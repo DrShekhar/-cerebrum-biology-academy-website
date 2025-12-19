@@ -23,6 +23,24 @@ export async function GET() {
   })
 }
 
-export async function POST() {
-  return NextResponse.json({ success: false, error: 'Method not allowed' }, { status: 405 })
+export async function POST(request: Request) {
+  try {
+    // Accept analytics data from TrustProvider
+    // Currently just acknowledges receipt - can be expanded to store in database
+    const data = await request.json()
+
+    // Log for monitoring (will be removed in production by compiler.removeConsole)
+    console.log('Trust metrics received:', {
+      trustLevel: data.trustLevel,
+      timestamp: data.timestamp,
+    })
+
+    return NextResponse.json({
+      success: true,
+      message: 'Metrics received',
+      timestamp: new Date().toISOString(),
+    })
+  } catch {
+    return NextResponse.json({ success: false, error: 'Invalid request' }, { status: 400 })
+  }
 }

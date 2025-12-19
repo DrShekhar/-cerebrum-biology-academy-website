@@ -1,0 +1,482 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 1,
+  "ncertChapterName": "The Living World",
+  "questions": [
+    {
+      "question": "Which of the following is the most important defining characteristic that distinguishes living organisms from non-living matter?",
+      "options": ["Growth", "Reproduction", "Cellular organization", "Response to stimuli"],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, cellular organization is the defining characteristic of living organisms. While growth can occur in non-living things (like mountains), and some living organisms don't reproduce (like mules), all living organisms are made of cells. This is the basis of cell theory. (NCERT Class 11, Chapter 1, Page 2)",
+      "difficulty": "MEDIUM",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 2
+    },
+    {
+      "question": "Growth in living organisms differs from growth in non-living objects because:",
+      "options": [
+        "Living organisms grow faster",
+        "Growth in living organisms is from inside by cell division",
+        "Non-living objects cannot grow",
+        "Living organisms grow only in favorable conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Growth in living organisms is intrinsic (from inside) and occurs by cell division, which increases the number of cells. This is called intussusception. In contrast, non-living objects like crystals or mountains grow by addition of materials on the surface (accretion). (NCERT Class 11, Chapter 1, Page 2-3)",
+      "difficulty": "EASY",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 2
+    },
+    {
+      "question": "Which of the following organisms can reproduce but is still considered non-living?",
+      "options": ["Bacteria", "Viruses", "Fungi", "Algae"],
+      "correctAnswer": "B",
+      "explanation": "Viruses can replicate inside host cells but are not considered living because they lack cellular organization and cannot reproduce on their own outside a host. They are obligate parasites and exist as nucleoprotein particles when outside host cells. (NCERT Class 11, Chapter 1, Page 3)",
+      "difficulty": "EASY",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 3
+    },
+    {
+      "question": "The sum total of all chemical reactions occurring in the body is termed as:",
+      "options": ["Catabolism", "Anabolism", "Metabolism", "Homeostasis"],
+      "correctAnswer": "C",
+      "explanation": "Metabolism is the sum total of all chemical reactions occurring in the body. It includes both catabolism (breakdown reactions) and anabolism (synthesis reactions). Metabolism is a defining feature of all living organisms and no non-living object shows metabolism. (NCERT Class 11, Chapter 1, Page 4)",
+      "difficulty": "EASY",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 4
+    },
+    {
+      "question": "According to NCERT, which property is considered the most obvious and technically complicated feature of all living organisms?",
+      "options": ["Growth", "Reproduction", "Consciousness", "Metabolism"],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, consciousness (awareness of surroundings) is the most obvious and technically complicated feature of living organisms. Human beings have the highest level of self-consciousness. All organisms respond to environmental stimuli, showing awareness. (NCERT Class 11, Chapter 1, Page 4)",
+      "difficulty": "MEDIUM",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 4
+    },
+    {
+      "question": "The basic unit of classification is:",
+      "options": ["Genus", "Species", "Family", "Order"],
+      "correctAnswer": "B",
+      "explanation": "Species is the basic unit of classification. According to NCERT, a species is defined as a group of individuals which are capable of interbreeding and producing fertile offspring. This biological concept of species was given by Ernst Mayr. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "Binomial nomenclature was introduced by:",
+      "options": ["Aristotle", "Theophrastus", "Carolus Linnaeus", "John Ray"],
+      "correctAnswer": "C",
+      "explanation": "Binomial nomenclature was introduced by Carolus Linnaeus in his book 'Species Plantarum' (1753) for plants and 'Systema Naturae' (10th edition, 1758) for animals. In this system, each organism has a two-part scientific name consisting of genus and species. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "In binomial nomenclature, the first word represents:",
+      "options": ["Species", "Genus", "Family", "Order"],
+      "correctAnswer": "B",
+      "explanation": "In binomial nomenclature, the first word represents the genus (generic name) and begins with a capital letter. The second word represents the species (specific epithet) and begins with a small letter. For example, in Homo sapiens, Homo is the genus and sapiens is the species. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "The correct sequence of taxonomic categories in ascending order is:",
+      "options": [
+        "Species → Genus → Family → Order → Class → Phylum → Kingdom",
+        "Species → Family → Genus → Order → Class → Phylum → Kingdom",
+        "Species → Genus → Order → Family → Class → Phylum → Kingdom",
+        "Species → Genus → Family → Class → Order → Phylum → Kingdom"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct ascending sequence of taxonomic categories is: Species → Genus → Family → Order → Class → Phylum/Division → Kingdom. This can be remembered as 'Kings Play Chess On Fine Green Silk' in reverse. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Which taxonomic category is placed between class and family?",
+      "options": ["Genus", "Order", "Phylum", "Species"],
+      "correctAnswer": "B",
+      "explanation": "Order is the taxonomic category placed between class and family. The hierarchy from higher to lower is: Kingdom → Phylum → Class → Order → Family → Genus → Species. Order contains related families. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Taxonomic keys are used for:",
+      "options": [
+        "Naming organisms",
+        "Classification of organisms",
+        "Identification of organisms",
+        "Evolution of organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Taxonomic keys are used for identification of organisms. They are based on contrasting characters (couplets) arranged in a dichotomous manner. Each statement in the key is called a lead. Keys help in quick identification of unknown organisms. (NCERT Class 11, Chapter 1, Page 10)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 10
+    },
+    {
+      "question": "A place where dried and pressed plant specimens are kept is called:",
+      "options": ["Museum", "Herbarium", "Botanical garden", "Zoological park"],
+      "correctAnswer": "B",
+      "explanation": "A herbarium is a store house of collected, dried and pressed plant specimens mounted on sheets. These sheets are arranged systematically according to a classification system. Herbaria serve as repositories of plant diversity and are valuable for taxonomic studies. (NCERT Class 11, Chapter 1, Page 9)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 9
+    },
+    {
+      "question": "Which of the following is NOT a taxonomic aid?",
+      "options": ["Herbarium", "Museum", "Laboratory", "Botanical garden"],
+      "correctAnswer": "C",
+      "explanation": "Laboratory is not specifically a taxonomic aid. Taxonomic aids include herbarium, botanical gardens, museums, zoological parks, and keys. These aids help in identification, naming, and classification of organisms. A laboratory is a general facility for experiments. (NCERT Class 11, Chapter 1, Page 9-10)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 9
+    },
+    {
+      "question": "The book 'Systema Naturae' was written by:",
+      "options": ["Charles Darwin", "Carolus Linnaeus", "Robert Hooke", "Gregor Mendel"],
+      "correctAnswer": "B",
+      "explanation": "Systema Naturae was written by Carolus Linnaeus. The 10th edition (1758) of this book is considered the starting point of binomial nomenclature for animals. Linnaeus is known as the Father of Taxonomy for his contributions to systematic classification. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "Which of the following statements is INCORRECT about living organisms?",
+      "options": [
+        "All living organisms grow",
+        "All living organisms reproduce",
+        "All living organisms respond to stimuli",
+        "All living organisms have cellular organization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The statement 'All living organisms reproduce' is incorrect. Mules, sterile worker bees, and infertile human couples cannot reproduce, yet they are undoubtedly living. Therefore, reproduction cannot be used as the sole defining characteristic of living organisms. (NCERT Class 11, Chapter 1, Page 3)",
+      "difficulty": "MEDIUM",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 3
+    },
+    {
+      "question": "The term 'Taxonomy' was coined by:",
+      "options": ["Linnaeus", "de Candolle", "Aristotle", "Theophrastus"],
+      "correctAnswer": "B",
+      "explanation": "The term 'Taxonomy' was coined by A.P. de Candolle in his work 'Theorie Elementaire de la Botanique' (1813). Taxonomy refers to the science of identification, nomenclature, and classification of organisms. It is derived from Greek words 'taxis' (arrangement) and 'nomos' (law). (NCERT Class 11, Chapter 1, Page 5)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomy",
+      "neetWeightage": "LOW",
+      "ncertPage": 5
+    },
+    {
+      "question": "Manuals, monographs and flora are examples of:",
+      "options": ["Museums", "Herbaria", "Taxonomic aids", "Zoological parks"],
+      "correctAnswer": "C",
+      "explanation": "Manuals, monographs, and flora are examples of taxonomic aids. Manuals are useful for identification in a given area. Monographs provide comprehensive information about a taxon. Flora contains information about plants of a particular area. (NCERT Class 11, Chapter 1, Page 10)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 10
+    },
+    {
+      "question": "A taxon is:",
+      "options": [
+        "A group of related organisms",
+        "A single organism",
+        "A category in classification",
+        "A unit of classification at any level"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A taxon (plural: taxa) is a unit of classification at any level in the taxonomic hierarchy. It can be a species, genus, family, or any other category. The term 'taxon' was introduced by ICBN in 1956. For example, insects, mammals, wheat all represent taxa at different levels. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomy",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "Which of the following pairs is INCORRECTLY matched?",
+      "options": [
+        "Herbarium - Dried plant specimens",
+        "Museum - Preserved animal specimens",
+        "Botanical garden - Collection of living plants",
+        "Zoological park - Collection of dried animals"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Zoological parks contain live animals in protected environments, not dried animals. They allow study of animal behavior and are important for ex-situ conservation. Museums contain preserved (not living) animal specimens. (NCERT Class 11, Chapter 1, Page 9)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 9
+    },
+    {
+      "question": "The study of principles and procedures of identification, nomenclature and classification is called:",
+      "options": ["Systematics", "Taxonomy", "Classification", "Nomenclature"],
+      "correctAnswer": "B",
+      "explanation": "Taxonomy is the study of principles and procedures of identification, nomenclature, and classification. Systematics is a broader term that includes taxonomy along with evolutionary relationships. Classification is the process of arranging organisms into groups. (NCERT Class 11, Chapter 1, Page 5)",
+      "difficulty": "EASY",
+      "topic": "Taxonomy",
+      "neetWeightage": "LOW",
+      "ncertPage": 5
+    },
+    {
+      "question": "Scientific name of mango is Mangifera indica. Here 'Mangifera' represents:",
+      "options": ["Species name", "Generic name", "Family name", "Specific epithet"],
+      "correctAnswer": "B",
+      "explanation": "In the scientific name Mangifera indica, 'Mangifera' is the generic name (genus). It is written first with a capital letter. 'indica' is the specific epithet (species name), written in small letters. Both words together form the binomial. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "Which of the following is TRUE about scientific names?",
+      "options": [
+        "They are written in English",
+        "The genus name is in small letters",
+        "They should be printed in italics",
+        "The species name starts with capital letter"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Scientific names should be printed in italics or underlined when handwritten. They are written in Latin (not English). The genus name starts with a capital letter while the species name (specific epithet) starts with a small letter. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "ICBN stands for:",
+      "options": [
+        "International Code of Botanical Names",
+        "Indian Code of Botanical Nomenclature",
+        "International Code of Botanical Nomenclature",
+        "International Code of Biological Nomenclature"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ICBN stands for International Code of Botanical Nomenclature. It provides rules and recommendations for naming plants. Similarly, ICZN (International Code of Zoological Nomenclature) is used for animals. These codes ensure uniformity in naming organisms worldwide. (NCERT Class 11, Chapter 1, Page 7)",
+      "difficulty": "EASY",
+      "topic": "Nomenclature",
+      "neetWeightage": "LOW",
+      "ncertPage": 7
+    },
+    {
+      "question": "The hierarchy of taxonomic categories was introduced by:",
+      "options": ["Darwin", "Linnaeus", "Aristotle", "Lamarck"],
+      "correctAnswer": "B",
+      "explanation": "The hierarchy of taxonomic categories was introduced by Carolus Linnaeus. He established the system of Kingdom, Phylum/Division, Class, Order, Family, Genus, and Species. This hierarchical system is still the basis of modern taxonomy. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Which category has the greatest number of similar characters?",
+      "options": ["Family", "Class", "Species", "Genus"],
+      "correctAnswer": "C",
+      "explanation": "Species has the greatest number of similar characters as it is the lowest taxonomic category. Members of a species share maximum similarities. As we move up the hierarchy (genus → family → order → class), the number of common characters decreases. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "Living organisms are self-replicating, evolving and self-regulating interactive systems capable of responding to external stimuli. Which feature is NOT directly mentioned in this definition?",
+      "options": ["Reproduction", "Evolution", "Homeostasis", "Growth"],
+      "correctAnswer": "D",
+      "explanation": "The definition mentions self-replicating (reproduction), evolving (evolution), self-regulating (homeostasis), and responding to external stimuli. Growth is not directly mentioned in this definition, though it is an important characteristic of living organisms. (NCERT Class 11, Chapter 1, Page 4)",
+      "difficulty": "HARD",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 4
+    },
+    {
+      "question": "Which of the following contains information about any one taxon?",
+      "options": ["Manual", "Monograph", "Flora", "Catalogue"],
+      "correctAnswer": "B",
+      "explanation": "A monograph contains information about any one taxon (taxonomic group). It provides exhaustive information on a single taxonomic group including description, keys, distribution, and bibliography. Manuals help identify taxa in an area, while flora describes plants of a region. (NCERT Class 11, Chapter 1, Page 10)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 10
+    },
+    {
+      "question": "The index containing the list of names of species described for a particular group is called:",
+      "options": ["Manual", "Monograph", "Flora", "Catalogue"],
+      "correctAnswer": "D",
+      "explanation": "A catalogue is an index containing a list of names of species described for a particular group. It provides a systematic list of all taxa along with their original citations. Catalogues are useful references for taxonomists. (NCERT Class 11, Chapter 1, Page 10)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 10
+    },
+    {
+      "question": "Which of the following best describes 'systematics'?",
+      "options": [
+        "Only classification of organisms",
+        "Only naming of organisms",
+        "Study of diversity and relationships among organisms",
+        "Only identification of organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Systematics is the study of diversity and evolutionary relationships among organisms. It is broader than taxonomy as it includes not just identification, nomenclature, and classification, but also phylogenetic relationships. The term was coined by Linnaeus. (NCERT Class 11, Chapter 1, Page 5)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomy",
+      "neetWeightage": "LOW",
+      "ncertPage": 5
+    },
+    {
+      "question": "Which of the following is common to all living organisms?",
+      "options": ["Reproduction by seeds", "Locomotion", "Cellular organization", "Photosynthesis"],
+      "correctAnswer": "C",
+      "explanation": "Cellular organization is common to all living organisms. All living beings are made up of one or more cells. Reproduction by seeds is specific to some plants, locomotion is not seen in plants, and photosynthesis is limited to photoautotrophs. (NCERT Class 11, Chapter 1, Page 2)",
+      "difficulty": "EASY",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 2
+    },
+    {
+      "question": "A species can be best defined as:",
+      "options": [
+        "A group of organisms with similar morphology",
+        "A group of individuals capable of interbreeding and producing fertile offspring",
+        "A group of organisms living in the same area",
+        "A group of organisms with similar behavior"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to the biological concept of species, a species is defined as a group of individuals that can interbreed among themselves and produce fertile offspring under natural conditions. This definition emphasizes reproductive isolation. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "Which taxonomic category contains related genera?",
+      "options": ["Order", "Class", "Family", "Phylum"],
+      "correctAnswer": "C",
+      "explanation": "Family is the taxonomic category that contains related genera. For example, Family Solanaceae contains genera like Solanum, Petunia, and Datura. Similarly, Family Felidae contains genera like Panthera and Felis. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Lion, leopard, and tiger are placed in the same:",
+      "options": ["Species", "Genus", "Family", "Order"],
+      "correctAnswer": "B",
+      "explanation": "Lion (Panthera leo), leopard (Panthera pardus), and tiger (Panthera tigris) all belong to the same genus Panthera. They are different species but share enough common characteristics to be grouped under one genus. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Biological concept of species was given by:",
+      "options": ["Linnaeus", "Ernst Mayr", "Darwin", "Aristotle"],
+      "correctAnswer": "B",
+      "explanation": "The biological concept of species was given by Ernst Mayr in 1942. According to this concept, species are groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "In taxonomic hierarchy, as we move from species to kingdom:",
+      "options": [
+        "Number of common characters increases",
+        "Number of common characters decreases",
+        "Number of organisms decreases",
+        "Similarities increase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As we move from species to kingdom in the taxonomic hierarchy, the number of common characters among members decreases. Species members are most similar, while kingdom members share only basic characteristics. This is because higher categories are more inclusive. (NCERT Class 11, Chapter 1, Page 6)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 6
+    },
+    {
+      "question": "Which among the following is most inclusive taxonomic category?",
+      "options": ["Genus", "Family", "Order", "Kingdom"],
+      "correctAnswer": "D",
+      "explanation": "Kingdom is the most inclusive taxonomic category among the given options. It contains the maximum number of organisms with basic common characteristics. The hierarchy from most to least inclusive is: Kingdom > Phylum > Class > Order > Family > Genus > Species. (NCERT Class 11, Chapter 1, Page 8)",
+      "difficulty": "EASY",
+      "topic": "Taxonomic Categories",
+      "neetWeightage": "LOW",
+      "ncertPage": 8
+    },
+    {
+      "question": "Assertion: Mules cannot reproduce.\nReason: All living organisms must be able to reproduce.\nChoose the correct option:",
+      "options": [
+        "Both assertion and reason are true, and reason correctly explains assertion",
+        "Both assertion and reason are true, but reason does not correctly explain assertion",
+        "Assertion is true but reason is false",
+        "Both assertion and reason are false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true - mules are sterile and cannot reproduce. However, the reason is false because reproduction is not a mandatory criterion for being classified as living. Mules are living despite being unable to reproduce. This is why reproduction cannot be the sole defining criterion of life. (NCERT Class 11, Chapter 1, Page 3)",
+      "difficulty": "HARD",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 3
+    },
+    {
+      "question": "Which of the following is the basis of modern taxonomic studies?",
+      "options": [
+        "Only morphological characters",
+        "Only internal structure",
+        "External and internal structures along with developmental stages",
+        "Only developmental stages"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Modern taxonomic studies are based on external and internal structures along with developmental stages. Earlier taxonomy was based mainly on external morphology, but now it includes anatomy, embryology, cytology, biochemistry, and molecular biology. (NCERT Class 11, Chapter 1, Page 5)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomy",
+      "neetWeightage": "LOW",
+      "ncertPage": 5
+    },
+    {
+      "question": "Which of the following statements about metabolic reactions is correct?",
+      "options": [
+        "They occur only in living organisms",
+        "They can occur in test tubes (in vitro)",
+        "They cannot be demonstrated outside the body",
+        "They only include catabolic reactions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Metabolic reactions can be demonstrated in test tubes (in vitro conditions). However, these isolated reactions are not living things. Living organisms have an organized system where thousands of metabolic reactions occur in a coordinated manner. (NCERT Class 11, Chapter 1, Page 4)",
+      "difficulty": "HARD",
+      "topic": "Characteristics of Living Organisms",
+      "neetWeightage": "LOW",
+      "ncertPage": 4
+    },
+    {
+      "question": "Which statement about taxonomic keys is correct?",
+      "options": [
+        "They contain only one character per step",
+        "They are based on contrasting characters",
+        "They cannot be used for plants",
+        "They are only used by experts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Taxonomic keys are based on contrasting characters arranged in a dichotomous manner. Each step presents two contrasting characters (a couplet), and the user selects the one that matches the specimen. This leads to identification of the organism. (NCERT Class 11, Chapter 1, Page 10)",
+      "difficulty": "MEDIUM",
+      "topic": "Taxonomic Aids",
+      "neetWeightage": "LOW",
+      "ncertPage": 10
+    }
+  ]
+}

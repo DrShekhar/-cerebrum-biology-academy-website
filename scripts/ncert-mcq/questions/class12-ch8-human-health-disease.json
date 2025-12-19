@@ -1,0 +1,1007 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 8,
+  "ncertChapterName": "Human Health and Disease",
+  "questions": [
+    {
+      "question": "Detection of cancer at early stages includes:",
+      "options": [
+        "Biopsy, histopathology, blood tests, imaging",
+        "Chemotherapy",
+        "Radiation",
+        "Surgery only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cancer detection techniques include: biopsy and histopathological examination, blood tests for cancer markers, imaging (X-ray, CT, MRI, PET scan), and molecular techniques.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 141,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most important tumor suppressor gene is:",
+      "options": ["myc", "p53", "src", "ras"],
+      "correctAnswer": "B",
+      "explanation": "p53 is called 'guardian of the genome' and is the most commonly mutated gene in human cancers. It regulates cell cycle, DNA repair, and apoptosis. Mutations in p53 are found in >50% of cancers.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ascariasis is caused by:",
+      "options": [
+        "Bacteria",
+        "Ascaris lumbricoides (roundworm)",
+        "Wuchereria (filarial worm)",
+        "Plasmodium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ascariasis is caused by Ascaris lumbricoides, a large roundworm parasitizing the intestine. It spreads through contaminated water, vegetables, and fruits. Causes internal bleeding, muscular pain, blockage.",
+      "difficulty": "EASY",
+      "topic": "Helminth Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Drugs are defined as:",
+      "options": [
+        "Chemicals that affect body function when taken",
+        "Only medicines",
+        "Only addictive substances",
+        "Only illegal substances"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Drugs are chemicals that interact with biological targets in the body to produce physiological effects. They include medicines, recreational substances, and substances of abuse.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 142,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The window period for HIV is:",
+      "options": [
+        "Time for virus to enter the body",
+        "Time between infection and detectable antibodies",
+        "Time for AIDS to develop",
+        "Time for recovery"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Window period (typically 2-6 weeks) is the time between HIV infection and the appearance of detectable antibodies in blood. During this time, ELISA may give false negative results.",
+      "difficulty": "MEDIUM",
+      "topic": "AIDS",
+      "ncertPage": 138,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Colostrum is rich in:",
+      "options": ["IgG antibodies", "IgA antibodies", "IgE antibodies", "IgM antibodies"],
+      "correctAnswer": "B",
+      "explanation": "Colostrum (first milk) is rich in IgA antibodies which provide protection against gut infections in newborns. This is why early breastfeeding is essential for infant immunity.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a physical carcinogen?",
+      "options": ["Tobacco smoke", "X-rays and UV radiation", "Viruses", "Alcohol"],
+      "correctAnswer": "B",
+      "explanation": "Physical carcinogens include ionizing radiations (X-rays, gamma rays) and non-ionizing radiations (UV rays). They cause DNA damage leading to mutations and cancer.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cancer-causing agents are called:",
+      "options": ["Mutagens", "Allergens", "Antibiotics", "Carcinogens"],
+      "correctAnswer": "D",
+      "explanation": "Carcinogens are agents that cause cancer. They can be physical (radiation, UV), chemical (tobacco smoke, asbestos), or biological (certain viruses like HPV, hepatitis B).",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The chemical released during allergic reaction causing symptoms is:",
+      "options": ["Adrenaline", "Insulin", "Histamine", "Thyroxine"],
+      "correctAnswer": "C",
+      "explanation": "Histamine is released from mast cells during allergic reactions. It causes vasodilation, increased vascular permeability, smooth muscle contraction, and inflammation - leading to allergic symptoms.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 136,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Drug addiction is characterized by:",
+      "options": [
+        "Mild side effects",
+        "Using drugs occasionally",
+        "Compulsive drug-seeking behavior despite harmful consequences",
+        "Taking medicines as prescribed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Drug addiction (substance use disorder) is characterized by compulsive drug seeking, continued use despite harmful consequences, inability to control use, and withdrawal symptoms on stopping.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 142,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Allergies are due to:",
+      "options": [
+        "Autoimmune destruction",
+        "Weak immune system",
+        "Exaggerated immune response to certain antigens",
+        "Lack of antibodies"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Allergies are exaggerated immune responses to normally harmless substances (allergens) like pollen, dust mites, animal dander, or food. IgE antibodies mediate allergic reactions.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 136,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pneumonia is caused by:",
+      "options": [
+        "Fungi only",
+        "Virus only",
+        "Streptococcus pneumoniae and Haemophilus influenzae",
+        "Protozoa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pneumonia is primarily caused by bacteria Streptococcus pneumoniae and Haemophilus influenzae. It affects the alveoli of lungs, filling them with fluid and reducing respiratory capacity.",
+      "difficulty": "EASY",
+      "topic": "Bacterial Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vector for elephantiasis is:",
+      "options": ["Housefly", "Anopheles mosquito", "Female Culex mosquito", "Aedes mosquito"],
+      "correctAnswer": "C",
+      "explanation": "Female Culex mosquito is the vector for elephantiasis (filariasis). It transmits the microfilariae (larval stage) of Wuchereria during blood meal.",
+      "difficulty": "MEDIUM",
+      "topic": "Helminth Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Viruses that can cause cancer are called:",
+      "options": ["Oncogenic viruses", "Retroviruses only", "RNA viruses only", "Bacteriophages"],
+      "correctAnswer": "A",
+      "explanation": "Oncogenic (tumor-causing) viruses include HPV (cervical cancer), Hepatitis B and C (liver cancer), EBV (Burkitt's lymphoma), and HTLV-1 (T-cell leukemia).",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The antibody class involved in allergic reactions is:",
+      "options": ["IgE", "IgM", "IgG", "IgA"],
+      "correctAnswer": "A",
+      "explanation": "IgE antibodies are involved in allergic reactions. They bind to mast cells and basophils. On re-exposure to allergen, IgE triggers release of histamine and other chemicals causing allergic symptoms.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 136,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which cells are called 'soldiers' of the immune system?",
+      "options": ["Red blood cells", "White blood cells (leukocytes)", "Platelets", "Plasma cells"],
+      "correctAnswer": "B",
+      "explanation": "White blood cells (leukocytes) are called soldiers of immune system as they defend against pathogens. They include neutrophils, lymphocytes, monocytes, eosinophils, and basophils.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Prevention of drug abuse includes:",
+      "options": [
+        "Punishment only",
+        "Ignoring the problem",
+        "Isolation of affected individuals",
+        "Education, counseling, family support, avoiding peer pressure"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Prevention strategies include: education about drug effects, building strong family bonds, counseling, peer education programs, avoiding bad company, developing healthy coping mechanisms.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 145,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "B-lymphocytes produce:",
+      "options": [
+        "Interferons only",
+        "Complement proteins",
+        "Only cell-mediated immunity",
+        "Antibodies (humoral immunity)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "B-lymphocytes (B-cells) produce antibodies (immunoglobulins) and are responsible for humoral immunity. They differentiate into plasma cells that secrete antibodies specific to antigens.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ringworm is caused by:",
+      "options": [
+        "Bacteria",
+        "Fungi (Microsporum, Trichophyton, Epidermophyton)",
+        "Virus",
+        "Worms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ringworm is a fungal infection (not caused by worms) caused by Microsporum, Trichophyton, and Epidermophyton fungi. It appears as dry, scaly lesions with ring-like appearance on skin, nails, scalp.",
+      "difficulty": "EASY",
+      "topic": "Fungal Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A person is considered to have AIDS when:",
+      "options": [
+        "T-helper cell count falls below 200 per cubic mm",
+        "Antibodies appear",
+        "Only fever is present",
+        "HIV is detected in blood"
+      ],
+      "correctAnswer": "A",
+      "explanation": "AIDS is diagnosed when HIV-positive person's CD4+ T-helper cell count falls below 200 cells/mm³ (normal: 500-1500/mm³) and/or they develop opportunistic infections.",
+      "difficulty": "MEDIUM",
+      "topic": "AIDS",
+      "ncertPage": 138,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "AIDS is caused by:",
+      "options": ["Fungus", "Protozoa", "Bacteria", "HIV (Human Immunodeficiency Virus)"],
+      "correctAnswer": "D",
+      "explanation": "AIDS (Acquired Immuno Deficiency Syndrome) is caused by HIV (Human Immunodeficiency Virus), a retrovirus. HIV attacks helper T-cells (CD4+ cells), weakening the immune system.",
+      "difficulty": "EASY",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Malaria is caused by:",
+      "options": ["Fungus", "Bacteria", "Virus", "Plasmodium (protozoan)"],
+      "correctAnswer": "D",
+      "explanation": "Malaria is caused by Plasmodium species (protozoan parasites). Different species cause different types of malaria: P. vivax (benign tertian), P. falciparum (malignant tertian), P. malariae (quartan).",
+      "difficulty": "EASY",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 131,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cirrhosis is:",
+      "options": [
+        "Liver disease due to chronic alcohol consumption",
+        "Heart disease",
+        "Brain disease",
+        "Lung disease"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cirrhosis is chronic liver damage characterized by fibrosis and scarring. Chronic alcohol consumption is a major cause. It leads to liver failure, portal hypertension, and is irreversible.",
+      "difficulty": "MEDIUM",
+      "topic": "Drug Abuse",
+      "ncertPage": 144,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Metastasis is:",
+      "options": [
+        "Contact inhibition",
+        "Tumor formation",
+        "Spread of cancer cells to distant body parts",
+        "Cell death"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Metastasis is the spread of cancer cells from primary tumor to distant body parts through blood or lymphatic system. It is a hallmark of malignant tumors and makes cancer difficult to treat.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 139,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diseases that can be transmitted from one person to another are called:",
+      "options": [
+        "Communicable diseases",
+        "Genetic diseases",
+        "Non-communicable diseases",
+        "Deficiency diseases"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Communicable or infectious diseases can spread from infected person to healthy person through various modes like air, water, contact, vectors, etc. Examples: typhoid, tuberculosis, common cold.",
+      "difficulty": "EASY",
+      "topic": "Types of Diseases",
+      "ncertPage": 129,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cocaine is obtained from:",
+      "options": [
+        "Coca plant (Erythroxylum coca)",
+        "Tobacco plant",
+        "Poppy plant",
+        "Cannabis plant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cocaine is obtained from leaves of coca plant (Erythroxylum coca). It is a powerful CNS stimulant that interferes with dopamine transport, causing intense euphoria and high addiction potential.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 143,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "HIV belongs to the group:",
+      "options": ["Bacteriophage", "DNA virus", "Retrovirus", "Prion"],
+      "correctAnswer": "C",
+      "explanation": "HIV is a retrovirus - an RNA virus that uses reverse transcriptase enzyme to convert its RNA to DNA, which then integrates into the host cell's genome.",
+      "difficulty": "EASY",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a barrier of innate immunity?",
+      "options": ["Skin", "Mucous membranes", "Antibodies", "Saliva and tears"],
+      "correctAnswer": "C",
+      "explanation": "Antibodies are part of acquired (adaptive) immunity, not innate immunity. Innate immunity includes physical barriers (skin, mucous), chemical barriers (lysozyme in tears, HCl in stomach), and cellular barriers.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Contact inhibition refers to:",
+      "options": [
+        "Cancer cells dividing faster",
+        "Immune cells attacking tumors",
+        "Cells not touching each other",
+        "Normal cells stopping division on contact with other cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Contact inhibition is the property of normal cells to stop dividing when they contact neighboring cells. Cancer cells lose this property and continue dividing, forming tumors.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 139,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Alcohol primarily affects:",
+      "options": ["Kidneys", "Central nervous system and liver", "Bones", "Muscles"],
+      "correctAnswer": "B",
+      "explanation": "Alcohol (ethanol) primarily affects the CNS (depressant) and liver (causes cirrhosis). It also damages pancreas, heart, and brain with chronic use. It crosses placenta and causes fetal alcohol syndrome.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 144,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cannabinoids are derived from:",
+      "options": ["Coca plant", "Tobacco plant", "Poppy plant", "Cannabis sativa (hemp plant)"],
+      "correctAnswer": "D",
+      "explanation": "Cannabinoids (marijuana, hashish, charas, ganja) are derived from Cannabis sativa (hemp plant). THC (tetrahydrocannabinol) is the main psychoactive component affecting cardiovascular system.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 142,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Heroin is derived from:",
+      "options": ["Cannabis plant", "Poppy plant (morphine)", "Coca leaves", "Tobacco"],
+      "correctAnswer": "B",
+      "explanation": "Heroin (diacetyl morphine/diamorphine) is derived from morphine, which comes from the latex of poppy plant (Papaver somniferum). It is highly addictive and is a depressant.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 142,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Benign tumors:",
+      "options": [
+        "Spread to other parts (metastasize)",
+        "Remain confined and do not spread",
+        "Are always fatal",
+        "Cannot be removed surgically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Benign tumors remain confined to their original location, do not invade surrounding tissues or metastasize. They are generally not life-threatening and can be removed surgically.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 139,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "LSD (Lysergic acid diethylamide) is a:",
+      "options": ["Hallucinogen", "Stimulant", "Sedative", "Depressant"],
+      "correctAnswer": "A",
+      "explanation": "LSD is a powerful hallucinogen derived from ergot fungus (Claviceps purpurea). It causes hallucinations, altered perception, and psychological effects. Not physically addictive but psychologically dangerous.",
+      "difficulty": "MEDIUM",
+      "topic": "Drug Abuse",
+      "ncertPage": 143,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Autoimmunity occurs when:",
+      "options": [
+        "Only T-cells are activated",
+        "Immunity is very strong",
+        "Immune system attacks body's own cells",
+        "No antibodies are produced"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Autoimmunity occurs when the immune system fails to distinguish self from non-self and attacks body's own cells. Examples: rheumatoid arthritis, multiple sclerosis, type 1 diabetes.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 136,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Typhoid fever is caused by:",
+      "options": ["Entamoeba", "Virus", "Salmonella typhi", "Plasmodium"],
+      "correctAnswer": "C",
+      "explanation": "Typhoid fever is caused by the bacterium Salmonella typhi. It spreads through contaminated food and water. Widal test is used for diagnosis. Mary Mallon (Typhoid Mary) was a famous carrier.",
+      "difficulty": "EASY",
+      "topic": "Bacterial Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Elephantiasis (filariasis) is caused by:",
+      "options": ["Entamoeba", "Ascaris", "Wuchereria (W. bancrofti and W. malayi)", "Plasmodium"],
+      "correctAnswer": "C",
+      "explanation": "Elephantiasis is caused by Wuchereria bancrofti and W. malayi (filarial worms). The adult worms live in lymphatic vessels, blocking lymph flow and causing swelling of limbs (especially legs), scrotum.",
+      "difficulty": "EASY",
+      "topic": "Helminth Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Health is defined by WHO as:",
+      "options": [
+        "Absence of disease",
+        "State of complete physical, mental and social well-being",
+        "Physical fitness only",
+        "Absence of symptoms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "WHO defines health as 'a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity'. This holistic definition includes all aspects of well-being.",
+      "difficulty": "EASY",
+      "topic": "Health and Disease",
+      "ncertPage": 129,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Immunity present from birth is called:",
+      "options": ["Active immunity", "Passive immunity", "Acquired immunity", "Innate immunity"],
+      "correctAnswer": "D",
+      "explanation": "Innate (inborn/natural) immunity is present from birth. It includes physical barriers (skin, mucous membranes), physiological barriers (pH, temperature), cellular barriers (WBCs), and cytokine barriers.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Opioids include:",
+      "options": [
+        "Morphine, heroin, and codeine",
+        "LSD and marijuana",
+        "Cocaine and amphetamines",
+        "Alcohol and nicotine"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Opioids are drugs derived from or related to opium. They include morphine, heroin (diacetyl morphine), codeine, and synthetic opioids. They bind to opioid receptors and cause euphoria, pain relief.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 142,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Acquired immunity that develops after exposure to antigen is called:",
+      "options": ["Sterile immunity", "Innate immunity", "Passive immunity", "Active immunity"],
+      "correctAnswer": "D",
+      "explanation": "Active immunity develops when the body's own immune system responds to antigen exposure (natural infection or vaccination). It involves production of antibodies and memory cells, providing long-lasting protection.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vaccination provides:",
+      "options": ["Passive immunity", "Innate immunity", "Active immunity", "No immunity"],
+      "correctAnswer": "C",
+      "explanation": "Vaccination provides active immunity by exposing the body to weakened/killed pathogens or their products (antigens). This stimulates antibody production and memory cell formation without causing disease.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 135,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Amoebic dysentery (amoebiasis) is caused by:",
+      "options": ["Plasmodium", "Entamoeba histolytica", "Leishmania", "Trypanosoma"],
+      "correctAnswer": "B",
+      "explanation": "Amoebiasis or amoebic dysentery is caused by Entamoeba histolytica. It spreads through contaminated food and water. Symptoms include constipation, abdominal pain, bloody stools with mucus.",
+      "difficulty": "EASY",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following diseases has been eradicated through vaccination?",
+      "options": ["Tuberculosis", "HIV/AIDS", "Malaria", "Smallpox"],
+      "correctAnswer": "D",
+      "explanation": "Smallpox was declared eradicated by WHO in 1980, the first disease to be completely eliminated through vaccination. India was declared smallpox-free in 1975.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 135,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rheumatoid arthritis is an example of:",
+      "options": ["Allergy", "Immunodeficiency", "Autoimmune disease", "Infectious disease"],
+      "correctAnswer": "C",
+      "explanation": "Rheumatoid arthritis is an autoimmune disease where the immune system attacks joint tissues, causing inflammation, pain, and joint destruction. It commonly affects hands and feet.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 136,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primary immune response is:",
+      "options": [
+        "Innate immunity",
+        "Immediate and strong",
+        "Slow and weak, produces memory cells",
+        "Only cell-mediated"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Primary immune response occurs on first antigen exposure. It is slow (lag period of 5-10 days), produces low antibody levels, but generates memory B and T cells for future responses.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tumor suppressor genes:",
+      "options": [
+        "Cause cancer when activated",
+        "Have no role in cancer",
+        "Promote cell division",
+        "Inhibit cell division and prevent cancer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Tumor suppressor genes (anti-oncogenes) inhibit cell proliferation and promote apoptosis. Loss of function mutations in these genes (like p53, Rb) can lead to cancer development.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ringworm spreads through:",
+      "options": [
+        "Air only",
+        "Soil, towels, clothes, and comb of infected persons",
+        "Blood transfusion",
+        "Sexual contact only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ringworm spreads through contact with infected soil or by using towels, clothes, or combs of infected persons. Heat and moisture help in fungal growth, common in groin, feet, and scalp.",
+      "difficulty": "MEDIUM",
+      "topic": "Fungal Diseases",
+      "ncertPage": 132,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The diagnostic test for HIV infection is:",
+      "options": ["Schick test", "Widal test", "ELISA", "Mantoux test"],
+      "correctAnswer": "C",
+      "explanation": "ELISA (Enzyme Linked Immunosorbent Assay) is the primary screening test for HIV. It detects HIV antibodies in blood. Western blot is used as confirmatory test.",
+      "difficulty": "EASY",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The infective stage of Plasmodium transmitted by mosquito to human is:",
+      "options": ["Sporozoite", "Merozoite", "Gametocyte", "Trophozoite"],
+      "correctAnswer": "A",
+      "explanation": "Sporozoites are the infective stage of Plasmodium transmitted from mosquito to human during blood meal. They travel to liver where they multiply before entering RBCs.",
+      "difficulty": "MEDIUM",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 131,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chemical carcinogens include:",
+      "options": ["X-rays", "UV rays", "Tobacco smoke, asbestos, aflatoxins", "Viruses"],
+      "correctAnswer": "C",
+      "explanation": "Chemical carcinogens include tobacco smoke components, asbestos (causes mesothelioma), aflatoxins (from Aspergillus, causes liver cancer), benzene, vinyl chloride, and many others.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Genes that normally stimulate cell division are called:",
+      "options": [
+        "Regulatory genes",
+        "Housekeeping genes",
+        "Tumor suppressor genes",
+        "Proto-oncogenes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Proto-oncogenes are normal genes that promote cell growth and division. When mutated or overexpressed, they become oncogenes and can cause cancer by promoting uncontrolled cell division.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The structure of antibody molecule is:",
+      "options": [
+        "Circular molecule",
+        "Single chain protein",
+        "Linear protein",
+        "Y-shaped with 4 polypeptide chains"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Antibodies are Y-shaped molecules made of 4 polypeptide chains: 2 identical heavy chains and 2 identical light chains linked by disulfide bonds. The Y arms have antigen-binding sites.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lysozyme present in tears and saliva:",
+      "options": [
+        "Is a virus",
+        "Promotes infection",
+        "Is an antibody",
+        "Destroys bacterial cell wall"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lysozyme is an antibacterial enzyme present in tears, saliva, nasal secretions, and breast milk. It destroys bacterial cell walls by hydrolyzing peptidoglycan, providing innate immune protection.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Secondary immune response is characterized by:",
+      "options": [
+        "Low antibody production",
+        "Quick, strong response due to memory cells",
+        "Only IgM production",
+        "Slow response"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Secondary (anamnestic) response occurs on subsequent antigen exposure. Memory cells enable quick (no lag), intense response with high antibody levels. This is the basis of vaccination.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "HIV primarily attacks:",
+      "options": [
+        "Red blood cells",
+        "Platelets",
+        "B-lymphocytes",
+        "Helper T-lymphocytes (CD4+ cells)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "HIV specifically attacks helper T-cells (CD4+ T-lymphocytes), macrophages, and dendritic cells that have CD4 receptors. Loss of T-helper cells severely compromises immune function.",
+      "difficulty": "EASY",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The confirmatory test for typhoid is:",
+      "options": ["Widal test", "Western blot", "PCR", "ELISA"],
+      "correctAnswer": "A",
+      "explanation": "Widal test is the serological test used for diagnosis of typhoid fever. It detects antibodies against Salmonella typhi antigens (O and H antigens) in patient's serum.",
+      "difficulty": "MEDIUM",
+      "topic": "Bacterial Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Malignant tumors are characterized by:",
+      "options": [
+        "Slow growth and no spread",
+        "Rapid growth, invasion, and metastasis",
+        "Self-limiting growth",
+        "Never life-threatening"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Malignant tumors (cancers) grow rapidly, invade surrounding tissues, and can metastasize (spread) to distant body parts through blood or lymph. They are life-threatening.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 139,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The causative organism of plague is:",
+      "options": ["Yersinia pestis", "Plasmodium", "Mycobacterium", "Virus"],
+      "correctAnswer": "A",
+      "explanation": "Plague (Black Death) is caused by the bacterium Yersinia pestis. It is transmitted by rat fleas and can cause bubonic, pneumonic, or septicemic plague. It caused devastating epidemics in history.",
+      "difficulty": "MEDIUM",
+      "topic": "Bacterial Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The characteristic fever pattern in malaria is caused by:",
+      "options": [
+        "Release of merozoites and haemozoin from RBCs",
+        "Liver damage",
+        "Immune response only",
+        "Mosquito saliva"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Malarial fever occurs when infected RBCs rupture, releasing merozoites and toxic waste (haemozoin). This triggers high fever with chills. The cycle repeats every 48-72 hours depending on species.",
+      "difficulty": "MEDIUM",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 131,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In pneumonia, the alveoli get filled with:",
+      "options": ["Fluid containing pathogens", "Mucus only", "Air", "Blood"],
+      "correctAnswer": "A",
+      "explanation": "In pneumonia, the alveoli become filled with fluid and cell debris, reducing gas exchange efficiency. This causes severe breathing problems due to decreased respiratory surface area.",
+      "difficulty": "MEDIUM",
+      "topic": "Bacterial Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cancer is characterized by:",
+      "options": [
+        "Controlled cell division",
+        "Uncontrolled cell division",
+        "Cell death",
+        "No cell division"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cancer is characterized by uncontrolled, abnormal cell proliferation. Cancer cells lose contact inhibition, divide continuously, and can spread to other body parts (metastasis).",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 139,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Immunity obtained through antibodies from mother is:",
+      "options": [
+        "Innate immunity",
+        "Active immunity",
+        "Passive immunity",
+        "Cell-mediated immunity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Passive immunity is obtained by receiving ready-made antibodies from another individual. Maternal antibodies pass to fetus (IgG via placenta) and infant (IgA via colostrum). It provides immediate but temporary protection.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 133,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Edward Jenner is known for:",
+      "options": [
+        "First vaccination (against smallpox)",
+        "Discovery of HIV",
+        "Discovery of insulin",
+        "Discovery of antibiotics"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Edward Jenner developed the first vaccine in 1796 against smallpox using cowpox virus. He observed that milkmaids who had cowpox were protected from smallpox, leading to vaccination.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 135,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adolescents are more vulnerable to drug abuse due to:",
+      "options": [
+        "Better metabolism",
+        "Higher tolerance",
+        "Stronger immunity",
+        "Peer pressure, curiosity, experimentation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Adolescents are vulnerable to drug abuse due to peer pressure, curiosity, desire to experiment, emotional instability, stress, and need for acceptance. Brain development makes them susceptible to addiction.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 145,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Interferons are used in cancer treatment because they:",
+      "options": [
+        "Activate immune system against cancer cells",
+        "Prevent cell division",
+        "Cause apoptosis",
+        "Kill cancer cells directly"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Interferons are cytokines that activate immune cells (NK cells, macrophages) to destroy cancer cells. Alpha-interferon is used in treatment of certain cancers and viral infections.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 141,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plasmodium reproduces asexually in:",
+      "options": ["Human only", "Both human and mosquito", "Neither", "Mosquito only"],
+      "correctAnswer": "A",
+      "explanation": "Plasmodium reproduces asexually in human host (schizogony in liver and RBCs) and sexually in mosquito (gametogony and sporogony). Human is the intermediate host, mosquito is the definitive host.",
+      "difficulty": "MEDIUM",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 131,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Treatment of cancer includes:",
+      "options": [
+        "Only surgery",
+        "Surgery, radiation therapy, chemotherapy, immunotherapy",
+        "Only chemotherapy",
+        "Only radiation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cancer treatment includes surgery (tumor removal), radiation therapy (kills cancer cells), chemotherapy (cytotoxic drugs), immunotherapy (activating immune system), and targeted therapy.",
+      "difficulty": "EASY",
+      "topic": "Cancer",
+      "ncertPage": 141,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Common cold is caused by:",
+      "options": ["Bacteria", "Rhinoviruses", "Plasmodium", "Fungi"],
+      "correctAnswer": "B",
+      "explanation": "Common cold is caused by rhinoviruses - a group of RNA viruses. It infects the nose, respiratory passage and spreads through droplets (coughs, sneezes) or contaminated objects.",
+      "difficulty": "EASY",
+      "topic": "Viral Diseases",
+      "ncertPage": 130,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Interferon is:",
+      "options": [
+        "Pathogen",
+        "Vaccine",
+        "Antibody",
+        "Antiviral protein produced by virus-infected cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Interferons are antiviral proteins produced by virus-infected cells. They 'interfere' with viral replication and also activate immune cells. They are used in treatment of viral infections and some cancers.",
+      "difficulty": "MEDIUM",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "T-lymphocytes are responsible for:",
+      "options": [
+        "Cell-mediated immunity",
+        "Innate immunity",
+        "Passive immunity",
+        "Humoral immunity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "T-lymphocytes (T-cells) mediate cell-mediated immunity (CMI). They directly attack infected cells, cancer cells, and transplanted tissues. T-helper cells also assist B-cells in antibody production.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tobacco contains the addictive substance:",
+      "options": ["Morphine", "Caffeine", "Nicotine", "THC"],
+      "correctAnswer": "C",
+      "explanation": "Tobacco contains nicotine, a highly addictive stimulant that increases dopamine levels in the brain. Tobacco smoke also contains carcinogens like benzopyrene and carbon monoxide.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 143,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT transmitted by contaminated needles?",
+      "options": ["HIV", "Hepatitis B", "Malaria", "Hepatitis C"],
+      "correctAnswer": "C",
+      "explanation": "Malaria is transmitted by mosquito bite, not contaminated needles. HIV, Hepatitis B, and Hepatitis C can all be transmitted through sharing contaminated needles among intravenous drug users.",
+      "difficulty": "MEDIUM",
+      "topic": "Drug Abuse",
+      "ncertPage": 144,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Antibodies are also called:",
+      "options": ["Interferons", "Interleukins", "Antigens", "Immunoglobulins"],
+      "correctAnswer": "D",
+      "explanation": "Antibodies are also called immunoglobulins (Ig). They are glycoprotein molecules produced by plasma cells in response to antigens. Five classes: IgG, IgA, IgM, IgE, and IgD.",
+      "difficulty": "EASY",
+      "topic": "Immunity",
+      "ncertPage": 134,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "HIV spreads through:",
+      "options": [
+        "Sexual contact, blood transfusion, contaminated needles",
+        "Mosquito bites",
+        "Air",
+        "Casual contact"
+      ],
+      "correctAnswer": "A",
+      "explanation": "HIV spreads through: unprotected sexual contact, contaminated blood transfusion, sharing needles (drug users), mother to child (during pregnancy, delivery, or breastfeeding). Not through casual contact.",
+      "difficulty": "EASY",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vector for malaria is:",
+      "options": ["Housefly", "Aedes mosquito", "Culex mosquito", "Female Anopheles mosquito"],
+      "correctAnswer": "D",
+      "explanation": "Female Anopheles mosquito is the vector for malaria. The mosquito transmits Plasmodium sporozoites during blood meal. Only females bite as they need blood for egg development.",
+      "difficulty": "EASY",
+      "topic": "Protozoan Diseases",
+      "ncertPage": 131,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Smoking can cause:",
+      "options": [
+        "No serious diseases",
+        "Only lung cancer",
+        "Lung cancer, emphysema, cardiovascular diseases",
+        "Only respiratory problems"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Smoking causes multiple diseases: lung cancer and other cancers, emphysema, chronic bronchitis, coronary heart disease, stroke, and oral cancers. It is the leading preventable cause of death.",
+      "difficulty": "EASY",
+      "topic": "Drug Abuse",
+      "ncertPage": 143,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Immunosuppression occurs in AIDS because:",
+      "options": [
+        "B-cells are destroyed",
+        "Helper T-cells are destroyed by HIV",
+        "Antibodies are destroyed",
+        "Bone marrow fails"
+      ],
+      "correctAnswer": "B",
+      "explanation": "HIV specifically destroys CD4+ helper T-cells which coordinate immune responses. Without T-helper cells, both humoral and cell-mediated immunity are severely compromised, leading to immunosuppression.",
+      "difficulty": "MEDIUM",
+      "topic": "AIDS",
+      "ncertPage": 137,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oncogenes are:",
+      "options": [
+        "Genes that prevent cancer",
+        "Mutated proto-oncogenes that cause cancer",
+        "Normal cell division genes",
+        "Genes for apoptosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oncogenes are mutated or overexpressed forms of proto-oncogenes that promote cancer development. They stimulate uncontrolled cell proliferation. Examples: ras, myc, src.",
+      "difficulty": "MEDIUM",
+      "topic": "Cancer",
+      "ncertPage": 140,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

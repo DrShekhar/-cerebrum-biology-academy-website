@@ -1,0 +1,912 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 6,
+  "ncertChapterName": "Anatomy of Flowering Plants",
+  "questions": [
+    {
+      "question": "Study of internal structure of plants is called:",
+      "options": ["Morphology", "Anatomy", "Physiology", "Cytology"],
+      "correctAnswer": "B",
+      "explanation": "Study of internal structure of plants is called anatomy. (NCERT Page 71)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 71,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three types of tissue systems in plants are:",
+      "options": [
+        "Meristematic, permanent and secretory",
+        "Epidermal, ground and vascular",
+        "Simple, complex and special",
+        "Parenchyma, collenchyma and sclerenchyma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "On the basis of structure and location, there are three types of tissue systems - epidermal, ground (fundamental) and vascular (conducting). (NCERT Page 71)",
+      "difficulty": "EASY",
+      "topic": "The Tissue System",
+      "ncertPage": 71,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The epidermal tissue system comprises:",
+      "options": [
+        "Xylem and phloem",
+        "Parenchyma and collenchyma",
+        "Epidermal cells, stomata and epidermal appendages",
+        "Cortex and pith"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The epidermal tissue system forms the outermost covering and comprises epidermal cells, stomata and the epidermal appendages - trichomes and hairs. (NCERT Page 71)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 71,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The epidermis is usually:",
+      "options": ["Multi-layered", "Single-layered", "Double-layered", "Absent"],
+      "correctAnswer": "B",
+      "explanation": "Epidermis is usually single-layered. It is made up of elongated, compactly arranged cells which form a continuous layer. (NCERT Page 71-72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The waxy thick layer on the outside of epidermis is called:",
+      "options": ["Suberin", "Cuticle", "Lignin", "Pectin"],
+      "correctAnswer": "B",
+      "explanation": "The outside of the epidermis is often covered with a waxy thick layer called the cuticle which prevents the loss of water. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cuticle is absent in:",
+      "options": ["Stems", "Leaves", "Roots", "Flowers"],
+      "correctAnswer": "C",
+      "explanation": "Cuticle is absent in roots. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stomata regulate:",
+      "options": [
+        "Food storage only",
+        "Transpiration and gaseous exchange",
+        "Water absorption only",
+        "Mineral transport only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Stomata are structures present in the epidermis of leaves. Stomata regulate the process of transpiration and gaseous exchange. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each stoma is composed of two:",
+      "options": ["Subsidiary cells", "Epidermal cells", "Guard cells", "Mesophyll cells"],
+      "correctAnswer": "C",
+      "explanation": "Each stoma is composed of two bean-shaped cells known as guard cells which enclose stomatal pore. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In grasses, the guard cells are:",
+      "options": ["Bean-shaped", "Dumb-bell shaped", "Oval-shaped", "Spindle-shaped"],
+      "correctAnswer": "B",
+      "explanation": "In grasses, the guard cells are dumb-bell shaped. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The inner walls of guard cells (towards stomatal pore) are:",
+      "options": ["Thin", "Highly thickened", "Absent", "Perforated"],
+      "correctAnswer": "B",
+      "explanation": "The outer walls of guard cells (away from stomatal pore) are thin and the inner walls (towards the stomatal pore) are highly thickened. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Guard cells possess:",
+      "options": ["Vacuoles only", "Chloroplasts", "No organelles", "Centrioles"],
+      "correctAnswer": "B",
+      "explanation": "The guard cells possess chloroplasts and regulate the opening and closing of stomata. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Specialized epidermal cells near guard cells are called:",
+      "options": ["Companion cells", "Subsidiary cells", "Accessory cells", "Border cells"],
+      "correctAnswer": "B",
+      "explanation": "Sometimes, a few epidermal cells in the vicinity of guard cells become specialized in shape and size and are known as subsidiary cells. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Stomatal apparatus includes:",
+      "options": [
+        "Guard cells only",
+        "Subsidiary cells only",
+        "Stomatal aperture, guard cells and subsidiary cells",
+        "Epidermal cells only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The stomatal aperture, guard cells and the surrounding subsidiary cells are together called stomatal apparatus. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Root hairs are:",
+      "options": [
+        "Multicellular",
+        "Unicellular elongations of epidermal cells",
+        "Modified guard cells",
+        "Specialized subsidiary cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The root hairs are unicellular elongations of the epidermal cells and help absorb water and minerals from the soil. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trichomes are epidermal hairs present on:",
+      "options": ["Roots", "Stem", "Root cap", "Endodermis"],
+      "correctAnswer": "B",
+      "explanation": "On the stem the epidermal hairs are called trichomes. The trichomes in the shoot system are usually multicellular. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Trichomes help in:",
+      "options": [
+        "Water absorption",
+        "Preventing water loss due to transpiration",
+        "Photosynthesis",
+        "Food storage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The trichomes help in preventing water loss due to transpiration. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Epidermal Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ground tissue consists of:",
+      "options": [
+        "Xylem and phloem only",
+        "Epidermis only",
+        "All tissues except epidermis and vascular bundles",
+        "Vascular bundles only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All tissues except epidermis and vascular bundles constitute the ground tissue. (NCERT Page 72)",
+      "difficulty": "MEDIUM",
+      "topic": "Ground Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ground tissue includes:",
+      "options": [
+        "Only complex tissues",
+        "Simple tissues such as parenchyma, collenchyma and sclerenchyma",
+        "Only xylem",
+        "Only phloem"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ground tissue consists of simple tissues such as parenchyma, collenchyma and sclerenchyma. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Ground Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In leaves, the ground tissue containing chloroplasts is called:",
+      "options": ["Cortex", "Pith", "Mesophyll", "Pericycle"],
+      "correctAnswer": "C",
+      "explanation": "In leaves, the ground tissue consists of thin-walled chloroplast containing cells and is called mesophyll. (NCERT Page 72)",
+      "difficulty": "EASY",
+      "topic": "Ground Tissue System",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vascular system consists of:",
+      "options": [
+        "Epidermis and cortex",
+        "Phloem and xylem",
+        "Parenchyma and sclerenchyma",
+        "Pith and medullary rays"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vascular system consists of complex tissues, the phloem and the xylem. (NCERT Page 73)",
+      "difficulty": "EASY",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dicotyledonous stems, cambium is present:",
+      "options": ["In cortex", "Between phloem and xylem", "In pith", "In epidermis"],
+      "correctAnswer": "B",
+      "explanation": "In dicotyledonous stems, cambium is present between phloem and xylem. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vascular bundles with cambium that can form secondary tissues are called:",
+      "options": ["Closed", "Open", "Radial", "Collateral"],
+      "correctAnswer": "B",
+      "explanation": "Vascular bundles with cambium possess the ability to form secondary xylem and phloem tissues, and hence are called open vascular bundles. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocotyledons, vascular bundles are:",
+      "options": ["Open", "Closed", "Radial", "Scattered and open"],
+      "correctAnswer": "B",
+      "explanation": "In monocotyledons, vascular bundles have no cambium present in them. Hence, since they do not form secondary tissues they are referred to as closed. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Radial arrangement of vascular bundles is found in:",
+      "options": ["Stems", "Leaves", "Roots", "Flowers"],
+      "correctAnswer": "C",
+      "explanation": "When xylem and phloem within a vascular bundle are arranged in an alternate manner along different radii, the arrangement is called radial such as in roots. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In conjoint vascular bundles:",
+      "options": [
+        "Xylem and phloem are on different radii",
+        "Xylem and phloem are on same radius",
+        "Only xylem is present",
+        "Only phloem is present"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In conjoint type of vascular bundles, the xylem and phloem are jointly situated along the same radius of vascular bundles. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Conjoint vascular bundles are common in:",
+      "options": ["Roots only", "Stems and leaves", "Root hairs", "Flowers only"],
+      "correctAnswer": "B",
+      "explanation": "Conjoint vascular bundles are common in stems and leaves. The conjoint vascular bundles usually have phloem located only on the outer side of xylem. (NCERT Page 73)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 73,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The outermost layer of dicot root is called:",
+      "options": ["Epidermis", "Epiblema", "Cortex", "Endodermis"],
+      "correctAnswer": "B",
+      "explanation": "In dicot root, the outermost layer is epiblema. Many of the cells of epiblema protrude in the form of unicellular root hairs. (NCERT Page 73)",
+      "difficulty": "EASY",
+      "topic": "Dicot Root",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cortex of dicot root consists of:",
+      "options": [
+        "Sclerenchyma cells",
+        "Collenchyma cells",
+        "Several layers of thin-walled parenchyma cells",
+        "Only stone cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cortex consists of several layers of thin-walled parenchyma cells with intercellular spaces. (NCERT Page 73-74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The innermost layer of cortex in root is:",
+      "options": ["Pericycle", "Endodermis", "Epiblema", "Stele"],
+      "correctAnswer": "B",
+      "explanation": "The innermost layer of the cortex is called endodermis. It comprises a single layer of barrel-shaped cells without any intercellular spaces. (NCERT Page 74)",
+      "difficulty": "EASY",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The water-impermeable, waxy material deposited on endodermal cell walls is:",
+      "options": ["Cutin", "Suberin", "Lignin", "Pectin"],
+      "correctAnswer": "B",
+      "explanation": "The tangential as well as radial walls of the endodermal cells have a deposition of water-impermeable, waxy material suberin in the form of casparian strips. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Casparian strips are found in:",
+      "options": ["Epidermis", "Cortex", "Endodermis", "Pith"],
+      "correctAnswer": "C",
+      "explanation": "The walls of endodermal cells have a deposition of suberin in the form of casparian strips. (NCERT Page 74)",
+      "difficulty": "EASY",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pericycle in roots is involved in:",
+      "options": [
+        "Photosynthesis",
+        "Initiation of lateral roots and vascular cambium",
+        "Water absorption",
+        "Food storage only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Next to endodermis lies pericycle. Initiation of lateral roots and vascular cambium during the secondary growth takes place in these cells. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dicot root, the number of xylem and phloem patches is usually:",
+      "options": ["More than six", "Two to four", "Only one", "More than ten"],
+      "correctAnswer": "B",
+      "explanation": "There are usually two to four xylem and phloem patches in dicot root. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Parenchymatous cells between xylem and phloem in root are called:",
+      "options": ["Pericycle", "Conjunctive tissue", "Medullary rays", "Cortex"],
+      "correctAnswer": "B",
+      "explanation": "The parenchymatous cells which lie between the xylem and the phloem are called conjunctive tissue. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "All tissues on the inner side of endodermis constitute:",
+      "options": ["Cortex", "Stele", "Ground tissue", "Epidermal system"],
+      "correctAnswer": "B",
+      "explanation": "All tissues on the innerside of the endodermis such as pericycle, vascular bundles and pith constitute the stele. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocot root, the number of xylem bundles is usually:",
+      "options": ["Two to four", "More than six (polyarch)", "Only one", "Exactly five"],
+      "correctAnswer": "B",
+      "explanation": "As compared to dicot root which have fewer xylem bundles, there are usually more than six (polyarch) xylem bundles in the monocot root. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pith in monocot root is:",
+      "options": [
+        "Small or inconspicuous",
+        "Large and well developed",
+        "Absent",
+        "Made of sclerenchyma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pith is large and well developed in monocot root. (NCERT Page 74)",
+      "difficulty": "EASY",
+      "topic": "Monocot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secondary growth in monocot roots:",
+      "options": [
+        "Occurs normally",
+        "Does not occur",
+        "Occurs only in older roots",
+        "Occurs in all roots"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Monocotyledonous roots do not undergo any secondary growth. (NCERT Page 74)",
+      "difficulty": "EASY",
+      "topic": "Monocot Root",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dicot stem, the outermost layer is:",
+      "options": ["Cortex", "Hypodermis", "Epidermis", "Pericycle"],
+      "correctAnswer": "C",
+      "explanation": "The epidermis is the outermost protective layer of the dicot stem. (NCERT Page 74-75)",
+      "difficulty": "EASY",
+      "topic": "Dicot Stem",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The collenchymatous cells just below epidermis in dicot stem constitute:",
+      "options": ["Cortex", "Hypodermis", "Pericycle", "Starch sheath"],
+      "correctAnswer": "B",
+      "explanation": "The outer hypodermis consists of a few layers of collenchymatous cells just below the epidermis, which provide mechanical strength to the young stem. (NCERT Page 75)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The endodermis of dicot stem is also called:",
+      "options": ["Bundle sheath", "Starch sheath", "Casparian strip", "Pericycle"],
+      "correctAnswer": "B",
+      "explanation": "The cells of the endodermis are rich in starch grains and the layer is also referred to as the starch sheath. (NCERT Page 75)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dicot stem, pericycle is present as:",
+      "options": [
+        "Continuous ring",
+        "Semi-lunar patches of sclerenchyma",
+        "Layer of parenchyma",
+        "Single cell layer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pericycle is present on the inner side of the endodermis and above the phloem in the form of semi-lunar patches of sclerenchyma. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Medullary rays in dicot stem consist of:",
+      "options": [
+        "Sclerenchyma cells",
+        "Collenchyma cells",
+        "Radially placed parenchymatous cells",
+        "Xylem vessels"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In between the vascular bundles there are a few layers of radially placed parenchymatous cells, which constitute medullary rays. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In dicot stem, vascular bundles are arranged in:",
+      "options": ["Scattered manner", "A ring", "Central position", "Random pattern"],
+      "correctAnswer": "B",
+      "explanation": "A large number of vascular bundles are arranged in a ring; the 'ring' arrangement of vascular bundles is a characteristic of dicot stem. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vascular bundles in dicot stem are:",
+      "options": [
+        "Radial and closed",
+        "Conjoint, open, with endarch protoxylem",
+        "Closed and scattered",
+        "Radial and open"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Each vascular bundle in dicot stem is conjoint, open, and with endarch protoxylem. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The central portion of dicot stem is occupied by:",
+      "options": ["Vascular bundles", "Cortex", "Pith", "Medullary rays"],
+      "correctAnswer": "C",
+      "explanation": "A large number of rounded, parenchymatous cells with large intercellular spaces which occupy the central portion of the stem constitute the pith. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hypodermis in monocot stem is:",
+      "options": ["Collenchymatous", "Sclerenchymatous", "Parenchymatous", "Absent"],
+      "correctAnswer": "B",
+      "explanation": "The monocot stem has a sclerenchymatous hypodermis. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocot stem, vascular bundles are:",
+      "options": [
+        "Arranged in a ring",
+        "Large number and scattered",
+        "Only in the center",
+        "Absent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The monocot stem has a large number of scattered vascular bundles, each surrounded by a sclerenchymatous bundle sheath. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each vascular bundle in monocot stem is surrounded by:",
+      "options": [
+        "Parenchymatous bundle sheath",
+        "Sclerenchymatous bundle sheath",
+        "Collenchymatous bundle sheath",
+        "No bundle sheath"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In monocot stem, vascular bundles are each surrounded by a sclerenchymatous bundle sheath. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vascular bundles in monocot stem are:",
+      "options": [
+        "Conjoint and open",
+        "Conjoint and closed",
+        "Radial and open",
+        "Radial and closed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Vascular bundles in monocot stem are conjoint and closed. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocot stem, phloem parenchyma is:",
+      "options": ["Present", "Absent", "Well developed", "Modified into sieve tubes"],
+      "correctAnswer": "B",
+      "explanation": "In monocot stem, the phloem parenchyma is absent, and water-containing cavities are present within the vascular bundles. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Peripheral vascular bundles in monocot stem are generally:",
+      "options": [
+        "Larger than central ones",
+        "Smaller than central ones",
+        "Same size as central ones",
+        "Absent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peripheral vascular bundles are generally smaller than the centrally located ones. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Stem",
+      "ncertPage": 76,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Dicotyledonous leaf is also called:",
+      "options": ["Isobilateral leaf", "Dorsiventral leaf", "Unifacial leaf", "Bilateral leaf"],
+      "correctAnswer": "B",
+      "explanation": "Dicotyledonous leaf is also called dorsiventral leaf. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The three main parts of dorsiventral leaf are:",
+      "options": [
+        "Cuticle, cortex and pith",
+        "Epidermis, mesophyll and vascular system",
+        "Xylem, phloem and cambium",
+        "Upper, middle and lower layers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vertical section of a dorsiventral leaf shows three main parts: epidermis, mesophyll and vascular system. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dicot leaf, the upper surface epidermis is called:",
+      "options": ["Abaxial epidermis", "Adaxial epidermis", "Mesophyll", "Bundle sheath"],
+      "correctAnswer": "B",
+      "explanation": "The epidermis covers both the upper surface (adaxial epidermis) and lower surface (abaxial epidermis) of the leaf. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In dorsiventral leaf, more stomata are present on:",
+      "options": ["Adaxial epidermis", "Abaxial epidermis", "Both surfaces equally", "Mesophyll"],
+      "correctAnswer": "B",
+      "explanation": "The abaxial epidermis generally bears more stomata than the adaxial epidermis. The latter may even lack stomata. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The tissue between upper and lower epidermis of leaf is called:",
+      "options": ["Cortex", "Pith", "Mesophyll", "Stele"],
+      "correctAnswer": "C",
+      "explanation": "The tissue between the upper and the lower epidermis is called the mesophyll. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mesophyll carries out:",
+      "options": ["Water absorption", "Photosynthesis", "Transpiration only", "Storage only"],
+      "correctAnswer": "B",
+      "explanation": "Mesophyll, which possesses chloroplasts and carry out photosynthesis, is made up of parenchyma. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The two types of mesophyll cells in dicot leaf are:",
+      "options": [
+        "Spongy and compact",
+        "Palisade parenchyma and spongy parenchyma",
+        "Upper and lower parenchyma",
+        "Thin and thick walled cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mesophyll has two types of cells - the palisade parenchyma and the spongy parenchyma. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Dicot Leaf",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Palisade parenchyma is located:",
+      "options": [
+        "On the abaxial side",
+        "On the adaxial side",
+        "In the middle",
+        "Surrounding vascular bundles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The adaxially placed palisade parenchyma is made up of elongated cells, which are arranged vertically and parallel to each other. (NCERT Page 76-77)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Spongy parenchyma cells are:",
+      "options": [
+        "Elongated and compactly arranged",
+        "Oval or round and loosely arranged",
+        "Cylindrical with no spaces",
+        "Square-shaped"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The oval or round and loosely arranged spongy parenchyma is situated below the palisade cells and extends to the lower epidermis. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vascular bundles in leaf are surrounded by:",
+      "options": ["Pericycle", "Bundle sheath cells", "Endodermis", "Cortex"],
+      "correctAnswer": "B",
+      "explanation": "The vascular bundles are surrounded by a layer of thick walled bundle sheath cells. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Monocotyledonous leaf is also called:",
+      "options": ["Dorsiventral leaf", "Isobilateral leaf", "Unifacial leaf", "Bifacial leaf"],
+      "correctAnswer": "B",
+      "explanation": "Monocotyledonous leaf is also called isobilateral leaf. (NCERT Page 77)",
+      "difficulty": "EASY",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In isobilateral leaf, stomata are present on:",
+      "options": [
+        "Upper surface only",
+        "Lower surface only",
+        "Both surfaces of epidermis",
+        "Neither surface"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In an isobilateral leaf, the stomata are present on both the surfaces of the epidermis. (NCERT Page 77)",
+      "difficulty": "EASY",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocot leaf, mesophyll is:",
+      "options": [
+        "Differentiated into palisade and spongy",
+        "Not differentiated into palisade and spongy",
+        "Absent",
+        "Made of sclerenchyma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In isobilateral leaf, the mesophyll is not differentiated into palisade and spongy parenchyma. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bulliform cells are found in:",
+      "options": ["Dicot leaves", "Grass leaves", "Dicot stems", "Monocot roots"],
+      "correctAnswer": "B",
+      "explanation": "In grasses, certain adaxial epidermal cells along the veins modify themselves into large, empty, colourless cells called bulliform cells. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bulliform cells help in:",
+      "options": [
+        "Photosynthesis",
+        "Water absorption",
+        "Rolling of leaves to minimize water loss",
+        "Food storage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When bulliform cells are flaccid due to water stress, they make the leaves curl inwards to minimise water loss. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When bulliform cells are turgid:",
+      "options": [
+        "Leaf curls inward",
+        "Leaf surface is exposed",
+        "Leaf falls off",
+        "Stomata close"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When the bulliform cells in the leaves have absorbed water and are turgid, the leaf surface is exposed. (NCERT Page 77)",
+      "difficulty": "MEDIUM",
+      "topic": "Monocot Leaf",
+      "ncertPage": 77,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which is NOT a characteristic of dicot root?",
+      "options": [
+        "Epiblema as outermost layer",
+        "2-4 xylem bundles",
+        "Pith is large and well developed",
+        "Casparian strips in endodermis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In dicot root, the pith is small or inconspicuous. Large and well developed pith is characteristic of monocot root. (NCERT Page 74)",
+      "difficulty": "MEDIUM",
+      "topic": "Comparative Anatomy",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ring arrangement of vascular bundles is characteristic of:",
+      "options": ["Monocot stem", "Dicot stem", "Monocot root", "Dicot root"],
+      "correctAnswer": "B",
+      "explanation": "The 'ring' arrangement of vascular bundles is a characteristic of dicot stem. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Comparative Anatomy",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Scattered vascular bundles are characteristic of:",
+      "options": ["Dicot stem", "Monocot stem", "Dicot root", "Monocot root"],
+      "correctAnswer": "B",
+      "explanation": "The monocot stem has a large number of scattered vascular bundles. (NCERT Page 76)",
+      "difficulty": "EASY",
+      "topic": "Comparative Anatomy",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which tissue provides mechanical strength to young dicot stem?",
+      "options": [
+        "Parenchyma of cortex",
+        "Collenchyma of hypodermis",
+        "Sclerenchyma of pith",
+        "Xylem vessels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The outer hypodermis consists of collenchymatous cells which provide mechanical strength to the young stem. (NCERT Page 75)",
+      "difficulty": "MEDIUM",
+      "topic": "Dicot Stem",
+      "ncertPage": 75,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Endarch protoxylem means:",
+      "options": [
+        "Protoxylem towards periphery",
+        "Protoxylem towards center (pith)",
+        "Protoxylem absent",
+        "Only metaxylem present"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Endarch protoxylem means protoxylem lies towards the centre (pith) and metaxylem towards the periphery, as seen in dicot stem. (NCERT Page 76)",
+      "difficulty": "MEDIUM",
+      "topic": "Vascular Tissue System",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secondary growth occurs in:",
+      "options": [
+        "Monocot stem only",
+        "Most dicot roots and stems",
+        "Monocot root only",
+        "All plant parts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The secondary growth occurs in most of the dicotyledonous roots and stems. (NCERT Page 77)",
+      "difficulty": "EASY",
+      "topic": "Comparative Anatomy",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

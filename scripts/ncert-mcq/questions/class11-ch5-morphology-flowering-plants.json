@@ -1,0 +1,1082 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 5,
+  "ncertChapterName": "Morphology of Flowering Plants",
+  "questions": [
+    {
+      "question": "Tap root system is found in:",
+      "options": ["Wheat", "Mustard", "Grass", "Maize"],
+      "correctAnswer": "B",
+      "explanation": "In majority of dicotyledonous plants like mustard, the direct elongation of the radicle leads to formation of primary root which with its branches constitutes the tap root system. (NCERT Page 57)",
+      "difficulty": "EASY",
+      "topic": "The Root",
+      "ncertPage": 57,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The fibrous root system is characteristic of:",
+      "options": ["Monocotyledonous plants", "Dicotyledonous plants", "Gymnosperms", "Bryophytes"],
+      "correctAnswer": "A",
+      "explanation": "In monocotyledonous plants, the primary root is short lived and is replaced by a large number of roots that originate from base of stem, constituting the fibrous root system. (NCERT Page 58)",
+      "difficulty": "EASY",
+      "topic": "The Root",
+      "ncertPage": 58,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adventitious roots arise from:",
+      "options": ["Radicle", "Parts of plant other than radicle", "Primary root", "Secondary root"],
+      "correctAnswer": "B",
+      "explanation": "In some plants like grass, Monstera and banyan tree, roots arise from parts of the plant other than the radicle and are called adventitious roots. (NCERT Page 58)",
+      "difficulty": "MEDIUM",
+      "topic": "The Root",
+      "ncertPage": 58,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The root cap protects the:",
+      "options": [
+        "Region of maturation",
+        "Region of elongation",
+        "Tender apex of root",
+        "Root hairs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The root is covered at the apex by a thimble-like structure called root cap. It protects the tender apex of the root as it makes its way through the soil. (NCERT Page 59)",
+      "difficulty": "EASY",
+      "topic": "The Root",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Root hairs are formed in the:",
+      "options": [
+        "Region of meristematic activity",
+        "Region of elongation",
+        "Root cap",
+        "Region of maturation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "From the region of maturation, some epidermal cells form very fine and delicate, thread-like structures called root hairs which absorb water and minerals. (NCERT Page 59)",
+      "difficulty": "MEDIUM",
+      "topic": "The Root",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cells responsible for growth of root in length are present in:",
+      "options": ["Root cap", "Region of elongation", "Region of maturation", "Root hair zone"],
+      "correctAnswer": "B",
+      "explanation": "The cells proximal to region of meristematic activity undergo rapid elongation and enlargement and are responsible for growth of root in length. This is called region of elongation. (NCERT Page 59)",
+      "difficulty": "MEDIUM",
+      "topic": "The Root",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The main functions of root system include all EXCEPT:",
+      "options": [
+        "Absorption of water",
+        "Photosynthesis",
+        "Storage of food",
+        "Synthesis of plant growth regulators"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Main functions of root system are absorption of water and minerals, providing anchorage, storing reserve food material and synthesis of plant growth regulators. Photosynthesis is done by leaves. (NCERT Page 58)",
+      "difficulty": "EASY",
+      "topic": "The Root",
+      "ncertPage": 58,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The stem develops from:",
+      "options": ["Radicle", "Plumule", "Cotyledon", "Endosperm"],
+      "correctAnswer": "B",
+      "explanation": "The stem is the ascending part of the axis bearing branches, leaves, flowers and fruits. It develops from the plumule of the embryo of a germinating seed. (NCERT Page 59)",
+      "difficulty": "EASY",
+      "topic": "The Stem",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The region of stem where leaves are borne is called:",
+      "options": ["Internode", "Node", "Axil", "Bud"],
+      "correctAnswer": "B",
+      "explanation": "The stem bears nodes and internodes. The region of the stem where leaves are borne are called nodes while internodes are the portions between two nodes. (NCERT Page 59)",
+      "difficulty": "EASY",
+      "topic": "The Stem",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The portion between two consecutive nodes on a stem is called:",
+      "options": ["Node", "Axil", "Internode", "Bud"],
+      "correctAnswer": "C",
+      "explanation": "Internodes are the portions between two nodes on the stem. (NCERT Page 59)",
+      "difficulty": "EASY",
+      "topic": "The Stem",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A bud present in the axil of a leaf is called:",
+      "options": ["Terminal bud", "Axillary bud", "Adventitious bud", "Floral bud"],
+      "correctAnswer": "B",
+      "explanation": "The leaf develops at the node and bears a bud in its axil. The axillary bud later develops into a branch. (NCERT Page 59)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Leaves originate from:",
+      "options": [
+        "Root apical meristem",
+        "Shoot apical meristem",
+        "Lateral meristem",
+        "Intercalary meristem"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Leaves originate from shoot apical meristems and are arranged in an acropetal order. (NCERT Page 59)",
+      "difficulty": "MEDIUM",
+      "topic": "The Leaf",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three main parts of a typical leaf are:",
+      "options": [
+        "Blade, margin, apex",
+        "Leaf base, petiole, lamina",
+        "Stipule, midrib, veinlet",
+        "Node, internode, bud"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A typical leaf consists of three main parts: leaf base, petiole and lamina. (NCERT Page 60)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The swollen leaf base in leguminous plants is called:",
+      "options": ["Stipule", "Pulvinus", "Sheath", "Rachis"],
+      "correctAnswer": "B",
+      "explanation": "In some leguminous plants the leaf base may become swollen, which is called the pulvinus. (NCERT Page 60)",
+      "difficulty": "MEDIUM",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The green expanded part of the leaf is called:",
+      "options": ["Petiole", "Stipule", "Lamina", "Leaf base"],
+      "correctAnswer": "C",
+      "explanation": "The lamina or the leaf blade is the green expanded part of the leaf with veins and veinlets. (NCERT Page 60)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When veinlets form a network, the venation is termed as:",
+      "options": ["Parallel", "Reticulate", "Pinnate", "Palmate"],
+      "correctAnswer": "B",
+      "explanation": "When the veinlets form a network, the venation is termed as reticulate. (NCERT Page 60)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Parallel venation is characteristic of:",
+      "options": [
+        "Dicotyledonous plants",
+        "Monocotyledonous plants",
+        "Gymnosperms",
+        "Pteridophytes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Leaves of dicotyledonous plants generally possess reticulate venation, while parallel venation is the characteristic of most monocotyledons. (NCERT Page 60)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A leaf with incisions not reaching the midrib is called:",
+      "options": ["Compound leaf", "Simple leaf", "Pinnate leaf", "Palmate leaf"],
+      "correctAnswer": "B",
+      "explanation": "A leaf is said to be simple when its lamina is entire or when incised, the incisions do not touch the midrib. (NCERT Page 60)",
+      "difficulty": "MEDIUM",
+      "topic": "The Leaf",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In pinnately compound leaf, leaflets are present on:",
+      "options": ["Tip of petiole", "Rachis", "Lamina", "Leaf base"],
+      "correctAnswer": "B",
+      "explanation": "In a pinnately compound leaf, a number of leaflets are present on a common axis, the rachis, which represents the midrib of the leaf as in neem. (NCERT Page 60-61)",
+      "difficulty": "MEDIUM",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In palmately compound leaf, leaflets are attached at:",
+      "options": ["Rachis", "Common point at tip of petiole", "Leaf base", "Midrib"],
+      "correctAnswer": "B",
+      "explanation": "In palmately compound leaves, the leaflets are attached at a common point, i.e., at the tip of petiole, as in silk cotton. (NCERT Page 61)",
+      "difficulty": "MEDIUM",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Neem has which type of compound leaf?",
+      "options": ["Palmately compound", "Pinnately compound", "Simple", "Bipinnate"],
+      "correctAnswer": "B",
+      "explanation": "In a pinnately compound leaf, a number of leaflets are present on a common axis (rachis) as in neem. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Silk cotton has which type of compound leaf?",
+      "options": ["Pinnately compound", "Simple", "Palmately compound", "Unifoliate"],
+      "correctAnswer": "C",
+      "explanation": "In palmately compound leaves, the leaflets are attached at a common point at the tip of petiole, as in silk cotton. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Phyllotaxy refers to:",
+      "options": [
+        "Arrangement of flowers on floral axis",
+        "Pattern of arrangement of leaves on stem",
+        "Arrangement of sepals in bud",
+        "Arrangement of petals in bud"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phyllotaxy is the pattern of arrangement of leaves on the stem or branch. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In alternate phyllotaxy:",
+      "options": [
+        "Two leaves arise at each node",
+        "More than two leaves arise at each node",
+        "A single leaf arises at each node alternately",
+        "Leaves are absent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In alternate type of phyllotaxy, a single leaf arises at each node in alternate manner, as in china rose, mustard and sunflower plants. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Opposite phyllotaxy is seen in:",
+      "options": ["China rose", "Sunflower", "Calotropis", "Alstonia"],
+      "correctAnswer": "C",
+      "explanation": "In opposite type, a pair of leaves arise at each node and lie opposite to each other as in Calotropis and guava plants. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Whorled phyllotaxy is found in:",
+      "options": ["China rose", "Mustard", "Guava", "Alstonia"],
+      "correctAnswer": "D",
+      "explanation": "If more than two leaves arise at a node and form a whorl, it is called whorled, as in Alstonia. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Leaf",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The arrangement of flowers on the floral axis is called:",
+      "options": ["Phyllotaxy", "Inflorescence", "Aestivation", "Placentation"],
+      "correctAnswer": "B",
+      "explanation": "The arrangement of flowers on the floral axis is termed as inflorescence. (NCERT Page 61)",
+      "difficulty": "EASY",
+      "topic": "The Inflorescence",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In racemose inflorescence:",
+      "options": [
+        "Main axis terminates in a flower",
+        "Main axis continues to grow",
+        "Flowers are borne in basipetal order",
+        "Growth is limited"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In racemose type of inflorescence, the main axis continues to grow and flowers are borne laterally in an acropetal succession. (NCERT Page 61)",
+      "difficulty": "MEDIUM",
+      "topic": "The Inflorescence",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In cymose inflorescence, flowers are borne in:",
+      "options": ["Acropetal succession", "Basipetal order", "Random order", "Spiral order"],
+      "correctAnswer": "B",
+      "explanation": "In cymose type of inflorescence, the main axis terminates in a flower, hence is limited in growth. The flowers are borne in a basipetal order. (NCERT Page 61)",
+      "difficulty": "MEDIUM",
+      "topic": "The Inflorescence",
+      "ncertPage": 61,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The swollen end of pedicel on which floral whorls are arranged is called:",
+      "options": ["Calyx", "Corolla", "Thalamus", "Gynoecium"],
+      "correctAnswer": "C",
+      "explanation": "A typical flower has four different kinds of whorls arranged successively on the swollen end of the stalk or pedicel, called thalamus or receptacle. (NCERT Page 62)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The four whorls of a typical flower in sequence from outside to inside are:",
+      "options": [
+        "Corolla, calyx, gynoecium, androecium",
+        "Calyx, corolla, androecium, gynoecium",
+        "Androecium, gynoecium, calyx, corolla",
+        "Gynoecium, androecium, corolla, calyx"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A typical flower has four whorls: calyx, corolla, androecium and gynoecium arranged successively on the thalamus. (NCERT Page 62)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which are accessory organs in a flower?",
+      "options": [
+        "Androecium and gynoecium",
+        "Calyx and corolla",
+        "Calyx and androecium",
+        "Corolla and gynoecium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Calyx and corolla are accessory organs, while androecium and gynoecium are reproductive organs. (NCERT Page 62)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When calyx and corolla are not distinct, they are termed as:",
+      "options": ["Sepal", "Petal", "Perianth", "Bract"],
+      "correctAnswer": "C",
+      "explanation": "In some flowers like lily, the calyx and corolla are not distinct and are termed as perianth. (NCERT Page 62)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A flower having both androecium and gynoecium is called:",
+      "options": ["Unisexual", "Bisexual", "Incomplete", "Naked"],
+      "correctAnswer": "B",
+      "explanation": "When a flower has both androecium and gynoecium, it is bisexual. A flower having either only stamens or only carpels is unisexual. (NCERT Page 62)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A flower that can be divided into two equal halves in any radial plane is:",
+      "options": ["Zygomorphic", "Asymmetric", "Actinomorphic", "Irregular"],
+      "correctAnswer": "C",
+      "explanation": "When a flower can be divided into two equal radial halves in any radial plane passing through the centre, it is said to be actinomorphic, e.g., mustard, datura, chilli. (NCERT Page 62)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Zygomorphic flowers can be divided into two equal halves:",
+      "options": [
+        "In any plane",
+        "Only in one particular vertical plane",
+        "Cannot be divided into equal halves",
+        "In horizontal plane only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a flower can be divided into two similar halves only in one particular vertical plane, it is zygomorphic, e.g., pea, gulmohur, bean. (NCERT Page 62)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An example of asymmetric flower is:",
+      "options": ["Mustard", "Pea", "Canna", "Datura"],
+      "correctAnswer": "C",
+      "explanation": "A flower is asymmetric (irregular) if it cannot be divided into two similar halves by any vertical plane passing through the centre, as in canna. (NCERT Page 62)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Trimerous flowers have floral appendages in multiples of:",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "B",
+      "explanation": "A flower may be trimerous, tetramerous or pentamerous when the floral appendages are in multiple of 3, 4 or 5, respectively. (NCERT Page 62)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Flowers with bracts are called:",
+      "options": ["Ebracteate", "Bracteate", "Incomplete", "Naked"],
+      "correctAnswer": "B",
+      "explanation": "Flowers with bracts (reduced leaf found at base of pedicel) are called bracteate and those without bracts, ebracteate. (NCERT Page 62)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In hypogynous flower, the ovary is:",
+      "options": ["Inferior", "Half inferior", "Superior", "Absent"],
+      "correctAnswer": "C",
+      "explanation": "In the hypogynous flower, the gynoecium occupies the highest position while other parts are below it. The ovary is said to be superior, e.g., mustard, china rose. (NCERT Page 63)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In perigynous flowers, the ovary is:",
+      "options": ["Superior", "Inferior", "Half inferior", "Absent"],
+      "correctAnswer": "C",
+      "explanation": "In perigynous flowers, gynoecium is situated in centre and other parts are located on rim of thalamus at same level. The ovary is said to be half inferior, e.g., plum, rose, peach. (NCERT Page 63)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In epigynous flowers, the ovary is:",
+      "options": ["Superior", "Half inferior", "Inferior", "Absent"],
+      "correctAnswer": "C",
+      "explanation": "In epigynous flowers, the margin of thalamus grows upward enclosing ovary completely and fusing with it. The ovary is said to be inferior as in guava, cucumber. (NCERT Page 63)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The outermost whorl of flower is:",
+      "options": ["Corolla", "Androecium", "Gynoecium", "Calyx"],
+      "correctAnswer": "D",
+      "explanation": "The calyx is the outermost whorl of the flower and the members are called sepals. (NCERT Page 63)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sepals are generally:",
+      "options": [
+        "Brightly coloured",
+        "Green and leaf-like",
+        "Absent",
+        "Modified into nectar glands"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Generally, sepals are green, leaf like and protect the flower in the bud stage. (NCERT Page 63)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When sepals are united, the calyx is called:",
+      "options": ["Polysepalous", "Gamosepalous", "Polypetalous", "Gamopetalous"],
+      "correctAnswer": "B",
+      "explanation": "The calyx may be gamosepalous (sepals united) or polysepalous (sepals free). (NCERT Page 63)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Petals are usually brightly coloured to:",
+      "options": [
+        "Protect the flower",
+        "Store food",
+        "Attract insects for pollination",
+        "Synthesize food"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Corolla is composed of petals. Petals are usually brightly coloured to attract insects for pollination. (NCERT Page 63)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The mode of arrangement of sepals or petals in floral bud is called:",
+      "options": ["Phyllotaxy", "Placentation", "Aestivation", "Vernation"],
+      "correctAnswer": "C",
+      "explanation": "The mode of arrangement of sepals or petals in floral bud with respect to other members of same whorl is known as aestivation. (NCERT Page 63)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In valvate aestivation, sepals or petals:",
+      "options": [
+        "Overlap each other",
+        "Touch at margin without overlapping",
+        "Are completely free",
+        "Are fused"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When sepals or petals in a whorl just touch one another at the margin, without overlapping, as in Calotropis, it is said to be valvate. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Twisted aestivation is found in:",
+      "options": ["Calotropis", "China rose", "Cassia", "Pea"],
+      "correctAnswer": "B",
+      "explanation": "If one margin of appendage overlaps that of the next one and so on as in china rose, lady's finger and cotton, it is called twisted. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Imbricate aestivation is seen in:",
+      "options": ["Calotropis", "China rose", "Cassia", "Pea"],
+      "correctAnswer": "C",
+      "explanation": "If the margins of sepals or petals overlap one another but not in any particular direction as in Cassia and gulmohur, the aestivation is called imbricate. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vexillary aestivation is characteristic of:",
+      "options": ["Solanaceae", "Brassicaceae", "Fabaceae (pea family)", "Asteraceae"],
+      "correctAnswer": "C",
+      "explanation": "In pea and bean flowers, the largest (standard) overlaps lateral petals (wings) which overlap two smallest anterior petals (keel); this is vexillary or papilionaceous aestivation. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each stamen consists of:",
+      "options": ["Stigma and style", "Filament and anther", "Ovary and ovule", "Petal and sepal"],
+      "correctAnswer": "B",
+      "explanation": "Each stamen which represents the male reproductive organ consists of a stalk or a filament and an anther. (NCERT Page 64)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pollen grains are produced in:",
+      "options": ["Filament", "Pollen-sacs", "Style", "Stigma"],
+      "correctAnswer": "B",
+      "explanation": "Each anther is usually bilobed and each lobe has two chambers, the pollen-sacs. The pollen grains are produced in pollen-sacs. (NCERT Page 64)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A sterile stamen is called:",
+      "options": ["Staminode", "Carpel", "Pistillode", "Filament"],
+      "correctAnswer": "A",
+      "explanation": "A sterile stamen is called staminode. (NCERT Page 64)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When stamens are attached to petals, they are called:",
+      "options": ["Epiphyllous", "Epipetalous", "Polyandrous", "Monoadelphous"],
+      "correctAnswer": "B",
+      "explanation": "When stamens are attached to the petals, they are epipetalous as in brinjal, or epiphyllous when attached to the perianth as in lily. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stamens united into one bundle are called:",
+      "options": ["Diadelphous", "Polyadelphous", "Monoadelphous", "Polyandrous"],
+      "correctAnswer": "C",
+      "explanation": "The stamens may be united into one bunch or one bundle (monoadelphous) as in china rose, or two bundles (diadelphous) as in pea. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diadelphous condition of stamens is seen in:",
+      "options": ["China rose", "Citrus", "Pea", "Lily"],
+      "correctAnswer": "C",
+      "explanation": "The stamens may be united into one bundle (monoadelphous) as in china rose, or two bundles (diadelphous) as in pea. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Polyadelphous stamens are found in:",
+      "options": ["China rose", "Pea", "Citrus", "Lily"],
+      "correctAnswer": "C",
+      "explanation": "Stamens united into more than two bundles (polyadelphous) are found in citrus. (NCERT Page 64)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 64,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The female reproductive part of flower is:",
+      "options": ["Androecium", "Gynoecium", "Corolla", "Calyx"],
+      "correctAnswer": "B",
+      "explanation": "Gynoecium is the female reproductive part of the flower and is made up of one or more carpels. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A carpel consists of:",
+      "options": [
+        "Filament and anther",
+        "Stigma, style and ovary",
+        "Sepal and petal",
+        "Thalamus and pedicel"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A carpel consists of three parts namely stigma, style and ovary. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The receptive surface for pollen grains is:",
+      "options": ["Style", "Ovary", "Stigma", "Placenta"],
+      "correctAnswer": "C",
+      "explanation": "The stigma is usually at the tip of the style and is the receptive surface for pollen grains. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When carpels are free, they are called:",
+      "options": ["Syncarpous", "Apocarpous", "Monocarpellary", "Bicarpellary"],
+      "correctAnswer": "B",
+      "explanation": "When more than one carpel is present, they may be free (as in lotus and rose) and are called apocarpous. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Syncarpous gynoecium is found in:",
+      "options": ["Lotus", "Rose", "Mustard", "Ranunculus"],
+      "correctAnswer": "C",
+      "explanation": "Carpels are termed syncarpous when they are fused, as in mustard and tomato. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The arrangement of ovules within ovary is called:",
+      "options": ["Aestivation", "Phyllotaxy", "Placentation", "Venation"],
+      "correctAnswer": "C",
+      "explanation": "The arrangement of ovules within the ovary is known as placentation. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In marginal placentation, ovules are borne:",
+      "options": [
+        "On central axis",
+        "On inner wall of ovary",
+        "Along ventral suture forming two rows",
+        "At base of ovary"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In marginal placentation, the placenta forms a ridge along the ventral suture of the ovary and the ovules are borne on this ridge forming two rows, as in pea. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Axile placentation is found in:",
+      "options": ["Pea", "Mustard", "Sunflower", "China rose"],
+      "correctAnswer": "D",
+      "explanation": "When the placenta is axial and ovules are attached to it in a multilocular ovary, the placentation is axile, as in china rose, tomato and lemon. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Parietal placentation is seen in:",
+      "options": ["Pea", "China rose", "Mustard", "Sunflower"],
+      "correctAnswer": "C",
+      "explanation": "In parietal placentation, ovules develop on inner wall of ovary or peripheral part, e.g., mustard and Argemone. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Free central placentation is found in:",
+      "options": ["Pea", "Mustard", "Dianthus", "Sunflower"],
+      "correctAnswer": "C",
+      "explanation": "When ovules are borne on central axis and septa are absent, as in Dianthus and Primrose, the placentation is called free central. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Basal placentation is seen in:",
+      "options": ["Pea", "Sunflower", "China rose", "Mustard"],
+      "correctAnswer": "B",
+      "explanation": "In basal placentation, the placenta develops at the base of ovary and a single ovule is attached to it, as in sunflower, marigold. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Flower",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A mature or ripened ovary developed after fertilisation is called:",
+      "options": ["Seed", "Fruit", "Embryo", "Endosperm"],
+      "correctAnswer": "B",
+      "explanation": "The fruit is a mature or ripened ovary, developed after fertilisation. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Fruit",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A fruit formed without fertilisation is called:",
+      "options": ["True fruit", "Parthenocarpic fruit", "False fruit", "Aggregate fruit"],
+      "correctAnswer": "B",
+      "explanation": "If a fruit is formed without fertilisation of the ovary, it is called a parthenocarpic fruit. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Fruit",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The wall of fruit is called:",
+      "options": ["Seed coat", "Pericarp", "Endosperm", "Testa"],
+      "correctAnswer": "B",
+      "explanation": "Generally, the fruit consists of a wall or pericarp and seeds. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Fruit",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The three layers of fleshy pericarp from outside to inside are:",
+      "options": [
+        "Testa, tegmen, endosperm",
+        "Epicarp, mesocarp, endocarp",
+        "Exocarp, mesocarp, seed coat",
+        "Epicarp, endosperm, embryo"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When pericarp is thick and fleshy, it is differentiated into the outer epicarp, the middle mesocarp and the inner endocarp. (NCERT Page 65)",
+      "difficulty": "MEDIUM",
+      "topic": "The Fruit",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mango and coconut fruits are examples of:",
+      "options": ["Berry", "Drupe", "Pome", "Capsule"],
+      "correctAnswer": "B",
+      "explanation": "In mango and coconut, the fruit is known as a drupe. They develop from monocarpellary superior ovaries and are one seeded. (NCERT Page 65)",
+      "difficulty": "EASY",
+      "topic": "The Fruit",
+      "ncertPage": 65,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In mango, the edible part is:",
+      "options": ["Epicarp", "Mesocarp", "Endocarp", "Seed"],
+      "correctAnswer": "B",
+      "explanation": "In mango, the pericarp is differentiated into an outer thin epicarp, a middle fleshy edible mesocarp and an inner stony hard endocarp. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Fruit",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In coconut, the mesocarp is:",
+      "options": ["Fleshy and edible", "Fibrous", "Stony hard", "Membranous"],
+      "correctAnswer": "B",
+      "explanation": "In coconut which is also a drupe, the mesocarp is fibrous. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Fruit",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The seed develops from:",
+      "options": ["Ovary", "Ovule", "Pollen", "Anther"],
+      "correctAnswer": "B",
+      "explanation": "The ovules after fertilisation develop into seeds. A seed is made up of a seed coat and an embryo. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The two layers of seed coat are:",
+      "options": [
+        "Epicarp and endocarp",
+        "Testa and tegmen",
+        "Hilum and micropyle",
+        "Plumule and radicle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The outermost covering of a seed is the seed coat. The seed coat has two layers, the outer testa and the inner tegmen. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The scar on seed coat through which developing seed was attached to fruit is:",
+      "options": ["Micropyle", "Hilum", "Raphe", "Chalaza"],
+      "correctAnswer": "B",
+      "explanation": "The hilum is a scar on the seed coat through which the developing seeds were attached to the fruit. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The small pore above the hilum is called:",
+      "options": ["Raphe", "Chalaza", "Micropyle", "Funicle"],
+      "correctAnswer": "C",
+      "explanation": "Above the hilum is a small pore called the micropyle. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The embryo of a dicotyledonous seed consists of:",
+      "options": [
+        "Radicle only",
+        "Plumule only",
+        "Embryonal axis and two cotyledons",
+        "Scutellum and coleoptile"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Within the seed coat is the embryo, consisting of an embryonal axis and two cotyledons. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Seeds with endosperm are called:",
+      "options": ["Non-endospermic", "Exalbuminous", "Endospermic", "Albuminous"],
+      "correctAnswer": "C",
+      "explanation": "In some seeds such as castor, the endosperm formed as a result of double fertilisation is a food storing tissue and called endospermic seeds. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Non-endospermic seeds are found in:",
+      "options": ["Castor", "Maize", "Bean and pea", "Wheat"],
+      "correctAnswer": "C",
+      "explanation": "In plants such as bean, gram and pea, the endosperm is not present in mature seeds and such seeds are called non-endospermic. (NCERT Page 66)",
+      "difficulty": "EASY",
+      "topic": "The Seed",
+      "ncertPage": 66,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In monocot seeds, the proteinous layer separating embryo from endosperm is:",
+      "options": ["Scutellum", "Coleoptile", "Aleurone layer", "Coleorhiza"],
+      "correctAnswer": "C",
+      "explanation": "The outer covering of endosperm separates the embryo by a proteinous layer called aleurone layer. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "The Seed",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The shield-shaped cotyledon in monocot seed is called:",
+      "options": ["Coleoptile", "Coleorhiza", "Scutellum", "Aleurone"],
+      "correctAnswer": "C",
+      "explanation": "The embryo consists of one large and shield shaped cotyledon known as scutellum and a short axis with a plumule and a radicle. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "The Seed",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sheath enclosing plumule in monocot seed is:",
+      "options": ["Coleorhiza", "Scutellum", "Coleoptile", "Aleurone layer"],
+      "correctAnswer": "C",
+      "explanation": "The plumule and radicle are enclosed in sheaths which are called coleoptile and coleorhiza respectively. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "The Seed",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sheath enclosing radicle in monocot seed is:",
+      "options": ["Coleoptile", "Coleorhiza", "Scutellum", "Tegmen"],
+      "correctAnswer": "B",
+      "explanation": "The plumule and radicle are enclosed in sheaths which are called coleoptile and coleorhiza respectively. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "The Seed",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In floral formula, 'K' stands for:",
+      "options": ["Corolla", "Calyx", "Carpel", "Androecium"],
+      "correctAnswer": "B",
+      "explanation": "In the floral formula, K stands for calyx, C for corolla, P for perianth, A for androecium and G for gynoecium. (NCERT Page 67)",
+      "difficulty": "EASY",
+      "topic": "Floral Formula",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In floral formula, superior ovary is represented by:",
+      "options": ["G with line below", "G with line above", "G without any line", "G with circle"],
+      "correctAnswer": "A",
+      "explanation": "G with line below represents superior ovary and G with line above represents inferior ovary. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "Floral Formula",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The symbol for actinomorphic flower is:",
+      "options": ["⊕", "%", "♂", "♀"],
+      "correctAnswer": "A",
+      "explanation": "In floral formula, ⊕ represents actinomorphic and % represents zygomorphic nature of flower. (NCERT Page 67)",
+      "difficulty": "MEDIUM",
+      "topic": "Floral Formula",
+      "ncertPage": 67,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Solanaceae is commonly called:",
+      "options": ["Rose family", "Mustard family", "Potato family", "Pea family"],
+      "correctAnswer": "C",
+      "explanation": "Solanaceae is a large family, commonly called as the 'potato family'. (NCERT Page 68)",
+      "difficulty": "EASY",
+      "topic": "Solanaceae",
+      "ncertPage": 68,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Underground stem in Solanaceae is found in:",
+      "options": ["Tomato", "Brinjal", "Potato", "Chilli"],
+      "correctAnswer": "C",
+      "explanation": "Underground stem in potato (Solanum tuberosum) is a characteristic of this family. (NCERT Page 68)",
+      "difficulty": "EASY",
+      "topic": "Solanaceae",
+      "ncertPage": 68,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The number of stamens in Solanaceae flowers is:",
+      "options": ["Three", "Four", "Five", "Six"],
+      "correctAnswer": "C",
+      "explanation": "Androecium in Solanaceae has five stamens which are epipetalous. (NCERT Page 69)",
+      "difficulty": "EASY",
+      "topic": "Solanaceae",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The fruit type in Solanaceae is:",
+      "options": ["Drupe or pome", "Berry or capsule", "Legume or pod", "Caryopsis or cypsela"],
+      "correctAnswer": "B",
+      "explanation": "Fruits in Solanaceae are berry or capsule. (NCERT Page 69)",
+      "difficulty": "MEDIUM",
+      "topic": "Solanaceae",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gynoecium in Solanaceae is:",
+      "options": [
+        "Monocarpellary",
+        "Bicarpellary syncarpous",
+        "Tricarpellary apocarpous",
+        "Pentacarpellary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gynoecium in Solanaceae is bicarpellary obligately placed, syncarpous with superior ovary. (NCERT Page 69)",
+      "difficulty": "MEDIUM",
+      "topic": "Solanaceae",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which plant belongs to Solanaceae and is used as fumigatory?",
+      "options": ["Tomato", "Tobacco", "Potato", "Brinjal"],
+      "correctAnswer": "B",
+      "explanation": "Many plants belonging to Solanaceae are source of fumigatory (tobacco), food (tomato, brinjal, potato), spice (chilli). (NCERT Page 69)",
+      "difficulty": "EASY",
+      "topic": "Solanaceae",
+      "ncertPage": 69,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Petunia belongs to family:",
+      "options": ["Fabaceae", "Brassicaceae", "Solanaceae", "Asteraceae"],
+      "correctAnswer": "C",
+      "explanation": "Petunia is an ornamental plant belonging to family Solanaceae. (NCERT Page 69)",
+      "difficulty": "EASY",
+      "topic": "Solanaceae",
+      "ncertPage": 69,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

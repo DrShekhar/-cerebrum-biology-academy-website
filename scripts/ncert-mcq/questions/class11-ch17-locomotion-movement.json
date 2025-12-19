@@ -1,0 +1,1082 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 17,
+  "ncertChapterName": "Locomotion and Movement",
+  "questions": [
+    {
+      "question": "Which type of movement is exhibited by macrophages and leucocytes?",
+      "options": [
+        "Ciliary movement",
+        "Amoeboid movement",
+        "Muscular movement",
+        "Flagellar movement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Macrophages and leucocytes in blood exhibit amoeboid movement, which involves streaming of protoplasm. This is also seen in Amoeba and cytoskeletal elements like microfilaments are involved in this movement. (NCERT Page 217)",
+      "difficulty": "EASY",
+      "topic": "Types of Movement",
+      "ncertPage": 217,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ciliary movement occurs in which of the following?",
+      "options": [
+        "Skeletal muscle fibers",
+        "Internal organs lined by ciliated epithelium",
+        "Blood vessels",
+        "Cardiac muscle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ciliary movement occurs in most of our internal tubular organs which are lined by ciliated epithelium. The coordinated movements of cilia in the trachea help us in removing dust particles and some foreign substances inhaled along with the atmospheric air. (NCERT Page 217)",
+      "difficulty": "EASY",
+      "topic": "Types of Movement",
+      "ncertPage": 217,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Movement of cilia and flagella is effected by which cytoskeletal element?",
+      "options": ["Microfilaments", "Intermediate filaments", "Microtubules", "Keratin fibers"],
+      "correctAnswer": "C",
+      "explanation": "Passage of ova through the female reproductive tract is facilitated by ciliary movement. Microtubules are the cytoskeletal elements involved in ciliary and flagellar movement. (NCERT Page 217)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Movement",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of skeletal muscle?",
+      "options": [
+        "Striated appearance",
+        "Voluntary control",
+        "Multinucleated cells",
+        "Involuntary control"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Skeletal muscles are closely associated with the skeletal components of the body and are primarily involved in locomotion and other voluntary movements. They are striated (have striations), multinucleated, and under voluntary control, NOT involuntary. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Muscle Types",
+      "ncertPage": 218,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Visceral muscles are found in which of the following locations?",
+      "options": [
+        "Attached to bones",
+        "Inner walls of hollow visceral organs",
+        "Heart wall",
+        "Limbs only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Visceral muscles are located in the inner walls of hollow visceral organs of the body like the alimentary canal, reproductive tract, etc. They do not exhibit striations and hence are called smooth muscles or non-striated muscles. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Muscle Types",
+      "ncertPage": 218,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which muscle type shows characteristics of both striated and smooth muscles?",
+      "options": ["Skeletal muscle", "Visceral muscle", "Cardiac muscle", "Voluntary muscle"],
+      "correctAnswer": "C",
+      "explanation": "Cardiac muscle is the muscle of the heart. Many cardiac muscle cells assemble in a branching pattern to form a cardiac muscle. Cardiac muscles are striated like skeletal muscles but their activity is involuntary like visceral muscles. (NCERT Page 218)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Types",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cell junctions that fuse the plasma membranes of cardiac muscle cells and allow cells to contract as a unit are called:",
+      "options": ["Tight junctions", "Gap junctions", "Intercalated discs", "Desmosomes"],
+      "correctAnswer": "C",
+      "explanation": "The cell junctions called intercalated discs fuse the plasma membranes of cardiac muscle cells and make them stick together. Intercalated discs allow the cells to contract as a unit, i.e., when one cell receives a signal to contract, its neighbours are also stimulated to contract. (NCERT Page 218)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Types",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each muscle fiber in a skeletal muscle is lined by which membrane?",
+      "options": ["Sarcolemma", "Sarcoplasm", "Endomysium", "Perimysium"],
+      "correctAnswer": "A",
+      "explanation": "Each organised skeletal muscle in our body is made of a number of muscle bundles or fascicles held together by a common collagenous connective tissue layer called fascia. Each muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Muscle Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cytoplasm of a muscle fiber is called:",
+      "options": ["Sarcolemma", "Sarcoplasm", "Myofibril", "Myofilament"],
+      "correctAnswer": "B",
+      "explanation": "Each muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm (cytoplasm). Sarcoplasm contains multiple nuclei and parallely arranged myofibrils. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Muscle Structure",
+      "ncertPage": 218,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sarcoplasmic reticulum in muscle fibers is a modified form of:",
+      "options": ["Golgi apparatus", "Mitochondria", "Endoplasmic reticulum", "Ribosomes"],
+      "correctAnswer": "C",
+      "explanation": "Muscle fibre is a syncitium as the sarcoplasm contains many nuclei. The endoplasmic reticulum (ER) of muscle fibers, i.e., sarcoplasmic reticulum, is the store house of calcium ions. (NCERT Page 218)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The functional unit of muscle contraction is:",
+      "options": ["Myofibril", "Muscle fiber", "Sarcomere", "Myofilament"],
+      "correctAnswer": "C",
+      "explanation": "Each myofibril has alternate dark and light bands on it. A portion of the myofibril between two successive 'Z' lines is considered as the functional unit of contraction called a sarcomere. (NCERT Page 218-219)",
+      "difficulty": "EASY",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The light bands in a myofibril are called:",
+      "options": ["A-bands or anisotropic bands", "I-bands or isotropic bands", "H-zone", "M-line"],
+      "correctAnswer": "B",
+      "explanation": "The light bands contain actin and are called I-bands or Isotropic bands, whereas the dark bands called 'A' or Anisotropic bands contain myosin. Both these proteins are arranged as rod-like structures, parallel to each other and also to the longitudinal axis of the myofibrils. (NCERT Page 218)",
+      "difficulty": "MEDIUM",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The dark bands in striated muscle are called:",
+      "options": ["I-bands", "A-bands", "Z-lines", "H-zone"],
+      "correctAnswer": "B",
+      "explanation": "The dark bands are called 'A' bands or Anisotropic bands and they contain myosin proteins. The light bands contain actin and are called I-bands or Isotropic bands. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which protein is primarily found in the I-bands of a sarcomere?",
+      "options": ["Myosin", "Actin", "Tropomyosin", "Troponin"],
+      "correctAnswer": "B",
+      "explanation": "The light bands contain actin and are called I-bands or Isotropic bands. Actin filaments are thinner as compared to myosin filaments, hence are commonly called thin filaments. (NCERT Page 218)",
+      "difficulty": "EASY",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "What is the elastic fiber that runs through the center of each 'I' band and attaches to the 'Z' line?",
+      "options": ["Myosin", "Actin", "Meromyosin", "Elastic fiber mentioned in I-band"],
+      "correctAnswer": "D",
+      "explanation": "An elastic fibre called 'Z' line bisects each 'I' band. The thin filaments are firmly attached to the 'Z' line. The central part of thick filament, not overlapped by thin filaments is called the 'H' zone. (NCERT Page 218-219)",
+      "difficulty": "HARD",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The central part of the A-band not overlapped by thin filaments is called:",
+      "options": ["I-band", "Z-line", "H-zone", "M-line"],
+      "correctAnswer": "C",
+      "explanation": "The central part of the thick filament, that is not overlapped by thin filaments, is called the 'H' zone. The 'A' and 'I' bands are arranged alternately throughout the length of the myofibrils. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Actin filaments are also known as:",
+      "options": ["Thick filaments", "Thin filaments", "Intermediate filaments", "Z-filaments"],
+      "correctAnswer": "B",
+      "explanation": "Actin filaments are thinner as compared to the myosin filaments, hence are commonly called thin filaments. Thick filaments contain myosin while thin filaments contain actin, tropomyosin and troponin. (NCERT Page 219)",
+      "difficulty": "EASY",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Each actin (thin) filament is made of:",
+      "options": [
+        "One 'F' actin and one regulatory protein",
+        "Two 'F' actins and one regulatory protein",
+        "Two 'F' actins and two types of regulatory proteins",
+        "Three 'F' actins and three regulatory proteins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Each actin (thin) filament is made of two 'F' (filamentous) actins helically wound to each other. Each 'F' actin is a polymer of monomeric 'G' (Globular) actins. Two filaments of another protein, tropomyosin also run close to the 'F' actins throughout its length. A complex protein Troponin is distributed at regular intervals on the tropomyosin. (NCERT Page 219)",
+      "difficulty": "HARD",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "'F' actin is a polymer of:",
+      "options": ["Tropomyosin", "Troponin", "G (Globular) actin", "Meromyosin"],
+      "correctAnswer": "C",
+      "explanation": "Each 'F' actin is a polymer of monomeric 'G' (Globular) actins. Two 'F' actins are helically wound to each other to form each actin (thin) filament. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Troponin is distributed at regular intervals on which protein?",
+      "options": ["Actin", "Myosin", "Tropomyosin", "Meromyosin"],
+      "correctAnswer": "C",
+      "explanation": "Two filaments of tropomyosin run close to the 'F' actins throughout its length. A complex protein Troponin is distributed at regular intervals on the tropomyosin. In the resting state a subunit of troponin masks the active binding sites for myosin on the actin filaments. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each myosin (thick) filament is a polymerised protein of:",
+      "options": [
+        "Globular actin molecules",
+        "Meromyosin molecules",
+        "Tropomyosin molecules",
+        "Troponin molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Each myosin (thick) filament is also a polymerised protein. Many monomeric proteins called Meromyosins constitute one thick filament. Each meromyosin has two important parts, a globular head with a short arm and a tail. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The globular head of meromyosin is called:",
+      "options": ["Light meromyosin (LMM)", "Heavy meromyosin (HMM)", "Cross arm", "F-actin"],
+      "correctAnswer": "B",
+      "explanation": "Each meromyosin has two important parts, a globular head with a short arm and a tail. The tail of both is called Light Meromyosin (LMM). The globular head with the short arm forms the Heavy Meromyosin (HMM). (NCERT Page 219)",
+      "difficulty": "HARD",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which part of the myosin molecule contains the binding sites for ATP?",
+      "options": [
+        "Light meromyosin (LMM)",
+        "The tail portion",
+        "Heavy meromyosin (HMM) globular head",
+        "Tropomyosin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The HMM component, i.e., the head and short arm projects outwards at regular distance and angle from each other from the surface of a polymerised myosin filament and is known as cross arm. The globular head is an active ATPase enzyme and has binding sites for ATP and active sites for actin. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During muscle contraction, which of the following ions is released from the sarcoplasmic reticulum?",
+      "options": ["Sodium ions", "Potassium ions", "Calcium ions", "Magnesium ions"],
+      "correctAnswer": "C",
+      "explanation": "The sarcoplasmic reticulum releases calcium ions into the sarcoplasm when neural signal reaches muscle fiber. The spread of stimulus to T-tubules causes the release of calcium ions into the sarcoplasm. (NCERT Page 219-220)",
+      "difficulty": "EASY",
+      "topic": "Muscle Contraction",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the resting state, the active binding sites for myosin on actin filaments are masked by:",
+      "options": ["Tropomyosin", "Meromyosin", "A subunit of troponin", "Calcium ions"],
+      "correctAnswer": "C",
+      "explanation": "In the resting state, a subunit of troponin masks the active binding sites for myosin on the actin filaments. When calcium ions bind to troponin, the masking is removed and active sites are exposed for myosin binding. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "What happens when calcium ions bind to troponin during muscle contraction?",
+      "options": [
+        "ATP is hydrolyzed",
+        "Active sites for myosin on actin are exposed",
+        "Sarcomere lengthens",
+        "H-zone becomes wider"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Increase in Ca++ level leads to the binding of calcium with a subunit of troponin on actin filaments and thereby remove the masking of active sites for myosin. The active sites are now exposed. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cross bridges between actin and myosin pull the thin filaments towards the:",
+      "options": ["Z-line", "H-zone", "Centre of 'A' band", "I-band"],
+      "correctAnswer": "C",
+      "explanation": "The actin filaments are pulled towards the centre of 'A' band by the cross bridges formed between myosin heads and actin. The 'Z' line attached to these actins are also pulled inwards thereby causing shortening of the sarcomere, i.e., contraction. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During muscle contraction, which of the following decreases in length?",
+      "options": ["A-band", "Myosin filament", "I-band", "Actin filament"],
+      "correctAnswer": "C",
+      "explanation": "During contraction, 'I' bands get reduced, whereas 'A' bands retain their original length. The 'Z' line attached to the actins is pulled inward causing shortening of the sarcomere. The length of individual filaments does not change. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which band retains its original length during muscle contraction?",
+      "options": ["I-band", "H-zone", "A-band", "Both I-band and H-zone"],
+      "correctAnswer": "C",
+      "explanation": "During contraction, 'I' bands get reduced whereas 'A' bands retain their original length. The A-band contains myosin which does not change in length, only the overlap between thick and thin filaments increases. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The repeated activation of cross bridges and pulling of thin filaments is called:",
+      "options": ["Tetanus", "Rigor mortis", "Ratchet mechanism", "Sliding filament theory"],
+      "correctAnswer": "C",
+      "explanation": "The process of cross bridge formation, tilting and release is repeated multiple times causing the actin filaments to slide over the myosin filaments towards the center of the 'A' band. This repeated process is called ratchet mechanism. (NCERT Page 220)",
+      "difficulty": "HARD",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During muscle relaxation, calcium ions are:",
+      "options": [
+        "Released from sarcoplasmic reticulum",
+        "Bound to troponin",
+        "Pumped back into sarcoplasmic reticulum",
+        "Transported out of the cell"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During muscle relaxation, Ca++ ions are pumped back to the sarcoplasmic reticulum which results in the masking of active sites in the actin. The Z-lines return to their original position and muscle gets relaxed. (NCERT Page 220)",
+      "difficulty": "EASY",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Muscle fatigue is caused by accumulation of:",
+      "options": ["Carbon dioxide", "Lactic acid", "Pyruvic acid", "Oxalic acid"],
+      "correctAnswer": "B",
+      "explanation": "Repeated activation of the muscles can lead to the accumulation of lactic acid due to anaerobic breakdown of glycogen in the muscles, causing fatigue. Under oxygen debt, muscles cannot sustain continuous contraction. (NCERT Page 220)",
+      "difficulty": "EASY",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A sustained contraction of muscle without relaxation is known as:",
+      "options": ["Muscle fatigue", "Tetany", "Muscle tone", "Twitch"],
+      "correctAnswer": "B",
+      "explanation": "A motor unit is a motor neuron along with the muscle fibres it innervates. The minimum strength of stimulus required to cause contraction is called threshold stimulus. Successive stimuli without allowing relaxation leads to tetany (sustained contraction). (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The protein that stores oxygen in muscle cells is:",
+      "options": ["Hemoglobin", "Myoglobin", "Actin", "Myosin"],
+      "correctAnswer": "B",
+      "explanation": "Red coloured muscle fibres contain red coloured oxygen storing pigment called myoglobin. The myoglobin content is high in red fibres and they depend on aerobic metabolism for sustained, less powerful contractions. (NCERT Page 220)",
+      "difficulty": "EASY",
+      "topic": "Muscle Types",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Red muscle fibers are adapted for:",
+      "options": [
+        "Quick, powerful contractions",
+        "Slow, sustained contractions",
+        "Anaerobic respiration only",
+        "Producing high levels of lactic acid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Red fibres contain plenty of myoglobin which stores oxygen. They also contain large number of mitochondria which can utilise the large amount of oxygen stored for aerobic respiration. Such muscles are called aerobic muscles and are adapted for slow, sustained contractions. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Types",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "White muscle fibers have:",
+      "options": [
+        "High myoglobin and many mitochondria",
+        "Low myoglobin and fewer mitochondria",
+        "High myoglobin and fewer mitochondria",
+        "Low myoglobin and many mitochondria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "White fibres have very less myoglobin content and hence are white or pale in colour. They depend on anaerobic process for energy and produce large amounts of lactic acid. They are adapted for quick, powerful contractions but fatigue quickly. (NCERT Page 220)",
+      "difficulty": "MEDIUM",
+      "topic": "Muscle Types",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The total number of bones in an adult human skeleton is:",
+      "options": ["206", "213", "300", "270"],
+      "correctAnswer": "A",
+      "explanation": "There are 206 bones in the adult human skeleton. The skeletal system includes the hard part of body and forms a framework that supports and protects soft organs. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a component of the axial skeleton?",
+      "options": ["Skull", "Vertebral column", "Pectoral girdle", "Sternum"],
+      "correctAnswer": "C",
+      "explanation": "The skeleton can be divided into two parts - Axial and Appendicular. The axial skeleton comprises 80 bones distributed along the main axis of the body: skull, vertebral column, sternum and ribs. The pectoral girdle is part of the appendicular skeleton. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The human skull is composed of how many bones?",
+      "options": ["14 bones", "22 bones", "26 bones", "29 bones"],
+      "correctAnswer": "B",
+      "explanation": "The skull is composed of two sets of bones - cranial and facial. The cranial bones are 8 in number forming the hard protective outer covering called brain box or cranium. The facial region has 14 skeletal elements which form the front part of the skull. Total = 8 + 14 = 22 bones. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many bones make up the cranium (brain box)?",
+      "options": ["6 bones", "8 bones", "14 bones", "22 bones"],
+      "correctAnswer": "B",
+      "explanation": "The cranial bones are 8 in number. They form the hard protective outer covering of the brain called brain box or cranium. The remaining 14 bones form the facial skeleton. (NCERT Page 221)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The only bone of the skull that is movable is the:",
+      "options": ["Maxilla", "Mandible", "Nasal bone", "Zygomatic bone"],
+      "correctAnswer": "B",
+      "explanation": "A single U-shaped bone called hyoid is present at the base of the buccal cavity. It is also included in the skull. Each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles. The lower jaw (mandible) is the only movable bone of the skull. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The number of vertebrae in the human vertebral column is:",
+      "options": ["24", "26", "33", "30"],
+      "correctAnswer": "B",
+      "explanation": "Our vertebral column is formed by 26 vertebrae serially arranged. They are differentiated into cervical (7), thoracic (12), lumbar (5), sacral (1 - fused) and coccygeal (1 - fused) regions starting from the skull. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many cervical vertebrae are present in humans?",
+      "options": ["5", "7", "12", "26"],
+      "correctAnswer": "B",
+      "explanation": "There are 7 cervical vertebrae in the neck region. The first vertebra is the atlas and the second is the axis. All mammals, from giraffes to mice, have 7 cervical vertebrae. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first cervical vertebra is called:",
+      "options": ["Axis", "Atlas", "Sacrum", "Coccyx"],
+      "correctAnswer": "B",
+      "explanation": "The first vertebra is the atlas and it articulates with the occipital condyles of the skull. The atlas allows nodding motion of the head. The second cervical vertebra is called axis. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "How many thoracic vertebrae are present in humans?",
+      "options": ["7", "5", "12", "26"],
+      "correctAnswer": "C",
+      "explanation": "There are 12 thoracic vertebrae in the chest region. Each thoracic vertebra articulates with a pair of ribs on the lateral sides. The thoracic vertebrae, along with ribs and sternum, form the thoracic cage. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many pairs of ribs are present in the human body?",
+      "options": ["7 pairs", "10 pairs", "12 pairs", "14 pairs"],
+      "correctAnswer": "C",
+      "explanation": "There are 12 pairs of ribs. Each rib is a thin flat bone connected dorsally to the vertebral column and ventrally to the sternum. They form the protective cage around thoracic organs. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "True ribs are:",
+      "options": [
+        "All 12 pairs of ribs",
+        "First 7 pairs",
+        "8th, 9th and 10th pairs",
+        "11th and 12th pairs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "True ribs are the first seven pairs of ribs that are attached directly to the sternum ventrally by their own costal cartilages. Bicephalic articulation is present at the dorsal end of each rib with the vertebral column. (NCERT Page 221)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "False ribs are:",
+      "options": [
+        "8th, 9th and 10th pairs",
+        "First 7 pairs",
+        "11th and 12th pairs",
+        "All ribs except the first pair"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The 8th, 9th and 10th pairs of ribs do not articulate directly with the sternum but join the seventh rib with the help of hyaline cartilage. These are called vertebrochondral (false) ribs. (NCERT Page 221)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Floating ribs are:",
+      "options": [
+        "First 7 pairs",
+        "8th, 9th and 10th pairs",
+        "11th and 12th pairs",
+        "All pairs of ribs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Last 2 pairs (11th and 12th) of ribs are not connected ventrally and are therefore called floating ribs. These ribs are attached only to the vertebral column at their dorsal ends. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sternum is a flat bone on the:",
+      "options": [
+        "Ventral side of thorax",
+        "Dorsal side of thorax",
+        "Lateral sides of thorax",
+        "Both dorsal and ventral sides"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The sternum is a flat bone on the ventral midline of thorax. Thoracic vertebrae, ribs and sternum together form the rib cage which protects the heart and lungs. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The appendicular skeleton consists of bones of:",
+      "options": [
+        "Skull and vertebral column",
+        "Ribs and sternum",
+        "Limbs and girdles",
+        "Vertebral column and ribs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The bones of the limbs along with their girdles constitute the appendicular skeleton. The appendicular skeleton includes pectoral girdle, upper limbs, pelvic girdle, and lower limbs. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Each half of the pectoral girdle consists of:",
+      "options": [
+        "Clavicle and scapula",
+        "Ilium, ischium and pubis",
+        "Humerus and radius",
+        "Femur and tibia"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The pectoral girdle consists of a clavicle and a scapula on each side. Scapula is a large triangular flat bone situated in the dorsal part of the thorax between the second and seventh ribs. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The clavicle is commonly called the:",
+      "options": ["Collar bone", "Shoulder blade", "Hip bone", "Breast bone"],
+      "correctAnswer": "A",
+      "explanation": "The clavicle is a long slender bone with two curvatures and is commonly called the collar bone. It articulates with the acromion process of the scapula and the sternum. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The depression in the scapula where the head of humerus articulates is called:",
+      "options": ["Glenoid cavity", "Acetabulum", "Olecranon fossa", "Obturator foramen"],
+      "correctAnswer": "A",
+      "explanation": "Scapula has a slightly elevated ridge called the spine which projects as a flat, expanded process called the acromion. Below the acromion is a depression called the glenoid cavity which articulates with the head of the humerus to form the shoulder joint. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The bone of the upper arm is:",
+      "options": ["Radius", "Ulna", "Humerus", "Femur"],
+      "correctAnswer": "C",
+      "explanation": "Each limb is made of 30 bones. The bones of the hand (Fore arm) are humerus (upper arm bone), radius and ulna (two bones of the forearm), carpals (wrist bones), metacarpals (palm bones) and phalanges (finger bones). (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "How many carpal bones are present in each wrist?",
+      "options": ["5", "7", "8", "14"],
+      "correctAnswer": "C",
+      "explanation": "The wrist contains 8 carpal bones arranged in two rows of four each. These articulate with the radius and ulna proximally and with the metacarpals distally. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pelvic girdle consists of which three bones fused together?",
+      "options": [
+        "Ilium, ischium and pubis",
+        "Clavicle, scapula and sternum",
+        "Humerus, radius and ulna",
+        "Femur, tibia and fibula"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The pelvic girdle consists of two coxal bones. Each coxal bone is formed by the fusion of three bones - ilium, ischium and pubis. At the point of fusion of the above bones is a cavity called acetabulum to which the thigh bone articulates. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The socket where the femur articulates with the pelvic girdle is called:",
+      "options": ["Acetabulum", "Glenoid cavity", "Obturator foramen", "Sacroiliac joint"],
+      "correctAnswer": "A",
+      "explanation": "The acetabulum is the cavity at the point of fusion of ilium, ischium and pubis on each coxal bone. The head of the femur articulates with the acetabulum to form the hip joint. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The thigh bone is called:",
+      "options": ["Femur", "Tibia", "Humerus", "Fibula"],
+      "correctAnswer": "A",
+      "explanation": "The bones of the leg are femur (thigh bone - the longest bone), tibia and fibula (two bones of the shank/lower leg), tarsals (ankle bones), metatarsals (sole bones) and phalanges (toe bones). (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The longest bone in the human body is:",
+      "options": ["Femur", "Tibia", "Humerus", "Fibula"],
+      "correctAnswer": "A",
+      "explanation": "The femur (thigh bone) is the longest bone in the human body. It articulates with the acetabulum of the pelvic girdle at its proximal end and with the tibia at its distal end. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many tarsal bones are present in each ankle?",
+      "options": ["7", "5", "8", "14"],
+      "correctAnswer": "A",
+      "explanation": "The ankle contains 7 tarsal bones. These include the calcaneus (heel bone), talus, and five smaller tarsals. They articulate with the tibia and fibula above and metatarsals below. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cup-shaped bone that covers the knee ventrally is called:",
+      "options": ["Patella", "Tibia", "Femur", "Fibula"],
+      "correctAnswer": "A",
+      "explanation": "A cup-shaped bone called patella covers the knee ventrally (knee cap). It is the largest sesamoid bone in the body and protects the anterior articular surface of the knee joint. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Joints which permit no movement are called:",
+      "options": [
+        "Fibrous joints",
+        "Synovial joints",
+        "Cartilaginous joints",
+        "Ball and socket joints"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Joints are points of contact between bones, or between bones and cartilages. Fibrous joints do not allow any movement because the bones are firmly bound together by dense connective tissue. Examples include sutures in the skull. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Joints",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sutures are an example of:",
+      "options": ["Fibrous joints", "Synovial joints", "Cartilaginous joints", "Pivot joints"],
+      "correctAnswer": "A",
+      "explanation": "Fibrous joints do not allow any movement. The skull bones are immovably joined together by fibrous joints called sutures. These joints have fibrous connective tissue between the bones. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Joints",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The joint between adjacent vertebrae is an example of:",
+      "options": ["Cartilaginous joint", "Fibrous joint", "Synovial joint", "Pivot joint"],
+      "correctAnswer": "A",
+      "explanation": "In cartilaginous joints, the bones involved are joined together with the help of cartilages. The joint between adjacent vertebrae in the vertebral column is an example of cartilaginous joint. Limited movement is possible. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Joints",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Synovial joints are characterised by the presence of:",
+      "options": [
+        "Fluid filled synovial cavity",
+        "Cartilage pad",
+        "Dense connective tissue",
+        "No movement"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Synovial joints are characterised by the presence of a fluid filled synovial cavity between the articulating surfaces of the two bones. Such joints allow considerable movement and include ball and socket, hinge, pivot, gliding, saddle and condyloid joints. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Joints",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The shoulder joint is an example of:",
+      "options": ["Ball and socket joint", "Pivot joint", "Hinge joint", "Gliding joint"],
+      "correctAnswer": "A",
+      "explanation": "Ball and socket joint is formed between the humerus and pectoral girdle (shoulder joint) and between femur and pelvic girdle (hip joint). It allows movement in all directions. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The elbow joint is an example of:",
+      "options": ["Hinge joint", "Ball and socket joint", "Pivot joint", "Gliding joint"],
+      "correctAnswer": "A",
+      "explanation": "Hinge joint allows movement in one plane only like the hinge of a door. The elbow joint and knee joint are examples of hinge joints. They allow flexion and extension movements only. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The joint between atlas and axis vertebrae is:",
+      "options": ["Pivot joint", "Hinge joint", "Ball and socket joint", "Gliding joint"],
+      "correctAnswer": "A",
+      "explanation": "Pivot joint is a joint in which one bone rotates around another. The joint between atlas and axis is a pivot joint that allows the rotation of the head from side to side. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gliding joints are found between:",
+      "options": ["Carpals", "Femur and tibia", "Humerus and scapula", "Atlas and axis"],
+      "correctAnswer": "A",
+      "explanation": "Gliding joint is a joint in which one bone glides over another. The joints between the carpals (wrist bones) and between the tarsals (ankle bones) are gliding joints. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Saddle joint is present between:",
+      "options": [
+        "Carpal and metacarpal of thumb",
+        "Atlas and axis",
+        "Femur and tibia",
+        "Humerus and ulna"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The saddle joint is a type of synovial joint that allows movement in two perpendicular axes. The classic example is the joint between the carpal and metacarpal of the thumb (carpometacarpal joint). (NCERT Page 223)",
+      "difficulty": "HARD",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An autoimmune disorder affecting neuromuscular junction leading to fatigue and weakness is:",
+      "options": ["Myasthenia gravis", "Muscular dystrophy", "Tetany", "Osteoporosis"],
+      "correctAnswer": "A",
+      "explanation": "Myasthenia gravis: Auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle. Antibodies attack acetylcholine receptors at neuromuscular junctions. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Muscular dystrophy is characterized by:",
+      "options": [
+        "Autoimmune attack on neuromuscular junctions",
+        "Uric acid accumulation in joints",
+        "Decreased calcium levels",
+        "Progressive degeneration of skeletal muscle"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Muscular dystrophy: Progressive degeneration of skeletal muscle mostly due to genetic disorders. It leads to muscle weakness and wasting. The most common type is Duchenne muscular dystrophy. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rapid spasms in muscle due to low Ca++ in body fluid is called:",
+      "options": ["Myasthenia gravis", "Muscular dystrophy", "Arthritis", "Tetany"],
+      "correctAnswer": "D",
+      "explanation": "Tetany: Rapid spasms (wild contractions) in muscle due to low Ca++ in body fluid. This occurs when calcium levels in blood fall below normal, often due to parathyroid dysfunction or vitamin D deficiency. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Inflammation of joints is called:",
+      "options": ["Osteoporosis", "Tetany", "Gout", "Arthritis"],
+      "correctAnswer": "D",
+      "explanation": "Arthritis: Inflammation of joints. There are different types including osteoarthritis (wear and tear of joint cartilage) and rheumatoid arthritis (autoimmune inflammation of joints). (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Age-related bone disorder involving decreased bone mass is:",
+      "options": ["Arthritis", "Gout", "Tetany", "Osteoporosis"],
+      "correctAnswer": "D",
+      "explanation": "Osteoporosis: Age-related disorder characterised by decreased bone mass and increased chances of fractures. Decreased levels of estrogen is a common cause. It is more common in post-menopausal women. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Accumulation of uric acid crystals in joints leads to:",
+      "options": ["Osteoporosis", "Arthritis", "Tetany", "Gout"],
+      "correctAnswer": "D",
+      "explanation": "Gout: Inflammation of joints due to accumulation of uric acid crystals. It typically affects the big toe first and is associated with purine-rich diet and metabolic disorders. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following correctly describes the 'Z' line in a sarcomere?",
+      "options": [
+        "It bisects the A-band",
+        "It contains only myosin",
+        "It is present in the center of H-zone",
+        "It bisects the I-band"
+      ],
+      "correctAnswer": "D",
+      "explanation": "An elastic fibre called 'Z' line bisects each 'I' band. The thin filaments (actin) are firmly attached to the 'Z' line. A portion of the myofibril between two successive 'Z' lines is considered as a sarcomere. (NCERT Page 218)",
+      "difficulty": "MEDIUM",
+      "topic": "Sarcomere Structure",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The axial skeleton comprises how many bones?",
+      "options": ["126 bones", "64 bones", "206 bones", "80 bones"],
+      "correctAnswer": "D",
+      "explanation": "The axial skeleton comprises 80 bones distributed along the main axis of the body. It includes skull (22), vertebral column (26), sternum (1), and ribs (24). The appendicular skeleton has 126 bones. (NCERT Page 221)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which structure allows communication between T-tubules and sarcoplasmic reticulum?",
+      "options": ["Z-line", "M-line", "Sarcolemma", "Triad"],
+      "correctAnswer": "D",
+      "explanation": "T-tubules are transverse tubules that are invaginations of the sarcolemma. They form triads with the terminal cisternae of sarcoplasmic reticulum, allowing the signal from nerve to trigger calcium release. (NCERT Page 219)",
+      "difficulty": "HARD",
+      "topic": "Muscle Structure",
+      "ncertPage": 219,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a function of the skeletal system?",
+      "options": [
+        "Support and protection",
+        "Movement",
+        "Storage of minerals",
+        "Production of hormones"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The skeletal system provides support, protection of vital organs, site for muscle attachment enabling movement, storage of calcium and phosphorus minerals, and production of blood cells (haemopoiesis). Hormone production is not a primary function. (NCERT Page 221)",
+      "difficulty": "MEDIUM",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During muscle contraction, the binding of myosin head to actin forms:",
+      "options": ["Z-line", "H-zone", "M-line", "Cross bridge"],
+      "correctAnswer": "D",
+      "explanation": "When calcium binds to troponin and active sites on actin are exposed, the myosin head binds to these sites to form a cross bridge. The cross bridge then rotates, pulling the actin filament toward the center of the sarcomere. (NCERT Page 220)",
+      "difficulty": "EASY",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is the correct sequence of events during muscle contraction?",
+      "options": [
+        "Ca++ release → cross bridge formation → ATP hydrolysis → sliding of filaments",
+        "ATP hydrolysis → Ca++ release → sliding of filaments → cross bridge formation",
+        "Cross bridge formation → Ca++ release → ATP hydrolysis → sliding of filaments",
+        "Ca++ release → exposure of active sites → cross bridge formation → sliding of filaments"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The sequence is: neural signal reaches muscle → Ca++ released from SR → Ca++ binds troponin → active sites on actin exposed → myosin heads bind actin (cross bridge) → ATP hydrolysis causes head rotation → thin filaments slide over thick filaments. (NCERT Page 220)",
+      "difficulty": "HARD",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ear ossicles are located in:",
+      "options": ["Inner ear", "Cochlea", "External ear", "Middle ear"],
+      "correctAnswer": "D",
+      "explanation": "Each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles. They transmit sound vibrations from the eardrum to the inner ear. They are the smallest bones in the human body. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pubic symphysis is an example of:",
+      "options": [
+        "Fibrous joint",
+        "Ball and socket joint",
+        "Synovial joint",
+        "Cartilaginous joint"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The pubic symphysis between the two pubic bones at the front of the pelvis is a cartilaginous joint. It contains a fibrocartilage disc and allows limited movement. During childbirth, this joint becomes more flexible. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Joints",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The protein that regulates muscle contraction by masking the binding sites on actin is:",
+      "options": ["Myosin", "Meromyosin", "Tropomyosin", "Troponin"],
+      "correctAnswer": "D",
+      "explanation": "In the resting state, a subunit of troponin masks the active binding sites for myosin on the actin filaments. When calcium ions bind to troponin, this masking is removed and active sites are exposed for cross bridge formation. (NCERT Page 219)",
+      "difficulty": "MEDIUM",
+      "topic": "Contractile Proteins",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following bones is NOT part of the appendicular skeleton?",
+      "options": ["Femur", "Scapula", "Radius", "Sternum"],
+      "correctAnswer": "D",
+      "explanation": "The sternum is part of the axial skeleton along with the skull, vertebral column, and ribs. The appendicular skeleton includes bones of the limbs (humerus, radius, ulna, femur, tibia, fibula, etc.) and their girdles (pectoral and pelvic). (NCERT Page 221-222)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "How many lumbar vertebrae are present in humans?",
+      "options": ["4", "7", "12", "5"],
+      "correctAnswer": "D",
+      "explanation": "There are 5 lumbar vertebrae in the lower back region. These are the largest vertebrae as they bear the weight of the upper body. The vertebral column has 7 cervical, 12 thoracic, 5 lumbar, 1 sacral (fused), and 1 coccygeal (fused). (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sliding filament theory of muscle contraction was proposed by:",
+      "options": [
+        "Watson and Crick",
+        "Morgan and Sturtevant",
+        "Sutton and Boveri",
+        "Huxley and Hanson"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The sliding filament theory was proposed by H.E. Huxley and J. Hanson in 1954. According to this theory, muscle contraction occurs by the sliding of thin filaments (actin) over thick filaments (myosin), without any change in their individual lengths. (NCERT Page 220)",
+      "difficulty": "HARD",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The condyloid joint allows movement in:",
+      "options": ["One axis", "No axis", "Three axes", "Two axes"],
+      "correctAnswer": "D",
+      "explanation": "The condyloid joint (also called ellipsoid joint) allows movement in two perpendicular axes (biaxial) - flexion/extension and abduction/adduction, but not rotation. Examples include the wrist joint between radius and carpals. (NCERT Page 223)",
+      "difficulty": "HARD",
+      "topic": "Joints",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is the smallest bone in the human body?",
+      "options": ["Patella", "Carpals", "Phalanges of little finger", "Stapes"],
+      "correctAnswer": "D",
+      "explanation": "The stapes (stirrup) is the smallest bone in the human body. It is one of the three ear ossicles in the middle ear, along with malleus (hammer) and incus (anvil). The stapes transmits vibrations to the inner ear. (NCERT Page 221)",
+      "difficulty": "EASY",
+      "topic": "Skeletal System",
+      "ncertPage": 221,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rigor mortis (stiffening of body after death) occurs due to:",
+      "options": [
+        "Accumulation of lactic acid",
+        "Muscle dehydration",
+        "Excess calcium release",
+        "Lack of ATP to release cross bridges"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Rigor mortis occurs because ATP is required to detach myosin heads from actin after the power stroke. After death, ATP synthesis stops, so the cross bridges cannot be released, causing muscles to remain in a contracted, stiff state. (NCERT Page 220)",
+      "difficulty": "HARD",
+      "topic": "Muscle Contraction",
+      "ncertPage": 220,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The obturator foramen is formed by:",
+      "options": [
+        "Ilium and sacrum",
+        "All three hip bones",
+        "Ilium and pubis",
+        "Pubis and ischium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The obturator foramen is a large aperture in the hip bone, formed between the pubis and ischium. It is the largest foramen in the human body and allows the passage of the obturator nerve and vessels. (NCERT Page 222)",
+      "difficulty": "HARD",
+      "topic": "Skeletal System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

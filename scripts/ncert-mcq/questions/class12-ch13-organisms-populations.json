@@ -1,0 +1,872 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 13,
+  "ncertChapterName": "Organisms and Populations",
+  "questions": [
+    {
+      "question": "Eurythermal organisms are those that:",
+      "options": [
+        "Tolerate wide range of temperatures",
+        "Live only in cold regions",
+        "Live only in hot regions",
+        "Tolerate narrow range of temperatures"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Eurythermal organisms can tolerate a wide range of temperatures. Example: many birds and mammals. 'Eury' means wide.",
+      "difficulty": "EASY",
+      "topic": "Temperature as Abiotic Factor",
+      "ncertPage": 194,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Birth rate (natality) is expressed as:",
+      "options": [
+        "Births per capita per unit time",
+        "Immigration rate",
+        "Emigration rate",
+        "Deaths per unit time"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Birth rate (natality) = Number of births / Time period. Per capita birth rate is births per individual per unit time (often expressed per 1000 individuals).",
+      "difficulty": "EASY",
+      "topic": "Population Attributes",
+      "ncertPage": 199,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Resource partitioning allows:",
+      "options": [
+        "Coexistence of competing species by using different resources",
+        "Predation",
+        "Parasitism",
+        "Competitive exclusion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Resource partitioning occurs when competing species evolve to use different resources or same resource differently, reducing competition and allowing coexistence.",
+      "difficulty": "MEDIUM",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mycorrhiza is mutualism between:",
+      "options": ["Fungus and plant roots", "Bacteria and roots", "Algae and fungus", "Two plants"],
+      "correctAnswer": "A",
+      "explanation": "Mycorrhiza is mutualistic association between fungal hyphae and plant roots. Fungus helps in nutrient (especially phosphorus) absorption; plant provides carbohydrates.",
+      "difficulty": "EASY",
+      "topic": "Mutualism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Population growth is affected by:",
+      "options": [
+        "Birth rate, death rate, immigration, and emigration",
+        "Only death rate",
+        "Only immigration",
+        "Only birth rate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Population change = (Births + Immigration) - (Deaths + Emigration). All four factors determine population size changes over time.",
+      "difficulty": "EASY",
+      "topic": "Population Growth",
+      "ncertPage": 200,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Organisms whose body temperature changes with environment are called:",
+      "options": ["Poikilotherms (ectotherms)", "Regulators", "Homeostatic", "Homeotherms"],
+      "correctAnswer": "A",
+      "explanation": "Poikilotherms (ectotherms) like fish, amphibians, reptiles have body temperature that varies with environmental temperature. They depend on external heat sources.",
+      "difficulty": "EASY",
+      "topic": "Temperature Regulation",
+      "ncertPage": 195,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An advantage of being a conformer is:",
+      "options": [
+        "Energy conservation (no thermoregulation cost)",
+        "Faster metabolism",
+        "Better reproduction",
+        "Better survival in extreme conditions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Conformers save energy as they don't expend energy on thermoregulation. However, they are limited to narrower range of habitats.",
+      "difficulty": "MEDIUM",
+      "topic": "Responses to Abiotic Factors",
+      "ncertPage": 195,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Logistic growth occurs when:",
+      "options": [
+        "Resources are limited and carrying capacity exists",
+        "There is no competition",
+        "Birth rate is zero",
+        "Resources are unlimited"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Logistic growth occurs when resources are limited. Growth rate decreases as population approaches carrying capacity (K), producing S-shaped curve.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Growth Models",
+      "ncertPage": 201,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Exponential growth occurs when:",
+      "options": [
+        "Resources are unlimited",
+        "Population is at carrying capacity",
+        "Death rate exceeds birth rate",
+        "Resources are limited"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Exponential (geometric) growth occurs when resources are unlimited. Population increases by a constant proportion per time (J-shaped curve): dN/dt = rN.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Growth Models",
+      "ncertPage": 200,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Allen's rule states that:",
+      "options": [
+        "Extremities (ears, tail) are shorter in cold climates",
+        "Fur color changes with season",
+        "Migration increases in cold regions",
+        "Body size increases in cold regions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Allen's rule states that mammals in colder climates have shorter extremities (ears, tails, limbs) to reduce heat loss. Example: Arctic fox vs desert fox.",
+      "difficulty": "MEDIUM",
+      "topic": "Morphological Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Siberian crane migrates to:",
+      "options": ["Keoladeo National Park, India", "Australia", "South America", "Africa"],
+      "correctAnswer": "A",
+      "explanation": "Siberian cranes migrate from Siberia to Keoladeo National Park (Bharatpur, Rajasthan) in India during winter to escape harsh cold.",
+      "difficulty": "MEDIUM",
+      "topic": "Migration",
+      "ncertPage": 196,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Temperature affects organisms because it affects:",
+      "options": [
+        "Enzyme kinetics and metabolic rate",
+        "Only size",
+        "Behavior only",
+        "Only body color"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Temperature affects enzyme kinetics and metabolic rate. Most organisms function optimally within a narrow temperature range. Extremes can denature enzymes.",
+      "difficulty": "EASY",
+      "topic": "Temperature as Abiotic Factor",
+      "ncertPage": 194,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Interspecific competition is between:",
+      "options": [
+        "Members of different species",
+        "Predator and prey",
+        "Host and parasite",
+        "Members of same species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Interspecific competition occurs between individuals of different species competing for the same resources. Example: flamingos and fish competing for zooplankton.",
+      "difficulty": "EASY",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Camouflage, mimicry, and chemical defense are:",
+      "options": [
+        "Prey defense mechanisms",
+        "Parasitic adaptations",
+        "Competitive adaptations",
+        "Predator adaptations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Prey have evolved various defenses: camouflage (blending with surroundings), mimicry (resembling distasteful species), and chemical defenses (toxins, poisons).",
+      "difficulty": "EASY",
+      "topic": "Predation",
+      "ncertPage": 202,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The intrinsic rate of natural increase (r) is:",
+      "options": [
+        "Birth rate minus death rate (b-d)",
+        "Carrying capacity",
+        "Immigration rate",
+        "Death rate minus birth rate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Intrinsic rate of increase (r) = Birth rate (b) - Death rate (d). Positive r means population grows; negative r means decline.",
+      "difficulty": "EASY",
+      "topic": "Population Growth Models",
+      "ncertPage": 200,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diapause occurs in:",
+      "options": [
+        "Zooplankton and insects during adverse conditions",
+        "Only birds",
+        "Only reptiles",
+        "Only mammals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Diapause is developmental arrest in response to adverse conditions, common in zooplankton and insects. Development resumes when conditions improve.",
+      "difficulty": "MEDIUM",
+      "topic": "Dormancy",
+      "ncertPage": 196,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An urn-shaped age pyramid indicates:",
+      "options": [
+        "Stable population",
+        "Declining population with more old individuals",
+        "Very young population",
+        "Growing population"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Urn-shaped (declining) age pyramid has narrow base indicating declining population with fewer young and more post-reproductive individuals.",
+      "difficulty": "MEDIUM",
+      "topic": "Age Structure",
+      "ncertPage": 199,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Migration is a response to:",
+      "options": [
+        "Favorable conditions",
+        "Avoid temporarily stressful conditions",
+        "Reproduce only",
+        "Find mates only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Migration allows organisms to temporarily move away from stressful habitat to more hospitable areas. Example: birds migrating to avoid harsh winters.",
+      "difficulty": "EASY",
+      "topic": "Responses to Abiotic Factors",
+      "ncertPage": 196,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The term 'ecology' was coined by:",
+      "options": ["Charles Darwin", "Ernst Haeckel", "Odum", "Warming"],
+      "correctAnswer": "B",
+      "explanation": "Ernst Haeckel (German biologist) coined the term 'ecology' in 1866 from Greek 'oikos' (house/habitat) and 'logos' (study).",
+      "difficulty": "MEDIUM",
+      "topic": "Introduction to Ecology",
+      "ncertPage": 193,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Abiotic components of environment include:",
+      "options": [
+        "Plants and animals",
+        "Temperature, water, light, and soil",
+        "Microorganisms",
+        "Herbivores and carnivores"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Abiotic (non-living) components include physical and chemical factors like temperature, water, light, soil, humidity, and atmospheric gases.",
+      "difficulty": "EASY",
+      "topic": "Abiotic Factors",
+      "ncertPage": 193,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carrying capacity (K) is:",
+      "options": [
+        "Birth rate",
+        "Maximum population size an environment can sustain",
+        "Death rate",
+        "Growth rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carrying capacity (K) is the maximum population size that an environment can sustain indefinitely given available resources.",
+      "difficulty": "EASY",
+      "topic": "Population Growth Models",
+      "ncertPage": 201,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Brood parasitism is shown by:",
+      "options": ["Bacteria", "Cuckoo bird laying eggs in crow's nest", "Tapeworms", "Lice"],
+      "correctAnswer": "B",
+      "explanation": "Brood parasitism is where one species lays eggs in another's nest. Cuckoo lays eggs in crow's nest; crow raises cuckoo chick at expense of its own.",
+      "difficulty": "MEDIUM",
+      "topic": "Parasitism",
+      "ncertPage": 204,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bergmann's rule states that:",
+      "options": [
+        "Extremities are shorter in cold regions",
+        "Body size increases in colder regions",
+        "Population increases in warmer regions",
+        "Fur density decreases in cold regions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bergmann's rule states that within a species, individuals in colder regions have larger body size (lower surface area to volume ratio reduces heat loss).",
+      "difficulty": "MEDIUM",
+      "topic": "Morphological Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stenothermal organisms:",
+      "options": [
+        "Tolerate wide temperature range",
+        "Tolerate only narrow temperature range",
+        "Are found everywhere",
+        "Are temperature independent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Stenothermal organisms can tolerate only a narrow range of temperatures. Example: polar organisms, deep-sea fish. 'Steno' means narrow.",
+      "difficulty": "EASY",
+      "topic": "Temperature as Abiotic Factor",
+      "ncertPage": 194,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Epiphytes like orchids are examples of:",
+      "options": ["Parasites", "Commensals (using tree for support)", "Mutualists", "Predators"],
+      "correctAnswer": "B",
+      "explanation": "Epiphytes are commensals that grow on trees for support and access to light but don't derive nutrition from the tree (unlike parasites).",
+      "difficulty": "EASY",
+      "topic": "Commensalism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The exponential growth equation is:",
+      "options": ["dN/dt = rN(K-N)/K", "dN/dt = rN", "N = K", "r = b - d"],
+      "correctAnswer": "B",
+      "explanation": "Exponential growth: dN/dt = rN, where N = population size, r = intrinsic rate of natural increase (per capita growth rate), t = time.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Growth Models",
+      "ncertPage": 200,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cattle egrets feeding on insects disturbed by grazing cattle is:",
+      "options": ["Parasitism", "Commensalism", "Mutualism", "Predation"],
+      "correctAnswer": "B",
+      "explanation": "Cattle egrets benefit from easily catching insects disturbed by grazing cattle. Cattle are neither helped nor harmed - this is commensalism (+/0).",
+      "difficulty": "EASY",
+      "topic": "Commensalism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Aestivation is:",
+      "options": [
+        "Winter sleep",
+        "Summer dormancy to avoid heat and desiccation",
+        "Migration",
+        "Breeding behavior"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aestivation is summer dormancy to avoid heat stress and water loss. Example: snails, lungfish, some desert animals during hot dry summer.",
+      "difficulty": "EASY",
+      "topic": "Dormancy",
+      "ncertPage": 196,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Parasitism is a relationship where:",
+      "options": [
+        "Both organisms benefit",
+        "Parasite benefits, host is harmed",
+        "Both are harmed",
+        "Neither is affected"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Parasitism is +/- interaction where parasite derives nutrition from host, causing harm to host but usually not immediate death (unlike predation).",
+      "difficulty": "EASY",
+      "topic": "Parasitism",
+      "ncertPage": 204,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Population density is:",
+      "options": [
+        "Total number of individuals",
+        "Number of individuals per unit area or volume",
+        "Birth rate",
+        "Death rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Population density (N) = Number of individuals / Unit area (or volume). It can be measured directly (counting) or indirectly (using indices).",
+      "difficulty": "EASY",
+      "topic": "Population Attributes",
+      "ncertPage": 198,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The logistic growth equation is:",
+      "options": ["dN/dt = rN", "dN/dt = rN(K-N)/K", "N = rK", "K = N"],
+      "correctAnswer": "B",
+      "explanation": "Logistic growth: dN/dt = rN(K-N)/K, where K = carrying capacity. Growth rate slows as N approaches K due to density-dependent factors.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Growth Models",
+      "ncertPage": 201,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Conformers are organisms that:",
+      "options": [
+        "Maintain constant internal environment",
+        "Body temperature/osmolarity changes with environment",
+        "Migrate to avoid stress",
+        "Enter dormancy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Conformers (99% of animals) cannot maintain constant internal environment. Their body temperature or osmolarity changes with environmental conditions.",
+      "difficulty": "MEDIUM",
+      "topic": "Responses to Abiotic Factors",
+      "ncertPage": 195,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ectoparasites live:",
+      "options": ["In water", "Inside host body", "On the surface of host body", "In soil"],
+      "correctAnswer": "C",
+      "explanation": "Ectoparasites live on the external surface of host. Examples: lice, ticks, leeches. They feed on host tissues or blood from outside.",
+      "difficulty": "EASY",
+      "topic": "Parasitism",
+      "ncertPage": 204,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mutualism is a relationship where:",
+      "options": [
+        "One benefits, other unaffected",
+        "One benefits, other is harmed",
+        "Both organisms benefit (+/+)",
+        "Both are harmed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mutualism is +/+ interaction where both species benefit. Examples: lichens (algae + fungus), mycorrhizae (plant + fungus), pollination.",
+      "difficulty": "EASY",
+      "topic": "Mutualism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In predation, the effect on predator and prey is:",
+      "options": [
+        "Neither affected (0/0)",
+        "Both benefit (+/+)",
+        "Predator benefits, prey harmed (+/-)",
+        "Both harmed (-/-)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Predation is +/- interaction: predator gains energy and nutrition (+), prey is killed (-). Predation is important for energy transfer in food chain.",
+      "difficulty": "EASY",
+      "topic": "Population Interactions",
+      "ncertPage": 202,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Endoparasites live:",
+      "options": ["In water", "On host surface", "Inside host body", "In soil near host"],
+      "correctAnswer": "C",
+      "explanation": "Endoparasites live inside host body. Examples: tapeworms, roundworms, liver flukes, malarial parasite. They show specialized adaptations for internal living.",
+      "difficulty": "EASY",
+      "topic": "Parasitism",
+      "ncertPage": 204,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Age pyramids with broad base indicate:",
+      "options": [
+        "Aging population",
+        "Declining population",
+        "Rapidly growing population with high proportion of young",
+        "Stable population"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Broad-based age pyramids (expanding) indicate rapidly growing populations with high proportion of pre-reproductive individuals. Example: developing countries.",
+      "difficulty": "MEDIUM",
+      "topic": "Age Structure",
+      "ncertPage": 199,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Intraspecific competition is between:",
+      "options": [
+        "Plants and animals",
+        "Different species",
+        "Members of same species",
+        "Predator and prey"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Intraspecific competition is between individuals of the same species competing for the same resources. It is often more intense than interspecific competition.",
+      "difficulty": "EASY",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Desert lizards bask in sun during morning and burrow during midday. This is:",
+      "options": [
+        "Migration",
+        "Physiological adaptation",
+        "Behavioral adaptation (thermoregulation)",
+        "Morphological adaptation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Desert lizards use behavioral thermoregulation - basking to warm up in morning, burrowing to avoid extreme midday heat. This maintains optimal body temperature.",
+      "difficulty": "EASY",
+      "topic": "Behavioral Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pollination of fig by wasp is an example of:",
+      "options": ["Competition", "Commensalism", "Obligate mutualism", "Parasitism"],
+      "correctAnswer": "C",
+      "explanation": "Fig and fig wasp show obligate mutualism - neither can reproduce without the other. Wasp pollinates fig; fig provides nursery for wasp larvae.",
+      "difficulty": "MEDIUM",
+      "topic": "Mutualism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thick cuticle and sunken stomata are adaptations of:",
+      "options": ["Parasitic plants", "Aquatic plants", "Xerophytic (desert) plants", "Mesophytes"],
+      "correctAnswer": "C",
+      "explanation": "Xerophytes have thick cuticle, sunken stomata, reduced leaves to minimize water loss. Examples: Opuntia, Euphorbia, Casuarina.",
+      "difficulty": "EASY",
+      "topic": "Plant Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sex ratio is:",
+      "options": [
+        "Death rate",
+        "Total number of males",
+        "Ratio of males to females (or females per 1000 males)",
+        "Birth rate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sex ratio is the proportion of males to females in a population. In India, it's expressed as females per 1000 males (national average ~940 in 2011).",
+      "difficulty": "EASY",
+      "topic": "Population Attributes",
+      "ncertPage": 199,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The exponential growth curve is:",
+      "options": ["Bell-shaped", "S-shaped (sigmoid)", "J-shaped", "Linear"],
+      "correctAnswer": "C",
+      "explanation": "Exponential growth produces J-shaped curve - population increases without limit as long as resources are unlimited. Not sustainable in nature.",
+      "difficulty": "EASY",
+      "topic": "Population Growth Models",
+      "ncertPage": 200,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Competition occurs when:",
+      "options": [
+        "One organism lives on another",
+        "Resources are unlimited",
+        "Organisms compete for limited resources",
+        "One organism benefits from another"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Competition occurs when organisms compete for the same limited resources (food, space, light). Both competitors are negatively affected (-/- interaction).",
+      "difficulty": "EASY",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A bell-shaped age pyramid indicates:",
+      "options": [
+        "Extinct population",
+        "Growing population",
+        "Stable population",
+        "Declining population"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bell-shaped (stable) age pyramid indicates stable population where pre-reproductive and reproductive age groups are roughly equal in proportion.",
+      "difficulty": "MEDIUM",
+      "topic": "Age Structure",
+      "ncertPage": 199,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gause's competitive exclusion principle states that:",
+      "options": [
+        "Competition only occurs in animals",
+        "Two species can coexist indefinitely",
+        "Two species competing for same resources cannot coexist",
+        "Competition benefits both species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Gause's principle states that two species with identical ecological niches cannot coexist indefinitely - one will outcompete the other to extinction.",
+      "difficulty": "MEDIUM",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Amensalism is interaction where:",
+      "options": [
+        "Both unaffected",
+        "Both benefit",
+        "One is harmed, other unaffected (-/0)",
+        "Both are harmed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Amensalism is -/0 interaction where one species is harmed while the other is unaffected. Example: Penicillium secreting penicillin inhibiting bacteria.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Interactions",
+      "ncertPage": 203,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Kangaroo rat conserves water by:",
+      "options": [
+        "Sweating",
+        "Drinking more water",
+        "Concentrated urine and metabolic water production",
+        "Living in water"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Kangaroo rat (desert rodent) survives without drinking water by producing concentrated urine and obtaining metabolic water from food oxidation.",
+      "difficulty": "MEDIUM",
+      "topic": "Water Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hibernation is:",
+      "options": ["Migration", "Death", "Summer sleep", "Winter sleep in animals"],
+      "correctAnswer": "D",
+      "explanation": "Hibernation is winter dormancy where animals enter a state of reduced metabolic activity to survive cold when food is scarce. Example: bears, ground squirrels.",
+      "difficulty": "EASY",
+      "topic": "Dormancy",
+      "ncertPage": 196,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Monarch butterfly caterpillars are distasteful due to:",
+      "options": [
+        "Spines",
+        "Camouflage",
+        "Natural toxins",
+        "Cardiac glycosides acquired from milkweed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Monarch butterfly caterpillars feed on milkweed and accumulate cardiac glycosides. These toxins make them distasteful to birds, which learn to avoid them.",
+      "difficulty": "MEDIUM",
+      "topic": "Predation",
+      "ncertPage": 202,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "At carrying capacity (K), population growth rate is:",
+      "options": ["Negative", "Exponential", "Maximum", "Zero (population stable)"],
+      "correctAnswer": "D",
+      "explanation": "When population reaches carrying capacity (N=K), growth rate becomes zero because (K-N)/K = 0. Birth rate equals death rate.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Growth Models",
+      "ncertPage": 201,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Predation is interaction between:",
+      "options": [
+        "Two predator species",
+        "Host and parasite",
+        "Two prey species",
+        "Predator that kills and eats prey"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Predation is +/- interaction where predator benefits by killing and eating prey. It controls prey population and maintains ecosystem balance.",
+      "difficulty": "EASY",
+      "topic": "Population Interactions",
+      "ncertPage": 202,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "CAM plants open stomata at night to:",
+      "options": [
+        "Release oxygen",
+        "Absorb nutrients",
+        "Absorb more light",
+        "Reduce water loss while fixing CO2"
+      ],
+      "correctAnswer": "D",
+      "explanation": "CAM plants open stomata at night (cooler, lower evaporation) to take in CO2 and close during day to conserve water. CO2 is stored as malic acid.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Adaptations",
+      "ncertPage": 197,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cuscuta (dodder) is an example of:",
+      "options": ["Mutualist", "Commensal", "Predator", "Plant parasite"],
+      "correctAnswer": "D",
+      "explanation": "Cuscuta (dodder) is a stem parasite that lacks chlorophyll and derives nutrition from host plant through haustoria. It's an obligate holoparasite.",
+      "difficulty": "EASY",
+      "topic": "Parasitism",
+      "ncertPage": 204,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Population is defined as:",
+      "options": [
+        "All plants in an area",
+        "All animals in an area",
+        "All organisms in an area",
+        "Group of individuals of same species in same area at same time"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A population is a group of individuals of the same species living in the same geographical area at the same time, capable of interbreeding.",
+      "difficulty": "EASY",
+      "topic": "Population Ecology",
+      "ncertPage": 198,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Regulators maintain constant internal environment through:",
+      "options": [
+        "Dormancy",
+        "Behavioral changes only",
+        "Migration",
+        "Physiological mechanisms (homeostasis)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Regulators maintain homeostasis through physiological mechanisms like thermoregulation, osmoregulation regardless of external conditions. Example: mammals, birds.",
+      "difficulty": "MEDIUM",
+      "topic": "Responses to Abiotic Factors",
+      "ncertPage": 195,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Organisms that maintain constant body temperature are called:",
+      "options": ["Conformers", "Regulators", "Poikilotherms", "Homeotherms (endotherms)"],
+      "correctAnswer": "D",
+      "explanation": "Homeotherms (endotherms) like birds and mammals maintain constant body temperature through internal metabolic heat production.",
+      "difficulty": "EASY",
+      "topic": "Temperature Regulation",
+      "ncertPage": 195,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ecological niche of an organism includes:",
+      "options": [
+        "Only its food",
+        "Only its predators",
+        "Only its habitat",
+        "Its role, resources used, and environmental conditions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ecological niche is the organism's functional role in ecosystem including habitat, resources used, time of activity, and interactions with other species.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Niche",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Two species can coexist if they have:",
+      "options": [
+        "Same food preferences",
+        "Same habitat requirements",
+        "Identical niches",
+        "Different ecological niches (niche differentiation)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Species with identical niches cannot coexist (competitive exclusion). Coexistence requires niche differentiation - using different resources or same resources differently.",
+      "difficulty": "MEDIUM",
+      "topic": "Competition",
+      "ncertPage": 203,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lichen is an example of mutualism between:",
+      "options": [
+        "Two algae",
+        "Plant and animal",
+        "Two fungi",
+        "Algae (or cyanobacteria) and fungus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lichen is mutualistic association between algae/cyanobacteria (photosynthesis, food) and fungus (protection, moisture, minerals). Both benefit.",
+      "difficulty": "EASY",
+      "topic": "Mutualism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ecology is the study of:",
+      "options": [
+        "Only living organisms",
+        "Only non-living factors",
+        "Genetics of populations",
+        "Organisms and their environment"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ecology is the study of interactions between organisms and their environment, including both biotic (living) and abiotic (non-living) components.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Ecology",
+      "ncertPage": 193,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Commensalism is interaction where:",
+      "options": [
+        "Both are harmed",
+        "One benefits, other is harmed",
+        "Both benefit",
+        "One benefits, other is unaffected"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Commensalism is +/0 interaction where one species benefits while the other is neither helped nor harmed. Example: orchids growing on trees, barnacles on whales.",
+      "difficulty": "EASY",
+      "topic": "Commensalism",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The logistic growth curve is:",
+      "options": ["Linear", "Circular", "J-shaped", "S-shaped (sigmoid)"],
+      "correctAnswer": "D",
+      "explanation": "Logistic growth produces S-shaped (sigmoid) curve. Initial growth is exponential, then slows due to resource limitation, and finally stabilizes at K.",
+      "difficulty": "EASY",
+      "topic": "Population Growth Models",
+      "ncertPage": 201,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Death rate (mortality) is:",
+      "options": [
+        "Rate of immigration",
+        "Rate of growth",
+        "Number of births per unit time",
+        "Number of deaths per capita per unit time"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Death rate (mortality) = Number of deaths / Time period. Per capita death rate is deaths per individual per unit time.",
+      "difficulty": "EASY",
+      "topic": "Population Attributes",
+      "ncertPage": 199,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

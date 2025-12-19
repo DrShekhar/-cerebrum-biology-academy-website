@@ -1,0 +1,1072 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 14,
+  "ncertChapterName": "Transport in Plants",
+  "questions": [
+    {
+      "question": "When turgor pressure equals osmotic pressure, water potential becomes:",
+      "options": ["Zero", "Maximum", "Minimum", "Negative"],
+      "correctAnswer": "A",
+      "explanation": "When turgor pressure equals the osmotic pressure (or solute potential with opposite sign), the water potential of the cell becomes zero. At this point, net water movement stops. (NCERT Page 184)",
+      "difficulty": "HARD",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ascent of sap can occur up to a height of:",
+      "options": [
+        "Less than 10 meters",
+        "Over 100 meters in tall trees",
+        "About 50 meters",
+        "Only a few centimeters"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In tall trees like redwoods, water can rise to heights of over 100 meters through the xylem, primarily due to transpiration pull. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Transpiration helps in:",
+      "options": [
+        "Cooling of leaf surface",
+        "Absorption of minerals",
+        "Both cooling and mineral absorption",
+        "Neither cooling nor mineral absorption"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Transpiration helps in the absorption and upward movement of water and minerals from roots to leaves. It also cools leaf surfaces by evaporative cooling. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Transpiration",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The major route for transpiration is:",
+      "options": ["Cuticle", "Lenticels", "Hydathodes", "Stomata"],
+      "correctAnswer": "D",
+      "explanation": "Transpiration occurs mainly through the stomata in the leaves. Stomatal transpiration accounts for about 90% of water loss. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Transpiration",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A cell placed in hypotonic solution becomes:",
+      "options": ["Turgid", "Plasmolyzed", "Flaccid", "Deplasmolyzed"],
+      "correctAnswer": "A",
+      "explanation": "When a cell is placed in a hypotonic solution, water enters the cell and the cell becomes turgid. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The water potential of pure water at standard temperature and pressure is:",
+      "options": ["-1", "0", "1", "100"],
+      "correctAnswer": "B",
+      "explanation": "The water potential of pure water at standard temperature (273 K) and standard atmospheric pressure (1 atm) is taken to be zero. (NCERT Page 183)",
+      "difficulty": "EASY",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT transported through xylem?",
+      "options": ["Water", "Mineral salts", "Organic food", "Some organic nitrogen compounds"],
+      "correctAnswer": "C",
+      "explanation": "Xylem primarily transports water and dissolved minerals. Organic food (like sucrose) is transported through phloem. However, some organic nitrogen compounds can be transported in xylem. (NCERT Page 187, 189)",
+      "difficulty": "MEDIUM",
+      "topic": "Xylem Transport",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "What happens at the sink during phloem transport?",
+      "options": [
+        "Sugar is loaded into phloem",
+        "Water potential increases",
+        "Pressure increases",
+        "Sugar is unloaded from phloem"
+      ],
+      "correctAnswer": "D",
+      "explanation": "At the sink, sugar is unloaded from the phloem. This decreases the osmotic pressure at the sink and water moves out, maintaining the pressure flow. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Imbibition pressure can be very high, for example:",
+      "options": [
+        "Swelling of seeds can break flower pots",
+        "Water moves up against gravity",
+        "Roots penetrate soil",
+        "All of the above"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The pressure that is produced by the swelling of wood has been used to split rocks. Imbibition pressure is so high that swelling seeds can even break flower pots. (NCERT Page 185)",
+      "difficulty": "MEDIUM",
+      "topic": "Imbibition",
+      "ncertPage": 185,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Apoplast movement is blocked at the endodermis by:",
+      "options": ["Cell membrane", "Casparian strip", "Cuticle", "Lignin"],
+      "correctAnswer": "B",
+      "explanation": "The apoplastic movement of water is blocked at the endodermis by a band of suberised matrix called the Casparian strip. (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Root pressure is developed due to:",
+      "options": [
+        "Transpiration pull",
+        "Capillarity",
+        "Active absorption of minerals followed by osmotic entry of water",
+        "Imbibition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Active absorption of minerals followed by the osmotic movement of water into the xylem of the root creates root pressure. (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Root Pressure",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The inner wall of guard cells (facing the stoma) is:",
+      "options": [
+        "Thinner than outer wall",
+        "Same thickness as outer wall",
+        "Absent",
+        "Thicker than outer wall"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The inner wall of guard cells (towards the stomatal pore) is thicker than the outer wall. This differential thickening causes the guard cells to curve when turgid, opening the stoma. (NCERT Page 187)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomata",
+      "ncertPage": 187,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Imbibition is:",
+      "options": [
+        "Absorption of water by hydrophilic substances",
+        "Diffusion of water through membrane",
+        "Active transport of water",
+        "Movement of water through xylem"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imbibition is a special type of diffusion when water is absorbed by solids – colloids – causing them to enormously increase in volume. (NCERT Page 185)",
+      "difficulty": "EASY",
+      "topic": "Imbibition",
+      "ncertPage": 185,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The rate of diffusion is NOT affected by:",
+      "options": [
+        "Concentration gradient",
+        "Size of organ",
+        "Permeability of membrane",
+        "Temperature"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The rate of diffusion is affected by concentration gradient, permeability of membrane separating them, temperature and pressure. Size of organ does not affect diffusion rate. (NCERT Page 181)",
+      "difficulty": "MEDIUM",
+      "topic": "Diffusion",
+      "ncertPage": 181,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The movement of molecules from a region of higher concentration to lower concentration is called:",
+      "options": ["Osmosis", "Active transport", "Diffusion", "Imbibition"],
+      "correctAnswer": "C",
+      "explanation": "Diffusion is the movement of molecules from a region of higher concentration to a region of lower concentration. (NCERT Page 181)",
+      "difficulty": "EASY",
+      "topic": "Diffusion",
+      "ncertPage": 181,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cohesion-tension-transpiration pull model was proposed by:",
+      "options": ["J.C. Bose", "Priestley", "Munch", "Dixon and Joly"],
+      "correctAnswer": "D",
+      "explanation": "The cohesion-tension-transpiration pull theory of water transport was proposed by Dixon and Joly. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When a plant cell is placed in hypertonic solution:",
+      "options": ["Cell shrinks (plasmolysis)", "Cell swells", "No change occurs", "Cell bursts"],
+      "correctAnswer": "A",
+      "explanation": "If a cell is placed in a hypertonic solution, water leaves the cell and the cell shrinks. This shrinkage of protoplasm from the cell wall is called plasmolysis. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Active transport is characterized by:",
+      "options": [
+        "Movement along concentration gradient",
+        "Movement against concentration gradient using ATP",
+        "No energy requirement",
+        "Movement of water only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Active transport is the pumping of substances across membranes against a concentration gradient, i.e., uphill transport. It requires energy (ATP). (NCERT Page 183)",
+      "difficulty": "EASY",
+      "topic": "Active Transport",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The movement of minerals in plants occurs through:",
+      "options": ["Phloem only", "Both xylem and phloem", "Xylem only", "Neither xylem nor phloem"],
+      "correctAnswer": "C",
+      "explanation": "Once minerals are absorbed by roots, they are transported upward along with water through the xylem. (NCERT Page 189)",
+      "difficulty": "EASY",
+      "topic": "Mineral Uptake",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The water column in xylem does not break because of:",
+      "options": [
+        "High root pressure",
+        "Low transpiration rate",
+        "Thick vessel walls",
+        "Cohesion between water molecules and adhesion to vessel walls"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The properties of cohesion (between water molecules) and adhesion (between water and vessel walls) prevent the water column from breaking even under high tension. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is true about passive transport?",
+      "options": [
+        "Is called diffusion when the transport is along the concentration gradient",
+        "Requires ATP",
+        "Is uphill transport",
+        "Is non-selective"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Transport along the concentration gradient, i.e., passive transport, includes diffusion. Passive transport does not require ATP. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Active Transport",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When two types of molecules move in the same direction across a membrane, it is called:",
+      "options": ["Uniport", "Symport", "Antiport", "Diffusion"],
+      "correctAnswer": "B",
+      "explanation": "When two types of molecules move across a membrane in the same direction, it is called symport. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Active Transport",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following can be a source of food?",
+      "options": ["Growing fruit", "Root tip", "Photosynthesizing leaf", "Developing seed"],
+      "correctAnswer": "C",
+      "explanation": "Source is the part of plant where food is synthesized (leaves) or stored (storage organs when mobilizing food). Fruits, root tips, and developing seeds are sinks. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Porins are proteins that form:",
+      "options": [
+        "Pumps in membranes",
+        "Small pores in plasma membrane",
+        "Ion channels only",
+        "Large pores in outer membranes of plastids, mitochondria and bacteria"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Porins are proteins that form large pores in the outer membranes of plastids, mitochondria and some bacteria allowing molecules up to the size of small proteins to pass through. (NCERT Page 182)",
+      "difficulty": "MEDIUM",
+      "topic": "Facilitated Diffusion",
+      "ncertPage": 182,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The water potential is denoted by the Greek symbol:",
+      "options": ["Psi (Ψ)", "Alpha (α)", "Omega (ω)", "Beta (β)"],
+      "correctAnswer": "A",
+      "explanation": "Water potential is denoted by the Greek symbol Psi (Ψ). (NCERT Page 183)",
+      "difficulty": "EASY",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Guttation is:",
+      "options": [
+        "Loss of water as vapor",
+        "Exudation of liquid water from leaves",
+        "Absorption of water by roots",
+        "Translocation of food"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Guttation is the exudation of water in liquid form from the margins or tips of leaves, especially noticeable early in the morning. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Root Pressure",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cohesion refers to:",
+      "options": [
+        "Attraction between water molecules and vessel walls",
+        "Evaporation of water",
+        "Mutual attraction between water molecules",
+        "Root pressure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cohesion is the mutual attraction between water molecules due to hydrogen bonding. This property helps maintain the continuous water column in xylem. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Channel proteins that allow water to pass through are called:",
+      "options": ["Porins", "Ion channels", "Carrier proteins", "Aquaporins"],
+      "correctAnswer": "D",
+      "explanation": "Aquaporins are channel proteins that allow water to pass through the membrane. They are water-specific channels. (NCERT Page 182)",
+      "difficulty": "EASY",
+      "topic": "Facilitated Diffusion",
+      "ncertPage": 182,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transpiration is defined as:",
+      "options": [
+        "Loss of water in vapor form from aerial parts of plant",
+        "Absorption of water",
+        "Guttation",
+        "Imbibition"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Transpiration is the evaporative loss of water by plants. It occurs mainly through the stomata in the leaves. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Transpiration",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transpiration occurs at a faster rate in:",
+      "options": ["Night", "Day", "Both equally", "Neither"],
+      "correctAnswer": "B",
+      "explanation": "Transpiration occurs at a faster rate during the day when stomata are open for gas exchange during photosynthesis. Temperature and light are also higher during the day. (NCERT Page 187-188)",
+      "difficulty": "EASY",
+      "topic": "Transpiration",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The role of the endodermis in roots is to:",
+      "options": [
+        "Increase water absorption",
+        "Store food",
+        "Regulate the substances entering the xylem",
+        "Provide mechanical support"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The endodermis with Casparian strip ensures that water and dissolved substances enter the xylem only through the cell protoplasm, allowing selective absorption. (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Guard cells differ from other epidermal cells in having:",
+      "options": ["No nucleus", "No cell wall", "No vacuole", "Chloroplasts"],
+      "correctAnswer": "D",
+      "explanation": "Guard cells are unique among epidermal cells in having chloroplasts, which help in the opening and closing of stomata. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Stomata",
+      "ncertPage": 187,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When guard cells lose water and become flaccid:",
+      "options": [
+        "Stomata close",
+        "Stomata open",
+        "Transpiration increases",
+        "Photosynthesis increases"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When guard cells lose water and become flaccid, the stomata close. This happens when K+ ions move out of guard cells. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Stomata",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plasmolysis is:",
+      "options": [
+        "Swelling of protoplasm",
+        "Shrinkage of protoplasm from the cell wall",
+        "Bursting of cell",
+        "Division of cell"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a cell is placed in a hypertonic solution, water leaves the cell and the cell shrinks. This shrinkage of protoplasm from the cell wall is called plasmolysis. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Plasmolysis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Solute potential is always:",
+      "options": ["Positive", "Zero", "Negative", "Can be positive or negative"],
+      "correctAnswer": "C",
+      "explanation": "Solute potential (Ψs) is always negative. The more the solute molecules, the lower (more negative) is the solute potential. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first step in absorption of water by roots is:",
+      "options": [
+        "Active transport",
+        "Facilitated diffusion",
+        "Osmosis",
+        "Imbibition by root hairs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imbibition is the first step in absorption of water by roots. (NCERT Page 185)",
+      "difficulty": "MEDIUM",
+      "topic": "Imbibition",
+      "ncertPage": 185,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The direction of translocation in phloem is:",
+      "options": ["Bidirectional", "Always upward", "Always downward", "Only radial"],
+      "correctAnswer": "A",
+      "explanation": "Unlike xylem transport which is unidirectional (upward), phloem transport is bidirectional - food can move both up and down depending on the location of source and sink. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Root pressure is most effective in:",
+      "options": ["Tall trees", "Herbaceous plants", "Xerophytes", "Epiphytes"],
+      "correctAnswer": "B",
+      "explanation": "Root pressure provides a modest push in the overall water transport in plants, but it is most effective in shorter, herbaceous plants. It cannot account for the movement of water to the top of tall trees. (NCERT Page 187)",
+      "difficulty": "MEDIUM",
+      "topic": "Root Pressure",
+      "ncertPage": 187,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The main form in which food is translocated in phloem is:",
+      "options": ["Glucose", "Starch", "Sucrose", "Fructose"],
+      "correctAnswer": "C",
+      "explanation": "Sucrose is the main form in which organic food is translocated through the phloem. (NCERT Page 189)",
+      "difficulty": "EASY",
+      "topic": "Phloem Transport",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to the cohesion-tension-transpiration pull theory, water rises in xylem due to:",
+      "options": [
+        "Root pressure only",
+        "Capillarity only",
+        "Active transport",
+        "Transpiration pull with cohesion and adhesion of water molecules"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to the cohesion-tension theory, the pull from transpiration creates tension that pulls water up through xylem vessels. Water molecules stick together (cohesion) and to vessel walls (adhesion), forming a continuous column. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Potometer is used to measure:",
+      "options": [
+        "Rate of transpiration",
+        "Photosynthesis rate",
+        "Root pressure",
+        "Rate of translocation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A potometer is an apparatus used to measure the rate of transpiration indirectly by measuring the rate of water uptake by a cut shoot. (NCERT Page 188)",
+      "difficulty": "EASY",
+      "topic": "Transpiration",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Diffusion is a slow process and is not dependent on:",
+      "options": ["Concentration gradient", "Living system", "Temperature", "Medium"],
+      "correctAnswer": "B",
+      "explanation": "Diffusion is a slow process and is not dependent on a living system. It is a passive process driven by the concentration gradient. (NCERT Page 181)",
+      "difficulty": "EASY",
+      "topic": "Diffusion",
+      "ncertPage": 181,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Carrier proteins are highly selective because they:",
+      "options": [
+        "Use ATP",
+        "Allow passage of all solutes",
+        "Undergo conformational changes",
+        "Are present in all membranes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Carrier proteins or permeases are highly selective. They bind to specific molecules and undergo a change in shape to transport them across the membrane. (NCERT Page 182)",
+      "difficulty": "MEDIUM",
+      "topic": "Facilitated Diffusion",
+      "ncertPage": 182,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The symplast pathway involves movement through:",
+      "options": [
+        "Cell walls only",
+        "Intercellular spaces",
+        "Xylem vessels",
+        "Cytoplasm connected by plasmodesmata"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The symplastic pathway is the movement through the cytoplasm of cells connected by plasmodesmata (cytoplasmic bridges). (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pressure exerted by the protoplasm against the cell wall is called:",
+      "options": ["Turgor pressure", "Osmotic pressure", "Root pressure", "Wall pressure"],
+      "correctAnswer": "A",
+      "explanation": "When water enters a plant cell, the cell swells and the turgor pressure or pressure potential is developed due to pressure exerted by the protoplasm against the cell wall. (NCERT Page 184)",
+      "difficulty": "MEDIUM",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a means of transport in plants?",
+      "options": ["Diffusion", "Muscular contraction", "Facilitated diffusion", "Active transport"],
+      "correctAnswer": "B",
+      "explanation": "Plants use diffusion, facilitated diffusion, and active transport for movement of substances. Unlike animals, plants do not have muscular contraction as they lack muscles. (NCERT Page 181)",
+      "difficulty": "EASY",
+      "topic": "Means of Transport",
+      "ncertPage": 181,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Facilitated diffusion requires:",
+      "options": [
+        "ATP",
+        "Both ATP and membrane proteins",
+        "Special membrane proteins",
+        "Neither ATP nor membrane proteins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Facilitated diffusion is passive transport that requires special membrane proteins (porins, channel proteins, carrier proteins) but does not require ATP. (NCERT Page 182)",
+      "difficulty": "MEDIUM",
+      "topic": "Facilitated Diffusion",
+      "ncertPage": 182,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Water can move through roots via:",
+      "options": [
+        "Apoplast pathway only",
+        "Symplast pathway only",
+        "Transmembrane pathway only",
+        "Both apoplast and symplast pathways"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Water moves through the root either by apoplast (cell wall continuum) or symplast (cytoplasmic continuum through plasmodesmata). (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Absorption by Roots",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Osmosis is:",
+      "options": [
+        "Diffusion of water across a semipermeable membrane",
+        "Movement of solute from low to high concentration",
+        "Active transport of water",
+        "Movement of water from low to high concentration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Osmosis is the term used for the diffusion of water across a selectively permeable membrane. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Companion cells are associated with:",
+      "options": ["Tracheids", "Sieve tubes", "Vessels", "Fibres"],
+      "correctAnswer": "B",
+      "explanation": "Sieve tube elements are associated with companion cells. Companion cells help in the loading and unloading of sugars into sieve tubes. (NCERT Page 189)",
+      "difficulty": "EASY",
+      "topic": "Phloem Transport",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pressure flow or mass flow hypothesis for phloem transport was given by:",
+      "options": ["Dixon and Joly", "Bose", "Ernst Munch", "Priestley"],
+      "correctAnswer": "C",
+      "explanation": "The pressure flow or mass flow hypothesis was given by Ernst Munch to explain the translocation of food in phloem. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The negative pressure or tension in xylem sap is created by:",
+      "options": ["Root pressure", "Photosynthesis", "Respiration", "Transpiration"],
+      "correctAnswer": "D",
+      "explanation": "Transpiration creates negative pressure or tension in the xylem sap, which pulls water upward through the plant. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The water potential equation is:",
+      "options": ["Ψw = Ψs + Ψp", "Ψw = Ψs × Ψp", "Ψw = Ψs - Ψp", "Ψw = Ψs / Ψp"],
+      "correctAnswer": "A",
+      "explanation": "The water potential equation is Ψw = Ψs + Ψp, where Ψw is water potential, Ψs is solute potential and Ψp is pressure potential. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Water Potential",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The apoplast pathway consists of:",
+      "options": [
+        "Cytoplasm and vacuoles",
+        "Cell walls and intercellular spaces",
+        "Plasmodesmata only",
+        "Xylem vessels only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The apoplastic movement of water occurs through the network of cell walls and intercellular spaces. (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cytoplasmic bridges that connect adjacent plant cells are called:",
+      "options": ["Gap junctions", "Tight junctions", "Plasmodesmata", "Desmosomes"],
+      "correctAnswer": "C",
+      "explanation": "Plasmodesmata are cytoplasmic bridges that connect the cytoplasm of adjacent plant cells, allowing the symplastic movement of substances. (NCERT Page 186)",
+      "difficulty": "EASY",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The magnitude of lowering of water potential due to dissolved solutes is called:",
+      "options": [
+        "Pressure potential",
+        "Gravitational potential",
+        "Matric potential",
+        "Solute potential"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The magnitude of lowering of water potential due to dissolution of a solute is called solute potential or osmotic potential (Ψs). (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Addition of solutes to water:",
+      "options": [
+        "Decreases water potential",
+        "Increases water potential",
+        "Has no effect on water potential",
+        "Sometimes increases, sometimes decreases"
+      ],
+      "correctAnswer": "A",
+      "explanation": "If some solute is dissolved in pure water, the solution has fewer free water molecules and the concentration of water decreases, reducing its water potential. Hence, all solutions have lower water potential than pure water. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Root pressure can be demonstrated by:",
+      "options": [
+        "Transpiration",
+        "Guttation and exudation from cut stem",
+        "Wilting",
+        "Plasmolysis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Root pressure can be demonstrated by observing guttation (exudation of water from leaf margins) and by exudation of sap from a freshly cut stump. (NCERT Page 186-187)",
+      "difficulty": "MEDIUM",
+      "topic": "Root Pressure",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pressure potential (Ψp) is usually:",
+      "options": ["Negative", "Zero", "Positive", "Variable"],
+      "correctAnswer": "C",
+      "explanation": "Pressure potential is usually positive, though in the case of water moving in the xylem, it can be negative. (NCERT Page 184)",
+      "difficulty": "MEDIUM",
+      "topic": "Water Potential",
+      "ncertPage": 184,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which cells are involved in loading sugars into phloem?",
+      "options": ["Guard cells", "Vessel elements", "Tracheids", "Companion cells"],
+      "correctAnswer": "D",
+      "explanation": "Companion cells actively help in loading sugars into sieve tube elements using ATP. They have numerous mitochondria for this purpose. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The sieve tube elements in phloem are connected by:",
+      "options": ["Sieve plates with sieve pores", "Plasmodesmata", "Simple pits", "Bordered pits"],
+      "correctAnswer": "A",
+      "explanation": "Sieve tube elements are connected to each other by sieve plates, which have sieve pores allowing the flow of substances. (NCERT Page 189)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Antiport is the transport mechanism where:",
+      "options": [
+        "Two molecules move in same direction",
+        "Two molecules move in opposite directions",
+        "Single molecule is transported",
+        "No energy is required"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When two types of molecules move in opposite directions across a membrane, it is called antiport. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Active Transport",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Long distance transport of substances in plants occurs through:",
+      "options": ["Diffusion", "Osmosis", "Vascular system (mass flow)", "Imbibition"],
+      "correctAnswer": "C",
+      "explanation": "For long distance transport, plants have developed a vascular system consisting of xylem and phloem. This is also called translocation through mass flow or bulk flow. (NCERT Page 185)",
+      "difficulty": "EASY",
+      "topic": "Long Distance Transport",
+      "ncertPage": 185,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Phloem loading refers to:",
+      "options": [
+        "Movement of water into phloem",
+        "Passive movement of minerals",
+        "Unloading of food at sink",
+        "Active transport of sugars into sieve tube elements"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Phloem loading is the process by which sugars produced in mesophyll cells are actively transported into the sieve tube elements of phloem. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A solution that has more solute concentration than the cell sap is called:",
+      "options": ["Hypertonic", "Hypotonic", "Isotonic", "Neutral"],
+      "correctAnswer": "A",
+      "explanation": "A solution is hypertonic (or hyperosmotic) if it has a greater concentration of solutes than the cell. (NCERT Page 184)",
+      "difficulty": "EASY",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sieve tube elements are:",
+      "options": [
+        "Dead cells",
+        "Living but enucleate cells",
+        "Living cells with nucleus",
+        "Partially dead cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sieve tube elements are living cells but they lack nucleus at maturity. They depend on companion cells for their metabolic needs. (NCERT Page 189)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Structure",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During seed germination, the source of food is:",
+      "options": ["Leaves", "Roots", "Cotyledons or endosperm", "Stem"],
+      "correctAnswer": "C",
+      "explanation": "During seed germination, storage organs (cotyledons or endosperm) become the source, providing food for the growing embryo. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Translocation of food in plants occurs through:",
+      "options": ["Xylem", "Both xylem and phloem", "Parenchyma", "Phloem"],
+      "correctAnswer": "D",
+      "explanation": "Transport of food, i.e., organic solutes from leaves to other parts of the plant body (translocation) occurs in the phloem. (NCERT Page 189)",
+      "difficulty": "EASY",
+      "topic": "Phloem Transport",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Minerals are absorbed by roots mainly by:",
+      "options": ["Active transport", "Passive diffusion only", "Mass flow only", "Osmosis only"],
+      "correctAnswer": "A",
+      "explanation": "Most minerals are absorbed by roots through active transport, which requires energy in the form of ATP. (NCERT Page 189)",
+      "difficulty": "MEDIUM",
+      "topic": "Mineral Uptake",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following factors does NOT affect the rate of transpiration?",
+      "options": ["Temperature", "Root pressure", "Humidity", "Wind velocity"],
+      "correctAnswer": "B",
+      "explanation": "Factors affecting transpiration include temperature, light, humidity, wind speed, and number of stomata. Root pressure is not a major factor affecting transpiration rate. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Transpiration",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Water moves from:",
+      "options": [
+        "Low water potential to high water potential",
+        "Low solute concentration to high solute concentration",
+        "High water potential to low water potential",
+        "High osmotic pressure to low osmotic pressure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Water moves from its region of higher chemical potential (higher water potential) to its region of lower chemical potential (lower water potential) until equilibrium is reached. (NCERT Page 184)",
+      "difficulty": "MEDIUM",
+      "topic": "Osmosis",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to the mass flow hypothesis, phloem sap moves due to:",
+      "options": [
+        "Active transport along the sieve tubes",
+        "Transpiration pull",
+        "Root pressure",
+        "Pressure gradient created by loading of sugar at source and unloading at sink"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to the mass flow hypothesis, sugars are actively loaded at the source creating high osmotic pressure, and unloaded at the sink. This creates a pressure gradient that drives mass flow. (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Casparian strip is made up of:",
+      "options": ["Suberin", "Cellulose", "Lignin", "Pectin"],
+      "correctAnswer": "A",
+      "explanation": "The Casparian strip is a band of suberised (waxy) matrix present in the walls of endodermal cells that blocks the apoplast pathway. (NCERT Page 186)",
+      "difficulty": "MEDIUM",
+      "topic": "Pathways of Water Movement",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "For a solution at atmospheric pressure, water potential equals:",
+      "options": [
+        "Pressure potential only",
+        "Solute potential only",
+        "Pressure potential plus solute potential",
+        "Zero"
+      ],
+      "correctAnswer": "B",
+      "explanation": "For a solution at atmospheric pressure (open beaker), water potential (Ψw) = solute potential (Ψs). (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Water Potential",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Uniport refers to:",
+      "options": [
+        "Transport of two molecules in same direction",
+        "Transport of two molecules in opposite directions",
+        "Transport of one type of molecule independent of others",
+        "Transport of water only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When a molecule moves across a membrane independent of other molecules, the process is called uniport. (NCERT Page 183)",
+      "difficulty": "MEDIUM",
+      "topic": "Active Transport",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Mass flow or bulk flow is:",
+      "options": [
+        "Movement of individual molecules",
+        "Diffusion of water",
+        "Osmotic movement",
+        "Movement of a substance en masse from one point to another due to pressure difference"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mass flow is the movement of substances en masse from one point to another as a result of pressure differences between the two points. (NCERT Page 185)",
+      "difficulty": "MEDIUM",
+      "topic": "Long Distance Transport",
+      "ncertPage": 185,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Tracheids and vessels are:",
+      "options": [
+        "Dead cells at maturity",
+        "Living cells",
+        "Only partially living",
+        "Living with nucleus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tracheids and vessel elements are dead cells at maturity. They lack protoplasm which allows unimpeded flow of water. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Xylem Structure",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High humidity:",
+      "options": [
+        "Increases transpiration",
+        "Decreases transpiration",
+        "Has no effect on transpiration",
+        "Stops transpiration completely"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Higher humidity in the atmosphere reduces the rate of transpiration because the concentration gradient of water vapor between the leaf interior and the atmosphere is reduced. (NCERT Page 188)",
+      "difficulty": "EASY",
+      "topic": "Transpiration",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Food is transported in phloem from:",
+      "options": [
+        "Roots to leaves only",
+        "Leaves to roots only",
+        "Source to sink",
+        "Sink to source"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In phloem, food is transported from source (where food is produced or stored, like leaves) to sink (where food is used or stored, like roots, fruits). (NCERT Page 190)",
+      "difficulty": "MEDIUM",
+      "topic": "Phloem Transport",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following shows imbibition?",
+      "options": [
+        "Absorption of water by roots",
+        "Transpiration",
+        "Guttation",
+        "Swelling of seeds when soaked in water"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Examples of imbibition include absorption of water by seeds and dry wood. When seeds are soaked in water, they swell due to imbibition. (NCERT Page 185)",
+      "difficulty": "EASY",
+      "topic": "Imbibition",
+      "ncertPage": 185,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The main force responsible for the ascent of sap in tall trees is:",
+      "options": ["Transpiration pull", "Root pressure", "Capillarity", "Atmospheric pressure"],
+      "correctAnswer": "A",
+      "explanation": "Transpiration pull is the main driving force for the ascent of sap in tall trees. The pull is generated by the evaporation of water from mesophyll cells. (NCERT Page 188)",
+      "difficulty": "EASY",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adhesion refers to:",
+      "options": [
+        "Mutual attraction between water molecules",
+        "Attraction between water molecules and xylem vessel walls",
+        "Transpiration pull",
+        "Root pressure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adhesion is the attraction of water molecules to polar surfaces like the cellulose in the cell walls of tracheary elements. (NCERT Page 188)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascent of Sap",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which ion is required for stomatal opening?",
+      "options": ["Na+", "Ca2+", "K+", "Mg2+"],
+      "correctAnswer": "C",
+      "explanation": "Potassium ions (K+) are essential for stomatal opening. K+ influx into guard cells increases their osmotic potential, causing water uptake and turgidity. (NCERT Page 187)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomata",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stomata open when guard cells become:",
+      "options": ["Flaccid", "Plasmolyzed", "Dehydrated", "Turgid"],
+      "correctAnswer": "D",
+      "explanation": "When guard cells absorb water and become turgid, the stomata open due to the differential thickening of guard cell walls. (NCERT Page 187)",
+      "difficulty": "EASY",
+      "topic": "Stomata",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Absorption of water by roots primarily occurs through:",
+      "options": ["Root hairs", "Tap root", "Root cap", "Lateral roots"],
+      "correctAnswer": "A",
+      "explanation": "Water is absorbed along with mineral salts from the soil by the root hairs. (NCERT Page 186)",
+      "difficulty": "EASY",
+      "topic": "Absorption by Roots",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

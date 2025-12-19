@@ -1,0 +1,992 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 12,
+  "ncertChapterName": "Respiration in Plants",
+  "questions": [
+    {
+      "question": "All the energy required for 'life' processes is obtained by oxidation of some macromolecules that we call:",
+      "options": ["Vitamins", "Minerals", "Food", "Water"],
+      "correctAnswer": "C",
+      "explanation": "All the energy required for 'life' processes is obtained by oxidation of some macromolecules that we call 'food'. These include carbohydrates, proteins, and fats. (NCERT Page 153)",
+      "difficulty": "EASY",
+      "topic": "Introduction to Respiration",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Green plants and cyanobacteria can prepare their own food by the process of photosynthesis. They trap light energy and convert it into:",
+      "options": ["Kinetic energy", "Chemical energy", "Heat energy", "Nuclear energy"],
+      "correctAnswer": "B",
+      "explanation": "Green plants and cyanobacteria trap light energy and convert it into chemical energy that is stored in the bonds of carbohydrates like glucose, sucrose and starch. (NCERT Page 153)",
+      "difficulty": "EASY",
+      "topic": "Introduction to Respiration",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The breaking of C-C bonds of complex compounds through oxidation within the cells, leading to release of considerable amount of energy is called:",
+      "options": ["Photosynthesis", "Respiration", "Fermentation", "Digestion"],
+      "correctAnswer": "B",
+      "explanation": "The breaking of the C-C bonds of complex compounds through oxidation within the cells, leading to release of considerable amount of energy is called respiration. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "Definition of Respiration",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The compounds that are oxidised during the process of respiration are known as:",
+      "options": [
+        "Respiratory products",
+        "Respiratory substrates",
+        "Respiratory enzymes",
+        "Respiratory quotients"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The compounds that are oxidised during the process of respiration are known as respiratory substrates. Usually carbohydrates are oxidised to release energy. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "Respiratory Substrates",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During oxidation within a cell, the energy contained in respiratory substrates is released in a series of slow step-wise reactions and is trapped as chemical energy in the form of:",
+      "options": ["GTP", "ATP", "CTP", "UTP"],
+      "correctAnswer": "B",
+      "explanation": "The energy is released in a series of slow step-wise reactions controlled by enzymes, and it is trapped as chemical energy in the form of ATP. Hence, ATP acts as the energy currency of the cell. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "ATP as Energy Currency",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants, unlike animals, have no specialised organs for gaseous exchange. They use which structures for this purpose?",
+      "options": [
+        "Gills and lungs",
+        "Stomata and lenticels",
+        "Tracheae and spiracles",
+        "Book lungs and tracheoles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plants, unlike animals, have no specialised organs for gaseous exchange but they have stomata and lenticels for this purpose. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "Do Plants Breathe",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In stems, the 'living' cells are organised in thin layers inside and beneath the bark. They have openings called:",
+      "options": ["Stomata", "Lenticels", "Hydathodes", "Pneumatophores"],
+      "correctAnswer": "B",
+      "explanation": "In stems, the 'living' cells are organised in thin layers inside and beneath the bark. They also have openings called lenticels for gaseous exchange. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Gaseous Exchange in Stems",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The complete combustion of glucose produces CO₂ and H₂O as end products and yields energy. Most of this energy is given out as:",
+      "options": ["Light", "Sound", "Heat", "Electricity"],
+      "correctAnswer": "C",
+      "explanation": "The complete combustion of glucose, which produces CO₂ and H₂O as end products, yields energy most of which is given out as heat. (NCERT Page 155)",
+      "difficulty": "MEDIUM",
+      "topic": "Glucose Oxidation",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "This breakdown of glucose to pyruvic acid is called:",
+      "options": ["Krebs cycle", "Glycolysis", "Fermentation", "Beta-oxidation"],
+      "correctAnswer": "B",
+      "explanation": "All living organisms retain the enzymatic machinery to partially oxidise glucose without the help of oxygen. This breakdown of glucose to pyruvic acid is called glycolysis. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Glycolysis",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The term glycolysis has originated from the Greek words, glycos for sugar, and lysis for:",
+      "options": ["Building", "Splitting", "Binding", "Storing"],
+      "correctAnswer": "B",
+      "explanation": "The term glycolysis has originated from the Greek words, glycos for sugar, and lysis for splitting. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Glycolysis Etymology",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The scheme of glycolysis was given by Gustav Embden, Otto Meyerhof, and J. Parnas, and is often referred to as the:",
+      "options": ["Calvin cycle", "EMP pathway", "TCA cycle", "HMP shunt"],
+      "correctAnswer": "B",
+      "explanation": "The scheme of glycolysis was given by Gustav Embden, Otto Meyerhof, and J. Parnas, and is often referred to as the EMP pathway. (NCERT Page 155)",
+      "difficulty": "MEDIUM",
+      "topic": "Glycolysis - EMP Pathway",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In anaerobic organisms, glycolysis is:",
+      "options": [
+        "The only process in respiration",
+        "Absent",
+        "Optional",
+        "Occurs in mitochondria"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In anaerobic organisms, glycolysis is the only process in respiration. (NCERT Page 155)",
+      "difficulty": "MEDIUM",
+      "topic": "Glycolysis in Anaerobes",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glycolysis occurs in which part of the cell?",
+      "options": ["Mitochondria", "Cytoplasm", "Nucleus", "Chloroplast"],
+      "correctAnswer": "B",
+      "explanation": "Glycolysis occurs in the cytoplasm of the cell and is present in all living organisms. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Site of Glycolysis",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In glycolysis, glucose undergoes partial oxidation to form how many molecules of pyruvic acid?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "In glycolysis, glucose undergoes partial oxidation to form two molecules of pyruvic acid. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Glycolysis Products",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In plants, the glucose used in glycolysis is derived from sucrose, which is the end product of:",
+      "options": ["Respiration", "Photosynthesis", "Fermentation", "Nitrogen fixation"],
+      "correctAnswer": "B",
+      "explanation": "In plants, this glucose is derived from sucrose, which is the end product of photosynthesis, or from storage carbohydrates. (NCERT Page 155)",
+      "difficulty": "EASY",
+      "topic": "Source of Glucose",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sucrose is converted into glucose and fructose by the enzyme:",
+      "options": ["Amylase", "Invertase", "Maltase", "Sucrase"],
+      "correctAnswer": "B",
+      "explanation": "Sucrose is converted into glucose and fructose by the enzyme, invertase, and these two monosaccharides readily enter the glycolytic pathway. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "Invertase Enzyme",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucose and fructose are phosphorylated to give rise to glucose-6-phosphate by the activity of the enzyme:",
+      "options": ["Phosphatase", "Hexokinase", "Isomerase", "Aldolase"],
+      "correctAnswer": "B",
+      "explanation": "Glucose and fructose are phosphorylated to give rise to glucose-6-phosphate by the activity of the enzyme hexokinase. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "Hexokinase",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In glycolysis, a chain of how many reactions takes place to produce pyruvate from glucose?",
+      "options": ["Eight", "Ten", "Twelve", "Six"],
+      "correctAnswer": "B",
+      "explanation": "In glycolysis, a chain of ten reactions, under the control of different enzymes, takes place to produce pyruvate from glucose. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "Steps in Glycolysis",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ATP is utilised at how many steps during glycolysis?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "ATP is utilised at two steps: first in the conversion of glucose into glucose 6-phosphate and second in the conversion of fructose 6-phosphate to fructose 1, 6-bisphosphate. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "ATP Consumption in Glycolysis",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fructose 1, 6-bisphosphate is split into dihydroxyacetone phosphate and:",
+      "options": [
+        "Pyruvic acid",
+        "3-phosphoglyceraldehyde (PGAL)",
+        "Phosphoenolpyruvate",
+        "1,3-bisphosphoglycerate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The fructose 1, 6-bisphosphate is split into dihydroxyacetone phosphate and 3-phosphoglyceraldehyde (PGAL). (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "Glycolysis Intermediates",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During glycolysis, NADH + H⁺ is formed from NAD⁺ when 3-phosphoglyceraldehyde (PGAL) is converted to:",
+      "options": [
+        "3-phosphoglyceric acid",
+        "1,3-bisphosphoglycerate (BPGA)",
+        "Phosphoenolpyruvate",
+        "Pyruvic acid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "NADH + H⁺ is formed from NAD⁺ when 3-phosphoglyceraldehyde (PGAL) is converted to 1, 3-bisphosphoglycerate (BPGA). (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "NADH Formation in Glycolysis",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ATP is synthesised during the conversion of BPGA to 3-phosphoglyceric acid (PGA) and also during the conversion of:",
+      "options": [
+        "Glucose to glucose-6-phosphate",
+        "PGAL to BPGA",
+        "PEP to pyruvic acid",
+        "Fructose-6-phosphate to fructose 1,6-bisphosphate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The conversion of BPGA to 3-phosphoglyceric acid (PGA) is an energy yielding process; this energy is trapped by the formation of ATP. Another ATP is synthesised during the conversion of PEP to pyruvic acid. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "ATP Synthesis in Glycolysis",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyruvic acid is the key product of glycolysis. There are how many major ways in which different cells handle pyruvic acid?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "B",
+      "explanation": "There are three major ways in which different cells handle pyruvic acid produced by glycolysis. These are lactic acid fermentation, alcoholic fermentation and aerobic respiration. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Fate of Pyruvic Acid",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In fermentation by yeast, the incomplete oxidation of glucose under anaerobic conditions produces CO₂ and:",
+      "options": ["Lactic acid", "Ethanol", "Acetic acid", "Citric acid"],
+      "correctAnswer": "B",
+      "explanation": "In fermentation, say by yeast, the incomplete oxidation of glucose is achieved under anaerobic conditions by sets of reactions where pyruvic acid is converted to CO₂ and ethanol. (NCERT Page 157)",
+      "difficulty": "EASY",
+      "topic": "Alcoholic Fermentation",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzymes that catalyse alcoholic fermentation are pyruvic acid decarboxylase and:",
+      "options": ["Lactate dehydrogenase", "Alcohol dehydrogenase", "Hexokinase", "Isomerase"],
+      "correctAnswer": "B",
+      "explanation": "The enzymes, pyruvic acid decarboxylase and alcohol dehydrogenase catalyse the reactions of alcoholic fermentation. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Fermentation Enzymes",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Some bacteria produce lactic acid from pyruvic acid. In animal cells, when oxygen is inadequate, pyruvic acid is reduced to lactic acid by:",
+      "options": ["Alcohol dehydrogenase", "Lactate dehydrogenase", "Pyruvate kinase", "Aldolase"],
+      "correctAnswer": "B",
+      "explanation": "Other organisms like some bacteria produce lactic acid from pyruvic acid. In animal cells also, like muscles during exercise, when oxygen is inadequate, pyruvic acid is reduced to lactic acid by lactate dehydrogenase. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Lactic Acid Fermentation",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reducing agent in both lactic acid and alcohol fermentation is:",
+      "options": ["FADH₂", "NADH + H⁺", "NADPH", "Coenzyme A"],
+      "correctAnswer": "B",
+      "explanation": "The reducing agent is NADH+H⁺ which is reoxidised to NAD⁺ in both the processes. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Reducing Agent in Fermentation",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In fermentation, less than what percentage of the energy in glucose is released?",
+      "options": ["Twenty per cent", "Seven per cent", "Fifty per cent", "Thirty per cent"],
+      "correctAnswer": "B",
+      "explanation": "In both lactic acid and alcohol fermentation not much energy is released; less than seven per cent of the energy in glucose is released. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Energy Yield in Fermentation",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Yeasts poison themselves to death when the concentration of alcohol reaches about:",
+      "options": ["5 per cent", "13 per cent", "20 per cent", "30 per cent"],
+      "correctAnswer": "B",
+      "explanation": "Yeasts poison themselves to death when the concentration of alcohol reaches about 13 per cent. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Alcohol Toxicity in Yeast",
+      "ncertPage": 157,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Aerobic respiration is the process that leads to a complete oxidation of organic substances in the presence of oxygen, and releases CO₂, water and a large amount of:",
+      "options": ["Proteins", "Carbohydrates", "Energy", "Fats"],
+      "correctAnswer": "C",
+      "explanation": "Aerobic respiration is the process that leads to a complete oxidation of organic substances in the presence of oxygen, and releases CO₂, water and a large amount of energy present in the substrate. (NCERT Page 158)",
+      "difficulty": "EASY",
+      "topic": "Aerobic Respiration Definition",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "For aerobic respiration, pyruvate produced in glycolysis is transported from the cytoplasm into the:",
+      "options": ["Nucleus", "Mitochondria", "Endoplasmic reticulum", "Golgi apparatus"],
+      "correctAnswer": "B",
+      "explanation": "For aerobic respiration to take place within the mitochondria, the final product of glycolysis, pyruvate is transported from the cytoplasm into the mitochondria. (NCERT Page 158)",
+      "difficulty": "EASY",
+      "topic": "Site of Aerobic Respiration",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In aerobic respiration, the complete oxidation of pyruvate by stepwise removal of all hydrogen atoms leaves how many molecules of CO₂?",
+      "options": ["Two", "Three", "Four", "Six"],
+      "correctAnswer": "B",
+      "explanation": "The complete oxidation of pyruvate by the stepwise removal of all the hydrogen atoms, leaving three molecules of CO₂. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "CO₂ Release from Pyruvate",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The oxidative decarboxylation of pyruvate in the mitochondrial matrix is catalysed by:",
+      "options": [
+        "Pyruvate kinase",
+        "Pyruvic dehydrogenase",
+        "Citrate synthase",
+        "Isocitrate dehydrogenase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pyruvate, after it enters mitochondrial matrix undergoes oxidative decarboxylation by a complex set of reactions catalysed by pyruvic dehydrogenase. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "Pyruvate Dehydrogenase",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reactions catalysed by pyruvic dehydrogenase require the participation of several coenzymes, including NAD⁺ and:",
+      "options": ["FAD", "Coenzyme A", "Biotin", "Thiamine"],
+      "correctAnswer": "B",
+      "explanation": "The reactions catalysed by pyruvic dehydrogenase require the participation of several coenzymes, including NAD⁺ and Coenzyme A. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "Coenzymes in Pyruvate Oxidation",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During the metabolism of two molecules of pyruvic acid (produced from one glucose molecule), how many molecules of NADH are produced?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "During this process, two molecules of NADH are produced from the metabolism of two molecules of pyruvic acid (produced from one glucose molecule during glycolysis). (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "NADH from Pyruvate Oxidation",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The acetyl CoA then enters a cyclic pathway called the tricarboxylic acid cycle, more commonly known as:",
+      "options": ["Calvin cycle", "Krebs' cycle", "Glyoxylate cycle", "Urea cycle"],
+      "correctAnswer": "B",
+      "explanation": "The acetyl CoA then enters a cyclic pathway, tricarboxylic acid cycle, more commonly called as Krebs' cycle after the scientist Hans Krebs who first elucidated it. (NCERT Page 158)",
+      "difficulty": "EASY",
+      "topic": "Krebs Cycle",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The TCA cycle starts with the condensation of acetyl group with oxaloacetic acid (OAA) and water to yield:",
+      "options": ["Succinic acid", "Citric acid", "Malic acid", "Fumaric acid"],
+      "correctAnswer": "B",
+      "explanation": "The TCA cycle starts with the condensation of acetyl group with oxaloacetic acid (OAA) and water to yield citric acid. (NCERT Page 158)",
+      "difficulty": "EASY",
+      "topic": "First Product of TCA Cycle",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The condensation of acetyl group with OAA to form citric acid is catalysed by the enzyme:",
+      "options": [
+        "Aconitase",
+        "Citrate synthase",
+        "Isocitrate dehydrogenase",
+        "Succinate dehydrogenase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The reaction is catalysed by the enzyme citrate synthase and a molecule of CoA is released. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "Citrate Synthase",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Citrate is isomerised to isocitrate. It is followed by two successive steps of decarboxylation, leading to the formation of:",
+      "options": ["Succinic acid", "Malic acid", "α-ketoglutaric acid", "Fumaric acid"],
+      "correctAnswer": "C",
+      "explanation": "Citrate is then isomerised to isocitrate. It is followed by two successive steps of decarboxylation, leading to the formation of α-ketoglutaric acid and then succinyl-CoA. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "Decarboxylation in TCA Cycle",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During the conversion of succinyl-CoA to succinic acid, a molecule of which is synthesised by substrate level phosphorylation?",
+      "options": ["ATP", "GTP", "CTP", "UTP"],
+      "correctAnswer": "B",
+      "explanation": "During the conversion of succinyl-CoA to succinic acid a molecule of GTP is synthesised. This is a substrate level phosphorylation. (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "Substrate Level Phosphorylation",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a coupled reaction, GTP is converted to GDP with the simultaneous synthesis of ATP from:",
+      "options": ["AMP", "ADP", "GMP", "CMP"],
+      "correctAnswer": "B",
+      "explanation": "In a coupled reaction GTP is converted to GDP with the simultaneous synthesis of ATP from ADP. (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "GTP to ATP Conversion",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the TCA cycle, there are how many points where NAD⁺ is reduced to NADH + H⁺?",
+      "options": ["Two", "Three", "Four", "One"],
+      "correctAnswer": "B",
+      "explanation": "Also there are three points in the cycle where NAD⁺ is reduced to NADH + H⁺ and one point where FAD⁺ is reduced to FADH₂. (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "NADH Formation in TCA Cycle",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the TCA cycle, there is one point where FAD⁺ is reduced to:",
+      "options": ["NADH", "FADH₂", "NADPH", "Coenzyme A"],
+      "correctAnswer": "B",
+      "explanation": "Also there are three points in the cycle where NAD⁺ is reduced to NADH + H⁺ and one point where FAD⁺ is reduced to FADH₂. (NCERT Page 159)",
+      "difficulty": "EASY",
+      "topic": "FADH₂ Formation in TCA Cycle",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The metabolic pathway through which electrons pass from one carrier to another is called the:",
+      "options": [
+        "Glycolytic pathway",
+        "Electron transport system",
+        "Krebs cycle",
+        "Pentose phosphate pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The metabolic pathway through which the electron passes from one carrier to another, is called the electron transport system (ETS) and it is present in the inner mitochondrial membrane. (NCERT Page 159)",
+      "difficulty": "EASY",
+      "topic": "Electron Transport System",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The electron transport system (ETS) is present in the:",
+      "options": [
+        "Outer mitochondrial membrane",
+        "Inner mitochondrial membrane",
+        "Mitochondrial matrix",
+        "Cytoplasm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The electron transport system (ETS) is present in the inner mitochondrial membrane. (NCERT Page 159)",
+      "difficulty": "EASY",
+      "topic": "Location of ETS",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Electrons from NADH produced in the mitochondrial matrix are oxidised by:",
+      "options": ["Complex II", "Complex I (NADH dehydrogenase)", "Complex III", "Complex IV"],
+      "correctAnswer": "B",
+      "explanation": "Electrons from NADH produced in the mitochondrial matrix during citric acid cycle are oxidised by an NADH dehydrogenase (complex I). (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "Complex I of ETS",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "From Complex I, electrons are transferred to which molecule located within the inner membrane?",
+      "options": ["Cytochrome c", "Ubiquinone", "Cytochrome a", "FAD"],
+      "correctAnswer": "B",
+      "explanation": "Electrons are then transferred to ubiquinone located within the inner membrane. (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "Ubiquinone in ETS",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ubiquinone also receives reducing equivalents via FADH₂ that is generated during oxidation of succinate. This involves:",
+      "options": ["Complex I", "Complex II", "Complex III", "Complex IV"],
+      "correctAnswer": "B",
+      "explanation": "Ubiquinone also receives reducing equivalents via FADH₂ (complex II) that is generated during oxidation of succinate in the citric acid cycle. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Complex II of ETS",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reduced ubiquinone (ubiquinol) is oxidised with the transfer of electrons to cytochrome c via:",
+      "options": ["Complex I", "Complex II", "Complex III (Cytochrome bc₁ complex)", "Complex IV"],
+      "correctAnswer": "C",
+      "explanation": "The reduced ubiquinone (ubiquinol) is then oxidised with the transfer of electrons to cytochrome c via cytochrome bc₁ complex (complex III). (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Complex III of ETS",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cytochrome c is a small protein attached to the outer surface of the inner membrane and acts as a mobile carrier for transfer of electrons between:",
+      "options": [
+        "Complex I and II",
+        "Complex II and III",
+        "Complex III and IV",
+        "Complex I and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cytochrome c is a small protein attached to the outer surface of the inner membrane and acts as a mobile carrier for transfer of electrons between complex III and IV. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Cytochrome c",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Complex IV refers to cytochrome c oxidase complex containing cytochromes a and a₃, and:",
+      "options": ["Iron centres", "Two copper centres", "Zinc centres", "Magnesium centres"],
+      "correctAnswer": "B",
+      "explanation": "Complex IV refers to cytochrome c oxidase complex containing cytochromes a and a₃, and two copper centres. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Complex IV of ETS",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When electrons pass through the electron transport chain from Complex I to IV, they are coupled to ATP synthase which is:",
+      "options": ["Complex III", "Complex IV", "Complex V", "Complex II"],
+      "correctAnswer": "C",
+      "explanation": "When the electrons pass from one carrier to another via complex I to IV in the electron transport chain, they are coupled to ATP synthase (complex V) for the production of ATP from ADP and inorganic phosphate. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "ATP Synthase - Complex V",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxidation of one molecule of NADH gives rise to how many molecules of ATP?",
+      "options": ["Two", "Three", "Four", "One"],
+      "correctAnswer": "B",
+      "explanation": "Oxidation of one molecule of NADH gives rise to 3 molecules of ATP. (NCERT Page 160)",
+      "difficulty": "EASY",
+      "topic": "ATP Yield from NADH",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxidation of one molecule of FADH₂ produces how many molecules of ATP?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "Oxidation of one molecule of FADH₂ produces 2 molecules of ATP. (NCERT Page 160)",
+      "difficulty": "EASY",
+      "topic": "ATP Yield from FADH₂",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In aerobic respiration, the role of oxygen is limited to:",
+      "options": ["Initial stage", "Glycolysis", "Terminal stage", "TCA cycle"],
+      "correctAnswer": "C",
+      "explanation": "Although the aerobic process of respiration takes place only in the presence of oxygen, the role of oxygen is limited to the terminal stage of the process. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Role of Oxygen",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxygen acts as the final:",
+      "options": ["Electron donor", "Hydrogen acceptor", "Proton pump", "ATP synthase"],
+      "correctAnswer": "B",
+      "explanation": "Oxygen acts as the final hydrogen acceptor. It drives the whole process by removing hydrogen from the system. (NCERT Page 160)",
+      "difficulty": "MEDIUM",
+      "topic": "Oxygen as Terminal Acceptor",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process where ATP synthesis is coupled to energy of oxidation-reduction is called:",
+      "options": [
+        "Photophosphorylation",
+        "Oxidative phosphorylation",
+        "Substrate level phosphorylation",
+        "Cyclic phosphorylation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Unlike photophosphorylation where it is the light energy that is utilised for the production of proton gradient required for phosphorylation, in respiration it is the energy of oxidation-reduction utilised for the same process. It is for this reason that the process is called oxidative phosphorylation. (NCERT Page 160)",
+      "difficulty": "EASY",
+      "topic": "Oxidative Phosphorylation",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ATP synthase complex consists of two major components, F₁ and:",
+      "options": ["F₂", "F₀", "F₃", "Fx"],
+      "correctAnswer": "B",
+      "explanation": "This complex consists of two major components, F₁ and F₀. (NCERT Page 161)",
+      "difficulty": "MEDIUM",
+      "topic": "ATP Synthase Structure",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The F₁ headpiece of ATP synthase is a peripheral membrane protein complex and contains the site for synthesis of ATP from ADP and:",
+      "options": ["GTP", "Inorganic phosphate", "NADH", "FADH₂"],
+      "correctAnswer": "B",
+      "explanation": "The F₁ headpiece is a peripheral membrane protein complex and contains the site for synthesis of ATP from ADP and inorganic phosphate. (NCERT Page 161)",
+      "difficulty": "MEDIUM",
+      "topic": "F₁ of ATP Synthase",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "F₀ is an integral membrane protein complex that forms the channel through which protons cross the:",
+      "options": ["Outer membrane", "Inner membrane", "Matrix", "Intermembrane space"],
+      "correctAnswer": "B",
+      "explanation": "F₀ is an integral membrane protein complex that forms the channel through which protons cross the inner membrane. (NCERT Page 161)",
+      "difficulty": "MEDIUM",
+      "topic": "F₀ of ATP Synthase",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "For each ATP produced, how many H⁺ pass through F₀ from the intermembrane space to the matrix?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "For each ATP produced, 4H⁺ pass through F₀ from the intermembrane space to the matrix down the electrochemical proton gradient. (NCERT Page 161)",
+      "difficulty": "MEDIUM",
+      "topic": "Protons per ATP",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "There can be a net gain of how many ATP molecules during aerobic respiration of one molecule of glucose?",
+      "options": ["32", "36", "38", "40"],
+      "correctAnswer": "C",
+      "explanation": "Hence, there can be a net gain of 38 ATP molecules during aerobic respiration of one molecule of glucose. (NCERT Page 161)",
+      "difficulty": "EASY",
+      "topic": "Total ATP Yield",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fermentation accounts for only a partial breakdown of glucose whereas in aerobic respiration it is completely degraded to:",
+      "options": ["CO₂ and alcohol", "CO₂ and lactic acid", "CO₂ and H₂O", "H₂O and alcohol"],
+      "correctAnswer": "C",
+      "explanation": "Fermentation accounts for only a partial breakdown of glucose whereas in aerobic respiration it is completely degraded to CO₂ and H₂O. (NCERT Page 162)",
+      "difficulty": "EASY",
+      "topic": "Comparison of Fermentation and Aerobic Respiration",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In fermentation there is a net gain of only how many molecules of ATP for each molecule of glucose degraded to pyruvic acid?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "In fermentation there is a net gain of only two molecules of ATP for each molecule of glucose degraded to pyruvic acid. (NCERT Page 162)",
+      "difficulty": "EASY",
+      "topic": "ATP Yield in Fermentation",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "NADH is oxidised to NAD⁺ rather slowly in fermentation, however the reaction is very vigorous in case of:",
+      "options": ["Glycolysis", "Aerobic respiration", "Photosynthesis", "Nitrogen fixation"],
+      "correctAnswer": "B",
+      "explanation": "NADH is oxidised to NAD⁺ rather slowly in fermentation, however the reaction is very vigorous in case of aerobic respiration. (NCERT Page 162)",
+      "difficulty": "MEDIUM",
+      "topic": "NAD Regeneration",
+      "ncertPage": 162,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The favoured substrate for respiration is:",
+      "options": ["Proteins", "Fats", "Glucose", "Amino acids"],
+      "correctAnswer": "C",
+      "explanation": "Glucose is the favoured substrate for respiration. All carbohydrates are usually first converted into glucose before they are used for respiration. (NCERT Page 162)",
+      "difficulty": "EASY",
+      "topic": "Preferred Respiratory Substrate",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "If fatty acids were to be respired, they would first be degraded to:",
+      "options": ["Pyruvate", "Acetyl CoA", "Citric acid", "Oxaloacetic acid"],
+      "correctAnswer": "B",
+      "explanation": "If fatty acids were to be respired they would first be degraded to acetyl CoA and enter the pathway. (NCERT Page 162)",
+      "difficulty": "MEDIUM",
+      "topic": "Fat Respiration",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glycerol would enter the respiratory pathway after being converted to:",
+      "options": ["Pyruvate", "Acetyl CoA", "PGAL", "Citric acid"],
+      "correctAnswer": "C",
+      "explanation": "Glycerol would enter the pathway after being converted to PGAL. (NCERT Page 162)",
+      "difficulty": "MEDIUM",
+      "topic": "Glycerol in Respiration",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Because the respiratory pathway is involved in both anabolism and catabolism, it would hence be better to consider the respiratory pathway as:",
+      "options": [
+        "Catabolic pathway",
+        "Anabolic pathway",
+        "Amphibolic pathway",
+        "Metabolic pathway"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Because the respiratory pathway is involved in both anabolism and catabolism, it would hence be better to consider the respiratory pathway as an amphibolic pathway rather than as a catabolic one. (NCERT Page 162)",
+      "difficulty": "EASY",
+      "topic": "Amphibolic Pathway",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ratio of the volume of CO₂ evolved to the volume of O₂ consumed in respiration is called the:",
+      "options": [
+        "Photosynthetic quotient",
+        "Respiratory quotient",
+        "Metabolic rate",
+        "Exchange ratio"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ratio of the volume of CO₂ evolved to the volume of O₂ consumed in respiration is called the respiratory quotient (RQ) or respiratory ratio. (NCERT Page 163)",
+      "difficulty": "EASY",
+      "topic": "Respiratory Quotient Definition",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The respiratory quotient depends upon the type of:",
+      "options": ["Enzyme used", "Respiratory substrate used", "Oxygen available", "Temperature"],
+      "correctAnswer": "B",
+      "explanation": "The respiratory quotient depends upon the type of respiratory substrate used during respiration. (NCERT Page 163)",
+      "difficulty": "EASY",
+      "topic": "RQ Depends on Substrate",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When carbohydrates are used as substrate and are completely oxidised, the RQ will be:",
+      "options": ["0.7", "0.9", "1.0", "1.3"],
+      "correctAnswer": "C",
+      "explanation": "When carbohydrates are used as substrate and are completely oxidised, the RQ will be 1, because equal amounts of CO₂ and O₂ are evolved and consumed, respectively. (NCERT Page 163)",
+      "difficulty": "EASY",
+      "topic": "RQ for Carbohydrates",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When fats are used in respiration, the RQ is:",
+      "options": ["Equal to 1", "Less than 1", "Greater than 1", "Zero"],
+      "correctAnswer": "B",
+      "explanation": "When fats are used in respiration, the RQ is less than 1. For tripalmitin, RQ = 102/145 = 0.7. (NCERT Page 164)",
+      "difficulty": "EASY",
+      "topic": "RQ for Fats",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "For tripalmitin (a fatty acid), if used as a respiratory substrate, the RQ is approximately:",
+      "options": ["0.5", "0.7", "0.9", "1.0"],
+      "correctAnswer": "B",
+      "explanation": "Calculations for a fatty acid, tripalmitin, if used as a substrate shows RQ = 102CO₂/145O₂ = 0.7. (NCERT Page 164)",
+      "difficulty": "MEDIUM",
+      "topic": "RQ Calculation for Fats",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When proteins are respiratory substrates, the RQ would be about:",
+      "options": ["0.7", "0.9", "1.0", "1.2"],
+      "correctAnswer": "B",
+      "explanation": "When proteins are respiratory substrates the ratio would be about 0.9. (NCERT Page 164)",
+      "difficulty": "MEDIUM",
+      "topic": "RQ for Proteins",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants have stomata and lenticels for gaseous exchange. Stomata are present mainly on:",
+      "options": ["Roots", "Stems", "Leaves", "Flowers"],
+      "correctAnswer": "C",
+      "explanation": "Plants, unlike animals, have no specialised organs for gaseous exchange but they have stomata and lenticels for this purpose. Stomata are mainly present on leaves. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "Stomata Location",
+      "ncertPage": 154,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The interconnected network of air spaces in plants is facilitated by the loose packing of:",
+      "options": ["Collenchyma cells", "Sclerenchyma cells", "Parenchyma cells", "Xylem vessels"],
+      "correctAnswer": "C",
+      "explanation": "This is also facilitated by the loose packing of parenchyma cells in leaves, stems and roots, which provide an interconnected network of air spaces. (NCERT Page 155)",
+      "difficulty": "MEDIUM",
+      "topic": "Air Spaces in Plants",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Some organisms are facultative anaerobes while in others the requirement for anaerobic condition is:",
+      "options": ["Optional", "Obligate", "Temporary", "Seasonal"],
+      "correctAnswer": "B",
+      "explanation": "Some of these organisms are facultative anaerobes, while in others the requirement for anaerobic condition is obligate. (NCERT Page 155)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaerobic Organisms",
+      "ncertPage": 155,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During exercise, when oxygen is inadequate for cellular respiration in muscle cells, pyruvic acid is reduced to:",
+      "options": ["Ethanol", "Lactic acid", "Acetic acid", "Citric acid"],
+      "correctAnswer": "B",
+      "explanation": "In animal cells also, like muscles during exercise, when oxygen is inadequate for cellular respiration pyruvic acid is reduced to lactic acid by lactate dehydrogenase. (NCERT Page 157)",
+      "difficulty": "EASY",
+      "topic": "Lactic Acid in Muscles",
+      "ncertPage": 157,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first process of aerobic respiration (complete oxidation of pyruvate) takes place in the:",
+      "options": [
+        "Cytoplasm",
+        "Matrix of mitochondria",
+        "Inner membrane of mitochondria",
+        "Outer membrane of mitochondria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "What is interesting to note is that the first process takes place in the matrix of the mitochondria while the second process is located on the inner membrane of the mitochondria. (NCERT Page 158)",
+      "difficulty": "MEDIUM",
+      "topic": "Location of Pyruvate Oxidation",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The continued oxidation of acetyl CoA via the TCA cycle requires the continued replenishment of:",
+      "options": ["Citric acid", "Succinic acid", "Oxaloacetic acid", "Malic acid"],
+      "correctAnswer": "C",
+      "explanation": "The continued oxidation of acetyl CoA via the TCA cycle requires the continued replenishment of oxaloacetic acid, the first member of the cycle. (NCERT Page 159)",
+      "difficulty": "MEDIUM",
+      "topic": "OAA Regeneration",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fermentation takes place under anaerobic conditions in many prokaryotes, unicellular eukaryotes and in:",
+      "options": ["All plant cells", "Germinating seeds", "Mature leaves", "Root hairs"],
+      "correctAnswer": "B",
+      "explanation": "Fermentation takes place under anaerobic conditions in many prokaryotes and unicellular eukaryotes. It also occurs in germinating seeds. (NCERT Page 157)",
+      "difficulty": "MEDIUM",
+      "topic": "Fermentation Sites",
+      "ncertPage": 157,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which type of respiration is most common in higher organisms?",
+      "options": [
+        "Anaerobic respiration",
+        "Aerobic respiration",
+        "Fermentation",
+        "Glycolysis only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aerobic respiration is the type of respiration that is most common in higher organisms. (NCERT Page 158)",
+      "difficulty": "EASY",
+      "topic": "Aerobic Respiration in Higher Organisms",
+      "ncertPage": 158,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The passage of protons through the F₀ channel is coupled to the catalytic site of F₁ component for the production of:",
+      "options": ["NADH", "FADH₂", "ATP", "GTP"],
+      "correctAnswer": "C",
+      "explanation": "The passage of protons through the channel is coupled to the catalytic site of the F₁ component for the production of ATP. (NCERT Page 161)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemiosmosis",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucose-6-phosphate isomerises to produce:",
+      "options": [
+        "Glucose-1-phosphate",
+        "Fructose-6-phosphate",
+        "Fructose-1-phosphate",
+        "Ribose-5-phosphate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This phosphorylated form of glucose then isomerises to produce fructose-6-phosphate. (NCERT Page 156)",
+      "difficulty": "MEDIUM",
+      "topic": "Glycolysis Steps",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In living organisms, respiratory substrates are often more than one; pure proteins or fats are:",
+      "options": ["Always used", "Never used", "Sometimes used", "Preferentially used"],
+      "correctAnswer": "B",
+      "explanation": "What is important to recognise is that in living organisms, respiratory substrates are often more than one; pure proteins or fats are never used as respiratory substrates. (NCERT Page 164)",
+      "difficulty": "MEDIUM",
+      "topic": "Mixed Respiratory Substrates",
+      "ncertPage": 164,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The proteins would be degraded by proteases and the individual amino acids (after deamination) would enter the pathway at stages within:",
+      "options": [
+        "Glycolysis only",
+        "Krebs' cycle or as pyruvate or acetyl CoA",
+        "ETS only",
+        "Fermentation pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The proteins would be degraded by proteases and the individual amino acids (after deamination) depending on their structure would enter the pathway at some stage within the Krebs' cycle or even as pyruvate or acetyl CoA. (NCERT Page 162)",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Entry in Respiration",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ATP acts as the:",
+      "options": [
+        "Energy source of the cell",
+        "Energy currency of the cell",
+        "Structural component of the cell",
+        "Genetic material of the cell"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hence, ATP acts as the energy currency of the cell. This energy trapped in ATP is utilised in various energy-requiring processes of the organisms. (NCERT Page 154)",
+      "difficulty": "EASY",
+      "topic": "ATP as Energy Currency",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The carbon skeleton produced during respiration is used as precursors for biosynthesis of other molecules in the cell. This makes respiration an:",
+      "options": ["Anabolic pathway", "Catabolic pathway", "Amphibolic pathway", "Linear pathway"],
+      "correctAnswer": "C",
+      "explanation": "The carbon skeleton produced during respiration is used as precursors for biosynthesis of other molecules in the cell. This makes respiration an amphibolic pathway. (NCERT Page 154)",
+      "difficulty": "MEDIUM",
+      "topic": "Amphibolic Nature",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,1212 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 19,
+  "ncertChapterName": "Neural Control and Coordination",
+  "questions": [
+    {
+      "question": "The neural system of all animals is composed of highly specialised cells called:",
+      "options": ["Myocytes", "Hepatocytes", "Nephrons", "Neurons"],
+      "correctAnswer": "D",
+      "explanation": "The neural system of all animals is composed of highly specialised cells called neurons that can detect, receive, and transmit different kinds of stimuli. (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 239,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The neural organisation is very simple in lower invertebrates like:",
+      "options": ["Hydra", "Earthworm", "Cockroach", "Insects"],
+      "correctAnswer": "A",
+      "explanation": "The neural organisation is very simple in lower invertebrates like Hydra. (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 239,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The human neural system is divided into:",
+      "options": [
+        "Somatic and autonomic nervous system",
+        "Central and peripheral nervous system",
+        "Sympathetic and parasympathetic",
+        "Sensory and motor system"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The human neural system is divided into two parts: (i) the central nervous system (CNS) and (ii) the peripheral nervous system (PNS). (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The central nervous system (CNS) includes:",
+      "options": [
+        "Brain only",
+        "Spinal cord only",
+        "Brain and spinal cord",
+        "Cranial and spinal nerves"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The CNS includes the brain and the spinal cord and is the site of information processing and control. (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The peripheral nervous system (PNS) comprises:",
+      "options": [
+        "Only motor nerves",
+        "Brain and spinal cord",
+        "All nerves of the body associated with CNS",
+        "Only sensory nerves"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The PNS comprises of all the nerves of the body associated with the CNS (brain and spinal cord). (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The nerve fibres of the PNS are of two types:",
+      "options": [
+        "Myelinated and non-myelinated",
+        "Afferent (sensory) and efferent (motor)",
+        "Sympathetic and parasympathetic",
+        "Somatic and visceral"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The nerve fibres of the PNS are of two types: (a) afferent fibres transmitting impulses from tissues/organs to the CNS and (b) efferent fibres transmitting regulatory impulses from the CNS to the concerned peripheral tissues/organs. (NCERT Page 239)",
+      "difficulty": "MEDIUM",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Afferent nerve fibres transmit impulses from:",
+      "options": ["Brain to spinal cord", "CNS to organs", "Organs to CNS", "One organ to another"],
+      "correctAnswer": "C",
+      "explanation": "Afferent fibres transmit impulses from tissues/organs to the CNS. (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Efferent nerve fibres transmit impulses from:",
+      "options": ["Brain to spinal cord", "Organs to CNS", "CNS to organs", "Spinal cord to brain"],
+      "correctAnswer": "C",
+      "explanation": "Efferent fibres transmit regulatory impulses from the CNS to the concerned peripheral tissues/organs. (NCERT Page 239)",
+      "difficulty": "EASY",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The PNS is divided into:",
+      "options": [
+        "Myelinated and non-myelinated",
+        "Central and peripheral",
+        "Somatic and autonomic nervous system",
+        "Afferent and efferent only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The PNS is divided into two divisions called somatic neural system and autonomic neural system. (NCERT Page 239)",
+      "difficulty": "MEDIUM",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The somatic neural system relays impulses from CNS to:",
+      "options": ["Involuntary organs", "Skeletal muscles", "Cardiac muscles", "Smooth muscles"],
+      "correctAnswer": "B",
+      "explanation": "The somatic neural system relays impulses from the CNS to skeletal muscles. (NCERT Page 239)",
+      "difficulty": "MEDIUM",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The autonomic neural system transmits impulses to:",
+      "options": [
+        "Brain only",
+        "Skeletal muscles only",
+        "Voluntary organs",
+        "Involuntary organs and smooth & cardiac muscles"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The autonomic neural system transmits impulses from the CNS to the involuntary organs and smooth & cardiac muscles. (NCERT Page 239)",
+      "difficulty": "MEDIUM",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The autonomic neural system is further classified into:",
+      "options": [
+        "Afferent and efferent",
+        "Sympathetic and parasympathetic",
+        "Central and peripheral",
+        "Somatic and visceral"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The autonomic neural system is further classified into sympathetic neural system and parasympathetic neural system. (NCERT Page 239)",
+      "difficulty": "MEDIUM",
+      "topic": "Neural System",
+      "ncertPage": 239,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A neuron is the structural and functional unit of:",
+      "options": ["Nervous system", "Circulatory system", "Digestive system", "Muscular system"],
+      "correctAnswer": "A",
+      "explanation": "A neuron is a microscopic structure composed of three major parts: cell body, dendrites, and axon. It is the structural and functional unit of the nervous system. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three major parts of a neuron are:",
+      "options": [
+        "Nucleus, cytoplasm, and axon",
+        "Soma, axon, and myelin",
+        "Cell body, dendrites, and axon",
+        "Dendrites, synapse, and axon"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A neuron is a microscopic structure composed of three major parts namely, cell body, dendrites, and axon. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cell body of a neuron contains:",
+      "options": [
+        "Only mitochondria",
+        "Only nucleus",
+        "Cytoplasm with cell organelles and Nissl granules",
+        "Only Nissl granules"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cell body contains cytoplasm with typical cell organelles and certain granular bodies called Nissl's granules. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Nissl granules are composed of:",
+      "options": [
+        "Golgi bodies",
+        "Lipids",
+        "Rough endoplasmic reticulum",
+        "Smooth endoplasmic reticulum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Nissl's granules are composed of rough endoplasmic reticulum (RER) and are the site of protein synthesis. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The short branching projections arising from the cell body of a neuron are called:",
+      "options": ["Axons", "Dendrites", "Synapses", "Nodes"],
+      "correctAnswer": "B",
+      "explanation": "Short fibres which branch repeatedly and project out of the cell body are called dendrites. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The long fibre arising from the cell body of a neuron is called:",
+      "options": ["Axon", "Synapse", "Soma", "Dendrite"],
+      "correctAnswer": "A",
+      "explanation": "The axon is a long fibre, the distal end of which is branched. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The branched distal end of an axon is called:",
+      "options": ["Axon terminal", "Node of Ranvier", "Dendrite", "Axon hillock"],
+      "correctAnswer": "A",
+      "explanation": "The axon is a long fibre, the distal end of which is branched. Each branch terminates as a bulb-like structure called synaptic knob. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The bulb-like structures at the terminal end of axon branches are called:",
+      "options": ["Nissl granules", "Synaptic knobs", "Nodes of Ranvier", "Dendrons"],
+      "correctAnswer": "B",
+      "explanation": "Each branch terminates as a bulb-like structure called synaptic knob which possess synaptic vesicles containing chemicals called neurotransmitters. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Synaptic vesicles contain chemicals called:",
+      "options": ["Enzymes", "Antibodies", "Hormones", "Neurotransmitters"],
+      "correctAnswer": "D",
+      "explanation": "Synaptic knobs possess synaptic vesicles containing chemicals called neurotransmitters. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Based on the number of axons and dendrites, neurons are classified as:",
+      "options": [
+        "Excitatory and inhibitory",
+        "Sensory, motor, and interneurons",
+        "Myelinated and non-myelinated",
+        "Multipolar, bipolar, and unipolar"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Based on the number of axon and dendrites, the neurons are divided into three types, namely: multipolar (with one axon and two or more dendrites), bipolar (with one axon and one dendrite) and unipolar (cell body with one axon only). (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A multipolar neuron has:",
+      "options": [
+        "One axon and two or more dendrites",
+        "Only one axon",
+        "Only dendrites",
+        "One axon and one dendrite"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Multipolar neurons have one axon and two or more dendrites; found in the cerebral cortex. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A bipolar neuron has:",
+      "options": [
+        "Only one axon",
+        "Multiple axons",
+        "One axon and two or more dendrites",
+        "One axon and one dendrite"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bipolar neurons have one axon and one dendrite; found in the retina of eye. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A unipolar neuron has:",
+      "options": [
+        "Two axons",
+        "Cell body with one axon only",
+        "Multiple dendrites only",
+        "One axon and one dendrite"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Unipolar neurons have cell body with one axon only; found in embryonic stage. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Myelinated nerve fibres are found in:",
+      "options": [
+        "Spinal and cranial nerves",
+        "Only CNS",
+        "Only PNS",
+        "Autonomic and somatic neural systems"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Two types of axons are found in the nervous system: myelinated and non-myelinated. The myelinated nerve fibres are enveloped with Schwann cells, which form a myelin sheath around the axon. They are found in spinal and cranial nerves. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The myelin sheath is formed by:",
+      "options": ["Astrocytes", "Microglia", "Nissl granules", "Schwann cells"],
+      "correctAnswer": "D",
+      "explanation": "The myelinated nerve fibres are enveloped with Schwann cells, which form a myelin sheath around the axon. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The gaps between two adjacent myelin sheaths are called:",
+      "options": ["Synapses", "Nodes of Ranvier", "Axon terminals", "Nissl granules"],
+      "correctAnswer": "B",
+      "explanation": "The gaps between two adjacent myelin sheaths are called nodes of Ranvier. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Non-myelinated nerve fibres are found in:",
+      "options": [
+        "Autonomic and somatic neural systems",
+        "Only skeletal muscles",
+        "Spinal nerves",
+        "Cranial nerves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Non-myelinated nerve fibres are enclosed by a Schwann cell that does not form a myelin sheath around the axon, and are commonly found in autonomic and the somatic neural systems. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Neuron",
+      "ncertPage": 240,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The electrical potential difference across the resting plasma membrane of a neuron is called:",
+      "options": ["Graded potential", "Spike potential", "Action potential", "Resting potential"],
+      "correctAnswer": "D",
+      "explanation": "The electrical potential difference across the resting plasma membrane, called as the resting potential. (NCERT Page 240)",
+      "difficulty": "EASY",
+      "topic": "Nerve Impulse",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The resting potential of a neuron is approximately:",
+      "options": ["-70 mV", "+90 mV", "-90 mV", "+70 mV"],
+      "correctAnswer": "A",
+      "explanation": "The resting potential is about -70 mV, with the inner side of the membrane being negatively charged compared to the outer side. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At resting state, the axonal membrane is:",
+      "options": [
+        "Depolarised",
+        "Hyperpolarised",
+        "Polarised (positive outside, negative inside)",
+        "Not polarised"
+      ],
+      "correctAnswer": "C",
+      "explanation": "You might be aware that the axonal membrane is comparatively more permeable to potassium ions (K+) and nearly impermeable to sodium ions (Na+). Similarly, the membrane is impermeable to negatively charged proteins present in the axoplasm. Consequently, the axoplasm inside the axon contains high concentration of K+ and negatively charged proteins and low concentration of Na+. In contrast, the fluid outside the axon contains a low concentration of K+, a high concentration of Na+ and thus the membrane is positively charged outside and negatively charged inside. (NCERT Page 240)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 240,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During depolarisation, the membrane becomes permeable to:",
+      "options": ["Cl- ions", "Ca2+ ions", "K+ ions", "Na+ ions"],
+      "correctAnswer": "D",
+      "explanation": "When a stimulus is applied at a site, the membrane at that site becomes freely permeable to Na+. This leads to a rapid influx of Na+ followed by the reversal of the polarity at that site (the outer surface becomes negatively charged and inner side becomes positively charged). This is called depolarisation. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During depolarisation, the potential changes from:",
+      "options": ["0 mV to -70 mV", "-70 mV to -90 mV", "-70 mV to +30 mV", "+30 mV to -70 mV"],
+      "correctAnswer": "C",
+      "explanation": "During depolarisation, the potential changes from the resting potential of about -70 mV to about +30 mV as Na+ rushes in. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The reversal of membrane potential during impulse transmission is called:",
+      "options": [
+        "Threshold potential",
+        "Resting potential",
+        "Action potential",
+        "Graded potential"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The electrical potential difference across the plasma membrane at the site A is called the action potential, which is in fact termed as a nerve impulse. (NCERT Page 241)",
+      "difficulty": "EASY",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Repolarisation is achieved by:",
+      "options": ["Influx of Na+", "Efflux of K+", "Influx of Cl-", "Influx of Ca2+"],
+      "correctAnswer": "B",
+      "explanation": "The membrane becomes freely permeable to K+, resulting in rapid efflux of K+ to the outside. This brings about repolarisation. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sodium-potassium pump:",
+      "options": [
+        "Pumps Na+ out and K+ in",
+        "Pumps both ions out",
+        "Pumps both ions in",
+        "Pumps Na+ in and K+ out"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ionic gradients across the resting membrane are maintained by the active transport of ions by the sodium-potassium pump which transports 3 Na+ outwards for 2 K+ into the cell. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In myelinated neurons, impulse conduction is:",
+      "options": ["Continuous", "Saltatory", "Slower than non-myelinated", "Does not occur"],
+      "correctAnswer": "B",
+      "explanation": "In myelinated neurons, the impulse jumps from node to node. This is called saltatory conduction, which is faster than continuous conduction in non-myelinated fibers. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Nerve Impulse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A synapse is formed by:",
+      "options": [
+        "Two dendrites",
+        "Two axons",
+        "Axon terminal of one neuron and dendrite or cell body of another",
+        "Two cell bodies"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A synapse is formed by the membranes of a pre-synaptic neuron and a post-synaptic neuron, which may or may not be separated by a gap called synaptic cleft. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Synapse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The gap between pre-synaptic and post-synaptic neurons is called:",
+      "options": ["Synaptic cleft", "Axon hillock", "Neurolemma", "Node of Ranvier"],
+      "correctAnswer": "A",
+      "explanation": "The pre-synaptic membrane and post-synaptic membrane may or may not be separated by a gap called synaptic cleft. (NCERT Page 241)",
+      "difficulty": "EASY",
+      "topic": "Synapse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At a chemical synapse, the signal is transmitted by:",
+      "options": ["Neurotransmitters", "Hormones", "Ions directly", "Electrical impulses"],
+      "correctAnswer": "A",
+      "explanation": "At a chemical synapse, the neurotransmitters are released from synaptic vesicles in the pre-synaptic neuron which bind to receptors on the post-synaptic membrane to transmit the signal. (NCERT Page 241)",
+      "difficulty": "MEDIUM",
+      "topic": "Synapse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An example of a neurotransmitter is:",
+      "options": ["Adrenaline only", "Insulin", "Acetylcholine", "Thyroxine"],
+      "correctAnswer": "C",
+      "explanation": "Acetylcholine is an important neurotransmitter released at neuromuscular junctions and many synapses. (NCERT Page 241)",
+      "difficulty": "EASY",
+      "topic": "Synapse",
+      "ncertPage": 241,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The human brain is protected by the:",
+      "options": ["Sternum", "Vertebral column only", "Skull and three meninges", "Ribs"],
+      "correctAnswer": "C",
+      "explanation": "The brain is protected by the skull and is covered by three meninges: dura mater (outer), arachnoid (middle), and pia mater (inner). (NCERT Page 242)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three meninges that cover the brain are:",
+      "options": [
+        "Pericardium, pleura, and peritoneum",
+        "Epidermis, dermis, and hypodermis",
+        "Serosa, muscularis, and mucosa",
+        "Dura mater, arachnoid, and pia mater"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The brain is covered by three cranial meninges: an outer dura mater, a very thin middle arachnoid, and an inner pia mater. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The space between the arachnoid and pia mater is filled with:",
+      "options": ["Lymph", "Air", "Blood", "Cerebrospinal fluid (CSF)"],
+      "correctAnswer": "D",
+      "explanation": "The brain can be divided into three major parts: forebrain, midbrain and hindbrain. Between the arachnoid and pia mater is the subarachnoid space filled with cerebrospinal fluid. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The brain can be divided into three major parts:",
+      "options": [
+        "Forebrain, midbrain, and hindbrain",
+        "Frontal, parietal, and temporal lobes",
+        "Gray matter, white matter, and ventricles",
+        "Cerebrum, cerebellum, and medulla"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The brain can be divided into three major parts: (i) forebrain, (ii) midbrain, and (iii) hindbrain. (NCERT Page 242)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The forebrain consists of:",
+      "options": [
+        "Cerebellum and pons",
+        "Cerebrum, thalamus, and hypothalamus",
+        "Medulla and pons",
+        "Midbrain and hindbrain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Forebrain consists of cerebrum, thalamus and hypothalamus. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cerebrum is the largest part of the brain and is divided into:",
+      "options": [
+        "Four lobes only",
+        "Anterior and posterior parts",
+        "Three hemispheres",
+        "Two cerebral hemispheres"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cerebrum forms the major part of the human brain. A deep cleft divides the cerebrum longitudinally into two halves, which are termed as the left and right cerebral hemispheres. (NCERT Page 242)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The two cerebral hemispheres are connected by:",
+      "options": ["Medulla", "Thalamus", "Pons", "Corpus callosum"],
+      "correctAnswer": "D",
+      "explanation": "The two cerebral hemispheres are connected by a tract of nerve fibres called corpus callosum. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The outer layer of the cerebral hemisphere is called:",
+      "options": ["Corpus callosum", "White matter", "Cerebral cortex (gray matter)", "Medulla"],
+      "correctAnswer": "C",
+      "explanation": "The layer of cells which covers the cerebral hemisphere is called cerebral cortex and is thrown into prominent folds. The cerebral cortex is referred to as the grey matter due to its greyish appearance. (NCERT Page 242)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The folds of the cerebral cortex are called:",
+      "options": ["Gyri (singular: gyrus)", "Sulci", "Ventricles", "Fissures"],
+      "correctAnswer": "A",
+      "explanation": "The cerebral cortex is thrown into prominent folds. The uplifted ridges are called gyri (singular: gyrus). (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The grooves between the folds of the cerebral cortex are called:",
+      "options": ["Sulci", "Ventricles", "Corpus callosum", "Gyri"],
+      "correctAnswer": "A",
+      "explanation": "The grooves between the folds are called sulci (singular: sulcus). (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The inner part of the cerebral hemisphere containing myelinated nerve fibres is called:",
+      "options": ["Cerebral cortex", "Basal ganglia", "Gray matter", "White matter"],
+      "correctAnswer": "D",
+      "explanation": "The inner part of cerebral hemisphere is called the white matter because it contains myelinated nerve fibres. (NCERT Page 242)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The sensory area of the cerebrum is located in:",
+      "options": ["Temporal lobe", "Occipital lobe", "Frontal lobe", "Parietal lobe"],
+      "correctAnswer": "D",
+      "explanation": "The cerebrum has sensory areas known as sensory areas which receive sensory impulses. The primary sensory area is in the parietal lobe. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The motor area of the cerebrum is located in:",
+      "options": ["Occipital lobe", "Parietal lobe", "Temporal lobe", "Frontal lobe"],
+      "correctAnswer": "D",
+      "explanation": "The motor area which controls voluntary muscle movements is located in the frontal lobe. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The association areas in the cerebrum are responsible for:",
+      "options": [
+        "Receiving sensory impulses only",
+        "Complex functions like memory, communication, and intersensory associations",
+        "Motor functions only",
+        "Reflex actions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Association areas are responsible for complex functions like memory, intersensory associations, communication, and motor reasoning. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The thalamus is a major:",
+      "options": [
+        "Motor control centre",
+        "Coordinating centre for sensory and motor signalling",
+        "Centre for hunger and thirst",
+        "Centre for vision"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The thalamus is the major coordinating centre for sensory and motor signalling. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hypothalamus contains centres for:",
+      "options": [
+        "Vision and hearing",
+        "Motor coordination",
+        "Memory and learning",
+        "Hunger, thirst, sleep-wake cycle, and body temperature"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hypothalamus contains a number of centres which control body temperature, urge for eating and drinking. It also contains several groups of neurosecretory cells, which secrete hypothalamic hormones. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The limbic system is involved in:",
+      "options": [
+        "Motor coordination",
+        "Regulation of sexual behaviour, expression of emotions, and motivation",
+        "Vision",
+        "Hearing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The inner parts of cerebral hemispheres and a group of associated deep structures like amygdala, hippocampus, etc., form a complex structure called the limbic system. Along with the hypothalamus, it is involved in the regulation of sexual behaviour, expression of emotional reactions (e.g., excitement, pleasure, rage and fear), and motivation. (NCERT Page 242)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 242,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The midbrain is located between:",
+      "options": [
+        "Medulla and spinal cord",
+        "Pons and medulla",
+        "Cerebrum and cerebellum",
+        "Thalamus and hindbrain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The midbrain is located between the thalamus/hypothalamus of the forebrain and pons of the hindbrain. (NCERT Page 243)",
+      "difficulty": "EASY",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The dorsal portion of the midbrain consists of four round swellings called:",
+      "options": ["Pons", "Cerebral peduncles", "Corpora quadrigemina", "Mammillary bodies"],
+      "correctAnswer": "C",
+      "explanation": "The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hindbrain comprises:",
+      "options": [
+        "Thalamus and hypothalamus",
+        "Pons, cerebellum, and medulla oblongata",
+        "Cerebrum and midbrain",
+        "Only cerebellum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hindbrain comprises pons, cerebellum, and medulla (also called the medulla oblongata). (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cerebellum is responsible for:",
+      "options": [
+        "Thinking and memory",
+        "Maintaining body equilibrium and posture",
+        "Controlling hunger and thirst",
+        "Vision"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cerebellum has very convoluted surface in order to provide the additional space for many more neurons. It is responsible for maintaining body equilibrium and posture and coordination of voluntary movements. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The medulla oblongata contains centres for:",
+      "options": [
+        "Learning and memory",
+        "Higher mental functions",
+        "Respiration, cardiovascular reflexes, and gastric secretions",
+        "Vision and hearing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Medulla contains centres which control respiration, cardiovascular reflexes, and gastric secretions. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The brain stem consists of:",
+      "options": [
+        "Midbrain, pons, and medulla oblongata",
+        "Thalamus and hypothalamus",
+        "Forebrain and hindbrain",
+        "Cerebrum and cerebellum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The midbrain, pons and medulla together constitute the brain stem. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Brain",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The spinal cord is enclosed in the:",
+      "options": ["Vertebral column", "Ribs", "Sternum", "Skull"],
+      "correctAnswer": "A",
+      "explanation": "The spinal cord is a long cylindrical structure extending from the medulla oblongata to the lumbar region of the vertebral column, enclosed in the vertebral column. (NCERT Page 243)",
+      "difficulty": "EASY",
+      "topic": "Spinal Cord",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In a cross-section of the spinal cord, the gray matter is:",
+      "options": [
+        "Only in the dorsal region",
+        "On the outside",
+        "In the shape of H or butterfly in the centre",
+        "Absent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In transverse section, the spinal cord shows two distinct regions: the inner grey matter and the outer white matter. The grey matter is arranged in the form of H or butterfly. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Spinal Cord",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The dorsal horn of the spinal cord gray matter contains:",
+      "options": ["Interneurons only", "No neurons", "Motor neurons", "Sensory neuron cell bodies"],
+      "correctAnswer": "D",
+      "explanation": "The dorsal horn (or posterior horn) contains cell bodies of interneurons and receives sensory information. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Spinal Cord",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ventral horn of the spinal cord gray matter contains:",
+      "options": ["Motor neuron cell bodies", "Only interneurons", "No neurons", "Sensory neurons"],
+      "correctAnswer": "A",
+      "explanation": "The ventral horn (or anterior horn) contains cell bodies of motor neurons whose axons leave via ventral roots. (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Spinal Cord",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A reflex action is:",
+      "options": [
+        "An involuntary, automatic response to a stimulus",
+        "A learned response",
+        "A conscious response",
+        "A voluntary response"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Reflex action is a sudden, involuntary response to a stimulus. The reflex action involves the neural pathway called reflex arc. (NCERT Page 243)",
+      "difficulty": "EASY",
+      "topic": "Reflex Action",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pathway involved in a reflex action is called:",
+      "options": ["Synaptic pathway", "Motor pathway", "Neural circuit", "Reflex arc"],
+      "correctAnswer": "D",
+      "explanation": "The reflex action involves the neural pathway called reflex arc which includes receptor → afferent nerve → CNS → efferent nerve → effector. (NCERT Page 243)",
+      "difficulty": "EASY",
+      "topic": "Reflex Action",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The correct sequence of components in a reflex arc is:",
+      "options": [
+        "Effector → Afferent nerve → CNS → Efferent nerve → Receptor",
+        "Receptor → Afferent nerve → CNS → Efferent nerve → Effector",
+        "CNS → Receptor → Effector → Afferent → Efferent",
+        "Receptor → Efferent → CNS → Afferent → Effector"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The components of a reflex arc in sequence are: Receptor → Afferent (sensory) nerve → CNS (integration centre) → Efferent (motor) nerve → Effector (muscle or gland). (NCERT Page 243)",
+      "difficulty": "MEDIUM",
+      "topic": "Reflex Action",
+      "ncertPage": 243,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Withdrawal of hand on touching a hot object is an example of:",
+      "options": ["Spinal reflex", "Cerebral reflex", "Autonomic response", "Conditioned reflex"],
+      "correctAnswer": "A",
+      "explanation": "Withdrawal of hand on touching a hot object is a classic example of spinal reflex, which is controlled by the spinal cord without involvement of the brain. (NCERT Page 243)",
+      "difficulty": "EASY",
+      "topic": "Reflex Action",
+      "ncertPage": 243,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The human eye is a:",
+      "options": [
+        "Photoreceptor organ",
+        "Mechanoreceptor organ",
+        "Chemoreceptor organ",
+        "Thermoreceptor organ"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The eye is the sense organ of sight and functions as a photoreceptor detecting light stimuli. (NCERT Page 244)",
+      "difficulty": "EASY",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The wall of the eyeball is composed of three layers:",
+      "options": [
+        "Cornea, lens, and vitreous",
+        "Iris, pupil, and lens",
+        "Cornea, iris, and retina",
+        "Sclera, choroid, and retina"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The wall of the eye ball is composed of three layers. The external layer is composed of a dense connective tissue, the sclera. The middle layer is the choroid. The inner layer is the retina. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The transparent anterior portion of the sclera is called:",
+      "options": ["Pupil", "Lens", "Iris", "Cornea"],
+      "correctAnswer": "D",
+      "explanation": "The anterior portion of the sclera is called the cornea. It is transparent and admits light into the eye. (NCERT Page 244)",
+      "difficulty": "EASY",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The coloured visible portion of the eye containing the pupil is called:",
+      "options": ["Cornea", "Sclera", "Iris", "Retina"],
+      "correctAnswer": "C",
+      "explanation": "The anterior portion of the choroid is called the iris which is the visible coloured portion of the eye. The pupil is the aperture in the centre of the iris. (NCERT Page 244)",
+      "difficulty": "EASY",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The lens of the eye is held in position by:",
+      "options": ["Vitreous humor", "Cornea", "Suspensory ligaments (zonule of Zinn)", "Iris"],
+      "correctAnswer": "C",
+      "explanation": "The lens is held in position by suspensory ligaments (zonule of Zinn) attached to the ciliary body. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The space between the cornea and the lens is called:",
+      "options": ["Aqueous chamber", "Posterior chamber", "Retinal space", "Vitreous chamber"],
+      "correctAnswer": "A",
+      "explanation": "The space between the cornea and the lens is called the aqueous chamber and contains a thin watery fluid called aqueous humor. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The space behind the lens is called:",
+      "options": ["Aqueous chamber", "Vitreous chamber", "Anterior chamber", "Retinal space"],
+      "correctAnswer": "B",
+      "explanation": "The space behind the lens is called the vitreous chamber and is filled with a transparent gel called vitreous humor. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The photoreceptor cells in the retina are of two types:",
+      "options": [
+        "Bipolar and ganglion cells",
+        "Rods and cones",
+        "Horizontal and amacrine cells",
+        "Pigment cells and neural cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The neural layer of the retina contains three types of neural cells – from inside to outside – ganglion cells, bipolar cells, and photoreceptor cells. There are two types of photoreceptor cells, namely, rods and cones. (NCERT Page 244)",
+      "difficulty": "EASY",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rods contain a purple-red pigment called:",
+      "options": ["Hemoglobin", "Melanin", "Rhodopsin", "Iodopsin"],
+      "correctAnswer": "C",
+      "explanation": "The rods contain the purplish-red protein called rhodopsin or visual purple. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cones are responsible for:",
+      "options": [
+        "Night vision only",
+        "Peripheral vision only",
+        "Vision in dim light",
+        "Daylight (photopic) vision and colour vision"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cones are responsible for daylight (photopic) vision and colour perception. They contain photopigments called iodopsins. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The point where the optic nerve leaves the eye is called:",
+      "options": ["Yellow spot", "Ora serrata", "Fovea", "Blind spot"],
+      "correctAnswer": "D",
+      "explanation": "At the point where the optic nerve leaves the eye and where blood vessels enter, there are no photoreceptors. This is called the blind spot. (NCERT Page 244)",
+      "difficulty": "EASY",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The fovea is the region of:",
+      "options": [
+        "Optic nerve exit",
+        "No photoreceptors",
+        "Maximum concentration of cones",
+        "Maximum concentration of rods"
+      ],
+      "correctAnswer": "C",
+      "explanation": "At the posterior pole of the eye, lateral to the blind spot, there is a yellowish pigmented spot called macula lutea with a central pit called the fovea. The fovea is a thinned-out portion of the retina where only cones are densely packed. (NCERT Page 244)",
+      "difficulty": "MEDIUM",
+      "topic": "Eye",
+      "ncertPage": 244,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ear performs two functions:",
+      "options": [
+        "Hearing and maintenance of body balance",
+        "Taste and smell",
+        "Touch and temperature",
+        "Vision and smell"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ears perform two sensory functions, hearing and maintenance of body balance. (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three parts of the human ear are:",
+      "options": [
+        "External ear, middle ear, and internal ear",
+        "Pinna, ear canal, and eardrum",
+        "Malleus, incus, and stapes",
+        "Cochlea, vestibule, and semicircular canals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ear can be divided into three sections – external ear, middle ear, and internal ear. (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The external ear consists of:",
+      "options": [
+        "Cochlea and vestibule",
+        "Pinna and external auditory meatus",
+        "Eustachian tube and ossicles",
+        "Semicircular canals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The external ear consists of the pinna and external auditory meatus (canal). (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The tympanic membrane (eardrum) separates the:",
+      "options": [
+        "Middle ear from internal ear",
+        "External ear from middle ear",
+        "Cochlea from vestibule",
+        "Pinna from ear canal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tympanic membrane separates the external ear from the middle ear. (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The middle ear contains three small bones called:",
+      "options": [
+        "Cochlea, vestibule, and canals",
+        "Malleus, incus, and stapes (ear ossicles)",
+        "Utricle, saccule, and cochlea",
+        "Pinna, meatus, and membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The middle ear contains three ossicles called malleus, incus, and stapes which are attached to one another in a chain-like fashion. (NCERT Page 245)",
+      "difficulty": "MEDIUM",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Eustachian tube connects the:",
+      "options": [
+        "Middle ear to pharynx",
+        "Internal ear to brain",
+        "Cochlea to vestibule",
+        "External ear to middle ear"
+      ],
+      "correctAnswer": "A",
+      "explanation": "An Eustachian tube connects the middle ear cavity with the pharynx. The Eustachian tube helps in equalising the pressures on either side of the ear drum. (NCERT Page 245)",
+      "difficulty": "MEDIUM",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The internal ear is also called:",
+      "options": ["Vestibule", "Organ of Corti", "Labyrinth", "Cochlea"],
+      "correctAnswer": "C",
+      "explanation": "The inner ear (internal ear) consists of the bony labyrinth and the membranous labyrinth. (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The coiled portion of the membranous labyrinth called cochlea is involved in:",
+      "options": ["Neither", "Balance", "Hearing", "Both hearing and balance"],
+      "correctAnswer": "C",
+      "explanation": "The coiled portion of the labyrinth is called cochlea. It contains the organ of hearing, the Organ of Corti. (NCERT Page 245)",
+      "difficulty": "EASY",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sensory receptor for hearing is located in the:",
+      "options": ["Semicircular canals", "Organ of Corti", "Crista", "Vestibule"],
+      "correctAnswer": "B",
+      "explanation": "The Organ of Corti is the sensory organ of hearing located on the basilar membrane within the cochlea. (NCERT Page 245)",
+      "difficulty": "MEDIUM",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vestibular apparatus comprises:",
+      "options": [
+        "Cochlea only",
+        "Three semicircular canals and the otolith organ",
+        "Organ of Corti",
+        "Eustachian tube"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vestibular apparatus is composed of three semi-circular canals and the otolith organ (utricle and saccule). They are involved in balance and posture. (NCERT Page 245)",
+      "difficulty": "MEDIUM",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The semicircular canals are responsible for:",
+      "options": [
+        "Static equilibrium only",
+        "Sound amplification",
+        "Hearing",
+        "Dynamic equilibrium (balance during movement)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The semicircular canals are involved in the detection of rotational movements and help maintain dynamic equilibrium. (NCERT Page 245)",
+      "difficulty": "MEDIUM",
+      "topic": "Ear",
+      "ncertPage": 245,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

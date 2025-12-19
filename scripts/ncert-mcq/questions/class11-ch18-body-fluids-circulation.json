@@ -1,0 +1,1052 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 18,
+  "ncertChapterName": "Body Fluids and Circulation",
+  "questions": [
+    {
+      "question": "The body fluid that constitutes the internal environment of the body is called:",
+      "options": ["Lymph", "Interstitial fluid", "All of these", "Blood"],
+      "correctAnswer": "C",
+      "explanation": "Blood, lymph, and interstitial fluid together constitute the body fluids which form the internal environment of the body. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Blood is a special connective tissue consisting of:",
+      "options": [
+        "Cells only",
+        "Fluid matrix only",
+        "Cells and fluid matrix called plasma",
+        "Muscles and plasma"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blood is a special connective tissue consisting of a fluid matrix, plasma, and formed elements. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plasma constitutes approximately what percentage of blood?",
+      "options": ["45%", "55%", "65%", "35%"],
+      "correctAnswer": "B",
+      "explanation": "Plasma constitutes about 55 per cent of the blood. (NCERT Page 230)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Water forms about what percentage of plasma?",
+      "options": ["70-80%", "90-92%", "95-98%", "60-70%"],
+      "correctAnswer": "B",
+      "explanation": "90-92 per cent of plasma is water and proteins contribute 6-8 per cent of it. (NCERT Page 230)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a plasma protein?",
+      "options": ["Fibrinogen", "Globulins", "Albumins", "Haemoglobin"],
+      "correctAnswer": "D",
+      "explanation": "Fibrinogens, globulins and albumins are the major plasma proteins. Haemoglobin is present in RBCs, not in plasma. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fibrinogen is needed for:",
+      "options": ["Defence", "Osmotic balance", "Clotting of blood", "Oxygen transport"],
+      "correctAnswer": "C",
+      "explanation": "Fibrinogens are needed for clotting or coagulation of blood. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Globulins are primarily involved in:",
+      "options": [
+        "Oxygen transport",
+        "Blood clotting",
+        "Defence mechanisms (immunity)",
+        "Osmotic balance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Globulins primarily are involved in defence mechanisms of the body (immunity). (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Albumins help in:",
+      "options": ["Blood clotting", "Defence mechanisms", "Osmotic balance", "Oxygen transport"],
+      "correctAnswer": "C",
+      "explanation": "Albumins help in osmotic balance of the blood. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plasma without clotting factors is called:",
+      "options": ["Lymph", "Serum", "Interstitial fluid", "Blood"],
+      "correctAnswer": "B",
+      "explanation": "Plasma without the clotting factors is called serum. (NCERT Page 230)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The formed elements of blood are:",
+      "options": [
+        "Plasma proteins",
+        "Erythrocytes only",
+        "Leucocytes only",
+        "Erythrocytes, leucocytes, and platelets"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Erythrocytes, leucocytes, and platelets are collectively called formed elements and they constitute nearly 45 per cent of the blood. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Blood",
+      "ncertPage": 230,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Erythrocytes (RBCs) are formed in:",
+      "options": ["Red bone marrow", "Spleen only", "Lymph nodes", "Liver in adults"],
+      "correctAnswer": "A",
+      "explanation": "Erythrocytes or red blood cells (RBC) are the most abundant of all the cells in blood. RBCs are formed in the red bone marrow in the adults. (NCERT Page 230)",
+      "difficulty": "EASY",
+      "topic": "Erythrocytes",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mature mammalian RBCs are:",
+      "options": [
+        "Nucleated and biconcave",
+        "Enucleated and biconcave",
+        "Nucleated and spherical",
+        "Enucleated and spherical"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A healthy individual has 12-16 gms of haemoglobin in every 100 ml of blood. These molecules are called RBC and they lack nucleus (enucleated) in mammals and are biconcave in shape. (NCERT Page 230)",
+      "difficulty": "MEDIUM",
+      "topic": "Erythrocytes",
+      "ncertPage": 230,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The normal RBC count in adult males is:",
+      "options": ["3-4 million/mm³", "5-5.5 million/mm³", "6-7 million/mm³", "8-9 million/mm³"],
+      "correctAnswer": "B",
+      "explanation": "RBC count in adult males is about 5 millions to 5.5 millions per mm³ of blood. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Erythrocytes",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "RBCs have an average life span of:",
+      "options": ["90 days", "120 days", "150 days", "60 days"],
+      "correctAnswer": "B",
+      "explanation": "RBCs have an average life span of 120 days after which they are destroyed in the spleen (graveyard of RBCs). (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Erythrocytes",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 'graveyard of RBCs' is:",
+      "options": ["Kidney", "Spleen", "Bone marrow", "Liver"],
+      "correctAnswer": "B",
+      "explanation": "RBCs have an average life span of 120 days after which they are destroyed in the spleen (graveyard of RBCs). (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Erythrocytes",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Leucocytes (WBCs) are also known as:",
+      "options": ["White blood corpuscles", "Platelets", "Erythrocytes", "Thrombocytes"],
+      "correctAnswer": "A",
+      "explanation": "Leucocytes are also known as white blood cells (WBC) as they are colourless due to the lack of haemoglobin. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Leucocytes are generally:",
+      "options": [
+        "Non-nucleated",
+        "Short-lived and non-nucleated",
+        "Short-lived and nucleated",
+        "Long-lived and non-nucleated"
+      ],
+      "correctAnswer": "C",
+      "explanation": "They are nucleated and are relatively short lived. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Leucocytes are of two main types:",
+      "options": [
+        "Granulocytes and agranulocytes",
+        "Monocytes and lymphocytes",
+        "Basophils and acidophils",
+        "Erythrocytes and thrombocytes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "We have two main categories of WBCs – granulocytes and agranulocytes. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Neutrophils, eosinophils, and basophils are examples of:",
+      "options": ["Thrombocytes", "Erythrocytes", "Agranulocytes", "Granulocytes"],
+      "correctAnswer": "D",
+      "explanation": "Neutrophils, eosinophils, and basophils are different types of granulocytes. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lymphocytes and monocytes are examples of:",
+      "options": ["Granulocytes", "Agranulocytes", "Thrombocytes", "Erythrocytes"],
+      "correctAnswer": "B",
+      "explanation": "Lymphocytes and monocytes are different types of agranulocytes. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most abundant WBCs are:",
+      "options": ["Neutrophils", "Eosinophils", "Lymphocytes", "Monocytes"],
+      "correctAnswer": "A",
+      "explanation": "Neutrophils are the most abundant cells (60-65 per cent) of the total WBCs and basophils are the least (0.5-1 per cent). (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The percentage of neutrophils in total WBC count is:",
+      "options": ["20-25%", "40-45%", "60-65%", "80-85%"],
+      "correctAnswer": "C",
+      "explanation": "Neutrophils are the most abundant cells (60-65 per cent) of the total WBCs. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The least abundant WBCs are:",
+      "options": ["Monocytes", "Neutrophils", "Eosinophils", "Basophils"],
+      "correctAnswer": "D",
+      "explanation": "Basophils are the least (0.5-1 per cent) among all WBCs. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Leucocytes",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Platelets are also called:",
+      "options": ["Lymphocytes", "Erythrocytes", "Leucocytes", "Thrombocytes"],
+      "correctAnswer": "D",
+      "explanation": "Platelets also called thrombocytes, are cell fragments produced from megakaryocytes. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Platelets",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Platelets are produced from:",
+      "options": ["Monocytes", "Lymphocytes", "Red bone marrow cells", "Megakaryocytes"],
+      "correctAnswer": "D",
+      "explanation": "Platelets are cell fragments produced from megakaryocytes (special cells in the bone marrow). (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Platelets",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The normal count of platelets is:",
+      "options": [
+        "50,000-100,000/mm³",
+        "150,000-350,000/mm³",
+        "500,000-700,000/mm³",
+        "800,000-1,000,000/mm³"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Blood normally contains 150,000-350,000 platelets/mm³. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Platelets",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Platelets are essential for:",
+      "options": ["Coagulation of blood", "Osmotic balance", "Defence", "Oxygen transport"],
+      "correctAnswer": "A",
+      "explanation": "Platelets can release a variety of substances most of which are involved in the coagulation or clotting of blood. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Platelets",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ABO blood grouping is based on the presence or absence of:",
+      "options": ["Platelets", "Haemoglobin type", "Rh factor", "Two surface antigens (A and B)"],
+      "correctAnswer": "D",
+      "explanation": "ABO grouping is based on the presence or absence of two surface antigens (chemicals that can induce immune response) on the RBCs namely A and B. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blood group A has:",
+      "options": [
+        "Both antigens and no antibodies",
+        "No antigens and both antibodies",
+        "Antigen B and antibody a",
+        "Antigen A and antibody b"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood group A has antigen A on RBCs and antibody b (anti-B) in plasma. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The universal donor blood group is:",
+      "options": ["A", "B", "AB", "O"],
+      "correctAnswer": "D",
+      "explanation": "Persons with blood group O can donate blood to persons with any other blood group and hence are called 'universal donors'. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The universal recipient blood group is:",
+      "options": ["B", "AB", "O", "A"],
+      "correctAnswer": "B",
+      "explanation": "Persons with blood group AB can accept blood from persons with AB as well as the other groups of blood and hence are called 'universal recipients'. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blood group O has:",
+      "options": [
+        "Antigen A only",
+        "Antigen B only",
+        "Both antigens, no antibodies",
+        "No antigens, both antibodies (a and b)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood group O has no antigens on RBCs but has both antibodies a (anti-A) and b (anti-B) in plasma. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blood group AB has:",
+      "options": [
+        "Only antigen A",
+        "Only antigen B",
+        "Both antigens, no antibodies",
+        "No antigens, both antibodies"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blood group AB has both antigens A and B on RBCs but no antibodies in plasma. (NCERT Page 231)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Another blood grouping based on presence or absence of a protein antigen on RBCs is:",
+      "options": ["MN grouping", "HLA grouping", "ABO grouping", "Rh grouping"],
+      "correctAnswer": "D",
+      "explanation": "Another blood grouping is also done based on the presence or absence of another antigen called Rh antigen (Rh factor) on the surface of RBCs. (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Rh factor was first discovered in:",
+      "options": ["Rats", "Rhesus monkey", "Human beings", "Rabbits"],
+      "correctAnswer": "B",
+      "explanation": "Rh antigen similar to one present in Rhesus monkeys (hence Rh). (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A person with Rh+ blood:",
+      "options": [
+        "Has anti-Rh antibodies in plasma",
+        "Lacks Rh antigen on RBCs",
+        "Has both Rh antigen and antibodies",
+        "Has Rh antigen on RBCs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Majority (nearly 80 per cent) of humans possess Rh antigens on their RBCs and are called Rh positive (Rh+ve). Those who do not have Rh antigens are Rh negative (Rh-ve). (NCERT Page 231)",
+      "difficulty": "EASY",
+      "topic": "Blood Groups",
+      "ncertPage": 231,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "If an Rh-ve person receives Rh+ve blood for the first time:",
+      "options": [
+        "Immediate clumping occurs",
+        "Anti-Rh antibodies are produced",
+        "The person becomes Rh+ve",
+        "No reaction occurs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A special case of Rh incompatibility (fetomaternal) has been observed between the Rh-ve blood of a pregnant mother with Rh+ve blood of the foetus. Rh antigens of the foetus do not get exposed to the Rh-ve blood of the mother in the first pregnancy as the two bloods are well separated by the placenta. However, during the delivery of the first child, there is a possibility of exposure of the maternal blood to small amounts of the Rh+ve blood from the foetus. In such cases, the mother starts preparing antibodies against Rh in her blood. (NCERT Page 232)",
+      "difficulty": "HARD",
+      "topic": "Blood Groups",
+      "ncertPage": 232,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Erythroblastosis foetalis occurs when:",
+      "options": [
+        "Rh-ve mother carries Rh+ve foetus (second pregnancy)",
+        "Both parents are Rh+ve",
+        "Both parents are Rh-ve",
+        "Rh+ve mother carries Rh-ve foetus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "During subsequent pregnancies, the Rh antibodies from the mother (Rh-ve) can leak into the blood of the foetus (Rh+ve) and destroy the foetal RBCs. This could be fatal to the foetus or could cause severe anaemia and jaundice to the baby. This condition is called erythroblastosis foetalis. (NCERT Page 232)",
+      "difficulty": "HARD",
+      "topic": "Blood Groups",
+      "ncertPage": 232,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Coagulation of blood involves the conversion of:",
+      "options": [
+        "Thrombin to prothrombin",
+        "Fibrinogen to fibrin",
+        "Fibrin to fibrinogen",
+        "Prothrombin to thromboplastin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The mechanism of clotting involves a cascade of events. An enzyme complex, thrombokinase is formed by a series of linked enzymatic reactions (cascade process) involving a number of factors present in the plasma in an inactive state. Thrombokinase converts prothrombin to thrombin. Thrombin converts fibrinogen to fibrin. The fibrin threads form the basis of a blood clot. (NCERT Page 232)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Coagulation",
+      "ncertPage": 232,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prothrombin is converted to thrombin by:",
+      "options": ["Calcium ions alone", "Fibrinogen", "Thrombokinase", "Fibrin"],
+      "correctAnswer": "C",
+      "explanation": "Thrombokinase converts prothrombin to thrombin in the presence of Ca²⁺. (NCERT Page 232)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Coagulation",
+      "ncertPage": 232,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Calcium ions are required for:",
+      "options": ["Blood coagulation", "Osmotic balance", "Defence mechanism", "Formation of RBCs"],
+      "correctAnswer": "A",
+      "explanation": "Calcium ions play a very important role in clotting. (NCERT Page 232)",
+      "difficulty": "EASY",
+      "topic": "Blood Coagulation",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lymph is a fluid that:",
+      "options": [
+        "Contains no cells",
+        "Contains RBCs",
+        "Is colourless and contains WBCs",
+        "Is red and contains platelets"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As the blood passes through the capillaries in tissues, some water along with many small water-soluble substances move out into the intercellular spaces forming the interstitial fluid. This fluid is called lymph and it is colourless. It contains WBCs and clotting factors. (NCERT Page 232)",
+      "difficulty": "MEDIUM",
+      "topic": "Lymph",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lymph differs from blood in that it:",
+      "options": [
+        "Is darker in colour",
+        "Has more RBCs",
+        "Lacks erythrocytes and proteins",
+        "Has more proteins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Lymph is similar to blood plasma but has lesser proteins. It is devoid of RBCs but has leucocytes. (NCERT Page 232)",
+      "difficulty": "MEDIUM",
+      "topic": "Lymph",
+      "ncertPage": 232,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The lymphatic system consists of:",
+      "options": [
+        "Heart and blood vessels",
+        "Lymph, lymph vessels, and lymph nodes",
+        "Arteries and veins only",
+        "Capillaries only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lymph, lymphatic capillaries, lymphatic vessels, lymph nodes, and lymphoid organs together constitute the lymphatic system. (NCERT Page 232)",
+      "difficulty": "EASY",
+      "topic": "Lymph",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An important function of lymph is:",
+      "options": [
+        "Secretion of hormones",
+        "Production of RBCs",
+        "Transport of oxygen",
+        "Transport of digested fats from intestine"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The lymphatic system is an important component of the circulatory system. It helps in the transport of fats. Lymph nodes are secondary lymphoid organs important for immunity. (NCERT Page 232)",
+      "difficulty": "MEDIUM",
+      "topic": "Lymph",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The human heart is enclosed in a double-walled membranous bag called:",
+      "options": ["Meninges", "Pleura", "Pericardium", "Peritoneum"],
+      "correctAnswer": "C",
+      "explanation": "The human heart is situated in the thoracic cavity, in between the two lungs, slightly tilted to the left. It has the size of a clenched fist. It is protected by a double-walled membranous bag, pericardium. (NCERT Page 232)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The fluid in the pericardial space is called:",
+      "options": ["Synovial fluid", "Pleural fluid", "Lymph", "Pericardial fluid"],
+      "correctAnswer": "D",
+      "explanation": "The pericardial space is filled with pericardial fluid which reduces friction and protects the heart. (NCERT Page 232)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 232,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The human heart has:",
+      "options": ["Five chambers", "Two chambers", "Three chambers", "Four chambers"],
+      "correctAnswer": "D",
+      "explanation": "The human heart has four chambers, two relatively small upper chambers called atria and two larger lower chambers called ventricles. (NCERT Page 232)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 232,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The wall of the ventricles is thicker than the atria because:",
+      "options": [
+        "Ventricles pump blood out of the heart",
+        "Atria are smaller",
+        "Ventricles store more blood",
+        "Atria receive blood"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A muscular wall, the inter-ventricular septum, separates the left and the right ventricles. The ventricles have thicker walls than the atria because they pump blood to longer distances. (NCERT Page 233)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The opening between the right atrium and right ventricle is guarded by:",
+      "options": ["Semilunar valves", "Eustachian valve", "Bicuspid valve", "Tricuspid valve"],
+      "correctAnswer": "D",
+      "explanation": "The opening between the right atrium and the right ventricle is guarded by a valve formed of three muscular flaps called tricuspid valve. (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The bicuspid valve (mitral valve) is present between:",
+      "options": [
+        "Right atrium and right ventricle",
+        "Left atrium and left ventricle",
+        "Ventricle and aorta",
+        "Atrium and pulmonary artery"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening between the left atrium and left ventricle is guarded by a bicuspid (mitral) valve. (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The openings of the right and left ventricles into the pulmonary artery and aorta respectively are guarded by:",
+      "options": ["Eustachian valves", "Tricuspid valves", "Bicuspid valves", "Semilunar valves"],
+      "correctAnswer": "D",
+      "explanation": "The openings of the right and the left ventricles into the pulmonary artery and aorta respectively are provided with the semilunar valves. (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The valves in the heart allow the flow of blood:",
+      "options": [
+        "In both directions",
+        "Only in one direction",
+        "From ventricles to atria",
+        "From aorta to ventricles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The valves in the heart allow the flow of blood only in one direction - from atria to ventricles and from ventricles to pulmonary artery/aorta. (NCERT Page 233)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The nodal tissue in the heart is composed of:",
+      "options": [
+        "Specialised cardiac muscle fibres",
+        "Nervous tissue",
+        "Connective tissue",
+        "Skeletal muscle fibres"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The nodal tissue is a specialised cardiac musculature located in the heart. A patch of this tissue is present in the right upper corner of the right atrium called the sino-atrial node (SAN). (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The SA node is located in:",
+      "options": [
+        "Right upper corner of right atrium",
+        "Inter-ventricular septum",
+        "Left ventricle",
+        "Left atrium"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A patch of this tissue is present in the right upper corner of the right atrium called the sino-atrial node (SAN). (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pacemaker of the heart is:",
+      "options": ["Purkinje fibres", "AV node", "SA node (SAN)", "Bundle of His"],
+      "correctAnswer": "C",
+      "explanation": "Since it initiates and maintains the rhythmic contractile activity of the heart, it is responsible for generating the cardiac impulse. It is known as the pacemaker of the heart. (NCERT Page 233)",
+      "difficulty": "EASY",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The AV node is located in:",
+      "options": [
+        "Left ventricle",
+        "Upper right atrium",
+        "Lower left corner of right atrium, close to AV septum",
+        "Inter-ventricular septum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Another mass of this tissue is seen in the lower left corner of the right atrium close to the atrio-ventricular septum called the atrio-ventricular node (AVN). (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The bundle of His passes through:",
+      "options": ["Walls of atria", "Inter-ventricular septum", "Walls of veins", "Pericardium"],
+      "correctAnswer": "B",
+      "explanation": "A bundle of nodal fibres, atrioventricular bundle (AV bundle), also called bundle of His continues from the AVN which passes through the atrio-ventricular septa to emerge on the top of the inter-ventricular septum and immediately divides into a right and left bundle. (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Purkinje fibres are found in:",
+      "options": ["Atrial walls", "Ventricular walls", "Blood vessels", "Pericardium"],
+      "correctAnswer": "B",
+      "explanation": "These branches give rise to minute fibres throughout the ventricular musculature of the respective sides and are called Purkinje fibres. (NCERT Page 233)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The correct sequence of cardiac conduction system is:",
+      "options": [
+        "Bundle of His → SA node → AV node → Purkinje fibres",
+        "Purkinje fibres → AV node → SA node → Bundle of His",
+        "SA node → AV node → Bundle of His → Purkinje fibres",
+        "AV node → SA node → Bundle of His → Purkinje fibres"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cardiac impulse is initiated by the SA node and spreads through the atria to the AV node, then through the bundle of His and Purkinje fibres to the ventricles. (NCERT Page 233-234)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart",
+      "ncertPage": 233,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cardiac cycle is the sequence of events during:",
+      "options": [
+        "One heart sound",
+        "One minute of heart activity",
+        "One complete heartbeat",
+        "One ECG recording"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The sequential events in the heart which are repeated in the same order are called the cardiac cycle. To begin with, all the four chambers of heart are in a relaxed state (joint diastole). (NCERT Page 234)",
+      "difficulty": "EASY",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The duration of a cardiac cycle is approximately:",
+      "options": ["1.0 seconds", "0.4 seconds", "0.6 seconds", "0.8 seconds"],
+      "correctAnswer": "D",
+      "explanation": "A cardiac cycle takes about 0.8 seconds to complete. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The contraction phase of the heart is called:",
+      "options": ["Stroke volume", "Diastole", "Systole", "Cardiac output"],
+      "correctAnswer": "C",
+      "explanation": "Systole is the contraction phase of the heart chambers. Atrial systole pushes blood into ventricles, and ventricular systole pumps blood to pulmonary artery and aorta. (NCERT Page 234)",
+      "difficulty": "EASY",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The relaxation phase of the heart is called:",
+      "options": ["Stroke volume", "Systole", "Diastole", "Cardiac output"],
+      "correctAnswer": "C",
+      "explanation": "Diastole is the relaxation phase of the heart chambers during which the chambers fill with blood. (NCERT Page 234)",
+      "difficulty": "EASY",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stroke volume (SV) is defined as:",
+      "options": [
+        "Total blood pumped per minute",
+        "Volume of blood pumped by each ventricle per beat",
+        "Heart rate per minute",
+        "Total blood in the body"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood which is called the stroke volume. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stroke volume of a healthy person is approximately:",
+      "options": ["70 mL", "100 mL", "30 mL", "50 mL"],
+      "correctAnswer": "A",
+      "explanation": "During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood which is called the stroke volume. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cardiac output is calculated as:",
+      "options": [
+        "Stroke volume × Heart rate",
+        "Blood pressure × Heart rate",
+        "Total blood volume × Heart rate",
+        "Stroke volume × Blood pressure"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cardiac output = Stroke volume × Heart rate. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cardiac output of a healthy person is approximately:",
+      "options": ["10 litres/min", "3 litres/min", "5 litres/min", "7 litres/min"],
+      "correctAnswer": "C",
+      "explanation": "The cardiac output of a healthy individual is approximately 5 litres per minute (70 mL × 72 beats/min). (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first heart sound (lub) is produced when:",
+      "options": [
+        "Semilunar valves close",
+        "AV valves (tricuspid and bicuspid) close",
+        "SA node fires",
+        "Ventricles relax"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The first heart sound (lub) is associated with the closure of the tricuspid and bicuspid valves. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The second heart sound (dub) is produced when:",
+      "options": ["Semilunar valves close", "Atria contract", "SA node fires", "AV valves close"],
+      "correctAnswer": "A",
+      "explanation": "The second heart sound (dub) is associated with the closure of the semilunar valves. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "Cardiac Cycle",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Electrocardiograph (ECG) is a graphical representation of:",
+      "options": [
+        "Electrical activity of the heart",
+        "Heart sounds",
+        "Blood flow velocity",
+        "Blood pressure changes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "An electrocardiograph (ECG) is the graphical representation of the electrical activity of the heart during a cardiac cycle. (NCERT Page 234)",
+      "difficulty": "EASY",
+      "topic": "ECG",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "To obtain a standard ECG (Limb Lead), electrodes are placed on:",
+      "options": ["Back only", "Head and neck", "Both wrists and both ankles", "Chest only"],
+      "correctAnswer": "C",
+      "explanation": "To obtain a standard ECG or Limb Lead, electrodes are placed on both wrists and both ankles. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "ECG",
+      "ncertPage": 234,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The P-wave in ECG represents:",
+      "options": [
+        "Ventricular repolarisation",
+        "Atrial repolarisation",
+        "Ventricular depolarisation",
+        "Atrial depolarisation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The P-wave represents the electrical excitation (or depolarisation) of the atria, which leads to the contraction of both the atria. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "ECG",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The QRS complex in ECG represents:",
+      "options": [
+        "Ventricular depolarisation",
+        "Ventricular repolarisation",
+        "Atrial depolarisation",
+        "Atrial repolarisation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The QRS complex represents the depolarisation of the ventricles, which initiates the ventricular contraction. (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "ECG",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The T-wave in ECG represents:",
+      "options": [
+        "Atrial repolarisation",
+        "Atrial depolarisation",
+        "Ventricular depolarisation",
+        "Ventricular repolarisation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The T-wave represents the return of the ventricles from excited to normal state (repolarisation). (NCERT Page 234)",
+      "difficulty": "MEDIUM",
+      "topic": "ECG",
+      "ncertPage": 234,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In double circulation, blood passes through the heart:",
+      "options": [
+        "Once in each cycle",
+        "Twice in each cycle",
+        "Three times in each cycle",
+        "Does not pass through heart"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In double circulation, blood passes through the heart twice in each complete cycle - once through pulmonary circulation and once through systemic circulation. (NCERT Page 235)",
+      "difficulty": "EASY",
+      "topic": "Circulation",
+      "ncertPage": 235,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pulmonary circulation involves blood flow between:",
+      "options": [
+        "Heart and lungs",
+        "Heart and brain",
+        "Heart and kidneys",
+        "Heart and body organs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pulmonary circulation involves the flow of blood between the heart and lungs for oxygenation. (NCERT Page 235)",
+      "difficulty": "EASY",
+      "topic": "Circulation",
+      "ncertPage": 235,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Systemic circulation involves blood flow between:",
+      "options": [
+        "Heart and different body parts",
+        "Lungs and body parts",
+        "Liver and kidneys",
+        "Heart and lungs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Systemic circulation involves the flow of blood between the heart and different parts of the body for supply of oxygen and nutrients. (NCERT Page 235)",
+      "difficulty": "EASY",
+      "topic": "Circulation",
+      "ncertPage": 235,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hepatic portal system carries blood from:",
+      "options": ["Intestine to liver", "Heart to liver", "Kidney to liver", "Liver to heart"],
+      "correctAnswer": "A",
+      "explanation": "A unique vascular connection exists between the digestive tract and liver called hepatic portal system. The hepatic portal vein carries blood from intestine to the liver before it is delivered to the systemic circulation. (NCERT Page 235)",
+      "difficulty": "MEDIUM",
+      "topic": "Circulation",
+      "ncertPage": 235,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The coronary circulation supplies blood to:",
+      "options": ["Heart muscles", "Kidneys", "Lungs", "Brain"],
+      "correctAnswer": "A",
+      "explanation": "A special coronary circulation is provided to supply blood to the heart muscles (myocardium) through coronary arteries and veins. (NCERT Page 235)",
+      "difficulty": "EASY",
+      "topic": "Circulation",
+      "ncertPage": 235,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Blood pressure is measured using:",
+      "options": ["Stethoscope", "Sphygmomanometer", "ECG machine", "Thermometer"],
+      "correctAnswer": "B",
+      "explanation": "Blood pressure is measured using an instrument called sphygmomanometer. (NCERT Page 235)",
+      "difficulty": "EASY",
+      "topic": "Blood Pressure",
+      "ncertPage": 235,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Normal systolic blood pressure in humans is:",
+      "options": ["120 mm Hg", "140 mm Hg", "80 mm Hg", "100 mm Hg"],
+      "correctAnswer": "A",
+      "explanation": "The systemic pressure is commonly measured in the brachial artery. Normal blood pressure is approximately 120/80 mm Hg. The systolic pressure is 120 mm Hg. (NCERT Page 235)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Pressure",
+      "ncertPage": 235,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Normal diastolic blood pressure in humans is:",
+      "options": ["80 mm Hg", "100 mm Hg", "120 mm Hg", "60 mm Hg"],
+      "correctAnswer": "A",
+      "explanation": "Normal blood pressure is approximately 120/80 mm Hg. The diastolic pressure is 80 mm Hg. (NCERT Page 235)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Pressure",
+      "ncertPage": 235,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High blood pressure (hypertension) is defined as blood pressure higher than:",
+      "options": ["160/100 mm Hg", "100/60 mm Hg", "120/80 mm Hg", "140/90 mm Hg"],
+      "correctAnswer": "D",
+      "explanation": "Blood pressure above 140/90 mm Hg is considered high blood pressure or hypertension. (NCERT Page 236)",
+      "difficulty": "MEDIUM",
+      "topic": "Blood Pressure",
+      "ncertPage": 236,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Atherosclerosis refers to:",
+      "options": [
+        "Deposition of cholesterol and calcium in arteries",
+        "Weak heart valves",
+        "Abnormal heart rhythm",
+        "Low blood pressure"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Coronary Artery Disease (CAD), often referred to as atherosclerosis, affects the vessels that supply blood to the heart muscle. It is caused by deposits of calcium, fat, cholesterol and fibrous tissues, which makes the lumen of arteries narrower. (NCERT Page 236)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 236,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Heart failure is also known as:",
+      "options": ["Heart attack", "Angina pectoris", "Congestive heart failure", "Cardiac arrest"],
+      "correctAnswer": "C",
+      "explanation": "Heart failure is sometimes called congestive heart failure because congestion of the lungs is one of the main symptoms of this disease. (NCERT Page 236)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 236,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

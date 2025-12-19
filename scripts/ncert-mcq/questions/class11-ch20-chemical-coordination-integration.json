@@ -1,0 +1,1342 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 20,
+  "ncertChapterName": "Chemical Coordination and Integration",
+  "questions": [
+    {
+      "question": "The endocrine glands lack:",
+      "options": ["Ducts", "Secretory cells", "Hormones", "Blood supply"],
+      "correctAnswer": "A",
+      "explanation": "Endocrine glands lack ducts and are hence called ductless glands. Their secretions are called hormones. (NCERT Page 248)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 248,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Hormones are secreted by:",
+      "options": [
+        "Both exocrine and endocrine",
+        "Nerves only",
+        "Exocrine glands",
+        "Endocrine glands"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts by endocrine glands. (NCERT Page 248)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 248,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The study of endocrine glands and hormones is called:",
+      "options": ["Physiology", "Endocrinology", "Histology", "Anatomy"],
+      "correctAnswer": "B",
+      "explanation": "The study of endocrine glands and hormones is called endocrinology. (NCERT Page 248)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 248,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The hypothalamus contains groups of neurosecretory cells called:",
+      "options": ["Follicles", "Acini", "Islets of Langerhans", "Nuclei"],
+      "correctAnswer": "D",
+      "explanation": "The hypothalamus contains several groups of neurosecretory cells called nuclei which produce hormones. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Hypothalamus",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hypothalamus produces two types of hormones:",
+      "options": [
+        "Releasing hormones and inhibiting hormones",
+        "Growth hormone and prolactin",
+        "FSH and LH",
+        "TSH and ACTH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "These hormones regulate the synthesis and secretion of pituitary hormones. The hypothalamus produces releasing hormones (which stimulate secretion of pituitary hormones) and inhibiting hormones (which inhibit secretions of pituitary hormones). (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Hypothalamus",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GnRH (Gonadotrophin releasing hormone) stimulates the secretion of:",
+      "options": ["Growth hormone", "Gonadotrophins (FSH and LH)", "TSH", "ACTH"],
+      "correctAnswer": "B",
+      "explanation": "GnRH (gonadotrophin releasing hormone) stimulates the pituitary synthesis and release of gonadotrophins. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Hypothalamus",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Somatostatin from hypothalamus inhibits the secretion of:",
+      "options": ["Prolactin", "FSH", "LH", "Growth hormone"],
+      "correctAnswer": "D",
+      "explanation": "Somatostatin from the hypothalamus inhibits the secretion of growth hormone from the pituitary. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Hypothalamus",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hormones produced by hypothalamus reach the pituitary gland through:",
+      "options": ["Portal blood system", "Lymph vessels", "General circulation", "Nerve fibres"],
+      "correctAnswer": "A",
+      "explanation": "The hormones produced by hypothalamus reach the pituitary gland through a portal circulatory system and regulate the functions of the anterior pituitary. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Hypothalamus",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pituitary gland is located at the base of the brain in a bony cavity called:",
+      "options": ["Sella turcica", "Foramen magnum", "Vertebral canal", "Cranium"],
+      "correctAnswer": "A",
+      "explanation": "The pituitary gland is located in a bony cavity called sella turcica and is attached to the hypothalamus by a stalk. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pituitary gland is divided into:",
+      "options": [
+        "No lobes",
+        "Two lobes",
+        "Three lobes (anterior, intermediate, posterior)",
+        "Four lobes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The pituitary gland is divided anatomically into an adenohypophysis (anterior pituitary) and a neurohypophysis (posterior pituitary). The adenohypophysis consists of pars distalis (anterior lobe) and pars intermedia (intermediate lobe). (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pars distalis (anterior lobe of pituitary) secretes:",
+      "options": [
+        "Two hormones",
+        "Six hormones (GH, PRL, TSH, ACTH, LH, FSH)",
+        "Oxytocin and vasopressin",
+        "Only one hormone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pars distalis produces growth hormone (GH), prolactin (PRL), thyroid stimulating hormone (TSH), adrenocorticotropic hormone (ACTH), luteinizing hormone (LH), and follicle stimulating hormone (FSH). (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Growth hormone (GH) stimulates:",
+      "options": ["Gonads", "Thyroid gland", "Growth of body tissues", "Adrenal gland"],
+      "correctAnswer": "C",
+      "explanation": "Growth hormone stimulates growth and development of the body. Oversecretion of GH stimulates abnormal growth of the body leading to gigantism. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gigantism is caused by:",
+      "options": [
+        "Oversecretion of ACTH",
+        "Undersecretion of GH",
+        "Oversecretion of GH in childhood",
+        "Undersecretion of TSH"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oversecretion of GH stimulates abnormal growth of the body leading to gigantism. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Dwarfism is caused by:",
+      "options": [
+        "Oversecretion of TSH",
+        "Undersecretion of ACTH",
+        "Oversecretion of GH",
+        "Undersecretion of GH in childhood"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Undersecretion of GH in childhood leads to stunted growth resulting in pituitary dwarfism. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Acromegaly is caused by:",
+      "options": [
+        "Undersecretion of GH in adults",
+        "Oversecretion of TSH",
+        "Undersecretion of TSH",
+        "Oversecretion of GH in adults"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Excess secretion of growth hormone in adults especially in middle age can result in severe disfigurement called acromegaly (enlargement of hands, feet, and jaw bones). (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prolactin (PRL) regulates:",
+      "options": [
+        "Thyroid function",
+        "Growth of mammary glands and milk production",
+        "Adrenal function",
+        "Gonad function"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prolactin regulates the growth of the mammary glands and formation of milk in them. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "TSH (Thyroid Stimulating Hormone) stimulates:",
+      "options": [
+        "Gonads",
+        "Pancreas",
+        "Adrenal cortex",
+        "Thyroid gland to synthesise and secrete thyroid hormones"
+      ],
+      "correctAnswer": "D",
+      "explanation": "TSH stimulates the synthesis and secretion of thyroid hormones from the thyroid gland. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ACTH (Adrenocorticotrophic Hormone) stimulates:",
+      "options": [
+        "Gonads",
+        "Pancreas",
+        "Thyroid gland",
+        "Adrenal cortex to synthesise and secrete glucocorticoids"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ACTH stimulates the synthesis and secretion of steroid hormones called glucocorticoids from adrenal cortex. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "LH and FSH are together called:",
+      "options": ["Thyroid hormones", "Corticoids", "Growth factors", "Gonadotrophins"],
+      "correctAnswer": "D",
+      "explanation": "LH and FSH stimulate gonadal activity and hence are called gonadotrophins. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In males, LH stimulates:",
+      "options": [
+        "Spermatogenesis",
+        "Synthesis and secretion of androgens by Leydig cells",
+        "Growth of seminiferous tubules",
+        "Formation of acrosome"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In males, LH stimulates the synthesis and secretion of hormones called androgens from testis (Leydig cells or interstitial cells). (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In males, FSH stimulates:",
+      "options": [
+        "Testosterone production",
+        "Leydig cell function",
+        "Androgen secretion",
+        "Spermatogenesis together with androgens"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In males, FSH and androgens regulate spermatogenesis. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In females, LH induces:",
+      "options": [
+        "Ovulation of fully mature Graafian follicle and maintains corpus luteum",
+        "Spermatogenesis",
+        "Milk secretion",
+        "Follicle development"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In females, LH induces ovulation of fully mature follicles (graafian follicles) and maintains the corpus luteum. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In females, FSH stimulates:",
+      "options": [
+        "Corpus luteum formation",
+        "Milk secretion",
+        "Ovulation",
+        "Growth and development of ovarian follicles"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In females, FSH stimulates growth and development of the ovarian follicles. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pars intermedia secretes only one hormone called:",
+      "options": ["TSH", "Growth hormone", "Melanocyte stimulating hormone (MSH)", "Prolactin"],
+      "correctAnswer": "C",
+      "explanation": "Pars intermedia secretes only one hormone called melanocyte stimulating hormone (MSH). However, in humans, the pars intermedia is almost merged with pars distalis. (NCERT Page 249)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "MSH acts on:",
+      "options": [
+        "Gonads",
+        "Thyroid",
+        "Melanocytes (pigment cells) and regulates skin pigmentation",
+        "Adrenal cortex"
+      ],
+      "correctAnswer": "C",
+      "explanation": "MSH acts on melanocytes (pigment containing cells) and regulates pigmentation of the skin. (NCERT Page 249)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 249,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The posterior pituitary (neurohypophysis) stores and releases:",
+      "options": ["Oxytocin and vasopressin (ADH)", "FSH and LH", "ACTH and PRL", "GH and TSH"],
+      "correctAnswer": "A",
+      "explanation": "Neurohypophysis (posterior pituitary) stores and releases two hormones called oxytocin and vasopressin, which are actually synthesised by the hypothalamus and transported axonally to neurohypophysis. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxytocin and vasopressin are synthesised by the:",
+      "options": ["Anterior pituitary", "Hypothalamus", "Posterior pituitary", "Thyroid"],
+      "correctAnswer": "B",
+      "explanation": "Oxytocin and vasopressin are actually synthesised by the hypothalamus and transported axonally to neurohypophysis (posterior pituitary) for storage and release. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxytocin acts on:",
+      "options": [
+        "Kidneys",
+        "Smooth muscles of uterus (during parturition) and mammary glands (milk ejection)",
+        "Thyroid",
+        "Adrenal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oxytocin acts on the smooth muscles of our body and stimulates their contraction. In females, it stimulates a vigorous contraction of uterus at the time of child birth, and milk ejection from the mammary gland. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vasopressin is also called:",
+      "options": [
+        "Anti-diuretic hormone (ADH)",
+        "Thyroid stimulating hormone",
+        "Luteinizing hormone",
+        "Growth hormone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vasopressin acts mainly at the kidney and stimulates resorption of water and electrolytes by the distal tubules and thereby reduces loss of water through urine (diuresis). Hence, it is also called anti-diuretic hormone (ADH). (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Pituitary Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ADH deficiency causes:",
+      "options": ["Acromegaly", "Gigantism", "Diabetes mellitus", "Diabetes insipidus"],
+      "correctAnswer": "D",
+      "explanation": "An under secretion of ADH results in the production of large quantities of dilute urine, a disease known as diabetes insipidus. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pituitary Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pineal gland is located on:",
+      "options": ["Below hypothalamus", "Dorsal side of forebrain", "Neck region", "Thorax"],
+      "correctAnswer": "B",
+      "explanation": "The pineal gland is located on the dorsal side of forebrain. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Pineal Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pineal gland secretes:",
+      "options": ["Thyroxine", "Melatonin", "Insulin", "Glucagon"],
+      "correctAnswer": "B",
+      "explanation": "Pineal secretes a hormone called melatonin. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Pineal Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Melatonin is involved in:",
+      "options": [
+        "Fat metabolism",
+        "Carbohydrate metabolism",
+        "Regulation of 24-hour (diurnal) rhythm of our body",
+        "Protein synthesis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Melatonin plays a very important role in the regulation of a 24-hour (diurnal) rhythm of our body, e.g., maintaining sleep-wake cycle, body temperature, etc. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pineal Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Melatonin also influences:",
+      "options": [
+        "Metabolism, pigmentation, menstrual cycle, and defence capability",
+        "Only pigmentation",
+        "Only sleep",
+        "Carbohydrate metabolism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Melatonin also influences metabolism, pigmentation, the menstrual cycle as well as our defence capability. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Pineal Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The thyroid gland is located on either side of:",
+      "options": ["Heart", "Stomach", "Oesophagus", "Trachea"],
+      "correctAnswer": "D",
+      "explanation": "The thyroid gland is situated on either side of the trachea (windpipe). (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The two lobes of the thyroid gland are connected by:",
+      "options": ["Ligament", "Isthmus", "Capsule", "Connective tissue"],
+      "correctAnswer": "B",
+      "explanation": "The thyroid gland is composed of two lobes which are interconnected with a thin flap of connective tissue called isthmus. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The structural and functional unit of the thyroid gland is:",
+      "options": ["Follicle", "Islet", "Lobule", "Acinus"],
+      "correctAnswer": "A",
+      "explanation": "The thyroid gland is composed of follicles and stromal tissue. Each thyroid follicle is composed of follicular cells, enclosing a cavity filled with colloid. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hormones secreted by thyroid follicular cells are:",
+      "options": [
+        "Calcitonin only",
+        "Tetraiodothyronine (T4) and triiodothyronine (T3)",
+        "Parathormone",
+        "Insulin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Follicular cells synthesise two hormones, tetraiodothyronine or thyroxine (T4) and triiodothyronine (T3). (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Iodine is essential for:",
+      "options": [
+        "Growth hormone synthesis",
+        "ACTH synthesis",
+        "Insulin synthesis",
+        "Normal synthesis of thyroid hormones"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Iodine is essential for the normal rate of hormone synthesis in the thyroid. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thyroid hormones regulate:",
+      "options": [
+        "Only calcium levels",
+        "Only growth",
+        "Basal metabolic rate (BMR)",
+        "Only reproduction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Thyroid hormones play an important role in the regulation of the basal metabolic rate. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thyroid hormones also support:",
+      "options": [
+        "Only protein synthesis",
+        "Only bone formation",
+        "Process of RBC formation, metabolism of carbohydrates, proteins and fats",
+        "Only fat metabolism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Thyroid hormones also support the process of red blood cell formation. Thyroid hormones control the metabolism of carbohydrates, proteins and fats. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Maintenance of water and electrolyte balance is also influenced by:",
+      "options": ["Glucagon", "Growth hormone", "Insulin", "Thyroid hormones"],
+      "correctAnswer": "D",
+      "explanation": "Thyroid hormones are also required for maintenance of water and electrolyte balance. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Goitre is caused by:",
+      "options": [
+        "Excess thyroid hormones",
+        "Deficiency of iodine in diet",
+        "Excess iodine",
+        "Deficiency of calcium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Deficiency of iodine in our diet results in hypothyroidism and enlargement of the thyroid gland, commonly called goitre. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hypothyroidism during pregnancy causes:",
+      "options": [
+        "Gigantism in baby",
+        "Cretinism (stunted growth and mental retardation in baby)",
+        "Acromegaly in baby",
+        "Normal development"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hypothyroidism during pregnancy causes defective development and maturation of the growing baby leading to stunted growth (cretinism), mental retardation, low intelligence quotient, abnormal skin, deaf-mutism, etc. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Myxoedema is characterised by:",
+      "options": [
+        "High body temperature",
+        "Weight loss",
+        "High BMR",
+        "Low BMR, puffiness of face and hands in adults"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In adults, hypothyroidism may lead to a condition called myxoedema, which is characterised by a low metabolic rate, increase in body weight, tendency to retain water in tissues, and puffiness of face and hands. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Exophthalmic goitre (Graves' disease) is caused by:",
+      "options": ["Hyperthyroidism", "Hypoparathyroidism", "Hyperparathyroidism", "Hypothyroidism"],
+      "correctAnswer": "A",
+      "explanation": "Hyperthyroidism adversely affects the body physiology. A condition called Graves' disease or exophthalmic goitre is caused due to hypersecretion of thyroid hormones. (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Calcitonin is secreted by:",
+      "options": [
+        "Adrenal gland",
+        "Thyroid follicular cells",
+        "Parafollicular cells (C cells) of thyroid",
+        "Parathyroid gland"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The thyroid gland also secretes a protein hormone called thyrocalcitonin (TCT) which regulates the blood calcium levels. TCT is secreted by the parafollicular cells (C cells). (NCERT Page 250)",
+      "difficulty": "MEDIUM",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thyrocalcitonin (calcitonin) regulates:",
+      "options": [
+        "Blood calcium levels",
+        "Blood pressure",
+        "Body temperature",
+        "Blood glucose levels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thyrocalcitonin (TCT) regulates the blood calcium levels. It lowers calcium levels in the blood. (NCERT Page 250)",
+      "difficulty": "EASY",
+      "topic": "Thyroid Gland",
+      "ncertPage": 250,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In humans, there are how many parathyroid glands?",
+      "options": ["Eight", "Two", "Four", "Six"],
+      "correctAnswer": "C",
+      "explanation": "In humans, four parathyroid glands are present on the back side of the thyroid gland, one pair each in the two lobes of the thyroid gland. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Parathyroid Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The parathyroid glands are located on the:",
+      "options": [
+        "Above thyroid",
+        "Front of thyroid",
+        "Back side of thyroid gland",
+        "Below thyroid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In humans, four parathyroid glands are present on the back side of the thyroid gland. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Parathyroid Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Parathyroid hormone (PTH) is also called:",
+      "options": ["Adrenaline", "Calcitonin", "Collip's hormone", "Thyroxine"],
+      "correctAnswer": "C",
+      "explanation": "The parathyroid glands secrete a peptide hormone called parathyroid hormone (PTH), also called as Collip's hormone. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Parathyroid Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "PTH increases:",
+      "options": [
+        "Blood potassium levels",
+        "Blood calcium levels",
+        "Blood glucose levels",
+        "Blood sodium levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PTH increases the Ca2+ levels in the blood. It acts on bones and stimulates the process of bone resorption (calcium release from bones). (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Parathyroid Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PTH and TCT (calcitonin) are:",
+      "options": [
+        "Both decrease blood calcium",
+        "Antagonistic to each other in calcium regulation",
+        "Synergistic to each other",
+        "Both increase blood calcium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PTH increases blood calcium while TCT (calcitonin) decreases blood calcium. They are antagonistic to each other in the regulation of calcium levels in blood. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Parathyroid Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The thymus gland is located:",
+      "options": [
+        "In the abdomen",
+        "Near the kidneys",
+        "In the neck",
+        "Behind sternum on the ventral side of aorta"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The thymus gland is a lobular structure located on the dorsal side of the heart and the aorta (behind sternum, ventral side of aorta). (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Thymus",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The thymus secretes:",
+      "options": ["Adrenaline", "Insulin", "Thymosins", "Glucagon"],
+      "correctAnswer": "C",
+      "explanation": "The thymus gland secretes the peptide hormones called thymosins. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Thymus",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thymosins play a role in:",
+      "options": [
+        "Calcium regulation",
+        "Growth",
+        "Carbohydrate metabolism",
+        "Differentiation of T-lymphocytes (cell-mediated immunity)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Thymosins play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Thymus",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The thymus is degenerated in:",
+      "options": ["Young adults", "Infants", "Children", "Old individuals"],
+      "correctAnswer": "D",
+      "explanation": "The thymus is quite large at the time of birth but keeps reducing in size with age and by the time puberty is attained it reduces to a very small size. It is degenerated in old individuals. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Thymus",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The adrenal glands are located:",
+      "options": [
+        "In the pelvic region",
+        "Behind heart",
+        "At the anterior part of each kidney",
+        "In the neck"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Our body has one pair of adrenal glands, one at the anterior part of each kidney. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The adrenal gland has two components:",
+      "options": [
+        "Anterior and posterior",
+        "Upper and lower",
+        "Outer and inner follicles",
+        "Cortex and medulla"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The gland is composed of two types of tissues. The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The adrenal cortex is divided into three layers called:",
+      "options": [
+        "Cortex, medulla, and capsule",
+        "Outer, middle, and inner",
+        "Alpha, beta, and gamma zones",
+        "Zona glomerulosa, zona fasciculata, and zona reticularis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The adrenal cortex can be divided into three layers, called zona glomerulosa (outer layer), zona fasciculata (middle layer) and zona reticularis (inner layer). (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hormones of adrenal cortex are commonly called:",
+      "options": ["Corticoids", "Thyroid hormones", "Sex hormones only", "Catecholamines"],
+      "correctAnswer": "A",
+      "explanation": "The adrenal cortex secretes many hormones, commonly called as corticoids. (NCERT Page 251)",
+      "difficulty": "EASY",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Mineralocorticoids like aldosterone are secreted by:",
+      "options": ["Adrenal medulla", "Zona fasciculata", "Zona glomerulosa", "Zona reticularis"],
+      "correctAnswer": "C",
+      "explanation": "The adrenal cortex secretes corticoids, which are of three types: mineralocorticoids (mainly aldosterone) secreted by zona glomerulosa. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Aldosterone acts on:",
+      "options": [
+        "Brain",
+        "Liver",
+        "Renal tubules and stimulates reabsorption of Na+ and excretion of K+",
+        "Heart"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Aldosterone acts mainly at the renal tubules and stimulates the reabsorption of Na+ and water and excretion of K+ and phosphate ions. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucocorticoids like cortisol are secreted by:",
+      "options": ["Zona fasciculata", "Zona reticularis", "Adrenal medulla", "Zona glomerulosa"],
+      "correctAnswer": "A",
+      "explanation": "Glucocorticoids (mainly cortisol) are secreted by zona fasciculata of the adrenal cortex. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cortisol stimulates:",
+      "options": [
+        "Gluconeogenesis, lipolysis, and proteolysis",
+        "Fat storage",
+        "Glycogenesis",
+        "Fat synthesis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cortisol is involved in carbohydrate metabolism. It stimulates gluconeogenesis (formation of glucose from non-carbohydrate sources), lipolysis (breakdown of fats), and proteolysis (breakdown of proteins). (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucocorticoids also have:",
+      "options": [
+        "Anti-inflammatory action",
+        "No effect on inflammation",
+        "Effect only on growth",
+        "Pro-inflammatory action"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucocorticoids suppress the immune response and produce anti-inflammatory reactions. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sex corticoids (androgens) are secreted by:",
+      "options": ["Zona fasciculata", "Zona reticularis", "Adrenal medulla", "Zona glomerulosa"],
+      "correctAnswer": "B",
+      "explanation": "Sexcorticoids (mainly androgens) are secreted by zona reticularis. (NCERT Page 251)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 251,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The adrenal medulla secretes:",
+      "options": [
+        "Corticoids",
+        "Adrenaline and noradrenaline (catecholamines)",
+        "Aldosterone",
+        "Cortisol"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adrenal medulla secretes two hormones called adrenaline (epinephrine) and noradrenaline (norepinephrine). These are commonly called catecholamines. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adrenaline is also called:",
+      "options": [
+        "Epinephrine (emergency hormone or fight-or-flight hormone)",
+        "Cortisol",
+        "Aldosterone",
+        "Norepinephrine"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Adrenaline is commonly called the 'hormone of fight or flight' as it is rapidly secreted in response to stress of any kind and during emergency situations. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Adrenal Gland",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Catecholamines increase:",
+      "options": [
+        "Digestion",
+        "Sleep",
+        "Heart rate, strength of heart contraction, and blood pressure",
+        "Body weight"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Catecholamines increase alertness, pupillary dilation, piloerection (raising of hairs), sweating, etc. Both adrenaline and noradrenaline increase the heart rate, the strength of heart contraction and the rate of respiration. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Catecholamines also stimulate:",
+      "options": [
+        "Fat synthesis",
+        "Protein synthesis",
+        "Glycogenesis",
+        "Breakdown of glycogen (glycogenolysis) resulting in increased blood glucose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Catecholamines stimulate the breakdown of glycogen resulting in an increased concentration of glucose in blood. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Addison's disease is caused by:",
+      "options": [
+        "Hyposecretion of adrenal cortex hormones",
+        "Hypersecretion of adrenal medulla hormones",
+        "Hyposecretion of thyroid hormones",
+        "Hypersecretion of adrenal cortex hormones"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Addison's disease is caused by hyposecretion of adrenal cortex hormones. It is characterized by weight loss, muscle weakness, fatigue, low blood pressure, and darkening of the skin. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Adrenal Gland",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pancreas is a:",
+      "options": [
+        "Only endocrine gland",
+        "Only exocrine gland",
+        "Composite gland (both endocrine and exocrine)",
+        "Neither endocrine nor exocrine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pancreas is a composite gland which acts as both exocrine and endocrine gland. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The endocrine part of pancreas is called:",
+      "options": ["Lobules", "Follicles", "Acini", "Islets of Langerhans"],
+      "correctAnswer": "D",
+      "explanation": "The endocrine pancreas consists of Islets of Langerhans. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The islets of Langerhans contain two main types of cells:",
+      "options": [
+        "Chief and parietal cells",
+        "Alpha (α) cells and beta (β) cells",
+        "Goblet and absorptive cells",
+        "Follicular and parafollicular cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue. The two main types of cells in the Islet of Langerhans are called α-cells and β-cells. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucagon is secreted by:",
+      "options": [
+        "Beta cells",
+        "Alpha cells of islets of Langerhans",
+        "Acinar cells",
+        "Delta cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The α-cells secrete a hormone called glucagon. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Insulin is secreted by:",
+      "options": [
+        "Delta cells",
+        "Alpha cells",
+        "Beta (β) cells of islets of Langerhans",
+        "Acinar cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The β-cells secrete insulin. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucagon acts on:",
+      "options": [
+        "Liver cells and stimulates glycogenolysis (increase blood glucose)",
+        "Fat cells only",
+        "Kidneys",
+        "Muscles only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucagon acts mainly on the liver cells (hepatocytes) and stimulates glycogenolysis resulting in an increased blood sugar (hyperglycemia). (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucagon also stimulates:",
+      "options": [
+        "Gluconeogenesis (formation of glucose from non-carbohydrates)",
+        "Glycolysis",
+        "Lipogenesis",
+        "Glycogenesis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucagon also stimulates the process of gluconeogenesis which also contributes to hyperglycemia. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glucagon is also called:",
+      "options": [
+        "Growth hormone",
+        "Stress hormone",
+        "Hypoglycemic hormone",
+        "Hyperglycemic hormone"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glucagon is a hyperglycemic hormone as it increases blood glucose levels. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Insulin acts on:",
+      "options": [
+        "Only liver",
+        "Hepatocytes and adipocytes and enhances cellular glucose uptake",
+        "Only muscles",
+        "Only brain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Insulin acts mainly on hepatocytes and adipocytes and enhances cellular glucose uptake and utilisation. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Insulin is called:",
+      "options": [
+        "Stress hormone",
+        "Hyperglycemic hormone",
+        "Hypoglycemic hormone",
+        "Growth hormone"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Insulin reduces blood glucose level and is therefore called hypoglycemic hormone. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Insulin and glucagon are:",
+      "options": [
+        "Both hyperglycemic",
+        "Both hypoglycemic",
+        "Antagonistic to each other",
+        "Synergistic to each other"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Insulin is hypoglycemic and glucagon is hyperglycemic. They are antagonistic to each other in regulating blood glucose levels. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diabetes mellitus is caused by:",
+      "options": [
+        "Deficiency of insulin leading to hyperglycemia and glucosuria",
+        "Excess glucagon",
+        "Deficiency of glucagon",
+        "Excess insulin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies. (NCERT Page 252)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The testis produces:",
+      "options": ["Androgens (mainly testosterone)", "Progesterone", "Relaxin", "Oestrogen"],
+      "correctAnswer": "A",
+      "explanation": "A pair of testis is present in the scrotal sac of males. Testis performs dual functions as a primary sex organ as well as an endocrine gland. Testis secretes several male sex hormones called androgens, mainly testosterone. (NCERT Page 252)",
+      "difficulty": "EASY",
+      "topic": "Testis",
+      "ncertPage": 252,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Androgens regulate:",
+      "options": [
+        "Development, maturation, and functions of male accessory sex organs",
+        "Ovulation",
+        "Menstruation",
+        "Female secondary sexual characters"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Androgens regulate the development, maturation and functions of the male accessory sex organs like epididymis, vas deferens, seminal vesicles, prostate gland, urethra, etc. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Testis",
+      "ncertPage": 253,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Male secondary sexual characters like facial hair, low voice, etc., are stimulated by:",
+      "options": ["FSH", "Oestrogen", "Androgens", "Progesterone"],
+      "correctAnswer": "C",
+      "explanation": "Androgens stimulate muscular growth, growth of facial and axillary hair, aggressiveness, low pitch of voice, etc. These are known as male secondary sexual characters. (NCERT Page 253)",
+      "difficulty": "EASY",
+      "topic": "Testis",
+      "ncertPage": 253,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ovary produces:",
+      "options": ["Insulin", "Testosterone", "Oestrogen and progesterone", "Androgens only"],
+      "correctAnswer": "C",
+      "explanation": "Females have a pair of ovaries located in the abdomen. Ovary produces two groups of steroid hormones called estrogen and progesterone. (NCERT Page 253)",
+      "difficulty": "EASY",
+      "topic": "Ovary",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oestrogen is produced by:",
+      "options": ["Corpus luteum", "Growing ovarian follicles", "Testis", "Pituitary"],
+      "correctAnswer": "B",
+      "explanation": "Ovary produces estrogen and progesterone. Estrogen is mainly produced by the growing ovarian follicles. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Ovary",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oestrogen stimulates:",
+      "options": [
+        "Testosterone production",
+        "Male secondary sexual characters",
+        "Growth and activities of female secondary sex organs and development of female secondary sexual characters",
+        "Spermatogenesis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Estrogen stimulates growth and activities of female secondary sex organs, appearance of female secondary sexual characters (e.g., high pitch of voice, breast enlargement, etc.). (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Ovary",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Progesterone is mainly produced by:",
+      "options": ["Corpus luteum", "Testis", "Pituitary", "Ovarian follicles"],
+      "correctAnswer": "A",
+      "explanation": "Progesterone is mainly produced by the corpus luteum after ovulation. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Ovary",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Progesterone supports:",
+      "options": [
+        "Pregnancy (maintenance of endometrium) and acts on mammary glands",
+        "Male secondary sexual characters",
+        "Bone growth",
+        "Spermatogenesis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Progesterone supports pregnancy. It also acts on the mammary glands and stimulates the formation of alveoli (small sacs) in the mammary glands. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Ovary",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The atrial wall of the heart secretes:",
+      "options": ["Insulin", "Atrial natriuretic factor (ANF)", "Glucagon", "Adrenaline"],
+      "correctAnswer": "B",
+      "explanation": "The atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF). (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart as Endocrine",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ANF causes:",
+      "options": [
+        "Increase in blood pressure",
+        "Dilation of blood vessels and decrease in blood pressure",
+        "Increase in heart rate",
+        "Increase in sodium reabsorption"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ANF can cause dilation of the blood vessels. This decreases the blood pressure. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Heart as Endocrine",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The juxtaglomerular cells of kidney produce:",
+      "options": ["Insulin", "Thyroxine", "ADH", "Erythropoietin"],
+      "correctAnswer": "D",
+      "explanation": "The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC). (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "Kidney as Endocrine",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Erythropoietin stimulates:",
+      "options": [
+        "Platelet formation",
+        "Hormone secretion",
+        "WBC formation",
+        "Erythropoiesis (RBC formation)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Erythropoietin stimulates erythropoiesis (formation of RBC). (NCERT Page 253)",
+      "difficulty": "EASY",
+      "topic": "Kidney as Endocrine",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The gastrointestinal tract secretes hormones like:",
+      "options": [
+        "Gastrin, secretin, cholecystokinin (CCK), and GIP",
+        "Thyroxine and calcitonin",
+        "FSH and LH",
+        "Insulin and glucagon"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The gastrointestinal tract secretes four major peptide hormones, namely gastrin, secretin, cholecystokinin (CCK), and gastric inhibitory peptide (GIP). (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "GI Tract Hormones",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gastrin acts on:",
+      "options": [
+        "Pancreas",
+        "Gastric glands and stimulates secretion of HCl and pepsinogen",
+        "Liver",
+        "Small intestine only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "GI Tract Hormones",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secretin acts on:",
+      "options": [
+        "Salivary glands",
+        "Gastric glands",
+        "Exocrine pancreas and stimulates secretion of water and bicarbonate ions",
+        "Liver only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Secretin acts on the exocrine pancreas and stimulates secretion of water and bicarbonate ions. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "GI Tract Hormones",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "CCK (Cholecystokinin) stimulates:",
+      "options": [
+        "Secretion of pancreatic enzymes and bile juice from gallbladder",
+        "Gastric secretion",
+        "Salivary secretion",
+        "HCl secretion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "GI Tract Hormones",
+      "ncertPage": 253,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GIP (Gastric Inhibitory Peptide):",
+      "options": [
+        "Stimulates gastric secretion",
+        "Inhibits gastric secretion and stimulates insulin secretion",
+        "Stimulates HCl secretion",
+        "Inhibits insulin secretion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "GIP inhibits gastric secretion and motility. It also stimulates insulin secretion. (NCERT Page 253)",
+      "difficulty": "MEDIUM",
+      "topic": "GI Tract Hormones",
+      "ncertPage": 253,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

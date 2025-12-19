@@ -1,0 +1,782 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 16,
+  "ncertChapterName": "Environmental Issues",
+  "questions": [
+    {
+      "question": "Acid rain is caused by:",
+      "options": ["CFCs only", "CO2 only", "SO2 and NOx", "O3 only"],
+      "correctAnswer": "C",
+      "explanation": "Acid rain is caused primarily by sulphur dioxide (SO2) and nitrogen oxides (NOx) which combine with atmospheric moisture to form sulphuric and nitric acids.",
+      "difficulty": "EASY",
+      "topic": "Acid Rain",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Itai-itai disease is caused by:",
+      "options": ["Arsenic", "Mercury", "Cadmium", "Lead"],
+      "correctAnswer": "C",
+      "explanation": "Itai-itai ('ouch-ouch') disease is caused by cadmium poisoning. It causes severe pain in joints and bones, and kidney damage.",
+      "difficulty": "MEDIUM",
+      "topic": "Heavy Metal Pollution",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Catalytic converters convert:",
+      "options": [
+        "SO2 to SO3",
+        "CO to CO2, and unburnt hydrocarbons to CO2 and H2O",
+        "O2 to O3",
+        "N2 to NO2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Catalytic converters convert carbon monoxide to carbon dioxide, unburnt hydrocarbons to CO2 and H2O, and nitric oxide to nitrogen gas.",
+      "difficulty": "MEDIUM",
+      "topic": "Catalytic Converter",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Afforestation is:",
+      "options": [
+        "Forest burning",
+        "Cutting forests",
+        "Planting trees on land that was not previously forested",
+        "Protecting existing forests"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Afforestation is planting trees on land that was not previously forested, while reforestation is planting trees on land that was previously forested.",
+      "difficulty": "EASY",
+      "topic": "Afforestation",
+      "ncertPage": 281,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Air pollution is caused by:",
+      "options": [
+        "Neither particulate nor gaseous",
+        "Only particulate matter",
+        "Only gaseous pollutants",
+        "Both particulate and gaseous pollutants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Air pollution is caused by both particulate pollutants (dust, smoke, soot) and gaseous pollutants (CO, NO2, SO2, hydrocarbons).",
+      "difficulty": "EASY",
+      "topic": "Air Pollution",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Montreal Protocol was signed in:",
+      "options": ["2002", "1987", "1992", "1997"],
+      "correctAnswer": "C",
+      "explanation": "The Montreal Protocol was signed in 1987 to control the emission of ozone depleting substances (ODS). It has been highly successful.",
+      "difficulty": "MEDIUM",
+      "topic": "Montreal Protocol",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The thickness of ozone layer is measured in:",
+      "options": ["Millimeters", "Meters", "Centimeters", "Dobson Units (DU)"],
+      "correctAnswer": "D",
+      "explanation": "The thickness of ozone layer is measured in Dobson Units (DU). Normal ozone thickness is about 300 DU (3mm at STP).",
+      "difficulty": "MEDIUM",
+      "topic": "Ozone Layer",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Photochemical smog contains:",
+      "options": ["Only fog", "Only carbon monoxide", "Only smoke", "Ozone, PAN, and aldehydes"],
+      "correctAnswer": "D",
+      "explanation": "Photochemical smog is a mixture of pollutants formed by sunlight-driven reactions. It contains ozone, PAN (peroxyacetyl nitrate), aldehydes, and other oxidants.",
+      "difficulty": "MEDIUM",
+      "topic": "Smog",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Noise pollution is measured in:",
+      "options": ["Dobson Units", "Pascal", "Hertz", "Decibels (dB)"],
+      "correctAnswer": "D",
+      "explanation": "Noise pollution is measured in decibels (dB). Sound above 80 dB can cause hearing impairment and above 150 dB can damage ear drums.",
+      "difficulty": "EASY",
+      "topic": "Noise Pollution",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Greenhouse gases include:",
+      "options": [
+        "Only CO2",
+        "CO2, CH4, N2O, CFCs, and water vapor",
+        "Only methane",
+        "Only nitrogen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Major greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), CFCs, and water vapor. They trap heat in the atmosphere.",
+      "difficulty": "EASY",
+      "topic": "Greenhouse Effect",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Deforestation leads to:",
+      "options": [
+        "Better air quality",
+        "Increased groundwater",
+        "Increased rainfall",
+        "Soil erosion, loss of biodiversity, and climate change"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Deforestation causes soil erosion, loss of biodiversity, disruption of water cycle, climate change, desertification, and loss of tribal livelihoods.",
+      "difficulty": "EASY",
+      "topic": "Deforestation",
+      "ncertPage": 281,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Solid waste management involves:",
+      "options": [
+        "Reduction, reuse, recycling, and disposal",
+        "Only landfilling",
+        "Only composting",
+        "Only burning"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Solid waste management follows the 3R principle - Reduce, Reuse, Recycle, followed by proper disposal methods like sanitary landfills, composting, or incineration.",
+      "difficulty": "EASY",
+      "topic": "Solid Waste",
+      "ncertPage": 279,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Hospital waste should be:",
+      "options": [
+        "Dumped in open",
+        "Composted",
+        "Disposed with domestic waste",
+        "Incinerated separately"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hospital/biomedical waste (infectious materials, syringes, bandages) should be incinerated at high temperatures to destroy pathogens and prevent infection spread.",
+      "difficulty": "EASY",
+      "topic": "Hospital Waste",
+      "ncertPage": 279,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "UV-B radiation causes:",
+      "options": [
+        "Only genetic mutations",
+        "Snow blindness only",
+        "Skin cancer, cataract, and immune suppression",
+        "No harmful effects"
+      ],
+      "correctAnswer": "C",
+      "explanation": "UV-B radiation causes skin cancer (including melanoma), cataracts, immune suppression, and affects plant productivity and aquatic ecosystems.",
+      "difficulty": "MEDIUM",
+      "topic": "UV Effects",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carbon footprint refers to:",
+      "options": [
+        "Carbon in ocean",
+        "Carbon in atmosphere only",
+        "Carbon particles in soil",
+        "Total greenhouse gas emissions by an entity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carbon footprint is the total amount of greenhouse gases (mainly CO2) emitted directly or indirectly by an individual, organization, or product.",
+      "difficulty": "EASY",
+      "topic": "Carbon Footprint",
+      "ncertPage": 276,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "CFCs were used in:",
+      "options": ["Fertilizers", "Refrigerants and aerosol sprays", "Pesticides", "Fuels"],
+      "correctAnswer": "B",
+      "explanation": "CFCs were commonly used as refrigerants (in ACs and refrigerators), aerosol propellants, and in fire extinguishers before they were banned.",
+      "difficulty": "EASY",
+      "topic": "CFCs",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Algal bloom is caused by:",
+      "options": [
+        "Lack of nutrients",
+        "Excess of nutrients (eutrophication)",
+        "Low temperature",
+        "High oxygen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Algal bloom is caused by eutrophication - excessive growth of algae due to nutrient enrichment (nitrogen and phosphorus) of water bodies.",
+      "difficulty": "EASY",
+      "topic": "Eutrophication",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Slash and burn agriculture is also known as:",
+      "options": ["Hydroponics", "Terrace farming", "Jhum cultivation", "Organic farming"],
+      "correctAnswer": "C",
+      "explanation": "Slash and burn agriculture (shifting cultivation or Jhum) involves cutting and burning forest vegetation to clear land for cultivation.",
+      "difficulty": "EASY",
+      "topic": "Deforestation",
+      "ncertPage": 281,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sanitary landfill is:",
+      "options": [
+        "Open dumping of waste",
+        "Waste covered with soil in compacted layers",
+        "Burning of waste",
+        "Composting"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sanitary landfill is a method where waste is compacted and covered with soil layers. It has leachate collection systems and vents for methane gas.",
+      "difficulty": "MEDIUM",
+      "topic": "Landfills",
+      "ncertPage": 279,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Ozone hole is mainly observed over:",
+      "options": ["Tropics", "Equator", "Arctic", "Antarctica"],
+      "correctAnswer": "C",
+      "explanation": "The ozone hole is mainly observed over Antarctica during spring (September-October). It was first observed in 1985.",
+      "difficulty": "EASY",
+      "topic": "Ozone Hole",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Radioactive waste management involves:",
+      "options": [
+        "Dumping in ocean",
+        "Storage in shielded containers underground",
+        "Open burning",
+        "Composting"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Radioactive waste must be stored in properly shielded containers and disposed in geological repositories deep underground to prevent radiation exposure.",
+      "difficulty": "MEDIUM",
+      "topic": "Radioactive Waste",
+      "ncertPage": 279,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Electronic waste (e-waste) contains:",
+      "options": [
+        "Heavy metals like lead, mercury, and cadmium",
+        "Only organic compounds",
+        "No toxic materials",
+        "Only plastic"
+      ],
+      "correctAnswer": "A",
+      "explanation": "E-waste contains toxic heavy metals like lead, mercury, cadmium, and chromium, which can cause serious health and environmental problems if not properly disposed.",
+      "difficulty": "MEDIUM",
+      "topic": "E-waste",
+      "ncertPage": 279,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Particulate matter less than 2.5 micrometers is called:",
+      "options": ["PM1", "PM10", "PM2.5", "PM5"],
+      "correctAnswer": "C",
+      "explanation": "PM2.5 refers to particulate matter with diameter less than 2.5 micrometers. It is particularly dangerous as it can penetrate deep into lungs.",
+      "difficulty": "MEDIUM",
+      "topic": "Air Pollution",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Chipko movement was started by:",
+      "options": [
+        "Medha Patkar",
+        "Women of Garhwal Himalayas",
+        "Sundar Lal Bahuguna alone",
+        "Government of India"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Chipko movement was started in 1974 by women of Garhwal Himalayas (Reni village) who hugged trees to prevent their felling by contractors.",
+      "difficulty": "MEDIUM",
+      "topic": "Chipko Movement",
+      "ncertPage": 282,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Minamata disease is caused by:",
+      "options": ["Cadmium poisoning", "Arsenic poisoning", "Lead poisoning", "Mercury poisoning"],
+      "correctAnswer": "D",
+      "explanation": "Minamata disease is caused by mercury poisoning. It was first discovered in Minamata, Japan, where industrial mercury contaminated fish.",
+      "difficulty": "MEDIUM",
+      "topic": "Heavy Metal Pollution",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Kyoto Protocol deals with:",
+      "options": [
+        "Ozone depletion",
+        "Reduction of greenhouse gas emissions",
+        "Biodiversity conservation",
+        "Hazardous waste"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Kyoto Protocol (1997) is an international agreement to reduce greenhouse gas emissions to combat global warming and climate change.",
+      "difficulty": "MEDIUM",
+      "topic": "Kyoto Protocol",
+      "ncertPage": 276,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Polyblend is:",
+      "options": [
+        "A biodegradable polymer",
+        "A type of pesticide",
+        "A type of plastic",
+        "Fine powder of recycled modified plastic mixed with bitumen"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Polyblend is a fine powder of recycled modified plastic that can be mixed with bitumen to lay roads. It increases road life and helps in plastic waste management.",
+      "difficulty": "MEDIUM",
+      "topic": "Plastic Waste",
+      "ncertPage": 280,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Primary pollutants are:",
+      "options": [
+        "Formed by reaction in atmosphere",
+        "Directly emitted from sources",
+        "Only natural pollutants",
+        "Biodegradable pollutants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Primary pollutants are emitted directly from sources (like CO from vehicles). Secondary pollutants are formed by reaction of primary pollutants in atmosphere (like ozone).",
+      "difficulty": "MEDIUM",
+      "topic": "Air Pollution",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Eutrophication leads to:",
+      "options": [
+        "Decreased oxygen (hypoxia)",
+        "Increased biodiversity",
+        "Cleaner water",
+        "Increased oxygen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Eutrophication leads to excessive algal growth, which upon death and decomposition depletes oxygen, causing hypoxia and death of aquatic organisms.",
+      "difficulty": "EASY",
+      "topic": "Eutrophication",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secondary sewage treatment uses:",
+      "options": [
+        "Only chemicals",
+        "Microorganisms to decompose organic matter",
+        "Only UV light",
+        "Heavy metals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Secondary treatment is biological treatment using microorganisms (bacteria) to decompose organic matter in wastewater, reducing BOD.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 274,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ecological sanitation involves:",
+      "options": [
+        "Incineration",
+        "Use of flush toilets",
+        "Composting human waste to produce manure",
+        "Ocean dumping"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ecological sanitation (EcoSan) is a sustainable system that treats human waste to produce safe manure, saving water and preventing pollution.",
+      "difficulty": "MEDIUM",
+      "topic": "Eco-sanitation",
+      "ncertPage": 280,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Biomagnification is:",
+      "options": [
+        "Increase in concentration of pollutants at successive trophic levels",
+        "Decomposition of pollutants",
+        "Elimination of pollutants",
+        "Dilution of pollutants in food chain"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biomagnification is the increase in concentration of non-biodegradable pollutants (like DDT, heavy metals) at each successive trophic level in a food chain.",
+      "difficulty": "EASY",
+      "topic": "Biomagnification",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The greenhouse effect is:",
+      "options": [
+        "Always harmful",
+        "A natural phenomenon that keeps Earth warm",
+        "Caused only by industries",
+        "Limited to polar regions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The greenhouse effect is a natural phenomenon that keeps Earth's surface warm (average 15°C). Without it, Earth would be too cold for life (about -18°C).",
+      "difficulty": "EASY",
+      "topic": "Greenhouse Effect",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "BOD stands for:",
+      "options": [
+        "Biological Organic Demand",
+        "Biological Oxygen Demand",
+        "Biochemical Oxygen Demand",
+        "Basic Oxygen Demand"
+      ],
+      "correctAnswer": "C",
+      "explanation": "BOD (Biochemical Oxygen Demand) is the amount of oxygen required by microorganisms to decompose organic matter in water.",
+      "difficulty": "EASY",
+      "topic": "BOD",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A scrubber is used to remove:",
+      "options": ["Gases like SO2", "Radioactive waste", "Heavy metals", "Particulate matter only"],
+      "correctAnswer": "A",
+      "explanation": "A scrubber removes gases like sulphur dioxide (SO2) from industrial exhaust. The exhaust is passed through a spray of water or lime.",
+      "difficulty": "MEDIUM",
+      "topic": "Pollution Control",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In biomagnification, the highest concentration of pollutants is found in:",
+      "options": ["Secondary consumers", "Top carnivores", "Producers", "Primary consumers"],
+      "correctAnswer": "D",
+      "explanation": "Top carnivores (highest trophic level) have the highest concentration of biomagnified pollutants because they accumulate pollutants from all lower trophic levels.",
+      "difficulty": "EASY",
+      "topic": "Biomagnification",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Catalytic converters should not be used with:",
+      "options": ["Diesel", "Leaded petrol", "CNG", "Unleaded petrol"],
+      "correctAnswer": "A",
+      "explanation": "Motor vehicles fitted with catalytic converters should use unleaded petrol because lead inactivates the catalyst.",
+      "difficulty": "MEDIUM",
+      "topic": "Catalytic Converter",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Global warming can cause:",
+      "options": [
+        "Only flooding",
+        "Only sea level rise",
+        "Sea level rise, climate change, and changes in precipitation",
+        "Only drought"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Global warming causes multiple effects: sea level rise, changes in precipitation patterns, extreme weather events, shifts in species distribution, and ecosystem disruption.",
+      "difficulty": "MEDIUM",
+      "topic": "Global Warming",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which gas contributes most to greenhouse effect?",
+      "options": ["Nitrous oxide", "CFCs", "Methane", "Water vapor"],
+      "correctAnswer": "D",
+      "explanation": "Water vapor contributes most to the natural greenhouse effect. However, among anthropogenic gases, CO2 is the largest contributor to enhanced greenhouse effect.",
+      "difficulty": "MEDIUM",
+      "topic": "Greenhouse Gases",
+      "ncertPage": 276,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "DDT shows biomagnification because it is:",
+      "options": [
+        "Fat soluble and non-biodegradable",
+        "Water soluble and non-biodegradable",
+        "Fat soluble and biodegradable",
+        "Water soluble and biodegradable"
+      ],
+      "correctAnswer": "A",
+      "explanation": "DDT is fat soluble and non-biodegradable, so it accumulates in fatty tissues and increases in concentration at higher trophic levels.",
+      "difficulty": "MEDIUM",
+      "topic": "Biomagnification",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High BOD indicates:",
+      "options": [
+        "Moderate pollution",
+        "No organic matter",
+        "Clean water",
+        "Highly polluted water"
+      ],
+      "correctAnswer": "D",
+      "explanation": "High BOD indicates highly polluted water with high organic matter content. Microorganisms need more oxygen to decompose the organic waste.",
+      "difficulty": "EASY",
+      "topic": "BOD",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The greenhouse gas with highest global warming potential per molecule is:",
+      "options": ["Methane", "CFCs", "Water vapor", "Carbon dioxide"],
+      "correctAnswer": "A",
+      "explanation": "CFCs have the highest global warming potential per molecule (thousands of times more than CO2). However, CO2 contributes most due to higher concentration.",
+      "difficulty": "HARD",
+      "topic": "Greenhouse Gases",
+      "ncertPage": 276,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Normal rain water has pH of:",
+      "options": ["About 5.6", "8.5", "4.0", "7.0"],
+      "correctAnswer": "A",
+      "explanation": "Normal rain water has pH of about 5.6 due to dissolved CO2 forming weak carbonic acid. Acid rain has pH below 5.6 due to strong acids.",
+      "difficulty": "MEDIUM",
+      "topic": "Acid Rain",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Catalytic converters contain:",
+      "options": [
+        "Platinum-palladium and rhodium",
+        "Calcium and magnesium",
+        "Lead and mercury",
+        "Iron and copper"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Catalytic converters have expensive metals like platinum-palladium and rhodium as catalysts to reduce emission of poisonous gases from automobiles.",
+      "difficulty": "MEDIUM",
+      "topic": "Catalytic Converter",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The term 'sustainable development' means:",
+      "options": [
+        "Development meeting present needs without compromising future",
+        "No development",
+        "Maximum resource exploitation",
+        "Rapid industrialization"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+      "difficulty": "EASY",
+      "topic": "Sustainable Development",
+      "ncertPage": 280,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Blue baby syndrome is caused by:",
+      "options": [
+        "Fluoride in water",
+        "Nitrates in drinking water",
+        "Mercury in water",
+        "Lead in water"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Blue baby syndrome (methemoglobinemia) is caused by high nitrate levels in drinking water. Nitrates reduce oxygen carrying capacity of hemoglobin in infants.",
+      "difficulty": "MEDIUM",
+      "topic": "Water Pollution",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Thermal pollution is caused by:",
+      "options": [
+        "Radioactive waste",
+        "Heated water discharge from power plants",
+        "Pesticides",
+        "Heavy metals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Thermal pollution is caused when power plants discharge heated water into water bodies. It reduces dissolved oxygen and affects aquatic life.",
+      "difficulty": "EASY",
+      "topic": "Thermal Pollution",
+      "ncertPage": 274,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ozone depletion is primarily caused by:",
+      "options": ["Methane", "Nitrogen", "Carbon dioxide", "CFCs (Chlorofluorocarbons)"],
+      "correctAnswer": "D",
+      "explanation": "CFCs (Chlorofluorocarbons) are the primary cause of ozone depletion. They release chlorine atoms that catalytically destroy ozone molecules.",
+      "difficulty": "EASY",
+      "topic": "Ozone Depletion",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oil spills in ocean are cleaned by:",
+      "options": [
+        "Bioremediation using oil-degrading bacteria",
+        "Evaporation only",
+        "Sedimentation only",
+        "Chemical dispersants only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bioremediation using oil-degrading bacteria (like Pseudomonas) is an effective and eco-friendly method to clean oil spills.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioremediation",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Snow blindness is caused by:",
+      "options": ["Infrared radiation", "UV-B radiation", "Visible light", "X-rays"],
+      "correctAnswer": "B",
+      "explanation": "Snow blindness (photokeratitis) is caused by UV-B radiation reflected from snow. It causes inflammation of the cornea.",
+      "difficulty": "MEDIUM",
+      "topic": "UV Effects",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Integrated pest management (IPM) involves:",
+      "options": [
+        "Only chemical pesticides",
+        "Combination of biological, cultural, and chemical methods",
+        "Only biological control",
+        "Only mechanical methods"
+      ],
+      "correctAnswer": "B",
+      "explanation": "IPM is an approach that combines biological control, cultural practices, and minimal use of chemical pesticides to manage pests sustainably.",
+      "difficulty": "MEDIUM",
+      "topic": "IPM",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Electrostatic precipitator is used to:",
+      "options": [
+        "Treat sewage",
+        "Purify water",
+        "Remove gaseous pollutants",
+        "Remove particulate matter from air"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Electrostatic precipitator (ESP) is widely used to remove particulate matter from industrial exhaust. It can remove over 99% of particulate matter.",
+      "difficulty": "EASY",
+      "topic": "Pollution Control",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Reforestation means:",
+      "options": [
+        "Shifting cultivation",
+        "Cutting forests",
+        "Planting trees on degraded forest land",
+        "Preserving existing forests"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Reforestation is the process of restoring forests by planting trees on degraded or previously forested land.",
+      "difficulty": "EASY",
+      "topic": "Reforestation",
+      "ncertPage": 281,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In electrostatic precipitator, the electrode wires are maintained at:",
+      "options": ["Alternating voltage", "Low voltage", "Several thousand volts", "Zero voltage"],
+      "correctAnswer": "C",
+      "explanation": "In an electrostatic precipitator, electrode wires are maintained at several thousand volts which produce a corona that releases electrons, ionizing particulate matter.",
+      "difficulty": "MEDIUM",
+      "topic": "Electrostatic Precipitator",
+      "ncertPage": 273,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "One chlorine atom can destroy:",
+      "options": [
+        "100 ozone molecules",
+        "100,000 ozone molecules",
+        "1 million ozone molecules",
+        "10 ozone molecules"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A single chlorine atom released from CFCs can destroy around 100,000 ozone molecules because it acts as a catalyst and is regenerated.",
+      "difficulty": "HARD",
+      "topic": "Ozone Depletion",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Primary sewage treatment involves:",
+      "options": [
+        "Biological treatment",
+        "Physical removal of particles",
+        "Chemical treatment",
+        "UV treatment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Primary sewage treatment involves physical processes like sedimentation and filtration to remove large particles and suspended solids from wastewater.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 274,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Joint Forest Management (JFM) involves:",
+      "options": [
+        "Local communities working with forest department",
+        "Private ownership",
+        "International organizations",
+        "Government control only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "JFM involves local communities working with the government forest department to protect and manage forests, sharing both responsibilities and benefits.",
+      "difficulty": "MEDIUM",
+      "topic": "JFM",
+      "ncertPage": 282,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Good ozone is found in:",
+      "options": ["Stratosphere", "Mesosphere", "Thermosphere", "Troposphere"],
+      "correctAnswer": "A",
+      "explanation": "'Good ozone' in the stratosphere protects Earth from harmful UV radiation. 'Bad ozone' in troposphere is a pollutant causing respiratory problems.",
+      "difficulty": "EASY",
+      "topic": "Ozone",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Organic farming avoids the use of:",
+      "options": ["Crop rotation", "Compost", "Manures", "Synthetic fertilizers and pesticides"],
+      "correctAnswer": "D",
+      "explanation": "Organic farming avoids synthetic fertilizers and pesticides, instead using natural methods like composting, crop rotation, and biological pest control.",
+      "difficulty": "EASY",
+      "topic": "Organic Farming",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

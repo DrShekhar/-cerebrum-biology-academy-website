@@ -4,33 +4,17 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/Toast'
-import {
-  BookOpen,
-  ChevronRight,
-  RefreshCw,
-  Award,
-  Target,
-  Brain,
-  Trophy,
-  Flame,
-  Zap,
-  Users,
-  Send,
-  AlertTriangle,
-  Focus,
-  Maximize2,
-  Minimize2,
-  BarChart3,
-} from 'lucide-react'
+import { ChevronRight, Maximize2, Minimize2 } from 'lucide-react'
 import { QuestionCard } from '@/components/mcq/QuestionCard'
 import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
-import { TopicFilter } from '@/components/mcq/TopicFilter'
-import { NcertFilter } from '@/components/mcq/NcertFilter'
+import { ContentSourceTabs, type ContentSource } from '@/components/mcq/ContentSourceTabs'
+import { FilterPanel } from '@/components/mcq/FilterPanel'
+import { NcertOptions } from '@/components/mcq/NcertOptions'
+import { ModeRadio, type QuizMode } from '@/components/mcq/ModeRadio'
 import { LeadCaptureModal } from '@/components/mcq/LeadCaptureModal'
 import { ProtectedContent } from '@/components/mcq/ProtectedContent'
 import { SessionSummary } from '@/components/mcq/SessionSummary'
 import { ReportErrorModal } from '@/components/mcq/ReportErrorModal'
-import { ModeSelector, type QuizMode } from '@/components/mcq/ModeSelector'
 import { TimedModeTimer } from '@/components/mcq/TimedModeTimer'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
 import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
@@ -64,16 +48,19 @@ export default function NEETBiologyMCQPage() {
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null)
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null)
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | null>(null)
-  const [isPYQOnly, setIsPYQOnly] = useState(false)
   const [selectedPYQYear, setSelectedPYQYear] = useState<number | null>(null)
   const [questionCount, setQuestionCount] = useState(20)
 
-  // NCERT Filter State
-  const [isNcertOnly, setIsNcertOnly] = useState(false)
-  const [selectedNcertClass, setSelectedNcertClass] = useState<number | null>(null)
-  const [selectedNcertChapter, setSelectedNcertChapter] = useState<number | null>(null)
+  // Content Source State (new tab-based UI)
+  const [contentSource, setContentSource] = useState<ContentSource>('all')
+
+  // NCERT Filter State (simplified - no class filter)
   const [selectedNeetWeightage, setSelectedNeetWeightage] = useState<string | null>(null)
   const [hasDiagramOnly, setHasDiagramOnly] = useState(false)
+
+  // Derived states from contentSource
+  const isNcertOnly = contentSource === 'ncert'
+  const isPYQOnlyFromTabs = contentSource === 'pyq'
 
   // Stats State
   const [userStats, setUserStats] = useState<UserStats | null>(null)
@@ -217,15 +204,18 @@ export default function NEETBiologyMCQPage() {
       if (selectedTopic) params.append('topic', selectedTopic)
       if (selectedChapter) params.append('chapter', selectedChapter)
       if (selectedDifficulty) params.append('difficulty', selectedDifficulty)
-      if (isPYQOnly) params.append('isPYQOnly', 'true')
-      if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
-      // NCERT filters
-      if (isNcertOnly) params.append('isNcertBased', 'true')
-      if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
-      if (selectedNcertChapter) params.append('ncertChapter', selectedNcertChapter.toString())
-      if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
-      // Diagram filter
-      if (hasDiagramOnly) params.append('hasDiagram', 'true')
+
+      // Content source filtering (from tabs)
+      if (contentSource === 'pyq') {
+        params.append('isPYQOnly', 'true')
+        if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
+      } else if (contentSource === 'ncert') {
+        params.append('isNcertBased', 'true')
+        if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
+        if (hasDiagramOnly) params.append('hasDiagram', 'true')
+      }
+      // 'all' content source uses no additional filters
+
       params.append('limit', questionCount.toString())
 
       // Exclude already answered questions
@@ -266,11 +256,8 @@ export default function NEETBiologyMCQPage() {
     selectedTopic,
     selectedChapter,
     selectedDifficulty,
-    isPYQOnly,
+    contentSource,
     selectedPYQYear,
-    isNcertOnly,
-    selectedNcertClass,
-    selectedNcertChapter,
     selectedNeetWeightage,
     hasDiagramOnly,
     questionCount,
@@ -530,12 +517,11 @@ export default function NEETBiologyMCQPage() {
 
     // Show toast with filter summary
     const filterParts = [
-      isNcertOnly ? `NCERT ${selectedNcertClass ? `Class ${selectedNcertClass}` : ''}` : null,
-      selectedNcertChapter ? `Ch.${selectedNcertChapter}` : null,
+      contentSource === 'ncert' ? 'NCERT Based' : null,
+      contentSource === 'pyq' ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
       selectedTopic,
       selectedChapter,
       selectedDifficulty,
-      isPYQOnly ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
       selectedNeetWeightage ? `${selectedNeetWeightage} Priority` : null,
     ].filter(Boolean)
 
@@ -634,10 +620,10 @@ export default function NEETBiologyMCQPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-parchment via-sage-50/30 to-stone-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading MCQ Practice...</p>
+          <div className="w-16 h-16 border-4 border-sage-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-stone-600">Loading MCQ Practice...</p>
         </div>
       </div>
     )
@@ -651,36 +637,36 @@ export default function NEETBiologyMCQPage() {
 
   return (
     <ProtectedContent>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
+      <div className="min-h-screen bg-gradient-to-br from-parchment via-sage-50/30 to-stone-50">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
-        {/* Breadcrumb */}
-        <nav className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-40">
+        {/* Breadcrumb - Botanical Scholar */}
+        <nav className="bg-white/90 backdrop-blur-md border-b border-stone-200/50 sticky top-0 z-40">
           <div className="max-w-7xl mx-auto px-4 py-4">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Link href="/" className="hover:text-green-600 transition-colors">
+            <div className="flex items-center gap-2 text-sm text-stone-600">
+              <Link href="/" className="hover:text-sage-600 transition-colors">
                 Home
               </Link>
-              <ChevronRight className="w-4 h-4" />
-              <span className="text-green-600 font-medium">NEET Biology MCQ</span>
+              <ChevronRight className="w-4 h-4 text-stone-400" />
+              <span className="text-sage-600 font-medium">NEET Biology MCQ</span>
             </div>
           </div>
         </nav>
 
         <div className="max-w-7xl mx-auto px-4 py-8">
-          {/* Header */}
+          {/* Header - Botanical Scholar */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Brain className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <span className="text-lg">🧬</span>
               Unlimited Free Practice
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-ink mb-3 tracking-tight">
               NEET Biology MCQ Practice 2026
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               Free unlimited practice with PYQs, gamification, and topic-wise questions. Track your
               progress and compete on leaderboards!
             </p>
@@ -703,106 +689,116 @@ export default function NEETBiologyMCQPage() {
             {/* Main Content - Centered */}
             <div className="flex-1 flex flex-col items-center">
               {!quizStarted ? (
-                <>
-                  {/* Mode Selection */}
-                  <div className="w-full max-w-xl mb-6">
-                    <ModeSelector
+                <div className="w-full max-w-2xl space-y-4">
+                  {/* Content Source Tabs */}
+                  <ContentSourceTabs
+                    activeSource={contentSource}
+                    onSourceChange={setContentSource}
+                    selectedPYQYear={selectedPYQYear}
+                    onPYQYearChange={setSelectedPYQYear}
+                    questionCounts={{ all: 7000, ncert: 3375, pyq: 500 }}
+                  />
+
+                  {/* Mode Selection - Botanical Scholar */}
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-stone-200/50 paper-texture">
+                    <ModeRadio
                       selectedMode={quizMode}
                       onModeChange={handleModeChange}
                       reviewDueCount={reviewDueCount}
                     />
                   </div>
 
-                  {/* NCERT Filter */}
-                  <div className="w-full max-w-xl mb-4">
-                    <NcertFilter
-                      isNcertOnly={isNcertOnly}
-                      selectedClass={selectedNcertClass}
-                      selectedChapter={selectedNcertChapter}
-                      selectedWeightage={selectedNeetWeightage}
-                      hasDiagramOnly={hasDiagramOnly}
-                      diagramCount={248}
-                      onNcertOnlyChange={setIsNcertOnly}
-                      onClassChange={setSelectedNcertClass}
-                      onChapterChange={setSelectedNcertChapter}
-                      onWeightageChange={setSelectedNeetWeightage}
-                      onDiagramOnlyChange={setHasDiagramOnly}
-                    />
-                  </div>
-
-                  {/* Filter Section */}
-                  <TopicFilter
+                  {/* Filter Panel - Always Visible */}
+                  <FilterPanel
                     selectedTopic={selectedTopic}
                     selectedChapter={selectedChapter}
                     selectedDifficulty={selectedDifficulty}
-                    isPYQOnly={isPYQOnly}
-                    selectedPYQYear={selectedPYQYear}
                     questionCount={questionCount}
                     onTopicChange={setSelectedTopic}
                     onChapterChange={setSelectedChapter}
                     onDifficultyChange={setSelectedDifficulty}
-                    onPYQOnlyChange={setIsPYQOnly}
-                    onPYQYearChange={setSelectedPYQYear}
                     onQuestionCountChange={setQuestionCount}
-                    onApplyFilters={handleApplyFilters}
                   />
 
-                  {/* Start Quiz Card */}
-                  <div className="bg-white rounded-2xl shadow-xl p-8 text-center mt-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <BookOpen className="w-10 h-10 text-white" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      {selectedTopic || 'All Topics'} Practice
-                    </h2>
-                    <p className="text-gray-600 mb-6">
-                      Unlimited questions with instant feedback, explanations, and XP rewards!
-                    </p>
+                  {/* NCERT Options - Only when NCERT tab active */}
+                  {contentSource === 'ncert' && (
+                    <NcertOptions
+                      selectedWeightage={selectedNeetWeightage}
+                      hasDiagramOnly={hasDiagramOnly}
+                      diagramCount={248}
+                      onWeightageChange={setSelectedNeetWeightage}
+                      onDiagramOnlyChange={setHasDiagramOnly}
+                    />
+                  )}
 
-                    {/* Features */}
-                    <div className="flex flex-wrap items-center justify-center gap-4 mb-8 text-sm">
-                      <div className="flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1.5 rounded-full">
-                        <Zap className="w-4 h-4" />
-                        <span>Earn XP</span>
-                      </div>
-                      <div className="flex items-center gap-2 bg-orange-50 text-orange-700 px-3 py-1.5 rounded-full">
-                        <Flame className="w-4 h-4" />
-                        <span>Build Streaks</span>
-                      </div>
-                      <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-3 py-1.5 rounded-full">
-                        <Trophy className="w-4 h-4" />
-                        <span>Leaderboards</span>
-                      </div>
-                      <div className="flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1.5 rounded-full">
-                        <Award className="w-4 h-4" />
-                        <span>Badges</span>
+                  {/* Start Quiz Button - Botanical Scholar CTA */}
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-stone-200 overflow-hidden paper-texture">
+                    <div className="p-6">
+                      {/* Main CTA Button */}
+                      <button
+                        onClick={handleStartQuiz}
+                        className="group relative w-full bg-gradient-to-r from-sage-500 to-sage-700 text-white py-5 px-8 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-sage-500/25 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
+                      >
+                        {/* Shimmer effect on hover */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+
+                        <div className="relative flex items-center justify-center gap-3">
+                          <span className="text-2xl" role="img" aria-label="DNA">
+                            🧬
+                          </span>
+                          <div className="flex flex-col items-start">
+                            <span className="tracking-wide">Start Practicing</span>
+                            <span className="text-sm font-normal text-white/80">
+                              {questionCount} Questions Ready
+                            </span>
+                          </div>
+                          <ChevronRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                        </div>
+                      </button>
+
+                      {/* Quick Benefits Section */}
+                      <div className="mt-5 pt-5 border-t border-dashed border-stone-200">
+                        <div className="flex items-center justify-center gap-2 mb-3">
+                          <div className="h-px flex-1 bg-stone-200" />
+                          <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
+                            Quick Benefits
+                          </span>
+                          <div className="h-px flex-1 bg-stone-200" />
+                        </div>
+                        <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+                          <div className="flex items-center gap-1.5 text-sage-700">
+                            <span className="text-base">🏆</span>
+                            <span className="font-medium">Earn XP</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-amber-700">
+                            <span className="text-base">🔥</span>
+                            <span className="font-medium">Build Streaks</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-specimen-700">
+                            <span className="text-base">📊</span>
+                            <span className="font-medium">Track Progress</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
-
-                    <button
-                      onClick={handleStartQuiz}
-                      className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-lg"
-                    >
-                      Start Practicing
-                    </button>
                   </div>
-                </>
+                </div>
               ) : (
                 <>
-                  {/* Quiz Progress Bar - Compact */}
-                  <div className="bg-white rounded-lg shadow-sm p-3 mb-4 w-full max-w-3xl">
+                  {/* Quiz Progress Bar - Botanical Scholar */}
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-sm border border-stone-200/50 p-3 mb-4 w-full max-w-3xl">
                     <div className="flex items-center justify-between mb-1.5">
                       <div className="flex items-center gap-3">
-                        <span className="text-xs font-medium text-gray-700">
+                        <span className="text-xs font-medium font-mono text-ink">
                           Q {currentQuestionIndex + 1}/{questions.length}
                         </span>
-                        <div className="flex items-center gap-1 text-xs">
+                        <div className="flex items-center gap-1 text-xs font-mono">
                           <span className="text-green-600 font-bold">
                             {sessionStats.correctAnswers}
                           </span>
-                          <span className="text-gray-400">/</span>
-                          <span className="text-gray-600">{sessionStats.questionsAttempted}</span>
-                          <span className="text-gray-400">({sessionAccuracy}%)</span>
+                          <span className="text-stone-400">/</span>
+                          <span className="text-stone-600">{sessionStats.questionsAttempted}</span>
+                          <span className="text-stone-400">({sessionAccuracy}%)</span>
                         </div>
                         {/* Timed Mode Timer */}
                         {quizMode === 'timed' &&
@@ -817,21 +813,21 @@ export default function NEETBiologyMCQPage() {
                               showWarningAt={10}
                             />
                           )}
-                        {/* Mode Indicator Badge */}
+                        {/* Mode Indicator Badge - Botanical Scholar */}
                         <span
                           className={`px-2 py-0.5 rounded-full text-xs font-medium ${
                             quizMode === 'practice'
-                              ? 'bg-green-100 text-green-700'
+                              ? 'bg-sage-100 text-sage-700'
                               : quizMode === 'timed'
-                                ? 'bg-blue-100 text-blue-700'
-                                : 'bg-purple-100 text-purple-700'
+                                ? 'bg-sky-100 text-sky-700'
+                                : 'bg-specimen-100 text-specimen-700'
                           }`}
                         >
                           {quizMode === 'practice'
-                            ? 'Practice'
+                            ? '📚 Practice'
                             : quizMode === 'timed'
-                              ? 'Timed'
-                              : 'Review'}
+                              ? '⏱️ Timed'
+                              : '🔄 Review'}
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -839,8 +835,8 @@ export default function NEETBiologyMCQPage() {
                           onClick={() => setFocusMode(!focusMode)}
                           className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-colors ${
                             focusMode
-                              ? 'bg-purple-100 text-purple-700'
-                              : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                              ? 'bg-specimen-100 text-specimen-700'
+                              : 'text-stone-600 hover:text-stone-700 hover:bg-stone-100'
                           }`}
                           title={focusMode ? 'Exit Focus Mode' : 'Enter Focus Mode'}
                         >
@@ -859,25 +855,25 @@ export default function NEETBiologyMCQPage() {
                         {sessionStats.questionsAttempted >= 5 && (
                           <button
                             onClick={handleEndSession}
-                            className="flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-medium"
+                            className="flex items-center gap-1 text-sage-600 hover:text-sage-700 text-xs font-medium"
                           >
-                            <Trophy className="w-3 h-3" />
+                            <span>🏆</span>
                             End Session
                           </button>
                         )}
                         <button
                           onClick={handleResetClick}
-                          className="flex items-center gap-1 text-gray-500 hover:text-gray-700 text-xs"
+                          className="flex items-center gap-1 text-stone-600 hover:text-stone-700 text-xs"
                         >
-                          <RefreshCw className="w-3 h-3" />
+                          <span>🔄</span>
                           Reset
                         </button>
                       </div>
                     </div>
-                    {/* Progress bar */}
-                    <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                    {/* Progress bar - Botanical Scholar */}
+                    <div className="h-1.5 bg-stone-200 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-300"
+                        className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-300"
                         style={{
                           width: `${questions.length > 0 ? ((currentQuestionIndex + 1) / questions.length) * 100 : 0}%`,
                         }}
@@ -903,34 +899,38 @@ export default function NEETBiologyMCQPage() {
                       {/* Question Display - Centered and wider */}
                       <div className="w-full max-w-3xl">
                         {isLoadingQuestions ? (
-                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
-                            <p className="text-gray-600 text-sm">Loading questions...</p>
+                          <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-6 text-center paper-texture">
+                            <div className="w-10 h-10 border-4 border-sage-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+                            <p className="text-stone-600 text-sm">Loading questions...</p>
                           </div>
                         ) : error ? (
-                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-3" />
-                            <p className="text-gray-700 text-sm mb-3">{error}</p>
+                          <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-6 text-center paper-texture">
+                            <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                              <span className="text-2xl">⚠️</span>
+                            </div>
+                            <p className="text-stone-700 text-sm mb-3">{error}</p>
                             <button
                               onClick={handleApplyFilters}
-                              className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                              className="bg-gradient-to-r from-sage-500 to-sage-700 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-sage-500/25 transition-all text-sm"
                             >
                               Try Again
                             </button>
                           </div>
                         ) : questions.length === 0 ? (
-                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <BookOpen className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-                            <h3 className="text-base font-semibold text-gray-700 mb-2">
+                          <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-6 text-center paper-texture">
+                            <div className="w-12 h-12 bg-stone-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                              <span className="text-2xl">📖</span>
+                            </div>
+                            <h3 className="text-base font-semibold text-ink mb-2">
                               No Questions Available
                             </h3>
-                            <p className="text-gray-500 text-sm mb-4">
+                            <p className="text-stone-600 text-sm mb-4">
                               No questions found for the current filters. Try adjusting your filter
                               settings.
                             </p>
                             <button
                               onClick={handleApplyFilters}
-                              className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                              className="bg-gradient-to-r from-sage-500 to-sage-700 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-sage-500/25 transition-all text-sm"
                             >
                               Load Questions
                             </button>
@@ -951,13 +951,13 @@ export default function NEETBiologyMCQPage() {
                         ) : null}
                       </div>
 
-                      {/* Next Question Button - Centered */}
+                      {/* Next Question Button - Botanical Scholar */}
                       {currentQuestion && answeredIds.has(currentQuestion.id) && (
                         <div className="mt-4 w-full max-w-3xl">
                           <button
                             onClick={handleNextQuestion}
                             disabled={isLoadingQuestions}
-                            className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-md transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 text-sm"
+                            className="group w-full bg-gradient-to-r from-sage-500 to-sage-700 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-sage-500/25 transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 text-sm"
                           >
                             {isLoadingQuestions ? (
                               <>
@@ -967,42 +967,42 @@ export default function NEETBiologyMCQPage() {
                             ) : (
                               <>
                                 Next Question
-                                <ChevronRight className="w-4 h-4" />
+                                <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                               </>
                             )}
                           </button>
                         </div>
                       )}
 
-                      {/* Quick Actions - Hidden in Focus Mode */}
+                      {/* Quick Actions - Botanical Scholar */}
                       {!focusMode && (
                         <div className="mt-4 flex flex-wrap justify-center gap-2 w-full max-w-3xl">
                           <button
                             onClick={() => router.push('/neet-biology-mcq/analytics')}
-                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-specimen-50 hover:text-specimen-700 transition-all"
                           >
-                            <BarChart3 className="w-3.5 h-3.5 text-purple-500" />
+                            <span>📊</span>
                             Analytics
                           </button>
                           <button
                             onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-sage-50 hover:text-sage-700 transition-all"
                           >
-                            <Users className="w-3.5 h-3.5 text-blue-500" />
+                            <span>🏆</span>
                             Leaderboard
                           </button>
                           <button
                             onClick={() => router.push('/neet-biology-mcq/contribute')}
-                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-sage-50 hover:text-sage-700 transition-all"
                           >
-                            <Send className="w-3.5 h-3.5 text-green-500" />
+                            <span>✏️</span>
                             Submit Question
                           </button>
                           <button
                             onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-all"
                           >
-                            <Target className="w-3.5 h-3.5 text-amber-500" />
+                            <span>🎯</span>
                             Daily Challenge
                           </button>
                         </div>
@@ -1012,35 +1012,35 @@ export default function NEETBiologyMCQPage() {
                 </>
               )}
 
-              {/* Features Section (only when not started) */}
+              {/* Features Section - Botanical Scholar (only when not started) */}
               {!quizStarted && (
                 <div className="mt-12 grid md:grid-cols-3 gap-6">
-                  <div className="bg-white rounded-xl p-6 shadow-lg">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                      <BookOpen className="w-6 h-6 text-green-600" />
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-stone-200/50 paper-texture">
+                    <div className="w-12 h-12 bg-sage-100 rounded-xl flex items-center justify-center mb-4">
+                      <span className="text-2xl">📚</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Unlimited Practice</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="text-lg font-semibold text-ink mb-2">Unlimited Practice</h3>
+                    <p className="text-stone-600 text-sm">
                       No limits! Practice as many questions as you want. New questions added weekly.
                     </p>
                   </div>
 
-                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-stone-200/50 paper-texture">
                     <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                      <Award className="w-6 h-6 text-amber-600" />
+                      <span className="text-2xl">📜</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">PYQ Support</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="text-lg font-semibold text-ink mb-2">PYQ Support</h3>
+                    <p className="text-stone-600 text-sm">
                       Practice Previous Year Questions from 2015-2024 with year-wise filtering.
                     </p>
                   </div>
 
-                  <div className="bg-white rounded-xl p-6 shadow-lg">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                      <Trophy className="w-6 h-6 text-purple-600" />
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-stone-200/50 paper-texture">
+                    <div className="w-12 h-12 bg-specimen-100 rounded-xl flex items-center justify-center mb-4">
+                      <span className="text-2xl">🏆</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Compete & Win</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="text-lg font-semibold text-ink mb-2">Compete & Win</h3>
+                    <p className="text-stone-600 text-sm">
                       Earn XP, unlock badges, and compete on leaderboards with other aspirants.
                     </p>
                   </div>
@@ -1066,34 +1066,36 @@ export default function NEETBiologyMCQPage() {
             )}
           </div>
 
-          {/* CTA Section */}
-          <div className="mt-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-2xl font-bold mb-4">Want Expert Guidance for NEET Biology?</h2>
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+          {/* CTA Section - Botanical Scholar */}
+          <div className="mt-16 bg-gradient-to-r from-sage-600 to-sage-800 rounded-2xl p-8 text-white text-center shadow-xl shadow-sage-900/20">
+            <h2 className="text-2xl font-bold mb-4 tracking-tight">
+              Want Expert Guidance for NEET Biology?
+            </h2>
+            <p className="text-sage-100 mb-6 max-w-2xl mx-auto">
               Join Cerebrum Biology Academy for comprehensive NEET Biology preparation with
               experienced AIIMS faculty and personalized attention.
             </p>
             <Link
               href="/demo"
-              className="inline-block bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+              className="inline-block bg-white text-sage-700 px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all"
             >
               Book Free Demo Class
             </Link>
           </div>
 
           {/* Related Links */}
-          <div className="mt-12 text-center text-sm text-gray-500">
+          <div className="mt-12 text-center text-sm text-stone-600">
             <p>
               Related:{' '}
-              <Link href="/neet-biology-syllabus-2026" className="text-green-600 hover:underline">
+              <Link href="/neet-biology-syllabus-2026" className="text-sage-600 hover:underline">
                 NEET Biology Syllabus 2026
               </Link>{' '}
               |{' '}
-              <Link href="/neet-rank-predictor" className="text-green-600 hover:underline">
+              <Link href="/neet-rank-predictor" className="text-sage-600 hover:underline">
                 NEET Rank Predictor
               </Link>{' '}
               |{' '}
-              <Link href="/neet-college-predictor" className="text-green-600 hover:underline">
+              <Link href="/neet-college-predictor" className="text-sage-600 hover:underline">
                 College Predictor
               </Link>
             </p>
@@ -1118,15 +1120,15 @@ export default function NEETBiologyMCQPage() {
             onClick={() => setShowResetConfirm(false)}
           >
             <div
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl animate-scale-in"
+              className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 max-w-sm w-full shadow-xl border border-stone-200/50 animate-scale-in paper-texture"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="text-center">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-6 h-6 text-amber-600" />
+                <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚠️</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Reset Quiz?</h3>
-                <p className="text-gray-600 text-sm mb-6">
+                <h3 className="text-lg font-bold text-ink mb-2">Reset Quiz?</h3>
+                <p className="text-stone-600 text-sm mb-6">
                   You&apos;ve answered {sessionStats.questionsAttempted} questions with{' '}
                   {sessionStats.correctAnswers} correct ({sessionAccuracy}% accuracy). Your progress
                   will be lost.
@@ -1134,13 +1136,13 @@ export default function NEETBiologyMCQPage() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setShowResetConfirm(false)}
-                    className="flex-1 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                    className="flex-1 py-2 px-4 border-2 border-stone-300 text-stone-700 rounded-lg font-medium hover:bg-stone-50 hover:border-stone-400 transition-all"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleResetQuiz}
-                    className="flex-1 py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                    className="flex-1 py-2 px-4 bg-gradient-to-r from-coral-500 to-coral-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-coral-500/25 transition-all"
                   >
                     Reset
                   </button>

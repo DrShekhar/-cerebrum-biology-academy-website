@@ -1,0 +1,787 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 10,
+  "ncertChapterName": "Microbes in Human Welfare",
+  "questions": [
+    {
+      "question": "Cattle dung (gobar) is used in biogas plants because:",
+      "options": [
+        "All of the above",
+        "It is readily available",
+        "It contains methanogens that produce biogas",
+        "It is cheap"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cattle dung is ideal for biogas production because it contains methanogens from cattle gut, is abundant in rural India, and is cheap. India has developed gobar gas technology.",
+      "difficulty": "EASY",
+      "topic": "Biogas Production",
+      "ncertPage": 163,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Toddy is made from:",
+      "options": ["Sap of palm trees", "Barley", "Rice", "Grapes"],
+      "correctAnswer": "A",
+      "explanation": "Toddy is a traditional alcoholic drink made by fermenting the sap of palm trees. Natural yeasts present in the sap ferment the sugars to alcohol.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bt toxin kills insects by:",
+      "options": [
+        "Creating pores in gut, causing cell lysis",
+        "Nervous system damage",
+        "Preventing reproduction",
+        "Blocking respiration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bt toxin (activated Cry protein) binds to gut epithelium of insects and creates pores, causing cell swelling and lysis. This leads to death of insect larvae.",
+      "difficulty": "MEDIUM",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lipase enzyme used in detergents is produced by:",
+      "options": ["Both bacteria and fungi", "Plants", "Bacteria", "Fungi"],
+      "correctAnswer": "A",
+      "explanation": "Lipases (fat-digesting enzymes) used in detergents are produced by various bacteria and fungi. They help remove oily stains from clothes by breaking down fats.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lactobacillus is used in the production of:",
+      "options": ["Curd", "Alcohol", "Vinegar", "Bread"],
+      "correctAnswer": "A",
+      "explanation": "Lactobacillus (lactic acid bacteria) converts milk to curd by producing lactic acid. The acid causes coagulation of milk proteins (casein), thickening it into curd.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is used to make dosa and idli batter?",
+      "options": ["Bacteria (Leuconostoc) for fermentation", "Chemicals", "Fungi", "Yeast alone"],
+      "correctAnswer": "A",
+      "explanation": "Dosa and idli batter fermentation involves bacteria (mainly Leuconostoc mesenteroides) and yeast. Fermentation makes batter fluffy and increases nutritional value.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cyclosporin A is produced by:",
+      "options": ["Trichoderma polysporum", "Penicillium", "Bacillus", "Streptomyces"],
+      "correctAnswer": "A",
+      "explanation": "Cyclosporin A is produced by the fungus Trichoderma polysporum. It revolutionized organ transplantation by preventing immune rejection without suppressing the entire immune system.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The large holes in Swiss cheese are due to:",
+      "options": [
+        "CO2 produced by Propionibacterium shermanii",
+        "Air bubbles",
+        "Enzyme action",
+        "Bacterial contamination"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Propionibacterium shermanii produces large amounts of CO2 during cheese ripening. This CO2 creates the characteristic large holes (eyes) in Swiss cheese.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biogas is mainly composed of:",
+      "options": [
+        "Methane and carbon dioxide",
+        "Hydrogen and helium",
+        "Chlorine and fluorine",
+        "Nitrogen and oxygen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biogas is mainly composed of methane (50-70%) and CO2 (30-40%), with traces of H2S and H2. Methane is the combustible component that makes biogas useful as fuel.",
+      "difficulty": "EASY",
+      "topic": "Biogas Production",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Activated sludge is:",
+      "options": [
+        "Sediment rich in aerobic microbes used as inoculum",
+        "Chemical precipitate",
+        "Industrial waste",
+        "Raw sewage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Activated sludge is the sediment from secondary treatment rich in aerobic bacteria and fungi. Part of it is used as inoculum for new batches of sewage treatment.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trichoderma is used as:",
+      "options": [
+        "Biocontrol agent against plant pathogens",
+        "Antibiotic producer",
+        "Nitrogen fixer",
+        "Biofertilizer"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trichoderma is a fungus used as biocontrol agent against several plant pathogens. It parasitizes pathogenic fungi and produces antibiotics that inhibit their growth.",
+      "difficulty": "MEDIUM",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Baculoviruses are used as:",
+      "options": [
+        "Biocontrol agents for insect pests",
+        "Antibiotics",
+        "Nitrogen fixers",
+        "Biofertilizers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Baculoviruses (like nucleopolyhedrovirus) are pathogens specific to certain insects. They are used as narrow-spectrum biocontrol agents that don't harm non-target organisms.",
+      "difficulty": "MEDIUM",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Statins lower blood cholesterol by:",
+      "options": [
+        "Inhibiting cholesterol-synthesizing enzyme",
+        "Destroying cholesterol",
+        "Blocking cholesterol absorption",
+        "Increasing cholesterol excretion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statins competitively inhibit HMG-CoA reductase, the enzyme that catalyzes cholesterol synthesis in liver. This lowers blood cholesterol and reduces risk of heart disease.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a biofertilizer?",
+      "options": ["Urea", "Mycorrhiza", "Rhizobium", "Azotobacter"],
+      "correctAnswer": "A",
+      "explanation": "Urea is a chemical fertilizer (synthetic nitrogen source), not a biofertilizer. Biofertilizers are living organisms that enrich soil nutrients naturally.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Beer is made from:",
+      "options": ["Malted cereals (barley) and hops", "Sugarcane", "Rice only", "Grapes"],
+      "correctAnswer": "A",
+      "explanation": "Beer is produced by fermenting malted cereals (mainly barley) with yeast. Hops are added for characteristic bitter flavor. Beer is not distilled.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Statins used to lower cholesterol are obtained from:",
+      "options": ["Yeast Monascus purpureus", "Algae", "Viruses", "Bacteria"],
+      "correctAnswer": "A",
+      "explanation": "Statins (like lovastatin) are produced by the yeast Monascus purpureus. They are competitive inhibitors of HMG-CoA reductase enzyme and lower blood cholesterol levels.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cyanobacteria used as biofertilizers in paddy fields include:",
+      "options": ["Spirulina only", "Anabaena and Nostoc", "Chlorella", "Chlamydomonas"],
+      "correctAnswer": "B",
+      "explanation": "Anabaena, Nostoc, and Oscillatoria are nitrogen-fixing cyanobacteria used as biofertilizers in paddy fields. They fix atmospheric nitrogen and add organic matter to soil.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lactic acid is produced by:",
+      "options": ["Yeast", "Lactobacillus", "Aspergillus", "Streptomyces"],
+      "correctAnswer": "B",
+      "explanation": "Lactic acid is produced by Lactobacillus bacteria through fermentation of lactose or other sugars. It is used in food preservation, pharmaceuticals, and biodegradable plastics.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The effluent from primary settling tank goes to:",
+      "options": [
+        "Directly to river",
+        "Aeration tank for secondary treatment",
+        "Incineration",
+        "Landfill"
+      ],
+      "correctAnswer": "B",
+      "explanation": "After primary treatment (sedimentation), the effluent (supernatant) goes to aeration tanks for secondary (biological) treatment where microbes decompose organic matter.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Azolla is used as biofertilizer in rice fields because:",
+      "options": [
+        "It is a green manure",
+        "It hosts nitrogen-fixing cyanobacterium Anabaena",
+        "It kills pests",
+        "It prevents water loss"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Azolla is a water fern that hosts Anabaena (nitrogen-fixing cyanobacterium) in its leaf cavities. This symbiotic association fixes nitrogen, enriching rice paddy soil.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Distilled alcoholic beverages include:",
+      "options": ["Beer and wine", "Whisky, brandy, and rum", "Curd and buttermilk", "Vinegar"],
+      "correctAnswer": "B",
+      "explanation": "Distilled spirits (whisky, brandy, rum, vodka) are made by distilling fermented products. Distillation increases alcohol concentration. Beer and wine are fermented but not distilled.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pectinases and proteases are used in:",
+      "options": [
+        "Making bread",
+        "Clarifying bottled fruit juices",
+        "Making antibiotics",
+        "Sewage treatment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pectinases and proteases are used to clarify bottled fruit juices by breaking down pectin and proteins that cause cloudiness. This improves juice clarity and appearance.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mycorrhiza is a symbiotic association between:",
+      "options": [
+        "Bacteria and roots",
+        "Fungi and plant roots",
+        "Algae and fungi",
+        "Bacteria and leaves"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mycorrhiza is a mutualistic association between fungi and plant roots. The fungus helps plant absorb phosphorus and other nutrients; plant provides carbohydrates to fungus.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 166,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Streptokinase is used as:",
+      "options": [
+        "Antibiotic",
+        "Clot buster (thrombolytic agent)",
+        "Vaccine",
+        "Enzyme for digestion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Streptokinase, produced by Streptococcus bacteria, is used as a clot-busting (thrombolytic) agent. It activates plasminogen to dissolve blood clots in heart attack patients.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Anaerobic sludge digestion produces:",
+      "options": ["Oxygen", "Biogas (mainly methane)", "Nitrogen", "Hydrogen only"],
+      "correctAnswer": "B",
+      "explanation": "Anaerobic digestion of activated sludge by methanogenic bacteria produces biogas (mainly methane and CO2). This biogas can be used as fuel for electricity generation.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High BOD indicates:",
+      "options": [
+        "Clean water",
+        "High organic pollution",
+        "High mineral content",
+        "High oxygen content"
+      ],
+      "correctAnswer": "B",
+      "explanation": "High BOD indicates high organic pollution - more organic matter means more oxygen needed for microbial decomposition. Clean water has low BOD (less organic matter to decompose).",
+      "difficulty": "EASY",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rhizobium is a:",
+      "options": [
+        "Free-living nitrogen fixer",
+        "Symbiotic nitrogen fixer in legume root nodules",
+        "Phosphate solubilizer",
+        "Pathogen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Rhizobium is a symbiotic nitrogen-fixing bacterium that lives in root nodules of legumes. It converts atmospheric N2 to ammonia (fixed nitrogen) that plants can use.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Streptokinase is produced by:",
+      "options": ["Streptomyces", "Streptococcus", "Penicillium", "Bacillus"],
+      "correctAnswer": "B",
+      "explanation": "Streptokinase is produced by Streptococcus bacteria. It is a fibrinolytic enzyme used to dissolve blood clots in conditions like myocardial infarction (heart attack).",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first antibiotic discovered was:",
+      "options": ["Streptomycin", "Penicillin", "Tetracycline", "Erythromycin"],
+      "correctAnswer": "B",
+      "explanation": "Penicillin was the first antibiotic discovered by Alexander Fleming in 1928 from the fungus Penicillium notatum. It revolutionized medicine and saved millions of lives.",
+      "difficulty": "EASY",
+      "topic": "Antibiotics",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Acetobacter aceti is used in production of:",
+      "options": ["Alcohol", "Acetic acid (vinegar)", "Lactic acid", "Citric acid"],
+      "correctAnswer": "B",
+      "explanation": "Acetobacter aceti is an acetic acid bacterium that oxidizes ethanol to acetic acid. It is used in vinegar production through aerobic fermentation.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Streptomycin is obtained from:",
+      "options": ["Penicillium", "Streptomyces griseus", "Bacillus", "Aspergillus"],
+      "correctAnswer": "B",
+      "explanation": "Streptomycin is an aminoglycoside antibiotic produced by Streptomyces griseus (actinobacterium). It was discovered by Selman Waksman and is used to treat tuberculosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Antibiotics",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bread making involves:",
+      "options": [
+        "Bacterial fermentation",
+        "Yeast fermentation producing CO2 for leavening",
+        "Mold growth",
+        "Enzyme treatment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bread making uses yeast (Saccharomyces cerevisiae) which ferments sugars producing CO2. The CO2 bubbles cause dough to rise (leavening), making bread soft and porous.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Penicillin was discovered by:",
+      "options": ["Edward Jenner", "Louis Pasteur", "Alexander Fleming", "Robert Koch"],
+      "correctAnswer": "C",
+      "explanation": "Alexander Fleming discovered penicillin in 1928 when he observed that Penicillium mold inhibited bacterial growth. He received Nobel Prize in 1945 for this discovery.",
+      "difficulty": "EASY",
+      "topic": "Antibiotics",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Butyric acid is produced by:",
+      "options": ["Saccharomyces", "Aspergillus", "Clostridium butylicum", "Lactobacillus"],
+      "correctAnswer": "C",
+      "explanation": "Butyric acid is produced by Clostridium butylicum through anaerobic fermentation. It is used in pharmaceuticals and as flavoring agent.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Frankia is a nitrogen-fixing bacterium associated with:",
+      "options": ["Wheat", "Legumes", "Non-leguminous plants like Casuarina and Alnus", "Rice"],
+      "correctAnswer": "C",
+      "explanation": "Frankia is an actinomycete that forms nitrogen-fixing symbiosis with non-leguminous plants like Casuarina, Alnus, and others. This association is called actinorhizal symbiosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Biofertilizers are:",
+      "options": [
+        "Compost only",
+        "Chemical fertilizers",
+        "Organisms that enrich soil nutrient quality",
+        "Organic manure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Biofertilizers are organisms (bacteria, fungi, cyanobacteria) that enrich soil nutrients. They include nitrogen fixers, phosphate solubilizers, and mycorrhizae.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The bacterium used in making curd from milk is:",
+      "options": ["Rhizobium", "Acetobacter", "Lactobacillus", "Clostridium"],
+      "correctAnswer": "C",
+      "explanation": "Lactobacillus species (like L. acidophilus, L. bulgaricus) are lactic acid bacteria that ferment lactose in milk to lactic acid, converting milk to curd.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The advantage of baculoviruses in pest control is:",
+      "options": [
+        "They work in all conditions",
+        "They kill all insects",
+        "Species-specific, don't harm beneficial insects",
+        "They are very cheap"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Baculoviruses are species-specific, attacking only target pests without harming beneficial insects, birds, mammals, or plants. This makes them excellent biocontrol agents.",
+      "difficulty": "MEDIUM",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 165,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Mycorrhizae help plants by:",
+      "options": [
+        "Photosynthesis",
+        "Fixing nitrogen",
+        "Absorbing phosphorus and other nutrients from soil",
+        "Producing antibiotics"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mycorrhizal fungi extend the root system, helping plants absorb phosphorus, zinc, and other nutrients from larger soil volume. They also provide disease resistance.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 166,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cyclosporin A is used as:",
+      "options": [
+        "Antifungal",
+        "Antibiotic",
+        "Immunosuppressant in organ transplants",
+        "Antiviral"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cyclosporin A, produced by fungus Trichoderma polysporum, is an immunosuppressive agent. It prevents rejection of transplanted organs by suppressing the immune system.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ladybird and dragonflies are used to control:",
+      "options": [
+        "Bacterial diseases",
+        "Fungal diseases",
+        "Aphids and mosquitoes respectively",
+        "Weeds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ladybird beetles are predators of aphids (plant pests). Dragonflies prey on mosquitoes. These beneficial insects are used in biological pest control programs.",
+      "difficulty": "EASY",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The primary treatment of sewage involves:",
+      "options": [
+        "Chlorination",
+        "Biological treatment",
+        "Physical removal of large debris by filtration and sedimentation",
+        "Chemical treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Primary sewage treatment is physical - removal of floating debris by sequential filtration and sedimentation of soil/grit. The settled material is called primary sludge.",
+      "difficulty": "EASY",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In aeration tanks, sewage is agitated to:",
+      "options": [
+        "Add chemicals",
+        "Kill microbes",
+        "Provide oxygen for aerobic microbes to decompose organic matter",
+        "Remove solids"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Aeration provides oxygen for aerobic bacteria in flocs to efficiently decompose organic matter in sewage. This biological treatment significantly reduces BOD.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The secondary treatment of sewage is:",
+      "options": [
+        "Incineration",
+        "Physical treatment",
+        "Biological treatment",
+        "Chemical treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Secondary sewage treatment is biological - microorganisms decompose organic matter in aeration tanks. This reduces BOD (Biological Oxygen Demand) of sewage significantly.",
+      "difficulty": "EASY",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primary sludge in sewage treatment is:",
+      "options": [
+        "Treated water",
+        "Chemical precipitate",
+        "Settled organic matter after primary treatment",
+        "Microbial flocs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Primary sludge is the solid material (organic matter, grit, soil) that settles at the bottom during primary treatment (sedimentation). It is removed for further processing.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ethanol is produced industrially by:",
+      "options": ["Aspergillus", "Streptomyces", "Saccharomyces cerevisiae", "Lactobacillus"],
+      "correctAnswer": "C",
+      "explanation": "Ethanol (industrial alcohol) is produced by Saccharomyces cerevisiae through fermentation of sugars from molasses or starch crops. It is used as biofuel and in beverages.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "BOD (Biological Oxygen Demand) refers to:",
+      "options": [
+        "Oxygen needed for respiration",
+        "Oxygen required by plants",
+        "Oxygen required by microbes to decompose organic matter",
+        "Oxygen in atmosphere"
+      ],
+      "correctAnswer": "C",
+      "explanation": "BOD is the amount of oxygen required by aerobic microorganisms to decompose organic matter in water. High BOD indicates high organic pollution. Treated sewage has lower BOD.",
+      "difficulty": "EASY",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Saccharomyces cerevisiae is commonly called:",
+      "options": [
+        "Bread mold",
+        "Wine bacteria",
+        "Cheese fungus",
+        "Baker's yeast or Brewer's yeast"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Saccharomyces cerevisiae is commonly called baker's yeast or brewer's yeast. It is used in bread making (leavening) and in brewing beer, wine, and other alcoholic beverages.",
+      "difficulty": "EASY",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of making wine from grapes involves:",
+      "options": [
+        "Distillation only",
+        "Enzyme treatment",
+        "Bacterial fermentation",
+        "Yeast fermentation without distillation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Wine is made by yeast fermentation of grape juice. The sugar in grapes is converted to alcohol by Saccharomyces cerevisiae. Wine is not distilled (unlike brandy, whisky).",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 159,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Penicillin is obtained from:",
+      "options": ["Streptomyces", "Yeast", "Bacteria", "Penicillium notatum (fungus)"],
+      "correctAnswer": "D",
+      "explanation": "Penicillin is produced by the fungus Penicillium notatum (also P. chrysogenum). It inhibits bacterial cell wall synthesis and is effective against gram-positive bacteria.",
+      "difficulty": "EASY",
+      "topic": "Antibiotics",
+      "ncertPage": 160,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bacillus thuringiensis (Bt) is used as:",
+      "options": [
+        "Biofertilizer",
+        "Nitrogen fixer",
+        "Antibiotic producer",
+        "Biopesticide to control insect pests"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bacillus thuringiensis (Bt) produces crystal proteins (Cry proteins) toxic to certain insect larvae. Bt toxin is used as biopesticide and Bt genes are used in transgenic crops.",
+      "difficulty": "EASY",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Methanobacterium is found in:",
+      "options": ["Soil surface", "Fresh water", "Human gut", "Cattle rumen (anaerobic sludge)"],
+      "correctAnswer": "D",
+      "explanation": "Methanobacterium is an obligate anaerobe found in cattle rumen, anaerobic sludge, and bottom of wetlands. It produces methane during anaerobic digestion of cellulose.",
+      "difficulty": "MEDIUM",
+      "topic": "Biogas Production",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The technology of biogas production in India was developed by:",
+      "options": ["IITs", "WHO", "IARI", "IARI and KVIC"],
+      "correctAnswer": "D",
+      "explanation": "IARI (Indian Agricultural Research Institute) and KVIC (Khadi and Village Industries Commission) developed biogas (gobar gas) technology in India for rural energy needs.",
+      "difficulty": "MEDIUM",
+      "topic": "Biogas Production",
+      "ncertPage": 163,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Free-living nitrogen-fixing bacteria include:",
+      "options": ["E. coli", "Lactobacillus", "Rhizobium only", "Azospirillum and Azotobacter"],
+      "correctAnswer": "D",
+      "explanation": "Azospirillum and Azotobacter are free-living nitrogen-fixing bacteria in soil. They fix atmospheric nitrogen without plant symbiosis, enriching soil fertility.",
+      "difficulty": "EASY",
+      "topic": "Biofertilizers",
+      "ncertPage": 165,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ganga Action Plan and Yamuna Action Plan were initiated for:",
+      "options": [
+        "Irrigation",
+        "Flood control",
+        "Dam construction",
+        "Reducing river water pollution through sewage treatment"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ganga Action Plan (1985) and Yamuna Action Plan were initiated to reduce pollution in these rivers by building sewage treatment plants along their banks to treat sewage before discharge.",
+      "difficulty": "EASY",
+      "topic": "Sewage Treatment",
+      "ncertPage": 163,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Citric acid is commercially produced using:",
+      "options": ["Yeast", "Algae", "Bacteria", "Aspergillus niger"],
+      "correctAnswer": "D",
+      "explanation": "Citric acid is produced commercially by the fungus Aspergillus niger through fermentation. It is used in food industry, pharmaceuticals, and as a preservative.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Industrial Products",
+      "ncertPage": 161,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glomus is a genus of:",
+      "options": ["Pathogenic fungi", "Algae", "Nitrogen-fixing bacteria", "Mycorrhizal fungi"],
+      "correctAnswer": "D",
+      "explanation": "Glomus is a genus of arbuscular mycorrhizal fungi (AMF). These fungi form associations with most plants and improve nutrient uptake, especially phosphorus.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofertilizers",
+      "ncertPage": 166,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biocontrol of pests refers to:",
+      "options": [
+        "Mechanical removal",
+        "Burning infected plants",
+        "Chemical control",
+        "Using living organisms to control pests"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Biocontrol uses living organisms (natural enemies, parasites, predators, pathogens) to control pest populations. It's an eco-friendly alternative to chemical pesticides.",
+      "difficulty": "EASY",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The flocs in secondary sewage treatment are:",
+      "options": [
+        "Sand particles",
+        "Toxic compounds",
+        "Chemicals",
+        "Masses of bacteria and fungal filaments"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Flocs are masses of bacteria associated with fungal filaments that form mesh-like structures. They efficiently decompose organic matter during aeration in secondary treatment.",
+      "difficulty": "MEDIUM",
+      "topic": "Sewage Treatment",
+      "ncertPage": 162,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bt toxin is produced by:",
+      "options": ["Pseudomonas", "Streptomyces", "Rhizobium", "Bacillus thuringiensis"],
+      "correctAnswer": "D",
+      "explanation": "Bt toxin (Cry proteins) is produced by Bacillus thuringiensis. The toxin is inactive when produced but becomes active in alkaline gut of insect larvae, killing them.",
+      "difficulty": "EASY",
+      "topic": "Biocontrol Agents",
+      "ncertPage": 164,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Roquefort cheese is ripened by:",
+      "options": ["Yeast", "Lactobacillus", "Bacteria", "Penicillium roqueforti"],
+      "correctAnswer": "D",
+      "explanation": "Roquefort cheese is ripened by the fungus Penicillium roqueforti, which gives it characteristic flavor and blue-green veins. Similarly, Camembert cheese uses Penicillium camemberti.",
+      "difficulty": "MEDIUM",
+      "topic": "Microbes in Household Products",
+      "ncertPage": 158,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biogas is produced by:",
+      "options": ["Fungi", "Algae", "Aerobic bacteria", "Methanogens (anaerobic bacteria)"],
+      "correctAnswer": "D",
+      "explanation": "Biogas is produced by methanogenic bacteria (like Methanobacterium, Methanococcus) which are obligate anaerobes. They grow on cellulosic material and produce methane.",
+      "difficulty": "EASY",
+      "topic": "Biogas Production",
+      "ncertPage": 163,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

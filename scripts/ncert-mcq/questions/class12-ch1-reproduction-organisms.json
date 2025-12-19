@@ -1,0 +1,852 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 1,
+  "ncertChapterName": "Reproduction in Organisms",
+  "questions": [
+    {
+      "question": "In most organisms, the male gamete is:",
+      "options": [
+        "Smaller and motile",
+        "Equal in size to female gamete",
+        "Larger and motile",
+        "Larger and non-motile"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In most organisms, the male gamete (sperm) is smaller and motile, while the female gamete (ovum/egg) is larger and usually non-motile. The small size and motility of sperm enables them to move towards the egg for fertilization.",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 9,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Dioecious plants have:",
+      "options": [
+        "Only bisexual flowers",
+        "Flowers with both stamens and carpels",
+        "Both male and female flowers on same plant",
+        "Male and female flowers on different plants"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Dioecious plants have male and female flowers on different plants (e.g., papaya, date palm, mulberry). 'Di' means two and 'oikos' means house, indicating male and female organs are in two separate 'houses' (plants).",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 7,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Clone refers to:",
+      "options": [
+        "Sexually produced offspring",
+        "Genetically identical offspring produced asexually",
+        "Offspring with mixed genetic material",
+        "Hybrid offspring"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A clone is a group of genetically identical individuals produced by asexual reproduction from a single parent. Since only mitosis is involved and there is no mixing of genetic material, all clones are genetically identical to the parent and to each other.",
+      "difficulty": "EASY",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 3,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Development of zygote depends on:",
+      "options": [
+        "Neither A nor B",
+        "Type of life cycle of organism",
+        "Environment in which it develops",
+        "Both A and B"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The development of zygote depends on both the type of life cycle of the organism and the environment in which development occurs. Some zygotes develop immediately, while others may have a resting period. The environment also affects whether development is external or internal.",
+      "difficulty": "MEDIUM",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 12,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which structure protects the embryo in seeds?",
+      "options": ["Endosperm", "Cotyledon", "Pericarp", "Seed coat"],
+      "correctAnswer": "D",
+      "explanation": "The seed coat (testa) protects the embryo inside the seed from mechanical injury, desiccation, and pathogens. It develops from the integuments of the ovule and is the outermost covering of the seed.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In angiosperms, the ovule develops into:",
+      "options": ["Endosperm", "Fruit", "Embryo", "Seed"],
+      "correctAnswer": "D",
+      "explanation": "In angiosperms (flowering plants), the ovule develops into the seed after fertilization. The seed contains the embryo along with food reserves (endosperm or cotyledons) and is enclosed by seed coat (developed from integuments).",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of fusion of male and female gametes is called:",
+      "options": ["Parturition", "Pollination", "Syngamy or fertilization", "Embryogenesis"],
+      "correctAnswer": "C",
+      "explanation": "Syngamy or fertilization is the process of fusion of a male gamete with a female gamete to form a zygote. This is a crucial step in sexual reproduction that combines genetic material from both parents.",
+      "difficulty": "EASY",
+      "topic": "Fertilization",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In angiosperms, the ovary develops into:",
+      "options": ["Seed", "Embryo", "Fruit", "Endosperm"],
+      "correctAnswer": "C",
+      "explanation": "In angiosperms, the ovary develops into the fruit after fertilization. The fruit encloses the seeds and aids in their protection and dispersal. The fruit wall (pericarp) develops from the ovary wall.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The product of fertilization is called:",
+      "options": ["Seed", "Embryo", "Zygote", "Gamete"],
+      "correctAnswer": "C",
+      "explanation": "The zygote is the product of fertilization - it is formed by the fusion of male and female gametes. The zygote is diploid (2n) and is the first cell of the new individual that will develop into an embryo.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Regeneration as a mode of reproduction is seen in:",
+      "options": ["Planaria", "Paramecium", "Euglena", "Amoeba"],
+      "correctAnswer": "A",
+      "explanation": "Planaria (flatworm) can reproduce by regeneration. If a Planaria is cut into pieces, each piece can regenerate into a complete organism. This is possible due to the presence of specialized cells called neoblasts.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In organisms with external fertilization, the zygote is usually formed in:",
+      "options": ["Male body", "External medium (water)", "Soil", "Female body"],
+      "correctAnswer": "B",
+      "explanation": "In organisms with external fertilization (like most fish and amphibians), the zygote is formed outside the body in the external medium, typically water. Both gametes are released into water where fertilization occurs.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 12,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vegetative propagation through leaf occurs in:",
+      "options": ["Onion", "Ginger", "Potato", "Bryophyllum"],
+      "correctAnswer": "D",
+      "explanation": "Bryophyllum propagates through leaves. Adventitious buds develop on the margins of leaves, which when fall on soil, develop into new plants. This is natural vegetative propagation through leaves.",
+      "difficulty": "EASY",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In majority of organisms, the gametes are:",
+      "options": ["Diploid", "Haploid", "Triploid", "Tetraploid"],
+      "correctAnswer": "B",
+      "explanation": "Gametes are haploid (n) cells produced by meiosis. During fertilization, two haploid gametes fuse to form a diploid (2n) zygote, thus maintaining the chromosome number of the species across generations.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 6,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which statement about clone is correct?",
+      "options": [
+        "Clones are genetically and morphologically similar",
+        "Clones are produced only by sexual reproduction",
+        "Clones have different genetic composition",
+        "Clones are morphologically similar but genetically different"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Clones are genetically identical individuals derived from a single parent through asexual reproduction. Since they have identical genetic makeup, they are also morphologically similar under the same environmental conditions.",
+      "difficulty": "EASY",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 3,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which type of binary fission occurs in Paramecium?",
+      "options": [
+        "Simple binary fission",
+        "Longitudinal binary fission",
+        "Transverse binary fission",
+        "Oblique binary fission"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Paramecium undergoes transverse binary fission, where the plane of division is perpendicular to the long axis of the cell. The cytoplasm divides transversely after nuclear division.",
+      "difficulty": "EASY",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In haploid organisms like Monera, fungi, and algae, gametes are formed by:",
+      "options": ["Reduction division", "Binary fission", "Meiosis", "Mitosis"],
+      "correctAnswer": "D",
+      "explanation": "In haploid organisms, gametes are formed by mitosis since the organism is already haploid. Meiosis would further reduce the chromosome number. Meiosis in such organisms occurs after zygote formation (zygotic meiosis).",
+      "difficulty": "MEDIUM",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 10,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In most aquatic organisms, fertilization is:",
+      "options": ["Internal", "External", "In vitro", "Absent"],
+      "correctAnswer": "B",
+      "explanation": "In most aquatic organisms (like many fish, amphibians, and aquatic invertebrates), fertilization is external. Gametes are released into the water where they meet and fuse. This is facilitated by the aquatic medium.",
+      "difficulty": "EASY",
+      "topic": "Fertilization",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Organisms that produce both male and female gametes are called:",
+      "options": ["Dioecious", "Bisexual or hermaphrodite", "Monoecious", "Unisexual"],
+      "correctAnswer": "B",
+      "explanation": "Organisms that produce both male and female gametes are called bisexual or hermaphrodite. Examples include earthworm, leech, tapeworm (animals), and most flowering plants. Monoecious specifically refers to plants with separate male and female flowers on the same individual.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 7,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is an oviparous mammal?",
+      "options": ["Kangaroo", "Whale", "Bat", "Platypus"],
+      "correctAnswer": "D",
+      "explanation": "Platypus (and echidnas) are the only egg-laying mammals, called monotremes. They are oviparous but still have mammary glands and nurse their young with milk after hatching.",
+      "difficulty": "MEDIUM",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Eyes on potato tuber are actually:",
+      "options": ["Axillary buds", "Terminal buds", "Adventitious buds", "Root buds"],
+      "correctAnswer": "A",
+      "explanation": "Eyes on potato tuber are axillary buds. Potato tuber is a modified stem, and the eyes represent nodes with axillary buds. Each eye can give rise to a new plant when the tuber is planted.",
+      "difficulty": "EASY",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a continuous breeder?",
+      "options": ["Lizard", "Frog", "Crow", "Human"],
+      "correctAnswer": "D",
+      "explanation": "Humans are continuous breeders, capable of reproducing throughout the year regardless of seasons. Frogs, crows, and lizards are seasonal breeders that reproduce during specific favorable seasons.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Runners are seen in:",
+      "options": ["Onion", "Potato", "Ginger", "Strawberry"],
+      "correctAnswer": "D",
+      "explanation": "Runners are horizontal stems that grow along the soil surface and produce roots and shoots at nodes. They are found in plants like strawberry, lawn grass (Cynodon), and Oxalis.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a characteristic feature of reproduction?",
+      "options": [
+        "Increase in body size of the organism",
+        "Continuity of species",
+        "Transmission of genetic material from parents to offspring",
+        "Production of offspring similar to parents"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Reproduction involves the production of offspring, continuity of species, and transmission of genetic material. Growth (increase in body size) is a characteristic of life but not a feature of reproduction specifically.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Reproduction",
+      "ncertPage": 2,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which organism has the shortest life span?",
+      "options": ["Crow", "Fruit fly", "Butterfly", "Mayfly"],
+      "correctAnswer": "D",
+      "explanation": "Mayfly (Ephemera) has one of the shortest life spans, living only for a day or even less. Adult mayflies live for just a few hours to a few days, primarily to reproduce.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Reproduction",
+      "ncertPage": 2,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The wall of ovary develops into:",
+      "options": ["Embryo", "Seed coat", "Pericarp", "Endosperm"],
+      "correctAnswer": "C",
+      "explanation": "The wall of the ovary develops into the pericarp (fruit wall) after fertilization. The pericarp may be dry or fleshy and protects the seeds. It may be differentiated into epicarp, mesocarp, and endocarp.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Seasonal breeders reproduce during:",
+      "options": ["Winter only", "Summer only", "Throughout the year", "Favorable seasons only"],
+      "correctAnswer": "D",
+      "explanation": "Seasonal breeders reproduce during particular periods or seasons, which are usually favorable for reproduction and offspring survival. Examples include frogs, lizards, and most birds. This contrasts with continuous breeders that can reproduce throughout the year.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Grafting is not possible in monocots because they:",
+      "options": [
+        "Lack cambium",
+        "Have fibrous roots",
+        "Have parallel venation",
+        "Have scattered vascular bundles"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Grafting is not possible in monocots because they lack cambium (vascular cambium). Grafting requires the joining of cambial tissues of stock and scion for successful union. Monocots lack secondary growth.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The period from birth to natural death of an organism is called:",
+      "options": ["Life cycle", "Life span", "Reproduction period", "Growth phase"],
+      "correctAnswer": "B",
+      "explanation": "Life span is the period from birth to natural death of an organism. It varies from a few days (mayfly) to thousands of years (some trees). Life cycle refers to the series of stages an organism passes through during its lifetime.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Reproduction",
+      "ncertPage": 2,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The asexual reproductive structures called zoospores are produced by:",
+      "options": ["Rhizopus", "Chlamydomonas", "Amoeba", "Yeast"],
+      "correctAnswer": "B",
+      "explanation": "Zoospores are flagellated, motile asexual spores produced by many algae including Chlamydomonas. They swim in water using their flagella and settle to grow into new individuals.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following produces offspring by parthenogenesis?",
+      "options": ["Honeybee", "Human", "Fish", "Frog"],
+      "correctAnswer": "A",
+      "explanation": "Honeybees produce offspring by parthenogenesis. Unfertilized eggs develop into haploid male bees (drones). Fertilized eggs develop into diploid females (workers or queen, depending on nutrition).",
+      "difficulty": "EASY",
+      "topic": "Special Modes of Reproduction",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Animals that give birth to young ones are called:",
+      "options": ["Viviparous", "Ovoviviparous", "Bisexual", "Oviparous"],
+      "correctAnswer": "A",
+      "explanation": "Viviparous animals give birth to live young ones. In these animals, the zygote develops into an embryo inside the female body, receiving nourishment from the mother. Examples include most mammals including humans.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants that flower many times during their lifetime are called:",
+      "options": ["Polycarpic", "Annual", "Biennial", "Monocarpic"],
+      "correctAnswer": "A",
+      "explanation": "Polycarpic plants flower multiple times during their lifetime. Most perennial plants are polycarpic, producing flowers and fruits repeatedly year after year. Examples include mango, apple, and most fruit trees.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In which plant does vegetative propagation occur through stem tubers?",
+      "options": ["Garlic", "Ginger", "Potato", "Onion"],
+      "correctAnswer": "C",
+      "explanation": "Potato propagates through stem tubers. The tuber is a modified underground stem with eyes (axillary buds) that can sprout and grow into new plants. Ginger uses rhizomes, while onion and garlic use bulbs.",
+      "difficulty": "EASY",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is an example of parthenogenesis?",
+      "options": [
+        "Development of fruit from ovary",
+        "Development of fruit without fertilization",
+        "Development of unfertilized egg into adult",
+        "Development of seed from ovule"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Parthenogenesis is the development of an organism from an unfertilized egg without the involvement of a male gamete. It occurs naturally in some insects (honeybees - drones from unfertilized eggs), rotifers, and some lizards.",
+      "difficulty": "MEDIUM",
+      "topic": "Special Modes of Reproduction",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of formation of gametes is called:",
+      "options": ["Gametogenesis", "Embryogenesis", "Organogenesis", "Sporogenesis"],
+      "correctAnswer": "A",
+      "explanation": "Gametogenesis is the process of formation of gametes. In males, it is called spermatogenesis (formation of sperms), and in females, it is called oogenesis (formation of ova or eggs).",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 9,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Multiple fission is exhibited by:",
+      "options": ["Plasmodium", "Euglena", "Amoeba", "Paramecium"],
+      "correctAnswer": "A",
+      "explanation": "Multiple fission is exhibited by Plasmodium (malarial parasite). The parent cell divides into many daughter cells simultaneously. In Plasmodium, the schizont stage undergoes multiple fission (schizogony) to produce merozoites.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Strobilus (cone) in gymnosperms is:",
+      "options": [
+        "Storage structure",
+        "Vegetative structure",
+        "Reproductive structure",
+        "Photosynthetic structure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Strobilus or cone in gymnosperms is a reproductive structure bearing sporophylls (spore-bearing leaves). Male cones bear microsporophylls with pollen sacs, while female cones bear megasporophylls with ovules.",
+      "difficulty": "MEDIUM",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 6,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In flowering plants, the zygote is formed inside the:",
+      "options": ["Stigma", "Style", "Anther", "Ovule"],
+      "correctAnswer": "D",
+      "explanation": "In flowering plants, the zygote is formed inside the ovule. After pollination and pollen tube growth, the male gametes reach the ovule where one fertilizes the egg cell to form the zygote.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bulbils are modified:",
+      "options": ["Leaves", "Flowers or floral buds", "Roots", "Stems"],
+      "correctAnswer": "B",
+      "explanation": "Bulbils are modified flower buds or flowers that function as vegetative propagules. They are found in plants like Agave and some lilies. When they fall to the ground, they develop into new plants.",
+      "difficulty": "HARD",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Conidia are asexual reproductive structures produced by:",
+      "options": ["Rhizopus", "Penicillium", "Hydra", "Plasmodium"],
+      "correctAnswer": "B",
+      "explanation": "Conidia are non-motile asexual spores produced exogenously (externally) on specialized hyphae called conidiophores. They are characteristic of fungi like Penicillium and Aspergillus.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reproductive part of an angiosperm is the:",
+      "options": ["Root", "Flower", "Leaf", "Stem"],
+      "correctAnswer": "B",
+      "explanation": "The flower is the reproductive part of angiosperms (flowering plants). It contains the male reproductive organs (stamens with anthers) and female reproductive organs (carpels/pistils with ovary, style, and stigma).",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 6,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Animals that lay eggs are called:",
+      "options": ["Unisexual", "Viviparous", "Oviparous", "Ovoviviparous"],
+      "correctAnswer": "C",
+      "explanation": "Oviparous animals lay eggs that develop and hatch outside the mother's body. Examples include birds, most reptiles, amphibians, and fish. The eggs may be covered with hard or leathery shells.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gemmules are asexual reproductive structures in:",
+      "options": ["Planaria", "Hydra", "Sponges", "Yeast"],
+      "correctAnswer": "C",
+      "explanation": "Gemmules are internal buds found in freshwater sponges (like Spongilla). They are resistant structures that help sponges survive unfavorable conditions. When conditions improve, gemmules develop into new sponges.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Fragmentation as a mode of asexual reproduction is seen in:",
+      "options": ["Amoeba", "Spirogyra", "Paramecium", "Plasmodium"],
+      "correctAnswer": "B",
+      "explanation": "Fragmentation is seen in filamentous algae like Spirogyra. The filament breaks into fragments, and each fragment grows into a new individual. This is different from binary fission (Amoeba, Paramecium) and multiple fission (Plasmodium).",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In flowering plants, the end of juvenile phase is indicated by:",
+      "options": ["Flowering", "Fruit formation", "Leaf formation", "Root development"],
+      "correctAnswer": "A",
+      "explanation": "In flowering plants, the transition from juvenile to reproductive phase can be seen with the formation of flowers. The plant must reach reproductive maturity (end of juvenile phase) before it can produce flowers.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a method of vegetative propagation?",
+      "options": ["Layering", "Cutting", "Pollination", "Grafting"],
+      "correctAnswer": "C",
+      "explanation": "Pollination is the transfer of pollen and is a step in sexual reproduction, not vegetative propagation. Grafting, layering, and cutting are artificial methods of vegetative propagation used by humans to multiply plants.",
+      "difficulty": "EASY",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In which type of life cycle does meiosis occur in the zygote?",
+      "options": ["None of these", "Diplontic", "Haplontic", "Haplo-diplontic"],
+      "correctAnswer": "C",
+      "explanation": "In haplontic life cycle, the dominant phase is haploid. Meiosis occurs in the zygote immediately after fertilization (zygotic meiosis), and the organism remains haploid for most of its life cycle. This is found in many algae and fungi.",
+      "difficulty": "HARD",
+      "topic": "Life Cycles",
+      "ncertPage": 10,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plants that flower only once in their lifetime are called:",
+      "options": ["Biennial", "Annual", "Monocarpic", "Perennial"],
+      "correctAnswer": "C",
+      "explanation": "Monocarpic plants flower only once in their lifetime. After flowering and fruiting, they die. Examples include bamboo (flowers once in 50-100 years), Agave (century plant), and some palms. Most annual plants are also monocarpic.",
+      "difficulty": "MEDIUM",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vegetative propagules in Bryophyllum are:",
+      "options": ["Rhizomes", "Bulbils", "Eyes on tubers", "Adventitious buds on leaf margins"],
+      "correctAnswer": "D",
+      "explanation": "In Bryophyllum (sprout leaf plant), vegetative propagules are adventitious buds that develop on the margins of leaves. These buds fall off and develop into new plants when they touch the soil.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In organisms with internal fertilization, the zygote is formed:",
+      "options": [
+        "Outside both bodies",
+        "Inside the male body",
+        "In water",
+        "Inside the female body"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In organisms with internal fertilization, the zygote is formed inside the female body. The male gametes are transferred to the female body where they fuse with the female gametes, forming the zygote.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 12,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The period of growth and maturity required before reproduction is called:",
+      "options": ["Senescent phase", "Vegetative phase", "Reproductive phase", "Juvenile phase"],
+      "correctAnswer": "D",
+      "explanation": "The juvenile phase is the period of growth and development before an organism becomes reproductively mature. This phase varies in different organisms - it's a few days in some insects and several years in humans.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Integuments of the ovule develop into:",
+      "options": ["Pericarp", "Seed coat", "Endosperm", "Embryo"],
+      "correctAnswer": "B",
+      "explanation": "The integuments (outer and inner) of the ovule develop into the seed coat (testa and tegmen) after fertilization. The seed coat protects the embryo and endosperm inside the seed.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Asexual reproduction is common in:",
+      "options": [
+        "Higher animals only",
+        "Lower organisms like protists and monerans",
+        "Flowering plants only",
+        "Mammals only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Asexual reproduction is common in lower organisms like protists, monerans, many algae, and fungi. It involves only a single parent without gamete formation. Higher organisms typically reproduce sexually.",
+      "difficulty": "EASY",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 3,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cell division during gamete formation in diploid organisms is:",
+      "options": ["Meiosis", "Amitosis", "Binary fission", "Mitosis only"],
+      "correctAnswer": "A",
+      "explanation": "In diploid organisms, gamete formation involves meiosis to produce haploid gametes. During meiosis, the chromosome number is reduced to half. This ensures that when gametes fuse during fertilization, the diploid number is restored.",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 10,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Monoecious plants have:",
+      "options": [
+        "Bisexual flowers only",
+        "Only male flowers",
+        "Only female flowers",
+        "Both male and female flowers on the same plant"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Monoecious plants bear both male and female flowers on the same plant (e.g., maize, cucumber, castor). The term comes from Greek 'mono' (one) and 'oikos' (house), meaning both sexes in one 'house' (plant).",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 7,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following shows both sexual and asexual reproduction?",
+      "options": ["Humans", "Bacteria", "Hydra", "Amoeba"],
+      "correctAnswer": "C",
+      "explanation": "Hydra can reproduce both asexually (by budding) and sexually. It typically reproduces asexually during favorable conditions and sexually during unfavorable conditions. Humans reproduce only sexually, while bacteria and Amoeba reproduce only asexually.",
+      "difficulty": "EASY",
+      "topic": "Asexual and Sexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In honeybees, drones develop from:",
+      "options": [
+        "Unfertilized haploid eggs",
+        "Larvae fed on royal jelly",
+        "Fertilized haploid eggs",
+        "Fertilized diploid eggs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In honeybees, drones (males) develop from unfertilized haploid eggs through parthenogenesis. They are haploid. Female workers and queens develop from fertilized diploid eggs; queens develop from larvae fed royal jelly.",
+      "difficulty": "MEDIUM",
+      "topic": "Special Modes of Reproduction",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Apomixis is:",
+      "options": [
+        "Normal sexual reproduction",
+        "Asexual reproduction involving seeds without fertilization",
+        "Vegetative propagation",
+        "External fertilization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Apomixis is a type of asexual reproduction in which seeds are formed without fertilization. The embryo develops from the egg cell or other cells of the ovule without meiosis and syngamy. It is found in some grasses and citrus.",
+      "difficulty": "HARD",
+      "topic": "Special Modes of Reproduction",
+      "ncertPage": 14,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sexual reproduction involves:",
+      "options": [
+        "Single parent only",
+        "Formation of gametes",
+        "Genetically identical offspring",
+        "Mitotic cell division only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sexual reproduction involves the formation of gametes (sex cells), usually by meiosis, and their fusion (fertilization) to form a zygote. It typically involves two parents and produces genetically variable offspring.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 6,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When both gametes are similar in appearance, they are called:",
+      "options": ["Anisogametes", "Zoospores", "Heterogametes", "Isogametes or homogametes"],
+      "correctAnswer": "D",
+      "explanation": "Isogametes or homogametes are gametes that are morphologically similar. This type of sexual reproduction (isogamy) is found in some algae like Cladophora and some fungi. These gametes cannot be distinguished as male or female based on appearance.",
+      "difficulty": "MEDIUM",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 9,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Offsprings produced through parthenogenesis are:",
+      "options": [
+        "Can be haploid or diploid",
+        "Always polyploid",
+        "Always diploid",
+        "Always haploid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Offsprings produced through parthenogenesis can be haploid or diploid depending on whether the egg is haploid or diploid. For example, in honeybees, unfertilized haploid eggs develop into haploid males (drones), while some organisms have diploid parthenogenetic eggs.",
+      "difficulty": "HARD",
+      "topic": "Special Modes of Reproduction",
+      "ncertPage": 14,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Suckers develop from:",
+      "options": [
+        "Terminal buds",
+        "Axillary buds at soil level",
+        "Adventitious roots",
+        "Root tips"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Suckers are underground stems that arise from axillary buds at the base of the aerial stem, grow horizontally underground, and turn upward to form aerial shoots. They are found in Chrysanthemum, mint, and banana.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following animals is unisexual?",
+      "options": ["Earthworm", "Leech", "Cockroach", "Tapeworm"],
+      "correctAnswer": "C",
+      "explanation": "Cockroach is a unisexual (dioecious) animal with separate male and female individuals. Earthworm, leech, and tapeworm are bisexual (hermaphrodite) animals that possess both male and female reproductive organs.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 7,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Internal fertilization is characteristic of:",
+      "options": ["Starfish", "Terrestrial organisms", "Sea urchins", "Bony fish"],
+      "correctAnswer": "B",
+      "explanation": "Internal fertilization is characteristic of most terrestrial organisms including reptiles, birds, and mammals. Since there is no water medium for gamete transfer on land, internal fertilization ensures that gametes meet inside the female body.",
+      "difficulty": "EASY",
+      "topic": "Fertilization",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Water hyacinth (Eichhornia) reproduces vegetatively by:",
+      "options": ["Bulbils", "Tubers", "Runners", "Offsets"],
+      "correctAnswer": "D",
+      "explanation": "Water hyacinth reproduces vegetatively by offsets. Offsets are short runners arising from leaf axils. Water hyacinth is called 'Terror of Bengal' due to its rapid vegetative reproduction causing water bodies to be clogged.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Budding as a mode of reproduction occurs in:",
+      "options": ["Plasmodium", "Paramecium", "Spirogyra", "Yeast and Hydra"],
+      "correctAnswer": "D",
+      "explanation": "Budding occurs in organisms like yeast (unicellular fungus) and Hydra (cnidarian). A small outgrowth (bud) develops from the parent body, which eventually detaches and grows into a new individual.",
+      "difficulty": "EASY",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which type of reproduction produces offspring with genetic variation?",
+      "options": ["Budding", "Sexual reproduction", "Fragmentation", "Binary fission"],
+      "correctAnswer": "B",
+      "explanation": "Sexual reproduction produces offspring with genetic variation due to meiosis (crossing over and random assortment) and the fusion of gametes from two different parents. Asexual reproduction methods produce genetically identical clones.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 6,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a modified stem for vegetative propagation?",
+      "options": ["Sweet potato", "Carrot", "Ginger", "Radish"],
+      "correctAnswer": "C",
+      "explanation": "Ginger is a rhizome (underground modified stem) used for vegetative propagation. Sweet potato, carrot, and radish are modified roots (tuberous roots) and are not typically used for vegetative propagation in the same way.",
+      "difficulty": "MEDIUM",
+      "topic": "Vegetative Propagation",
+      "ncertPage": 5,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Senescence in plants refers to:",
+      "options": ["Aging and death", "Juvenile phase", "Growth phase", "Reproductive phase"],
+      "correctAnswer": "A",
+      "explanation": "Senescence refers to the aging process that leads to death of an organism or its parts. In plants, senescence occurs at the end of the reproductive phase and involves cellular and tissue changes leading to death.",
+      "difficulty": "EASY",
+      "topic": "Sexual Reproduction",
+      "ncertPage": 8,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Binary fission in Amoeba is:",
+      "options": ["Irregular (simple)", "Oblique", "Longitudinal", "Transverse"],
+      "correctAnswer": "A",
+      "explanation": "Binary fission in Amoeba occurs in any plane (simple or irregular binary fission) because Amoeba has no definite shape. In Paramecium, it is transverse, and in Euglena, it is longitudinal.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of development of embryo from zygote is called:",
+      "options": ["Gametogenesis", "Embryogenesis", "Parturition", "Organogenesis"],
+      "correctAnswer": "B",
+      "explanation": "Embryogenesis is the process of development of embryo from the zygote. It involves cell division (cleavage), cell growth, and cell differentiation to form various tissues and organs of the embryo.",
+      "difficulty": "EASY",
+      "topic": "Post-fertilization Events",
+      "ncertPage": 12,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Events in sexual reproduction before fertilization are called:",
+      "options": [
+        "Pre-fertilization events",
+        "Developmental events",
+        "Embryonic events",
+        "Post-fertilization events"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pre-fertilization events include all the events of sexual reproduction that occur before fertilization. These include gametogenesis (formation of gametes) and gamete transfer (in plants, this involves pollination).",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 9,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Transfer of male gametes for fertilization is called:",
+      "options": ["Insemination", "Pollination", "Gamete transfer", "Fertilization"],
+      "correctAnswer": "C",
+      "explanation": "Gamete transfer is the process of bringing male and female gametes together for fertilization. In plants, this involves pollination (pollen transfer). In animals, it may involve mating or external release of gametes in water.",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 10,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When male and female gametes are morphologically distinct, they are called:",
+      "options": ["Homogametes", "Heterogametes", "Zoospores", "Isogametes"],
+      "correctAnswer": "B",
+      "explanation": "Heterogametes are gametes that are morphologically distinct. The male gamete is usually smaller and motile (sperm/antherozoid), while the female gamete is larger and often non-motile (ovum/egg). This condition is called heterogamy or anisogamy.",
+      "difficulty": "EASY",
+      "topic": "Pre-fertilization Events",
+      "ncertPage": 9,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Spores produced during asexual reproduction are formed by:",
+      "options": ["Fusion", "Meiosis", "Mitosis", "Both meiosis and mitosis"],
+      "correctAnswer": "C",
+      "explanation": "Asexual spores are formed by mitosis, not meiosis. Since asexual reproduction does not involve reduction division or fusion of gametes, the spores are genetically identical to the parent. Sexual spores involve meiosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Asexual Reproduction",
+      "ncertPage": 4,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

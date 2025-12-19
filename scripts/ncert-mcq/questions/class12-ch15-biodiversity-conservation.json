@@ -1,0 +1,787 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 15,
+  "ncertChapterName": "Biodiversity and Conservation",
+  "questions": [
+    {
+      "question": "The 'broadly utilitarian' argument for conservation emphasizes:",
+      "options": [
+        "Commercial exploitation",
+        "Direct economic benefits",
+        "Ecosystem services provided by biodiversity",
+        "Medicinal value"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The broadly utilitarian argument emphasizes ecosystem services like oxygen production, pollination, nutrient cycling, climate regulation, and waste decomposition.",
+      "difficulty": "MEDIUM",
+      "topic": "Conservation Arguments",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "India has approximately what percentage of world's biodiversity?",
+      "options": ["1.2%", "2.4%", "8.1%", "15%"],
+      "correctAnswer": "B",
+      "explanation": "India has about 8.1% of the world's biodiversity despite having only 2.4% of the world's land area. India is one of the 12 mega diversity countries.",
+      "difficulty": "MEDIUM",
+      "topic": "India's Biodiversity",
+      "ncertPage": 262,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The current rate of species extinction is:",
+      "options": [
+        "10-100 times the natural rate",
+        "100-1000 times the natural rate",
+        "Same as natural rate",
+        "Lower than natural rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The current rate of extinction is estimated to be 100-1000 times faster than the natural or background extinction rate, primarily due to human activities.",
+      "difficulty": "MEDIUM",
+      "topic": "Extinction Rate",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The concept of biodiversity hotspots was given by:",
+      "options": ["Paul Ehrlich", "David Tilman", "E.O. Wilson", "Norman Myers"],
+      "correctAnswer": "D",
+      "explanation": "Norman Myers defined biodiversity hotspots based on endemic plant species and the degree of threat to the habitat.",
+      "difficulty": "MEDIUM",
+      "topic": "Hotspot Concept",
+      "ncertPage": 267,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The species-area relationship is represented by the equation:",
+      "options": ["S = CZ^A", "S = C + AZ", "S = C/AZ", "S = CA^Z"],
+      "correctAnswer": "A",
+      "explanation": "The species-area relationship is represented as S = CA^Z, where S is species richness, A is area, Z is the slope of the line (regression coefficient), and C is the Y-intercept.",
+      "difficulty": "HARD",
+      "topic": "Species-Area Equation",
+      "ncertPage": 263,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A biodiversity hotspot must have:",
+      "options": [
+        "Only endangered species",
+        "Large protected areas",
+        "High species richness only",
+        "At least 1500 endemic plant species and 70% habitat loss"
+      ],
+      "correctAnswer": "D",
+      "explanation": "For a region to qualify as a biodiversity hotspot, it must have at least 1,500 endemic vascular plant species and should have lost at least 70% of its primary vegetation.",
+      "difficulty": "HARD",
+      "topic": "Hotspot Criteria",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Seed banks store seeds at:",
+      "options": [
+        "Body temperature",
+        "Boiling point",
+        "Room temperature",
+        "Freezing temperatures (-10 to -20°C)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Seed banks store seeds at freezing temperatures (typically -18 to -20°C) after drying them to low moisture content. This allows seeds to remain viable for decades.",
+      "difficulty": "MEDIUM",
+      "topic": "Seed Banks",
+      "ncertPage": 268,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sacred groves are found in:",
+      "options": [
+        "Only Kerala",
+        "Several states including Rajasthan, Kerala, Maharashtra",
+        "Only Meghalaya",
+        "Only Rajasthan"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sacred groves are found in several states of India including Rajasthan, Western Ghats (Kerala, Karnataka), Maharashtra, and Meghalaya in North-East India.",
+      "difficulty": "MEDIUM",
+      "topic": "Sacred Groves",
+      "ncertPage": 268,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Biodiversity has economic value because it provides:",
+      "options": [
+        "Food, medicines, and industrial products",
+        "Spiritual satisfaction",
+        "Scientific knowledge",
+        "Aesthetic pleasure only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The direct economic value of biodiversity includes food (crops, livestock, fish), medicines (25% of drugs from plants), and industrial products (fibres, timber, oils).",
+      "difficulty": "EASY",
+      "topic": "Economic Value",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gene banks are used for:",
+      "options": [
+        "Storing whole organisms",
+        "Storing seeds, tissue cultures, or gametes",
+        "Releasing animals into wild",
+        "Breeding programs only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gene banks store genetic material in the form of seeds, tissue cultures, pollen, or gametes at very low temperatures for long-term preservation.",
+      "difficulty": "EASY",
+      "topic": "Gene Banks",
+      "ncertPage": 268,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Species richness generally decreases from:",
+      "options": ["East to west", "Mountains to plains", "Poles to equator", "Equator to poles"],
+      "correctAnswer": "D",
+      "explanation": "The latitudinal gradient in species richness shows that species diversity generally decreases from equator to poles. Tropical regions have more species than temperate or polar regions.",
+      "difficulty": "EASY",
+      "topic": "Latitudinal Gradient",
+      "ncertPage": 263,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most important cause of biodiversity loss is:",
+      "options": [
+        "Co-extinctions",
+        "Overexploitation",
+        "Habitat loss and fragmentation",
+        "Alien species invasion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Habitat loss and fragmentation is the most important cause driving species to extinction. Tropical rainforests, once covering 14% of Earth's land, now cover less than 6%.",
+      "difficulty": "EASY",
+      "topic": "Habitat Loss",
+      "ncertPage": 265,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mass extinction events in Earth's history have occurred:",
+      "options": ["Once", "Five times", "Twenty times", "Never"],
+      "correctAnswer": "A",
+      "explanation": "There have been five major mass extinction events in Earth's history. The current human-caused extinction is sometimes called the 'Sixth Mass Extinction.'",
+      "difficulty": "MEDIUM",
+      "topic": "Mass Extinction",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Habitat fragmentation results in:",
+      "options": [
+        "More genetic diversity",
+        "Increased biodiversity",
+        "Smaller isolated populations",
+        "Better species distribution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Habitat fragmentation divides large habitats into smaller, isolated patches. This reduces population sizes, limits gene flow, and increases extinction risk for many species.",
+      "difficulty": "MEDIUM",
+      "topic": "Habitat Fragmentation",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ex situ conservation means:",
+      "options": [
+        "Conservation in sacred groves",
+        "Conservation in natural habitat",
+        "Conservation outside natural habitat",
+        "Conservation in wilderness"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ex situ conservation involves conserving biodiversity outside their natural habitat, such as in zoos, botanical gardens, gene banks, and cryopreservation facilities.",
+      "difficulty": "EASY",
+      "topic": "Ex Situ Conservation",
+      "ncertPage": 268,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In situ conservation means:",
+      "options": [
+        "Conservation in zoos",
+        "Conservation in gene banks",
+        "Conservation outside natural habitat",
+        "Conservation in natural habitat"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In situ conservation means conserving biodiversity in its natural habitat. This includes protected areas like national parks, wildlife sanctuaries, and biosphere reserves.",
+      "difficulty": "EASY",
+      "topic": "In Situ Conservation",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "David Tilman's long-term ecosystem experiments showed that:",
+      "options": [
+        "Plots with more species showed higher productivity",
+        "Only keystone species affect productivity",
+        "Biodiversity has no effect on productivity",
+        "Plots with more species had less productivity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "David Tilman's long-term ecosystem experiments using grassland plots proved that plots with more species showed higher productivity, less year-to-year variation, and greater ability to resist perturbations.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem Experiments",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The 'rivet popper hypothesis' was proposed by:",
+      "options": ["Robert May", "David Tilman", "Paul Ehrlich", "E.O. Wilson"],
+      "correctAnswer": "B",
+      "explanation": "Paul Ehrlich proposed the rivet popper hypothesis using the analogy of rivets in an airplane. Each species is like a rivet; losing a few may not cause problems, but continued loss eventually leads to catastrophic failure.",
+      "difficulty": "MEDIUM",
+      "topic": "Importance of Biodiversity",
+      "ncertPage": 264,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The estimated number of species on Earth ranges from:",
+      "options": ["20-50 million", "100-150 million", "1-2 million", "7-8 million"],
+      "correctAnswer": "D",
+      "explanation": "According to IUCN (2004), the estimated total number of species on Earth ranges from 7 to 100 million. Currently, about 1.5 million species have been described.",
+      "difficulty": "MEDIUM",
+      "topic": "Species Numbers",
+      "ncertPage": 262,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Genetic diversity refers to:",
+      "options": [
+        "Diversity within a species",
+        "Diversity between species",
+        "Diversity of ecosystems",
+        "Diversity of biomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Genetic diversity is the variation at the genetic level within a species. For example, more than 50,000 genetically different strains of rice and 1,000 varieties of mango exist in India.",
+      "difficulty": "EASY",
+      "topic": "Genetic Diversity",
+      "ncertPage": 261,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a hypothesis explaining greater tropical biodiversity?",
+      "options": [
+        "Glaciation history",
+        "Constant environment",
+        "More solar energy",
+        "Higher speciation rates"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four are valid hypotheses. Tropical regions have constant environments, receive more solar energy, show higher speciation rates, and unlike temperate regions, were not disturbed by ice ages.",
+      "difficulty": "HARD",
+      "topic": "Tropical Biodiversity",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ethical argument for biodiversity conservation states that:",
+      "options": [
+        "Biodiversity has no value",
+        "Every species has an intrinsic value",
+        "Only useful species should be conserved",
+        "Conservation is unnecessary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ethical argument states that every species has an intrinsic value and right to exist, regardless of its utility to humans. Humans have a moral responsibility to protect all species.",
+      "difficulty": "MEDIUM",
+      "topic": "Ethical Arguments",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Project Tiger was launched in:",
+      "options": ["1983", "1993", "1963", "1973"],
+      "correctAnswer": "D",
+      "explanation": "Project Tiger was launched in 1973 to protect the Bengal tiger from extinction. It is one of India's most successful conservation programs.",
+      "difficulty": "MEDIUM",
+      "topic": "Project Tiger",
+      "ncertPage": 267,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Biosphere reserves have:",
+      "options": [
+        "Core, buffer, and transition zones",
+        "Only buffer zone",
+        "Only transition zone",
+        "Only core zone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biosphere reserves have three zones: core zone (undisturbed area), buffer zone (limited activities), and transition zone (where sustainable human activities are permitted).",
+      "difficulty": "MEDIUM",
+      "topic": "Biosphere Reserves",
+      "ncertPage": 267,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "India has how many biodiversity hotspots?",
+      "options": ["5", "2", "3", "4"],
+      "correctAnswer": "C",
+      "explanation": "India has 4 biodiversity hotspots: Western Ghats and Sri Lanka, Himalayas, Indo-Burma, and Sundaland (including Nicobar Islands).",
+      "difficulty": "MEDIUM",
+      "topic": "Biodiversity Hotspots",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ecosystem diversity includes:",
+      "options": [
+        "Genetic variation",
+        "Species variation",
+        "Variety of habitats and ecosystems",
+        "Population variation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ecosystem diversity refers to the variety of ecosystems in a region - deserts, forests, wetlands, grasslands, marine ecosystems, etc. India has great ecosystem diversity.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Diversity",
+      "ncertPage": 261,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Western Ghats is a biodiversity hotspot because it has:",
+      "options": [
+        "High endemism and significant habitat loss",
+        "No endemic species",
+        "Only common species",
+        "Low endemism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Western Ghats is a biodiversity hotspot due to high endemism (about 4,000 endemic plant species) and significant habitat loss (over 70% primary vegetation lost).",
+      "difficulty": "MEDIUM",
+      "topic": "Western Ghats",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 'narrowly utilitarian' argument for biodiversity conservation emphasizes:",
+      "options": [
+        "Direct economic benefits from biodiversity",
+        "Spiritual value",
+        "Aesthetic pleasure",
+        "Ethical responsibility"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The narrowly utilitarian argument focuses on direct economic benefits like food, medicines, industrial products, and other commercially valuable products from biodiversity.",
+      "difficulty": "MEDIUM",
+      "topic": "Conservation Arguments",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Overexploitation has led to the extinction of:",
+      "options": ["Woolly mammoth", "Trilobites", "Dinosaurs", "Steller's sea cow"],
+      "correctAnswer": "D",
+      "explanation": "Steller's sea cow, passenger pigeon, and dodo are examples of species that became extinct due to overexploitation by humans.",
+      "difficulty": "MEDIUM",
+      "topic": "Overexploitation",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Keystone species are:",
+      "options": [
+        "Species that have disproportionate impact on ecosystem",
+        "Largest species",
+        "Endemic species",
+        "Most abundant species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Keystone species have a disproportionately large impact on their ecosystem relative to their abundance. Their removal causes significant ecosystem changes.",
+      "difficulty": "MEDIUM",
+      "topic": "Keystone Species",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "For large areas like continents, the Z value is typically:",
+      "options": ["0.3-0.4", "0.6-1.2", "1.5-2.0", "0.1-0.2"],
+      "correctAnswer": "A",
+      "explanation": "The slope of the species-area relationship (Z value) becomes much steeper (0.6-1.2) when analyzing the relationship among very large areas like whole continents.",
+      "difficulty": "HARD",
+      "topic": "Species-Area Relationship",
+      "ncertPage": 263,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Species diversity refers to:",
+      "options": [
+        "Genetic variations",
+        "Variation within populations",
+        "Variety of species per unit area",
+        "Number of genera"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Species diversity is the variety of species per unit area. The Western Ghats have greater species diversity than the Eastern Ghats.",
+      "difficulty": "EASY",
+      "topic": "Species Diversity",
+      "ncertPage": 261,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biodiversity refers to:",
+      "options": [
+        "Diversity of non-living components",
+        "Variety of living organisms in a given area",
+        "Total number of individuals in a population",
+        "Number of endemic species only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Biodiversity is the totality of genes, species, and ecosystems of a region. It refers to the variety and variability of life forms in a given area.",
+      "difficulty": "EASY",
+      "topic": "Biodiversity Definition",
+      "ncertPage": 261,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The World Wildlife Fund (WWF) was founded in:",
+      "options": ["1951", "1961", "1971", "1981"],
+      "correctAnswer": "B",
+      "explanation": "The World Wildlife Fund (WWF) was founded in 1961. It is one of the largest international conservation organizations working on wildlife conservation and environmental issues.",
+      "difficulty": "MEDIUM",
+      "topic": "WWF",
+      "ncertPage": 268,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Sacred groves are examples of:",
+      "options": ["Ex situ conservation", "In situ conservation", "Seed banks", "Cryopreservation"],
+      "correctAnswer": "B",
+      "explanation": "Sacred groves are tracts of forest protected by religious beliefs and social traditions. They represent traditional in situ conservation methods practiced in India.",
+      "difficulty": "EASY",
+      "topic": "Sacred Groves",
+      "ncertPage": 268,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The 'Evil Quartet' of biodiversity loss includes:",
+      "options": [
+        "Pollution, climate change, hunting, deforestation",
+        "Mining, agriculture, urbanization, industrialization",
+        "Floods, droughts, earthquakes, volcanoes",
+        "Habitat loss, overexploitation, alien species, co-extinctions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The 'Evil Quartet' describes the four major causes of biodiversity loss: habitat loss and fragmentation, overexploitation, alien species invasion, and co-extinctions.",
+      "difficulty": "MEDIUM",
+      "topic": "Causes of Biodiversity Loss",
+      "ncertPage": 265,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which is NOT an example of in situ conservation?",
+      "options": ["National Park", "Wildlife Sanctuary", "Botanical Garden", "Biosphere Reserve"],
+      "correctAnswer": "B",
+      "explanation": "Botanical gardens are ex situ conservation methods. National parks, wildlife sanctuaries, and biosphere reserves are in situ conservation methods.",
+      "difficulty": "EASY",
+      "topic": "Conservation Methods",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Approximately what percentage of prescription drugs are derived from plants?",
+      "options": ["75%", "10%", "25%", "50%"],
+      "correctAnswer": "C",
+      "explanation": "More than 25% of prescription drugs used today are derived from plants. Plant-based medicines have been used in traditional medicine systems for thousands of years.",
+      "difficulty": "MEDIUM",
+      "topic": "Medicinal Value",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cryopreservation involves storing at:",
+      "options": ["Room temperature", "0°C", "-196°C in liquid nitrogen", "100°C"],
+      "correctAnswer": "B",
+      "explanation": "Cryopreservation involves storing gametes, embryos, or tissues at very low temperatures (-196°C) in liquid nitrogen. This allows indefinite preservation.",
+      "difficulty": "MEDIUM",
+      "topic": "Cryopreservation",
+      "ncertPage": 268,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which group has the highest number of described species?",
+      "options": ["Insects", "Fungi", "Algae", "Vertebrates"],
+      "correctAnswer": "A",
+      "explanation": "Insects are the most species-rich taxonomic group, comprising more than 70% of all animal species. Over 1 million insect species have been described.",
+      "difficulty": "MEDIUM",
+      "topic": "Species Distribution",
+      "ncertPage": 262,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Amazon rainforest is called the:",
+      "options": ["Lungs of the planet", "Carbon sink", "Heart of the Earth", "Green belt"],
+      "correctAnswer": "D",
+      "explanation": "The Amazon rainforest is called 'the lungs of the planet' because it produces about 20% of the world's oxygen through photosynthesis.",
+      "difficulty": "EASY",
+      "topic": "Amazon Rainforest",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Biodiversity Act of India was passed in:",
+      "options": ["2010", "1992", "2000", "2002"],
+      "correctAnswer": "C",
+      "explanation": "The Biological Diversity Act was passed by the Indian Parliament in 2002 to conserve biological diversity, regulate access to genetic resources, and ensure fair benefit sharing.",
+      "difficulty": "MEDIUM",
+      "topic": "Biodiversity Act",
+      "ncertPage": 268,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "How many biodiversity hotspots exist worldwide?",
+      "options": ["34", "50", "17", "25"],
+      "correctAnswer": "D",
+      "explanation": "There are 34 biodiversity hotspots in the world. Together, they cover less than 2% of the Earth's land area but support more than 50% of the world's species.",
+      "difficulty": "MEDIUM",
+      "topic": "Global Hotspots",
+      "ncertPage": 267,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The value of Z (regression coefficient) for smaller areas typically ranges from:",
+      "options": ["1.0-1.5", "0.01-0.05", "0.1-0.2", "0.5-0.8"],
+      "correctAnswer": "C",
+      "explanation": "For smaller areas (sampling a subset of a region), the Z value typically ranges from 0.1 to 0.2, regardless of the taxonomic group or region.",
+      "difficulty": "HARD",
+      "topic": "Species-Area Relationship",
+      "ncertPage": 263,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Introduction of Nile perch in Lake Victoria led to:",
+      "options": [
+        "Increase in native fish species",
+        "Extinction of over 200 cichlid fish species",
+        "Better ecosystem balance",
+        "Increased biodiversity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The introduction of Nile perch (an exotic predatory fish) into Lake Victoria in East Africa led to the extinction of over 200 species of cichlid fish endemic to the lake.",
+      "difficulty": "MEDIUM",
+      "topic": "Alien Species Impact",
+      "ncertPage": 266,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which habitat has been most affected by human activities?",
+      "options": ["Deep oceans", "Deserts", "Tropical rainforests", "Polar regions"],
+      "correctAnswer": "C",
+      "explanation": "Tropical rainforests have been most severely affected, reduced from 14% to less than 6% of Earth's land surface. Habitat loss is the primary cause of species extinction.",
+      "difficulty": "EASY",
+      "topic": "Habitat Loss",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which invasive alien weed has caused environmental damage in India?",
+      "options": ["Parthenium", "Rose", "Tulsi", "Lotus"],
+      "correctAnswer": "A",
+      "explanation": "Parthenium (carrot grass), Lantana, and water hyacinth (Eichhornia) are invasive alien weeds that have caused serious environmental damage in India.",
+      "difficulty": "MEDIUM",
+      "topic": "Invasive Species",
+      "ncertPage": 266,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Co-extinction refers to:",
+      "options": [
+        "Extinction of all species together",
+        "Extinction of one species causing another's extinction",
+        "Simultaneous mass extinction",
+        "Extinction due to co-evolution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a species becomes extinct, the dependent species (like parasites, symbionts, or obligate associates) also become extinct. This is called co-extinction.",
+      "difficulty": "MEDIUM",
+      "topic": "Co-extinction",
+      "ncertPage": 266,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Red Data Book contains:",
+      "options": [
+        "List of extinct species only",
+        "List of all species",
+        "List of common species",
+        "List of threatened species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Red Data Book (Red List) maintained by IUCN contains a list of threatened and endangered species categorized based on their conservation status.",
+      "difficulty": "EASY",
+      "topic": "Red Data Book",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Alien species that become invasive are called:",
+      "options": ["Keystone species", "Native species", "Endemic species", "Exotic species"],
+      "correctAnswer": "C",
+      "explanation": "Alien or exotic species are introduced from other regions. When they become invasive, they can cause extinction of native species by outcompeting them.",
+      "difficulty": "EASY",
+      "topic": "Alien Species",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is an ex situ conservation method?",
+      "options": ["Zoo", "National park", "Sacred grove", "Biosphere reserve"],
+      "correctAnswer": "D",
+      "explanation": "Zoos, botanical gardens, seed banks, and gene banks are ex situ conservation methods where organisms are conserved outside their natural habitat.",
+      "difficulty": "EASY",
+      "topic": "Ex Situ Conservation",
+      "ncertPage": 268,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Colombia has approximately how many bird species?",
+      "options": ["1,400", "2,500", "500", "1,000"],
+      "correctAnswer": "D",
+      "explanation": "Colombia (near the equator) has about 1,400 species of birds, while New York at 41°N has only 105 species and Greenland at 71°N has only 56 species.",
+      "difficulty": "MEDIUM",
+      "topic": "Latitudinal Gradient",
+      "ncertPage": 263,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "In wildlife sanctuaries, compared to national parks:",
+      "options": [
+        "Human activities are strictly banned",
+        "Limited human activities are permitted",
+        "Mining is allowed",
+        "Hunting is allowed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In wildlife sanctuaries, limited human activities like grazing by local communities may be permitted. National parks have stricter regulations with no human activities allowed.",
+      "difficulty": "MEDIUM",
+      "topic": "Protected Areas",
+      "ncertPage": 267,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "India has how many biosphere reserves?",
+      "options": ["14", "18", "22", "10"],
+      "correctAnswer": "A",
+      "explanation": "India has 18 biosphere reserves, of which 12 are part of the World Network of Biosphere Reserves under UNESCO's Man and Biosphere (MAB) Programme.",
+      "difficulty": "MEDIUM",
+      "topic": "Biosphere Reserves",
+      "ncertPage": 267,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An example of co-extinction is:",
+      "options": [
+        "Host plant and obligate pollinator",
+        "Predator and prey",
+        "Producer and consumer",
+        "Dodo and tortoise"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When a host fish species becomes extinct, its obligate parasites also become extinct. Similarly, extinction of host plants leads to extinction of obligate pollinators.",
+      "difficulty": "MEDIUM",
+      "topic": "Co-extinction",
+      "ncertPage": 266,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three levels of biodiversity are:",
+      "options": [
+        "Alpha, beta, and gamma diversity",
+        "Primary, secondary, and tertiary diversity",
+        "Endemic, exotic, and native diversity",
+        "Genetic, species, and ecosystem diversity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The three important levels of biodiversity are: genetic diversity (variation within species), species diversity (variety of species), and ecosystem diversity (variety of ecosystems).",
+      "difficulty": "EASY",
+      "topic": "Levels of Biodiversity",
+      "ncertPage": 261,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Endemic species are:",
+      "options": [
+        "Found only in a particular geographic region",
+        "Introduced from other regions",
+        "Extinct species",
+        "Found everywhere"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Endemic species are found exclusively in a particular geographic region and nowhere else. India has high endemism, especially in Western Ghats and Eastern Himalayas.",
+      "difficulty": "EASY",
+      "topic": "Endemic Species",
+      "ncertPage": 261,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "IUCN stands for:",
+      "options": [
+        "International Union for Care of Nature",
+        "Indian Union for Care of Nature",
+        "Indian Union for Conservation of Nature",
+        "International Union for Conservation of Nature"
+      ],
+      "correctAnswer": "D",
+      "explanation": "IUCN is the International Union for Conservation of Nature, which maintains the Red List of threatened species and sets global conservation priorities.",
+      "difficulty": "EASY",
+      "topic": "IUCN",
+      "ncertPage": 265,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The species-area relationship was given by:",
+      "options": ["Robert May", "Paul Ehrlich", "Darwin", "Alexander von Humboldt"],
+      "correctAnswer": "D",
+      "explanation": "German naturalist and geographer Alexander von Humboldt observed that within a region, species richness increases with increasing explored area, but only up to a limit.",
+      "difficulty": "MEDIUM",
+      "topic": "Species-Area Relationship",
+      "ncertPage": 263,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to the rivet popper hypothesis, species loss:",
+      "options": [
+        "Affects only keystone species",
+        "Has no effect on ecosystem",
+        "Always causes immediate collapse",
+        "May lead to ecosystem collapse beyond a threshold"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The rivet popper hypothesis suggests that like rivets in an airplane, losing some species may not significantly affect the ecosystem, but continued loss will eventually lead to ecosystem collapse.",
+      "difficulty": "MEDIUM",
+      "topic": "Rivet Popper Hypothesis",
+      "ncertPage": 264,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "India has approximately how many national parks?",
+      "options": ["50", "100", "150", "200"],
+      "correctAnswer": "B",
+      "explanation": "India has about 100+ national parks, which are protected areas where human activities are strictly prohibited.",
+      "difficulty": "MEDIUM",
+      "topic": "National Parks",
+      "ncertPage": 267,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The Convention on Biological Diversity (CBD) was signed at:",
+      "options": ["Stockholm 1972", "Rio de Janeiro 1992", "Kyoto 1997", "Paris 2015"],
+      "correctAnswer": "B",
+      "explanation": "The Convention on Biological Diversity (CBD) was signed at the Earth Summit in Rio de Janeiro in 1992. It focuses on conservation, sustainable use, and fair benefit sharing.",
+      "difficulty": "MEDIUM",
+      "topic": "CBD",
+      "ncertPage": 268,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

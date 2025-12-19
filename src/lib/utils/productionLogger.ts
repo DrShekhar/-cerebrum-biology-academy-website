@@ -53,20 +53,25 @@ const pinoConfig = {
   },
 }
 
-const transport = isDevelopment
-  ? {
-      target: 'pino-pretty',
-      options: {
-        colorize: true,
-        translateTime: 'HH:MM:ss',
-        ignore: 'pid,hostname',
-        singleLine: false,
-        messageFormat: '{levelLabel} - {msg}',
-      },
-    }
-  : undefined
+// Only use pino.transport on the server (Node.js)
+const isServer = typeof window === 'undefined'
 
-export const pinoLogger = transport ? pino(pinoConfig, pino.transport(transport)) : pino(pinoConfig)
+const transport =
+  isDevelopment && isServer
+    ? {
+        target: 'pino-pretty',
+        options: {
+          colorize: true,
+          translateTime: 'HH:MM:ss',
+          ignore: 'pid,hostname',
+          singleLine: false,
+          messageFormat: '{levelLabel} - {msg}',
+        },
+      }
+    : undefined
+
+export const pinoLogger =
+  transport && isServer ? pino(pinoConfig, pino.transport(transport)) : pino(pinoConfig)
 
 export interface LogContext {
   userId?: string

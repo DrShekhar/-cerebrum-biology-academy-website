@@ -1,0 +1,987 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 11,
+  "ncertChapterName": "Biotechnology: Principles and Processes",
+  "questions": [
+    {
+      "question": "Electroporation uses:",
+      "options": [
+        "Electric pulses to introduce DNA",
+        "Heat to introduce DNA",
+        "Enzymes to introduce DNA",
+        "Chemicals to introduce DNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Electroporation uses brief electric pulses to create temporary pores in cell membranes, allowing DNA to enter cells. It is used for both prokaryotes and eukaryotes.",
+      "difficulty": "EASY",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bacteriophage vectors can carry:",
+      "options": [
+        "Larger DNA inserts than plasmids",
+        "No foreign DNA",
+        "Only RNA",
+        "Only small DNA inserts"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bacteriophage vectors (like λ phage) can carry larger DNA inserts (up to 23 kb) compared to plasmids (up to 10 kb), making them useful for cloning larger genes.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bacteria are made competent by treating with:",
+      "options": [
+        "Calcium chloride",
+        "Potassium chloride",
+        "Magnesium chloride",
+        "Sodium chloride"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bacteria are made competent by treating with divalent cations like CaCl2. This increases cell wall permeability and helps DNA entry, especially when followed by heat shock.",
+      "difficulty": "EASY",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In gel electrophoresis, smaller DNA fragments:",
+      "options": [
+        "Move faster and travel further",
+        "Don't move at all",
+        "Move in opposite direction",
+        "Move slower and stay near wells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Smaller DNA fragments face less resistance from the gel matrix and move faster/further towards the anode. Larger fragments move slower and stay closer to wells.",
+      "difficulty": "EASY",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blunt ends are produced when restriction enzyme cuts:",
+      "options": [
+        "At the center of recognition sequence on both strands",
+        "Only one strand",
+        "Outside recognition sequence",
+        "At staggered positions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Blunt ends are produced when the enzyme cuts at the same position on both strands (center of the palindrome), leaving no overhangs. Example: SmaI produces blunt ends.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Agrobacterium tumefaciens is called 'natural genetic engineer' because:",
+      "options": [
+        "It naturally transfers DNA to plant cells",
+        "It fixes nitrogen",
+        "It causes disease in humans",
+        "It produces antibiotics"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Agrobacterium is called natural genetic engineer because it naturally transfers T-DNA from Ti plasmid into plant cells, integrating bacterial genes into plant genome.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme that joins DNA fragments is:",
+      "options": ["DNA ligase", "DNA polymerase", "Helicase", "Restriction endonuclease"],
+      "correctAnswer": "A",
+      "explanation": "DNA ligase joins DNA fragments by catalyzing phosphodiester bond formation between 3'-OH and 5'-phosphate ends of adjacent nucleotides.",
+      "difficulty": "EASY",
+      "topic": "Tools of Recombinant DNA Technology",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "X-gal produces blue color when cleaved by:",
+      "options": ["β-galactosidase", "Restriction enzyme", "DNA polymerase", "DNA ligase"],
+      "correctAnswer": "A",
+      "explanation": "X-gal (5-bromo-4-chloro-3-indolyl-β-D-galactopyranoside) is cleaved by β-galactosidase to produce blue-colored product. Intact lacZ gene produces blue colonies.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Annealing in PCR refers to:",
+      "options": [
+        "Primer binding to template",
+        "DNA synthesis",
+        "Product analysis",
+        "DNA denaturation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Annealing is when primers hybridize (bind) to complementary sequences on single-stranded template DNA. Temperature is typically 50-65°C, specific for primer sequences.",
+      "difficulty": "EASY",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Competent cells are:",
+      "options": [
+        "Cells that can take up foreign DNA",
+        "Antibiotic-resistant cells",
+        "Cancer cells",
+        "Dead cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Competent cells are bacterial cells treated (with CaCl2 or electric shock) to increase their ability to take up foreign DNA. Natural competence is rare in bacteria.",
+      "difficulty": "EASY",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "After 20 cycles of PCR, one DNA molecule becomes approximately:",
+      "options": ["1 million copies (2^20)", "200 copies", "20 copies", "40 copies"],
+      "correctAnswer": "A",
+      "explanation": "PCR amplification is exponential. After n cycles, DNA increases 2^n times. After 20 cycles: 2^20 = approximately 1 million copies of the target sequence.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "YAC stands for:",
+      "options": [
+        "Yeast Artificial Chromosome",
+        "Yeast Amplified Clone",
+        "Young Adult Clone",
+        "Yield Amplification Cycle"
+      ],
+      "correctAnswer": "A",
+      "explanation": "YAC (Yeast Artificial Chromosome) is a vector for cloning very large DNA fragments (up to 1000 kb). It contains centromere, telomeres, and origin of replication.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A palindromic DNA sequence reads:",
+      "options": [
+        "Same on both strands when read in 5' to 3' direction",
+        "Differently on both strands",
+        "Same only from 3' to 5' direction",
+        "Same only on one strand"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Palindromic sequences read the same on both strands when read in 5' to 3' direction. Example: 5'-GAATTC-3' and 3'-CTTAAG-5' both read GAATTC in their 5' to 3' direction.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bioreactors maintain optimal conditions for:",
+      "options": [
+        "Growth of desired organisms",
+        "Protein denaturation",
+        "Cell lysis",
+        "DNA cutting"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bioreactors provide optimal conditions (temperature, pH, substrate, oxygen, agitation) for growth of microorganisms or cells to maximize product yield.",
+      "difficulty": "EASY",
+      "topic": "Bioreactors",
+      "ncertPage": 178,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "DNA moves towards the positive electrode because:",
+      "options": [
+        "DNA is negatively charged (due to phosphate groups)",
+        "DNA is neutral",
+        "DNA is attracted to the gel",
+        "DNA is positively charged"
+      ],
+      "correctAnswer": "A",
+      "explanation": "DNA has negative charge due to phosphate groups in the backbone. In electric field, DNA migrates towards positive electrode (anode).",
+      "difficulty": "EASY",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of introducing recombinant DNA into host cell is called:",
+      "options": ["Transformation", "Translation", "Replication", "Transcription"],
+      "correctAnswer": "A",
+      "explanation": "Transformation is the process of introducing foreign DNA (including recombinant DNA) into bacterial cells. Other methods include transduction and electroporation.",
+      "difficulty": "EASY",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Restriction enzymes recognize:",
+      "options": [
+        "Specific palindromic sequences",
+        "RNA sequences only",
+        "Protein sequences",
+        "Any DNA sequence"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Restriction enzymes recognize specific palindromic sequences (same sequence when read 5' to 3' on both strands). These are typically 4-8 base pairs long.",
+      "difficulty": "EASY",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR stands for:",
+      "options": [
+        "Polymerase Chain Reaction",
+        "Plasmid Chain Replication",
+        "Primary Cell Reaction",
+        "Protein Chain Reaction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PCR is Polymerase Chain Reaction, a technique to amplify specific DNA sequences. Invented by Kary Mullis, it revolutionized molecular biology.",
+      "difficulty": "EASY",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bioreactors are used for:",
+      "options": [
+        "Large-scale production of biotechnology products",
+        "DNA sequencing",
+        "Gel electrophoresis",
+        "Small-scale laboratory work"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bioreactors are large vessels (100-1000 liters) for growing organisms in large quantities to produce biotechnology products like recombinant proteins.",
+      "difficulty": "EASY",
+      "topic": "Bioreactors",
+      "ncertPage": 178,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cloning vectors are:",
+      "options": [
+        "Organisms that carry diseases",
+        "DNA molecules that carry foreign DNA into host",
+        "Restriction enzymes",
+        "Gene sequences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cloning vectors are DNA molecules (like plasmids) that can replicate independently and carry foreign DNA into host cells for multiplication (cloning).",
+      "difficulty": "EASY",
+      "topic": "Cloning Vectors",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transformation refers to:",
+      "options": ["Cancer development", "Uptake of DNA by bacteria", "Cell division", "Mutation"],
+      "correctAnswer": "B",
+      "explanation": "Transformation is the uptake of naked DNA by bacterial cells. It is one method to introduce recombinant DNA into host cells.",
+      "difficulty": "EASY",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Taq polymerase is isolated from:",
+      "options": ["E. coli", "Thermus aquaticus", "Bacillus subtilis", "Saccharomyces cerevisiae"],
+      "correctAnswer": "B",
+      "explanation": "Taq polymerase is from Thermus aquaticus, a thermophilic bacterium from hot springs. It remains active at high temperatures (94°C) used in PCR denaturation.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR was invented by:",
+      "options": ["Watson and Crick", "Kary Mullis", "Frederick Sanger", "Herbert Boyer"],
+      "correctAnswer": "B",
+      "explanation": "PCR was invented by Kary Mullis in 1983. He received the Nobel Prize in Chemistry (1993) for this revolutionary DNA amplification technique.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombinant DNA technology is also called:",
+      "options": [
+        "Cell fusion technology",
+        "Genetic engineering",
+        "Tissue culture",
+        "Fermentation technology"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Recombinant DNA technology is also called genetic engineering. It involves combining DNA from different sources to create new genetic combinations.",
+      "difficulty": "EASY",
+      "topic": "Principles of Biotechnology",
+      "ncertPage": 170,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The recognition sequence for EcoRI is:",
+      "options": ["5'-AAGCTT-3'", "5'-GAATTC-3'", "5'-GGATCC-3'", "5'-CTGCAG-3'"],
+      "correctAnswer": "B",
+      "explanation": "EcoRI recognizes the palindromic sequence 5'-GAATTC-3'. It cuts between G and A on both strands, producing sticky ends with 5' overhangs.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "BAC stands for:",
+      "options": [
+        "Binary Artificial Chromosome",
+        "Bacterial Artificial Chromosome",
+        "Basic Amplification Cycle",
+        "Bacterial Antibiotic Carrier"
+      ],
+      "correctAnswer": "B",
+      "explanation": "BAC (Bacterial Artificial Chromosome) is based on F-plasmid of E. coli. It can carry DNA inserts of 75-300 kb, useful for genome sequencing projects.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Exonuclease removes nucleotides from:",
+      "options": ["Middle of DNA strand", "Ends of DNA strand", "Circular DNA only", "RNA only"],
+      "correctAnswer": "B",
+      "explanation": "Exonuclease removes nucleotides from the ends (5' or 3') of DNA strands. In contrast, endonuclease cuts within the DNA strand.",
+      "difficulty": "MEDIUM",
+      "topic": "Tools of Recombinant DNA Technology",
+      "ncertPage": 171,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "pBR322 is a:",
+      "options": [
+        "Natural plasmid",
+        "Artificially constructed cloning vector",
+        "Bacteriophage",
+        "Cosmid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "pBR322 is an artificially constructed plasmid vector. 'p' stands for plasmid, 'BR' for Bolivar and Rodriguez (who constructed it), '322' is the serial number.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the nomenclature of restriction enzyme 'EcoRI', 'R' represents:",
+      "options": ["Restriction", "Strain name (RY13)", "RNA", "Recognition site"],
+      "correctAnswer": "B",
+      "explanation": "In EcoRI: E=genus Escherichia, co=species coli, R=strain RY13, I=first enzyme from this strain. The letter indicates the specific bacterial strain.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Restriction enzymes are also called:",
+      "options": ["DNA ligases", "Molecular scissors", "DNA polymerases", "RNA polymerases"],
+      "correctAnswer": "B",
+      "explanation": "Restriction enzymes are called molecular scissors because they cut DNA at specific recognition sequences. They are essential tools for recombinant DNA technology.",
+      "difficulty": "EASY",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primers in PCR are:",
+      "options": [
+        "Long DNA sequences",
+        "Short synthetic oligonucleotides",
+        "RNA molecules",
+        "Proteins"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PCR primers are short (15-25 nucleotides) synthetic oligonucleotides complementary to sequences flanking the target DNA. Two primers are needed (forward and reverse).",
+      "difficulty": "EASY",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biotechnology deals with:",
+      "options": [
+        "Study of evolution",
+        "Use of living organisms in industrial processes",
+        "Study of life processes",
+        "Study of ecology"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Biotechnology is the use of living organisms or their products in industrial processes for human benefit. Modern biotechnology includes genetic engineering and bioprocess technology.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Biotechnology",
+      "ncertPage": 170,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The separated DNA fragments can be recovered from gel by:",
+      "options": ["Centrifugation", "Elution from gel", "Heating", "Filtration"],
+      "correctAnswer": "B",
+      "explanation": "DNA bands can be cut from the gel and DNA extracted by elution. This purified DNA can be used for further experiments like cloning or sequencing.",
+      "difficulty": "MEDIUM",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Origin of replication (ori) in vectors is needed for:",
+      "options": [
+        "Antibiotic resistance",
+        "Autonomous replication of the vector",
+        "Selection of transformants",
+        "Insertion of foreign DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Origin of replication (ori) is the sequence where replication starts. It controls the copy number of the vector - how many copies are made in the host cell.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Commonly used selectable markers in E. coli are:",
+      "options": [
+        "Genes for protein synthesis",
+        "Genes for antibiotic resistance",
+        "Genes for toxin production",
+        "Genes for enzyme production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Antibiotic resistance genes (ampicillin, tetracycline, kanamycin) are commonly used selectable markers. They help identify bacteria that have taken up the plasmid.",
+      "difficulty": "EASY",
+      "topic": "Cloning Vectors",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "IPTG is used in blue-white screening to:",
+      "options": ["Cut DNA", "Induce lac operon expression", "Stain DNA", "Amplify DNA"],
+      "correctAnswer": "B",
+      "explanation": "IPTG (isopropyl β-D-thiogalactoside) is a lactose analog that induces lac operon expression. It enables β-galactosidase production for X-gal hydrolysis in screening.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gene gun is used to:",
+      "options": ["Sequence genes", "Introduce DNA into plant cells", "Cut DNA", "Amplify DNA"],
+      "correctAnswer": "B",
+      "explanation": "Gene gun (biolistics) bombards plant cells with DNA-coated gold or tungsten microparticles. This is effective for introducing DNA into plant cells with tough cell walls.",
+      "difficulty": "MEDIUM",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The three steps of PCR in order are:",
+      "options": [
+        "Extension, annealing, denaturation",
+        "Denaturation, annealing, extension",
+        "Annealing, denaturation, extension",
+        "Extension, denaturation, annealing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PCR cycle: Denaturation (94°C, DNA strands separate) → Annealing (50-65°C, primers bind) → Extension (72°C, Taq polymerase synthesizes new strands).",
+      "difficulty": "EASY",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Southern blotting is used to detect:",
+      "options": ["Carbohydrates", "RNA", "DNA", "Proteins"],
+      "correctAnswer": "C",
+      "explanation": "Southern blotting (developed by E.M. Southern) detects specific DNA sequences. DNA is transferred from gel to membrane and hybridized with labeled probe.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Detection Techniques",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plasmids are:",
+      "options": [
+        "RNA molecules",
+        "Circular chromosomal DNA",
+        "Extra-chromosomal circular DNA",
+        "Linear DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plasmids are extra-chromosomal, self-replicating, circular DNA molecules found in bacteria. They are widely used as cloning vectors in genetic engineering.",
+      "difficulty": "EASY",
+      "topic": "Cloning Vectors",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cosmids are:",
+      "options": [
+        "Chromosomes",
+        "Natural plasmids",
+        "Hybrid vectors with plasmid and lambda phage features",
+        "Bacteriophages"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cosmids are hybrid vectors containing cos sites of lambda phage and plasmid origin. They can carry larger DNA inserts (up to 45 kb) and replicate as plasmids.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Downstream processing includes:",
+      "options": [
+        "PCR amplification",
+        "Gene cloning",
+        "Separation, purification, and quality control",
+        "DNA sequencing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Downstream processing involves separation of product from culture, purification (removing impurities), and quality control testing before formulation.",
+      "difficulty": "MEDIUM",
+      "topic": "Downstream Processing",
+      "ncertPage": 179,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Restriction enzymes are naturally found in:",
+      "options": ["Animals", "Viruses", "Bacteria", "Plants"],
+      "correctAnswer": "C",
+      "explanation": "Restriction enzymes are found naturally in bacteria where they provide defense against bacteriophage infection by cutting foreign DNA.",
+      "difficulty": "EASY",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Microinjection is commonly used for introducing DNA into:",
+      "options": ["Viral particles", "Bacterial cells", "Animal cells", "Fungal cells"],
+      "correctAnswer": "C",
+      "explanation": "Microinjection uses fine needles to directly inject DNA into animal cells, especially for creating transgenic animals. DNA is injected into the nucleus.",
+      "difficulty": "MEDIUM",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombinant DNA is:",
+      "options": [
+        "Viral DNA only",
+        "Natural bacterial DNA",
+        "DNA containing sequences from two different sources",
+        "Mutated DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Recombinant DNA (rDNA) contains DNA sequences from two or more different sources joined together. It is created using restriction enzymes and DNA ligase.",
+      "difficulty": "EASY",
+      "topic": "Principles of Biotechnology",
+      "ncertPage": 170,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Genetic engineering involves:",
+      "options": [
+        "Tissue culture only",
+        "Natural selection",
+        "Artificial modification of DNA",
+        "Breeding techniques"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Genetic engineering involves artificial manipulation of DNA through recombinant DNA technology. It allows transfer of genes across species barriers.",
+      "difficulty": "EASY",
+      "topic": "Principles of Biotechnology",
+      "ncertPage": 170,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Northern blotting is used to detect:",
+      "options": ["Lipids", "DNA", "RNA", "Proteins"],
+      "correctAnswer": "C",
+      "explanation": "Northern blotting detects specific RNA sequences. RNA is separated by electrophoresis, transferred to membrane, and detected using complementary probe.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Detection Techniques",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "pBR322 contains resistance genes for:",
+      "options": [
+        "Chloramphenicol only",
+        "Kanamycin and streptomycin",
+        "Ampicillin and tetracycline",
+        "Penicillin and erythromycin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "pBR322 contains two antibiotic resistance genes - ampicillin (ampR) and tetracycline (tetR). These serve as selectable markers for identifying transformed bacteria.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Downstream processing refers to:",
+      "options": [
+        "Vector construction",
+        "Introduction of DNA into host",
+        "Purification and separation of products after biosynthesis",
+        "Gene amplification"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Downstream processing includes all steps after biosynthesis: separation, purification, and formulation of the product. It includes filtration, chromatography, etc.",
+      "difficulty": "EASY",
+      "topic": "Downstream Processing",
+      "ncertPage": 179,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA probes are:",
+      "options": [
+        "DNA polymerases",
+        "Restriction enzymes",
+        "Labeled DNA sequences used to detect complementary sequences",
+        "Cloning vectors"
+      ],
+      "correctAnswer": "C",
+      "explanation": "DNA probes are short, labeled (radioactive or fluorescent) DNA sequences. They hybridize with complementary target DNA for detection in techniques like Southern blotting.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Detection Techniques",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In blue-white screening, recombinant colonies appear:",
+      "options": ["Red", "Blue", "White", "Yellow"],
+      "correctAnswer": "C",
+      "explanation": "Recombinant colonies appear white because foreign DNA inserted into lacZ gene inactivates β-galactosidase. Without active enzyme, X-gal is not cleaved to blue product.",
+      "difficulty": "EASY",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Extension in PCR occurs at:",
+      "options": ["94°C", "50-65°C", "72°C", "37°C"],
+      "correctAnswer": "C",
+      "explanation": "Extension at 72°C is the optimal temperature for Taq polymerase activity. It synthesizes new DNA strands complementary to the template, starting from primers.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Heat shock method involves:",
+      "options": [
+        "UV exposure",
+        "Continuous heating",
+        "Alternating between cold and warm temperatures",
+        "Only cooling"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Heat shock involves incubating CaCl2-treated cells with DNA on ice, then briefly heating (42°C for 90 seconds), then returning to ice. This facilitates DNA uptake.",
+      "difficulty": "MEDIUM",
+      "topic": "Introduction of Recombinant DNA",
+      "ncertPage": 175,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Blue-white screening uses:",
+      "options": ["Luciferase", "Antibiotic resistance", "lacZ gene and X-gal", "GFP protein"],
+      "correctAnswer": "C",
+      "explanation": "Blue-white screening uses lacZ gene (β-galactosidase) and X-gal chromogenic substrate. Blue colonies have intact lacZ; white colonies have inactivated lacZ (recombinants).",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recognition sequence of HindIII is:",
+      "options": ["5'-CTGCAG-3'", "5'-GAATTC-3'", "5'-AAGCTT-3'", "5'-GGATCC-3'"],
+      "correctAnswer": "C",
+      "explanation": "HindIII recognizes 5'-AAGCTT-3' and cuts between the two A residues, producing sticky ends with 5' overhangs.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Selectable markers in vectors help in:",
+      "options": [
+        "DNA amplification",
+        "DNA replication",
+        "Identification of transformed cells",
+        "Gene expression"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Selectable markers (like antibiotic resistance genes) help identify transformed cells. Non-transformed cells die on selective medium, while transformed cells survive.",
+      "difficulty": "EASY",
+      "topic": "Cloning Vectors",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Insertional inactivation is used for:",
+      "options": [
+        "Protein purification",
+        "DNA amplification",
+        "Selection of recombinant clones",
+        "Gene expression"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Insertional inactivation occurs when foreign DNA is inserted into a marker gene, inactivating it. This helps distinguish recombinant clones from non-recombinants.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Endonuclease cuts DNA:",
+      "options": ["Only at ori site", "Only RNA", "From the ends", "Within the strand"],
+      "correctAnswer": "D",
+      "explanation": "Endonucleases cut DNA at internal sites within the strand. Restriction endonucleases cut at specific recognition sequences.",
+      "difficulty": "EASY",
+      "topic": "Tools of Recombinant DNA Technology",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "dNTPs in PCR stands for:",
+      "options": [
+        "Dinucleotide phosphates",
+        "Denatured nucleotides",
+        "Derived nucleoside phosphates",
+        "Deoxyribonucleoside triphosphates"
+      ],
+      "correctAnswer": "D",
+      "explanation": "dNTPs are deoxyribonucleoside triphosphates (dATP, dTTP, dGTP, dCTP). They serve as building blocks for new DNA strand synthesis during PCR extension.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ethidium bromide (EtBr) is used in gel electrophoresis to:",
+      "options": ["Separate DNA", "Amplify DNA", "Cut DNA", "Visualize DNA under UV light"],
+      "correctAnswer": "D",
+      "explanation": "Ethidium bromide intercalates between DNA bases and fluoresces bright orange under UV light. This allows visualization of DNA bands in the gel.",
+      "difficulty": "EASY",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Denaturation in PCR occurs at:",
+      "options": ["72°C", "37°C", "50°C", "94°C"],
+      "correctAnswer": "D",
+      "explanation": "Denaturation at 94°C breaks hydrogen bonds between DNA strands, separating the double helix into single strands for primer annealing.",
+      "difficulty": "MEDIUM",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR requires:",
+      "options": [
+        "Only enzymes",
+        "Only heat",
+        "Only DNA template",
+        "Template DNA, primers, dNTPs, and thermostable DNA polymerase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "PCR requires: template DNA, two primers (forward and reverse), dNTPs (nucleotides), thermostable DNA polymerase (Taq), and buffer with Mg2+.",
+      "difficulty": "EASY",
+      "topic": "Polymerase Chain Reaction",
+      "ncertPage": 176,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The agarose gel used in electrophoresis is extracted from:",
+      "options": ["Fungi", "Plants", "Bacteria", "Seaweed (red algae)"],
+      "correctAnswer": "D",
+      "explanation": "Agarose is extracted from seaweed (red algae like Gelidium and Gracilaria). It forms a porous matrix through which DNA molecules migrate during electrophoresis.",
+      "difficulty": "MEDIUM",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Multiple cloning site (MCS) in a vector is:",
+      "options": [
+        "Antibiotic resistance gene",
+        "Promoter region",
+        "Origin of replication",
+        "Region with multiple unique restriction sites"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Multiple cloning site (polylinker) contains several unique restriction enzyme sites clustered together. It allows insertion of foreign DNA using different restriction enzymes.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "EcoRI is isolated from:",
+      "options": [
+        "Bacillus amyloliquefaciens",
+        "Streptomyces",
+        "Haemophilus influenzae",
+        "Escherichia coli RY13"
+      ],
+      "correctAnswer": "D",
+      "explanation": "EcoRI is isolated from Escherichia coli strain RY13. The name indicates: E=Escherichia, co=coli, R=strain RY13, I=first enzyme isolated.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gel electrophoresis separates DNA based on:",
+      "options": ["Nucleotide composition", "GC content", "Color", "Size (molecular weight)"],
+      "correctAnswer": "D",
+      "explanation": "Gel electrophoresis separates DNA fragments by size. Smaller fragments move faster through the gel matrix; larger fragments move slower. DNA is negatively charged.",
+      "difficulty": "EASY",
+      "topic": "Gel Electrophoresis",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first restriction endonuclease isolated was:",
+      "options": ["BamHI", "SalI", "EcoRI", "HindII"],
+      "correctAnswer": "D",
+      "explanation": "HindII was the first restriction endonuclease isolated in 1970 by Werner Arber. It cuts at specific palindromic sequences in DNA.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 171,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most commonly used bioreactor is:",
+      "options": [
+        "Air-lift bioreactor",
+        "Packed bed bioreactor",
+        "Simple stirred-tank bioreactor",
+        "Sparged stirred-tank bioreactor"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sparged stirred-tank bioreactor is most common. It has a stirrer (impeller) for mixing and a sparger for introducing sterile air for aerobic organisms.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioreactors",
+      "ncertPage": 178,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a bioreactor, the stirrer is used for:",
+      "options": [
+        "Product separation",
+        "pH measurement",
+        "Sterilization",
+        "Mixing contents and oxygen transfer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The stirrer (impeller) ensures thorough mixing of nutrients and oxygen throughout the culture, maintaining homogeneous conditions for optimal growth.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioreactors",
+      "ncertPage": 178,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In pBR322, if foreign DNA is inserted into ampR gene:",
+      "options": [
+        "Bacteria lose all antibiotic resistance",
+        "Bacteria become tetracycline sensitive",
+        "Bacteria become ampicillin resistant",
+        "Bacteria lose ampicillin resistance but retain tetracycline resistance"
+      ],
+      "correctAnswer": "D",
+      "explanation": "When foreign DNA is inserted into ampR gene (insertional inactivation), the gene is disrupted. Recombinants are ampicillin-sensitive but tetracycline-resistant.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 174,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sticky ends produced by restriction enzymes have:",
+      "options": [
+        "Double-stranded extensions",
+        "Circular ends",
+        "Blunt ends with no overhangs",
+        "Single-stranded overhangs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sticky ends have short single-stranded overhangs (either 5' or 3'). These overhangs can hydrogen bond with complementary sticky ends, facilitating DNA ligation.",
+      "difficulty": "EASY",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "BamHI recognition sequence is:",
+      "options": ["5'-AAGCTT-3'", "5'-CTGCAG-3'", "5'-GAATTC-3'", "5'-GGATCC-3'"],
+      "correctAnswer": "D",
+      "explanation": "BamHI (from Bacillus amyloliquefaciens H) recognizes 5'-GGATCC-3' and cuts between G and G, producing sticky ends.",
+      "difficulty": "MEDIUM",
+      "topic": "Restriction Enzymes",
+      "ncertPage": 172,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Western blotting detects:",
+      "options": ["Nucleic acids", "DNA", "RNA", "Proteins"],
+      "correctAnswer": "D",
+      "explanation": "Western blotting detects specific proteins using antibodies. Proteins are separated by electrophoresis, transferred to membrane, and detected with specific antibodies.",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Detection Techniques",
+      "ncertPage": 177,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA ligase is used to:",
+      "options": ["Amplify DNA", "Separate DNA", "Cut DNA", "Join DNA fragments"],
+      "correctAnswer": "D",
+      "explanation": "DNA ligase joins DNA fragments by forming phosphodiester bonds between adjacent nucleotides. It seals nicks in the sugar-phosphate backbone.",
+      "difficulty": "EASY",
+      "topic": "Tools of Recombinant DNA Technology",
+      "ncertPage": 173,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The term 'clone' refers to:",
+      "options": [
+        "Hybrid organisms",
+        "Mutant organisms",
+        "Sexually produced offspring",
+        "Genetically identical copies"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Clone refers to genetically identical copies of a gene, cell, or organism. Cloning in biotechnology creates multiple identical copies of DNA, cells, or organisms.",
+      "difficulty": "EASY",
+      "topic": "Principles of Biotechnology",
+      "ncertPage": 170,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Ti plasmid is used for transformation of:",
+      "options": ["Bacterial cells", "Fungal cells", "Animal cells", "Plant cells"],
+      "correctAnswer": "D",
+      "explanation": "Ti (tumor-inducing) plasmid from Agrobacterium tumefaciens is used for plant transformation. The T-DNA region integrates into plant genome.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning Vectors",
+      "ncertPage": 175,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

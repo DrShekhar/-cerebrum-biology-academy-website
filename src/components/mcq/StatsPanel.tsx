@@ -34,108 +34,115 @@ export function StatsPanel({
     sessionQuestions > 0 ? Math.round((sessionCorrect / sessionQuestions) * 100) : 0
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 sticky top-24">
-      {/* Level & XP - Compact */}
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1.5">
-          <div className="flex items-center gap-1.5">
-            <span className="text-lg">{levelConfig.icon}</span>
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-4 sticky top-24 paper-texture">
+      {/* Level Card - Botanical Scholar */}
+      <div className="mb-4 bg-gradient-to-br from-sage-50 to-stone-50 rounded-xl p-3 border border-sage-200/50">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">{levelConfig.icon}</span>
             <div>
-              <p className="text-xs text-gray-500">Level {currentLevel}</p>
-              <p className="font-semibold text-sm text-gray-900">{levelConfig.name}</p>
+              <p className="text-xs text-stone-600 font-medium">Level {currentLevel}</p>
+              <p className="font-semibold text-sm text-ink">{levelConfig.name}</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-xs text-gray-500">Total XP</p>
-            <p className="font-bold text-sm text-blue-600">{totalXp.toLocaleString()}</p>
+            <p className="text-xs text-stone-600">Total XP</p>
+            <p className="font-bold text-sm font-mono text-sage-600">{totalXp.toLocaleString()}</p>
           </div>
         </div>
 
-        {/* Progress Bar */}
+        {/* Progress Bar - Botanical */}
         {nextLevel ? (
           <div className="mt-2">
-            <div className="flex justify-between text-[10px] text-gray-500 mb-0.5">
+            <div className="flex justify-between text-[10px] text-stone-600 mb-0.5">
               <span>Progress to Level {nextLevel.level}</span>
-              <span>{Math.round(levelProgress)}%</span>
+              <span className="font-mono">{Math.round(levelProgress)}%</span>
             </div>
-            <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-2 bg-stone-200 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500 ease-out animate-progress-fill"
                 style={{ width: `${levelProgress}%` }}
               />
             </div>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[10px] text-stone-400 mt-1 font-mono">
               {Math.max(0, nextLevel.xpRequired - totalXp)} XP to {nextLevel.name}
             </p>
           </div>
         ) : (
           <div className="mt-2 text-center">
-            <p className="text-[10px] text-purple-600 font-medium">Max Level Reached!</p>
+            <p className="text-[10px] text-specimen-600 font-medium">🎊 Max Level Reached!</p>
           </div>
         )}
       </div>
 
-      {/* Stats Grid - Compact */}
+      {/* Stats Grid - Botanical Scholar */}
       <div className="grid grid-cols-2 gap-2 mb-4">
         {/* Streak */}
-        <div className="bg-orange-50 rounded-lg p-2.5 text-center">
+        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-2.5 text-center border border-amber-200/50">
           <div className="text-xl mb-0.5">🔥</div>
-          <p className="text-lg font-bold text-orange-600">{currentStreak}</p>
-          <p className="text-[10px] text-orange-700">Day Streak</p>
+          <p className="text-lg font-bold font-mono text-amber-600">{currentStreak}</p>
+          <p className="text-[10px] text-amber-700 font-medium">Day Streak</p>
         </div>
 
         {/* Accuracy */}
-        <div className="bg-green-50 rounded-lg p-2.5 text-center">
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-2.5 text-center border border-green-200/50">
           <div className="text-xl mb-0.5">🎯</div>
-          <p className="text-lg font-bold text-green-600">{accuracy}%</p>
-          <p className="text-[10px] text-green-700">Accuracy</p>
+          <p className="text-lg font-bold font-mono text-green-600">{accuracy}%</p>
+          <p className="text-[10px] text-green-700 font-medium">Accuracy</p>
         </div>
 
         {/* Total Questions */}
-        <div className="bg-blue-50 rounded-lg p-2.5 text-center">
+        <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-lg p-2.5 text-center border border-sky-200/50">
           <div className="text-xl mb-0.5">📝</div>
-          <p className="text-lg font-bold text-blue-600">{totalQuestions}</p>
-          <p className="text-[10px] text-blue-700">Questions</p>
+          <p className="text-lg font-bold font-mono text-sky-600">{totalQuestions}</p>
+          <p className="text-[10px] text-sky-700 font-medium">Questions</p>
         </div>
 
         {/* Correct Answers */}
-        <div className="bg-purple-50 rounded-lg p-2.5 text-center">
+        <div className="bg-gradient-to-br from-specimen-50 to-purple-50 rounded-lg p-2.5 text-center border border-specimen-200/50">
           <div className="text-xl mb-0.5">✅</div>
-          <p className="text-lg font-bold text-purple-600">{correctAnswers}</p>
-          <p className="text-[10px] text-purple-700">Correct</p>
+          <p className="text-lg font-bold font-mono text-specimen-600">{correctAnswers}</p>
+          <p className="text-[10px] text-specimen-700 font-medium">Correct</p>
         </div>
       </div>
 
-      {/* Session Stats - Compact */}
+      {/* Session Stats - Botanical Scholar */}
       {sessionQuestions > 0 && (
-        <div className="border-t pt-3">
-          <h4 className="text-xs font-medium text-gray-500 mb-2">This Session</h4>
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-gray-600">Questions</span>
-            <span className="font-medium">{sessionQuestions}</span>
+        <div className="border-t border-dashed border-stone-200 pt-3">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
+              This Session
+            </span>
+            <div className="h-px flex-1 bg-stone-200" />
           </div>
-          <div className="flex items-center justify-between text-xs mt-0.5">
-            <span className="text-gray-600">Correct</span>
-            <span className="font-medium text-green-600">{sessionCorrect}</span>
-          </div>
-          <div className="flex items-center justify-between text-xs mt-0.5">
-            <span className="text-gray-600">Session Accuracy</span>
-            <span className="font-medium">{sessionAccuracy}%</span>
+          <div className="space-y-1">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-stone-600">Questions</span>
+              <span className="font-medium font-mono">{sessionQuestions}</span>
+            </div>
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-stone-600">Correct</span>
+              <span className="font-medium font-mono text-green-600">{sessionCorrect}</span>
+            </div>
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-stone-600">Session Accuracy</span>
+              <span className="font-medium font-mono">{sessionAccuracy}%</span>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Quick Actions - Consistent button style */}
+      {/* Quick Actions - Botanical Scholar */}
       <div className="mt-4 space-y-2">
         <button
           onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-          className="w-full py-2 px-3 bg-white border-2 border-blue-500 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors text-xs flex items-center justify-center gap-2"
+          className="w-full py-2 px-3 bg-white border-2 border-sage-400 text-sage-700 rounded-lg font-medium hover:bg-sage-50 hover:border-sage-500 transition-colors text-xs flex items-center justify-center gap-2"
         >
           <span>🏆</span> View Leaderboard
         </button>
         <button
           onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-          className="w-full py-2 px-3 bg-white border-2 border-amber-500 text-amber-600 rounded-lg font-medium hover:bg-amber-50 transition-colors text-xs flex items-center justify-center gap-2"
+          className="w-full py-2 px-3 bg-white border-2 border-amber-400 text-amber-700 rounded-lg font-medium hover:bg-amber-50 hover:border-amber-500 transition-colors text-xs flex items-center justify-center gap-2"
         >
           <span>🎯</span> Daily Challenge
         </button>
@@ -144,7 +151,7 @@ export function StatsPanel({
   )
 }
 
-// Compact version for mobile
+// Compact version for mobile - Botanical Scholar
 export function StatsPanelCompact({
   totalXp,
   currentLevel,
@@ -157,28 +164,30 @@ export function StatsPanelCompact({
     sessionQuestions > 0 ? Math.round((sessionCorrect / sessionQuestions) * 100) : 0
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 flex items-center justify-between">
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md border border-stone-200/50 p-4 flex items-center justify-between">
       {/* Level */}
       <div className="flex items-center gap-2">
         <span className="text-xl">{levelConfig.icon}</span>
         <div>
-          <p className="text-xs text-gray-500">Lv.{currentLevel}</p>
-          <p className="font-bold text-sm text-blue-600">{totalXp} XP</p>
+          <p className="text-xs text-stone-600">Lv.{currentLevel}</p>
+          <p className="font-bold text-sm font-mono text-sage-600">{totalXp} XP</p>
         </div>
       </div>
 
       {/* Streak */}
       <div className="flex items-center gap-1">
         <span className="text-lg">🔥</span>
-        <span className="font-bold text-orange-600">{currentStreak}</span>
+        <span className="font-bold font-mono text-amber-600">{currentStreak}</span>
       </div>
 
       {/* Session */}
       <div className="text-center">
-        <p className="text-xs text-gray-500">Session</p>
-        <p className="font-medium text-sm">
+        <p className="text-xs text-stone-600">Session</p>
+        <p className="font-medium text-sm font-mono">
           {sessionCorrect}/{sessionQuestions}
-          {sessionQuestions > 0 && <span className="text-gray-400 ml-1">({sessionAccuracy}%)</span>}
+          {sessionQuestions > 0 && (
+            <span className="text-stone-400 ml-1">({sessionAccuracy}%)</span>
+          )}
         </p>
       </div>
     </div>

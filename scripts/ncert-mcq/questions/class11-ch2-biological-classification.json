@@ -1,0 +1,630 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 2,
+  "ncertChapterName": "Biological Classification",
+  "generatedAt": "2025-12-18T16:30:00.000Z",
+  "sourceReference": "NCERT Biology Class 11 Chapter 2 (Pages 10-22)",
+  "answerDistribution": { "A": 15, "B": 15, "C": 15, "D": 15 },
+  "questions": [
+    {
+      "question": "Who proposed the Five Kingdom Classification system?",
+      "options": ["R.H. Whittaker", "Carl Linnaeus", "Aristotle", "Ernst Haeckel"],
+      "correctAnswer": "A",
+      "explanation": "R.H. Whittaker (1969) proposed the Five Kingdom Classification with kingdoms Monera, Protista, Fungi, Plantae and Animalia. (NCERT Page 11)",
+      "difficulty": "EASY",
+      "topic": "Classification Systems",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a criterion used by Whittaker for Five Kingdom Classification?",
+      "options": ["Cell structure", "Habitat", "Mode of nutrition", "Body organisation"],
+      "correctAnswer": "B",
+      "explanation": "Whittaker used cell structure, body organisation, mode of nutrition, reproduction and phylogenetic relationships as criteria. Habitat was not a primary criterion. (NCERT Page 11)",
+      "difficulty": "MEDIUM",
+      "topic": "Classification Systems",
+      "ncertPage": 11,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cell wall of Kingdom Monera is composed of:",
+      "options": ["Cellulose", "Chitin", "Polysaccharide and amino acids", "Pectin"],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT Table 2.1, Monera has noncellulosic cell wall made of polysaccharide + amino acid. (NCERT Page 11)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Monera",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which kingdom has chitin in its cell wall?",
+      "options": ["Monera", "Protista", "Plantae", "Fungi"],
+      "correctAnswer": "D",
+      "explanation": "According to NCERT Table 2.1, Fungi have cell wall present with chitin. Plants have cellulose in their cell walls. (NCERT Page 11)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 11,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The body organisation in Kingdom Fungi is:",
+      "options": [
+        "Multicellular/loose tissue",
+        "Cellular",
+        "Tissue/organ",
+        "Tissue/organ/organ system"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT Table 2.1, Fungi have multicellular/loose tissue body organisation. (NCERT Page 11)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 11,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which shape of bacteria is comma-shaped?",
+      "options": ["Coccus", "Vibrio", "Spirillum", "Bacillus"],
+      "correctAnswer": "B",
+      "explanation": "Vibrium (pl.: vibrio) are comma-shaped bacteria. Cocci are spherical, Bacilli are rod-shaped, and Spirilla are spiral. (NCERT Page 12)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Monera",
+      "ncertPage": 12,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Archaebacteria that live in extreme salty areas are called:",
+      "options": ["Methanogens", "Thermoacidophiles", "Halophiles", "Cyanobacteria"],
+      "correctAnswer": "C",
+      "explanation": "Halophiles live in extreme salty areas. Thermoacidophiles live in hot springs, and Methanogens live in marshy areas. (NCERT Page 13)",
+      "difficulty": "EASY",
+      "topic": "Archaebacteria",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Methanogens are found in the gut of:",
+      "options": ["Humans", "Dogs", "Birds", "Ruminant animals"],
+      "correctAnswer": "D",
+      "explanation": "Methanogens are present in the gut of several ruminant animals such as cows and buffaloes and are responsible for production of methane (biogas). (NCERT Page 13)",
+      "difficulty": "EASY",
+      "topic": "Archaebacteria",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which pigment is present in cyanobacteria that makes them photosynthetic?",
+      "options": ["Chlorophyll a", "Chlorophyll b", "Chlorophyll c", "Bacteriochlorophyll"],
+      "correctAnswer": "A",
+      "explanation": "Cyanobacteria have chlorophyll a similar to green plants and are photosynthetic autotrophs. (NCERT Page 13)",
+      "difficulty": "MEDIUM",
+      "topic": "Eubacteria",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nitrogen fixation in cyanobacteria occurs in specialised cells called:",
+      "options": ["Akinetes", "Heterocysts", "Hormogonia", "Basal cells"],
+      "correctAnswer": "B",
+      "explanation": "Some cyanobacteria can fix atmospheric nitrogen in specialised cells called heterocysts, e.g., Nostoc and Anabaena. (NCERT Page 13)",
+      "difficulty": "EASY",
+      "topic": "Eubacteria",
+      "ncertPage": 13,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following organisms completely lack a cell wall?",
+      "options": ["Cyanobacteria", "Archaebacteria", "Mycoplasma", "Eubacteria"],
+      "correctAnswer": "C",
+      "explanation": "Mycoplasma are organisms that completely lack a cell wall. They are the smallest living cells known and can survive without oxygen. (NCERT Page 14)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Monera",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The smallest living cells known are:",
+      "options": ["Bacteria", "Viruses", "PPLO", "Mycoplasma"],
+      "correctAnswer": "D",
+      "explanation": "Mycoplasma are the smallest living cells known and can survive without oxygen. (NCERT Page 14)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Monera",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diatoms belong to which group of protists?",
+      "options": ["Chrysophytes", "Dinoflagellates", "Euglenoids", "Slime moulds"],
+      "correctAnswer": "A",
+      "explanation": "Chrysophytes include diatoms and golden algae (desmids). They are found in fresh water as well as marine environments. (NCERT Page 14)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Protista",
+      "ncertPage": 14,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cell walls of diatoms are embedded with:",
+      "options": ["Calcium carbonate", "Silica", "Chitin", "Cellulose"],
+      "correctAnswer": "B",
+      "explanation": "In diatoms, the walls are embedded with silica and thus the walls are indestructible. This leads to accumulation called diatomaceous earth. (NCERT Page 14)",
+      "difficulty": "EASY",
+      "topic": "Chrysophytes",
+      "ncertPage": 14,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diatomaceous earth is used for:",
+      "options": ["Making cement", "Making glass", "Polishing and filtration", "Fertilizers"],
+      "correctAnswer": "C",
+      "explanation": "Being gritty, diatomaceous earth is used in polishing, filtration of oils and syrups. (NCERT Page 14)",
+      "difficulty": "MEDIUM",
+      "topic": "Chrysophytes",
+      "ncertPage": 14,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Red tides are caused by rapid multiplication of:",
+      "options": ["Diatoms", "Euglenoids", "Slime moulds", "Dinoflagellates"],
+      "correctAnswer": "D",
+      "explanation": "Red dinoflagellates (Example: Gonyaulax) undergo rapid multiplication causing red tides. Toxins released may kill marine animals. (NCERT Page 15)",
+      "difficulty": "MEDIUM",
+      "topic": "Dinoflagellates",
+      "ncertPage": 15,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gonyaulax is an example of:",
+      "options": ["Dinoflagellate", "Chrysophyte", "Euglenoid", "Slime mould"],
+      "correctAnswer": "A",
+      "explanation": "Gonyaulax is a red dinoflagellate that causes red tides when it undergoes rapid multiplication. (NCERT Page 15)",
+      "difficulty": "MEDIUM",
+      "topic": "Dinoflagellates",
+      "ncertPage": 15,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The protein-rich layer in Euglenoids that makes their body flexible is called:",
+      "options": ["Cell wall", "Pellicle", "Capsule", "Glycocalyx"],
+      "correctAnswer": "B",
+      "explanation": "Euglenoids have a protein rich layer called pellicle instead of a cell wall, which makes their body flexible. (NCERT Page 15)",
+      "difficulty": "EASY",
+      "topic": "Euglenoids",
+      "ncertPage": 15,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Euglenoids show which type of nutrition?",
+      "options": ["Only autotrophic", "Only heterotrophic", "Mixotrophic", "Only saprophytic"],
+      "correctAnswer": "C",
+      "explanation": "Euglenoids are photosynthetic in presence of sunlight but behave like heterotrophs when deprived of sunlight, showing mixotrophic nutrition. (NCERT Page 15)",
+      "difficulty": "MEDIUM",
+      "topic": "Euglenoids",
+      "ncertPage": 15,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The aggregation formed by slime moulds under suitable conditions is called:",
+      "options": ["Mycelium", "Thallus", "Fruiting body", "Plasmodium"],
+      "correctAnswer": "D",
+      "explanation": "Under suitable conditions, slime moulds form an aggregation called plasmodium which may grow and spread over several feet. (NCERT Page 15)",
+      "difficulty": "MEDIUM",
+      "topic": "Slime Moulds",
+      "ncertPage": 15,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Amoeboid protozoans move and capture prey using:",
+      "options": ["Pseudopodia", "Cilia", "Flagella", "Pellicle"],
+      "correctAnswer": "A",
+      "explanation": "Amoeboid protozoans move and capture their prey by putting out pseudopodia (false feet) as in Amoeba. (NCERT Page 15-16)",
+      "difficulty": "EASY",
+      "topic": "Protozoans",
+      "ncertPage": 16,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sleeping sickness is caused by:",
+      "options": ["Plasmodium", "Trypanosoma", "Entamoeba", "Paramoecium"],
+      "correctAnswer": "B",
+      "explanation": "Flagellated protozoans like Trypanosoma are parasitic forms that cause diseases such as sleeping sickness. (NCERT Page 16)",
+      "difficulty": "EASY",
+      "topic": "Protozoans",
+      "ncertPage": 16,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Paramoecium belongs to which group of protozoans?",
+      "options": [
+        "Amoeboid protozoans",
+        "Flagellated protozoans",
+        "Ciliated protozoans",
+        "Sporozoans"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Paramoecium is a ciliated protozoan that is aquatic and actively moves due to presence of thousands of cilia. (NCERT Page 16)",
+      "difficulty": "EASY",
+      "topic": "Protozoans",
+      "ncertPage": 16,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plasmodium belongs to which group of protozoans?",
+      "options": [
+        "Amoeboid protozoans",
+        "Flagellated protozoans",
+        "Ciliated protozoans",
+        "Sporozoans"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Plasmodium (malarial parasite) is a sporozoan that has an infectious spore-like stage in its life cycle. (NCERT Page 16)",
+      "difficulty": "EASY",
+      "topic": "Protozoans",
+      "ncertPage": 16,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The network of hyphae in fungi is called:",
+      "options": ["Mycelium", "Thallus", "Rhizomorph", "Stroma"],
+      "correctAnswer": "A",
+      "explanation": "Fungal bodies consist of long, slender thread-like structures called hyphae. The network of hyphae is known as mycelium. (NCERT Page 16)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 16,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Continuous tubes filled with multinucleated cytoplasm in fungi are called:",
+      "options": ["Septate hyphae", "Coenocytic hyphae", "Branched hyphae", "Rhizoids"],
+      "correctAnswer": "B",
+      "explanation": "Some hyphae are continuous tubes filled with multinucleated cytoplasm - these are called coenocytic hyphae. (NCERT Page 16)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 16,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Fungi that live in association with roots of higher plants are called:",
+      "options": ["Lichens", "Saprophytes", "Mycorrhiza", "Parasites"],
+      "correctAnswer": "C",
+      "explanation": "Fungi can live as symbionts with roots of higher plants as mycorrhiza, and with algae as lichens. (NCERT Page 16)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 16,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The fusion of protoplasms between two gametes in fungi is called:",
+      "options": ["Karyogamy", "Meiosis", "Syngamy", "Plasmogamy"],
+      "correctAnswer": "D",
+      "explanation": "The sexual cycle in fungi involves: (i) Plasmogamy - fusion of protoplasms, (ii) Karyogamy - fusion of nuclei, (iii) Meiosis in zygote. (NCERT Page 17)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 17,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The dikaryotic stage (n + n) occurs in:",
+      "options": [
+        "Phycomycetes only",
+        "Ascomycetes and Basidiomycetes",
+        "All fungi",
+        "Deuteromycetes only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In ascomycetes and basidiomycetes, an intervening dikaryotic stage (n + n, two nuclei per cell) occurs. This condition is called dikaryon. (NCERT Page 17)",
+      "difficulty": "HARD",
+      "topic": "Kingdom Fungi",
+      "ncertPage": 17,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phycomycetes have which type of mycelium?",
+      "options": [
+        "Septate and branched",
+        "Septate and unbranched",
+        "Absent",
+        "Aseptate and coenocytic"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In Phycomycetes, the mycelium is aseptate and coenocytic. They are found in aquatic habitats and moist places. (NCERT Page 17)",
+      "difficulty": "MEDIUM",
+      "topic": "Phycomycetes",
+      "ncertPage": 17,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a parasitic fungus on mustard?",
+      "options": ["Albugo", "Mucor", "Rhizopus", "Aspergillus"],
+      "correctAnswer": "A",
+      "explanation": "Albugo is the parasitic fungi on mustard. Mucor and Rhizopus are saprophytic Phycomycetes. (NCERT Page 17)",
+      "difficulty": "MEDIUM",
+      "topic": "Phycomycetes",
+      "ncertPage": 17,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ascomycetes are commonly known as:",
+      "options": ["Club fungi", "Sac fungi", "Imperfect fungi", "Algal fungi"],
+      "correctAnswer": "B",
+      "explanation": "Ascomycetes are commonly known as sac-fungi because their sexual spores (ascospores) are produced in sac-like asci. (NCERT Page 17)",
+      "difficulty": "EASY",
+      "topic": "Ascomycetes",
+      "ncertPage": 17,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which unicellular fungus belongs to Ascomycetes?",
+      "options": ["Mucor", "Rhizopus", "Yeast (Saccharomyces)", "Agaricus"],
+      "correctAnswer": "C",
+      "explanation": "Yeast (Saccharomyces) is a rarely unicellular ascomycete. Most ascomycetes are multicellular like Penicillium. (NCERT Page 17)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascomycetes",
+      "ncertPage": 17,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Conidia in Ascomycetes are produced on special mycelium called:",
+      "options": ["Basidium", "Ascus", "Sporangiophores", "Conidiophores"],
+      "correctAnswer": "D",
+      "explanation": "The asexual spores in Ascomycetes are conidia produced exogenously on special mycelium called conidiophores. (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which organism is extensively used in biochemical and genetic work?",
+      "options": ["Neurospora", "Aspergillus", "Claviceps", "Penicillium"],
+      "correctAnswer": "A",
+      "explanation": "Neurospora is used extensively in biochemical and genetic work. It is an ascomycete. (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Ascomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Mushrooms belong to which class of fungi?",
+      "options": ["Phycomycetes", "Basidiomycetes", "Ascomycetes", "Deuteromycetes"],
+      "correctAnswer": "B",
+      "explanation": "Commonly known forms of basidiomycetes are mushrooms, bracket fungi or puffballs. (NCERT Page 18)",
+      "difficulty": "EASY",
+      "topic": "Basidiomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Basidiomycetes, plasmogamy occurs by fusion of:",
+      "options": ["Sex organs", "Gametes", "Vegetative or somatic cells", "Ascospores"],
+      "correctAnswer": "C",
+      "explanation": "In Basidiomycetes, sex organs are absent, but plasmogamy is brought about by fusion of two vegetative or somatic cells of different strains. (NCERT Page 18)",
+      "difficulty": "HARD",
+      "topic": "Basidiomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ustilago (smut) belongs to which class of fungi?",
+      "options": ["Phycomycetes", "Ascomycetes", "Deuteromycetes", "Basidiomycetes"],
+      "correctAnswer": "D",
+      "explanation": "Common members of Basidiomycetes are Agaricus (mushroom), Ustilago (smut) and Puccinia (rust fungus). (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Basidiomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Puccinia is a:",
+      "options": ["Smut fungus", "Rust fungus", "Mushroom", "Bread mould"],
+      "correctAnswer": "B",
+      "explanation": "Puccinia is a rust fungus and belongs to Basidiomycetes. Ustilago is a smut fungus. (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Basidiomycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Deuteromycetes are also called:",
+      "options": ["Sac fungi", "Imperfect fungi", "Club fungi", "Algal fungi"],
+      "correctAnswer": "B",
+      "explanation": "Deuteromycetes are commonly known as imperfect fungi because only the asexual or vegetative phases are known. (NCERT Page 18)",
+      "difficulty": "EASY",
+      "topic": "Deuteromycetes",
+      "ncertPage": 18,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Deuteromycetes reproduce only by:",
+      "options": [
+        "Sexual spores",
+        "Both sexual and asexual",
+        "Fragmentation only",
+        "Asexual spores called conidia"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Deuteromycetes reproduce only by asexual spores known as conidia. Sexual reproduction is unknown in this group. (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Deuteromycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is an example of Deuteromycetes?",
+      "options": ["Mucor", "Alternaria", "Aspergillus", "Agaricus"],
+      "correctAnswer": "B",
+      "explanation": "Alternaria, Colletotrichum and Trichoderma are examples of Deuteromycetes. Aspergillus is an Ascomycete. (NCERT Page 18)",
+      "difficulty": "MEDIUM",
+      "topic": "Deuteromycetes",
+      "ncertPage": 18,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cuscuta is an example of:",
+      "options": [
+        "Insectivorous plant",
+        "Autotrophic plant",
+        "Parasitic plant",
+        "Saprophytic plant"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cuscuta is a parasite. Bladderwort and Venus fly trap are examples of insectivorous plants. (NCERT Page 19)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Plantae",
+      "ncertPage": 19,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The phenomenon of alternation between diploid sporophytic and haploid gametophytic phases in plants is called:",
+      "options": ["Alternation of generations", "Metagenesis", "Metamorphosis", "Parthenogenesis"],
+      "correctAnswer": "A",
+      "explanation": "Life cycle of plants has two distinct phases - diploid sporophytic and haploid gametophytic - that alternate. This is called alternation of generations. (NCERT Page 19)",
+      "difficulty": "MEDIUM",
+      "topic": "Kingdom Plantae",
+      "ncertPage": 19,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Animals store food reserves as:",
+      "options": ["Starch", "Cellulose", "Chitin", "Glycogen or fat"],
+      "correctAnswer": "D",
+      "explanation": "Animals digest their food in an internal cavity and store food reserves as glycogen or fat. (NCERT Page 19)",
+      "difficulty": "EASY",
+      "topic": "Kingdom Animalia",
+      "ncertPage": 19,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Who first recognised viruses as causal organism of mosaic disease of tobacco?",
+      "options": ["Stanley", "Beijerinck", "Dmitri Ivanowsky", "Pasteur"],
+      "correctAnswer": "C",
+      "explanation": "Dmitri Ivanowsky (1892) recognised certain microbes as causal organism of the mosaic disease of tobacco. (NCERT Page 20)",
+      "difficulty": "MEDIUM",
+      "topic": "Viruses",
+      "ncertPage": 20,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The term 'Contagium vivum fluidum' was coined by:",
+      "options": ["M.W. Beijerinck", "Ivanowsky", "W.M. Stanley", "Pasteur"],
+      "correctAnswer": "A",
+      "explanation": "M.W. Beijerinck (1898) named the pathogen 'virus' and called the fluid as Contagium vivum fluidum (infectious living fluid). (NCERT Page 20)",
+      "difficulty": "HARD",
+      "topic": "Viruses",
+      "ncertPage": 20,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Who showed that viruses could be crystallised?",
+      "options": ["Ivanowsky", "W.M. Stanley", "Beijerinck", "Pasteur"],
+      "correctAnswer": "B",
+      "explanation": "W.M. Stanley (1935) showed that viruses could be crystallised and crystals consist largely of proteins. (NCERT Page 20)",
+      "difficulty": "MEDIUM",
+      "topic": "Viruses",
+      "ncertPage": 20,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plant viruses generally contain:",
+      "options": [
+        "Double stranded DNA",
+        "Double stranded RNA",
+        "Single stranded RNA",
+        "Single stranded DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Viruses that infect plants have single stranded RNA. Bacteriophages are usually double stranded DNA viruses. (NCERT Page 20)",
+      "difficulty": "HARD",
+      "topic": "Viruses",
+      "ncertPage": 20,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The protein coat of virus is called:",
+      "options": ["Capsomere", "Virion", "Capsid", "Nucleoid"],
+      "correctAnswer": "C",
+      "explanation": "The protein coat called capsid made of small subunits called capsomeres, protects the nucleic acid of viruses. (NCERT Page 20)",
+      "difficulty": "EASY",
+      "topic": "Viruses",
+      "ncertPage": 20,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Viroids were discovered by:",
+      "options": ["Ivanowsky", "Beijerinck", "T.O. Diener", "Stanley"],
+      "correctAnswer": "C",
+      "explanation": "In 1971, T.O. Diener discovered viroids - a new infectious agent smaller than viruses that caused potato spindle tuber disease. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Viroids",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Viroids differ from viruses in that they:",
+      "options": ["Have DNA", "Have protein coat", "Are larger in size", "Lack protein coat"],
+      "correctAnswer": "D",
+      "explanation": "Viroids are free RNA and lack the protein coat that is found in viruses. The RNA of viroid is of low molecular weight. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Viroids",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Potato spindle tuber disease is caused by:",
+      "options": ["Viroid", "Virus", "Prion", "Bacteria"],
+      "correctAnswer": "A",
+      "explanation": "T.O. Diener discovered viroids that caused potato spindle tuber disease. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Viroids",
+      "ncertPage": 21,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Prions are:",
+      "options": ["Infectious RNA", "Abnormally folded proteins", "Infectious DNA", "Lipoproteins"],
+      "correctAnswer": "B",
+      "explanation": "Prions are agents consisting of abnormally folded protein that cause infectious neurological diseases. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Prions",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mad cow disease (BSE) is caused by:",
+      "options": ["Virus", "Prion", "Viroid", "Bacteria"],
+      "correctAnswer": "B",
+      "explanation": "Bovine spongiform encephalopathy (BSE) commonly called mad cow disease is caused by prions. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Prions",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The algal component in lichens is called:",
+      "options": ["Mycobiont", "Symbiont", "Phycobiont", "Photobiont"],
+      "correctAnswer": "C",
+      "explanation": "In lichens, the algal component is known as phycobiont and fungal component as mycobiont. (NCERT Page 21)",
+      "difficulty": "EASY",
+      "topic": "Lichens",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lichens are good indicators of:",
+      "options": ["Air pollution", "Soil fertility", "Water quality", "Temperature"],
+      "correctAnswer": "A",
+      "explanation": "Lichens are very good pollution indicators - they do not grow in polluted areas. (NCERT Page 21)",
+      "difficulty": "EASY",
+      "topic": "Lichens",
+      "ncertPage": 21,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In lichens, the fungal component provides:",
+      "options": ["Food", "Chlorophyll", "Shelter and water absorption", "Oxygen"],
+      "correctAnswer": "C",
+      "explanation": "In lichens, algae prepare food for fungi and fungi provide shelter and absorb mineral nutrients and water for its partner. (NCERT Page 21)",
+      "difficulty": "MEDIUM",
+      "topic": "Lichens",
+      "ncertPage": 21,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

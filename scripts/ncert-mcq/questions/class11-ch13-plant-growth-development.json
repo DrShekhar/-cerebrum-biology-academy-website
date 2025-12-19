@@ -1,0 +1,1109 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 13,
+  "ncertChapterName": "Plant Growth and Development",
+  "questions": [
+    {
+      "question": "Growth in plants is defined as an irreversible permanent increase in:",
+      "options": [
+        "Size of existing cells only",
+        "Number of cells only",
+        "Weight due to water absorption only",
+        "Size, weight, and number of cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Growth is defined as an irreversible permanent increase in size of an organ or its parts or even of an individual cell. This increase is accompanied by increase in weight and number of cells through cell division. (NCERT Page 166)",
+      "difficulty": "EASY",
+      "topic": "Growth Definition",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plants retain the capacity for unlimited growth throughout their life due to:",
+      "options": [
+        "Meristems at certain locations",
+        "Secondary meristems only",
+        "Parenchyma cells",
+        "Sclerenchyma cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Plants retain the capacity for unlimited growth throughout their life because they possess meristems at certain locations in their body. These meristems have the capacity to divide and self-perpetuate. (NCERT Page 166)",
+      "difficulty": "EASY",
+      "topic": "Meristems and Growth",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The type of growth where new cells are continuously added to the plant body throughout life is called:",
+      "options": [
+        "Determinate growth",
+        "Closed form of growth",
+        "Open form of growth",
+        "Limited growth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This ability of plants to continuously grow throughout their life is called 'open form of growth' or indeterminate growth. Animals generally have 'closed form' or determinate growth. (NCERT Page 166)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Growth",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following represents the correct sequence of phases in cell growth?",
+      "options": [
+        "Division → Elongation → Maturation",
+        "Elongation → Division → Maturation",
+        "Division → Maturation → Elongation",
+        "Maturation → Division → Elongation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The three phases of growth are: Cell division (meristematic phase), Cell elongation, and Cell maturation (differentiation). These occur in sequence from apical meristem downwards. (NCERT Page 167)",
+      "difficulty": "EASY",
+      "topic": "Phases of Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Root apical meristem and shoot apical meristem together are known as:",
+      "options": [
+        "Lateral meristems",
+        "Primary meristems",
+        "Intercalary meristems",
+        "Secondary meristems"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Root apical meristem (RAM) and shoot apical meristem (SAM) together are called primary meristems. They are responsible for primary growth leading to increase in length of plants. (NCERT Page 166)",
+      "difficulty": "EASY",
+      "topic": "Types of Meristems",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The increase in girth of stem and root in dicot plants is due to:",
+      "options": [
+        "Primary meristems",
+        "Apical meristems",
+        "Intercalary meristems",
+        "Lateral meristems"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lateral meristems (vascular cambium and cork cambium) appear later in life and cause the increase in girth of organs. This is called secondary growth and occurs mainly in dicot plants. (NCERT Page 166)",
+      "difficulty": "EASY",
+      "topic": "Secondary Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Growth in plants is measurable and can be measured by various parameters. Which of the following is NOT typically used to measure plant growth?",
+      "options": [
+        "Increase in chlorophyll content",
+        "Increase in fresh weight",
+        "Increase in dry weight",
+        "Increase in length"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Growth in plants can be measured by increase in fresh weight, dry weight, length, area, volume, and cell number. Chlorophyll content is not a direct measure of growth. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Measuring Growth",
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "In the meristematic phase of growth, cells:",
+      "options": [
+        "Are rich in protoplasm with large vacuoles",
+        "Have thick secondary walls",
+        "Show maximum elongation",
+        "Have thin cellulose walls and dense cytoplasm"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In the meristematic phase, cells are rich in protoplasm, possess large conspicuous nuclei, have thin cellulose cell walls, and dense cytoplasm. They divide repeatedly. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Meristematic Phase",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The phase of growth characterized by cell enlargement, increased vacuolation, and new cell wall deposition is:",
+      "options": [
+        "Meristematic phase",
+        "Phase of elongation",
+        "Phase of maturation",
+        "Dormant phase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phase of elongation is characterized by cell enlargement, increased vacuolation, and new cell wall deposition. Cells proximal to the meristematic zone show this phase. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Phase of Elongation",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In the phase of maturation, cells:",
+      "options": [
+        "Continue to divide rapidly",
+        "Show increased vacuolation only",
+        "Attain maximum size and wall thickening",
+        "Lose their nuclei completely"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the maturation phase, cells attain their maximum size in terms of wall thickening and protoplasmic modifications. This phase is further away from the apex. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Phase of Maturation",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "If the length of a maize root at time t₀ is L₀ and at time t₁ is L₁, the growth rate is expressed as:",
+      "options": ["L₁ - L₀", "L₁/L₀", "(L₁ - L₀)/t", "(L₁ + L₀)/2t"],
+      "correctAnswer": "C",
+      "explanation": "Growth rate is expressed as growth per unit time. Mathematically, it is (L₁ - L₀)/t, representing the increase in growth per unit time. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Growth Rate",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In arithmetic growth, one daughter cell continues to divide while the other:",
+      "options": [
+        "Differentiates and matures",
+        "Dies immediately",
+        "Divides faster",
+        "Becomes dormant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In arithmetic growth, following mitotic cell division, only one daughter cell continues to divide while the other differentiates and matures. This is seen in root elongation at constant rate. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Arithmetic Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The mathematical expression for arithmetic growth is:",
+      "options": ["Lt = L₀ × eʳᵗ", "Lt = L₀ × 2ⁿ", "Lt = L₀/rt", "Lt = L₀ + rt"],
+      "correctAnswer": "D",
+      "explanation": "In arithmetic growth, Lt = L₀ + rt, where Lt is length at time t, L₀ is length at time zero, r is growth rate, and t is time. This gives a linear increase. (NCERT Page 168)",
+      "difficulty": "HARD",
+      "topic": "Arithmetic Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In geometric growth, the initial growth is:",
+      "options": ["Rapid throughout", "Slow then rapid", "Slow throughout", "Constant throughout"],
+      "correctAnswer": "B",
+      "explanation": "In geometric growth, the initial growth is slow (lag phase) but increases rapidly thereafter at an exponential rate. Both daughter cells following mitosis retain ability to divide. (NCERT Page 168)",
+      "difficulty": "MEDIUM",
+      "topic": "Geometric Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The exponential growth can be expressed as:",
+      "options": ["W₁ = W₀ × eʳᵗ", "W₁ = W₀ + rt", "W₁ = W₀ - rt", "W₁ = W₀/eʳᵗ"],
+      "correctAnswer": "A",
+      "explanation": "Exponential growth is expressed as W₁ = W₀ × eʳᵗ, where W₁ is final size, W₀ is initial size, r is growth rate, t is time, and e is base of natural logarithms. (NCERT Page 168)",
+      "difficulty": "HARD",
+      "topic": "Exponential Growth",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The growth of a pollen tube is an example of:",
+      "options": ["Geometric growth", "Sigmoid growth", "No growth", "Arithmetic growth"],
+      "correctAnswer": "D",
+      "explanation": "The elongation of roots at a constant rate is an example of arithmetic growth. Similarly, pollen tube growth shows arithmetic growth where growth rate remains constant. (NCERT Page 167)",
+      "difficulty": "MEDIUM",
+      "topic": "Arithmetic Growth",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A sigmoid growth curve shows:",
+      "options": [
+        "Only lag phase",
+        "Only exponential phase",
+        "Lag, exponential, and stationary phases",
+        "Constant growth throughout"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A sigmoid or S-shaped growth curve shows three phases: lag phase (slow growth), log/exponential phase (rapid growth), and stationary phase (growth slows due to limiting factors). (NCERT Page 168)",
+      "difficulty": "MEDIUM",
+      "topic": "Sigmoid Growth Curve",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stationary phase in sigmoid growth curve occurs due to:",
+      "options": [
+        "Increased nutrient availability",
+        "Increased temperature",
+        "Limited nutrient supply",
+        "Increased light intensity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the stationary phase of sigmoid growth, growth slows down due to limited nutrient supply. The organism reaches its maximum growth potential under given conditions. (NCERT Page 168)",
+      "difficulty": "MEDIUM",
+      "topic": "Sigmoid Growth Curve",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The relative growth rate (RGR) is expressed as:",
+      "options": [
+        "Growth per unit initial parameter per unit time",
+        "Growth of given system per unit time only",
+        "Total growth divided by final weight",
+        "Final weight minus initial weight"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Relative Growth Rate (RGR) is the growth of the given system per unit time expressed on a common basis like per unit initial parameter. It allows comparison between different organisms. (NCERT Page 168)",
+      "difficulty": "HARD",
+      "topic": "Growth Rate",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Growth is influenced by both internal and external factors. Which is NOT an internal factor?",
+      "options": ["Plant growth regulators", "Temperature", "Genetic factors", "Nutrition"],
+      "correctAnswer": "B",
+      "explanation": "Internal factors affecting growth include genetic factors, growth regulators, and nutrition (intrinsic factors). Temperature, light, CO₂, and water are external (extrinsic) factors. (NCERT Page 168)",
+      "difficulty": "EASY",
+      "topic": "Factors Affecting Growth",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cells derived from root apical meristem and shoot apical meristem undergo:",
+      "options": [
+        "Dedifferentiation only",
+        "Redifferentiation only",
+        "No further change",
+        "Differentiation and maturation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cells derived from root apical meristem and shoot apical meristem differentiate and mature to perform specific functions. This process of taking up permanent shape, size, and function is differentiation. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Differentiation",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Differentiation in plants involves:",
+      "options": [
+        "Changes in protoplasm only",
+        "Changes in cell wall only",
+        "Major structural changes in cell wall and protoplasm",
+        "No structural changes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Differentiation involves major structural changes both in the cell wall and protoplasm of cells. These changes occur to enable cells to perform specific functions. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Differentiation",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The formation of tracheary elements involves:",
+      "options": [
+        "Increase in protoplasm content",
+        "Loss of protoplasm and lignification of cell walls",
+        "Formation of thin primary walls",
+        "Retention of nucleus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Formation of tracheary elements involves loss of protoplasm and deposition of lignin in cell walls. Similarly, sieve tube elements lose nucleus at maturity. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Differentiation",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The process by which living differentiated cells regain the capacity to divide under certain conditions is called:",
+      "options": ["Differentiation", "Redifferentiation", "Development", "Dedifferentiation"],
+      "correctAnswer": "D",
+      "explanation": "Dedifferentiation is the process by which living differentiated cells (like parenchyma) regain the capacity for division under certain conditions. (NCERT Page 169)",
+      "difficulty": "EASY",
+      "topic": "Dedifferentiation",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The formation of interfascicular cambium and cork cambium from fully differentiated parenchyma is an example of:",
+      "options": ["Differentiation", "Dedifferentiation", "Redifferentiation", "Development"],
+      "correctAnswer": "B",
+      "explanation": "The formation of interfascicular cambium and cork cambium from fully differentiated parenchyma cells is an example of dedifferentiation, where cells regain meristematic capacity. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Dedifferentiation",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The dedifferentiated cells that divide and produce cells that lose the capacity to divide but mature to perform specific functions exhibit:",
+      "options": ["Differentiation", "Dedifferentiation", "Redifferentiation", "Regeneration"],
+      "correctAnswer": "C",
+      "explanation": "Redifferentiation occurs when products of dedifferentiated cells lose the capacity to divide again but mature to perform specific functions. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Redifferentiation",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The formation of secondary xylem and secondary phloem by vascular cambium is an example of:",
+      "options": ["Redifferentiation", "Dedifferentiation", "Differentiation only", "Development"],
+      "correctAnswer": "A",
+      "explanation": "The formation of secondary xylem and secondary phloem by vascular cambium (a dedifferentiated tissue) is an example of redifferentiation. (NCERT Page 169)",
+      "difficulty": "MEDIUM",
+      "topic": "Redifferentiation",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Development in plants refers to:",
+      "options": [
+        "Cell division only",
+        "Growth only",
+        "All changes from seed germination to senescence",
+        "Differentiation only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Development is the sum total of growth and differentiation. It includes all changes that an organism goes through during its life cycle from germination to senescence. (NCERT Page 169)",
+      "difficulty": "EASY",
+      "topic": "Development",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plant development is considered as the sum of:",
+      "options": [
+        "Growth and differentiation",
+        "Growth and metabolism",
+        "Differentiation and reproduction",
+        "Metabolism and reproduction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Development is considered as the sum total of growth and differentiation. Plants follow different pathways in response to environment or phases of life to form different structures. (NCERT Page 169)",
+      "difficulty": "EASY",
+      "topic": "Development",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Heterophylly observed in cotton, coriander, and larkspur is due to:",
+      "options": [
+        "Genetic differences",
+        "Different environments",
+        "Different phases of life",
+        "Both B and C"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Heterophylly (different shaped leaves) in cotton, coriander, and larkspur is due to different phases of life (juvenile vs adult). The leaves produced during juvenile and mature phases are different. (NCERT Page 170)",
+      "difficulty": "MEDIUM",
+      "topic": "Heterophylly",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Heterophylly in buttercup is due to:",
+      "options": [
+        "Different phases of life",
+        "Different environments (air vs water)",
+        "Genetic mutations",
+        "Nutritional differences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In buttercup (Ranunculus), heterophylly is due to different environments. Leaves submerged in water are dissected while those on surface are broad with lobes. (NCERT Page 170)",
+      "difficulty": "MEDIUM",
+      "topic": "Heterophylly",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ability of plants to follow different pathways in response to environment or phases of life to form different kinds of structures is called:",
+      "options": ["Totipotency", "Differentiation", "Development", "Plasticity"],
+      "correctAnswer": "D",
+      "explanation": "Plasticity is the ability of plants to follow different pathways in response to environment or phases of life to form different kinds of structures. Heterophylly is an example. (NCERT Page 170)",
+      "difficulty": "MEDIUM",
+      "topic": "Plasticity",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plant growth regulators (PGRs) can be defined as:",
+      "options": [
+        "Nutrients required for plant growth",
+        "Small simple molecules with diverse actions",
+        "Large complex proteins",
+        "Minerals essential for plant growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plant Growth Regulators (PGRs) are small, simple molecules of diverse chemical composition. They could be indole compounds, adenine derivatives, terpenoids, or gases like ethylene. (NCERT Page 170)",
+      "difficulty": "EASY",
+      "topic": "Plant Growth Regulators",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Charles Darwin and his son Francis Darwin observed phototropism in:",
+      "options": [
+        "Pea seedlings",
+        "Canary grass coleoptiles",
+        "Maize coleoptiles",
+        "Oat coleoptiles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Charles Darwin and Francis Darwin observed phototropism in coleoptiles of canary grass. They observed that the coleoptile tip was the site of perception of light stimulus. (NCERT Page 170)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Auxin",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to Darwin's experiment, the coleoptile tip:",
+      "options": [
+        "Is the site of growth",
+        "Does not perceive light",
+        "Is the site of light perception and transmits influence to lower part",
+        "Inhibits growth of lower region"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Darwin concluded that the coleoptile tip is the site of transmitting some 'influence' to the lower part when exposed to unilateral light. The tip perceives light and influences growth below. (NCERT Page 170)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Auxin",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "F.W. Went first isolated auxin from:",
+      "options": [
+        "Oat coleoptile tips",
+        "Canary grass coleoptiles",
+        "Maize coleoptiles",
+        "Pea seedlings"
+      ],
+      "correctAnswer": "A",
+      "explanation": "F.W. Went (1928) first isolated auxin from oat coleoptile tips. He placed coleoptile tips on agar blocks and showed the diffusible substance caused curvature. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Auxin",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 'Avena curvature test' was developed by:",
+      "options": ["Charles Darwin", "Kenneth Thimann", "E. Kurosawa", "F.W. Went"],
+      "correctAnswer": "D",
+      "explanation": "F.W. Went developed the Avena curvature test using oat (Avena) coleoptiles to bioassay auxin activity. The degree of curvature is proportional to auxin concentration. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Auxin",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The term 'auxin' was coined by:",
+      "options": ["F.W. Went", "Charles Darwin", "Kenneth Thimann", "E. Kurosawa"],
+      "correctAnswer": "A",
+      "explanation": "F.W. Went coined the term 'auxin' from Greek 'auxein' meaning 'to grow'. He isolated this diffusible substance from coleoptile tips. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Auxin",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most common naturally occurring auxin is:",
+      "options": [
+        "IBA (Indole-3-butyric acid)",
+        "IAA (Indole-3-acetic acid)",
+        "NAA (Naphthalene acetic acid)",
+        "2,4-D (2,4-Dichlorophenoxyacetic acid)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "IAA (Indole-3-acetic acid) is the most common naturally occurring auxin. IBA is also natural, while NAA and 2,4-D are synthetic auxins. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Types of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a synthetic auxin?",
+      "options": ["IAA", "IBA", "NAA", "Both A and B"],
+      "correctAnswer": "C",
+      "explanation": "NAA (Naphthalene acetic acid) and 2,4-D (2,4-Dichlorophenoxyacetic acid) are synthetic auxins. IAA and IBA are naturally occurring auxins. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Types of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxin is synthesized primarily at:",
+      "options": ["Shoot tips and young leaves", "Root tips only", "Mature leaves", "Stem bark"],
+      "correctAnswer": "A",
+      "explanation": "Auxin is generally produced by growing apices of stems and roots, from where it migrates to the regions of its action. Shoot tips and young leaves are major sites. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Auxin Synthesis",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The phenomenon where apical bud inhibits the growth of lateral buds is called:",
+      "options": ["Phototropism", "Geotropism", "Apical dominance", "Thigmotropism"],
+      "correctAnswer": "C",
+      "explanation": "Apical dominance is the phenomenon where the presence of apical bud (which produces auxin) inhibits the growth of lateral buds. Removal of apical bud promotes lateral bud growth. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Apical Dominance",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxins promote:",
+      "options": [
+        "Cell division only",
+        "Cell elongation only",
+        "Neither cell division nor elongation",
+        "Both cell division and elongation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Auxins promote cell elongation in the shoot region and also help in cell division (when applied along with cytokinins in tissue culture). (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Functions of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxins induce initiation of roots in:",
+      "options": ["Stem cuttings", "Leaf cuttings", "Seeds", "Both stem and leaf cuttings"],
+      "correctAnswer": "D",
+      "explanation": "Auxins induce initiation of roots in stem cuttings, a property widely used in horticulture for vegetative propagation of plants. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Functions of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxins promote flowering in:",
+      "options": ["All plants", "Pineapples only", "Tomatoes only", "None of the above"],
+      "correctAnswer": "B",
+      "explanation": "Auxins promote flowering in pineapples. They are also used to induce parthenocarpy (seedless fruit development) in tomatoes. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Auxins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The development of fruit without fertilization induced by auxins is called:",
+      "options": ["Apomixis", "Parthenogenesis", "Parthenocarpy", "Polyembryony"],
+      "correctAnswer": "C",
+      "explanation": "Parthenocarpy is the development of fruit without fertilization. Auxins can induce parthenocarpy in tomatoes, resulting in seedless fruits. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Parthenocarpy",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "2,4-D is widely used as:",
+      "options": ["Fungicide", "Insecticide", "Fertilizer", "Herbicide to kill dicot weeds"],
+      "correctAnswer": "D",
+      "explanation": "2,4-D (2,4-Dichlorophenoxyacetic acid) is widely used as herbicide to kill dicot weeds. It doesn't affect mature monocot plants due to different anatomical features. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Applications of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxins are involved in:",
+      "options": [
+        "Phototropism only",
+        "Both phototropism and geotropism",
+        "Geotropism only",
+        "Neither phototropism nor geotropism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Auxins play a role in both phototropic (response to light) and geotropic (response to gravity) responses through differential distribution. (NCERT Page 171)",
+      "difficulty": "EASY",
+      "topic": "Functions of Auxins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 'foolish seedling' disease (Bakanae disease) of rice is caused by:",
+      "options": [
+        "A fungus (Gibberella fujikuroi)",
+        "A bacterium",
+        "A virus",
+        "Excess auxin production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bakanae (foolish seedling) disease of rice is caused by the fungus Gibberella fujikuroi. E. Kurosawa (1926) observed that sterile filtrates of this fungus caused symptoms. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Gibberellins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "E. Kurosawa (1926) observed the symptoms of Bakanae disease caused by:",
+      "options": [
+        "Sterile filtrates of fungus",
+        "Bacterial toxin",
+        "Viral infection",
+        "Auxin excess"
+      ],
+      "correctAnswer": "A",
+      "explanation": "E. Kurosawa observed that sterile filtrates of the fungus Gibberella fujikuroi could produce symptoms of Bakanae disease, proving a chemical substance was responsible. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Gibberellins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The active substance causing Bakanae disease was later identified as:",
+      "options": ["Auxin", "Gibberellic acid", "Cytokinin", "Abscisic acid"],
+      "correctAnswer": "B",
+      "explanation": "The active substance was later identified as gibberellic acid (GA). Gibberellins were named after the fungus Gibberella fujikuroi from which they were first isolated. (NCERT Page 172)",
+      "difficulty": "EASY",
+      "topic": "Discovery of Gibberellins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many gibberellins are known to exist today?",
+      "options": ["Less than 50", "More than 100", "Exactly 100", "Only one type"],
+      "correctAnswer": "B",
+      "explanation": "More than 100 gibberellins are reported from widely different organisms such as fungi and higher plants. They are denoted as GA₁, GA₂, GA₃, etc. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Gibberellins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gibberellins are acidic in nature and are chemically:",
+      "options": ["Terpenes", "Indole compounds", "Adenine derivatives", "Phenolic compounds"],
+      "correctAnswer": "A",
+      "explanation": "Gibberellins are weakly acidic. They are all terpenoids (compounds made from acetate units via the mevalonic acid pathway). (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Nature of Gibberellins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a function of gibberellins?",
+      "options": [
+        "Elongation of internodes in genetically dwarf plants",
+        "Induction of bolting and flowering",
+        "Promotion of seed and bud dormancy",
+        "Mobilization of food reserves during seed germination"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Gibberellins break seed and bud dormancy, not promote it. They cause internode elongation in dwarf plants, induce bolting, and mobilize food reserves during germination. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Gibberellins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GA₃ can cause the stem of genetically dwarf pea plants to elongate to normal height. This property is used in:",
+      "options": [
+        "Weed control",
+        "Inducing dormancy",
+        "Increasing sugarcane yield",
+        "Preventing flowering"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GA₃ increases the length of grape stalks and promotes stem elongation. In sugarcane, it increases the length of the stem, thereby increasing yield. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Applications of Gibberellins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The rapid elongation of internodes just prior to flowering in rosette plants is called:",
+      "options": ["Vernalization", "Etiolation", "Bolting", "Senescence"],
+      "correctAnswer": "C",
+      "explanation": "Bolting is the rapid elongation of internodes just prior to flowering in rosette plants like beet, cabbage, and henbane. Gibberellins induce bolting. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Bolting",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gibberellins promote early seed production in:",
+      "options": [
+        "All plants equally",
+        "Annual herbs only",
+        "Juvenile conifers",
+        "Aquatic plants only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Gibberellins can hasten maturity period in juvenile conifers, thus leading to early seed production. They also promote flowering in some plants. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Gibberellins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During seed germination, gibberellins stimulate production of enzymes like:",
+      "options": ["Lipases only", "Proteases only", "α-amylases only", "All of the above"],
+      "correctAnswer": "D",
+      "explanation": "During germination, gibberellins stimulate the production of various hydrolytic enzymes including α-amylases, lipases, and proteases to mobilize stored food reserves. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Gibberellins in Seed Germination",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The brewing industry uses gibberellins for:",
+      "options": ["Flavoring", "Speed up malting process", "Preservation", "Coloring"],
+      "correctAnswer": "B",
+      "explanation": "Gibberellins are used in the brewing industry to speed up the malting process by stimulating α-amylase production in barley seeds. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Applications of Gibberellins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cytokinins were discovered by:",
+      "options": ["F.W. Went", "E. Kurosawa", "Skoog and Miller", "Charles Darwin"],
+      "correctAnswer": "C",
+      "explanation": "Skoog and Miller discovered and named cytokinins. They identified kinetin from autoclaved herring sperm DNA and later zeatin from corn (maize). (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Cytokinins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Kinetin was isolated from:",
+      "options": ["Corn kernels", "Coconut milk", "Autoclaved herring sperm DNA", "Yeast extract"],
+      "correctAnswer": "C",
+      "explanation": "Kinetin was isolated from autoclaved herring sperm DNA. It does not occur naturally in plants but has cytokinin-like activity. (NCERT Page 172)",
+      "difficulty": "MEDIUM",
+      "topic": "Discovery of Cytokinins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The natural cytokinin zeatin was isolated from:",
+      "options": ["Corn (Zea mays)", "Herring sperm", "Coconut", "Bacteria"],
+      "correctAnswer": "A",
+      "explanation": "Zeatin, the first naturally occurring cytokinin, was isolated from corn (Zea mays) kernels and immature corn. It is named after Zea mays. (NCERT Page 172-173)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Cytokinins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cytokinins are synthesized in:",
+      "options": [
+        "Regions of rapid cell division like root apices",
+        "Shoot tips only",
+        "Mature leaves",
+        "Bark tissues"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cytokinins are synthesized in regions where rapid cell division occurs, for example, root apices, developing shoot buds, young fruits. (NCERT Page 173)",
+      "difficulty": "EASY",
+      "topic": "Synthesis of Cytokinins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The primary function of cytokinins is to promote:",
+      "options": [
+        "Cell division (cytokinesis)",
+        "Cell elongation",
+        "Seed dormancy",
+        "Leaf abscission"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cytokinins primarily promote cytokinesis (cell division), especially when present along with auxins. They are named after this function. (NCERT Page 173)",
+      "difficulty": "EASY",
+      "topic": "Functions of Cytokinins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cytokinins help in overcoming:",
+      "options": [
+        "Vernalization requirement",
+        "Photoperiodic response",
+        "Apical dominance",
+        "Phototropism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cytokinins help overcome apical dominance by promoting the growth of lateral buds. They counteract the inhibitory effect of auxin from the apical bud. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Cytokinins",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cytokinins delay senescence of leaves. This is called:",
+      "options": ["Apical dominance", "Bolting effect", "Richmond-Lang effect", "Vernalization"],
+      "correctAnswer": "C",
+      "explanation": "The ability of cytokinins to delay leaf senescence is called the Richmond-Lang effect. They promote nutrient mobilization to treated areas. (NCERT Page 173)",
+      "difficulty": "HARD",
+      "topic": "Functions of Cytokinins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cytokinins promote nutrient mobilization. This helps in:",
+      "options": [
+        "Delaying leaf senescence",
+        "Promoting dormancy",
+        "Inducing abscission",
+        "Promoting root formation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cytokinins promote nutrient mobilization, which helps in delaying senescence of leaves. Nutrients move to areas with high cytokinin concentration. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Cytokinins",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ethylene is unique among plant hormones because it is:",
+      "options": ["A solid compound", "A gaseous hormone", "A liquid compound", "A protein"],
+      "correctAnswer": "B",
+      "explanation": "Ethylene is unique because it is a simple gaseous hormone (C₂H₄). It was the first gaseous plant hormone discovered. (NCERT Page 173)",
+      "difficulty": "EASY",
+      "topic": "Ethylene Properties",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ethylene is synthesized from:",
+      "options": ["Methionine", "Tryptophan", "Tyrosine", "Phenylalanine"],
+      "correctAnswer": "A",
+      "explanation": "Ethylene is synthesized in large amounts by tissues undergoing senescence and ripening fruits. It is synthesized from the amino acid methionine. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Ethylene Synthesis",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The horizontal growth of seedlings, swelling of the axis, and apical hook formation is called:",
+      "options": ["Phototropism", "Triple response", "Geotropism", "Bolting"],
+      "correctAnswer": "B",
+      "explanation": "Triple response to ethylene includes: (1) inhibition of stem elongation, (2) increase in thickness of stem (swelling), and (3) transverse orientation of stem (horizontal growth). (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Ethylene",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ethylene promotes:",
+      "options": ["Stem elongation", "Seed dormancy", "Fruit ripening", "Leaf expansion"],
+      "correctAnswer": "C",
+      "explanation": "Ethylene is widely used to promote ripening of climacteric fruits like apples, bananas, and tomatoes. It hastens fruit ripening. (NCERT Page 173)",
+      "difficulty": "EASY",
+      "topic": "Functions of Ethylene",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ethylene promotes senescence and abscission of:",
+      "options": [
+        "Root tips only",
+        "Stem only",
+        "Plant organs like leaves and flowers",
+        "Seeds only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ethylene promotes senescence and abscission of plant organs especially leaves and flowers. It accelerates the natural aging process. (NCERT Page 173)",
+      "difficulty": "EASY",
+      "topic": "Functions of Ethylene",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ethylene is highly effective in:",
+      "options": [
+        "Inducing dormancy in seeds",
+        "Promoting flowering",
+        "Preventing fruit ripening",
+        "Inducing flowering in pineapples"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ethylene is highly effective in inducing flowering in pineapple. It also promotes female flower formation in cucurbits. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Ethylene",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fruits that show a sudden rise in respiration rate during ripening are called:",
+      "options": [
+        "Non-climacteric fruits",
+        "Parthenocarpic fruits",
+        "Climacteric fruits",
+        "Aggregate fruits"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Climacteric fruits show a sudden rise in respiration rate (respiratory climacteric) during ripening. Examples include apple, banana, mango. Ethylene promotes this process. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Climacteric Fruits",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Abscisic acid (ABA) is also known as:",
+      "options": ["Growth hormone", "Stress hormone", "Flowering hormone", "Ripening hormone"],
+      "correctAnswer": "B",
+      "explanation": "Abscisic acid (ABA) is called the stress hormone because it increases plant tolerance to various stresses. It also inhibits growth and metabolism. (NCERT Page 174)",
+      "difficulty": "EASY",
+      "topic": "Abscisic Acid",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ABA acts as a growth inhibitor and:",
+      "options": [
+        "Inhibits seed germination and induces dormancy",
+        "Promotes seed germination",
+        "Promotes flowering",
+        "Promotes cell elongation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "ABA acts as a general plant growth inhibitor, inhibits seed germination, and induces dormancy. It also stimulates closure of stomata during water stress. (NCERT Page 174)",
+      "difficulty": "EASY",
+      "topic": "Functions of ABA",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ABA stimulates closure of stomata in:",
+      "options": ["Epidermis of leaves", "Root cortex", "Stem epidermis", "Flower petals"],
+      "correctAnswer": "A",
+      "explanation": "ABA stimulates the closure of stomata in the epidermis of leaves. This helps reduce water loss during stress conditions. (NCERT Page 174)",
+      "difficulty": "EASY",
+      "topic": "Functions of ABA",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ABA increases the tolerance of plants to:",
+      "options": [
+        "Only drought stress",
+        "Various kinds of stresses",
+        "Only cold stress",
+        "Only salt stress"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ABA increases the tolerance of plants to various kinds of stresses including drought, cold, and salinity. Hence it's called the stress hormone. (NCERT Page 174)",
+      "difficulty": "EASY",
+      "topic": "Functions of ABA",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plant growth regulators that promote plant growth are called:",
+      "options": [
+        "Plant growth inhibitors",
+        "Plant growth retardants",
+        "Plant growth promoters",
+        "Plant growth hormones only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plant growth promoters include auxins, gibberellins, and cytokinins. They promote cell division, cell enlargement, flowering, fruiting, and seed formation. (NCERT Page 174)",
+      "difficulty": "EASY",
+      "topic": "Classification of PGRs",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following acts as both growth promoter and inhibitor depending on concentration?",
+      "options": ["ABA only", "Gibberellin only", "Ethylene", "Cytokinin only"],
+      "correctAnswer": "C",
+      "explanation": "Ethylene is placed in a separate category as it can be both growth promoter and inhibitor depending on its concentration and the plant part. (NCERT Page 174)",
+      "difficulty": "MEDIUM",
+      "topic": "Classification of PGRs",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Photoperiodism is the response of plants to:",
+      "options": [
+        "Relative lengths of day and night",
+        "Light intensity",
+        "Light quality",
+        "Temperature changes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Photoperiodism is the response of plants to the relative lengths of day and night (photoperiod). It affects flowering in many plants. (NCERT Page 175)",
+      "difficulty": "EASY",
+      "topic": "Photoperiodism",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants requiring long day photoperiod for flowering are called:",
+      "options": [
+        "Short day plants",
+        "Day neutral plants",
+        "Long day plants",
+        "Night flowering plants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Long day plants (LDP) require long day photoperiod (light period exceeding a critical duration) to flower. Examples include henbane and wheat. (NCERT Page 175)",
+      "difficulty": "EASY",
+      "topic": "Photoperiodism",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Short day plants flower when:",
+      "options": [
+        "Light period exceeds critical length",
+        "Light period is less than critical length",
+        "Light period is equal to dark period",
+        "Regardless of photoperiod"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Short day plants (SDP) require light period less than a critical length to flower. Examples include tobacco, soybean, and chrysanthemum. (NCERT Page 175)",
+      "difficulty": "MEDIUM",
+      "topic": "Photoperiodism",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants that flower regardless of the duration of light are called:",
+      "options": [
+        "Day neutral plants",
+        "Short day plants",
+        "Long day plants",
+        "Intermediate plants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Day neutral plants can flower regardless of the duration of light exposure. Examples include tomato and cotton. (NCERT Page 175)",
+      "difficulty": "EASY",
+      "topic": "Photoperiodism",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The role of low temperature in flowering is called:",
+      "options": ["Photoperiodism", "Bolting", "Vernalization", "Etiolation"],
+      "correctAnswer": "C",
+      "explanation": "Vernalization is the phenomenon where exposure to low temperature promotes flowering in certain plants. Some plants require cold treatment to flower. (NCERT Page 175)",
+      "difficulty": "EASY",
+      "topic": "Vernalization",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is an example of vernalization?",
+      "options": [
+        "Flowering in pineapple",
+        "Bolting in beet",
+        "Winter wheat requiring cold treatment to flower",
+        "Parthenocarpy in tomatoes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Winter wheat requires vernalization (cold treatment) for flowering. Plants are exposed to low temperature (0-5°C) for a period to acquire the ability to flower. (NCERT Page 175)",
+      "difficulty": "MEDIUM",
+      "topic": "Vernalization",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Seed dormancy can be broken by:",
+      "options": [
+        "ABA application",
+        "Gibberellin application",
+        "Reducing light exposure",
+        "Increasing ethylene exposure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Seed dormancy can be broken by gibberellin application. Gibberellins overcome the inhibitory effect of ABA on seed germination and break dormancy. (NCERT Page 172)",
+      "difficulty": "EASY",
+      "topic": "Seed Dormancy",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The antagonistic relationship between ABA and gibberellins is seen in:",
+      "options": [
+        "Seed dormancy and germination",
+        "Fruit ripening",
+        "Root formation",
+        "Leaf senescence"
+      ],
+      "correctAnswer": "A",
+      "explanation": "ABA and gibberellins show antagonistic effects in seed dormancy. ABA promotes dormancy while gibberellins break dormancy and promote germination. (NCERT Page 174)",
+      "difficulty": "MEDIUM",
+      "topic": "Hormone Interactions",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ratio of auxin to cytokinin determines:",
+      "options": [
+        "Root and shoot differentiation in tissue culture",
+        "Flowering time",
+        "Fruit ripening",
+        "Seed dormancy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In tissue culture, high auxin:cytokinin ratio promotes root formation while low ratio promotes shoot formation. Equal ratio promotes callus formation. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Hormone Interactions",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which hormone pair is involved in apical dominance?",
+      "options": [
+        "Auxin and cytokinin",
+        "ABA and ethylene",
+        "Gibberellin and ABA",
+        "Ethylene and gibberellin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Apical dominance involves auxin (promoting dominance from apical bud) and cytokinin (promoting lateral bud growth). They have antagonistic effects. (NCERT Page 171, 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Hormone Interactions",
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Auxin causes elongation of cells in stem but inhibits growth in:",
+      "options": ["Leaves", "Flowers", "Roots at higher concentration", "Fruits"],
+      "correctAnswer": "C",
+      "explanation": "Auxin promotes cell elongation in stems but at higher concentrations inhibits root growth. This differential sensitivity explains geotropism. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Differential Auxin Response",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The movement of auxin from shoot tip to base is called:",
+      "options": [
+        "Basipetal or polar transport",
+        "Acropetal movement",
+        "Lateral movement",
+        "Radial movement"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Auxin shows polar transport - basipetal (from tip to base) in shoots. This polarity is maintained by auxin carrier proteins and is crucial for its functions. (NCERT Page 171)",
+      "difficulty": "MEDIUM",
+      "topic": "Auxin Transport",
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Female flowers in cucumbers can be increased by application of:",
+      "options": ["Ethylene", "Gibberellins", "ABA", "Cytokinins"],
+      "correctAnswer": "A",
+      "explanation": "Ethylene promotes female flower formation in cucurbits like cucumber. It also induces flowering in pineapples. (NCERT Page 173)",
+      "difficulty": "MEDIUM",
+      "topic": "Functions of Ethylene",
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

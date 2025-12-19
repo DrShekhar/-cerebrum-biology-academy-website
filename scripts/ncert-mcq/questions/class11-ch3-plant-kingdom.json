@@ -1,0 +1,727 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 3,
+  "ncertChapterName": "Plant Kingdom",
+  "questions": [
+    {
+      "question": "Which type of classification system was given by George Bentham and Joseph Dalton Hooker?",
+      "options": [
+        "Artificial classification",
+        "Phylogenetic classification",
+        "Numerical taxonomy",
+        "Natural classification"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bentham and Hooker gave natural classification system for flowering plants based on natural affinities and considering external as well as internal features like anatomy, embryology and phytochemistry. (NCERT Page 24)",
+      "difficulty": "MEDIUM",
+      "topic": "Classification Systems",
+      "ncertPage": 24,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Numerical taxonomy is based on:",
+      "options": [
+        "All observable characteristics",
+        "Evolutionary relationships",
+        "Only morphological characters",
+        "Chemical constituents"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Numerical Taxonomy is based on all observable characteristics. Numbers and codes are assigned to all characters and data are processed using computers. (NCERT Page 24)",
+      "difficulty": "EASY",
+      "topic": "Classification Systems",
+      "ncertPage": 24,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Cytotaxonomy is based on which of the following?",
+      "options": [
+        "Embryological features",
+        "Chemical constituents",
+        "Chromosome number and structure",
+        "Anatomical features"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cytotaxonomy is based on cytological information like chromosome number, structure, and behaviour. (NCERT Page 24)",
+      "difficulty": "EASY",
+      "topic": "Classification Systems",
+      "ncertPage": 24,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which taxonomy uses chemical constituents of plants to resolve taxonomic confusions?",
+      "options": ["Numerical taxonomy", "Cytotaxonomy", "Phylogenetic taxonomy", "Chemotaxonomy"],
+      "correctAnswer": "D",
+      "explanation": "Chemotaxonomy uses the chemical constituents of plants to resolve confusions in classification. (NCERT Page 24)",
+      "difficulty": "EASY",
+      "topic": "Classification Systems",
+      "ncertPage": 24,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Algae are characterized as:",
+      "options": [
+        "Non-chlorophyllous, heterotrophic organisms",
+        "Chlorophyll-bearing, thalloid, autotrophic organisms",
+        "Vascular, autotrophic organisms",
+        "Seed-bearing plants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Algae are chlorophyll-bearing, simple, thalloid, autotrophic and largely aquatic organisms. (NCERT Page 24)",
+      "difficulty": "EASY",
+      "topic": "Algae",
+      "ncertPage": 24,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In which organisms do algae occur in association?",
+      "options": [
+        "Only fungi",
+        "Only animals",
+        "Fungi (lichen) and animals (sloth bear)",
+        "Only higher plants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Some algae occur in association with fungi (lichen) and animals (e.g., on sloth bear). (NCERT Page 24)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 24,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most common type of asexual reproduction in algae is through:",
+      "options": ["Zoospores", "Fragmentation", "Budding", "Binary fission"],
+      "correctAnswer": "A",
+      "explanation": "Asexual reproduction in algae is by production of different types of spores, the most common being zoospores which are flagellated (motile). (NCERT Page 24)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 24,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Isogamous reproduction involves fusion of gametes that are:",
+      "options": [
+        "Different in size but similar in structure",
+        "One large non-motile and one small motile",
+        "Always non-flagellated",
+        "Similar in size"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Isogamous reproduction involves fusion of gametes that are similar in size, as in Ulothrix and Spirogyra. (NCERT Page 24)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 24,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oogamous reproduction is seen in:",
+      "options": ["Ulothrix", "Spirogyra", "Volvox and Fucus", "Eudorina"],
+      "correctAnswer": "C",
+      "explanation": "Oogamous reproduction (fusion between large non-motile female gamete and smaller motile male gamete) is seen in Volvox and Fucus. (NCERT Page 24)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 24,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "What percentage of total carbon dioxide fixation on earth is carried out by algae?",
+      "options": ["About 25%", "About 75%", "Nearly 100%", "At least 50%"],
+      "correctAnswer": "D",
+      "explanation": "At least half of the total carbon dioxide fixation on earth is carried out by algae through photosynthesis. (NCERT Page 26)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 26,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Agar is obtained from which of the following algae?",
+      "options": [
+        "Gelidium and Gracilaria",
+        "Laminaria and Sargassum",
+        "Porphyra and Chlorella",
+        "Volvox and Ulothrix"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Agar is one of the commercial products obtained from Gelidium and Gracilaria (red algae). It is used to grow microbes and in preparations of ice-creams and jellies. (NCERT Page 26)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 26,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Algin is a hydrocolloid obtained from:",
+      "options": ["Red algae", "Green algae", "Brown algae", "Blue-green algae"],
+      "correctAnswer": "C",
+      "explanation": "Algin is a hydrocolloid (water holding substance) obtained from brown algae. (NCERT Page 26)",
+      "difficulty": "MEDIUM",
+      "topic": "Algae",
+      "ncertPage": 26,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chlorella is used as food supplement because it is rich in:",
+      "options": ["Carbohydrates", "Proteins", "Fats", "Vitamins only"],
+      "correctAnswer": "B",
+      "explanation": "Chlorella, a unicellular alga rich in proteins, is used as food supplement even by space travellers. (NCERT Page 26)",
+      "difficulty": "EASY",
+      "topic": "Algae",
+      "ncertPage": 26,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The green colour of Chlorophyceae is due to dominance of:",
+      "options": ["Fucoxanthin", "Phycoerythrin", "Chlorophyll a and c", "Chlorophyll a and b"],
+      "correctAnswer": "D",
+      "explanation": "Members of Chlorophyceae are grass green due to the dominance of pigments chlorophyll a and b. (NCERT Page 26)",
+      "difficulty": "EASY",
+      "topic": "Chlorophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyrenoids in green algae contain:",
+      "options": ["Only starch", "Only protein", "Protein and starch", "Lipids only"],
+      "correctAnswer": "C",
+      "explanation": "Pyrenoids are storage bodies located in chloroplasts of green algae. They contain protein besides starch. (NCERT Page 26)",
+      "difficulty": "MEDIUM",
+      "topic": "Chlorophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cell wall of green algae consists of:",
+      "options": [
+        "Only cellulose",
+        "Cellulose and algin",
+        "Pectin and polysulphate esters",
+        "Cellulose and pectose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Green algae have a rigid cell wall made of an inner layer of cellulose and an outer layer of pectose. (NCERT Page 26)",
+      "difficulty": "MEDIUM",
+      "topic": "Chlorophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a green alga?",
+      "options": ["Laminaria", "Chlamydomonas", "Volvox", "Spirogyra"],
+      "correctAnswer": "A",
+      "explanation": "Laminaria is a brown alga (Phaeophyceae). Chlamydomonas, Volvox, and Spirogyra are green algae. (NCERT Page 26)",
+      "difficulty": "EASY",
+      "topic": "Chlorophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Brown algae are found primarily in:",
+      "options": [
+        "Fresh water habitats",
+        "Marine habitats",
+        "Terrestrial habitats",
+        "Brackish water only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The members of Phaeophyceae or brown algae are found primarily in marine habitats. (NCERT Page 26)",
+      "difficulty": "EASY",
+      "topic": "Phaeophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The brown colour in Phaeophyceae is due to the pigment:",
+      "options": ["Phycoerythrin", "Chlorophyll b", "Fucoxanthin", "Carotene"],
+      "correctAnswer": "C",
+      "explanation": "Brown algae vary in colour from olive green to brown depending upon the amount of xanthophyll pigment fucoxanthin present in them. (NCERT Page 26)",
+      "difficulty": "EASY",
+      "topic": "Phaeophyceae",
+      "ncertPage": 26,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Food is stored in brown algae in the form of:",
+      "options": ["Starch", "Laminarin and mannitol", "Glycogen", "Floridean starch"],
+      "correctAnswer": "B",
+      "explanation": "Food is stored in brown algae as complex carbohydrates in the form of laminarin or mannitol. (NCERT Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Phaeophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The plant body of brown algae is attached to the substratum by:",
+      "options": ["Roots", "Rhizoids", "Stipe", "Holdfast"],
+      "correctAnswer": "D",
+      "explanation": "The plant body of brown algae is usually attached to the substratum by a holdfast, and has a stalk (stipe) and leaf-like photosynthetic organ (frond). (NCERT Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Phaeophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The zoospores in brown algae are:",
+      "options": [
+        "Non-flagellated",
+        "Biflagellate pear-shaped with unequal laterally attached flagella",
+        "Biflagellate with equal flagella",
+        "Uniflagellate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Asexual reproduction in brown algae is by biflagellate zoospores that are pear-shaped and have two unequal laterally attached flagella. (NCERT Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Phaeophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Red algae are called so because of the pigment:",
+      "options": ["Fucoxanthin", "Chlorophyll d", "Carotenoids", "r-Phycoerythrin"],
+      "correctAnswer": "D",
+      "explanation": "Red algae are called so because of the predominance of the red pigment r-phycoerythrin in their body. (NCERT Page 27)",
+      "difficulty": "EASY",
+      "topic": "Rhodophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Food is stored in red algae as:",
+      "options": ["Floridean starch", "Starch", "Laminarin", "Mannitol"],
+      "correctAnswer": "A",
+      "explanation": "Food in red algae is stored as floridean starch which is very similar to amylopectin and glycogen in structure. (NCERT Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Rhodophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Red algae reproduce sexually by:",
+      "options": ["Motile gametes", "Flagellated spores", "Zoospores", "Non-motile gametes"],
+      "correctAnswer": "D",
+      "explanation": "Red algae reproduce asexually by non-motile spores and sexually by non-motile gametes. (NCERT Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Rhodophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The flagellar arrangement in green algae is:",
+      "options": ["2, unequal, lateral", "Absent", "2-8, equal, apical", "2, unequal, apical"],
+      "correctAnswer": "C",
+      "explanation": "In Chlorophyceae, flagella are 2-8 in number, equal in size, and apically inserted. (NCERT Table 3.1, Page 27)",
+      "difficulty": "HARD",
+      "topic": "Chlorophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which class of algae completely lacks flagella?",
+      "options": ["Chlorophyceae", "Rhodophyceae", "Phaeophyceae", "All algae have flagella"],
+      "correctAnswer": "B",
+      "explanation": "Rhodophyceae (red algae) lack flagella completely. Their spores and gametes are non-motile. (NCERT Table 3.1, Page 27)",
+      "difficulty": "MEDIUM",
+      "topic": "Rhodophyceae",
+      "ncertPage": 27,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bryophytes are called 'amphibians of plant kingdom' because:",
+      "options": [
+        "They live only in water",
+        "They evolved from amphibians",
+        "They can live in soil but need water for sexual reproduction",
+        "They can live both in water and on land equally"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bryophytes are called amphibians of the plant kingdom because these plants can live in soil but are dependent on water for sexual reproduction. (NCERT Page 29)",
+      "difficulty": "EASY",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The main plant body of bryophyte is:",
+      "options": [
+        "Haploid gametophyte",
+        "Diploid sporophyte",
+        "Diploid gametophyte",
+        "Haploid sporophyte"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The main plant body of the bryophyte is haploid. It produces gametes, hence is called a gametophyte. (NCERT Page 29)",
+      "difficulty": "MEDIUM",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The male sex organ in bryophytes is called:",
+      "options": ["Archegonium", "Oogonium", "Antheridium", "Sporangium"],
+      "correctAnswer": "C",
+      "explanation": "The male sex organ in bryophytes is called antheridium. They produce biflagellate antherozoids. (NCERT Page 29)",
+      "difficulty": "EASY",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The female sex organ in bryophytes is:",
+      "options": [
+        "Flask-shaped archegonium",
+        "Spherical antheridium",
+        "Cup-shaped oogonium",
+        "Tubular sporangium"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The female sex organ called archegonium is flask-shaped and produces a single egg. (NCERT Page 29)",
+      "difficulty": "EASY",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In bryophytes, the sporophyte is:",
+      "options": [
+        "Free-living and independent",
+        "Photosynthetic and autotrophic",
+        "Attached to gametophyte and derives nourishment from it",
+        "Dominant phase of life cycle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The sporophyte in bryophytes is not free-living but attached to the photosynthetic gametophyte and derives nourishment from it. (NCERT Page 29)",
+      "difficulty": "MEDIUM",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sphagnum is used as packing material because of its:",
+      "options": [
+        "Light weight",
+        "Antiseptic properties",
+        "Capacity to hold water",
+        "Elastic nature"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Species of Sphagnum provide peat used as fuel and packing material for trans-shipment of living material because of their capacity to hold water. (NCERT Page 29)",
+      "difficulty": "MEDIUM",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which organisms are the first to colonise bare rocks?",
+      "options": ["Ferns and horsetails", "Mosses and lichens", "Gymnosperms", "Angiosperms"],
+      "correctAnswer": "B",
+      "explanation": "Mosses along with lichens are the first organisms to colonise rocks and hence are of great ecological importance. (NCERT Page 29)",
+      "difficulty": "EASY",
+      "topic": "Bryophytes",
+      "ncertPage": 29,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The thallus of Marchantia is:",
+      "options": [
+        "Erect and radial",
+        "Cylindrical and floating",
+        "Dorsiventral and appressed to substrate",
+        "Branched and filamentous"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The plant body of Marchantia is thalloid. The thallus is dorsiventral and closely appressed to the substrate. (NCERT Page 29)",
+      "difficulty": "MEDIUM",
+      "topic": "Liverworts",
+      "ncertPage": 29,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gemmae in liverworts are:",
+      "options": [
+        "Sexual reproductive structures",
+        "Female sex organs",
+        "Green, multicellular, asexual buds",
+        "Male sex organs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Gemmae are green, multicellular, asexual buds which develop in small receptacles called gemma cups. They germinate to form new individuals. (NCERT Page 29)",
+      "difficulty": "MEDIUM",
+      "topic": "Liverworts",
+      "ncertPage": 29,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sporophyte of liverwort is differentiated into:",
+      "options": [
+        "Root, stem and leaves",
+        "Holdfast, stipe and frond",
+        "Foot, seta and capsule",
+        "Rhizome, roots and fronds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The sporophyte of liverwort is differentiated into a foot, seta and capsule. Spores are produced within the capsule after meiosis. (NCERT Page 30)",
+      "difficulty": "MEDIUM",
+      "topic": "Liverworts",
+      "ncertPage": 30,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first stage in the life cycle of moss is:",
+      "options": ["Protonema stage", "Leafy stage", "Sporophyte stage", "Capsule stage"],
+      "correctAnswer": "A",
+      "explanation": "The gametophyte of moss consists of two stages. The first stage is the protonema stage which develops directly from a spore. It is creeping, green, branched and filamentous. (NCERT Page 30)",
+      "difficulty": "MEDIUM",
+      "topic": "Mosses",
+      "ncertPage": 30,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The leafy stage of moss develops from:",
+      "options": ["Spore directly", "Zygote", "Secondary protonema as a lateral bud", "Capsule"],
+      "correctAnswer": "C",
+      "explanation": "The second stage (leafy stage) develops from the secondary protonema as a lateral bud. It consists of upright, slender axes bearing spirally arranged leaves. (NCERT Page 30)",
+      "difficulty": "HARD",
+      "topic": "Mosses",
+      "ncertPage": 30,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In mosses, sex organs are produced at the:",
+      "options": [
+        "Base of the leafy shoot",
+        "On the protonema",
+        "Apex of the leafy shoot",
+        "On the capsule"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In sexual reproduction, the sex organs antheridia and archegonia are produced at the apex of the leafy shoots. (NCERT Page 30)",
+      "difficulty": "MEDIUM",
+      "topic": "Mosses",
+      "ncertPage": 30,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pteridophytes are the first terrestrial plants to possess:",
+      "options": ["Seeds", "Vascular tissues (xylem and phloem)", "Flowers", "Fruits"],
+      "correctAnswer": "B",
+      "explanation": "Evolutionarily, pteridophytes are the first terrestrial plants to possess vascular tissues - xylem and phloem. (NCERT Page 30)",
+      "difficulty": "EASY",
+      "topic": "Pteridophytes",
+      "ncertPage": 30,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In pteridophytes, the main plant body is:",
+      "options": [
+        "Diploid sporophyte",
+        "Haploid gametophyte",
+        "Haploid sporophyte",
+        "Diploid gametophyte"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In pteridophytes, the main plant body is a sporophyte which is differentiated into true root, stem and leaves with well-differentiated vascular tissues. (NCERT Page 30)",
+      "difficulty": "MEDIUM",
+      "topic": "Pteridophytes",
+      "ncertPage": 30,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Small leaves in pteridophytes are called:",
+      "options": ["Macrophylls", "Microphylls", "Megaphylls", "Sporophylls"],
+      "correctAnswer": "B",
+      "explanation": "The leaves in pteridophyta are small (microphylls) as in Selaginella or large (macrophylls) as in ferns. (NCERT Page 30)",
+      "difficulty": "EASY",
+      "topic": "Pteridophytes",
+      "ncertPage": 30,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Strobili or cones are formed by:",
+      "options": [
+        "Leaves arranged alternately",
+        "Roots modified for storage",
+        "Sporophylls arranged spirally along an axis",
+        "Stems modified for climbing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sporophylls may form distinct compact structures called strobili or cones when arranged spirally along an axis. Examples: Selaginella, Equisetum. (NCERT Page 30)",
+      "difficulty": "MEDIUM",
+      "topic": "Pteridophytes",
+      "ncertPage": 30,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The gametophyte of pteridophytes is called:",
+      "options": ["Protonema", "Thallus", "Prothallus", "Sporophyll"],
+      "correctAnswer": "C",
+      "explanation": "Spores germinate to give rise to inconspicuous, small but multicellular, free-living, mostly photosynthetic thalloid gametophytes called prothallus. (NCERT Page 32)",
+      "difficulty": "EASY",
+      "topic": "Pteridophytes",
+      "ncertPage": 32,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plants that produce spores of similar kinds are called:",
+      "options": ["Homosporous", "Heterosporous", "Anisosporous", "Megasporous"],
+      "correctAnswer": "A",
+      "explanation": "In majority of pteridophytes all spores are of similar kinds; such plants are called homosporous. (NCERT Page 32)",
+      "difficulty": "EASY",
+      "topic": "Pteridophytes",
+      "ncertPage": 32,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following pteridophytes is heterosporous?",
+      "options": ["Dryopteris", "Selaginella and Salvinia", "Pteris", "Adiantum"],
+      "correctAnswer": "B",
+      "explanation": "Genera like Selaginella and Salvinia produce two kinds of spores, macro (large) and micro (small) spores, and are known as heterosporous. (NCERT Page 32)",
+      "difficulty": "MEDIUM",
+      "topic": "Pteridophytes",
+      "ncertPage": 32,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The development of seed habit is considered an important step in evolution because:",
+      "options": [
+        "Seeds can be dispersed easily",
+        "Seeds provide food for animals",
+        "Seeds are colourful",
+        "Female gametophyte is retained on parent sporophyte and embryo develops within it"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In heterosporous pteridophytes, female gametophytes are retained on parent sporophytes and embryos develop within them. This is a precursor to seed habit. (NCERT Page 32)",
+      "difficulty": "HARD",
+      "topic": "Pteridophytes",
+      "ncertPage": 32,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Equisetum belongs to the class:",
+      "options": ["Sphenopsida", "Psilopsida", "Lycopsida", "Pteropsida"],
+      "correctAnswer": "A",
+      "explanation": "Pteridophytes are classified into four classes: Psilopsida (Psilotum), Lycopsida (Selaginella, Lycopodium), Sphenopsida (Equisetum) and Pteropsida (ferns). (NCERT Page 32)",
+      "difficulty": "MEDIUM",
+      "topic": "Pteridophytes",
+      "ncertPage": 32,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gymnosperms are plants with:",
+      "options": ["Enclosed seeds", "No seeds", "Naked seeds", "Spores only"],
+      "correctAnswer": "C",
+      "explanation": "In gymnosperms (gymnos: naked, sperma: seeds), ovules are not enclosed by ovary wall. After fertilisation, seeds remain exposed (naked). (NCERT Page 32)",
+      "difficulty": "EASY",
+      "topic": "Gymnosperms",
+      "ncertPage": 32,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "One of the tallest tree species belonging to gymnosperms is:",
+      "options": ["Cycas", "Sequoia", "Pinus", "Cedrus"],
+      "correctAnswer": "B",
+      "explanation": "The giant redwood tree Sequoia is one of the tallest tree species among gymnosperms. (NCERT Page 32)",
+      "difficulty": "EASY",
+      "topic": "Gymnosperms",
+      "ncertPage": 32,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Coralloid roots in Cycas are associated with:",
+      "options": [
+        "Mycorrhizal fungi",
+        "Parasitic bacteria",
+        "N2-fixing cyanobacteria",
+        "Rhizobium"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Cycas, small specialised roots called coralloid roots are associated with N2-fixing cyanobacteria. (NCERT Page 32)",
+      "difficulty": "MEDIUM",
+      "topic": "Gymnosperms",
+      "ncertPage": 32,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mycorrhizal association in roots is found in:",
+      "options": ["Pinus", "Cycas", "Sequoia", "Ginkgo"],
+      "correctAnswer": "A",
+      "explanation": "Roots in some genera like Pinus have fungal association in the form of mycorrhiza. (NCERT Page 32)",
+      "difficulty": "MEDIUM",
+      "topic": "Gymnosperms",
+      "ncertPage": 32,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The stems of Cycas are:",
+      "options": ["Highly branched", "Underground", "Unbranched", "Climbing"],
+      "correctAnswer": "C",
+      "explanation": "The stems are unbranched (Cycas) or branched (Pinus, Cedrus). (NCERT Page 32)",
+      "difficulty": "EASY",
+      "topic": "Gymnosperms",
+      "ncertPage": 32,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The reduced male gametophyte in gymnosperms is called:",
+      "options": ["Pollen grain", "Prothallus", "Embryo sac", "Nucellus"],
+      "correctAnswer": "A",
+      "explanation": "The microspores develop into a highly reduced male gametophyte confined to limited cells. This reduced gametophyte is called a pollen grain. (NCERT Page 33)",
+      "difficulty": "MEDIUM",
+      "topic": "Gymnosperms",
+      "ncertPage": 33,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Pinus, male and female cones are borne on:",
+      "options": ["Different trees", "Only female trees", "Same tree", "Only male trees"],
+      "correctAnswer": "C",
+      "explanation": "The male or female cones or strobili may be borne on the same tree (Pinus). However, in Cycas male cones and megasporophylls are borne on different trees. (NCERT Page 33)",
+      "difficulty": "MEDIUM",
+      "topic": "Gymnosperms",
+      "ncertPage": 33,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The composite structure of nucellus protected by envelopes is called:",
+      "options": ["Seed", "Embryo", "Ovule", "Pollen grain"],
+      "correctAnswer": "C",
+      "explanation": "The nucellus is protected by envelopes and the composite structure is called an ovule. (NCERT Page 33)",
+      "difficulty": "MEDIUM",
+      "topic": "Gymnosperms",
+      "ncertPage": 33,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In angiosperms, seeds are:",
+      "options": ["Naked", "Absent", "Enclosed in fruits", "Exposed on leaves"],
+      "correctAnswer": "C",
+      "explanation": "In angiosperms or flowering plants, the seeds are enclosed in fruits, unlike gymnosperms where seeds are naked. (NCERT Page 34)",
+      "difficulty": "EASY",
+      "topic": "Angiosperms",
+      "ncertPage": 34,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The smallest angiosperm is:",
+      "options": ["Wolffia", "Eucalyptus", "Sequoia", "Cycas"],
+      "correctAnswer": "A",
+      "explanation": "Angiosperms range in size from the smallest Wolffia to tall trees of Eucalyptus (over 100 metres). (NCERT Page 34)",
+      "difficulty": "EASY",
+      "topic": "Angiosperms",
+      "ncertPage": 34,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Angiosperms are divided into:",
+      "options": [
+        "Gymnosperms and pteridophytes",
+        "Bryophytes and algae",
+        "Dicotyledons and monocotyledons",
+        "Liverworts and mosses"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Angiosperms are divided into two classes: the dicotyledons and the monocotyledons. (NCERT Page 34)",
+      "difficulty": "EASY",
+      "topic": "Angiosperms",
+      "ncertPage": 34,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

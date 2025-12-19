@@ -1,0 +1,972 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 6,
+  "ncertChapterName": "Molecular Basis of Inheritance",
+  "questions": [
+    {
+      "question": "The sugar in DNA is:",
+      "options": ["Fructose", "Ribose", "Deoxyribose", "Glucose"],
+      "correctAnswer": "C",
+      "explanation": "DNA contains deoxyribose sugar, which lacks an oxygen at the 2' carbon position. RNA contains ribose sugar with a hydroxyl group at 2' position. This structural difference affects stability.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hershey and Chase experiment used:",
+      "options": ["Bacteria", "Bacteriophage (T2 phage)", "Drosophila", "Pea plants"],
+      "correctAnswer": "B",
+      "explanation": "Hershey and Chase (1952) used T2 bacteriophage and E. coli. They labeled phage DNA with ³²P and protein with ³⁵S to conclusively prove that DNA is the genetic material that enters the bacterial cell.",
+      "difficulty": "EASY",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 95,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In prokaryotes, transcription and translation:",
+      "options": [
+        "Are coupled (occur simultaneously)",
+        "Only transcription occurs",
+        "Only translation occurs",
+        "Occur in different compartments"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In prokaryotes, transcription and translation are coupled - translation begins even before transcription is complete because there is no nuclear membrane. In eukaryotes, they are separated spatially.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Expression",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Taq polymerase used in PCR is obtained from:",
+      "options": ["Yeast", "E. coli", "Thermus aquaticus", "Drosophila"],
+      "correctAnswer": "C",
+      "explanation": "Taq polymerase is a thermostable DNA polymerase obtained from Thermus aquaticus, a bacterium found in hot springs. It can withstand high temperatures used in PCR denaturation step.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Techniques",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Origin of replication in E. coli is called:",
+      "options": ["Centromere", "Telomere", "ARS", "OriC"],
+      "correctAnswer": "D",
+      "explanation": "The origin of replication in E. coli chromosome is called OriC (origin of chromosomal replication). It is a specific DNA sequence where replication initiates.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Griffith's experiment proved that:",
+      "options": [
+        "Proteins are genetic material",
+        "RNA is genetic material",
+        "DNA is the genetic material",
+        "Some transforming principle can change genetic properties"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Griffith's experiment proved that some 'transforming principle' from heat-killed bacteria could transform live non-virulent bacteria. He did not identify what this transforming principle was - that was done by Avery et al.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 94,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme that unwinds DNA double helix during replication is:",
+      "options": ["Primase", "DNA polymerase", "Helicase", "Ligase"],
+      "correctAnswer": "C",
+      "explanation": "Helicase unwinds the DNA double helix at the replication fork by breaking hydrogen bonds between base pairs. It uses ATP hydrolysis to separate the two strands.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA fingerprinting is used in:",
+      "options": [
+        "Forensic analysis",
+        "Identification of genetic diseases",
+        "All of the above",
+        "Paternity testing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "DNA fingerprinting has numerous applications: paternity/maternity testing, forensic investigations (crime scene evidence), identification of bodies, detecting genetic diseases, and evolutionary studies.",
+      "difficulty": "EASY",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The structural gene in an operon is preceded by:",
+      "options": ["Enhancer", "Terminator", "Operator", "Regulator"],
+      "correctAnswer": "C",
+      "explanation": "In an operon, the operator region is located between the promoter and structural genes. It is the site where repressor protein binds to block transcription.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Expression",
+      "ncertPage": 103,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA fingerprinting is based on:",
+      "options": ["Coding sequences", "Introns", "Promoters", "Repetitive DNA sequences (VNTRs)"],
+      "correctAnswer": "D",
+      "explanation": "DNA fingerprinting is based on Variable Number Tandem Repeats (VNTRs) or short tandem repeats (STRs). These repetitive sequences vary in number between individuals, creating unique patterns.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA polymerase synthesizes DNA in which direction?",
+      "options": ["Both directions", "No specific direction", "3' to 5'", "5' to 3'"],
+      "correctAnswer": "D",
+      "explanation": "DNA polymerase synthesizes DNA only in 5' to 3' direction by adding nucleotides to the 3'-OH group of the growing chain. It reads the template in 3' to 5' direction.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The distance between two adjacent base pairs in DNA is:",
+      "options": ["0.34 nm", "2 nm", "3.4 nm", "20 nm"],
+      "correctAnswer": "A",
+      "explanation": "The distance between two adjacent base pairs (rise per base pair) is 0.34 nm. With 10 base pairs per turn, the pitch (one complete turn) is 3.4 nm (10 × 0.34 nm).",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chargaff's rule states that:",
+      "options": ["Both B and C", "A = G and C = T", "A = T and G = C", "A + G = C + T"],
+      "correctAnswer": "A",
+      "explanation": "Chargaff's rules: (1) A = T and G = C (base pairing rule), (2) Total purines = Total pyrimidines (A + G = C + T). This provided crucial evidence for the complementary base pairing in DNA.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The number of hydrogen bonds between G-C base pair is:",
+      "options": ["2", "3", "4", "1"],
+      "correctAnswer": "B",
+      "explanation": "Guanine-Cytosine (G-C) base pair is held by 3 hydrogen bonds, making it stronger than A-T pair (2 bonds). DNA with higher GC content requires more energy to denature (higher melting temperature).",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The DNA strand that has the same sequence as mRNA (except T for U) is:",
+      "options": ["Template strand", "Coding strand", "Antisense strand", "Minus strand"],
+      "correctAnswer": "B",
+      "explanation": "The coding strand (sense strand, plus strand) has the same sequence as mRNA (except T instead of U). The template strand (antisense strand, minus strand) is complementary and is read by RNA polymerase.",
+      "difficulty": "MEDIUM",
+      "topic": "Transcription",
+      "ncertPage": 101,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Satellite DNA is:",
+      "options": [
+        "Coding DNA",
+        "Highly repetitive non-coding DNA",
+        "Mitochondrial DNA",
+        "Ribosomal DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Satellite DNA consists of highly repetitive non-coding DNA sequences. They form a distinct 'satellite' band in density gradient centrifugation due to different base composition. Used in DNA fingerprinting.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Exons are:",
+      "options": [
+        "Regulatory sequences",
+        "Intergenic sequences",
+        "Non-coding sequences",
+        "Coding sequences that appear in mature mRNA"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Exons are expressed sequences that code for protein. They are retained in mature mRNA after splicing removes introns. The term comes from 'expressed regions'.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 103,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The lac operon is an example of:",
+      "options": [
+        "Positive regulation only",
+        "Negative regulation only",
+        "Both positive and negative regulation",
+        "No regulation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The lac operon shows both negative regulation (by lac repressor - turned off when lactose absent) and positive regulation (by CAP-cAMP complex - enhanced when glucose absent).",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Expression Regulation",
+      "ncertPage": 107,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The lac operon contains how many structural genes?",
+      "options": ["3", "4", "1", "2"],
+      "correctAnswer": "A",
+      "explanation": "The lac operon has three structural genes: lacZ (β-galactosidase), lacY (permease), and lacA (transacetylase). These are transcribed as a single polycistronic mRNA.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Expression Regulation",
+      "ncertPage": 107,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Histones are rich in:",
+      "options": [
+        "Neutral amino acids",
+        "Aromatic amino acids",
+        "Acidic amino acids",
+        "Basic amino acids (lysine and arginine)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Histones are positively charged proteins rich in basic amino acids lysine and arginine. This allows them to bind tightly to negatively charged DNA phosphate backbone.",
+      "difficulty": "MEDIUM",
+      "topic": "Packaging of DNA",
+      "ncertPage": 98,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The number of hydrogen bonds between A-T base pair is:",
+      "options": ["1", "2", "3", "4"],
+      "correctAnswer": "B",
+      "explanation": "Adenine-Thymine (A-T) base pair is held by 2 hydrogen bonds. Guanine-Cytosine (G-C) base pair is held by 3 hydrogen bonds. This makes G-C pairs stronger and DNA with more GC content more stable.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In DNA, the backbone consists of:",
+      "options": ["Hydrogen bonds", "Proteins", "Nitrogenous bases", "Sugar-phosphate"],
+      "correctAnswer": "D",
+      "explanation": "The DNA backbone consists of alternating sugar (deoxyribose) and phosphate groups linked by phosphodiester bonds. The nitrogenous bases project inward and form hydrogen bonds with complementary bases.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The biochemical nature of 'transforming principle' was identified by:",
+      "options": [
+        "Watson and Crick",
+        "Griffith",
+        "Avery, MacLeod and McCarty",
+        "Hershey and Chase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Avery, MacLeod, and McCarty (1944) demonstrated that the transforming principle identified by Griffith was DNA. They purified DNA from heat-killed S strain and showed it could transform R strain to S strain.",
+      "difficulty": "EASY",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 94,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The central dogma of molecular biology is:",
+      "options": [
+        "DNA → RNA → Protein",
+        "RNA → DNA → Protein",
+        "Protein → RNA → DNA",
+        "DNA → Protein → RNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The central dogma of molecular biology (proposed by Crick) states that genetic information flows from DNA to RNA (transcription) to Protein (translation). Reverse transcription is an exception.",
+      "difficulty": "EASY",
+      "topic": "Central Dogma",
+      "ncertPage": 101,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stop codons (termination codons) are:",
+      "options": ["GUG, AUG, UGA", "UAU, UAC, UGG", "AUG, UAA, UAG", "UAA, UAG, UGA"],
+      "correctAnswer": "D",
+      "explanation": "UAA (ochre), UAG (amber), and UGA (opal) are the three stop codons. They do not code for any amino acid and signal the termination of translation.",
+      "difficulty": "EASY",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The linker histone in chromatin is:",
+      "options": ["H2B", "H3", "H1", "H2A"],
+      "correctAnswer": "C",
+      "explanation": "H1 is the linker histone that binds to linker DNA between nucleosomes. It helps in further compaction of chromatin. The core histones are H2A, H2B, H3, and H4.",
+      "difficulty": "MEDIUM",
+      "topic": "Packaging of DNA",
+      "ncertPage": 98,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyrimidines found in DNA are:",
+      "options": [
+        "Guanine and Thymine",
+        "Adenine and Guanine",
+        "Cytosine and Thymine",
+        "Adenine and Cytosine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pyrimidines in DNA are Cytosine (C) and Thymine (T). They have single-ring structure. In RNA, Uracil replaces Thymine as the pyrimidine that pairs with Adenine.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme that joins Okazaki fragments is:",
+      "options": ["Helicase", "DNA ligase", "Primase", "DNA polymerase"],
+      "correctAnswer": "B",
+      "explanation": "DNA ligase joins Okazaki fragments on the lagging strand by forming phosphodiester bonds. It seals the nicks between fragments to create a continuous strand.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nucleosomes are the structural units of:",
+      "options": ["Chromatin", "Ribosome", "Cell membrane", "RNA"],
+      "correctAnswer": "A",
+      "explanation": "Nucleosomes are the basic structural units of chromatin (eukaryotic chromosome). Each nucleosome consists of DNA wrapped around a histone octamer (2 each of H2A, H2B, H3, H4).",
+      "difficulty": "EASY",
+      "topic": "Packaging of DNA",
+      "ncertPage": 98,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 3' end of tRNA has the sequence:",
+      "options": ["AUG", "CCA", "UAA", "GGC"],
+      "correctAnswer": "B",
+      "explanation": "All tRNAs have CCA sequence at their 3' end where the amino acid is attached. The terminal adenosine is the site of amino acid attachment via its 3'-OH group.",
+      "difficulty": "HARD",
+      "topic": "RNA Structure",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The genetic code is:",
+      "options": [
+        "Doublet (2 bases)",
+        "Triplet (3 bases)",
+        "Quadruplet (4 bases)",
+        "Singlet (1 base)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The genetic code is triplet - three consecutive nucleotides (codon) code for one amino acid. With 4 bases, there are 64 possible codons (4³), which code for 20 amino acids plus stop signals.",
+      "difficulty": "EASY",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The genetic code is said to be degenerate because:",
+      "options": [
+        "The code keeps changing",
+        "One codon codes for multiple amino acids",
+        "Multiple codons code for the same amino acid",
+        "Some codons don't code for anything"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The genetic code is degenerate (redundant) because multiple codons can code for the same amino acid. For example, leucine is coded by 6 different codons. This provides some protection against mutations.",
+      "difficulty": "MEDIUM",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In eukaryotes, mRNA undergoes:",
+      "options": [
+        "Splicing, capping, and polyadenylation",
+        "Reverse transcription",
+        "Replication",
+        "No processing"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Eukaryotic mRNA processing includes: (1) Splicing - removal of introns, (2) 5' capping - addition of 7-methylguanosine cap, (3) 3' polyadenylation - addition of poly-A tail. This produces mature mRNA.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 103,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The nitrogenous bases in DNA are:",
+      "options": [
+        "Adenine, Guanine, Cytosine, Uracil",
+        "Adenine, Guanine, Cytosine, Thymine",
+        "Adenine, Thymine, Uracil, Cytosine",
+        "Guanine, Cytosine, Uracil, Thymine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "DNA contains four nitrogenous bases: Adenine (A), Guanine (G), Cytosine (C), and Thymine (T). RNA has Uracil (U) instead of Thymine. A and G are purines; C and T are pyrimidines.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Semi-conservative replication of DNA was proved by:",
+      "options": ["Watson and Crick", "Meselson and Stahl", "Hershey and Chase", "Griffith"],
+      "correctAnswer": "B",
+      "explanation": "Meselson and Stahl (1958) proved semi-conservative DNA replication using E. coli and density gradient centrifugation with ¹⁵N (heavy) and ¹⁴N (light) isotopes.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 99,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The total number of base pairs in human genome is approximately:",
+      "options": ["300 billion", "3 million", "3 billion", "30 billion"],
+      "correctAnswer": "C",
+      "explanation": "The human genome contains approximately 3 billion (3 × 10⁹) base pairs distributed across 23 pairs of chromosomes. Only about 2% codes for proteins.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Genome Project",
+      "ncertPage": 108,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Translation occurs on:",
+      "options": ["Ribosomes", "Mitochondria only", "Golgi body", "Nucleus"],
+      "correctAnswer": "A",
+      "explanation": "Translation (protein synthesis) occurs on ribosomes. In prokaryotes, ribosomes are 70S (50S + 30S); in eukaryotes, cytoplasmic ribosomes are 80S (60S + 40S).",
+      "difficulty": "EASY",
+      "topic": "Translation",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Introns are:",
+      "options": [
+        "Non-coding sequences within genes",
+        "Regulatory sequences",
+        "Promoter sequences",
+        "Coding sequences"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Introns are non-coding intervening sequences within eukaryotic genes that are transcribed but removed by splicing. Exons are the coding sequences that are retained in mature mRNA.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 103,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme that attaches amino acid to its specific tRNA is:",
+      "options": [
+        "Peptidyl transferase",
+        "DNA polymerase",
+        "RNA polymerase",
+        "Aminoacyl-tRNA synthetase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aminoacyl-tRNA synthetase (amino acid activating enzyme) attaches the correct amino acid to its corresponding tRNA. There is at least one synthetase for each amino acid.",
+      "difficulty": "MEDIUM",
+      "topic": "Translation",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In DNA double helix, adenine pairs with:",
+      "options": ["Thymine", "Uracil", "Guanine", "Cytosine"],
+      "correctAnswer": "A",
+      "explanation": "Adenine pairs with Thymine through two hydrogen bonds (A=T). Guanine pairs with Cytosine through three hydrogen bonds (G≡C). This is complementary base pairing.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme responsible for transcription is:",
+      "options": ["Ligase", "Helicase", "DNA polymerase", "RNA polymerase"],
+      "correctAnswer": "D",
+      "explanation": "RNA polymerase catalyzes transcription by synthesizing RNA using DNA as template. In prokaryotes, there is one type; in eukaryotes, there are three types (RNA Pol I, II, III).",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 101,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The anticodon is present on:",
+      "options": ["rRNA", "DNA", "mRNA", "tRNA"],
+      "correctAnswer": "D",
+      "explanation": "The anticodon is a sequence of three nucleotides on tRNA that is complementary to the codon on mRNA. The anticodon-codon base pairing ensures correct amino acid incorporation.",
+      "difficulty": "EASY",
+      "topic": "Translation",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR (Polymerase Chain Reaction) was developed by:",
+      "options": ["Kary Mullis", "Alec Jeffreys", "Frederick Sanger", "Watson and Crick"],
+      "correctAnswer": "A",
+      "explanation": "PCR was developed by Kary Mullis in 1983. He received the Nobel Prize in Chemistry in 1993 for this technique, which revolutionized molecular biology by allowing amplification of specific DNA sequences.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Techniques",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The wobble hypothesis explains:",
+      "options": [
+        "Why RNA is single stranded",
+        "Why genes have introns",
+        "Why genetic code is degenerate",
+        "Why DNA is double stranded"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Wobble hypothesis (by Crick) explains degeneracy of genetic code. The third base of codon can 'wobble' and form non-standard base pairs with anticodon, allowing one tRNA to recognize multiple codons.",
+      "difficulty": "MEDIUM",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which RNA has cloverleaf structure?",
+      "options": ["mRNA", "tRNA", "rRNA", "snRNA"],
+      "correctAnswer": "B",
+      "explanation": "tRNA has a characteristic cloverleaf secondary structure (2D) with four loops: acceptor arm, D arm, anticodon arm, and TψC arm. The 3D structure is L-shaped.",
+      "difficulty": "EASY",
+      "topic": "RNA Structure",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "β-galactosidase is coded by:",
+      "options": ["lacA", "lacI", "lacZ", "lacY"],
+      "correctAnswer": "C",
+      "explanation": "The lacZ gene codes for β-galactosidase enzyme, which hydrolyzes lactose into glucose and galactose. This is the main enzyme for lactose metabolism.",
+      "difficulty": "EASY",
+      "topic": "Gene Expression Regulation",
+      "ncertPage": 107,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The two strands of DNA are:",
+      "options": [
+        "Parallel and complementary",
+        "Antiparallel and identical",
+        "Parallel and identical",
+        "Antiparallel and complementary"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The two strands of DNA double helix run antiparallel (one 5'→3' and other 3'→5') and are complementary (A pairs with T, G pairs with C). This allows template-based replication.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The technique used for DNA fingerprinting is:",
+      "options": ["Northern blotting", "Western blotting", "Eastern blotting", "Southern blotting"],
+      "correctAnswer": "D",
+      "explanation": "Southern blotting (developed by Edwin Southern) is used in DNA fingerprinting to separate DNA fragments by size, transfer to membrane, and detect with specific probes.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "TATA box is a:",
+      "options": [
+        "Enhancer sequence",
+        "Origin of replication",
+        "Terminator sequence",
+        "Core promoter element"
+      ],
+      "correctAnswer": "D",
+      "explanation": "TATA box is a core promoter element found about 25-30 bp upstream of transcription start site in many eukaryotic genes. It helps position RNA polymerase II for accurate transcription initiation.",
+      "difficulty": "MEDIUM",
+      "topic": "Transcription",
+      "ncertPage": 102,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The genetic code is said to be universal because:",
+      "options": [
+        "It is the same in almost all organisms",
+        "Only prokaryotes use it",
+        "It changes during evolution",
+        "It varies in different organisms"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The genetic code is nearly universal - the same codons code for the same amino acids in almost all organisms (bacteria to humans). Minor variations exist in mitochondria and some organisms.",
+      "difficulty": "EASY",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In eukaryotes, RNA Polymerase II transcribes:",
+      "options": ["tRNA genes", "mRNA genes (protein-coding genes)", "5S rRNA genes", "rRNA genes"],
+      "correctAnswer": "B",
+      "explanation": "RNA Pol II transcribes mRNA (protein-coding genes) and some snRNAs. RNA Pol I transcribes rRNA (except 5S). RNA Pol III transcribes tRNA, 5S rRNA, and some snRNAs.",
+      "difficulty": "HARD",
+      "topic": "Transcription",
+      "ncertPage": 102,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transcription is the synthesis of:",
+      "options": ["DNA from RNA", "DNA from DNA", "RNA from DNA", "Protein from RNA"],
+      "correctAnswer": "C",
+      "explanation": "Transcription is the process of synthesizing RNA from DNA template by RNA polymerase. The DNA strand that serves as template is called template strand or antisense strand.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 101,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA is a polymer of:",
+      "options": ["Fatty acids", "Amino acids", "Nucleosides", "Nucleotides"],
+      "correctAnswer": "D",
+      "explanation": "DNA is a polymer of nucleotides (polynucleotide). Each nucleotide consists of a nitrogenous base, a pentose sugar (deoxyribose), and a phosphate group.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A nucleosome contains DNA wrapped around:",
+      "options": [
+        "Non-histone proteins",
+        "6 histone molecules",
+        "Histone H1",
+        "Histone octamer (8 histone molecules)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A nucleosome core consists of DNA (about 146 bp) wrapped around an octamer of histone proteins - two copies each of H2A, H2B, H3, and H4. H1 is linker histone that binds between nucleosomes.",
+      "difficulty": "MEDIUM",
+      "topic": "Packaging of DNA",
+      "ncertPage": 98,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The promoter sequence recognized by sigma factor in prokaryotes is located at:",
+      "options": [
+        "+1 and +10 positions",
+        "-100 and -200 positions",
+        "+35 and +100 positions",
+        "-10 and -35 positions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Prokaryotic promoters have two consensus sequences: Pribnow box at -10 (TATAAT) and -35 box (TTGACA). Sigma factor of RNA polymerase recognizes these sequences for transcription initiation.",
+      "difficulty": "HARD",
+      "topic": "Transcription",
+      "ncertPage": 102,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The start codon is:",
+      "options": ["AUG", "UGA", "UAA", "UAG"],
+      "correctAnswer": "A",
+      "explanation": "AUG is the start codon (initiation codon) that signals the beginning of translation. It codes for methionine (Met) in eukaryotes and formylmethionine (fMet) in prokaryotes.",
+      "difficulty": "EASY",
+      "topic": "Genetic Code",
+      "ncertPage": 104,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The double helix model of DNA was proposed by:",
+      "options": ["Wilkins", "Griffith", "Hershey and Chase", "Watson and Crick"],
+      "correctAnswer": "D",
+      "explanation": "Watson and Crick proposed the double helix model of DNA in 1953 based on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins. They shared Nobel Prize in 1962.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sanger sequencing uses:",
+      "options": ["Amino acids", "Fatty acids", "Dideoxynucleotides", "Ribonucleotides"],
+      "correctAnswer": "C",
+      "explanation": "Sanger sequencing (chain termination method) uses dideoxynucleotides (ddNTPs) that lack 3'-OH group. When incorporated, they terminate DNA synthesis, generating fragments of different lengths.",
+      "difficulty": "HARD",
+      "topic": "DNA Sequencing",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The enzyme reverse transcriptase synthesizes:",
+      "options": ["DNA from RNA", "Protein from RNA", "DNA from DNA", "RNA from DNA"],
+      "correctAnswer": "A",
+      "explanation": "Reverse transcriptase synthesizes DNA from RNA template (reverse of normal transcription). It is found in retroviruses like HIV. Used to make cDNA from mRNA in molecular biology.",
+      "difficulty": "EASY",
+      "topic": "Molecular Biology",
+      "ncertPage": 101,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR is used to:",
+      "options": ["Sequence proteins", "Synthesize RNA", "Degrade DNA", "Amplify DNA sequences"],
+      "correctAnswer": "D",
+      "explanation": "PCR (Polymerase Chain Reaction) is used to amplify (make millions of copies of) specific DNA sequences. It requires template DNA, primers, dNTPs, and thermostable DNA polymerase (Taq).",
+      "difficulty": "EASY",
+      "topic": "Molecular Techniques",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which type of RNA is most abundant in the cell?",
+      "options": ["snRNA", "mRNA", "tRNA", "rRNA"],
+      "correctAnswer": "D",
+      "explanation": "rRNA (ribosomal RNA) is the most abundant RNA in cells, making up about 80% of total cellular RNA. It forms the structural and catalytic core of ribosomes.",
+      "difficulty": "EASY",
+      "topic": "RNA Types",
+      "ncertPage": 103,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Split genes containing introns and exons are found in:",
+      "options": ["Eukaryotes mainly", "Viruses only", "Bacteria only", "Prokaryotes only"],
+      "correctAnswer": "A",
+      "explanation": "Split genes (containing introns and exons) are characteristic of eukaryotes. Most prokaryotic genes are continuous (no introns). Some exceptions exist in both groups.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 103,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Griffith's transformation experiment was performed on:",
+      "options": ["E. coli", "Streptococcus pneumoniae", "Drosophila", "Bacteriophage"],
+      "correctAnswer": "B",
+      "explanation": "Frederick Griffith's transformation experiment (1928) was performed on Streptococcus pneumoniae (Diplococcus pneumoniae). He discovered that 'transforming principle' from heat-killed S strain could transform non-virulent R strain to virulent S strain.",
+      "difficulty": "EASY",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 94,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA fingerprinting was developed by:",
+      "options": ["Watson and Crick", "Alec Jeffreys", "Kary Mullis", "Frederick Sanger"],
+      "correctAnswer": "B",
+      "explanation": "DNA fingerprinting was developed by Alec Jeffreys in 1984. He discovered that certain regions of DNA (minisatellites/VNTRs) vary greatly between individuals and can be used for identification.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "VNTRs stand for:",
+      "options": [
+        "Various Nuclear Transfer Repeats",
+        "Variable Number Tandem Repeats",
+        "Very Numerous Tandem Regions",
+        "Variable Nucleotide Transfer Regions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "VNTRs (Variable Number Tandem Repeats) are repetitive DNA sequences where the number of repeat units varies between individuals. They are also called minisatellites and are used in DNA fingerprinting.",
+      "difficulty": "EASY",
+      "topic": "DNA Fingerprinting",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The repressor protein in lac operon is coded by:",
+      "options": ["lacY gene", "lacI gene", "lacA gene", "lacZ gene"],
+      "correctAnswer": "B",
+      "explanation": "The lacI gene (regulator gene) codes for the lac repressor protein. This protein binds to the operator in absence of lactose, blocking transcription of structural genes.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Expression Regulation",
+      "ncertPage": 107,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In prokaryotes, the three stages of transcription are:",
+      "options": [
+        "Splicing, capping, polyadenylation",
+        "G1, S, G2",
+        "Initiation, elongation, termination",
+        "Replication, transcription, translation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Transcription occurs in three stages: (1) Initiation - RNA polymerase binds to promoter, (2) Elongation - RNA synthesis, (3) Termination - release of RNA and polymerase from DNA.",
+      "difficulty": "EASY",
+      "topic": "Transcription",
+      "ncertPage": 102,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Purines found in DNA are:",
+      "options": [
+        "Cytosine and Thymine",
+        "Adenine and Cytosine",
+        "Adenine and Guanine",
+        "Guanine and Thymine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Purines (double-ring structures) in DNA are Adenine (A) and Guanine (G). Pyrimidines (single-ring structures) are Cytosine (C) and Thymine (T). Purines pair with pyrimidines.",
+      "difficulty": "EASY",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Hershey-Chase experiment, ³⁵S was used to label:",
+      "options": ["Cell membrane", "DNA", "Protein coat", "RNA"],
+      "correctAnswer": "C",
+      "explanation": "³⁵S (radioactive sulfur) was used to label protein because proteins contain sulfur in amino acids methionine and cysteine. DNA does not contain sulfur.",
+      "difficulty": "EASY",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 95,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Semi-conservative replication means:",
+      "options": [
+        "One strand is conserved and one is newly synthesized",
+        "DNA is not replicated",
+        "Only one strand is replicated",
+        "Both strands are newly synthesized"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In semi-conservative replication, each daughter DNA molecule has one original (parental/conserved) strand and one newly synthesized strand. Each parental strand serves as a template.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 99,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Human Genome Project was completed in:",
+      "options": ["2003", "2010", "1990", "2000"],
+      "correctAnswer": "A",
+      "explanation": "The Human Genome Project was officially completed in April 2003, coinciding with the 50th anniversary of Watson and Crick's publication of DNA structure. It took 13 years (started 1990).",
+      "difficulty": "EASY",
+      "topic": "Human Genome Project",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The lac operon is induced (turned on) in presence of:",
+      "options": ["Glucose", "Lactose", "Tryptophan", "Histidine"],
+      "correctAnswer": "B",
+      "explanation": "The lac operon is induced when lactose is present. Lactose (or its isomer allolactose) binds to the repressor, changing its shape so it cannot bind to the operator, allowing transcription.",
+      "difficulty": "EASY",
+      "topic": "Gene Expression Regulation",
+      "ncertPage": 107,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The leading strand is synthesized:",
+      "options": ["Not at all", "After lagging strand", "Discontinuously", "Continuously"],
+      "correctAnswer": "D",
+      "explanation": "The leading strand is synthesized continuously in the 5' to 3' direction (same as direction of replication fork movement). Only one primer is needed for its synthesis.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Hershey-Chase experiment, ³²P was used to label:",
+      "options": ["DNA", "RNA", "Lipids", "Protein"],
+      "correctAnswer": "A",
+      "explanation": "³²P (radioactive phosphorus) was used to label DNA because DNA contains phosphorus in its phosphate groups. Proteins do not contain phosphorus, so ³⁵S was used to label protein coat.",
+      "difficulty": "EASY",
+      "topic": "DNA as Genetic Material",
+      "ncertPage": 95,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Okazaki fragments are formed on the:",
+      "options": ["Lagging strand", "Both strands", "Template strand", "Leading strand"],
+      "correctAnswer": "A",
+      "explanation": "Okazaki fragments are short DNA segments formed on the lagging strand during replication. Because DNA polymerase synthesizes only 5' to 3', the lagging strand is synthesized discontinuously.",
+      "difficulty": "EASY",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The human genome contains approximately:",
+      "options": ["3,000 genes", "20,000-25,000 genes", "100,000 genes", "1 million genes"],
+      "correctAnswer": "B",
+      "explanation": "The human genome contains approximately 20,000-25,000 protein-coding genes. This was surprisingly low compared to initial estimates of 80,000-100,000 genes.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Genome Project",
+      "ncertPage": 108,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Telomerase is required to:",
+      "options": [
+        "Proofread DNA",
+        "Unwind DNA",
+        "Replicate telomere sequences",
+        "Join DNA fragments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Telomerase is a ribonucleoprotein enzyme that extends telomeres (chromosome ends) in eukaryotes. It prevents chromosome shortening during replication. It is active in germ cells and cancer cells.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The X-ray diffraction data for DNA structure was provided by:",
+      "options": ["Rosalind Franklin and Maurice Wilkins", "Chargaff", "Watson", "Crick"],
+      "correctAnswer": "A",
+      "explanation": "Rosalind Franklin and Maurice Wilkins provided crucial X-ray diffraction images of DNA. Photo 51 by Franklin was key evidence for the helical structure. Wilkins shared the Nobel Prize with Watson and Crick.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Structure",
+      "ncertPage": 96,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Peptide bond formation during translation is catalyzed by:",
+      "options": [
+        "Aminoacyl-tRNA synthetase",
+        "Peptidyl transferase (ribozyme)",
+        "DNA polymerase",
+        "Ribosomal RNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peptide bond formation is catalyzed by peptidyl transferase, which is actually the 23S rRNA component of the large ribosomal subunit. This makes it a ribozyme (RNA with catalytic activity).",
+      "difficulty": "MEDIUM",
+      "topic": "Translation",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme that synthesizes RNA primer is:",
+      "options": ["RNA polymerase", "Primase", "Ligase", "DNA polymerase"],
+      "correctAnswer": "B",
+      "explanation": "Primase (a type of RNA polymerase) synthesizes short RNA primers that provide the 3'-OH group required for DNA polymerase to start synthesis. These primers are later removed and replaced with DNA.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Replication",
+      "ncertPage": 100,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pitch of DNA double helix is:",
+      "options": ["0.34 nm", "2 nm", "3.4 nm", "20 nm"],
+      "correctAnswer": "C",
+      "explanation": "One complete turn (pitch) of DNA double helix is 3.4 nm and contains 10 base pairs. Each base pair is 0.34 nm apart. The diameter of the helix is about 2 nm.",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Structure",
+      "ncertPage": 97,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "tRNA is also called:",
+      "options": [
+        "Small nuclear RNA",
+        "Messenger RNA",
+        "Ribosomal RNA",
+        "Soluble RNA or adapter RNA"
+      ],
+      "correctAnswer": "D",
+      "explanation": "tRNA (transfer RNA) is also called soluble RNA (sRNA) or adapter RNA. It acts as an adapter between mRNA codons and amino acids, carrying specific amino acids to the ribosome.",
+      "difficulty": "EASY",
+      "topic": "Translation",
+      "ncertPage": 105,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

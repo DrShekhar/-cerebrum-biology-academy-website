@@ -1,0 +1,1037 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 15,
+  "ncertChapterName": "Digestion and Absorption",
+  "questions": [
+    {
+      "question": "Food is required for:",
+      "options": ["Energy only", "Growth only", "Repair only", "Growth, repair, and energy"],
+      "correctAnswer": "D",
+      "explanation": "Food provides materials for growth and repair of tissues as well as the energy required for life activities. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 222,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The process of conversion of complex food substances into simple absorbable forms is called:",
+      "options": ["Assimilation", "Digestion", "Egestion", "Absorption"],
+      "correctAnswer": "B",
+      "explanation": "The process of conversion of complex food substances to simple absorbable forms is called digestion and is carried out by our digestive system. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The human digestive system consists of:",
+      "options": [
+        "Alimentary canal and associated digestive glands",
+        "Only stomach and intestines",
+        "Alimentary canal only",
+        "Digestive glands only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The human digestive system consists of the alimentary canal and the associated glands. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Digestive System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The alimentary canal begins with:",
+      "options": ["Stomach", "Pharynx", "Mouth", "Oesophagus"],
+      "correctAnswer": "C",
+      "explanation": "The alimentary canal begins with an anterior opening – the mouth. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Digestive System",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The vestibule in the oral cavity is the space bounded externally by:",
+      "options": [
+        "Hard and soft palate",
+        "Gums and floor of mouth",
+        "Tongue and teeth",
+        "Lips and cheeks"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The teeth and the gums together bound a space called the vestibule, the space bounded externally by lips and cheeks. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Oral Cavity",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The oral cavity proper is the area bounded by:",
+      "options": [
+        "Lips and cheeks",
+        "Teeth and gums",
+        "Tongue, palate, and floor of mouth",
+        "Pharynx and oesophagus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The oral cavity proper is the area occupied by the tongue bounded by the teeth and gums on all sides, the floor of the mouth below, and the palate above. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Oral Cavity",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hard palate and soft palate together form the:",
+      "options": [
+        "Lateral walls of pharynx",
+        "Base of tongue",
+        "Floor of oral cavity",
+        "Roof of oral cavity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The hard palate is formed by the maxillary and palatine bones while the soft palate is formed by skeletal muscle. Together they form the roof of the oral cavity. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Oral Cavity",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The muscular tongue is attached to the floor of the oral cavity by:",
+      "options": ["Frenulum", "Epiglottis", "Papillae", "Uvula"],
+      "correctAnswer": "A",
+      "explanation": "The muscular tongue is attached to the floor of the oral cavity by the frenulum. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Oral Cavity",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The small projections on the upper surface of the tongue called papillae bear:",
+      "options": ["Salivary glands", "Taste buds", "Mucous glands", "Enzyme-secreting cells"],
+      "correctAnswer": "B",
+      "explanation": "The upper surface of the tongue has small projections called papillae, some of which bear taste buds. (NCERT Page 222)",
+      "difficulty": "EASY",
+      "topic": "Oral Cavity",
+      "ncertPage": 222,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Each tooth is embedded in a socket of jaw bone. This type of attachment is called:",
+      "options": ["Thecodont", "Homodont", "Acrodont", "Pleurodont"],
+      "correctAnswer": "A",
+      "explanation": "Each tooth is embedded in a socket of jaw bone. This type of attachment is called thecodont. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Teeth",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Humans have different types of teeth (incisors, canines, premolars, molars). This condition is termed:",
+      "options": ["Thecodont", "Heterodont", "Diphyodont", "Homodont"],
+      "correctAnswer": "B",
+      "explanation": "Majority of mammals including human being forms two sets of teeth during their life, a set of temporary milk or deciduous teeth replaced by a set of permanent or adult teeth. This type of dentition is called diphyodont. An adult human has 32 permanent teeth which are of four different types (Heterodont dentition). (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Teeth",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The dental formula for permanent teeth in humans is:",
+      "options": ["2123/2123", "2102/2102", "2103/2103", "2132/2132"],
+      "correctAnswer": "A",
+      "explanation": "The dental formula for permanent teeth of human is 2123/2123, indicating 2 incisors, 1 canine, 2 premolars, and 3 molars in each half of each jaw. (NCERT Page 222)",
+      "difficulty": "MEDIUM",
+      "topic": "Teeth",
+      "ncertPage": 222,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enamel covers the:",
+      "options": ["Gum", "Root of tooth", "Crown of tooth", "Pulp cavity"],
+      "correctAnswer": "C",
+      "explanation": "The enamel helps in mastication of food. It covers the crown (exposed part) of the tooth. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Teeth",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which is the hardest substance in the human body?",
+      "options": ["Cementum", "Bone", "Dentine", "Enamel"],
+      "correctAnswer": "D",
+      "explanation": "Enamel is the hardest substance of the body. It covers the crown of the tooth and helps in mastication. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Teeth",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The layer of tooth below enamel is called:",
+      "options": ["Cementum", "Dentine", "Pulp", "Bone"],
+      "correctAnswer": "B",
+      "explanation": "Dentine is the layer beneath the enamel in the crown region and beneath the cementum in the root region. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Teeth",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The bone-like structure covering the root of the tooth is:",
+      "options": ["Enamel", "Dentine", "Cementum", "Pulp"],
+      "correctAnswer": "C",
+      "explanation": "The root is covered by a bone-like structure called cementum which attaches the tooth to the jaw bone through periodontal ligament. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Teeth",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The central cavity of the tooth containing blood vessels, nerves, and lymph vessels is called:",
+      "options": ["Oral cavity", "Pulp cavity", "Root canal", "Dental socket"],
+      "correctAnswer": "B",
+      "explanation": "A central pulp cavity containing blood vessels, nerves, and lymph vessels is present within the tooth. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Teeth",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pharynx is a common passage for:",
+      "options": ["Air and food only", "Food and water only", "Food and air", "Air and sound only"],
+      "correctAnswer": "C",
+      "explanation": "The oral cavity leads into a short pharynx which serves as a common passage for food and air. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Pharynx",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cartilaginous flap that prevents the entry of food into the glottis is:",
+      "options": ["Soft palate", "Bolus", "Uvula", "Epiglottis"],
+      "correctAnswer": "D",
+      "explanation": "A cartilaginous flap called epiglottis prevents the entry of food into the glottis – opening of the wind pipe – during swallowing. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Pharynx",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The oesophagus is a thin, long tube which extends from pharynx to:",
+      "options": ["Large intestine", "Duodenum", "Small intestine", "Stomach"],
+      "correctAnswer": "D",
+      "explanation": "The oesophagus is a thin, long tube which extends posteriorly passing through the neck, thorax, and diaphragm and leads to a 'J' shaped bag like structure called stomach. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Oesophagus",
+      "ncertPage": 223,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The opening of the oesophagus into the stomach is regulated by:",
+      "options": [
+        "Pyloric sphincter",
+        "Gastro-oesophageal sphincter",
+        "Sphincter of Oddi",
+        "Ileocaecal valve"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A muscular sphincter (gastro-oesophageal) regulates the opening of oesophagus into the stomach. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stomach has how many major parts?",
+      "options": ["Four", "Five", "Two", "Three"],
+      "correctAnswer": "D",
+      "explanation": "The stomach, located in the upper left portion of the abdominal cavity has three major parts – a cardiac portion into which the oesophagus opens, a fundic region, and a pyloric portion which opens into the first part of small intestine. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Stomach",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The opening of the stomach into the small intestine is regulated by:",
+      "options": [
+        "Sphincter of Oddi",
+        "Ileocaecal valve",
+        "Gastro-oesophageal sphincter",
+        "Pyloric sphincter"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The pyloric portion which opens into the first part of small intestine is regulated by pyloric sphincter. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The small intestine is distinguished into which three regions?",
+      "options": [
+        "Caecum, colon, and rectum",
+        "Ascending, transverse, and descending",
+        "Fundus, body, and pylorus",
+        "Duodenum, jejunum, and ileum"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The small intestine is distinguishable into three regions, a 'C' shaped duodenum, a long coiled middle portion jejunum, and a highly coiled ileum. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Small Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hepatopancreatic duct opens into the:",
+      "options": ["Ileum", "Stomach", "Duodenum", "Jejunum"],
+      "correctAnswer": "C",
+      "explanation": "The opening of the stomach into the duodenum is guarded by the pyloric sphincter. A common hepato-pancreatic duct opens into the duodenum. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Small Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ileum opens into:",
+      "options": ["Rectum", "Duodenum", "Caecum through ileocaecal valve", "Colon directly"],
+      "correctAnswer": "C",
+      "explanation": "The ileum opens into the large intestine. The large intestine consists of caecum, colon, and rectum. The caecum is a small blind sac which hosts some symbiotic micro-organisms. A narrow finger-like tubular projection, the vermiform appendix is present at the junction of small intestine and large intestine. The caecum opens into the colon. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Large Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vermiform appendix arises from:",
+      "options": ["Ileum", "Caecum", "Colon", "Rectum"],
+      "correctAnswer": "B",
+      "explanation": "A narrow finger-like tubular projection, the vermiform appendix which is a vestigial organ, arises from the caecum. (NCERT Page 223)",
+      "difficulty": "EASY",
+      "topic": "Large Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The parts of the colon in correct sequence are:",
+      "options": [
+        "Sigmoid, ascending, transverse, descending",
+        "Descending, transverse, ascending, sigmoid",
+        "Transverse, ascending, descending, sigmoid",
+        "Ascending, transverse, descending, sigmoid"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The caecum opens into the colon. The colon is divided into ascending, transverse, descending, and sigmoid colon. (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Large Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The anal canal is guarded by:",
+      "options": ["One sphincter", "Two sphincters", "Three sphincters", "No sphincter"],
+      "correctAnswer": "B",
+      "explanation": "The terminal portion of alimentary canal is differentiated as the anal canal which is guarded by internal sphincter (involuntary) and external sphincter (voluntary). (NCERT Page 223)",
+      "difficulty": "MEDIUM",
+      "topic": "Large Intestine",
+      "ncertPage": 223,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The wall of alimentary canal from the oesophagus to large intestine has how many layers?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "The wall of alimentary canal from oesophagus to rectum possesses four layers namely serosa, muscularis, sub-mucosa, and mucosa. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Histology of Gut",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The outermost layer of the alimentary canal made of thin mesothelium is:",
+      "options": ["Serosa", "Mucosa", "Submucosa", "Muscularis"],
+      "correctAnswer": "A",
+      "explanation": "Serosa is the outermost layer and is made up of a thin mesothelium (epithelium of visceral organs) with some connective tissues. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Histology of Gut",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The muscularis layer of stomach has:",
+      "options": [
+        "Two layers of muscle",
+        "Three layers of muscle",
+        "No muscle",
+        "One layer of muscle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Muscularis is formed by smooth muscles usually arranged into an inner circular and an outer longitudinal layer. An oblique muscle layer may be present in some regions. The stomach has an additional oblique layer, giving it three layers. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Histology of Gut",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The sub-mucosa contains:",
+      "options": [
+        "Glands, blood vessels, nerves, and lymph vessels",
+        "Epithelium only",
+        "Serosa and muscles",
+        "Muscles only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The sub-mucosa layer is formed of loose connective tissues containing nerves, blood, and lymph vessels. In duodenum, glands are also present in sub-mucosa. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Histology of Gut",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The finger-like projections in the small intestine that increase surface area are called:",
+      "options": ["Villi", "Papillae", "Crypts", "Rugae"],
+      "correctAnswer": "A",
+      "explanation": "In small intestine, the mucosa forms finger-like projections called villi which increase surface area for absorption. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Small Intestine",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Goblet cells in the mucosa secrete:",
+      "options": ["Enzymes", "Hormones", "Mucus", "HCl"],
+      "correctAnswer": "C",
+      "explanation": "Goblet cells are modified columnar epithelial cells in the mucosa that secrete mucus. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Histology of Gut",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The gastric glands are present in:",
+      "options": ["Stomach", "Small intestine", "Large intestine", "Oesophagus"],
+      "correctAnswer": "A",
+      "explanation": "Gastric glands are present in the mucosa of the stomach. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Stomach",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The crypts of Lieberkühn are found in:",
+      "options": ["Small intestine", "Large intestine only", "Stomach", "Duodenum only"],
+      "correctAnswer": "A",
+      "explanation": "In small intestine, the mucosa forms numerous microscopic projections called villi and crypts between the villi (crypts of Lieberkühn). (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Small Intestine",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a salivary gland?",
+      "options": ["Sublingual", "Brunner's gland", "Parotid", "Submaxillary (submandibular)"],
+      "correctAnswer": "B",
+      "explanation": "The main salivary glands are parotid (cheek), submaxillary/submandibular (lower jaw), and sublingual (below the tongue). Brunner's glands are found in the duodenum. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Digestive Glands",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The parotid gland is located in:",
+      "options": ["Lower jaw", "Cheek region", "Behind the pharynx", "Below the tongue"],
+      "correctAnswer": "B",
+      "explanation": "Parotid glands are the largest salivary glands located in the cheek region. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Digestive Glands",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The liver is the largest gland of the body weighing about:",
+      "options": ["0.5-0.8 kg", "1.2-1.5 kg", "2-2.5 kg", "3-3.5 kg"],
+      "correctAnswer": "B",
+      "explanation": "Liver is the largest gland of the body weighing about 1.2 to 1.5 kg in an adult human. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Liver",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The liver is located in which region of the abdominal cavity?",
+      "options": ["Lower right", "Lower left", "Upper left", "Upper right"],
+      "correctAnswer": "D",
+      "explanation": "The liver is situated in the abdominal cavity, just below the diaphragm and has two lobes. The liver is located mainly in the upper right region. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Liver",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hepatic cells secrete:",
+      "options": ["Bile", "Gastric juice", "Intestinal juice", "Pancreatic juice"],
+      "correctAnswer": "A",
+      "explanation": "The hepatic cells secrete bile which is stored and concentrated in a thin muscular sac called the gall bladder. (NCERT Page 224)",
+      "difficulty": "EASY",
+      "topic": "Liver",
+      "ncertPage": 224,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The bile duct and pancreatic duct join to form:",
+      "options": ["Cystic duct", "Hepatic duct", "Hepatopancreatic duct", "Common bile duct"],
+      "correctAnswer": "C",
+      "explanation": "The bile duct and the pancreatic duct open together into the duodenum as the common hepato-pancreatic duct which is guarded by a sphincter called the sphincter of Oddi. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Liver",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sphincter guarding the hepatopancreatic ampulla is called:",
+      "options": [
+        "Sphincter of Oddi",
+        "Ileocaecal sphincter",
+        "Cardiac sphincter",
+        "Pyloric sphincter"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The hepato-pancreatic duct is guarded by a sphincter called the sphincter of Oddi. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Liver",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pancreas is a compound gland, compound because it is:",
+      "options": [
+        "Both exocrine and endocrine",
+        "Located in two places",
+        "Secretes two juices",
+        "Made of two lobes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The pancreas is a compound (both exocrine and endocrine) elongated organ situated between the limbs of the 'C' shaped duodenum. (NCERT Page 224)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreas",
+      "ncertPage": 224,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The exocrine portion of pancreas secretes:",
+      "options": ["Pancreatic juice", "Bile", "Insulin", "Glucagon"],
+      "correctAnswer": "A",
+      "explanation": "The exocrine portion secretes an alkaline pancreatic juice containing enzymes while the endocrine portion secretes hormones (insulin and glucagon). (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Pancreas",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The mastication of food and mixing it with saliva is called:",
+      "options": ["Digestion", "Chewing", "Bolus formation", "Deglutition"],
+      "correctAnswer": "B",
+      "explanation": "The food is masticated (chewed) in the mouth by the teeth and mixed with saliva by the tongue to form a bolus. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Digestion in Mouth",
+      "ncertPage": 225,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Saliva secreted into the oral cavity contains:",
+      "options": [
+        "Electrolytes, salivary amylase, and lysozyme",
+        "Trypsin and chymotrypsin",
+        "Maltase and sucrase",
+        "Lipase and pepsin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Saliva is mainly produced by three pairs of salivary glands. The secretion is known as saliva. It is slightly alkaline (pH about 8) and contains electrolytes (Na+, K+, Cl-, HCO3-) and enzymes, salivary amylase (ptyalin) and lysozyme. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion in Mouth",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The salivary enzyme ptyalin acts on:",
+      "options": ["Fats", "Starch", "Cellulose", "Proteins"],
+      "correctAnswer": "B",
+      "explanation": "The salivary amylase (ptyalin) digests starch into maltose (a disaccharide). About 30 per cent of starch is hydrolysed in the mouth. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Digestion in Mouth",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lysozyme in saliva acts as:",
+      "options": ["A lubricant", "An emulsifier", "A digestive enzyme", "An antibacterial agent"],
+      "correctAnswer": "D",
+      "explanation": "Lysozyme present in saliva acts as an antibacterial agent that prevents infections. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Digestion in Mouth",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "About what percentage of starch is hydrolysed in the mouth?",
+      "options": ["50%", "70%", "10%", "30%"],
+      "correctAnswer": "D",
+      "explanation": "The salivary amylase hydrolyses starch into maltose. About 30 per cent of starch is hydrolysed here by this enzyme (optimum pH 6.8). (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion in Mouth",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The passage of food from the pharynx into the oesophagus is called:",
+      "options": ["Deglutition", "Peristalsis", "Absorption", "Mastication"],
+      "correctAnswer": "A",
+      "explanation": "The food is masticated and mixed with saliva to form a bolus which is then passed into pharynx and then into oesophagus by swallowing or deglutition. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Swallowing",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Peristalsis is:",
+      "options": [
+        "Mixing of food with enzymes",
+        "Absorption of nutrients",
+        "Voluntary contraction of muscles",
+        "Wave-like contractions of gut muscles pushing food"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The bolus is pushed down through the oesophagus by successive waves of muscular contractions called peristalsis. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Movement of Food",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The gastric glands contain three types of cells which are:",
+      "options": [
+        "Mucus neck cells, peptic cells, and parietal cells",
+        "Chief cells, goblet cells, and endocrine cells",
+        "Absorptive cells, goblet cells, and Paneth cells",
+        "Alpha, beta, and gamma cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The gastric glands have three major types of cells namely (i) mucus neck cells which secrete mucus; (ii) peptic or chief cells which secrete the proenzyme pepsinogen; and (iii) parietal or oxyntic cells which secrete HCl and intrinsic factor. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Gastric Glands",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pepsinogen is secreted by:",
+      "options": ["Goblet cells", "Parietal cells", "Mucus neck cells", "Peptic (chief) cells"],
+      "correctAnswer": "D",
+      "explanation": "Peptic or chief cells secrete the proenzyme pepsinogen. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Gastric Glands",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "HCl in the stomach is secreted by:",
+      "options": ["Chief cells", "Parietal (oxyntic) cells", "Mucus neck cells", "G cells"],
+      "correctAnswer": "B",
+      "explanation": "Parietal or oxyntic cells secrete HCl and intrinsic factor (factor essential for absorption of vitamin B12). (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Gastric Glands",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pH of gastric juice is approximately:",
+      "options": ["4.5", "7.0", "8.5", "2.0"],
+      "correctAnswer": "D",
+      "explanation": "The highly acidic nature of the stomach contents due to HCl brings the pH to around 1.8-2.0. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The inactive pepsinogen is converted to active pepsin by:",
+      "options": ["Enterokinase", "HCl", "Trypsin", "Bile"],
+      "correctAnswer": "B",
+      "explanation": "The proenzyme pepsinogen, on exposure to hydrochloric acid gets converted into the active enzyme pepsin, the proteolytic enzyme of the stomach. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pepsin converts proteins into:",
+      "options": ["Dipeptides", "Polypeptides only", "Amino acids", "Proteoses and peptones"],
+      "correctAnswer": "D",
+      "explanation": "Pepsin converts proteins into proteoses and peptones (peptides). (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rennin is an enzyme that:",
+      "options": [
+        "Digests proteins",
+        "Coagulates milk protein (casein)",
+        "Digests fats",
+        "Digests starch"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In infants, the gastric juice contains rennin which helps in digestion of milk proteins by converting the soluble casein into insoluble paracasein. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Stomach",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The semi-digested food in the stomach is called:",
+      "options": ["Bolus", "Chyme", "Chyle", "Faeces"],
+      "correctAnswer": "B",
+      "explanation": "The partially digested food in the stomach is called chyme. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Stomach",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The various types of movements generated by the muscularis layer of the small intestine are helpful in:",
+      "options": [
+        "Absorption only",
+        "Secretion of hormones",
+        "Secretion of enzymes",
+        "Proper mixing of food with enzymes and pushing it aborally"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The small intestine has movements which help in proper mixing of food with enzymes and pushing it in the aboral direction (towards the anus). (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Small Intestine",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bile contains:",
+      "options": [
+        "Bile pigments, bile salts, cholesterol, and phospholipids",
+        "Lipase and amylase",
+        "Pepsin and trypsin",
+        "Digestive enzymes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bile contains bile pigments (bilirubin and biliverdin), bile salts, cholesterol and phospholipids but no enzymes. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Bile",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The bile salts help in:",
+      "options": [
+        "Protein digestion",
+        "Carbohydrate digestion",
+        "Emulsification of fats",
+        "Nucleic acid digestion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bile helps in emulsification of fats, i.e., breaking down of the fats into very small micelles. (NCERT Page 225)",
+      "difficulty": "EASY",
+      "topic": "Bile",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bile also activates:",
+      "options": ["Pepsinogen", "Lipases", "Amylases", "Proteases"],
+      "correctAnswer": "B",
+      "explanation": "Bile helps in emulsification of fats and also activates lipases. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Bile",
+      "ncertPage": 225,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pancreatic juice contains:",
+      "options": [
+        "Only one enzyme",
+        "Inactive enzymes only",
+        "Inactive enzymes like trypsinogen, chymotrypsinogen, procarboxypeptidases, and enzymes like amylases, lipases, and nucleases",
+        "Bile pigments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The pancreatic juice contains inactive enzymes – trypsinogen, chymotrypsinogen, procarboxypeptidases – and enzymes – amylases, lipases, and nucleases. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreatic Juice",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trypsinogen is activated by:",
+      "options": ["HCl", "Pepsin", "Enterokinase (enteropeptidase)", "Bile"],
+      "correctAnswer": "C",
+      "explanation": "Trypsinogen is activated by an enzyme, enterokinase, secreted by the intestinal mucosa into active trypsin. (NCERT Page 225)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreatic Juice",
+      "ncertPage": 225,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trypsin activates:",
+      "options": [
+        "Chymotrypsinogen and procarboxypeptidases",
+        "Proelastase only",
+        "Pepsinogen",
+        "Enterokinase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trypsin activates the other pancreatic enzymes - it converts chymotrypsinogen to chymotrypsin and procarboxypeptidases to carboxypeptidases. (NCERT Page 226)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreatic Juice",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trypsin and chymotrypsin act on:",
+      "options": ["Starch", "Fats", "Proteins", "Nucleic acids"],
+      "correctAnswer": "C",
+      "explanation": "Proteins, proteoses, and peptones (partially hydrolysed proteins) in the chyme reaching the intestine are acted upon by the proteolytic enzymes of pancreatic juice (trypsin, chymotrypsin, and carboxypeptidases). (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Pancreatic Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Carboxypeptidases act on:",
+      "options": [
+        "Both ends equally",
+        "Internal peptide bonds",
+        "The carboxyl end of polypeptides",
+        "The amino end of polypeptides"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Carboxypeptidases are exopeptidases that act on the carboxyl end of polypeptide chains, releasing amino acids one at a time. (NCERT Page 226)",
+      "difficulty": "MEDIUM",
+      "topic": "Pancreatic Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The intestinal juice or succus entericus contains:",
+      "options": [
+        "HCl",
+        "Bile pigments",
+        "A variety of enzymes like disaccharidases, dipeptidases, lipases, nucleosidases, etc.",
+        "Only amylase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The intestinal mucosal epithelium has goblet cells which secrete mucus. The secretions of the brush border cells of the mucosa along with the secretions of the goblet cells constitute the intestinal juice or succus entericus. This juice contains a variety of enzymes like disaccharidases, dipeptidases, lipases, nucleosidases, etc. (NCERT Page 226)",
+      "difficulty": "MEDIUM",
+      "topic": "Intestinal Juice",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Maltase acts on maltose to produce:",
+      "options": ["Sucrose", "Fructose", "Glucose", "Galactose"],
+      "correctAnswer": "C",
+      "explanation": "The disaccharidases in intestinal juice hydrolyse disaccharides - maltase acts on maltose to produce glucose. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Intestinal Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lactase acts on lactose to produce:",
+      "options": [
+        "Two glucose molecules",
+        "Fructose and galactose",
+        "Glucose and fructose",
+        "Glucose and galactose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lactase breaks down lactose (milk sugar) into glucose and galactose. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Intestinal Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sucrase acts on sucrose to produce:",
+      "options": [
+        "Two glucose molecules",
+        "Glucose and fructose",
+        "Maltose",
+        "Glucose and galactose"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sucrase hydrolyses sucrose (table sugar) into glucose and fructose. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Intestinal Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Dipeptidases break dipeptides into:",
+      "options": ["Peptones", "Polypeptides", "Amino acids", "Proteoses"],
+      "correctAnswer": "C",
+      "explanation": "Dipeptidases act on dipeptides to release free amino acids, which are the final products of protein digestion. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Intestinal Juice",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Lipase converts fats into:",
+      "options": ["Amino acids", "Glucose", "Fatty acids and glycerol", "Nucleotides"],
+      "correctAnswer": "C",
+      "explanation": "Lipases break down fats into fatty acids and glycerol (diglycerides and monoglycerides). (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Fat Digestion",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nucleases break nucleic acids into:",
+      "options": ["Monosaccharides", "Amino acids", "Fatty acids", "Nucleotides"],
+      "correctAnswer": "D",
+      "explanation": "Nucleases act on nucleic acids (DNA and RNA) to produce nucleotides. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acid Digestion",
+      "ncertPage": 226,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The end products of carbohydrate digestion are:",
+      "options": [
+        "Oligosaccharides",
+        "Disaccharides",
+        "Polysaccharides",
+        "Monosaccharides (glucose, fructose, galactose)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carbohydrates are fully digested to monosaccharides – mainly glucose, fructose, and galactose. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Digestion Summary",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The end products of protein digestion are:",
+      "options": ["Amino acids", "Peptones", "Peptides", "Proteoses"],
+      "correctAnswer": "A",
+      "explanation": "Proteins are digested to amino acids which are absorbed by the small intestine. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Digestion Summary",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The end products of fat digestion are:",
+      "options": ["Triglycerides", "Fatty acids only", "Glycerol only", "Fatty acids and glycerol"],
+      "correctAnswer": "D",
+      "explanation": "Fats are finally digested into fatty acids and glycerol. (NCERT Page 226)",
+      "difficulty": "EASY",
+      "topic": "Digestion Summary",
+      "ncertPage": 226,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Absorption of digested products mainly occurs in:",
+      "options": ["Stomach", "Small intestine", "Large intestine", "Oesophagus"],
+      "correctAnswer": "B",
+      "explanation": "Absorption is the process by which the end products of digestion pass through the intestinal mucosa into the blood or lymph. It is carried out by passive, active, or facilitated transport mechanisms. Small amounts of monosaccharides like glucose, amino acids, and some electrolytes like chloride ions are generally absorbed by simple diffusion. The passage of these substances into the blood depends upon the concentration gradients. However, some substances like glucose and amino acids are absorbed with the help of carrier proteins. This mechanism is called the facilitated transport. Transport of water depends upon the osmotic gradient. Active transport occurs against the concentration gradient and hence requires energy. Various nutrients like amino acids, monosaccharides like glucose, electrolytes like Na+ are absorbed into the blood by this mechanism. Fatty acids and glycerol being insoluble, cannot be absorbed into the blood. They are first incorporated into small droplets called micelles which move into the intestinal mucosa. They are re-formed into very small protein coated fat globules called the chylomicrons which are transported into the lymph vessels (lacteals) in the villi. These lymph vessels ultimately release the absorbed substances into the blood stream. Absorption of substances takes place in different parts of the alimentary canal, like mouth, stomach, small intestine, and large intestine. However, maximum absorption occurs in the small intestine. (NCERT Page 226-227)",
+      "difficulty": "EASY",
+      "topic": "Absorption",
+      "ncertPage": 227,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Micelles are:",
+      "options": [
+        "Mucus globules",
+        "Protein droplets",
+        "Small droplets containing fatty acids and glycerol",
+        "Enzyme complexes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fatty acids and glycerol being insoluble, cannot be absorbed into the blood. They are first incorporated into small droplets called micelles which move into the intestinal mucosa. (NCERT Page 227)",
+      "difficulty": "MEDIUM",
+      "topic": "Fat Absorption",
+      "ncertPage": 227,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chylomicrons are:",
+      "options": [
+        "Very small protein coated fat globules",
+        "Muscle proteins",
+        "Bile salts",
+        "Digestive enzymes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "After micelles move into intestinal mucosa, fats are re-formed into very small protein coated fat globules called the chylomicrons. (NCERT Page 227)",
+      "difficulty": "MEDIUM",
+      "topic": "Fat Absorption",
+      "ncertPage": 227,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chylomicrons are transported into:",
+      "options": [
+        "Blood capillaries directly",
+        "Lymph vessels (lacteals)",
+        "Liver directly",
+        "Pancreas"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chylomicrons are transported into the lymph vessels (lacteals) in the villi. These lymph vessels ultimately release the absorbed substances into the blood stream. (NCERT Page 227)",
+      "difficulty": "MEDIUM",
+      "topic": "Fat Absorption",
+      "ncertPage": 227,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The major function of the large intestine is:",
+      "options": [
+        "Absorption of water, some minerals, and certain drugs",
+        "Secretion of enzymes",
+        "Digestion of proteins",
+        "Digestion of fats"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The large intestine's functions include absorption of some water, minerals, and certain drugs. Undigested, unabsorbed substances called faeces enter into the caecum through ileo-caecal valve. (NCERT Page 227)",
+      "difficulty": "EASY",
+      "topic": "Large Intestine",
+      "ncertPage": 227,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The bacteria in the large intestine synthesise:",
+      "options": ["Fats", "Proteins", "Vitamins B and K", "Carbohydrates"],
+      "correctAnswer": "C",
+      "explanation": "The bacterial activity in the large intestine produces some vitamins, notably B complex and vitamin K. (NCERT Page 227)",
+      "difficulty": "MEDIUM",
+      "topic": "Large Intestine",
+      "ncertPage": 227,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The elimination of undigested food from the body is called:",
+      "options": ["Absorption", "Assimilation", "Egestion (defecation)", "Digestion"],
+      "correctAnswer": "C",
+      "explanation": "The faeces are eliminated from the body through the anus. This process is called egestion or defecation. (NCERT Page 227)",
+      "difficulty": "EASY",
+      "topic": "Egestion",
+      "ncertPage": 227,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The process by which absorbed simple substances are converted into complex substances in living cells is:",
+      "options": ["Assimilation", "Egestion", "Digestion", "Absorption"],
+      "correctAnswer": "A",
+      "explanation": "The process of assimilation involves the conversion of absorbed simple substances into complex substances required by the body cells. (NCERT Page 227)",
+      "difficulty": "MEDIUM",
+      "topic": "Assimilation",
+      "ncertPage": 227,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

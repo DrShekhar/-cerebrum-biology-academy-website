@@ -1,0 +1,1122 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 5,
+  "ncertChapterName": "Principles of Inheritance and Variation",
+  "questions": [
+    {
+      "question": "Alfred Sturtevant constructed the first:",
+      "options": [
+        "Physical map of chromosomes",
+        "Genetic/linkage map",
+        "Karyotype",
+        "Pedigree chart"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Alfred Sturtevant, Morgan's student, used recombination frequencies to construct the first genetic (linkage) map of X chromosome in Drosophila, showing relative positions of genes.",
+      "difficulty": "MEDIUM",
+      "topic": "Genetic Mapping",
+      "ncertPage": 77,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In humans, sex of the child is determined by:",
+      "options": ["Father", "Both parents equally", "Environmental factors", "Mother"],
+      "correctAnswer": "A",
+      "explanation": "In humans, the father determines the sex of the child. All eggs carry X chromosome, while sperm can carry either X or Y. If X-sperm fertilizes, child is XX (female); if Y-sperm, child is XY (male).",
+      "difficulty": "EASY",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ZW-ZZ system of sex determination is found in:",
+      "options": ["Birds", "Grasshopper", "Honeybee", "Humans"],
+      "correctAnswer": "A",
+      "explanation": "In birds, females are heterogametic (ZW) and males are homogametic (ZZ). This is opposite to mammals. Female determines the sex of offspring by contributing either Z or W chromosome.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ABO blood groups are an example of:",
+      "options": [
+        "Incomplete dominance",
+        "Multiple allelism and codominance",
+        "Polygenic inheritance",
+        "Complete dominance only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ABO blood groups show multiple allelism (three alleles: I^A, I^B, i) and codominance (I^A and I^B are codominant). I^A and I^B are both dominant over i. This determines four blood types: A, B, AB, O.",
+      "difficulty": "MEDIUM",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Features of Klinefelter syndrome include:",
+      "options": [
+        "Feminine features like gynecomastia and sterility",
+        "Short stature",
+        "Normal fertility",
+        "Masculine features and fertility"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Klinefelter syndrome males show some feminine characteristics like gynecomastia (breast development), sparse body hair, small testes, and are usually sterile due to improper development of secondary sexual characters.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sex determination in humans is:",
+      "options": ["Haplodiploidy", "XO type", "XX-XY type", "ZW-ZZ type"],
+      "correctAnswer": "C",
+      "explanation": "Humans follow XX-XY sex determination system. Females have two X chromosomes (XX) and males have one X and one Y chromosome (XY). Sex is determined by the sperm (X or Y) that fertilizes the egg.",
+      "difficulty": "EASY",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The law of dominance states that:",
+      "options": [
+        "Alleles assort independently",
+        "Both alleles express equally",
+        "One allele masks the expression of the other",
+        "Alleles segregate during gamete formation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Law of Dominance states that when two contrasting alleles are present (heterozygous), one (dominant) masks the expression of the other (recessive). The dominant trait is expressed in the phenotype.",
+      "difficulty": "EASY",
+      "topic": "Mendel's Laws",
+      "ncertPage": 70,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Codominance is exhibited by:",
+      "options": ["ABO blood groups", "Snapdragon flower color", "Eye color", "Pea seed color"],
+      "correctAnswer": "A",
+      "explanation": "Codominance is exhibited by ABO blood groups where both A and B alleles are expressed in AB blood group (I^A I^B). Neither allele is dominant or recessive to the other; both express simultaneously.",
+      "difficulty": "EASY",
+      "topic": "Codominance",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Features of Down syndrome include:",
+      "options": [
+        "Mental retardation and short stature",
+        "Small round head with furrowed tongue",
+        "Palm with single crease (simian crease)",
+        "All of the above"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Down syndrome is characterized by mental retardation, short stature, small round head, flat face, protruding furrowed tongue, partially open mouth, epicanthal fold, and simian crease on palm.",
+      "difficulty": "EASY",
+      "topic": "Autosomal Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Universal blood donor has blood group:",
+      "options": ["B", "AB", "O", "A"],
+      "correctAnswer": "C",
+      "explanation": "Blood group O is the universal donor because O negative RBCs have no A, B, or Rh antigens and can be transfused to any blood group without causing agglutination reaction.",
+      "difficulty": "EASY",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In honeybees, drones are:",
+      "options": ["Haploid males", "Diploid females", "Haploid females", "Diploid males"],
+      "correctAnswer": "A",
+      "explanation": "Drones (male honeybees) are haploid (n=16) as they develop from unfertilized eggs by parthenogenesis. Queens and workers (females) are diploid (2n=32) from fertilized eggs.",
+      "difficulty": "EASY",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Turner syndrome is characterized by:",
+      "options": ["47, XYY karyotype", "47, XXY karyotype", "45, X karyotype", "47, XXX karyotype"],
+      "correctAnswer": "C",
+      "explanation": "Turner syndrome females have 45, X karyotype (44 autosomes + X). They are missing one X chromosome, resulting in total 45 chromosomes. It is the only viable monosomy in humans.",
+      "difficulty": "EASY",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The chromosomal theory of inheritance was proposed by:",
+      "options": ["Sutton and Boveri", "Morgan", "Watson and Crick", "Mendel"],
+      "correctAnswer": "A",
+      "explanation": "The Chromosomal Theory of Inheritance was proposed independently by Walter Sutton and Theodor Boveri in 1902-1903. They proposed that chromosomes are the physical carriers of genes.",
+      "difficulty": "MEDIUM",
+      "topic": "History of Genetics",
+      "ncertPage": 76,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "How many alleles control ABO blood groups?",
+      "options": ["6", "2", "3", "4"],
+      "correctAnswer": "C",
+      "explanation": "Three alleles (I^A, I^B, and i) control ABO blood groups. I^A codes for A antigen, I^B for B antigen, and i produces no antigen. Any individual has only two of these alleles.",
+      "difficulty": "EASY",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Haplodiploidy sex determination is seen in:",
+      "options": ["Humans", "Birds", "Honeybees", "Fish"],
+      "correctAnswer": "C",
+      "explanation": "Honeybees show haplodiploidy where males (drones) develop from unfertilized eggs (haploid, n) and females (queens and workers) from fertilized eggs (diploid, 2n). No sex chromosomes are involved.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Queen Victoria was a carrier of:",
+      "options": ["Colour blindness", "Haemophilia", "Sickle cell anemia", "Muscular dystrophy"],
+      "correctAnswer": "B",
+      "explanation": "Queen Victoria was a carrier of haemophilia and transmitted it to many European royal families through her descendants. This is why haemophilia was once called the 'royal disease'.",
+      "difficulty": "EASY",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Polygenic inheritance involves:",
+      "options": [
+        "One gene affecting multiple traits",
+        "Multiple genes affecting one trait",
+        "Multiple alleles of one gene",
+        "Linked genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Polygenic inheritance (quantitative inheritance) involves multiple genes (polygenes) contributing to a single phenotypic trait. Examples include human skin color, height, and intelligence.",
+      "difficulty": "EASY",
+      "topic": "Polygenic Inheritance",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which is NOT a feature of pea plant that made it suitable for Mendel's experiments?",
+      "options": [
+        "Bisexual flowers",
+        "Cross-pollination is natural",
+        "Contrasting traits",
+        "Large number of offspring"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pea plants naturally self-pollinate, not cross-pollinate. The closed flower structure (keel) prevents cross-pollination. Mendel had to manually cross-pollinate by removing anthers and transferring pollen.",
+      "difficulty": "MEDIUM",
+      "topic": "Mendel's Experiments",
+      "ncertPage": 68,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The law of independent assortment is applicable when genes are:",
+      "options": [
+        "On the same chromosome",
+        "Linked together",
+        "On different chromosomes or far apart on same chromosome",
+        "In the same nucleus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Independent assortment occurs when genes are on different chromosomes or far apart on the same chromosome (so crossing over between them is frequent). Linked genes do not assort independently.",
+      "difficulty": "MEDIUM",
+      "topic": "Mendel's Laws",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phenylketonuria is an example of:",
+      "options": [
+        "Polygenic inheritance",
+        "Pleiotropic gene effect",
+        "Multiple allelism",
+        "Codominance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phenylketonuria (PKU) is an example of pleiotropy where a single defective gene causes multiple effects: mental retardation, reduced hair and skin pigmentation, and other symptoms due to accumulation of phenylalanine.",
+      "difficulty": "MEDIUM",
+      "topic": "Pleiotropy",
+      "ncertPage": 75,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Recombination frequency is related to:",
+      "options": [
+        "Rate of mutation",
+        "Distance between linked genes",
+        "Number of chromosomes",
+        "Number of alleles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Recombination frequency (RF) is directly proportional to the distance between linked genes on a chromosome. Greater the distance, higher the chance of crossing over and hence higher recombination frequency.",
+      "difficulty": "MEDIUM",
+      "topic": "Recombination",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a cross between TtRr × TtRr, how many different phenotypes can be obtained?",
+      "options": ["9", "16", "2", "4"],
+      "correctAnswer": "D",
+      "explanation": "In a dihybrid cross (TtRr × TtRr), 4 different phenotypes are produced: T_R_ (both dominant), T_rr (T dominant, r recessive), ttR_ (t recessive, R dominant), ttrr (both recessive) in 9:3:3:1 ratio.",
+      "difficulty": "MEDIUM",
+      "topic": "Dihybrid Cross",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to the law of segregation:",
+      "options": [
+        "Alleles express together",
+        "Alleles blend during gamete formation",
+        "Alleles separate during gamete formation",
+        "Alleles are linked together"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Law of Segregation states that during gamete formation, the two alleles of a gene separate (segregate) so that each gamete receives only one allele. This occurs during meiosis.",
+      "difficulty": "EASY",
+      "topic": "Mendel's Laws",
+      "ncertPage": 70,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a monohybrid cross, the phenotypic ratio in F2 generation is:",
+      "options": ["1:2:1", "3:1", "9:3:3:1", "1:1"],
+      "correctAnswer": "B",
+      "explanation": "In a monohybrid cross (Tt × Tt), the F2 generation shows a phenotypic ratio of 3:1 (3 dominant : 1 recessive). The genotypic ratio is 1:2:1 (TT:Tt:tt).",
+      "difficulty": "EASY",
+      "topic": "Monohybrid Cross",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "If a test cross produces all dominant phenotype offspring, the unknown parent is:",
+      "options": [
+        "Cannot be determined",
+        "Heterozygous",
+        "Homozygous dominant",
+        "Homozygous recessive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "If test cross (unknown × tt) produces all dominant offspring, the unknown must be homozygous dominant (TT). Cross: TT × tt → all Tt (dominant phenotype).",
+      "difficulty": "MEDIUM",
+      "topic": "Test Cross",
+      "ncertPage": 71,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Super female syndrome (47, XXX) is characterized by:",
+      "options": [
+        "Sterility",
+        "Masculine features",
+        "Mental retardation always",
+        "Usually normal but may have learning difficulties"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Super females (47, XXX) are usually normal in appearance and fertility. Some may have mild learning difficulties. The condition is often undiagnosed because symptoms are mild or absent.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Y-linked traits are also called:",
+      "options": ["Recessive traits", "X-linked traits", "Holandric traits", "Autosomal traits"],
+      "correctAnswer": "C",
+      "explanation": "Y-linked traits are called holandric traits because they are transmitted only from father to son (through Y chromosome). Examples in humans include hairy ear pinna (hypertrichosis).",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Linkage",
+      "ncertPage": 79,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Chromosomal disorders can be due to:",
+      "options": ["Aneuploidy", "Polyploidy", "Structural abnormalities", "All of the above"],
+      "correctAnswer": "D",
+      "explanation": "Chromosomal disorders can result from aneuploidy (gain/loss of chromosome), polyploidy (multiple sets of chromosomes), or structural changes (deletion, duplication, translocation, inversion).",
+      "difficulty": "EASY",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "True breeding line is one that:",
+      "options": [
+        "Shows incomplete dominance",
+        "Shows variation in each generation",
+        "Produces offspring identical to parent for many generations",
+        "Always produces hybrid offspring"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A true breeding line (pure line) is one that has undergone continuous self-pollination and produces offspring identical to the parent for the trait being studied. It is homozygous for that trait.",
+      "difficulty": "EASY",
+      "topic": "Mendel's Experiments",
+      "ncertPage": 68,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "1% recombination frequency equals:",
+      "options": [
+        "0.1 map units",
+        "1 centiMorgan (cM) or 1 map unit",
+        "10 map units",
+        "100 map units"
+      ],
+      "correctAnswer": "B",
+      "explanation": "1% recombination frequency equals 1 centiMorgan (cM) or 1 map unit. This measure is used to construct genetic maps showing relative positions of genes on chromosomes.",
+      "difficulty": "MEDIUM",
+      "topic": "Recombination",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The chromosomal constitution in Down syndrome is:",
+      "options": ["45 + XX/XY", "46 + XX/XY", "45 + X", "44 + XX/XY"],
+      "correctAnswer": "A",
+      "explanation": "Down syndrome individuals have 45 autosomes (with trisomy 21) + XX or XY = 47 chromosomes total. The karyotype is written as 47, XX+21 or 47, XY+21.",
+      "difficulty": "MEDIUM",
+      "topic": "Autosomal Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Epistasis is:",
+      "options": [
+        "Multiple genes affecting one trait",
+        "One gene masking expression of another gene",
+        "Genes on same chromosome",
+        "One gene affecting multiple traits"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Epistasis is a form of gene interaction where one gene (epistatic gene) masks or modifies the expression of another gene (hypostatic gene) at a different locus. Example: coat color in mice.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Interaction",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Number of Barr bodies in Klinefelter syndrome (XXY) is:",
+      "options": ["2", "3", "0", "1"],
+      "correctAnswer": "D",
+      "explanation": "Number of Barr bodies = Number of X chromosomes - 1. In XXY (Klinefelter), there is 1 Barr body. In XX female, 1 Barr body. In XO (Turner), 0 Barr bodies.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosomes",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In coat color of mice, the gene for color deposition is epistatic to:",
+      "options": [
+        "Gene for black/brown color",
+        "All color genes",
+        "No other genes",
+        "Gene for agouti pattern"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In mice, the C gene (color deposition) is epistatic to B gene (black/brown color). cc mice are albino regardless of B genotype because no pigment is deposited. Only C_ mice show black (B_) or brown (bb).",
+      "difficulty": "HARD",
+      "topic": "Gene Interaction",
+      "ncertPage": 75,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pleiotropy refers to:",
+      "options": [
+        "One gene affecting multiple traits",
+        "Multiple genes affecting one trait",
+        "One trait affected by environment",
+        "Multiple alleles of one gene"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pleiotropy is when a single gene influences multiple phenotypic traits. Example: sickle cell anemia gene affects RBC shape, causes anemia, affects multiple organs, and provides malaria resistance.",
+      "difficulty": "EASY",
+      "topic": "Pleiotropy",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The phenomenon where genes of parental types tend to remain together is:",
+      "options": ["Crossing over", "Recombination", "Independent assortment", "Linkage"],
+      "correctAnswer": "D",
+      "explanation": "Linkage is the tendency of genes located on the same chromosome to be inherited together. Parental combinations appear more frequently than recombinant types due to linkage.",
+      "difficulty": "EASY",
+      "topic": "Linkage",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "If recombination frequency between two genes is 50%, the genes are:",
+      "options": [
+        "Completely linked",
+        "On different chromosomes or far apart",
+        "Close together on same chromosome",
+        "On sex chromosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "50% recombination frequency indicates independent assortment, meaning genes are either on different chromosomes or so far apart on the same chromosome that crossing over between them is very frequent.",
+      "difficulty": "MEDIUM",
+      "topic": "Recombination",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Incomplete dominance is seen in:",
+      "options": [
+        "Fruit fly eye color",
+        "Pea plant flower color",
+        "Snapdragon flower color",
+        "Human blood groups"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Incomplete dominance is seen in snapdragon (Antirrhinum) flower color where red (RR) × white (rr) produces pink (Rr) heterozygotes. Neither allele is completely dominant over the other.",
+      "difficulty": "EASY",
+      "topic": "Incomplete Dominance",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sickle cell anemia is caused by substitution of:",
+      "options": [
+        "Glutamic acid by lysine in β-globin",
+        "Glutamic acid by valine in β-globin",
+        "Valine by glutamic acid in β-globin",
+        "Histidine by valine in α-globin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sickle cell anemia results from a point mutation in β-globin gene where glutamic acid (GAG) is replaced by valine (GUG) at position 6. This causes hemoglobin molecules to aggregate, deforming RBCs.",
+      "difficulty": "MEDIUM",
+      "topic": "Mutation",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following cannot be inherited from father to son?",
+      "options": [
+        "Y-linked trait",
+        "Autosomal recessive trait",
+        "Autosomal dominant trait",
+        "X-linked trait"
+      ],
+      "correctAnswer": "D",
+      "explanation": "X-linked traits cannot pass from father to son because sons inherit Y chromosome (not X) from their father. Sons get their only X chromosome from their mother.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Linkage",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Monosomy means:",
+      "options": [
+        "Loss of one chromosome (2n-1)",
+        "Single gene disorder",
+        "One type of chromosome only",
+        "Only one set of chromosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Monosomy refers to the presence of only one copy of a particular chromosome instead of two (2n-1). Example: Turner syndrome (45, XO) where one X chromosome is missing.",
+      "difficulty": "EASY",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In codominance:",
+      "options": [
+        "Alleles blend to produce intermediate phenotype",
+        "One allele is suppressed",
+        "One allele dominates over the other",
+        "Both alleles express equally"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In codominance, both alleles of a heterozygote are fully expressed and contribute to the phenotype. Both gene products are produced, as seen in AB blood group where both A and B antigens are present.",
+      "difficulty": "EASY",
+      "topic": "Codominance",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Point mutation involves:",
+      "options": [
+        "Change in chromosome number",
+        "Change in single base pair",
+        "Deletion of large segment",
+        "Translocation between chromosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Point mutation is a change in a single base pair in DNA. It can be substitution (transition or transversion), insertion, or deletion of a single nucleotide. Example: sickle cell anemia results from a point mutation.",
+      "difficulty": "EASY",
+      "topic": "Mutation",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a dihybrid cross, the phenotypic ratio in F2 generation is:",
+      "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+      "correctAnswer": "C",
+      "explanation": "In a dihybrid cross (RrYy × RrYy), the F2 phenotypic ratio is 9:3:3:1 (9 round yellow : 3 round green : 3 wrinkled yellow : 1 wrinkled green), assuming independent assortment.",
+      "difficulty": "EASY",
+      "topic": "Dihybrid Cross",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A person with blood group AB has genotype:",
+      "options": ["ii", "I^A I^A", "I^B I^B", "I^A I^B"],
+      "correctAnswer": "D",
+      "explanation": "Blood group AB is produced by genotype I^A I^B, where both alleles are codominant and expressed. The person has both A and B antigens on RBCs and no antibodies in plasma.",
+      "difficulty": "EASY",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pedigree analysis is used to:",
+      "options": [
+        "Count chromosomes",
+        "Detect mutations",
+        "Construct genetic maps",
+        "Study inheritance patterns in families"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Pedigree analysis involves studying inheritance patterns of traits across generations in a family using pedigree charts. It helps determine if a trait is dominant/recessive, autosomal/sex-linked.",
+      "difficulty": "EASY",
+      "topic": "Pedigree Analysis",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Universal blood recipient has blood group:",
+      "options": ["B", "AB", "O", "A"],
+      "correctAnswer": "B",
+      "explanation": "Blood group AB is the universal recipient because AB positive individuals have no anti-A, anti-B, or anti-Rh antibodies in plasma and can receive blood from any ABO/Rh group.",
+      "difficulty": "EASY",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a monohybrid cross, the genotypic ratio in F2 generation is:",
+      "options": ["9:3:3:1", "1:1:1:1", "3:1", "1:2:1"],
+      "correctAnswer": "D",
+      "explanation": "In a monohybrid cross (Tt × Tt), the F2 genotypic ratio is 1:2:1 (1 TT : 2 Tt : 1 tt). The 1 TT and 2 Tt show the dominant phenotype while tt shows recessive.",
+      "difficulty": "EASY",
+      "topic": "Monohybrid Cross",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Features of Turner syndrome include:",
+      "options": [
+        "All of the above",
+        "Short stature and webbed neck",
+        "Lack of secondary sexual characters",
+        "Sterility"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Turner syndrome females are short, have webbed neck, shield-shaped chest, undeveloped gonads (streak gonads), lack secondary sexual characters, have amenorrhea (no menstruation), and are sterile.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The law of segregation is also called:",
+      "options": [
+        "Law of dominance",
+        "Law of unit characters",
+        "Law of purity of gametes",
+        "Law of independent assortment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Law of Segregation is also called the Law of Purity of Gametes because it states that alleles separate during gamete formation, and each gamete receives only one allele of a gene (pure for that allele).",
+      "difficulty": "EASY",
+      "topic": "Mendel's Laws",
+      "ncertPage": 70,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In incomplete dominance, the phenotypic ratio in F2 is:",
+      "options": ["1:2:1", "9:3:3:1", "1:1", "3:1"],
+      "correctAnswer": "A",
+      "explanation": "In incomplete dominance, F2 phenotypic ratio is 1:2:1 (same as genotypic ratio) because heterozygotes can be distinguished phenotypically. Example: 1 red : 2 pink : 1 white.",
+      "difficulty": "MEDIUM",
+      "topic": "Incomplete Dominance",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Genes located on the same chromosome are called:",
+      "options": ["Linked genes", "Pleiotropic genes", "Alleles", "Multiple alleles"],
+      "correctAnswer": "A",
+      "explanation": "Genes located on the same chromosome are called linked genes. They tend to be inherited together and do not show independent assortment unless crossing over separates them.",
+      "difficulty": "EASY",
+      "topic": "Linkage",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Non-disjunction occurs during:",
+      "options": ["Mitosis only", "Meiosis only", "Both mitosis and meiosis", "Neither"],
+      "correctAnswer": "C",
+      "explanation": "Non-disjunction (failure of chromosomes to separate properly) can occur during both mitosis and meiosis. During meiosis, it leads to gametes with abnormal chromosome numbers causing aneuploid offspring.",
+      "difficulty": "MEDIUM",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phenotype refers to:",
+      "options": [
+        "Genetic makeup of an organism",
+        "Observable characteristics of an organism",
+        "All genes of an organism",
+        "Chromosomal arrangement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phenotype is the observable physical or biochemical characteristics of an organism determined by genotype and environment. Genotype is the genetic constitution. Phenotype = Genotype + Environment.",
+      "difficulty": "EASY",
+      "topic": "Basic Genetics",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "If a test cross produces 1:1 ratio of phenotypes, the unknown parent is:",
+      "options": ["Heterozygous", "Homozygous recessive", "Codominant", "Homozygous dominant"],
+      "correctAnswer": "A",
+      "explanation": "If test cross produces 1:1 ratio (50% dominant : 50% recessive), the unknown parent is heterozygous (Tt). Cross: Tt × tt → 1 Tt : 1 tt.",
+      "difficulty": "MEDIUM",
+      "topic": "Test Cross",
+      "ncertPage": 71,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A colour blind man marries a carrier woman. The probability of their son being colour blind is:",
+      "options": ["100%", "0%", "25%", "50%"],
+      "correctAnswer": "D",
+      "explanation": "Cross: X^c Y × X^+ X^c → Sons: X^+ Y (normal) or X^c Y (colour blind) = 50% each. Sons inherit X from mother (50% chance of getting X^c) and Y from father.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "T.H. Morgan's work on linkage and recombination was done on:",
+      "options": ["Mouse", "Pea plant", "Maize", "Drosophila (fruit fly)"],
+      "correctAnswer": "D",
+      "explanation": "T.H. Morgan conducted extensive genetic studies on Drosophila melanogaster (fruit fly). He demonstrated linkage, recombination, sex-linkage, and helped establish the chromosomal theory of inheritance.",
+      "difficulty": "EASY",
+      "topic": "Linkage",
+      "ncertPage": 76,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Haemophilia is:",
+      "options": ["X-linked recessive", "X-linked dominant", "Autosomal recessive", "Y-linked"],
+      "correctAnswer": "A",
+      "explanation": "Haemophilia (failure of blood clotting) is an X-linked recessive disorder. It is more common in males because they have only one X chromosome. The gene codes for clotting factor VIII (Haemophilia A).",
+      "difficulty": "EASY",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Down syndrome is caused by:",
+      "options": [
+        "Inversion in chromosome 21",
+        "Monosomy of chromosome 21",
+        "Trisomy of chromosome 21",
+        "Deletion in chromosome 21"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Down syndrome is caused by trisomy of chromosome 21 (three copies instead of two), resulting in 47 chromosomes. It is characterized by mental retardation, short stature, and distinctive facial features.",
+      "difficulty": "EASY",
+      "topic": "Autosomal Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Human skin color is controlled by:",
+      "options": [
+        "Sex-linked genes",
+        "Single gene with multiple alleles",
+        "At least 3-4 genes",
+        "Single gene with complete dominance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Human skin color is a polygenic trait controlled by at least 3-4 genes (some estimates suggest more). Each gene has two alleles, and the phenotype depends on the total number of dominant alleles.",
+      "difficulty": "MEDIUM",
+      "topic": "Polygenic Inheritance",
+      "ncertPage": 75,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mendel studied how many contrasting pairs of traits in pea plants?",
+      "options": ["6", "7", "8", "5"],
+      "correctAnswer": "B",
+      "explanation": "Mendel studied 7 contrasting pairs of traits: stem height (tall/dwarf), flower color (violet/white), flower position (axial/terminal), pod shape (inflated/constricted), pod color (green/yellow), seed shape (round/wrinkled), and seed color (yellow/green).",
+      "difficulty": "EASY",
+      "topic": "Mendel's Experiments",
+      "ncertPage": 68,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Linkage was discovered by:",
+      "options": ["Mendel", "Morgan", "Bateson and Punnett", "Sutton"],
+      "correctAnswer": "C",
+      "explanation": "Linkage was first discovered by Bateson and Punnett in sweet pea while studying flower color and pollen shape. They observed that certain combinations appeared together more often than expected.",
+      "difficulty": "MEDIUM",
+      "topic": "Linkage",
+      "ncertPage": 76,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Recombinant offspring have:",
+      "options": [
+        "Extra chromosomes",
+        "Same combination of alleles as parents",
+        "New combinations of alleles",
+        "Mutations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Recombinant offspring have new combinations of alleles that differ from either parent. These arise from crossing over between linked genes during meiosis.",
+      "difficulty": "EASY",
+      "topic": "Recombination",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a cross TtRr × TtRr, how many genotypes can be obtained?",
+      "options": ["12", "16", "4", "9"],
+      "correctAnswer": "D",
+      "explanation": "In a dihybrid cross, 9 different genotypes are produced: TTRR, TTRr, TTrr, TtRR, TtRr, Ttrr, ttRR, ttRr, ttrr. There are 16 offspring combinations but only 9 unique genotypes.",
+      "difficulty": "HARD",
+      "topic": "Dihybrid Cross",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Law of Independent Assortment states that:",
+      "options": [
+        "Genes on same chromosome assort together",
+        "Dominant alleles always assort together",
+        "Alleles of one gene segregate with alleles of another gene",
+        "Alleles of different genes assort independently during gamete formation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Law of Independent Assortment states that alleles of different genes located on different chromosomes assort independently during gamete formation. This is the basis for the 9:3:3:1 ratio.",
+      "difficulty": "EASY",
+      "topic": "Mendel's Laws",
+      "ncertPage": 72,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mendel's work was rediscovered in 1900 by:",
+      "options": [
+        "de Vries, Correns, and von Tschermak",
+        "Morgan, Sturtevant, and Bridges",
+        "Watson, Crick, and Wilkins",
+        "Darwin, Wallace, and Lamarck"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mendel's work, published in 1866, was rediscovered independently in 1900 by three scientists: Hugo de Vries (Netherlands), Carl Correns (Germany), and Erich von Tschermak (Austria).",
+      "difficulty": "MEDIUM",
+      "topic": "History of Genetics",
+      "ncertPage": 68,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "If an autosomal recessive trait appears in offspring of unaffected parents:",
+      "options": [
+        "It is X-linked",
+        "Both parents are carriers",
+        "One parent is affected",
+        "It is a new mutation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "If unaffected parents have affected offspring for an autosomal recessive trait, both parents must be carriers (heterozygotes, Aa). Cross: Aa × Aa → 1 AA : 2 Aa : 1 aa (25% affected).",
+      "difficulty": "MEDIUM",
+      "topic": "Pedigree Analysis",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Punnett square is used to:",
+      "options": [
+        "Predict outcomes of genetic crosses",
+        "Map chromosomes",
+        "Identify genes",
+        "Study mutations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A Punnett square is a diagram used to predict the genotypes and phenotypes of offspring from a genetic cross. It shows all possible combinations of parental gametes.",
+      "difficulty": "EASY",
+      "topic": "Basic Genetics",
+      "ncertPage": 70,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Alleles are:",
+      "options": [
+        "Genes on different chromosomes",
+        "Non-functional genes",
+        "Different genes on same chromosome",
+        "Alternative forms of the same gene"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Alleles are alternative forms of the same gene that occupy the same locus on homologous chromosomes. They may code for different versions of the same trait (e.g., T for tall, t for dwarf).",
+      "difficulty": "EASY",
+      "topic": "Basic Genetics",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trisomy means:",
+      "options": [
+        "Presence of an extra chromosome (2n+1)",
+        "Loss of one chromosome",
+        "Three copies of all chromosomes",
+        "Three sets of chromosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trisomy refers to the presence of three copies of a particular chromosome instead of two (2n+1). Examples include Down syndrome (trisomy 21), Klinefelter syndrome (XXY).",
+      "difficulty": "EASY",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Crossing over occurs during:",
+      "options": ["Interphase", "Mitosis", "Meiosis I (pachytene)", "Meiosis II"],
+      "correctAnswer": "C",
+      "explanation": "Crossing over occurs during pachytene stage of prophase I of meiosis. Homologous chromosomes exchange segments at chiasmata, creating new combinations of alleles (recombination).",
+      "difficulty": "EASY",
+      "topic": "Recombination",
+      "ncertPage": 77,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Klinefelter syndrome is characterized by:",
+      "options": ["45, X karyotype", "47, XXY karyotype", "47, XYY karyotype", "47, XXX karyotype"],
+      "correctAnswer": "B",
+      "explanation": "Klinefelter syndrome males have 47, XXY karyotype (44 autosomes + XXY). They have an extra X chromosome, resulting in overall 47 chromosomes.",
+      "difficulty": "EASY",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In grasshopper, males have:",
+      "options": [
+        "XO sex chromosomes",
+        "ZZ sex chromosomes",
+        "XX sex chromosomes",
+        "XY sex chromosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Grasshoppers follow XO sex determination. Males have only one X chromosome (XO), while females have two (XX). Males produce two types of sperm (with X or without sex chromosome).",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Determination",
+      "ncertPage": 78,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A haemophiliac man marries a normal woman. Their daughters will be:",
+      "options": ["All carriers", "50% haemophiliac", "All haemophiliac", "All normal"],
+      "correctAnswer": "A",
+      "explanation": "Cross: X^h Y × X^H X^H → Daughters: X^H X^h (all carriers). Daughters receive X^h from father and X^H from mother, making them heterozygous carriers.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A test cross is a cross between:",
+      "options": [
+        "F1 hybrid and dominant parent",
+        "F1 hybrid and recessive parent",
+        "Two recessive parents",
+        "Two F1 hybrids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A test cross is a cross between an organism of unknown genotype (showing dominant phenotype) and a homozygous recessive individual. It helps determine if the unknown is homozygous or heterozygous.",
+      "difficulty": "EASY",
+      "topic": "Test Cross",
+      "ncertPage": 71,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An individual with 47, XYY karyotype is called:",
+      "options": ["Super male", "Down syndrome male", "Klinefelter male", "Turner female"],
+      "correctAnswer": "A",
+      "explanation": "47, XYY individuals are called super males or Jacob syndrome. They are usually taller than average, may have mild learning difficulties, but are generally fertile and have normal appearance.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosome Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A colour blind man marries a normal woman. Their sons will be:",
+      "options": ["50% colour blind", "All carrier", "All colour blind", "All normal"],
+      "correctAnswer": "D",
+      "explanation": "Cross: X^c Y (colour blind man) × X^+ X^+ (normal woman) → Sons: X^+ Y (all normal). Sons inherit X from mother (normal) and Y from father. The father's X^c goes only to daughters.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Aneuploidy refers to:",
+      "options": [
+        "Structural changes in chromosomes",
+        "Point mutations",
+        "Multiple sets of chromosomes",
+        "Gain or loss of one or more chromosomes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aneuploidy is a condition where one or more chromosomes are added or missing from the normal diploid number (2n±1, 2n±2, etc.). It usually results from non-disjunction during meiosis.",
+      "difficulty": "EASY",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In incomplete dominance, the F1 phenotype is:",
+      "options": [
+        "Same as recessive parent",
+        "Intermediate between parents",
+        "Different from both parents but not intermediate",
+        "Same as dominant parent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In incomplete dominance, the F1 heterozygote shows a phenotype intermediate between the two parents. For example, red × white = pink in snapdragon.",
+      "difficulty": "EASY",
+      "topic": "Incomplete Dominance",
+      "ncertPage": 73,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a pedigree chart, a filled circle represents:",
+      "options": ["Unaffected female", "Affected female", "Unaffected male", "Affected male"],
+      "correctAnswer": "B",
+      "explanation": "In pedigree charts: square = male, circle = female; filled (shaded) = affected, empty = unaffected. A filled circle therefore represents an affected female.",
+      "difficulty": "EASY",
+      "topic": "Pedigree Analysis",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sex-linked genes are located on:",
+      "options": [
+        "Both autosomes and sex chromosomes",
+        "Mitochondrial DNA",
+        "Autosomes",
+        "Sex chromosomes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sex-linked genes are located on sex chromosomes (X or Y). Most sex-linked traits in humans are X-linked because X chromosome carries many more genes than Y chromosome.",
+      "difficulty": "EASY",
+      "topic": "Sex Linkage",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Colour blindness is:",
+      "options": ["X-linked recessive", "X-linked dominant", "Y-linked", "Autosomal dominant"],
+      "correctAnswer": "A",
+      "explanation": "Colour blindness (red-green color blindness) is an X-linked recessive trait. Males are more commonly affected because they have only one X chromosome and no corresponding allele on Y to mask the defective gene.",
+      "difficulty": "EASY",
+      "topic": "Sex-Linked Inheritance",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Crisscross inheritance is seen in:",
+      "options": [
+        "Y-linked traits",
+        "Mitochondrial inheritance",
+        "Autosomal dominant traits",
+        "X-linked traits"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Crisscross inheritance occurs in X-linked traits where males inherit the trait from their mother (through X chromosome) and transmit it to their daughters. Fathers cannot transmit X-linked traits to sons.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Linkage",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mendel selected pea plant for his experiments because:",
+      "options": [
+        "Self-pollination and cross-pollination are easily possible",
+        "All of the above",
+        "It has clearly contrasting characters",
+        "It has short life cycle and produces many seeds"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mendel chose pea plant because it has clearly distinguishable contrasting traits, short generation time, produces many offspring, can self-pollinate naturally, and cross-pollination can be easily performed.",
+      "difficulty": "EASY",
+      "topic": "Mendel's Experiments",
+      "ncertPage": 68,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which disorder is caused by trisomy of chromosome 18?",
+      "options": ["Patau syndrome", "Klinefelter syndrome", "Down syndrome", "Edward syndrome"],
+      "correctAnswer": "D",
+      "explanation": "Edward syndrome is caused by trisomy 18 (three copies of chromosome 18). It is characterized by severe developmental delay, heart defects, and often early death. Patau syndrome is trisomy 13.",
+      "difficulty": "HARD",
+      "topic": "Chromosomal Disorders",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A person with blood group O has genotype:",
+      "options": ["I^B i", "I^A I^B", "ii", "I^A i"],
+      "correctAnswer": "C",
+      "explanation": "Blood group O is produced by genotype ii (homozygous recessive). The person has no A or B antigens on RBCs but has both anti-A and anti-B antibodies in plasma.",
+      "difficulty": "EASY",
+      "topic": "Multiple Alleles",
+      "ncertPage": 74,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Homozygous condition means:",
+      "options": [
+        "No alleles are present",
+        "Multiple alleles are present",
+        "Both alleles are different",
+        "Both alleles are the same"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Homozygous means having two identical alleles for a trait (TT or tt). Heterozygous means having two different alleles (Tt). Homozygotes are true breeding for that trait.",
+      "difficulty": "EASY",
+      "topic": "Basic Genetics",
+      "ncertPage": 69,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Barr body is:",
+      "options": [
+        "Extra chromosome in Down syndrome",
+        "Active X chromosome",
+        "Inactive X chromosome",
+        "Y chromosome"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Barr body is the inactive X chromosome in female mammals, visible as a dark-staining body in the nucleus. X-inactivation (Lyon hypothesis) ensures dosage compensation - only one X is active in each cell.",
+      "difficulty": "MEDIUM",
+      "topic": "Sex Chromosomes",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

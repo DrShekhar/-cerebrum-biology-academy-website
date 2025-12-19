@@ -1,0 +1,882 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 9,
+  "ncertChapterName": "Strategies for Enhancement in Food Production",
+  "questions": [
+    {
+      "question": "IR-8 is a high-yielding variety of:",
+      "options": ["Cotton", "Wheat", "Rice", "Maize"],
+      "correctAnswer": "C",
+      "explanation": "IR-8 is a semi-dwarf, high-yielding rice variety developed at IRRI (International Rice Research Institute), Philippines. It was introduced in India during Green Revolution and called 'miracle rice'.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The main steps in plant breeding are:",
+      "options": [
+        "Collection, evaluation, selection, hybridization, testing",
+        "Hybridization only",
+        "Selection only",
+        "Collection of variability only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Plant breeding steps: 1) Collection of variability (germplasm), 2) Evaluation and selection of parents, 3) Cross hybridization, 4) Selection of superior recombinants, 5) Testing, release and commercialization.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 151,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hormone that promotes root formation in tissue culture is:",
+      "options": ["ABA", "Cytokinin", "Auxin", "Gibberellin"],
+      "correctAnswer": "C",
+      "explanation": "Auxins promote root formation in tissue culture. The ratio of auxin to cytokinin determines organogenesis - high auxin favors roots, high cytokinin favors shoots, balanced ratio produces callus.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Atlas 66 wheat variety is bred for:",
+      "options": ["Drought tolerance", "High yield", "Disease resistance", "High protein content"],
+      "correctAnswer": "D",
+      "explanation": "Atlas 66 wheat variety was bred for high protein content. Biofortified crops like this help address protein malnutrition in populations dependent on cereals as staple food.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofortification",
+      "ncertPage": 154,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "White revolution is associated with:",
+      "options": [
+        "Increase in milk production",
+        "Increase in egg production",
+        "Increase in wheat production",
+        "Increase in fish production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "White revolution (Operation Flood) refers to rapid increase in milk production in India. Dr. Verghese Kurien is called 'Father of White Revolution'. It made India largest milk producer.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 147,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Heterosis or hybrid vigor refers to:",
+      "options": [
+        "Superior performance of hybrid offspring than parents",
+        "Same performance as parents",
+        "Death of offspring",
+        "Reduced performance of offspring"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Heterosis (hybrid vigor) is the superior performance of hybrid offspring compared to either parent. It results from combination of best alleles from both parents and is exploited in breeding programs.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meristem culture is used for:",
+      "options": [
+        "Creating mutations",
+        "Producing virus-free plants",
+        "Increasing seed production",
+        "Increasing flower size"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Meristem (shoot tip) culture is used to produce virus-free plants. Meristem tissue usually lacks viruses as vascular tissue (through which viruses spread) is absent in meristem region.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Integrated pest management (IPM) involves:",
+      "options": [
+        "Combined use of biological, cultural, and minimal chemical control",
+        "Use of biological control only",
+        "No pest control",
+        "Use of chemical pesticides only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "IPM combines biological control (biocontrol agents, predators), cultural practices (crop rotation, resistant varieties), and minimum chemical control for sustainable pest management with less environmental damage.",
+      "difficulty": "EASY",
+      "topic": "Plant Protection",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is an advantage of micropropagation?",
+      "options": [
+        "Requires large space",
+        "Cannot produce disease-free plants",
+        "It is very slow",
+        "Produces genetically identical plants in large numbers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Advantages of micropropagation: rapid multiplication, production of genetically identical (true-to-type) plants, disease-free plants, conservation of rare species, year-round production, small space needed.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Methylophilus methylotrophus is:",
+      "options": [
+        "A fungus for antibiotic production",
+        "An alga",
+        "A yeast used for alcohol production",
+        "A bacterium used for producing SCP from methanol"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Methylophilus methylotrophus is a bacterium that can use methanol as sole carbon source to produce large amounts of protein-rich biomass. 250g of this organism can produce 25 tonnes of protein.",
+      "difficulty": "MEDIUM",
+      "topic": "Single Cell Protein",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Golden rice has been developed for:",
+      "options": [
+        "High vitamin A (beta-carotene) content",
+        "Disease resistance",
+        "High yield",
+        "High protein content"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Golden rice is genetically modified rice that produces beta-carotene (provitamin A) in the grain. It was developed to address vitamin A deficiency, which causes blindness in millions of children.",
+      "difficulty": "EASY",
+      "topic": "Biofortification",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blue revolution refers to:",
+      "options": [
+        "Growth in cotton production",
+        "Growth in fish production",
+        "Growth in milk production",
+        "Growth in wheat production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Blue revolution refers to the rapid growth in fish and aquatic food production through modern techniques of aquaculture. It is similar to green revolution in agriculture and white revolution in dairy.",
+      "difficulty": "EASY",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Layers in poultry are birds that:",
+      "options": [
+        "Cannot produce eggs",
+        "Are raised for meat",
+        "Are raised for egg production",
+        "Are wild birds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Layers are poultry birds (usually hens) specifically bred and raised for egg production. They are different from broilers which are raised for meat. Layers produce eggs for 18-24 months.",
+      "difficulty": "EASY",
+      "topic": "Poultry Farming",
+      "ncertPage": 149,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a surface feeder in composite fish culture?",
+      "options": ["Catla", "Grass carp", "Common carp", "Mrigal"],
+      "correctAnswer": "A",
+      "explanation": "Catla is a surface feeder. In composite fish culture: Catla feeds at surface, Rohu in middle column, Mrigal and Common carp at bottom, Grass carp on vegetation. This maximizes pond productivity.",
+      "difficulty": "MEDIUM",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "MOET stands for:",
+      "options": [
+        "Multiple Oocyte Extraction Technology",
+        "Modern Ovulation Enhancement Technique",
+        "Multiple Ovulation Embryo Transfer",
+        "Many Ovaries Egg Transfer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "MOET (Multiple Ovulation Embryo Transfer) is a technique to increase herd size rapidly. High-yielding cows are induced to produce many eggs, fertilized in vitro, and embryos transferred to surrogate mothers.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mung bean variety resistant to yellow mosaic virus and powdery mildew is:",
+      "options": ["Pusa Gaurav", "Pusa Komal", "Pusa Swarnim", "Pusa Sadabahar"],
+      "correctAnswer": "B",
+      "explanation": "Pusa Komal is a cowpea variety resistant to bacterial blight. Actually, the mung bean variety resistant to yellow mosaic virus is created through mutation breeding.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 154,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Explant in tissue culture is:",
+      "options": [
+        "The nutrient medium",
+        "Any part of plant used to start culture",
+        "The hormone used",
+        "The container"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Explant is any part of plant (leaf, stem, root tip, meristem, etc.) used to initiate tissue culture. The explant cells divide and form callus, which can be differentiated into complete plantlets.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Protoplasts are:",
+      "options": [
+        "Bacterial cells",
+        "Animal cells",
+        "Cells with thick cell wall",
+        "Naked plant cells without cell wall"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Protoplasts are plant cells from which cell wall has been removed using enzymes (cellulase, pectinase). They are used in somatic hybridization as they can fuse with protoplasts of other species.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pusa Sadabahar is a chilli variety resistant to:",
+      "options": [
+        "Bacterial blight",
+        "Chilli mosaic virus, leaf curl, and tobacco mosaic virus",
+        "Wilt",
+        "Rust"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pusa Sadabahar is a chilli variety developed for resistance to chilli mosaic virus, leaf curl, and tobacco mosaic virus. Disease-resistant varieties reduce pesticide use and crop losses.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Germplasm collection refers to:",
+      "options": [
+        "Entire collection of plants/seeds with all diverse alleles for all genes",
+        "Collection of pollen",
+        "Collection of insects",
+        "Collection of seeds only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Germplasm refers to the entire collection of plants, seeds, and tissues that possess all the diverse alleles for all genes in a given crop. It is the source of genetic variability for breeding programs.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 151,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Inbreeding in animal husbandry refers to:",
+      "options": [
+        "Mating of closely related animals",
+        "Cross-breeding different species",
+        "Artificial insemination",
+        "Mating of unrelated animals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Inbreeding is mating between closely related animals (4-6 generations). It increases homozygosity and can be used to develop pure lines. However, it can also lead to inbreeding depression.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a bottom feeder in composite fish culture?",
+      "options": ["Rohu", "Mrigal and Common carp", "Silver carp", "Catla"],
+      "correctAnswer": "B",
+      "explanation": "Mrigal and Common carp are bottom feeders that feed on detritus and organic matter at pond bottom. This feeding pattern allows efficient utilization of all pond zones in composite fish culture.",
+      "difficulty": "MEDIUM",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The high-yielding exotic cattle breed developed for milk production is:",
+      "options": ["Jersey", "Gir", "Red Sindhi", "Sahiwal"],
+      "correctAnswer": "A",
+      "explanation": "Jersey is a high-yielding exotic cattle breed known for rich, creamy milk. Exotic breeds like Jersey and Holstein-Friesian give more milk than Indian breeds like Red Sindhi, Sahiwal, and Gir.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Husbandry",
+      "ncertPage": 147,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Somatic hybridization involves:",
+      "options": [
+        "Sexual crossing",
+        "Fusion of protoplasts from different plant species",
+        "Grafting",
+        "Layering"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Somatic hybridization involves fusion of protoplasts (cell wall-removed cells) from two different plant species to create hybrid cells. This overcomes sexual incompatibility barriers between species.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In poultry farming, broilers are:",
+      "options": [
+        "Chickens raised for meat",
+        "Disease-resistant birds",
+        "Wild birds",
+        "Egg-laying hens"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Broilers are chickens bred and raised specifically for meat production. They grow rapidly and have high feed-to-meat conversion ratio. Layers are birds raised for egg production.",
+      "difficulty": "EASY",
+      "topic": "Poultry Farming",
+      "ncertPage": 149,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Totipotency refers to:",
+      "options": [
+        "Ability to produce toxins",
+        "Ability to resist diseases",
+        "Ability of cells to divide",
+        "Ability of a cell to develop into a complete organism"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Totipotency is the ability of a single cell to divide and produce all differentiated cells of an organism (develop into complete organism). Plant cells retain totipotency, enabling tissue culture.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process of crossing genetically dissimilar plants to produce hybrids is called:",
+      "options": ["Hybridization", "Mutation", "Polyploidy", "Selection"],
+      "correctAnswer": "A",
+      "explanation": "Hybridization is the crossing of two genetically different plants to combine desirable characters from both parents into the offspring. It is the most commonly used method in plant breeding.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pusa Gaurav is a variety of:",
+      "options": ["Rice", "Cotton", "Wheat", "Brassica resistant to aphids"],
+      "correctAnswer": "D",
+      "explanation": "Pusa Gaurav is a mustard (Brassica) variety that is resistant to aphids (insect pests). Breeding pest-resistant varieties reduces the need for chemical pesticides.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Apis dorsata is commonly known as:",
+      "options": ["Indian bee", "Rock bee (giant bee)", "Little bee", "Italian bee"],
+      "correctAnswer": "B",
+      "explanation": "Apis dorsata is called rock bee or giant honey bee. It builds large single-comb nests on high branches or cliffs. It produces large quantities of honey but is aggressive and cannot be domesticated easily.",
+      "difficulty": "MEDIUM",
+      "topic": "Apiculture",
+      "ncertPage": 149,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pusa Swarnim is a variety of Brassica that is resistant to:",
+      "options": ["Leaf curl", "White rust", "Wilt", "Mosaic virus"],
+      "correctAnswer": "B",
+      "explanation": "Pusa Swarnim is a mustard (Brassica) variety developed at IARI that is resistant to white rust disease. Such disease-resistant varieties help in reducing crop losses.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Fisheries is a sector that deals with:",
+      "options": [
+        "Only freshwater fish",
+        "Only marine fish",
+        "Both freshwater and marine fish as well as other aquatic organisms",
+        "Only ornamental fish"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fisheries involves catching, breeding, and management of fish and other aquatic organisms (prawns, crabs, oysters, etc.) from both freshwater (ponds, rivers) and marine (sea) sources.",
+      "difficulty": "EASY",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most commonly used bee species for commercial honey production is:",
+      "options": ["Apis florea", "Apis mellifera", "Apis cerana indica", "Apis dorsata"],
+      "correctAnswer": "B",
+      "explanation": "Apis mellifera (Italian bee) is most commonly used for commercial honey production. It is gentle, has good honey yield, and can be easily maintained in artificial hives.",
+      "difficulty": "MEDIUM",
+      "topic": "Apiculture",
+      "ncertPage": 149,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tissue culture technique involves:",
+      "options": [
+        "Growing animals",
+        "Making compost",
+        "Growing whole plants only",
+        "Growing plant cells/tissues in artificial nutrient medium under aseptic conditions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Plant tissue culture involves growing plant cells, tissues, or organs in artificial nutrient medium under aseptic (sterile) conditions. It is used for rapid multiplication and production of disease-free plants.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Dairy farm management includes:",
+      "options": [
+        "Selection of good breeds",
+        "All of the above",
+        "Quality and quantity of milk production",
+        "Proper housing, feeding, and disease control"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dairy farm management involves multiple aspects: selection of high-yielding breeds, proper housing and feeding, hygiene, regular health inspection, disease control, and maintaining milk quality and quantity.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 147,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Maize hybrids with high lysine and tryptophan are developed to:",
+      "options": [
+        "Improve disease resistance",
+        "Increase sugar content",
+        "Increase yield",
+        "Improve nutritional quality (protein quality)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Maize hybrids with high lysine and tryptophan (essential amino acids usually deficient in cereals) are biofortified varieties that improve protein quality for better human nutrition.",
+      "difficulty": "MEDIUM",
+      "topic": "Biofortification",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Nobel Peace Prize winner for developing high-yielding wheat varieties was:",
+      "options": ["B.P. Pal", "M.S. Swaminathan", "Norman E. Borlaug", "G.M. Reddy"],
+      "correctAnswer": "C",
+      "explanation": "Norman E. Borlaug won the Nobel Peace Prize in 1970 for developing high-yielding, disease-resistant wheat varieties. He is called 'Father of Green Revolution' globally.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Micropropagation is used for:",
+      "options": [
+        "Pest control",
+        "Slow multiplication of plants",
+        "Rapid multiplication of plants from small tissue pieces",
+        "Killing microbes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Micropropagation is the rapid multiplication of plants through tissue culture. Thousands of plantlets can be produced from a small explant in a short time. It's used for commercial propagation.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hisardale sheep is a cross between:",
+      "options": [
+        "Jersey and Sahiwal",
+        "Bikaneri ewes and Merino rams",
+        "Indian and Australian sheep",
+        "Murrah and Surti"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hisardale sheep is a new breed developed by crossing Bikaneri ewes with Merino rams. It combines good wool quality of Merino with adaptability of Bikaneri to Indian conditions.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plants produced through tissue culture are called:",
+      "options": ["Transgenic", "Hybrids", "Somaclones", "Mutants"],
+      "correctAnswer": "C",
+      "explanation": "Plants produced through tissue culture from a single parent are called somaclones. They are genetically identical to parent. Sometimes somaclonal variations (genetic variations) may occur during culture.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Biofortification refers to:",
+      "options": [
+        "Adding vitamins to food during processing",
+        "Breeding crops with higher nutritional quality",
+        "Using fertilizers",
+        "Genetic modification of microbes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Biofortification is breeding crops with higher levels of vitamins, minerals, and proteins. Examples: Golden rice (beta-carotene), iron-fortified rice, protein-rich maize. It addresses malnutrition.",
+      "difficulty": "EASY",
+      "topic": "Biofortification",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sonalika and Kalyan Sona are varieties of:",
+      "options": ["Sugarcane", "Rice", "Wheat", "Maize"],
+      "correctAnswer": "C",
+      "explanation": "Sonalika and Kalyan Sona are high-yielding, semi-dwarf wheat varieties developed in India during Green Revolution. They are resistant to rust diseases and give high yields with irrigation and fertilizers.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rohu is a:",
+      "options": [
+        "Carnivorous fish",
+        "Surface feeder",
+        "Column (middle zone) feeder",
+        "Bottom feeder"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Rohu (Labeo rohita) is a column feeder that feeds in the middle zone of water on plant material. It is one of the major carps used in composite fish culture in India.",
+      "difficulty": "MEDIUM",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Plant breeding is defined as:",
+      "options": [
+        "Natural selection of plants",
+        "Purposeful manipulation of plant species for desired characteristics",
+        "Growing plants in greenhouse",
+        "Pest control in plants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plant breeding is the purposeful manipulation of plant species to create desired plant types that are better suited for cultivation, produce better yields, and are disease resistant.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 151,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Green manure crops are:",
+      "options": [
+        "Crops grown for food",
+        "Crops grown and ploughed into soil for soil enrichment",
+        "Crops sprayed with green color",
+        "Ornamental crops"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Green manure crops (like sun hemp, Sesbania) are grown and ploughed into soil while green. They add organic matter and nitrogen (if leguminous) to soil, improving soil fertility naturally.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Jaya and Ratna are high-yielding varieties of:",
+      "options": ["Cotton", "Wheat", "Rice", "Sugarcane"],
+      "correctAnswer": "C",
+      "explanation": "Jaya and Ratna are high-yielding rice varieties developed in India. Jaya is a cross between T(N)1 and T-141, known for high yield potential.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Grass carp in composite fish culture feeds on:",
+      "options": [
+        "Aquatic weeds and vegetation",
+        "Other fish",
+        "Surface plankton",
+        "Bottom detritus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Grass carp (Ctenopharyngodon idella) feeds on aquatic weeds and vegetation. It helps control weed growth in ponds while converting plant matter to fish protein.",
+      "difficulty": "MEDIUM",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hormone that promotes shoot formation in tissue culture is:",
+      "options": ["Cytokinin", "Gibberellin", "Ethylene", "Auxin"],
+      "correctAnswer": "A",
+      "explanation": "Cytokinins promote shoot formation in tissue culture. High cytokinin to auxin ratio promotes shoot development, while high auxin to cytokinin ratio promotes root development.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme used to remove cell wall for protoplast isolation is:",
+      "options": ["Lipase", "Protease", "Amylase", "Cellulase and pectinase"],
+      "correctAnswer": "D",
+      "explanation": "Cellulase (digests cellulose) and pectinase (digests pectin) enzymes are used to remove cell wall and isolate protoplasts. The protoplasts are osmotically fragile and need proper medium.",
+      "difficulty": "MEDIUM",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The mule is an example of:",
+      "options": ["Out-crossing", "Interspecific hybridization", "Cross-breeding", "Inbreeding"],
+      "correctAnswer": "B",
+      "explanation": "Mule (male donkey × female horse) is an example of interspecific hybridization. It combines strength and patience of donkey with size and speed of horse. Mules are usually sterile.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Apiculture is:",
+      "options": ["Mushroom cultivation", "Fish farming", "Poultry farming", "Bee-keeping"],
+      "correctAnswer": "D",
+      "explanation": "Apiculture is bee-keeping for production of honey and beeswax. Common species include Apis indica, Apis dorsata (rock bee), Apis florea (little bee), and Apis mellifera (Italian bee).",
+      "difficulty": "EASY",
+      "topic": "Apiculture",
+      "ncertPage": 149,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Artificial insemination involves:",
+      "options": [
+        "Cloning",
+        "Natural mating",
+        "Injecting semen collected from superior male into female",
+        "Test tube fertilization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Artificial insemination is introducing semen collected from superior males into reproductive tract of selected females. It allows one superior male to mate many females and spread superior genes.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Himgiri is a wheat variety resistant to:",
+      "options": [
+        "Hill bunt, leaf rust, and stripe rust",
+        "Tobacco mosaic virus",
+        "Wilt disease",
+        "Bacterial blight"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Himgiri is a disease-resistant wheat variety developed in India. It is resistant to hill bunt, leaf rust, and stripe rust - common fungal diseases affecting wheat crops.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Saccharum officinarum is crossed with wild species for:",
+      "options": [
+        "Larger stems",
+        "Higher sugar content",
+        "Disease resistance, better ratooning, high yield",
+        "Sweeter taste"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Saccharum officinarum (noble cane, high sugar) is crossed with Saccharum barberi (north Indian wild cane) for disease resistance, tolerance to stress, good ratooning ability, and high yield.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pusa Sem 2 and Pusa Sem 3 are varieties of:",
+      "options": [
+        "Flat bean resistant to jassids, aphids, and fruit borer",
+        "Wheat resistant to rust",
+        "Cotton resistant to bollworms",
+        "Rice resistant to leaf hoppers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pusa Sem 2 and Pusa Sem 3 are flat bean (sem) varieties bred for resistance to jassids, aphids, and fruit borer. Pest-resistant varieties provide natural crop protection.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 153,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The 'Father of White Revolution in India' is:",
+      "options": ["B.P. Pal", "M.S. Swaminathan", "Norman Borlaug", "Verghese Kurien"],
+      "correctAnswer": "D",
+      "explanation": "Dr. Verghese Kurien is called the 'Father of White Revolution in India'. He founded Amul dairy cooperative and led Operation Flood, which transformed India into world's largest milk producer.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 147,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Composite fish culture involves:",
+      "options": [
+        "Culturing fish in sea",
+        "Culturing single species of fish",
+        "Culturing multiple compatible fish species in same pond",
+        "Culturing fish with plants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Composite fish culture (polyculture) involves growing 5-6 compatible fish species in the same pond to utilize all ecological niches. Surface feeders, column feeders, and bottom feeders are combined.",
+      "difficulty": "MEDIUM",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pomato is a somatic hybrid of:",
+      "options": ["Potato and mango", "Pea and tomato", "Potato and brinjal", "Potato and tomato"],
+      "correctAnswer": "D",
+      "explanation": "Pomato is a somatic hybrid produced by fusing protoplasts of potato and tomato. While scientifically interesting, such hybrids are often sterile or don't combine the useful traits of both parents.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Aquaculture refers to:",
+      "options": [
+        "Rain water harvesting",
+        "Study of water",
+        "Culture of aquatic organisms under controlled conditions",
+        "Water purification"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Aquaculture is the farming of aquatic organisms (fish, shellfish, aquatic plants) under controlled conditions. It includes both freshwater aquaculture and mariculture (marine aquaculture).",
+      "difficulty": "EASY",
+      "topic": "Fisheries",
+      "ncertPage": 150,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Semi-dwarf wheat varieties were developed from:",
+      "options": [
+        "Japanese variety Norin 10",
+        "Mexican varieties",
+        "American varieties",
+        "Indian varieties"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Semi-dwarf wheat varieties were developed using Japanese variety Norin 10 which carried dwarfing genes. These short, high-yielding varieties don't lodge and respond well to fertilizers.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Animal husbandry deals with:",
+      "options": [
+        "Plant cultivation",
+        "Care, breeding and management of livestock",
+        "Manufacturing of fertilizers",
+        "Soil conservation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Animal husbandry is the agricultural practice dealing with care, breeding, and management of livestock animals for commercial purposes. It includes dairy farming, poultry, bee-keeping, and fisheries.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 147,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Outbreeding refers to:",
+      "options": [
+        "Self-fertilization",
+        "Cloning",
+        "Mating of closely related animals",
+        "Mating of unrelated animals of same breed or different breeds"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Outbreeding is mating between unrelated animals. It includes out-crossing (same breed, no common ancestor for 4-6 generations), cross-breeding (different breeds), and interspecific hybridization.",
+      "difficulty": "EASY",
+      "topic": "Animal Husbandry",
+      "ncertPage": 148,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Callus is:",
+      "options": [
+        "Undifferentiated mass of cells",
+        "Root tissue",
+        "Leaf tissue",
+        "Hardened plant tissue"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Callus is an unorganized, undifferentiated mass of cells produced when plant tissue is cultured on appropriate medium with hormones. Callus can be induced to form roots and shoots.",
+      "difficulty": "EASY",
+      "topic": "Tissue Culture",
+      "ncertPage": 156,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Single Cell Protein (SCP) refers to:",
+      "options": [
+        "Protein from single animal cell",
+        "Protein from tissue culture",
+        "Protein from a single plant cell",
+        "Microbial biomass used as protein-rich food/feed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Single Cell Protein (SCP) is protein-rich microbial biomass from bacteria, yeasts, algae, or fungi. It can be used as food for humans or animal feed. Spirulina, Methylophilus are SCP sources.",
+      "difficulty": "EASY",
+      "topic": "Single Cell Protein",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Spirulina is:",
+      "options": [
+        "A fungus",
+        "A yeast",
+        "A bacterium used for SCP",
+        "A blue-green alga (cyanobacterium) used for SCP"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Spirulina is a blue-green alga (cyanobacterium) rich in proteins, vitamins, and minerals. It is used as a nutritional supplement and as single cell protein. It can grow on waste water.",
+      "difficulty": "EASY",
+      "topic": "Single Cell Protein",
+      "ncertPage": 155,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mutation breeding involves:",
+      "options": [
+        "Vegetative propagation",
+        "Natural crossing",
+        "Inducing mutations using mutagens",
+        "Grafting"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mutation breeding uses physical (radiation) or chemical mutagens to induce genetic variations. Desirable mutants are selected and used as new varieties or in hybridization programs.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 154,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 'Father of Green Revolution in India' is:",
+      "options": ["Verghese Kurien", "B.P. Pal", "Norman Borlaug", "M.S. Swaminathan"],
+      "correctAnswer": "D",
+      "explanation": "Dr. M.S. Swaminathan is called the 'Father of Green Revolution in India'. He introduced Mexican semi-dwarf wheat varieties to India and developed many high-yielding varieties.",
+      "difficulty": "EASY",
+      "topic": "Plant Breeding",
+      "ncertPage": 152,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

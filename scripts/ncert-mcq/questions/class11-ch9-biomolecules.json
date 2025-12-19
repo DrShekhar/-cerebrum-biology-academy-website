@@ -1,0 +1,1167 @@
+{
+  "ncertClass": 11,
+  "chapter": 9,
+  "chapterName": "Biomolecules",
+  "questions": [
+    {
+      "question": "The relative abundance of carbon and hydrogen compared to other elements is higher in:",
+      "options": ["Earth's crust", "Living organisms", "Both are equal", "Non-living matter"],
+      "correctAnswer": "B",
+      "explanation": "A closer examination reveals that the relative abundance of carbon and hydrogen with respect to other elements is higher in any living organism than in earth's crust. (NCERT Page 104)",
+      "difficulty": "EASY",
+      "topic": "Chemical Composition",
+      "ncertPage": 104,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "When living tissue is ground in trichloroacetic acid, the filtrate obtained is called:",
+      "options": ["Acid insoluble fraction", "Acid-soluble pool", "Retentate", "Precipitate"],
+      "correctAnswer": "B",
+      "explanation": "When living tissue is ground in trichloroacetic acid and strained, we obtain two fractions. One is called the filtrate or more technically, the acid-soluble pool. (NCERT Page 104)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Analysis",
+      "ncertPage": 104,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The acid insoluble fraction obtained from living tissue is also called:",
+      "options": ["Filtrate", "Retentate", "Supernatant", "Extract"],
+      "correctAnswer": "B",
+      "explanation": "When living tissue is strained after grinding in trichloroacetic acid, the second fraction is called the retentate or the acid-insoluble fraction. (NCERT Page 104)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Analysis",
+      "ncertPage": 104,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most abundant element in living organisms by weight is:",
+      "options": ["Carbon", "Hydrogen", "Oxygen", "Nitrogen"],
+      "correctAnswer": "C",
+      "explanation": "According to the table, oxygen constitutes about 65% of human body weight, making it the most abundant element. (NCERT Page 105)",
+      "difficulty": "EASY",
+      "topic": "Chemical Composition",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carbon constitutes approximately what percentage of human body weight?",
+      "options": ["0.03%", "9.5%", "18.5%", "65%"],
+      "correctAnswer": "C",
+      "explanation": "According to the table, carbon constitutes about 18.5% of human body weight, compared to only 0.03% in earth's crust. (NCERT Page 105)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Composition",
+      "ncertPage": 105,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The material remaining after complete burning of living tissue is called:",
+      "options": ["Dry weight", "Wet weight", "Ash", "Residue"],
+      "correctAnswer": "C",
+      "explanation": "If the tissue is fully burnt, all the carbon compounds are oxidised to gaseous form and removed. What is remaining is called 'ash'. This ash contains inorganic elements. (NCERT Page 105)",
+      "difficulty": "EASY",
+      "topic": "Chemical Analysis",
+      "ncertPage": 105,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Amino acids are organic compounds containing an amino group and acidic group on the:",
+      "options": ["Beta carbon", "Alpha carbon", "Gamma carbon", "Different carbons"],
+      "correctAnswer": "B",
+      "explanation": "Amino acids are organic compounds containing an amino group and an acidic group as substituents on the same carbon i.e., the α-carbon. Hence, they are called α-amino acids. (NCERT Page 105)",
+      "difficulty": "EASY",
+      "topic": "Amino Acids",
+      "ncertPage": 105,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The number of types of amino acids that occur in proteins is:",
+      "options": ["10", "15", "20", "25"],
+      "correctAnswer": "C",
+      "explanation": "Based on the nature of R group there are many amino acids. However, those which occur in proteins are only of twenty types. (NCERT Page 105-106)",
+      "difficulty": "EASY",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The R group in glycine amino acid is:",
+      "options": ["Methyl group", "Hydrogen", "Hydroxymethyl", "Carboxyl group"],
+      "correctAnswer": "B",
+      "explanation": "The R group in proteinaceous amino acids could be a hydrogen (the amino acid is called glycine). (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The R group in alanine is:",
+      "options": ["Hydrogen", "Methyl group", "Hydroxymethyl", "Benzyl group"],
+      "correctAnswer": "B",
+      "explanation": "The R group could be a methyl group (alanine). (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The R group in serine is:",
+      "options": ["Hydrogen", "Methyl group", "Hydroxymethyl", "Indole group"],
+      "correctAnswer": "C",
+      "explanation": "The R group could be hydroxy methyl (serine). (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An example of acidic amino acid is:",
+      "options": ["Glycine", "Lysine", "Glutamic acid", "Valine"],
+      "correctAnswer": "C",
+      "explanation": "Based on number of amino and carboxyl groups, there are acidic (e.g., glutamic acid), basic (lysine) and neutral (valine) amino acids. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An example of basic amino acid is:",
+      "options": ["Glutamic acid", "Lysine", "Valine", "Glycine"],
+      "correctAnswer": "B",
+      "explanation": "Based on number of amino and carboxyl groups, there are acidic (e.g., glutamic acid), basic (lysine) and neutral (valine) amino acids. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An example of neutral amino acid is:",
+      "options": ["Glutamic acid", "Lysine", "Valine", "Aspartic acid"],
+      "correctAnswer": "C",
+      "explanation": "Based on number of amino and carboxyl groups, there are acidic (e.g., glutamic acid), basic (lysine) and neutral (valine) amino acids. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is an aromatic amino acid?",
+      "options": ["Glycine", "Alanine", "Tyrosine", "Valine"],
+      "correctAnswer": "C",
+      "explanation": "There are aromatic amino acids (tyrosine, phenylalanine, tryptophan). (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The form of amino acid that carries both positive and negative charges is called:",
+      "options": ["Cationic form", "Anionic form", "Zwitterionic form", "Neutral form"],
+      "correctAnswer": "C",
+      "explanation": "A particular property of amino acids is the ionizable nature of –NH2 and –COOH groups. Hence in solutions of different pH, the structure changes. The form with both charges is called zwitterionic form. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Amino Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lipids are generally:",
+      "options": [
+        "Water soluble",
+        "Water insoluble",
+        "Soluble in dilute acid",
+        "Soluble in dilute alkali"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lipids are generally water insoluble. They could be simple fatty acids. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Palmitic acid has how many carbon atoms?",
+      "options": ["14", "16", "18", "20"],
+      "correctAnswer": "B",
+      "explanation": "For example, palmitic acid has 16 carbons including carboxyl carbon. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Arachidonic acid has how many carbon atoms?",
+      "options": ["16", "18", "20", "22"],
+      "correctAnswer": "C",
+      "explanation": "Arachidonic acid has 20 carbon atoms including the carboxyl carbon. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Fatty acids without double bonds are called:",
+      "options": ["Unsaturated", "Saturated", "Essential", "Non-essential"],
+      "correctAnswer": "B",
+      "explanation": "Fatty acids could be saturated (without double bond) or unsaturated (with one or more C=C double bonds). (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glycerol is chemically:",
+      "options": [
+        "Monohydroxy propane",
+        "Dihydroxy propane",
+        "Trihydroxy propane",
+        "Tetrahydroxy butane"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Another simple lipid is glycerol which is trihydroxy propane. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fats and oils are differentiated based on:",
+      "options": ["Color", "Melting point", "Taste", "Smell"],
+      "correctAnswer": "B",
+      "explanation": "They can be monoglycerides, diglycerides and triglycerides. These are also called fats and oils based on melting point. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Oils have:",
+      "options": [
+        "Higher melting point",
+        "Lower melting point",
+        "Same melting point as fats",
+        "No melting point"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oils have lower melting point (e.g., gingelly oil) and hence remain as oil in winters. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Phospholipids are found in:",
+      "options": ["Cell wall", "Cell membrane", "Nucleus", "Ribosomes"],
+      "correctAnswer": "B",
+      "explanation": "Some lipids have phosphorous and a phosphorylated organic compound in them. These are phospholipids. They are found in cell membrane. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lecithin is an example of:",
+      "options": ["Simple lipid", "Phospholipid", "Glycolipid", "Steroid"],
+      "correctAnswer": "B",
+      "explanation": "Some lipids have phosphorous and a phosphorylated organic compound in them. These are phospholipids. Lecithin is one example. (NCERT Page 106)",
+      "difficulty": "MEDIUM",
+      "topic": "Lipids",
+      "ncertPage": 106,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The nitrogen bases found in nucleic acids are:",
+      "options": [
+        "Adenine, guanine, cytosine, uracil and thymine",
+        "Adenine, guanine, cytosine only",
+        "Adenine, thymine, uracil only",
+        "Guanine, cytosine, thymine only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Some of these are nitrogen bases – adenine, guanine, cytosine, uracil, and thymine. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When a nitrogen base is attached to a sugar, it is called:",
+      "options": ["Nucleotide", "Nucleoside", "Nucleic acid", "Polynucleotide"],
+      "correctAnswer": "B",
+      "explanation": "When found attached to a sugar, they are called nucleosides. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When a phosphate group is esterified to the sugar of a nucleoside, it is called:",
+      "options": ["Nucleoside", "Nucleotide", "Nucleic acid", "Nitrogen base"],
+      "correctAnswer": "B",
+      "explanation": "If a phosphate group is also found esterified to the sugar they are called nucleotides. (NCERT Page 106)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 106,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adenine and Guanine are substituted:",
+      "options": ["Pyrimidines", "Purines", "Pentoses", "Hexoses"],
+      "correctAnswer": "B",
+      "explanation": "Adenine and Guanine are substituted purines while the rest are substituted pyrimidines. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cytosine, uracil and thymine are substituted:",
+      "options": ["Purines", "Pyrimidines", "Pentoses", "Hexoses"],
+      "correctAnswer": "B",
+      "explanation": "Adenine and Guanine are substituted purines while the rest (cytosine, uracil, thymine) are substituted pyrimidines. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primary metabolites are found in:",
+      "options": ["Only plants", "Only animals", "Animal tissues", "Only microbes"],
+      "correctAnswer": "C",
+      "explanation": "In animal tissues, one notices the presence of all such categories of compounds. These are primary metabolites. (NCERT Page 108)",
+      "difficulty": "MEDIUM",
+      "topic": "Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is a secondary metabolite?",
+      "options": ["Amino acids", "Sugars", "Alkaloids", "Fatty acids"],
+      "correctAnswer": "C",
+      "explanation": "When one analyses plant, fungal and microbial cells, one would see thousands of compounds other than primary metabolites, e.g. alkaloids, flavonoids, rubber, essential oils, antibiotics, coloured pigments, scents, gums, spices. These are called secondary metabolites. (NCERT Page 108)",
+      "difficulty": "MEDIUM",
+      "topic": "Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Morphine and Codeine are examples of:",
+      "options": ["Pigments", "Alkaloids", "Terpenoids", "Essential oils"],
+      "correctAnswer": "B",
+      "explanation": "Alkaloids include Morphine, Codeine, etc. (NCERT Page 108, Table 9.3)",
+      "difficulty": "MEDIUM",
+      "topic": "Secondary Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carotenoids and Anthocyanins are examples of:",
+      "options": ["Alkaloids", "Pigments", "Terpenoids", "Toxins"],
+      "correctAnswer": "B",
+      "explanation": "Pigments include Carotenoids, Anthocyanins, etc. (NCERT Page 108, Table 9.3)",
+      "difficulty": "MEDIUM",
+      "topic": "Secondary Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Concanavalin A is an example of:",
+      "options": ["Alkaloid", "Toxin", "Lectin", "Drug"],
+      "correctAnswer": "C",
+      "explanation": "Lectins include Concanavalin A. (NCERT Page 108, Table 9.3)",
+      "difficulty": "MEDIUM",
+      "topic": "Secondary Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Abrin and Ricin are examples of:",
+      "options": ["Lectins", "Toxins", "Drugs", "Alkaloids"],
+      "correctAnswer": "B",
+      "explanation": "Toxins include Abrin, Ricin. (NCERT Page 108, Table 9.3)",
+      "difficulty": "MEDIUM",
+      "topic": "Secondary Metabolites",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The molecular weight of compounds in the acid soluble pool ranges from:",
+      "options": [
+        "18 to 800 daltons",
+        "1000 to 10000 daltons",
+        "10000 to 100000 daltons",
+        "Above 100000 daltons"
+      ],
+      "correctAnswer": "A",
+      "explanation": "There is one feature common to all those compounds found in the acid soluble pool. They have molecular weights ranging from 18 to around 800 daltons (Da) approximately. (NCERT Page 108)",
+      "difficulty": "MEDIUM",
+      "topic": "Biomacromolecules",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The acid insoluble fraction has only how many types of organic compounds?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "The acid insoluble fraction has only four types of organic compounds i.e., proteins, nucleic acids, polysaccharides and lipids. (NCERT Page 108)",
+      "difficulty": "MEDIUM",
+      "topic": "Biomacromolecules",
+      "ncertPage": 108,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biomolecules with molecular weights less than one thousand dalton are called:",
+      "options": ["Macromolecules", "Micromolecules", "Polymers", "Monomers"],
+      "correctAnswer": "B",
+      "explanation": "Biomolecules which have molecular weights less than one thousand dalton are usually referred to as micromolecules or simply biomolecules. (NCERT Page 108)",
+      "difficulty": "EASY",
+      "topic": "Biomacromolecules",
+      "ncertPage": 108,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT strictly a macromolecule?",
+      "options": ["Proteins", "Nucleic acids", "Lipids", "Polysaccharides"],
+      "correctAnswer": "C",
+      "explanation": "Lipids are indeed small molecular weight compounds. Lipids are not strictly macromolecules. (NCERT Page 108-109)",
+      "difficulty": "MEDIUM",
+      "topic": "Biomacromolecules",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most abundant chemical in living organisms is:",
+      "options": ["Proteins", "Carbohydrates", "Water", "Lipids"],
+      "correctAnswer": "C",
+      "explanation": "Water is the most abundant chemical in living organisms, constituting 70-90% of total cellular mass. (NCERT Page 109)",
+      "difficulty": "EASY",
+      "topic": "Cell Composition",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Proteins constitute approximately what percentage of total cellular mass?",
+      "options": ["3%", "5-7%", "10-15%", "70-90%"],
+      "correctAnswer": "C",
+      "explanation": "Proteins constitute 10-15% of the total cellular mass. (NCERT Page 109, Table 9.4)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Composition",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Proteins are:",
+      "options": ["Polynucleotides", "Polysaccharides", "Polypeptides", "Polyphosphates"],
+      "correctAnswer": "C",
+      "explanation": "Proteins are polypeptides. They are linear chains of amino acids linked by peptide bonds. (NCERT Page 109)",
+      "difficulty": "EASY",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A protein is a:",
+      "options": ["Homopolymer", "Heteropolymer", "Simple polymer", "Linear polymer"],
+      "correctAnswer": "B",
+      "explanation": "As there are 20 types of amino acids, a protein is a heteropolymer and not a homopolymer. A homopolymer has only one type of monomer repeating 'n' number of times. (NCERT Page 109)",
+      "difficulty": "MEDIUM",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most abundant protein in animal world is:",
+      "options": ["Insulin", "Collagen", "Haemoglobin", "Keratin"],
+      "correctAnswer": "B",
+      "explanation": "Collagen is the most abundant protein in animal world. (NCERT Page 110)",
+      "difficulty": "EASY",
+      "topic": "Proteins",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most abundant protein in the whole of the biosphere is:",
+      "options": ["Collagen", "Keratin", "RuBisCO", "Insulin"],
+      "correctAnswer": "C",
+      "explanation": "Ribulose bisphosphate Carboxylase-Oxygenase (RuBisCO) is the most abundant protein in the whole of the biosphere. (NCERT Page 110)",
+      "difficulty": "MEDIUM",
+      "topic": "Proteins",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Polysaccharides are long chains of:",
+      "options": ["Amino acids", "Fatty acids", "Sugars", "Nucleotides"],
+      "correctAnswer": "C",
+      "explanation": "Polysaccharides are long chains of sugars. They are threads containing different monosaccharides as building blocks. (NCERT Page 110)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cellulose is a polymeric polysaccharide consisting of:",
+      "options": ["Fructose only", "Glucose only", "Both glucose and fructose", "Galactose only"],
+      "correctAnswer": "B",
+      "explanation": "For example, cellulose is a polymeric polysaccharide consisting of only one type of monosaccharide i.e., glucose. Cellulose is a homopolymer. (NCERT Page 110)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The storage polysaccharide in animals is:",
+      "options": ["Starch", "Cellulose", "Glycogen", "Inulin"],
+      "correctAnswer": "C",
+      "explanation": "Starch is present as a store house of energy in plant tissues. Animals have another variant called glycogen. (NCERT Page 110)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Inulin is a polymer of:",
+      "options": ["Glucose", "Fructose", "Galactose", "Mannose"],
+      "correctAnswer": "B",
+      "explanation": "Inulin is a polymer of fructose. (NCERT Page 110)",
+      "difficulty": "MEDIUM",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In a polysaccharide chain, the right end is called:",
+      "options": ["Non-reducing end", "Reducing end", "Active end", "Terminal end"],
+      "correctAnswer": "B",
+      "explanation": "In a polysaccharide chain (say glycogen), the right end is called the reducing end and the left end is called the non-reducing end. (NCERT Page 110)",
+      "difficulty": "MEDIUM",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Starch can hold I₂ molecules in its:",
+      "options": ["Linear portion", "Branched portion", "Helical portion", "Terminal portion"],
+      "correctAnswer": "C",
+      "explanation": "Starch forms helical secondary structures. In fact, starch can hold I₂ molecules in the helical portion. The starch-I₂ is blue in colour. (NCERT Page 110)",
+      "difficulty": "MEDIUM",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The colour of starch-iodine complex is:",
+      "options": ["Red", "Green", "Blue", "Yellow"],
+      "correctAnswer": "C",
+      "explanation": "Starch can hold I₂ molecules in the helical portion. The starch-I₂ is blue in colour. (NCERT Page 110)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 110,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plant cell walls are made of:",
+      "options": ["Starch", "Glycogen", "Cellulose", "Chitin"],
+      "correctAnswer": "C",
+      "explanation": "Plant cell walls are made of cellulose. Paper made from plant pulp and cotton fibre is cellulosic. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The complex polysaccharide found in exoskeletons of arthropods is:",
+      "options": ["Cellulose", "Chitin", "Starch", "Glycogen"],
+      "correctAnswer": "B",
+      "explanation": "Exoskeletons of arthropods, for example, have a complex polysaccharide called chitin. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Polysaccharides",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nucleic acids are:",
+      "options": ["Polypeptides", "Polysaccharides", "Polynucleotides", "Polyamines"],
+      "correctAnswer": "C",
+      "explanation": "The other type of macromolecule is the nucleic acid. These are polynucleotides. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A nucleotide has how many chemically distinct components?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "C",
+      "explanation": "A nucleotide has three chemically distinct components. One is a heterocyclic compound, the second is a monosaccharide and the third a phosphoric acid or phosphate. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sugar found in DNA is:",
+      "options": ["Ribose", "Deoxyribose", "Glucose", "Fructose"],
+      "correctAnswer": "B",
+      "explanation": "The sugar found in polynucleotides is either ribose or 2' deoxyribose. A nucleic acid containing deoxyribose is called deoxyribonucleic acid (DNA). (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sugar found in RNA is:",
+      "options": ["Deoxyribose", "Ribose", "Glucose", "Galactose"],
+      "correctAnswer": "B",
+      "explanation": "The nucleic acid which contains ribose is called ribonucleic acid (RNA). (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Nucleic Acids",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The sequence of amino acids in a protein is called:",
+      "options": [
+        "Secondary structure",
+        "Tertiary structure",
+        "Primary structure",
+        "Quaternary structure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The sequence of amino acids i.e., the positional information in a protein – which is the first amino acid, which is second, and so on – is called the primary structure of a protein. (NCERT Page 111)",
+      "difficulty": "EASY",
+      "topic": "Protein Structure",
+      "ncertPage": 111,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first amino acid of a protein is also called:",
+      "options": [
+        "C-terminal amino acid",
+        "N-terminal amino acid",
+        "Middle amino acid",
+        "Essential amino acid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The first amino acid is also called as N-terminal amino acid. The last amino acid is called the C-terminal amino acid. (NCERT Page 112)",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The helical structure of protein is its:",
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "Quaternary structure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The thread is folded in the form of a helix. In addition, other regions of the protein thread are folded into other forms in what is called the secondary structure. (NCERT Page 112)",
+      "difficulty": "EASY",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In proteins, which type of helices are observed?",
+      "options": [
+        "Left handed only",
+        "Right handed only",
+        "Both left and right handed",
+        "No helices"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In proteins, only right handed helices are observed. (NCERT Page 112)",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The 3-dimensional view of a protein is called:",
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "Quaternary structure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The long protein chain is also folded upon itself like a hollow woolen ball, giving rise to the tertiary structure. This gives us a 3-dimensional view of a protein. (NCERT Page 112)",
+      "difficulty": "EASY",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which structure of protein is absolutely necessary for biological activities?",
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "All structures equally"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tertiary structure is absolutely necessary for the many biological activities of proteins. (NCERT Page 112)",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The manner in which subunits of a multi-subunit protein are arranged is called:",
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "Quaternary structure"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The manner in which individual folded polypeptides or subunits are arranged with respect to each other is the architecture of a protein otherwise called the quaternary structure. (NCERT Page 112)",
+      "difficulty": "EASY",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adult human haemoglobin consists of how many subunits?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "Adult human haemoglobin consists of 4 subunits. Two subunits of α type and two subunits of β type together constitute the human haemoglobin. (NCERT Page 112)",
+      "difficulty": "MEDIUM",
+      "topic": "Protein Structure",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Almost all enzymes are:",
+      "options": ["Carbohydrates", "Lipids", "Proteins", "Nucleic acids"],
+      "correctAnswer": "C",
+      "explanation": "Almost all enzymes are proteins. (NCERT Page 112)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nucleic acids that behave like enzymes are called:",
+      "options": ["Apoenzymes", "Holoenzymes", "Ribozymes", "Isoenzymes"],
+      "correctAnswer": "C",
+      "explanation": "There are some nucleic acids that behave like enzymes. These are called ribozymes. (NCERT Page 112)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 112,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The crevice or pocket in an enzyme into which the substrate fits is called:",
+      "options": ["Binding site", "Active site", "Catalytic centre", "Allosteric site"],
+      "correctAnswer": "B",
+      "explanation": "An active site of an enzyme is a crevice or pocket into which the substrate fits. (NCERT Page 113)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 113,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes get damaged at temperatures above:",
+      "options": ["20°C", "30°C", "40°C", "50°C"],
+      "correctAnswer": "C",
+      "explanation": "Inorganic catalysts work efficiently at high temperatures and high pressures, while enzymes get damaged at high temperatures (say above 40°C). (NCERT Page 113)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 113,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Enzymes isolated from thermophilic organisms can remain stable up to:",
+      "options": ["40-50°C", "50-60°C", "60-70°C", "80-90°C"],
+      "correctAnswer": "D",
+      "explanation": "Enzymes isolated from organisms who normally live under extremely high temperatures are stable and retain their catalytic power even at high temperatures (upto 80°-90°C). (NCERT Page 113)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 113,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The rate of a reaction is expressed as:",
+      "options": ["δS/δt", "δP/δt", "δE/δt", "δT/δt"],
+      "correctAnswer": "B",
+      "explanation": "Rate of a physical or chemical process refers to the amount of product formed per unit time. It can be expressed as: rate = δP/δt (NCERT Page 113)",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Reactions",
+      "ncertPage": 113,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Carbonic anhydrase catalyses the formation of:",
+      "options": ["CO₂ from H₂CO₃", "H₂CO₃ from CO₂ and H₂O", "H₂O from CO₂", "CO₂ from H₂O"],
+      "correctAnswer": "B",
+      "explanation": "CO₂ + H₂O → H₂CO₃ (carbonic acid). This reaction is catalysed by carbonic anhydrase. (NCERT Page 113)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 113,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Carbonic anhydrase accelerates the reaction rate by approximately:",
+      "options": ["100 times", "1000 times", "1 million times", "10 million times"],
+      "correctAnswer": "D",
+      "explanation": "The enzyme has accelerated the reaction rate by about 10 million times. (NCERT Page 114)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 114,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A multistep chemical reaction where each step is catalysed by enzymes is called:",
+      "options": ["Coupled reaction", "Metabolic pathway", "Chain reaction", "Sequential reaction"],
+      "correctAnswer": "B",
+      "explanation": "A multistep chemical reaction, when each of the steps is catalysed by the same enzyme complex or different enzymes, is called a metabolic pathway. (NCERT Page 114)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 114,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The chemical which is converted into a product by an enzyme is called:",
+      "options": ["Catalyst", "Substrate", "Product", "Cofactor"],
+      "correctAnswer": "B",
+      "explanation": "The chemical which is converted into a product is called a 'substrate'. (NCERT Page 114)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 114,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The transient complex formed between enzyme and substrate is called:",
+      "options": ["EP complex", "ES complex", "Transition complex", "Activation complex"],
+      "correctAnswer": "B",
+      "explanation": "The substrate 'S' has to bind the enzyme at its 'active site'. There is thus, an obligatory formation of an 'ES' complex. E stands for enzyme. (NCERT Page 114)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 114,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The difference in average energy content of substrate from that of transition state is called:",
+      "options": ["Free energy", "Kinetic energy", "Activation energy", "Potential energy"],
+      "correctAnswer": "C",
+      "explanation": "The difference in average energy content of 'S' from that of this transition state is called 'activation energy'. (NCERT Page 115)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 115,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes bring down the:",
+      "options": ["Free energy", "Activation energy", "Kinetic energy", "Total energy"],
+      "correctAnswer": "B",
+      "explanation": "Enzymes eventually bring down this energy barrier (activation energy) making the transition of 'S' to 'P' more easy. (NCERT Page 115)",
+      "difficulty": "EASY",
+      "topic": "Enzymes",
+      "ncertPage": 115,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The correct sequence of enzyme catalysis is:",
+      "options": [
+        "E + S → ES → E + P",
+        "E + S → ES → EP → E + P",
+        "E + S → EP → E + P",
+        "E + S → E + P"
+      ],
+      "correctAnswer": "B",
+      "explanation": "E + S ⇌ ES → EP → E + P. The formation of the ES complex is essential for catalysis. (NCERT Page 115)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzymes",
+      "ncertPage": 115,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The binding of substrate to enzyme induces the enzyme to:",
+      "options": ["Become inactive", "Alter its shape", "Release products", "Change pH"],
+      "correctAnswer": "B",
+      "explanation": "The binding of the substrate induces the enzyme to alter its shape, fitting more tightly around the substrate. (NCERT Page 115)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Action",
+      "ncertPage": 115,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The temperature at which enzyme shows highest activity is called:",
+      "options": [
+        "Maximum temperature",
+        "Optimum temperature",
+        "Threshold temperature",
+        "Critical temperature"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Each enzyme shows its highest activity at a particular temperature and pH called the optimum temperature and optimum pH. (NCERT Page 116)",
+      "difficulty": "EASY",
+      "topic": "Factors Affecting Enzymes",
+      "ncertPage": 116,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Low temperature:",
+      "options": [
+        "Destroys enzyme activity",
+        "Preserves enzyme in inactive state",
+        "Increases enzyme activity",
+        "Has no effect on enzyme"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Low temperature preserves the enzyme in a temporarily inactive state whereas high temperature destroys enzymatic activity because proteins are denatured by heat. (NCERT Page 116)",
+      "difficulty": "MEDIUM",
+      "topic": "Factors Affecting Enzymes",
+      "ncertPage": 116,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The maximum velocity of an enzymatic reaction is denoted as:",
+      "options": ["Km", "Vmax", "Kcat", "V0"],
+      "correctAnswer": "B",
+      "explanation": "The reaction ultimately reaches a maximum velocity (Vmax) which is not exceeded by any further rise in concentration of the substrate. (NCERT Page 116)",
+      "difficulty": "EASY",
+      "topic": "Enzyme Kinetics",
+      "ncertPage": 116,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The process when binding of a chemical shuts off enzyme activity is called:",
+      "options": ["Activation", "Inhibition", "Denaturation", "Saturation"],
+      "correctAnswer": "B",
+      "explanation": "When the binding of the chemical shuts off enzyme activity, the process is called inhibition and the chemical is called an inhibitor. (NCERT Page 117)",
+      "difficulty": "EASY",
+      "topic": "Enzyme Inhibition",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When an inhibitor closely resembles the substrate in structure, it is called:",
+      "options": [
+        "Non-competitive inhibitor",
+        "Competitive inhibitor",
+        "Allosteric inhibitor",
+        "Irreversible inhibitor"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When the inhibitor closely resembles the substrate in its molecular structure and inhibits the activity of the enzyme, it is known as competitive inhibitor. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Inhibition",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Malonate is a competitive inhibitor of:",
+      "options": ["Carbonic anhydrase", "Succinic dehydrogenase", "Trypsin", "Pepsin"],
+      "correctAnswer": "B",
+      "explanation": "Inhibition of succinic dehydrogenase by malonate which closely resembles the substrate succinate in structure. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Inhibition",
+      "ncertPage": 117,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Enzymes are divided into how many classes?",
+      "options": ["4", "5", "6", "7"],
+      "correctAnswer": "C",
+      "explanation": "Enzymes are divided into 6 classes each with 4-13 subclasses and named accordingly by a four-digit number. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Enzymes which catalyse oxidoreduction reactions are called:",
+      "options": ["Transferases", "Hydrolases", "Oxidoreductases", "Lyases"],
+      "correctAnswer": "C",
+      "explanation": "Oxidoreductases/dehydrogenases: Enzymes which catalyse oxidoreduction between two substrates. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes catalysing transfer of a group between substrates are called:",
+      "options": ["Oxidoreductases", "Transferases", "Hydrolases", "Isomerases"],
+      "correctAnswer": "B",
+      "explanation": "Transferases: Enzymes catalysing a transfer of a group, G (other than hydrogen) between a pair of substrate S and S'. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes catalysing hydrolysis reactions are called:",
+      "options": ["Transferases", "Lyases", "Hydrolases", "Ligases"],
+      "correctAnswer": "C",
+      "explanation": "Hydrolases: Enzymes catalysing hydrolysis of ester, ether, peptide, glycosidic, C-C, C-halide or P-N bonds. (NCERT Page 117)",
+      "difficulty": "EASY",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes that catalyse removal of groups leaving double bonds are called:",
+      "options": ["Hydrolases", "Lyases", "Ligases", "Isomerases"],
+      "correctAnswer": "B",
+      "explanation": "Lyases: Enzymes that catalyse removal of groups from substrates by mechanisms other than hydrolysis leaving double bonds. (NCERT Page 117)",
+      "difficulty": "MEDIUM",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Enzymes catalysing inter-conversion of isomers are called:",
+      "options": ["Lyases", "Ligases", "Isomerases", "Transferases"],
+      "correctAnswer": "C",
+      "explanation": "Isomerases: Includes all enzymes catalysing inter-conversion of optical, geometric or positional isomers. (NCERT Page 117)",
+      "difficulty": "EASY",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Enzymes catalysing linking together of two compounds are called:",
+      "options": ["Lyases", "Ligases", "Isomerases", "Hydrolases"],
+      "correctAnswer": "B",
+      "explanation": "Ligases: Enzymes catalysing the linking together of 2 compounds, e.g., enzymes which catalyse joining of C-O, C-S, C-N, P-O etc. bonds. (NCERT Page 117)",
+      "difficulty": "EASY",
+      "topic": "Enzyme Classification",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Non-protein constituents bound to enzymes are called:",
+      "options": ["Substrates", "Products", "Cofactors", "Inhibitors"],
+      "correctAnswer": "C",
+      "explanation": "There are a number of cases in which non-protein constituents called co-factors are bound to the enzyme to make the enzyme catalytically active. (NCERT Page 117)",
+      "difficulty": "EASY",
+      "topic": "Cofactors",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The protein portion of an enzyme is called:",
+      "options": ["Holoenzyme", "Apoenzyme", "Cofactor", "Coenzyme"],
+      "correctAnswer": "B",
+      "explanation": "The protein portion of the enzymes is called the apoenzyme. (NCERT Page 118)",
+      "difficulty": "EASY",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The three kinds of cofactors are:",
+      "options": [
+        "Prosthetic groups, coenzymes and vitamins",
+        "Prosthetic groups, coenzymes and metal ions",
+        "Vitamins, minerals and coenzymes",
+        "Activators, inhibitors and coenzymes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Three kinds of cofactors may be identified: prosthetic groups, co-enzymes and metal ions. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prosthetic groups are:",
+      "options": [
+        "Loosely bound to apoenzyme",
+        "Tightly bound to apoenzyme",
+        "Not bound to enzyme",
+        "Transiently bound"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prosthetic groups are organic compounds and are distinguished from other cofactors in that they are tightly bound to the apoenzyme. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In peroxidase and catalase, the prosthetic group is:",
+      "options": ["FAD", "NAD", "Haem", "Biotin"],
+      "correctAnswer": "C",
+      "explanation": "In peroxidase and catalase, which catalyze the breakdown of hydrogen peroxide to water and oxygen, haem is the prosthetic group. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The association of coenzymes with apoenzyme is:",
+      "options": ["Permanent", "Transient", "Very strong", "Covalent"],
+      "correctAnswer": "B",
+      "explanation": "Co-enzymes are also organic compounds but their association with the apoenzyme is only transient, usually occurring during the course of catalysis. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "NAD and NADP contain the vitamin:",
+      "options": ["Thiamine", "Riboflavin", "Niacin", "Pyridoxine"],
+      "correctAnswer": "C",
+      "explanation": "The essential chemical components of many coenzymes are vitamins, e.g., coenzyme nicotinamide adenine dinucleotide (NAD) and NADP contain the vitamin niacin. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Zinc is a cofactor for:",
+      "options": ["Catalase", "Peroxidase", "Carboxypeptidase", "Carbonic anhydrase"],
+      "correctAnswer": "C",
+      "explanation": "A number of enzymes require metal ions for their activity, e.g., zinc is a cofactor for the proteolytic enzyme carboxypeptidase. (NCERT Page 118)",
+      "difficulty": "MEDIUM",
+      "topic": "Cofactors",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Collagen is a:",
+      "options": ["Enzyme", "Hormone", "Structural protein", "Receptor"],
+      "correctAnswer": "C",
+      "explanation": "Collagen is the most abundant protein in animal world. It functions as intercellular ground substance. (NCERT Page 109, Table 9.5)",
+      "difficulty": "EASY",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Trypsin is an example of:",
+      "options": ["Structural protein", "Enzyme", "Hormone", "Antibody"],
+      "correctAnswer": "B",
+      "explanation": "Trypsin is an enzyme. (NCERT Page 109, Table 9.5)",
+      "difficulty": "EASY",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Insulin is an example of:",
+      "options": ["Enzyme", "Hormone", "Antibody", "Receptor"],
+      "correctAnswer": "B",
+      "explanation": "Insulin is a hormone. (NCERT Page 109, Table 9.5)",
+      "difficulty": "EASY",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GLUT-4 enables transport of:",
+      "options": ["Amino acids", "Fatty acids", "Glucose", "Nucleotides"],
+      "correctAnswer": "C",
+      "explanation": "GLUT-4 enables glucose transport into cells. (NCERT Page 109, Table 9.5)",
+      "difficulty": "MEDIUM",
+      "topic": "Proteins",
+      "ncertPage": 109,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

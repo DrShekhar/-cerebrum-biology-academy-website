@@ -1,0 +1,997 @@
+{
+  "ncertClass": 11,
+  "chapter": 7,
+  "chapterName": "Structural Organisation in Animals",
+  "questions": [
+    {
+      "question": "A group of similar cells along with intercellular substances performing a specific function is called:",
+      "options": ["Organ", "Tissue", "Organ system", "Organism"],
+      "correctAnswer": "B",
+      "explanation": "In multicellular animals, a group of similar cells alongwith intercellular substances perform a specific function. Such an organisation is called tissue. (NCERT Page 79)",
+      "difficulty": "EASY",
+      "topic": "Animal Tissues",
+      "ncertPage": 79,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "All complex animals consist of how many basic types of tissues?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "All complex animals consist of only four basic types of tissues - epithelial, connective, muscular and neural. (NCERT Page 79)",
+      "difficulty": "EASY",
+      "topic": "Animal Tissues",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The four basic types of animal tissues are:",
+      "options": [
+        "Epithelial, connective, parenchyma and muscular",
+        "Epithelial, connective, muscular and neural",
+        "Epithelial, meristematic, muscular and neural",
+        "Connective, muscular, neural and secretory"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All complex animals consist of only four basic types of tissues - epithelial, connective, muscular and neural tissues. (NCERT Page 79)",
+      "difficulty": "EASY",
+      "topic": "Animal Tissues",
+      "ncertPage": 79,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The heart consists of:",
+      "options": [
+        "Only muscular tissue",
+        "Only connective tissue",
+        "All four types of tissues",
+        "Only epithelial and muscular tissues"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Our heart consists of all the four types of tissues, i.e., epithelial, connective, muscular and neural. (NCERT Page 80)",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Tissues",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The study of form or externally visible features is called:",
+      "options": ["Anatomy", "Morphology", "Histology", "Physiology"],
+      "correctAnswer": "B",
+      "explanation": "Morphology refers to study of form or externally visible features. In case of animals this refers to the external appearance of the organs or parts of the body. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 80,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The study of morphology of internal organs in animals is called:",
+      "options": ["Morphology", "Anatomy", "Cytology", "Histology"],
+      "correctAnswer": "B",
+      "explanation": "The word anatomy conventionally is used for the study of morphology of internal organs in the animals. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Introduction",
+      "ncertPage": 80,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Frogs belong to class:",
+      "options": ["Reptilia", "Pisces", "Amphibia", "Mammalia"],
+      "correctAnswer": "C",
+      "explanation": "Frogs can live both on land and in freshwater and belong to class Amphibia of phylum Chordata. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Classification",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most common species of frog found in India is:",
+      "options": ["Rana esculenta", "Rana tigrina", "Rana pipiens", "Bufo melanostictus"],
+      "correctAnswer": "B",
+      "explanation": "The most common species of frog found in India is Rana tigrina (Indian bullfrog). (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Classification",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Animals whose body temperature varies with the temperature of the environment are called:",
+      "options": ["Homeotherms", "Poikilotherms", "Endotherms", "Warm blooded"],
+      "correctAnswer": "B",
+      "explanation": "Frogs do not have constant body temperature i.e., their body temperature varies with the temperature of the environment. Such animals are called cold blooded or poikilotherms. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Characteristics",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The protective coloration in frogs that helps them hide from enemies is called:",
+      "options": ["Aposematism", "Mimicry", "Warning coloration", "Batesian mimicry"],
+      "correctAnswer": "B",
+      "explanation": "Frogs have the ability to change the colour to hide them from their enemies (camouflage). This protective coloration is called mimicry. (NCERT Page 80)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Characteristics",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Summer sleep in frogs is called:",
+      "options": ["Hibernation", "Aestivation", "Torpor", "Diapause"],
+      "correctAnswer": "B",
+      "explanation": "During peak summer frogs take shelter in deep burrows to protect them from extreme heat. This is known as summer sleep (aestivation). (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Characteristics",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Winter sleep in frogs is called:",
+      "options": ["Aestivation", "Hibernation", "Diapause", "Dormancy"],
+      "correctAnswer": "B",
+      "explanation": "During peak winter frogs take shelter in deep burrows to protect them from extreme cold. This is known as winter sleep (hibernation). (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Characteristics",
+      "ncertPage": 80,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The skin of frog is smooth and slippery due to the presence of:",
+      "options": ["Oil glands", "Mucus", "Keratin", "Chitin"],
+      "correctAnswer": "B",
+      "explanation": "The skin of frog is smooth and slippery due to the presence of mucus. The skin is always maintained in a moist condition. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The colour of dorsal side of frog body is generally:",
+      "options": ["Pale yellow", "Olive green with dark irregular spots", "Brown", "Black"],
+      "correctAnswer": "B",
+      "explanation": "The colour of dorsal side of body is generally olive green with dark irregular spots. On the ventral side the skin is uniformly pale yellow. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Frog absorbs water through:",
+      "options": ["Mouth", "Skin", "Cloaca", "Nostrils"],
+      "correctAnswer": "B",
+      "explanation": "The frog never drinks water but absorb it through the skin. (NCERT Page 80)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Body of a frog is divisible into:",
+      "options": [
+        "Head, neck and trunk",
+        "Head, trunk and tail",
+        "Head and trunk",
+        "Head, thorax and abdomen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Body of a frog is divisible into head and trunk. A neck and tail are absent. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The membrane that protects frog's eyes while in water is:",
+      "options": ["Conjunctiva", "Nictitating membrane", "Tympanum", "Cornea"],
+      "correctAnswer": "B",
+      "explanation": "Eyes are bulged and covered by a nictitating membrane that protects them while in water. (NCERT Page 80)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The membranous structure on either side of eyes in frog that receives sound signals is:",
+      "options": ["Pinna", "Tympanum", "Cochlea", "Vestibule"],
+      "correctAnswer": "B",
+      "explanation": "On either side of eyes a membranous tympanum (ear) receives sound signals. (NCERT Page 80)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 80,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The hind limbs of frog end in:",
+      "options": ["Four digits", "Five digits", "Three digits", "Six digits"],
+      "correctAnswer": "B",
+      "explanation": "The hind limbs end in five digits and they are larger and muscular than fore limbs that end in four digits. (NCERT Page 81)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The fore limbs of frog end in:",
+      "options": ["Three digits", "Four digits", "Five digits", "Six digits"],
+      "correctAnswer": "B",
+      "explanation": "The hind limbs end in five digits and they are larger and muscular than fore limbs that end in four digits. (NCERT Page 81)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Webbed digits in frog help in:",
+      "options": ["Walking", "Burrowing", "Swimming", "Climbing"],
+      "correctAnswer": "C",
+      "explanation": "Feet have webbed digits that help in swimming. (NCERT Page 81)",
+      "difficulty": "EASY",
+      "topic": "Frog Morphology",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Male frogs can be distinguished from female frogs by the presence of:",
+      "options": [
+        "Webbed feet",
+        "Vocal sacs and copulatory pad",
+        "Nictitating membrane",
+        "Tympanum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Male frogs can be distinguished by the presence of sound producing vocal sacs and also a copulatory pad on the first digit of the fore limbs which are absent in female frogs. (NCERT Page 81)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Morphology",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The copulatory pad in male frog is present on:",
+      "options": [
+        "First digit of hind limb",
+        "First digit of fore limb",
+        "Last digit of fore limb",
+        "Last digit of hind limb"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Male frogs have a copulatory pad on the first digit of the fore limbs which are absent in female frogs. (NCERT Page 81)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Morphology",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The alimentary canal in frog is short because frogs are:",
+      "options": ["Herbivores", "Carnivores", "Omnivores", "Detritivores"],
+      "correctAnswer": "B",
+      "explanation": "The alimentary canal is short because frogs are carnivores and hence the length of intestine is reduced. (NCERT Page 81)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Digestive System",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The correct sequence of parts in frog's alimentary canal is:",
+      "options": [
+        "Mouth → Pharynx → Oesophagus → Stomach → Intestine → Rectum → Cloaca",
+        "Mouth → Oesophagus → Pharynx → Stomach → Intestine → Cloaca",
+        "Mouth → Pharynx → Stomach → Oesophagus → Intestine → Rectum → Cloaca",
+        "Mouth → Oesophagus → Stomach → Pharynx → Intestine → Cloaca"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mouth opens into the buccal cavity that leads to the oesophagus through pharynx. Oesophagus opens into the stomach which continues as the intestine, rectum and finally opens outside by the cloaca. (NCERT Page 81)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Digestive System",
+      "ncertPage": 81,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bile in frog is secreted by:",
+      "options": ["Gall bladder", "Liver", "Pancreas", "Stomach"],
+      "correctAnswer": "B",
+      "explanation": "Liver secretes bile that is stored in the gall bladder. (NCERT Page 81)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bile is stored in:",
+      "options": ["Liver", "Gall bladder", "Pancreas", "Duodenum"],
+      "correctAnswer": "B",
+      "explanation": "Liver secretes bile that is stored in the gall bladder. (NCERT Page 81)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Food in frog is captured by:",
+      "options": ["Teeth", "Bilobed tongue", "Lips", "Jaw"],
+      "correctAnswer": "B",
+      "explanation": "Food is captured by the bilobed tongue. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Partially digested food in the stomach is called:",
+      "options": ["Bolus", "Chyme", "Chyle", "Faeces"],
+      "correctAnswer": "B",
+      "explanation": "Partially digested food called chyme is passed from stomach to the first part of the small intestine, the duodenum. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The first part of small intestine in frog is:",
+      "options": ["Ileum", "Jejunum", "Duodenum", "Caecum"],
+      "correctAnswer": "C",
+      "explanation": "Partially digested food called chyme is passed from stomach to the first part of the small intestine, the duodenum. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The function of bile is to:",
+      "options": ["Digest proteins", "Emulsify fat", "Digest carbohydrates", "Absorb nutrients"],
+      "correctAnswer": "B",
+      "explanation": "Bile emulsifies fat and pancreatic juices digest carbohydrates and proteins. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Digestive System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The finger-like folds in the inner wall of intestine that absorb digested food are called:",
+      "options": ["Rugae", "Villi and microvilli", "Papillae", "Crypts"],
+      "correctAnswer": "B",
+      "explanation": "Digested food is absorbed by the numerous finger-like folds in the inner wall of intestine called villi and microvilli. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In water, skin of frog acts as:",
+      "options": [
+        "Excretory organ",
+        "Aquatic respiratory organ",
+        "Locomotory organ",
+        "Sensory organ"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In water, skin acts as aquatic respiratory organ (cutaneous respiration). Dissolved oxygen in the water is exchanged through the skin by diffusion. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Respiration through skin is called:",
+      "options": [
+        "Pulmonary respiration",
+        "Cutaneous respiration",
+        "Branchial respiration",
+        "Buccal respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In water, skin acts as aquatic respiratory organ (cutaneous respiration). (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "On land, the respiratory organs of frog are:",
+      "options": ["Only lungs", "Only skin", "Buccal cavity, skin and lungs", "Gills and skin"],
+      "correctAnswer": "C",
+      "explanation": "On land, the buccal cavity, skin and lungs act as the respiratory organs. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Respiration by lungs is called:",
+      "options": [
+        "Cutaneous respiration",
+        "Pulmonary respiration",
+        "Branchial respiration",
+        "Buccopharyngeal respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The respiration by lungs is called pulmonary respiration. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The lungs in frog are:",
+      "options": [
+        "A pair of compact solid structures",
+        "A pair of elongated, pink coloured sac-like structures",
+        "Single, median sac-like structure",
+        "A pair of lobed structures with bronchi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The lungs are a pair of elongated, pink coloured sac-like structures present in the upper part of the trunk region (thorax). (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During aestivation and hibernation, gaseous exchange in frog takes place through:",
+      "options": ["Lungs", "Buccal cavity", "Skin", "Gills"],
+      "correctAnswer": "C",
+      "explanation": "During aestivation and hibernation gaseous exchange takes place through skin. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Respiratory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The vascular system of frog is:",
+      "options": ["Open type", "Closed type", "Mixed type", "Lacunar type"],
+      "correctAnswer": "B",
+      "explanation": "The vascular system of frog is well-developed closed type. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The heart of frog has:",
+      "options": ["Two chambers", "Three chambers", "Four chambers", "Single chamber"],
+      "correctAnswer": "B",
+      "explanation": "Heart has three chambers, two atria and one ventricle and is covered by a membrane called pericardium. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The membrane covering the heart is called:",
+      "options": ["Peritoneum", "Pericardium", "Pleura", "Meninges"],
+      "correctAnswer": "B",
+      "explanation": "Heart has three chambers, two atria and one ventricle and is covered by a membrane called pericardium. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The triangular structure that joins the right atrium in frog is:",
+      "options": ["Conus arteriosus", "Sinus venosus", "Truncus arteriosus", "Bulbus cordis"],
+      "correctAnswer": "B",
+      "explanation": "A triangular structure called sinus venosus joins the right atrium. It receives blood through the major veins called vena cava. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ventricle of frog opens into:",
+      "options": ["Sinus venosus", "Conus arteriosus", "Vena cava", "Pulmonary vein"],
+      "correctAnswer": "B",
+      "explanation": "The ventricle opens into a sac-like conus arteriosus on the ventral side of the heart. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The special venous connection between liver and intestine in frog is called:",
+      "options": [
+        "Renal portal system",
+        "Hepatic portal system",
+        "Pulmonary circulation",
+        "Systemic circulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Special venous connection between liver and intestine is present in frogs. This is called hepatic portal system. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The special venous connection between kidney and lower parts of the body in frog is called:",
+      "options": [
+        "Hepatic portal system",
+        "Renal portal system",
+        "Systemic circulation",
+        "Coronary circulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Special venous connection between the kidney and lower parts of the body is called renal portal system. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "RBCs in frog are:",
+      "options": ["Enucleated", "Nucleated", "Biconcave", "Biconvex"],
+      "correctAnswer": "B",
+      "explanation": "RBC's are nucleated and contain red coloured pigment namely haemoglobin. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lymph differs from blood in that it lacks:",
+      "options": ["WBCs", "Few proteins and RBCs", "Platelets", "Plasma"],
+      "correctAnswer": "B",
+      "explanation": "The lymph is different from blood. It lacks few proteins and RBCs. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The excretory system of frog consists of:",
+      "options": [
+        "Kidneys and ureters only",
+        "Kidneys, ureters, cloaca and urinary bladder",
+        "Kidneys and urinary bladder only",
+        "Kidneys, urethra and urinary bladder"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The excretory system consists of a pair of kidneys, ureters, cloaca and urinary bladder. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Excretory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The kidneys of frog are:",
+      "options": [
+        "Compact, dark red and bean like structures",
+        "Elongated, pink coloured structures",
+        "Bilobed yellowish structures",
+        "Small, round structures"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Kidneys are compact, dark red and bean like structures situated a little posteriorly in the body cavity on both sides of vertebral column. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Excretory System",
+      "ncertPage": 82,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The structural and functional units of kidney are called:",
+      "options": ["Glomeruli", "Nephrons", "Lobules", "Acini"],
+      "correctAnswer": "B",
+      "explanation": "Each kidney is composed of several structural and functional units called uriniferous tubules or nephrons. (NCERT Page 82)",
+      "difficulty": "EASY",
+      "topic": "Frog Excretory System",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In male frogs, the ureters act as:",
+      "options": ["Only urinary duct", "Urinogenital duct", "Only genital duct", "Vas deferens"],
+      "correctAnswer": "B",
+      "explanation": "Two ureters emerge from the kidneys in the male frogs. The ureters act as urinogenital duct which opens into the cloaca. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Excretory System",
+      "ncertPage": 82,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Frog excretes:",
+      "options": ["Ammonia", "Urea", "Uric acid", "Amino acids"],
+      "correctAnswer": "B",
+      "explanation": "The frog excretes urea and thus is a ureotelic animal. (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Excretory System",
+      "ncertPage": 83,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Animals that excrete urea as their main nitrogenous waste are called:",
+      "options": ["Ammonotelic", "Ureotelic", "Uricotelic", "Aminotelic"],
+      "correctAnswer": "B",
+      "explanation": "The frog excretes urea and thus is a ureotelic animal. (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Excretory System",
+      "ncertPage": 83,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The prominent endocrine glands found in frog include:",
+      "options": [
+        "Only pituitary and thyroid",
+        "Pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals and gonads",
+        "Only adrenals and gonads",
+        "Only pancreas and thyroid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The prominent endocrine glands found in frog are pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals and gonads. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The nervous system of frog is organised into:",
+      "options": [
+        "Only central and peripheral",
+        "Central, peripheral and autonomic",
+        "Only central and autonomic",
+        "Only peripheral and autonomic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The nervous system is organised into a central nervous system (brain and spinal cord), a peripheral nervous system (cranial and spinal nerves) and an autonomic nervous system (sympathetic and parasympathetic). (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The number of pairs of cranial nerves in frog is:",
+      "options": ["Eight", "Ten", "Twelve", "Fourteen"],
+      "correctAnswer": "B",
+      "explanation": "There are ten pairs of cranial nerves arising from the brain. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The bony structure enclosing the brain is called:",
+      "options": ["Vertebral column", "Cranium", "Skull cap", "Foramen magnum"],
+      "correctAnswer": "B",
+      "explanation": "Brain is enclosed in a bony structure called brain box (cranium). (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The brain of frog is divided into:",
+      "options": ["Two parts", "Three parts", "Four parts", "Five parts"],
+      "correctAnswer": "B",
+      "explanation": "The brain is divided into fore-brain, mid-brain and hind-brain. (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Forebrain of frog includes:",
+      "options": [
+        "Optic lobes only",
+        "Olfactory lobes, cerebral hemispheres and diencephalon",
+        "Cerebellum and medulla oblongata",
+        "Only cerebral hemispheres"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Forebrain includes olfactory lobes, paired cerebral hemispheres and unpaired diencephalon. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The midbrain of frog is characterised by:",
+      "options": ["Olfactory lobes", "Cerebral hemispheres", "A pair of optic lobes", "Cerebellum"],
+      "correctAnswer": "C",
+      "explanation": "The midbrain is characterised by a pair of optic lobes. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Hind-brain of frog consists of:",
+      "options": [
+        "Optic lobes and diencephalon",
+        "Cerebellum and medulla oblongata",
+        "Olfactory lobes and cerebral hemispheres",
+        "Only cerebellum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hind-brain consists of cerebellum and medulla oblongata. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The medulla oblongata passes out through:",
+      "options": ["Cranium", "Foramen magnum", "Vertebral column", "Optic foramen"],
+      "correctAnswer": "B",
+      "explanation": "The medulla oblongata passes out through the foramen magnum and continues into spinal cord, which is enclosed in the vertebral column. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Nervous System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The sense organs in frog include:",
+      "options": [
+        "Only eyes and ears",
+        "Organs of touch, taste, smell, vision and hearing",
+        "Only organs of vision and smell",
+        "Only eyes, ears and nose"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Frog has different types of sense organs, namely organs of touch (sensory papillae), taste (taste buds), smell (nasal epithelium), vision (eyes) and hearing (tympanum with internal ears). (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Sense Organs",
+      "ncertPage": 83,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Eyes in frog are:",
+      "options": ["Compound eyes", "Simple eyes", "Vestigial", "Stalked eyes"],
+      "correctAnswer": "B",
+      "explanation": "Eyes in a frog are a pair of spherical structures situated in the orbit in skull. These are simple eyes (possessing only one unit). (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Sense Organs",
+      "ncertPage": 83,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "External ear in frog is:",
+      "options": [
+        "Well developed with pinna",
+        "Represented only by tympanum",
+        "Absent",
+        "Present as small flap"
+      ],
+      "correctAnswer": "C",
+      "explanation": "External ear is absent in frogs and only tympanum can be seen externally. (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Sense Organs",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ear in frog is an organ of:",
+      "options": [
+        "Only hearing",
+        "Only balancing",
+        "Both hearing and balancing",
+        "Neither hearing nor balancing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ear is an organ of hearing as well as balancing (equilibrium). (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Sense Organs",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Male reproductive organs in frog consist of:",
+      "options": ["A pair of ovaries", "A pair of testes", "Single testis", "Single ovary"],
+      "correctAnswer": "B",
+      "explanation": "Male reproductive organs consist of a pair of yellowish ovoid testes. (NCERT Page 83)",
+      "difficulty": "EASY",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The testes in frog are attached to kidneys by:",
+      "options": ["Mesentery", "Mesorchium", "Mesovarium", "Peritoneum"],
+      "correctAnswer": "B",
+      "explanation": "Testes are found adhered to the upper part of kidneys by a double fold of peritoneum called mesorchium. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The number of vasa efferentia arising from testes in frog is:",
+      "options": ["5-8", "10-12", "15-20", "20-25"],
+      "correctAnswer": "B",
+      "explanation": "Vasa efferentia are 10-12 in number that arise from testes. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 83,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Vasa efferentia in male frog open into:",
+      "options": ["Cloaca directly", "Bidder's canal", "Urinary bladder", "Vas deferens"],
+      "correctAnswer": "B",
+      "explanation": "Vasa efferentia enter the kidneys on their side and open into Bidder's canal. (NCERT Page 83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cloaca is used to pass:",
+      "options": [
+        "Only urine",
+        "Only faecal matter",
+        "Faecal matter, urine and sperms",
+        "Only sperms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cloaca is a small, median chamber that is used to pass faecal matter, urine and sperms to the exterior. (NCERT Page 84)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 84,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Female reproductive organs in frog include:",
+      "options": ["A pair of testes", "A pair of ovaries", "Single ovary", "Ovary and testes both"],
+      "correctAnswer": "B",
+      "explanation": "The female reproductive organs include a pair of ovaries. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 84,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In female frog, the ovaries have:",
+      "options": [
+        "Functional connection with kidneys",
+        "No functional connection with kidneys",
+        "Direct connection with ureters",
+        "Connection with urinary bladder"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ovaries are situated near kidneys and there is no functional connection with kidneys. (NCERT Page 84)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 84,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "A mature female frog can lay approximately:",
+      "options": ["500-1000 ova", "1000-1500 ova", "2500-3000 ova", "5000-6000 ova"],
+      "correctAnswer": "C",
+      "explanation": "A mature female can lay 2500 to 3000 ova at a time. (NCERT Page 84)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 84,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Fertilisation in frog is:",
+      "options": [
+        "Internal",
+        "External",
+        "Both internal and external",
+        "Neither internal nor external"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fertilisation is external and takes place in water. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Reproduction",
+      "ncertPage": 84,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The larval stage of frog is called:",
+      "options": ["Nymph", "Caterpillar", "Tadpole", "Maggot"],
+      "correctAnswer": "C",
+      "explanation": "Development involves a larval stage called tadpole. Tadpole undergoes metamorphosis to form the adult. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Development",
+      "ncertPage": 84,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tadpole undergoes __________ to form the adult frog.",
+      "options": ["Moulting", "Metamorphosis", "Regeneration", "Fragmentation"],
+      "correctAnswer": "B",
+      "explanation": "Tadpole undergoes metamorphosis to form the adult. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Development",
+      "ncertPage": 84,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Frogs are beneficial for mankind because they:",
+      "options": [
+        "Produce silk",
+        "Eat insects and protect crops",
+        "Provide milk",
+        "Help in pollination"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Frogs are beneficial for mankind because they eat insects and protect the crop. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Importance",
+      "ncertPage": 84,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Frogs maintain ecological balance because they:",
+      "options": [
+        "Produce oxygen",
+        "Serve as important link of food chain and food web",
+        "Help in decomposition",
+        "Fix nitrogen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Frogs maintain ecological balance because these serve as an important link of food chain and food web in the ecosystem. (NCERT Page 84)",
+      "difficulty": "EASY",
+      "topic": "Frog Importance",
+      "ncertPage": 84,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of frogs?",
+      "options": [
+        "Poikilothermic",
+        "External fertilisation",
+        "Nucleated RBCs",
+        "Four-chambered heart"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Frogs have a three-chambered heart (two atria and one ventricle), not four-chambered. They are poikilothermic, have external fertilisation, and nucleated RBCs. (NCERT Page 82)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Characteristics",
+      "ncertPage": 82,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The main digestive glands in frog are:",
+      "options": [
+        "Salivary glands and pancreas",
+        "Liver and pancreas",
+        "Gastric glands and liver",
+        "Intestinal glands and pancreas"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The main digestive glands in frog are liver and pancreas. Liver secretes bile and pancreas produces pancreatic juice containing digestive enzymes. (NCERT Page 81-82)",
+      "difficulty": "EASY",
+      "topic": "Frog Digestive System",
+      "ncertPage": 81,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which type of circulation is present in frog?",
+      "options": ["Double circulation", "Single circulation", "Open circulation", "No circulation"],
+      "correctAnswer": "B",
+      "explanation": "Circulatory system in frog is closed with single circulation. (NCERT Page 84, Summary)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Circulatory System",
+      "ncertPage": 84,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In female frogs, the ureters and oviduct:",
+      "options": [
+        "Open together in cloaca",
+        "Open separately in cloaca",
+        "Do not open in cloaca",
+        "Open in urinary bladder"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In females the ureters and oviduct open seperately in the cloaca. (NCERT Page 82-83)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Reproductive System",
+      "ncertPage": 83,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The tongue of frog is:",
+      "options": [
+        "Trilobed and attached posteriorly",
+        "Bilobed and attached anteriorly",
+        "Unilobed and free",
+        "Absent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A muscular tongue is present in frog, which is bilobed at the tip and is used in capturing the prey. The tongue is attached anteriorly. (NCERT Page 84, Summary)",
+      "difficulty": "MEDIUM",
+      "topic": "Frog Morphology",
+      "ncertPage": 84,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

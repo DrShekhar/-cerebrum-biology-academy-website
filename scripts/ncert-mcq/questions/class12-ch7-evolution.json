@@ -1,0 +1,867 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 7,
+  "ncertChapterName": "Evolution",
+  "questions": [
+    {
+      "question": "Hugo de Vries proposed the:",
+      "options": [
+        "Theory of natural selection",
+        "Mutation theory",
+        "Theory of inheritance",
+        "Theory of pangenesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hugo de Vries proposed the mutation theory based on his work with evening primrose (Oenothera). He suggested that evolution occurs through sudden, large, heritable changes (mutations).",
+      "difficulty": "MEDIUM",
+      "topic": "Theories of Evolution",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vestigial organs are:",
+      "options": [
+        "Fully functional organs",
+        "Rudimentary, non-functional organs",
+        "Organs acquired during lifetime",
+        "Newly evolved organs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Vestigial organs are rudimentary, degenerate organs that were functional in ancestors but have reduced or no function in present organisms. Examples in humans: appendix, wisdom teeth, coccyx.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Allopatric speciation occurs due to:",
+      "options": [
+        "Behavioral isolation",
+        "Geographic isolation",
+        "Temporal isolation",
+        "Mechanical isolation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allopatric speciation occurs when populations are separated by geographic barriers (mountains, rivers, etc.). Isolated populations evolve independently and may become reproductively incompatible over time.",
+      "difficulty": "EASY",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Miller-Urey experiment, energy was provided by:",
+      "options": ["Heat only", "Chemical reactions", "Sunlight", "Electric discharge (sparks)"],
+      "correctAnswer": "D",
+      "explanation": "Miller and Urey used electric discharge (sparks) to simulate lightning in the early Earth's atmosphere. This energy drove the synthesis of organic compounds from inorganic precursors.",
+      "difficulty": "EASY",
+      "topic": "Origin of Life",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Neanderthals (Homo neanderthalensis):",
+      "options": [
+        "Never existed in Europe",
+        "Are direct ancestors of modern humans",
+        "Lived alongside early Homo sapiens",
+        "Still exist today"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Neanderthals lived alongside early Homo sapiens in Europe and Western Asia until about 40,000 years ago. Some interbreeding occurred; modern non-African humans have 1-4% Neanderthal DNA.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Industrial melanism in peppered moth is an example of:",
+      "options": ["Genetic drift", "Lamarckism", "Natural selection", "Mutation"],
+      "correctAnswer": "C",
+      "explanation": "Industrial melanism - the increase in dark (melanic) peppered moths during industrial revolution - is a classic example of natural selection. Dark moths survived better on soot-covered trees.",
+      "difficulty": "EASY",
+      "topic": "Natural Selection",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Reproductive isolation includes:",
+      "options": [
+        "No barriers",
+        "Pre-zygotic barriers only",
+        "Post-zygotic barriers only",
+        "Both pre-zygotic and post-zygotic barriers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Reproductive isolation includes both pre-zygotic barriers (prevent mating or fertilization) and post-zygotic barriers (hybrid inviability, sterility). Both types prevent gene flow between species.",
+      "difficulty": "MEDIUM",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first mammals appeared during:",
+      "options": ["Cretaceous period", "Quaternary period", "Cambrian period", "Triassic period"],
+      "correctAnswer": "D",
+      "explanation": "First mammals appeared during the Triassic period (about 200 million years ago). They were small, nocturnal creatures. Mammals diversified after dinosaur extinction at end of Cretaceous.",
+      "difficulty": "MEDIUM",
+      "topic": "Geological Time Scale",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The formation of new species is called:",
+      "options": ["Evolution", "Speciation", "Adaptation", "Mutation"],
+      "correctAnswer": "B",
+      "explanation": "Speciation is the evolutionary process by which new species form. It can occur through geographic isolation (allopatric), reproductive isolation without geographic barrier (sympatric), or other mechanisms.",
+      "difficulty": "EASY",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The era of reptiles is:",
+      "options": ["Cenozoic era", "Precambrian era", "Paleozoic era", "Mesozoic era"],
+      "correctAnswer": "D",
+      "explanation": "Mesozoic era (252-66 million years ago) is called the Age of Reptiles. It includes Triassic, Jurassic, and Cretaceous periods when dinosaurs and other reptiles dominated.",
+      "difficulty": "MEDIUM",
+      "topic": "Geological Time Scale",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The theory of chemical evolution (origin of life) was proposed by:",
+      "options": ["Darwin", "Lamarck", "Oparin and Haldane", "Miller and Urey"],
+      "correctAnswer": "C",
+      "explanation": "Oparin (Russian) and Haldane (British) independently proposed the chemical evolution theory, suggesting that life originated from non-living organic molecules through a series of chemical reactions in primordial soup.",
+      "difficulty": "EASY",
+      "topic": "Origin of Life",
+      "ncertPage": 116,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Stabilizing selection favors:",
+      "options": [
+        "New phenotypes",
+        "Extreme phenotypes",
+        "Intermediate phenotypes",
+        "Only one extreme"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Stabilizing selection favors intermediate phenotypes and selects against extremes. This reduces variation and maintains the status quo. Example: human birth weight - very low or very high is selected against.",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Natural Selection",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The theory of natural selection was proposed by:",
+      "options": ["Darwin and Wallace", "Mendel", "Weismann", "Lamarck"],
+      "correctAnswer": "A",
+      "explanation": "Charles Darwin and Alfred Russel Wallace independently proposed the theory of natural selection in 1858. Darwin published 'On the Origin of Species' in 1859.",
+      "difficulty": "EASY",
+      "topic": "Darwin's Theory",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Disruptive selection results in:",
+      "options": [
+        "Extinction",
+        "Increased variation with two or more phenotypes favored",
+        "Reduced variation",
+        "No change in population"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Disruptive selection favors both extreme phenotypes while selecting against intermediate ones. This can increase variation and potentially lead to speciation. Example: different bill sizes in birds.",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Natural Selection",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Analogous organs indicate:",
+      "options": [
+        "Parallel evolution",
+        "Common ancestry",
+        "Divergent evolution",
+        "Convergent evolution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Analogous organs (different origin, similar function) indicate convergent evolution - independent evolution of similar features in unrelated organisms due to similar environmental pressures. Example: wings of insects and birds.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hardy-Weinberg equilibrium describes:",
+      "options": [
+        "Extinction of species",
+        "Changing allele frequencies",
+        "Stable allele frequencies in a population",
+        "Origin of new species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hardy-Weinberg principle states that allele and genotype frequencies remain constant in a population across generations if certain conditions are met (no mutation, migration, selection, etc.).",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Darwin's finches are found in:",
+      "options": ["Australia", "Galapagos Islands", "Madagascar", "Hawaii"],
+      "correctAnswer": "B",
+      "explanation": "Darwin's finches are found in Galapagos Islands. Darwin observed different finch species with varied beak shapes adapted to different food sources - a classic example of adaptive radiation.",
+      "difficulty": "EASY",
+      "topic": "Adaptive Radiation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Atavism refers to:",
+      "options": [
+        "Loss of organs",
+        "Fusion of organs",
+        "Development of new organs",
+        "Reappearance of ancestral characters"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Atavism is the reappearance of ancestral characters that were absent in recent generations. Examples: human baby born with tail, presence of extra nipples in humans.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which evidence strongly supports that all life shares a common ancestor?",
+      "options": [
+        "Similar anatomy only",
+        "Universal genetic code",
+        "Similar behavior",
+        "Same habitat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The universal genetic code - the same codons code for the same amino acids in almost all organisms - strongly supports common ancestry. If life originated independently, different codes would be expected.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 120,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lamarck's theory is based on:",
+      "options": [
+        "Genetic drift",
+        "Natural selection",
+        "Use and disuse of organs and inheritance of acquired characters",
+        "Mutation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Lamarck proposed that organs develop with use and degenerate with disuse, and these acquired characters are inherited. This theory was later disproved as acquired characters are not inherited.",
+      "difficulty": "EASY",
+      "topic": "Theories of Evolution",
+      "ncertPage": 120,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Darwin's book 'On the Origin of Species' was published in:",
+      "options": ["1900", "1809", "1831", "1859"],
+      "correctAnswer": "D",
+      "explanation": "Darwin's 'On the Origin of Species by Means of Natural Selection' was published in 1859. It presented his theory of evolution by natural selection with extensive evidence.",
+      "difficulty": "MEDIUM",
+      "topic": "Darwin's Theory",
+      "ncertPage": 121,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Archaeopteryx is a connecting link between:",
+      "options": [
+        "Reptiles and mammals",
+        "Amphibians and reptiles",
+        "Fish and amphibians",
+        "Reptiles and birds"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Archaeopteryx (about 150 million years old fossil) is a connecting link between reptiles and birds. It had feathers and wings (bird features) but also teeth, clawed wings, and bony tail (reptile features).",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to Hardy-Weinberg equilibrium, if p is frequency of dominant allele and q is frequency of recessive allele, then:",
+      "options": ["2pq = 1", "p + q = 0", "p + q = 1", "p² + q² = 1"],
+      "correctAnswer": "C",
+      "explanation": "Hardy-Weinberg equations: p + q = 1 (allele frequencies) and p² + 2pq + q² = 1 (genotype frequencies), where p² = frequency of homozygous dominant, 2pq = heterozygous, q² = homozygous recessive.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The concept of 'common descent' means:",
+      "options": [
+        "All organisms were created at the same time",
+        "All organisms share a common ancestor",
+        "All organisms live in the same habitat",
+        "All organisms have the same DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Common descent means all living organisms descended from a common ancestor. Evidence includes universal genetic code, similar biochemistry, homologous structures, and shared DNA sequences.",
+      "difficulty": "EASY",
+      "topic": "Evolution Theory",
+      "ncertPage": 121,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Miller-Urey experiment (1953) demonstrated:",
+      "options": [
+        "Life can originate spontaneously",
+        "Organic molecules can form from inorganic precursors",
+        "DNA is genetic material",
+        "RNA was the first genetic material"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Miller and Urey experimentally showed that organic molecules (amino acids, sugars) could form from inorganic precursors (CH₄, NH₃, H₂O, H₂) when subjected to electric discharge (simulating lightning).",
+      "difficulty": "EASY",
+      "topic": "Origin of Life",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bottleneck effect occurs when:",
+      "options": [
+        "Mutations accumulate",
+        "Population size suddenly decreases drastically",
+        "New individuals join a population",
+        "Population size increases"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bottleneck effect occurs when population size drastically decreases due to catastrophe, disease, etc. Surviving individuals carry only a fraction of original genetic diversity, altering allele frequencies.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Founder effect is a type of:",
+      "options": ["Genetic drift", "Gene flow", "Mutation", "Natural selection"],
+      "correctAnswer": "A",
+      "explanation": "Founder effect occurs when a small group colonizes a new area, carrying only a subset of the original population's genetic diversity. It's a type of genetic drift causing rapid allele frequency changes.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sympatric speciation occurs:",
+      "options": [
+        "Only in animals",
+        "With geographic isolation",
+        "Without geographic isolation",
+        "Only in plants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sympatric speciation occurs without geographic isolation. Reproductive isolation evolves within a population occupying the same area. Can occur through polyploidy, habitat specialization, or behavioral isolation.",
+      "difficulty": "MEDIUM",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fitness in evolutionary terms refers to:",
+      "options": [
+        "Ability to survive",
+        "Reproductive success",
+        "Intelligence",
+        "Physical strength"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In evolutionary biology, fitness (Darwinian fitness) refers to reproductive success - the ability of an organism to survive and reproduce, passing its genes to the next generation.",
+      "difficulty": "MEDIUM",
+      "topic": "Natural Selection",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Wings of birds and wings of insects are examples of:",
+      "options": ["Analogous organs", "Vestigial organs", "Atavism", "Homologous organs"],
+      "correctAnswer": "A",
+      "explanation": "Wings of birds (modified forelimbs) and wings of insects (exoskeletal extensions) are analogous organs - they perform similar function (flight) but have different evolutionary origins.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Molecular clock is based on:",
+      "options": [
+        "Fossil dating",
+        "Rate of molecular/genetic change",
+        "Carbon dating",
+        "Anatomical comparison"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Molecular clock uses the rate of molecular evolution (mutations in DNA/proteins) to estimate the time of divergence between species. It assumes relatively constant mutation rates over time.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 120,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Genetic drift is more pronounced in:",
+      "options": [
+        "Small populations",
+        "Stable populations",
+        "Migrating populations",
+        "Large populations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Genetic drift - random changes in allele frequencies - has greater effect in small populations where chance events can significantly alter allele frequencies. Large populations are more stable.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The term 'survival of the fittest' was coined by:",
+      "options": ["Darwin", "Lamarck", "Herbert Spencer", "Mendel"],
+      "correctAnswer": "C",
+      "explanation": "Herbert Spencer coined the phrase 'survival of the fittest' after reading Darwin's work. Darwin later adopted it. 'Fitness' here means reproductive success, not physical strength.",
+      "difficulty": "MEDIUM",
+      "topic": "Darwin's Theory",
+      "ncertPage": 121,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Forelimbs of whale, bat, horse, and human are examples of:",
+      "options": [
+        "Vestigial organs",
+        "Rudimentary organs",
+        "Analogous organs",
+        "Homologous organs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Forelimbs of whale (flipper), bat (wing), horse (leg), and human (arm) are homologous organs - they share the same basic structural plan (pentadactyl limb) inherited from a common ancestor.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Dinosaurs became extinct at the end of:",
+      "options": ["Permian period", "Triassic period", "Jurassic period", "Cretaceous period"],
+      "correctAnswer": "D",
+      "explanation": "Dinosaurs went extinct at the end of Cretaceous period (about 66 million years ago), likely due to asteroid impact. This mass extinction allowed mammals to diversify and dominate.",
+      "difficulty": "MEDIUM",
+      "topic": "Geological Time Scale",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Connecting link between reptiles and mammals is:",
+      "options": ["Duck-billed platypus", "Coelacanth", "Archaeopteryx", "Lung fish"],
+      "correctAnswer": "A",
+      "explanation": "Duck-billed platypus (and echidna) are connecting links between reptiles and mammals. They are mammals (have hair, produce milk) but lay eggs and have other reptilian features.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Homo sapiens first appeared about:",
+      "options": [
+        "2 million years ago",
+        "500,000 years ago",
+        "200,000-300,000 years ago",
+        "10,000 years ago"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Anatomically modern Homo sapiens first appeared about 200,000-300,000 years ago in Africa. They spread to other continents starting about 70,000 years ago (Out of Africa migration).",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The genus Homo evolved about:",
+      "options": [
+        "2 million years ago",
+        "10,000 years ago",
+        "25 million years ago",
+        "15 million years ago"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The genus Homo (humans and direct ancestors) evolved about 2-2.5 million years ago in Africa. Homo habilis was one of the earliest species, followed by Homo erectus and Homo sapiens.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to Darwin's theory, the main driving force of evolution is:",
+      "options": [
+        "Use and disuse of organs",
+        "Natural selection",
+        "Inheritance of acquired characters",
+        "Mutation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Darwin proposed that natural selection is the main mechanism of evolution. Organisms with favorable variations survive and reproduce more (survival of the fittest), passing traits to offspring.",
+      "difficulty": "EASY",
+      "topic": "Darwin's Theory",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Big Bang theory explains:",
+      "options": ["Origin of universe", "Origin of species", "Origin of man", "Origin of life"],
+      "correctAnswer": "A",
+      "explanation": "The Big Bang theory explains the origin of the universe, suggesting it originated from a singular huge explosion about 13.8 billion years ago. Earth formed about 4.5 billion years ago.",
+      "difficulty": "EASY",
+      "topic": "Origin of Life",
+      "ncertPage": 116,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Organic evolution is best described as:",
+      "options": [
+        "Change in allele frequencies over generations",
+        "Survival of the strongest",
+        "Development of organs during lifetime",
+        "Progress towards perfection"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Evolution is defined as change in allele frequencies in a population over generations. It's not about progress or perfection, but about adaptation to changing environments through heritable variation.",
+      "difficulty": "MEDIUM",
+      "topic": "Evolution Theory",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The era of mammals is:",
+      "options": ["Mesozoic era", "Cenozoic era", "Archaean era", "Paleozoic era"],
+      "correctAnswer": "B",
+      "explanation": "Cenozoic era (66 million years ago to present) is called the Age of Mammals. After dinosaur extinction, mammals diversified rapidly through adaptive radiation.",
+      "difficulty": "MEDIUM",
+      "topic": "Geological Time Scale",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Convergent evolution produces:",
+      "options": [
+        "Embryonic structures",
+        "Homologous structures",
+        "Analogous structures",
+        "Vestigial structures"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Convergent evolution produces analogous structures - similar structures in unrelated organisms due to similar selective pressures. Examples: wings in birds, bats, and insects; eyes in vertebrates and cephalopods.",
+      "difficulty": "EASY",
+      "topic": "Evolution Patterns",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Divergent evolution produces:",
+      "options": [
+        "Analogous organs",
+        "Homologous organs",
+        "Vestigial organs only",
+        "No structural changes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Divergent evolution produces homologous structures - organs with same evolutionary origin but different functions in related organisms. Example: forelimbs of vertebrates modified for different functions.",
+      "difficulty": "EASY",
+      "topic": "Evolution Patterns",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first cellular life forms on Earth were:",
+      "options": ["Fungi", "Plants", "Eukaryotes", "Prokaryotes"],
+      "correctAnswer": "D",
+      "explanation": "The first cellular life forms were prokaryotes (bacteria and archaea), appearing about 3.5-3.8 billion years ago. Eukaryotes evolved later, about 2 billion years ago.",
+      "difficulty": "EASY",
+      "topic": "Origin of Life",
+      "ncertPage": 117,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Factors that disturb Hardy-Weinberg equilibrium include:",
+      "options": [
+        "All of the above",
+        "Gene flow and genetic drift",
+        "Mutation and natural selection",
+        "Non-random mating"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Hardy-Weinberg equilibrium requires: no mutation, no migration (gene flow), no selection, random mating, and large population. Violation of any condition causes evolution (change in allele frequencies).",
+      "difficulty": "MEDIUM",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adaptive radiation refers to:",
+      "options": [
+        "Evolution of multiple species from a single ancestor",
+        "Extinction of species",
+        "Migration of species",
+        "Evolution of single species from multiple ancestors"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Adaptive radiation is the rapid evolution of diversely adapted species from a common ancestor. Examples: Darwin's finches, Australian marsupials, Hawaiian honeycreepers.",
+      "difficulty": "EASY",
+      "topic": "Adaptive Radiation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to Oparin-Haldane hypothesis, the early Earth's atmosphere was:",
+      "options": [
+        "Had no atmosphere",
+        "Oxidizing (with free oxygen)",
+        "Reducing (without free oxygen)",
+        "Same as present"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The early Earth's atmosphere was reducing (without free O₂), containing CH₄, NH₃, H₂O vapor, and H₂. Free oxygen appeared later through photosynthesis by cyanobacteria.",
+      "difficulty": "MEDIUM",
+      "topic": "Origin of Life",
+      "ncertPage": 116,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Coacervates are:",
+      "options": [
+        "Aggregates of organic molecules bounded by membrane-like structure",
+        "Types of fossils",
+        "Primitive eukaryotes",
+        "First living cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Coacervates are aggregates of colloidal particles (organic molecules) bounded by a primitive membrane-like structure. Oparin proposed they were precursors to living cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Origin of Life",
+      "ncertPage": 117,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Coelacanth is a connecting link between:",
+      "options": [
+        "Fish and amphibians",
+        "Amphibians and reptiles",
+        "Reptiles and mammals",
+        "Reptiles and birds"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Coelacanth (lobe-finned fish) is a connecting link between fish and amphibians. Its lobed fins have bone structure similar to limbs of tetrapods, suggesting fish-to-land transition.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gene flow refers to:",
+      "options": [
+        "Mutation rate",
+        "Natural selection",
+        "Transfer of genes within a cell",
+        "Transfer of alleles between populations through migration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gene flow (gene migration) is the transfer of genetic material between populations through migration of individuals. It can introduce new alleles and tends to reduce genetic differences between populations.",
+      "difficulty": "EASY",
+      "topic": "Population Genetics",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Embryological evidence of evolution was provided by:",
+      "options": ["Oparin", "Darwin", "Lamarck", "Ernst Haeckel"],
+      "correctAnswer": "D",
+      "explanation": "Ernst Haeckel proposed that 'ontogeny recapitulates phylogeny' - embryonic development repeats evolutionary history. Though not strictly accurate, embryological similarities do indicate common ancestry.",
+      "difficulty": "MEDIUM",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 120,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The famous example of Lamarckism is:",
+      "options": [
+        "Peppered moth",
+        "Darwin's finches",
+        "Long neck of giraffe",
+        "Industrial melanism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Lamarck explained the long neck of giraffe by use and disuse - stretching to reach high leaves lengthened the neck, which was inherited. This explanation is now known to be incorrect.",
+      "difficulty": "EASY",
+      "topic": "Theories of Evolution",
+      "ncertPage": 120,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The direct ancestor of modern humans (Homo sapiens) is thought to be:",
+      "options": ["Ramapithecus", "Homo erectus", "Australopithecus", "Dryopithecus"],
+      "correctAnswer": "B",
+      "explanation": "Homo erectus is considered a direct ancestor of modern humans. They had larger brains, used fire, and made more sophisticated tools. Homo sapiens evolved from archaic Homo sapiens/H. erectus populations.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The study of fossils is called:",
+      "options": ["Paleontology", "Anatomy", "Physiology", "Ecology"],
+      "correctAnswer": "A",
+      "explanation": "Paleontology is the study of fossils - preserved remains or traces of ancient organisms. Fossils provide direct evidence of past life forms and evolutionary history.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The wings of butterfly and wings of bird exhibit:",
+      "options": ["Both homology and analogy", "Neither", "Homology", "Analogy"],
+      "correctAnswer": "D",
+      "explanation": "Wings of butterfly (insect exoskeleton modification) and bird (modified forelimb) are analogous - similar function (flight) but different evolutionary origin. They evolved independently through convergent evolution.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Peripatric speciation is a type of:",
+      "options": [
+        "Parapatric speciation",
+        "Artificial selection",
+        "Sympatric speciation",
+        "Allopatric speciation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Peripatric speciation is a form of allopatric speciation where a small peripheral population becomes isolated from the main population and evolves into a new species, often rapidly due to founder effect.",
+      "difficulty": "HARD",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Parallel evolution occurs when:",
+      "options": [
+        "Related species independently evolve similar features",
+        "Species evolve in opposite directions",
+        "Evolution stops",
+        "Unrelated species develop similar features"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Parallel evolution occurs when two related species (from common ancestor) independently evolve similar features due to similar selective pressures. It's different from convergent evolution which involves unrelated species.",
+      "difficulty": "HARD",
+      "topic": "Evolution Patterns",
+      "ncertPage": 119,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is a vestigial organ in humans?",
+      "options": ["Appendix", "Kidney", "Liver", "Heart"],
+      "correctAnswer": "A",
+      "explanation": "The vermiform appendix is a vestigial organ in humans. It is a remnant of the caecum that was functional in herbivorous ancestors for cellulose digestion.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which organic molecules were formed in Miller-Urey experiment?",
+      "options": ["Nucleic acids", "Proteins", "Amino acids and sugars", "Lipids only"],
+      "correctAnswer": "C",
+      "explanation": "Miller-Urey experiment produced various organic molecules including amino acids (glycine, alanine, aspartic acid, etc.), sugars, and other organic compounds, but not complex molecules like proteins or nucleic acids.",
+      "difficulty": "MEDIUM",
+      "topic": "Origin of Life",
+      "ncertPage": 117,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biological species concept defines species based on:",
+      "options": [
+        "Reproductive isolation",
+        "Geographic location",
+        "Genetic similarity",
+        "Physical appearance"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biological species concept (Ernst Mayr) defines species as groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups.",
+      "difficulty": "MEDIUM",
+      "topic": "Speciation",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Homologous organs indicate:",
+      "options": [
+        "Parallel evolution",
+        "Convergent evolution",
+        "Divergent evolution",
+        "No evolutionary relationship"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Homologous organs (same origin, different function) indicate divergent evolution - descent from a common ancestor with subsequent adaptation to different environments. Example: forelimbs of vertebrates.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 119,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The use of tools first appeared in:",
+      "options": ["Homo habilis", "Homo erectus", "Homo sapiens only", "Australopithecus"],
+      "correctAnswer": "A",
+      "explanation": "Homo habilis ('handy man') was the first tool maker (about 2.4 million years ago). They made simple stone tools (Oldowan tools). Earlier hominins may have used unmodified objects.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Australopithecus is significant because:",
+      "options": [
+        "It was the first to develop language",
+        "It was the first to use fire",
+        "It showed bipedal locomotion",
+        "It had the largest brain size"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Australopithecus (lived about 4-2 million years ago) is significant for showing bipedal (upright, two-legged) locomotion while having a small, ape-like brain. Lucy is a famous Australopithecus specimen.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Evolution",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Directional selection results in:",
+      "options": [
+        "Intermediate phenotypes being eliminated",
+        "Average phenotype being favored",
+        "Extreme phenotypes being favored",
+        "One extreme phenotype being favored"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Directional selection favors one extreme phenotype, causing the population mean to shift in that direction. Example: increasing giraffe neck length over generations.",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Natural Selection",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT evidence for evolution?",
+      "options": ["Embryology", "Spontaneous generation", "Fossil record", "Comparative anatomy"],
+      "correctAnswer": "B",
+      "explanation": "Spontaneous generation (life arising from non-living matter spontaneously) is a disproved theory, not evidence for evolution. Fossil record, comparative anatomy, embryology, and molecular biology provide evidence for evolution.",
+      "difficulty": "EASY",
+      "topic": "Evidence of Evolution",
+      "ncertPage": 118,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

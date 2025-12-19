@@ -1,0 +1,1127 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 16,
+  "ncertChapterName": "Breathing and Exchange of Gases",
+  "questions": [
+    {
+      "question": "Asthma is characterized by:",
+      "options": [
+        "Destruction of alveolar walls",
+        "Inflammation and spasm of bronchioles",
+        "Fibrosis of lung tissue",
+        "Accumulation of fluid in alveoli"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Asthma is an allergic respiratory disorder characterized by inflammation of bronchioles, increased mucus secretion, and spasm of bronchial smooth muscles. This leads to difficulty in breathing (dyspnea), wheezing, and coughing, especially during expiration.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hilum of the lung contains:",
+      "options": [
+        "Only pulmonary arteries",
+        "Only bronchi",
+        "Bronchi, pulmonary vessels, nerves, and lymphatics",
+        "Only pulmonary veins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The hilum is the root of the lung where structures enter and leave. It contains the primary bronchus, pulmonary artery (carrying deoxygenated blood), two pulmonary veins (carrying oxygenated blood), bronchial arteries and veins, lymph vessels, and nerves.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The total lung capacity of a healthy adult human is approximately:",
+      "options": ["6500-7000 mL", "3500-4000 mL", "4500-5000 mL", "5700-6000 mL"],
+      "correctAnswer": "D",
+      "explanation": "Total Lung Capacity (TLC) = Vital Capacity + Residual Volume = 4500-4800 mL + 1200-1300 mL = approximately 5700-6000 mL. TLC is the maximum volume of air that the lungs can accommodate after forced inspiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Inspiratory capacity (IC) equals:",
+      "options": ["ERV + RV", "TV + IRV + ERV", "TV + IRV", "TV + ERV"],
+      "correctAnswer": "C",
+      "explanation": "Inspiratory Capacity (IC) = Tidal Volume + Inspiratory Reserve Volume = TV + IRV. It represents the maximum volume of air that can be inspired after normal expiration. IC is approximately 3000-3500 mL.",
+      "difficulty": "EASY",
+      "topic": "Pulmonary Capacities",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cartilaginous rings in trachea are:",
+      "options": [
+        "Incomplete C-shaped rings of fibrocartilage",
+        "Complete rings of hyaline cartilage",
+        "Incomplete C-shaped rings of hyaline cartilage",
+        "Complete rings of elastic cartilage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The trachea is supported by 16-20 C-shaped or incomplete rings of hyaline cartilage. These rings are incomplete posteriorly to allow the expansion of esophagus during swallowing of food. The trachealis muscle connects the two ends of the C-shaped cartilage.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vital capacity is defined as:",
+      "options": ["TV + IRV", "TV + ERV", "ERV + RV", "TV + IRV + ERV"],
+      "correctAnswer": "D",
+      "explanation": "Vital Capacity (VC) = Tidal Volume + Inspiratory Reserve Volume + Expiratory Reserve Volume = TV + IRV + ERV. It represents the maximum volume of air that can be breathed in or out during single respiration. In healthy adults, VC is approximately 4500-4800 mL.",
+      "difficulty": "EASY",
+      "topic": "Pulmonary Capacities",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Asbestosis is caused by inhalation of:",
+      "options": ["Asbestos fibers", "Cotton dust", "Coal dust", "Silica dust"],
+      "correctAnswer": "A",
+      "explanation": "Asbestosis is a chronic lung disease caused by inhalation of asbestos fibers, leading to lung scarring (fibrosis). It was common in workers in construction, shipbuilding, and insulation industries. Asbestos exposure also increases the risk of lung cancer and mesothelioma.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Carbon monoxide is dangerous because it:",
+      "options": [
+        "Destroys RBCs",
+        "Blocks alveoli",
+        "Destroys haemoglobin",
+        "Binds to haemoglobin with very high affinity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carbon monoxide (CO) is extremely dangerous because it binds to haemoglobin with about 200-250 times higher affinity than oxygen. This forms carboxyhaemoglobin (HbCO), which cannot carry oxygen. Even small amounts of CO can significantly reduce oxygen-carrying capacity of blood.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pneumothorax refers to:",
+      "options": [
+        "Accumulation of air in pleural cavity",
+        "Inflammation of pleura",
+        "Accumulation of pus in pleural cavity",
+        "Accumulation of fluid in pleural cavity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pneumothorax is the presence of air in the pleural cavity, which can cause lung collapse. It can be spontaneous, traumatic, or iatrogenic. The negative intrapleural pressure is lost, preventing lung expansion during inspiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The chloride shift or Hamburger phenomenon refers to:",
+      "options": [
+        "Movement of Cl⁻ ions into RBCs in exchange for HCO₃⁻ ions",
+        "Movement of Cl⁻ ions out of RBCs in exchange for HCO₃⁻ ions",
+        "Movement of CO₂ into RBCs",
+        "Movement of O₂ out of RBCs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The chloride shift (Hamburger phenomenon) is the exchange of Cl⁻ ions for HCO₃⁻ ions across the RBC membrane. In tissues, HCO₃⁻ formed inside RBCs diffuses out into plasma, and Cl⁻ moves in to maintain electrical neutrality. This is reversed in the lungs.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During inspiration, the diaphragm:",
+      "options": [
+        "Relaxes and becomes flat",
+        "Contracts and becomes dome-shaped",
+        "Relaxes and becomes dome-shaped",
+        "Contracts and becomes flat"
+      ],
+      "correctAnswer": "D",
+      "explanation": "During inspiration, the diaphragm contracts and becomes flat, increasing the vertical dimension of the thoracic cavity. This creates a negative pressure in the lungs relative to atmospheric pressure, causing air to flow into the lungs.",
+      "difficulty": "EASY",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Emphysema is characterized by:",
+      "options": [
+        "Accumulation of fluid in pleural cavity",
+        "Spasm of bronchial muscles",
+        "Inflammation of bronchi",
+        "Abnormal increase in size of alveoli due to destruction of alveolar walls"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Emphysema is a chronic respiratory disorder characterized by abnormal permanent enlargement of alveoli and destruction of alveolar walls. This reduces the surface area for gas exchange, causing breathlessness. It is commonly caused by cigarette smoking.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carbon dioxide is transported in blood in which of the following forms?",
+      "options": [
+        "Only as dissolved CO₂",
+        "Only as bicarbonates",
+        "As dissolved CO₂, bicarbonates, and carbaminohaemoglobin",
+        "Only as carbaminohaemoglobin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CO₂ is transported in blood in three forms: (1) About 7% dissolved in plasma, (2) About 70% as bicarbonates (HCO₃⁻), and (3) About 23% as carbaminohaemoglobin (bound to haemoglobin). Bicarbonates are formed primarily in RBCs by the action of carbonic anhydrase.",
+      "difficulty": "EASY",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The type I alveolar cells (pneumocytes) are:",
+      "options": [
+        "Macrophages that engulf pathogens",
+        "Ciliated cells that move mucus",
+        "Cuboidal cells that secrete surfactant",
+        "Squamous cells forming the alveolar lining for gas exchange"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Type I alveolar cells (Type I pneumocytes) are squamous epithelial cells that form the thin alveolar lining across which gas exchange occurs. They cover about 95% of the alveolar surface area and are very thin (about 0.1-0.2 μm) to facilitate diffusion.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Type II alveolar cells (pneumocytes) are responsible for:",
+      "options": [
+        "Secretion of surfactant",
+        "Phagocytosis of pathogens",
+        "Movement of mucus",
+        "Gas exchange"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Type II alveolar cells (Type II pneumocytes) are cuboidal cells that secrete pulmonary surfactant, a phospholipid-rich substance that reduces surface tension in alveoli. This prevents alveolar collapse during expiration and reduces the work of breathing.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The surfactant begins to be produced in the foetus at approximately:",
+      "options": ["32 weeks", "40 weeks", "20 weeks", "24 weeks"],
+      "correctAnswer": "D",
+      "explanation": "Surfactant production begins around 24 weeks of gestation, but adequate amounts for normal lung function are not produced until about 35 weeks. This is why premature infants born before 35 weeks often develop Respiratory Distress Syndrome (RDS).",
+      "difficulty": "HARD",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The external intercostal muscles when contract:",
+      "options": [
+        "Move ribs downward and inward",
+        "Move ribs upward and outward",
+        "Have no effect on rib position",
+        "Move ribs downward and outward"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contraction of external intercostal muscles lifts the ribs upward and outward, increasing the anteroposterior and lateral dimensions of the thoracic cavity. This is known as the 'bucket-handle' and 'pump-handle' movements of the ribs during inspiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Peripheral chemoreceptors are located in:",
+      "options": [
+        "Carotid body and aortic body",
+        "Lungs and bronchi",
+        "Cerebellum and pons",
+        "Medulla and hypothalamus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Peripheral chemoreceptors are located in the carotid bodies (at the bifurcation of common carotid arteries) and aortic bodies (in the aortic arch). They are sensitive to changes in arterial pO₂, pCO₂, and pH, and send signals to the respiratory centre to adjust ventilation.",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The partial pressure of oxygen in alveolar air is approximately:",
+      "options": ["76 mm Hg", "104 mm Hg", "159 mm Hg", "40 mm Hg"],
+      "correctAnswer": "B",
+      "explanation": "The partial pressure of oxygen (pO₂) in alveolar air is approximately 104 mm Hg. This is lower than atmospheric pO₂ (159 mm Hg) because alveolar air is humidified and mixed with residual air containing CO₂.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The partial pressure of CO₂ in alveolar air is approximately:",
+      "options": ["76 mm Hg", "0.3 mm Hg", "40 mm Hg", "45 mm Hg"],
+      "correctAnswer": "C",
+      "explanation": "The partial pressure of carbon dioxide (pCO₂) in alveolar air is approximately 40 mm Hg. This creates a pressure gradient that allows CO₂ to diffuse from pulmonary capillaries (where pCO₂ is 45 mm Hg) into the alveoli.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which cells in the respiratory tract are responsible for trapping and moving mucus?",
+      "options": ["Clara cells", "Type I pneumocytes", "Goblet cells", "Ciliated epithelial cells"],
+      "correctAnswer": "D",
+      "explanation": "Ciliated epithelial cells line most of the respiratory tract and use their cilia to move mucus (produced by goblet cells) toward the pharynx. This mucociliary escalator mechanism removes trapped particles and pathogens from the respiratory tract.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The enzyme that catalyzes the conversion of CO₂ to carbonic acid in RBCs is:",
+      "options": ["Carbonic anhydrase", "Carboxypeptidase", "CO₂ hydratase", "Carboxylase"],
+      "correctAnswer": "A",
+      "explanation": "Carbonic anhydrase is a zinc-containing enzyme present in RBCs that catalyzes the reversible reaction: CO₂ + H₂O ⇌ H₂CO₃. The carbonic acid (H₂CO₃) then dissociates into H⁺ and HCO₃⁻. This enzyme speeds up the reaction by about 5000 times.",
+      "difficulty": "EASY",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Occupational lung disease caused by inhalation of silica dust is called:",
+      "options": ["Emphysema", "Pneumonia", "Asbestosis", "Silicosis"],
+      "correctAnswer": "D",
+      "explanation": "Silicosis is a lung fibrosis caused by long-term inhalation of silica dust, common in workers in stone cutting, sandblasting, and mining industries. The silica particles cause chronic inflammation and progressive fibrosis of lung tissue.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ventilation-perfusion ratio (V/Q ratio) in normal lungs is approximately:",
+      "options": ["0.4", "0.8", "1.2", "1.6"],
+      "correctAnswer": "B",
+      "explanation": "The normal V/Q ratio is approximately 0.8. Alveolar ventilation is about 4 L/min and pulmonary blood flow (cardiac output) is about 5 L/min. V/Q = 4/5 = 0.8. This ratio ensures efficient matching of ventilation to perfusion for optimal gas exchange.",
+      "difficulty": "HARD",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Normal quiet breathing is called:",
+      "options": ["Apnea", "Hyperpnea", "Dyspnea", "Eupnea"],
+      "correctAnswer": "D",
+      "explanation": "Eupnea is the normal, quiet breathing at rest with a rate of 12-16 breaths per minute. It is rhythmic and effortless, primarily using the diaphragm with minimal chest wall movement.",
+      "difficulty": "EASY",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The Bohr effect refers to:",
+      "options": [
+        "Increase in oxygen affinity of haemoglobin at high pCO₂",
+        "Decrease in oxygen affinity of haemoglobin at high pCO₂ and low pH",
+        "Increase in oxygen affinity at low pH",
+        "No change in oxygen affinity with pH changes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Bohr effect describes the decrease in oxygen affinity of haemoglobin at high pCO₂ and low pH. This facilitates unloading of oxygen in tissues where CO₂ is high and pH is low due to metabolic activity. It shifts the oxygen-haemoglobin dissociation curve to the right.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At high altitudes, the main challenge for respiration is:",
+      "options": [
+        "Low temperature",
+        "Low atmospheric pressure leading to low pO₂",
+        "High CO₂ levels",
+        "High humidity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At high altitudes, the atmospheric pressure is low, which reduces the partial pressure of oxygen (pO₂) in inspired air. This makes it difficult to load adequate oxygen onto haemoglobin, causing hypoxia. The body adapts by increasing RBC production (polycythemia).",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The percentage of CO₂ transported as bicarbonates is approximately:",
+      "options": ["23%", "50%", "70%", "7%"],
+      "correctAnswer": "C",
+      "explanation": "Approximately 70% of CO₂ is transported in blood as bicarbonate ions (HCO₃⁻). This is the major form of CO₂ transport. Bicarbonates are formed primarily in RBCs through the action of carbonic anhydrase, then diffuse into plasma.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The conchae (turbinates) in the nasal cavity function to:",
+      "options": [
+        "Filter particles only",
+        "Increase surface area for warming, humidifying, and filtering air",
+        "Produce mucus only",
+        "Detect smell"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The conchae (superior, middle, inferior) are bony projections in the nasal cavity covered by mucosa. They increase the surface area of the nasal cavity, creating turbulent airflow that helps warm, humidify, and filter the inspired air more efficiently.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The P₅₀ value of haemoglobin represents:",
+      "options": [
+        "pO₂ at which haemoglobin is 50% saturated",
+        "pCO₂ at which haemoglobin is 50% saturated",
+        "pH at which haemoglobin is 50% saturated",
+        "pO₂ at which haemoglobin is 100% saturated"
+      ],
+      "correctAnswer": "A",
+      "explanation": "P₅₀ is the partial pressure of oxygen at which haemoglobin is 50% saturated. For normal adult haemoglobin, P₅₀ is about 26 mm Hg. A shift in P₅₀ indicates a change in oxygen affinity - higher P₅₀ means lower affinity (right shift).",
+      "difficulty": "HARD",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The residual volume in human lungs is approximately:",
+      "options": ["500 mL", "1000 mL", "1200 mL", "1500 mL"],
+      "correctAnswer": "C",
+      "explanation": "Residual Volume (RV) is the volume of air remaining in the lungs even after maximum forceful expiration. It is approximately 1200-1300 mL. This air cannot be expelled and keeps the alveoli inflated, preventing their collapse.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The function of epiglottis is to:",
+      "options": [
+        "Warm and humidify air",
+        "Produce sound",
+        "Prevent food from entering the trachea",
+        "Filter inspired air"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The epiglottis is a leaf-shaped elastic cartilage that covers the glottis (opening of larynx) during swallowing. This prevents food and liquids from entering the trachea and directs them into the esophagus, preventing aspiration.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The RQ value for carbohydrates is:",
+      "options": ["0.8", "0.9", "1.0", "0.7"],
+      "correctAnswer": "C",
+      "explanation": "The RQ for carbohydrates is 1.0 because the number of CO₂ molecules produced equals the number of O₂ molecules consumed. For glucose: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O, RQ = 6CO₂/6O₂ = 1.0.",
+      "difficulty": "EASY",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each haemoglobin molecule can bind with a maximum of:",
+      "options": [
+        "4 molecules of oxygen",
+        "8 molecules of oxygen",
+        "1 molecule of oxygen",
+        "2 molecules of oxygen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Each haemoglobin molecule contains 4 heme groups, and each heme can bind one molecule of O₂. Therefore, each haemoglobin can carry a maximum of 4 molecules of oxygen (4 × O₂). This forms oxyhaemoglobin: Hb₄ + 4O₂ → Hb₄O₈.",
+      "difficulty": "EASY",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During forced expiration, the muscles involved are:",
+      "options": [
+        "Internal intercostal muscles and abdominal muscles",
+        "Only diaphragm",
+        "Only external intercostal muscles",
+        "External intercostal muscles and diaphragm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Forced expiration (as during exercise or coughing) requires active contraction of internal intercostal muscles and abdominal muscles. Internal intercostals pull ribs downward and inward, while abdominal muscles push the diaphragm upward, forcefully expelling air.",
+      "difficulty": "MEDIUM",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The condition characterized by increased rate and depth of breathing is called:",
+      "options": ["Apnea", "Dyspnea", "Hyperpnea", "Eupnea"],
+      "correctAnswer": "C",
+      "explanation": "Hyperpnea is the increased rate and depth of breathing that occurs during exercise or increased metabolic activity. It is a normal physiological response to meet increased oxygen demand. Dyspnea is difficulty in breathing, while apnea is cessation of breathing.",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The covering of the lungs is called:",
+      "options": ["Pericardium", "Peritoneum", "Pleura", "Mesentery"],
+      "correctAnswer": "C",
+      "explanation": "The pleura is a double-layered serous membrane covering the lungs. The visceral pleura covers the lung surface, while the parietal pleura lines the thoracic cavity. The pleural cavity between them contains pleural fluid that reduces friction during breathing.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Haldane effect refers to:",
+      "options": [
+        "Effect of oxygen on CO₂ transport",
+        "Effect of CO₂ on oxygen transport",
+        "Effect of pH on oxygen transport",
+        "Effect of temperature on oxygen transport"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Haldane effect is the effect of oxygen binding on CO₂ transport. Oxygenation of haemoglobin in the lungs promotes release of CO₂ (decreases CO₂ affinity), while deoxygenation in tissues promotes CO₂ loading. This is the reverse of the Bohr effect.",
+      "difficulty": "HARD",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The partial pressure of CO₂ in deoxygenated blood is approximately:",
+      "options": ["40 mm Hg", "45 mm Hg", "95 mm Hg", "104 mm Hg"],
+      "correctAnswer": "B",
+      "explanation": "The partial pressure of CO₂ in deoxygenated blood (venous blood) is approximately 45 mm Hg. This is higher than the alveolar pCO₂ (40 mm Hg), creating a pressure gradient that drives CO₂ diffusion from blood into alveoli.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Foetal haemoglobin (HbF) has higher oxygen affinity than adult haemoglobin (HbA) because:",
+      "options": [
+        "HbF has more heme groups",
+        "HbF binds 2,3-DPG less strongly",
+        "HbF has α chains instead of β chains",
+        "HbF is present in higher concentration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Foetal haemoglobin (α₂γ₂) has higher oxygen affinity than adult haemoglobin (α₂β₂) because γ chains bind 2,3-DPG less strongly than β chains. This allows HbF to extract oxygen from maternal blood at the placenta more efficiently.",
+      "difficulty": "HARD",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The percentage of CO₂ transported as carbaminohaemoglobin is approximately:",
+      "options": ["50%", "70%", "7%", "23%"],
+      "correctAnswer": "D",
+      "explanation": "Approximately 23% of CO₂ is transported bound to haemoglobin as carbaminohaemoglobin (HbCO₂). CO₂ binds to the amino groups of haemoglobin, not to the heme group like oxygen. This is also known as the carbamino compound.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 276,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hypoxia refers to:",
+      "options": [
+        "Excess oxygen in blood",
+        "Deficiency of oxygen in tissues",
+        "Excess carbon dioxide in blood",
+        "Deficiency of carbon dioxide in blood"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hypoxia is a condition characterized by deficiency of oxygen supply to tissues despite adequate blood flow. It can be caused by various factors including reduced pO₂ in inspired air, respiratory disorders, circulatory disorders, or anaemia.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is the correct sequence of respiratory passage in humans?",
+      "options": [
+        "Nostrils → Pharynx → Larynx → Trachea → Bronchi → Bronchioles → Alveoli",
+        "Nostrils → Larynx → Pharynx → Trachea → Bronchi → Bronchioles → Alveoli",
+        "Nostrils → Pharynx → Trachea → Larynx → Bronchi → Bronchioles → Alveoli",
+        "Nostrils → Trachea → Pharynx → Larynx → Bronchi → Bronchioles → Alveoli"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of respiratory passage is: External nostrils → Nasal cavity → Pharynx → Larynx → Trachea → Primary bronchi → Secondary bronchi → Tertiary bronchi → Bronchioles → Alveoli. This represents the conducting and respiratory portions of the respiratory system.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The compliance of lungs refers to:",
+      "options": [
+        "Resistance to airflow",
+        "Ability of lungs to stretch during breathing",
+        "Rate of gas exchange",
+        "Surface tension in alveoli"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pulmonary compliance is a measure of the lung's ability to stretch and expand during inspiration. It is defined as the change in lung volume per unit change in pressure. High compliance means lungs expand easily, low compliance (as in fibrosis) makes breathing difficult.",
+      "difficulty": "HARD",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The inspiratory reserve volume (IRV) in a healthy adult is approximately:",
+      "options": ["1000-1100 mL", "2500-3000 mL", "3500-4000 mL", "500-600 mL"],
+      "correctAnswer": "B",
+      "explanation": "Inspiratory Reserve Volume (IRV) is the additional volume of air that can be inspired forcefully after a normal inspiration. In a healthy adult, IRV is approximately 2500-3000 mL.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Dead space in the respiratory system refers to:",
+      "options": [
+        "Maximum volume of air that can be expired",
+        "Volume of air remaining after maximum expiration",
+        "Volume of air that does not participate in gas exchange",
+        "Volume of air in alveoli"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Anatomical dead space refers to the volume of air (about 150 mL) in the conducting passages (nose, pharynx, larynx, trachea, bronchi, bronchioles) that does not participate in gas exchange. Only alveolar air participates in gas exchange.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The volume of air that can be breathed in after maximum expiration is called:",
+      "options": ["Total lung capacity", "Inspiratory capacity", "Tidal volume", "Vital capacity"],
+      "correctAnswer": "D",
+      "explanation": "Vital capacity (VC) is the maximum volume of air that can be inspired after maximum expiration (or expired after maximum inspiration). It equals TV + IRV + ERV, approximately 4500-4800 mL in healthy adults. It indicates the functional capacity of the lungs.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The alveolar ventilation rate is calculated as:",
+      "options": [
+        "Vital capacity × Respiratory rate",
+        "Total lung capacity × Respiratory rate",
+        "Tidal volume × Respiratory rate",
+        "(Tidal volume - Dead space) × Respiratory rate"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Alveolar ventilation rate = (Tidal Volume - Dead Space) × Respiratory Rate. For example: (500 mL - 150 mL) × 15 breaths/min = 5250 mL/min. This represents the actual volume of fresh air reaching the alveoli for gas exchange per minute.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sleep apnea is characterized by:",
+      "options": [
+        "Increased breathing rate during sleep",
+        "Decreased oxygen demand during sleep",
+        "Continuous breathing during sleep",
+        "Temporary cessation of breathing during sleep"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sleep apnea is a disorder characterized by repeated episodes of cessation of breathing (apnea) during sleep. It can be obstructive (due to upper airway collapse) or central (due to failure of respiratory centre). It leads to poor sleep quality and daytime drowsiness.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "COPD (Chronic Obstructive Pulmonary Disease) includes:",
+      "options": [
+        "Lung cancer and pleural effusion",
+        "Asthma only",
+        "Emphysema and chronic bronchitis",
+        "Pneumonia and tuberculosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "COPD is a group of progressive lung diseases characterized by airflow limitation that is not fully reversible. The main components are chronic bronchitis (inflammation and excess mucus) and emphysema (destruction of alveolar walls). Smoking is the primary cause.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The expiratory reserve volume (ERV) in a healthy adult is approximately:",
+      "options": ["1000-1100 mL", "2500-3000 mL", "3500-4000 mL", "500-600 mL"],
+      "correctAnswer": "A",
+      "explanation": "Expiratory Reserve Volume (ERV) is the additional volume of air that can be expired forcefully after a normal expiration. In a healthy adult, ERV is approximately 1000-1100 mL.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Hering-Breuer reflex is initiated by:",
+      "options": [
+        "Chemoreceptors in carotid body",
+        "Stretch receptors in bronchial tree and lungs",
+        "Baroreceptors in aortic arch",
+        "Pain receptors in chest wall"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Hering-Breuer reflex is a protective reflex initiated by stretch receptors in the walls of bronchi and bronchioles. When lungs are over-inflated, these receptors send inhibitory signals via the vagus nerve to the respiratory centre, stopping inspiration and preventing over-inflation.",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During expiration:",
+      "options": [
+        "Diaphragm relaxes and external intercostal muscles contract",
+        "Both diaphragm and external intercostal muscles relax",
+        "Both diaphragm and external intercostal muscles contract",
+        "Diaphragm contracts and external intercostal muscles relax"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During normal expiration, both the diaphragm and external intercostal muscles relax. This causes the thoracic cavity to decrease in volume, increasing intrapulmonary pressure above atmospheric pressure, and air flows out of the lungs passively.",
+      "difficulty": "MEDIUM",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The normal rate of respiration in a healthy adult at rest is:",
+      "options": [
+        "12-16 breaths per minute",
+        "20-24 breaths per minute",
+        "28-32 breaths per minute",
+        "8-10 breaths per minute"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The normal respiratory rate in a healthy adult at rest is 12-16 breaths per minute. This rate can increase significantly during exercise, fever, or other conditions that increase the body's oxygen demand.",
+      "difficulty": "EASY",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The function of nose hairs (vibrissae) is to:",
+      "options": [
+        "Humidify the inspired air",
+        "Filter large particles from inspired air",
+        "Detect odors",
+        "Warm the inspired air"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The coarse hairs (vibrissae) present in the vestibule of the nasal cavity filter out large particles like dust and insects from the inspired air. This is the first line of defense in cleaning the inspired air before it reaches the respiratory zone.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which condition is characterized by accumulation of fluid in the pleural cavity?",
+      "options": ["Pleural effusion", "Bronchitis", "Emphysema", "Asthma"],
+      "correctAnswer": "A",
+      "explanation": "Pleural effusion is a condition characterized by abnormal accumulation of fluid in the pleural cavity (space between visceral and parietal pleura). It can be caused by infections, heart failure, cancer, or kidney disease, and impairs lung expansion.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gas exchange in alveoli occurs by:",
+      "options": ["Facilitated diffusion", "Osmosis", "Active transport", "Simple diffusion"],
+      "correctAnswer": "D",
+      "explanation": "Gas exchange between alveoli and blood occurs by simple diffusion along the concentration gradient. Oxygen diffuses from alveoli (high pO₂) to blood (low pO₂), and CO₂ diffuses from blood (high pCO₂) to alveoli (low pCO₂). No energy or carrier proteins are required.",
+      "difficulty": "EASY",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The respiratory quotient (RQ) is defined as:",
+      "options": [
+        "Volume of O₂ inhaled / Volume of O₂ exhaled",
+        "Volume of O₂ consumed / Volume of CO₂ produced",
+        "Volume of CO₂ produced / Volume of O₂ consumed",
+        "Volume of O₂ consumed × Volume of CO₂ produced"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Respiratory Quotient (RQ) = Volume of CO₂ produced / Volume of O₂ consumed. RQ varies with the type of substrate being oxidized: carbohydrates (RQ = 1.0), fats (RQ = 0.7), proteins (RQ = 0.8). The average RQ on a mixed diet is about 0.85.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The voice box or larynx is composed of:",
+      "options": ["4 cartilages", "6 cartilages", "9 cartilages", "12 cartilages"],
+      "correctAnswer": "C",
+      "explanation": "The larynx (voice box) is composed of 9 cartilages: 3 single (thyroid, cricoid, epiglottis) and 3 paired (arytenoid, corniculate, cuneiform). The thyroid cartilage is the largest and forms the 'Adam's apple'. The larynx also contains the vocal cords.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Respiratory Distress Syndrome (RDS) in newborns is caused by:",
+      "options": [
+        "Infection of lungs",
+        "Excessive surfactant production",
+        "Deficiency of surfactant",
+        "Excess oxygen exposure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Respiratory Distress Syndrome (RDS), also called hyaline membrane disease, occurs in premature infants due to insufficient production of surfactant. This causes alveolar collapse, reduced gas exchange, and difficulty in breathing. Surfactant production usually becomes adequate by 35 weeks of gestation.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The RQ value for fats is approximately:",
+      "options": ["0.9", "1.0", "0.5", "0.7"],
+      "correctAnswer": "D",
+      "explanation": "The RQ for fats is approximately 0.7 because fats have less oxygen in their structure and require more O₂ for complete oxidation. For tripalmitin: 2C₅₁H₉₈O₆ + 145O₂ → 102CO₂ + 98H₂O, RQ = 102/145 ≈ 0.7.",
+      "difficulty": "EASY",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Oxygen is transported in blood mainly as:",
+      "options": ["Oxyhaemoglobin", "Bicarbonates", "Dissolved in plasma", "Carbaminohaemoglobin"],
+      "correctAnswer": "A",
+      "explanation": "About 97% of oxygen is transported as oxyhaemoglobin (bound to haemoglobin in RBCs), while only about 3% is dissolved in plasma. Each haemoglobin molecule can bind up to 4 molecules of oxygen.",
+      "difficulty": "EASY",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The actual site of gas exchange in lungs is:",
+      "options": ["Alveolar ducts", "Alveoli", "Bronchi", "Bronchioles"],
+      "correctAnswer": "B",
+      "explanation": "Alveoli are the structural and functional units of lungs where actual gas exchange (diffusion of O₂ and CO₂) takes place. Human lungs contain approximately 300-350 million alveoli, providing a total surface area of about 70-80 m² for gas exchange.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The number of alveoli in both human lungs is approximately:",
+      "options": ["300-350 million", "500-600 million", "50-100 million", "150-200 million"],
+      "correctAnswer": "A",
+      "explanation": "The human lungs contain approximately 300-350 million alveoli (about 480 million according to some estimates). This provides a huge surface area of about 70-80 m² (roughly the size of a tennis court) for efficient gas exchange.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Minute ventilation or pulmonary ventilation is:",
+      "options": [
+        "Volume of air in alveoli",
+        "Tidal volume × Respiratory rate",
+        "Vital capacity ÷ Respiratory rate",
+        "Residual volume × Respiratory rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Minute ventilation (pulmonary ventilation) = Tidal Volume × Respiratory Rate. For example: 500 mL × 15 breaths/min = 7500 mL/min (7.5 L/min). This is the total volume of air moved in and out of the lungs per minute.",
+      "difficulty": "EASY",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The respiratory centre is located in:",
+      "options": ["Cerebellum", "Medulla oblongata and pons", "Hypothalamus", "Cerebrum"],
+      "correctAnswer": "B",
+      "explanation": "The respiratory centre is located in the medulla oblongata and pons of the brainstem. The medulla contains the inspiratory and expiratory centres, while the pons contains the pneumotaxic and apneustic centres that modify the basic rhythm.",
+      "difficulty": "EASY",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The primary muscle of respiration is:",
+      "options": [
+        "External intercostal muscles",
+        "Internal intercostal muscles",
+        "Diaphragm",
+        "Abdominal muscles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The diaphragm is the primary muscle of respiration, responsible for approximately 75% of the air movement during quiet breathing. It is a dome-shaped skeletal muscle that separates the thoracic cavity from the abdominal cavity.",
+      "difficulty": "EASY",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The oxygen content of arterial blood is approximately:",
+      "options": [
+        "20 mL O₂/100 mL blood",
+        "25 mL O₂/100 mL blood",
+        "10 mL O₂/100 mL blood",
+        "15 mL O₂/100 mL blood"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Arterial blood contains approximately 20 mL of O₂ per 100 mL of blood (20 vol%). This includes about 19.4 mL bound to haemoglobin and about 0.3 mL dissolved in plasma. Venous blood contains about 15 mL O₂/100 mL blood.",
+      "difficulty": "HARD",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The main component of pulmonary surfactant is:",
+      "options": [
+        "Dipalmitoylphosphatidylcholine (DPPC)",
+        "Sphingomyelin",
+        "Triglycerides",
+        "Cholesterol"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The main component of pulmonary surfactant is dipalmitoylphosphatidylcholine (DPPC), also called lecithin. Surfactant also contains surfactant proteins (SP-A, SP-B, SP-C, SP-D). Surfactant reduces surface tension and prevents alveolar collapse.",
+      "difficulty": "HARD",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cyanosis is caused by:",
+      "options": [
+        "Excess oxyhaemoglobin in blood",
+        "Excess reduced haemoglobin (deoxyhaemoglobin) in blood",
+        "Excess carboxyhaemoglobin in blood",
+        "Excess methaemoglobin in blood"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cyanosis is a bluish discoloration of skin and mucous membranes caused by excessive amounts of deoxygenated (reduced) haemoglobin in blood (>5 g/dL). It indicates inadequate oxygenation and is visible when oxygen saturation falls below 85%.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The diffusing capacity of lungs is highest for:",
+      "options": ["Nitrogen", "Carbon monoxide", "Oxygen", "Carbon dioxide"],
+      "correctAnswer": "D",
+      "explanation": "The diffusing capacity is highest for carbon dioxide because CO₂ is about 20-25 times more soluble than O₂ in body fluids. Despite having a smaller pressure gradient, CO₂ diffuses rapidly across the respiratory membrane due to its high solubility.",
+      "difficulty": "HARD",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The pneumotaxic centre is located in:",
+      "options": ["Cerebrum", "Medulla oblongata", "Pons", "Cerebellum"],
+      "correctAnswer": "C",
+      "explanation": "The pneumotaxic centre is located in the pons region of the brainstem. It moderates the function of the respiratory rhythm centre in the medulla by sending inhibitory impulses that limit the duration of inspiration, thereby regulating the respiratory rate.",
+      "difficulty": "EASY",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bronchitis is characterized by:",
+      "options": [
+        "Inflammation of bronchi with excessive mucus production",
+        "Destruction of alveolar walls",
+        "Spasm of bronchiolar smooth muscles",
+        "Fibrosis of lung tissue"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bronchitis is inflammation of the bronchial tubes characterized by excessive mucus production, coughing, and difficulty breathing. Chronic bronchitis (lasting more than 3 months per year for 2 consecutive years) is a component of COPD, often caused by smoking.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Disorders",
+      "ncertPage": 278,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The term 'apnea' refers to:",
+      "options": [
+        "Difficult breathing",
+        "Temporary cessation of breathing",
+        "Normal breathing",
+        "Rapid breathing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Apnea is the temporary cessation or absence of breathing. It can be voluntary (as when holding breath) or involuntary (as in sleep apnea). Prolonged apnea leads to hypoxia and can be life-threatening.",
+      "difficulty": "EASY",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The solubility of CO₂ in blood compared to O₂ is:",
+      "options": ["Half of O₂", "20-25 times more than O₂", "5 times less than O₂", "Same as O₂"],
+      "correctAnswer": "B",
+      "explanation": "Carbon dioxide is approximately 20-25 times more soluble in blood than oxygen. This high solubility of CO₂ allows it to diffuse across the respiratory membrane more rapidly than O₂, despite similar pressure gradients.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The respiratory membrane is composed of:",
+      "options": [
+        "Alveolar epithelium only",
+        "Capillary endothelium only",
+        "Squamous epithelium of alveoli, endothelium of capillaries and their fused basement membranes",
+        "Cuboidal epithelium and basement membrane"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The respiratory membrane (diffusion membrane) consists of three layers: (1) Thin squamous epithelium of alveoli, (2) Endothelium of alveolar capillaries, and (3) Their fused basement membranes. The total thickness is only about 0.2-0.5 μm, facilitating rapid gas exchange.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The chemosensitive area of the respiratory centre is highly sensitive to:",
+      "options": [
+        "Temperature changes only",
+        "O₂ concentration only",
+        "CO₂ and H⁺ ion concentration",
+        "N₂ concentration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The chemosensitive area adjacent to the respiratory rhythm centre is highly sensitive to CO₂ and H⁺ ion concentration. An increase in CO₂ and H⁺ activates this centre, which in turn stimulates the respiratory centre to increase ventilation.",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Respiration",
+      "ncertPage": 277,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The oxygen-haemoglobin dissociation curve is:",
+      "options": ["Exponential", "Linear", "Hyperbolic", "Sigmoid (S-shaped)"],
+      "correctAnswer": "D",
+      "explanation": "The oxygen-haemoglobin dissociation curve is sigmoid or S-shaped. This shape indicates cooperative binding - once one oxygen binds to haemoglobin, it becomes easier for subsequent oxygen molecules to bind. The sigmoid shape is physiologically important for efficient loading and unloading of oxygen.",
+      "difficulty": "EASY",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The intrapleural pressure is normally:",
+      "options": [
+        "Zero",
+        "Equal to atmospheric pressure",
+        "Higher than atmospheric pressure",
+        "Lower than atmospheric pressure (negative)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The intrapleural pressure (pressure in the pleural cavity) is normally negative, about -4 mm Hg at rest. This negative pressure keeps the lungs inflated and closely adherent to the thoracic wall. Loss of negative pressure leads to lung collapse.",
+      "difficulty": "MEDIUM",
+      "topic": "Mechanism of Breathing",
+      "ncertPage": 273,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Functional residual capacity (FRC) equals:",
+      "options": ["TV + IRV + ERV", "TV + IRV", "TV + ERV", "ERV + RV"],
+      "correctAnswer": "D",
+      "explanation": "Functional Residual Capacity (FRC) = Expiratory Reserve Volume + Residual Volume = ERV + RV. It represents the volume of air that remains in the lungs after normal expiration. FRC is approximately 2200-2400 mL.",
+      "difficulty": "MEDIUM",
+      "topic": "Pulmonary Capacities",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The effect of 2,3-DPG (2,3-diphosphoglycerate) on oxygen-haemoglobin binding is:",
+      "options": [
+        "Prevents oxygen binding completely",
+        "Increases oxygen affinity",
+        "Decreases oxygen affinity",
+        "Has no effect on oxygen binding"
+      ],
+      "correctAnswer": "C",
+      "explanation": "2,3-DPG (also called 2,3-BPG) is produced in RBCs during glycolysis. It binds to deoxyhaemoglobin and decreases oxygen affinity, facilitating oxygen release to tissues. 2,3-DPG levels increase at high altitudes and in chronic hypoxia.",
+      "difficulty": "HARD",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The partial pressure of oxygen in deoxygenated blood is approximately:",
+      "options": ["104 mm Hg", "159 mm Hg", "40 mm Hg", "95 mm Hg"],
+      "correctAnswer": "C",
+      "explanation": "The partial pressure of oxygen in deoxygenated blood (venous blood returning from tissues) is approximately 40 mm Hg. This creates a pressure gradient with alveolar air (pO₂ = 104 mm Hg), allowing oxygen to diffuse into the blood.",
+      "difficulty": "MEDIUM",
+      "topic": "Gas Exchange",
+      "ncertPage": 274,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is TRUE about the right lung?",
+      "options": [
+        "It has 2 lobes and is smaller than the left lung",
+        "It has 3 lobes and is larger than the left lung",
+        "It has 3 lobes and is smaller than the left lung",
+        "It has 2 lobes and is larger than the left lung"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The right lung has 3 lobes (superior, middle, inferior) separated by horizontal and oblique fissures, and is larger than the left lung. The left lung has only 2 lobes (superior, inferior) separated by the oblique fissure, and is smaller due to the presence of the heart on the left side.",
+      "difficulty": "EASY",
+      "topic": "Respiratory Organs",
+      "ncertPage": 271,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The nasal cavity is lined by:",
+      "options": [
+        "Ciliated pseudostratified columnar epithelium with goblet cells",
+        "Simple cuboidal epithelium",
+        "Transitional epithelium",
+        "Squamous epithelium throughout"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Most of the nasal cavity is lined by respiratory mucosa consisting of ciliated pseudostratified columnar epithelium with goblet cells. The cilia move mucus (containing trapped dust and pathogens) toward the pharynx, and goblet cells produce mucus.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Tidal volume is defined as:",
+      "options": [
+        "Volume of air inspired or expired during a normal respiration",
+        "Maximum volume of air that can be inspired after normal inspiration",
+        "Maximum volume of air that can be expired after normal expiration",
+        "Volume of air remaining in lungs after maximum expiration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tidal Volume (TV) is the volume of air inspired or expired during normal breathing. In a healthy adult, it is approximately 500 mL. It represents the air that moves in and out of lungs during quiet respiration.",
+      "difficulty": "EASY",
+      "topic": "Pulmonary Volumes",
+      "ncertPage": 272,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The trachea divides into right and left primary bronchi at the level of:",
+      "options": [
+        "7th thoracic vertebra",
+        "9th thoracic vertebra",
+        "3rd thoracic vertebra",
+        "5th thoracic vertebra"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The trachea bifurcates (divides) into right and left primary bronchi at the level of the 5th thoracic vertebra (T5), at a point called the carina. The right bronchus is wider, shorter, and more vertical than the left, making it more prone to aspiration of foreign objects.",
+      "difficulty": "HARD",
+      "topic": "Respiratory Organs",
+      "ncertPage": 270,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The percentage of oxygen saturation of haemoglobin in arterial blood is approximately:",
+      "options": ["97%", "100%", "40%", "75%"],
+      "correctAnswer": "A",
+      "explanation": "In arterial blood (oxygenated blood leaving the lungs), haemoglobin is approximately 97% saturated with oxygen. This high saturation occurs because arterial blood has been exposed to the high pO₂ in alveoli (104 mm Hg).",
+      "difficulty": "MEDIUM",
+      "topic": "Transport of Gases",
+      "ncertPage": 275,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

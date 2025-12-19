@@ -1,0 +1,932 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 4,
+  "ncertChapterName": "Animal Kingdom",
+  "questions": [
+    {
+      "question": "Which level of organisation is exhibited by sponges?",
+      "options": ["Tissue level", "Organ level", "Cellular level", "Organ-system level"],
+      "correctAnswer": "C",
+      "explanation": "In sponges, the cells are arranged as loose cell aggregates, i.e., they exhibit cellular level of organisation. Some division of labour occurs among the cells. (NCERT Page 37)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 37,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tissue level of organisation is first seen in:",
+      "options": ["Porifera", "Coelenterates", "Platyhelminthes", "Annelids"],
+      "correctAnswer": "B",
+      "explanation": "In coelenterates, cells performing the same function are arranged into tissues, hence is called tissue level of organisation. (NCERT Page 37)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 37,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Organ level of organisation is first exhibited by:",
+      "options": ["Porifera", "Coelenterata", "Platyhelminthes", "Annelida"],
+      "correctAnswer": "C",
+      "explanation": "Organ level of organisation is exhibited by members of Platyhelminthes and other higher phyla where tissues are grouped together to form organs. (NCERT Page 37)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 37,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An incomplete digestive system has:",
+      "options": [
+        "Two openings - mouth and anus",
+        "Only a single opening that serves as both mouth and anus",
+        "No opening",
+        "Three openings"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Platyhelminthes, the digestive system has only a single opening that serves as both mouth and anus, hence called incomplete. (NCERT Page 38)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In open type circulatory system:",
+      "options": [
+        "Blood circulates through vessels only",
+        "Blood is pumped out and cells are directly bathed in it",
+        "Blood never leaves the heart",
+        "There is no heart"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In open type circulatory system, blood is pumped out of the heart and the cells and tissues are directly bathed in it. (NCERT Page 38)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which animals are mostly asymmetrical?",
+      "options": ["Sponges", "Coelenterates", "Arthropods", "Annelids"],
+      "correctAnswer": "A",
+      "explanation": "Sponges are mostly asymmetrical, i.e., any plane that passes through the centre does not divide them into equal halves. (NCERT Page 38)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Radial symmetry is found in:",
+      "options": [
+        "Annelids and arthropods",
+        "Coelenterates, ctenophores and echinoderms",
+        "Platyhelminthes only",
+        "Molluscs only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Radial symmetry, where any plane passing through the central axis divides the organism into two identical halves, is found in coelenterates, ctenophores and echinoderms. (NCERT Page 38)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bilateral symmetry is exhibited by:",
+      "options": ["Sponges", "Coelenterates", "Annelids and arthropods", "Ctenophores"],
+      "correctAnswer": "C",
+      "explanation": "Animals like annelids, arthropods, etc., where body can be divided into identical left and right halves in only one plane, exhibit bilateral symmetry. (NCERT Page 38)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diploblastic animals have:",
+      "options": [
+        "One germ layer",
+        "Two germ layers - ectoderm and endoderm",
+        "Three germ layers",
+        "Four germ layers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Animals in which cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates. (NCERT Page 38)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The undifferentiated layer present between ectoderm and endoderm in diploblastic animals is:",
+      "options": ["Mesoderm", "Mesoglea", "Coelom", "Pseudocoelom"],
+      "correctAnswer": "B",
+      "explanation": "In diploblastic animals, an undifferentiated layer called mesoglea is present in between the ectoderm and endoderm. (NCERT Page 38)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 38,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Triploblastic animals have mesoderm between:",
+      "options": [
+        "Two ectoderms",
+        "Ectoderm and endoderm",
+        "Two endoderms",
+        "Mesoglea and endoderm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Animals having a third germinal layer, mesoderm, in between the ectoderm and endoderm are called triploblastic animals. (NCERT Page 39)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The body cavity lined by mesoderm is called:",
+      "options": ["Pseudocoelom", "Coelom", "Blastocoel", "Spongocoel"],
+      "correctAnswer": "B",
+      "explanation": "The body cavity which is lined by mesoderm is called coelom. Animals possessing coelom are called coelomates. (NCERT Page 39)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pseudocoelomates are:",
+      "options": ["Annelids", "Molluscs", "Aschelminthes", "Arthropods"],
+      "correctAnswer": "C",
+      "explanation": "In pseudocoelomates, the body cavity is not lined by mesoderm; instead mesoderm is present as scattered pouches. E.g., Aschelminthes. (NCERT Page 39)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Acoelomates are animals in which:",
+      "options": [
+        "Coelom is present",
+        "Pseudocoelom is present",
+        "Body cavity is absent",
+        "Body cavity is lined by mesoderm"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The animals in which body cavity is absent are called acoelomates, e.g., platyhelminthes. (NCERT Page 39)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Metameric segmentation is characteristic of:",
+      "options": ["Platyhelminthes", "Molluscs", "Earthworm", "Echinoderms"],
+      "correctAnswer": "C",
+      "explanation": "In earthworm, the body shows metameric segmentation (serial repetition of at least some organs) and the phenomenon is known as metamerism. (NCERT Page 39)",
+      "difficulty": "EASY",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Notochord is derived from:",
+      "options": ["Ectoderm", "Endoderm", "Mesoderm", "Mesoglea"],
+      "correctAnswer": "C",
+      "explanation": "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals. (NCERT Page 39)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Non-chordates include:",
+      "options": [
+        "Porifera to Echinodermata",
+        "Porifera to Chordata",
+        "Hemichordata to Mammalia",
+        "Only Porifera"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Animals which do not form notochord are called non-chordates, e.g., porifera to echinoderms. (NCERT Page 39)",
+      "difficulty": "MEDIUM",
+      "topic": "Basis of Classification",
+      "ncertPage": 39,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sponges have a water transport system through which water enters via:",
+      "options": ["Osculum", "Ostia", "Spongocoel", "Choanocytes"],
+      "correctAnswer": "B",
+      "explanation": "Water enters through minute pores (ostia) in the body wall into a central cavity, spongocoel, from where it goes out through the osculum. (NCERT Page 40)",
+      "difficulty": "MEDIUM",
+      "topic": "Porifera",
+      "ncertPage": 40,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Choanocytes or collar cells are found in:",
+      "options": ["Coelenterata", "Porifera", "Ctenophora", "Platyhelminthes"],
+      "correctAnswer": "B",
+      "explanation": "Choanocytes or collar cells line the spongocoel and the canals in sponges. (NCERT Page 40)",
+      "difficulty": "EASY",
+      "topic": "Porifera",
+      "ncertPage": 40,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The skeleton of sponges is made up of:",
+      "options": ["Calcium carbonate only", "Silica only", "Spicules or spongin fibres", "Chitin"],
+      "correctAnswer": "C",
+      "explanation": "The body of sponges is supported by a skeleton made up of spicules or spongin fibres. (NCERT Page 40)",
+      "difficulty": "MEDIUM",
+      "topic": "Porifera",
+      "ncertPage": 40,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sponges are:",
+      "options": ["Dioecious", "Hermaphrodite", "Asexual only", "Parthenogenetic"],
+      "correctAnswer": "B",
+      "explanation": "Sexes are not separate (hermaphrodite) in sponges, i.e., eggs and sperms are produced by the same individual. (NCERT Page 40)",
+      "difficulty": "MEDIUM",
+      "topic": "Porifera",
+      "ncertPage": 40,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Spongilla is a:",
+      "options": ["Marine sponge", "Fresh water sponge", "Bath sponge", "Calcareous sponge"],
+      "correctAnswer": "B",
+      "explanation": "Spongilla is a fresh water sponge. Sycon and Euspongia (Bath sponge) are other examples of Porifera. (NCERT Page 41)",
+      "difficulty": "EASY",
+      "topic": "Porifera",
+      "ncertPage": 41,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cnidoblasts containing nematocysts are found in:",
+      "options": ["Porifera", "Coelenterata", "Platyhelminthes", "Annelida"],
+      "correctAnswer": "B",
+      "explanation": "The name cnidaria is derived from cnidoblasts or cnidocytes which contain the stinging capsules or nematocysts present on tentacles and body. (NCERT Page 41)",
+      "difficulty": "EASY",
+      "topic": "Coelenterata",
+      "ncertPage": 41,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cnidoblasts are used for:",
+      "options": [
+        "Respiration only",
+        "Anchorage, defense and capture of prey",
+        "Reproduction only",
+        "Digestion only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cnidoblasts are used for anchorage, defense and for the capture of prey. (NCERT Page 41)",
+      "difficulty": "MEDIUM",
+      "topic": "Coelenterata",
+      "ncertPage": 41,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The two basic body forms in cnidarians are:",
+      "options": [
+        "Larva and adult",
+        "Polyp and medusa",
+        "Male and female",
+        "Trochophore and veliger"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cnidarians exhibit two basic body forms - polyp (sessile, cylindrical) and medusa (umbrella-shaped, free-swimming). (NCERT Page 41)",
+      "difficulty": "EASY",
+      "topic": "Coelenterata",
+      "ncertPage": 41,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Alternation of generation (Metagenesis) is seen in:",
+      "options": ["Sycon", "Obelia", "Planaria", "Ascaris"],
+      "correctAnswer": "B",
+      "explanation": "Cnidarians which exist in both polyp and medusa forms exhibit alternation of generations (Metagenesis), e.g., Obelia. (NCERT Page 41)",
+      "difficulty": "MEDIUM",
+      "topic": "Coelenterata",
+      "ncertPage": 41,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Aurelia is commonly known as:",
+      "options": ["Sea anemone", "Jelly fish", "Sea pen", "Brain coral"],
+      "correctAnswer": "B",
+      "explanation": "Aurelia is umbrella-shaped and free-swimming, commonly called jelly fish. It represents the medusa form. (NCERT Page 41)",
+      "difficulty": "EASY",
+      "topic": "Coelenterata",
+      "ncertPage": 41,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ctenophores are commonly known as:",
+      "options": ["Flatworms", "Roundworms", "Sea walnuts or comb jellies", "Segmented worms"],
+      "correctAnswer": "C",
+      "explanation": "Ctenophores are commonly known as sea walnuts or comb jellies. They are exclusively marine and radially symmetrical. (NCERT Page 42)",
+      "difficulty": "EASY",
+      "topic": "Ctenophora",
+      "ncertPage": 42,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Comb plates help in:",
+      "options": ["Digestion", "Respiration", "Locomotion", "Excretion"],
+      "correctAnswer": "C",
+      "explanation": "The body of ctenophores bears eight external rows of ciliated comb plates, which help in locomotion. (NCERT Page 42)",
+      "difficulty": "EASY",
+      "topic": "Ctenophora",
+      "ncertPage": 42,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bioluminescence is well-marked in:",
+      "options": ["Porifera", "Coelenterata", "Ctenophora", "Platyhelminthes"],
+      "correctAnswer": "C",
+      "explanation": "Bioluminescence (the property of a living organism to emit light) is well-marked in ctenophores. (NCERT Page 42)",
+      "difficulty": "MEDIUM",
+      "topic": "Ctenophora",
+      "ncertPage": 42,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Flatworms belong to phylum:",
+      "options": ["Aschelminthes", "Annelida", "Platyhelminthes", "Arthropoda"],
+      "correctAnswer": "C",
+      "explanation": "Platyhelminthes have dorso-ventrally flattened body, hence are called flatworms. (NCERT Page 42)",
+      "difficulty": "EASY",
+      "topic": "Platyhelminthes",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Flame cells help in:",
+      "options": ["Digestion", "Osmoregulation and excretion", "Respiration", "Locomotion"],
+      "correctAnswer": "B",
+      "explanation": "Specialised cells called flame cells help in osmoregulation and excretion in flatworms. (NCERT Page 42)",
+      "difficulty": "MEDIUM",
+      "topic": "Platyhelminthes",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High regeneration capacity is possessed by:",
+      "options": ["Taenia", "Fasciola", "Planaria", "Ascaris"],
+      "correctAnswer": "C",
+      "explanation": "Some members like Planaria possess high regeneration capacity. (NCERT Page 42)",
+      "difficulty": "EASY",
+      "topic": "Platyhelminthes",
+      "ncertPage": 42,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Roundworms belong to phylum:",
+      "options": ["Platyhelminthes", "Aschelminthes", "Annelida", "Arthropoda"],
+      "correctAnswer": "B",
+      "explanation": "The body of aschelminthes is circular in cross-section, hence the name roundworms. (NCERT Page 43)",
+      "difficulty": "EASY",
+      "topic": "Aschelminthes",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Aschelminthes, sexes are:",
+      "options": ["Not separate", "Separate (dioecious)", "Both in same individual", "Absent"],
+      "correctAnswer": "B",
+      "explanation": "Sexes are separate (dioecious), i.e., males and females are distinct in Aschelminthes. Often females are longer than males. (NCERT Page 43)",
+      "difficulty": "MEDIUM",
+      "topic": "Aschelminthes",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Wuchereria causes:",
+      "options": ["Roundworm infection", "Filariasis", "Hookworm disease", "Tapeworm infection"],
+      "correctAnswer": "B",
+      "explanation": "Wuchereria is the filaria worm that causes filariasis. It belongs to Aschelminthes. (NCERT Page 43)",
+      "difficulty": "EASY",
+      "topic": "Aschelminthes",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The phylum name Annelida is derived from:",
+      "options": [
+        "Presence of antenna",
+        "Segmented body like rings",
+        "Absence of appendages",
+        "Flat body"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The body surface of annelids is distinctly marked out into segments or metameres, hence the phylum name Annelida (Latin, annulus: little ring). (NCERT Page 43)",
+      "difficulty": "EASY",
+      "topic": "Annelida",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Parapodia are lateral appendages found in:",
+      "options": ["Earthworm", "Leech", "Nereis", "All annelids"],
+      "correctAnswer": "C",
+      "explanation": "Aquatic annelids like Nereis possess lateral appendages, parapodia, which help in swimming. (NCERT Page 43)",
+      "difficulty": "MEDIUM",
+      "topic": "Annelida",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nephridia help in:",
+      "options": ["Locomotion", "Osmoregulation and excretion", "Reproduction", "Digestion"],
+      "correctAnswer": "B",
+      "explanation": "Nephridia (sing. nephridium) help in osmoregulation and excretion in annelids. (NCERT Page 43)",
+      "difficulty": "EASY",
+      "topic": "Annelida",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Annelids have which type of circulatory system?",
+      "options": ["Open", "Absent", "Closed", "Lacunar"],
+      "correctAnswer": "C",
+      "explanation": "A closed circulatory system is present in annelids. (NCERT Page 43)",
+      "difficulty": "MEDIUM",
+      "topic": "Annelida",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Earthworms and leeches are:",
+      "options": ["Dioecious", "Monoecious", "Asexual", "Parthenogenetic"],
+      "correctAnswer": "B",
+      "explanation": "Nereis, an aquatic form, is dioecious, but earthworms and leeches are monoecious. (NCERT Page 43)",
+      "difficulty": "MEDIUM",
+      "topic": "Annelida",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The largest phylum of Animalia is:",
+      "options": ["Mollusca", "Annelida", "Chordata", "Arthropoda"],
+      "correctAnswer": "D",
+      "explanation": "Arthropoda is the largest phylum of Animalia which includes insects. Over two-thirds of all named species on earth are arthropods. (NCERT Page 44)",
+      "difficulty": "EASY",
+      "topic": "Arthropoda",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The body of arthropods is covered by:",
+      "options": ["Calcareous shell", "Chitinous exoskeleton", "Spongin fibres", "Scales"],
+      "correctAnswer": "B",
+      "explanation": "The body of arthropods is covered by chitinous exoskeleton. (NCERT Page 44)",
+      "difficulty": "EASY",
+      "topic": "Arthropoda",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Malpighian tubules are excretory organs of:",
+      "options": ["Annelids", "Molluscs", "Arthropods", "Echinoderms"],
+      "correctAnswer": "C",
+      "explanation": "Excretion in arthropods takes place through malpighian tubules. (NCERT Page 44)",
+      "difficulty": "MEDIUM",
+      "topic": "Arthropoda",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Limulus is called:",
+      "options": ["Honey bee", "Silkworm", "Living fossil (King crab)", "Locust"],
+      "correctAnswer": "C",
+      "explanation": "Limulus (King crab) is called a living fossil among arthropods. (NCERT Page 44)",
+      "difficulty": "MEDIUM",
+      "topic": "Arthropoda",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Arthropods have which type of circulatory system?",
+      "options": ["Closed type", "Open type", "Both open and closed", "No circulatory system"],
+      "correctAnswer": "B",
+      "explanation": "Circulatory system in arthropods is of open type. (NCERT Page 44)",
+      "difficulty": "MEDIUM",
+      "topic": "Arthropoda",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The second largest animal phylum is:",
+      "options": ["Arthropoda", "Chordata", "Annelida", "Mollusca"],
+      "correctAnswer": "D",
+      "explanation": "Mollusca is the second largest animal phylum. They are terrestrial or aquatic. (NCERT Page 44)",
+      "difficulty": "EASY",
+      "topic": "Mollusca",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Radula is a file-like rasping organ found in:",
+      "options": ["Arthropoda", "Annelida", "Mollusca", "Echinodermata"],
+      "correctAnswer": "C",
+      "explanation": "The mouth of molluscs contains a file-like rasping organ for feeding, called radula. (NCERT Page 44)",
+      "difficulty": "MEDIUM",
+      "topic": "Mollusca",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The soft spongy layer of skin forming mantle in molluscs covers:",
+      "options": ["Head", "Foot", "Visceral hump", "Gills"],
+      "correctAnswer": "C",
+      "explanation": "A soft and spongy layer of skin forms a mantle over the visceral hump in molluscs. (NCERT Page 44)",
+      "difficulty": "MEDIUM",
+      "topic": "Mollusca",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Octopus is also known as:",
+      "options": ["Sea horse", "Devil fish", "Star fish", "Jelly fish"],
+      "correctAnswer": "B",
+      "explanation": "Octopus is commonly known as Devil fish. It belongs to phylum Mollusca. (NCERT Page 45)",
+      "difficulty": "EASY",
+      "topic": "Mollusca",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The name Echinodermata means:",
+      "options": ["Jointed appendages", "Spiny bodied", "Soft bodied", "Segmented body"],
+      "correctAnswer": "B",
+      "explanation": "Echinoderms have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied). (NCERT Page 45)",
+      "difficulty": "EASY",
+      "topic": "Echinodermata",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most distinctive feature of echinoderms is:",
+      "options": ["Radula", "Water vascular system", "Malpighian tubules", "Parapodia"],
+      "correctAnswer": "B",
+      "explanation": "The most distinctive feature of echinoderms is the presence of water vascular system which helps in locomotion, capture and transport of food and respiration. (NCERT Page 45)",
+      "difficulty": "EASY",
+      "topic": "Echinodermata",
+      "ncertPage": 45,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Adult echinoderms are:",
+      "options": [
+        "Bilaterally symmetrical",
+        "Radially symmetrical",
+        "Asymmetrical",
+        "Spherically symmetrical"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adult echinoderms are radially symmetrical but larvae are bilaterally symmetrical. (NCERT Page 45)",
+      "difficulty": "MEDIUM",
+      "topic": "Echinodermata",
+      "ncertPage": 45,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Asterias is commonly known as:",
+      "options": ["Sea urchin", "Star fish", "Sea cucumber", "Sea lily"],
+      "correctAnswer": "B",
+      "explanation": "Asterias is commonly called star fish. It belongs to Echinodermata. (NCERT Page 45)",
+      "difficulty": "EASY",
+      "topic": "Echinodermata",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Hemichordates have a rudimentary structure in collar region called:",
+      "options": ["Notochord", "Stomochord", "Chordae tendinae", "Vertebral column"],
+      "correctAnswer": "B",
+      "explanation": "Hemichordates have a rudimentary structure in the collar region called stomochord, similar to notochord. (NCERT Page 45)",
+      "difficulty": "MEDIUM",
+      "topic": "Hemichordata",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The body of Balanoglossus is composed of:",
+      "options": [
+        "Head, thorax and abdomen",
+        "Proboscis, collar and trunk",
+        "Head, mantle and foot",
+        "Scolex, neck and proglottids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The body of hemichordates is cylindrical and composed of an anterior proboscis, a collar and a long trunk. (NCERT Page 45)",
+      "difficulty": "MEDIUM",
+      "topic": "Hemichordata",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Chordates are characterized by:",
+      "options": [
+        "Notochord, ventral nerve cord and gill slits",
+        "Notochord, dorsal hollow nerve cord and pharyngeal gill slits",
+        "Vertebral column and lungs",
+        "Exoskeleton and jointed appendages"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Animals of phylum Chordata are characterized by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits. (NCERT Page 45-46)",
+      "difficulty": "EASY",
+      "topic": "Chordata",
+      "ncertPage": 46,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In chordates, the heart is:",
+      "options": ["Dorsal", "Absent", "Ventral", "Lateral"],
+      "correctAnswer": "C",
+      "explanation": "In chordates, heart is ventral, whereas in non-chordates heart is dorsal (if present). (NCERT Table 4.1, Page 46)",
+      "difficulty": "MEDIUM",
+      "topic": "Chordata",
+      "ncertPage": 46,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Protochordates include:",
+      "options": [
+        "All vertebrates",
+        "Urochordata and Cephalochordata",
+        "Only mammals",
+        "Cyclostomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Subphyla Urochordata and Cephalochordata are often referred to as protochordates and are exclusively marine. (NCERT Page 46)",
+      "difficulty": "MEDIUM",
+      "topic": "Chordata",
+      "ncertPage": 46,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In Urochordata, notochord is present in:",
+      "options": [
+        "Throughout life",
+        "Head to tail region",
+        "Only in larval tail",
+        "Only in adults"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Urochordata, notochord is present only in larval tail, while in Cephalochordata, it extends from head to tail and persists throughout life. (NCERT Page 46)",
+      "difficulty": "MEDIUM",
+      "topic": "Chordata",
+      "ncertPage": 46,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cyclostomes have:",
+      "options": [
+        "Jaws with teeth",
+        "Sucking and circular mouth without jaws",
+        "Beak",
+        "Horny teeth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cyclostomes have a sucking and circular mouth without jaws. They are ectoparasites on some fishes. (NCERT Page 47)",
+      "difficulty": "MEDIUM",
+      "topic": "Cyclostomata",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Chondrichthyes have:",
+      "options": [
+        "Bony endoskeleton",
+        "Cartilaginous endoskeleton",
+        "No skeleton",
+        "Exoskeleton only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chondrichthyes are marine animals with streamlined body and have cartilaginous endoskeleton. (NCERT Page 47)",
+      "difficulty": "EASY",
+      "topic": "Chondrichthyes",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Placoid scales are found in:",
+      "options": ["Bony fishes", "Cartilaginous fishes", "Amphibians", "Reptiles"],
+      "correctAnswer": "B",
+      "explanation": "The skin of Chondrichthyes is tough, containing minute placoid scales. Teeth are modified placoid scales. (NCERT Page 47)",
+      "difficulty": "MEDIUM",
+      "topic": "Chondrichthyes",
+      "ncertPage": 47,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Chondrichthyes lack air bladder, hence they:",
+      "options": [
+        "Cannot breathe",
+        "Have to swim constantly to avoid sinking",
+        "Float on water surface",
+        "Live at bottom"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Due to the absence of air bladder, Chondrichthyes have to swim constantly to avoid sinking. (NCERT Page 47)",
+      "difficulty": "MEDIUM",
+      "topic": "Chondrichthyes",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Electric organs are present in:",
+      "options": ["Scoliodon", "Torpedo", "Labeo", "Hippocampus"],
+      "correctAnswer": "B",
+      "explanation": "Some Chondrichthyes have electric organs (e.g., Torpedo) and some possess poison sting (e.g., Trygon). (NCERT Page 48)",
+      "difficulty": "MEDIUM",
+      "topic": "Chondrichthyes",
+      "ncertPage": 48,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In bony fishes, gills are covered by:",
+      "options": ["Scales", "Operculum", "Skin", "Mantle"],
+      "correctAnswer": "B",
+      "explanation": "Osteichthyes have four pairs of gills which are covered by an operculum on each side. (NCERT Page 48)",
+      "difficulty": "EASY",
+      "topic": "Osteichthyes",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Air bladder in bony fishes helps in:",
+      "options": ["Respiration", "Regulating buoyancy", "Digestion", "Excretion"],
+      "correctAnswer": "B",
+      "explanation": "Air bladder is present in Osteichthyes which regulates buoyancy. (NCERT Page 48)",
+      "difficulty": "EASY",
+      "topic": "Osteichthyes",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hippocampus is commonly called:",
+      "options": ["Flying fish", "Sea horse", "Angel fish", "Fighting fish"],
+      "correctAnswer": "B",
+      "explanation": "Hippocampus is commonly called Sea horse. It is a marine bony fish. (NCERT Page 48)",
+      "difficulty": "EASY",
+      "topic": "Osteichthyes",
+      "ncertPage": 48,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Amphibians have a heart with:",
+      "options": ["Two chambers", "Three chambers", "Four chambers", "Five chambers"],
+      "correctAnswer": "B",
+      "explanation": "The heart in amphibians is three-chambered (two auricles and one ventricle). (NCERT Page 48)",
+      "difficulty": "EASY",
+      "topic": "Amphibia",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The common chamber where alimentary canal, urinary and reproductive tracts open is called:",
+      "options": ["Rectum", "Cloaca", "Bladder", "Coelom"],
+      "correctAnswer": "B",
+      "explanation": "Alimentary canal, urinary and reproductive tracts open into a common chamber called cloaca which opens to the exterior. (NCERT Page 48)",
+      "difficulty": "MEDIUM",
+      "topic": "Amphibia",
+      "ncertPage": 48,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ichthyophis is a:",
+      "options": ["Fish", "Limbless amphibian", "Reptile", "Mammal"],
+      "correctAnswer": "B",
+      "explanation": "Ichthyophis is a limbless amphibian. Other examples include Bufo (Toad), Rana (Frog), Salamandra. (NCERT Page 48)",
+      "difficulty": "MEDIUM",
+      "topic": "Amphibia",
+      "ncertPage": 48,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The skin of reptiles is:",
+      "options": [
+        "Moist and glandular",
+        "Dry and cornified with scales",
+        "Covered with feathers",
+        "Covered with hair"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Reptiles are mostly terrestrial and their body is covered by dry and cornified skin, epidermal scales or scutes. (NCERT Page 49)",
+      "difficulty": "EASY",
+      "topic": "Reptilia",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Four-chambered heart is found in:",
+      "options": ["All reptiles", "Crocodiles only", "Lizards only", "Snakes only"],
+      "correctAnswer": "B",
+      "explanation": "Heart is usually three-chambered in reptiles, but four-chambered in crocodiles. (NCERT Page 49)",
+      "difficulty": "MEDIUM",
+      "topic": "Reptilia",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a poisonous snake?",
+      "options": ["Python", "Naja (Cobra)", "Ptyas", "Eryx"],
+      "correctAnswer": "B",
+      "explanation": "Poisonous snakes include Naja (Cobra), Bangarus (Krait), Vipera (Viper). (NCERT Page 49)",
+      "difficulty": "EASY",
+      "topic": "Reptilia",
+      "ncertPage": 49,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The characteristic feature of Aves is:",
+      "options": ["Scales on body", "Feathers and wings", "Hair on body", "Moist skin"],
+      "correctAnswer": "B",
+      "explanation": "The characteristic features of Aves (birds) are the presence of feathers and forelimbs modified into wings. (NCERT Page 49)",
+      "difficulty": "EASY",
+      "topic": "Aves",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The long bones in birds are hollow with air cavities called:",
+      "options": ["Medullary cavity", "Pneumatic bones", "Cancellous bones", "Compact bones"],
+      "correctAnswer": "B",
+      "explanation": "Endoskeleton in birds is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic). (NCERT Page 49)",
+      "difficulty": "MEDIUM",
+      "topic": "Aves",
+      "ncertPage": 49,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Birds are:",
+      "options": [
+        "Cold-blooded (poikilothermous)",
+        "Warm-blooded (homoiothermous)",
+        "Neither warm nor cold-blooded",
+        "Ectothermic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Birds are warm-blooded (homoiothermous) animals, i.e., they can maintain a constant body temperature. (NCERT Page 49)",
+      "difficulty": "EASY",
+      "topic": "Aves",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Struthio is commonly known as:",
+      "options": ["Penguin", "Ostrich", "Parrot", "Peacock"],
+      "correctAnswer": "B",
+      "explanation": "Struthio is the ostrich, a flightless bird. (NCERT Page 50)",
+      "difficulty": "EASY",
+      "topic": "Aves",
+      "ncertPage": 50,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The most unique characteristic of mammals is:",
+      "options": [
+        "Presence of hair",
+        "Four-chambered heart",
+        "Mammary glands",
+        "Lungs for respiration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which young ones are nourished. (NCERT Page 50)",
+      "difficulty": "EASY",
+      "topic": "Mammalia",
+      "ncertPage": 50,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "External ears or pinnae are present in:",
+      "options": ["Reptiles", "Birds", "Mammals", "Amphibians"],
+      "correctAnswer": "C",
+      "explanation": "External ears or pinnae are present in mammals. Different types of teeth are present in the jaw. (NCERT Page 51)",
+      "difficulty": "EASY",
+      "topic": "Mammalia",
+      "ncertPage": 51,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ornithorhynchus (Platypus) is:",
+      "options": ["Viviparous mammal", "Oviparous mammal", "Ovoviviparous", "Not a mammal"],
+      "correctAnswer": "B",
+      "explanation": "Ornithorhynchus (Platypus) is an oviparous (egg-laying) mammal. Most other mammals are viviparous. (NCERT Page 51)",
+      "difficulty": "MEDIUM",
+      "topic": "Mammalia",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Balaenoptera is the:",
+      "options": ["Common dolphin", "Blue whale", "Kangaroo", "Flying fox"],
+      "correctAnswer": "B",
+      "explanation": "Balaenoptera is the Blue whale. Other examples include Delphinus (Common dolphin), Macropus (Kangaroo). (NCERT Page 51)",
+      "difficulty": "MEDIUM",
+      "topic": "Mammalia",
+      "ncertPage": 51,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

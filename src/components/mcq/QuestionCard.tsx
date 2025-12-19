@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
-import { BookOpen, Flag } from 'lucide-react'
+import { Flag } from 'lucide-react'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
 import { DiagramQuestion } from './DiagramQuestion'
 import { BookmarkButton } from './BookmarkButton'
@@ -127,67 +127,76 @@ export function QuestionCard({
       'flex items-center gap-3 p-3.5 rounded-xl border-2 transition-all duration-200 cursor-pointer'
 
     if (!selectedAnswer) {
-      return `${baseClasses} border-gray-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-sm`
+      return `${baseClasses} border-stone-200 bg-white hover:border-sage-400 hover:bg-sage-50 hover:shadow-sm`
     }
 
     if (result) {
       if (option === result.correctAnswer) {
-        return `${baseClasses} border-green-500 bg-green-50 shadow-sm`
+        return `${baseClasses} border-green-500 bg-gradient-to-r from-green-50 to-emerald-50 shadow-md animate-correct-pulse-botanical`
       }
       if (option === selectedAnswer && !result.isCorrect) {
-        return `${baseClasses} border-red-500 bg-red-50 shadow-sm`
+        return `${baseClasses} border-coral-500 bg-gradient-to-r from-coral-50 to-red-50 shadow-sm animate-shake-wrong`
       }
     }
 
     // Non-selected options after answer - keep visible but muted
-    return `${baseClasses} border-gray-200 bg-gray-50 opacity-70 cursor-default`
+    return `${baseClasses} border-stone-200 bg-stone-50 opacity-70 cursor-default`
   }
 
   return (
     <div
-      className={`bg-white rounded-xl shadow-lg p-4 animate-fade-in-up ${isProtected ? 'select-none' : ''}`}
+      className={`bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-4 animate-fade-in-up paper-texture ${isProtected ? 'select-none' : ''}`}
       onContextMenu={isProtected ? (e) => e.preventDefault() : undefined}
       role="article"
       aria-label={`Question ${questionNumber}`}
     >
-      {/* Question Header - Compact */}
+      {/* Question Header - Botanical Scholar */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 text-blue-700 font-bold text-xs">
+          <span className="flex items-center justify-center w-7 h-7 rounded-full bg-sage-100 text-sage-700 font-bold text-xs font-mono">
             {questionNumber}
           </span>
           <span
-            className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+            className={`px-2 py-0.5 rounded-full text-xs font-medium flex items-center gap-1 ${
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
                 : question.difficulty === 'HARD'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-yellow-100 text-yellow-700'
+                  ? 'bg-coral-100 text-coral-700'
+                  : 'bg-amber-100 text-amber-700'
             }`}
           >
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                question.difficulty === 'EASY'
+                  ? 'bg-green-500'
+                  : question.difficulty === 'HARD'
+                    ? 'bg-coral-500'
+                    : 'bg-amber-500'
+              }`}
+            />
             {question.difficulty}
           </span>
           {question.isPYQ && question.pyqYear && (
-            <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
-              PYQ {question.pyqYear}
+            <span className="px-2 py-0.5 rounded-full bg-specimen-100 text-specimen-700 text-xs font-medium">
+              📜 PYQ {question.pyqYear}
             </span>
           )}
         </div>
         <div className="flex items-center gap-2">
           <div
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${
-              !selectedAnswer ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium font-mono ${
+              !selectedAnswer ? 'bg-stone-100 text-stone-600' : 'bg-stone-50 text-stone-400'
             }`}
             aria-label={`Time spent: ${formatTime(timeElapsed)}`}
           >
-            <span className="text-[10px] opacity-70">Time:</span>
+            <span className="text-base">⏱️</span>
             <span className="font-semibold tabular-nums">{formatTime(timeElapsed)}</span>
           </div>
           {freeUserId && <BookmarkButton questionId={question.id} freeUserId={freeUserId} />}
           {!selectedAnswer && onSkip && (
             <button
               onClick={onSkip}
-              className="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+              className="px-2.5 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 hover:bg-stone-200 transition-colors"
               aria-label="Skip this question"
             >
               Skip →
@@ -195,24 +204,25 @@ export function QuestionCard({
           )}
         </div>
       </div>
-      {/* Topic & NCERT Reference */}
-      <div className="mb-2 flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-sm font-medium">
+      {/* Topic & NCERT Reference - Botanical Scholar */}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <span className="inline-flex items-center px-2.5 py-1 rounded-lg bg-sage-50 text-sage-700 text-sm font-medium border border-sage-200/50">
           {question.topic}
         </span>
         {question.isNcertBased && (question.ncertClass || question.ncertChapter) && (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
-            <BookOpen className="w-3 h-3" />
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gradient-to-r from-sage-50/80 to-stone-50 border border-sage-200/50 text-sage-700 text-xs font-medium">
+            <span>📖</span>
             <span>
               {question.ncertClass && `Class ${question.ncertClass}`}
-              {question.ncertClass && question.ncertChapter && ' | '}
+              {question.ncertClass && question.ncertChapter && ' • '}
               {question.ncertChapter && `Ch.${question.ncertChapter}`}
-              {question.ncertPage && ` | Pg.${question.ncertPage}`}
+              {question.ncertPage && ` • Pg.${question.ncertPage}`}
             </span>
           </span>
         )}
         {question.isNeetImportant && (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-xs font-medium">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+            <span className="text-amber-500">★</span>
             NEET Important
           </span>
         )}
@@ -229,9 +239,9 @@ export function QuestionCard({
         </div>
       )}
 
-      {/* Question Text - Larger for better readability */}
+      {/* Question Text - Botanical Scholar */}
       <div className="mb-5">
-        <p className="text-lg text-gray-900 leading-relaxed font-medium">{question.question}</p>
+        <p className="text-lg text-ink leading-relaxed font-medium">{question.question}</p>
       </div>
 
       {/* Side-positioned diagrams */}
@@ -245,40 +255,40 @@ export function QuestionCard({
         </div>
       )}
 
-      {/* Options - Better spacing and larger text */}
+      {/* Options - Botanical Scholar */}
       <div className="space-y-3" role="radiogroup" aria-label="Answer options">
         {question.options.map((option, index) => (
           <button
             key={index}
             onClick={() => handleOptionClick(optionLabels[index])}
             disabled={!!selectedAnswer || isSubmitting}
-            className={`${getOptionClassName(index)} ${!selectedAnswer ? 'hover:scale-[1.01] active:scale-[0.99]' : ''}`}
+            className={`${getOptionClassName(index)} w-full ${!selectedAnswer ? 'hover:scale-[1.01] active:scale-[0.99]' : ''}`}
             role="radio"
             aria-checked={selectedAnswer === optionLabels[index]}
             aria-label={`Option ${optionLabels[index]}: ${option}. Press ${index + 1} to select.`}
           >
             <span
-              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm transition-colors ${
+              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm font-mono transition-colors ${
                 result && optionLabels[index] === result.correctAnswer
-                  ? 'bg-green-500 text-white'
+                  ? 'bg-green-500 text-white shadow-md'
                   : result && optionLabels[index] === selectedAnswer && !result.isCorrect
-                    ? 'bg-red-500 text-white'
+                    ? 'bg-coral-500 text-white shadow-md'
                     : selectedAnswer === optionLabels[index]
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-100 text-gray-700'
+                      ? 'bg-sage-500 text-white shadow-md'
+                      : 'bg-stone-100 text-stone-700'
               }`}
               aria-hidden="true"
             >
               {optionLabels[index]}
             </span>
-            <span className="text-left text-gray-700 text-base flex-1">{option}</span>
+            <span className="text-left text-ink text-base flex-1">{option}</span>
             {result && optionLabels[index] === result.correctAnswer && (
               <span className="text-green-500 text-lg font-bold" aria-label="Correct answer">
                 ✓
               </span>
             )}
             {result && optionLabels[index] === selectedAnswer && !result.isCorrect && (
-              <span className="text-red-500 text-lg font-bold" aria-label="Incorrect">
+              <span className="text-coral-500 text-lg font-bold" aria-label="Incorrect">
                 ✗
               </span>
             )}
@@ -286,17 +296,17 @@ export function QuestionCard({
         ))}
       </div>
 
-      {/* Keyboard Shortcut Hint - More visible */}
+      {/* Keyboard Shortcut Hint - Botanical Scholar */}
       {!selectedAnswer && !isSubmitting && (
-        <div className="flex items-center justify-center gap-2 mt-3 text-gray-400">
+        <div className="flex items-center justify-center gap-2 mt-3 text-stone-400">
           <span className="text-xs">⌨️</span>
           <p className="text-xs">
             Press{' '}
-            <kbd className="px-1.5 py-0.5 bg-gray-100 rounded text-gray-500 font-mono text-xs">
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
               1-4
             </kbd>{' '}
             or{' '}
-            <kbd className="px-1.5 py-0.5 bg-gray-100 rounded text-gray-500 font-mono text-xs">
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
               A-D
             </kbd>{' '}
             to select
@@ -304,7 +314,7 @@ export function QuestionCard({
         </div>
       )}
 
-      {/* Result Feedback - Enhanced with CSS animations */}
+      {/* Result Feedback - Botanical Scholar */}
       <div
         className={`grid transition-all duration-300 ease-out ${
           result ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
@@ -317,8 +327,8 @@ export function QuestionCard({
             <div
               className={`p-4 rounded-xl ${
                 result.isCorrect
-                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 animate-scale-in animate-pulse-glow'
-                  : 'bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 animate-shake-wrong'
+                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 animate-correct-pulse-botanical'
+                  : 'bg-gradient-to-r from-coral-50 to-red-50 border-2 border-coral-300 animate-shake-wrong'
               }`}
             >
               <div className="flex items-center justify-between">
@@ -329,19 +339,19 @@ export function QuestionCard({
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
                   <span
-                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-coral-700'}`}
                   >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-sm rounded-full animate-xp-float shadow-lg">
+                  <span className="px-3 py-1.5 bg-gradient-to-r from-sage-500 to-sage-700 text-white font-bold text-sm font-mono rounded-full animate-xp-float-botanical shadow-lg">
                     +{result.xpEarned} XP
                   </span>
                   {onReportError && (
                     <button
                       onClick={() => onReportError(question.id)}
-                      className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                      className="p-1.5 text-stone-400 hover:text-coral-500 hover:bg-coral-50 rounded-full transition-colors"
                       title="Report an error with this question"
                       aria-label="Report error"
                     >
@@ -351,10 +361,10 @@ export function QuestionCard({
                 </div>
               </div>
 
-              {/* Explanation Preview - Compact */}
+              {/* Explanation Preview - Botanical Scholar */}
               {showExplanation && result.explanation && (
-                <div className="mt-2 pt-2 border-t border-gray-200">
-                  <p className="text-gray-600 text-xs leading-relaxed">
+                <div className="mt-2 pt-2 border-t border-stone-200">
+                  <p className="text-stone-600 text-xs leading-relaxed">
                     {showFullExplanation || result.explanation.length <= 150
                       ? result.explanation
                       : `${result.explanation.slice(0, result.explanation.lastIndexOf(' ', 150))}...`}
@@ -362,7 +372,7 @@ export function QuestionCard({
                   {result.explanation.length > 150 && (
                     <button
                       onClick={() => setShowFullExplanation(!showFullExplanation)}
-                      className="mt-1 text-blue-600 text-xs font-medium hover:underline"
+                      className="mt-1 text-sage-600 text-xs font-medium hover:underline"
                     >
                       {showFullExplanation ? 'Less' : 'More'}
                     </button>
@@ -371,47 +381,47 @@ export function QuestionCard({
               )}
 
               {!showExplanation && result.explanation && (
-                <div className="mt-2 pt-2 border-t border-gray-200 flex items-center justify-between">
-                  <p className="text-gray-500 text-xs">
+                <div className="mt-2 pt-2 border-t border-stone-200 flex items-center justify-between">
+                  <p className="text-stone-600 text-xs">
                     Full explanation available with course enrollment
                   </p>
                   <a
                     href="/demo"
-                    className="px-2.5 py-1 bg-blue-600 text-white text-xs font-medium rounded hover:bg-blue-700 transition-colors flex-shrink-0 ml-2"
+                    className="px-2.5 py-1 bg-sage-600 text-white text-xs font-medium rounded hover:bg-sage-700 transition-colors flex-shrink-0 ml-2"
                   >
                     Unlock Explanations
                   </a>
                 </div>
               )}
 
-              {/* Streak Update - Enhanced */}
+              {/* Streak Update - Botanical Scholar */}
               {result.streakUpdated && result.newStreak && (
-                <div className="mt-3 flex items-center gap-2 p-2 bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200 animate-fade-in-up">
-                  <span className="text-2xl animate-streak-fire">🔥</span>
+                <div className="mt-3 flex items-center gap-2 p-2 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border border-amber-200 animate-fade-in-up">
+                  <span className="text-2xl animate-streak-glow-botanical">🔥</span>
                   <div>
-                    <span className="font-bold text-orange-600 text-sm">
+                    <span className="font-bold text-amber-700 text-sm">
                       {result.newStreak} Day Streak!
                     </span>
-                    <p className="text-orange-500 text-xs">Keep it going!</p>
+                    <p className="text-amber-600 text-xs">Keep it going!</p>
                   </div>
                 </div>
               )}
 
-              {/* Badge Unlocked - Enhanced */}
+              {/* Badge Unlocked - Botanical Scholar */}
               {result.badgesUnlocked && result.badgesUnlocked.length > 0 && (
                 <div className="mt-3 space-y-2">
                   {result.badgesUnlocked.map((badge, idx) => (
                     <div
                       key={badge.code}
-                      className="flex items-center gap-3 p-3 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-300 animate-scale-in shadow-sm"
+                      className="flex items-center gap-3 p-3 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg border border-amber-300 animate-scale-in shadow-sm"
                       style={{ animationDelay: `${idx * 150}ms` }}
                     >
                       <span className="text-2xl animate-confetti-burst">{badge.icon}</span>
                       <div className="flex-1 min-w-0">
-                        <p className="font-bold text-yellow-800 text-sm">🏆 Badge Unlocked!</p>
-                        <p className="text-yellow-700 text-xs">{badge.name}</p>
+                        <p className="font-bold text-amber-800 text-sm">🏆 Badge Unlocked!</p>
+                        <p className="text-amber-700 text-xs">{badge.name}</p>
                       </div>
-                      <span className="px-2 py-1 bg-yellow-200 text-yellow-800 font-bold text-xs rounded-full">
+                      <span className="px-2 py-1 bg-amber-200 text-amber-800 font-bold text-xs font-mono rounded-full">
                         +{badge.xpReward} XP
                       </span>
                     </div>
@@ -419,12 +429,12 @@ export function QuestionCard({
                 </div>
               )}
 
-              {/* Level Up - Enhanced */}
+              {/* Level Up - Botanical Scholar */}
               {result.levelUp && (
-                <div className="mt-3 p-3 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg border-2 border-purple-300 text-center animate-scale-in animate-pulse-glow">
+                <div className="mt-3 p-3 bg-gradient-to-r from-specimen-100 to-purple-100 rounded-lg border-2 border-specimen-300 text-center animate-scale-in">
                   <span className="text-3xl animate-confetti-burst inline-block">🎊</span>
-                  <p className="font-bold text-purple-800 text-base mt-1">Level Up!</p>
-                  <p className="text-purple-600 text-sm">
+                  <p className="font-bold text-specimen-800 text-base mt-1">Level Up!</p>
+                  <p className="text-specimen-600 text-sm">
                     You&apos;re now Level {result.levelUp.newLevel}
                   </p>
                 </div>

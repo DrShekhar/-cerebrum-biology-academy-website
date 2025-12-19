@@ -1,0 +1,857 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 14,
+  "ncertChapterName": "Ecosystem",
+  "questions": [
+    {
+      "question": "Primary consumers in a food chain are:",
+      "options": ["Herbivores that eat producers", "Decomposers", "Top predators", "Carnivores"],
+      "correctAnswer": "A",
+      "explanation": "Primary consumers are herbivores that feed directly on producers (plants). Example: grasshoppers, deer, cattle, zooplankton.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Structure",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which pyramid is always upright and never inverted?",
+      "options": ["Pyramid of biomass", "Pyramid of energy", "All pyramids", "Pyramid of numbers"],
+      "correctAnswer": "B",
+      "explanation": "Pyramid of energy is always upright because energy flow is unidirectional and decreases at each level. Numbers and biomass pyramids can be inverted.",
+      "difficulty": "EASY",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyramid of biomass in aquatic ecosystem is often:",
+      "options": ["Upright", "Inverted (small phytoplankton, large fish)", "Linear", "Absent"],
+      "correctAnswer": "B",
+      "explanation": "In aquatic ecosystems: small biomass of rapidly reproducing phytoplankton supports larger biomass of zooplankton and fish (inverted pyramid).",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The annual net primary productivity of the whole biosphere is:",
+      "options": [
+        "10 billion tons",
+        "50 billion tons of carbon",
+        "170 billion tons of dry organic matter",
+        "500 billion tons"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Global NPP is about 170 billion tons of dry organic matter per year. Oceans contribute 55 billion tons (despite low productivity, due to large area).",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Pyramid of energy is always:",
+      "options": [
+        "Upright (energy decreases at each level)",
+        "Irregular",
+        "Spindle-shaped",
+        "Inverted"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pyramid of energy is always upright because energy decreases at each trophic level (10% law). Energy cannot be recycled or created.",
+      "difficulty": "EASY",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyramid of numbers in a tree ecosystem is:",
+      "options": [
+        "Upright",
+        "Inverted (one tree supports many insects/birds)",
+        "Linear",
+        "Circular"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In tree ecosystem: 1 tree → many herbivorous insects → more parasites → many hyperparasites. Numbers increase at higher levels (inverted).",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ecological succession is:",
+      "options": [
+        "Sequential change in species composition over time",
+        "Extinction of species",
+        "Decrease in biodiversity",
+        "Sudden change in ecosystem"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ecological succession is the gradual, sequential change in species composition and community structure in an area over time until a stable climax community develops.",
+      "difficulty": "EASY",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pioneer species on bare rock are usually:",
+      "options": ["Trees", "Lichens (crustose type)", "Grasses", "Shrubs"],
+      "correctAnswer": "B",
+      "explanation": "Crustose lichens are pioneers on bare rock. They secrete acids that weather rock, creating small amounts of soil. Mosses follow, then grasses and shrubs.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secondary succession occurs on:",
+      "options": [
+        "Newly formed islands",
+        "Lava flows",
+        "Bare rock",
+        "Areas where community was destroyed but soil remains"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Secondary succession occurs in areas where vegetation was destroyed (fire, flood, logging) but soil and seeds remain. It is faster than primary succession.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primary productivity is:",
+      "options": [
+        "Rate at which producers create organic matter through photosynthesis",
+        "Rate of decomposition",
+        "Rate of predation",
+        "Rate of consumption"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Primary productivity is the rate of biomass production by producers through photosynthesis. It's expressed as g/m²/year or kcal/m²/year.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nutrient cycling is also called:",
+      "options": ["Food chain", "Succession", "Energy flow", "Biogeochemical cycle"],
+      "correctAnswer": "D",
+      "explanation": "Nutrient cycling is called biogeochemical cycling because nutrients move between biotic (organisms) and abiotic (geological) components.",
+      "difficulty": "EASY",
+      "topic": "Nutrient Cycling",
+      "ncertPage": 216,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Decomposers break down:",
+      "options": [
+        "Rocks and minerals",
+        "Water molecules",
+        "Living organisms only",
+        "Dead organic matter and release nutrients"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Decomposers (fungi, bacteria) break down dead organic matter (detritus) and release inorganic nutrients back into the ecosystem for reuse by producers.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Structure",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Energy flow in an ecosystem is:",
+      "options": ["Random", "Bidirectional", "Cyclic", "Unidirectional (one-way)"],
+      "correctAnswer": "D",
+      "explanation": "Energy flow is unidirectional - from sun to producers to consumers. Energy cannot be recycled; it is lost as heat at each trophic level.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phosphorus enters the food chain through:",
+      "options": [
+        "Atmospheric absorption",
+        "Plant uptake of dissolved phosphates from soil",
+        "Animal respiration",
+        "Volcanic activity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plants absorb dissolved phosphate ions from soil solution. Animals get phosphorus by eating plants or other animals.",
+      "difficulty": "MEDIUM",
+      "topic": "Phosphorus Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Succession in water bodies is called:",
+      "options": ["Psammosere", "Halosere", "Xerosere", "Hydrosere"],
+      "correctAnswer": "D",
+      "explanation": "Hydrosere is succession in aquatic habitats (ponds, lakes). Pioneer plants are phytoplankton and rooted hydrophytes, eventually leading to terrestrial community.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Humification leads to formation of:",
+      "options": ["Minerals", "Humus (dark amorphous substance)", "Water", "Oxygen"],
+      "correctAnswer": "B",
+      "explanation": "Humification forms humus - a dark, complex, highly resistant organic substance. Humus improves soil structure and water-holding capacity.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The biotic components of an ecosystem include:",
+      "options": [
+        "Soil and minerals",
+        "Light and humidity",
+        "Temperature and water",
+        "Producers, consumers, and decomposers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Biotic components are living organisms classified into producers (autotrophs), consumers (heterotrophs), and decomposers (saprotrophs).",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Structure",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mineralization releases:",
+      "options": [
+        "Humus",
+        "Detritus",
+        "Complex organic compounds",
+        "Inorganic nutrients like CO2, water, and minerals"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mineralization is the final step where humus is degraded to release inorganic nutrients (CO2, H2O, minerals) that can be absorbed by plants.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Detritus includes:",
+      "options": [
+        "Dead remains of plants and animals, and fecal matter",
+        "Water and minerals",
+        "Sunlight",
+        "Living organisms only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Detritus is dead organic matter including fallen leaves, dead animals, feces, and other organic waste that forms the starting material for decomposition.",
+      "difficulty": "EASY",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyramid of biomass in a forest ecosystem is:",
+      "options": [
+        "Irregular",
+        "Inverted",
+        "Upright (biomass decreases at higher levels)",
+        "Bell-shaped"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In forest: high biomass of trees → lower biomass of herbivores → lower biomass of carnivores. Biomass decreases up the pyramid (upright).",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Detritus food chain begins with:",
+      "options": ["Living animals", "Sunlight", "Living plants", "Dead organic matter (detritus)"],
+      "correctAnswer": "D",
+      "explanation": "Detritus food chain begins with dead organic matter (leaf litter, dead animals). Energy flows: Detritus → Detritivores → Predators of detritivores.",
+      "difficulty": "MEDIUM",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PAR (Photosynthetically Active Radiation) is:",
+      "options": [
+        "Wavelengths of light used in photosynthesis (400-700 nm)",
+        "Infrared radiation",
+        "Ultraviolet radiation",
+        "All solar radiation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PAR is the portion of solar spectrum (400-700 nm) used by plants for photosynthesis. Only about 2-10% of PAR is captured by plants.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ecosystem services include:",
+      "options": [
+        "Only recreation",
+        "Only food production",
+        "Air/water purification, pollination, nutrient cycling, climate regulation",
+        "Only timber production"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ecosystem services include: provisioning (food, water), regulating (climate, disease), supporting (nutrient cycling), and cultural (recreation, aesthetics).",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Services",
+      "ncertPage": 219,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gross Primary Productivity (GPP) is:",
+      "options": [
+        "Rate of decomposition",
+        "Secondary productivity",
+        "Net production available to consumers",
+        "Total rate of photosynthesis including plant respiration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "GPP is the total rate of organic matter production by photosynthesis. It includes the portion used by plants for their own respiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Catabolism in decomposition is:",
+      "options": [
+        "Enzymatic degradation of detritus by bacteria and fungi",
+        "Water movement",
+        "Humus formation",
+        "Physical breakdown"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Catabolism is enzymatic degradation of detritus by bacteria and fungi into simpler inorganic substances. It releases CO2, water, and nutrients.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phosphorus cycling occurs through:",
+      "options": [
+        "Only oceans",
+        "Atmosphere as main reservoir",
+        "Sediments, rocks, soil, and water (no atmospheric phase)",
+        "Only living organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Phosphorus has no significant atmospheric phase. It cycles through rocks → soil → plants → animals → decomposers → soil/water → sediments.",
+      "difficulty": "MEDIUM",
+      "topic": "Phosphorus Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Phosphorus is important for:",
+      "options": [
+        "Nitrogen fixation",
+        "Protein synthesis only",
+        "ATP, nucleic acids, cell membranes, bones, and teeth",
+        "Carbon fixation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Phosphorus is essential for ATP (energy currency), nucleic acids (DNA, RNA), phospholipids (cell membranes), and bones/teeth (calcium phosphate).",
+      "difficulty": "EASY",
+      "topic": "Phosphorus Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ecological pyramids represent:",
+      "options": [
+        "Only numbers",
+        "Only biomass",
+        "Only energy",
+        "Relationship between trophic levels in terms of number, biomass, or energy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ecological pyramids graphically represent the relationship between trophic levels in terms of number of organisms, biomass, or energy.",
+      "difficulty": "EASY",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Food chains are generally limited to 3-4 trophic levels because:",
+      "options": [
+        "Producers are few",
+        "There are few predators",
+        "Energy decreases at each level (10% law)",
+        "Space is limited"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Due to 10% energy transfer, by 4th or 5th level very little energy remains to support another trophic level. This limits food chain length.",
+      "difficulty": "MEDIUM",
+      "topic": "Energy Flow",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Climax community is:",
+      "options": [
+        "Final, stable community in equilibrium with environment",
+        "Pioneer community",
+        "Transitional community",
+        "First stage of succession"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Climax community is the final, stable community in succession. It remains in equilibrium with the environment unless disturbed.",
+      "difficulty": "EASY",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Decomposition rate is faster when:",
+      "options": [
+        "Detritus has high lignin content",
+        "Temperature is low and dry conditions",
+        "Temperature is warm and moist conditions",
+        "Oxygen is absent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Decomposition is faster in warm, moist conditions with good oxygen supply. Low temperature, drought, and anaerobic conditions slow decomposition.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In a food chain, energy is lost mainly through:",
+      "options": ["Respiration and heat", "Reproduction", "Growth", "Photosynthesis"],
+      "correctAnswer": "A",
+      "explanation": "At each trophic level, most energy (~90%) is lost through respiration (metabolic processes) as heat. Only ~10% is available to the next level.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pioneer species are:",
+      "options": [
+        "Final species in succession",
+        "First species to colonize a new or disturbed area",
+        "Dominant trees",
+        "Consumers only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pioneer species are the first to colonize a barren area. They are hardy, tolerant, and modify the environment for later species. Example: lichens on rocks.",
+      "difficulty": "EASY",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reservoir pool for gaseous cycles (carbon, nitrogen) is:",
+      "options": ["Rocks", "Soil", "Atmosphere", "Ocean floor"],
+      "correctAnswer": "C",
+      "explanation": "For gaseous cycles (carbon, nitrogen), the reservoir is the atmosphere. For sedimentary cycles (phosphorus), the reservoir is Earth's crust.",
+      "difficulty": "MEDIUM",
+      "topic": "Nutrient Cycling",
+      "ncertPage": 216,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The reservoir pool for phosphorus cycle is:",
+      "options": [
+        "Ocean surface",
+        "Living organisms",
+        "Atmosphere",
+        "Earth's crust (rocks and sediments)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Phosphorus cycle is a sedimentary cycle with reservoir in rocks and sediments. Phosphorus enters ecosystems through weathering of phosphate rocks.",
+      "difficulty": "MEDIUM",
+      "topic": "Phosphorus Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Decomposition is the process of:",
+      "options": [
+        "Photosynthesis",
+        "Breaking down complex organic matter into simpler inorganic substances",
+        "Energy production",
+        "Growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Decomposition is the breakdown of dead organic matter (detritus) into simpler inorganic compounds by decomposers, releasing nutrients for recycling.",
+      "difficulty": "EASY",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Primary succession occurs on:",
+      "options": [
+        "Burnt forests",
+        "Previously vegetated areas",
+        "Bare areas with no life (newly exposed rock, lava)",
+        "Agricultural fields"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Primary succession begins on lifeless, barren areas like newly cooled lava, bare rock, or newly formed sand dunes. It starts from scratch.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fragmentation in decomposition is done by:",
+      "options": ["Sunlight", "Bacteria only", "Detritivores like earthworms", "Plants"],
+      "correctAnswer": "C",
+      "explanation": "Fragmentation is the breakdown of detritus into smaller particles by detritivores (earthworms, beetles, larvae). This increases surface area for decomposer action.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A food web is:",
+      "options": [
+        "A single food chain",
+        "Interconnected network of food chains",
+        "Only decomposer pathway",
+        "Producer level only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A food web is a network of interconnected food chains showing multiple feeding relationships. Most organisms have multiple food sources and predators.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Succession on bare rock is called:",
+      "options": ["Psammosere", "Halosere", "Hydrosere", "Xerosere (lithosere)"],
+      "correctAnswer": "D",
+      "explanation": "Xerosere is succession in dry habitats (bare rock = lithosere). Lichens are pioneers that break down rock and create soil for later species.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Carbon is returned to the atmosphere by:",
+      "options": [
+        "Nitrogen fixation",
+        "Phosphorus cycling",
+        "Photosynthesis only",
+        "Respiration, decomposition, and combustion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "CO2 returns to atmosphere through: respiration (all organisms), decomposition (of dead matter), combustion (burning fossil fuels), and volcanic eruptions.",
+      "difficulty": "EASY",
+      "topic": "Carbon Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Grazing food chain begins with:",
+      "options": [
+        "Living producers (green plants)",
+        "Consumers",
+        "Decomposers",
+        "Dead organic matter"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Grazing food chain (GFC) begins with living green plants as producers. Energy flows: Plants → Herbivores → Carnivores → Top carnivores.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In aquatic ecosystems, the major producers are:",
+      "options": ["Fish", "Phytoplankton", "Zooplankton", "Whales"],
+      "correctAnswer": "B",
+      "explanation": "Phytoplankton (microscopic algae, cyanobacteria) are the main producers in aquatic ecosystems. They perform photosynthesis and form the base of aquatic food chains.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Structure",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most productive ecosystems are:",
+      "options": ["Deserts", "Tropical rainforests and coral reefs", "Tundra", "Oceans (open sea)"],
+      "correctAnswer": "B",
+      "explanation": "Tropical rainforests (2000-3000 g/m²/year) and coral reefs have highest primary productivity due to favorable temperature, moisture, and light.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Green plants occupy the first trophic level because they are:",
+      "options": ["Consumers", "Producers that capture solar energy", "Decomposers", "Omnivores"],
+      "correctAnswer": "B",
+      "explanation": "Green plants (producers) occupy the first trophic level (T1) because they capture solar energy and convert it into chemical energy through photosynthesis.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Standing crop refers to:",
+      "options": [
+        "Amount of living biomass at a given time",
+        "Dead organic matter",
+        "Productivity rate",
+        "Annual production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Standing crop (standing state) is the amount of living biomass present in an ecosystem at a particular time, measured as biomass per unit area.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sere refers to:",
+      "options": [
+        "Single species",
+        "Climax community",
+        "Entire sequence of communities in succession",
+        "Pioneer community only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sere is the entire sequence of communities that successively replace each other from pioneer stage to climax community during ecological succession.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Succession",
+      "ncertPage": 218,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The value of ecosystem services was estimated at:",
+      "options": [
+        "Millions of dollars",
+        "33 trillion US dollars per year (more than global GDP)",
+        "Impossible to calculate",
+        "Very low"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Robert Costanza estimated ecosystem services at 33 trillion USD/year - nearly twice the global GDP at the time. This shows nature's immense economic value.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem Services",
+      "ncertPage": 219,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Unlike energy, nutrients in an ecosystem are:",
+      "options": ["Recycled (cyclic)", "Lost completely", "Created continuously", "Unidirectional"],
+      "correctAnswer": "A",
+      "explanation": "Unlike energy (unidirectional), nutrients are cycled between biotic and abiotic components. They are not lost but continuously recycled.",
+      "difficulty": "EASY",
+      "topic": "Nutrient Cycling",
+      "ncertPage": 216,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Leaching involves:",
+      "options": [
+        "Breaking of bonds",
+        "Water-soluble substances moving into soil",
+        "Enzyme action",
+        "Humus formation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Leaching is the process where water-soluble inorganic nutrients move down into the soil horizon and become unavailable for use by plants.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Burning of fossil fuels affects the carbon cycle by:",
+      "options": [
+        "Reducing photosynthesis",
+        "Removing CO2 from atmosphere",
+        "Adding excess CO2 to atmosphere",
+        "No effect"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Burning fossil fuels releases stored carbon as CO2, adding excess to the atmosphere. This contributes to greenhouse effect and global warming.",
+      "difficulty": "EASY",
+      "topic": "Carbon Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The 10% law states that:",
+      "options": [
+        "50% energy is transferred",
+        "All energy is transferred",
+        "Only 10% energy is transferred to next trophic level",
+        "90% energy is transferred"
+      ],
+      "correctAnswer": "C",
+      "explanation": "10% law (Lindeman's law): Only about 10% of energy at one trophic level is available to the next. Rest is lost as heat, respiration, and waste.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An ecosystem is:",
+      "options": [
+        "Only living organisms in an area",
+        "A functional unit of nature with biotic and abiotic components",
+        "Only abiotic factors",
+        "Only a food chain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "An ecosystem is a functional unit of nature comprising all living organisms (biotic) and non-living factors (abiotic) in a defined area, interacting with each other.",
+      "difficulty": "EASY",
+      "topic": "Introduction to Ecosystem",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pyramid of numbers in a grassland ecosystem is:",
+      "options": [
+        "Upright (more producers, fewer consumers)",
+        "Spindle-shaped",
+        "Irregular",
+        "Inverted"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In grassland: many grasses → fewer grasshoppers → fewer frogs → few snakes → very few hawks. Number decreases at higher levels (upright pyramid).",
+      "difficulty": "MEDIUM",
+      "topic": "Ecological Pyramids",
+      "ncertPage": 215,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Secondary productivity is:",
+      "options": [
+        "Productivity of producers",
+        "Rate of biomass formation by consumers",
+        "GPP minus NPP",
+        "Rate of decomposition"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Secondary productivity is the rate at which consumers produce new biomass. It depends on efficiency of converting consumed food into body mass.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Food chain represents:",
+      "options": [
+        "Water cycle",
+        "Only producers",
+        "Flow of energy through different trophic levels",
+        "Nutrient cycling only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Food chain shows the pathway of energy flow from producers through various consumers. Energy decreases at each successive trophic level.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Net Primary Productivity (NPP) is:",
+      "options": [
+        "GPP minus respiration of producers",
+        "GPP plus respiration",
+        "Secondary productivity",
+        "Same as GPP"
+      ],
+      "correctAnswer": "A",
+      "explanation": "NPP = GPP - Respiration. NPP is the biomass available to consumers. About 20-50% of GPP is lost through plant respiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Productivity",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the carbon cycle, carbon enters the biotic component through:",
+      "options": ["Photosynthesis", "Combustion", "Decomposition", "Respiration"],
+      "correctAnswer": "A",
+      "explanation": "Carbon enters the biotic component when producers fix atmospheric CO2 through photosynthesis, converting it into organic compounds (glucose).",
+      "difficulty": "EASY",
+      "topic": "Carbon Cycle",
+      "ncertPage": 217,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Producers in an ecosystem are:",
+      "options": [
+        "Decomposers",
+        "Herbivores",
+        "Autotrophs that synthesize food through photosynthesis",
+        "Carnivores"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Producers are autotrophic organisms (green plants, algae, cyanobacteria) that produce food through photosynthesis using sunlight, CO2, and water.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem Structure",
+      "ncertPage": 210,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trophic level refers to:",
+      "options": [
+        "Size of organism",
+        "Age of organism",
+        "Type of reproduction",
+        "Feeding position in a food chain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Trophic level is the position of an organism in the food chain. Producers are T1, primary consumers T2, secondary consumers T3, and so on.",
+      "difficulty": "EASY",
+      "topic": "Energy Flow",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The steps of decomposition in order are:",
+      "options": [
+        "Fragmentation, leaching, catabolism, humification, mineralization",
+        "Mineralization, fragmentation, leaching",
+        "Catabolism, humification, fragmentation",
+        "Humification, mineralization, fragmentation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Decomposition steps: Fragmentation → Leaching → Catabolism → Humification → Mineralization. Each step progressively breaks down organic matter.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "High lignin and chitin in detritus:",
+      "options": [
+        "Don't affect decomposition",
+        "Prevent decomposition completely",
+        "Speed up decomposition",
+        "Slow down decomposition"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lignin (in wood) and chitin (in arthropod exoskeletons) are resistant to decomposition. High content of these slows the decomposition rate.",
+      "difficulty": "MEDIUM",
+      "topic": "Decomposition",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "If producers fix 1000 kcal, the energy available at third trophic level is:",
+      "options": ["0.1 kcal", "100 kcal", "10 kcal", "1 kcal"],
+      "correctAnswer": "C",
+      "explanation": "By 10% law: T1 (producers) = 1000 kcal → T2 (herbivores) = 100 kcal → T3 (carnivores) = 10 kcal.",
+      "difficulty": "MEDIUM",
+      "topic": "Energy Flow",
+      "ncertPage": 214,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

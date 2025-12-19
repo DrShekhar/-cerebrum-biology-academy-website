@@ -1,0 +1,932 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 12,
+  "ncertChapterName": "Biotechnology and Its Applications",
+  "questions": [
+    {
+      "question": "Edible vaccines are produced in:",
+      "options": ["Transgenic plants", "Bacteria only", "Chemical laboratories", "Animals"],
+      "correctAnswer": "A",
+      "explanation": "Edible vaccines are antigens produced in transgenic plants (potato, banana, tomato). Eating the plant provides immunity. This eliminates cold chain and injection needs.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Germline gene therapy is controversial because:",
+      "options": [
+        "Changes are heritable and passed to offspring",
+        "It is too expensive",
+        "It only works in bacteria",
+        "It is ineffective"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Germline gene therapy modifies germ cells, so changes are inherited by future generations. This raises ethical concerns about 'designer babies' and unintended consequences.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Human growth hormone (hGH) is produced using:",
+      "options": [
+        "Recombinant DNA technology",
+        "Chemical synthesis",
+        "Plant cells",
+        "Cadaver pituitary glands only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Recombinant hGH is produced using E. coli expressing human growth hormone gene. This replaced the dangerous practice of extracting hGH from cadaver pituitaries.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Flavr Savr tomato was engineered for:",
+      "options": [
+        "Delayed ripening and longer shelf life",
+        "Higher vitamin content",
+        "Larger size",
+        "Pest resistance"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Flavr Savr tomato was the first GM food approved for human consumption (1994). It was engineered to delay ripening by suppressing polygalacturonase enzyme, extending shelf life.",
+      "difficulty": "MEDIUM",
+      "topic": "GM Food",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The Cartagena Protocol deals with:",
+      "options": ["Biosafety of GMOs", "Nuclear weapons", "Ozone depletion", "Climate change"],
+      "correctAnswer": "A",
+      "explanation": "Cartagena Protocol on Biosafety (2000) is an international agreement governing movement of GMOs (Living Modified Organisms) between countries to protect biodiversity.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioethical Issues",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "RNA interference (RNAi) is used to:",
+      "options": ["Silence specific genes", "Join DNA fragments", "Cut DNA", "Amplify genes"],
+      "correctAnswer": "A",
+      "explanation": "RNAi is a cellular mechanism where specific mRNA is degraded, silencing gene expression. It's used to create pest-resistant plants and study gene function.",
+      "difficulty": "MEDIUM",
+      "topic": "RNA Interference",
+      "ncertPage": 185,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA fingerprinting is used for:",
+      "options": [
+        "Forensics and paternity testing",
+        "Producing GM crops",
+        "Making vaccines",
+        "Gene therapy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "DNA fingerprinting is used in forensics (identifying criminals from biological evidence), paternity testing, immigration cases, and identification of missing persons.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombinant Factor VIII is used to treat:",
+      "options": ["Hemophilia A", "AIDS", "Cancer", "Diabetes"],
+      "correctAnswer": "A",
+      "explanation": "Recombinant Factor VIII is used to treat Hemophilia A, a blood clotting disorder caused by Factor VIII deficiency. It enables blood clot formation.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In India, GM mustard is controversial because:",
+      "options": [
+        "Concerns about biodiversity, pollinators, and food safety",
+        "It doesn't work",
+        "Farmers don't want it",
+        "It is expensive"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GM mustard (DMH-11) debates include: impact on pollinators, gene flow to wild mustard relatives, herbicide (glufosinate) use concerns, and food safety questions.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioethical Issues",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Genetically modified organisms (GMOs) are:",
+      "options": [
+        "Organisms with artificially introduced foreign genes",
+        "Naturally occurring hybrids",
+        "Organisms with mutations",
+        "Organisms produced by conventional breeding"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GMOs are organisms whose genetic material has been altered using genetic engineering. Foreign genes (transgenes) are introduced to confer new traits.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Basmati rice patent case involved:",
+      "options": [
+        "Patent on basmati rice varieties",
+        "Patent on rice cooking method",
+        "Patent on rice export",
+        "Patent on growing method"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A US company (RiceTec) patented basmati rice varieties (1997). India challenged as basmati is a traditional Indian variety. Some patent claims were cancelled.",
+      "difficulty": "MEDIUM",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bt toxin is not harmful to humans because:",
+      "options": [
+        "All of the above",
+        "It is destroyed by stomach acid",
+        "Human gut lacks the receptors for Bt toxin",
+        "It is not absorbed"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bt toxin is safe for humans because: (1) it requires alkaline pH for activation (human stomach is acidic), (2) humans lack specific gut receptors for the toxin.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "To prevent biopiracy, India has created:",
+      "options": [
+        "Traditional Knowledge Digital Library (TKDL)",
+        "More GM crops",
+        "Export bans",
+        "More patents"
+      ],
+      "correctAnswer": "A",
+      "explanation": "India created TKDL documenting traditional knowledge to prevent biopiracy. It serves as prior art evidence against patent applications based on Indian traditional knowledge.",
+      "difficulty": "MEDIUM",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GEAC in India stands for:",
+      "options": [
+        "Genetic Engineering Approval Committee",
+        "Gene Evaluation and Analysis Center",
+        "Genome Enhancement Advisory Council",
+        "Genetic Engineering Advisory Committee"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GEAC (Genetic Engineering Approval Committee) under Ministry of Environment and Forests regulates GM organism research and release in India.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioethical Issues",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The US patent on turmeric for wound healing was challenged because:",
+      "options": [
+        "It was traditional knowledge in India",
+        "US doesn't grow turmeric",
+        "Patent was too expensive",
+        "Turmeric doesn't heal wounds"
+      ],
+      "correctAnswer": "A",
+      "explanation": "India challenged the US patent on turmeric (1995) because wound healing property of turmeric was traditional knowledge in India for centuries. Patent was revoked in 1997.",
+      "difficulty": "MEDIUM",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transgenic animals are animals that have:",
+      "options": [
+        "Foreign genes in their genome",
+        "Deleted genes",
+        "Extra chromosomes",
+        "Mutated genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Transgenic animals have foreign genes (transgenes) integrated into their genome. These genes are expressed and often passed to offspring.",
+      "difficulty": "EASY",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "PCR-based diagnosis is more sensitive because:",
+      "options": [
+        "It amplifies DNA millions of times",
+        "It is faster",
+        "It uses radioactive materials",
+        "It uses antibodies"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PCR amplifies target DNA millions of times, allowing detection of even tiny amounts of pathogen DNA. This makes it extremely sensitive for early detection of infections.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In ADA deficiency gene therapy, functional ADA gene is introduced into:",
+      "options": ["Lymphocytes (T cells)", "Muscle cells", "Nerve cells", "Red blood cells"],
+      "correctAnswer": "A",
+      "explanation": "In ADA-SCID gene therapy, lymphocytes are isolated from patient, transfected with retrovirus containing functional ADA gene, then returned to patient.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transgenic animals producing pharmaceutical proteins in milk is called:",
+      "options": ["Gene therapy", "Pharming", "Cloning", "Hybridization"],
+      "correctAnswer": "B",
+      "explanation": "Pharming uses transgenic animals to produce pharmaceutical proteins in their milk. It's a cost-effective way to produce human therapeutic proteins.",
+      "difficulty": "MEDIUM",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pest resistant plants reduce the use of:",
+      "options": ["Fertilizers", "Chemical pesticides", "Water", "Labor"],
+      "correctAnswer": "B",
+      "explanation": "Pest resistant GM plants (like Bt crops) significantly reduce the need for chemical pesticides, decreasing environmental pollution and farming costs.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 184,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ADA deficiency causes:",
+      "options": ["Diabetes", "Severe combined immunodeficiency (SCID)", "Cancer", "Heart disease"],
+      "correctAnswer": "B",
+      "explanation": "ADA (adenosine deaminase) deficiency causes SCID, where the immune system is severely compromised. Without treatment, patients cannot fight infections.",
+      "difficulty": "EASY",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ELISA stands for:",
+      "options": [
+        "Electro-Luminescent Immunological Screening",
+        "Enzyme Linked Immunosorbent Assay",
+        "Electronic Light Imaging System",
+        "Enzyme Lysate Indicator System"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ELISA (Enzyme Linked Immunosorbent Assay) uses enzyme-linked antibodies to detect antigens or antibodies. Color change indicates positive result.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cry proteins are encoded by:",
+      "options": [
+        "Genes from Agrobacterium",
+        "cry genes from Bacillus thuringiensis",
+        "Genes from cotton plant",
+        "Viral genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cry proteins (Crystal proteins) are encoded by cry genes in Bacillus thuringiensis. Different cry genes (cryIAc, cryIIAb, etc.) target different insect groups.",
+      "difficulty": "EASY",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The advantages of GM crops include:",
+      "options": [
+        "Increased pesticide use",
+        "Increased yield and pest resistance",
+        "Only aesthetic improvement",
+        "Reduced nutrition"
+      ],
+      "correctAnswer": "B",
+      "explanation": "GM crops offer benefits including: higher yield, pest/disease resistance, herbicide tolerance, improved nutrition, drought tolerance, and reduced chemical use.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Alpha-1 antitrypsin is produced using transgenic:",
+      "options": ["Bacteria", "Sheep", "Plants", "Yeast"],
+      "correctAnswer": "B",
+      "explanation": "Alpha-1 antitrypsin (for emphysema treatment) is produced in milk of transgenic sheep. Pharming uses transgenic animals to produce therapeutic proteins.",
+      "difficulty": "MEDIUM",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Roundup Ready crops are resistant to:",
+      "options": ["Insecticides", "Glyphosate herbicide", "Fungicides", "Frost"],
+      "correctAnswer": "B",
+      "explanation": "Roundup Ready crops (soybeans, corn, cotton) are resistant to glyphosate (Roundup herbicide). Farmers can spray glyphosate to kill weeds without harming the crop.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Meloidogyne incognita is a:",
+      "options": ["Fungal pathogen", "Root-knot nematode", "Bacterial pathogen", "Viral pathogen"],
+      "correctAnswer": "B",
+      "explanation": "Meloidogyne incognita is a root-knot nematode that causes significant crop damage. RNAi-based resistance has been developed against it in tobacco plants.",
+      "difficulty": "MEDIUM",
+      "topic": "RNA Interference",
+      "ncertPage": 185,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Restriction fragment length polymorphism (RFLP) is used in:",
+      "options": [
+        "Protein analysis",
+        "DNA fingerprinting and genetic mapping",
+        "RNA sequencing",
+        "Microscopy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "RFLP analyzes differences in restriction fragment sizes between individuals. It's used in DNA fingerprinting, genetic mapping, and diagnosing genetic diseases.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vaccine testing using transgenic animals helps in:",
+      "options": [
+        "Producing vaccines",
+        "Studying vaccine safety without human trials",
+        "Storing vaccines",
+        "Transporting vaccines"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Transgenic animals with human genes can be used to test vaccine safety and efficacy before human trials, reducing risks and ethical concerns.",
+      "difficulty": "MEDIUM",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The use of cadaver-derived hGH was stopped because:",
+      "options": [
+        "It was ineffective",
+        "Risk of Creutzfeldt-Jakob disease transmission",
+        "It was expensive",
+        "Supply was too high"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cadaver-derived hGH was discontinued after patients developed Creutzfeldt-Jakob disease (CJD), a fatal prion disease transmitted through contaminated tissue.",
+      "difficulty": "HARD",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Proinsulin contains:",
+      "options": [
+        "Only A and B chains",
+        "A chain, B chain, and C peptide",
+        "Only C peptide",
+        "A chain only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Proinsulin is the precursor with A chain, B chain, and connecting C-peptide. C-peptide is removed during maturation to produce active insulin.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bt cotton contains gene from:",
+      "options": ["Agrobacterium", "Bacillus thuringiensis", "E. coli", "Rhizobium"],
+      "correctAnswer": "B",
+      "explanation": "Bt cotton contains cry genes from Bacillus thuringiensis. These genes produce Bt toxin (Cry protein) that kills bollworm larvae that feed on the cotton plant.",
+      "difficulty": "EASY",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Patent is a form of:",
+      "options": ["Copyright", "Intellectual Property Rights (IPR)", "Trademark", "Trade secret"],
+      "correctAnswer": "B",
+      "explanation": "Patent is a form of IPR that gives inventor exclusive rights to make, use, or sell an invention for a limited period (usually 20 years).",
+      "difficulty": "EASY",
+      "topic": "IPR and Patents",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bt toxin exists as inactive protoxin because:",
+      "options": [
+        "It is degraded by bacteria",
+        "Alkaline pH of insect gut is needed to activate it",
+        "It requires UV light",
+        "It is naturally inactive"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bt toxin (protoxin) is inactive in Bacillus thuringiensis. In the alkaline gut of insects (pH 9.5), it is activated by proteases and becomes toxic Cry protein.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Autoradiography in DNA fingerprinting uses:",
+      "options": [
+        "Fluorescent dyes",
+        "Radioactive probes that expose X-ray film",
+        "UV light",
+        "Electron microscopy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Southern blotting-based DNA fingerprinting, radioactive probes hybridize to DNA. When X-ray film is placed over the membrane, radiation exposes the film at probe locations.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Therapeutic cloning aims to produce:",
+      "options": [
+        "Transgenic plants",
+        "Complete organisms",
+        "Embryonic stem cells for treatment",
+        "Food animals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Therapeutic cloning creates embryos to harvest embryonic stem cells for treating diseases. Unlike reproductive cloning, it doesn't aim to create complete organisms.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning",
+      "ncertPage": 188,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ELISA is based on:",
+      "options": [
+        "Gel electrophoresis",
+        "DNA amplification",
+        "Antigen-antibody interaction",
+        "Gene sequencing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ELISA detects antigens or antibodies using specific antigen-antibody interactions. Enzyme-linked antibodies produce color change for detection.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombinant human insulin was first produced in:",
+      "options": ["2000", "1972", "1983", "1990"],
+      "correctAnswer": "C",
+      "explanation": "Eli Lilly produced the first recombinant human insulin (Humulin) in 1983. It was among the first biopharmaceuticals produced using genetic engineering.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Dolly the sheep was created through:",
+      "options": [
+        "Gene therapy",
+        "In vitro fertilization",
+        "Somatic cell nuclear transfer (cloning)",
+        "Natural breeding"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Dolly (1996) was created by somatic cell nuclear transfer - nucleus from adult mammary cell was transferred to enucleated egg. First mammal cloned from adult cell.",
+      "difficulty": "MEDIUM",
+      "topic": "Cloning",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Concerns about GM crops include:",
+      "options": [
+        "Pest resistance",
+        "Higher yields",
+        "Gene flow to wild relatives and food safety",
+        "Better nutrition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GM crop concerns include: gene flow to wild plants, development of superweeds, allergenicity, long-term health effects, and impact on non-target organisms.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Biotechnology applications in agriculture include:",
+      "options": [
+        "Traditional breeding only",
+        "Mechanical harvesting",
+        "Genetically modified crops",
+        "Chemical pesticides only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Agricultural biotechnology includes genetically modified (GM) crops with improved traits like pest resistance, herbicide tolerance, and enhanced nutrition.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Insulin for diabetic patients is now produced using:",
+      "options": [
+        "Plant cells",
+        "Pig pancreas only",
+        "Recombinant DNA technology in E. coli/yeast",
+        "Chemical synthesis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Human insulin (Humulin) is produced using rDNA technology. Human insulin gene is expressed in E. coli or yeast, producing authentic human insulin in large quantities.",
+      "difficulty": "EASY",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Activated Bt toxin binds to:",
+      "options": [
+        "Blood cells",
+        "Brain receptors of insects",
+        "Midgut epithelial cells of insects",
+        "Muscle cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Activated Cry protein binds to specific receptors on midgut epithelial cells of susceptible insects, creating pores that cause cell swelling and lysis, killing the insect.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Rosie was the first transgenic cow that produced:",
+      "options": [
+        "Antibiotics",
+        "Insulin",
+        "Human alpha-lactalbumin enriched milk",
+        "Growth hormone"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Rosie (1997) was the first transgenic cow producing human alpha-lactalbumin enriched milk, which is nutritionally better for human infants than normal cow milk.",
+      "difficulty": "MEDIUM",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transgenic mice are used to:",
+      "options": [
+        "Replace lab equipment",
+        "Fight pests",
+        "Study human diseases",
+        "Produce milk for humans"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Transgenic mice with human disease genes are used as disease models to understand pathology, test therapies, and study gene function. Example: mice with cancer genes.",
+      "difficulty": "EASY",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bioethics deals with:",
+      "options": [
+        "Biology education",
+        "Biological experiments only",
+        "Ethical issues arising from biological research",
+        "Business in biology"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bioethics examines ethical issues in biological research including genetic engineering, cloning, stem cells, animal experimentation, and informed consent.",
+      "difficulty": "EASY",
+      "topic": "Ethical Issues",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Biopiracy in India was attempted for:",
+      "options": ["Cotton", "Wheat and rice", "Turmeric and neem", "Sugarcane"],
+      "correctAnswer": "C",
+      "explanation": "Biopiracy cases involving Indian resources include turmeric (wound healing patent by US) and neem (fungicidal property patent by US company). India fought and won these cases.",
+      "difficulty": "MEDIUM",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Molecular diagnosis uses:",
+      "options": [
+        "Blood pressure measurement",
+        "Visual examination only",
+        "DNA/RNA/protein detection techniques",
+        "Traditional microscopy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Molecular diagnosis uses techniques like PCR, ELISA, and DNA probes to detect pathogens, genetic disorders, or disease markers at the molecular level.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cry2Ab gene in Bt cotton provides resistance against:",
+      "options": ["Fungi", "Beetles", "Lepidopteran insects (bollworms)", "Nematodes"],
+      "correctAnswer": "C",
+      "explanation": "Cry2Ab produces toxin effective against lepidopteran pests like bollworms. Bt cotton expressing Cry1Ac and Cry2Ab genes provides broader spectrum pest resistance.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "DNA fingerprinting is based on:",
+      "options": [
+        "Protein sequences",
+        "Coding DNA sequences",
+        "Variable number tandem repeats (VNTRs)",
+        "Mitochondrial DNA only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "DNA fingerprinting uses VNTRs (Variable Number Tandem Repeats) or STRs (Short Tandem Repeats) - repetitive DNA sequences that vary between individuals.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Herbicide tolerant crops are created by:",
+      "options": [
+        "Mutagenesis",
+        "Traditional breeding only",
+        "Introducing genes for herbicide resistance",
+        "Chemical treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Herbicide tolerant crops contain genes (like glyphosate resistance gene) that allow the crop to survive herbicide application while weeds are killed.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Neem's antifungal properties were patented by:",
+      "options": [
+        "Indian government",
+        "Indian company",
+        "European Patent Office (for US company)",
+        "Japanese company"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A US company and USDA obtained a patent (1994) on neem fungicidal properties from European Patent Office. India challenged and the patent was revoked in 2005.",
+      "difficulty": "MEDIUM",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Mature human insulin consists of:",
+      "options": [
+        "Three chains",
+        "Four chains",
+        "One polypeptide chain",
+        "Two polypeptide chains (A and B) linked by disulfide bonds"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mature insulin has two polypeptide chains: A chain (21 amino acids) and B chain (30 amino acids) connected by two disulfide bridges.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The function of GEAC is to:",
+      "options": [
+        "Train scientists",
+        "Manufacture GM crops",
+        "Fund biotechnology research",
+        "Approve validity of GM research and safety"
+      ],
+      "correctAnswer": "D",
+      "explanation": "GEAC evaluates proposals for research, large-scale use, and environmental release of GMOs. It ensures biosafety and assesses risks before approval.",
+      "difficulty": "MEDIUM",
+      "topic": "Bioethical Issues",
+      "ncertPage": 189,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Golden rice was developed to address:",
+      "options": [
+        "Iron deficiency",
+        "Iodine deficiency",
+        "Protein deficiency",
+        "Vitamin A deficiency"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Golden rice addresses vitamin A deficiency (VAD), which causes blindness and immune problems in millions, especially in Asia and Africa where rice is staple food.",
+      "difficulty": "EASY",
+      "topic": "Biofortified Crops",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ELISA is commonly used to detect:",
+      "options": ["DNA mutations", "Protein structure", "Blood group", "HIV infection"],
+      "correctAnswer": "D",
+      "explanation": "ELISA is widely used for HIV testing (detecting antibodies against HIV), pregnancy tests (detecting hCG), and other diagnostic applications.",
+      "difficulty": "EASY",
+      "topic": "Molecular Diagnostics",
+      "ncertPage": 187,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In RNAi, gene silencing occurs through:",
+      "options": [
+        "Protein denaturation",
+        "Gene deletion",
+        "DNA methylation only",
+        "Complementary dsRNA binding to mRNA causing degradation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In RNAi, double-stranded RNA (dsRNA) complementary to target mRNA is introduced. It triggers mRNA degradation, preventing protein synthesis (gene silencing).",
+      "difficulty": "MEDIUM",
+      "topic": "RNA Interference",
+      "ncertPage": 185,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bt brinjal in India:",
+      "options": [
+        "Was never developed",
+        "Is only for export",
+        "Is commercially cultivated",
+        "Was approved but moratorium was placed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bt brinjal was developed in India for resistance against fruit and shoot borer. GEAC approved it in 2009, but Environment Ministry placed a moratorium in 2010.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Agriculture",
+      "ncertPage": 189,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Bioremediation using GM bacteria can help in:",
+      "options": [
+        "Medicine production",
+        "Crop improvement",
+        "Food production",
+        "Environmental cleanup (oil spills, heavy metals)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bioremediation uses microorganisms to clean up environmental pollution. GM bacteria can be engineered to degrade specific pollutants like oil, pesticides, and heavy metals.",
+      "difficulty": "MEDIUM",
+      "topic": "Environmental Applications",
+      "ncertPage": 183,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The first successful gene therapy was for:",
+      "options": ["Hemophilia", "Sickle cell anemia", "Cystic fibrosis", "ADA deficiency (SCID)"],
+      "correctAnswer": "D",
+      "explanation": "First successful gene therapy (1990) was for ADA (adenosine deaminase) deficiency causing SCID (Severe Combined Immunodeficiency). Functional ADA gene was introduced.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "CryIIIAb is effective against:",
+      "options": [
+        "Dipterans (flies)",
+        "All insects",
+        "Lepidopterans (butterflies/moths)",
+        "Coleopterans (beetles)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "CryIIIAb is specific for coleopteran insects (beetles). Different Cry proteins have specificity for different insect orders due to receptor-toxin matching.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "CryIAc and CryIIAb control:",
+      "options": ["Fungal diseases", "Viral infections", "Nematodes", "Cotton bollworms"],
+      "correctAnswer": "D",
+      "explanation": "CryIAc and CryIIAb genes are used in Bt cotton to produce toxins that kill cotton bollworms (lepidopteran pests), protecting the crop from these destructive insects.",
+      "difficulty": "MEDIUM",
+      "topic": "Bt Cotton",
+      "ncertPage": 184,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nematode-resistant tobacco plants were created using:",
+      "options": ["Chemical treatment", "Mutation breeding", "Bt genes", "RNAi technology"],
+      "correctAnswer": "D",
+      "explanation": "Nematode (Meloidogyne incognita) resistant tobacco was created using RNAi. Host plant produces dsRNA that silences nematode genes essential for survival.",
+      "difficulty": "MEDIUM",
+      "topic": "RNA Interference",
+      "ncertPage": 185,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Biopiracy refers to:",
+      "options": [
+        "Biological warfare",
+        "Pirate ships carrying biological samples",
+        "Legal use of biological resources",
+        "Unauthorized exploitation of biological resources/traditional knowledge"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Biopiracy is exploitation of biological resources or traditional knowledge from developing countries by developed countries without proper authorization or compensation.",
+      "difficulty": "EASY",
+      "topic": "Biopiracy",
+      "ncertPage": 190,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Somatic gene therapy affects:",
+      "options": [
+        "All cells including germ cells",
+        "Only brain cells",
+        "Only germ cells",
+        "Only somatic (body) cells, not inherited"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Somatic gene therapy targets body cells (somatic cells), not germ cells. Changes are not passed to offspring. It treats the individual but not future generations.",
+      "difficulty": "MEDIUM",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Gene therapy involves:",
+      "options": [
+        "Surgery",
+        "Radiation therapy",
+        "Drug treatment",
+        "Correction of genetic defects by introducing functional genes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gene therapy corrects genetic disorders by introducing functional genes into patient's cells. It can replace defective genes or provide new functions.",
+      "difficulty": "EASY",
+      "topic": "Gene Therapy",
+      "ncertPage": 186,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombinant erythropoietin (EPO) is used to treat:",
+      "options": ["Cancer", "Infections", "Diabetes", "Anemia (stimulates RBC production)"],
+      "correctAnswer": "D",
+      "explanation": "Recombinant EPO is used to treat anemia in kidney disease and cancer patients. It stimulates bone marrow to produce red blood cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnological Applications in Medicine",
+      "ncertPage": 186,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Golden rice is rich in:",
+      "options": ["Vitamin C", "Iron", "Proteins", "Beta-carotene (provitamin A)"],
+      "correctAnswer": "D",
+      "explanation": "Golden rice is genetically engineered to produce beta-carotene (provitamin A) in the edible grain. It addresses vitamin A deficiency in rice-dependent populations.",
+      "difficulty": "EASY",
+      "topic": "Biofortified Crops",
+      "ncertPage": 183,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Transgenic animals are used for:",
+      "options": [
+        "Entertainment",
+        "Transportation",
+        "Food production only",
+        "Research, drug production, and disease models"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Transgenic animals are used to: study diseases, produce therapeutic proteins (pharming), test drugs, create organ donors, and understand gene function.",
+      "difficulty": "EASY",
+      "topic": "Transgenic Animals",
+      "ncertPage": 188,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

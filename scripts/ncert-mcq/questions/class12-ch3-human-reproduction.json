@@ -1,0 +1,1022 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 3,
+  "ncertChapterName": "Human Reproduction",
+  "questions": [
+    {
+      "question": "Implantation of blastocyst occurs in the:",
+      "options": ["Ovary", "Fallopian tube", "Cervix", "Endometrium of uterus"],
+      "correctAnswer": "D",
+      "explanation": "Implantation occurs in the endometrium (inner lining) of the uterus, about 6-7 days after fertilization. The trophoblast cells of the blastocyst invade the endometrium and establish connection with maternal blood vessels.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The labia majora are homologous to:",
+      "options": ["Vas deferens", "Penis", "Scrotum", "Prostate"],
+      "correctAnswer": "C",
+      "explanation": "The labia majora in females are homologous to the scrotum in males. Both develop from the same embryonic structure (labioscrotal swellings). They represent the external genitalia formed from common embryonic tissue.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 46,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Primary oocytes are arrested at which stage until puberty?",
+      "options": ["Prophase I", "Metaphase I", "Prophase II", "Metaphase II"],
+      "correctAnswer": "A",
+      "explanation": "Primary oocytes formed during fetal development are arrested at prophase I of meiosis I. They remain in this arrested state (dictyate stage) until puberty, when they resume meiosis under hormonal stimulation.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The acrosome of sperm contains:",
+      "options": ["Mitochondria", "Hydrolytic enzymes", "Nucleus", "Centriole"],
+      "correctAnswer": "B",
+      "explanation": "The acrosome is a cap-like structure at the anterior end of sperm head. It contains hydrolytic enzymes (hyaluronidase and acrosin) that help the sperm penetrate the egg during fertilization (acrosomal reaction).",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hormone that stimulates milk ejection (let-down reflex) is:",
+      "options": ["Estrogen", "Progesterone", "Prolactin", "Oxytocin"],
+      "correctAnswer": "D",
+      "explanation": "Oxytocin (from the posterior pituitary) stimulates milk ejection (let-down reflex) by causing contraction of myoepithelial cells around the mammary alveoli. Suckling stimulates oxytocin release through a neuroendocrine reflex.",
+      "difficulty": "EASY",
+      "topic": "Lactation",
+      "ncertPage": 53,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Each testis contains about:",
+      "options": [
+        "1000 seminiferous tubules",
+        "100 seminiferous tubules",
+        "250 seminiferous tubules",
+        "500 seminiferous tubules"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Each testis contains about 250 compartments called testicular lobules. Each lobule contains 1-3 highly coiled seminiferous tubules where sperm production (spermatogenesis) occurs.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Ectopic pregnancy refers to implantation in:",
+      "options": [
+        "Uterus",
+        "Sites other than uterus (e.g., fallopian tube)",
+        "Cervix only",
+        "Ovary only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ectopic pregnancy occurs when the blastocyst implants outside the uterus, most commonly in the fallopian tube (tubal pregnancy). This is a serious condition that requires medical intervention as the tube cannot support fetal development.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The inner cell mass of the blastocyst gives rise to:",
+      "options": ["Embryo", "Trophoblast", "Chorion", "Placenta only"],
+      "correctAnswer": "A",
+      "explanation": "The inner cell mass (embryoblast) of the blastocyst differentiates to form the embryo proper. It gives rise to all the tissues and organs of the developing baby. The trophoblast forms extra-embryonic structures like placenta.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The normal sperm count per mL of semen is:",
+      "options": ["10-20 million", "40-300 million", "500-600 million", "1 billion"],
+      "correctAnswer": "B",
+      "explanation": "Normal sperm count ranges from 40-300 million per mL of semen (or 15-200 million according to WHO criteria). Low sperm count (below 15 million/mL) is called oligospermia and can cause infertility.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The first menstrual cycle is called:",
+      "options": ["Menarche", "Puberty", "Ovulation", "Menopause"],
+      "correctAnswer": "A",
+      "explanation": "Menarche is the first menstrual cycle (onset of menstruation) that occurs at puberty, usually between 11-16 years of age. It marks the beginning of the reproductive phase in females.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The umbilical cord contains:",
+      "options": [
+        "Two arteries and two veins",
+        "One artery and one vein",
+        "Two arteries and one vein",
+        "Two veins and one artery"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The umbilical cord contains two umbilical arteries (carrying deoxygenated blood from fetus to placenta) and one umbilical vein (carrying oxygenated blood from placenta to fetus). This is unusual as arteries usually carry oxygenated blood.",
+      "difficulty": "MEDIUM",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Menstruation occurs due to:",
+      "options": [
+        "Fall in progesterone and estrogen levels",
+        "Rise in FSH levels",
+        "Increased estrogen levels",
+        "Increased progesterone levels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Menstruation occurs when progesterone and estrogen levels fall due to degeneration of corpus luteum (if fertilization does not occur). This causes shedding of the endometrium, resulting in menstrual flow.",
+      "difficulty": "MEDIUM",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mitochondria in sperm are located in the:",
+      "options": ["Neck", "Middle piece", "Tail", "Head"],
+      "correctAnswer": "B",
+      "explanation": "Mitochondria are arranged spirally around the axial filament in the middle piece of sperm. They provide ATP (energy) for the movement of the sperm tail.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The cervical canal along with vagina forms the:",
+      "options": ["Fallopian tube", "External genitalia", "Uterine cavity", "Birth canal"],
+      "correctAnswer": "D",
+      "explanation": "The cervical canal (connecting uterus to vagina) along with the vagina forms the birth canal. During childbirth, the baby passes through this canal. The vagina also serves as the copulatory canal.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 45,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which hormone peak is responsible for ovulation?",
+      "options": ["Progesterone", "LH", "FSH", "Estrogen"],
+      "correctAnswer": "B",
+      "explanation": "The LH surge (a sudden and massive increase in LH secretion) triggers ovulation. This surge occurs in response to rising estrogen levels from the mature follicle and causes the Graafian follicle to rupture.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first trimester is characterized by:",
+      "options": [
+        "Rapid growth of fetus",
+        "Differentiation of organs and limbs",
+        "Maturation of fetal lungs",
+        "Movement of fetus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During the first trimester (months 1-3), major organ differentiation occurs. By the end of first trimester, the embryo (now called fetus) has developed all major organ systems, limb buds, and recognizable human features.",
+      "difficulty": "MEDIUM",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which hormone is secreted by the placenta and is the basis of pregnancy tests?",
+      "options": [
+        "Estrogen",
+        "Progesterone",
+        "Human chorionic gonadotropin (hCG)",
+        "Human placental lactogen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Human chorionic gonadotropin (hCG) is secreted by the trophoblast and later by the placenta. Its presence in urine or blood is the basis for pregnancy tests. hCG maintains the corpus luteum in early pregnancy.",
+      "difficulty": "EASY",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The seminiferous tubules open into the rete testis through:",
+      "options": ["Tubuli recti", "Epididymis", "Vas deferens", "Vasa efferentia"],
+      "correctAnswer": "A",
+      "explanation": "Seminiferous tubules continue as tubuli recti (straight tubules), which open into the rete testis (network of tubules in the mediastinum testis). From rete testis, sperm pass through vasa efferentia to the epididymis.",
+      "difficulty": "HARD",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Parturition is induced by:",
+      "options": [
+        "Decrease in estrogen and increase in oxytocin",
+        "Signals from fully developed fetus",
+        "Decrease in hCG only",
+        "Increase in progesterone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Parturition (childbirth) is induced by signals from the fully developed fetus and placenta. These signals cause release of oxytocin and prostaglandins, leading to uterine contractions. This is an example of feto-placental reflex.",
+      "difficulty": "MEDIUM",
+      "topic": "Parturition",
+      "ncertPage": 53,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which part of the sperm contains the genetic material?",
+      "options": ["Tail", "Acrosome", "Nucleus in the head", "Middle piece"],
+      "correctAnswer": "C",
+      "explanation": "The nucleus of the sperm, located in the head region behind the acrosome, contains the haploid set of chromosomes (genetic material). The nucleus is highly condensed with protamines replacing histones for efficient packaging.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "During oogenesis, how many functional ova are formed from one oogonium?",
+      "options": ["2", "3", "4", "1"],
+      "correctAnswer": "D",
+      "explanation": "From one oogonium, only one functional ovum is formed. The unequal cytokinesis during meiosis I and II results in one large ovum retaining most of the cytoplasm and nutrients, and three small polar bodies that degenerate.",
+      "difficulty": "EASY",
+      "topic": "Gametogenesis",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Human placenta is:",
+      "options": ["Epitheliochorial", "Endotheliochorial", "Hemochorial", "Hemoendothelial"],
+      "correctAnswer": "C",
+      "explanation": "Human placenta is hemochorial type, where the chorionic villi are directly bathed in maternal blood. The barrier between fetal and maternal blood consists only of fetal tissues (chorion), not maternal endothelium.",
+      "difficulty": "HARD",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The funnel-shaped opening of the fallopian tube near the ovary is called:",
+      "options": ["Fimbriae", "Isthmus", "Ampulla", "Infundibulum"],
+      "correctAnswer": "D",
+      "explanation": "The infundibulum is the funnel-shaped opening of the fallopian tube near the ovary. It has finger-like projections called fimbriae that help collect the ovum released during ovulation.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 45,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The secondary oocyte is arrested at:",
+      "options": ["Metaphase II", "Prophase I", "Metaphase I", "Prophase II"],
+      "correctAnswer": "A",
+      "explanation": "Secondary oocyte is arrested at metaphase II of meiosis II. Meiosis II is completed only after fertilization, when sperm entry triggers the completion of meiosis and formation of the second polar body.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The gestation period in humans is approximately:",
+      "options": ["220 days", "280 days", "320 days", "180 days"],
+      "correctAnswer": "B",
+      "explanation": "The gestation period (pregnancy duration) in humans is approximately 280 days or 40 weeks from the last menstrual period. This is equivalent to about 9 months or 266 days from fertilization.",
+      "difficulty": "EASY",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "FSH in males stimulates:",
+      "options": [
+        "Sertoli cells to facilitate spermatogenesis",
+        "Release of GnRH",
+        "Development of secondary sexual characters",
+        "Leydig cells to produce testosterone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "FSH (Follicle Stimulating Hormone) acts on Sertoli cells, stimulating them to support spermatogenesis. LH acts on Leydig cells to stimulate testosterone production.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The prostate gland secretion makes up approximately what percentage of semen?",
+      "options": ["25-30%", "40-45%", "60-70%", "10-15%"],
+      "correctAnswer": "A",
+      "explanation": "Prostate gland secretion contributes about 25-30% of semen volume. It is slightly alkaline and contains citric acid, acid phosphatase, calcium, and proteolytic enzymes.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Primary spermatocytes undergo:",
+      "options": [
+        "Meiosis II to form spermatids",
+        "Spermiogenesis to form sperms",
+        "Mitosis to form secondary spermatocytes",
+        "Meiosis I to form secondary spermatocytes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Primary spermatocytes (diploid, 2n) undergo meiosis I to form secondary spermatocytes (haploid, n). Secondary spermatocytes then undergo meiosis II to form spermatids.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The LH surge triggers:",
+      "options": ["Implantation", "Menstruation", "Ovulation", "Corpus luteum formation"],
+      "correctAnswer": "C",
+      "explanation": "The LH surge (a rapid increase in LH secretion) triggers ovulation. This surge occurs around day 13-14 of the menstrual cycle and causes the Graafian follicle to rupture and release the secondary oocyte.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The secretory phase is characterized by:",
+      "options": [
+        "Secretion of progesterone by corpus luteum",
+        "Rise in FSH levels",
+        "Menstrual bleeding",
+        "Endometrial regeneration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The secretory (luteal) phase occurs from days 15-28. Corpus luteum secretes progesterone, which makes the endometrium more glandular and secretory, preparing it for implantation of the embryo.",
+      "difficulty": "MEDIUM",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During fertilization, the sperm enters the secondary oocyte and triggers:",
+      "options": ["Meiosis I", "Completion of meiosis II", "Mitosis", "Formation of polar body I"],
+      "correctAnswer": "B",
+      "explanation": "Sperm entry into the secondary oocyte (which is arrested at metaphase II) triggers the completion of meiosis II. This results in the formation of a mature ovum and the second polar body.",
+      "difficulty": "MEDIUM",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The average duration of the menstrual cycle is:",
+      "options": ["14 days", "21 days", "28 days", "35 days"],
+      "correctAnswer": "C",
+      "explanation": "The average menstrual cycle is 28 days, although it can vary from 21-35 days in different women. The cycle consists of menstrual phase (days 1-5), follicular phase (days 6-13), ovulation (day 14), and luteal phase (days 15-28).",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The placenta is formed by:",
+      "options": [
+        "Trophoblast only",
+        "Endometrium only",
+        "Chorionic villi and uterine tissue",
+        "Inner cell mass"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The placenta is formed by the interdigitation of chorionic villi (from fetal trophoblast) with uterine tissue (maternal). It serves as the structural and functional connection between the developing embryo and the maternal body.",
+      "difficulty": "MEDIUM",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Corona radiata is:",
+      "options": [
+        "The membrane of the ovum",
+        "Nuclear envelope of ovum",
+        "A glycoprotein layer",
+        "Layer of follicular cells surrounding zona pellucida"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Corona radiata is the outermost layer of follicular (granulosa) cells surrounding the zona pellucida of the secondary oocyte. Sperm must penetrate this layer first during fertilization.",
+      "difficulty": "EASY",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sertoli cells are found in:",
+      "options": ["Epididymis", "Prostate gland", "Ovary", "Seminiferous tubules"],
+      "correctAnswer": "D",
+      "explanation": "Sertoli cells (sustentacular cells) are found in the seminiferous tubules of the testis. They provide nutrition to developing sperms, secrete inhibin (which regulates FSH), and help in spermiation.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The antrum of a Graafian follicle is filled with:",
+      "options": ["Follicular fluid (liquor folliculi)", "Air", "Cells", "Blood"],
+      "correctAnswer": "A",
+      "explanation": "The antrum (fluid-filled cavity) of a Graafian follicle is filled with follicular fluid or liquor folliculi. This fluid contains hormones, nutrients, and other molecules that support the developing oocyte.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 48,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Permanent cessation of menstruation is called:",
+      "options": ["Dysmenorrhea", "Menarche", "Menopause", "Amenorrhea"],
+      "correctAnswer": "C",
+      "explanation": "Menopause is the permanent cessation of menstruation, typically occurring between 45-55 years of age. It marks the end of the reproductive phase in females due to declining ovarian function.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "By the end of 12 weeks, the embryo is called:",
+      "options": ["Neonate", "Blastocyst", "Embryo", "Fetus"],
+      "correctAnswer": "D",
+      "explanation": "From the 9th week of development (after 12 weeks from LMP), the developing baby is called a fetus. Before this, it is called an embryo. The fetal period is characterized by growth and maturation of organs.",
+      "difficulty": "EASY",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which extra-embryonic membrane forms the fluid-filled sac around the embryo?",
+      "options": ["Yolk sac", "Allantois", "Chorion", "Amnion"],
+      "correctAnswer": "D",
+      "explanation": "The amnion forms the fluid-filled amniotic sac around the embryo/fetus. Amniotic fluid cushions the developing baby, maintains temperature, allows movement, and prevents adhesions. It also contains fetal cells used in amniocentesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The female reproductive system includes a pair of ovaries located:",
+      "options": [
+        "Outside the body cavity",
+        "In the scrotal sac",
+        "In the pelvic cavity",
+        "In the abdominal cavity above uterus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ovaries are located in the pelvic cavity, one on each side of the uterus. They are attached to the pelvic wall and uterus by ligaments. Each ovary is about 2-4 cm in length.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "After fertilization, the zygote undergoes:",
+      "options": ["Meiosis", "Cleavage", "Differentiation only", "No cell division initially"],
+      "correctAnswer": "B",
+      "explanation": "After fertilization, the zygote undergoes rapid mitotic divisions called cleavage. These divisions increase cell number without much increase in total mass. The cells formed are called blastomeres.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Inhibin is secreted by:",
+      "options": [
+        "Sertoli cells and granulosa cells",
+        "Hypothalamus",
+        "Anterior pituitary",
+        "Leydig cells and ovary"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Inhibin is secreted by Sertoli cells in males and granulosa cells in females. It provides negative feedback to the anterior pituitary, inhibiting FSH secretion. This helps regulate gametogenesis.",
+      "difficulty": "HARD",
+      "topic": "Hormonal Control",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bulbourethral glands (Cowper's glands) secrete:",
+      "options": ["Acidic secretion", "Testosterone", "Fructose-rich fluid", "Alkaline mucus"],
+      "correctAnswer": "D",
+      "explanation": "Bulbourethral glands (Cowper's glands) secrete alkaline mucus that lubricates the urethra and neutralizes traces of acidic urine in the urethra before ejaculation.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The innermost layer of the uterus is called:",
+      "options": ["Endometrium", "Mesometrium", "Perimetrium", "Myometrium"],
+      "correctAnswer": "A",
+      "explanation": "The uterus has three layers: perimetrium (outer serous membrane), myometrium (middle thick layer of smooth muscle), and endometrium (inner glandular layer). The endometrium undergoes cyclic changes during the menstrual cycle.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 45,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many sperms are formed from one primary spermatocyte?",
+      "options": ["1", "2", "4", "8"],
+      "correctAnswer": "C",
+      "explanation": "One primary spermatocyte (2n) undergoes meiosis I to form two secondary spermatocytes (n), which then undergo meiosis II to form four spermatids (n). Each spermatid differentiates into a sperm. So, 4 sperms from 1 primary spermatocyte.",
+      "difficulty": "EASY",
+      "topic": "Gametogenesis",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Leydig cells secrete:",
+      "options": ["Progesterone", "Testosterone", "FSH", "Estrogen"],
+      "correctAnswer": "B",
+      "explanation": "Leydig cells (interstitial cells) are present in the interstitial spaces between seminiferous tubules. They secrete testosterone (male sex hormone) in response to LH from the anterior pituitary.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Polyspermy is prevented by:",
+      "options": [
+        "Acrosomal reaction",
+        "Sperm capacitation",
+        "Formation of corona radiata",
+        "Zona reaction and cortical reaction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Polyspermy (entry of multiple sperms) is prevented by cortical reaction (release of cortical granules causing zona hardening) and zona reaction (changes in zona pellucida that block additional sperm binding).",
+      "difficulty": "MEDIUM",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The correct sequence of male reproductive tract is:",
+      "options": [
+        "Testis → Epididymis → Vasa efferentia → Rete testis → Vas deferens",
+        "Testis → Vas deferens → Vasa efferentia → Rete testis → Epididymis",
+        "Testis → Vasa efferentia → Rete testis → Epididymis → Vas deferens",
+        "Testis → Rete testis → Vasa efferentia → Epididymis → Vas deferens"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sperm travel from seminiferous tubules → rete testis → vasa efferentia → epididymis → vas deferens → ejaculatory duct → urethra. This sequence is important for sperm maturation and transport.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Spermatogenesis begins at:",
+      "options": ["Birth", "Childhood", "Puberty", "Adulthood"],
+      "correctAnswer": "C",
+      "explanation": "Spermatogenesis begins at puberty due to the increased secretion of GnRH from the hypothalamus, which stimulates release of gonadotropins (FSH and LH) from the anterior pituitary.",
+      "difficulty": "EASY",
+      "topic": "Gametogenesis",
+      "ncertPage": 46,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mammary glands are modified:",
+      "options": ["Salivary glands", "Endocrine glands", "Sebaceous glands", "Sweat glands"],
+      "correctAnswer": "D",
+      "explanation": "Mammary glands are modified sweat glands (apocrine glands). Each mammary gland contains 15-20 lobes, each with many alveoli that secrete milk. The mammary lobes are separated by adipose tissue.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 46,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "After ovulation, the ruptured follicle transforms into:",
+      "options": ["Graafian follicle", "Corpus luteum", "Corpus albicans", "Primary follicle"],
+      "correctAnswer": "B",
+      "explanation": "After ovulation, the ruptured Graafian follicle transforms into corpus luteum under the influence of LH. Corpus luteum secretes progesterone (mainly) and some estrogen to prepare the endometrium for implantation.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which cells provide nutrition to developing sperms?",
+      "options": ["Leydig cells", "Sertoli cells", "Spermatogonia", "Spermatocytes"],
+      "correctAnswer": "B",
+      "explanation": "Sertoli cells (nurse cells) provide nutrition and support to developing sperms. They also phagocytose residual cytoplasm during spermiogenesis, secrete inhibin, and form the blood-testis barrier.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The blastocyst has:",
+      "options": [
+        "Only trophoblast cells",
+        "Three germ layers",
+        "No cavity",
+        "An outer trophoblast and inner cell mass"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The blastocyst consists of an outer layer of cells called trophoblast (which forms placenta) and an inner cell mass (which forms the embryo). It also has a fluid-filled cavity called blastocoel.",
+      "difficulty": "MEDIUM",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The first milk secreted after childbirth is called:",
+      "options": ["Fore milk", "Hind milk", "Mature milk", "Colostrum"],
+      "correctAnswer": "D",
+      "explanation": "Colostrum is the first milk secreted in the first few days after delivery. It is yellowish, rich in proteins (especially antibodies like IgA), and provides passive immunity to the newborn. It is lower in fat than mature milk.",
+      "difficulty": "EASY",
+      "topic": "Lactation",
+      "ncertPage": 53,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a function of the placenta?",
+      "options": [
+        "Gas exchange",
+        "Direct mixing of maternal and fetal blood",
+        "Supply of nutrients",
+        "Removal of waste products"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The placenta facilitates exchange between mother and fetus without direct mixing of blood. Nutrients, gases, and waste products are exchanged by diffusion across the placental barrier. Direct blood mixing would cause immune rejection.",
+      "difficulty": "MEDIUM",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which placental hormone has properties similar to growth hormone?",
+      "options": ["Human placental lactogen (hPL)", "Estrogen", "Progesterone", "hCG"],
+      "correctAnswer": "A",
+      "explanation": "Human placental lactogen (hPL), also called human chorionic somatomammotropin, has properties similar to growth hormone and prolactin. It promotes fetal growth and prepares mammary glands for lactation.",
+      "difficulty": "MEDIUM",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The stages of labor in correct sequence are:",
+      "options": [
+        "Expulsion, dilation, placental stage",
+        "Placental stage, dilation, expulsion",
+        "Dilation, placental stage, expulsion",
+        "Dilation, expulsion, placental stage"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The three stages of labor are: (1) Dilation stage - cervix dilates to about 10 cm, (2) Expulsion stage - baby is delivered through birth canal, (3) Placental stage - placenta is expelled ('afterbirth').",
+      "difficulty": "MEDIUM",
+      "topic": "Parturition",
+      "ncertPage": 53,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The scrotum maintains the testes at a temperature that is:",
+      "options": [
+        "2-2.5°C higher than body temperature",
+        "Same as body temperature",
+        "2-2.5°C lower than body temperature",
+        "5°C lower than body temperature"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The scrotum maintains the testes at 2-2.5°C lower than normal body temperature (about 34-35°C instead of 37°C). This lower temperature is essential for normal spermatogenesis. The dartos and cremaster muscles regulate scrotal temperature.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The 16-celled embryo is called:",
+      "options": ["Blastula", "Morula", "Gastrula", "Blastocyst"],
+      "correctAnswer": "B",
+      "explanation": "The morula is a 16-celled solid ball of cells formed by cleavage divisions. The morula continues to divide and transforms into the blastocyst, which has a cavity (blastocoel) and an inner cell mass.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Fertilization usually occurs in the:",
+      "options": [
+        "Infundibulum",
+        "Uterus",
+        "Isthmus of fallopian tube",
+        "Ampulla of fallopian tube"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Fertilization typically occurs in the ampulla of the fallopian tube, which is the wider part of the oviduct. The ampulla-isthmus junction is where the sperm usually meets the ovum.",
+      "difficulty": "EASY",
+      "topic": "Female Reproductive System",
+      "ncertPage": 45,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The release of mature sperms from Sertoli cells is called:",
+      "options": ["Spermiation", "Capacitation", "Spermatogenesis", "Spermiogenesis"],
+      "correctAnswer": "A",
+      "explanation": "Spermiation is the release of mature sperms from Sertoli cells into the lumen of seminiferous tubules. After spermiation, sperms are transported to epididymis for maturation and storage.",
+      "difficulty": "EASY",
+      "topic": "Gametogenesis",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The outer layer of the ovary is called:",
+      "options": ["Cortex", "Stroma", "Medulla", "Germinal epithelium"],
+      "correctAnswer": "D",
+      "explanation": "The ovary is covered by a thin epithelium called germinal epithelium. Below this is the ovarian stroma, which is differentiated into outer cortex (containing ovarian follicles) and inner medulla (with blood vessels and nerves).",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "At birth, each ovary contains approximately:",
+      "options": [
+        "1 million primary follicles",
+        "2 million primary follicles",
+        "100,000 primary follicles",
+        "500,000 primary follicles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At birth, each ovary contains about 2 million primary follicles. By puberty, this number reduces to about 60,000-80,000 in each ovary. Only about 400-500 follicles mature during a woman's reproductive life.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Oogenesis begins in the female:",
+      "options": ["After menarche", "At puberty", "During fetal development", "At birth"],
+      "correctAnswer": "C",
+      "explanation": "Oogenesis begins during fetal development. Primary oocytes are formed during embryonic development and enter meiosis I, but are arrested at prophase I until puberty. Oogenesis is completed only after fertilization.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A Graafian follicle contains:",
+      "options": ["Secondary oocyte", "Oogonium", "Ovum", "Primary oocyte"],
+      "correctAnswer": "A",
+      "explanation": "A mature Graafian follicle contains a secondary oocyte (arrested at metaphase II) along with follicular fluid (antrum) and surrounding layers of granulosa and theca cells. The secondary oocyte is released during ovulation.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The finger-like projections of trophoblast are called:",
+      "options": ["Villi", "Fimbriae", "Chorionic villi", "Microvilli"],
+      "correctAnswer": "C",
+      "explanation": "After implantation, the trophoblast develops finger-like projections called chorionic villi. These villi contain fetal blood vessels and are surrounded by maternal blood, allowing exchange of materials between mother and fetus.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hormone that maintains pregnancy by keeping the endometrium intact is:",
+      "options": ["FSH", "LH", "Progesterone", "GnRH"],
+      "correctAnswer": "C",
+      "explanation": "Progesterone (initially from corpus luteum, later from placenta) maintains pregnancy by keeping the endometrium thick, glandular, and well-vascularized. It also suppresses uterine contractions and maternal immune response to the fetus.",
+      "difficulty": "EASY",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Bartholin's glands are present in:",
+      "options": [
+        "Male reproductive system",
+        "Female reproductive system",
+        "Both male and female",
+        "Neither male nor female"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bartholin's glands (greater vestibular glands) are present in females, located on either side of the vaginal opening. They secrete mucus for lubrication during intercourse. They are homologous to bulbourethral glands in males.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 46,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Quickening refers to:",
+      "options": [
+        "First fetal movements felt by mother",
+        "Onset of labor",
+        "First breath of baby",
+        "First heartbeat of fetus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Quickening refers to the first movements of the fetus felt by the mother. This typically occurs between 16-20 weeks of pregnancy (during the second trimester) when the fetus has developed sufficiently to produce detectable movements.",
+      "difficulty": "EASY",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The hormone that stimulates uterine contractions during labor is:",
+      "options": ["Prolactin", "Estrogen", "Progesterone", "Oxytocin"],
+      "correctAnswer": "D",
+      "explanation": "Oxytocin (from the posterior pituitary) stimulates powerful uterine contractions during labor. It works in a positive feedback mechanism - contractions stimulate more oxytocin release, which causes stronger contractions.",
+      "difficulty": "EASY",
+      "topic": "Parturition",
+      "ncertPage": 53,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The acrosomal reaction involves:",
+      "options": [
+        "Release of enzymes from acrosome",
+        "Capacitation of sperm",
+        "Formation of zona pellucida",
+        "Sperm maturation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The acrosomal reaction involves the release of hydrolytic enzymes (hyaluronidase and acrosin) from the sperm acrosome. These enzymes help the sperm penetrate the corona radiata and zona pellucida of the ovum.",
+      "difficulty": "MEDIUM",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Relaxin hormone during pregnancy:",
+      "options": [
+        "Relaxes pelvic ligaments and cervix",
+        "Stimulates milk production",
+        "Maintains corpus luteum",
+        "Stimulates uterine contractions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Relaxin (secreted by corpus luteum and placenta) relaxes the pubic symphysis and softens the cervix near the end of pregnancy, preparing the birth canal for delivery. It also inhibits uterine contractions until term.",
+      "difficulty": "MEDIUM",
+      "topic": "Pregnancy",
+      "ncertPage": 52,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The transformation of spermatids into spermatozoa is called:",
+      "options": ["Spermiogenesis", "Sperm capacitation", "Spermatogenesis", "Spermiation"],
+      "correctAnswer": "A",
+      "explanation": "Spermiogenesis is the transformation of spermatids (rounded cells) into spermatozoa (mature sperms with head, middle piece, and tail). This involves loss of cytoplasm, formation of acrosome, and development of flagellum.",
+      "difficulty": "EASY",
+      "topic": "Gametogenesis",
+      "ncertPage": 47,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sperm maturation and storage occurs in:",
+      "options": ["Seminiferous tubules", "Vas deferens", "Epididymis", "Seminal vesicle"],
+      "correctAnswer": "C",
+      "explanation": "The epididymis is a highly coiled tube where sperms undergo maturation (acquire motility and fertilizing capacity) and are stored. It is about 6 meters long when uncoiled.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The three germ layers of the embryo are:",
+      "options": [
+        "Ectoderm, mesoderm, endoderm",
+        "Amnion, chorion, allantois",
+        "Morula, blastula, gastrula",
+        "Trophoblast, inner cell mass, blastocoel"
+      ],
+      "correctAnswer": "A",
+      "explanation": "During gastrulation, the inner cell mass differentiates into three primary germ layers: ectoderm (outer), mesoderm (middle), and endoderm (inner). These layers give rise to all tissues and organs of the body.",
+      "difficulty": "EASY",
+      "topic": "Embryonic Development",
+      "ncertPage": 51,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which accessory gland contributes about 60% of semen volume?",
+      "options": ["Prostate gland", "Seminal vesicles", "Bulbourethral glands", "Cowper's glands"],
+      "correctAnswer": "B",
+      "explanation": "Seminal vesicles contribute about 60% of the total semen volume. Their secretion is rich in fructose (energy source for sperms), prostaglandins, and other nutrients.",
+      "difficulty": "MEDIUM",
+      "topic": "Male Reproductive System",
+      "ncertPage": 43,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The hormone that stimulates milk production is:",
+      "options": ["Prolactin", "Estrogen", "Progesterone", "Oxytocin"],
+      "correctAnswer": "A",
+      "explanation": "Prolactin (from the anterior pituitary) stimulates milk production (lactogenesis) in the mammary glands. Suckling by the baby stimulates prolactin secretion through a neuroendocrine reflex.",
+      "difficulty": "EASY",
+      "topic": "Lactation",
+      "ncertPage": 53,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Ovulation typically occurs on day:",
+      "options": ["5", "10", "14", "21"],
+      "correctAnswer": "C",
+      "explanation": "In a typical 28-day cycle, ovulation occurs around day 14, triggered by a surge in LH (luteinizing hormone). The LH surge causes the mature Graafian follicle to rupture and release the secondary oocyte.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The male reproductive system consists of a pair of testes located in the:",
+      "options": ["Inguinal canal", "Abdominal cavity", "Pelvic cavity", "Scrotal sac"],
+      "correctAnswer": "D",
+      "explanation": "The testes are located in the scrotal sac (scrotum), which is a pouch of skin hanging outside the abdominal cavity. This location maintains the testes at 2-2.5°C lower than body temperature, which is essential for spermatogenesis.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 42,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Capacitation of sperm occurs in:",
+      "options": [
+        "Vas deferens",
+        "Female reproductive tract",
+        "Seminiferous tubules",
+        "Epididymis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Capacitation is the final maturation process of sperm that occurs in the female reproductive tract (uterus and fallopian tubes). It involves changes in the sperm plasma membrane that enable it to undergo acrosomal reaction and fertilize the egg.",
+      "difficulty": "MEDIUM",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The structure released from the ovary during ovulation is:",
+      "options": ["Oogonium", "Primary oocyte", "Secondary oocyte", "Ovum"],
+      "correctAnswer": "C",
+      "explanation": "During ovulation, a secondary oocyte (arrested at metaphase II) along with zona pellucida and corona radiata is released from the Graafian follicle. It is not yet a mature ovum.",
+      "difficulty": "MEDIUM",
+      "topic": "Gametogenesis",
+      "ncertPage": 48,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The proliferative phase of the menstrual cycle is characterized by:",
+      "options": [
+        "Secretion from endometrial glands",
+        "Ovulation",
+        "Shedding of endometrium",
+        "Regeneration and thickening of endometrium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The proliferative (follicular) phase occurs from days 6-13. Under the influence of estrogen from growing follicles, the endometrium regenerates and thickens, preparing for possible implantation.",
+      "difficulty": "MEDIUM",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The clitoris is homologous to:",
+      "options": ["Testis", "Scrotum", "Penis", "Prostate gland"],
+      "correctAnswer": "C",
+      "explanation": "The clitoris in females is homologous (developmentally equivalent) to the penis in males. Both develop from the same embryonic structure (genital tubercle) and have similar erectile tissue.",
+      "difficulty": "MEDIUM",
+      "topic": "Female Reproductive System",
+      "ncertPage": 46,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Corpus luteum degenerates if fertilization does not occur, forming:",
+      "options": ["Primary follicle", "Corpus albicans", "Secondary follicle", "Graafian follicle"],
+      "correctAnswer": "B",
+      "explanation": "If fertilization does not occur, corpus luteum degenerates after about 14 days and forms a white scar called corpus albicans. This leads to a fall in progesterone and estrogen, triggering menstruation.",
+      "difficulty": "EASY",
+      "topic": "Menstrual Cycle",
+      "ncertPage": 49,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The zona pellucida is:",
+      "options": [
+        "The nucleus of the ovum",
+        "A layer of follicular cells",
+        "The outer membrane of the ovum",
+        "A glycoprotein layer surrounding the ovum"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The zona pellucida is a glycoprotein layer surrounding the secondary oocyte. It plays a role in sperm binding (through ZP3 receptors), blocks polyspermy after fertilization, and protects the early embryo.",
+      "difficulty": "EASY",
+      "topic": "Fertilization",
+      "ncertPage": 50,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A mature sperm has:",
+      "options": [
+        "Head, neck, and tail only",
+        "Head, neck, middle piece, and tail",
+        "Head and tail only",
+        "Acrosome, nucleus, and tail"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A mature sperm has four parts: head (with acrosome and nucleus), neck (with proximal centriole), middle piece (with mitochondria arranged spirally), and tail (for motility). Total length is about 60 micrometers.",
+      "difficulty": "EASY",
+      "topic": "Male Reproductive System",
+      "ncertPage": 44,
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

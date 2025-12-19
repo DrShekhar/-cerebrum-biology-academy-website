@@ -1,0 +1,1142 @@
+{
+  "ncertClass": 11,
+  "chapter": 10,
+  "chapterName": "Cell Cycle and Cell Division",
+  "questions": [
+    {
+      "question": "The sequence of events by which a cell duplicates its genome, synthesises other constituents, and eventually divides into two daughter cells is termed:",
+      "options": ["Cell division", "Cell cycle", "Mitosis", "Cytokinesis"],
+      "correctAnswer": "B",
+      "explanation": "The sequence of events by which a cell duplicates its genome, synthesises the other constituents of the cell and eventually divides into two daughter cells is termed cell cycle. (NCERT Page 120)",
+      "difficulty": "EASY",
+      "topic": "Cell Cycle",
+      "ncertPage": 120,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Human cells in culture divide once in approximately every:",
+      "options": ["12 hours", "24 hours", "48 hours", "90 minutes"],
+      "correctAnswer": "B",
+      "explanation": "A typical eukaryotic cell cycle is illustrated by human cells in culture. These cells divide once in approximately every 24 hours. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Cycle",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Yeast can progress through the cell cycle in only about:",
+      "options": ["24 hours", "12 hours", "90 minutes", "6 hours"],
+      "correctAnswer": "C",
+      "explanation": "The duration of cell cycle can vary from organism to organism. Yeast, for example, can progress through the cell cycle in only about 90 minutes. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Cycle",
+      "ncertPage": 121,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The cell cycle is divided into two basic phases:",
+      "options": [
+        "G1 phase and S phase",
+        "Interphase and M Phase",
+        "Karyokinesis and Cytokinesis",
+        "Prophase and Telophase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cell cycle is divided into two basic phases: Interphase and M Phase (Mitosis phase). (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "Cell Cycle Phases",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The M Phase represents the phase when:",
+      "options": [
+        "DNA replication occurs",
+        "Cell growth occurs",
+        "Actual cell division or mitosis occurs",
+        "Protein synthesis occurs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The M Phase represents the phase when the actual cell division or mitosis occurs and the interphase represents the phase between two successive M phases. (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "M Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In the 24 hour average duration of cell cycle of a human cell, cell division proper lasts for only about:",
+      "options": ["30 minutes", "1 hour", "3 hours", "6 hours"],
+      "correctAnswer": "B",
+      "explanation": "In the 24 hour average duration of cell cycle of a human cell, cell division proper lasts for only about an hour. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Cycle Duration",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The interphase lasts more than what percentage of the duration of cell cycle?",
+      "options": ["50%", "75%", "95%", "99%"],
+      "correctAnswer": "C",
+      "explanation": "The interphase lasts more than 95% of the duration of cell cycle. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Cycle Duration",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The M Phase starts with nuclear division called:",
+      "options": ["Cytokinesis", "Karyokinesis", "Interkinesis", "Synapsis"],
+      "correctAnswer": "B",
+      "explanation": "The M Phase starts with the nuclear division, corresponding to the separation of daughter chromosomes (karyokinesis) and usually ends with division of cytoplasm (cytokinesis). (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "M Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Division of cytoplasm at the end of cell division is called:",
+      "options": ["Karyokinesis", "Cytokinesis", "Mitosis", "Meiosis"],
+      "correctAnswer": "B",
+      "explanation": "The M Phase starts with the nuclear division (karyokinesis) and usually ends with division of cytoplasm (cytokinesis). (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "Cytokinesis",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The interphase is divided into three further phases. These are:",
+      "options": [
+        "Prophase, Metaphase, Anaphase",
+        "G1, S, G2",
+        "Leptotene, Zygotene, Pachytene",
+        "Meiosis I, Interkinesis, Meiosis II"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The interphase is divided into three further phases: G1 phase (Gap 1), S phase (Synthesis), and G2 phase (Gap 2). (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "Interphase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "G1 phase corresponds to the interval between:",
+      "options": [
+        "S phase and G2 phase",
+        "Mitosis and initiation of DNA replication",
+        "DNA replication and mitosis",
+        "Two consecutive cell divisions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "G1 phase corresponds to the interval between mitosis and initiation of DNA replication. During G1 phase, the cell is metabolically active and continuously grows but does not replicate its DNA. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "G1 Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During which phase does DNA synthesis or replication take place?",
+      "options": ["G1 phase", "S phase", "G2 phase", "M phase"],
+      "correctAnswer": "B",
+      "explanation": "S or synthesis phase marks the period during which DNA synthesis or replication takes place. During this time the amount of DNA per cell doubles. (NCERT Page 121)",
+      "difficulty": "EASY",
+      "topic": "S Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "If the initial amount of DNA is denoted as 2C, after S phase it becomes:",
+      "options": ["2C", "4C", "C", "8C"],
+      "correctAnswer": "B",
+      "explanation": "During S phase, the amount of DNA per cell doubles. If the initial amount of DNA is denoted as 2C then it increases to 4C. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "DNA Content",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "After S phase, if a cell had diploid (2n) chromosomes at G1, the number of chromosomes:",
+      "options": ["Doubles to 4n", "Remains 2n", "Reduces to n", "Becomes 8n"],
+      "correctAnswer": "B",
+      "explanation": "There is no increase in the chromosome number after S phase; if the cell had diploid or 2n number of chromosomes at G1, even after S phase the number of chromosomes remains the same, i.e., 2n. (NCERT Page 121)",
+      "difficulty": "HARD",
+      "topic": "Chromosome Number",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During which phase does the centriole duplicate in animal cells?",
+      "options": ["G1 phase", "S phase", "G2 phase", "M phase"],
+      "correctAnswer": "B",
+      "explanation": "In animal cells, during the S phase, DNA replication begins in the nucleus, and the centriole duplicates in the cytoplasm. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "S Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During G2 phase, what is synthesised in preparation for mitosis?",
+      "options": ["DNA", "RNA only", "Proteins", "Lipids only"],
+      "correctAnswer": "C",
+      "explanation": "During the G2 phase, proteins are synthesised in preparation for mitosis while cell growth continues. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "G2 Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cells that do not divide further exit G1 phase to enter an inactive stage called:",
+      "options": ["S phase", "G2 phase", "Quiescent stage (G0)", "M phase"],
+      "correctAnswer": "C",
+      "explanation": "Cells that do not divide further exit G1 phase to enter an inactive stage called quiescent stage (G0) of the cell cycle. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "G0 Phase",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Cells in G0 stage:",
+      "options": [
+        "Are dead",
+        "Remain metabolically active but no longer proliferate",
+        "Continue to divide",
+        "Have no DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cells in G0 stage remain metabolically active but no longer proliferate unless called on to do so depending on the requirement of the organism. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "G0 Phase",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which cells in adult animals do not appear to exhibit division?",
+      "options": ["Skin cells", "Heart cells", "Blood cells", "Gut lining cells"],
+      "correctAnswer": "B",
+      "explanation": "Some cells in the adult animals do not appear to exhibit division (e.g., heart cells). (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Division",
+      "ncertPage": 122,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In animals, mitotic cell division is only seen in:",
+      "options": ["Haploid cells only", "Diploid somatic cells", "Gametes only", "Germ cells only"],
+      "correctAnswer": "B",
+      "explanation": "In animals, mitotic cell division is only seen in the diploid somatic cells. However, there are few exceptions to this where haploid cells divide by mitosis, for example, male honey bees. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Mitosis",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "An example where haploid cells divide by mitosis is:",
+      "options": ["Human males", "Female honey bees", "Male honey bees", "Worker bees"],
+      "correctAnswer": "C",
+      "explanation": "In animals, mitotic cell division is only seen in the diploid somatic cells. However, there are few exceptions where haploid cells divide by mitosis, for example, male honey bees. (NCERT Page 122)",
+      "difficulty": "HARD",
+      "topic": "Mitosis",
+      "ncertPage": 122,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Since the number of chromosomes in the parent and progeny cells is the same, mitosis is also called:",
+      "options": [
+        "Reduction division",
+        "Equational division",
+        "Reductional division",
+        "Meiotic division"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Since the number of chromosomes in the parent and progeny cells is the same, mitosis is also called as equational division. (NCERT Page 122)",
+      "difficulty": "EASY",
+      "topic": "Mitosis",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Karyokinesis involves how many stages?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctAnswer": "C",
+      "explanation": "Though for convenience mitosis has been divided into four stages of nuclear division (karyokinesis): Prophase, Metaphase, Anaphase, and Telophase. (NCERT Page 122)",
+      "difficulty": "EASY",
+      "topic": "Karyokinesis",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The correct sequence of stages in karyokinesis is:",
+      "options": [
+        "Metaphase, Prophase, Anaphase, Telophase",
+        "Prophase, Metaphase, Anaphase, Telophase",
+        "Prophase, Anaphase, Metaphase, Telophase",
+        "Telophase, Anaphase, Metaphase, Prophase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Karyokinesis involves the following four stages: Prophase, Metaphase, Anaphase, and Telophase. (NCERT Page 122)",
+      "difficulty": "EASY",
+      "topic": "Karyokinesis",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prophase is the first stage of karyokinesis and follows which phases of interphase?",
+      "options": ["G1 phase only", "S and G2 phases", "G1 and S phases", "G2 phase only"],
+      "correctAnswer": "B",
+      "explanation": "Prophase which is the first stage of karyokinesis of mitosis follows the S and G2 phases of interphase. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 122,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Prophase is marked by:",
+      "options": [
+        "Alignment of chromosomes at equator",
+        "Separation of chromatids",
+        "Initiation of condensation of chromosomal material",
+        "Formation of nuclear envelope"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Prophase is marked by the initiation of condensation of chromosomal material. The chromosomal material becomes untangled during the process of chromatin condensation. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During prophase, the centrosome moves towards:",
+      "options": [
+        "The center of the cell",
+        "Opposite poles of the cell",
+        "The equator",
+        "The nucleus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The centrosome, which had undergone duplication during S phase of interphase, now begins to move towards opposite poles of the cell. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During prophase, chromosomes are seen to be composed of:",
+      "options": [
+        "Single chromatid",
+        "Two chromatids attached at centromere",
+        "Four chromatids",
+        "Multiple chromatids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chromosomes are seen to be composed of two chromatids attached together at the centromere. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Microtubules radiating from centrosome are called:",
+      "options": ["Spindle fibres", "Asters", "Centrioles", "Kinetochores"],
+      "correctAnswer": "B",
+      "explanation": "Each centrosome radiates out microtubules called asters. The two asters together with spindle fibres forms mitotic apparatus. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Mitotic Apparatus",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At the end of prophase, which of the following is NOT visible under microscope?",
+      "options": ["Chromosomes", "Spindle fibres", "Nucleolus", "Chromatids"],
+      "correctAnswer": "C",
+      "explanation": "Cells at the end of prophase, when viewed under the microscope, do not show golgi complexes, endoplasmic reticulum, nucleolus and the nuclear envelope. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The complete disintegration of the nuclear envelope marks the start of:",
+      "options": ["Prophase", "Metaphase", "Anaphase", "Telophase"],
+      "correctAnswer": "B",
+      "explanation": "The complete disintegration of the nuclear envelope marks the start of the second phase of mitosis (metaphase), hence the chromosomes are spread through the cytoplasm of the cell. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Metaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stage at which morphology of chromosomes is most easily studied is:",
+      "options": ["Prophase", "Metaphase", "Anaphase", "Telophase"],
+      "correctAnswer": "B",
+      "explanation": "By metaphase stage, condensation of chromosomes is completed and they can be observed clearly under the microscope. This then, is the stage at which morphology of chromosomes is most easily studied. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Metaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At metaphase, the chromosome is made up of:",
+      "options": [
+        "Single chromatid",
+        "Two sister chromatids held by centromere",
+        "Four chromatids",
+        "Dispersed chromatin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At this stage, metaphase chromosome is made up of two sister chromatids, which are held together by the centromere. (NCERT Page 123)",
+      "difficulty": "EASY",
+      "topic": "Metaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Small disc-shaped structures at the surface of centromeres are called:",
+      "options": ["Centrioles", "Asters", "Kinetochores", "Spindle poles"],
+      "correctAnswer": "C",
+      "explanation": "Small disc-shaped structures at the surface of the centromeres are called kinetochores. These structures serve as the sites of attachment of spindle fibres to the chromosomes. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Kinetochore",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The plane of alignment of chromosomes at metaphase is referred to as:",
+      "options": ["Spindle equator", "Metaphase plate", "Cell plate", "Equatorial plate"],
+      "correctAnswer": "B",
+      "explanation": "The plane of alignment of the chromosomes at metaphase is referred to as the metaphase plate. (NCERT Page 123)",
+      "difficulty": "EASY",
+      "topic": "Metaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At metaphase, each chromatid of a chromosome is connected by its kinetochore to spindle fibres from:",
+      "options": ["Same pole", "Both poles", "Opposite pole from sister chromatid", "No pole"],
+      "correctAnswer": "C",
+      "explanation": "At metaphase, one chromatid of each chromosome is connected by its kinetochore to spindle fibres from one pole and its sister chromatid connected by its kinetochore to spindle fibres from the opposite pole. (NCERT Page 123)",
+      "difficulty": "HARD",
+      "topic": "Metaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At the onset of anaphase, each chromosome arranged at the metaphase plate:",
+      "options": [
+        "Condenses further",
+        "Splits simultaneously",
+        "Moves to one pole",
+        "Forms bivalents"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At the onset of anaphase, each chromosome arranged at the metaphase plate is split simultaneously and the two daughter chromatids begin their migration towards the two opposite poles. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During anaphase, as chromosomes move from equatorial plate, which part leads the movement?",
+      "options": ["Chromosome arms", "Centromere", "Telomere", "Chromatid"],
+      "correctAnswer": "B",
+      "explanation": "As each chromosome moves away from the equatorial plate, the centromere of each chromosome remains directed towards the pole and hence at the leading edge, with the arms of the chromosome trailing behind. (NCERT Page 123)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase",
+      "ncertPage": 123,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Anaphase is characterised by:",
+      "options": [
+        "Chromosomes condensing",
+        "Centromeres splitting and chromatids separating",
+        "Nuclear envelope forming",
+        "Chromosomes pairing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Anaphase stage is characterised by the following key events: Centromeres split and chromatids separate; Chromatids move to opposite poles. (NCERT Page 124)",
+      "difficulty": "EASY",
+      "topic": "Anaphase",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At the beginning of telophase, chromosomes that have reached their respective poles:",
+      "options": [
+        "Condense further",
+        "Decondense and lose their individuality",
+        "Remain compact",
+        "Begin replication"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At the beginning of the final stage of karyokinesis, i.e., telophase, the chromosomes that have reached their respective poles decondense and lose their individuality. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Telophase",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During telophase, which of the following reforms?",
+      "options": [
+        "Spindle fibres",
+        "Asters",
+        "Nuclear envelope around chromosome clusters",
+        "Centromere"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During telophase, nuclear envelope develops around the chromosome clusters at each pole forming two daughter nuclei. Nucleolus, golgi complex and ER reform. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Telophase",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In animal cells, cytokinesis is achieved by:",
+      "options": [
+        "Cell plate formation",
+        "Appearance of furrow in plasma membrane",
+        "Dissolution of cell wall",
+        "Formation of new cell wall"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In an animal cell, cytokinesis is achieved by the appearance of a furrow in the plasma membrane. The furrow gradually deepens and ultimately joins in the centre dividing the cell cytoplasm into two. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Cytokinesis",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In plant cells, cytokinesis occurs by:",
+      "options": [
+        "Cleavage furrow from outside to inside",
+        "Cell plate formation from centre to periphery",
+        "Constriction of plasma membrane",
+        "Dissolution of middle lamella"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In plant cells, wall formation starts in the centre of the cell and grows outward to meet the existing lateral walls. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Cytokinesis",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The formation of new cell wall in plant cells begins with the formation of:",
+      "options": ["Secondary wall", "Primary wall", "Cell-plate", "Middle lamella"],
+      "correctAnswer": "C",
+      "explanation": "The formation of the new cell wall begins with the formation of a simple precursor, called the cell-plate that represents the middle lamella between the walls of two adjacent cells. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Cytokinesis",
+      "ncertPage": 124,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "When karyokinesis is not followed by cytokinesis, it leads to formation of:",
+      "options": ["Uninucleate cells", "Binucleate cells", "Syncytium", "Coenocyte"],
+      "correctAnswer": "C",
+      "explanation": "In some organisms karyokinesis is not followed by cytokinesis as a result of which multinucleate condition arises leading to the formation of syncytium (e.g., liquid endosperm in coconut). (NCERT Page 124)",
+      "difficulty": "HARD",
+      "topic": "Cytokinesis",
+      "ncertPage": 124,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An example of syncytium is:",
+      "options": ["Nerve cells", "Muscle cells", "Liquid endosperm in coconut", "Red blood cells"],
+      "correctAnswer": "C",
+      "explanation": "In some organisms karyokinesis is not followed by cytokinesis as a result of which multinucleate condition arises leading to the formation of syncytium (e.g., liquid endosperm in coconut). (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Syncytium",
+      "ncertPage": 124,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The growth of multicellular organisms is due to:",
+      "options": ["Meiosis", "Mitosis", "Amitosis", "Binary fission"],
+      "correctAnswer": "B",
+      "explanation": "Mitosis usually results in the production of diploid daughter cells with identical genetic complement. The growth of multicellular organisms is due to mitosis. (NCERT Page 125)",
+      "difficulty": "EASY",
+      "topic": "Significance of Mitosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A very significant contribution of mitosis is:",
+      "options": ["Genetic variation", "Cell repair", "Gamete formation", "Chromosome reduction"],
+      "correctAnswer": "B",
+      "explanation": "A very significant contribution of mitosis is cell repair. The cells of the upper layer of the epidermis, cells of the lining of the gut, and blood cells are being constantly replaced. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Mitosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Mitotic divisions in meristematic tissues result in:",
+      "options": [
+        "Limited growth",
+        "Continuous growth throughout plant life",
+        "Seasonal growth only",
+        "No growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mitotic divisions in the meristematic tissues – the apical and the lateral cambium, result in a continuous growth of plants throughout their life. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Mitosis",
+      "ncertPage": 125,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The specialised kind of cell division that reduces chromosome number by half is called:",
+      "options": ["Mitosis", "Amitosis", "Meiosis", "Binary fission"],
+      "correctAnswer": "C",
+      "explanation": "This specialised kind of cell division that reduces the chromosome number by half results in the production of haploid daughter cells. This kind of division is called meiosis. (NCERT Page 125)",
+      "difficulty": "EASY",
+      "topic": "Meiosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meiosis ensures production of:",
+      "options": [
+        "Diploid phase in life cycle",
+        "Haploid phase in life cycle",
+        "Polyploid cells",
+        "Aneuploid cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Meiosis ensures the production of haploid phase in the life cycle of sexually reproducing organisms whereas fertilisation restores the diploid phase. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Meiosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meiosis involves how many sequential cycles of nuclear and cell division?",
+      "options": ["One", "Two", "Three", "Four"],
+      "correctAnswer": "B",
+      "explanation": "Meiosis involves two sequential cycles of nuclear and cell division called meiosis I and meiosis II but only a single cycle of DNA replication. (NCERT Page 125)",
+      "difficulty": "EASY",
+      "topic": "Meiosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During meiosis, DNA replication occurs:",
+      "options": [
+        "Once before meiosis I",
+        "Twice, before each division",
+        "Once before meiosis II",
+        "Not at all"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Meiosis involves two sequential cycles of nuclear and cell division called meiosis I and meiosis II but only a single cycle of DNA replication. Meiosis I is initiated after the parental chromosomes have replicated at the S phase. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Meiosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "How many haploid cells are formed at the end of meiosis II?",
+      "options": ["One", "Two", "Four", "Eight"],
+      "correctAnswer": "C",
+      "explanation": "Four haploid cells are formed at the end of meiosis II. (NCERT Page 125)",
+      "difficulty": "EASY",
+      "topic": "Meiosis",
+      "ncertPage": 125,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prophase I of meiosis is subdivided into how many phases?",
+      "options": ["Three", "Four", "Five", "Six"],
+      "correctAnswer": "C",
+      "explanation": "Prophase of the first meiotic division has been further subdivided into the following five phases based on chromosomal behaviour: Leptotene, Zygotene, Pachytene, Diplotene and Diakinesis. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase I",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The correct sequence of stages in Prophase I is:",
+      "options": [
+        "Leptotene, Pachytene, Zygotene, Diplotene, Diakinesis",
+        "Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis",
+        "Zygotene, Leptotene, Pachytene, Diakinesis, Diplotene",
+        "Pachytene, Leptotene, Zygotene, Diplotene, Diakinesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prophase I is subdivided into Leptotene, Zygotene, Pachytene, Diplotene and Diakinesis. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase I",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During which stage of prophase I do chromosomes become gradually visible?",
+      "options": ["Zygotene", "Leptotene", "Pachytene", "Diplotene"],
+      "correctAnswer": "B",
+      "explanation": "During leptotene stage the chromosomes become gradually visible under the light microscope. The compaction of chromosomes continues throughout leptotene. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Leptotene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During zygotene, chromosomes start pairing together. This process is called:",
+      "options": ["Crossing over", "Synapsis", "Terminalisation", "Disjunction"],
+      "correctAnswer": "B",
+      "explanation": "During zygotene stage, chromosomes start pairing together and this process of association is called synapsis. Such paired chromosomes are called homologous chromosomes. (NCERT Page 126)",
+      "difficulty": "EASY",
+      "topic": "Zygotene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The complex structure formed during chromosome synapsis is called:",
+      "options": ["Bivalent", "Tetrad", "Synaptonemal complex", "Chiasmata"],
+      "correctAnswer": "C",
+      "explanation": "Electron micrographs of zygotene stage indicate that chromosome synapsis is accompanied by the formation of complex structure called synaptonemal complex. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Synaptonemal Complex",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The complex formed by a pair of synapsed homologous chromosomes is called:",
+      "options": ["Monad", "Dyad", "Bivalent", "Polyvalent"],
+      "correctAnswer": "C",
+      "explanation": "The complex formed by a pair of synapsed homologous chromosomes is called a bivalent or a tetrad. (NCERT Page 126)",
+      "difficulty": "EASY",
+      "topic": "Bivalent",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During pachytene, the four chromatids of each bivalent become distinct and appear as:",
+      "options": ["Dyads", "Monads", "Tetrads", "Hexads"],
+      "correctAnswer": "C",
+      "explanation": "During pachytene stage, the four chromatids of each bivalent chromosomes becomes distinct and clearly appear as tetrads. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Pachytene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Pachytene is characterised by the appearance of:",
+      "options": ["Synaptonemal complex", "Recombination nodules", "Chiasmata", "Nuclear envelope"],
+      "correctAnswer": "B",
+      "explanation": "Pachytene stage is characterised by the appearance of recombination nodules, the sites at which crossing over occurs between non-sister chromatids of the homologous chromosomes. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Pachytene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Crossing over is the exchange of genetic material between:",
+      "options": [
+        "Sister chromatids",
+        "Non-sister chromatids of homologous chromosomes",
+        "Non-homologous chromosomes",
+        "Different cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Crossing over is the exchange of genetic material between two homologous chromosomes. It occurs between non-sister chromatids of the homologous chromosomes. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Crossing Over",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The enzyme involved in crossing over is called:",
+      "options": ["Ligase", "Helicase", "Recombinase", "Polymerase"],
+      "correctAnswer": "C",
+      "explanation": "Crossing over is also an enzyme-mediated process and the enzyme involved is called recombinase. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Crossing Over",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Recombination between homologous chromosomes is completed by the end of:",
+      "options": ["Leptotene", "Zygotene", "Pachytene", "Diplotene"],
+      "correctAnswer": "C",
+      "explanation": "Recombination between homologous chromosomes is completed by the end of pachytene, leaving the chromosomes linked at the sites of crossing over. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Pachytene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The beginning of diplotene is recognised by:",
+      "options": [
+        "Synapsis",
+        "Condensation of chromosomes",
+        "Dissolution of synaptonemal complex",
+        "Formation of spindle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The beginning of diplotene is recognised by the dissolution of the synaptonemal complex and the tendency of the recombined homologous chromosomes to separate from each other except at the sites of crossovers. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Diplotene",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The X-shaped structures seen at the sites of crossing over are called:",
+      "options": ["Bivalents", "Tetrads", "Chiasmata", "Synaptonemal complex"],
+      "correctAnswer": "C",
+      "explanation": "During diplotene, homologous chromosomes separate except at the sites of crossovers. These X-shaped structures are called chiasmata. (NCERT Page 126)",
+      "difficulty": "EASY",
+      "topic": "Chiasmata",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In oocytes of some vertebrates, which stage of prophase I can last for months or years?",
+      "options": ["Leptotene", "Zygotene", "Pachytene", "Diplotene"],
+      "correctAnswer": "D",
+      "explanation": "In oocytes of some vertebrates, diplotene can last for months or years. (NCERT Page 126)",
+      "difficulty": "HARD",
+      "topic": "Diplotene",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The final stage of meiotic prophase I is:",
+      "options": ["Diplotene", "Diakinesis", "Pachytene", "Zygotene"],
+      "correctAnswer": "B",
+      "explanation": "The final stage of meiotic prophase I is diakinesis. This is marked by terminalisation of chiasmata. (NCERT Page 126)",
+      "difficulty": "EASY",
+      "topic": "Diakinesis",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Diakinesis is marked by:",
+      "options": [
+        "Formation of synaptonemal complex",
+        "Terminalisation of chiasmata",
+        "Appearance of recombination nodules",
+        "Synapsis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The final stage of meiotic prophase I is diakinesis. This is marked by terminalisation of chiasmata. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Diakinesis",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "By the end of diakinesis, which structures disappear?",
+      "options": [
+        "Chromosomes and spindle",
+        "Nucleolus and nuclear envelope",
+        "Centromere and kinetochore",
+        "Centrioles and asters"
+      ],
+      "correctAnswer": "B",
+      "explanation": "By the end of diakinesis, the nucleolus disappears and the nuclear envelope also breaks down. Diakinesis represents transition to metaphase. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Diakinesis",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During Metaphase I, which type of chromosomes align on the equatorial plate?",
+      "options": [
+        "Individual chromosomes",
+        "Bivalent chromosomes",
+        "Sister chromatids",
+        "Daughter chromosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Metaphase I: The bivalent chromosomes align on the equatorial plate. (NCERT Page 126)",
+      "difficulty": "MEDIUM",
+      "topic": "Metaphase I",
+      "ncertPage": 126,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During Anaphase I, what separates?",
+      "options": ["Sister chromatids", "Homologous chromosomes", "Centromeres", "Kinetochores"],
+      "correctAnswer": "B",
+      "explanation": "Anaphase I: The homologous chromosomes separate, while sister chromatids remain associated at their centromeres. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase I",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During Anaphase I, sister chromatids:",
+      "options": [
+        "Separate and move to opposite poles",
+        "Remain associated at their centromeres",
+        "Undergo crossing over",
+        "Condense further"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Anaphase I: The homologous chromosomes separate, while sister chromatids remain associated at their centromeres. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase I",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At the end of Telophase I, the resulting cells are called:",
+      "options": ["Monads", "Dyad of cells", "Tetrad of cells", "Octad of cells"],
+      "correctAnswer": "B",
+      "explanation": "Telophase I: The nuclear membrane and nucleolus reappear, cytokinesis follows and this is called as dyad of cells. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Telophase I",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The stage between the two meiotic divisions is called:",
+      "options": ["Interphase", "Interkinesis", "Cytokinesis", "Karyokinesis"],
+      "correctAnswer": "B",
+      "explanation": "The stage between the two meiotic divisions is called interkinesis and is generally short lived. (NCERT Page 127)",
+      "difficulty": "EASY",
+      "topic": "Interkinesis",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During interkinesis:",
+      "options": [
+        "DNA replication occurs",
+        "No DNA replication occurs",
+        "Chromosomes condense",
+        "Crossing over takes place"
+      ],
+      "correctAnswer": "B",
+      "explanation": "There is no replication of DNA during interkinesis. Interkinesis is followed by prophase II. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Interkinesis",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In contrast to meiosis I, meiosis II resembles:",
+      "options": ["Meiosis I", "Normal mitosis", "Amitosis", "Binary fission"],
+      "correctAnswer": "B",
+      "explanation": "In contrast to meiosis I, meiosis II resembles a normal mitosis. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Meiosis II",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meiosis II is initiated immediately after:",
+      "options": ["Interphase", "Cytokinesis of meiosis I", "Prophase I", "DNA replication"],
+      "correctAnswer": "B",
+      "explanation": "Meiosis II is initiated immediately after cytokinesis, usually before the chromosomes have fully elongated. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Meiosis II",
+      "ncertPage": 127,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "At Metaphase II, chromosomes align at the equator and microtubules attach to kinetochores of:",
+      "options": ["Bivalents", "Homologous chromosomes", "Sister chromatids", "Tetrads"],
+      "correctAnswer": "C",
+      "explanation": "Metaphase II: At this stage, the chromosomes align at the equator and the microtubules from opposite poles of the spindle get attached to the kinetochores of sister chromatids. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Metaphase II",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Anaphase II begins with:",
+      "options": [
+        "Pairing of chromosomes",
+        "Simultaneous splitting of centromere",
+        "Formation of spindle",
+        "Condensation of chromosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Anaphase II begins with the simultaneous splitting of the centromere of each chromosome (which was holding the sister chromatids together), allowing them to move toward opposite poles of the cell. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase II",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "At the end of meiosis, the resulting cells are called:",
+      "options": ["Dyad of cells", "Triad of cells", "Tetrad of cells", "Pentad of cells"],
+      "correctAnswer": "C",
+      "explanation": "Meiosis ends with telophase II; cytokinesis follows resulting in the formation of tetrad of cells i.e., four haploid daughter cells. (NCERT Page 128)",
+      "difficulty": "EASY",
+      "topic": "Telophase II",
+      "ncertPage": 128,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meiosis is the mechanism by which:",
+      "options": [
+        "Chromosome number doubles",
+        "Conservation of chromosome number is achieved across generations",
+        "Cells grow larger",
+        "Proteins are synthesised"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Meiosis is the mechanism by which conservation of specific chromosome number of each species is achieved across generations in sexually reproducing organisms. (NCERT Page 128)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Meiosis",
+      "ncertPage": 128,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Meiosis increases:",
+      "options": [
+        "Chromosome number",
+        "Genetic variability in the population",
+        "Cell size",
+        "DNA content"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Meiosis also increases the genetic variability in the population of organisms from one generation to the next. Variations are very important for the process of evolution. (NCERT Page 128)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Meiosis",
+      "ncertPage": 128,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The longest phase of meiosis I is:",
+      "options": ["Metaphase I", "Anaphase I", "Telophase I", "Prophase I"],
+      "correctAnswer": "D",
+      "explanation": "Prophase of the first meiotic division is typically longer and more complex when compared to prophase of mitosis. (NCERT Page 126)",
+      "difficulty": "EASY",
+      "topic": "Prophase I",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which phase of prophase I is relatively short-lived compared to pachytene?",
+      "options": ["Diplotene", "Diakinesis", "Leptotene and Zygotene", "All are equally long"],
+      "correctAnswer": "C",
+      "explanation": "The first two stages of prophase I (leptotene and zygotene) are relatively short-lived compared to the next stage that is pachytene. (NCERT Page 126)",
+      "difficulty": "HARD",
+      "topic": "Prophase I",
+      "ncertPage": 126,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cell growth results in disturbing the ratio between:",
+      "options": [
+        "DNA and RNA",
+        "Nucleus and cytoplasm",
+        "Mitochondria and chloroplasts",
+        "Proteins and lipids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cell growth results in disturbing the ratio between the nucleus and the cytoplasm. It therefore becomes essential for the cell to divide to restore the nucleo-cytoplasmic ratio. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Mitosis",
+      "ncertPage": 125,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cells of which of the following are being constantly replaced?",
+      "options": ["Heart", "Brain neurons", "Upper layer of epidermis", "All of these"],
+      "correctAnswer": "C",
+      "explanation": "The cells of the upper layer of the epidermis, cells of the lining of the gut, and blood cells are being constantly replaced through mitosis. (NCERT Page 125)",
+      "difficulty": "MEDIUM",
+      "topic": "Significance of Mitosis",
+      "ncertPage": 125,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Plants can show mitotic divisions in:",
+      "options": [
+        "Only diploid cells",
+        "Only haploid cells",
+        "Both haploid and diploid cells",
+        "Neither haploid nor diploid cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Against this (animals showing mitosis only in diploid somatic cells), the plants can show mitotic divisions in both haploid and diploid cells. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Mitosis",
+      "ncertPage": 122,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "At the time of cytoplasmic division, which organelles get distributed between daughter cells?",
+      "options": [
+        "Only mitochondria",
+        "Only plastids",
+        "Mitochondria and plastids",
+        "None are distributed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "At the time of cytoplasmic division, organelles like mitochondria and plastids get distributed between the two daughter cells. (NCERT Page 124)",
+      "difficulty": "MEDIUM",
+      "topic": "Cytokinesis",
+      "ncertPage": 124,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Onion root tip cells have 16 chromosomes. At G1 phase, the DNA content will be:",
+      "options": ["16C", "2C", "4C", "8C"],
+      "correctAnswer": "B",
+      "explanation": "If the content after M phase is 2C, then at G1 the DNA content remains 2C (before S phase DNA replication). (NCERT Page 122)",
+      "difficulty": "HARD",
+      "topic": "DNA Content",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "After S phase, if DNA content at G1 was 2C, the DNA content will be:",
+      "options": ["2C", "4C", "C", "8C"],
+      "correctAnswer": "B",
+      "explanation": "During S phase, DNA replication occurs. If the initial amount of DNA is 2C, then after S phase it increases to 4C. (NCERT Page 121)",
+      "difficulty": "MEDIUM",
+      "topic": "S Phase",
+      "ncertPage": 121,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The two asters together with spindle fibres form:",
+      "options": ["Centrosome", "Centriole", "Mitotic apparatus", "Nuclear envelope"],
+      "correctAnswer": "C",
+      "explanation": "Each centrosome radiates out microtubules called asters. The two asters together with spindle fibres forms mitotic apparatus. (NCERT Page 122)",
+      "difficulty": "MEDIUM",
+      "topic": "Mitotic Apparatus",
+      "ncertPage": 122,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The microtubules responsible for movement of sister chromatids during anaphase II are attached to:",
+      "options": ["Cell membrane", "Kinetochores", "Nuclear envelope", "Centrioles"],
+      "correctAnswer": "B",
+      "explanation": "Sister chromatids move toward opposite poles of the cell by shortening of microtubules attached to kinetochores. (NCERT Page 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Anaphase II",
+      "ncertPage": 127,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Prophase II is much simpler than:",
+      "options": ["Prophase of mitosis", "Prophase I", "Metaphase II", "Anaphase II"],
+      "correctAnswer": "B",
+      "explanation": "Interkinesis is followed by prophase II, a much simpler prophase than prophase I. (NCERT Page 127)",
+      "difficulty": "EASY",
+      "topic": "Prophase II",
+      "ncertPage": 127,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The nuclear membrane disappears by the end of:",
+      "options": [
+        "Prophase I only",
+        "Prophase II only",
+        "Both Prophase I and Prophase II",
+        "Neither"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The nuclear membrane disappears by the end of diakinesis (Prophase I) and also by the end of prophase II. (NCERT Page 126, 127)",
+      "difficulty": "MEDIUM",
+      "topic": "Prophase",
+      "ncertPage": 127,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

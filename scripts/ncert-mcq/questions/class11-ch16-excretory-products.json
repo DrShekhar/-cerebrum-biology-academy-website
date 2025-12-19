@@ -1,0 +1,1092 @@
+{
+  "ncertClass": 11,
+  "ncertChapter": 16,
+  "ncertChapterName": "Excretory Products and Their Elimination",
+  "questions": [
+    {
+      "question": "A fall in GFR activates JG cells to release:",
+      "options": ["Renin", "ADH", "Aldosterone", "ANF"],
+      "correctAnswer": "A",
+      "explanation": "A fall in GFR can activate the JG cells to release renin which can stimulate the glomerular blood flow and thereby the GFR back to normal. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "What percentage of the filtrate is reabsorbed by the renal tubules?",
+      "options": ["50%", "99%", "75%", "90%"],
+      "correctAnswer": "B",
+      "explanation": "A comparison of volume of filtrate formed per day (180 litres) with that of urine released (1.5 litres), suggests that nearly 99 per cent of the filtrate has to be reabsorbed by the renal tubules. (NCERT Page 209)",
+      "difficulty": "EASY",
+      "topic": "Urine Formation",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "JGA is formed by cellular modifications in:",
+      "options": [
+        "PCT and efferent arteriole",
+        "Loop of Henle and vasa recta",
+        "DCT and afferent arteriole",
+        "Collecting duct and renal vein"
+      ],
+      "correctAnswer": "C",
+      "explanation": "JGA is a special sensitive region formed by cellular modifications in the distal convoluted tubule and the afferent arteriole at the location of their contact. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "During glomerular filtration, which component of blood does NOT pass into the Bowman's capsule?",
+      "options": ["Glucose", "Amino acids", "Urea", "Proteins"],
+      "correctAnswer": "D",
+      "explanation": "Blood is filtered so finely through the glomerular membranes that almost all the constituents of the plasma except the proteins pass onto the lumen of the Bowman's capsule. (NCERT Page 208)",
+      "difficulty": "EASY",
+      "topic": "Urine Formation",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The functional unit of kidney is:",
+      "options": ["Nephron", "Neuron", "Nephridium", "Glomerulus"],
+      "correctAnswer": "A",
+      "explanation": "Each kidney has nearly one million complex tubular structures called nephrons, which are the functional units of the kidney. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glomerulus is formed by:",
+      "options": ["Efferent arteriole", "Afferent arteriole", "Renal vein", "Vasa recta"],
+      "correctAnswer": "B",
+      "explanation": "Glomerulus is a tuft of capillaries formed by the afferent arteriole - a fine branch of renal artery. Blood from the glomerulus is carried away by an efferent arteriole. (NCERT Page 207)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "GFR in a healthy individual is approximately:",
+      "options": ["25 ml/minute", "75 ml/minute", "125 ml/minute", "175 ml/minute"],
+      "correctAnswer": "C",
+      "explanation": "GFR in a healthy individual is approximately 125 ml/minute, i.e., 180 litres per day! (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Urine Formation",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "After hemodialysis, which substance is added to blood before returning it to the body?",
+      "options": ["More heparin", "Saline", "Glucose", "Anti-heparin"],
+      "correctAnswer": "D",
+      "explanation": "The cleared blood is pumped back to the body through a vein after adding anti-heparin to it. (NCERT Page 214)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The human excretory system consists of:",
+      "options": [
+        "A pair of kidneys, ureters, urinary bladder, and urethra",
+        "A pair of kidneys and urinary bladder only",
+        "Two pairs of kidneys and urethra",
+        "A kidney, two ureters, and urethra"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In humans, the excretory system consists of a pair of kidneys, one pair of ureters, a urinary bladder, and a urethra. (NCERT Page 206)",
+      "difficulty": "EASY",
+      "topic": "Human Excretory System",
+      "ncertPage": 206,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ANF causes:",
+      "options": ["Vasoconstriction", "Vasodilation", "Increased blood pressure", "Increased GFR"],
+      "correctAnswer": "B",
+      "explanation": "ANF can cause vasodilation (dilation of blood vessels) and thereby decrease the blood pressure. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is the most toxic nitrogenous waste?",
+      "options": ["Urea", "Uric acid", "Ammonia", "Creatinine"],
+      "correctAnswer": "C",
+      "explanation": "Ammonia is the most toxic form of nitrogenous waste and requires large amounts of water for its elimination. Uric acid is the least toxic and can be removed with minimum loss of water. (NCERT Page 205)",
+      "difficulty": "EASY",
+      "topic": "Modes of Excretion",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The broad funnel shaped space inner to the hilum of kidney with projections called calyces is:",
+      "options": ["Medulla", "Cortex", "Renal column", "Renal pelvis"],
+      "correctAnswer": "D",
+      "explanation": "Inner to the hilum is a broad funnel shaped space called the renal pelvis with projections called calyces. (NCERT Page 206)",
+      "difficulty": "MEDIUM",
+      "topic": "Human Excretory System",
+      "ncertPage": 206,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Filtration slits or slit pores are found in:",
+      "options": [
+        "Podocytes of Bowman's capsule",
+        "Glomerular capillaries",
+        "PCT cells",
+        "Loop of Henle"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The epithelial cells of Bowman's capsule called podocytes are arranged in an intricate manner so as to leave some minute spaces called filtration slits or slit pores. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In mammals, ammonia produced by metabolism is converted into urea in the:",
+      "options": ["Kidney", "Liver", "Spleen", "Pancreas"],
+      "correctAnswer": "B",
+      "explanation": "In ureotelic animals like mammals, ammonia produced by metabolism is converted into urea in the liver and released into the blood which is filtered and excreted out by the kidneys. (NCERT Page 205)",
+      "difficulty": "EASY",
+      "topic": "Modes of Excretion",
+      "ncertPage": 205,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The region of nephron where reabsorption is minimum is:",
+      "options": [
+        "PCT",
+        "Descending limb of loop of Henle",
+        "Ascending limb of loop of Henle",
+        "DCT"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Henle's Loop: Reabsorption is minimum in its ascending limb. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Malpighian tubules are the excretory structures of:",
+      "options": ["Earthworms", "Prawns", "Flatworms", "Most insects including cockroaches"],
+      "correctAnswer": "D",
+      "explanation": "Malpighian tubules are the excretory structures of most of the insects including cockroaches. They help in the removal of nitrogenous wastes and osmoregulation. (NCERT Page 206)",
+      "difficulty": "EASY",
+      "topic": "Excretory Structures",
+      "ncertPage": 206,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Our lungs remove approximately how much CO2 per minute?",
+      "options": ["200 ml", "100 ml", "300 ml", "400 ml"],
+      "correctAnswer": "A",
+      "explanation": "Our lungs remove large amounts of CO2 (approximately 200mL/minute) and also significant quantities of water every day. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Role of Other Organs",
+      "ncertPage": 213,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which segment of nephron allows passage of small amounts of urea into medullary interstitium?",
+      "options": ["PCT", "Collecting duct", "Loop of Henle", "DCT"],
+      "correctAnswer": "B",
+      "explanation": "The collecting duct allows passage of small amounts of urea into the medullary interstitium to keep up the osmolarity. (NCERT Page 210)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 210,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In hemodialysis, which anticoagulant is added to blood?",
+      "options": ["Warfarin", "Aspirin", "Heparin", "Citrate"],
+      "correctAnswer": "C",
+      "explanation": "Blood drained from a convenient artery is pumped into a dialysing unit after adding an anticoagulant like heparin. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "What percentage of electrolytes and water are reabsorbed by PCT?",
+      "options": ["30-40%", "50-60%", "90-95%", "70-80%"],
+      "correctAnswer": "D",
+      "explanation": "Nearly all of the essential nutrients, and 70-80 per cent of electrolytes and water are reabsorbed by the PCT segment. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The collecting duct extends from:",
+      "options": [
+        "Cortex to inner parts of medulla",
+        "Medulla to cortex",
+        "Pelvis to cortex",
+        "Calyx to cortex"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The collecting duct - this long duct extends from the cortex of the kidney to the inner parts of the medulla. (NCERT Page 210)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 210,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Each kidney has nearly how many nephrons?",
+      "options": ["One thousand", "One million", "Ten thousand", "One hundred thousand"],
+      "correctAnswer": "B",
+      "explanation": "Each kidney has nearly one million complex tubular structures called nephrons, which are the functional units. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Tubular secretion helps in the maintenance of:",
+      "options": [
+        "Only water balance",
+        "Only pH balance",
+        "Ionic and acid-base balance of body fluids",
+        "Only ionic balance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tubular secretion is an important step in urine formation as it helps in the maintenance of ionic and acid-base balance of body fluids. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Urine Formation",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The three main processes involved in urine formation are:",
+      "options": [
+        "Filtration, absorption, and excretion",
+        "Osmosis, diffusion, and active transport",
+        "Ingestion, digestion, and egestion",
+        "Glomerular filtration, reabsorption, and secretion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Urine formation involves three main processes namely, glomerular filtration, reabsorption and secretion, that takes place in different parts of the nephron. (NCERT Page 208)",
+      "difficulty": "EASY",
+      "topic": "Urine Formation",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The renal columns called Columns of Bertini are:",
+      "options": [
+        "Cortex extending between the medullary pyramids",
+        "Medullary pyramids projecting into cortex",
+        "Part of renal pelvis",
+        "Extensions of collecting ducts"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cortex extends in between the medullary pyramids as renal columns called Columns of Bertini. (NCERT Page 207)",
+      "difficulty": "MEDIUM",
+      "topic": "Kidney Structure",
+      "ncertPage": 207,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Antennal glands or green glands perform excretory function in:",
+      "options": ["Insects", "Crustaceans like prawns", "Annelids", "Flatworms"],
+      "correctAnswer": "B",
+      "explanation": "Antennal glands or green glands perform the excretory function in crustaceans like prawns. (NCERT Page 206)",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Structures",
+      "ncertPage": 206,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "On an average, how much urea is excreted out per day?",
+      "options": ["5-10 gm", "15-20 gm", "25-30 gm", "40-50 gm"],
+      "correctAnswer": "C",
+      "explanation": "On an average, 25-30 gm of urea is excreted out per day. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Micturition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The osmolarity gradient in the kidney is mainly caused by:",
+      "options": [
+        "Glucose and amino acids",
+        "Proteins and lipids",
+        "Water and carbon dioxide",
+        "NaCl and urea"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The osmolarity gradient (300-1200 mOsmolL-1) in the kidney is mainly caused by NaCl and urea. (NCERT Page 211)",
+      "difficulty": "MEDIUM",
+      "topic": "Counter Current Mechanism",
+      "ncertPage": 211,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Glomerulus along with Bowman's capsule is called:",
+      "options": [
+        "Malpighian body or renal corpuscle",
+        "Renal tubule",
+        "Loop of Henle",
+        "Collecting duct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glomerulus along with Bowman's capsule is called the Malpighian body or renal corpuscle. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The double walled cup-like structure which encloses the glomerulus is called:",
+      "options": ["PCT", "Bowman's capsule", "DCT", "Loop of Henle"],
+      "correctAnswer": "B",
+      "explanation": "The renal tubule begins with a double walled cup-like structure called Bowman's capsule, which encloses the glomerulus. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which group of animals are uricotelic?",
+      "options": [
+        "Bony fishes and aquatic amphibians",
+        "Mammals and marine fishes",
+        "Reptiles, birds, and insects",
+        "All aquatic animals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Reptiles, birds, land snails, and insects excrete nitrogenous wastes as uric acid in the form of pellet or paste with minimum loss of water and are called uricotelic animals. (NCERT Page 205)",
+      "difficulty": "MEDIUM",
+      "topic": "Modes of Excretion",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The counter current mechanism is facilitated by the special arrangement of:",
+      "options": [
+        "PCT and DCT",
+        "Glomerulus and Bowman's capsule",
+        "Collecting duct and renal pelvis",
+        "Henle's loop and vasa recta"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The transport of substances facilitated by the special arrangement of Henle's loop and vasa recta is called the counter current mechanism. (NCERT Page 211)",
+      "difficulty": "MEDIUM",
+      "topic": "Counter Current Mechanism",
+      "ncertPage": 211,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Normal urine is:",
+      "options": ["Slightly acidic", "Slightly alkaline", "Neutral", "Highly acidic"],
+      "correctAnswer": "A",
+      "explanation": "The urine formed is a light yellow coloured watery fluid which is slightly acidic (pH-6.0) and has a characteristic odour. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Micturition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Animals that excrete ammonia as their primary nitrogenous waste are called:",
+      "options": ["Ureotelic", "Ammonotelic", "Uricotelic", "Aminotelic"],
+      "correctAnswer": "B",
+      "explanation": "Ammonotelic animals excrete ammonia as their primary nitrogenous waste. Many bony fishes, aquatic amphibians, and aquatic insects are ammonotelic in nature. (NCERT Page 205)",
+      "difficulty": "EASY",
+      "topic": "Modes of Excretion",
+      "ncertPage": 205,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Human kidneys can produce urine nearly how many times concentrated than the initial filtrate?",
+      "options": ["Two times", "Three times", "Four times", "Five times"],
+      "correctAnswer": "C",
+      "explanation": "Human kidneys can produce urine nearly four times concentrated than the initial filtrate formed. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Counter Current Mechanism",
+      "ncertPage": 212,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The blood vessel that carries blood INTO the glomerulus is:",
+      "options": ["Efferent arteriole", "Renal vein", "Vasa recta", "Afferent arteriole"],
+      "correctAnswer": "D",
+      "explanation": "Glomerulus is a tuft of capillaries formed by the afferent arteriole. Blood from the glomerulus is carried away by an efferent arteriole. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The pH of normal urine is approximately:",
+      "options": ["6.0", "4.0", "7.4", "8.5"],
+      "correctAnswer": "A",
+      "explanation": "The urine formed is a light yellow coloured watery fluid which is slightly acidic (pH-6.0). (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Micturition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ADH facilitates:",
+      "options": [
+        "Water excretion from kidneys",
+        "Water reabsorption from latter parts of tubule",
+        "Sodium excretion",
+        "Glucose reabsorption"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ADH facilitates water reabsorption from latter parts of the tubule, thereby preventing diuresis. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Conditional reabsorption of Na+ and water takes place in:",
+      "options": ["PCT", "Loop of Henle", "DCT", "Glomerulus"],
+      "correctAnswer": "C",
+      "explanation": "Conditional reabsorption of Na+ and water takes place in the DCT segment. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The functioning of kidneys is regulated by hormonal feedback mechanisms involving:",
+      "options": [
+        "Only hypothalamus",
+        "Only JGA",
+        "Only pituitary gland",
+        "Hypothalamus, JGA, and heart"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The functioning of the kidneys is efficiently monitored and regulated by hormonal feedback mechanisms involving the hypothalamus, JGA and to a certain extent, the heart. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ADH is released from:",
+      "options": ["Neurohypophysis", "Adenohypophysis", "Adrenal cortex", "JGA"],
+      "correctAnswer": "A",
+      "explanation": "Osmoreceptors stimulate the hypothalamus to release antidiuretic hormone (ADH) or vasopressin from the neurohypophysis. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Another name for ADH is:",
+      "options": ["Aldosterone", "Vasopressin", "Renin", "Angiotensin"],
+      "correctAnswer": "B",
+      "explanation": "Osmoreceptors stimulate the hypothalamus to release antidiuretic hormone (ADH) or vasopressin from the neurohypophysis. (NCERT Page 212)",
+      "difficulty": "EASY",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Presence of glucose in urine is called:",
+      "options": ["Ketonuria", "Proteinuria", "Glycosuria", "Haematuria"],
+      "correctAnswer": "C",
+      "explanation": "Presence of glucose (Glycosuria) and ketone bodies (Ketonuria) in urine are indicative of diabetes mellitus. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a function of nephridia?",
+      "options": [
+        "Removal of nitrogenous wastes",
+        "Maintenance of fluid balance",
+        "Maintenance of ionic balance",
+        "Production of hormones"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nephridia help to remove nitrogenous wastes and maintain a fluid and ionic balance. They do not produce hormones. (NCERT Page 206)",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Structures",
+      "ncertPage": 206,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "PCT helps maintain pH and ionic balance by secreting:",
+      "options": [
+        "Hydrogen ions and ammonia",
+        "Sodium and potassium ions",
+        "Chloride and bicarbonate ions",
+        "Calcium and magnesium ions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PCT also helps to maintain the pH and ionic balance of body fluids by selective secretion of hydrogen ions and ammonia into the filtrate and by absorption of HCO3- from it. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The epithelial cells of Bowman's capsule are called:",
+      "options": ["Nephrocytes", "Podocytes", "Hepatocytes", "Chondrocytes"],
+      "correctAnswer": "B",
+      "explanation": "The epithelial cells of Bowman's capsule called podocytes are arranged in an intricate manner so as to leave some minute spaces called filtration slits or slit pores. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Liver secretes bile containing:",
+      "options": [
+        "Only bilirubin",
+        "Only cholesterol",
+        "Bilirubin, biliverdin, cholesterol, degraded steroid hormones, vitamins and drugs",
+        "Only vitamins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Liver secretes bile-containing substances like bilirubin, biliverdin, cholesterol, degraded steroid hormones, vitamins and drugs. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Role of Other Organs",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The notch on the inner concave surface of the kidney through which ureter, blood vessels, and nerves enter is called:",
+      "options": ["Renal pelvis", "Calyx", "Cortex", "Hilum"],
+      "correctAnswer": "D",
+      "explanation": "Towards the centre of the inner concave surface of the kidney is a notch called hilum through which ureter, blood vessels, and nerves enter. (NCERT Page 206)",
+      "difficulty": "EASY",
+      "topic": "Human Excretory System",
+      "ncertPage": 206,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which substances are actively reabsorbed in the nephron?",
+      "options": [
+        "Glucose, amino acids, Na+",
+        "Nitrogenous wastes",
+        "Water only",
+        "Urea and ammonia"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Substances like glucose, amino acids, Na+, etc., in the filtrate are reabsorbed actively whereas the nitrogenous wastes are absorbed by passive transport. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Urine Formation",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vasa recta is:",
+      "options": [
+        "Part of Bowman's capsule",
+        "A minute vessel running parallel to Loop of Henle forming a U-shape",
+        "A branch of renal vein",
+        "Part of collecting duct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A minute vessel of the peritubular capillary network runs parallel to the Henle's loop forming a 'U' shaped vasa recta. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Vasa recta is absent or highly reduced in:",
+      "options": [
+        "Juxta medullary nephrons",
+        "All nephrons",
+        "Cortical nephrons",
+        "Collecting ducts"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Vasa recta is absent or highly reduced in cortical nephrons. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Nephrons",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Juxta medullary nephrons have:",
+      "options": [
+        "Short loop of Henle",
+        "No loop of Henle",
+        "Loop of Henle in cortex only",
+        "Very long loop of Henle that runs deep into medulla"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In juxta medullary nephrons, the loop of Henle is very long and runs deep into the medulla. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Nephrons",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "JGA stands for:",
+      "options": [
+        "Juxta Glomerular Apparatus",
+        "Joint Glomerular Assembly",
+        "Juxta Glomeral Area",
+        "Junctional Glomerular Apparatus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "JGA is Juxta Glomerular Apparatus - a special sensitive region formed by cellular modifications in the distal convoluted tubule and the afferent arteriole at the location of their contact. (NCERT Page 209)",
+      "difficulty": "EASY",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Dialysing fluid has the same composition as plasma except:",
+      "options": ["Glucose", "Nitrogenous wastes", "Electrolytes", "Water"],
+      "correctAnswer": "B",
+      "explanation": "The dialysing fluid has the same composition as that of plasma except the nitrogenous wastes. As nitrogenous wastes are absent in the dialysing fluid, these substances freely move out. (NCERT Page 214)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "For kidney transplantation, donor is preferably a close relative to:",
+      "options": [
+        "Reduce cost",
+        "Reduce surgery time",
+        "Minimise chances of rejection by immune system",
+        "Ensure blood type matching only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A functioning kidney is used in transplantation from a donor, preferably a close relative, to minimise its chances of rejection by the immune system of the host. (NCERT Page 214)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Angiotensin II is a powerful:",
+      "options": ["Vasodilator", "Diuretic", "Anticoagulant", "Vasoconstrictor"],
+      "correctAnswer": "D",
+      "explanation": "Angiotensin II, being a powerful vasoconstrictor, increases the glomerular blood pressure and thereby GFR. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glomerulonephritis is:",
+      "options": [
+        "Inflammation of glomeruli of kidney",
+        "Stone in kidney",
+        "Kidney failure",
+        "Tumor in kidney"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glomerulonephritis: Inflammation of glomeruli of kidney. (NCERT Page 214)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The ultimate method for correction of acute renal failures is:",
+      "options": ["Hemodialysis", "Kidney transplantation", "Drug therapy", "Peritoneal dialysis"],
+      "correctAnswer": "B",
+      "explanation": "Kidney transplantation is the ultimate method in the correction of acute renal failures (kidney failure). (NCERT Page 214)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The blood vessel that carries blood OUT of the glomerulus is:",
+      "options": [
+        "Afferent arteriole",
+        "Renal artery",
+        "Efferent arteriole",
+        "Peritubular capillary"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blood from the glomerulus is carried away by an efferent arteriole. (NCERT Page 207)",
+      "difficulty": "EASY",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "As concentrated filtrate passes upward through ascending limb, it gets diluted due to:",
+      "options": [
+        "Water absorption",
+        "Urea absorption",
+        "Glucose absorption",
+        "Passage of electrolytes to medullary fluid"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As the concentrated filtrate passes upward through the ascending limb, it gets diluted due to the passage of electrolytes to the medullary fluid. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Aldosterone causes reabsorption of:",
+      "options": [
+        "Na+ and water from distal parts of tubule",
+        "K+ and Cl- from PCT",
+        "Glucose from loop of Henle",
+        "Urea from collecting duct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Aldosterone causes reabsorption of Na+ and water from the distal parts of the tubule. This also leads to an increase in blood pressure and GFR. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Renal calculi are:",
+      "options": [
+        "Inflammation of kidney",
+        "Stones formed within the kidney",
+        "Kidney infection",
+        "Tumors in kidney"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Renal calculi: Stone or insoluble mass of crystallised salts (oxalates, etc.) formed within the kidney. (NCERT Page 214)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ANF is released from:",
+      "options": ["Kidneys", "Hypothalamus", "Atria of the heart", "Adrenal gland"],
+      "correctAnswer": "C",
+      "explanation": "An increase in blood flow to the atria of the heart can cause the release of Atrial Natriuretic Factor (ANF). (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The osmolarity gradient in the kidney interstitium ranges from:",
+      "options": [
+        "100-300 mOsmolL-1",
+        "500-1500 mOsmolL-1",
+        "800-2000 mOsmolL-1",
+        "300-1200 mOsmolL-1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The proximity between Henle's loop and vasa recta helps in maintaining an increasing osmolarity towards inner medullary interstitium, i.e., from 300 mOsmolL-1 in cortex to about 1200 mOsmolL-1 in inner medulla. (NCERT Page 211)",
+      "difficulty": "HARD",
+      "topic": "Counter Current Mechanism",
+      "ncertPage": 211,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which part of nephron is lined by brush border epithelium?",
+      "options": ["PCT", "Bowman's capsule", "Loop of Henle", "DCT"],
+      "correctAnswer": "A",
+      "explanation": "PCT is lined by simple cuboidal brush border epithelium which increases the surface area for reabsorption. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The process of release of urine is called:",
+      "options": ["Urination", "Micturition", "Voiding", "All of the above"],
+      "correctAnswer": "B",
+      "explanation": "The process of release of urine is called micturition and the neural mechanisms causing it is called the micturition reflex. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Micturition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The descending limb of loop of Henle is:",
+      "options": [
+        "Permeable to water and electrolytes",
+        "Impermeable to water but permeable to electrolytes",
+        "Permeable to water but almost impermeable to electrolytes",
+        "Impermeable to both water and electrolytes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The descending limb of loop of Henle is permeable to water but almost impermeable to electrolytes. This concentrates the filtrate as it moves down. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Glomerular filtration is considered as a process of:",
+      "options": ["Simple diffusion", "Active transport", "Osmosis", "Ultra filtration"],
+      "correctAnswer": "D",
+      "explanation": "Blood is filtered so finely through the membranes that almost all constituents of plasma except proteins pass into Bowman's capsule. Therefore, it is considered as a process of ultra filtration. (NCERT Page 208)",
+      "difficulty": "EASY",
+      "topic": "Urine Formation",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Nephrons with short loop of Henle that extends only slightly into the medulla are called:",
+      "options": [
+        "Cortical nephrons",
+        "Juxta medullary nephrons",
+        "Medullary nephrons",
+        "Peritubular nephrons"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In majority of nephrons, the loop of Henle is too short and extends only very little into the medulla. Such nephrons are called cortical nephrons. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Types of Nephrons",
+      "ncertPage": 208,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Peritubular capillaries are formed from:",
+      "options": [
+        "Afferent arteriole",
+        "Efferent arteriole",
+        "Renal artery directly",
+        "Renal vein"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The efferent arteriole emerging from the glomerulus forms a fine capillary network around the renal tubule called the peritubular capillaries. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 208,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Each kidney of an adult human measures approximately:",
+      "options": [
+        "5-7 cm in length",
+        "15-18 cm in length",
+        "10-12 cm in length",
+        "20-25 cm in length"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Each kidney of an adult human measures 10-12 cm in length, 5-7 cm in width, 2-3 cm in thickness with an average weight of 120-170 g. (NCERT Page 206)",
+      "difficulty": "MEDIUM",
+      "topic": "Human Excretory System",
+      "ncertPage": 206,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Angiotensin II activates which gland to release aldosterone?",
+      "options": ["Thyroid gland", "Pituitary gland", "Pancreas", "Adrenal cortex"],
+      "correctAnswer": "D",
+      "explanation": "Angiotensin II also activates the adrenal cortex to release Aldosterone. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The dialysing unit in hemodialysis contains:",
+      "options": [
+        "Coiled cellophane tube surrounded by dialysing fluid",
+        "Coiled plastic tube",
+        "Metal tube",
+        "Glass tube"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The unit contains a coiled cellophane tube surrounded by a fluid (dialysing fluid) having the same composition as that of plasma except the nitrogenous wastes. (NCERT Page 213-214)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 214,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "An adult human excretes, on an average, how much urine per day?",
+      "options": ["0.5 to 1 litre", "1 to 1.5 litres", "2 to 2.5 litres", "3 to 4 litres"],
+      "correctAnswer": "B",
+      "explanation": "An adult human excretes, on an average, 1 to 1.5 litres of urine per day. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Micturition",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ANF mechanism acts as a check on:",
+      "options": [
+        "ADH mechanism",
+        "Aldosterone mechanism",
+        "Renin-angiotensin mechanism",
+        "All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ANF mechanism, therefore, acts as a check on the renin-angiotensin mechanism. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Renin-Angiotensin mechanism helps to:",
+      "options": [
+        "Decrease blood pressure",
+        "Decrease GFR",
+        "Increase urine output",
+        "Increase GFR"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Renin-Angiotensin mechanism increases glomerular blood pressure and thereby GFR through vasoconstriction by angiotensin II and increased Na+ and water reabsorption by aldosterone. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ascending limb of loop of Henle is:",
+      "options": [
+        "Impermeable to water but allows transport of electrolytes",
+        "Permeable to both water and electrolytes",
+        "Permeable to water but impermeable to electrolytes",
+        "Impermeable to both water and electrolytes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ascending limb is impermeable to water but allows transport of electrolytes actively or passively. (NCERT Page 209)",
+      "difficulty": "MEDIUM",
+      "topic": "Function of Tubules",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The amount of filtrate formed by the kidneys per minute is called:",
+      "options": [
+        "Urine output",
+        "Glomerular Filtration Rate (GFR)",
+        "Renal plasma flow",
+        "Filtration fraction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The amount of the filtrate formed by the kidneys per minute is called glomerular filtration rate (GFR). (NCERT Page 209)",
+      "difficulty": "EASY",
+      "topic": "Urine Formation",
+      "ncertPage": 209,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Sweat produced by sweat glands contains:",
+      "options": [
+        "Only water and NaCl",
+        "Only urea",
+        "NaCl, small amounts of urea, lactic acid",
+        "Glucose and amino acids"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sweat produced by the sweat glands is a watery fluid containing NaCl, small amounts of urea, lactic acid, etc. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Role of Other Organs",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Accumulation of urea in blood due to malfunctioning of kidneys is called:",
+      "options": ["Glycosuria", "Haematuria", "Ketonuria", "Uremia"],
+      "correctAnswer": "D",
+      "explanation": "Malfunctioning of kidneys can lead to accumulation of urea in blood, a condition called uremia, which is highly harmful and may lead to kidney failure. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Disorders",
+      "ncertPage": 213,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Blood filtered by the kidneys per minute constitutes roughly what fraction of cardiac output?",
+      "options": ["1/5th", "1/10th", "1/3rd", "1/2"],
+      "correctAnswer": "A",
+      "explanation": "1100-1200 ml of blood filtered by the kidneys per minute constitute roughly 1/5th of the blood pumped out by each ventricle of the heart in a minute. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Urine Formation",
+      "ncertPage": 208,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Presence of ketone bodies in urine is called:",
+      "options": ["Glycosuria", "Ketonuria", "Albuminuria", "Haematuria"],
+      "correctAnswer": "B",
+      "explanation": "Presence of glucose (Glycosuria) and ketone bodies (Ketonuria) in urine are indicative of diabetes mellitus. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Disorders",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Renin converts angiotensinogen to:",
+      "options": ["Angiotensin II directly", "Aldosterone", "Angiotensin I", "ADH"],
+      "correctAnswer": "C",
+      "explanation": "A fall in GFR activates JG cells to release renin which converts angiotensinogen in blood to angiotensin I and further to angiotensin II. (NCERT Page 212)",
+      "difficulty": "MEDIUM",
+      "topic": "Regulation of Kidney Function",
+      "ncertPage": 212,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Protonephridia or flame cells are the excretory structures in:",
+      "options": ["Earthworms", "Cockroaches", "Prawns", "Flatworms"],
+      "correctAnswer": "D",
+      "explanation": "Protonephridia or flame cells are the excretory structures in Platyhelminthes (Flatworms like Planaria), rotifers, some annelids, and the cephalochordate Amphioxus. (NCERT Page 206)",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Structures",
+      "ncertPage": 206,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Sebaceous glands eliminate substances like:",
+      "options": [
+        "Sterols, hydrocarbons, and waxes",
+        "Urea and ammonia",
+        "Glucose and amino acids",
+        "Bilirubin and biliverdin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sebaceous glands eliminate certain substances like sterols, hydrocarbons and waxes through sebum. (NCERT Page 213)",
+      "difficulty": "MEDIUM",
+      "topic": "Role of Other Organs",
+      "ncertPage": 213,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "Which organs other than kidneys help in excretion?",
+      "options": ["Only lungs", "Lungs, liver, and skin", "Only liver", "Only skin"],
+      "correctAnswer": "B",
+      "explanation": "Other than the kidneys, lungs, liver and skin also help in the elimination of excretory wastes. (NCERT Page 213)",
+      "difficulty": "EASY",
+      "topic": "Role of Other Organs",
+      "ncertPage": 213,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The correct sequence of parts in a nephron is:",
+      "options": [
+        "Bowman's capsule → DCT → Loop of Henle → PCT → Collecting duct",
+        "PCT → Bowman's capsule → Loop of Henle → DCT → Collecting duct",
+        "Bowman's capsule → PCT → Loop of Henle → DCT → Collecting duct",
+        "Bowman's capsule → Loop of Henle → PCT → DCT → Collecting duct"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence is: Bowman's capsule → Proximal Convoluted Tubule (PCT) → Loop of Henle → Distal Convoluted Tubule (DCT) → Collecting duct. (NCERT Page 207-208)",
+      "difficulty": "MEDIUM",
+      "topic": "Nephron Structure",
+      "ncertPage": 207,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "On average, how much blood is filtered by the kidneys per minute?",
+      "options": ["500-600 ml", "800-900 ml", "1500-1600 ml", "1100-1200 ml"],
+      "correctAnswer": "D",
+      "explanation": "On an average, 1100-1200 ml of blood is filtered by the kidneys per minute which constitute roughly 1/5th of the blood pumped out by each ventricle of the heart in a minute. (NCERT Page 208)",
+      "difficulty": "MEDIUM",
+      "topic": "Urine Formation",
+      "ncertPage": 208,
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

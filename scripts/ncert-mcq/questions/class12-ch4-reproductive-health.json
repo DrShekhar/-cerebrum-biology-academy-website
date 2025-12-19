@@ -1,0 +1,1037 @@
+{
+  "ncertClass": 12,
+  "ncertChapter": 4,
+  "ncertChapterName": "Reproductive Health",
+  "questions": [
+    {
+      "question": "In vitro fertilization involves fertilization:",
+      "options": [
+        "Outside the body in a laboratory",
+        "In the ovary",
+        "Inside the uterus",
+        "In the fallopian tube"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In vitro fertilization (IVF) involves fertilization outside the body, in a laboratory dish or test tube. Eggs are collected from the woman and fertilized with sperm in controlled conditions.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "According to WHO, reproductive health means:",
+      "options": [
+        "Ability to produce offspring",
+        "Healthy reproductive organs",
+        "Absence of diseases of reproductive system",
+        "Total well-being in all aspects of reproduction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to WHO (World Health Organization), reproductive health means total well-being in all aspects of reproduction, including physical, emotional, behavioral, and social aspects. It is not just the absence of diseases.",
+      "difficulty": "EASY",
+      "topic": "Reproductive Health",
+      "ncertPage": 56,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Oral pills primarily prevent pregnancy by:",
+      "options": [
+        "Inhibiting ovulation",
+        "Inducing abortion",
+        "Killing sperms",
+        "Blocking fallopian tubes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Oral pills primarily prevent pregnancy by inhibiting ovulation. The synthetic estrogen and progesterone create a negative feedback that suppresses FSH and LH from the pituitary, preventing follicle maturation and ovulation.",
+      "difficulty": "EASY",
+      "topic": "Hormonal Methods",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The most important factor for population explosion is:",
+      "options": [
+        "Decline in death rate",
+        "Decline in MMR and IMR",
+        "All of the above",
+        "High birth rate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Population explosion is caused by multiple factors: high birth rate, decline in death rate (due to better healthcare), decline in MMR (Maternal Mortality Rate), and decline in IMR (Infant Mortality Rate). Increased life expectancy also contributes.",
+      "difficulty": "MEDIUM",
+      "topic": "Population Explosion",
+      "ncertPage": 57,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act prohibits:",
+      "options": ["MTP", "Sex determination of fetus", "Amniocentesis", "All prenatal tests"],
+      "correctAnswer": "B",
+      "explanation": "The PCPNDT Act (1994, amended in 2003) specifically prohibits prenatal sex determination and disclosure of sex of the fetus. It does not ban amniocentesis itself, which is allowed for legitimate medical purposes.",
+      "difficulty": "EASY",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is NOT a symptom of STDs?",
+      "options": ["Painful urination", "High fever always", "Genital sores", "Genital discharge"],
+      "correctAnswer": "B",
+      "explanation": "Common STD symptoms include genital discharge, painful urination, genital sores or warts, itching, and rashes. Fever may or may not be present. Many STDs can be asymptomatic, especially in early stages.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Side effects of hormonal contraceptives may include:",
+      "options": [
+        "Nausea and weight gain",
+        "Breakthrough bleeding",
+        "Mood changes",
+        "All of the above"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hormonal contraceptives can cause various side effects including nausea, headache, weight gain, breast tenderness, mood changes, breakthrough bleeding, and in rare cases, blood clots.",
+      "difficulty": "MEDIUM",
+      "topic": "Hormonal Methods",
+      "ncertPage": 60,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Prevention of STDs includes:",
+      "options": [
+        "All of the above",
+        "Using condoms",
+        "Avoiding multiple sexual partners",
+        "Avoiding sharing needles"
+      ],
+      "correctAnswer": "A",
+      "explanation": "STDs can be prevented by using condoms during intercourse, avoiding multiple sexual partners, avoiding sharing needles, getting vaccinated (for Hepatitis B and HPV), and regular screening.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "IUDs (Intrauterine Devices) are inserted in:",
+      "options": ["Cervix", "Uterus", "Fallopian tube", "Vagina"],
+      "correctAnswer": "B",
+      "explanation": "IUDs (Intrauterine Devices) are inserted into the uterus through the vagina by a trained doctor or nurse. They prevent pregnancy by various mechanisms depending on the type of IUD.",
+      "difficulty": "EASY",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Tubectomy involves:",
+      "options": [
+        "Cutting and tying of fallopian tubes",
+        "Removal of ovaries",
+        "Removal of uterus",
+        "Cutting and tying of vas deferens"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tubectomy is a surgical sterilization procedure for females in which the fallopian tubes are cut and tied or blocked to prevent eggs from reaching the uterus. It does not affect hormone production or menstrual cycle.",
+      "difficulty": "EASY",
+      "topic": "Surgical Methods",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which surgical method is more easily reversible?",
+      "options": ["Neither is reversible", "Tubectomy", "Vasectomy", "Both are equally reversible"],
+      "correctAnswer": "C",
+      "explanation": "Vasectomy is generally more easily reversible than tubectomy because the vas deferens is more accessible and easier to reconnect. However, reversal success rates vary, and both procedures should be considered permanent.",
+      "difficulty": "MEDIUM",
+      "topic": "Surgical Methods",
+      "ncertPage": 60,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Oral contraceptive pills contain:",
+      "options": [
+        "Testosterone",
+        "Estrogen only",
+        "Progesterone only",
+        "Estrogen and progesterone combination"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Most oral contraceptive pills (combined pills) contain synthetic forms of both estrogen and progesterone (progestins). These hormones primarily inhibit ovulation by suppressing FSH and LH secretion.",
+      "difficulty": "EASY",
+      "topic": "Hormonal Methods",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hormone-releasing IUDs primarily make the uterus:",
+      "options": [
+        "Increase blood supply",
+        "More receptive to implantation",
+        "Unsuitable for implantation",
+        "Produce more mucus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hormone-releasing IUDs (like LNG-20, Progestasert) release progesterone or synthetic progestins that make the uterus unsuitable for implantation and also thicken cervical mucus to prevent sperm entry.",
+      "difficulty": "MEDIUM",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Condoms also protect against:",
+      "options": ["STDs and AIDS", "Only bacterial STDs", "Cancer", "Unwanted pregnancy only"],
+      "correctAnswer": "A",
+      "explanation": "Condoms not only prevent unwanted pregnancy but also protect against sexually transmitted diseases (STDs) including AIDS by preventing contact with infected body fluids. They are the only contraceptive that protects against STDs.",
+      "difficulty": "EASY",
+      "topic": "Barrier Methods",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Medical Termination of Pregnancy (MTP) is legalized in India under:",
+      "options": ["1951 Act", "1971 MTP Act", "1994 Act", "2000 Act"],
+      "correctAnswer": "B",
+      "explanation": "MTP was legalized in India under the Medical Termination of Pregnancy Act of 1971. This act specifies the conditions under which pregnancy can be legally terminated and who can perform the procedure.",
+      "difficulty": "EASY",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is a bacterial STD?",
+      "options": ["Genital herpes", "AIDS", "Syphilis", "Hepatitis B"],
+      "correctAnswer": "C",
+      "explanation": "Syphilis (caused by Treponema pallidum) is a bacterial STD. Genital herpes is caused by herpes simplex virus, AIDS by HIV, and Hepatitis B by Hepatitis B virus - all viral diseases.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ZIFT stands for:",
+      "options": [
+        "Zona Intra Fallopian Transfer",
+        "Zygote Internal Fertilization Technique",
+        "Zone Implantation and Fertilization Transfer",
+        "Zygote Intra Fallopian Transfer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ZIFT stands for Zygote Intra Fallopian Transfer. In this technique, the zygote or early embryo (up to 8 cells) formed by IVF is transferred into the fallopian tube.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "ICSI stands for:",
+      "options": [
+        "Intra Cellular Spermatid Injection",
+        "Intra Cytoplasmic Sperm Injection",
+        "Internal Cell Sperm Injection",
+        "In vitro Cell Sperm Implantation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ICSI stands for Intra Cytoplasmic Sperm Injection. A single sperm is directly injected into the cytoplasm of an egg using a micromanipulator. It is used when sperm count is very low or motility is poor.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Trichomoniasis is caused by:",
+      "options": ["A virus", "A protozoan", "A fungus", "A bacterium"],
+      "correctAnswer": "B",
+      "explanation": "Trichomoniasis is caused by Trichomonas vaginalis, a flagellated protozoan parasite. It is one of the most common curable STDs, causing vaginitis in women and urethritis in men.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "MTP is relatively safe up to:",
+      "options": [
+        "20 weeks of pregnancy",
+        "Any time during pregnancy",
+        "8 weeks of pregnancy",
+        "12 weeks of pregnancy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "MTP is considered relatively safe during the first trimester (up to 12 weeks). Beyond this period, the risk of complications increases, though MTP may still be performed up to 20 weeks under certain conditions as per the amended law.",
+      "difficulty": "MEDIUM",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cu-7, Multiload 375 are examples of:",
+      "options": [
+        "Barrier methods",
+        "Non-medicated IUDs",
+        "Copper-releasing IUDs",
+        "Hormone-releasing IUDs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cu-7, Multiload 375, and CuT (Copper-T) are copper-releasing IUDs. They release copper ions which suppress sperm motility and fertilizing capacity and increase phagocytosis of sperms.",
+      "difficulty": "MEDIUM",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Causes of infertility in females include:",
+      "options": [
+        "Uterine problems",
+        "All of the above",
+        "Problems with ovulation",
+        "Blocked fallopian tubes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Female infertility can result from ovulation disorders, blocked or damaged fallopian tubes, endometriosis, uterine problems, hormonal imbalances, advanced age, or other medical conditions.",
+      "difficulty": "EASY",
+      "topic": "Infertility",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "IMR stands for:",
+      "options": [
+        "Immunization Mortality Rate",
+        "Internal Migration Rate",
+        "Infectious Morbidity Rate",
+        "Infant Mortality Rate"
+      ],
+      "correctAnswer": "D",
+      "explanation": "IMR stands for Infant Mortality Rate - the number of infant deaths (under 1 year of age) per 1,000 live births. A declining IMR indicates better healthcare and nutrition for infants.",
+      "difficulty": "EASY",
+      "topic": "Population",
+      "ncertPage": 57,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Vasectomy involves:",
+      "options": [
+        "Cutting and tying of vas deferens",
+        "Removal of uterus",
+        "Removal of testes",
+        "Cutting and tying of fallopian tubes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vasectomy is a surgical sterilization procedure for males in which the vas deferens (sperm duct) is cut and tied to prevent sperm from reaching the ejaculate. It does not affect hormone production or sexual function.",
+      "difficulty": "EASY",
+      "topic": "Surgical Methods",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The full form of MMR in population studies is:",
+      "options": [
+        "Maternal Mortality Rate",
+        "Maximum Mortality Rate",
+        "Mean Mortality Rate",
+        "Measles, Mumps, Rubella"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In population studies, MMR stands for Maternal Mortality Rate - the number of maternal deaths per 100,000 live births. A declining MMR indicates better healthcare for pregnant women.",
+      "difficulty": "EASY",
+      "topic": "Population",
+      "ncertPage": 57,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "GIFT stands for:",
+      "options": [
+        "Gamete Intra Fallopian Transfer",
+        "Genetic Internal Fertilization Transfer",
+        "Gonad In Fertility Technique",
+        "Gamete Internal Fertilization Test"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GIFT stands for Gamete Intra Fallopian Transfer. In this technique, unfertilized eggs (ova) and sperm are directly placed into the fallopian tube, where fertilization occurs naturally.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Infertility is defined as:",
+      "options": [
+        "Inability to conceive after unprotected intercourse for 1-2 years",
+        "Absence of menstruation",
+        "Inability to produce sperms",
+        "Inability to produce eggs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Infertility is the inability of a couple to conceive a child despite unprotected regular sexual intercourse for 1-2 years. It can be due to problems in either partner or both.",
+      "difficulty": "EASY",
+      "topic": "Infertility",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which of the following is a barrier method of contraception?",
+      "options": ["Oral pills", "Tubectomy", "Copper-T", "Diaphragm"],
+      "correctAnswer": "D",
+      "explanation": "Diaphragms, condoms, cervical caps, and vaults are barrier methods that physically prevent sperm from meeting the ovum. Copper-T is an IUD, oral pills are hormonal methods, and tubectomy is a surgical method.",
+      "difficulty": "EASY",
+      "topic": "Barrier Methods",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The embryo formed by IVF is transferred at the:",
+      "options": ["8-celled blastomere stage", "Blastocyst stage", "2-cell stage", "4-cell stage"],
+      "correctAnswer": "A",
+      "explanation": "In IVF, the embryo is usually transferred at the 8-celled blastomere stage into the fallopian tube (ZIFT). If transferred at a later stage (blastocyst), it can be placed directly in the uterus (IUT).",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "LNG-20 is a:",
+      "options": [
+        "Hormone-releasing IUD",
+        "Oral contraceptive",
+        "Copper-releasing IUD",
+        "Non-medicated IUD"
+      ],
+      "correctAnswer": "A",
+      "explanation": "LNG-20 (Levonorgestrel-releasing) is a hormone-releasing IUD that releases small amounts of levonorgestrel (a progestin). It makes the uterus unsuitable for implantation and thickens cervical mucus.",
+      "difficulty": "MEDIUM",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Amniocentesis is a technique used for:",
+      "options": [
+        "Sex determination (illegally)",
+        "Collecting amniotic fluid sample",
+        "All of the above",
+        "Detecting genetic disorders in fetus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Amniocentesis involves collecting amniotic fluid to detect genetic disorders in the fetus. While its legitimate use is for detecting chromosomal abnormalities, it has been misused for sex determination, which is now banned in India.",
+      "difficulty": "EASY",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Cryopreservation of gametes involves:",
+      "options": [
+        "Radiation treatment",
+        "Freezing at very low temperatures",
+        "Heating to high temperatures",
+        "Chemical preservation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cryopreservation involves freezing gametes (sperm, eggs) or embryos at very low temperatures (usually in liquid nitrogen at -196°C) for long-term storage. They can be thawed and used later for ART procedures.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Surrogacy involves:",
+      "options": [
+        "Using donor sperms",
+        "Another woman carrying and delivering the baby",
+        "Cloning",
+        "Using donor eggs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Surrogacy is an arrangement where another woman (surrogate mother) carries and delivers a baby for a couple who cannot conceive or carry a pregnancy themselves. The embryo may be the couple's or involve donor gametes.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Implants and injectable contraceptives contain:",
+      "options": ["Estrogen", "Progestogen alone", "Copper", "Spermicides"],
+      "correctAnswer": "B",
+      "explanation": "Implants (like Norplant) and injectable contraceptives (like Depo-Provera) contain progestogen (synthetic progesterone) alone. They provide long-term contraception and work by preventing ovulation and thickening cervical mucus.",
+      "difficulty": "MEDIUM",
+      "topic": "Hormonal Methods",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Copper-releasing IUDs work by:",
+      "options": [
+        "Increasing phagocytosis of sperms and suppressing sperm motility",
+        "Blocking the cervix",
+        "Preventing ovulation",
+        "Releasing hormones"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Copper-releasing IUDs (like Cu-7, Multiload 375) release copper ions that increase phagocytosis of sperms by uterine macrophages and also suppress sperm motility and fertilizing capacity.",
+      "difficulty": "MEDIUM",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "India's population according to 2011 census was approximately:",
+      "options": ["1.2 billion", "500 million", "800 million", "1 billion"],
+      "correctAnswer": "A",
+      "explanation": "According to the 2011 census, India's population was about 1.2 billion (1,210 million), making it the second most populous country in the world after China.",
+      "difficulty": "EASY",
+      "topic": "Population",
+      "ncertPage": 57,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "IVF is most suitable for couples where:",
+      "options": [
+        "All of the above",
+        "The male has very low sperm count",
+        "The female has blocked fallopian tubes",
+        "There is unexplained infertility"
+      ],
+      "correctAnswer": "A",
+      "explanation": "IVF can be used for various causes of infertility including blocked tubes, low sperm count, advanced maternal age, endometriosis, and unexplained infertility. It bypasses the need for functional tubes.",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The rhythm method of contraception is based on:",
+      "options": [
+        "Using condoms during fertile period",
+        "Taking pills during fertile period",
+        "Using IUD during fertile period",
+        "Periodic abstinence during fertile period"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The rhythm method (calendar method) is a natural family planning method based on avoiding sexual intercourse during the fertile period (days 10-17 in a 28-day cycle). It requires tracking menstrual cycles.",
+      "difficulty": "EASY",
+      "topic": "Natural Methods",
+      "ncertPage": 58,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Which contraceptive method also prevents STDs?",
+      "options": ["IUDs", "Oral pills", "Condoms", "Tubectomy"],
+      "correctAnswer": "C",
+      "explanation": "Condoms are the only contraceptive method that also provides protection against STDs (Sexually Transmitted Diseases) including HIV/AIDS. They prevent direct contact between sexual partners' body fluids.",
+      "difficulty": "EASY",
+      "topic": "Contraception",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is a non-medicated IUD?",
+      "options": ["Copper-T", "LNG-20", "Progestasert", "Lippes loop"],
+      "correctAnswer": "D",
+      "explanation": "Lippes loop is a non-medicated (inert) IUD made of plastic. LNG-20 and Progestasert are hormone-releasing IUDs, while Copper-T releases copper ions.",
+      "difficulty": "MEDIUM",
+      "topic": "IUDs",
+      "ncertPage": 59,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "The ideal contraceptive should be:",
+      "options": [
+        "Free from side effects",
+        "Should not interfere with sexual desire",
+        "All of the above",
+        "User-friendly and reversible"
+      ],
+      "correctAnswer": "C",
+      "explanation": "An ideal contraceptive should be user-friendly, easily available, effective, reversible, have no or minimal side effects, and should not interfere with sexual drive or coitus.",
+      "difficulty": "EASY",
+      "topic": "Contraception",
+      "ncertPage": 58,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Genital warts are caused by:",
+      "options": [
+        "Herpes simplex virus",
+        "Human papillomavirus (HPV)",
+        "Treponema pallidum",
+        "Hepatitis B virus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Genital warts are caused by Human Papillomavirus (HPV). Certain strains of HPV are also associated with cervical cancer. HPV vaccine is available for prevention.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "MTPs are generally advised when:",
+      "options": [
+        "For sex determination",
+        "Both A and B",
+        "Pregnancy is result of rape or failure of contraception",
+        "Continuation of pregnancy is harmful to mother or fetus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "MTP is legally permitted when pregnancy results from rape, contraceptive failure, or when continuation poses risk to the mother's health or the fetus has substantial abnormalities. MTP for sex determination is illegal in India.",
+      "difficulty": "MEDIUM",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The fertile period in a woman's menstrual cycle is:",
+      "options": ["Days 1-7", "Days 10-17", "Days 21-28", "Days 5-10"],
+      "correctAnswer": "B",
+      "explanation": "The fertile period (when chances of conception are highest) is from day 10 to day 17 of the menstrual cycle. Ovulation occurs around day 14, and the ovum remains viable for 1-2 days while sperm can survive for up to 5 days.",
+      "difficulty": "MEDIUM",
+      "topic": "Natural Methods",
+      "ncertPage": 58,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Saheli is:",
+      "options": [
+        "An IUD",
+        "A progesterone-only pill",
+        "A non-steroidal oral contraceptive",
+        "An injectable contraceptive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Saheli is a non-steroidal oral contraceptive developed by CDRI (Central Drug Research Institute), Lucknow. Its active ingredient is centchroman, which is taken once a week and has minimal side effects.",
+      "difficulty": "MEDIUM",
+      "topic": "Hormonal Methods",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following conditions makes MTP necessary?",
+      "options": [
+        "Economic reasons alone",
+        "Gender of fetus",
+        "Preference for male child",
+        "Severe fetal abnormalities"
+      ],
+      "correctAnswer": "D",
+      "explanation": "MTP may be necessary when the fetus has severe abnormalities incompatible with life, when pregnancy poses risk to mother's health, or in cases of rape. MTP for sex selection or economic reasons alone is illegal.",
+      "difficulty": "MEDIUM",
+      "topic": "MTP",
+      "ncertPage": 61,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Emergency contraception should be taken within:",
+      "options": [
+        "1 week of unprotected intercourse",
+        "2 weeks of unprotected intercourse",
+        "24 hours of unprotected intercourse",
+        "72 hours of unprotected intercourse"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Emergency contraceptives (morning-after pills) should be taken within 72 hours (3 days) of unprotected intercourse for maximum effectiveness. The sooner they are taken, the more effective they are.",
+      "difficulty": "EASY",
+      "topic": "Emergency Contraception",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Syphilis is caused by:",
+      "options": [
+        "Treponema pallidum",
+        "Chlamydia trachomatis",
+        "Herpes simplex virus",
+        "Neisseria gonorrhoeae"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Syphilis is caused by the spirochete bacterium Treponema pallidum. It progresses through primary, secondary, and tertiary stages if untreated and can cause serious complications including cardiovascular and neurological damage.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "AIDS is caused by:",
+      "options": [
+        "Hepatitis B virus",
+        "Herpes simplex virus",
+        "Human Immunodeficiency Virus (HIV)",
+        "Human papillomavirus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "AIDS (Acquired Immunodeficiency Syndrome) is caused by HIV (Human Immunodeficiency Virus). HIV attacks CD4+ T helper cells of the immune system, gradually destroying the body's ability to fight infections.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "AI (Artificial Insemination) is used when:",
+      "options": [
+        "The male cannot inseminate or has low sperm count",
+        "The female cannot produce eggs",
+        "There is blockage in fallopian tubes",
+        "The male cannot produce sperms"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Artificial Insemination (AI or IUI - Intrauterine Insemination) is used when the male cannot inseminate naturally or has low sperm count. Semen is collected and artificially introduced into the female reproductive tract.",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Hepatitis B is transmitted through:",
+      "options": [
+        "Air",
+        "Sexual contact only",
+        "Blood transfusion only",
+        "Sexual contact, blood transfusion, and from mother to child"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hepatitis B can be transmitted sexually, through contaminated blood/needles, and from infected mother to baby during childbirth. It is a serious liver infection that can become chronic.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following requires the woman to have at least one functional fallopian tube?",
+      "options": ["GIFT", "IUI", "Both B and C", "IVF-ET"],
+      "correctAnswer": "C",
+      "explanation": "GIFT (Gamete Intra Fallopian Transfer) and IUI require at least one functional fallopian tube since fertilization/sperm transport occurs through the tube. IVF can work even with blocked tubes as fertilization is external.",
+      "difficulty": "HARD",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "India achieved replacement level fertility (TFR=2.1) in:",
+      "options": ["2011", "2021", "1991", "2001"],
+      "correctAnswer": "B",
+      "explanation": "India achieved replacement level fertility (TFR of 2.1) according to NFHS-5 (2019-21). This means on average women are having just enough children to replace themselves, important for population stabilization.",
+      "difficulty": "MEDIUM",
+      "topic": "Population",
+      "ncertPage": 57,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The window period in AIDS refers to:",
+      "options": [
+        "Time between exposure and infection",
+        "Time between infection and appearance of symptoms",
+        "Time between infection and development of antibodies",
+        "Time between infection and death"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The window period is the time between HIV infection and the development of detectable antibodies (usually 2-12 weeks). During this period, tests may be negative even though the person is infected and can transmit HIV.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Gonorrhoea is caused by:",
+      "options": [
+        "Chlamydia trachomatis",
+        "Human papillomavirus",
+        "Treponema pallidum",
+        "Neisseria gonorrhoeae"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gonorrhoea is caused by the bacterium Neisseria gonorrhoeae. Symptoms include discharge from genitals and painful urination. It can be treated with antibiotics.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Lactational amenorrhea is effective as a contraceptive method for:",
+      "options": [
+        "Up to 1 year after parturition",
+        "Indefinitely during breastfeeding",
+        "Up to 3 months after parturition",
+        "Up to 6 months after parturition"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lactational amenorrhea (absence of menstruation during intensive breastfeeding) is effective as a natural contraceptive for up to 6 months after delivery. After this period, ovulation may resume even during lactation.",
+      "difficulty": "MEDIUM",
+      "topic": "Natural Methods",
+      "ncertPage": 58,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Natural methods of birth control include all EXCEPT:",
+      "options": ["Periodic abstinence", "Coitus interruptus", "Lactational amenorrhea", "IUDs"],
+      "correctAnswer": "D",
+      "explanation": "Natural methods include periodic abstinence (avoiding intercourse during fertile period), coitus interruptus (withdrawal before ejaculation), and lactational amenorrhea (no ovulation during breastfeeding). IUDs are barrier/chemical methods.",
+      "difficulty": "EASY",
+      "topic": "Natural Methods",
+      "ncertPage": 58,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which STD cannot be cured completely?",
+      "options": ["Genital herpes", "Chlamydiasis", "Gonorrhoea", "Syphilis"],
+      "correctAnswer": "A",
+      "explanation": "Genital herpes (caused by Herpes Simplex Virus) cannot be completely cured. The virus remains dormant in the body and can cause recurring outbreaks. Bacterial STDs like gonorrhoea and syphilis can be cured with antibiotics.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "In AI, semen is introduced into:",
+      "options": ["Ovary", "Vagina only", "Vagina or uterus", "Fallopian tube"],
+      "correctAnswer": "C",
+      "explanation": "In Artificial Insemination, semen can be introduced into the vagina (ICI - Intracervical Insemination) or directly into the uterus (IUI - Intrauterine Insemination) depending on the technique used.",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "ART stands for:",
+      "options": [
+        "Automatic Reproductive Testing",
+        "Artificial Reproduction Technique",
+        "Assisted Reproductive Technology",
+        "Advanced Reproductive Treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ART stands for Assisted Reproductive Technology, which includes various medical procedures used to help infertile couples achieve pregnancy. Examples include IVF, ZIFT, GIFT, ICSI, and AI.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which hormone is used in emergency contraceptive pills?",
+      "options": [
+        "Testosterone",
+        "FSH",
+        "Estrogen only",
+        "High doses of progestins or estrogen-progestin combination"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Emergency contraceptive pills (morning-after pills) contain high doses of progestins (like levonorgestrel) or estrogen-progestin combinations. They work by preventing ovulation and/or implantation.",
+      "difficulty": "MEDIUM",
+      "topic": "Emergency Contraception",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "A test tube baby is a baby born through:",
+      "options": [
+        "Artificial insemination",
+        "Normal conception",
+        "IVF and embryo transfer",
+        "GIFT only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A 'test tube baby' is a popular term for a baby conceived through IVF (In Vitro Fertilization) where fertilization occurs outside the body. The first test tube baby, Louise Brown, was born in 1978.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "In GIFT, fertilization occurs:",
+      "options": ["In the uterus", "In the ovary", "In the laboratory", "In the fallopian tube"],
+      "correctAnswer": "D",
+      "explanation": "In GIFT, gametes (ovum and sperm) are transferred directly to the fallopian tube, where fertilization occurs naturally in vivo (inside the body), unlike IVF where fertilization is in vitro.",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is NOT a viral STD?",
+      "options": ["Genital warts", "AIDS", "Genital herpes", "Syphilis"],
+      "correctAnswer": "D",
+      "explanation": "Syphilis is caused by the bacterium Treponema pallidum, not a virus. AIDS (HIV), genital herpes (HSV), and genital warts (HPV) are all caused by viruses.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Which of the following is true about oral pills?",
+      "options": [
+        "They should be taken only during fertile period",
+        "They need to be taken every day",
+        "They provide protection against STDs",
+        "They are suitable for breastfeeding mothers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oral contraceptive pills need to be taken daily (usually for 21 days followed by 7 days break or continuous). They do not protect against STDs and combined pills are not recommended during breastfeeding.",
+      "difficulty": "MEDIUM",
+      "topic": "Hormonal Methods",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Chlamydiasis is caused by:",
+      "options": [
+        "Treponema pallidum",
+        "Chlamydia trachomatis",
+        "Trichomonas vaginalis",
+        "Neisseria gonorrhoeae"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chlamydiasis (chlamydial infection) is caused by Chlamydia trachomatis, an obligate intracellular bacterium. It is one of the most common bacterial STDs and can cause PID (Pelvic Inflammatory Disease) if untreated.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Condoms are made of:",
+      "options": ["Rubber/latex or polyurethane", "Copper", "Plastic only", "Silicone"],
+      "correctAnswer": "A",
+      "explanation": "Condoms are typically made of thin rubber (latex) or polyurethane. They cover the penis (male condom) or line the vagina (female condom) and prevent sperm from entering the female reproductive tract.",
+      "difficulty": "EASY",
+      "topic": "Barrier Methods",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Causes of infertility in males include:",
+      "options": [
+        "Immotile sperms",
+        "All of the above",
+        "Low sperm count",
+        "Physical inability to inseminate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Male infertility can be caused by low sperm count (oligospermia), absence of sperm (azoospermia), poor sperm motility, abnormal sperm morphology, physical inability to ejaculate, or hormonal imbalances.",
+      "difficulty": "EASY",
+      "topic": "Infertility",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Diaphragms and cervical caps are used by:",
+      "options": ["Males", "Females", "Both males and females", "Neither"],
+      "correctAnswer": "B",
+      "explanation": "Diaphragms and cervical caps are barrier contraceptives used by females. They are inserted into the vagina to cover the cervix, preventing sperm from entering the uterus. They are usually used with spermicides.",
+      "difficulty": "EASY",
+      "topic": "Barrier Methods",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "PID (Pelvic Inflammatory Disease) can result from untreated:",
+      "options": ["Both A and B", "AIDS", "Gonorrhoea", "Chlamydiasis"],
+      "correctAnswer": "A",
+      "explanation": "PID (Pelvic Inflammatory Disease) is an infection of the female reproductive organs that can result from untreated gonorrhoea and chlamydiasis. It can cause scarring, infertility, and chronic pelvic pain.",
+      "difficulty": "MEDIUM",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Donor insemination uses:",
+      "options": ["Wife's eggs", "Donor embryos", "Husband's sperm", "Sperm from a donor"],
+      "correctAnswer": "D",
+      "explanation": "Donor insemination (DI) uses sperm from a donor (not the husband) when the male partner has no sperm, severe genetic defects, or other conditions. The donor sperm is used for artificial insemination or IVF.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "World Population Day is observed on:",
+      "options": ["October 24", "April 22", "July 11", "December 1"],
+      "correctAnswer": "C",
+      "explanation": "World Population Day is observed on July 11 every year to raise awareness about global population issues including family planning, gender equality, poverty, maternal health, and human rights.",
+      "difficulty": "EASY",
+      "topic": "Population",
+      "ncertPage": 57,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "The success rate of IVF is typically:",
+      "options": ["60-70%", "90-100%", "10-20%", "30-40%"],
+      "correctAnswer": "D",
+      "explanation": "IVF success rates typically range from 30-40% per cycle, though this varies based on factors like maternal age, cause of infertility, and clinic expertise. Success rates decline with increasing age.",
+      "difficulty": "MEDIUM",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "LOW"
+    },
+    {
+      "question": "STDs are diseases transmitted through:",
+      "options": ["Water", "Sexual contact", "Food", "Air"],
+      "correctAnswer": "B",
+      "explanation": "STDs (Sexually Transmitted Diseases), also called STIs (Sexually Transmitted Infections) or VDs (Venereal Diseases), are transmitted through sexual contact with an infected person.",
+      "difficulty": "EASY",
+      "topic": "STDs",
+      "ncertPage": 62,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "Spermicides are:",
+      "options": [
+        "Antibiotics against STDs",
+        "Devices that trap sperms",
+        "Chemicals that kill sperms",
+        "Hormones that prevent sperm production"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Spermicides are chemical substances (creams, jellies, foams) that kill or immobilize sperms. They are used along with barrier methods like diaphragms and cervical caps for increased effectiveness.",
+      "difficulty": "EASY",
+      "topic": "Chemical Methods",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The active ingredient in Saheli is:",
+      "options": ["Mifepristone", "Estrogen", "Progesterone", "Centchroman"],
+      "correctAnswer": "D",
+      "explanation": "Saheli contains centchroman (ormeloxifene), a selective estrogen receptor modulator (SERM). It is a non-hormonal contraceptive developed in India that is taken once a week after the initial loading phase.",
+      "difficulty": "MEDIUM",
+      "topic": "Hormonal Methods",
+      "ncertPage": 60,
+      "neetWeightage": "HIGH"
+    },
+    {
+      "question": "IUI stands for:",
+      "options": [
+        "In vitro Uterine Insemination",
+        "Intra Uterine Implantation",
+        "Intra Uterine Insemination",
+        "Internal Uterine Implantation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "IUI stands for Intra Uterine Insemination. It is a form of artificial insemination where washed and concentrated sperm are directly placed in the uterus around the time of ovulation.",
+      "difficulty": "EASY",
+      "topic": "ART",
+      "ncertPage": 63,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "Female condoms are made of:",
+      "options": ["Copper", "Silicone", "Latex only", "Polyurethane"],
+      "correctAnswer": "D",
+      "explanation": "Female condoms are typically made of polyurethane or nitrile (synthetic rubber). They line the vagina and prevent sperm from entering. They can be inserted up to 8 hours before intercourse.",
+      "difficulty": "MEDIUM",
+      "topic": "Barrier Methods",
+      "ncertPage": 59,
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "question": "The programme initiated by the government to create awareness about reproduction is:",
+      "options": [
+        "Family welfare programmes",
+        "Family planning programmes",
+        "All of the above",
+        "RCH (Reproductive and Child Health Care) programmes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The government has initiated various programmes including Family Planning (started in 1951), Family Welfare, and RCH (Reproductive and Child Health Care) programmes to create awareness about reproduction-related aspects.",
+      "difficulty": "EASY",
+      "topic": "Reproductive Health Programmes",
+      "ncertPage": 56,
+      "neetWeightage": "LOW"
+    }
+  ]
+}
