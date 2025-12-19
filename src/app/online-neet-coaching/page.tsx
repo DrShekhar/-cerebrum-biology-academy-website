@@ -308,7 +308,7 @@ export default function OnlineNeetCoachingPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Start Your Online NEET Journey</h2>
             <p className="mb-8 text-xl text-blue-100">
-              Join thousands of students preparing for NEET 2025 online!
+              Join thousands of students preparing for NEET 2026 online!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

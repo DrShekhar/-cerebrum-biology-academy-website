@@ -155,7 +155,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
             >
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Target className="mr-1 inline h-4 w-4" />
-                NEET 2025/2026 Preparation
+                NEET 2026/2026 Preparation
               </span>
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
                 Best Online Biology Teacher for NEET

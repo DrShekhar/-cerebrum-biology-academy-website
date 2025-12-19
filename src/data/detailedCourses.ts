@@ -3,9 +3,9 @@ import { Course } from '@/types'
 export const detailedCourses: Course[] = [
   {
     id: 'neet-2025-11th',
-    title: 'NEET 2025 - Class 11th Foundation',
+    title: 'NEET 2026 - Class 11th Foundation',
     description:
-      'Comprehensive 1-year foundation program for Class 11th students targeting NEET 2025. Build strong conceptual foundation with AIIMS expert faculty.',
+      'Comprehensive 1-year foundation program for Class 11th students targeting NEET 2026. Build strong conceptual foundation with AIIMS expert faculty.',
     duration: '1 Year',
     price: 98000,
     features: [
@@ -180,9 +180,9 @@ export const detailedCourses: Course[] = [
           'Yes, comprehensive study materials including textbooks, practice papers, and online resources are included in the course fee.',
       },
     ],
-    seoTitle: 'NEET 2025 Class 11th Foundation Course | Biology Coaching Delhi',
+    seoTitle: 'NEET 2026 Class 11th Foundation Course | Biology Coaching Delhi',
     seoDescription:
-      'Join our NEET 2025 Class 11th foundation course. 2-year comprehensive program with AIIMS faculty, small batches, and proven results. Enroll now!',
+      'Join our NEET 2026 Class 11th foundation course. 2-year comprehensive program with AIIMS faculty, small batches, and proven results. Enroll now!',
     isPopular: true,
     discount: {
       percentage: 10,
@@ -192,7 +192,7 @@ export const detailedCourses: Course[] = [
   },
   {
     id: 'neet-2025-12th',
-    title: 'NEET 2025 - Class 12th Intensive',
+    title: 'NEET 2026 - Class 12th Intensive',
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously. Master advanced concepts and exam strategies.',
     duration: '1 Year',
@@ -364,16 +364,16 @@ export const detailedCourses: Course[] = [
           "All classes are recorded and made available online. Additionally, we provide comprehensive notes for every session to ensure you don't miss any important content.",
       },
     ],
-    seoTitle: 'NEET 2025 Class 12th Course | Board + NEET Preparation Delhi',
+    seoTitle: 'NEET 2026 Class 12th Course | Board + NEET Preparation Delhi',
     seoDescription:
-      'Excel in CBSE Class 12th and NEET 2025 with our dual preparation course. Expert faculty, comprehensive study material, and proven results. Enroll today!',
+      'Excel in CBSE Class 12th and NEET 2026 with our dual preparation course. Expert faculty, comprehensive study material, and proven results. Enroll today!',
     isPopular: true,
   },
   {
     id: 'neet-2025-dropper',
-    title: 'NEET 2025 - Dropper/Repeater Batch',
+    title: 'NEET 2026 - Dropper/Repeater Batch',
     description:
-      'Specialized intensive course for dropper students targeting NEET 2025. Comprehensive revision, advanced problem solving, and strategic preparation for improved scores.',
+      'Specialized intensive course for dropper students targeting NEET 2026. Comprehensive revision, advanced problem solving, and strategic preparation for improved scores.',
     duration: '1 Year',
     price: 156000,
     features: [
@@ -528,9 +528,9 @@ export const detailedCourses: Course[] = [
           'We conduct regular motivational sessions, share success stories, provide personalized counseling, and maintain a competitive yet supportive learning environment.',
       },
     ],
-    seoTitle: 'NEET 2025 Dropper Batch | Intensive Biology Coaching Delhi',
+    seoTitle: 'NEET 2026 Dropper Batch | Intensive Biology Coaching Delhi',
     seoDescription:
-      'Join our NEET 2025 dropper batch for intensive preparation and score improvement. Expert faculty, daily tests, and proven results. Limited seats available!',
+      'Join our NEET 2026 dropper batch for intensive preparation and score improvement. Expert faculty, daily tests, and proven results. Limited seats available!',
     isPopular: false,
   },
   {

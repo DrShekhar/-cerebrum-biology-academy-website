@@ -389,7 +389,7 @@ function generatePersonalizedHero(preferences: any, segment: string, visitCount:
   if (preferences.class === '12') {
     return {
       title: isReturningUser
-        ? "Welcome Back! Let's Ace NEET 2025"
+        ? "Welcome Back! Let's Ace NEET 2026"
         : 'Class 12? Time to Master NEET Biology',
       subtitle:
         'Join thousands of Class 12 students achieving 650+ NEET scores with our intensive program',
@@ -594,10 +594,10 @@ function generatePersonalizedUrgency(preferences: any, recommendations: any, seg
   if (preferences.class === '12') {
     return {
       urgencyLevel: 'high',
-      title: 'NEET 2025 is Just Months Away!',
+      title: 'NEET 2026 is Just Months Away!',
       message:
         'Class 12 students have limited time. Every day counts towards your medical college dream.',
-      timeRemaining: 'Only 4 months left for NEET 2025',
+      timeRemaining: 'Only 4 months left for NEET 2026',
       ctaText: 'Secure My Seat Now',
     }
   }

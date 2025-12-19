@@ -304,8 +304,8 @@ export class BacklinkStrategy {
     this.contentPlans = [
       {
         contentType: 'RESEARCH',
-        topic: 'NEET 2025 Analysis: Trends, Statistics, and Success Patterns',
-        targetKeywords: ['NEET 2025 analysis', 'NEET trends', 'medical entrance statistics'],
+        topic: 'NEET 2026 Analysis: Trends, Statistics, and Success Patterns',
+        targetKeywords: ['NEET 2026 analysis', 'NEET trends', 'medical entrance statistics'],
         targetAudience: 'Students, Parents, Educators, Media',
         distributionChannels: ['Blog', 'Press Release', 'Social Media', 'Education Forums'],
         backlinkPotential: 9,
@@ -320,7 +320,7 @@ export class BacklinkStrategy {
         ],
         contentOutline: [
           'Executive Summary',
-          'NEET 2025 Exam Overview',
+          'NEET 2026 Exam Overview',
           'Application and Registration Trends',
           'Subject-wise Performance Analysis',
           'State-wise and Category-wise Statistics',
@@ -706,7 +706,7 @@ Some topics we could discuss:
 - Emerging trends in NEET Biology preparation
 - Common mistakes students make and how to avoid them
 - Impact of online learning on biology education
-- Predictions for NEET 2025 patterns
+- Predictions for NEET 2026 patterns
 
 Would you be interested in featuring our expert perspective? I can provide detailed insights, data from our student success stories, and practical tips that would benefit your audience.
 

@@ -42,7 +42,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'Biology coaching Laxmi Nagar',
       'Biology coaching Dwarka',
       'Biology tuition Delhi',
-      'NEET 2025 coaching Delhi',
+      'NEET 2026 coaching Delhi',
       'NEET 2026 coaching Delhi',
       'Online NEET coaching Delhi',
       'Best biology teacher NEET Delhi',

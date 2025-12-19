@@ -106,7 +106,7 @@ export default function BotanyClassesPage() {
               Multiple Batch Timings Available
             </span>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-              Botany Classes for NEET 2025
+              Botany Classes for NEET 2026
             </h1>
             <p className="mb-8 text-xl text-cyan-100">
               Join expert-led botany batches covering 45% of NEET Biology. Regular, Crash Course &
@@ -371,7 +371,7 @@ export default function BotanyClassesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Enroll in Botany Classes Today</h2>
             <p className="mb-8 text-xl text-cyan-100">
-              New batches starting soon - secure your seat for NEET 2025!
+              New batches starting soon - secure your seat for NEET 2026!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

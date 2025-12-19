@@ -128,7 +128,7 @@ export default function Class12Page() {
 
   const urgencyReasons = [
     'Board exams start in 4 months',
-    'NEET 2025 preparation needs to peak now',
+    'NEET 2026 preparation needs to peak now',
     'Limited seats in medical colleges',
     'Competition increases every year',
     'Foundation gaps need immediate fixing',
@@ -166,12 +166,12 @@ export default function Class12Page() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Crack NEET 2025 with <span className="text-yellow-300">Class 12 Biology</span>
+                Crack NEET 2026 with <span className="text-yellow-300">Class 12 Biology</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 mb-8">
                 The most critical year of your medical journey! Master Class 12 Biology concepts
-                while simultaneously preparing for NEET 2025. Time is running out!
+                while simultaneously preparing for NEET 2026. Time is running out!
               </p>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
@@ -234,9 +234,9 @@ export default function Class12Page() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* NEET 2025 Countdown */}
+              {/* NEET 2026 Countdown */}
               <div className="bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl p-8 text-center mb-6">
-                <h3 className="text-2xl font-bold mb-4">NEET 2025 Countdown</h3>
+                <h3 className="text-2xl font-bold mb-4">NEET 2026 Countdown</h3>
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                   <div>
                     <div className="text-xl sm:text-3xl font-bold">167</div>
@@ -507,7 +507,7 @@ export default function Class12Page() {
               Secure Your Medical Future - Start Today!
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join 3,200+ Class 12 students who are already on track for NEET 2025 success. Every
+              Join 3,200+ Class 12 students who are already on track for NEET 2026 success. Every
               day you wait, the competition gets stronger. Act NOW!
             </p>
 

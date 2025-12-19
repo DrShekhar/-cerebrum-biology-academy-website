@@ -115,7 +115,7 @@ const mockCourses: Course[] = [
     price: 65000,
     rating: 4.9,
     completionRate: 85,
-    description: 'Intensive crash course for dropper students targeting NEET 2025',
+    description: 'Intensive crash course for dropper students targeting NEET 2026',
     topics: ['Complete Syllabus', 'Mock Tests', 'Revision', 'Problem Solving', 'Exam Strategy'],
     schedule: 'Daily - 9:00 AM to 1:00 PM',
   },

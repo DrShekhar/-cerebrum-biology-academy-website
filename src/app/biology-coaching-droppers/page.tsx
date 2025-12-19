@@ -150,7 +150,7 @@ export default function BiologyDroppersPage() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-5 h-5 mr-2 text-yellow-300" />
-              NEET 2025 Dropper Batch
+              NEET 2026 Dropper Batch
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">

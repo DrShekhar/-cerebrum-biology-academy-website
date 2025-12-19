@@ -268,7 +268,7 @@ export class SEOEngine {
 
   private async optimizeMetaDescription(content: string, keywords: string[]): Promise<string> {
     const primaryKeyword = keywords[0]
-    return `Join Cerebrum Biology Academy for expert ${primaryKeyword}. AIIMS faculty, 98% success rate, personalized mentoring for NEET 2025. Enroll now for guaranteed results!`
+    return `Join Cerebrum Biology Academy for expert ${primaryKeyword}. AIIMS faculty, 98% success rate, personalized mentoring for NEET 2026. Enroll now for guaranteed results!`
   }
 
   private scoreTitle(title: string, keywords: string[]): number {

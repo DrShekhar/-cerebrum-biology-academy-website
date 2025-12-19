@@ -332,7 +332,7 @@ export default function NeetOnlineClassesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Join NEET Online Classes Today</h2>
             <p className="mb-8 text-xl text-indigo-100">
-              New batches starting soon - secure your seat for NEET 2025!
+              New batches starting soon - secure your seat for NEET 2026!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

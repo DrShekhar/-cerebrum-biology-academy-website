@@ -31,7 +31,7 @@ interface EnrollmentNotification {
 // Course enrollment data
 const courseData = [
   {
-    name: 'NEET 2025 Biology Mastery',
+    name: 'NEET 2026 Biology Mastery',
     capacity: 150,
     enrolled: 127,
     type: 'comprehensive',

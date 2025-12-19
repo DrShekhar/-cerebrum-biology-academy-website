@@ -28,9 +28,9 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
 
   const courseOptions = [
     { value: '', label: 'Select a Course' },
-    { value: 'neet-2025-11th', label: 'NEET 2025 - Class 11th' },
-    { value: 'neet-2025-12th', label: 'NEET 2025 - Class 12th' },
-    { value: 'neet-2025-dropper', label: 'NEET 2025 - Dropper Batch' },
+    { value: 'neet-2026-11th', label: 'NEET 2026 - Class 11th' },
+    { value: 'neet-2026-12th', label: 'NEET 2026 - Class 12th' },
+    { value: 'neet-2026-dropper', label: 'NEET 2026 - Dropper Batch' },
     { value: 'neet-2026-early-bird', label: 'NEET 2026 - Early Bird' },
     { value: 'general-inquiry', label: 'General Inquiry' },
   ]

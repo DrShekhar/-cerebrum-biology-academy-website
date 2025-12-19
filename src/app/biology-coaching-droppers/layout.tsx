@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET dropper biology coaching. Intensive revision, gap analysis, complete NCERT line-by-line. Expert AIIMS faculty, 98% success rate. Previous year papers, test series. Book free demo!',
   keywords:
-    'NEET dropper coaching, biology coaching for droppers, NEET repeater batch, dropper batch biology, NEET second attempt coaching, NEET 2025 dropper, biology tuition for droppers, NEET dropper course, repeater biology coaching, NEET dropper online coaching, biology for NEET repeaters, gap year NEET coaching',
+    'NEET dropper coaching, biology coaching for droppers, NEET repeater batch, dropper batch biology, NEET second attempt coaching, NEET 2026 dropper, biology tuition for droppers, NEET dropper course, repeater biology coaching, NEET dropper online coaching, biology for NEET repeaters, gap year NEET coaching',
   openGraph: {
     title: 'Best NEET Dropper Biology Coaching | Repeater Batch | Cerebrum Academy',
     description:

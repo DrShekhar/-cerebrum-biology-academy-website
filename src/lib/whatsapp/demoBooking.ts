@@ -40,7 +40,7 @@ export class DemoBookingService {
     })
 
     // Send initial message
-    const message = `🎓 *Demo Class Booking*\n\nGreat choice, ${studentName}! Let's book your FREE demo class.\n\nWhich class are you preparing for?\n\n1️⃣ Class 11 (NEET Foundation)\n2️⃣ Class 12 (NEET Preparation)\n3️⃣ Dropper (NEET 2025/2026)\n\nJust type the number or class name!`
+    const message = `🎓 *Demo Class Booking*\n\nGreat choice, ${studentName}! Let's book your FREE demo class.\n\nWhich class are you preparing for?\n\n1️⃣ Class 11 (NEET Foundation)\n2️⃣ Class 12 (NEET Preparation)\n3️⃣ Dropper (NEET 2026/2027)\n\nJust type the number or class name!`
 
     await this.sendMessage(phoneNumber, phoneNumberId, message)
   }
@@ -291,7 +291,7 @@ export class DemoBookingService {
     const classNames: { [key: string]: string } = {
       CLASS_11: 'Class 11 (NEET Foundation)',
       CLASS_12: 'Class 12 (NEET Preparation)',
-      DROPPER: 'Dropper Batch (NEET 2025/2026)',
+      DROPPER: 'Dropper Batch (NEET 2026/2027)',
     }
     return classNames[classCode] || classCode
   }

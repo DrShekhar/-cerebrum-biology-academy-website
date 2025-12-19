@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Botany Teacher | Best Botany Teacher for NEET 2025',
+  title: 'Botany Teacher | Best Botany Teacher for NEET 2026',
   description:
     'Looking for the best botany teacher? Expert AIIMS-trained faculty specializing in Plant Biology. Master Plant Physiology, Plant Kingdom & Ecology. 45% of NEET Biology is Botany!',
   keywords: [

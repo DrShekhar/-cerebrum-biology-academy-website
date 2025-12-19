@@ -3,11 +3,11 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Class 12 Biology NEET Coaching | Target 2025 Batch | Cerebrum Academy',
   description:
-    'Intensive Class 12 Biology coaching for NEET 2025. Complete syllabus, previous year papers, mock tests, 90+ marks guarantee. AIIMS faculty. Limited seats!',
+    'Intensive Class 12 Biology coaching for NEET 2026. Complete syllabus, previous year papers, mock tests, 90+ marks guarantee. AIIMS faculty. Limited seats!',
   keywords:
-    'Class 12 biology, NEET target batch, Class 12 NEET coaching, biology coaching, NEET 2025, board exam biology, NEET preparation, competitive biology',
+    'Class 12 biology, NEET target batch, Class 12 NEET coaching, biology coaching, NEET 2026, board exam biology, NEET preparation, competitive biology',
   openGraph: {
-    title: 'Class 12 Biology NEET Target Batch | Crack NEET 2025',
+    title: 'Class 12 Biology NEET Target Batch | Crack NEET 2026',
     description:
       'Final year intensive NEET Biology coaching. 98% qualification rate, board exam 90+ guarantee, complete syllabus + previous years. Book your seat now!',
     images: ['/og-images/class-12-biology.jpg'],

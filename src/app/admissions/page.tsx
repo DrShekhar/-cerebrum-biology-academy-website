@@ -1535,7 +1535,7 @@ export default function AdmissionsPage() {
         <div className="px-4 py-3 flex items-center justify-between gap-3">
           <div className="flex-1">
             <p className="text-xs text-gray-600">Limited seats available</p>
-            <p className="text-sm font-bold text-gray-900">Apply for NEET 2025</p>
+            <p className="text-sm font-bold text-gray-900">Apply for NEET 2026</p>
           </div>
           <div className="flex gap-2">
             <button

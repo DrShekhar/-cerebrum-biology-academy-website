@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Specialized NEET repeater program with proven rank improvement strategies. 89% repeaters qualify NEET with us. Emotional support, focused Biology coaching, motivation. Start again, succeed this time!',
   keywords:
-    'NEET repeaters, NEET second attempt, failed NEET, NEET dropper, repeater success, rank improvement, NEET 2025 repeater, second chance NEET, biology repeater course',
+    'NEET repeaters, NEET second attempt, failed NEET, NEET dropper, repeater success, rank improvement, NEET 2026 repeater, second chance NEET, biology repeater course',
   openGraph: {
     title: 'NEET Repeaters 2025 | Transform Failure into Success',
     description:

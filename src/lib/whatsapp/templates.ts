@@ -123,7 +123,7 @@ You're not enrolled in any course currently, but I can still help!
 *Our Popular Courses:*
 1️⃣ Class 11 - NEET Foundation
 2️⃣ Class 12 - NEET Preparation
-3️⃣ Dropper Batch - NEET 2025/2026
+3️⃣ Dropper Batch - NEET 2026/2027
 
 *Benefits:*
 ✓ Live classes with AIIMS faculty

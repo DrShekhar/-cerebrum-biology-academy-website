@@ -518,7 +518,7 @@ export function StudentCommunity() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="text-sm font-medium">NEET 2025 Warriors</h4>
+                    <h4 className="text-sm font-medium">NEET 2026 Warriors</h4>
                     <p className="text-xs text-gray-500">2,847 members</p>
                   </div>
                   <button className="text-xs bg-blue-100 text-blue-800 px-3 py-2 rounded min-h-[44px] min-w-[44px]">

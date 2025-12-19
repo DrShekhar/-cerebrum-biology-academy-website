@@ -655,7 +655,7 @@ export default function ChapterPage() {
                       href="/neet-2025-preparation"
                       className="block p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors"
                     >
-                      NEET 2025 Preparation
+                      NEET 2026 Preparation
                     </Link>
                     <Link
                       href="/courses"

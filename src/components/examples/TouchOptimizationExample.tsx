@@ -155,7 +155,7 @@ function CourseDetailsForm({
     name: '',
     email: '',
     phone: '',
-    target: 'NEET 2025',
+    target: 'NEET 2026',
   })
 
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -233,7 +233,7 @@ function CourseDetailsForm({
           onChange={(e) => handleInputChange('target', e.target.value)}
           style={{ fontSize: '16px' }}
         >
-          <option value="NEET 2025">NEET 2025</option>
+          <option value="NEET 2026">NEET 2026</option>
           <option value="NEET 2026">NEET 2026</option>
           <option value="AIIMS">AIIMS</option>
           <option value="JIPMER">JIPMER</option>

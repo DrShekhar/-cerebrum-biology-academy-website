@@ -45,8 +45,8 @@ export function OrganizationSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Course',
-            name: 'NEET 2025 - Class 11th Biology',
-            description: 'Comprehensive biology coaching for NEET 2025 aspirants in Class 11th',
+            name: 'NEET 2026 - Class 11th Biology',
+            description: 'Comprehensive biology coaching for NEET 2026 aspirants in Class 11th',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -59,8 +59,8 @@ export function OrganizationSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Course',
-            name: 'NEET 2025 - Class 12th Biology',
-            description: 'Intensive biology preparation for NEET 2025 Class 12th students',
+            name: 'NEET 2026 - Class 12th Biology',
+            description: 'Intensive biology preparation for NEET 2026 Class 12th students',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',

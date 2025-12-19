@@ -22,7 +22,7 @@ export function CourseCardWithTrust() {
         <h4 className="text-xl font-semibold text-slate-800 mb-2">Complete NEET Biology Course</h4>
 
         <p className="text-slate-600 mb-4">
-          Comprehensive Biology course for NEET 2025 with live classes and doubt sessions.
+          Comprehensive Biology course for NEET 2026 with live classes and doubt sessions.
         </p>
 
         {/* Pricing Section */}

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Specialized NEET dropper batch for 2025. Complete Biology syllabus in 10 months, rank improvement strategies, 98% success rate. Join India's best NEET repeater program!",
   keywords:
-    'NEET dropper batch, NEET repeater, one year NEET coaching, NEET second attempt, dropper biology coaching, NEET 2025 preparation, rank improvement NEET',
+    'NEET dropper batch, NEET repeater, one year NEET coaching, NEET second attempt, dropper biology coaching, NEET 2026 preparation, rank improvement NEET',
   openGraph: {
     title: 'NEET Dropper Batch 2025 | Transform Your Rank in 10 Months',
     description:

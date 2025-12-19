@@ -24,7 +24,7 @@ const TRACK_OPTIONS: TrackOption[] = [
     title: 'NEET Preparation',
     description: 'Comprehensive preparation for NEET medical entrance exam',
     icon: <Target className="w-8 h-8" />,
-    goals: ['NEET 2025', 'NEET 2026', 'NEET 2027', 'NEET Dropper'],
+    goals: ['NEET 2026', 'NEET 2026', 'NEET 2027', 'NEET Dropper'],
     color: 'from-blue-600 to-purple-600',
   },
   {

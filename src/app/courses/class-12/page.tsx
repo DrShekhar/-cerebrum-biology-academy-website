@@ -307,7 +307,7 @@ export default function Class12BiologyPage() {
           </div>
 
           <div className="bg-yellow-100 border border-yellow-300 rounded-xl p-6">
-            <p className="text-yellow-800 font-semibold mb-2">🎯 NEET 2025 Special Offer</p>
+            <p className="text-yellow-800 font-semibold mb-2">🎯 NEET 2026 Special Offer</p>
             <p className="text-yellow-700">
               Enroll before 31st January and get FREE NEET crash course (worth ₹15,000) + Previous
               15 years question bank!

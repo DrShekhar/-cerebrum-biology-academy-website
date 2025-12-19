@@ -288,7 +288,7 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
                 value={metadata.category}
                 onChange={(e) => setMetadata((prev) => ({ ...prev, category: e.target.value }))}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., Class 11, NEET 2025"
+                placeholder="e.g., Class 11, NEET 2026"
               />
             </div>
           </div>

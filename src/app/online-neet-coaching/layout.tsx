@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Online NEET Coaching | Best Online Coaching for NEET 2025 | Cerebrum Biology Academy',
+  title: 'Online NEET Coaching | Best Online Coaching for NEET 2026 | Cerebrum Biology Academy',
   description:
     "Join India's best online NEET coaching with AIIMS-trained faculty. Live interactive classes, recorded lectures, doubt sessions & complete study material. 2,500+ selections. Start your NEET preparation online today!",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'online coaching for neet 2025',
   ],
   openGraph: {
-    title: 'Online NEET Coaching | Best Online Coaching for NEET 2025',
+    title: 'Online NEET Coaching | Best Online Coaching for NEET 2026',
     description:
       "Join India's best online NEET coaching with AIIMS-trained faculty. Live classes, recorded lectures & complete study material.",
     url: 'https://cerebrumbiologyacademy.com/online-neet-coaching',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online NEET Coaching | Best Online Coaching for NEET 2025',
+    title: 'Online NEET Coaching | Best Online Coaching for NEET 2026',
     description:
       "Join India's best online NEET coaching with AIIMS-trained faculty. Live classes, recorded lectures & complete study material.",
   },

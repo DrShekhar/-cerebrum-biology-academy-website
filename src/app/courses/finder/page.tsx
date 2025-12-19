@@ -313,7 +313,7 @@ export default function CourseFinderPage() {
                   </div>
                   <div className="grid gap-4">
                     {[
-                      { value: 'this-year', label: 'NEET 2025', desc: 'Appearing in May 2025' },
+                      { value: 'this-year', label: 'NEET 2026', desc: 'Appearing in May 2025' },
                       { value: 'next-year', label: 'NEET 2026', desc: 'Appearing in May 2026' },
                       { value: 'two-years', label: 'NEET 2027', desc: 'Long-term preparation' },
                       {
