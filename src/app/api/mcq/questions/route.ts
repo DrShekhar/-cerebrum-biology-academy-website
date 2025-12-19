@@ -88,7 +88,12 @@ export async function GET(request: NextRequest) {
       isVerified: true,
     }
 
-    if (filters.topic) {
+    // For official questions: if chapter is selected, use ncertChapterName (more specific)
+    // Skip topic filter when chapter is selected since database has subtopics, not broad categories
+    if (filters.chapter) {
+      officialWhere.ncertChapterName = filters.chapter
+    } else if (filters.topic) {
+      // Only filter by topic if no chapter is selected
       officialWhere.topic = filters.topic
     }
     if (filters.difficulty) {
