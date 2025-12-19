@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import {
   Globe,
   MapPin,
@@ -18,6 +19,13 @@ import {
   GraduationCap,
   Phone,
   Plane,
+  Brain,
+  Target,
+  FileText,
+  Shield,
+  Sparkles,
+  Calendar,
+  Send,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -71,31 +79,37 @@ const features = [
     icon: Video,
     title: 'Live Interactive Classes',
     description: 'Real-time teaching via Zoom with instant doubt resolution. All classes recorded.',
+    color: 'bg-blue-500',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
     description: 'Multiple batch timings across time zones. IST evening works for most regions.',
+    color: 'bg-amber-500',
   },
   {
-    icon: Award,
+    icon: GraduationCap,
     title: 'AIIMS Trained Faculty',
     description: "Expert doctors from India's top medical institutions with 14+ years experience.",
+    color: 'bg-green-500',
   },
   {
     icon: BookOpen,
     title: 'Digital Study Material',
     description: 'Complete NCERT-based notes, accessible anywhere. 10,000+ practice questions.',
+    color: 'bg-purple-500',
   },
   {
     icon: Globe,
     title: 'NEET Centers Abroad',
     description: '14 international NEET exam centers. Write exam in your country.',
+    color: 'bg-red-500',
   },
   {
-    icon: GraduationCap,
+    icon: Award,
     title: 'NRI Quota Guidance',
     description: 'Complete support for NRI quota admissions in Indian medical colleges.',
+    color: 'bg-indigo-500',
   },
 ]
 
@@ -103,30 +117,167 @@ const stats = [
   { label: 'Countries Served', value: '14+', icon: Globe },
   { label: 'NRI Students', value: '900+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
-  { label: 'CBSE Schools Covered', value: '200+', icon: BookOpen },
+  { label: 'AIIMS Faculty', value: '14+ Yrs', icon: Star },
 ]
 
 const courses = [
-  { name: 'Class 9th Foundation', duration: '1 Year', fee: '₹58,000' },
-  { name: 'Class 10th Foundation', duration: '1 Year', fee: '₹68,000' },
-  { name: 'Class 11th NEET', duration: '1 Year', fee: '₹75,000' },
-  { name: 'Class 12th NEET', duration: '1 Year', fee: '₹72,000' },
-  { name: 'NEET Dropper', duration: '1 Year', fee: '₹85,000' },
-  { name: 'Crash Course', duration: '3-6 Months', fee: '₹35,000' },
+  {
+    name: 'Class 9th Foundation',
+    duration: '1 Year',
+    fee: '₹58,000',
+    seats: 12,
+    popular: false,
+  },
+  {
+    name: 'Class 10th Foundation',
+    duration: '1 Year',
+    fee: '₹68,000',
+    seats: 15,
+    popular: false,
+  },
+  {
+    name: 'Class 11th NEET',
+    duration: '1 Year',
+    fee: '₹75,000',
+    seats: 8,
+    popular: true,
+  },
+  {
+    name: 'Class 12th NEET',
+    duration: '1 Year',
+    fee: '₹72,000',
+    seats: 10,
+    popular: true,
+  },
+  {
+    name: 'NEET Dropper',
+    duration: '1 Year',
+    fee: '₹85,000',
+    seats: 6,
+    popular: false,
+  },
+  {
+    name: 'Crash Course',
+    duration: '3-6 Months',
+    fee: '₹35,000',
+    seats: 20,
+    popular: false,
+  },
+]
+
+const testimonials = [
+  {
+    name: 'Arjun Sharma',
+    country: 'UAE',
+    score: '685/720',
+    quote:
+      'The flexible timings allowed me to balance school and NEET prep. Dr. Shekhar sir made Biology so interesting that I topped my class!',
+    avatar: '👨‍🎓',
+    college: 'AIIMS Delhi',
+  },
+  {
+    name: 'Priya Menon',
+    country: 'Saudi Arabia',
+    score: '672/720',
+    quote:
+      'Living in Riyadh, I never thought I could get quality coaching. Cerebrum proved me wrong with their live classes and personal mentorship.',
+    avatar: '👩‍🎓',
+    college: 'JIPMER Puducherry',
+  },
+  {
+    name: 'Rahul Gupta',
+    country: 'Singapore',
+    score: '658/720',
+    quote:
+      'The MCQ practice tool and rank predictor helped me track my progress. The NCERT-focused approach was exactly what I needed.',
+    avatar: '👨‍🎓',
+    college: 'MAMC Delhi',
+  },
+]
+
+const blogArticles = [
+  {
+    title: 'Complete Guide to NEET 2026 for NRI Students',
+    excerpt:
+      'Everything you need to know about NEET 2026 - registration, exam centers abroad, NRI quota, and preparation strategy.',
+    image: '📚',
+    readTime: '8 min read',
+    link: '/blog',
+  },
+  {
+    title: 'NRI Quota Medical Admissions: A Complete Guide',
+    excerpt:
+      'Understand the NRI quota admission process, eligibility criteria, top colleges, and fee structure for NRI students.',
+    image: '🏥',
+    readTime: '10 min read',
+    link: '/blog',
+  },
+  {
+    title: 'How to Prepare for NEET from UAE & Gulf Countries',
+    excerpt:
+      'Time zone management, study schedule, and tips from successful NRI students who cracked NEET while living abroad.',
+    image: '🌍',
+    readTime: '6 min read',
+    link: '/blog',
+  },
 ]
 
 export function NRIStudentsHubPage() {
+  const [formData, setFormData] = useState({
+    studentName: '',
+    parentName: '',
+    country: '',
+    city: '',
+    whatsappNumber: '',
+    email: '',
+    currentClass: '',
+    targetYear: 'NEET 2026',
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
   const whatsappMessage = encodeURIComponent(
     "Hi, I'm an NRI student interested in NEET Biology coaching. Please share details about online classes, timings, and fee structure."
   )
   const whatsappLink = `https://wa.me/918826444334?text=${whatsappMessage}`
 
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      // Submit to API
+      const response = await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.studentName,
+          phone: formData.whatsappNumber,
+          email: formData.email,
+          center: 'online',
+          supportType: 'admission',
+          message: `NRI Lead from ${formData.country}. Class: ${formData.currentClass}. Target: ${formData.targetYear}. Parent: ${formData.parentName}. City: ${formData.city}`,
+          timestamp: new Date().toISOString(),
+          source: 'nri-students-page',
+        }),
+      })
+
+      if (response.ok) {
+        setFormSubmitted(true)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-purple-800 to-blue-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 text-6xl">🇦🇪</div>
           <div className="absolute top-40 right-20 text-5xl">🇸🇦</div>
           <div className="absolute bottom-20 left-1/4 text-5xl">🇸🇬</div>
@@ -136,90 +287,317 @@ export function NRIStudentsHubPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
-              <Globe className="w-5 h-5 mr-2" />
-              Serving NRI Students in 14+ Countries
-            </div>
+          {/* Breadcrumb */}
+          <nav className="text-sm text-white/80 mb-4">
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <span>NRI Students</span>
+          </nav>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-yellow-300">NEET Biology Coaching</span>
-              <br />
-              for NRI & Overseas Students
-            </h1>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Globe className="w-4 h-4 mr-2" />
+                Serving NRI Students in 14+ Countries
+              </div>
 
-            <p className="text-xl md:text-2xl opacity-90 mb-4">
-              UAE | Saudi Arabia | Kuwait | Singapore | Qatar | Oman | Malaysia | Nepal & More
-            </p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Crack <span className="text-yellow-300">NEET 2026</span> from Anywhere in the World
+              </h1>
 
-            <p className="text-lg opacity-80 mb-8 max-w-3xl mx-auto">
-              Prepare for NEET from anywhere in the world. AIIMS-trained faculty, flexible timings
-              across time zones, live interactive classes, and complete guidance for NRI quota
-              admissions. Classes 9th to 12th + Droppers.
-            </p>
+              <p className="text-lg opacity-90 mb-6">
+                UAE | Saudi Arabia | Kuwait | Singapore | Qatar | Nepal & 8 More Countries
+              </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
-                >
-                  <stat.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-                  <div className="text-2xl font-bold">{stat.value}</div>
-                  <div className="text-sm opacity-80">{stat.label}</div>
+              {/* Stats Pills */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full text-sm flex items-center"
+                  >
+                    <stat.icon className="w-4 h-4 mr-2 text-yellow-300" />
+                    <span className="font-bold mr-1">{stat.value}</span>
+                    <span className="opacity-80">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    className="bg-green-500 text-white hover:bg-green-600"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    WhatsApp Us
+                  </Button>
+                </a>
+                <Link href="/demo-booking">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white text-white hover:bg-white hover:text-indigo-600"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    Book Free Demo
+                  </Button>
+                </Link>
+                <a href="tel:+918826444334">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white text-white hover:bg-white hover:text-indigo-600"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </Button>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Quick Lead Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 shadow-2xl"
+            >
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-2">Get Free Consultation</h2>
+                <p className="text-sm text-gray-600">Our counselor will call you within 1 hour</p>
+              </div>
+
+              {!formSubmitted ? (
+                <form onSubmit={handleFormSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Student Name *"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                    value={formData.studentName}
+                    onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
+                  />
+                  <select
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                    value={formData.country}
+                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  >
+                    <option value="">Select Country *</option>
+                    {Object.entries(nriCountriesData).map(([code, country]) => (
+                      <option key={code} value={country.country}>
+                        {country.flag} {country.country}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="WhatsApp Number *"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                    value={formData.whatsappNumber}
+                    onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+                  />
+                  <select
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                    value={formData.currentClass}
+                    onChange={(e) => setFormData({ ...formData, currentClass: e.target.value })}
+                  >
+                    <option value="">Select Class *</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option>
+                    <option value="Dropper">Dropper</option>
+                  </select>
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    className="w-full bg-green-500 hover:bg-green-600 text-white py-3"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      'Submitting...'
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Get Free Consultation
+                      </>
+                    )}
+                  </Button>
+                </form>
+              ) : (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Thank You!</h3>
+                  <p className="text-gray-600 mb-4">Our counselor will call you within 1 hour.</p>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" className="bg-green-500 text-white">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Chat on WhatsApp Now
+                    </Button>
+                  </a>
                 </div>
-              ))}
-            </div>
+              )}
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="bg-green-500 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="truncate">WhatsApp Us</span>
-                </Button>
-              </a>
-              <Link href="/demo-booking" className="w-full sm:w-auto">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-indigo-900 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
-                >
-                  <Play className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="truncate">Book Demo</span>
-                </Button>
-              </Link>
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-indigo-900 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
-                >
-                  <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="truncate">Call Now</span>
-                </Button>
-              </a>
-            </div>
-          </motion.div>
+              {/* Trust Badges */}
+              <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center text-xs text-gray-500">
+                  <Shield className="w-4 h-4 mr-1 text-green-500" />
+                  Secure
+                </div>
+                <div className="flex items-center text-xs text-gray-500">
+                  <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
+                  No Spam
+                </div>
+                <div className="flex items-center text-xs text-gray-500">
+                  <Phone className="w-4 h-4 mr-1 text-green-500" />
+                  Free Call
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Regions Section */}
+      {/* Free Tools Section */}
+      <section className="py-12 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Start Your NEET Prep Journey - Free!
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Try Our Free NEET Preparation Tools
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* MCQ Practice Tool */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/neet-biology-mcq">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                        NEET Biology MCQ Practice
+                      </h3>
+                      <p className="text-gray-600 mb-3">
+                        10,000+ chapter-wise MCQs with detailed solutions. Practice Botany & Zoology
+                        topics.
+                      </p>
+                      <div className="flex items-center text-purple-600 font-medium">
+                        Start Practicing Free
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Rank Predictor Tool */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/neet-rank-predictor">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Target className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        NEET Rank Predictor
+                      </h3>
+                      <p className="text-gray-600 mb-3">
+                        Predict your NEET rank based on expected score. Get college recommendations
+                        for NRI quota.
+                      </p>
+                      <div className="flex items-center text-blue-600 font-medium">
+                        Check Your Rank
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section - Redesigned with Design System */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why NRI Students Choose Cerebrum
+            </h2>
+            <p className="text-xl text-gray-600">Everything you need to crack NEET from abroad</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
+              >
+                <div
+                  className={`w-12 h-12 ${feature.color} rounded-2xl flex items-center justify-center mb-4`}
+                >
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Regions & Countries Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -302,7 +680,7 @@ export function NRIStudentsHubPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -313,31 +691,46 @@ export function NRIStudentsHubPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why NRI Students Choose Cerebrum
+              NRI Students Who Cracked NEET
             </h2>
-            <p className="text-xl text-gray-600">Everything you need to crack NEET from abroad</p>
+            <p className="text-xl text-gray-600">Success stories from students around the world</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={feature.title}
+                key={testimonial.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100"
+                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100"
               >
-                <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-4xl">{testimonial.avatar}</div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.country} • {testimonial.college}
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
+                  NEET Score: {testimonial.score}
+                </div>
+                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                <div className="flex mt-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Courses Section */}
+      {/* Courses Section with Limited Seats */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -347,6 +740,10 @@ export function NRIStudentsHubPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+            <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 text-sm font-medium mb-4">
+              <Calendar className="w-4 h-4 mr-2" />
+              NEET 2026 Batches Starting Soon - Limited Seats!
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Courses for NRI Students
             </h2>
@@ -363,12 +760,21 @@ export function NRIStudentsHubPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6"
+                className={`bg-white rounded-xl shadow-lg p-6 relative ${course.popular ? 'ring-2 ring-purple-500' : ''}`}
               >
+                {course.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+                    MOST POPULAR
+                  </div>
+                )}
+                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {course.seats} Seats Left
+                </div>
+
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{course.name}</h3>
                 <div className="flex justify-between text-gray-600 mb-4">
                   <span>{course.duration}</span>
-                  <span className="text-green-600 font-bold">{course.fee}</span>
+                  <span className="text-green-600 font-bold text-xl">{course.fee}</span>
                 </div>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center text-sm text-gray-600">
@@ -385,22 +791,25 @@ export function NRIStudentsHubPage() {
                   </li>
                 </ul>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="primary" className="w-full bg-green-500 hover:bg-green-600">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Enquire Now
+                    Reserve Your Seat
                   </Button>
                 </a>
               </motion.div>
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <CheckCircle className="w-5 h-5 text-blue-600" />
+              <span className="font-semibold text-blue-900">Same Fees as Indian Students</span>
+            </div>
             <p className="text-gray-600 mb-4">
-              Fees are same as Indian students. Payment accepted in USD, AED, SAR, SGD, and other
-              currencies.
+              Payment accepted in USD, AED, SAR, SGD, and other currencies.
             </p>
             <Link href="/pricing">
-              <Button variant="primary">
+              <Button variant="outline">
                 View Detailed Fee Structure
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -458,8 +867,69 @@ export function NRIStudentsHubPage() {
         </div>
       </section>
 
-      {/* Boards Supported */}
+      {/* Blog Resources Section */}
       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              NEET Preparation Guides for NRI Students
+            </h2>
+            <p className="text-xl text-gray-600">Expert articles to help you prepare from abroad</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {blogArticles.map((article, index) => (
+              <motion.div
+                key={article.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Link href={article.link}>
+                  <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow group">
+                    <div className="h-40 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                      <span className="text-6xl">{article.image}</span>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <FileText className="w-4 h-4 text-blue-600" />
+                        <span className="text-sm text-gray-500">{article.readTime}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        {article.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm mb-4">{article.excerpt}</p>
+                      <div className="flex items-center text-blue-600 font-medium text-sm">
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/blog">
+              <Button variant="outline">
+                View All Articles
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Boards Supported */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -480,7 +950,7 @@ export function NRIStudentsHubPage() {
             {['CBSE', 'ICSE', 'IB', 'Cambridge (IGCSE)', 'State Boards'].map((board) => (
               <div
                 key={board}
-                className="bg-gray-50 rounded-xl p-6 text-center border border-gray-200"
+                className="bg-white rounded-xl p-6 text-center border border-gray-200 shadow-sm"
               >
                 <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-3" />
                 <div className="font-semibold text-gray-900">{board}</div>
@@ -497,7 +967,7 @@ export function NRIStudentsHubPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Final CTA Section with Urgency */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
@@ -506,11 +976,33 @@ export function NRIStudentsHubPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+            {/* Urgency Badge */}
+            <div className="inline-flex items-center bg-red-500 px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+              <Calendar className="w-4 h-4 mr-2" />
+              NEET 2026 Batch Filling Fast - Only 50 Seats Left!
+            </div>
+
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               900+ NRI students trust us for NEET preparation. 98% success rate. AIIMS-trained
               faculty.
             </p>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
+                100% Satisfaction Guarantee
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Shield className="w-5 h-5 mr-2 text-green-300" />
+                Secure Payments
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Phone className="w-5 h-5 mr-2 text-blue-300" />
+                24/7 Support
+              </div>
+            </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
               <a
@@ -535,7 +1027,7 @@ export function NRIStudentsHubPage() {
                   className="border-white text-white hover:bg-white hover:text-indigo-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <Play className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="truncate">Book Demo</span>
+                  <span className="truncate">Book Free Demo</span>
                 </Button>
               </Link>
               <a href="tel:+918826444334" className="w-full sm:w-auto">
