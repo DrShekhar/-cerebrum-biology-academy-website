@@ -172,7 +172,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Premium Modern Design */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
         {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
           className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
@@ -341,7 +341,7 @@ export default function AboutPage() {
             <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">
               Academic Foundation
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-4 sm:mb-6 md:mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 sm:mb-6 md:mb-8 tracking-tight">
               Our Mission & Vision
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
@@ -357,7 +357,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative bg-white/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl hover:shadow-2xl border border-blue-200/50 hover:border-blue-400/60 transition-all duration-500 overflow-hidden group"
+              className="relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 overflow-hidden group"
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -366,10 +366,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <Target
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 mr-3 sm:mr-4 md:mr-5"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 mr-3 sm:mr-4 md:mr-5"
                     strokeWidth={1.5}
                   />
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
                     Our Mission
                   </h3>
                 </div>
@@ -416,7 +416,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl hover:shadow-2xl border border-teal-200/50 hover:border-teal-400/60 transition-all duration-500 overflow-hidden group"
+              className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 overflow-hidden group"
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -425,14 +425,14 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <div className="flex items-center mb-8">
                   <Lightbulb className="w-16 h-16 text-teal-600 mr-5" strokeWidth={1.5} />
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
                     Our Vision
                   </h3>
                 </div>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-8">
                   To become{' '}
-                  <strong className="font-semibold text-blue-900">
+                  <strong className="font-semibold text-black">
                     India's most trusted and innovative NEET coaching institute
                   </strong>
                   , recognized for producing confident, competent medical professionals who
@@ -441,25 +441,25 @@ export default function AboutPage() {
 
                 <div className="space-y-4 pt-8 border-t border-gray-200">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       National leadership in medical education
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       International research collaborations
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Healthcare innovation pipeline
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Societal impact through graduates
                     </span>
@@ -478,7 +478,7 @@ export default function AboutPage() {
             <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Institutional Values
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
               Our Core Academic Principles
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
@@ -495,19 +495,19 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative bg-white/60 backdrop-blur-lg border border-purple-200/40 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-3 hover:scale-105 transition-all duration-500 group overflow-hidden"
+                className="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl hover:border-teal-300 hover:-translate-y-3 hover:scale-105 transition-all duration-500 group overflow-hidden"
               >
                 {/* Animated gradient background on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 {/* Content wrapper for z-index */}
                 <div className="relative z-10">
-                  {/* Icon with Sophisticated Gradient */}
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <value.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
+                  {/* Icon with Solid Background */}
+                  <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <value.icon className="w-10 h-10 text-teal-400" strokeWidth={1.5} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-blue-900 mb-4 leading-tight group-hover:text-blue-700 transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-4 leading-tight group-hover:text-gray-800 transition-colors">
                     {value.title}
                   </h3>
 
@@ -517,8 +517,8 @@ export default function AboutPage() {
                   </p>
 
                   {/* Metric - Elegant Display */}
-                  <div className="bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 text-white px-4 sm:px-6 py-4 rounded-2xl shadow-lg mb-6 group-hover:shadow-xl transition-shadow">
-                    <div className="text-4xl font-bold tabular-nums text-teal-300 leading-none mb-2">
+                  <div className="bg-slate-800 text-white px-4 sm:px-6 py-4 rounded-2xl shadow-lg mb-6 group-hover:shadow-xl transition-shadow">
+                    <div className="text-4xl font-bold tabular-nums text-teal-400 leading-none mb-2">
                       {value.metric}
                     </div>
                     <div className="text-sm text-white/80 font-light">{value.metricLabel}</div>
@@ -540,7 +540,7 @@ export default function AboutPage() {
               <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 Our Founder
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
                 The AIIMS Doctor Who Chose Teaching Over Practice
               </h2>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
@@ -558,18 +558,18 @@ export default function AboutPage() {
               >
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   After graduating from{' '}
-                  <strong className="font-semibold text-blue-900">AIIMS Delhi in 2014</strong>, Dr.
+                  <strong className="font-semibold text-black">AIIMS Delhi in 2014</strong>, Dr.
                   Shekhar C Singh faced the classic dilemma: prestigious hospital residency or
                   uncertain teaching career?
                 </p>
-                <p className="text-2xl text-blue-900 leading-relaxed font-light italic">
+                <p className="text-2xl text-black leading-relaxed font-light italic">
                   His choice surprised everyone.
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   "During my MBBS, I tutored juniors preparing for NEET. I saw brilliant
                   students—kids who'd spent ₹3 lakhs on coaching—completely lost in Biology. Not
                   because they weren't smart, but because{' '}
-                  <strong className="font-semibold text-blue-900">
+                  <strong className="font-semibold text-black">
                     no one taught them the way AIIMS professors taught us
                   </strong>
                   : building concepts from scratch, connecting patterns, making complex topics
@@ -577,7 +577,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   That realization became{' '}
-                  <strong className="font-semibold text-blue-900">Cerebrum Biology Academy</strong>.
+                  <strong className="font-semibold text-black">Cerebrum Biology Academy</strong>.
                 </p>
               </motion.div>
 
@@ -586,7 +586,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-3xl p-10 border border-teal-600/20 shadow-2xl"
+                className="bg-slate-800 rounded-3xl p-10 border border-slate-700 shadow-2xl"
               >
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-8">
                   What Makes Dr. Singh Different
@@ -651,7 +651,7 @@ export default function AboutPage() {
             <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Journey
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
               Nine Years of Growth
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
@@ -676,21 +676,21 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                 >
                   <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                    <div className="relative bg-white/70 backdrop-blur-lg rounded-3xl shadow-xl p-10 hover:shadow-2xl border border-blue-200/50 hover:border-blue-400/60 transition-all duration-500 group hover:-translate-y-2 overflow-hidden">
-                      {/* Hover gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative bg-white rounded-3xl shadow-lg p-10 hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 group hover:-translate-y-2 overflow-hidden">
+                      {/* Hover overlay */}
+                      <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative z-10">
                         <div className="flex items-center mb-6">
-                          <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                            <milestone.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
+                          <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <milestone.icon className="w-10 h-10 text-teal-400" strokeWidth={1.5} />
                           </div>
                           <div className="ml-6">
-                            <div className="text-4xl font-bold text-blue-800 tracking-tight">
+                            <div className="text-4xl font-bold text-teal-600 tracking-tight">
                               {milestone.year}
                             </div>
                           </div>
                         </div>
-                        <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 leading-tight">
+                        <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4 leading-tight">
                           {milestone.title}
                         </h3>
                         <p className="text-lg lg:text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
@@ -699,7 +699,7 @@ export default function AboutPage() {
                         <div className="bg-gradient-to-br from-teal-500/10 to-teal-500/5 rounded-2xl p-6 border-l-4 border-teal-600 backdrop-blur-sm">
                           <div className="flex items-center">
                             <CheckCircle className="w-6 h-6 text-teal-600 mr-3 flex-shrink-0" />
-                            <span className="text-blue-900 font-semibold text-base lg:text-lg">
+                            <span className="text-black font-semibold text-base lg:text-lg">
                               {milestone.stats}
                             </span>
                           </div>
@@ -728,7 +728,7 @@ export default function AboutPage() {
             <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Approach
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
               Our Teaching Methodology
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
@@ -740,22 +740,22 @@ export default function AboutPage() {
             {methodology.map((method, index) => (
               <motion.div
                 key={index}
-                className="relative bg-white/60 backdrop-blur-lg rounded-3xl shadow-lg p-10 border border-purple-200/40 hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
+                className="relative bg-white rounded-3xl shadow-md p-10 border border-gray-200 hover:shadow-xl hover:border-teal-300 hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
                   <div className="flex items-start gap-6 mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl font-bold text-teal-300">{method.step}</span>
+                    <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-3xl font-bold text-teal-400">{method.step}</span>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-blue-900 mb-3 leading-tight">
+                      <h3 className="text-2xl font-bold text-black mb-3 leading-tight">
                         {method.title}
                       </h3>
                       <p className="text-lg text-gray-700 font-light leading-relaxed">
@@ -794,7 +794,7 @@ export default function AboutPage() {
               <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 World-Class Teaching
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-blue-900 mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
                 Faculty Excellence
               </h2>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-10 leading-[1.8] font-light">
@@ -829,19 +829,19 @@ export default function AboutPage() {
               {facultyStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="relative bg-white/60 backdrop-blur-lg rounded-3xl p-8 text-center shadow-lg border border-purple-200/40 hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-2 hover:scale-105 transition-all duration-500 group overflow-hidden"
+                  className="relative bg-white rounded-3xl p-8 text-center shadow-md border border-gray-200 hover:shadow-xl hover:border-teal-300 hover:-translate-y-2 hover:scale-105 transition-all duration-500 group overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  {/* Hover gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative z-10">
-                    <div className="text-5xl font-bold text-blue-800 mb-3 tracking-tight">
+                    <div className="text-5xl font-bold text-teal-600 mb-3 tracking-tight">
                       {stat.number}
                     </div>
-                    <div className="text-blue-900 font-semibold mb-2 text-lg">{stat.label}</div>
+                    <div className="text-black font-semibold mb-2 text-lg">{stat.label}</div>
                     <div className="text-sm text-gray-600 font-light leading-relaxed">
                       {stat.description}
                     </div>
@@ -857,7 +857,7 @@ export default function AboutPage() {
       <EEATSignals variant="full" className="bg-white" />
 
       {/* CTA Section - Premium Modern Design */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
         {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
           className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
