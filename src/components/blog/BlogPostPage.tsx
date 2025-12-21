@@ -93,7 +93,8 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
   const [showShareMenu, setShowShareMenu] = useState(false)
   const [headerCollapsed, setHeaderCollapsed] = useState(false)
   const lastScrollY = useRef(0)
-  const scrollThreshold = 50 // Minimum scroll before triggering collapse
+  const scrollThreshold = 100 // Increased threshold to prevent jitter
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
 
   // Track views (adds real-time views to viral base count)
   const { views: totalViews } = useBlogViews({
@@ -102,22 +103,29 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
     trackOnMount: true,
   })
 
-  // Scroll direction detection for collapsible header
+  // Scroll direction detection for collapsible header with debouncing
   const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY
-    const scrollDiff = currentScrollY - lastScrollY.current
-
-    // Only trigger if scrolled more than threshold
-    if (Math.abs(scrollDiff) > scrollThreshold) {
-      if (scrollDiff > 0 && currentScrollY > 200) {
-        // Scrolling DOWN and past hero area - collapse header
-        setHeaderCollapsed(true)
-      } else if (scrollDiff < 0) {
-        // Scrolling UP - expand header
-        setHeaderCollapsed(false)
-      }
-      lastScrollY.current = currentScrollY
+    // Clear any pending scroll updates
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current)
     }
+
+    scrollTimeout.current = setTimeout(() => {
+      const currentScrollY = window.scrollY
+      const scrollDiff = currentScrollY - lastScrollY.current
+
+      // Only trigger if scrolled more than threshold
+      if (Math.abs(scrollDiff) > scrollThreshold) {
+        if (scrollDiff > 0 && currentScrollY > 300) {
+          // Scrolling DOWN and past hero area - collapse header
+          setHeaderCollapsed(true)
+        } else if (scrollDiff < -scrollThreshold && currentScrollY < 200) {
+          // Scrolling UP significantly and near top - expand header
+          setHeaderCollapsed(false)
+        }
+        lastScrollY.current = currentScrollY
+      }
+    }, 50) // 50ms debounce
   }, [])
 
   useEffect(() => {

@@ -626,18 +626,22 @@ export class AdvancedPaymentEngine extends EventEmitter {
 
   /**
    * Setup multiple payment providers for global coverage
+   * SECURITY: Only initialize providers with valid credentials
    */
   private async setupPaymentProviders() {
-    const providers: PaymentProvider[] = [
-      {
+    const providers: PaymentProvider[] = []
+
+    // Razorpay - Primary for India
+    if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
+      providers.push({
         provider_id: 'razorpay_india',
         name: 'Razorpay',
         type: 'gateway',
         api_credentials: {
-          api_key: process.env.RAZORPAY_KEY_ID || 'rzp_test_key',
-          secret_key: process.env.RAZORPAY_SECRET || 'rzp_test_secret',
+          api_key: process.env.RAZORPAY_KEY_ID,
+          secret_key: process.env.RAZORPAY_KEY_SECRET,
           merchant_id: 'merchant_razorpay',
-          webhook_secret: process.env.RAZORPAY_WEBHOOK_SECRET || 'webhook_secret',
+          webhook_secret: process.env.RAZORPAY_WEBHOOK_SECRET || '',
           sandbox_mode: process.env.NODE_ENV !== 'production',
         },
         webhook_config: {
@@ -655,16 +659,22 @@ export class AdvancedPaymentEngine extends EventEmitter {
           machine_learning_models: true,
         },
         international_support: false,
-      },
-      {
+      })
+    } else {
+      console.warn('⚠️ Razorpay not configured - missing RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET')
+    }
+
+    // Stripe - Global payments
+    if (process.env.STRIPE_PUBLISHABLE_KEY && process.env.STRIPE_SECRET_KEY) {
+      providers.push({
         provider_id: 'stripe_global',
         name: 'Stripe',
         type: 'gateway',
         api_credentials: {
-          api_key: process.env.STRIPE_PUBLISHABLE_KEY || 'pk_test_key',
-          secret_key: process.env.STRIPE_SECRET_KEY || 'sk_test_secret',
+          api_key: process.env.STRIPE_PUBLISHABLE_KEY,
+          secret_key: process.env.STRIPE_SECRET_KEY,
           merchant_id: 'merchant_stripe',
-          webhook_secret: process.env.STRIPE_WEBHOOK_SECRET || 'whsec_secret',
+          webhook_secret: process.env.STRIPE_WEBHOOK_SECRET || '',
           sandbox_mode: process.env.NODE_ENV !== 'production',
         },
         webhook_config: {
@@ -682,16 +692,22 @@ export class AdvancedPaymentEngine extends EventEmitter {
           machine_learning_models: true,
         },
         international_support: true,
-      },
-      {
+      })
+    } else {
+      console.warn('⚠️ Stripe not configured - missing STRIPE_PUBLISHABLE_KEY or STRIPE_SECRET_KEY')
+    }
+
+    // PayPal - Global wallet
+    if (process.env.PAYPAL_CLIENT_ID && process.env.PAYPAL_CLIENT_SECRET) {
+      providers.push({
         provider_id: 'paypal_global',
         name: 'PayPal',
         type: 'wallet',
         api_credentials: {
-          api_key: process.env.PAYPAL_CLIENT_ID || 'paypal_client_id',
-          secret_key: process.env.PAYPAL_CLIENT_SECRET || 'paypal_secret',
+          api_key: process.env.PAYPAL_CLIENT_ID,
+          secret_key: process.env.PAYPAL_CLIENT_SECRET,
           merchant_id: 'merchant_paypal',
-          webhook_secret: process.env.PAYPAL_WEBHOOK_ID || 'webhook_id',
+          webhook_secret: process.env.PAYPAL_WEBHOOK_ID || '',
           sandbox_mode: process.env.NODE_ENV !== 'production',
         },
         webhook_config: {
@@ -709,8 +725,16 @@ export class AdvancedPaymentEngine extends EventEmitter {
           machine_learning_models: true,
         },
         international_support: true,
-      },
-    ]
+      })
+    } else {
+      console.warn('⚠️ PayPal not configured - missing PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET')
+    }
+
+    if (providers.length === 0) {
+      console.error(
+        '⚠️ No payment providers configured! Please set up at least one payment provider.'
+      )
+    }
 
     providers.forEach((provider) => {
       this.paymentProviders.set(provider.provider_id, provider)

@@ -43,6 +43,23 @@ function useDebounce<T>(value: T, delay: number): T {
 
 type SortOption = 'newest' | 'popular' | 'readTime'
 
+// Format large numbers for display (e.g., 2525000 -> "2.5M+", 150000 -> "150K+")
+function formatViewCount(views: number): string {
+  if (views >= 1000000) {
+    const millions = views / 1000000
+    return millions >= 10
+      ? `${Math.round(millions)}M+`
+      : `${millions.toFixed(1).replace(/\.0$/, '')}M+`
+  }
+  if (views >= 1000) {
+    const thousands = views / 1000
+    return thousands >= 100
+      ? `${Math.round(thousands)}K+`
+      : `${thousands.toFixed(1).replace(/\.0$/, '')}K+`
+  }
+  return `${views}+`
+}
+
 interface BlogListingPageProps {
   posts: BlogPostMeta[]
   categories: BlogCategory[]
@@ -228,7 +245,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                 <div className="text-sm opacity-80">Articles</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-                <div className="text-2xl font-bold">{Math.round(stats.totalViews / 1000)}K+</div>
+                <div className="text-2xl font-bold">{formatViewCount(stats.totalViews)}</div>
                 <div className="text-sm opacity-80">Total Reads</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">

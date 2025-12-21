@@ -10,20 +10,29 @@ import { cookies } from 'next/headers'
 export type UserRole = PrismaUserRole
 
 // Environment variables validation
-// Lazy validation - secrets are checked when actually used, not at module load time
-// This prevents build failures when secrets aren't needed (e.g., during CI/CD builds)
+// SECURITY: Secrets are REQUIRED in production - no fallbacks allowed
 const getJWTSecret = () => {
-  const secret = process.env.JWT_SECRET || 'fallback-secret-change-in-production'
-  if (process.env.NODE_ENV === 'production' && !process.env.JWT_SECRET) {
-    console.warn('JWT_SECRET not set in production - using fallback (INSECURE)')
+  const secret = process.env.JWT_SECRET
+  if (!secret) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('CRITICAL: JWT_SECRET is required in production')
+    }
+    // Only use fallback in development/test
+    console.warn('[DEV] JWT_SECRET not set - using development fallback')
+    return 'dev-only-secret-not-for-production-use'
   }
   return secret
 }
 
 const getJWTRefreshSecret = () => {
-  const secret = process.env.JWT_REFRESH_SECRET || 'fallback-refresh-secret-change-in-production'
-  if (process.env.NODE_ENV === 'production' && !process.env.JWT_REFRESH_SECRET) {
-    console.warn('JWT_REFRESH_SECRET not set in production - using fallback (INSECURE)')
+  const secret = process.env.JWT_REFRESH_SECRET
+  if (!secret) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('CRITICAL: JWT_REFRESH_SECRET is required in production')
+    }
+    // Only use fallback in development/test
+    console.warn('[DEV] JWT_REFRESH_SECRET not set - using development fallback')
+    return 'dev-only-refresh-secret-not-for-production-use'
   }
   return secret
 }

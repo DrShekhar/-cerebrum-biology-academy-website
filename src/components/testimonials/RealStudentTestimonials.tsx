@@ -62,7 +62,7 @@ export function RealStudentTestimonials({
 
         <div className="relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
               {currentTestimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}

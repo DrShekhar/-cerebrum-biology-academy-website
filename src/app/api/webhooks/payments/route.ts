@@ -117,14 +117,22 @@ async function verifyWebhookSignature(
 }
 
 function verifyRazorpaySignature(body: string, signature: string): boolean {
-  const secret = process.env.RAZORPAY_WEBHOOK_SECRET || 'webhook_secret'
+  const secret = process.env.RAZORPAY_WEBHOOK_SECRET
+  if (!secret) {
+    console.error('CRITICAL: RAZORPAY_WEBHOOK_SECRET is not configured')
+    return false
+  }
   const expectedSignature = crypto.createHmac('sha256', secret).update(body).digest('hex')
 
   return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
 }
 
 function verifyStripeSignature(body: string, signature: string): boolean {
-  const secret = process.env.STRIPE_WEBHOOK_SECRET || 'whsec_secret'
+  const secret = process.env.STRIPE_WEBHOOK_SECRET
+  if (!secret) {
+    console.error('CRITICAL: STRIPE_WEBHOOK_SECRET is not configured')
+    return false
+  }
   const timestamp = signature.split(',')[0].replace('t=', '')
   const signatureHash = signature.split(',')[1].replace('v1=', '')
 
