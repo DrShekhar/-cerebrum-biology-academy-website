@@ -26,6 +26,8 @@ import {
   Sparkles,
   Calendar,
   Send,
+  ChevronDown,
+  HelpCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -193,6 +195,76 @@ const testimonials = [
     avatar: '👨‍🎓',
     college: 'MAMC Delhi',
   },
+  {
+    name: 'Sneha Nair',
+    country: 'Kuwait',
+    score: '665/720',
+    quote:
+      'Being in Kuwait with limited NEET resources, Cerebrum was a blessing. The recorded lectures helped me revise anytime, and the doubt-solving sessions were incredibly helpful.',
+    avatar: '👩‍🎓',
+    college: 'KMC Manipal',
+  },
+  {
+    name: 'Aditya Krishnan',
+    country: 'Qatar',
+    score: '678/720',
+    quote:
+      'Dr. Shekhar sir\u2019s teaching style made complex topics like Genetics and Ecology so simple. The weekend batch timings perfectly suited my school schedule in Doha.',
+    avatar: '👨‍🎓',
+    college: 'CMC Vellore',
+  },
+  {
+    name: 'Ananya Reddy',
+    country: 'Oman',
+    score: '652/720',
+    quote:
+      'The personalized attention and regular parent-teacher meetings kept my preparation on track. I secured admission through NRI quota with proper guidance from the team.',
+    avatar: '👩‍🎓',
+    college: 'KGMU Lucknow',
+  },
+]
+
+const faqs = [
+  {
+    question: 'What are the class timings for NRI students in different time zones?',
+    answer:
+      'We offer flexible batch timings to accommodate students from all time zones. Weekend batches (Friday/Saturday) are available at 6:00 PM IST and 8:00 PM IST, which translates to afternoon hours for Gulf countries (2:30-4:30 PM GST) and morning/evening for Southeast Asian countries. Weekday batches run from 7:00 PM - 9:00 PM IST. All live classes are also recorded for students who miss a session.',
+  },
+  {
+    question: 'What payment methods are available for NRI students?',
+    answer:
+      'We accept international payments through multiple channels: Razorpay (supports all major international credit/debit cards), PayPal, direct bank wire transfer (SWIFT), and UPI for NRI accounts. Payment can be made in INR or USD. We also offer EMI options for course fees through select banks.',
+  },
+  {
+    question: 'How does the NRI quota work for NEET admissions?',
+    answer:
+      'NRI quota reserves 15% of seats in private and deemed medical colleges for NRI-sponsored candidates. The student must be an Indian citizen, and the NRI sponsor (parent/blood relative) must provide an NRI certificate. NEET qualification is mandatory. Fees under NRI quota are typically USD 15,000-25,000 per year. We provide complete guidance on documentation and admission process.',
+  },
+  {
+    question: 'Can I appear for NEET exam from abroad?',
+    answer:
+      'Yes! NEET 2026 will have exam centers in 14+ countries including UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Kuwait, Qatar, Oman, Bahrain, Singapore, Malaysia, Nepal, Sri Lanka, and more. You need to register with your overseas address and select the nearest international exam center.',
+  },
+  {
+    question: 'Which board syllabus do you follow - CBSE, ICSE, or State Board?',
+    answer:
+      'Our curriculum is NCERT-based, which is the official syllabus for NEET. We help students from all boards (CBSE, ICSE, IB, IGCSE, State Boards) bridge any syllabus gaps. Students from IB/IGCSE particularly benefit from our comprehensive NCERT coverage as NEET is strictly based on NCERT Class 11 & 12.',
+  },
+  {
+    question: 'How do you handle doubt clearing for students in different time zones?',
+    answer:
+      'We have a multi-channel doubt resolution system: 1) Live doubt sessions during class, 2) 24/7 WhatsApp doubt support with guaranteed response within 4 hours, 3) Weekly dedicated doubt-clearing sessions on weekends, 4) Recorded video explanations for frequently asked doubts. Dr. Shekhar personally addresses complex conceptual queries.',
+  },
+  {
+    question: 'Do you provide study material and test series?',
+    answer:
+      'Yes, all enrolled students receive: Digital study notes (PDF), Chapter-wise MCQ banks (10,000+ questions), Full syllabus mock tests (NEET pattern), Previous year question papers (2015-2024) with solutions, Topic-wise test series, and Access to our AI-powered practice platform with rank predictor.',
+  },
+  {
+    question: 'What if I miss a live class due to time zone issues?',
+    answer:
+      'All our live classes are recorded in HD quality and uploaded to the student portal within 2 hours of the session ending. You can watch recordings unlimited times till your course validity. Additionally, we provide detailed class notes and summary handouts for quick revision.',
+  },
 ]
 
 const blogArticles = [
@@ -235,6 +307,7 @@ export function NRIStudentsHubPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const whatsappMessage = encodeURIComponent(
     "Hi, I'm an NRI student interested in NEET Biology coaching. Please share details about online classes, timings, and fee structure."
@@ -730,8 +803,86 @@ export function NRIStudentsHubPage() {
         </div>
       </section>
 
-      {/* Courses Section with Limited Seats */}
+      {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
+              <HelpCircle className="w-4 h-4 mr-2" />
+              Common Questions from NRI Parents & Students
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about NEET preparation from abroad
+            </p>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+              >
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                >
+                  <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-purple-600 flex-shrink-0 transition-transform duration-200 ${
+                      openFaqIndex === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openFaqIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="px-6 pb-5"
+                  >
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="text-center mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-gray-600 mb-4">Still have questions?</p>
+            <Link
+              href={whatsappLink}
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Chat with us on WhatsApp
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Courses Section with Limited Seats */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"

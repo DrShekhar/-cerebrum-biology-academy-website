@@ -212,6 +212,12 @@ export function ComponentName({ className }: Props) {
 }
 ```
 
+## Reference Pages
+
+| Page          | URL              | Purpose                                                  |
+| ------------- | ---------------- | -------------------------------------------------------- |
+| Color Palette | `/color-palette` | All colors, gradients, combinations used across the site |
+
 ## MCP Servers
 
 - **interakt** - WhatsApp automation (project-specific)

@@ -127,19 +127,6 @@ export const Footer = memo(function Footer() {
     { name: 'NRI Students (14+ Countries)', href: '/nri-students' },
   ]
 
-  const nriCountryLinks = [
-    { name: '🇦🇪 UAE (Dubai)', href: '/nri-students/uae' },
-    { name: '🇸🇦 Saudi Arabia', href: '/nri-students/saudi-arabia' },
-    { name: '🇰🇼 Kuwait', href: '/nri-students/kuwait' },
-    { name: '🇶🇦 Qatar', href: '/nri-students/qatar' },
-    { name: '🇴🇲 Oman', href: '/nri-students/oman' },
-    { name: '🇧🇭 Bahrain', href: '/nri-students/bahrain' },
-    { name: '🇸🇬 Singapore', href: '/nri-students/singapore' },
-    { name: '🇲🇾 Malaysia', href: '/nri-students/malaysia' },
-    { name: '🇳🇵 Nepal', href: '/nri-students/nepal' },
-    { name: '🇳🇬 Nigeria', href: '/nri-students/nigeria' },
-  ]
-
   const hubLinks = [
     { name: 'NEET Biology', href: '/neet-biology-coaching' },
     { name: 'Biology Teacher', href: '/biology-teacher' },
@@ -181,7 +168,7 @@ export const Footer = memo(function Footer() {
     <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8">
           {/* Company Info - Spans 2 columns on larger screens */}
           <motion.div
             className="lg:col-span-2"
@@ -338,37 +325,6 @@ export const Footer = memo(function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </motion.div>
-
-          {/* NRI/Overseas Countries */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
-            <h4 className="font-semibold text-lg mb-4 text-white">NRI Students</h4>
-            <ul className="space-y-2">
-              {nriCountryLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  href="/nri-students"
-                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
-                >
-                  View All Countries →
-                </Link>
-              </li>
             </ul>
           </motion.div>
 

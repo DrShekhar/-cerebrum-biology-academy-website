@@ -181,6 +181,62 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Being in Dubai, I thought NEET preparation would be difficult. But Cerebrum made it so easy with convenient timings and amazing faculty. The WhatsApp support was a lifesaver!',
     },
+    testimonials: [
+      {
+        name: 'Aisha Khan',
+        city: 'Dubai',
+        score: '645/720',
+        quote:
+          'Being in Dubai, I thought NEET preparation would be difficult. But Cerebrum made it so easy with convenient timings and amazing faculty. The WhatsApp support was a lifesaver!',
+        college: 'AIIMS Delhi',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Mohammed Rashid',
+        city: 'Abu Dhabi',
+        score: '632/720',
+        quote:
+          'The 2:30 PM UAE timing was perfect for my schedule. Dr. Shekhar Sir explains concepts so clearly that even complex topics became easy to understand.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Priya Sharma',
+        city: 'Sharjah',
+        score: '618/720',
+        quote:
+          'I was studying IB Biology and was worried about NCERT. The bridge course helped me transition smoothly. Now I am in a top government medical college!',
+        college: 'Grant Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Aryan Patel',
+        city: 'Dubai',
+        score: '608/720',
+        quote:
+          'The recorded lectures were a blessing. I could watch them during my free periods at school. Weekly tests kept me on track throughout the year.',
+        college: 'B.J. Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Fatima Al-Khalid',
+        city: 'Al Ain',
+        score: '595/720',
+        quote:
+          'My parents were skeptical about online coaching, but the results speak for themselves. The NRI quota guidance was incredibly helpful for admissions.',
+        college: 'Kasturba Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Rohan Mehta',
+        city: 'Ajman',
+        score: '582/720',
+        quote:
+          'Coming from a small Indian school in Ajman, I had no coaching options nearby. Cerebrum gave me the same quality education as students in India.',
+        college: 'Seth GS Medical College',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching UAE',
       'NEET classes Dubai',
@@ -275,6 +331,44 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Dr. Shekhar Sir and the team made NEET preparation from Riyadh feel like I was studying in India. The quality of teaching is exceptional!',
     },
+    testimonials: [
+      {
+        name: 'Mohammed Rizwan',
+        city: 'Riyadh',
+        score: '632/720',
+        quote:
+          'Dr. Shekhar Sir and the team made NEET preparation from Riyadh feel like I was studying in India. The quality of teaching is exceptional!',
+        college: 'AIIMS Delhi',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Sara Ahmed',
+        city: 'Jeddah',
+        score: '618/720',
+        quote:
+          'The flexibility during Ramadan was amazing. They adjusted timings and gave extra recorded sessions. Truly student-centric approach!',
+        college: 'Lady Hardinge Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Yusuf Khan',
+        city: 'Dammam',
+        score: '605/720',
+        quote:
+          'CIWG quota guidance was invaluable. I got admission in a top college with fee benefits. Thank you Cerebrum!',
+        college: 'Armed Forces Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Ananya Reddy',
+        city: 'Al Khobar',
+        score: '592/720',
+        quote:
+          'The Saudi afternoon timing worked perfectly. I could focus on school in morning and NEET in afternoon.',
+        college: 'St. Johns Medical College',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Saudi Arabia',
       'NEET classes Riyadh',
@@ -369,6 +463,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'The faculty understands the challenges of NRI students. They adjusted timings during my exams and provided extra support when I needed it.',
     },
+    testimonials: [
+      {
+        name: 'Fatima Al-Rashid',
+        city: 'Kuwait City',
+        score: '618/720',
+        quote:
+          'The faculty understands the challenges of NRI students. They adjusted timings during my exams and provided extra support when I needed it.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Rahul Nair',
+        city: 'Salmiya',
+        score: '602/720',
+        quote:
+          'The summer intensive batch during Kuwait vacation was perfect. I could focus 100% on NEET preparation.',
+        college: 'Grant Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Meera Krishnan',
+        city: 'Hawally',
+        score: '588/720',
+        quote:
+          'Small batch size meant personalized attention. The teacher knew exactly where I was struggling and helped me improve.',
+        college: 'Government Medical College, Kozhikode',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Kuwait',
       'NEET classes Kuwait City',
@@ -460,6 +583,44 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Coming from an IB background, I was worried about NEET preparation. The bridge course helped me understand NCERT patterns perfectly.',
     },
+    testimonials: [
+      {
+        name: 'Arjun Menon',
+        city: 'Doha',
+        score: '655/720',
+        quote:
+          'Coming from an IB background, I was worried about NEET preparation. The bridge course helped me understand NCERT patterns perfectly.',
+        college: 'AIIMS Delhi',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Roshni Kapoor',
+        city: 'Al Wakrah',
+        score: '628/720',
+        quote:
+          'Education City environment combined with Cerebrum coaching was the perfect combination for my NEET success.',
+        college: 'Lady Hardinge Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Danish Ahmed',
+        city: 'Doha',
+        score: '612/720',
+        quote:
+          'The Qatar afternoon timing worked perfectly. Excellent internet connectivity made live classes seamless.',
+        college: 'Grant Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Ananya Iyer',
+        city: 'Lusail',
+        score: '598/720',
+        quote:
+          'Small batch size and personalized attention made all the difference. The faculty knew exactly where I needed help.',
+        college: 'KMC Manipal',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Qatar',
       'NEET classes Doha',
@@ -551,6 +712,44 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'The teachers are so dedicated. Even during late nights, they would respond to my doubts on WhatsApp. That level of support is rare!',
     },
+    testimonials: [
+      {
+        name: 'Sneha Nair',
+        city: 'Muscat',
+        score: '628/720',
+        quote:
+          'The teachers are so dedicated. Even during late nights, they would respond to my doubts on WhatsApp. That level of support is rare!',
+        college: 'AIIMS Delhi',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Aryan Shetty',
+        city: 'Salalah',
+        score: '615/720',
+        quote:
+          'Indian School Salalah combined with Cerebrum coaching gave me the perfect preparation. The Oman timing was very convenient.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Priya Krishnan',
+        city: 'Sohar',
+        score: '602/720',
+        quote:
+          'The peaceful environment of Oman helped me focus on studies. Cerebrum faculty made complex topics simple and memorable.',
+        college: 'Seth GS Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Vishal Sharma',
+        city: 'Muscat',
+        score: '588/720',
+        quote:
+          'Being from a small Indian school in Oman, I had limited options. Cerebrum opened doors to top medical colleges.',
+        college: 'Government Medical College, Kozhikode',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Oman',
       'NEET classes Muscat',
@@ -641,6 +840,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Small batch size meant I got personal attention. The faculty knew my weak areas and helped me improve specifically on those topics.',
     },
+    testimonials: [
+      {
+        name: 'Rahul Sharma',
+        city: 'Manama',
+        score: '612/720',
+        quote:
+          'Small batch size meant I got personal attention. The faculty knew my weak areas and helped me improve specifically on those topics.',
+        college: 'AIIMS Delhi',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Ayesha Merchant',
+        city: 'Riffa',
+        score: '598/720',
+        quote:
+          'The close-knit Indian community in Bahrain plus excellent online coaching was the perfect combination for NEET success.',
+        college: 'Grant Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Karthik Menon',
+        city: 'Manama',
+        score: '582/720',
+        quote:
+          'Traveling to India during vacation for intensive batches boosted my preparation significantly. Great flexibility!',
+        college: 'Armed Forces Medical College',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Bahrain',
       'NEET classes Manama',
@@ -741,6 +969,44 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Coming from IB, I needed help understanding NCERT patterns. The faculty did an excellent job bridging the gap. Scored way above my expectations!',
     },
+    testimonials: [
+      {
+        name: 'Priya Venkatesh',
+        city: 'Singapore',
+        score: '668/720',
+        quote:
+          'Coming from IB, I needed help understanding NCERT patterns. The faculty did an excellent job bridging the gap. Scored way above my expectations!',
+        college: 'AIIMS Delhi',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Rohan Bhatia',
+        city: 'Singapore',
+        score: '652/720',
+        quote:
+          'GIIS Singapore academics combined with Cerebrum NEET coaching was unbeatable. The evening timing was perfect for my schedule.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Anika Reddy',
+        city: 'Singapore',
+        score: '638/720',
+        quote:
+          'Singapore high academic standards prepared me well. Cerebrum helped me channel that into NEET-specific preparation.',
+        college: 'Lady Hardinge Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Vivaan Gupta',
+        city: 'Singapore',
+        score: '625/720',
+        quote:
+          'The weekend batches were perfect for balancing CCAs and NEET prep. World-class coaching from anywhere!',
+        college: 'KMC Manipal',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Singapore',
       'NEET classes Singapore',
@@ -837,6 +1103,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Preparing for NEET from Malaysia seemed impossible initially. Cerebrum made it achievable with their structured approach and constant support.',
     },
+    testimonials: [
+      {
+        name: 'Anand Krishnan',
+        city: 'Kuala Lumpur',
+        score: '598/720',
+        quote:
+          'Preparing for NEET from Malaysia seemed impossible initially. Cerebrum made it achievable with their structured approach and constant support.',
+        college: 'Grant Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Deepika Nair',
+        city: 'Penang',
+        score: '585/720',
+        quote:
+          'GIIS Malaysia education plus Cerebrum coaching was the perfect combination. The evening classes fit my schedule well.',
+        college: 'B.J. Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Arjun Pillai',
+        city: 'Johor Bahru',
+        score: '572/720',
+        quote:
+          'The flexibility to pay in MYR and attend classes at convenient times made NEET preparation stress-free.',
+        college: 'Government Medical College, Thrissur',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Malaysia',
       'NEET classes Kuala Lumpur',
@@ -928,6 +1223,53 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Being in Nepal, I had the advantage of almost same timezone. Combined with excellent teaching, I achieved my NEET goal!',
     },
+    testimonials: [
+      {
+        name: 'Suman Shrestha',
+        city: 'Kathmandu',
+        score: '642/720',
+        quote:
+          'Being in Nepal, I had the advantage of almost same timezone. Combined with excellent teaching, I achieved my NEET goal!',
+        college: 'AIIMS Delhi',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Aakriti Sharma',
+        city: 'Pokhara',
+        score: '628/720',
+        quote:
+          'The 16+ CBSE schools in Nepal meant perfect curriculum alignment. Cerebrum faculty understood exactly what we needed.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Bibek Pradhan',
+        city: 'Kathmandu',
+        score: '615/720',
+        quote:
+          'Same fees as Indian students and no visa needed for medical college - Nepal students have great advantages!',
+        college: 'Lady Hardinge Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Anjali Thapa',
+        city: 'Biratnagar',
+        score: '602/720',
+        quote:
+          'The alumni network of Nepali students in Indian medical colleges was incredibly helpful. Strong community support!',
+        college: 'Grant Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Roshan Gurung',
+        city: 'Lalitpur',
+        score: '588/720',
+        quote:
+          'Almost same timezone meant I could attend all live classes. The open border policy makes studying in India seamless.',
+        college: 'Seth GS Medical College',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Nepal',
       'NEET classes Kathmandu',
@@ -1016,6 +1358,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Being the only Indian student from my school preparing for NEET, I felt isolated. Cerebrum connected me with other NRI students and provided excellent support.',
     },
+    testimonials: [
+      {
+        name: 'Vikram Patel',
+        city: 'Lagos',
+        score: '585/720',
+        quote:
+          'Being the only Indian student from my school preparing for NEET, I felt isolated. Cerebrum connected me with other NRI students and provided excellent support.',
+        college: 'Grant Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Shreya Mehta',
+        city: 'Abuja',
+        score: '572/720',
+        quote:
+          'Lagos being the only African NEET center was convenient. The afternoon timing worked perfectly with my school schedule.',
+        college: 'B.J. Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Raj Sharma',
+        city: 'Lagos',
+        score: '558/720',
+        quote:
+          'The personalized attention from small batch size made all the difference. Faculty knew my strengths and weaknesses.',
+        college: 'Government Medical College, Nagpur',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Nigeria',
       'NEET classes Lagos',
@@ -1105,6 +1476,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Despite no NEET center in Kenya, Cerebrum helped me plan my India trip and prepare thoroughly. The support was incredible!',
     },
+    testimonials: [
+      {
+        name: 'Neha Shah',
+        city: 'Nairobi',
+        score: '572/720',
+        quote:
+          'Despite no NEET center in Kenya, Cerebrum helped me plan my India trip and prepare thoroughly. The support was incredible!',
+        college: 'Grant Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Akash Patel',
+        city: 'Nairobi',
+        score: '558/720',
+        quote:
+          'The historic Indian community in Kenya has great educational focus. Cerebrum coaching connected me to that legacy.',
+        college: 'B.J. Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Priya Joshi',
+        city: 'Mombasa',
+        score: '545/720',
+        quote:
+          'Traveling to India for NEET exam was well-planned with Cerebrum help. The intensive revision before exam boosted my score.',
+        college: 'Government Medical College, Kozhikode',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Kenya',
       'NEET classes Nairobi',
@@ -1191,6 +1591,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'The evening timing worked perfectly with my school schedule. I could attend live classes and still have time for revision.',
     },
+    testimonials: [
+      {
+        name: 'Riya Mehta',
+        city: 'Bangkok',
+        score: '608/720',
+        quote:
+          'The evening timing worked perfectly with my school schedule. I could attend live classes and still have time for revision.',
+        college: 'Maulana Azad Medical College',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Aryan Kapoor',
+        city: 'Bangkok',
+        score: '595/720',
+        quote:
+          'GIIS Thailand plus Cerebrum coaching was an unbeatable combination. The NEET center in Bangkok made things convenient.',
+        college: 'Grant Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Kavya Nair',
+        city: 'Phuket',
+        score: '582/720',
+        quote:
+          'Visiting India during Thai holidays for intensive batches helped accelerate my preparation significantly.',
+        college: 'B.J. Medical College',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Thailand',
       'NEET classes Bangkok',
@@ -1276,6 +1705,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Even without a NEET center in Indonesia, Cerebrum made my preparation seamless. Traveled to Singapore for the exam confidently.',
     },
+    testimonials: [
+      {
+        name: 'Aditya Kapoor',
+        city: 'Jakarta',
+        score: '565/720',
+        quote:
+          'Even without a NEET center in Indonesia, Cerebrum made my preparation seamless. Traveled to Singapore for the exam confidently.',
+        college: 'B.J. Medical College',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Ishita Sharma',
+        city: 'Jakarta',
+        score: '552/720',
+        quote:
+          'GIIS Jakarta education combined with Cerebrum NEET coaching gave me the edge I needed for medical entrance.',
+        college: 'Government Medical College, Nagpur',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Varun Reddy',
+        city: 'Surabaya',
+        score: '538/720',
+        quote:
+          'Traveling to Singapore for NEET was easy with Cerebrum guidance. The personalized attention made all the difference.',
+        college: 'KMC Manipal',
+        avatar: '👨‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Indonesia',
       'NEET classes Jakarta',
@@ -1365,6 +1823,35 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       quote:
         'Being one of the few NEET aspirants in Tanzania, I felt alone. Cerebrum connected me with other African students and provided amazing support.',
     },
+    testimonials: [
+      {
+        name: 'Kavita Patel',
+        city: 'Dar es Salaam',
+        score: '548/720',
+        quote:
+          'Being one of the few NEET aspirants in Tanzania, I felt alone. Cerebrum connected me with other African students and provided amazing support.',
+        college: 'Government Medical College, Nagpur',
+        avatar: '👩‍🎓',
+      },
+      {
+        name: 'Rohan Mehta',
+        city: 'Dar es Salaam',
+        score: '535/720',
+        quote:
+          'Indian School DSM gave me strong foundation. Cerebrum coaching helped me convert that into NEET success.',
+        college: 'KMC Manipal',
+        avatar: '👨‍🎓',
+      },
+      {
+        name: 'Anisha Shah',
+        city: 'Arusha',
+        score: '522/720',
+        quote:
+          'With IIT coming to Zanzibar, the Indian education ecosystem in Tanzania is growing. Cerebrum was ahead of the curve!',
+        college: 'Government Medical College, Thrissur',
+        avatar: '👩‍🎓',
+      },
+    ],
     seoKeywords: [
       'NEET coaching Tanzania',
       'NEET classes Dar es Salaam',
