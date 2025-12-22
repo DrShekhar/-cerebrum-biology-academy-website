@@ -1,0 +1,11 @@
+// SEO Landing Page Components
+export { SEOLandingPage } from './SEOLandingPage'
+export { SEOLandingHero } from './SEOLandingHero'
+export { PainPointsSection } from './PainPointsSection'
+export { BenefitsSection } from './BenefitsSection'
+export { MiniTestimonials } from './MiniTestimonials'
+export { SEOFAQSection } from './SEOFAQSection'
+export { CourseSummaryCard } from './CourseSummaryCard'
+export { FinalCTA } from './FinalCTA'
+export { ToolsCTASection } from './ToolsCTASection'
+export { RelatedBlogPosts } from './RelatedBlogPosts'

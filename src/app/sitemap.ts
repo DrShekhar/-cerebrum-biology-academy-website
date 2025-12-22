@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/mdx'
+import { getAllSEOSlugs } from '@/data/seo-landing'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cerebrumbiologyacademy.com'
   // Use a static date representing when site content was last updated
   // This is better for SEO than dynamic dates that change on every build
-  const lastUpdated = new Date('2025-12-17T00:00:00.000Z')
+  const lastUpdated = new Date('2025-12-22T00:00:00.000Z')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -14,6 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.updatedAt || post.publishedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+  }))
+
+  // Dynamically generate SEO landing page URLs
+  const seoSlugs = getAllSEOSlugs()
+  const seoLandingRoutes: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
   }))
 
   const routes: MetadataRoute.Sitemap = [
@@ -97,6 +107,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Blog posts are dynamically generated above
     ...blogRoutes,
+    // SEO landing pages for keyword targeting
+    ...seoLandingRoutes,
     {
       url: `${baseUrl}/gallery`,
       lastModified: lastUpdated,

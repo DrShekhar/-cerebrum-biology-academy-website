@@ -1,17 +1,50 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
 import { DemoClassModal } from './DemoClassModal'
 
+// Map URL query param values to internal ClassLevel values
+const classParamMap: Record<string, ClassLevel> = {
+  'class-9': '9th',
+  'class-10': '10th',
+  'class-11': '11th',
+  'class-12': '12th',
+  dropper: 'Dropper',
+  '9th': '9th',
+  '10th': '10th',
+  '11th': '11th',
+  '12th': '12th',
+  Dropper: 'Dropper',
+}
+
 export function EnhancedCoursesListingPage() {
-  const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('all')
+  const searchParams = useSearchParams()
+  const coursesRef = useRef<HTMLDivElement>(null)
+
+  // Get class from URL query param
+  const classParam = searchParams.get('class')
+  const initialClass = classParam && classParamMap[classParam] ? classParamMap[classParam] : 'all'
+
+  const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>(initialClass)
   const [searchQuery, setSearchQuery] = useState('')
   const [showDemoModal, setShowDemoModal] = useState(false)
   const [selectedCourse, setSelectedCourse] = useState<CourseProgram | null>(null)
+
+  // Update selected class when URL param changes and scroll to courses
+  useEffect(() => {
+    if (classParam && classParamMap[classParam]) {
+      setSelectedClass(classParamMap[classParam])
+      // Scroll to courses section after a short delay
+      setTimeout(() => {
+        coursesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+    }
+  }, [classParam])
 
   // Calculate course counts for each class
   const courseCounts = useMemo(() => {
@@ -97,7 +130,7 @@ export function EnhancedCoursesListingPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-10 sm:py-12 md:py-16">
+      <section ref={coursesRef} className="py-10 sm:py-12 md:py-16" id="courses">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Search and Filter Section */}
           <div className="mb-6 sm:mb-8">
