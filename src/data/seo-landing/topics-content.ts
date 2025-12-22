@@ -200,6 +200,7 @@ export const cellBiologyTuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Cell Biology Tuition for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -371,6 +372,7 @@ export const molecularBiologyTuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Molecular Biology Tuition for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -542,6 +544,7 @@ export const geneticsBiologyTuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Genetics Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -713,6 +716,7 @@ export const evolutionClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Evolution Class 12 for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -884,6 +888,7 @@ export const biodiversityConservationClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Biodiversity and Conservation Class 12',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete Biodiversity and Conservation chapter for Class 12 NEET preparation.',
@@ -1054,6 +1059,7 @@ export const animalTissuesClass9: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Animal Tissues Class 9',
     provider: 'Cerebrum Biology Academy',
     description: 'Class 9 Animal Tissues chapter for NEET foundation preparation.',
@@ -1224,6 +1230,7 @@ export const plantPhysiologyClass11: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Plant Physiology Class 11',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1395,6 +1402,7 @@ export const livingWorldNcert: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'The Living World NCERT',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete Living World chapter from Class 11 NCERT for NEET preparation.',
@@ -1565,6 +1573,7 @@ export const dnaBiologyTuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'DNA Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1736,6 +1745,7 @@ export const botanyZoologyTuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Botany and Zoology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1881,6 +1891,7 @@ export const ecologyBiologyTuition: SEOLandingContent = {
     tertiaryButton: { text: 'Free Ecology Notes', link: '/resources' },
   },
   schema: {
+    '@type': 'Course',
     courseName: 'Ecology Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -2013,6 +2024,7 @@ export const humanPhysiologyTuition: SEOLandingContent = {
     tertiaryButton: { text: 'Free Physiology Notes', link: '/resources' },
   },
   schema: {
+    '@type': 'Course',
     courseName: 'Human Physiology Tuition',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete human physiology for NEET covering all organ systems.',
@@ -2144,6 +2156,7 @@ export const biomoleculesClass11: SEOLandingContent = {
     tertiaryButton: { text: 'Free Notes', link: '/resources' },
   },
   schema: {
+    '@type': 'Course',
     courseName: 'Biomolecules Class 11',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete Biomolecules chapter for Class 11 NEET.',
@@ -2283,6 +2296,7 @@ export const plantKingdomClass11: SEOLandingContent = {
     tertiaryButton: { text: 'Free Plant Notes', link: '/resources' },
   },
   schema: {
+    '@type': 'Course',
     courseName: 'Plant Kingdom Class 11',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete Plant Kingdom for Class 11 NEET.',
@@ -2422,6 +2436,7 @@ export const animalKingdomClass11: SEOLandingContent = {
     tertiaryButton: { text: 'Free Animal Notes', link: '/resources' },
   },
   schema: {
+    '@type': 'Course',
     courseName: 'Animal Kingdom Class 11',
     provider: 'Cerebrum Biology Academy',
     description: 'Complete Animal Kingdom for Class 11 NEET.',

@@ -65,7 +65,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
 
   title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2025',
   metaDescription:
-    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2025 batch!",
+    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2026 batch!",
   keywords: [
     'NEET dropper batch online',
     'NEET dropper online coaching',
@@ -79,7 +79,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
     subheadline:
       'NEET dropper online batch with 92% success rate. Turn your gap year into your winning year.',
     highlightedText: 'Drop Year Done Right = AIIMS Possible',
-    ctaText: 'Join 2025 Dropper Batch',
+    ctaText: 'Join 2026 Dropper Batch',
     ctaLink: '/courses/neet-dropper',
     backgroundGradient: 'from-red-900 via-orange-900 to-amber-900',
   },
@@ -195,6 +195,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET Dropper Online Batch',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -210,35 +211,35 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
   ...dropperBaseContent,
   slug: 'neet-repeater-course-2025',
 
-  title: 'NEET Repeater Course 2025 Online | Best Coaching for 2nd Attempt',
+  title: 'NEET Repeater Course 2026 Online | Best Coaching for 2nd Attempt',
   metaDescription:
-    'NEET 2025/2026 repeater course online. Expert coaching for second attempt. 92% success rate, proven methodology. Enroll for NEET 2025 batch now!',
+    'NEET 2026/2026 repeater course online. Expert coaching for second attempt. 92% success rate, proven methodology. Enroll for NEET 2026 batch now!',
   keywords: [
-    'NEET repeater course 2025',
+    'NEET repeater course 2026',
     'NEET 2026 dropper batch',
-    'NEET 2025 repeater online',
+    'NEET 2026 repeater online',
     'NEET second attempt coaching online',
     'NEET repeater online course',
   ],
 
   hero: {
-    headline: 'NEET 2025: Your Year to Succeed',
+    headline: 'NEET 2026: Your Year to Succeed',
     subheadline:
-      "Didn't crack NEET 2024? The 2025 batch is your opportunity. Strategic online preparation designed for repeaters.",
-    highlightedText: 'NEET 2025 Batch Now Enrolling',
-    ctaText: 'Join NEET 2025 Batch',
+      "Didn't crack NEET 2026? The 2026 batch is your opportunity. Strategic online preparation designed for repeaters.",
+    highlightedText: 'NEET 2026 Batch Now Enrolling',
+    ctaText: 'Join NEET 2026 Batch',
     ctaLink: '/courses/neet-dropper',
     backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
   },
 
   painPoints: {
-    title: "NEET 2024 Didn't Work? NEET 2025 Will.",
+    title: "NEET 2026 Didn't Work? NEET 2026 Will.",
     points: [
       {
         icon: 'calendar',
-        question: 'Feeling the time pressure for NEET 2025?',
+        question: 'Feeling the time pressure for NEET 2026?',
         solution:
-          'Our 10-12 month structured program fits perfectly. Peak performance by May 2025.',
+          'Our 10-12 month structured program fits perfectly. Peak performance by May 2026.',
       },
       {
         icon: 'refresh-cw',
@@ -261,7 +262,7 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2025 Preparation Timeline',
+    title: 'NEET 2026 Preparation Timeline',
     subtitle: 'Strategically designed for repeaters to peak at the right time',
     items: [
       {
@@ -299,55 +300,56 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When should I join for NEET 2025 repeater batch?',
+      question: 'When should I join for NEET 2026 repeater batch?',
       answer:
         'Best to join by June-July 2024 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
     },
     {
-      question: 'What is the expected score improvement for NEET 2025?',
+      question: 'What is the expected score improvement for NEET 2026?',
       answer:
         'Typical improvement: 80-150 marks depending on starting point and effort. Students starting at 450-500 often reach 600+. Those at 500-550 can target 650+. Our record improvement is 180 marks.',
     },
     {
-      question: 'How is NEET 2025 expected to be different from 2024?',
+      question: 'How is NEET 2026 expected to be different from 2024?',
       answer:
         'NTA may adjust difficulty and pattern. We prepare for all scenarios with varied question types, increased conceptual focus, and application-based practice. Our students are ready for any pattern.',
     },
     {
-      question: 'Is this online course sufficient for NEET 2025?',
+      question: 'Is this online course sufficient for NEET 2026?',
       answer:
         'Absolutely sufficient. Our online repeater course includes: 6-day classes, complete study material, 50+ mock tests, doubt support, and mentorship. Many of our AIIMS selections came from online batches.',
     },
     {
-      question: 'How do you help with NEET 2025 exam anxiety?',
+      question: 'How do you help with NEET 2026 exam anxiety?',
       answer:
         'We address this seriously: Regular mock tests reduce exam fear, dedicated stress management sessions, one-on-one counseling available, peer support group, and exam day strategy training.',
     },
     {
-      question: 'What is the fee for NEET 2025 repeater online course?',
+      question: 'What is the fee for NEET 2026 repeater online course?',
       answer:
-        'NEET 2025 repeater batch: ₹80,000 for full program. Early bird discount available. EMI at ₹4,500/month. Includes everything needed for NEET 2025 success.',
+        'NEET 2026 repeater batch: ₹80,000 for full program. Early bird discount available. EMI at ₹4,500/month. Includes everything needed for NEET 2026 success.',
     },
   ],
 
   cta: {
-    title: 'Make NEET 2025 Your Year',
+    title: 'Make NEET 2026 Your Year',
     subtitle: "Enrollment open for limited seats. Don't wait until it's too late.",
     primaryButton: {
-      text: 'Enroll for NEET 2025',
+      text: 'Enroll for NEET 2026',
       link: '/courses/neet-dropper',
     },
     secondaryButton: {
       text: 'Talk to Counselor',
-      link: '/contact?topic=neet-2025-repeater',
+      link: '/contact?topic=neet-2026-repeater',
     },
   },
 
   schema: {
-    courseName: 'NEET 2025 Repeater Course',
+    '@type': 'Course',
+    courseName: 'NEET 2026 Repeater Course',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Online NEET repeater course for 2025 exam with strategic preparation and proven results.',
+      'Online NEET repeater course for 2026 exam with strategic preparation and proven results.',
     duration: 'P1Y',
     price: 80000,
     priceCurrency: 'INR',
@@ -492,6 +494,7 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET Dropper Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -642,6 +645,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Best NEET Dropper Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -789,6 +793,7 @@ export const oneYearNeetDropperCourse: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'One Year NEET Dropper Course',
     provider: 'Cerebrum Biology Academy',
     description:

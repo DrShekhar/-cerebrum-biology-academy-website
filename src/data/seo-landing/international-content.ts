@@ -20,7 +20,7 @@ const gcseBiologyTuition: SEOLandingContent = {
 
   title: 'GCSE Biology Tuition Online | Expert UK Tutors',
   metaDescription:
-    'Get expert GCSE Biology tuition online from experienced UK curriculum tutors. Master all topics with personalized lessons, past paper practice & guaranteed grade improvement.',
+    'Expert GCSE Biology tuition online from UK curriculum tutors. Personalized lessons, past paper practice & guaranteed grade improvement.',
   keywords: [
     'gcse biology tuition',
     'gcse biology tutor near me',
@@ -215,6 +215,7 @@ const gcseBiologyTuition: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'GCSE Biology Online Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -230,9 +231,9 @@ const gcseBiologyTutorOnline: SEOLandingContent = {
   slug: 'gcse-biology-tutor-online',
   classLevel: 'universal',
 
-  title: 'GCSE Biology Tutor Online | Expert 1-on-1 Tutoring | Cerebrum Academy',
+  title: 'GCSE Biology Tutor Online | Expert 1-on-1 Tutoring',
   metaDescription:
-    'Find expert GCSE Biology tutors online. Personalized 1-on-1 lessons for AQA, Edexcel & OCR. Improve grades with experienced UK curriculum specialists.',
+    'Expert GCSE Biology tutors online. Personalized 1-on-1 lessons for AQA, Edexcel & OCR. Improve grades with UK specialists.',
   keywords: [
     'gcse biology tutor',
     'gcse biology tutor online',
@@ -413,6 +414,7 @@ const gcseBiologyTutorOnline: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'GCSE Biology Online Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -618,6 +620,7 @@ const igcseBiologyTuition: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'Cambridge IGCSE Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -814,6 +817,7 @@ const igcseBiologyTutor: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'IGCSE Biology Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -829,7 +833,7 @@ const ibBiologyTuition: SEOLandingContent = {
   slug: 'ib-biology-tuition',
   classLevel: 'universal',
 
-  title: 'IB Biology Tuition Online | HL & SL Expert Tutors | Cerebrum Academy',
+  title: 'IB Biology Tuition Online | HL & SL Expert Tutors',
   metaDescription:
     'Expert IB Biology tuition for Higher and Standard Level. Master all topics, IA support & exam prep with experienced IB tutors. Achieve 7 in IB Biology.',
   keywords: [
@@ -1021,6 +1025,7 @@ const ibBiologyTuition: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'IB Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1219,6 +1224,7 @@ const ibBiologyTutorOnline: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'IB Biology Online Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1424,6 +1430,7 @@ const aLevelBiologyTutor: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'A-Level Biology Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1630,6 +1637,7 @@ const aLevelBiologyTuition: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'A-Level Biology Online Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1645,7 +1653,7 @@ const apBiologyTutor: SEOLandingContent = {
   slug: 'ap-biology-tutor',
   classLevel: 'universal',
 
-  title: 'AP Biology Tutor Online | Expert College Board Prep | Cerebrum Academy',
+  title: 'AP Biology Tutor Online | Expert College Board Prep',
   metaDescription:
     'Find expert AP Biology tutors online. Comprehensive preparation for AP exam including labs, FRQs & College Board curriculum. Achieve 4-5 scores.',
   keywords: [
@@ -1836,6 +1844,7 @@ const apBiologyTutor: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'AP Biology Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1851,9 +1860,9 @@ const internationalBiologyTutor: SEOLandingContent = {
   slug: 'international-biology-tutor',
   classLevel: 'universal',
 
-  title: 'International Biology Tutor Online | All Curricula | Cerebrum Academy',
+  title: 'International Biology Tutor | All Curricula Online',
   metaDescription:
-    'Expert biology tutors for all international curricula - GCSE, IGCSE, IB, A-Level, AP, O-Level & more. Find your perfect tutor for any biology course worldwide.',
+    'Biology tutors for all international curricula - GCSE, IGCSE, IB, A-Level, AP & O-Level. Find your perfect tutor worldwide.',
   keywords: [
     'international biology tutor',
     'o level biology',
@@ -2036,6 +2045,7 @@ const internationalBiologyTutor: SEOLandingContent = {
   contactButtons: defaultContactButtons,
 
   schema: {
+    '@type': 'Course',
     courseName: 'International Biology Tutoring',
     provider: 'Cerebrum Biology Academy',
     description:

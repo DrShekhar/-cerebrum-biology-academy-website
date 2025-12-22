@@ -185,6 +185,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Notes', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Crash Course 2025',
       provider: 'Cerebrum Biology Academy',
       description: 'Intensive NEET Biology crash course for last-minute preparation',
@@ -343,6 +344,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Quick Revision', link: '/neet-biology-revision-notes' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology 45-Day Course',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete NEET Biology revision in 45 days',
@@ -501,6 +503,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Full Year Course', link: '/neet-biology-online-coaching' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology 90-Day Course',
       provider: 'Cerebrum Biology Academy',
       description: 'Comprehensive NEET Biology preparation in 90 days',
@@ -659,6 +662,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Dropper Batch', link: '/neet-dropper-batch-online' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology 6-Month Course',
       provider: 'Cerebrum Biology Academy',
       description: 'Comprehensive 6-month NEET Biology preparation',
@@ -817,6 +821,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Class 12 NEET', link: '/class-12-biology-tuition-online' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology 1-Year Course',
       provider: 'Cerebrum Biology Academy',
       description: 'Comprehensive 1-year NEET Biology preparation',
@@ -975,6 +980,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Class 12 NEET', link: '/class-12-biology-tuition-online' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Weekend Batch',
       provider: 'Cerebrum Biology Academy',
       description: 'NEET Biology coaching on weekends only',

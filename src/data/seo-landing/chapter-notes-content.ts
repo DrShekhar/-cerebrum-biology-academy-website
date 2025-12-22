@@ -183,6 +183,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Genetics for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete genetics notes for NEET preparation',
@@ -339,6 +340,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Chapter Weightage', link: '/neet-biology-chapter-weightage' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Human Physiology for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete human physiology notes for NEET',
@@ -495,6 +497,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Ecology for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete ecology notes for NEET preparation',
@@ -651,6 +654,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Cell Biology for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete cell biology notes for NEET',
@@ -807,6 +811,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Notes PDF', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Plant Physiology for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete plant physiology notes for NEET',
@@ -963,6 +968,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 12', link: '/ncert-biology-notes-class-12' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Reproduction for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete reproduction notes for NEET',
@@ -1119,6 +1125,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Notes PDF', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Evolution for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete evolution notes for NEET',
@@ -1275,6 +1282,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Biotechnology for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete biotechnology notes for NEET',
@@ -1431,6 +1439,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Notes PDF', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Biodiversity for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete biodiversity and conservation notes for NEET',
@@ -1586,6 +1595,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Animal Kingdom for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete animal kingdom notes for NEET',
@@ -1741,6 +1751,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Plant Kingdom for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete plant kingdom notes for NEET',
@@ -1896,6 +1907,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Biomolecules for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete biomolecules notes for NEET',
@@ -2051,6 +2063,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Morphology of Flowering Plants for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete morphology notes for NEET',
@@ -2210,6 +2223,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Anatomy of Flowering Plants for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete plant anatomy notes for NEET',
@@ -2365,6 +2379,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Structural Organisation in Animals for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete animal tissue notes for NEET',
@@ -2521,6 +2536,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 11', link: '/ncert-biology-notes-class-11' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Biological Classification for NEET',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete biological classification notes for NEET',

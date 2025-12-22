@@ -199,6 +199,7 @@ export const class9BiologyTuitionOnline: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 9 Biology Online Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -347,6 +348,7 @@ export const neetFoundationClass9: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET Foundation Class 9',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -493,6 +495,7 @@ export const onlineBiologyClassesClass9: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Online Biology Classes Class 9',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -641,6 +644,7 @@ export const class9ScienceTuitionNeet: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 9 Pre-Medical Foundation',
     provider: 'Cerebrum Biology Academy',
     description:

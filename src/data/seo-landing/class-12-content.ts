@@ -200,6 +200,7 @@ export const neetBiologyCoachingClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 12 NEET Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -349,6 +350,7 @@ export const class12BiologyTuitionOnline: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 12 Biology Online Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -498,6 +500,7 @@ export const onlineBiologyClassesClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Online Biology Classes Class 12',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -645,6 +648,7 @@ export const bestBiologyTutorClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 12 Biology with Expert Tutor',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -794,6 +798,7 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET 2025 Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -945,6 +950,7 @@ export const boardNeetBiologyClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Board + NEET Biology Class 12',
     provider: 'Cerebrum Biology Academy',
     description:

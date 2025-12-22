@@ -187,6 +187,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 12', link: '/ncert-biology-notes-class-12' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Notes & Study Material',
       provider: 'Cerebrum Biology Academy',
       description: 'Free NEET Biology notes PDF with chapter-wise study material',
@@ -347,6 +348,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Notes', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology PYQ Practice',
       provider: 'Cerebrum Biology Academy',
       description: 'Chapter-wise NEET Biology previous year questions with solutions',
@@ -503,6 +505,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology MCQ Practice',
       provider: 'Cerebrum Biology Academy',
       description: 'Free online NEET Biology MCQ practice platform',
@@ -659,6 +662,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Mock Test Series',
       provider: 'Cerebrum Biology Academy',
       description: 'Free online NEET mock tests with detailed analysis',
@@ -815,6 +819,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Chapter Weightage', link: '/neet-biology-chapter-weightage' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Important Questions',
       provider: 'Cerebrum Biology Academy',
       description: 'Most important NEET Biology questions based on PYQ analysis',
@@ -971,6 +976,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NCERT Biology Class 12', link: '/ncert-biology-notes-class-12' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NCERT Based NEET Biology',
       provider: 'Cerebrum Biology Academy',
       description: 'NCERT-based MCQs for complete NEET Biology preparation',
@@ -1127,6 +1133,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Quick Revision',
       provider: 'Cerebrum Biology Academy',
       description: 'Quick revision notes for NEET Biology last-minute preparation',
@@ -1283,6 +1290,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Diagrams',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete collection of NEET Biology diagrams with labeling',
@@ -1439,6 +1447,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Important Questions', link: '/neet-biology-important-questions' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Formulas',
       provider: 'Cerebrum Biology Academy',
       description: 'NEET Biology formulas and important terms reference',
@@ -1595,6 +1604,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Chapter Weightage',
       provider: 'Cerebrum Biology Academy',
       description: 'NEET Biology chapter-wise weightage analysis for strategic preparation',

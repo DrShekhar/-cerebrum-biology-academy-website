@@ -37,9 +37,9 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'online-vs-offline-neet-coaching': {
     slug: 'online-vs-offline-neet-coaching',
     classLevel: 'universal',
-    title: 'Online vs Offline NEET Coaching: Which is Better? | Complete Comparison 2025',
+    title: 'Online vs Offline NEET Coaching 2025 | Complete Comparison',
     metaDescription:
-      'Detailed comparison of online vs offline NEET coaching. Pros, cons, cost analysis, and expert advice to help you choose the right coaching mode for NEET 2025.',
+      'Online vs offline NEET coaching comparison. Pros, cons, cost analysis & expert advice to choose the right coaching mode for NEET 2025.',
     keywords: [
       'online vs offline coaching',
       'neet online coaching',
@@ -213,6 +213,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Our Course Options', link: '/courses' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Online Coaching',
       provider: 'Cerebrum Biology Academy',
       description: 'Comprehensive comparison of online vs offline NEET coaching',
@@ -227,7 +228,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Best NEET Biology Coaching in India 2025 | Top 10 Comparison',
     metaDescription:
-      'Compare the best NEET Biology coaching institutes in India 2025. Expert reviews, fees, success rates, and student testimonials to find your perfect coaching.',
+      'Compare best NEET Biology coaching in India 2025. Reviews, fees, success rates & student testimonials to find your perfect coaching.',
     keywords: [
       'best neet coaching',
       'best neet biology coaching',
@@ -398,6 +399,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Student Results', link: '/results' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Best NEET Biology Coaching',
       provider: 'Cerebrum Biology Academy',
       description: 'Compare top NEET Biology coaching institutes in India',
@@ -410,7 +412,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'why-choose-cerebrum-academy': {
     slug: 'why-choose-cerebrum-academy',
     classLevel: 'universal',
-    title: 'Why Choose Cerebrum Biology Academy | NEET Coaching That Delivers Results',
+    title: 'Why Choose Cerebrum Academy | NEET Biology Coaching',
     metaDescription:
       'Discover why 2,500+ students chose Cerebrum Biology Academy for NEET preparation. AIIMS faculty, 98% success rate, small batches, and affordable fees.',
     keywords: [
@@ -583,6 +585,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Course Options', link: '/courses' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'Cerebrum Biology Academy NEET Coaching',
       provider: 'Cerebrum Biology Academy',
       description: 'Premium NEET Biology coaching by AIIMS graduate Dr. Shekhar',
@@ -597,7 +600,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Coaching Fees Comparison 2025 | Complete Fee Structure Guide',
     metaDescription:
-      'Compare NEET coaching fees across major institutes. Detailed breakdown of tuition, hostel, materials, and hidden costs. Find the best value for NEET preparation.',
+      'Compare NEET coaching fees across institutes. Breakdown of tuition, hostel, materials & hidden costs. Find best value for NEET prep.',
     keywords: [
       'neet coaching fees',
       'neet coaching cost',
@@ -768,6 +771,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Scholarship Info', link: '/scholarship' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Biology Coaching Fees',
       provider: 'Cerebrum Biology Academy',
       description: 'Complete fee comparison of NEET coaching institutes',
@@ -780,7 +784,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'neet-coaching-success-rate-comparison': {
     slug: 'neet-coaching-success-rate-comparison',
     classLevel: 'universal',
-    title: 'NEET Coaching Success Rate Comparison 2025 | Verified Results Analysis',
+    title: 'NEET Coaching Success Rate Comparison 2025 | Analysis',
     metaDescription:
       'Compare actual NEET coaching success rates. Understanding how to evaluate coaching results, spot inflated claims, and choose based on real data.',
     keywords: [
@@ -953,6 +957,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'About Dr. Shekhar', link: '/about' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Coaching Success Rate Analysis',
       provider: 'Cerebrum Biology Academy',
       description: 'How to evaluate NEET coaching success rates',
@@ -1138,6 +1143,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { title: 'Course Options', link: '/courses' },
     ],
     schema: {
+      '@type': 'Course',
       courseName: 'NEET Coaching Decision Guide',
       provider: 'Cerebrum Biology Academy',
       description: 'Honest analysis of whether NEET coaching is right for you',

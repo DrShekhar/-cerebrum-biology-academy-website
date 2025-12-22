@@ -202,6 +202,7 @@ export const ncertBiologyClass11: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Class 11 for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -359,6 +360,7 @@ export const ncertBiologyClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Class 12 for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -511,6 +513,7 @@ export const ncertFingertipsBiology: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT at Your Fingertips Biology',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -663,6 +666,7 @@ export const ncertExemplarBiology: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Exemplar Biology for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -815,6 +819,7 @@ export const ncertBiologyNotesClass11: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Notes Class 11',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -967,6 +972,7 @@ export const ncertBiologyNotesClass12: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Notes Class 12',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1119,6 +1125,7 @@ export const ncertBiologySolutions: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Solutions',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -1271,6 +1278,7 @@ export const ncertPunchBiology: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Punch Biology',
     provider: 'Cerebrum Biology Academy',
     description:

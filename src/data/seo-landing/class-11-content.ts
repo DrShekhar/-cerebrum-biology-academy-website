@@ -204,6 +204,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
 
   // Schema
   schema: {
+    '@type': 'Course',
     courseName: 'Class 11 NEET Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -357,6 +358,7 @@ export const class11BiologyTuitionOnline: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 11 Biology Online Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -511,6 +513,7 @@ export const onlineBiologyClassesClass11: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Online Biology Classes for Class 11',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -664,6 +667,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 11 Biology with Expert Tutor',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -813,6 +817,7 @@ export const class11NeetPreparationOnline: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Class 11 NEET Preparation Course',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -966,6 +971,7 @@ export const ncertBiologyClass11Tuition: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NCERT Biology Class 11 Tuition',
     provider: 'Cerebrum Biology Academy',
     description:

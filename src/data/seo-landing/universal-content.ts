@@ -197,6 +197,7 @@ export const onlineBiologyTuitionIndia: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Online Biology Tuition India',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -345,6 +346,7 @@ export const neetBiologyOnlineCoaching: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET Biology Online Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -491,6 +493,7 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'NEET Biology with Dr. Shekhar',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -637,6 +640,7 @@ export const oneOnOneBiologyTuitionNeet: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: '1-on-1 NEET Biology Tuition',
     provider: 'Cerebrum Biology Academy',
     description:
@@ -785,6 +789,7 @@ export const liveBiologyClassesNeet: SEOLandingContent = {
   },
 
   schema: {
+    '@type': 'Course',
     courseName: 'Live Biology Classes for NEET',
     provider: 'Cerebrum Biology Academy',
     description:
