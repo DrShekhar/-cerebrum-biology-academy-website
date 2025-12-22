@@ -4,7 +4,9 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
-import Header from '@/components/layout/Header'
+// PERFORMANCE: Using hybrid header for faster mobile LCP
+// Server-rendered shell with lazy-loaded interactivity
+import { HeaderHybrid } from '@/components/layout/HeaderHybrid'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
@@ -259,7 +261,7 @@ export default function RootLayout({
                   <PageErrorBoundary>
                     <SkipToContent />
                     <div data-section="navigation" className="priority-immediate" role="banner">
-                      <Header />
+                      <HeaderHybrid />
                     </div>
                     <DynamicTrialBanner />
                     <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
