@@ -253,7 +253,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
-                document.querySelectorAll('script[src*=".css"]').forEach(function(s){s.remove()});
+                var r=function(){document.querySelectorAll('script[src*=".css"]').forEach(function(s){s.remove()})};
+                r();
+                new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n.tagName==='SCRIPT'&&n.src&&n.src.includes('.css'))n.remove()})})}).observe(document.documentElement,{childList:true,subtree:true});
               })();
             `,
           }}
