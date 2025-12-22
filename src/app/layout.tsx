@@ -12,6 +12,7 @@ import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrustProvider } from '@/components/providers/TrustProvider'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
+import { MotionProvider } from '@/components/providers/MotionProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import {
@@ -243,6 +244,20 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* WORKAROUND: Remove duplicate CSS script tags (Next.js 15 + React 19 bug)
+            Issue: https://github.com/vercel/next.js/issues/75656
+            Next.js generates both <link rel="stylesheet"> AND <script> for same CSS file
+            This causes "Refused to execute script... MIME type ('text/css')" errors */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                document.querySelectorAll('script[src*=".css"]').forEach(function(s){s.remove()});
+              })();
+            `,
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
@@ -258,26 +273,28 @@ export default function RootLayout({
                 enableRealTimeUpdates={false}
               >
                 <PersonalizationProvider>
-                  <PageErrorBoundary>
-                    <SkipToContent />
-                    <div data-section="navigation" className="priority-immediate" role="banner">
-                      <HeaderHybrid />
-                    </div>
-                    <DynamicTrialBanner />
-                    <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
-                      {children}
-                    </main>
-                    <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                      <DynamicFooter />
-                    </div>
-                    <div data-section="mobile-navigation" className="priority-deferred">
-                      <DynamicMobileNavigation />
-                    </div>
-                    <FloatingCTA />
-                    <GlobalExitIntent />
-                    <ChatbotWrapper />
-                    <DynamicMaintenancePopup />
-                  </PageErrorBoundary>
+                  <MotionProvider>
+                    <PageErrorBoundary>
+                      <SkipToContent />
+                      <div data-section="navigation" className="priority-immediate" role="banner">
+                        <HeaderHybrid />
+                      </div>
+                      <DynamicTrialBanner />
+                      <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                        {children}
+                      </main>
+                      <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                        <DynamicFooter />
+                      </div>
+                      <div data-section="mobile-navigation" className="priority-deferred">
+                        <DynamicMobileNavigation />
+                      </div>
+                      <FloatingCTA />
+                      <GlobalExitIntent />
+                      <ChatbotWrapper />
+                      <DynamicMaintenancePopup />
+                    </PageErrorBoundary>
+                  </MotionProvider>
                 </PersonalizationProvider>
               </TrustProvider>
             </ToastProvider>
