@@ -1,0 +1,109 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c026d3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.98" />
+      <stop offset="100%" style="stop-color:#faf5ff;stop-opacity:0.98" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="150" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="1100" cy="530" r="180" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Left side - Quota visualization -->
+  <g transform="translate(40, 70)">
+    <!-- Pie chart representation -->
+    <g transform="translate(200, 180)">
+      <!-- AIQ slice -->
+      <path d="M 0 0 L 0 -120 A 120 120 0 0 1 103.9 60 Z" fill="rgba(255,255,255,0.3)"/>
+      <text x="30" y="-60" fill="white" font-size="14" font-weight="bold">AIQ</text>
+      <text x="25" y="-40" fill="white" font-size="11">15%</text>
+
+      <!-- State slice -->
+      <path d="M 0 0 L 103.9 60 A 120 120 0 0 1 -103.9 60 Z" fill="rgba(255,255,255,0.5)"/>
+      <text x="-20" y="80" fill="white" font-size="14" font-weight="bold">State</text>
+      <text x="-12" y="100" fill="white" font-size="11">50%</text>
+
+      <!-- Management slice (highlighted) -->
+      <path d="M 0 0 L -103.9 60 A 120 120 0 0 1 0 -120 Z" fill="#fbbf24"/>
+      <text x="-70" y="-30" fill="#92400e" font-size="14" font-weight="bold">Mgmt</text>
+      <text x="-60" y="-10" fill="#92400e" font-size="11">35%</text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(60, 350)">
+      <rect x="0" y="0" width="280" height="100" fill="rgba(255,255,255,0.15)" rx="10"/>
+
+      <rect x="20" y="20" width="20" height="20" fill="#fbbf24" rx="3"/>
+      <text x="50" y="35" fill="white" font-size="13">Management Quota (35%)</text>
+
+      <rect x="20" y="55" width="20" height="20" fill="rgba(255,255,255,0.5)" rx="3"/>
+      <text x="50" y="70" fill="white" font-size="13">State + AIQ (65%)</text>
+    </g>
+
+    <!-- NRI badge -->
+    <g transform="translate(260, 380)">
+      <circle cx="60" cy="40" r="45" fill="rgba(255,255,255,0.95)"/>
+      <text x="60" y="35" text-anchor="middle" fill="#9333ea" font-size="14" font-weight="bold">NRI</text>
+      <text x="60" y="52" text-anchor="middle" fill="#9333ea" font-size="11">QUOTA</text>
+    </g>
+  </g>
+
+  <!-- Right side - Content card -->
+  <g transform="translate(450, 45)">
+    <rect x="0" y="0" width="700" height="540" fill="url(#cardGrad)" rx="20"/>
+
+    <!-- Badge -->
+    <rect x="30" y="25" width="200" height="36" fill="#9333ea" rx="18"/>
+    <text x="130" y="49" text-anchor="middle" fill="white" font-size="14" font-weight="bold">ADMISSION GUIDE</text>
+
+    <!-- Main title -->
+    <text x="40" y="105" fill="#581c87" font-size="28" font-weight="bold">Management &amp; NRI</text>
+    <text x="40" y="145" fill="#581c87" font-size="28" font-weight="bold">Quota MBBS 2025</text>
+    <text x="40" y="180" fill="#9333ea" font-size="18">Complete Admission Process Guide</text>
+
+    <!-- Quota type boxes -->
+    <g transform="translate(40, 205)">
+      <rect x="0" y="0" width="300" height="80" fill="#fef3c7" rx="10"/>
+      <text x="150" y="35" text-anchor="middle" fill="#92400e" font-size="18" font-weight="bold">Management Quota</text>
+      <text x="150" y="60" text-anchor="middle" fill="#92400e" font-size="13">₹20-35 Lakhs/Year</text>
+
+      <rect x="320" y="0" width="300" height="80" fill="#dbeafe" rx="10"/>
+      <text x="470" y="35" text-anchor="middle" fill="#1e40af" font-size="18" font-weight="bold">NRI Quota</text>
+      <text x="470" y="60" text-anchor="middle" fill="#1e40af" font-size="13">$25,000-40,000/Year</text>
+    </g>
+
+    <!-- Features list -->
+    <g transform="translate(40, 310)">
+      <circle cx="12" cy="12" r="10" fill="#9333ea"/>
+      <text x="35" y="18" fill="#374151" font-size="14">Legal process &amp; documentation requirements</text>
+
+      <circle cx="12" cy="48" r="10" fill="#f59e0b"/>
+      <text x="35" y="54" fill="#374151" font-size="14">College-wise fee comparison for both quotas</text>
+
+      <circle cx="12" cy="84" r="10" fill="#22c55e"/>
+      <text x="35" y="90" fill="#374151" font-size="14">NEET cutoff requirements for each quota</text>
+
+      <circle cx="12" cy="120" r="10" fill="#3b82f6"/>
+      <text x="35" y="126" fill="#374151" font-size="14">Beware of scams &amp; verification checklist</text>
+
+      <circle cx="12" cy="156" r="10" fill="#ec4899"/>
+      <text x="35" y="162" fill="#374151" font-size="14">Step-by-step admission timeline 2025</text>
+    </g>
+
+    <!-- CTA -->
+    <rect x="40" y="480" width="620" height="45" fill="#9333ea" rx="10"/>
+    <text x="350" y="510" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Legality | Process | Fees | Eligibility | Timeline</text>
+  </g>
+
+  <!-- Bottom branding -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.25)"/>
+  <text x="600" y="612" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="16" font-weight="500">Cerebrum Biology Academy | cerebrumbiologyacademy.com</text>
+</svg>

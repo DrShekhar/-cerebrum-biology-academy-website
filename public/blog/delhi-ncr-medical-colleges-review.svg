@@ -1,0 +1,151 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.98" />
+      <stop offset="100%" style="stop-color:#ecfeff;stop-opacity:0.98" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="80" cy="80" r="120" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="1100" cy="550" r="150" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Left side - College cards preview -->
+  <g transform="translate(40, 80)">
+    <!-- Sharda Card -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.95)" rx="12"/>
+      <circle cx="40" cy="50" r="25" fill="#4f46e5"/>
+      <text x="40" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">S</text>
+      <text x="130" y="40" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="bold">Sharda</text>
+      <text x="130" y="58" text-anchor="middle" fill="#0ea5e9" font-size="11">Greater Noida</text>
+      <rect x="100" y="70" width="60" height="18" fill="#fef3c7" rx="9"/>
+      <text x="130" y="83" text-anchor="middle" fill="#92400e" font-size="10" font-weight="bold">₹22.5L/yr</text>
+    </g>
+
+    <!-- Santosh Card -->
+    <g transform="translate(220, 0)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.95)" rx="12"/>
+      <circle cx="40" cy="50" r="25" fill="#059669"/>
+      <text x="40" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">S</text>
+      <text x="130" y="40" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="bold">Santosh</text>
+      <text x="130" y="58" text-anchor="middle" fill="#0ea5e9" font-size="11">Ghaziabad</text>
+      <rect x="100" y="70" width="60" height="18" fill="#dcfce7" rx="9"/>
+      <text x="130" y="83" text-anchor="middle" fill="#166534" font-size="10" font-weight="bold">₹20L/yr</text>
+    </g>
+
+    <!-- SGT Card -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.95)" rx="12"/>
+      <circle cx="40" cy="50" r="25" fill="#f59e0b"/>
+      <text x="40" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">S</text>
+      <text x="130" y="40" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="bold">SGT Medical</text>
+      <text x="130" y="58" text-anchor="middle" fill="#0ea5e9" font-size="11">Gurugram</text>
+      <rect x="100" y="70" width="60" height="18" fill="#fef3c7" rx="9"/>
+      <text x="130" y="83" text-anchor="middle" fill="#92400e" font-size="10" font-weight="bold">₹21L/yr</text>
+    </g>
+
+    <!-- Hamdard Card -->
+    <g transform="translate(220, 130)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.95)" rx="12"/>
+      <circle cx="40" cy="50" r="25" fill="#ec4899"/>
+      <text x="40" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">H</text>
+      <text x="130" y="40" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="bold">Hamdard</text>
+      <text x="130" y="58" text-anchor="middle" fill="#0ea5e9" font-size="11">Delhi</text>
+      <rect x="100" y="70" width="60" height="18" fill="#fce7f3" rx="9"/>
+      <text x="130" y="83" text-anchor="middle" fill="#be185d" font-size="10" font-weight="bold">₹18.5L/yr</text>
+    </g>
+
+    <!-- Subharti Card -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.95)" rx="12"/>
+      <circle cx="40" cy="50" r="25" fill="#7c3aed"/>
+      <text x="40" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">S</text>
+      <text x="130" y="40" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="bold">Subharti</text>
+      <text x="130" y="58" text-anchor="middle" fill="#0ea5e9" font-size="11">Meerut</text>
+      <rect x="100" y="70" width="60" height="18" fill="#ede9fe" rx="9"/>
+      <text x="130" y="83" text-anchor="middle" fill="#6b21a8" font-size="10" font-weight="bold">₹18.5L/yr</text>
+    </g>
+
+    <!-- Rating stars graphic -->
+    <g transform="translate(220, 260)">
+      <rect x="0" y="0" width="200" height="100" fill="rgba(255,255,255,0.15)" rx="12" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+      <text x="100" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">HONEST</text>
+      <text x="100" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">REVIEWS</text>
+      <!-- Star rating -->
+      <g transform="translate(50, 70)">
+        <polygon points="10,0 12,7 20,7 14,11 16,18 10,14 4,18 6,11 0,7 8,7" fill="#fbbf24"/>
+        <polygon points="30,0 32,7 40,7 34,11 36,18 30,14 24,18 26,11 20,7 28,7" fill="#fbbf24"/>
+        <polygon points="50,0 52,7 60,7 54,11 56,18 50,14 44,18 46,11 40,7 48,7" fill="#fbbf24"/>
+        <polygon points="70,0 72,7 80,7 74,11 76,18 70,14 64,18 66,11 60,7 68,7" fill="#fbbf24"/>
+        <polygon points="90,0 92,7 100,7 94,11 96,18 90,14 84,18 86,11 80,7 88,7" fill="#fbbf24"/>
+      </g>
+    </g>
+
+    <!-- Bottom indicator -->
+    <rect x="0" y="390" width="420" height="50" fill="rgba(255,255,255,0.2)" rx="10"/>
+    <text x="210" y="422" text-anchor="middle" fill="white" font-size="16" font-weight="bold">6 Top Colleges Compared</text>
+  </g>
+
+  <!-- Right side - Content card -->
+  <g transform="translate(500, 45)">
+    <rect x="0" y="0" width="660" height="540" fill="url(#cardGrad)" rx="20"/>
+
+    <!-- Badge -->
+    <rect x="30" y="25" width="180" height="36" fill="#0ea5e9" rx="18"/>
+    <text x="120" y="49" text-anchor="middle" fill="white" font-size="14" font-weight="bold">COLLEGE REVIEWS</text>
+
+    <!-- Main title -->
+    <text x="40" y="105" fill="#0c4a6e" font-size="28" font-weight="bold">Delhi NCR Medical</text>
+    <text x="40" y="145" fill="#0c4a6e" font-size="28" font-weight="bold">Colleges: Honest Review</text>
+    <text x="40" y="180" fill="#0891b2" font-size="18">Sharda | Santosh | SGT | Hamdard | Subharti</text>
+
+    <!-- Review aspects -->
+    <g transform="translate(40, 210)">
+      <rect x="0" y="0" width="290" height="65" fill="#dcfce7" rx="10"/>
+      <text x="145" y="30" text-anchor="middle" fill="#166534" font-size="15" font-weight="bold">Infrastructure</text>
+      <text x="145" y="50" text-anchor="middle" fill="#166534" font-size="12">Campus, Labs, Library</text>
+
+      <rect x="310" y="0" width="290" height="65" fill="#dbeafe" rx="10"/>
+      <text x="455" y="30" text-anchor="middle" fill="#1e40af" font-size="15" font-weight="bold">Hospital Strength</text>
+      <text x="455" y="50" text-anchor="middle" fill="#1e40af" font-size="12">Beds, OPD, Specialties</text>
+    </g>
+
+    <g transform="translate(40, 290)">
+      <rect x="0" y="0" width="290" height="65" fill="#fef3c7" rx="10"/>
+      <text x="145" y="30" text-anchor="middle" fill="#92400e" font-size="15" font-weight="bold">Faculty Quality</text>
+      <text x="145" y="50" text-anchor="middle" fill="#92400e" font-size="12">Experience, Qualifications</text>
+
+      <rect x="310" y="0" width="290" height="65" fill="#fce7f3" rx="10"/>
+      <text x="455" y="30" text-anchor="middle" fill="#be185d" font-size="15" font-weight="bold">Placement Record</text>
+      <text x="455" y="50" text-anchor="middle" fill="#be185d" font-size="12">PG Results, Jobs</text>
+    </g>
+
+    <!-- Features list -->
+    <g transform="translate(40, 380)">
+      <circle cx="12" cy="12" r="10" fill="#0ea5e9"/>
+      <text x="35" y="18" fill="#374151" font-size="14">Pros &amp; Cons for each college</text>
+
+      <circle cx="12" cy="45" r="10" fill="#f59e0b"/>
+      <text x="35" y="51" fill="#374151" font-size="14">Student testimonials &amp; experiences</text>
+
+      <circle cx="12" cy="78" r="10" fill="#22c55e"/>
+      <text x="35" y="84" fill="#374151" font-size="14">Which college suits your profile</text>
+    </g>
+
+    <!-- CTA -->
+    <rect x="40" y="480" width="580" height="45" fill="#0ea5e9" rx="10"/>
+    <text x="330" y="510" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Unbiased Analysis | Real Data | Decision Helper</text>
+  </g>
+
+  <!-- Bottom branding -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.25)"/>
+  <text x="600" y="612" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="16" font-weight="500">Cerebrum Biology Academy | cerebrumbiologyacademy.com</text>
+</svg>
