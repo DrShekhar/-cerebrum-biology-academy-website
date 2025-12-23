@@ -165,7 +165,7 @@ export function ExitIntentPopup({
             {variant === 'discount' ? (
               <>
                 {/* Discount Variant Header - compact on mobile */}
-                <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
+                <div className="bg-indigo-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
                   <motion.div
                     className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
                     animate={{ scale: [1, 1.2, 1] }}
@@ -243,7 +243,7 @@ export function ExitIntentPopup({
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Your Name"
                             style={{ fontSize: '16px' }}
                           />
@@ -254,7 +254,7 @@ export function ExitIntentPopup({
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Phone Number *"
                             style={{ fontSize: '16px' }}
                           />
@@ -263,7 +263,7 @@ export function ExitIntentPopup({
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Email Address *"
                             style={{ fontSize: '16px' }}
                           />
@@ -272,7 +272,7 @@ export function ExitIntentPopup({
                         <motion.button
                           type="submit"
                           disabled={isSubmitting || !email || !phone}
-                          className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
+                          className="w-full py-3.5 sm:py-4 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >

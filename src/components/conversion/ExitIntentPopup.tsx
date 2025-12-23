@@ -515,9 +515,9 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
             <X className="w-5 h-5 text-gray-600" />
           </button>
 
-          {/* Header with gradient */}
+          {/* Header with solid indigo */}
           <div
-            className={`bg-gradient-to-r ${selectedOffer.visual.gradient} p-4 sm:p-6 text-white relative overflow-hidden`}
+            className="bg-indigo-500 p-4 sm:p-6 text-white relative overflow-hidden"
           >
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
@@ -617,12 +617,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
             <div className="space-y-3">
               <motion.button
                 onClick={handlePrimaryAction}
-                className={`
-                  w-full py-4 px-6 bg-gradient-to-r ${selectedOffer.visual.gradient}
-                  text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl
-                  transform hover:-translate-y-1 transition-all duration-300
-                  flex items-center justify-center gap-2
-                `}
+                className="w-full py-4 px-6 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
