@@ -1,0 +1,113 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.95" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24" />
+      <stop offset="100%" style="stop-color:#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="50" cy="50" r="80" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="1150" cy="580" r="100" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="200" cy="500" r="60" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Left side - College illustration -->
+  <g transform="translate(60, 100)">
+    <!-- College building silhouette -->
+    <rect x="20" y="200" width="350" height="200" fill="rgba(255,255,255,0.15)" rx="10"/>
+    <rect x="120" y="150" width="150" height="250" fill="rgba(255,255,255,0.2)" rx="5"/>
+    <!-- Dome -->
+    <ellipse cx="195" cy="150" rx="60" ry="40" fill="rgba(255,255,255,0.25)"/>
+    <!-- Windows -->
+    <rect x="140" y="180" width="30" height="40" fill="rgba(255,255,255,0.3)" rx="3"/>
+    <rect x="220" y="180" width="30" height="40" fill="rgba(255,255,255,0.3)" rx="3"/>
+    <rect x="140" y="240" width="30" height="40" fill="rgba(255,255,255,0.3)" rx="3"/>
+    <rect x="220" y="240" width="30" height="40" fill="rgba(255,255,255,0.3)" rx="3"/>
+    <!-- Main door -->
+    <rect x="165" y="320" width="60" height="80" fill="rgba(255,255,255,0.35)" rx="30 30 0 0"/>
+    <!-- Side buildings windows -->
+    <rect x="50" y="230" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="90" y="230" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="275" y="230" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="315" y="230" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="50" y="280" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="90" y="280" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="275" y="280" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+    <rect x="315" y="280" width="25" height="30" fill="rgba(255,255,255,0.2)" rx="2"/>
+
+    <!-- Stethoscope icon -->
+    <g transform="translate(280, 50)">
+      <circle cx="50" cy="80" r="35" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="8"/>
+      <path d="M 15 80 Q 15 20 50 20 Q 85 20 85 80" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="8"/>
+      <circle cx="15" cy="80" r="12" fill="#10b981"/>
+      <circle cx="85" cy="80" r="12" fill="#10b981"/>
+      <circle cx="50" cy="115" r="8" fill="#fbbf24"/>
+    </g>
+  </g>
+
+  <!-- Right side - Content card -->
+  <g transform="translate(500, 60)">
+    <rect x="0" y="0" width="640" height="510" fill="url(#cardGrad)" rx="20"/>
+
+    <!-- Badge -->
+    <rect x="30" y="30" width="180" height="36" fill="#10b981" rx="18"/>
+    <text x="120" y="54" text-anchor="middle" fill="white" font-size="14" font-weight="bold">TOP 25 COLLEGES</text>
+
+    <!-- Main title -->
+    <text x="40" y="110" fill="#1f2937" font-size="32" font-weight="bold">Private Medical</text>
+    <text x="40" y="150" fill="#1f2937" font-size="32" font-weight="bold">Colleges in India</text>
+    <text x="40" y="185" fill="#6b7280" font-size="18">2025 Complete Guide</text>
+
+    <!-- Feature boxes -->
+    <g transform="translate(40, 210)">
+      <!-- Fee Structure -->
+      <rect x="0" y="0" width="180" height="80" fill="#fef3c7" rx="10"/>
+      <text x="90" y="35" text-anchor="middle" fill="#92400e" font-size="24" font-weight="bold">Fees</text>
+      <text x="90" y="60" text-anchor="middle" fill="#92400e" font-size="14">10L - 30L/Year</text>
+
+      <!-- NEET Cutoff -->
+      <rect x="200" y="0" width="180" height="80" fill="#dbeafe" rx="10"/>
+      <text x="290" y="35" text-anchor="middle" fill="#1e40af" font-size="24" font-weight="bold">Cutoffs</text>
+      <text x="290" y="60" text-anchor="middle" fill="#1e40af" font-size="14">NEET 2024 Data</text>
+
+      <!-- Rankings -->
+      <rect x="400" y="0" width="180" height="80" fill="#dcfce7" rx="10"/>
+      <text x="490" y="35" text-anchor="middle" fill="#166534" font-size="24" font-weight="bold">Rankings</text>
+      <text x="490" y="60" text-anchor="middle" fill="#166534" font-size="14">NIRF &amp; NAAC</text>
+    </g>
+
+    <!-- College highlights list -->
+    <g transform="translate(40, 320)">
+      <circle cx="10" cy="10" r="8" fill="#4f46e5"/>
+      <text x="30" y="16" fill="#374151" font-size="15">KMC Manipal, St. John's, Ramaiah</text>
+
+      <circle cx="10" cy="45" r="8" fill="#10b981"/>
+      <text x="30" y="51" fill="#374151" font-size="15">Sharda, Santosh, SGT Gurugram</text>
+
+      <circle cx="10" cy="80" r="8" fill="#f59e0b"/>
+      <text x="30" y="86" fill="#374151" font-size="15">SRM Chennai, Symbiosis Pune</text>
+
+      <circle cx="10" cy="115" r="8" fill="#ec4899"/>
+      <text x="30" y="121" fill="#374151" font-size="15">Complete Pros &amp; Cons Analysis</text>
+    </g>
+
+    <!-- CTA Box -->
+    <rect x="40" y="440" width="560" height="50" fill="#4f46e5" rx="10"/>
+    <text x="320" y="472" text-anchor="middle" fill="white" font-size="16" font-weight="bold">NEET Cutoffs | Fee Structure | Admission Process | FAQs</text>
+  </g>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
+  <text x="600" y="612" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="16">Cerebrum Biology Academy | cerebrumbiologyacademy.com</text>
+</svg>
