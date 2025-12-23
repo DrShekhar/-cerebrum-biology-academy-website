@@ -612,6 +612,13 @@ const nextConfig = {
         destination: '/',
         permanent: false,
       },
+
+      // Career options page migrated to blog
+      {
+        source: '/career-options-after-12th-pcb',
+        destination: '/blog/career-options-after-12th-pcb-complete-guide',
+        permanent: true,
+      },
     ]
   },
 
