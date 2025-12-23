@@ -42,9 +42,8 @@ export function HeaderClientInteractions({ section }: HeaderClientInteractionsPr
     setIsSearchOpen(false)
   }, [pathname])
 
-  if (!mounted) return null
-
-  // Render specific section
+  // Burger menu must render immediately - critical for mobile navigation
+  // Check burger section BEFORE mount check to ensure it's always accessible
   if (section === 'burger') {
     return (
       <BurgerMenu
@@ -54,6 +53,9 @@ export function HeaderClientInteractions({ section }: HeaderClientInteractionsPr
       />
     )
   }
+
+  // Other sections wait for mount to avoid hydration issues
+  if (!mounted) return null
 
   if (section === 'search') {
     return (
