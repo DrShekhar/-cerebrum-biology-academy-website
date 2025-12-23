@@ -619,6 +619,15 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
           <TableOfContents items={toc} />
         </div>
 
+        {/* Bottom Lead Capture Form */}
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <BlogLeadCapture
+            articleSlug={meta.slug}
+            articleTitle={meta.title}
+            chapterName={meta.neetChapter || 'General'}
+          />
+        </div>
+
         {/* Related Articles */}
         {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
 
