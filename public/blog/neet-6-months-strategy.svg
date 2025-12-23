@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Calendar -->
+    <rect x="-100" y="-80" width="80" height="90" rx="5" fill="white" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="-100" y="-80" width="80" height="20" rx="5" fill="#3B82F6"/>
+    <text x="-60" y="-65" text-anchor="middle" font-size="12" fill="white" font-weight="bold">6</text>
+    <g font-size="8" fill="#6366F1">
+      <text x="-90" y="-45">M T W</text>
+      <text x="-90" y="-30">T F S S</text>
+    </g>
+    <!-- Clock -->
+    <circle cx="60" cy="-30" r="50" fill="white" stroke="#F59E0B" stroke-width="3"/>
+    <line x1="60" y1="-30" x2="60" y2="-60" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="-30" x2="85" y2="-20" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="60" cy="-30" r="5" fill="#F59E0B"/>
+    <!-- Progress arrow -->
+    <path d="M-150,80 L150,80" stroke="#22C55E" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="150,80 135,70 135,90" fill="#22C55E"/>
+    <circle cx="-100" cy="80" r="8" fill="#22C55E"/>
+    <circle cx="0" cy="80" r="8" fill="#F59E0B"/>
+    <circle cx="100" cy="80" r="8" fill="#EF4444"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#3B82F6">6 Months NEET Preparation Strategy</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Kidney shape (bean) -->
+    <path d="M-60,-70 Q-100,-70 -100,0 Q-100,70 -60,70 Q-40,70 -30,40 Q-20,10 -30,-40 Q-40,-70 -60,-70" fill="#EF4444" opacity="0.8"/>
+    <path d="M60,-70 Q100,-70 100,0 Q100,70 60,70 Q40,70 30,40 Q20,10 30,-40 Q40,-70 60,-70" fill="#EF4444" opacity="0.8"/>
+    <!-- Ureters -->
+    <path d="M-60,70 Q-40,100 0,120" fill="none" stroke="#F59E0B" stroke-width="6"/>
+    <path d="M60,70 Q40,100 0,120" fill="none" stroke="#F59E0B" stroke-width="6"/>
+    <!-- Nephron indication -->
+    <circle cx="-60" cy="0" r="15" fill="#F59E0B" opacity="0.6"/>
+    <circle cx="60" cy="0" r="15" fill="#F59E0B" opacity="0.6"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#EF4444">Excretory System</text>
+</svg>

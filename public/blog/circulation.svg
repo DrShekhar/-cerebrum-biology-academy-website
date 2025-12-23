@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Heart shape -->
+    <path d="M0,-50 C-30,-80 -80,-60 -80,-20 C-80,30 0,70 0,70 C0,70 80,30 80,-20 C80,-60 30,-80 0,-50" fill="#EF4444" opacity="0.9"/>
+    <!-- Arteries -->
+    <path d="M-80,-20 Q-120,-20 -150,20" fill="none" stroke="#EF4444" stroke-width="8" stroke-linecap="round"/>
+    <path d="M80,-20 Q120,-20 150,20" fill="none" stroke="#3B82F6" stroke-width="8" stroke-linecap="round"/>
+    <!-- Pulse line -->
+    <path d="M-200,120 L-100,120 L-80,90 L-60,150 L-40,80 L-20,140 L0,120 L200,120" fill="none" stroke="#EF4444" stroke-width="3"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#EF4444">Body Fluids & Circulation</text>
+</svg>

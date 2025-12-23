@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Stack of papers -->
+    <rect x="-90" y="-50" width="120" height="150" rx="3" fill="#E5E7EB" transform="rotate(3)"/>
+    <rect x="-85" y="-55" width="120" height="150" rx="3" fill="#F3F4F6" transform="rotate(-2)"/>
+    <rect x="-80" y="-60" width="120" height="150" rx="3" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+    <!-- Question marks -->
+    <text x="-40" y="-20" font-size="28" fill="#8B5CF6" opacity="0.6">?</text>
+    <text x="0" y="10" font-size="28" fill="#3B82F6" opacity="0.6">?</text>
+    <text x="-60" y="40" font-size="28" fill="#22C55E" opacity="0.6">?</text>
+    <!-- Lines representing questions -->
+    <line x1="-60" y1="-40" x2="20" y2="-40" stroke="#6366F1" stroke-width="2"/>
+    <line x1="-60" y1="70" x2="20" y2="70" stroke="#6366F1" stroke-width="2"/>
+    <!-- PYQ badge -->
+    <circle cx="80" cy="-40" r="40" fill="#8B5CF6"/>
+    <text x="80" y="-45" text-anchor="middle" font-size="14" font-weight="bold" fill="white">PYQ</text>
+    <text x="80" y="-25" text-anchor="middle" font-size="10" fill="white">Biology</text>
+    <!-- DNA helix hint -->
+    <path d="M100,20 Q120,40 100,60 Q80,80 100,100" fill="none" stroke="#22C55E" stroke-width="3" opacity="0.5"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#8B5CF6">NEET Biology Previous Year Questions</text>
+</svg>

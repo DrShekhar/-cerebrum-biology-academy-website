@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="400" height="300"/>
+  <g transform="translate(200,150)">
+    <!-- Central sparkle/magic icon -->
+    <polygon points="0,-60 15,-20 60,-20 25,10 40,60 0,30 -40,60 -25,10 -60,-20 -15,-20" fill="url(#spark)" opacity="0.9"/>
+    <circle cx="0" cy="0" r="20" fill="white"/>
+    <text x="0" y="6" text-anchor="middle" font-size="16" fill="#8B5CF6" font-weight="bold">AI</text>
+    <!-- Floating elements -->
+    <circle cx="-80" cy="-40" r="15" fill="#3B82F6" opacity="0.5"/>
+    <rect x="60" y="-50" width="30" height="30" rx="5" fill="#22C55E" opacity="0.5"/>
+    <polygon points="-70,40 -55,60 -85,60" fill="#8B5CF6" opacity="0.5"/>
+    <circle cx="80" cy="30" r="12" fill="#F59E0B" opacity="0.5"/>
+    <!-- Connection lines -->
+    <line x1="-60" y1="-30" x2="-25" y2="-15" stroke="#6366F1" stroke-width="2" stroke-dasharray="4,2" opacity="0.5"/>
+    <line x1="60" y1="-35" x2="25" y2="-10" stroke="#6366F1" stroke-width="2" stroke-dasharray="4,2" opacity="0.5"/>
+    <line x1="-55" y1="45" x2="-20" y2="20" stroke="#6366F1" stroke-width="2" stroke-dasharray="4,2" opacity="0.5"/>
+    <line x1="70" y1="25" x2="25" y2="10" stroke="#6366F1" stroke-width="2" stroke-dasharray="4,2" opacity="0.5"/>
+  </g>
+</svg>

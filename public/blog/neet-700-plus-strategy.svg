@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Trophy -->
+    <path d="M-30,-80 L-30,-20 Q-30,20 0,40 Q30,20 30,-20 L30,-80 Z" fill="url(#gold)" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="-15" y="40" width="30" height="15" fill="#F59E0B"/>
+    <rect x="-25" y="55" width="50" height="10" fill="#F59E0B"/>
+    <!-- Handles -->
+    <path d="M-30,-60 Q-60,-60 -60,-40 Q-60,-20 -30,-20" fill="none" stroke="#F59E0B" stroke-width="6"/>
+    <path d="M30,-60 Q60,-60 60,-40 Q60,-20 30,-20" fill="none" stroke="#F59E0B" stroke-width="6"/>
+    <!-- 700+ text -->
+    <text x="0" y="-35" text-anchor="middle" font-size="24" font-weight="bold" fill="#6366F1">700+</text>
+    <!-- Star -->
+    <polygon points="0,-100 8,-82 28,-82 12,-70 18,-50 0,-62 -18,-50 -12,-70 -28,-82 -8,-82" fill="#F59E0B" opacity="0.8"/>
+    <!-- Rising graph -->
+    <path d="M80,-40 L100,-20 L120,-50 L140,-30 L160,-70" fill="none" stroke="#22C55E" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="160" cy="-70" r="6" fill="#22C55E"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#F59E0B">How to Score 700+ in NEET</text>
+</svg>

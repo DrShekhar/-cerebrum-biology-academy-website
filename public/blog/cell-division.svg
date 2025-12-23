@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="800" height="400"/>
+  <g transform="translate(400,180)">
+    <!-- Parent cell -->
+    <ellipse cx="-150" cy="0" rx="50" ry="60" fill="#8B5CF6" opacity="0.3" stroke="#8B5CF6" stroke-width="2"/>
+    <ellipse cx="-150" cy="0" rx="20" ry="25" fill="#6366F1" opacity="0.5"/>
+    <!-- Arrow -->
+    <path d="M-80,0 L-20,0 M-30,-10 L-20,0 L-30,10" fill="none" stroke="#6366F1" stroke-width="3"/>
+    <!-- Dividing cell -->
+    <ellipse cx="60" cy="-30" rx="40" ry="45" fill="#3B82F6" opacity="0.3" stroke="#3B82F6" stroke-width="2"/>
+    <ellipse cx="60" cy="30" rx="40" ry="45" fill="#3B82F6" opacity="0.3" stroke="#3B82F6" stroke-width="2"/>
+    <!-- Spindle fibers -->
+    <line x1="60" y1="-30" x2="60" y2="30" stroke="#6366F1" stroke-width="1" stroke-dasharray="4,2"/>
+    <!-- Daughter cells -->
+    <path d="M120,0 L180,0 M170,-10 L180,0 L170,10" fill="none" stroke="#6366F1" stroke-width="3"/>
+    <circle cx="230" cy="-30" r="30" fill="#22C55E" opacity="0.3" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="230" cy="30" r="30" fill="#22C55E" opacity="0.3" stroke="#22C55E" stroke-width="2"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#8B5CF6">Cell Division - Mitosis & Meiosis</text>
+</svg>

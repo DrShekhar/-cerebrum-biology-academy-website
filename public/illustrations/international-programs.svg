@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="400" height="300"/>
+  <g transform="translate(200,150)">
+    <!-- Globe -->
+    <circle cx="0" cy="0" r="70" fill="#3B82F6" opacity="0.2"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <!-- Latitude lines -->
+    <ellipse cx="0" cy="0" rx="70" ry="25" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.5"/>
+    <ellipse cx="0" cy="-25" rx="55" ry="15" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.5"/>
+    <ellipse cx="0" cy="25" rx="55" ry="15" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.5"/>
+    <!-- Longitude -->
+    <ellipse cx="0" cy="0" rx="25" ry="70" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.5"/>
+    <!-- Location pins -->
+    <g transform="translate(-30,-40)">
+      <circle cx="0" cy="0" r="8" fill="#EF4444"/>
+      <polygon points="0,8 -6,0 6,0" fill="#EF4444"/>
+    </g>
+    <g transform="translate(40,10)">
+      <circle cx="0" cy="0" r="8" fill="#22C55E"/>
+      <polygon points="0,8 -6,0 6,0" fill="#22C55E"/>
+    </g>
+    <g transform="translate(-10,50)">
+      <circle cx="0" cy="0" r="8" fill="#F59E0B"/>
+      <polygon points="0,8 -6,0 6,0" fill="#F59E0B"/>
+    </g>
+    <!-- Connection lines -->
+    <path d="M-30,-32 Q20,-20 40,10" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="4,2"/>
+    <path d="M40,18 Q10,40 -10,50" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="4,2"/>
+    <!-- Graduation cap -->
+    <g transform="translate(90,-50)">
+      <polygon points="0,-15 -20,0 0,5 20,0" fill="#6366F1"/>
+      <rect x="-3" y="-5" width="6" height="10" fill="#6366F1"/>
+      <line x1="0" y1="5" x2="0" y2="20" stroke="#F59E0B" stroke-width="2"/>
+      <circle cx="0" cy="22" r="4" fill="#F59E0B"/>
+    </g>
+  </g>
+</svg>
