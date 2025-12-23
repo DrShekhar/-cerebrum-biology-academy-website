@@ -1,0 +1,73 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.98" />
+      <stop offset="100%" style="stop-color:#faf5ff;stop-opacity:0.98" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="150" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="1100" cy="530" r="180" fill="rgba(255,255,255,0.05)"/>
+  <g transform="translate(40, 70)">
+    <text x="200" y="40" text-anchor="middle" fill="white" font-size="22" font-weight="bold">MAHARASHTRA</text>
+    <rect x="50" y="60" width="300" height="180" fill="rgba(255,255,255,0.15)" rx="15"/>
+    <text x="200" y="100" text-anchor="middle" fill="white" font-size="16">80+ Medical Colleges</text>
+    <text x="200" y="130" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="bold">11,800+ Seats</text>
+    <text x="200" y="165" text-anchor="middle" fill="white" font-size="14">Govt: 41 | Private: 39</text>
+    <text x="200" y="190" text-anchor="middle" fill="white" font-size="14">Deemed: 13 Universities</text>
+    <text x="200" y="220" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="12">DMER Counselling</text>
+    <g transform="translate(50, 270)">
+      <rect x="0" y="0" width="145" height="70" fill="rgba(255,255,255,0.2)" rx="8"/>
+      <text x="72" y="25" text-anchor="middle" fill="white" font-size="11">Pune</text>
+      <text x="72" y="50" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="bold">15+ Colleges</text>
+      <rect x="155" y="0" width="145" height="70" fill="rgba(255,255,255,0.2)" rx="8"/>
+      <text x="227" y="25" text-anchor="middle" fill="white" font-size="11">Mumbai/Navi Mumbai</text>
+      <text x="227" y="50" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="bold">12+ Colleges</text>
+    </g>
+    <g transform="translate(50, 360)">
+      <rect x="0" y="0" width="300" height="80" fill="rgba(255,255,255,0.95)" rx="10"/>
+      <text x="150" y="30" text-anchor="middle" fill="#7c3aed" font-size="14" font-weight="bold">Fee Range 2025</text>
+      <text x="150" y="55" text-anchor="middle" fill="#374151" font-size="12">State: Rs 7-15L | Mgmt: Rs 15-35L</text>
+      <text x="150" y="72" text-anchor="middle" fill="#374151" font-size="11">NRI: $20,000 - $70,000/year</text>
+    </g>
+  </g>
+  <g transform="translate(450, 45)">
+    <rect x="0" y="0" width="700" height="540" fill="url(#cardGrad)" rx="20"/>
+    <rect x="30" y="25" width="200" height="36" fill="#7c3aed" rx="18"/>
+    <text x="130" y="49" text-anchor="middle" fill="white" font-size="14" font-weight="bold">COMPLETE GUIDE 2025</text>
+    <text x="40" y="100" fill="#581c87" font-size="26" font-weight="bold">Best Private Medical</text>
+    <text x="40" y="138" fill="#581c87" font-size="26" font-weight="bold">Colleges in Maharashtra</text>
+    <text x="40" y="175" fill="#7c3aed" font-size="17">Fees, NEET Cutoffs, Rankings &amp; Admission</text>
+    <g transform="translate(40, 200)">
+      <rect x="0" y="0" width="200" height="70" fill="#f3e8ff" rx="10"/>
+      <text x="100" y="28" text-anchor="middle" fill="#7c3aed" font-size="14" font-weight="bold">DY Patil</text>
+      <text x="100" y="50" text-anchor="middle" fill="#6b21a8" font-size="11">Pune | Navi Mumbai</text>
+      <rect x="215" y="0" width="200" height="70" fill="#dbeafe" rx="10"/>
+      <text x="315" y="28" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="bold">Bharati Vidyapeeth</text>
+      <text x="315" y="50" text-anchor="middle" fill="#1e3a8a" font-size="11">Pune | NAAC A</text>
+      <rect x="430" y="0" width="200" height="70" fill="#dcfce7" rx="10"/>
+      <text x="530" y="28" text-anchor="middle" fill="#166534" font-size="14" font-weight="bold">Symbiosis</text>
+      <text x="530" y="50" text-anchor="middle" fill="#14532d" font-size="11">Women Only | NAAC A++</text>
+    </g>
+    <g transform="translate(40, 295)">
+      <circle cx="12" cy="12" r="10" fill="#7c3aed"/>
+      <text x="35" y="18" fill="#374151" font-size="14">39 NMC-approved private medical colleges</text>
+      <circle cx="12" cy="48" r="10" fill="#f59e0b"/>
+      <text x="35" y="54" fill="#374151" font-size="14">Complete fee structure for all quotas</text>
+      <circle cx="12" cy="84" r="10" fill="#22c55e"/>
+      <text x="35" y="90" fill="#374151" font-size="14">NEET 2024 cutoff ranks &amp; trends</text>
+      <circle cx="12" cy="120" r="10" fill="#3b82f6"/>
+      <text x="35" y="126" fill="#374151" font-size="14">City-wise college comparison</text>
+      <circle cx="12" cy="156" r="10" fill="#ec4899"/>
+      <text x="35" y="162" fill="#374151" font-size="14">DMER counselling process explained</text>
+    </g>
+    <rect x="40" y="480" width="620" height="45" fill="#7c3aed" rx="10"/>
+    <text x="350" y="510" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Pune | Mumbai | Nashik | Aurangabad | Nagpur | Kolhapur</text>
+  </g>
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.25)"/>
+  <text x="600" y="612" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="16" font-weight="500">Cerebrum Biology Academy | cerebrumbiologyacademy.com</text>
+</svg>
