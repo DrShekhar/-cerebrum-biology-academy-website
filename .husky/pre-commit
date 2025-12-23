@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-echo "🔍 Running pre-commit checks (MVP Phase 1 - Pragmatic Mode)..."
+echo "Running pre-commit checks..."
 
 # Run lint-staged (code formatting) - BLOCKING
 npx lint-staged

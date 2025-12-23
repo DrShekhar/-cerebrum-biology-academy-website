@@ -41,8 +41,8 @@ export function HeaderHybrid() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Left Section - Logo */}
           <div className="flex items-center space-x-4">
-            {/* Burger Menu - Client interactive */}
-            <div id="burger-menu-slot" className="lg:hidden">
+            {/* Burger Menu - Client interactive, visible on ALL screens */}
+            <div id="burger-menu-slot">
               <Suspense
                 fallback={
                   <button
