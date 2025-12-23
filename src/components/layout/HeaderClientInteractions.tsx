@@ -6,12 +6,11 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/useAuth'
 
-// Lazy load menu components to defer framer-motion
-const BurgerMenu = dynamic(
-  () => import('@/components/navigation/BurgerMenu').then((mod) => mod.BurgerMenu),
-  { ssr: false }
-)
+// Direct import for BurgerMenu - critical UI that must always render
+// This ensures navigation works even if chunk loading fails
+import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 
+// Lazy load search menu (less critical)
 const SearchMenu = dynamic(
   () => import('@/components/navigation/SearchMenu').then((mod) => mod.SearchMenu),
   { ssr: false }
