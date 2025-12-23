@@ -8,15 +8,20 @@ import { Toaster } from 'react-hot-toast'
 import { KeyboardShortcutsModal } from '@/components/counselor/KeyboardShortcutsModal'
 import { Keyboard } from 'lucide-react'
 import Link from 'next/link'
+import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)
+  const { isOwner, isCheckingOwner } = useOwnerAccess()
 
   // DEV MODE: Skip authentication check if bypass is enabled
   const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
+
+  // Allow access if owner OR counselor role
+  const hasCounselorAccess = isOwner || (session?.user && session.user.role === 'counselor')
 
   useEffect(() => {
     if (isBypassEnabled) {
@@ -24,13 +29,13 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       return
     }
 
-    if (status === 'loading') return
+    if (status === 'loading' || isCheckingOwner) return
 
-    if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
+    if (!hasCounselorAccess) {
       router.push(`/auth/counselor-login?callbackUrl=${pathname}`)
       return
     }
-  }, [status, session, router, pathname, isBypassEnabled])
+  }, [status, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
 
   // Global keyboard shortcuts
   useEffect(() => {
@@ -77,7 +82,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [router])
 
-  if (!isBypassEnabled && status === 'loading') {
+  if (!isBypassEnabled && (status === 'loading' || isCheckingOwner)) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
@@ -93,10 +98,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (
-    !isBypassEnabled &&
-    (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor')
-  ) {
+  if (!isBypassEnabled && !hasCounselorAccess) {
     return null
   }
 

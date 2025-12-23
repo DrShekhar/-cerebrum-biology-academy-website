@@ -10,6 +10,10 @@ import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
+import { useUser } from '@clerk/nextjs'
+
+// Owner phone number - only this number gets multi-role access
+const OWNER_PHONE = '+919999744334'
 
 const PersonalizedStudentDashboard = dynamic(
   () =>
@@ -83,17 +87,27 @@ export default function DashboardPage() {
   const { user, isLoading, isAuthenticated } = useAuth()
   const { isDevMode } = useUserFlow()
   const router = useRouter()
+  const { user: clerkUser, isLoaded: clerkLoaded } = useUser()
 
   useEffect(() => {
-    // Optional: Auto-redirect to signin for better UX
-    // Uncomment if you want automatic redirection
-    // if (!isLoading && !isAuthenticated) {
-    //   router.push('/auth/signin?callbackUrl=' + encodeURIComponent('/dashboard'))
-    // }
-  }, [isLoading, isAuthenticated, router])
+    // Check if user is the owner by phone number - redirect to role selection
+    if (clerkLoaded && clerkUser) {
+      const userPhone = clerkUser.primaryPhoneNumber?.phoneNumber || ''
+      const normalizedPhone = userPhone.replace(/[\s\-\(\)]/g, '')
 
-  // Show loading while checking authentication
-  if (isLoading) {
+      if (
+        normalizedPhone === OWNER_PHONE ||
+        normalizedPhone === '919999744334' ||
+        normalizedPhone === '+919999744334'
+      ) {
+        router.push('/select-role')
+        return
+      }
+    }
+  }, [clerkLoaded, clerkUser, router])
+
+  // Show loading while checking authentication or Clerk is loading
+  if (isLoading || !clerkLoaded) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="text-center">

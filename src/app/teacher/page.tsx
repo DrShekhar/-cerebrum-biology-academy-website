@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useAuth } from '@/contexts/AuthContext'
+import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import Link from 'next/link'
 import {
   FileText,
@@ -48,6 +49,7 @@ interface UpcomingClass {
 
 export default function TeacherDashboardPage() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
+  const { isOwner, isCheckingOwner } = useOwnerAccess()
   const [stats, setStats] = useState<DashboardStats>({
     totalAssignments: 0,
     pendingSubmissions: 0,
@@ -60,12 +62,15 @@ export default function TeacherDashboardPage() {
   const [upcomingClasses, setUpcomingClasses] = useState<UpcomingClass[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
+  // Allow access if owner OR teacher role
+  const hasTeacherAccess = isOwner || (isAuthenticated && user?.role === 'TEACHER')
+
   useEffect(() => {
-    if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
+    if (!authLoading && !isCheckingOwner && !hasTeacherAccess) {
       window.location.href = '/auth/signin'
       return
     }
-  }, [authLoading, isAuthenticated, user])
+  }, [authLoading, isCheckingOwner, hasTeacherAccess])
 
   useEffect(() => {
     async function fetchDashboardData() {
@@ -86,16 +91,16 @@ export default function TeacherDashboardPage() {
       }
     }
 
-    if (isAuthenticated && user?.role === 'TEACHER') {
+    if (hasTeacherAccess) {
       fetchDashboardData()
     }
-  }, [isAuthenticated, user])
+  }, [hasTeacherAccess])
 
-  if (authLoading || isLoading) {
+  if (authLoading || isCheckingOwner || isLoading) {
     return <LoadingSkeleton />
   }
 
-  if (!isAuthenticated || user?.role !== 'TEACHER') {
+  if (!hasTeacherAccess) {
     return null
   }
 

@@ -2,6 +2,8 @@
 
 import { useState, ReactNode } from 'react'
 import { useSession, signOut } from 'next-auth/react'
+import { useClerk } from '@clerk/nextjs'
+import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
@@ -47,16 +49,20 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+  const { signOut: clerkSignOut } = useClerk()
+  const { isOwner, isCheckingOwner } = useOwnerAccess()
   const { data: session, status } = useSession({
     required: false,
     onUnauthenticated() {
-      // Redirect to login for admin pages
-      router.push('/admin/login')
+      // Only redirect if not owner via Clerk
+      if (!isOwner) {
+        router.push('/admin/login')
+      }
     },
   })
 
-  // Show loading state while session is loading
-  if (status === 'loading') {
+  // Show loading state while session is loading or checking owner status
+  if (status === 'loading' || isCheckingOwner) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -70,22 +76,35 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     )
   }
 
+  // Allow access if owner via Clerk OR admin via NextAuth session
+  const hasAdminAccess = isOwner || (session?.user && session.user.role === 'admin')
+
   // Redirect to login if not authenticated
-  if (status === 'unauthenticated' || !session?.user || session.user.role !== 'admin') {
+  if (!hasAdminAccess) {
     router.push('/admin/login')
     return null
   }
 
   const handleLogout = async () => {
     try {
-      await signOut({
-        callbackUrl: '/admin/login',
-        redirect: true,
-      })
+      if (isOwner) {
+        // Sign out from Clerk
+        await clerkSignOut({ redirectUrl: '/select-role' })
+      } else {
+        // Sign out from NextAuth
+        await signOut({
+          callbackUrl: '/admin/login',
+          redirect: true,
+        })
+      }
     } catch (error) {
       console.error('Logout error:', error)
     }
   }
+
+  // Get display name - from session or default to Owner for Clerk users
+  const displayName = session?.user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
+  const displayEmail = session?.user?.email || (isOwner ? 'Owner Access' : '')
 
   const navigation: NavItem[] = [
     {
@@ -411,10 +430,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                       <User className="w-4 h-4 text-primary-600" />
                     </div>
                     <div className="text-left">
-                      <div className="text-sm font-medium text-gray-900">
-                        {session.user.name || 'Admin User'}
-                      </div>
-                      <div className="text-xs text-gray-500">{session.user.email}</div>
+                      <div className="text-sm font-medium text-gray-900">{displayName}</div>
+                      <div className="text-xs text-gray-500">{displayEmail}</div>
                     </div>
                   </div>
                   <ChevronDown

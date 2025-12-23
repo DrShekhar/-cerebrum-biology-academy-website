@@ -1,20 +1,56 @@
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextRequest, NextResponse } from 'next/server'
 import { validateUserSession, addSecurityHeaders, UserSession } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
+
+// Define public routes that don't require authentication
+const isPublicRoute = createRouteMatcher([
+  '/',
+  '/courses(.*)',
+  '/about',
+  '/contact',
+  '/blog(.*)',
+  '/gallery(.*)',
+  '/pricing(.*)',
+  '/results(.*)',
+  '/faculty(.*)',
+  '/demo-booking(.*)',
+  '/admissions(.*)',
+  '/faq(.*)',
+  '/testimonials(.*)',
+  '/sign-in(.*)',
+  '/sign-up(.*)',
+  '/auth/(.*)',
+  '/api/public/(.*)',
+  '/api/webhooks/(.*)',
+])
+
+// Define admin routes
+const isAdminRoute = createRouteMatcher(['/admin(.*)', '/api/admin/(.*)'])
+
+// Define protected routes
+const isProtectedRoute = createRouteMatcher([
+  '/dashboard(.*)',
+  '/student/(.*)',
+  '/profile(.*)',
+  '/test/(.*)',
+  '/teacher/(.*)',
+  '/counselor(.*)',
+  '/select-role(.*)',
+])
 
 // Type guard to check if session has role property
 function hasRole(session: UserSession): session is UserSession & { role: string } {
   return session.valid && typeof session.role === 'string'
 }
 
-export default async function middleware(req: NextRequest) {
+export default clerkMiddleware(async (auth, req) => {
   const { pathname } = req.nextUrl
   const hostname = req.headers.get('host') || ''
 
   // ============================================
   // SEO: Redirect www to non-www (canonical domain)
-  // This prevents duplicate content issues in Google Search Console
   // ============================================
   if (hostname.startsWith('www.')) {
     const newUrl = new URL(req.url)
@@ -22,13 +58,29 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(newUrl, { status: 301 })
   }
 
-  // Validate user session for protected routes
+  // Get Clerk auth state
+  const { userId: clerkUserId } = await auth()
+
+  // For protected routes, require Clerk authentication
+  if (!isPublicRoute(req)) {
+    if (!clerkUserId) {
+      // Redirect to Clerk sign-in
+      const signInUrl = new URL('/sign-in', req.url)
+      signInUrl.searchParams.set('redirect_url', pathname)
+      return NextResponse.redirect(signInUrl)
+    }
+  }
+
+  // Legacy session validation for backward compatibility
+  // This allows existing sessions to work alongside Clerk
   const session = await validateUserSession(req).catch(() => ({ valid: false }) as UserSession)
 
-  // Public auth routes
+  // Combined auth check: either Clerk OR legacy session
+  const isAuthenticated = clerkUserId || session.valid
+
+  // Public auth routes (legacy)
   if (pathname.startsWith('/auth/')) {
-    // If already authenticated, redirect to dashboard
-    if (session.valid) {
+    if (isAuthenticated) {
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
     return addSecurityHeaders(NextResponse.next())
@@ -36,7 +88,6 @@ export default async function middleware(req: NextRequest) {
 
   // Public admin routes (login page)
   if (pathname === '/admin/login') {
-    // If already authenticated admin, redirect to dashboard
     if (hasRole(session) && session.role === 'ADMIN') {
       return NextResponse.redirect(new URL('/admin', req.url))
     }
@@ -44,39 +95,33 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Protected student/parent routes
-  if (
-    pathname.startsWith('/dashboard') ||
-    pathname.startsWith('/student/') ||
-    pathname.startsWith('/profile') ||
-    pathname.startsWith('/test/')
-  ) {
-    if (!session.valid) {
-      const loginUrl = new URL('/auth/signin', req.url)
-      loginUrl.searchParams.set('returnUrl', pathname)
+  if (isProtectedRoute(req)) {
+    if (!isAuthenticated) {
+      const loginUrl = new URL('/sign-in', req.url)
+      loginUrl.searchParams.set('redirect_url', pathname)
       return NextResponse.redirect(loginUrl)
     }
   }
 
-  // Protected teacher routes
+  // Protected teacher routes - allow Clerk authenticated users (page components handle role check)
   if (pathname.startsWith('/teacher/')) {
-    if (!hasRole(session) || (session.role !== 'TEACHER' && session.role !== 'ADMIN')) {
-      return NextResponse.redirect(new URL('/auth/signin', req.url))
+    if (!clerkUserId && (!hasRole(session) || (session.role !== 'TEACHER' && session.role !== 'ADMIN'))) {
+      return NextResponse.redirect(new URL('/sign-in', req.url))
     }
   }
 
-  // Protected counselor routes
+  // Protected counselor routes - allow Clerk authenticated users (page components handle role check)
   if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
-    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
-      const loginUrl = new URL('/auth/signin', req.url)
-      loginUrl.searchParams.set('returnUrl', pathname)
+    if (!clerkUserId && (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN'))) {
+      const loginUrl = new URL('/sign-in', req.url)
+      loginUrl.searchParams.set('redirect_url', pathname)
       return NextResponse.redirect(loginUrl)
     }
   }
 
-  // Protected admin routes
-  if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
-    // Check if user is authenticated and has admin role
-    if (!hasRole(session) || session.role !== 'ADMIN') {
+  // Protected admin routes - allow Clerk authenticated users (AdminLayout handles role check)
+  if (isAdminRoute(req) && pathname !== '/admin/login') {
+    if (!clerkUserId && (!hasRole(session) || session.role !== 'ADMIN')) {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
       return NextResponse.redirect(loginUrl)
@@ -86,8 +131,6 @@ export default async function middleware(req: NextRequest) {
     if (session.email) {
       const clientIP =
         req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
-      const userAgent = req.headers.get('user-agent') || 'unknown'
-
       console.log(
         `Admin access: ${session.email} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`
       )
@@ -101,7 +144,7 @@ export default async function middleware(req: NextRequest) {
     !pathname.includes('signup') &&
     !pathname.includes('csrf-token')
   ) {
-    if (!session.valid) {
+    if (!isAuthenticated) {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -145,8 +188,6 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Counselor API protection
-  // NOTE: Auth is handled at route level using withCounselor() middleware for better
-  // cookie handling in Next.js 15. This middleware check provides additional security layer.
   if (pathname.startsWith('/api/counselor/')) {
     if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
       return addSecurityHeaders(
@@ -165,7 +206,6 @@ export default async function middleware(req: NextRequest) {
   const response = NextResponse.next()
 
   // Preserve 404 and other error status codes
-  // Don't modify responses that aren't 200 OK
   if (response.status !== 200) {
     return response
   }
@@ -174,8 +214,7 @@ export default async function middleware(req: NextRequest) {
   addSecurityHeaders(response)
   addCSPHeaders(response)
 
-  // PERFORMANCE: Smart caching strategy - allow short-term caching for static pages
-  // while keeping dynamic/admin routes fresh
+  // PERFORMANCE: Smart caching strategy
   const isStaticPage =
     pathname === '/' ||
     pathname.startsWith('/courses') ||
@@ -185,7 +224,7 @@ export default async function middleware(req: NextRequest) {
     pathname.startsWith('/gallery') ||
     pathname.startsWith('/pricing')
 
-  const isProtectedRoute =
+  const isProtectedPath =
     pathname.startsWith('/admin') ||
     pathname.startsWith('/dashboard') ||
     pathname.startsWith('/student') ||
@@ -196,13 +235,12 @@ export default async function middleware(req: NextRequest) {
   // Additional security headers
   response.headers.set('X-DNS-Prefetch-Control', 'on')
 
-  // Only apply noindex to protected routes, NOT public pages
-  // Public pages should be indexed by search engines for SEO
-  if (isProtectedRoute) {
+  // Only apply noindex to protected routes
+  if (isProtectedPath) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow, nosnippet, noarchive, noimageindex')
   }
 
-  // Development vs Production headers
+  // Production headers
   if (process.env.NODE_ENV === 'production') {
     response.headers.set(
       'Strict-Transport-Security',
@@ -211,19 +249,23 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Session information header (for debugging)
-  if (process.env.NODE_ENV === 'development' && session.valid) {
-    response.headers.set('X-User-Role', session.role || 'unknown')
-    response.headers.set('X-User-ID', session.userId || 'unknown')
+  if (process.env.NODE_ENV === 'development') {
+    if (clerkUserId) {
+      response.headers.set('X-Clerk-User-ID', clerkUserId)
+    }
+    if (session.valid) {
+      response.headers.set('X-User-Role', session.role || 'unknown')
+      response.headers.set('X-User-ID', session.userId || 'unknown')
+    }
   }
 
-  // Permissions Policy to restrict sensitive features
+  // Permissions Policy
   response.headers.set(
     'Permissions-Policy',
     'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()'
   )
 
-  if (isProtectedRoute) {
-    // No caching for protected/dynamic routes
+  if (isProtectedPath) {
     response.headers.set(
       'Cache-Control',
       'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
@@ -231,25 +273,17 @@ export default async function middleware(req: NextRequest) {
     response.headers.set('Pragma', 'no-cache')
     response.headers.set('Expires', '0')
   } else if (isStaticPage) {
-    // Allow short caching for public pages with stale-while-revalidate
-    // max-age=60: Cache for 1 minute
-    // s-maxage=300: CDN caches for 5 minutes
-    // stale-while-revalidate=86400: Serve stale while fetching fresh (24h)
     response.headers.set(
       'Cache-Control',
       'public, max-age=60, s-maxage=300, stale-while-revalidate=86400'
     )
   } else {
-    // Default: minimal caching for other pages
     response.headers.set('Cache-Control', 'public, max-age=30, stale-while-revalidate=60')
   }
 
-  // Prevent admin routes from being cached with stronger directives
+  // Admin route logging
   if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
-    // Additional security for admin routes
     response.headers.set('X-Admin-Route', 'true')
-
-    // Log admin access attempts (in production, this should go to secure logging)
     if (process.env.NODE_ENV === 'production') {
       console.log(
         `Admin route accessed: ${pathname} from IP: ${req.headers.get('x-forwarded-for') || 'unknown'} at ${new Date().toISOString()}`
@@ -257,37 +291,19 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
-  // Apply compression to API responses for better performance
-  // Automatically compresses JSON and other compressible content types
+  // Apply compression to API responses
   if (pathname.startsWith('/api/')) {
     return await compressResponseMiddleware(req, response)
   }
 
   return response
-}
+})
 
 export const config = {
   matcher: [
-    // Auth routes
-    '/auth/:path*',
-    '/dashboard/:path*',
-    '/student/:path*',
-    '/profile/:path*',
-    '/test/:path*',
-    '/teacher/:path*',
-    '/counselor/:path*',
-
-    // Admin routes
-    '/admin/:path*',
-
-    // API routes
-    '/api/auth/:path*',
-    '/api/admin/:path*',
-    '/api/teacher/:path*',
-    '/api/counselor/:path*',
-    '/api/test/:path*',
-
-    // All other routes (exclude static files)
-    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+    // Skip Next.js internals and all static files
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
   ],
 }

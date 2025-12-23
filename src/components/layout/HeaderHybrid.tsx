@@ -14,6 +14,15 @@ const HeaderClientInteractions = dynamic(
   }
 )
 
+// Lazy load Clerk auth buttons
+const ClerkAuthButtons = dynamic(
+  () => import('@/components/auth/ClerkAuthButtons').then((mod) => mod.ClerkAuthButtons),
+  {
+    ssr: false,
+    loading: () => <div className="w-16 h-8 bg-slate-100 animate-pulse rounded" />,
+  }
+)
+
 /**
  * Hybrid Header - Server-rendered shell with lazy-loaded interactivity
  *
@@ -218,25 +227,7 @@ export function HeaderHybrid() {
                   />
                 </svg>
               </Link>
-              <Link
-                href="/auth/whatsapp"
-                className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 group"
-              >
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:scale-110"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-                  />
-                </svg>
-                <span>Login</span>
-              </Link>
+              <ClerkAuthButtons />
             </div>
           </div>
         </div>

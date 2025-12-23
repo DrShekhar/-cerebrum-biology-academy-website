@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
@@ -95,74 +96,79 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <StructuredData />
-        <meta
-          name="google-site-verification"
-          content="L6c1LAGqVg_qEAtFGDcbzqeMzqFdEwT7kKFDgfn2-Sc"
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-        />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-touch-fullscreen" content="yes" />
-        <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <StructuredData />
+          <meta
+            name="google-site-verification"
+            content="L6c1LAGqVg_qEAtFGDcbzqeMzqFdEwT7kKFDgfn2-Sc"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+          />
+          <meta name="format-detection" content="telephone=no" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+          <meta name="apple-touch-fullscreen" content="yes" />
+          <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
-        {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
-        {/* Google Fonts - CRITICAL for reducing render blocking */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Self-origin preconnect for faster CSS/JS loading */}
-        <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
-        <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
-        {/* Vercel CDN for static assets */}
-        <link rel="preconnect" href="https://vercel.live" />
-        {/* Third-party services - PERFORMANCE: GTM preconnect removed since script uses lazyOnload */}
-        <link rel="preconnect" href="https://wa.me" />
-        <link rel="dns-prefetch" href="//checkout.razorpay.com" />
-        <link rel="dns-prefetch" href="//api.whatsapp.com" />
-        <link rel="dns-prefetch" href="//giscus.app" />
-        <link rel="dns-prefetch" href="//i.ytimg.com" />
-        <link rel="dns-prefetch" href="//assets.zyrosite.com" />
+          {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
+          {/* Google Fonts - CRITICAL for reducing render blocking */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          {/* Self-origin preconnect for faster CSS/JS loading */}
+          <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
+          <link
+            rel="preconnect"
+            href="https://cerebrumbiologyacademy.com"
+            crossOrigin="anonymous"
+          />
+          {/* Vercel CDN for static assets */}
+          <link rel="preconnect" href="https://vercel.live" />
+          {/* Third-party services - PERFORMANCE: GTM preconnect removed since script uses lazyOnload */}
+          <link rel="preconnect" href="https://wa.me" />
+          <link rel="dns-prefetch" href="//checkout.razorpay.com" />
+          <link rel="dns-prefetch" href="//api.whatsapp.com" />
+          <link rel="dns-prefetch" href="//giscus.app" />
+          <link rel="dns-prefetch" href="//i.ytimg.com" />
+          <link rel="dns-prefetch" href="//assets.zyrosite.com" />
 
-        {/* Performance: Preload critical images */}
-        <link rel="preload" href="/brain-logo.webp" as="image" type="image/webp" />
+          {/* Performance: Preload critical images */}
+          <link rel="preload" href="/brain-logo.webp" as="image" type="image/webp" />
 
-        {/* Fonts are handled by next/font/google - no manual preload needed */}
+          {/* Fonts are handled by next/font/google - no manual preload needed */}
 
-        <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
-        <meta name="language" content="English,Hindi" />
+          <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
+          <meta name="language" content="English,Hindi" />
 
-        {/* hreflang tags for India-specific SEO */}
-        <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />
-        <meta name="application-name" content="Cerebrum Biology Academy" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
-        <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
-        <link rel="manifest" href="/manifest.json" />
+          {/* hreflang tags for India-specific SEO */}
+          <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
+          <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com" />
+          <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
+          <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
+          <meta name="theme-color" content="#2563eb" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+          <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />
+          <meta name="application-name" content="Cerebrum Biology Academy" />
+          <meta name="msapplication-TileColor" content="#2563eb" />
+          <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+          <link rel="manifest" href="/manifest.json" />
 
-        {/* Brain Logo Favicons */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon-32x32.png" />
+          {/* Brain Logo Favicons */}
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="shortcut icon" href="/favicon-32x32.png" />
 
-        {/* Critical CSS for instant LCP - header and hero above-the-fold styles */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
+          {/* Critical CSS for instant LCP - header and hero above-the-fold styles */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
               /* Critical render path - inline essential styles */
               *,::before,::after{box-sizing:border-box}
               html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,sans-serif}
@@ -242,68 +248,69 @@ export default function RootLayout({
               @media(min-width:1024px){.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
               @media(min-width:1280px){.xl\\:text-6xl{font-size:3.75rem;line-height:1}}
             `,
-          }}
-        />
+            }}
+          />
 
-        {/* WORKAROUND: Remove duplicate CSS script tags (Next.js 15 + React 19 bug)
+          {/* WORKAROUND: Remove duplicate CSS script tags (Next.js 15 + React 19 bug)
             Issue: https://github.com/vercel/next.js/issues/75656
             Next.js generates both <link rel="stylesheet"> AND <script> for same CSS file
             This causes "Refused to execute script... MIME type ('text/css')" errors */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               (function(){
                 var r=function(){document.querySelectorAll('script[src*=".css"]').forEach(function(s){s.remove()})};
                 r();
                 new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n.tagName==='SCRIPT'&&n.src&&n.src.includes('.css'))n.remove()})})}).observe(document.documentElement,{childList:true,subtree:true});
               })();
             `,
-          }}
-        />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <GoogleAnalytics />
-        <WebVitalsReporter />
-        <DynamicPWAProvider />
-        <FocusVisibleStyles />
-        <I18nProvider>
-          <AuthProvider>
-            <ToastProvider>
-              <TrustProvider
-                enableSocialProof={false}
-                enableTrustBadges={false}
-                enableRealTimeUpdates={false}
-              >
-                <PersonalizationProvider>
-                  <MotionProvider>
-                    <PageErrorBoundary>
-                      <SkipToContent />
-                      <div data-section="navigation" className="priority-immediate" role="banner">
-                        <HeaderHybrid />
-                      </div>
-                      <DynamicTrialBanner />
-                      <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
-                        {children}
-                      </main>
-                      <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                        <DynamicFooter />
-                      </div>
-                      <div data-section="mobile-navigation" className="priority-deferred">
-                        <DynamicMobileNavigation />
-                      </div>
-                      <FloatingCTA />
-                      <GlobalExitIntent />
-                      <ChatbotWrapper />
-                      <DynamicMaintenancePopup />
-                    </PageErrorBoundary>
-                  </MotionProvider>
-                </PersonalizationProvider>
-              </TrustProvider>
-            </ToastProvider>
-          </AuthProvider>
-        </I18nProvider>
-      </body>
-    </html>
+            }}
+          />
+        </head>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <GoogleAnalytics />
+          <WebVitalsReporter />
+          <DynamicPWAProvider />
+          <FocusVisibleStyles />
+          <I18nProvider>
+            <AuthProvider>
+              <ToastProvider>
+                <TrustProvider
+                  enableSocialProof={false}
+                  enableTrustBadges={false}
+                  enableRealTimeUpdates={false}
+                >
+                  <PersonalizationProvider>
+                    <MotionProvider>
+                      <PageErrorBoundary>
+                        <SkipToContent />
+                        <div data-section="navigation" className="priority-immediate" role="banner">
+                          <HeaderHybrid />
+                        </div>
+                        <DynamicTrialBanner />
+                        <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                          {children}
+                        </main>
+                        <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                          <DynamicFooter />
+                        </div>
+                        <div data-section="mobile-navigation" className="priority-deferred">
+                          <DynamicMobileNavigation />
+                        </div>
+                        <FloatingCTA />
+                        <GlobalExitIntent />
+                        <ChatbotWrapper />
+                        <DynamicMaintenancePopup />
+                      </PageErrorBoundary>
+                    </MotionProvider>
+                  </PersonalizationProvider>
+                </TrustProvider>
+              </ToastProvider>
+            </AuthProvider>
+          </I18nProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
 // Build: 1765944827
