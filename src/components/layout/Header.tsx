@@ -27,20 +27,9 @@ import Image from 'next/image'
 import { useAuth } from '@/hooks/useAuth'
 import { useI18n } from '@/contexts/I18nContext'
 
-// Dynamic imports for BurgerMenu and SearchMenu to defer framer-motion loading
-// These components use framer-motion which adds ~90KB to the bundle
-// By lazy loading them, we reduce initial JS and improve LCP
-const BurgerMenu = dynamic(
-  () => import('@/components/navigation/BurgerMenu').then((mod) => mod.BurgerMenu),
-  {
-    ssr: false,
-    loading: () => (
-      <button className="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menu">
-        <Menu className="w-6 h-6 text-gray-700" />
-      </button>
-    ),
-  }
-)
+// Import BurgerMenu directly for reliable navigation (critical UI)
+// This ensures the burger menu always renders even if dynamic chunks fail
+import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 
 const SearchMenu = dynamic(
   () => import('@/components/navigation/SearchMenu').then((mod) => mod.SearchMenu),
