@@ -166,16 +166,22 @@ export function RealStudentTestimonials({
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
               </button>
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 {Array.from({ length: totalPages }, (_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentPage(i)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      currentPage === i ? 'bg-blue-600 w-8' : 'bg-gray-300 hover:bg-gray-400'
+                    className={`min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-all ${
+                      currentPage === i ? 'bg-blue-600' : 'bg-gray-200 hover:bg-gray-300'
                     }`}
                     aria-label={`Go to page ${i + 1}`}
-                  />
+                  >
+                    <span
+                      className={`rounded-full transition-all ${
+                        currentPage === i ? 'w-6 h-3 bg-white' : 'w-3 h-3 bg-gray-500'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
 
