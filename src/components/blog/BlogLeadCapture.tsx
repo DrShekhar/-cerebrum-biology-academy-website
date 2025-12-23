@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Download, CheckCircle, Phone, Mail, User, Sparkles } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { CheckCircle, Phone, ArrowRight, GraduationCap } from 'lucide-react'
 
 interface BlogLeadCaptureProps {
   articleSlug: string
@@ -10,10 +9,8 @@ interface BlogLeadCaptureProps {
   chapterName?: string
 }
 
-export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: BlogLeadCaptureProps) {
+export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCaptureProps) {
   const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -21,12 +18,6 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
   const validatePhone = (value: string): boolean => {
     const phoneRegex = /^[6-9]\d{9}$/
     return phoneRegex.test(value)
-  }
-
-  const validateEmail = (value: string): boolean => {
-    if (!value) return true
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(value)
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,11 +29,6 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
       return
     }
 
-    if (email && !validateEmail(email)) {
-      setError('Please enter a valid email address')
-      return
-    }
-
     setIsSubmitting(true)
 
     try {
@@ -51,9 +37,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           phone,
-          email: email || undefined,
-          name: name || undefined,
-          source: 'blog_inline',
+          source: 'blog_bottom_cta',
           articleSlug,
           articleTitle,
         }),
@@ -75,13 +59,14 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
 
   if (isSubmitted) {
     return (
-      <div className="my-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl animate-fade-in">
-        <div className="flex items-center justify-center gap-3 text-green-700">
-          <CheckCircle className="w-8 h-8" />
+      <div className="my-8 p-5 bg-green-50 border border-green-200 rounded-xl">
+        <div className="flex items-center gap-3 text-green-700">
+          <CheckCircle className="w-6 h-6 flex-shrink-0" />
           <div>
-            <h3 className="text-lg font-bold">Thank You!</h3>
+            <p className="font-semibold">Thank you for your interest!</p>
             <p className="text-sm text-green-600">
-              We'll send you the study materials on WhatsApp shortly.
+              Our counselor will contact you within 24 hours to discuss your college admission
+              strategy.
             </p>
           </div>
         </div>
@@ -90,98 +75,73 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
   }
 
   return (
-    <div className="my-8 p-6 md:p-8 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl text-white relative overflow-hidden animate-fade-in-up">
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full animate-pulse" />
-      <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/10 rounded-full animate-pulse" />
-
-      <div className="relative z-10">
-        <div className="flex items-center gap-2 mb-3">
-          <Sparkles className="w-5 h-5 text-yellow-300" />
-          <span className="text-sm font-medium text-blue-100">Free Study Material</span>
+    <div className="my-8 border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-3">
+        <div className="flex items-center gap-2 text-white">
+          <GraduationCap className="w-5 h-5" />
+          <span className="font-semibold">Get Into Your Dream Medical College</span>
         </div>
+      </div>
 
-        <h3 className="text-xl md:text-2xl font-bold mb-2">
-          {chapterName ? `Get ${chapterName} Notes PDF` : 'Get Free NEET Biology Study Notes'}
-        </h3>
-        <p className="text-blue-100 mb-6 text-sm md:text-base">
-          Enter your details to receive comprehensive study materials, previous year questions, and
-          expert tips directly on WhatsApp.
+      {/* Content */}
+      <div className="p-5">
+        <p className="text-gray-700 text-sm mb-4">
+          <strong className="text-gray-900">Cerebrum Biology Academy</strong> has helped{' '}
+          <span className="text-blue-600 font-semibold">2,500+ students</span> secure admissions in
+          top medical colleges with our expert guidance on:
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div className="relative">
-              <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
-                placeholder="Mobile Number *"
-                required
-                className="w-full pl-10 pr-4 py-3 bg-white/95 text-gray-900 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none placeholder-gray-500"
-                style={{ fontSize: '16px' }}
-              />
-            </div>
+        <ul className="space-y-2 mb-5 text-sm text-gray-600">
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+            <span>Personalized college selection based on your NEET score</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+            <span>State & All India counselling strategy</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+            <span>Management/NRI quota admission guidance</span>
+          </li>
+        </ul>
 
-            <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email (Optional)"
-                className="w-full pl-10 pr-4 py-3 bg-white/95 text-gray-900 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none placeholder-gray-500"
-                style={{ fontSize: '16px' }}
-              />
-            </div>
-          </div>
-
-          <div className="relative">
-            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+        {/* Compact Form */}
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <div className="relative flex-1">
+            <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your Name (Optional)"
-              className="w-full pl-10 pr-4 py-3 bg-white/95 text-gray-900 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none placeholder-gray-500"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+              placeholder="Enter mobile number"
+              required
+              className="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
               style={{ fontSize: '16px' }}
             />
           </div>
-
-          {error && (
-            <p className="text-red-200 text-sm bg-red-500/20 px-3 py-2 rounded-lg">{error}</p>
-          )}
-
-          <Button
+          <button
             type="submit"
             disabled={isSubmitting || !phone}
-            className="w-full py-3.5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
           >
-            <Download className="w-5 h-5" />
-            {isSubmitting ? 'Sending...' : 'Get Free Notes on WhatsApp'}
-          </Button>
-
-          <p className="text-xs text-blue-200 text-center">
-            By submitting, you agree to receive study materials via WhatsApp. No spam.
-          </p>
+            {isSubmitting ? (
+              'Sending...'
+            ) : (
+              <>
+                Get Free Counselling
+                <ArrowRight className="w-4 h-4" />
+              </>
+            )}
+          </button>
         </form>
 
-        <div className="mt-6 pt-4 border-t border-white/20">
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-blue-100">
-            <div className="flex items-center gap-1">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>NCERT-aligned notes</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>Previous year questions</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>Expert tips</span>
-            </div>
-          </div>
-        </div>
+        {error && <p className="mt-2 text-red-600 text-xs">{error}</p>}
+
+        <p className="mt-3 text-xs text-gray-500 text-center">
+          Free consultation • No spam • Expert guidance from AIIMS alumni
+        </p>
       </div>
     </div>
   )

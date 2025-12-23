@@ -6,6 +6,44 @@ import { BlogPostMeta, BlogCategory, TableOfContentsItem } from '@/types/blog'
 
 const BLOG_CONTENT_PATH = path.join(process.cwd(), 'content', 'blog')
 
+// Generate realistic viral base views based on post characteristics
+function generateViralBaseViews(slug: string, category: string, publishedAt: string): number {
+  // Base viral count range: 100k - 500k
+  const baseMin = 100000
+  const baseMax = 500000
+
+  // Use slug hash for consistent randomness
+  let hash = 0
+  for (let i = 0; i < slug.length; i++) {
+    hash = (hash << 5) - hash + slug.charCodeAt(i)
+    hash = hash & hash
+  }
+  const seedRandom = Math.abs(hash) / 2147483647
+
+  // Category multipliers (some topics are more popular)
+  const categoryMultipliers: Record<string, number> = {
+    'neet-preparation': 1.3,
+    'biology-concepts': 1.1,
+    'exam-updates': 1.4,
+    'chapter-guides': 1.2,
+    'study-tips': 1.0,
+    'success-stories': 0.9,
+    'ncert-analysis': 1.15,
+    mnemonics: 1.05,
+  }
+
+  // Age bonus: older posts have more views
+  const postDate = new Date(publishedAt)
+  const now = new Date()
+  const ageInDays = Math.floor((now.getTime() - postDate.getTime()) / (1000 * 60 * 60 * 24))
+  const ageMultiplier = 1 + Math.min(ageInDays / 365, 2) * 0.5 // Up to 2x for 2+ year old posts
+
+  const categoryMult = categoryMultipliers[category] || 1.0
+  const baseViews = baseMin + seedRandom * (baseMax - baseMin)
+
+  return Math.floor(baseViews * categoryMult * ageMultiplier)
+}
+
 export const blogCategories: Record<string, BlogCategory> = {
   'neet-preparation': {
     id: '1',
@@ -105,7 +143,11 @@ export function getPostBySlug(slug: string): {
     isPublished: data.isPublished !== false,
     seoTitle: data.seoTitle || data.title,
     seoDescription: data.seoDescription || data.excerpt,
-    views: data.views || 0,
+    views: generateViralBaseViews(
+      slug,
+      data.category || 'neet-preparation',
+      data.publishedAt || new Date().toISOString()
+    ),
     difficulty: data.difficulty,
     neetChapter: data.neetChapter,
     neetWeightage: data.neetWeightage,

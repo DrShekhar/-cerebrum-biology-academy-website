@@ -388,13 +388,6 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 </div>
               )}
 
-              {/* Lead Capture Form */}
-              <BlogLeadCapture
-                articleSlug={meta.slug}
-                articleTitle={meta.title}
-                chapterName={meta.neetChapter}
-              />
-
               {/* Article Content */}
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-20 animate-fade-in-up">
                 <ReactMarkdown
@@ -619,13 +612,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
           <TableOfContents items={toc} />
         </div>
 
-        {/* Bottom Lead Capture Form */}
+        {/* Bottom Lead Capture Form - College Admission CTA */}
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <BlogLeadCapture
-            articleSlug={meta.slug}
-            articleTitle={meta.title}
-            chapterName={meta.neetChapter || 'General'}
-          />
+          <BlogLeadCapture articleSlug={meta.slug} articleTitle={meta.title} />
         </div>
 
         {/* Related Articles */}
