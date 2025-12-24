@@ -744,6 +744,481 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  // NEET Coaching Gurugram Pages
+  'neet-coaching-gurgaon': {
+    slug: 'neet-coaching-gurgaon',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Gurgaon with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
+    heroTitle: 'Best NEET Coaching in Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET preparation at our Sector 51 center. AIIMS faculty, proven 98% success rate, personalized attention.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Sector 51, Gurugram',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/neet-coaching-gurgaon-sector-56' },
+      { name: 'Sector 49', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'DLF Phase 1-5', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'South City', url: '/neet-coaching-south-city-gurgaon' },
+      { name: 'Nirvana Country', url: '/neet-coaching-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Delhi NEET Coaching', url: '/neet-coaching-delhi' },
+      { name: 'Noida NEET Coaching', url: '/neet-coaching-noida' },
+      { name: 'Faridabad NEET Coaching', url: '/neet-coaching-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy at M2K Corporate Park, Sector 51 is rated the best NEET coaching in Gurgaon. With AIIMS-trained Dr. Shekhar Singh, 98% success rate, and small batches of 15-20 students, we deliver exceptional results.',
+      },
+      {
+        question: 'What is the fee for NEET coaching in Gurgaon?',
+        answer:
+          'NEET coaching fees at our Gurgaon center range from ₹45,000 to ₹75,000 per year. This includes live classes, complete NCERT-based study material, test series, and doubt sessions. EMI options available.',
+      },
+      {
+        question: 'Do you offer NEET dropper batch in Gurgaon?',
+        answer:
+          'Yes, we have a dedicated NEET Dropper batch with intensive 6-8 hours daily coaching, crash courses, and personalized mentoring. Many droppers have improved 200+ marks with us.',
+      },
+      {
+        question: 'What are NEET coaching timings in Gurgaon?',
+        answer:
+          'Our Gurgaon NEET center offers morning (8-10 AM), afternoon (2-4 PM), and evening (6-8 PM) batches. Weekend batches also available for students with weekday constraints.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4595',
+      lng: '77.0266',
+    },
+  },
+
+  'neet-coaching-gurgaon-sector-51': {
+    slug: 'neet-coaching-gurgaon-sector-51',
+    cityName: 'Sector 51 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 51 Gurgaon | Best NEET Classes | Cerebrum Academy',
+    metaDescription:
+      'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon. AIIMS faculty Dr. Shekhar Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Sector 51 Gurgaon',
+    heroSubtitle:
+      'Join our flagship NEET center at M2K Corporate Park. AIIMS-trained faculty, proven track record, small batch sizes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Sector 51 NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'In Sector 51',
+    },
+    localities: [
+      { name: 'Eldeco Acacia', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'Central Park', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'Nirvana Country', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'The Close South', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'Uppal Southend', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'Palm Springs', url: '/neet-coaching-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 56 NEET', url: '/neet-coaching-gurgaon-sector-56' },
+      { name: 'DLF NEET', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'What is the address of NEET coaching in Sector 51?',
+        answer:
+          'Our NEET center is at M2K Corporate Park, Sector 51, Gurugram 122018. On Golf Course Extension Road, easily accessible from Eldeco Acacia, Central Park, Nirvana Country, and other nearby societies.',
+      },
+      {
+        question: 'Who teaches NEET at Sector 51 center?',
+        answer:
+          'Dr. Shekhar Singh, AIIMS-trained faculty with 15+ years experience, personally teaches Biology. Our 98% success rate speaks for the quality of teaching.',
+      },
+      {
+        question: 'What NEET courses are available at Sector 51?',
+        answer:
+          'We offer NEET Foundation (Class 11), NEET + Boards (Class 12), and NEET Dropper intensive batch. All courses include complete NCERT coverage and test series.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4295',
+      lng: '77.0766',
+    },
+  },
+
+  'neet-coaching-gurgaon-sector-56': {
+    slug: 'neet-coaching-gurgaon-sector-56',
+    cityName: 'Sector 56 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 56 Gurgaon students. Center in Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 56 Gurgaon',
+    heroSubtitle:
+      'Top NEET preparation just 5 minutes from Sector 56. Join our Sector 51 center with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '5 minutes from Sector 56',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'Sector 57', url: '/neet-coaching-gurgaon-sector-57' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 51 NEET', url: '/neet-coaching-gurgaon-sector-51' },
+    ],
+    faqs: [
+      {
+        question: 'Where can Sector 56 students attend NEET coaching?',
+        answer:
+          'Sector 56 students can attend our Sector 51 center at M2K Corporate Park, just 5 minutes away via Golf Course Extension Road.',
+      },
+      {
+        question: 'Why choose Cerebrum for NEET from Sector 56?',
+        answer:
+          'Proximity (5 min), AIIMS faculty, small batches of 15-20, 98% NEET success rate, and comprehensive study material make us the best choice.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.0866',
+    },
+  },
+
+  'neet-coaching-gurgaon-sector-49': {
+    slug: 'neet-coaching-gurgaon-sector-49',
+    cityName: 'Sector 49 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 49 Gurgaon | Eldeco Acacia | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 49 Gurgaon, Eldeco Acacia, Uppal Southend. Center in Sector 51 (3 min). 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 49 Gurgaon',
+    heroSubtitle:
+      'Top NEET classes just 3 minutes from Sector 49. Perfect for Eldeco Acacia and Uppal Southend residents.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '3 minutes from Sector 49',
+    },
+    localities: [
+      { name: 'Eldeco Acacia', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'Uppal Southend', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'Sohna Road', url: '/neet-coaching-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'South City NEET', url: '/neet-coaching-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Eldeco Acacia Sector 49?',
+        answer:
+          'Yes! Our Sector 51 NEET center is just 3 minutes from Eldeco Acacia, Sector 49. Students from Eldeco Acacia, Uppal Southend, and nearby societies attend daily.',
+      },
+      {
+        question: 'What NEET batches are available for Sector 49 students?',
+        answer:
+          'We offer Class 11 NEET Foundation, Class 12 NEET + Boards, and NEET Dropper batches. Multiple timing options available.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '100+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.0566',
+    },
+  },
+
+  'neet-coaching-dlf-gurgaon': {
+    slug: 'neet-coaching-dlf-gurgaon',
+    cityName: 'DLF Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in DLF Gurgaon | Phase 1-5 | Cyber City | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51. AIIMS faculty, 98% success. Book demo: 88264-44334',
+    heroTitle: 'NEET Coaching for DLF Gurgaon Students',
+    heroSubtitle:
+      'Premium NEET preparation for DLF Phase 1-5 residents. Join our Sector 51 center or attend live online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15-20 minutes from DLF areas',
+    },
+    localities: [
+      { name: 'DLF Phase 1', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'DLF Phase 2', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'DLF Phase 3', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'DLF Phase 4', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'DLF Phase 5', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'Cyber City', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'MG Road', url: '/neet-coaching-mg-road-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Where can DLF students get NEET coaching in Gurgaon?',
+        answer:
+          'DLF students can attend our Sector 51 NEET center (15-20 min via Golf Course Road) or join our live online classes from home with AIIMS faculty.',
+      },
+      {
+        question: 'Do you have students from DLF Phase areas?',
+        answer:
+          'Yes, 100+ students from all DLF phases attend our NEET classes. Many prefer hybrid mode - online on weekdays and offline on weekends.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '100+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4695',
+      lng: '77.0866',
+    },
+  },
+
+  'neet-coaching-golf-course-road-gurgaon': {
+    slug: 'neet-coaching-golf-course-road-gurgaon',
+    cityName: 'Golf Course Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching near Golf Course Road Gurgaon. DLF Magnolias, Aralias, Camellias, Palm Springs. Center in Sector 51. Call 88264-44334!',
+    heroTitle: 'NEET Coaching near Golf Course Road Gurgaon',
+    heroSubtitle:
+      'Premium NEET preparation on Golf Course Extension Road. Serving Magnolias, Aralias, Palm Springs, and all GCR societies.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'On Golf Course Extension Road',
+    },
+    localities: [
+      { name: 'DLF Magnolias', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'DLF Aralias', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'DLF Camellias', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'Palm Springs', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'The Close', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'Ireo Skyon', url: '/neet-coaching-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 51 NEET', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'DLF NEET', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Where is NEET coaching center near Golf Course Road?',
+        answer:
+          'Our NEET center at M2K Corporate Park, Sector 51 is right on Golf Course Extension Road. Easy access from Magnolias, Aralias, Palm Springs, and all GCR societies.',
+      },
+      {
+        question: 'Which premium societies do you serve for NEET?',
+        answer:
+          'We have students from DLF Magnolias, Aralias, Camellias, Palm Springs, The Close, Ireo Skyon, M3M Golf Estate, and all premium Golf Course Road condominiums.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4395',
+      lng: '77.0966',
+    },
+  },
+
+  'neet-coaching-sohna-road-gurgaon': {
+    slug: 'neet-coaching-sohna-road-gurgaon',
+    cityName: 'Sohna Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sohna Road Gurgaon. Central Park, Vatika City, BPTP, Bestech. Center in Sector 51 (10 min). Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sohna Road Gurgaon',
+    heroSubtitle:
+      'Top NEET preparation for Sohna Road residents. Serving Central Park, Vatika, BPTP, and all Sohna Road societies.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 minutes from Sohna Road',
+    },
+    localities: [
+      { name: 'Central Park 1 & 2', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'Vatika City', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'BPTP Park Grandeura', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'Bestech Park View', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'M3M Merlin', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'Emaar Emerald Hills', url: '/neet-coaching-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'South City NEET', url: '/neet-coaching-south-city-gurgaon' },
+      { name: 'Sector 49 NEET', url: '/neet-coaching-gurgaon-sector-49' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching near Sohna Road Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy in Sector 51 is the best choice for Sohna Road students. Just 10 minutes away, with AIIMS faculty and 98% success rate.',
+      },
+      {
+        question: 'Do you have students from Central Park and Vatika?',
+        answer:
+          'Yes! Many students from Central Park 1 & 2, Vatika City, BPTP, Bestech Park View, M3M Merlin, and other Sohna Road societies attend our NEET classes.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.3995',
+      lng: '77.0466',
+    },
+  },
+
+  'neet-coaching-south-city-gurgaon': {
+    slug: 'neet-coaching-south-city-gurgaon',
+    cityName: 'South City Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in South City Gurgaon | South City 1 & 2 | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for South City 1 & 2 Gurgaon students. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for South City Gurgaon',
+    heroSubtitle:
+      'Top NEET preparation for South City 1 & 2 residents. Our Sector 51 center is just 12 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12 minutes from South City',
+    },
+    localities: [
+      { name: 'South City 1', url: '/neet-coaching-south-city-gurgaon' },
+      { name: 'South City 2', url: '/neet-coaching-south-city-gurgaon' },
+      { name: 'Sohna Road', url: '/neet-coaching-sohna-road-gurgaon' },
+      { name: 'Sector 49', url: '/neet-coaching-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sohna Road NEET', url: '/neet-coaching-sohna-road-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do South City students reach NEET coaching?',
+        answer:
+          'From South City 1 or 2, take Sohna Road to Sector 49, then 3 min to our Sector 51 NEET center. Total 12 minutes by car.',
+      },
+      {
+        question: 'Are there students from South City at your NEET center?',
+        answer:
+          'Yes, 50+ students from South City 1 and South City 2 attend our NEET classes regularly due to proximity and quality of coaching.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4095',
+      lng: '77.0366',
+    },
+  },
+
+  'neet-coaching-nirvana-country-gurgaon': {
+    slug: 'neet-coaching-nirvana-country-gurgaon',
+    cityName: 'Nirvana Country Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Nirvana Country Gurgaon | The Close | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Nirvana Country, The Close South/North Gurgaon. Center in Sector 51 (8 min). AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Nirvana Country Gurgaon',
+    heroSubtitle:
+      'Top NEET preparation for Nirvana Country and The Close residents. Just 8 minutes to our Sector 51 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '8 minutes from Nirvana Country',
+    },
+    localities: [
+      { name: 'Nirvana Country', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'The Close South', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'The Close North', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'Sector 50', url: '/neet-coaching-nirvana-country-gurgaon' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 51 NEET', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'Golf Course NEET', url: '/neet-coaching-golf-course-road-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Nirvana Country?',
+        answer:
+          'Yes! Our Sector 51 NEET center is just 8 minutes from Nirvana Country via Golf Course Extension Road. We serve Nirvana Country, The Close South/North, and nearby societies.',
+      },
+      {
+        question: 'Why is Cerebrum best for Nirvana Country NEET students?',
+        answer:
+          'Proximity (8 min), AIIMS-trained faculty, small batches of 15-20 students, 98% success rate, and flexible batch timings make us ideal for Nirvana Country residents.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.1066',
+    },
+  },
+
   faridabad: {
     slug: 'faridabad',
     cityName: 'Faridabad',
