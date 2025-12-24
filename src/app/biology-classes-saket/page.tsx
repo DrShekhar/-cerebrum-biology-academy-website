@@ -5,21 +5,25 @@ import { getCityData } from '@/data/city-seo/city-hub-data'
 const cityData = getCityData('saket')!
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
+  title: 'Biology Classes in Saket | NEET Coaching Near Select Citywalk Delhi',
+  description:
+    'Top biology classes in Saket for NEET & board exams. Near Saket metro & Select Citywalk. Expert faculty for Class 11, 12. Call 88264-44334 for enrollment.',
   keywords: [
-    'biology classes in saket',
-    'biology coaching saket delhi',
-    'neet biology classes saket',
-    'best biology tuition saket',
-    'biology classes south delhi',
-    'biology coaching malviya nagar',
-    'class 11 biology tuition saket',
+    'biology classes saket',
+    'neet coaching saket delhi',
+    'biology tuition saket',
+    'best biology teacher saket',
+    'neet preparation saket delhi',
+    'class 11 biology saket',
+    'class 12 biology coaching saket',
+    'cbse biology tutor saket',
+    'medical coaching saket delhi',
   ],
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
-    url: `https://cerebrumbiologyacademy.com/biology-classes-saket`,
+    title: 'Biology Classes in Saket | NEET Coaching Near Select Citywalk Delhi',
+    description:
+      'Top biology classes in Saket for NEET & board exams. Near Saket metro & Select Citywalk.',
+    url: 'https://cerebrumbiologyacademy.com/biology-classes-saket',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-saket',

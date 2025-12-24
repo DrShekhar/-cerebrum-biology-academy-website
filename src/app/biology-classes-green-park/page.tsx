@@ -5,21 +5,25 @@ import { getCityData } from '@/data/city-seo/city-hub-data'
 const cityData = getCityData('green-park')!
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
+  title: 'Biology Classes in Green Park | NEET Coaching South Delhi',
+  description:
+    'Expert biology classes in Green Park for NEET & board exams. Near Green Park metro. Quality coaching with proven results. Call 88264-44334 for free demo class.',
   keywords: [
-    'biology classes in green park',
-    'biology coaching green park delhi',
-    'neet biology classes green park',
-    'best biology tuition green park',
-    'biology classes south delhi',
-    'biology coaching hauz khas',
-    'class 11 biology tuition green park',
+    'biology classes green park',
+    'neet coaching green park delhi',
+    'biology tuition green park',
+    'best biology teacher green park',
+    'neet preparation green park',
+    'class 11 biology green park',
+    'class 12 biology coaching green park',
+    'cbse biology tutor green park',
+    'medical coaching green park delhi',
   ],
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
-    url: `https://cerebrumbiologyacademy.com/biology-classes-green-park`,
+    title: 'Biology Classes in Green Park | NEET Coaching South Delhi',
+    description:
+      'Expert biology classes in Green Park for NEET & board exams. Near Green Park metro.',
+    url: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
