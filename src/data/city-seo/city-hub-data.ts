@@ -1403,6 +1403,483 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.2311',
     },
   },
+
+  'greater-kailash': {
+    slug: 'greater-kailash',
+    cityName: 'Greater Kailash',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Greater Kailash | Best NEET Coaching GK Delhi | Cerebrum Academy',
+    metaDescription:
+      'Premium biology classes in Greater Kailash (GK-I, GK-II), South Delhi. AIIMS faculty, 98% success. DPS GK students. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Classes in Greater Kailash',
+    heroSubtitle:
+      'South Delhi\'s most affluent locality gets premium NEET biology coaching. Serving GK-I, GK-II & GK Enclave.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '3-5 km from Greater Kailash',
+    },
+    localities: [
+      { name: 'GK-I M Block', url: '/biology-classes-greater-kailash' },
+      { name: 'GK-II', url: '/biology-classes-greater-kailash' },
+      { name: 'GK Enclave', url: '/biology-classes-greater-kailash' },
+      { name: 'Kailash Colony', url: '/neet-coaching-south-delhi/kailash-colony' },
+      { name: 'East of Kailash', url: '/neet-coaching-south-delhi/east-of-kailash' },
+      { name: 'Nehru Place', url: '/biology-classes-nehru-place' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+      { name: 'Lajpat Nagar', url: '/biology-classes-lajpat-nagar' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching for Greater Kailash students?',
+        answer:
+          'Cerebrum Biology Academy is the top choice for GK students. Our South Extension center is just 3-5 km away. Many DPS Greater Kailash students study with us. Call 88264-44334 for details.',
+      },
+      {
+        question: 'Is there NEET coaching near GK-I and GK-II?',
+        answer:
+          'Yes! Our South Extension center is easily accessible from both GK-I and GK-II. We also offer online classes for GK students preferring home study. Call 88264-44334.',
+      },
+      {
+        question: 'What is the fee for Greater Kailash students?',
+        answer:
+          'Offline at South Delhi center: ₹45,000-75,000/year. Online: ₹35,000-60,000/year. Premium quality matching GK standards. Call 88264-44334.',
+      },
+      {
+        question: 'Do you have students from DPS Greater Kailash?',
+        answer:
+          'Yes! Many DPS GK students are our toppers. We understand DPS curriculum and coordinate NEET prep accordingly. Call 88264-44334 to meet them.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '320+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5494',
+      lng: '77.2343',
+    },
+  },
+
+  'hauz-khas': {
+    slug: 'hauz-khas',
+    cityName: 'Hauz Khas',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Hauz Khas | NEET Coaching Near IIT Delhi | Cerebrum Academy',
+    metaDescription:
+      'Top biology classes in Hauz Khas, near IIT Delhi. Premier coaching hub location. AIIMS faculty, 98% success. Call 88264-44334 for free demo!',
+    heroTitle: 'Best Biology Classes in Hauz Khas',
+    heroSubtitle:
+      'South Delhi\'s premier coaching hub near IIT Delhi. Where serious NEET aspirants study.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '4-6 km from Hauz Khas',
+    },
+    localities: [
+      { name: 'Hauz Khas Village', url: '/biology-classes-hauz-khas' },
+      { name: 'Hauz Khas Enclave', url: '/biology-classes-hauz-khas' },
+      { name: 'SDA (Safdarjung Dev Area)', url: '/neet-coaching-south-delhi/sda' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'Kalu Sarai', url: '/neet-coaching-kalu-sarai' },
+      { name: 'IIT Delhi Area', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'Malviya Nagar', url: '/biology-classes-malviya-nagar' },
+    ],
+    faqs: [
+      {
+        question: 'Is Hauz Khas good for NEET coaching?',
+        answer:
+          'Hauz Khas is Delhi\'s premier coaching hub near IIT. Cerebrum Academy serves this area with premium NEET biology coaching. Our South Extension center + online options available. Call 88264-44334.',
+      },
+      {
+        question: 'How far is Cerebrum from Hauz Khas Metro?',
+        answer:
+          'Our South Extension center is 4-6 km from Hauz Khas Metro. Easy auto ride or take Yellow Line to AIIMS and walk. Online classes also available. Call 88264-44334.',
+      },
+      {
+        question: 'Do you offer coaching for students staying in Hauz Khas PGs?',
+        answer:
+          'Yes! Many outstation students in Hauz Khas PGs study with us. We offer flexible timings and online options for serious aspirants. Call 88264-44334.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '280+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5494',
+      lng: '77.2001',
+    },
+  },
+
+  'lajpat-nagar': {
+    slug: 'lajpat-nagar',
+    cityName: 'Lajpat Nagar',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Lajpat Nagar | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Lajpat Nagar, South Delhi. Central location, metro connected. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Classes in Lajpat Nagar',
+    heroSubtitle:
+      'Central South Delhi location with excellent connectivity. Premium NEET biology coaching.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '2-3 km from Lajpat Nagar',
+    },
+    localities: [
+      { name: 'Lajpat Nagar I', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Lajpat Nagar II', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Lajpat Nagar III', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Lajpat Nagar IV', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Amar Colony', url: '/neet-coaching-south-delhi/amar-colony' },
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the nearest biology coaching from Lajpat Nagar?',
+        answer:
+          'Our South Extension center is just 2-3 km from Lajpat Nagar Central Market. Take Lajpat Nagar Metro (Violet Line) or walk to South Extension. Call 88264-44334.',
+      },
+      {
+        question: 'Is there good NEET coaching in Lajpat Nagar area?',
+        answer:
+          'Cerebrum Biology Academy offers premium NEET coaching for Lajpat Nagar students. AIIMS-trained faculty with 98% success rate. Visit our nearby South Extension center. Call 88264-44334.',
+      },
+      {
+        question: 'What timings are available for Lajpat Nagar students?',
+        answer:
+          'Morning (8-10 AM), afternoon (2-4 PM), and evening (6-8 PM) batches. Many Lajpat Nagar students prefer evening batches after school. Call 88264-44334.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '250+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5692',
+      lng: '77.2432',
+    },
+  },
+
+  'malviya-nagar': {
+    slug: 'malviya-nagar',
+    cityName: 'Malviya Nagar',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Malviya Nagar | Affordable NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Top biology classes in Malviya Nagar, South Delhi. Affordable quality coaching. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Classes in Malviya Nagar',
+    heroSubtitle:
+      'Affordable yet premium NEET biology coaching in South Delhi\'s popular student hub.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '5-7 km from Malviya Nagar',
+    },
+    localities: [
+      { name: 'Malviya Nagar Main', url: '/biology-classes-malviya-nagar' },
+      { name: 'Shivalik', url: '/biology-classes-malviya-nagar' },
+      { name: 'Panchshila Park', url: '/neet-coaching-south-delhi/panchsheel-park' },
+      { name: 'Saket', url: '/biology-classes-saket' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Saket', url: '/biology-classes-saket' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    faqs: [
+      {
+        question: 'Is there affordable biology coaching in Malviya Nagar?',
+        answer:
+          'Cerebrum Biology Academy offers premium quality at competitive rates. Online: ₹35,000-60,000/year. Offline: ₹45,000-75,000/year. Better than local coaching quality. Call 88264-44334.',
+      },
+      {
+        question: 'How do I reach the coaching center from Malviya Nagar?',
+        answer:
+          'Take Malviya Nagar Metro (Yellow Line) to AIIMS, then auto to South Extension. Or take direct auto (15 mins). Online classes also available. Call 88264-44334.',
+      },
+      {
+        question: 'Do many Malviya Nagar students study here?',
+        answer:
+          'Yes! 200+ students from Malviya Nagar and surrounding areas study with us. Many prefer our hybrid mode. Call 88264-44334 to meet current students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '220+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.5281',
+      lng: '77.2067',
+    },
+  },
+
+  'cr-park': {
+    slug: 'cr-park',
+    cityName: 'CR Park',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in CR Park | NEET Coaching Chittaranjan Park | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in CR Park (Chittaranjan Park), South Delhi. Academic community focus. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Best Biology Classes in CR Park',
+    heroSubtitle:
+      'Serving Chittaranjan Park\'s academically-focused Bengali community. Premium NEET coaching.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '8-10 km from CR Park',
+    },
+    localities: [
+      { name: 'CR Park A Block', url: '/biology-classes-cr-park' },
+      { name: 'CR Park C Block', url: '/biology-classes-cr-park' },
+      { name: 'CR Park E Block', url: '/biology-classes-cr-park' },
+      { name: 'Kalkaji', url: '/biology-classes-kalkaji' },
+      { name: 'Nehru Place', url: '/biology-classes-nehru-place' },
+      { name: 'Alaknanda', url: '/neet-coaching-south-delhi/alaknanda' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Kalkaji', url: '/biology-classes-kalkaji' },
+      { name: 'Nehru Place', url: '/biology-classes-nehru-place' },
+    ],
+    faqs: [
+      {
+        question: 'Is there good biology coaching for CR Park students?',
+        answer:
+          'Cerebrum Biology Academy serves CR Park\'s academic community. Many Bengali families trust us for NEET prep. Online + offline options. Call 88264-44334.',
+      },
+      {
+        question: 'Why do CR Park families choose Cerebrum?',
+        answer:
+          'CR Park values academic excellence. Our AIIMS-trained faculty, 98% success rate, and structured approach matches the community\'s high standards. Call 88264-44334.',
+      },
+      {
+        question: 'Is online coaching good for CR Park students?',
+        answer:
+          'Yes! Many CR Park students prefer our live online classes - same quality as offline. Saves commute time for more study. Call 88264-44334 for demo.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '180+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5376',
+      lng: '77.2475',
+    },
+  },
+
+  kalkaji: {
+    slug: 'kalkaji',
+    cityName: 'Kalkaji',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Kalkaji | NEET Coaching Near Lotus Temple | Cerebrum Academy',
+    metaDescription:
+      'Top biology classes in Kalkaji, South Delhi. Near Kalkaji Temple & Lotus Temple. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Classes in Kalkaji',
+    heroSubtitle:
+      'Serving Kalkaji and surrounding areas. Near Kalkaji Temple and Lotus Temple.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '7-9 km from Kalkaji',
+    },
+    localities: [
+      { name: 'Kalkaji Main', url: '/biology-classes-kalkaji' },
+      { name: 'Govind Puri', url: '/biology-classes-kalkaji' },
+      { name: 'Nehru Place', url: '/biology-classes-nehru-place' },
+      { name: 'CR Park', url: '/biology-classes-cr-park' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Nehru Place', url: '/biology-classes-nehru-place' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Is there biology coaching near Kalkaji Temple?',
+        answer:
+          'Cerebrum Biology Academy serves Kalkaji students. Our South Extension center is accessible via Violet Line (Kalkaji Mandir Metro). Online also available. Call 88264-44334.',
+      },
+      {
+        question: 'How do I reach coaching from Kalkaji?',
+        answer:
+          'Take Kalkaji Mandir Metro (Violet Line) to Moolchand, then auto to South Extension. Or use our convenient online classes. Call 88264-44334 for directions.',
+      },
+      {
+        question: 'What is the fee for Kalkaji students?',
+        answer:
+          'Online: ₹35,000-60,000/year. Offline at South Extension: ₹45,000-75,000/year. Includes complete study material and test series. Call 88264-44334.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '170+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.5346',
+      lng: '77.2590',
+    },
+  },
+
+  'rk-puram': {
+    slug: 'rk-puram',
+    cityName: 'RK Puram',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in RK Puram | NEET Coaching All Sectors | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in RK Puram (Sectors 1-13), South Delhi. Serving govt colony families. DPS RKP students. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Classes in RK Puram',
+    heroSubtitle:
+      'Serving South Delhi\'s largest government colony. All sectors (1-13) covered. DPS RK Puram students welcome.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '6-10 km from RK Puram (varies by sector)',
+    },
+    localities: [
+      { name: 'RK Puram Sector 1-3', url: '/biology-classes-rk-puram' },
+      { name: 'RK Puram Sector 4-6', url: '/biology-classes-rk-puram' },
+      { name: 'RK Puram Sector 7-9', url: '/biology-classes-rk-puram' },
+      { name: 'RK Puram Sector 10-13', url: '/biology-classes-rk-puram' },
+      { name: 'Munirka', url: '/neet-coaching-south-delhi/munirka' },
+      { name: 'Vasant Vihar', url: '/biology-classes-vasant-vihar' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Vasant Vihar', url: '/biology-classes-vasant-vihar' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    faqs: [
+      {
+        question: 'Is there biology coaching for RK Puram students?',
+        answer:
+          'Yes! Cerebrum Biology Academy serves all RK Puram sectors (1-13). Many DPS RK Puram students study with us. Online + offline options. Call 88264-44334.',
+      },
+      {
+        question: 'Do you have students from DPS RK Puram?',
+        answer:
+          'Absolutely! DPS RK Puram is our top feeder school. We understand DPS curriculum and coordinate NEET prep with school schedule. Call 88264-44334.',
+      },
+      {
+        question: 'Which sector is nearest to the coaching center?',
+        answer:
+          'Our South Extension center is 6-10 km from various RK Puram sectors. Sectors near IIT (7-9) are closest. Metro + auto is convenient. Call 88264-44334.',
+      },
+      {
+        question: 'Is online coaching available for RK Puram students?',
+        answer:
+          'Yes! Many RK Puram students prefer online classes to save commute time. Live interactive classes with AIIMS faculty. Call 88264-44334 for demo.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '450+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5672',
+      lng: '77.1783',
+    },
+  },
+
+  'vasant-vihar': {
+    slug: 'vasant-vihar',
+    cityName: 'Vasant Vihar',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Vasant Vihar | Premium NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Premium biology classes in Vasant Vihar, South Delhi. Elite locality, embassy area. Vasant Valley students. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Best Biology Classes in Vasant Vihar',
+    heroSubtitle:
+      'Ultra-premium NEET coaching for South Delhi\'s most elite locality. Vasant Valley & embassy families.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '8-10 km from Vasant Vihar',
+    },
+    localities: [
+      { name: 'Vasant Vihar A Block', url: '/biology-classes-vasant-vihar' },
+      { name: 'Vasant Vihar B Block', url: '/biology-classes-vasant-vihar' },
+      { name: 'Vasant Vihar C Block', url: '/biology-classes-vasant-vihar' },
+      { name: 'Poorvi Marg', url: '/biology-classes-vasant-vihar' },
+      { name: 'Vasant Kunj', url: '/biology-classes-vasant-kunj' },
+      { name: 'RK Puram', url: '/biology-classes-rk-puram' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Vasant Kunj', url: '/biology-classes-vasant-kunj' },
+      { name: 'RK Puram', url: '/biology-classes-rk-puram' },
+    ],
+    faqs: [
+      {
+        question: 'Is there premium biology coaching for Vasant Vihar families?',
+        answer:
+          'Cerebrum Biology Academy offers premium NEET coaching matching Vasant Vihar standards. AIIMS-trained faculty, personalized attention, proven results. Call 88264-44334.',
+      },
+      {
+        question: 'Do Vasant Valley School students study here?',
+        answer:
+          'Yes! Many Vasant Valley students choose Cerebrum for NEET prep. We coordinate with school schedules and offer flexible timings. Call 88264-44334.',
+      },
+      {
+        question: 'Is online coaching available for embassy families?',
+        answer:
+          'Absolutely! Our online classes are perfect for diplomatic families with varying schedules. Live AIIMS faculty instruction from home. Call 88264-44334.',
+      },
+      {
+        question: 'What is the fee for Vasant Vihar students?',
+        answer:
+          'Premium quality at ₹45,000-75,000/year (offline) or ₹35,000-60,000/year (online). Includes personalized mentorship and complete material. Call 88264-44334.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '99%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5607',
+      lng: '77.1565',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
