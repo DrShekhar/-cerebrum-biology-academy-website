@@ -16,6 +16,11 @@ import {
   Target,
   Wifi,
   Navigation,
+  FileText,
+  Calculator,
+  ClipboardList,
+  ExternalLink,
+  Sparkles,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/city-hub-data'
 
@@ -76,6 +81,54 @@ const whyChooseUs = [
     icon: BookOpen,
     title: 'NCERT-Focused Material',
     description: 'Comprehensive study material aligned with NEET pattern',
+  },
+]
+
+const freeResources = [
+  {
+    icon: FileText,
+    title: 'Free Study Notes',
+    description: 'Chapter-wise biology notes for NEET preparation',
+    href: '/free-resources',
+    cta: 'Get Free Notes',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Free Mock Tests',
+    description: 'Practice with NEET-pattern questions',
+    href: '/neet-mock-test-free',
+    cta: 'Start Free Test',
+  },
+  {
+    icon: ExternalLink,
+    title: 'Official NEET Resources',
+    description: 'NTA official materials and previous papers',
+    href: '/neet-official-resources',
+    cta: 'Access Resources',
+  },
+]
+
+const neetTools = [
+  {
+    icon: Calculator,
+    title: 'NEET Rank Predictor',
+    description: 'Predict your rank based on expected score',
+    href: '/neet-rank-predictor',
+    color: 'bg-purple-100 text-purple-600',
+  },
+  {
+    icon: ClipboardList,
+    title: 'OMR Sheet Checker',
+    description: 'Practice filling OMR sheets accurately',
+    href: '/neet-tools/omr-checker',
+    color: 'bg-blue-100 text-blue-600',
+  },
+  {
+    icon: Calculator,
+    title: 'NEET Calculators',
+    description: 'Score, percentile & college prediction tools',
+    href: '/calculator',
+    color: 'bg-green-100 text-green-600',
   },
 ]
 
@@ -185,9 +238,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 )}
               </div>
 
-              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                {data.heroTitle}
-              </h1>
+              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">{data.heroTitle}</h1>
 
               <p className="mb-8 text-xl text-blue-100 md:text-2xl">{data.heroSubtitle}</p>
 
@@ -210,21 +261,23 @@ export function CityHubPage({ data }: CityHubPageProps) {
             </div>
 
             {/* Stats */}
-            <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-4">
-              <div className="rounded-xl bg-white/10 p-6 text-center backdrop-blur-sm">
-                <Users className="mx-auto mb-2 h-8 w-8 text-yellow-400" />
-                <div className="text-2xl font-bold">{data.stats.studentsFromCity}</div>
-                <div className="text-sm text-blue-200">Students from {data.cityName}</div>
+            <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
+                <Users className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
+                <div className="text-xl font-bold sm:text-2xl">{data.stats.studentsFromCity}</div>
+                <div className="text-xs text-blue-200 sm:text-sm">
+                  Students from {data.cityName}
+                </div>
               </div>
-              <div className="rounded-xl bg-white/10 p-6 text-center backdrop-blur-sm">
-                <Trophy className="mx-auto mb-2 h-8 w-8 text-yellow-400" />
-                <div className="text-2xl font-bold">{data.stats.successRate}</div>
-                <div className="text-sm text-blue-200">Success Rate</div>
+              <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
+                <Trophy className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
+                <div className="text-xl font-bold sm:text-2xl">{data.stats.successRate}</div>
+                <div className="text-xs text-blue-200 sm:text-sm">Success Rate</div>
               </div>
-              <div className="rounded-xl bg-white/10 p-6 text-center backdrop-blur-sm">
-                <Star className="mx-auto mb-2 h-8 w-8 text-yellow-400" />
-                <div className="text-2xl font-bold">{data.stats.rating}/5</div>
-                <div className="text-sm text-blue-200">Student Rating</div>
+              <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
+                <Star className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
+                <div className="text-xl font-bold sm:text-2xl">{data.stats.rating}/5</div>
+                <div className="text-xs text-blue-200 sm:text-sm">Student Rating</div>
               </div>
             </div>
           </div>
@@ -369,6 +422,96 @@ export function CityHubPage({ data }: CityHubPageProps) {
                   </ul>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Link
+                href="/courses"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
+              >
+                View All Courses & Fees
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Free Resources Section */}
+        <section className="bg-gradient-to-br from-green-50 to-blue-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mb-10 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+                <Sparkles className="mr-2 h-4 w-4" />
+                100% Free Resources
+              </div>
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+                Free NEET Preparation Resources
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                Start your preparation with our free study materials - no registration required
+              </p>
+            </div>
+
+            <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+              {freeResources.map((resource) => (
+                <Link
+                  key={resource.title}
+                  href={resource.href}
+                  className="group rounded-xl border-2 border-transparent bg-white p-6 shadow-md transition hover:border-green-500 hover:shadow-lg"
+                >
+                  <resource.icon className="mb-4 h-10 w-10 text-green-600" />
+                  <h3 className="mb-2 text-xl font-semibold text-gray-900">{resource.title}</h3>
+                  <p className="mb-4 text-gray-600">{resource.description}</p>
+                  <span className="inline-flex items-center font-medium text-green-600 group-hover:text-green-700">
+                    {resource.cta}
+                    <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* NEET Tools Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+                Free NEET Tools for {data.cityName} Students
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                Use our free tools to track your preparation and predict your performance
+              </p>
+            </div>
+
+            <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+              {neetTools.map((tool) => (
+                <Link
+                  key={tool.title}
+                  href={tool.href}
+                  className="group flex flex-col items-center rounded-xl bg-gray-50 p-6 text-center transition hover:bg-gray-100 hover:shadow-md"
+                >
+                  <div className={`mb-4 rounded-full p-4 ${tool.color}`}>
+                    <tool.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">{tool.title}</h3>
+                  <p className="mb-3 text-sm text-gray-600">{tool.description}</p>
+                  <span className="mt-auto inline-flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700">
+                    Try Now Free
+                    <ExternalLink className="ml-1 h-4 w-4" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link
+                href="/neet-tools"
+                className="inline-flex items-center text-lg font-medium text-blue-600 hover:text-blue-700"
+              >
+                View All NEET Tools
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </section>
