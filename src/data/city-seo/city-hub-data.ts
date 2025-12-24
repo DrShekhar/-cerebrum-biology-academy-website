@@ -107,11 +107,17 @@ export const cityHubData: Record<string, CityHubData> = {
       distance: 'Sector 51, Gurugram',
     },
     localities: [
-      { name: 'Sector 51', url: '/biology-classes-gurgaon/sector-51' },
-      { name: 'Sector 56', url: '/biology-classes-gurgaon/sector-56' },
-      { name: 'DLF Phase 4', url: '/biology-classes-gurgaon/dlf' },
-      { name: 'Golf Course Road', url: '/biology-classes-gurgaon/golf-course-road' },
-      { name: 'Sohna Road', url: '/biology-classes-gurgaon/sohna-road' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'MG Road', url: '/biology-classes-mg-road-gurgaon' },
+      { name: 'Palam Vihar', url: '/biology-classes-palam-vihar-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
       { name: 'Manesar', url: '/biology-classes-manesar' },
     ],
     relatedCities: [
@@ -150,6 +156,591 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.4595',
       lng: '77.0266',
+    },
+  },
+
+  'gurgaon-sector-51': {
+    slug: 'gurgaon-sector-51',
+    cityName: 'Sector 51 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Sector 51 Gurgaon at M2K Corporate Park. AIIMS faculty, 98% success rate. Walk-in for NEET & Board prep. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Sector 51 Gurgaon',
+    heroSubtitle:
+      'Visit our flagship Gurgaon center at M2K Corporate Park, Sector 51. Premium NEET coaching with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center - Sector 51',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'In Sector 51',
+    },
+    localities: [
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+      { name: 'Eldeco Acacia Sec 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Central Park 1 & 2', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Uppal Southend Sec 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'The Close South Sec 50', url: '/biology-classes-nirvana-country-gurgaon' },
+      { name: 'Palm Springs Sec 54', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Ireo Grand Arch Sec 58', url: '/biology-classes-gurgaon-sector-57' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'What is the exact address of the Sector 51 biology coaching center?',
+        answer:
+          'Our center is at M2K Corporate Park, Sector 51, Gurugram 122018. It is on Golf Course Extension Road, easily accessible from Sectors 49, 50, 52, 56, 57 and Sohna Road. Students from Eldeco Acacia, Central Park, Uppal Southend, Nirvana Country, and other gated societies can reach in 5-10 minutes.',
+      },
+      {
+        question: 'What are the batch timings at Sector 51 center?',
+        answer:
+          'We offer multiple batches: Morning (8-10 AM), Afternoon (2-4 PM), Evening (6-8 PM). Weekend batches available. Choose based on your school timing.',
+      },
+      {
+        question: 'Is parking available at the Sector 51 center?',
+        answer:
+          'Yes, ample free parking is available at M2K Corporate Park for both two-wheelers and cars. The building has modern facilities including AC classrooms.',
+      },
+      {
+        question: 'What courses are available at Sector 51 Gurgaon center?',
+        answer:
+          'We offer Class 11 NEET Foundation, Class 12 NEET + Boards, and NEET Dropper intensive batches. All taught by AIIMS-trained Dr. Shekhar Singh.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4295',
+      lng: '77.0766',
+    },
+  },
+
+  'gurgaon-sector-56': {
+    slug: 'gurgaon-sector-56',
+    cityName: 'Sector 56 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Top biology classes for Sector 56 Gurgaon students. Center in nearby Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for Sector 56 Gurgaon',
+    heroSubtitle:
+      'Premium NEET biology coaching just 5 minutes from Sector 56. Join our Sector 51 center with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '5 minutes from Sector 56',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Where can Sector 56 students attend biology classes?',
+        answer:
+          'Sector 56 students can attend our Sector 51 center at M2K Corporate Park, just 5 minutes away. Easy access via Golf Course Extension Road.',
+      },
+      {
+        question: 'Is there any transport facility from Sector 56?',
+        answer:
+          'While we do not provide transport, our Sector 51 center is very accessible. Many Sector 56 students commute easily by car, bike, or shared auto.',
+      },
+      {
+        question: 'What makes Cerebrum Academy best for Sector 56 students?',
+        answer:
+          'Proximity to Sector 51 center, AIIMS-trained faculty, small batch sizes of 15-20 students, and 98% NEET success rate make us the top choice.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.0866',
+    },
+  },
+
+  'gurgaon-sector-49': {
+    slug: 'gurgaon-sector-49',
+    cityName: 'Sector 49 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Sector 49 Gurgaon. Center in adjacent Sector 51 (3 min). AIIMS faculty, 98% success rate. Book free demo today!',
+    heroTitle: 'Biology Classes for Sector 49 Gurgaon',
+    heroSubtitle:
+      'Top NEET biology coaching right next to Sector 49. Walk to our Sector 51 center in just 3 minutes!',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '3 minutes from Sector 49',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 50', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+    ],
+    faqs: [
+      {
+        question: 'How far is the coaching center from Sector 49?',
+        answer:
+          'Our center at M2K Corporate Park, Sector 51 is just 3 minutes from Sector 49. It is the closest premium NEET coaching for Sector 49 residents.',
+      },
+      {
+        question: 'What courses are available for Sector 49 students?',
+        answer:
+          'We offer Class 11, Class 12, and NEET Dropper batches with AIIMS-trained faculty. All study material and test series included.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '100+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.0566',
+    },
+  },
+
+  'gurgaon-sector-57': {
+    slug: 'gurgaon-sector-57',
+    cityName: 'Sector 57 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Premium biology classes for Sector 57 Gurgaon students. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Sector 57 Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for Sector 57 students. Our Sector 51 center is just 7 minutes away via Golf Course Extension Road.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '7 minutes from Sector 57',
+    },
+    localities: [
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching near Sector 57 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy at M2K Corporate Park, Sector 51 is the best choice. Just 7 minutes from Sector 57 with 98% NEET success rate.',
+      },
+      {
+        question: 'Is online option available for Sector 57 students?',
+        answer:
+          'Yes, we offer live online classes as hybrid mode. Attend from home or visit our Sector 51 center as per your convenience.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4095',
+      lng: '77.0966',
+    },
+  },
+
+  'dlf-gurgaon': {
+    slug: 'dlf-gurgaon',
+    cityName: 'DLF Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+    heroTitle: 'Biology Classes for DLF Gurgaon Students',
+    heroSubtitle:
+      'Premium NEET coaching for DLF Phase 1, 2, 3, 4, 5 residents. Join our Sector 51 center or attend live online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15-20 minutes from DLF areas',
+    },
+    localities: [
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'MG Road', url: '/biology-classes-mg-road-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Cyber City', url: '/biology-classes-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Where can DLF Gurgaon students attend biology classes?',
+        answer:
+          'DLF students can attend our Sector 51 center (15-20 min via Golf Course Road) or join live online classes from home with same AIIMS faculty.',
+      },
+      {
+        question: 'Which DLF phases are covered?',
+        answer:
+          'We serve students from all DLF phases - Phase 1, 2, 3, 4, and 5. Our Sector 51 center is accessible via Golf Course Road and MG Road.',
+      },
+      {
+        question: 'Do you have students from DLF area?',
+        answer:
+          'Yes, 100+ students from DLF phases attend our classes. Many prefer our hybrid mode - online on weekdays and offline on weekends.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '100+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4695',
+      lng: '77.0866',
+    },
+  },
+
+  'golf-course-road-gurgaon': {
+    slug: 'golf-course-road-gurgaon',
+    cityName: 'Golf Course Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes near Golf Course Road Gurgaon. Center on Golf Course Extension Road Sector 51. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes near Golf Course Road Gurgaon',
+    heroSubtitle:
+      'Premium NEET coaching on Golf Course Extension Road. Our Sector 51 center is directly accessible from Golf Course Road.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'On Golf Course Extension Road',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the biology coaching center on Golf Course Road?',
+        answer:
+          'Our center is at M2K Corporate Park, Sector 51, right on Golf Course Extension Road. Easy access from all Golf Course Road societies.',
+      },
+      {
+        question: 'Which societies near Golf Course Road do you serve?',
+        answer:
+          'We serve students from DLF Magnolias, DLF Aralias, DLF Camellias, Palm Drive, Palm Springs, The Close South, The Close North, Nirvana Country, Ireo Skyon, Emaar Palm Terraces, M3M Golf Estate, and all premium Golf Course Road condominiums.',
+      },
+      {
+        question: 'Which gated societies within 5km are covered?',
+        answer:
+          'Our Sector 51 center serves all gated societies including DLF Magnolias, Aralias, Camellias, Palm Springs, The Close South/North, Nirvana Country, Central Park, Eldeco Acacia, Uppal Southend, Ireo Grand Arch, M3M Merlin, and Emaar Emerald Hills.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4395',
+      lng: '77.0966',
+    },
+  },
+
+  'sohna-road-gurgaon': {
+    slug: 'sohna-road-gurgaon',
+    cityName: 'Sohna Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Top biology classes for Sohna Road Gurgaon students. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+    heroTitle: 'Biology Classes for Sohna Road Gurgaon',
+    heroSubtitle:
+      'Premium NEET coaching for Sohna Road residents. Our Sector 51 center is 10 minutes via Golf Course Extension Road.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 minutes from Sohna Road',
+    },
+    localities: [
+      { name: 'Sector 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+      { name: 'Central Park 1 & 2', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Vatika City', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'BPTP Park Grandeura', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Bestech Park View', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'How far is the center from Sohna Road?',
+        answer:
+          'Our Sector 51 center is 10 minutes from main Sohna Road areas via Sector 49. Students from Central Park, Vatika, BPTP, Bestech, Tulip, and other Sohna Road societies attend regularly.',
+      },
+      {
+        question: 'Which Sohna Road societies do you have students from?',
+        answer:
+          'We have students from Central Park 1 & 2, Vatika City, BPTP Park Grandeura, Bestech Park View Grand Spa, Tulip Violet, Ireo Grand Arch, M3M Merlin, CHD Vann, Emaar Emerald Hills, and many other premium Sohna Road townships.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.3995',
+      lng: '77.0466',
+    },
+  },
+
+  'mg-road-gurgaon': {
+    slug: 'mg-road-gurgaon',
+    cityName: 'MG Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes near MG Road Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for MG Road Gurgaon students. Center in Sector 51. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for MG Road Gurgaon Students',
+    heroSubtitle:
+      'Premium NEET coaching accessible from MG Road. Join our Sector 51 center or attend live online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '20 minutes from MG Road',
+    },
+    localities: [
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sector 14', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'How can MG Road students reach the coaching center?',
+        answer:
+          'Take the Rapid Metro to Sector 55-56 station, then 5 min auto to our Sector 51 center. By car, 20 min via Golf Course Road.',
+      },
+      {
+        question: 'Do you have online classes for MG Road students?',
+        answer:
+          'Yes, we offer live online classes with same AIIMS faculty. MG Road students can attend from home and visit center on weekends.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '80+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4795',
+      lng: '77.0266',
+    },
+  },
+
+  'palam-vihar-gurgaon': {
+    slug: 'palam-vihar-gurgaon',
+    cityName: 'Palam Vihar Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Palam Vihar Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Palam Vihar Gurgaon. Center in Sector 51 or join online. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Palam Vihar Gurgaon',
+    heroSubtitle:
+      'Top NEET coaching for Palam Vihar students. Join our Sector 51 center (25 min) or attend live online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '25 minutes from Palam Vihar',
+    },
+    localities: [
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'MG Road', url: '/biology-classes-mg-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Dwarka', url: '/biology-classes-dwarka' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'What is the best option for Palam Vihar students?',
+        answer:
+          'Palam Vihar students can choose: 1) Hybrid mode - online weekdays + offline weekends, or 2) Full online classes, or 3) Daily commute to Sector 51.',
+      },
+      {
+        question: 'How long does it take to reach from Palam Vihar?',
+        answer:
+          'It takes about 25 minutes to reach our Sector 51 center via Dwarka Expressway or Old Delhi Road. Many students use this route.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5095',
+      lng: '77.0166',
+    },
+  },
+
+  'south-city-gurgaon': {
+    slug: 'south-city-gurgaon',
+    cityName: 'South City Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in South City Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for South City 1 & 2 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+    heroTitle: 'Biology Classes for South City Gurgaon',
+    heroSubtitle:
+      'Premium NEET coaching for South City 1 & 2 residents. Our Sector 51 center is just 12 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12 minutes from South City',
+    },
+    localities: [
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Sector 49', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+    ],
+    faqs: [
+      {
+        question: 'How do South City students reach the center?',
+        answer:
+          'From South City 1 or 2, take Sohna Road to Sector 49 exit, then 3 min to our Sector 51 center. Total 12 minutes by car.',
+      },
+      {
+        question: 'Do you have students from South City?',
+        answer:
+          'Yes, we have 50+ students from South City 1 and South City 2. Many attend offline regularly due to proximity.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4095',
+      lng: '77.0366',
+    },
+  },
+
+  'nirvana-country-gurgaon': {
+    slug: 'nirvana-country-gurgaon',
+    cityName: 'Nirvana Country Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Nirvana Country Gurgaon residents. Center in Sector 51 (8 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Nirvana Country Gurgaon',
+    heroSubtitle:
+      'Premium NEET coaching for Nirvana Country residents. Our Sector 51 center is just 8 minutes via Golf Course Extension Road.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '8 minutes from Nirvana Country',
+    },
+    localities: [
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+      { name: 'The Close South Sec 50', url: '/biology-classes-nirvana-country-gurgaon' },
+      { name: 'The Close North Sec 50', url: '/biology-classes-nirvana-country-gurgaon' },
+      { name: 'Palm Springs Sec 54', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How far is the center from Nirvana Country?',
+        answer:
+          'Our Sector 51 center is just 8 minutes from Nirvana Country via Golf Course Extension Road. We also serve The Close South, The Close North, and nearby premium societies.',
+      },
+      {
+        question: 'Why is Cerebrum best for Nirvana Country students?',
+        answer:
+          'Proximity (8 min), AIIMS-trained faculty, small batches of 15-20, 98% success rate, and flexible hybrid mode make us the ideal choice.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '40+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.1066',
     },
   },
 
