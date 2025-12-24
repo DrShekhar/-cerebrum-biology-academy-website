@@ -3979,6 +3979,608 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.0680',
     },
   },
+
+  // Gurugram Biology Tuition Pages
+  'biology-tuition-gurgaon': {
+    slug: 'biology-tuition-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Academy',
+    metaDescription:
+      'Best biology tuition in Gurgaon with offline center in Sector 51. AIIMS faculty for NEET & Board prep. Class 9-12 biology tutor. Call 88264-44334 for demo!',
+    heroTitle: 'Best Biology Tuition in Gurgaon',
+    heroSubtitle:
+      'Expert biology tuition for NEET and Board exams. Personal attention with small batch sizes at our Sector 51 Gurugram center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Centrally located in Gurgaon',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-tuition-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-tuition-gurgaon-sector-56' },
+      { name: 'Golf Course Road', url: '/biology-tuition-golf-course-road-gurgaon' },
+      { name: 'DLF Areas', url: '/biology-tuition-dlf-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-tuition-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Tutor Delhi', url: '/biology-tutor-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'What makes Cerebrum the best biology tuition in Gurgaon?',
+        answer:
+          'Cerebrum offers expert biology tuition with AIIMS-trained faculty, small batch sizes (15-20 students), personalized attention, and a proven 98% success rate. Our Sector 51 location is accessible from all parts of Gurgaon.',
+      },
+      {
+        question: 'Do you offer home tuition for biology in Gurgaon?',
+        answer:
+          'While we don\'t offer home tuition, our center-based coaching provides superior resources, peer learning, and systematic preparation. Many families find our Sector 51 center convenient from Eldeco Acacia, Central Park, and surrounding areas.',
+      },
+      {
+        question: 'What is the fee for biology tuition in Gurgaon?',
+        answer:
+          'Our biology tuition fees range from ₹45,000 to ₹75,000 per year depending on the program. This includes regular classes, study material, test series, and doubt sessions.',
+      },
+      {
+        question: 'Which classes do you offer biology tuition for?',
+        answer:
+          'We offer biology tuition for Class 9, 10, 11, and 12 students. We also have specialized batches for NEET aspirants, droppers, and 12th Board exam preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '2,500+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-tutor-gurgaon': {
+    slug: 'biology-tutor-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Academy',
+    metaDescription:
+      'Find the best biology tutor in Gurgaon for NEET & Boards. AIIMS-trained faculty at Sector 51 center. 98% success rate. Book demo: 88264-44334!',
+    heroTitle: 'Best Biology Tutor in Gurgaon',
+    heroSubtitle:
+      'Learn from AIIMS-trained biology experts at our Gurgaon center. Personal mentorship and proven teaching methodology.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Your local biology expert',
+    },
+    localities: [
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Who is the best biology tutor in Gurgaon for NEET?',
+        answer:
+          'Cerebrum Biology Academy has AIIMS-trained faculty who are considered among the best biology tutors in Gurgaon. Dr. Shekhar and his team have helped hundreds of students crack NEET with top ranks.',
+      },
+      {
+        question: 'How experienced are the biology tutors at Cerebrum?',
+        answer:
+          'Our biology tutors have 10+ years of teaching experience with backgrounds from AIIMS and top medical institutions. They understand NEET patterns thoroughly and provide personalized guidance.',
+      },
+      {
+        question: 'Can I get a personal biology tutor for my child in Gurgaon?',
+        answer:
+          'While we offer small batch coaching (not 1-on-1 home tuition), our batch sizes of 15-20 students ensure personal attention. We also provide dedicated doubt sessions and mentor support.',
+      },
+      {
+        question: 'What areas in Gurgaon do your biology tutors serve?',
+        answer:
+          'Our Sector 51 center serves students from all Gurgaon areas including DLF, Golf Course Road, Sohna Road, Nirvana Country, South City, and surrounding localities.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '2,500+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-home-tuition-gurgaon': {
+    slug: 'biology-home-tuition-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Academy',
+    metaDescription:
+      'Looking for biology home tuition in Gurgaon? Try our superior center-based coaching in Sector 51. Better resources, peer learning, 98% results. 88264-44334!',
+    heroTitle: 'Biology Coaching Near Your Home in Gurgaon',
+    heroSubtitle:
+      'Why home tuition when you can get better? Our Sector 51 center offers superior biology coaching with resources no home tutor can match.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Central Gurgaon location',
+    },
+    localities: [
+      { name: 'Eldeco Acacia', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'Central Park', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'The Close South/North', url: '/biology-classes-nirvana-country-gurgaon' },
+      { name: 'Palm Springs', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'DLF Magnolias', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
+      { name: 'Biology Tutor Gurgaon', url: '/biology-tutor-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is home tuition better than coaching for biology in Gurgaon?',
+        answer:
+          'Center-based coaching at Cerebrum offers advantages home tuition cannot: peer competition, comprehensive test series, lab facilities, and expert faculty. Our 98% success rate speaks for itself.',
+      },
+      {
+        question: 'My child needs personal attention - is home tuition better?',
+        answer:
+          'Our small batches of 15-20 students ensure personal attention while providing peer learning benefits. We also offer dedicated doubt sessions and mentor support that exceed what home tutors provide.',
+      },
+      {
+        question: 'How far is your center from major Gurgaon societies?',
+        answer:
+          'Our Sector 51 center is 5-15 minutes from most premium societies: Eldeco Acacia (5 min), Central Park (8 min), The Close (10 min), Palm Springs (12 min), DLF areas (15 min).',
+      },
+      {
+        question: 'What if my child misses a class?',
+        answer:
+          'We provide recorded backup classes, makeup sessions, and comprehensive notes. Our systematic approach ensures no student falls behind, unlike unpredictable home tuition arrangements.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '2,500+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  // Gurugram Class-Specific Pages
+  'biology-class-11-gurgaon': {
+    slug: 'biology-class-11-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Class 11 Biology Coaching Gurgaon | NEET Foundation | Cerebrum Academy',
+    metaDescription:
+      'Best Class 11 biology coaching in Gurgaon. Build strong NEET foundation with AIIMS faculty. School + NEET integrated program. Sector 51 center. 88264-44334!',
+    heroTitle: 'Class 11 Biology Coaching in Gurgaon',
+    heroSubtitle:
+      'Build your NEET foundation early! Our Class 11 program integrates school curriculum with competitive exam preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Your Class 11 Biology Hub',
+    },
+    localities: [
+      { name: 'DPS Gurgaon Students', url: '/biology-classes-dps-gurgaon' },
+      { name: 'Shri Ram School Students', url: '/biology-classes-shri-ram-school-gurgaon' },
+      { name: 'Amity Students', url: '/biology-classes-amity-gurgaon' },
+      { name: 'Suncity Students', url: '/biology-classes-suncity-school-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology Gurgaon', url: '/biology-class-12-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'When should Class 11 students start NEET preparation?',
+        answer:
+          'The best time is NOW! Starting NEET preparation alongside Class 11 gives you 2 years for comprehensive coverage. Our integrated program helps you excel in both school exams and NEET.',
+      },
+      {
+        question: 'Can Class 11 students manage school and NEET coaching together?',
+        answer:
+          'Absolutely! Our Class 11 program is designed to complement school schedules. We offer evening and weekend batches, and our curriculum covers both CBSE syllabus and NEET topics simultaneously.',
+      },
+      {
+        question: 'What topics are covered in Class 11 biology for NEET?',
+        answer:
+          'We cover Diversity in Living World, Plant & Animal Kingdoms, Cell Biology, Plant Physiology, Human Physiology fundamentals - all aligned with NCERT and NEET requirements.',
+      },
+      {
+        question: 'What is the fee for Class 11 biology coaching?',
+        answer:
+          'Our Class 11 NEET foundation program costs ₹45,000 to ₹60,000 per year. This includes regular classes, study material, test series, and doubt support.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-class-12-gurgaon': {
+    slug: 'biology-class-12-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Class 12 Biology Coaching Gurgaon | Board + NEET Prep | Cerebrum Academy',
+    metaDescription:
+      'Best Class 12 biology coaching in Gurgaon for Boards and NEET. Dual focus program. AIIMS faculty at Sector 51. 98% success rate. Call 88264-44334!',
+    heroTitle: 'Class 12 Biology Coaching in Gurgaon',
+    heroSubtitle:
+      'Master Class 12 Biology for both Board exams and NEET. Our dual-focus program ensures excellence in both.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Your Class 12 Success Center',
+    },
+    localities: [
+      { name: 'DPS Gurgaon Class 12', url: '/biology-classes-dps-gurgaon' },
+      { name: 'Scottish High IB Students', url: '/biology-classes-scottish-high-gurgaon' },
+      { name: 'Heritage School', url: '/biology-classes-heritage-school-gurgaon' },
+      { name: 'Pathways World School', url: '/biology-classes-pathways-world-school' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology Gurgaon', url: '/biology-class-11-gurgaon' },
+      { name: '12th Boards Biology Gurgaon', url: '/biology-12th-boards-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do you balance Board and NEET preparation in Class 12?',
+        answer:
+          'Our curriculum is structured to cover both simultaneously. The good news: 90% of Class 12 biology is common to Boards and NEET. We add NEET-specific practice and application-based questions on top.',
+      },
+      {
+        question: 'What is covered in Class 12 biology coaching?',
+        answer:
+          'We cover Reproduction, Genetics & Evolution, Biology in Human Welfare, Biotechnology, and Ecology - all chapters crucial for both Board exams and NEET.',
+      },
+      {
+        question: 'Can students joining in Class 12 still crack NEET?',
+        answer:
+          'Yes! While early start is better, dedicated Class 12 students can absolutely crack NEET. We offer crash courses covering Class 11 basics alongside regular Class 12 curriculum.',
+      },
+      {
+        question: 'What batch timings are available for Class 12 students?',
+        answer:
+          'We offer morning batches (before school for early dismissals), evening batches (4:30 PM onwards), and weekend intensive batches for Class 12 students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '900+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-12th-boards-gurgaon': {
+    slug: 'biology-12th-boards-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: '12th Boards Biology Coaching Gurgaon | CBSE Board Prep | Cerebrum Academy',
+    metaDescription:
+      'Ace your 12th Board biology exam with Cerebrum Gurgaon. CBSE-focused preparation, NCERT mastery, sample papers. Sector 51 center. Call 88264-44334!',
+    heroTitle: '12th Board Biology Exam Preparation in Gurgaon',
+    heroSubtitle:
+      'Score 95%+ in CBSE Biology Board exam. NCERT-focused teaching, extensive practice, and exam strategies.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Board Exam Excellence Center',
+    },
+    localities: [
+      { name: 'CBSE Schools Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DPS Students', url: '/biology-classes-dps-gurgaon' },
+      { name: 'Amity Students', url: '/biology-classes-amity-gurgaon' },
+      { name: 'GD Goenka Students', url: '/biology-classes-gd-goenka-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology Gurgaon', url: '/biology-class-12-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How can I score 95+ in Biology Board exam?',
+        answer:
+          'Our Board-focused program emphasizes NCERT mastery, diagram practice, previous year question analysis, and answer writing techniques. Most of our students score 90%+ with proper preparation.',
+      },
+      {
+        question: 'Is NCERT enough for Biology Board exam?',
+        answer:
+          'NCERT is the primary source for Board exams. We ensure thorough NCERT coverage plus supplementary practice from Exemplar problems and previous year papers for complete preparation.',
+      },
+      {
+        question: 'Do you have a crash course for Board exams?',
+        answer:
+          'Yes! We offer intensive Board exam crash courses starting December. These cover complete revision, chapter-wise tests, and full mock Board exams with detailed feedback.',
+      },
+      {
+        question: 'How many sample papers should I solve before Boards?',
+        answer:
+          'We recommend solving at least 20 sample papers before Boards. Our program includes 30+ mock tests and sample paper practice sessions with time management training.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '600+',
+      successRate: '99%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-class-9-10-gurgaon': {
+    slug: 'biology-class-9-10-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Academy',
+    metaDescription:
+      'Build strong biology foundation in Class 9-10 for future NEET success. School curriculum + competitive exam prep in Gurgaon Sector 51. Call 88264-44334!',
+    heroTitle: 'Class 9 & 10 Biology Foundation in Gurgaon',
+    heroSubtitle:
+      'Start early, win big! Our Class 9-10 program builds strong biology concepts for school success and future NEET preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Foundation Building Center',
+    },
+    localities: [
+      { name: 'Class 9 Biology Gurgaon', url: '/biology-class-9-10-gurgaon' },
+      { name: 'Class 10 Biology Gurgaon', url: '/biology-class-9-10-gurgaon' },
+      { name: 'School Students Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology Gurgaon', url: '/biology-class-11-gurgaon' },
+      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is Class 9-10 too early for NEET-focused biology coaching?',
+        answer:
+          'Not at all! Class 9-10 biology forms the foundation for advanced concepts. Students who build strong basics in these classes find Class 11-12 and NEET preparation much easier.',
+      },
+      {
+        question: 'What topics are covered in Class 9-10 biology?',
+        answer:
+          'We cover Cell Biology, Tissues, Life Processes, Control & Coordination, Reproduction, Heredity & Evolution - all essential foundation topics for future NEET preparation.',
+      },
+      {
+        question: 'Do you help with school exams too?',
+        answer:
+          'Absolutely! Our Class 9-10 program ensures excellent school exam performance while subtly introducing competitive exam concepts and analytical thinking skills.',
+      },
+      {
+        question: 'What is the fee for Class 9-10 biology coaching?',
+        answer:
+          'Our foundation program for Class 9-10 costs ₹25,000 to ₹35,000 per year. This includes regular classes, worksheets, tests, and doubt support.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '400+',
+      successRate: '95%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-classes-manav-rachna-gurgaon': {
+    slug: 'biology-classes-manav-rachna-gurgaon',
+    cityName: 'Manav Rachna Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Manav Rachna School students. NEET coaching accessible from Faridabad & Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for Manav Rachna Students',
+    heroSubtitle:
+      'Quality NEET biology coaching for Manav Rachna International School students. Accessible from both Faridabad and South Gurgaon locations.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '25-30 min from Manav Rachna',
+    },
+    localities: [
+      { name: 'Manav Rachna Faridabad', url: '/biology-classes-manav-rachna-gurgaon' },
+      { name: 'Manav Rachna Gurgaon', url: '/biology-classes-manav-rachna-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do Manav Rachna students travel to your Gurgaon center?',
+        answer:
+          'Yes! Many Manav Rachna students from both Faridabad and Gurgaon campuses travel to our Sector 51 center. Weekend batches are particularly popular among these students.',
+      },
+      {
+        question: 'What is the travel time from Manav Rachna Faridabad?',
+        answer:
+          'Our Sector 51 center is approximately 25-30 minutes from Manav Rachna Faridabad campus via Sohna Road. Many students find this convenient for weekend classes.',
+      },
+      {
+        question: 'Do you offer online classes for distant students?',
+        answer:
+          'Yes! Students who find travel difficult can opt for our live online classes with the same quality teaching. Many Manav Rachna students use our hybrid mode.',
+      },
+      {
+        question: 'How do Manav Rachna students perform at Cerebrum?',
+        answer:
+          'Manav Rachna students have consistently performed well. Their disciplined academic background combined with our NEET-focused coaching produces excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '65+',
+      successRate: '96%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4180',
+      lng: '77.0450',
+    },
+  },
+
+  'biology-classes-shikshanter-gurgaon': {
+    slug: 'biology-classes-shikshanter-gurgaon',
+    cityName: 'Shikshanter Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Shikshanter School Gurgaon students. NEET coaching in Sector 51, near Sector 40. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Shikshanter School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for Shikshanter students. Our progressive teaching complements your school\'s experiential approach.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '12-15 min from Shikshanter',
+    },
+    localities: [
+      { name: 'Shikshanter Sector 40', url: '/biology-classes-shikshanter-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is Cerebrum good for Shikshanter students who prefer experiential learning?',
+        answer:
+          'Absolutely! We use practical examples, visual learning, and hands-on understanding that aligns with Shikshanter\'s progressive pedagogy while adding NEET-specific exam strategies.',
+      },
+      {
+        question: 'How far is Cerebrum from Shikshanter School?',
+        answer:
+          'Our Sector 51 center is approximately 5 km from Shikshanter in Sector 40 - about 12-15 minutes drive. Very convenient for after-school classes.',
+      },
+      {
+        question: 'Do Shikshanter students adapt well to NEET coaching style?',
+        answer:
+          'Yes! Shikshanter students typically have strong conceptual understanding and curiosity. Our teaching helps them apply this foundation to competitive exam requirements effectively.',
+      },
+      {
+        question: 'What batch timings suit Shikshanter students?',
+        answer:
+          'We offer 4:30 PM evening batches perfect for Shikshanter students, plus weekend intensive options for those with busy school schedules.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '55+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4420',
+      lng: '77.0380',
+    },
+  },
+
+  'neet-droppers-batch-gurgaon': {
+    slug: 'neet-droppers-batch-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Droppers Batch Gurgaon | Repeater Coaching | Cerebrum Academy',
+    metaDescription:
+      'Dedicated NEET droppers batch in Gurgaon. Gap year coaching with intensive preparation. Proven results for repeaters. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'NEET Droppers Batch in Gurgaon',
+    heroSubtitle:
+      'Your second chance, our full commitment. Dedicated full-year program for NEET repeaters with proven success strategies.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Dropper Success Center',
+    },
+    localities: [
+      { name: 'Gap Year Students Gurgaon', url: '/neet-droppers-batch-gurgaon' },
+      { name: 'NEET Repeaters Gurugram', url: '/neet-droppers-batch-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/neet-coaching-gurgaon-sector-51' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Droppers Delhi', url: '/neet-droppers-batch-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is taking a drop year for NEET worth it?',
+        answer:
+          'Absolutely! Many AIIMS and top medical college students are droppers. With focused preparation and right guidance, a gap year can transform your NEET score significantly.',
+      },
+      {
+        question: 'What is different about your droppers batch?',
+        answer:
+          'Our droppers batch offers full-day classes (6-8 hours), extensive test series, personalized improvement plans, weak topic focus, and mental health support. We analyze your previous attempt to create a tailored strategy.',
+      },
+      {
+        question: 'Can I improve my NEET score significantly in one year?',
+        answer:
+          'Yes! Our droppers have shown average improvements of 100-150 marks. Many have jumped from below 500 to 600+ scores with dedicated preparation.',
+      },
+      {
+        question: 'What is the schedule for droppers batch?',
+        answer:
+          'Our droppers batch runs full-day from 9 AM to 5 PM with breaks. This includes classes, self-study, doubt sessions, and daily tests. Weekend mock tests complete the intensive preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '200+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
