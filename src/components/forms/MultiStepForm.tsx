@@ -4,26 +4,28 @@ import { useState, useEffect, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline'
 
-interface FormStep {
+export type FormDataRecord = Record<string, unknown>
+
+export interface FormStep<T extends FormDataRecord = FormDataRecord> {
   id: string
   title: string
   description?: string
-  component: React.ComponentType<StepComponentProps>
-  validation?: (data: any) => { isValid: boolean; errors?: string[] }
+  component: React.ComponentType<StepComponentProps<T>>
+  validation?: (data: T) => { isValid: boolean; errors?: string[] }
   skippable?: boolean
 }
 
-interface StepComponentProps {
-  data: any
-  onNext: (stepData: any) => void
+export interface StepComponentProps<T extends FormDataRecord = FormDataRecord> {
+  data: T
+  onNext: (stepData: Partial<T>) => void
   onPrevious?: () => void
   isLoading?: boolean
   errors?: string[]
 }
 
-interface MultiStepFormProps {
-  steps: FormStep[]
-  onComplete: (data: any) => Promise<void>
+interface MultiStepFormProps<T extends FormDataRecord = FormDataRecord> {
+  steps: FormStep<T>[]
+  onComplete: (data: T) => Promise<void>
   onStepChange?: (currentStep: number, totalSteps: number) => void
   autoSave?: boolean
   autoSaveKey?: string
@@ -32,7 +34,7 @@ interface MultiStepFormProps {
   allowBackNavigation?: boolean
 }
 
-export const MultiStepForm = ({
+export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
   steps,
   onComplete,
   onStepChange,
@@ -41,9 +43,9 @@ export const MultiStepForm = ({
   className = '',
   showProgressIndicator = true,
   allowBackNavigation = true,
-}: MultiStepFormProps) => {
+}: MultiStepFormProps<T>) => {
   const [currentStep, setCurrentStep] = useState(0)
-  const [formData, setFormData] = useState<any>({})
+  const [formData, setFormData] = useState<T>({} as T)
   const [isLoading, setIsLoading] = useState(false)
   const [errors, setErrors] = useState<string[]>([])
   const [savedProgress, setSavedProgress] = useState(false)
@@ -54,11 +56,11 @@ export const MultiStepForm = ({
       const saved = localStorage.getItem(autoSaveKey)
       if (saved) {
         try {
-          const { data, step, timestamp } = JSON.parse(saved)
+          const parsed = JSON.parse(saved) as { data: T; step: number; timestamp: number }
           // Only restore if saved within last 24 hours
-          if (Date.now() - timestamp < 24 * 60 * 60 * 1000) {
-            setFormData(data)
-            setCurrentStep(Math.min(step, steps.length - 1))
+          if (Date.now() - parsed.timestamp < 24 * 60 * 60 * 1000) {
+            setFormData(parsed.data)
+            setCurrentStep(Math.min(parsed.step, steps.length - 1))
           }
         } catch (error) {
           console.error('Failed to restore form data:', error)
@@ -91,11 +93,11 @@ export const MultiStepForm = ({
     onStepChange?.(currentStep, steps.length)
   }, [currentStep, steps.length, onStepChange])
 
-  const handleNext = async (stepData: any) => {
+  const handleNext = async (stepData: Partial<T>) => {
     setIsLoading(true)
     setErrors([])
 
-    const updatedData = { ...formData, ...stepData }
+    const updatedData = { ...formData, ...stepData } as T
 
     // Validate current step
     const currentStepConfig = steps[currentStep]
@@ -319,4 +321,3 @@ export const MultiStepForm = ({
   )
 }
 
-export type { FormStep, StepComponentProps, MultiStepFormProps }

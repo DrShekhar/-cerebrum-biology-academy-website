@@ -47,6 +47,30 @@ Full-stack educational platform for NEET Biology preparation built with Next.js 
 - Use `cn()` from `src/lib/utils` for class merging
 - Follow existing component structure in `src/components/`
 
+### Color Guidelines
+
+**AVOID these colors** (unless absolutely necessary):
+
+| Color       | Tailwind Class | Hex       |
+|-------------|----------------|-----------|
+| Yellow 500  | yellow-500     | `#eab308` |
+| Cyan 600    | cyan-600       | `#0891b2` |
+| Pink 600    | pink-600       | `#db2777` |
+| Pink 500    | pink-500       | `#ec4899` |
+| Emerald 600 | emerald-600    | `#059669` |
+| Emerald 500 | emerald-500    | `#10b981` |
+| Red 100     | red-100        | `#fee2e2` |
+| Teal 600    | teal-600       | `#0d9488` |
+| Teal 500    | teal-500       | `#14b8a6` |
+| Teal 400    | teal-400       | `#2dd4bf` |
+
+**Preferred alternatives:**
+- Use **Green scale** (green-500, green-600) instead of Emerald/Teal
+- Use **Blue scale** instead of Cyan
+- Use **Indigo/Purple** instead of Pink
+- Use **Yellow 400** or **Orange** instead of Yellow 500
+- Use **Red 50** instead of Red 100 for error backgrounds
+
 ### Authentication
 
 - NextAuth config: `src/lib/auth/config.ts`

@@ -183,7 +183,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[101] overflow-y-auto"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-10 shadow-sm">
+            <div className="sticky top-0 bg-white/100 backdrop-blur-sm border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-20 shadow-md isolate">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
                 <p className="text-sm text-gray-500">Explore our courses & services</p>
@@ -199,7 +199,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
 
             {/* Dashboard Link (if authenticated) */}
             {dashboardInfo && (
-              <div className="px-6 pt-4">
+              <div className="px-6 pt-4 relative z-0 bg-white">
                 <Link
                   href={dashboardInfo.href}
                   onClick={handleLinkClick}
@@ -215,7 +215,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             )}
 
             {/* Quick Course Links */}
-            <div className="px-6 pt-4">
+            <div className="px-6 pt-4 relative z-0 bg-white">
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
                 Quick Access
               </h3>
@@ -257,7 +257,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             </div>
 
             {/* Navigation Sections */}
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 relative z-0 bg-white">
               {navigationConfig.map((section) => {
                 const Icon = iconMap[section.icon as keyof typeof iconMap]
                 const isExpanded = expandedSection === section.id

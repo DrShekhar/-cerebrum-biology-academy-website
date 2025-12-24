@@ -272,7 +272,7 @@ export function ExitIntentPopup({
                         <motion.button
                           type="submit"
                           disabled={isSubmitting || !email || !phone}
-                          className="w-full py-3.5 sm:py-4 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
+                          className="w-full py-3.5 sm:py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:bg-indigo-200 disabled:text-indigo-400 disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >

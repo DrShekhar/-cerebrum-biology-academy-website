@@ -79,6 +79,38 @@ interface NEETProgress {
   weakAreas: WeakArea[]
 }
 
+interface GamificationAchievement {
+  id: string
+  type: string
+  title: string
+  description: string
+  icon: string
+  points: number
+  isCompleted: boolean
+  earnedAt: Date | null
+  currentProgress: number
+  targetProgress: number
+}
+
+interface GamificationStats {
+  totalPoints: number
+  currentLevel: number
+  xpInCurrentLevel: number
+  xpNeededForNextLevel: number
+  levelProgress: number
+  studyStreak: number
+  longestStreak: number
+  streakMilestone: { days: number; reward: number }
+  recentAchievements: GamificationAchievement[]
+  inProgressAchievements: GamificationAchievement[]
+  totalAchievements: number
+  completedAchievements: number
+}
+
+interface GamificationData {
+  gamification: GamificationStats
+}
+
 export function PersonalizedStudentDashboard() {
   const { user, isAuthenticated } = useAuth()
   const pathname = usePathname()
@@ -120,7 +152,7 @@ export function PersonalizedStudentDashboard() {
   const [recentSessions, setRecentSessions] = useState<StudySession[]>([])
 
   // Gamification data
-  const [gamificationData, setGamificationData] = useState<any | null>(null)
+  const [gamificationData, setGamificationData] = useState<GamificationData | null>(null)
 
   // Get or create freeUserId for guest users
   useEffect(() => {

@@ -5,6 +5,8 @@ import { MessageBubble } from '@/components/chat/MessageBubble'
 import { TypingIndicator } from '@/components/chat/TypingIndicator'
 import { ChatInput } from '@/components/chat/ChatInput'
 import { SuggestedQuestions } from '@/components/chat/SuggestedQuestions'
+import { useAuth } from '@/contexts/AuthContext'
+import { useUserFlow } from '@/hooks/useUserFlow'
 
 interface Message {
   id: string
@@ -31,16 +33,20 @@ const INITIAL_QUESTIONS = [
   'Describe the structure of DNA',
 ]
 
-const TEMP_FREE_USER_ID = 'temp_free_user_001' // TODO: Replace with real freeUserId from session
 const STORAGE_KEY = 'cerebrum_ai_tutor_session'
 
 export default function AITutorPage() {
+  const { user, isAuthenticated } = useAuth()
+  const { freeUserId } = useUserFlow()
   const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [sessionId, setSessionId] = useState<string>('')
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const messagesContainerRef = useRef<HTMLDivElement>(null)
+
+  // Get the effective user ID for tracking: authenticated user ID or guest freeUserId
+  const effectiveUserId = isAuthenticated && user?.id ? user.id : freeUserId || 'anonymous'
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -97,7 +103,7 @@ export default function AITutorPage() {
         },
         body: JSON.stringify({
           sessionId,
-          freeUserId: TEMP_FREE_USER_ID,
+          freeUserId: effectiveUserId,
           message: message.content,
           isUserMessage: message.isUser,
           ncertReferences: message.ncertReferences,
@@ -137,7 +143,7 @@ export default function AITutorPage() {
         },
         body: JSON.stringify({
           question: content.trim(),
-          studentId: 'STUDENT_001',
+          studentId: effectiveUserId,
           context: {
             topic: 'General Biology',
             difficulty: 'medium',
