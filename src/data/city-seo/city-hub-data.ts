@@ -3496,6 +3496,489 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.2525',
     },
   },
+
+  // Gurugram School-Specific Pages
+  'biology-classes-dps-gurgaon': {
+    slug: 'biology-classes-dps-gurgaon',
+    cityName: 'DPS Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for DPS Gurgaon students (Sector 45 & 67C). NEET coaching in Sector 51 near DPS campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'Biology Classes for DPS Gurgaon Students',
+    heroSubtitle:
+      'Specialized NEET biology coaching for DPS Gurgaon (Sector 45 & 67C) students. Our Sector 51 center is just 10-15 minutes from both DPS campuses.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '10-15 min from DPS Gurgaon',
+    },
+    localities: [
+      { name: 'DPS Sector 45', url: '/biology-classes-dps-gurgaon' },
+      { name: 'DPS Sector 67C', url: '/biology-classes-dps-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'South City Gurgaon', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is Cerebrum Academy good for DPS Gurgaon students preparing for NEET?',
+        answer:
+          'Absolutely! Many DPS Gurgaon students from both Sector 45 and 67C campuses study with us. Our Sector 51 center is conveniently located 10-15 minutes from both DPS campuses. Our batch timings complement DPS school schedules.',
+      },
+      {
+        question: 'How far is Cerebrum Academy from DPS Gurgaon Sector 45?',
+        answer:
+          'Our M2K Corporate Park center in Sector 51 is approximately 4 km from DPS Gurgaon Sector 45 - about 10-12 minutes drive. Many students come directly after school.',
+      },
+      {
+        question: 'Do you have special batches for DPS students?',
+        answer:
+          'Yes, we offer evening batches (4:30 PM onwards) specifically designed for school-going students from DPS and other premium schools. Weekend intensive batches are also available.',
+      },
+      {
+        question: 'What is the fee for DPS students joining NEET coaching?',
+        answer:
+          'Our comprehensive NEET biology program costs ₹45,000 to ₹75,000 per year. We also offer special packages for students from DPS and other partner schools. Contact us for current offers.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '180+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4425',
+      lng: '77.0629',
+    },
+  },
+
+  'biology-classes-shri-ram-school-gurgaon': {
+    slug: 'biology-classes-shri-ram-school-gurgaon',
+    cityName: 'Shri Ram School Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Shri Ram School Students | NEET Coaching Aravali Moulsari | Cerebrum',
+    metaDescription:
+      'Best biology classes for The Shri Ram School (Aravali & Moulsari) students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes for The Shri Ram School Students',
+    heroSubtitle:
+      'Premium NEET biology coaching for The Shri Ram School students (Aravali & Moulsari Avenue). Our curriculum complements TSRS pedagogy.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from TSRS campuses',
+    },
+    localities: [
+      { name: 'TSRS Aravali', url: '/biology-classes-shri-ram-school-gurgaon' },
+      { name: 'TSRS Moulsari', url: '/biology-classes-shri-ram-school-gurgaon' },
+      { name: 'DLF Phase 4', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you offer biology coaching suitable for The Shri Ram School students?',
+        answer:
+          'Yes! We understand the unique academic environment of TSRS. Our teaching methodology is designed to complement the school\'s progressive pedagogy while ensuring thorough NEET preparation.',
+      },
+      {
+        question: 'How far is Cerebrum from The Shri Ram School Aravali?',
+        answer:
+          'Our Sector 51 center is approximately 8 km from TSRS Aravali campus - about 15-20 minutes drive via Golf Course Extension Road.',
+      },
+      {
+        question: 'Can TSRS students manage NEET preparation alongside school curriculum?',
+        answer:
+          'Absolutely! We offer flexible batch timings including evening (post 4 PM) and weekend batches. Many TSRS students successfully balance both and excel in NEET.',
+      },
+      {
+        question: 'Do TSRS students perform well in NEET at Cerebrum?',
+        answer:
+          'Yes! TSRS students are among our top performers. Their strong conceptual foundation from school, combined with our NEET-focused training, leads to excellent results. Many have secured top medical colleges.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4540',
+      lng: '77.0820',
+    },
+  },
+
+  'biology-classes-pathways-world-school': {
+    slug: 'biology-classes-pathways-world-school',
+    cityName: 'Pathways World School',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Pathways World School | NEET Coaching Aravali Hills | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Pathways World School (Aravali Hills) students. NEET coaching in Sector 51 Gurgaon. IB & CBSE compatible. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Pathways World School Students',
+    heroSubtitle:
+      'Specialized NEET biology coaching for Pathways World School students. We bridge IB/Cambridge curriculum with NEET requirements.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '25-30 min from Pathways Aravali',
+    },
+    localities: [
+      { name: 'Pathways Aravali', url: '/biology-classes-pathways-world-school' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'South City Gurgaon', url: '/biology-classes-south-city-gurgaon' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Can IB students from Pathways prepare for NEET at Cerebrum?',
+        answer:
+          'Yes! We have extensive experience teaching IB Biology students. Our program bridges the gap between IB Higher Level Biology and NEET syllabus, covering additional NEET-specific topics.',
+      },
+      {
+        question: 'How do you help Pathways students transition to NEET preparation?',
+        answer:
+          'We provide a comprehensive gap analysis for IB/Cambridge students. Our specialized bridge module covers NEET-specific topics not in international curricula, ensuring complete preparation.',
+      },
+      {
+        question: 'What batch timings suit Pathways boarding students?',
+        answer:
+          'We offer weekend intensive batches (Saturday-Sunday) and vacation crash courses specifically designed for boarding school students. Online live classes are also available.',
+      },
+      {
+        question: 'Is travel from Pathways Aravali to Sector 51 feasible?',
+        answer:
+          'While it\'s a 25-30 minute drive, many Pathways students opt for our weekend batches or online classes. Day scholars often combine with pickup pools from Aravali area.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '96%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.3910',
+      lng: '77.0720',
+    },
+  },
+
+  'biology-classes-gd-goenka-gurgaon': {
+    slug: 'biology-classes-gd-goenka-gurgaon',
+    cityName: 'GD Goenka Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for GD Goenka World School students. NEET coaching in Sector 51 Gurgaon, near Sohna Road. AIIMS faculty. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for GD Goenka World School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for GD Goenka students. Our Sector 51 center is conveniently accessible from Sohna Road.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '20-25 min from GD Goenka',
+    },
+    localities: [
+      { name: 'GD Goenka Sohna', url: '/biology-classes-gd-goenka-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Sector 49', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    faqs: [
+      {
+        question: 'Is Cerebrum Academy suitable for GD Goenka students?',
+        answer:
+          'Absolutely! Many GD Goenka World School students study with us. Our teaching methodology complements the school\'s academic standards while focusing on NEET preparation.',
+      },
+      {
+        question: 'How do GD Goenka students travel to your Sector 51 center?',
+        answer:
+          'Our center is about 20-25 minutes from GD Goenka via Sohna Road. Many students carpool or use the SPR (Southern Peripheral Road) for quick access.',
+      },
+      {
+        question: 'Do you offer combined school + NEET curriculum support?',
+        answer:
+          'Yes! Our biology coaching covers both CBSE Class 11-12 syllabus and NEET preparation. GD Goenka students can manage school exams and NEET prep simultaneously.',
+      },
+      {
+        question: 'What results have GD Goenka students achieved at Cerebrum?',
+        answer:
+          'GD Goenka students have consistently performed well, with several securing admissions to top government medical colleges. Their strong academic foundation helps them excel in our program.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '85+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.3690',
+      lng: '77.0580',
+    },
+  },
+
+  'biology-classes-heritage-school-gurgaon': {
+    slug: 'biology-classes-heritage-school-gurgaon',
+    cityName: 'Heritage School Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Heritage Xperiential Learning School students. NEET coaching near Sector 62 Gurgaon. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Heritage School Students',
+    heroSubtitle:
+      'Specialized NEET biology coaching for Heritage Xperiential Learning School students. Experience-based learning meets exam-focused preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from Heritage School',
+    },
+    localities: [
+      { name: 'Heritage Sector 62', url: '/biology-classes-heritage-school-gurgaon' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Golf Course Extension', url: '/biology-classes-golf-course-extension-gurgaon' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Golf Course Extension', url: '/biology-classes-golf-course-extension-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How does Cerebrum complement Heritage School\'s experiential learning approach?',
+        answer:
+          'We appreciate Heritage\'s experiential pedagogy. Our teaching uses practical examples, visual learning, and conceptual understanding - aligning with experiential methods while adding NEET-specific rigor.',
+      },
+      {
+        question: 'Is the Sector 51 center convenient for Heritage School students?',
+        answer:
+          'Yes! Our M2K Corporate Park center is approximately 6 km from Heritage School Sector 62 - about 15-20 minutes drive via Golf Course Extension Road.',
+      },
+      {
+        question: 'Do Heritage School students need extra support for NEET?',
+        answer:
+          'Heritage students typically have strong conceptual understanding. Our program helps them channel this into NEET-specific problem-solving and time management skills.',
+      },
+      {
+        question: 'What batch timings work for Heritage School students?',
+        answer:
+          'We offer evening batches starting 4:30 PM and weekend batches. Heritage students can choose timings that fit their school schedule and extracurricular activities.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '70+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4220',
+      lng: '77.0750',
+    },
+  },
+
+  'biology-classes-amity-gurgaon': {
+    slug: 'biology-classes-amity-gurgaon',
+    cityName: 'Amity Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Amity International School Gurgaon students. NEET coaching in Sector 51, near Sector 46. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Amity International School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for Amity Gurgaon students. Our Sector 51 center is just 10 minutes from Amity campus.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '10 min from Amity Sector 46',
+    },
+    localities: [
+      { name: 'Amity Sector 46', url: '/biology-classes-amity-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 47 Gurgaon', url: '/biology-classes-gurgaon-sector-47' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum Academy to Amity International School?',
+        answer:
+          'Our Sector 51 center is just 3 km from Amity International School Sector 46 - approximately 10 minutes by road. This makes it very convenient for Amity students.',
+      },
+      {
+        question: 'Do many Amity students study at Cerebrum?',
+        answer:
+          'Yes! Amity Gurgaon students form a significant part of our student community. The proximity of our center to their school makes daily attendance convenient.',
+      },
+      {
+        question: 'Can Amity students come directly after school?',
+        answer:
+          'Absolutely! Our 4:30 PM batch is popular among Amity students. They can reach our center within 10 minutes of school dismissal.',
+      },
+      {
+        question: 'What is the fee structure for Amity students?',
+        answer:
+          'Our fees range from ₹45,000 to ₹75,000 per year. We offer special group discounts when multiple Amity students join together. Contact for current offers.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4350',
+      lng: '77.0520',
+    },
+  },
+
+  'biology-classes-scottish-high-gurgaon': {
+    slug: 'biology-classes-scottish-high-gurgaon',
+    cityName: 'Scottish High Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Scottish High International School students. NEET coaching in Sector 51 Gurgaon, near Sushant Lok. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for Scottish High Students',
+    heroSubtitle:
+      'Premium NEET biology coaching for Scottish High International School students. Bridge IB/Cambridge curriculum with NEET preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from Scottish High',
+    },
+    localities: [
+      { name: 'Scottish High Sushant Lok', url: '/biology-classes-scottish-high-gurgaon' },
+      { name: 'Sushant Lok', url: '/biology-classes-sushant-lok-gurgaon' },
+      { name: 'DLF Phase 4', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you teach IB Biology students from Scottish High?',
+        answer:
+          'Yes! We have specialized modules for IB Biology students. Our program bridges the gap between IB Higher Level Biology and NEET syllabus effectively.',
+      },
+      {
+        question: 'How far is Cerebrum from Scottish High International School?',
+        answer:
+          'Our Sector 51 center is approximately 7 km from Scottish High in Sushant Lok - about 15-20 minutes drive via Golf Course Road.',
+      },
+      {
+        question: 'Can Scottish High students manage both IB and NEET?',
+        answer:
+          'Absolutely! Many of our successful students are from Scottish High. With proper planning and our flexible batch timings, students excel in both IB and NEET.',
+      },
+      {
+        question: 'What additional support do IB students get?',
+        answer:
+          'We provide supplementary material covering NEET topics not in IB curriculum. Our faculty has experience teaching international curriculum students and understanding their unique needs.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '90+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4670',
+      lng: '77.0730',
+    },
+  },
+
+  'biology-classes-suncity-school-gurgaon': {
+    slug: 'biology-classes-suncity-school-gurgaon',
+    cityName: 'Suncity School Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Suncity World School students. NEET coaching in Sector 51 Gurgaon, near Sector 54. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Suncity World School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for Suncity World School students. Just 5 minutes from your school campus!',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '5 min from Suncity School',
+    },
+    localities: [
+      { name: 'Suncity School Sector 54', url: '/biology-classes-suncity-school-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Golf Course Extension', url: '/biology-classes-golf-course-extension-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Suncity World School?',
+        answer:
+          'We are just 1.5 km from Suncity World School Sector 54! Our Sector 51 center is the closest NEET coaching for Suncity students - approximately 5 minutes by road.',
+      },
+      {
+        question: 'Can Suncity students walk to your center?',
+        answer:
+          'While walking is possible (about 15-20 minutes), most students prefer a short drive or cycle. The proximity makes it very convenient for daily classes.',
+      },
+      {
+        question: 'Do you have special arrangements for Suncity students?',
+        answer:
+          'Yes! Given our proximity, we offer flexible timing options. Many Suncity students join our 4 PM batch immediately after school dismissal.',
+      },
+      {
+        question: 'How do Suncity students perform at Cerebrum?',
+        answer:
+          'Suncity students are among our top performers! The combination of their strong school foundation and our NEET-focused coaching has produced excellent results year after year.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '110+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4380',
+      lng: '77.0680',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
