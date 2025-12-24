@@ -4523,6 +4523,367 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  // Additional Gurgaon Schools
+  'biology-classes-rps-gurgaon': {
+    slug: 'biology-classes-rps-gurgaon',
+    cityName: 'RPS International Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for RPS International School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for RPS International School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for RPS International School students. Quality education with proven results.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from RPS International',
+    },
+    localities: [
+      { name: 'RPS International School', url: '/biology-classes-rps-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from RPS International School?',
+        answer:
+          'Our Sector 51 center is conveniently located for RPS International students - approximately 15-20 minutes by road.',
+      },
+      {
+        question: 'Do RPS students join Cerebrum for NEET?',
+        answer:
+          'Yes! Many RPS International students are part of our NEET preparation batches. Their strong academic foundation combines well with our focused NEET coaching.',
+      },
+      {
+        question: 'What batch timings work for RPS students?',
+        answer:
+          'Our 4:30 PM evening batches are popular among RPS students. Weekend batches are also available for those with busy schedules.',
+      },
+      {
+        question: 'What is the fee for RPS students?',
+        answer:
+          'Our fees range from ₹45,000 to ₹75,000 per year. We offer group discounts when multiple students from RPS join together.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '70+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4450',
+      lng: '77.0650',
+    },
+  },
+
+  'biology-classes-euro-international-gurgaon': {
+    slug: 'biology-classes-euro-international-gurgaon',
+    cityName: 'Euro International Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Euro International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for Euro International School Students',
+    heroSubtitle:
+      'Premium NEET biology coaching for Euro International School students. Bridge your school curriculum with competitive exam preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from Euro International',
+    },
+    localities: [
+      { name: 'Euro International School', url: '/biology-classes-euro-international-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+      { name: 'Sector 56 Gurgaon', url: '/biology-classes-gurgaon-sector-56' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you have students from Euro International School?',
+        answer:
+          'Yes! Euro International students are among our regular students. We understand their curriculum and help bridge the gap with NEET requirements.',
+      },
+      {
+        question: 'How close is Cerebrum to Euro International?',
+        answer:
+          'Our Sector 51 center is about 15-20 minutes from Euro International School branches - easily accessible for after-school classes.',
+      },
+      {
+        question: 'Can Euro students manage school and NEET together?',
+        answer:
+          'Absolutely! With our flexible batch timings and structured approach, Euro International students successfully balance both. Many have excelled in NEET while maintaining school grades.',
+      },
+      {
+        question: 'What results have Euro students achieved?',
+        answer:
+          'Euro International students at Cerebrum have consistently scored 600+ in NEET. Several have secured admissions in top government medical colleges.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '96%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4480',
+      lng: '77.0580',
+    },
+  },
+
+  'biology-classes-ryan-gurgaon': {
+    slug: 'biology-classes-ryan-gurgaon',
+    cityName: 'Ryan International Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Ryan International School Gurgaon. NEET coaching in Sector 51 with AIIMS faculty. Call 88264-44334 for free demo!',
+    heroTitle: 'Biology Classes for Ryan International School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for Ryan International School students. Strong foundation meets competitive exam excellence.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from Ryan International',
+    },
+    localities: [
+      { name: 'Ryan International School', url: '/biology-classes-ryan-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 31 Gurgaon', url: '/biology-classes-gurgaon-sector-31' },
+      { name: 'Mayfield Garden', url: '/biology-classes-mayfield-garden-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Which Ryan International branch students come to Cerebrum?',
+        answer:
+          'We have students from multiple Ryan International branches in Gurgaon including Sector 31 and other locations. All benefit from our proximity and quality teaching.',
+      },
+      {
+        question: 'How far is Cerebrum from Ryan International School?',
+        answer:
+          'Our Sector 51 center is centrally located - approximately 15-20 minutes from most Ryan International branches in Gurgaon.',
+      },
+      {
+        question: 'Do Ryan students perform well in NEET?',
+        answer:
+          'Yes! Ryan International students at Cerebrum have shown excellent results. The school strong academics combined with our NEET focus creates top performers.',
+      },
+      {
+        question: 'What is the best batch for Ryan students?',
+        answer:
+          'Our 4:30 PM evening batch is popular among Ryan students. We also have weekend intensive batches for comprehensive preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '85+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4380',
+      lng: '77.0450',
+    },
+  },
+
+  'biology-classes-dav-gurgaon': {
+    slug: 'biology-classes-dav-gurgaon',
+    cityName: 'DAV Public School Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for DAV Public School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, proven results. Call 88264-44334!',
+    heroTitle: 'Biology Classes for DAV Public School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for DAV students. Build on your strong CBSE foundation with targeted NEET preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '10-15 min from DAV Schools',
+    },
+    localities: [
+      { name: 'DAV Public School Gurgaon', url: '/biology-classes-dav-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 14 Gurgaon', url: '/biology-classes-gurgaon-sector-14' },
+      { name: 'Sector 49 Gurgaon', url: '/biology-classes-gurgaon-sector-49' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Cerebrum good for DAV students?',
+        answer:
+          'DAV students have strong CBSE foundation which aligns perfectly with NEET syllabus. Our coaching builds on this foundation with competitive exam strategies and practice.',
+      },
+      {
+        question: 'How close is Cerebrum to DAV Public School?',
+        answer:
+          'Our Sector 51 center is centrally located - about 10-15 minutes from DAV branches in Gurgaon. Convenient for after-school classes.',
+      },
+      {
+        question: 'Do DAV students need extra preparation for NEET?',
+        answer:
+          'While DAV provides excellent CBSE foundation, NEET requires additional competitive exam practice, advanced problems, and time management skills - which we provide.',
+      },
+      {
+        question: 'What batch timings suit DAV students?',
+        answer:
+          'Our 4:30 PM batches work well for DAV students. Early morning batches before school are also popular for dedicated NEET aspirants.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '95+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4500',
+      lng: '77.0400',
+    },
+  },
+
+  'biology-classes-lotus-valley-gurgaon': {
+    slug: 'biology-classes-lotus-valley-gurgaon',
+    cityName: 'Lotus Valley Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Lotus Valley International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Classes for Lotus Valley International School Students',
+    heroSubtitle:
+      'Premium NEET biology coaching for Lotus Valley students. Complement your international curriculum with competitive exam mastery.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '15-20 min from Lotus Valley',
+    },
+    localities: [
+      { name: 'Lotus Valley International', url: '/biology-classes-lotus-valley-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 50 Gurgaon', url: '/biology-classes-gurgaon-sector-50' },
+      { name: 'Nirvana Country', url: '/biology-classes-nirvana-country-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do Lotus Valley students study at Cerebrum?',
+        answer:
+          'Yes! Lotus Valley International School students are among our successful NEET aspirants. We help them bridge their international curriculum with NEET requirements.',
+      },
+      {
+        question: 'How far is Cerebrum from Lotus Valley School?',
+        answer:
+          'Our Sector 51 center is approximately 15-20 minutes from Lotus Valley International School - convenient for after-school classes.',
+      },
+      {
+        question: 'Can Lotus Valley students handle both IB/Cambridge and NEET?',
+        answer:
+          'Absolutely! Many Lotus Valley students successfully manage both. Our flexible schedules and targeted approach help them excel in school and NEET simultaneously.',
+      },
+      {
+        question: 'What extra support do international curriculum students get?',
+        answer:
+          'We provide supplementary material covering NEET-specific topics. Our faculty understands international curriculum patterns and addresses the gaps effectively.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '65+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4520',
+      lng: '77.0700',
+    },
+  },
+
+  'biology-classes-blue-bells-gurgaon': {
+    slug: 'biology-classes-blue-bells-gurgaon',
+    cityName: 'Blue Bells Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Blue Bells Model School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+    heroTitle: 'Biology Classes for Blue Bells School Students',
+    heroSubtitle:
+      'Expert NEET biology coaching for Blue Bells Model School students. Quality coaching at our convenient Sector 51 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: '10-15 min from Blue Bells',
+    },
+    localities: [
+      { name: 'Blue Bells Model School', url: '/biology-classes-blue-bells-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 4 Gurgaon', url: '/biology-classes-gurgaon-sector-4' },
+      { name: 'Sector 50 Gurgaon', url: '/biology-classes-gurgaon-sector-50' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Blue Bells Model School?',
+        answer:
+          'Our Sector 51 center is approximately 10-15 minutes from Blue Bells Model School - one of the most convenient NEET coaching options for Blue Bells students.',
+      },
+      {
+        question: 'Do Blue Bells students perform well at Cerebrum?',
+        answer:
+          'Yes! Blue Bells students have a strong academic foundation. Combined with our focused NEET coaching, they consistently achieve excellent results.',
+      },
+      {
+        question: 'What batch timings work for Blue Bells students?',
+        answer:
+          'Our 4:30 PM evening batches are popular among Blue Bells students. Weekend batches provide additional intensive preparation options.',
+      },
+      {
+        question: 'Is there any group discount for Blue Bells students?',
+        answer:
+          'Yes! When multiple Blue Bells students join together, we offer attractive group discounts. Contact us for current offers.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '75+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4600',
+      lng: '77.0350',
+    },
+  },
+
   'neet-droppers-batch-gurgaon': {
     slug: 'neet-droppers-batch-gurgaon',
     cityName: 'Gurgaon',
