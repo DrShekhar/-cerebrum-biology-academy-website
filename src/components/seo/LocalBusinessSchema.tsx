@@ -43,9 +43,9 @@ const locationData = {
   },
   gurugram: {
     name: 'Cerebrum Biology Academy - Gurugram',
-    address: 'M2K Corporate Park, Sector 50',
-    streetAddress: 'M2K Corporate Park',
-    addressLocality: 'Sector 50, Gurugram',
+    address: 'M2K Corporate Park, Sector 51, Gurugram',
+    streetAddress: 'M2K Corporate Park, Sector 51',
+    addressLocality: 'Sector 51, Gurugram',
     addressRegion: 'Haryana',
     postalCode: '122018',
     geo: { lat: '28.4153', lng: '77.0499' },
@@ -78,8 +78,8 @@ const locationData = {
   },
   'south-extension': {
     name: 'Cerebrum Biology Academy - South Extension',
-    address: 'Block B, South Extension 2',
-    streetAddress: 'Block B, South Extension Part 2',
+    address: 'Block D, South Extension 2, New Delhi',
+    streetAddress: 'Block D, South Extension Part 2',
     addressLocality: 'South Extension',
     addressRegion: 'Delhi',
     postalCode: '110049',

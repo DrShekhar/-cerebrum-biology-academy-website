@@ -127,6 +127,28 @@ export const Footer = memo(function Footer() {
     { name: 'NRI Students (14+ Countries)', href: '/nri-students' },
   ]
 
+  const biologyClassesByCity = [
+    { name: 'Delhi', href: '/biology-classes-delhi' },
+    { name: 'Noida', href: '/biology-classes-noida' },
+    { name: 'Gurgaon', href: '/biology-classes-gurgaon' },
+    { name: 'Faridabad', href: '/biology-classes-faridabad' },
+    { name: 'Ghaziabad', href: '/biology-classes-ghaziabad' },
+    { name: 'South Delhi', href: '/biology-classes-south-delhi' },
+    { name: 'Rohini', href: '/biology-classes-rohini' },
+    { name: 'Manesar', href: '/biology-classes-manesar' },
+    { name: 'Rewari', href: '/biology-classes-rewari' },
+    { name: 'Mahendragarh', href: '/biology-classes-mahendragarh' },
+  ]
+
+  const biologyTuitionLinks = [
+    { name: 'Biology Tuition', href: '/biology-tuition' },
+    { name: 'Class 9-10 Tuition', href: '/biology-tuition-class-9-10' },
+    { name: 'Class 11 Tuition', href: '/biology-tuition-class-11' },
+    { name: 'Class 12 Tuition', href: '/biology-tuition-class-12' },
+    { name: 'Tuition Near Me', href: '/biology-tuition-near-me' },
+    { name: 'Online Classes', href: '/online-biology-classes' },
+  ]
+
   const hubLinks = [
     { name: 'NEET Biology', href: '/neet-biology-coaching' },
     { name: 'Biology Teacher', href: '/biology-teacher' },
@@ -168,7 +190,7 @@ export const Footer = memo(function Footer() {
     <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8">
           {/* Company Info - Spans 2 columns on larger screens */}
           <motion.div
             className="lg:col-span-2"
@@ -235,10 +257,10 @@ export const Footer = memo(function Footer() {
                     <strong>Rohini:</strong> DC Chauk Sector 9, Delhi 110085
                   </div>
                   <div>
-                    <strong>Gurugram:</strong> M2K Corporate Park, Sector 50, 122018
+                    <strong>Gurugram:</strong> M2K Corporate Park, Sector 51, 122018
                   </div>
                   <div>
-                    <strong>South Delhi:</strong> Block B, South Extension 2, 110049
+                    <strong>South Delhi:</strong> Block D, South Extension 2, 110049
                   </div>
                 </div>
               </div>
@@ -328,11 +350,48 @@ export const Footer = memo(function Footer() {
             </ul>
           </motion.div>
 
-          {/* Services & Programs */}
+          {/* Biology Classes by City */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
+            viewport={{ once: true }}
+            style={{ opacity: 1 }}
+          >
+            <h4 className="font-semibold text-lg mb-4 text-white">Biology Classes</h4>
+            <ul className="space-y-2">
+              {biologyClassesByCity.slice(0, 7).map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Biology Tuition</h4>
+            <ul className="space-y-2">
+              {biologyTuitionLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Services & Programs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
