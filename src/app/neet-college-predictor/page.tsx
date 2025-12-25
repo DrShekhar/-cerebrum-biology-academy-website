@@ -107,6 +107,13 @@ export default function NEETCollegePredictorPage() {
   const [domicileState, setDomicileState] = useState<string>('')
   const [isPwD, setIsPwD] = useState(false)
 
+  // Search by college name feature
+  const [searchMode, setSearchMode] = useState<'rank' | 'college'>('rank')
+  const [collegeSearchQuery, setCollegeSearchQuery] = useState('')
+  const [selectedCollege, setSelectedCollege] = useState<College | null>(null)
+  const [showCollegeDropdown, setShowCollegeDropdown] = useState(false)
+  const collegeSearchRef = useRef<HTMLDivElement>(null)
+
   // Input mode: rank or marks
   const [inputMode, setInputMode] = useState<'rank' | 'marks'>('rank')
   const [marks, setMarks] = useState<string>('')
@@ -393,6 +400,53 @@ export default function NEETCollegePredictorPage() {
       return true
     })
   }, [results])
+
+  // Filtered colleges for search by college name
+  const filteredCollegesForSearch = useMemo(() => {
+    if (!collegeSearchQuery.trim() || !dataLoaded) return []
+    const query = collegeSearchQuery.toLowerCase().trim()
+    return collegesData
+      .filter((college) => {
+        const nameMatch = college.name.toLowerCase().includes(query)
+        const stateMatch = college.state.toLowerCase().includes(query)
+        return nameMatch || stateMatch
+      })
+      .slice(0, 10) // Limit to 10 results for performance
+  }, [collegeSearchQuery, collegesData, dataLoaded])
+
+  // Click outside handler for college search dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (collegeSearchRef.current && !collegeSearchRef.current.contains(event.target as Node)) {
+        setShowCollegeDropdown(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  // Handle college selection
+  const handleCollegeSelect = useCallback((college: College) => {
+    setSelectedCollege(college)
+    setCollegeSearchQuery(college.name)
+    setShowCollegeDropdown(false)
+  }, [])
+
+  // Get cutoff rank needed for selected college
+  const getMarksFromRank = (rankNum: number): number => {
+    if (rankNum <= 1) return 720
+    if (rankNum <= 10) return 720 - Math.round((rankNum - 1) / 2)
+    if (rankNum <= 100) return 715 - Math.round((rankNum - 10) / 6)
+    if (rankNum <= 1100) return 700 - Math.round((rankNum - 100) / 50)
+    if (rankNum <= 5000) return 680 - Math.round((rankNum - 1100) / 130)
+    if (rankNum <= 25000) return 650 - Math.round((rankNum - 5000) / 400)
+    if (rankNum <= 70000) return 600 - Math.round((rankNum - 25000) / 900)
+    if (rankNum <= 150000) return 550 - Math.round((rankNum - 70000) / 1600)
+    if (rankNum <= 300000) return 500 - Math.round((rankNum - 150000) / 3000)
+    if (rankNum <= 500000) return 450 - Math.round((rankNum - 300000) / 4000)
+    if (rankNum <= 750000) return 400 - Math.round((rankNum - 500000) / 5000)
+    return Math.max(0, 350 - Math.round((rankNum - 750000) / 6000))
+  }
 
   const aiqCount = results.filter((r) => r.quotaType === 'AIQ').length
   const stateCount = results.filter((r) => r.quotaType === 'State').length
@@ -737,385 +791,639 @@ _Powered by Cerebrum Biology Academy_`
                   </p>
                 </div>
 
-                <div className="space-y-6">
-                  {/* Rank/Marks Toggle */}
-                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
-                    <div className="mb-3 flex items-center justify-between">
-                      <label className="text-sm font-semibold text-gray-700">
-                        Enter your NEET Score *
-                      </label>
-                      <div className="flex rounded-full bg-white p-1 shadow-sm">
-                        <button
-                          type="button"
-                          onClick={() => setInputMode('rank')}
-                          className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
-                            inputMode === 'rank'
-                              ? 'bg-blue-600 text-white'
-                              : 'text-gray-600 hover:bg-gray-100'
-                          }`}
-                        >
-                          By Rank
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setInputMode('marks')}
-                          className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
-                            inputMode === 'marks'
-                              ? 'bg-blue-600 text-white'
-                              : 'text-gray-600 hover:bg-gray-100'
-                          }`}
-                        >
-                          By Marks
-                        </button>
-                      </div>
-                    </div>
-
-                    {inputMode === 'rank' ? (
-                      <div>
-                        <input
-                          type="number"
-                          id="rank"
-                          value={rank}
-                          onChange={(e) => setRank(e.target.value)}
-                          min="1"
-                          placeholder="Enter your All India Rank (AIR)"
-                          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                        />
-                      </div>
-                    ) : (
-                      <div className="space-y-2">
-                        <input
-                          type="number"
-                          id="marks"
-                          value={marks}
-                          onChange={(e) => setMarks(e.target.value)}
-                          min="0"
-                          max="720"
-                          placeholder="Enter your marks (out of 720)"
-                          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                        />
-                        {marks && parseInt(marks) >= 0 && parseInt(marks) <= 720 && (
-                          <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm">
-                            <TrendingUp className="h-4 w-4 text-blue-600" />
-                            <span className="text-blue-800">
-                              Estimated Rank: <strong>{parseInt(rank).toLocaleString()}</strong>
-                            </span>
-                            <span className="text-blue-600">(based on NEET 2024)</span>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Primary Inputs */}
-                  <div className="grid gap-4 md:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="category"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Category *
-                      </label>
-                      <select
-                        id="category"
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="general">General</option>
-                        <option value="ews">EWS</option>
-                        <option value="obc">OBC (NCL)</option>
-                        <option value="sc">SC</option>
-                        <option value="st">ST</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="domicile"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        <span className="flex items-center gap-1">
-                          Your Domicile State
-                          <span title="Required for State Quota eligibility">
-                            <HelpCircle className="h-4 w-4 text-gray-400" />
-                          </span>
-                        </span>
-                      </label>
-                      <select
-                        id="domicile"
-                        value={domicileState}
-                        onChange={(e) => setDomicileState(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="">Select domicile state</option>
-                        {allStates.map((state) => (
-                          <option key={state} value={state}>
-                            {state}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Quota Selection */}
-                  <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
-                    <label className="mb-3 block text-sm font-semibold text-blue-900">
-                      Quota Preference
-                    </label>
-                    <div className="flex flex-wrap gap-3">
-                      <label
-                        className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                          quotaPreference === 'all'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white text-gray-700 hover:bg-gray-100'
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="quota"
-                          value="all"
-                          checked={quotaPreference === 'all'}
-                          onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
-                          className="hidden"
-                        />
-                        <Globe className="h-4 w-4" />
-                        All Quotas
-                      </label>
-                      <label
-                        className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                          quotaPreference === 'aiq'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white text-gray-700 hover:bg-gray-100'
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="quota"
-                          value="aiq"
-                          checked={quotaPreference === 'aiq'}
-                          onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
-                          className="hidden"
-                        />
-                        <Globe className="h-4 w-4" />
-                        All India Quota (15%)
-                      </label>
-                      <label
-                        className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                          quotaPreference === 'state'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white text-gray-700 hover:bg-gray-100'
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="quota"
-                          value="state"
-                          checked={quotaPreference === 'state'}
-                          onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
-                          className="hidden"
-                        />
-                        <Home className="h-4 w-4" />
-                        State Quota (85%)
-                      </label>
-                    </div>
-                    {quotaPreference === 'state' && !domicileState && (
-                      <p className="mt-2 text-sm text-amber-700">
-                        ⚠️ Please select your domicile state above to see State Quota options
-                      </p>
-                    )}
-                  </div>
-
-                  {/* PwD Checkbox */}
-                  <div className="flex items-center gap-3 rounded-lg border border-purple-200 bg-purple-50 p-4">
-                    <label className="flex cursor-pointer items-center gap-3">
-                      <input
-                        type="checkbox"
-                        checked={isPwD}
-                        onChange={(e) => setIsPwD(e.target.checked)}
-                        className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                      />
-                      <div>
-                        <span className="flex items-center gap-2 font-medium text-purple-900">
-                          <Accessibility className="h-5 w-5" />
-                          PwD Candidate (5% Horizontal Reservation)
-                        </span>
-                        <span className="text-sm text-purple-700">
-                          Check this if you have 40%+ benchmark disability
-                        </span>
-                      </div>
-                    </label>
-                  </div>
-
-                  {/* Additional Filters */}
-                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                    <div>
-                      <label
-                        htmlFor="type"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        College Type
-                      </label>
-                      <select
-                        id="type"
-                        value={collegeType}
-                        onChange={(e) => setCollegeType(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="All">All Types</option>
-                        <option value="Government">Government (incl. AIIMS, JIPMER)</option>
-                        <option value="Private/Deemed">Private & Deemed Universities</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="state"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        College Location
-                      </label>
-                      <select
-                        id="state"
-                        value={selectedState}
-                        onChange={(e) => setSelectedState(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="All">All States</option>
-                        {allStates.map((state) => (
-                          <option key={state} value={state}>
-                            {state}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="feeRange"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Fee Range (Annual)
-                      </label>
-                      <select
-                        id="feeRange"
-                        value={feeRange}
-                        onChange={(e) => setFeeRange(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="All">All Fees</option>
-                        <option value="low">Below ₹1 Lakh (Govt)</option>
-                        <option value="medium">₹1 - ₹15 Lakhs</option>
-                        <option value="high">Above ₹15 Lakhs</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="sortBy"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Sort By
-                      </label>
-                      <select
-                        id="sortBy"
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value as SortOption)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      >
-                        <option value="cutoff">Cutoff Rank (Low to High)</option>
-                        <option value="fees">Fees (Low to High)</option>
-                        <option value="tier">College Tier</option>
-                        <option value="seats">Seats (High to Low)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <button
-                      onClick={handlePredict}
-                      disabled={isLoading}
-                      className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-semibold text-white transition-all disabled:opacity-70 ${
-                        hasSearched
-                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700'
-                          : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
-                      }`}
-                    >
-                      {getButtonText()}
-                    </button>
-                    {showResults && (
+                {/* Search Mode Toggle */}
+                <div className="mb-6">
+                  <div className="flex justify-center">
+                    <div className="inline-flex rounded-xl bg-gray-100 p-1">
                       <button
-                        onClick={handleReset}
-                        className="rounded-lg border-2 border-gray-300 px-6 py-4 font-semibold text-gray-600 transition-colors hover:bg-gray-50"
+                        type="button"
+                        onClick={() => {
+                          setSearchMode('rank')
+                          setSelectedCollege(null)
+                          setCollegeSearchQuery('')
+                        }}
+                        className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-all ${
+                          searchMode === 'rank'
+                            ? 'bg-white text-blue-600 shadow-sm'
+                            : 'text-gray-600 hover:text-gray-900'
+                        }`}
                       >
-                        Reset
+                        <TrendingUp className="h-4 w-4" />
+                        Search by Rank
                       </button>
-                    )}
-                  </div>
-
-                  {/* Success Summary */}
-                  {showResults && results.length > 0 && (
-                    <div className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
-                          <CheckCircle className="h-5 w-5 text-green-600" />
-                        </div>
-                        <div>
-                          <p className="font-semibold text-green-800">
-                            Found {results.length} admission options in {uniqueColleges.length}{' '}
-                            colleges!
-                          </p>
-                          <div className="flex flex-wrap gap-2 text-sm text-green-600">
-                            <span className="flex items-center gap-1">
-                              <Globe className="h-3 w-3" /> {aiqCount} AIQ
-                            </span>
-                            <span>•</span>
-                            <span className="flex items-center gap-1">
-                              <Home className="h-3 w-3" /> {stateCount} State
-                            </span>
-                            <span>•</span>
-                            <span>{govtCount} Govt</span>
-                            <span>•</span>
-                            <span>{privateCount} Private</span>
-                          </div>
-                        </div>
-                      </div>
                       <button
-                        onClick={scrollToResults}
-                        className="flex items-center gap-1 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-700"
+                        type="button"
+                        onClick={() => setSearchMode('college')}
+                        className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-all ${
+                          searchMode === 'college'
+                            ? 'bg-white text-blue-600 shadow-sm'
+                            : 'text-gray-600 hover:text-gray-900'
+                        }`}
                       >
-                        View Results
-                        <ArrowDown className="h-4 w-4" />
+                        <Building2 className="h-4 w-4" />
+                        Search by College
                       </button>
-                    </div>
-                  )}
-
-                  {showResults && results.length === 0 && (
-                    <div className="flex items-center gap-3 rounded-lg bg-yellow-50 p-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100">
-                        <Info className="h-5 w-5 text-yellow-600" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-yellow-800">No matching colleges found</p>
-                        <p className="text-sm text-yellow-600">
-                          Try adjusting your rank, quota preference, or other filters
-                        </p>
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="flex items-start gap-2 rounded-lg bg-blue-50 p-4">
-                    <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
-                    <div className="text-sm text-blue-800">
-                      <p className="mb-1">
-                        <strong>AIQ (15%):</strong> All India Quota seats open to all states.{' '}
-                        <strong>State Quota (85%):</strong> Reserved for state domicile holders
-                        (cutoffs are generally more relaxed).
-                      </p>
-                      <p>Data based on NEET 2024 MCC counselling. Actual cutoffs may vary.</p>
                     </div>
                   </div>
                 </div>
+
+                {searchMode === 'college' ? (
+                  /* College Search Mode */
+                  <div className="space-y-6">
+                    <div ref={collegeSearchRef} className="relative">
+                      <label className="mb-2 block text-sm font-semibold text-gray-700">
+                        Search College by Name
+                      </label>
+                      <div className="relative">
+                        <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
+                        <input
+                          type="text"
+                          value={collegeSearchQuery}
+                          onChange={(e) => {
+                            setCollegeSearchQuery(e.target.value)
+                            setShowCollegeDropdown(true)
+                            if (!e.target.value.trim()) setSelectedCollege(null)
+                          }}
+                          onFocus={() => setShowCollegeDropdown(true)}
+                          placeholder="Type college name e.g. AIIMS Delhi, KMC Manipal..."
+                          className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-12 pr-4 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        />
+                      </div>
+
+                      {/* Dropdown */}
+                      {showCollegeDropdown && filteredCollegesForSearch.length > 0 && (
+                        <div className="absolute z-20 mt-1 w-full rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+                          {filteredCollegesForSearch.map((college) => (
+                            <button
+                              key={college.name}
+                              type="button"
+                              onClick={() => handleCollegeSelect(college)}
+                              className="flex w-full items-center gap-3 px-4 py-2.5 text-left hover:bg-blue-50"
+                            >
+                              <Building2 className="h-5 w-5 flex-shrink-0 text-gray-400" />
+                              <div className="min-w-0 flex-1">
+                                <div className="truncate font-medium text-gray-900">
+                                  {college.name}
+                                </div>
+                                <div className="flex items-center gap-2 text-xs text-gray-500">
+                                  <MapPin className="h-3 w-3" />
+                                  {college.state}
+                                  <span
+                                    className={`rounded px-1.5 py-0.5 ${college.type === 'Government' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}
+                                  >
+                                    {college.type === 'Government' ? 'Govt' : 'Private'}
+                                  </span>
+                                </div>
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Selected College Details */}
+                    {selectedCollege && (
+                      <div className="rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+                        <div className="mb-4 flex items-start justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900">
+                              {selectedCollege.name}
+                            </h3>
+                            <div className="mt-1 flex items-center gap-3 text-sm text-gray-600">
+                              <span className="flex items-center gap-1">
+                                <MapPin className="h-4 w-4" />
+                                {selectedCollege.state}
+                              </span>
+                              <span
+                                className={`rounded-full px-2 py-0.5 text-xs font-medium ${selectedCollege.type === 'Government' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}
+                              >
+                                {selectedCollege.type}
+                              </span>
+                              {selectedCollege.nirfRank && (
+                                <span className="flex items-center gap-1 text-amber-600">
+                                  <Award className="h-4 w-4" />
+                                  NIRF #{selectedCollege.nirfRank}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedCollege(null)
+                              setCollegeSearchQuery('')
+                            }}
+                            className="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                          >
+                            <X className="h-5 w-5" />
+                          </button>
+                        </div>
+
+                        <div className="mb-4 grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
+                          <div className="rounded-lg bg-white p-3">
+                            <div className="text-gray-500">Total Seats</div>
+                            <div className="text-lg font-bold text-gray-900">
+                              {selectedCollege.totalSeats}
+                            </div>
+                          </div>
+                          <div className="rounded-lg bg-white p-3">
+                            <div className="text-gray-500">AIQ Seats</div>
+                            <div className="text-lg font-bold text-blue-600">
+                              {selectedCollege.aiqSeats}
+                            </div>
+                          </div>
+                          <div className="rounded-lg bg-white p-3">
+                            <div className="text-gray-500">State Seats</div>
+                            <div className="text-lg font-bold text-green-600">
+                              {selectedCollege.stateSeats}
+                            </div>
+                          </div>
+                          <div className="rounded-lg bg-white p-3">
+                            <div className="text-gray-500">Annual Fees</div>
+                            <div className="text-lg font-bold text-gray-900">
+                              {selectedCollege.feeDisplay}
+                            </div>
+                          </div>
+                        </div>
+
+                        <h4 className="mb-3 flex items-center gap-2 font-semibold text-gray-900">
+                          <TrendingUp className="h-4 w-4 text-blue-600" />
+                          NEET 2024 Closing Ranks (AIQ)
+                        </h4>
+                        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                          {[
+                            {
+                              key: 'general',
+                              label: 'General',
+                              color: 'bg-blue-100 text-blue-800',
+                            },
+                            { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-amber-800' },
+                            { key: 'obc', label: 'OBC', color: 'bg-green-100 text-green-800' },
+                            { key: 'sc', label: 'SC', color: 'bg-purple-100 text-purple-800' },
+                            { key: 'st', label: 'ST', color: 'bg-orange-100 text-orange-800' },
+                          ].map(({ key, label, color }) => {
+                            const cutoffRank =
+                              selectedCollege.aiqCutoffs[
+                                key as keyof typeof selectedCollege.aiqCutoffs
+                              ]
+                            const estimatedMarks = getMarksFromRank(cutoffRank)
+                            return (
+                              <div key={key} className="rounded-lg bg-white p-3 shadow-sm">
+                                <div className="mb-1 flex items-center justify-between">
+                                  <span
+                                    className={`rounded-full px-2 py-0.5 text-xs font-medium ${color}`}
+                                  >
+                                    {label}
+                                  </span>
+                                </div>
+                                <div className="text-lg font-bold text-gray-900">
+                                  Rank {cutoffRank.toLocaleString()}
+                                </div>
+                                <div className="text-sm text-gray-500">
+                                  ~{estimatedMarks} marks needed
+                                </div>
+                              </div>
+                            )
+                          })}
+                        </div>
+
+                        {selectedCollege.stateCutoffs && (
+                          <>
+                            <h4 className="mb-3 mt-6 flex items-center gap-2 font-semibold text-gray-900">
+                              <Home className="h-4 w-4 text-green-600" />
+                              NEET 2024 Closing Ranks (State Quota - {selectedCollege.state})
+                            </h4>
+                            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                              {[
+                                {
+                                  key: 'general',
+                                  label: 'General',
+                                  color: 'bg-blue-100 text-blue-800',
+                                },
+                                { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-amber-800' },
+                                { key: 'obc', label: 'OBC', color: 'bg-green-100 text-green-800' },
+                                { key: 'sc', label: 'SC', color: 'bg-purple-100 text-purple-800' },
+                                { key: 'st', label: 'ST', color: 'bg-orange-100 text-orange-800' },
+                              ].map(({ key, label, color }) => {
+                                const cutoffRank =
+                                  selectedCollege.stateCutoffs![
+                                    key as keyof typeof selectedCollege.stateCutoffs
+                                  ]
+                                const estimatedMarks = getMarksFromRank(cutoffRank)
+                                return (
+                                  <div key={key} className="rounded-lg bg-white p-3 shadow-sm">
+                                    <div className="mb-1 flex items-center justify-between">
+                                      <span
+                                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${color}`}
+                                      >
+                                        {label}
+                                      </span>
+                                    </div>
+                                    <div className="text-lg font-bold text-gray-900">
+                                      Rank {cutoffRank.toLocaleString()}
+                                    </div>
+                                    <div className="text-sm text-gray-500">
+                                      ~{estimatedMarks} marks needed
+                                    </div>
+                                  </div>
+                                )
+                              })}
+                            </div>
+                          </>
+                        )}
+
+                        <div className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-blue-100 p-3 text-sm text-blue-800">
+                          <Info className="h-4 w-4" />
+                          <span>
+                            Cutoffs based on NEET 2024 MCC counselling data. 2025 cutoffs may vary.
+                          </span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    {/* Rank/Marks Toggle */}
+                    <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                      <div className="mb-3 flex items-center justify-between">
+                        <label className="text-sm font-semibold text-gray-700">
+                          Enter your NEET Score *
+                        </label>
+                        <div className="flex rounded-full bg-white p-1 shadow-sm">
+                          <button
+                            type="button"
+                            onClick={() => setInputMode('rank')}
+                            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
+                              inputMode === 'rank'
+                                ? 'bg-blue-600 text-white'
+                                : 'text-gray-600 hover:bg-gray-100'
+                            }`}
+                          >
+                            By Rank
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setInputMode('marks')}
+                            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
+                              inputMode === 'marks'
+                                ? 'bg-blue-600 text-white'
+                                : 'text-gray-600 hover:bg-gray-100'
+                            }`}
+                          >
+                            By Marks
+                          </button>
+                        </div>
+                      </div>
+
+                      {inputMode === 'rank' ? (
+                        <div>
+                          <input
+                            type="number"
+                            id="rank"
+                            value={rank}
+                            onChange={(e) => setRank(e.target.value)}
+                            min="1"
+                            placeholder="Enter your All India Rank (AIR)"
+                            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                          />
+                        </div>
+                      ) : (
+                        <div className="space-y-2">
+                          <input
+                            type="number"
+                            id="marks"
+                            value={marks}
+                            onChange={(e) => setMarks(e.target.value)}
+                            min="0"
+                            max="720"
+                            placeholder="Enter your marks (out of 720)"
+                            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                          />
+                          {marks && parseInt(marks) >= 0 && parseInt(marks) <= 720 && (
+                            <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm">
+                              <TrendingUp className="h-4 w-4 text-blue-600" />
+                              <span className="text-blue-800">
+                                Estimated Rank: <strong>{parseInt(rank).toLocaleString()}</strong>
+                              </span>
+                              <span className="text-blue-600">(based on NEET 2024)</span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Primary Inputs */}
+                    <div className="grid gap-4 md:grid-cols-2">
+                      <div>
+                        <label
+                          htmlFor="category"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          Category *
+                        </label>
+                        <select
+                          id="category"
+                          value={category}
+                          onChange={(e) => setCategory(e.target.value)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="general">General</option>
+                          <option value="ews">EWS</option>
+                          <option value="obc">OBC (NCL)</option>
+                          <option value="sc">SC</option>
+                          <option value="st">ST</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="domicile"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          <span className="flex items-center gap-1">
+                            Your Domicile State
+                            <span title="Required for State Quota eligibility">
+                              <HelpCircle className="h-4 w-4 text-gray-400" />
+                            </span>
+                          </span>
+                        </label>
+                        <select
+                          id="domicile"
+                          value={domicileState}
+                          onChange={(e) => setDomicileState(e.target.value)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="">Select domicile state</option>
+                          {allStates.map((state) => (
+                            <option key={state} value={state}>
+                              {state}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Quota Selection */}
+                    <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+                      <label className="mb-3 block text-sm font-semibold text-blue-900">
+                        Quota Preference
+                      </label>
+                      <div className="flex flex-wrap gap-3">
+                        <label
+                          className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                            quotaPreference === 'all'
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-white text-gray-700 hover:bg-gray-100'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="quota"
+                            value="all"
+                            checked={quotaPreference === 'all'}
+                            onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
+                            className="hidden"
+                          />
+                          <Globe className="h-4 w-4" />
+                          All Quotas
+                        </label>
+                        <label
+                          className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                            quotaPreference === 'aiq'
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-white text-gray-700 hover:bg-gray-100'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="quota"
+                            value="aiq"
+                            checked={quotaPreference === 'aiq'}
+                            onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
+                            className="hidden"
+                          />
+                          <Globe className="h-4 w-4" />
+                          All India Quota (15%)
+                        </label>
+                        <label
+                          className={`flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                            quotaPreference === 'state'
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-white text-gray-700 hover:bg-gray-100'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="quota"
+                            value="state"
+                            checked={quotaPreference === 'state'}
+                            onChange={(e) => setQuotaPreference(e.target.value as QuotaPreference)}
+                            className="hidden"
+                          />
+                          <Home className="h-4 w-4" />
+                          State Quota (85%)
+                        </label>
+                      </div>
+                      {quotaPreference === 'state' && !domicileState && (
+                        <p className="mt-2 text-sm text-amber-700">
+                          ⚠️ Please select your domicile state above to see State Quota options
+                        </p>
+                      )}
+                    </div>
+
+                    {/* PwD Checkbox */}
+                    <div className="flex items-center gap-3 rounded-lg border border-purple-200 bg-purple-50 p-4">
+                      <label className="flex cursor-pointer items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={isPwD}
+                          onChange={(e) => setIsPwD(e.target.checked)}
+                          className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                        />
+                        <div>
+                          <span className="flex items-center gap-2 font-medium text-purple-900">
+                            <Accessibility className="h-5 w-5" />
+                            PwD Candidate (5% Horizontal Reservation)
+                          </span>
+                          <span className="text-sm text-purple-700">
+                            Check this if you have 40%+ benchmark disability
+                          </span>
+                        </div>
+                      </label>
+                    </div>
+
+                    {/* Additional Filters */}
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                      <div>
+                        <label
+                          htmlFor="type"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          College Type
+                        </label>
+                        <select
+                          id="type"
+                          value={collegeType}
+                          onChange={(e) => setCollegeType(e.target.value)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="All">All Types</option>
+                          <option value="Government">Government (incl. AIIMS, JIPMER)</option>
+                          <option value="Private/Deemed">Private & Deemed Universities</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="state"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          College Location
+                        </label>
+                        <select
+                          id="state"
+                          value={selectedState}
+                          onChange={(e) => setSelectedState(e.target.value)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="All">All States</option>
+                          {allStates.map((state) => (
+                            <option key={state} value={state}>
+                              {state}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="feeRange"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          Fee Range (Annual)
+                        </label>
+                        <select
+                          id="feeRange"
+                          value={feeRange}
+                          onChange={(e) => setFeeRange(e.target.value)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="All">All Fees</option>
+                          <option value="low">Below ₹1 Lakh (Govt)</option>
+                          <option value="medium">₹1 - ₹15 Lakhs</option>
+                          <option value="high">Above ₹15 Lakhs</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="sortBy"
+                          className="mb-2 block text-sm font-medium text-gray-700"
+                        >
+                          Sort By
+                        </label>
+                        <select
+                          id="sortBy"
+                          value={sortBy}
+                          onChange={(e) => setSortBy(e.target.value as SortOption)}
+                          className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        >
+                          <option value="cutoff">Cutoff Rank (Low to High)</option>
+                          <option value="fees">Fees (Low to High)</option>
+                          <option value="tier">College Tier</option>
+                          <option value="seats">Seats (High to Low)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <button
+                        onClick={handlePredict}
+                        disabled={isLoading}
+                        className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-semibold text-white transition-all disabled:opacity-70 ${
+                          hasSearched
+                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700'
+                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
+                        }`}
+                      >
+                        {getButtonText()}
+                      </button>
+                      {showResults && (
+                        <button
+                          onClick={handleReset}
+                          className="rounded-lg border-2 border-gray-300 px-6 py-4 font-semibold text-gray-600 transition-colors hover:bg-gray-50"
+                        >
+                          Reset
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Success Summary */}
+                    {showResults && results.length > 0 && (
+                      <div className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                            <CheckCircle className="h-5 w-5 text-green-600" />
+                          </div>
+                          <div>
+                            <p className="font-semibold text-green-800">
+                              Found {results.length} admission options in {uniqueColleges.length}{' '}
+                              colleges!
+                            </p>
+                            <div className="flex flex-wrap gap-2 text-sm text-green-600">
+                              <span className="flex items-center gap-1">
+                                <Globe className="h-3 w-3" /> {aiqCount} AIQ
+                              </span>
+                              <span>•</span>
+                              <span className="flex items-center gap-1">
+                                <Home className="h-3 w-3" /> {stateCount} State
+                              </span>
+                              <span>•</span>
+                              <span>{govtCount} Govt</span>
+                              <span>•</span>
+                              <span>{privateCount} Private</span>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          onClick={scrollToResults}
+                          className="flex items-center gap-1 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-700"
+                        >
+                          View Results
+                          <ArrowDown className="h-4 w-4" />
+                        </button>
+                      </div>
+                    )}
+
+                    {showResults && results.length === 0 && (
+                      <div className="flex items-center gap-3 rounded-lg bg-yellow-50 p-4">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100">
+                          <Info className="h-5 w-5 text-yellow-600" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-yellow-800">
+                            No matching colleges found
+                          </p>
+                          <p className="text-sm text-yellow-600">
+                            Try adjusting your rank, quota preference, or other filters
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex items-start gap-2 rounded-lg bg-blue-50 p-4">
+                      <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
+                      <div className="text-sm text-blue-800">
+                        <p className="mb-1">
+                          <strong>AIQ (15%):</strong> All India Quota seats open to all states.{' '}
+                          <strong>State Quota (85%):</strong> Reserved for state domicile holders
+                          (cutoffs are generally more relaxed).
+                        </p>
+                        <p>Data based on NEET 2024 MCC counselling. Actual cutoffs may vary.</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
