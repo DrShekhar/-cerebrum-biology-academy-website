@@ -43,6 +43,18 @@ export const metadata: Metadata = {
 
 const tools = [
   {
+    title: 'NEET Exam Countdown',
+    description:
+      'Track days left for NEET 2026 with live countdown, study time calculator, and personalized preparation phase guidance.',
+    href: '/neet-exam-countdown',
+    icon: Timer,
+    color: 'from-violet-500 to-purple-600',
+    bgColor: 'bg-violet-100',
+    iconColor: 'text-violet-600',
+    features: ['Live countdown', 'Study time calculator', 'Streak tracker'],
+    users: 'New',
+  },
+  {
     title: 'NEET Rank Predictor',
     description:
       'Predict your All India Rank based on your expected NEET score. Uses historical data and statistical analysis.',
@@ -88,18 +100,6 @@ const tools = [
     bgColor: 'bg-purple-100',
     iconColor: 'text-purple-600',
     features: ['Instant results', 'Section-wise analysis', 'Incorrect question explanations'],
-    users: 'New',
-  },
-  {
-    title: 'NEET Exam Countdown',
-    description:
-      'Track days left for NEET 2026 with live countdown, study time calculator, and personalized preparation phase guidance.',
-    href: '/neet-exam-countdown',
-    icon: Timer,
-    color: 'from-rose-500 to-red-500',
-    bgColor: 'bg-rose-100',
-    iconColor: 'text-rose-600',
-    features: ['Live countdown', 'Study time calculator', 'Streak tracker'],
     users: 'New',
   },
 ]

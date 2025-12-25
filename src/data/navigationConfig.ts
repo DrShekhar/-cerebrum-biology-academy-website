@@ -77,6 +77,14 @@ export const navigationConfig: NavigationSection[] = [
     icon: 'Calculator',
     items: [
       {
+        id: 'exam-countdown',
+        title: 'NEET Exam Countdown',
+        href: '/neet-exam-countdown',
+        description: 'Live countdown to NEET 2026 with study tracker',
+        keywords: ['countdown', 'neet countdown', 'days left', 'exam timer', 'study tracker'],
+        isNew: true,
+      },
+      {
         id: 'college-predictor',
         title: 'NEET College Predictor',
         href: '/neet-college-predictor',

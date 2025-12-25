@@ -30,6 +30,8 @@ import {
   Star,
   Rocket,
   Trophy,
+  Sun,
+  Moon,
 } from 'lucide-react'
 
 // NEET 2026 Exam Date - May 3, 2026, 2:00 PM IST
@@ -160,6 +162,48 @@ interface TimeLeft {
   total: number
 }
 
+// Theme Toggle Component
+function ThemeToggle({ isDark, onToggle }: { isDark: boolean; onToggle: () => void }) {
+  return (
+    <button
+      onClick={onToggle}
+      className={`group fixed right-4 top-4 z-50 flex h-12 w-12 items-center justify-center rounded-full border shadow-lg backdrop-blur-xl transition-all duration-500 hover:scale-110 md:right-6 md:top-6 md:h-14 md:w-14 ${
+        isDark
+          ? 'border-white/20 bg-white/10 shadow-violet-500/20 hover:border-violet-500/50 hover:shadow-violet-500/30'
+          : 'border-gray-200 bg-white/80 shadow-amber-500/20 hover:border-amber-500/50 hover:shadow-amber-500/30'
+      }`}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      <div className="relative h-6 w-6 md:h-7 md:w-7">
+        {/* Sun Icon */}
+        <Sun
+          className={`absolute inset-0 h-full w-full transition-all duration-500 ${
+            isDark
+              ? 'rotate-90 scale-0 text-amber-400 opacity-0'
+              : 'rotate-0 scale-100 text-amber-500 opacity-100'
+          }`}
+        />
+        {/* Moon Icon */}
+        <Moon
+          className={`absolute inset-0 h-full w-full transition-all duration-500 ${
+            isDark
+              ? 'rotate-0 scale-100 text-violet-300 opacity-100'
+              : '-rotate-90 scale-0 text-violet-400 opacity-0'
+          }`}
+        />
+      </div>
+      {/* Glow effect */}
+      <div
+        className={`absolute inset-0 rounded-full transition-opacity duration-500 ${
+          isDark
+            ? 'bg-gradient-to-r from-violet-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100'
+            : 'bg-gradient-to-r from-amber-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100'
+        }`}
+      />
+    </button>
+  )
+}
+
 export default function NEETExamCountdownPage() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -178,6 +222,7 @@ export default function NEETExamCountdownPage() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
   const [showToast, setShowToast] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   const calculateTimeLeft = useCallback((): TimeLeft => {
     const now = new Date()
@@ -194,6 +239,13 @@ export default function NEETExamCountdownPage() {
 
   useEffect(() => {
     setMounted(true)
+
+    // Load theme preference
+    const savedTheme = localStorage.getItem('neetCountdownTheme')
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark')
+    }
+
     const savedStreak = localStorage.getItem('neetStreak')
     const savedLastDate = localStorage.getItem('neetLastStudyDate')
     const today = new Date().toDateString()
@@ -228,6 +280,12 @@ export default function NEETExamCountdownPage() {
     setTimeLeft(calculateTimeLeft())
     return () => clearInterval(timer)
   }, [calculateTimeLeft])
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode
+    setIsDarkMode(newTheme)
+    localStorage.setItem('neetCountdownTheme', newTheme ? 'dark' : 'light')
+  }
 
   const markStudied = () => {
     const today = new Date().toDateString()
@@ -307,16 +365,70 @@ export default function NEETExamCountdownPage() {
     },
   ]
 
+  // Theme-specific classes
+  const theme = {
+    // Backgrounds
+    pageBg: isDarkMode ? 'bg-[#0a0a1a]' : 'bg-gradient-to-br from-slate-50 via-white to-blue-50',
+    cardBg: isDarkMode ? 'bg-white/5' : 'bg-white/70',
+    cardInnerBg: isDarkMode ? 'bg-[#0f0f24]/80' : 'bg-white/90',
+    cardBorder: isDarkMode ? 'border-white/10' : 'border-gray-200/50',
+    cardHoverBorder: isDarkMode ? 'hover:border-violet-500/30' : 'hover:border-violet-400/50',
+
+    // Text
+    textPrimary: isDarkMode ? 'text-white' : 'text-gray-900',
+    textSecondary: isDarkMode ? 'text-violet-300' : 'text-gray-600',
+    textMuted: isDarkMode ? 'text-violet-400' : 'text-gray-500',
+    textAccent: isDarkMode ? 'text-violet-400' : 'text-violet-600',
+
+    // Gradients
+    gradientText: isDarkMode
+      ? 'bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400'
+      : 'bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600',
+    gradientBg: isDarkMode
+      ? 'from-violet-600/20 via-indigo-600/20 to-violet-600/20'
+      : 'from-violet-100 via-purple-50 to-indigo-100',
+
+    // Buttons
+    buttonPrimary: isDarkMode
+      ? 'bg-gradient-to-r from-violet-600 to-indigo-600 shadow-violet-500/25 hover:shadow-violet-500/30'
+      : 'bg-gradient-to-r from-violet-500 to-indigo-500 shadow-violet-400/30 hover:shadow-violet-400/40',
+    buttonSecondary: isDarkMode
+      ? 'border-violet-500/50 text-violet-300 hover:border-violet-500 hover:bg-violet-500/10'
+      : 'border-violet-400 text-violet-600 hover:border-violet-500 hover:bg-violet-50',
+
+    // Progress bars
+    progressBg: isDarkMode ? 'bg-violet-900/50' : 'bg-violet-100',
+
+    // Inputs
+    inputBg: isDarkMode ? 'bg-white/5' : 'bg-white',
+    inputBorder: isDarkMode ? 'border-white/10' : 'border-gray-200',
+    inputFocus: isDarkMode ? 'focus:border-violet-500' : 'focus:border-violet-400',
+
+    // Overlays
+    overlayGradient: isDarkMode
+      ? 'from-violet-900/20 via-transparent to-transparent'
+      : 'from-violet-200/30 via-transparent to-transparent',
+    gridPattern: isDarkMode
+      ? 'bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)]'
+      : 'bg-[linear-gradient(rgba(139,92,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.05)_1px,transparent_1px)]',
+  }
+
   if (!mounted) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0a0a1a]">
+      <div
+        className={`flex min-h-screen items-center justify-center ${isDarkMode ? 'bg-[#0a0a1a]' : 'bg-white'}`}
+      >
         <div className="text-center">
           <div className="relative mx-auto h-20 w-20">
             <div className="absolute inset-0 animate-ping rounded-full bg-violet-500/30" />
             <div className="absolute inset-2 animate-spin rounded-full border-4 border-transparent border-t-violet-500" />
             <div className="absolute inset-4 rounded-full bg-gradient-to-br from-violet-600 to-indigo-600" />
           </div>
-          <p className="mt-6 text-lg font-medium text-violet-300">Loading countdown...</p>
+          <p
+            className={`mt-6 text-lg font-medium ${isDarkMode ? 'text-violet-300' : 'text-violet-600'}`}
+          >
+            Loading countdown...
+          </p>
         </div>
       </div>
     )
@@ -341,9 +453,12 @@ export default function NEETExamCountdownPage() {
         }}
       />
 
+      {/* Theme Toggle */}
+      <ThemeToggle isDark={isDarkMode} onToggle={toggleTheme} />
+
       {/* Toast */}
       {showToast && (
-        <div className="fixed right-4 top-4 z-50 animate-bounce rounded-2xl bg-gradient-to-r from-green-500 to-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
+        <div className="fixed right-4 top-20 z-50 animate-bounce rounded-2xl bg-gradient-to-r from-green-500 to-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
           <div className="flex items-center gap-3">
             <CheckCircle className="h-6 w-6" />
             <span className="font-semibold">Copied to clipboard!</span>
@@ -351,64 +466,84 @@ export default function NEETExamCountdownPage() {
         </div>
       )}
 
-      <main className="relative min-h-screen overflow-hidden bg-[#0a0a1a]">
+      <main
+        className={`relative min-h-screen overflow-hidden transition-colors duration-500 ${theme.pageBg}`}
+      >
         {/* Animated Background */}
         <div className="pointer-events-none fixed inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/20 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent" />
-          <div className="absolute -left-40 top-0 h-[500px] w-[500px] animate-pulse rounded-full bg-violet-600/10 blur-[120px]" />
           <div
-            className="absolute -right-40 top-1/3 h-[400px] w-[400px] animate-pulse rounded-full bg-indigo-600/10 blur-[100px]"
+            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${theme.overlayGradient}`}
+          />
+          <div
+            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] ${isDarkMode ? 'from-indigo-900/20 via-transparent to-transparent' : 'from-blue-200/30 via-transparent to-transparent'}`}
+          />
+          <div
+            className={`absolute -left-40 top-0 h-[500px] w-[500px] animate-pulse rounded-full blur-[120px] ${isDarkMode ? 'bg-violet-600/10' : 'bg-violet-300/20'}`}
+          />
+          <div
+            className={`absolute -right-40 top-1/3 h-[400px] w-[400px] animate-pulse rounded-full blur-[100px] ${isDarkMode ? 'bg-indigo-600/10' : 'bg-blue-300/20'}`}
             style={{ animationDelay: '1s' }}
           />
           <div
-            className="absolute -bottom-40 left-1/3 h-[600px] w-[600px] animate-pulse rounded-full bg-fuchsia-600/10 blur-[140px]"
+            className={`absolute -bottom-40 left-1/3 h-[600px] w-[600px] animate-pulse rounded-full blur-[140px] ${isDarkMode ? 'bg-fuchsia-600/10' : 'bg-purple-300/20'}`}
             style={{ animationDelay: '2s' }}
           />
           {/* Grid Pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+          <div className={`absolute inset-0 ${theme.gridPattern} bg-[size:60px_60px]`} />
         </div>
 
         {/* Hero Section */}
         <section className="relative pb-20 pt-8 md:pb-32 md:pt-12">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <nav className="mb-8 flex items-center gap-2 text-sm text-violet-400/70">
-              <Link href="/" className="transition-colors hover:text-violet-300">
+            <nav className={`mb-8 flex items-center gap-2 text-sm ${theme.textMuted}`}>
+              <Link
+                href="/"
+                className={`transition-colors ${isDarkMode ? 'hover:text-violet-300' : 'hover:text-violet-600'}`}
+              >
                 Home
               </Link>
-              <span className="text-violet-600">/</span>
-              <Link href="/neet-tools" className="transition-colors hover:text-violet-300">
+              <span className={isDarkMode ? 'text-violet-600' : 'text-violet-300'}>/</span>
+              <Link
+                href="/neet-tools"
+                className={`transition-colors ${isDarkMode ? 'hover:text-violet-300' : 'hover:text-violet-600'}`}
+              >
                 NEET Tools
               </Link>
-              <span className="text-violet-600">/</span>
-              <span className="text-violet-300">Exam Countdown</span>
+              <span className={isDarkMode ? 'text-violet-600' : 'text-violet-300'}>/</span>
+              <span className={theme.textAccent}>Exam Countdown</span>
             </nav>
 
             <div className="text-center">
               {/* Badge */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2.5 backdrop-blur-sm">
+              <div
+                className={`mb-6 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 backdrop-blur-sm ${isDarkMode ? 'border-violet-500/30 bg-violet-500/10' : 'border-violet-200 bg-violet-50/80'}`}
+              >
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
                 </span>
-                <span className="text-sm font-medium text-violet-300">
+                <span className={`text-sm font-medium ${theme.textAccent}`}>
                   Live Countdown to NEET 2026
                 </span>
               </div>
 
               {/* Title */}
-              <h1 className="mb-4 text-4xl font-black tracking-tight text-white md:text-6xl lg:text-7xl">
-                <span className="bg-gradient-to-r from-white via-violet-200 to-white bg-clip-text text-transparent">
+              <h1
+                className={`mb-4 text-4xl font-black tracking-tight md:text-6xl lg:text-7xl ${theme.textPrimary}`}
+              >
+                <span
+                  className={`bg-clip-text text-transparent ${isDarkMode ? 'bg-gradient-to-r from-white via-violet-200 to-white' : 'bg-gradient-to-r from-gray-900 via-violet-800 to-gray-900'}`}
+                >
                   NEET 2026
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
                   Exam Countdown
                 </span>
               </h1>
 
-              <p className="mx-auto mb-10 max-w-2xl text-lg text-violet-300/70">
+              <p className={`mx-auto mb-10 max-w-2xl text-lg ${theme.textSecondary}`}>
                 Every second counts. Track your journey to becoming a doctor.
               </p>
 
@@ -431,13 +566,15 @@ export default function NEETExamCountdownPage() {
                   <div key={item.label} className="group relative">
                     {/* Glow Effect */}
                     <div
-                      className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${item.color} opacity-50 blur-lg transition-all duration-500 group-hover:opacity-75`}
+                      className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${item.color} blur-lg transition-all duration-500 ${isDarkMode ? 'opacity-50 group-hover:opacity-75' : 'opacity-30 group-hover:opacity-50'}`}
                     />
 
-                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl md:rounded-3xl md:p-6">
+                    <div
+                      className={`relative overflow-hidden rounded-2xl border p-4 backdrop-blur-xl md:rounded-3xl md:p-6 ${theme.cardBorder} ${theme.cardBg}`}
+                    >
                       {/* Inner Glow */}
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-10`}
+                        className={`absolute inset-0 bg-gradient-to-br ${item.color} ${isDarkMode ? 'opacity-10' : 'opacity-5'}`}
                       />
 
                       <div className="relative">
@@ -446,7 +583,9 @@ export default function NEETExamCountdownPage() {
                         >
                           {item.value.toString().padStart(2, '0')}
                         </div>
-                        <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-violet-400 md:text-sm">
+                        <div
+                          className={`mt-2 text-xs font-semibold uppercase tracking-widest md:text-sm ${theme.textAccent}`}
+                        >
                           {item.label}
                         </div>
                       </div>
@@ -464,7 +603,7 @@ export default function NEETExamCountdownPage() {
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-sm text-violet-300 backdrop-blur-sm"
+                    className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm backdrop-blur-sm ${isDarkMode ? 'border-violet-500/20 bg-violet-500/10 text-violet-300' : 'border-violet-200 bg-violet-50/80 text-violet-700'}`}
                   >
                     <item.icon className="h-4 w-4" />
                     <span>{item.text}</span>
@@ -475,7 +614,7 @@ export default function NEETExamCountdownPage() {
               {/* Share Button */}
               <button
                 onClick={shareCountdown}
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-4 font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30"
+                className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl ${theme.buttonPrimary}`}
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 transition-opacity group-hover:opacity-100" />
                 <Share2 className="relative h-5 w-5" />
@@ -488,8 +627,10 @@ export default function NEETExamCountdownPage() {
         {/* Phase Indicator */}
         <section className="relative -mt-4 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-violet-600/20 via-indigo-600/20 to-violet-600/20 p-1 backdrop-blur-xl">
-              <div className="rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+            <div
+              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 backdrop-blur-xl ${isDarkMode ? 'border-white/10 from-violet-600/20 via-indigo-600/20 to-violet-600/20' : 'border-violet-200/50 from-violet-100 via-purple-50 to-indigo-100'}`}
+            >
+              <div className={`rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="flex items-center gap-4">
                     <div className="relative">
@@ -499,38 +640,40 @@ export default function NEETExamCountdownPage() {
                       </div>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-violet-400">Current Phase</p>
-                      <h3 className="text-2xl font-bold text-white md:text-3xl">
+                      <p className={`text-sm font-medium ${theme.textAccent}`}>Current Phase</p>
+                      <h3 className={`text-2xl font-bold md:text-3xl ${theme.textPrimary}`}>
                         {currentPhase.name}
                       </h3>
                     </div>
                   </div>
-                  <p className="max-w-md text-center text-violet-300/80 md:text-right">
+                  <p className={`max-w-md text-center md:text-right ${theme.textSecondary}`}>
                     {currentPhase.tip}
                   </p>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="mt-8">
-                  <div className="mb-3 flex justify-between text-xs font-medium text-violet-400">
+                  <div
+                    className={`mb-3 flex justify-between text-xs font-medium ${theme.textMuted}`}
+                  >
                     {PHASES.map((phase) => (
                       <span
                         key={phase.name}
-                        className={phase.name === currentPhase.name ? 'text-white' : ''}
+                        className={phase.name === currentPhase.name ? theme.textPrimary : ''}
                       >
                         {phase.name}
                       </span>
                     ))}
                   </div>
-                  <div className="h-3 overflow-hidden rounded-full bg-violet-900/50">
+                  <div className={`h-3 overflow-hidden rounded-full ${theme.progressBg}`}>
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-indigo-500 transition-all duration-1000"
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
-                  <p className="mt-3 text-center text-sm text-violet-400">
-                    <span className="font-bold text-white">{progressPercent}%</span> of your NEET
-                    journey completed
+                  <p className={`mt-3 text-center text-sm ${theme.textMuted}`}>
+                    <span className={`font-bold ${theme.textPrimary}`}>{progressPercent}%</span> of
+                    your NEET journey completed
                   </p>
                 </div>
               </div>
@@ -542,13 +685,11 @@ export default function NEETExamCountdownPage() {
         <section className="relative px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
+              <h2 className={`mb-3 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
                 Important{' '}
-                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                  Dates
-                </span>
+                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>Dates</span>
               </h2>
-              <p className="flex items-center justify-center gap-2 text-sm text-violet-400/70">
+              <p className={`flex items-center justify-center gap-2 text-sm ${theme.textMuted}`}>
                 <AlertCircle className="h-4 w-4" />
                 Tentative dates based on previous years. Official dates will be announced by NTA.
               </p>
@@ -564,7 +705,7 @@ export default function NEETExamCountdownPage() {
                     className={`group relative overflow-hidden rounded-2xl border transition-all duration-300 hover:scale-105 ${
                       isExam
                         ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/20 to-orange-500/20'
-                        : 'border-white/10 bg-white/5 hover:border-violet-500/30 hover:bg-white/10'
+                        : `${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`
                     }`}
                   >
                     {isExam && (
@@ -577,11 +718,11 @@ export default function NEETExamCountdownPage() {
                         <Icon className="h-6 w-6 text-white" />
                       </div>
                       <h3
-                        className={`mb-1 font-semibold ${isExam ? 'text-amber-300' : 'text-white'}`}
+                        className={`mb-1 font-semibold ${isExam ? 'text-amber-500' : theme.textPrimary}`}
                       >
                         {item.event}
                       </h3>
-                      <p className="text-sm text-violet-400">{item.date}</p>
+                      <p className={`text-sm ${theme.textMuted}`}>{item.date}</p>
                     </div>
                   </div>
                 )
@@ -595,21 +736,25 @@ export default function NEETExamCountdownPage() {
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-2">
               {/* Study Calculator */}
-              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl transition-all hover:border-blue-500/30">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+              <div
+                className={`group relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 opacity-0 transition-opacity group-hover:opacity-100`}
+                />
+                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                   <div className="mb-6 flex items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-500/25">
                       <Calculator className="h-7 w-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Study Calculator</h3>
-                      <p className="text-sm text-violet-400">Plan your preparation hours</p>
+                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Study Calculator</h3>
+                      <p className={`text-sm ${theme.textMuted}`}>Plan your preparation hours</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <label className="mb-3 block text-sm font-medium text-violet-300">
+                    <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
                       Hours you can study per day
                     </label>
                     <div className="flex items-center gap-4">
@@ -619,7 +764,7 @@ export default function NEETExamCountdownPage() {
                         max="12"
                         value={studyHoursPerDay}
                         onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
-                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-violet-900/50 accent-blue-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500 [&::-webkit-slider-thumb]:to-indigo-500 [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-blue-500/50"
+                        className={`h-2 w-full cursor-pointer appearance-none rounded-full accent-blue-500 ${theme.progressBg} [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500 [&::-webkit-slider-thumb]:to-indigo-500 [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-blue-500/50`}
                         aria-label="Study hours per day"
                         aria-valuemin={2}
                         aria-valuemax={12}
@@ -631,24 +776,32 @@ export default function NEETExamCountdownPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div
+                    className={`space-y-3 rounded-2xl border p-5 ${theme.cardBorder} ${theme.cardBg}`}
+                  >
                     {isExamOver ? (
                       <div className="py-6 text-center">
                         <Award className="mx-auto mb-3 h-14 w-14 text-green-500" />
-                        <p className="text-xl font-bold text-white">NEET 2026 Completed!</p>
-                        <p className="text-violet-400">Hope you did your best!</p>
+                        <p className={`text-xl font-bold ${theme.textPrimary}`}>
+                          NEET 2026 Completed!
+                        </p>
+                        <p className={theme.textMuted}>Hope you did your best!</p>
                       </div>
                     ) : isExamDay ? (
                       <div className="py-6 text-center">
                         <Sparkles className="mx-auto mb-3 h-14 w-14 animate-pulse text-amber-500" />
-                        <p className="text-xl font-bold text-white">Exam Day!</p>
-                        <p className="text-violet-400">All the best! You&apos;ve prepared well.</p>
+                        <p className={`text-xl font-bold ${theme.textPrimary}`}>Exam Day!</p>
+                        <p className={theme.textMuted}>All the best! You&apos;ve prepared well.</p>
                       </div>
                     ) : (
                       <>
-                        <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                          <span className="font-medium text-violet-300">Total Hours Remaining</span>
-                          <span className="text-3xl font-bold text-blue-400">
+                        <div
+                          className={`flex items-center justify-between border-b pb-4 ${theme.cardBorder}`}
+                        >
+                          <span className={`font-medium ${theme.textSecondary}`}>
+                            Total Hours Remaining
+                          </span>
+                          <span className="text-3xl font-bold text-blue-500">
                             {totalStudyHours.toLocaleString()}h
                           </span>
                         </div>
@@ -685,11 +838,13 @@ export default function NEETExamCountdownPage() {
                               >
                                 <item.icon className="h-4 w-4 text-white" />
                               </div>
-                              <span className="text-violet-300">
+                              <span className={theme.textSecondary}>
                                 {item.subject} ({item.percent})
                               </span>
                             </div>
-                            <span className="font-semibold text-white">{item.hours}h</span>
+                            <span className={`font-semibold ${theme.textPrimary}`}>
+                              {item.hours}h
+                            </span>
                           </div>
                         ))}
                       </>
@@ -699,16 +854,18 @@ export default function NEETExamCountdownPage() {
               </div>
 
               {/* Quick Stats */}
-              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl transition-all hover:border-fuchsia-500/30">
+              <div
+                className={`group relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/10 to-violet-600/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                   <div className="mb-6 flex items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-violet-600 shadow-lg shadow-fuchsia-500/25">
                       <Target className="h-7 w-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Quick Stats</h3>
-                      <p className="text-sm text-violet-400">Exam pattern at a glance</p>
+                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Quick Stats</h3>
+                      <p className={`text-sm ${theme.textMuted}`}>Exam pattern at a glance</p>
                     </div>
                   </div>
 
@@ -741,22 +898,28 @@ export default function NEETExamCountdownPage() {
                     ].map((stat) => (
                       <div
                         key={stat.label}
-                        className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center transition-all hover:bg-white/10"
+                        className={`rounded-2xl border p-4 text-center transition-all ${theme.cardBorder} ${theme.cardBg} hover:bg-opacity-80`}
                       >
                         <div
                           className={`bg-gradient-to-r ${stat.color} bg-clip-text text-3xl font-bold text-transparent`}
                         >
                           {stat.value}
                         </div>
-                        <div className="mt-1 text-sm font-medium text-violet-300">{stat.label}</div>
-                        <div className="text-xs text-violet-500">({stat.sub})</div>
+                        <div className={`mt-1 text-sm font-medium ${theme.textSecondary}`}>
+                          {stat.label}
+                        </div>
+                        <div className={`text-xs ${theme.textMuted}`}>({stat.sub})</div>
                       </div>
                     ))}
                   </div>
 
                   {/* Subject Distribution */}
-                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <h4 className="mb-4 font-semibold text-white">Question Distribution</h4>
+                  <div
+                    className={`mt-6 rounded-2xl border p-5 ${theme.cardBorder} ${theme.cardBg}`}
+                  >
+                    <h4 className={`mb-4 font-semibold ${theme.textPrimary}`}>
+                      Question Distribution
+                    </h4>
                     <div className="space-y-3">
                       {[
                         {
@@ -783,12 +946,12 @@ export default function NEETExamCountdownPage() {
                       ].map((item) => (
                         <div key={item.subject}>
                           <div className="mb-1 flex items-center justify-between text-sm">
-                            <span className="text-violet-300">{item.subject}</span>
-                            <span className="font-medium text-white">
+                            <span className={theme.textSecondary}>{item.subject}</span>
+                            <span className={`font-medium ${theme.textPrimary}`}>
                               {item.questions} Q ({item.marks} marks)
                             </span>
                           </div>
-                          <div className="h-2 overflow-hidden rounded-full bg-violet-900/50">
+                          <div className={`h-2 overflow-hidden rounded-full ${theme.progressBg}`}>
                             <div
                               className={`h-full rounded-full ${item.color}`}
                               style={{ width: `${item.percent}%` }}
@@ -809,21 +972,25 @@ export default function NEETExamCountdownPage() {
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-2">
               {/* Target Score */}
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl">
-                <div className="rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+              <div
+                className={`relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl ${theme.cardBorder} ${theme.cardBg}`}
+              >
+                <div className={`rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                   <div className="mb-6 flex items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg shadow-green-500/25">
                       <Trophy className="h-7 w-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Your Target</h3>
-                      <p className="text-sm text-violet-400">Set your goal and track progress</p>
+                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Your Target</h3>
+                      <p className={`text-sm ${theme.textMuted}`}>
+                        Set your goal and track progress
+                      </p>
                     </div>
                   </div>
 
                   <div className="space-y-5">
                     <div>
-                      <label className="mb-3 block text-sm font-medium text-violet-300">
+                      <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
                         Target Score
                       </label>
                       <div className="flex gap-3">
@@ -834,7 +1001,7 @@ export default function NEETExamCountdownPage() {
                             className={`flex-1 rounded-xl px-4 py-3 font-bold transition-all ${
                               targetScore === score
                                 ? 'bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg shadow-green-500/25'
-                                : 'border border-white/10 bg-white/5 text-violet-300 hover:bg-white/10'
+                                : `border ${theme.cardBorder} ${theme.cardBg} ${theme.textSecondary} hover:bg-opacity-80`
                             }`}
                           >
                             {score}+
@@ -844,41 +1011,51 @@ export default function NEETExamCountdownPage() {
                     </div>
 
                     <div>
-                      <label className="mb-3 block text-sm font-medium text-violet-300">
+                      <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
                         Category
                       </label>
                       <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
-                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
+                        className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500/20 ${theme.inputBg} ${theme.inputBorder} ${theme.textPrimary} ${theme.inputFocus}`}
                       >
-                        <option value="General" className="bg-[#0f0f24]">
+                        <option
+                          value="General"
+                          className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}
+                        >
                           General
                         </option>
-                        <option value="EWS" className="bg-[#0f0f24]">
+                        <option value="EWS" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
                           EWS
                         </option>
-                        <option value="OBC-NCL" className="bg-[#0f0f24]">
+                        <option
+                          value="OBC-NCL"
+                          className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}
+                        >
                           OBC-NCL
                         </option>
-                        <option value="SC" className="bg-[#0f0f24]">
+                        <option value="SC" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
                           SC
                         </option>
-                        <option value="ST" className="bg-[#0f0f24]">
+                        <option value="ST" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
                           ST
                         </option>
                       </select>
                     </div>
 
-                    <div className="rounded-2xl bg-gradient-to-r from-green-500/20 to-green-600/20 p-5">
-                      <div className="flex items-center gap-2 text-green-400">
+                    <div
+                      className={`rounded-2xl p-5 ${isDarkMode ? 'bg-gradient-to-r from-green-500/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
+                    >
+                      <div className="flex items-center gap-2 text-green-500">
                         <Award className="h-5 w-5" />
                         <span className="font-semibold">Expected Rank Range</span>
                       </div>
-                      <p className="mt-2 text-3xl font-bold text-green-400">
+                      <p className="mt-2 text-3xl font-bold text-green-500">
                         {getRecommendedCutoff()}
                       </p>
-                      <p className="mt-1 text-sm text-green-400/70">
+                      <p
+                        className={`mt-1 text-sm ${isDarkMode ? 'text-green-400/70' : 'text-green-600/70'}`}
+                      >
                         With {targetScore}+ marks in {category} category
                       </p>
                     </div>
@@ -887,16 +1064,22 @@ export default function NEETExamCountdownPage() {
               </div>
 
               {/* Streak Tracker */}
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl">
-                <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 blur-3xl" />
-                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+              <div
+                className={`relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl ${theme.cardBorder} ${theme.cardBg}`}
+              >
+                <div
+                  className={`absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br blur-3xl ${isDarkMode ? 'from-orange-500/20 to-red-500/20' : 'from-orange-200/50 to-red-200/50'}`}
+                />
+                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                   <div className="mb-6 flex items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg shadow-orange-500/25">
                       <Flame className="h-7 w-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Study Streak</h3>
-                      <p className="text-sm text-violet-400">Build consistency, build success</p>
+                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Study Streak</h3>
+                      <p className={`text-sm ${theme.textMuted}`}>
+                        Build consistency, build success
+                      </p>
                     </div>
                   </div>
 
@@ -904,10 +1087,12 @@ export default function NEETExamCountdownPage() {
                     <div className="relative mx-auto h-36 w-36">
                       {/* Outer Ring */}
                       <div
-                        className="absolute inset-0 animate-spin rounded-full border-4 border-orange-500/20"
+                        className={`absolute inset-0 animate-spin rounded-full border-4 ${isDarkMode ? 'border-orange-500/20' : 'border-orange-300/30'}`}
                         style={{ animationDuration: '8s' }}
                       />
-                      <div className="absolute inset-2 rounded-full border-2 border-dashed border-orange-500/30" />
+                      <div
+                        className={`absolute inset-2 rounded-full border-2 border-dashed ${isDarkMode ? 'border-orange-500/30' : 'border-orange-400/40'}`}
+                      />
                       {/* Inner Circle */}
                       <div className="absolute inset-4 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-red-500 shadow-xl shadow-orange-500/30">
                         <Flame className="h-8 w-8 text-white" />
@@ -918,18 +1103,22 @@ export default function NEETExamCountdownPage() {
                   </div>
 
                   {studiedToday ? (
-                    <div className="rounded-2xl bg-gradient-to-r from-green-500/20 to-green-600/20 p-5 text-center">
+                    <div
+                      className={`rounded-2xl p-5 text-center ${isDarkMode ? 'bg-gradient-to-r from-green-500/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
+                    >
                       <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
-                      <p className="mt-3 text-lg font-bold text-green-400">
+                      <p className="mt-3 text-lg font-bold text-green-500">
                         Great job! You studied today!
                       </p>
-                      <p className="text-sm text-green-400/70">
+                      <p
+                        className={`text-sm ${isDarkMode ? 'text-green-400/70' : 'text-green-600/70'}`}
+                      >
                         Come back tomorrow to extend your streak
                       </p>
                     </div>
                   ) : (
                     <div className="text-center">
-                      <p className="mb-4 text-violet-400">Did you study today?</p>
+                      <p className={`mb-4 ${theme.textMuted}`}>Did you study today?</p>
                       <button
                         onClick={markStudied}
                         className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-bold text-white shadow-lg shadow-orange-500/25 transition-all hover:shadow-xl hover:shadow-orange-500/30"
@@ -951,13 +1140,19 @@ export default function NEETExamCountdownPage() {
         {/* Topper Quote */}
         <section className="relative px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-violet-600/20 via-fuchsia-600/20 to-indigo-600/20 p-1 backdrop-blur-xl">
-              <div className="rounded-[22px] bg-[#0f0f24]/80 p-8 text-center md:p-12">
-                <Quote className="mx-auto mb-6 h-12 w-12 text-violet-500/50" />
-                <blockquote className="mb-6 text-xl font-medium text-white md:text-2xl lg:text-3xl">
+            <div
+              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 backdrop-blur-xl ${isDarkMode ? 'border-white/10 from-violet-600/20 via-fuchsia-600/20 to-indigo-600/20' : 'border-violet-200/50 from-violet-100 via-purple-50 to-indigo-100'}`}
+            >
+              <div className={`rounded-[22px] p-8 text-center md:p-12 ${theme.cardInnerBg}`}>
+                <Quote
+                  className={`mx-auto mb-6 h-12 w-12 ${isDarkMode ? 'text-violet-500/50' : 'text-violet-400/50'}`}
+                />
+                <blockquote
+                  className={`mb-6 text-xl font-medium md:text-2xl lg:text-3xl ${theme.textPrimary}`}
+                >
                   &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
                 </blockquote>
-                <cite className="text-violet-400">
+                <cite className={theme.textAccent}>
                   — {TOPPER_QUOTES[currentQuote].author}, NEET {TOPPER_QUOTES[currentQuote].year}
                 </cite>
                 <div className="mt-8 flex justify-center gap-2">
@@ -968,7 +1163,7 @@ export default function NEETExamCountdownPage() {
                       className={`h-2 rounded-full transition-all ${
                         idx === currentQuote
                           ? 'w-8 bg-gradient-to-r from-violet-500 to-fuchsia-500'
-                          : 'w-2 bg-violet-700 hover:bg-violet-600'
+                          : `w-2 ${isDarkMode ? 'bg-violet-700 hover:bg-violet-600' : 'bg-violet-200 hover:bg-violet-300'}`
                       }`}
                     />
                   ))}
@@ -982,13 +1177,13 @@ export default function NEETExamCountdownPage() {
         <section className="relative px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
+              <h2 className={`mb-3 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
                 More{' '}
-                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
                   NEET Tools
                 </span>
               </h2>
-              <p className="text-violet-400/70">Complete your preparation with our free tools</p>
+              <p className={theme.textMuted}>Complete your preparation with our free tools</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -1018,22 +1213,26 @@ export default function NEETExamCountdownPage() {
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-violet-500/30 hover:bg-white/10"
+                  className={`group relative overflow-hidden rounded-2xl border p-6 transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
                 >
                   <div
                     className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${tool.color} shadow-lg transition-transform group-hover:scale-110`}
                   >
                     <tool.icon className="h-7 w-7 text-white" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-white group-hover:text-violet-300">
+                  <h3
+                    className={`mb-2 text-lg font-bold transition-colors ${theme.textPrimary} group-hover:text-violet-500`}
+                  >
                     {tool.title}
                   </h3>
-                  <p className="mb-4 text-sm text-violet-400/70">{tool.desc}</p>
+                  <p className={`mb-4 text-sm ${theme.textMuted}`}>{tool.desc}</p>
                   <span
                     className={`inline-flex items-center gap-1 bg-gradient-to-r ${tool.color} bg-clip-text text-sm font-semibold text-transparent`}
                   >
                     Try Now{' '}
-                    <ArrowRight className="h-4 w-4 text-violet-400 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight
+                      className={`h-4 w-4 transition-transform group-hover:translate-x-1 ${theme.textAccent}`}
+                    />
                   </span>
                 </Link>
               ))}
@@ -1044,9 +1243,9 @@ export default function NEETExamCountdownPage() {
         {/* FAQ */}
         <section className="relative px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
+            <h2 className={`mb-10 text-center text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
               Frequently Asked{' '}
-              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
                 Questions
               </span>
             </h2>
@@ -1055,22 +1254,22 @@ export default function NEETExamCountdownPage() {
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:border-violet-500/30"
+                  className={`overflow-hidden rounded-2xl border backdrop-blur-sm transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
                 >
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                     className="flex w-full items-center justify-between p-5 text-left"
                   >
-                    <span className="font-semibold text-white">{faq.q}</span>
+                    <span className={`font-semibold ${theme.textPrimary}`}>{faq.q}</span>
                     <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-lg bg-violet-500/20 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
+                      className={`flex h-8 w-8 items-center justify-center rounded-lg transition-transform ${isDarkMode ? 'bg-violet-500/20' : 'bg-violet-100'} ${expandedFaq === idx ? 'rotate-180' : ''}`}
                     >
-                      <ChevronDown className="h-5 w-5 text-violet-400" />
+                      <ChevronDown className={`h-5 w-5 ${theme.textAccent}`} />
                     </div>
                   </button>
                   {expandedFaq === idx && (
-                    <div className="border-t border-white/10 px-5 pb-5 pt-3">
-                      <p className="text-violet-300/80">{faq.a}</p>
+                    <div className={`border-t px-5 pb-5 pt-3 ${theme.cardBorder}`}>
+                      <p className={theme.textSecondary}>{faq.a}</p>
                     </div>
                   )}
                 </div>
@@ -1082,19 +1281,23 @@ export default function NEETExamCountdownPage() {
         {/* CTA */}
         <section className="relative px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-3xl border border-violet-500/30 bg-gradient-to-r from-violet-600/30 via-fuchsia-600/30 to-indigo-600/30 p-1">
-              <div className="rounded-[22px] bg-[#0f0f24]/90 px-8 py-16 text-center backdrop-blur-xl">
-                <Rocket className="mx-auto mb-6 h-16 w-16 text-violet-400" />
-                <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+            <div
+              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 ${isDarkMode ? 'border-violet-500/30 from-violet-600/30 via-fuchsia-600/30 to-indigo-600/30' : 'border-violet-300 from-violet-200 via-purple-100 to-indigo-200'}`}
+            >
+              <div
+                className={`rounded-[22px] px-8 py-16 text-center backdrop-blur-xl ${theme.cardInnerBg}`}
+              >
+                <Rocket className={`mx-auto mb-6 h-16 w-16 ${theme.textAccent}`} />
+                <h2 className={`mb-4 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
                   Start Your NEET 2026 Journey
                 </h2>
-                <p className="mb-8 text-lg text-violet-300/70">
+                <p className={`mb-8 text-lg ${theme.textSecondary}`}>
                   Every day counts. Begin your preparation with Cerebrum Biology Academy.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
                     href="/contact"
-                    className="group relative overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-4 font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30"
+                    className={`group relative overflow-hidden rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl ${theme.buttonPrimary}`}
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 transition-opacity group-hover:opacity-100" />
                     <span className="relative flex items-center gap-2">
@@ -1104,7 +1307,7 @@ export default function NEETExamCountdownPage() {
                   </Link>
                   <Link
                     href="/neet-tools"
-                    className="rounded-full border border-violet-500/50 px-8 py-4 font-semibold text-violet-300 transition-all hover:border-violet-500 hover:bg-violet-500/10"
+                    className={`rounded-full border px-8 py-4 font-semibold transition-all ${theme.buttonSecondary}`}
                   >
                     <span className="flex items-center gap-2">
                       Explore All Tools
