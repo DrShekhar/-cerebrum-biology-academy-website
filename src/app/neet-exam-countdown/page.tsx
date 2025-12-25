@@ -162,44 +162,43 @@ interface TimeLeft {
   total: number
 }
 
-// Theme Toggle Component
+// iOS-style Theme Toggle Component
 function ThemeToggle({ isDark, onToggle }: { isDark: boolean; onToggle: () => void }) {
   return (
     <button
       onClick={onToggle}
-      className={`group fixed right-4 top-4 z-50 flex h-12 w-12 items-center justify-center rounded-full border shadow-lg backdrop-blur-xl transition-all duration-500 hover:scale-110 md:right-6 md:top-6 md:h-14 md:w-14 ${
+      className={`fixed right-4 top-20 z-50 flex h-8 w-16 items-center rounded-full p-1 shadow-lg transition-all duration-300 md:right-6 md:top-24 md:h-9 md:w-[72px] ${
         isDark
-          ? 'border-white/20 bg-white/10 shadow-violet-500/20 hover:border-violet-500/50 hover:shadow-violet-500/30'
-          : 'border-gray-200 bg-white/80 shadow-amber-500/20 hover:border-amber-500/50 hover:shadow-amber-500/30'
+          ? 'bg-gradient-to-r from-indigo-600 to-violet-600 shadow-violet-500/30'
+          : 'bg-gradient-to-r from-amber-400 to-orange-400 shadow-amber-400/30'
       }`}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      <div className="relative h-6 w-6 md:h-7 md:w-7">
-        {/* Sun Icon */}
+      {/* Track icons */}
+      <div className="absolute inset-0 flex items-center justify-between px-2">
         <Sun
-          className={`absolute inset-0 h-full w-full transition-all duration-500 ${
-            isDark
-              ? 'rotate-90 scale-0 text-amber-400 opacity-0'
-              : 'rotate-0 scale-100 text-amber-500 opacity-100'
+          className={`h-4 w-4 transition-opacity duration-300 md:h-5 md:w-5 ${
+            isDark ? 'text-white/40' : 'text-white opacity-0'
           }`}
         />
-        {/* Moon Icon */}
         <Moon
-          className={`absolute inset-0 h-full w-full transition-all duration-500 ${
-            isDark
-              ? 'rotate-0 scale-100 text-violet-300 opacity-100'
-              : '-rotate-90 scale-0 text-violet-400 opacity-0'
+          className={`h-4 w-4 transition-opacity duration-300 md:h-5 md:w-5 ${
+            isDark ? 'text-white opacity-0' : 'text-white/40'
           }`}
         />
       </div>
-      {/* Glow effect */}
+      {/* Sliding knob */}
       <div
-        className={`absolute inset-0 rounded-full transition-opacity duration-500 ${
-          isDark
-            ? 'bg-gradient-to-r from-violet-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100'
-            : 'bg-gradient-to-r from-amber-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100'
+        className={`flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-md transition-all duration-300 md:h-7 md:w-7 ${
+          isDark ? 'translate-x-8 md:translate-x-9' : 'translate-x-0'
         }`}
-      />
+      >
+        {isDark ? (
+          <Moon className="h-3.5 w-3.5 text-violet-600 md:h-4 md:w-4" />
+        ) : (
+          <Sun className="h-3.5 w-3.5 text-amber-500 md:h-4 md:w-4" />
+        )}
+      </div>
     </button>
   )
 }
