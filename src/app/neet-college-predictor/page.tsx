@@ -703,7 +703,7 @@ _Powered by Cerebrum Biology Academy_`
             '@type': 'WebApplication',
             name: 'NEET College Predictor 2026',
             description:
-              'Free tool to find medical colleges based on your NEET rank. Comprehensive database of 215+ Government and Private/Deemed medical colleges with AIQ and State Quota cutoffs.',
+              'Free tool to find medical colleges based on your NEET rank. Comprehensive database of 470+ Government and Private/Deemed medical colleges with AIQ and State Quota cutoffs.',
             url: 'https://www.cerebrumbiologyacademy.com/neet-college-predictor',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -760,7 +760,7 @@ _Powered by Cerebrum Biology Academy_`
 
             <h1 className="mb-4 text-3xl font-bold md:text-5xl">NEET College Predictor 2026</h1>
             <p className="mb-6 max-w-2xl text-lg text-blue-100 md:text-xl">
-              India&apos;s most comprehensive NEET college predictor with 215+ medical colleges. Now
+              India&apos;s most comprehensive NEET college predictor with 470+ medical colleges. Now
               with <strong>All India Quota & State Quota</strong> cutoffs and{' '}
               <strong>PwD reservation</strong> support.
             </p>
@@ -768,7 +768,7 @@ _Powered by Cerebrum Biology Academy_`
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
                 <Building2 className="h-5 w-5" />
-                <span className="font-semibold">215+ Colleges</span>
+                <span className="font-semibold">470+ Colleges</span>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
                 <Globe className="h-5 w-5" />
@@ -1844,7 +1844,7 @@ _Powered by Cerebrum Biology Academy_`
                   patterns.
                 </p>
                 <p>
-                  <strong>Coverage:</strong> 215+ medical colleges including all 20 AIIMS, JIPMER,
+                  <strong>Coverage:</strong> 470+ medical colleges including all 20 AIIMS, JIPMER,
                   ESIC, top government and private/deemed universities with both AIQ and State Quota
                   data.
                 </p>
