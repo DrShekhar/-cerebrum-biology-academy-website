@@ -14,6 +14,7 @@ import {
   Clock,
   Users,
   ClipboardCheck,
+  Timer,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
     'NEET preparation tools',
     'free NEET tools',
     'NEET 2026 preparation',
+    'NEET exam countdown',
+    'NEET days left',
   ],
   openGraph: {
     title: 'Free NEET Preparation Tools 2026 | Cerebrum Biology Academy',
@@ -85,6 +88,18 @@ const tools = [
     bgColor: 'bg-purple-100',
     iconColor: 'text-purple-600',
     features: ['Instant results', 'Section-wise analysis', 'Incorrect question explanations'],
+    users: 'New',
+  },
+  {
+    title: 'NEET Exam Countdown',
+    description:
+      'Track days left for NEET 2026 with live countdown, study time calculator, and personalized preparation phase guidance.',
+    href: '/neet-exam-countdown',
+    icon: Timer,
+    color: 'from-rose-500 to-red-500',
+    bgColor: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    features: ['Live countdown', 'Study time calculator', 'Streak tracker'],
     users: 'New',
   },
 ]
