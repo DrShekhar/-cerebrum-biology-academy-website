@@ -1862,6 +1862,108 @@ _Powered by Cerebrum Biology Academy_`
           </div>
         </section>
 
+        {/* Explore More Section - SEO Pages */}
+        <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-2 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+              Explore Medical Colleges
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-gray-600">
+              Browse curated lists of medical colleges by category
+            </p>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {/* Government Medical Colleges */}
+              <Link
+                href="/neet-college-predictor/government-medical-colleges"
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-blue-300 hover:shadow-md"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                  <Building2 className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-blue-600">
+                  Government Medical Colleges
+                </h3>
+                <p className="mb-4 text-sm text-gray-600">
+                  Complete list of 324+ government medical colleges in India with fees under ₹1
+                  lakh/year
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-blue-600">
+                  View All <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+
+              {/* Low Fees Medical Colleges */}
+              <Link
+                href="/neet-college-predictor/low-fees-medical-colleges"
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-green-300 hover:shadow-md"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-600 transition-colors group-hover:bg-green-600 group-hover:text-white">
+                  <IndianRupee className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-green-600">
+                  Low Fees Medical Colleges
+                </h3>
+                <p className="mb-4 text-sm text-gray-600">
+                  Affordable MBBS options with annual fees under ₹5 lakh including private colleges
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-green-600">
+                  View All <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+
+              {/* Top Colleges by State */}
+              <Link
+                href="#college-search"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setSearchMode('college')
+                  document.getElementById('search-form')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-purple-300 hover:shadow-md"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 text-purple-600 transition-colors group-hover:bg-purple-600 group-hover:text-white">
+                  <Search className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-purple-600">
+                  Search by College Name
+                </h3>
+                <p className="mb-4 text-sm text-gray-600">
+                  Find specific colleges by name and view detailed cutoffs, fees, and seat
+                  information
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-purple-600">
+                  Search Now <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
+
+            {/* Additional Links */}
+            <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+              <Link
+                href="/neet-rank-predictor"
+                className="text-gray-600 underline-offset-2 hover:text-blue-600 hover:underline"
+              >
+                NEET Rank Predictor
+              </Link>
+              <span className="text-gray-300">|</span>
+              <Link
+                href="/neet-tools"
+                className="text-gray-600 underline-offset-2 hover:text-blue-600 hover:underline"
+              >
+                All NEET Tools
+              </Link>
+              <span className="text-gray-300">|</span>
+              <Link
+                href="/neet-coaching-fees-comparison"
+                className="text-gray-600 underline-offset-2 hover:text-blue-600 hover:underline"
+              >
+                Coaching Fees Comparison
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-700 px-4 py-16 text-white sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
