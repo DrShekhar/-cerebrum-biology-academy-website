@@ -217,6 +217,9 @@ export default function NEETExamCountdownPage() {
     return cutoffs[category]?.[targetScore] || 'Top 50,000'
   }
 
+  // Toast state for share feedback
+  const [showToast, setShowToast] = useState(false)
+
   // Share function
   const shareCountdown = () => {
     const text = `Only ${timeLeft.days} days left for NEET 2026! I'm preparing with Cerebrum Biology Academy. Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
@@ -224,9 +227,14 @@ export default function NEETExamCountdownPage() {
       navigator.share({ title: 'NEET 2026 Countdown', text, url: window.location.href })
     } else {
       navigator.clipboard.writeText(text)
-      alert('Countdown copied to clipboard!')
+      setShowToast(true)
+      setTimeout(() => setShowToast(false), 3000)
     }
   }
+
+  // Check if exam day or past
+  const isExamDay = timeLeft.days === 0 && timeLeft.hours <= 24
+  const isExamOver = timeLeft.total <= 0
 
   // FAQ Data
   const faqs = [
@@ -282,6 +290,16 @@ export default function NEETExamCountdownPage() {
           }),
         }}
       />
+
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed top-4 right-4 z-50 animate-pulse rounded-lg bg-green-600 px-4 py-3 text-white shadow-lg">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="h-5 w-5" />
+            <span>Countdown copied to clipboard!</span>
+          </div>
+        </div>
+      )}
 
       <main className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-blue-50">
         {/* Hero Section - Main Countdown */}
@@ -408,9 +426,13 @@ export default function NEETExamCountdownPage() {
         {/* Important Dates Timeline */}
         <section className="px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+            <h2 className="mb-2 text-center text-2xl font-bold text-gray-900 md:text-3xl">
               NEET 2026 Important Dates
             </h2>
+            <p className="mb-8 text-center text-sm text-gray-500">
+              <AlertCircle className="mr-1 inline-block h-4 w-4" />
+              Tentative dates based on previous years. Official dates will be announced by NTA.
+            </p>
 
             <div className="relative">
               {/* Timeline Line */}
@@ -469,6 +491,10 @@ export default function NEETExamCountdownPage() {
                       value={studyHoursPerDay}
                       onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
                       className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-blue-200 accent-blue-600"
+                      aria-label="Study hours per day"
+                      aria-valuemin={2}
+                      aria-valuemax={12}
+                      aria-valuenow={studyHoursPerDay}
                     />
                     <span className="w-16 rounded-lg bg-blue-600 px-3 py-2 text-center font-bold text-white">
                       {studyHoursPerDay}h
@@ -477,31 +503,47 @@ export default function NEETExamCountdownPage() {
                 </div>
 
                 <div className="space-y-3 rounded-xl bg-white p-4">
-                  <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-                    <span className="font-medium text-gray-700">Total Hours Remaining</span>
-                    <span className="text-2xl font-bold text-blue-600">{totalStudyHours.toLocaleString()}h</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2">
-                    <div className="flex items-center gap-2">
-                      <Leaf className="h-5 w-5 text-green-600" />
-                      <span className="text-gray-600">Biology (50%)</span>
+                  {isExamOver ? (
+                    <div className="text-center py-4">
+                      <Award className="mx-auto h-12 w-12 text-green-600 mb-2" />
+                      <p className="text-xl font-bold text-gray-900">NEET 2026 Completed!</p>
+                      <p className="text-sm text-gray-600">Hope you did your best!</p>
                     </div>
-                    <span className="font-semibold text-green-600">{biologyHours}h</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2">
-                    <div className="flex items-center gap-2">
-                      <Atom className="h-5 w-5 text-purple-600" />
-                      <span className="text-gray-600">Physics (25%)</span>
+                  ) : isExamDay ? (
+                    <div className="text-center py-4">
+                      <Sparkles className="mx-auto h-12 w-12 text-indigo-600 mb-2 animate-pulse" />
+                      <p className="text-xl font-bold text-gray-900">Exam Day!</p>
+                      <p className="text-sm text-gray-600">All the best! You&apos;ve prepared well.</p>
                     </div>
-                    <span className="font-semibold text-purple-600">{physicsHours}h</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2">
-                    <div className="flex items-center gap-2">
-                      <Beaker className="h-5 w-5 text-orange-600" />
-                      <span className="text-gray-600">Chemistry (25%)</span>
-                    </div>
-                    <span className="font-semibold text-orange-600">{chemistryHours}h</span>
-                  </div>
+                  ) : (
+                    <>
+                      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
+                        <span className="font-medium text-gray-700">Total Hours Remaining</span>
+                        <span className="text-2xl font-bold text-blue-600">{totalStudyHours.toLocaleString()}h</span>
+                      </div>
+                      <div className="flex items-center justify-between py-2">
+                        <div className="flex items-center gap-2">
+                          <Leaf className="h-5 w-5 text-green-600" />
+                          <span className="text-gray-600">Biology (50%)</span>
+                        </div>
+                        <span className="font-semibold text-green-600">{biologyHours}h</span>
+                      </div>
+                      <div className="flex items-center justify-between py-2">
+                        <div className="flex items-center gap-2">
+                          <Atom className="h-5 w-5 text-purple-600" />
+                          <span className="text-gray-600">Physics (25%)</span>
+                        </div>
+                        <span className="font-semibold text-purple-600">{physicsHours}h</span>
+                      </div>
+                      <div className="flex items-center justify-between py-2">
+                        <div className="flex items-center gap-2">
+                          <Beaker className="h-5 w-5 text-orange-600" />
+                          <span className="text-gray-600">Chemistry (25%)</span>
+                        </div>
+                        <span className="font-semibold text-orange-600">{chemistryHours}h</span>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
