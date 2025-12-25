@@ -67,11 +67,34 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
   const [selectedTab, setSelectedTab] = useState('overview')
   const [notifications, setNotifications] = useState<any[]>([])
 
-  // Real-time data fetching
+  // Real-time data fetching with Page Visibility API
   useEffect(() => {
     fetchDashboardData()
-    const interval = setInterval(fetchDashboardData, 30000) // Refresh every 30 seconds
-    return () => clearInterval(interval)
+
+    let intervalId: NodeJS.Timeout | null = null
+
+    const startInterval = () => {
+      intervalId = setInterval(() => {
+        fetchDashboardData()
+      }, 30000) // Refresh every 30 seconds
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.hidden && intervalId) {
+        clearInterval(intervalId)
+        intervalId = null
+      } else if (!document.hidden && !intervalId) {
+        startInterval()
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    startInterval()
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      if (intervalId) clearInterval(intervalId)
+    }
   }, [timeframe])
 
   const fetchDashboardData = async () => {

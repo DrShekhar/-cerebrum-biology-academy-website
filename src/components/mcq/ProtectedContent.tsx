@@ -91,28 +91,12 @@ export function ProtectedContent({
       }
     }
 
-    // DevTools detection via console timing
-    const detectDevTools = () => {
-      const threshold = 160
-      const before = performance.now()
-      // eslint-disable-next-line no-debugger
-      debugger
-      const after = performance.now()
-      if (after - before > threshold) {
-        handleViolation('devtools_detected')
-      }
-    }
-
     window.addEventListener('keydown', handleKeyDown)
     document.addEventListener('visibilitychange', handleVisibilityChange)
-
-    // Run devtools detection periodically (disabled for now as it's aggressive)
-    // const devToolsInterval = setInterval(detectDevTools, 1000)
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('visibilitychange', handleVisibilityChange)
-      // clearInterval(devToolsInterval)
     }
   }, [handleViolation])
 

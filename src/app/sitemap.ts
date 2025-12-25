@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/mdx'
-import { getAllSEOSlugs } from '@/data/seo-landing'
+import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cerebrumbiologyacademy.com'

@@ -126,18 +126,25 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
     // Update behavioral preferences
     const behaviorUpdates: Partial<UserPreferences> = {}
 
+    // Maximum items to keep in arrays to prevent localStorage growth
+    const MAX_ARRAY_ITEMS = 50
+
     // Track page visits
     if (action === 'page_visit') {
       const currentPages = preferences.pagesVisited || []
       if (!currentPages.includes(data?.path)) {
-        behaviorUpdates.pagesVisited = [...currentPages, data?.path]
+        const updatedPages = [...currentPages, data?.path]
+        // Keep only last 50 items
+        behaviorUpdates.pagesVisited = updatedPages.slice(-MAX_ARRAY_ITEMS)
       }
     }
 
     // Track form submissions
     if (action === 'form_submit') {
       const currentForms = preferences.formsSubmitted || []
-      behaviorUpdates.formsSubmitted = [...currentForms, data?.formType]
+      const updatedForms = [...currentForms, data?.formType]
+      // Keep only last 50 items
+      behaviorUpdates.formsSubmitted = updatedForms.slice(-MAX_ARRAY_ITEMS)
     }
 
     // Track demo bookings
@@ -153,13 +160,17 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
     // Track material downloads
     if (action === 'material_download') {
       const currentMaterials = preferences.materialsDownloaded || []
-      behaviorUpdates.materialsDownloaded = [...currentMaterials, data?.materialId]
+      const updatedMaterials = [...currentMaterials, data?.materialId]
+      // Keep only last 50 items
+      behaviorUpdates.materialsDownloaded = updatedMaterials.slice(-MAX_ARRAY_ITEMS)
     }
 
     // Track video watches
     if (action === 'video_watch') {
       const currentVideos = preferences.videosWatched || []
-      behaviorUpdates.videosWatched = [...currentVideos, data?.videoId]
+      const updatedVideos = [...currentVideos, data?.videoId]
+      // Keep only last 50 items
+      behaviorUpdates.videosWatched = updatedVideos.slice(-MAX_ARRAY_ITEMS)
     }
 
     if (Object.keys(behaviorUpdates).length > 0) {

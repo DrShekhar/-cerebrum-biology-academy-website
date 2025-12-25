@@ -36,11 +36,17 @@ function generateToken(): string {
 function verifyToken(token: string): { valid: boolean; timestamp?: number } {
   try {
     const key = process.env.FREE_RESOURCES_ADMIN_PASSWORD
-    if (!key) return { valid: false }
+    if (!key) {
+      console.warn('[Security] Token verification failed: Admin password not configured')
+      return { valid: false }
+    }
 
     const decoded = Buffer.from(token, 'base64').toString('utf-8')
     const parts = decoded.split(':')
-    if (parts.length !== 3) return { valid: false }
+    if (parts.length !== 3) {
+      console.warn('[Security] Token verification failed: Invalid token format')
+      return { valid: false }
+    }
 
     const [timestamp, random, signature] = parts
     const tokenData = `${timestamp}:${random}`
@@ -53,7 +59,11 @@ function verifyToken(token: string): { valid: boolean; timestamp?: number } {
     )
 
     return { valid: isValid, timestamp: parseInt(timestamp, 10) }
-  } catch {
+  } catch (error) {
+    console.warn(
+      '[Security] Token verification failed:',
+      error instanceof Error ? error.message : 'Unknown error'
+    )
     return { valid: false }
   }
 }

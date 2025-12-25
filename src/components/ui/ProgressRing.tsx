@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo } from 'react'
 import { motion, useSpring, useTransform } from 'framer-motion'
 
 interface ProgressRingProps {
@@ -15,7 +15,7 @@ interface ProgressRingProps {
   className?: string
 }
 
-export function ProgressRing({
+export const ProgressRing = memo(function ProgressRing({
   value,
   max,
   size = 120,
@@ -139,6 +139,6 @@ export function ProgressRing({
       </div>
     </div>
   )
-}
+})
 
 export default ProgressRing

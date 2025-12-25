@@ -3,14 +3,63 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import type { UserRole } from '@/generated/prisma'
 
+export interface NotificationPreferences {
+  email?: boolean
+  sms?: boolean
+  push?: boolean
+}
+
+export interface PrivacyPreferences {
+  profileVisible?: boolean
+  progressVisible?: boolean
+  allowContactFromTeachers?: boolean
+}
+
+export interface StudyPreferences {
+  preferredStudyTime?: string
+  dailyStudyGoal?: number
+  reminderFrequency?: string
+}
+
+export interface UserPreferences {
+  notifications?: NotificationPreferences
+  privacy?: PrivacyPreferences
+  study?: StudyPreferences
+}
+
+export interface UserProfile {
+  bio?: string
+  avatarUrl?: string
+  preferences?: UserPreferences
+  phoneNumber?: string
+  parentName?: string
+  schoolName?: string
+  school?: string
+  grade?: string
+  curriculum?: string
+  targetExam?: string
+  dateOfBirth?: Date | null
+  address?: string
+  city?: string
+  state?: string
+  pincode?: string
+  goals?: string[]
+}
+
 export interface User {
   id: string
   email: string
   name: string
   role: UserRole
   emailVerified: Date | null
-  profile: any
+  profile: UserProfile | null
   profileCompletion?: number
+}
+
+export interface ProfileUpdateData {
+  name?: string
+  phone?: string
+  profile?: UserProfile
 }
 
 export interface AuthContextType {
@@ -25,7 +74,7 @@ export interface AuthContextType {
   signup: (userData: SignupData) => Promise<{ success: boolean; error?: string }>
   logout: () => Promise<void>
   refreshToken: () => Promise<boolean>
-  updateProfile: (data: any) => Promise<{ success: boolean; error?: string }>
+  updateProfile: (data: ProfileUpdateData) => Promise<{ success: boolean; error?: string }>
   permissions: string[]
   hasPermission: (permission: string) => boolean
   hasRole: (role: UserRole | UserRole[]) => boolean
@@ -89,17 +138,33 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }, [])
 
-  // Auto-refresh tokens
+  // Auto-refresh tokens with Page Visibility API
   useEffect(() => {
-    if (user) {
-      const interval = setInterval(
-        () => {
-          refreshToken()
-        },
-        14 * 60 * 1000
-      ) // Refresh every 14 minutes
+    if (!user) return
 
-      return () => clearInterval(interval)
+    let intervalId: NodeJS.Timeout | null = null
+
+    const startInterval = () => {
+      intervalId = setInterval(() => {
+        refreshToken()
+      }, 14 * 60 * 1000) // Refresh every 14 minutes
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.hidden && intervalId) {
+        clearInterval(intervalId)
+        intervalId = null
+      } else if (!document.hidden && !intervalId) {
+        startInterval()
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    startInterval()
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      if (intervalId) clearInterval(intervalId)
     }
   }, [user])
 
@@ -221,7 +286,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
-  const updateProfile = async (profileData: any) => {
+  const updateProfile = async (profileData: ProfileUpdateData) => {
     try {
       const response = await fetch('/api/auth/profile', {
         method: 'PUT',

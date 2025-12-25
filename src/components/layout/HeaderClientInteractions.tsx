@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
@@ -24,7 +24,7 @@ interface HeaderClientInteractionsProps {
  * Client-side interactive header elements
  * Loaded after initial paint to not block LCP
  */
-export function HeaderClientInteractions({ section }: HeaderClientInteractionsProps) {
+export const HeaderClientInteractions = memo(function HeaderClientInteractions({ section }: HeaderClientInteractionsProps) {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -106,4 +106,4 @@ export function HeaderClientInteractions({ section }: HeaderClientInteractionsPr
   }
 
   return null
-}
+})

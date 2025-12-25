@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 
-export function FloatingCTA() {
+export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
@@ -30,7 +30,11 @@ export function FloatingCTA() {
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    // Proper cleanup: ensure the exact same handler instance is removed
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -176,4 +180,4 @@ export function FloatingCTA() {
       */}
     </>
   )
-}
+})

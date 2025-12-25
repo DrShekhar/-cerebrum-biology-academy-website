@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense } from 'react'
+import { Suspense, memo } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -32,7 +32,7 @@ const ClerkAuthButtons = dynamic(
  * - Interactive elements (burger menu, search) load after LCP
  * - Reduces Time to Interactive on mobile by ~300ms
  */
-export function HeaderHybrid() {
+export const HeaderHybrid = memo(function HeaderHybrid() {
   return (
     <header
       className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-gray-100"
@@ -215,4 +215,4 @@ export function HeaderHybrid() {
       <HeaderClientInteractions section="all" />
     </header>
   )
-}
+})

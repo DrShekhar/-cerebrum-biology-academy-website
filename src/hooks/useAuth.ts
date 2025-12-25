@@ -35,8 +35,13 @@ export function useAuth() {
   let authData
   try {
     authData = db.useAuth ? db.useAuth() : { user: null, isLoading: false, error: null }
-  } catch {
-    authData = { user: null, isLoading: false, error: null }
+  } catch (error) {
+    console.warn('[Auth] InstantDB auth initialization failed:', error)
+    authData = {
+      user: null,
+      isLoading: false,
+      error: error instanceof Error ? error : new Error('Auth initialization failed'),
+    }
   }
 
   const { user: instantUser, isLoading, error } = authData

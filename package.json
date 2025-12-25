@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "rm -rf .next && rm -rf node_modules/.cache",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build",
     "start": "next start",
     "preview:prod": "npm run build && npm run start",
     "lint": "eslint",
@@ -76,6 +77,7 @@
     "db:migrate:reset": "prisma migrate reset",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed:topics": "tsx prisma/seed-biology-topics.ts",
+    "generate:seo-slugs": "node scripts/generate-seo-slugs.js",
     "db:studio": "prisma studio",
     "db:push": "prisma db push",
     "db:test:setup": "NODE_ENV=test prisma migrate deploy && NODE_ENV=test tsx prisma/seed.ts",

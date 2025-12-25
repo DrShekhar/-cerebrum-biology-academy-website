@@ -765,9 +765,10 @@ export default withSentryConfig(withMDX(nextConfig), {
   // Hides source maps from generated client bundles
   hideSourceMaps: true,
 
-  // Don't upload source maps (reduces build size significantly)
+  // CRITICAL FIX: Disable source maps completely to prevent 5GB builds
+  // Source maps were causing build to balloon from 200MB to 5GB
   sourcemaps: {
-    disable: process.env.NODE_ENV !== 'production',
+    disable: true,
   },
 
   // Automatically tree-shake Sentry logger statements to reduce bundle size

@@ -8,17 +8,52 @@ const globalForPrisma = globalThis as unknown as {
 
 // Mock Prisma client for fallback when WASM engine fails
 class MockPrismaClient {
-  user = {
-    findUnique: async () => null,
-    findMany: async () => [],
-    create: async () => null,
-    update: async () => null,
-    delete: async () => null,
+  private logWarning(operation: string) {
+    if (process.env.NODE_ENV === 'production') {
+      console.error(`[CRITICAL] MockPrismaClient used in production for operation: ${operation}`)
+    } else {
+      console.warn(`[MockPrismaClient] Database operation attempted: ${operation}`)
+    }
   }
-  $connect = async () => Promise.resolve()
-  $disconnect = async () => Promise.resolve()
-  $queryRaw = async () => []
-  $transaction = async <T>(fn: (client: MockPrismaClient) => Promise<T>): Promise<T> => fn(this)
+
+  user = {
+    findUnique: async () => {
+      this.logWarning('user.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('user.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('user.create')
+      return null
+    },
+    update: async () => {
+      this.logWarning('user.update')
+      return null
+    },
+    delete: async () => {
+      this.logWarning('user.delete')
+      return null
+    },
+  }
+  $connect = async () => {
+    this.logWarning('$connect')
+    return Promise.resolve()
+  }
+  $disconnect = async () => {
+    this.logWarning('$disconnect')
+    return Promise.resolve()
+  }
+  $queryRaw = async () => {
+    this.logWarning('$queryRaw')
+    return []
+  }
+  $transaction = async <T>(fn: (client: MockPrismaClient) => Promise<T>): Promise<T> => {
+    this.logWarning('$transaction')
+    return fn(this)
+  }
 }
 
 // Create Prisma client with enhanced error handling and WASM fallback

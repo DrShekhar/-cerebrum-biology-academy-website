@@ -97,6 +97,29 @@ function courseSelectorReducer(
   }
 }
 
+// Helper function to generate dynamic enrollment dates
+function getNextEnrollmentDates(): string[] {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = now.getMonth()
+
+  // Generate dates for next 3 upcoming batches
+  return [
+    new Date(year, month + 1, 1).toISOString().split('T')[0],
+    new Date(year, month + 1, 15).toISOString().split('T')[0],
+    new Date(year, month + 2, 1).toISOString().split('T')[0],
+  ]
+}
+
+// Helper function to get enrollment deadline (1 week before next batch)
+function getEnrollmentDeadline(): string {
+  const now = new Date()
+  const nextBatch = new Date(now.getFullYear(), now.getMonth() + 1, 1)
+  const deadline = new Date(nextBatch)
+  deadline.setDate(deadline.getDate() - 7)
+  return deadline.toISOString().split('T')[0]
+}
+
 // Mock course data (in real app, this would come from API)
 const MOCK_COURSE_DATA: CourseData[] = [
   {
@@ -205,8 +228,8 @@ const MOCK_COURSE_DATA: CourseData[] = [
       weeklyHours: 20,
       totalModules: 24,
       estimatedCompletion: '6 months',
-      startDates: ['2024-01-15', '2024-02-01', '2024-02-15'],
-      enrollmentDeadline: '2024-01-10',
+      startDates: getNextEnrollmentDates(),
+      enrollmentDeadline: getEnrollmentDeadline(),
     },
     availability: {
       spotsRemaining: 3,
@@ -412,6 +435,16 @@ export function useCourseSelector(initialState?: Partial<CourseSelectorState>) {
     const taxes = Math.round((subtotal - discounts) * 0.18) // 18% GST
     const total = subtotal - discounts + taxes
 
+    // Calculate dynamic timeline dates
+    const now = new Date()
+    const enrollmentDeadline = getEnrollmentDeadline()
+    const courseStartDate = new Date(now.getFullYear(), now.getMonth() + 1, 1)
+      .toISOString()
+      .split('T')[0]
+    const estimatedCompletion = new Date(now.getFullYear(), now.getMonth() + 7, 15)
+      .toISOString()
+      .split('T')[0]
+
     return {
       selections,
       student: {
@@ -427,9 +460,9 @@ export function useCourseSelector(initialState?: Partial<CourseSelectorState>) {
         paymentOptions: ['razorpay', 'upi', 'netbanking', 'card'],
       },
       timeline: {
-        enrollmentDeadline: '2024-01-10',
-        courseStartDate: '2024-01-15',
-        estimatedCompletion: '2024-07-15',
+        enrollmentDeadline,
+        courseStartDate,
+        estimatedCompletion,
       },
     }
   }, [state.selectedPlans, state.selectedClass, state.activeFilters, calculateTotalCost])

@@ -224,8 +224,11 @@ export default function SecureVideoPlayer({
           // The presence of active display capture can sometimes be detected
           // through performance metrics or other signals
         }
-      } catch {
-        // Ignore errors
+      } catch (error) {
+        console.debug(
+          '[Security] Screen capture detection unavailable:',
+          error instanceof Error ? error.message : 'Unknown error'
+        )
       }
     }
 

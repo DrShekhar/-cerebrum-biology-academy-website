@@ -47,12 +47,17 @@ export default function PDFViewer({ fileUrl, title }: PDFViewerProps) {
       container
         .requestFullscreen()
         .then(() => setIsFullscreen(true))
-        .catch(() => {})
+        .catch((error) => {
+          console.warn('[PDFViewer] Fullscreen request failed:', error)
+          setError('Fullscreen mode is not available in your browser')
+        })
     } else {
       document
         .exitFullscreen()
         .then(() => setIsFullscreen(false))
-        .catch(() => {})
+        .catch((error) => {
+          console.warn('[PDFViewer] Exit fullscreen failed:', error)
+        })
     }
   }
 
