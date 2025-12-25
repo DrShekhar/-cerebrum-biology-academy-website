@@ -561,9 +561,9 @@ export default function NEETExamCountdownPage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl bg-white p-4 text-center shadow-sm">
-                    <div className="text-3xl font-bold text-purple-600">200</div>
+                    <div className="text-3xl font-bold text-purple-600">180</div>
                     <div className="text-sm text-gray-600">Total Questions</div>
-                    <div className="mt-1 text-xs text-gray-400">(180 to attempt)</div>
+                    <div className="mt-1 text-xs text-gray-400">(45 per subject)</div>
                   </div>
                   <div className="rounded-xl bg-white p-4 text-center shadow-sm">
                     <div className="text-3xl font-bold text-purple-600">720</div>
