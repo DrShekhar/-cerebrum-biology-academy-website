@@ -1,0 +1,60 @@
+
+  'gurgaon-sector-43': {
+    slug: 'gurgaon-sector-43',
+    cityName: 'Sector 43 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Best Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Top NEET coaching for Sector 43 Gurgaon students. Center in Sector 51 (8 min). AIIMS faculty Dr. Shekhar Singh, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 43 Gurgaon',
+    heroSubtitle:
+      'Premium NEET biology coaching just 8 minutes from Sector 43. Join our Sector 51 center with 15+ years experienced AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '8 minutes from Sector 43',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/neet-coaching-gurgaon-sector-56' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'DLF Phase 1', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'DLF Gurgaon', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How far is the NEET coaching center from Sector 43?',
+        answer:
+          'Our Sector 51 center is just 8 minutes from Sector 43 via Golf Course Extension Road. Students from Hamilton Court, IREO Victory Valley, and nearby areas attend regularly.',
+      },
+      {
+        question: 'Who teaches at the Sector 51 center?',
+        answer:
+          'Dr. Shekhar C Singh, AIIMS-trained faculty with 15+ years of NEET coaching experience, personally teaches Biology. Our 98% success rate reflects the quality of teaching.',
+      },
+      {
+        question: 'What NEET courses are available for Sector 43 students?',
+        answer:
+          'We offer NEET Foundation (Class 11), NEET + Boards (Class 12), and NEET Dropper intensive batches. All include comprehensive NCERT coverage, test series, and doubt sessions.',
+      },
+      {
+        question: 'Is there parking available at the center?',
+        answer:
+          'Yes, ample free parking is available at M2K Corporate Park for both two-wheelers and four-wheelers. The building has modern AC classrooms and all necessary facilities.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4385',
+      lng: '77.0815',
+    },
+  },

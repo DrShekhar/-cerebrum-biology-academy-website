@@ -52,7 +52,7 @@ function CommunityPage() {
                 <div>Active Students</div>
               </div>
               <div className="text-center">
-                <div className="font-semibold text-green-600">15,000+</div>
+                <div className="font-semibold text-green-600">1,50,000+</div>
                 <div>Discussions</div>
               </div>
               <div className="text-center">

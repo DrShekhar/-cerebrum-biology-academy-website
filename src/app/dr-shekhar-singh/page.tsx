@@ -323,7 +323,7 @@ export default function DrShekharSinghPage() {
                     {drShekhar.image ? (
                       <img
                         src={drShekhar.image}
-                        alt="Dr. Shekhar C Singh, Director of Cerebrum Biology Academy, AIIMS alumnus with 14+ years of NEET teaching experience"
+                        alt="Dr. Shekhar C Singh, Director of Cerebrum Biology Academy, AIIMS New Delhi Alumnus with 15+ years of NEET teaching experience"
                         className="w-full h-full object-cover"
                         loading="eager"
                       />

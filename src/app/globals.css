@@ -582,8 +582,8 @@
     }
 
     .rdp-mobile-optimized .rdp-day {
-      width: 2.25rem; /* 36px */
-      height: 2.25rem; /* 36px */
+      width: 3rem; /* 48px - WCAG touch target */
+      height: 3rem; /* 48px - WCAG touch target */
       font-size: 0.875rem; /* 14px */
     }
 
@@ -604,8 +604,8 @@
     }
 
     .rdp-mobile-optimized .rdp-day {
-      width: 2rem; /* 32px */
-      height: 2rem; /* 32px */
+      width: 2.75rem; /* 44px - minimum WCAG touch target */
+      height: 2.75rem; /* 44px - minimum WCAG touch target */
       font-size: 0.8125rem; /* 13px */
     }
 
@@ -617,8 +617,8 @@
   /* Tablet optimization */
   @media (min-width: 641px) and (max-width: 1024px) {
     .rdp-mobile-optimized .rdp-day {
-      width: 2.5rem; /* 40px */
-      height: 2.5rem; /* 40px */
+      width: 3rem; /* 48px - WCAG touch target */
+      height: 3rem; /* 48px - WCAG touch target */
     }
   }
 }

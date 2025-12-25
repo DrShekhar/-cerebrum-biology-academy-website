@@ -181,7 +181,7 @@ export default function ZoologyClassesPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
-              { icon: Users, value: '15,000+', label: 'Students Taught' },
+              { icon: Users, value: '1,50,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Video, value: 'Online + Offline', label: 'Class Modes' },
             ].map((stat, index) => (

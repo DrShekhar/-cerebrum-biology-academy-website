@@ -134,7 +134,7 @@ export default function NeetOnlineClassesPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
-              { icon: Users, value: '15,000+', label: 'Students' },
+              { icon: Users, value: '1,50,000+', label: 'Students' },
               { icon: Star, value: '4.9/5', label: 'Class Rating' },
               { icon: Clock, value: '4', label: 'Batch Timings' },
             ].map((stat, index) => (

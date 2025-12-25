@@ -92,7 +92,7 @@ const features = [
   {
     icon: GraduationCap,
     title: 'AIIMS Trained Faculty',
-    description: "Expert doctors from India's top medical institutions with 14+ years experience.",
+    description: "Expert doctors from India's top medical institutions with 15+ years experience.",
     color: 'bg-green-500',
   },
   {
@@ -119,7 +119,7 @@ const stats = [
   { label: 'Countries Served', value: '14+', icon: Globe },
   { label: 'NRI Students', value: '900+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
-  { label: 'AIIMS Faculty', value: '14+ Yrs', icon: Star },
+  { label: 'AIIMS Faculty', value: '15+ Yrs', icon: Star },
 ]
 
 const courses = [

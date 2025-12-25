@@ -114,7 +114,7 @@ export default function NeetOnlinePage() {
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">NEET Online</h1>
             <p className="mb-8 text-xl text-cyan-100">
               Your complete NEET online preparation platform. Live classes, video lectures, practice
-              tests, and expert guidance - all accessible from anywhere. Join 15,000+ students!
+              tests, and expert guidance - all accessible from anywhere. Join 1,50,000+ students!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -140,7 +140,7 @@ export default function NeetOnlinePage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
-              { icon: Users, value: '15,000+', label: 'Online Students' },
+              { icon: Users, value: '1,50,000+', label: 'Online Students' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '24/7', label: 'Access' },
             ].map((stat, index) => (

@@ -1,39 +1,32 @@
 import { Metadata } from 'next'
-import { SEOLandingPage } from '@/components/seo-landing'
-import { comparisonSEOPages } from '@/data/seo-landing'
+import { IntentLandingPage } from '@/components/seo/IntentLandingPage'
+import { getIntentPageData } from '@/data/intent-seo/intent-pages-data'
 
-const content = comparisonSEOPages['online-vs-offline-neet-coaching']
+const pageData = getIntentPageData('online-vs-offline-neet-coaching')!
 
 export const metadata: Metadata = {
-  title: content.title,
-  description: content.metaDescription,
-  keywords: content.keywords,
+  title: pageData.metaTitle,
+  description: pageData.metaDescription,
+  keywords: [
+    'online vs offline neet coaching',
+    'which is better online or offline coaching',
+    'online neet coaching',
+    'offline neet coaching',
+    'hybrid neet coaching',
+    'online coaching effective for neet',
+    'best mode for neet preparation',
+  ],
   openGraph: {
-    title: content.title,
-    description: content.metaDescription,
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
+    url: 'https://cerebrumbiologyacademy.com/online-vs-offline-neet-coaching',
     type: 'website',
-    url: `https://cerebrumbiologyacademy.com/${content.slug}`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: content.title,
-    description: content.metaDescription,
   },
   alternates: {
-    canonical: `https://cerebrumbiologyacademy.com/${content.slug}`,
+    canonical: 'https://cerebrumbiologyacademy.com/online-vs-offline-neet-coaching',
   },
 }
 
-export default function OnlineVsOfflineNeetCoachingPage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(content.schema),
-        }}
-      />
-      <SEOLandingPage content={content} />
-    </>
-  )
+export default function OnlineVsOfflineNEETCoachingPage() {
+  return <IntentLandingPage data={pageData} />
 }

@@ -45,9 +45,9 @@ const whyChooseUs = [
   },
   {
     icon: Star,
-    title: '15,000+ Success Stories',
+    title: '1,50,000+ Success Stories',
     description: 'Over 15 years, thousands have achieved their medical dreams with us.',
-    stat: '15K+',
+    stat: '1,50K+',
   },
 ]
 
@@ -88,7 +88,7 @@ const tutorBenefits = [
 const successMetrics = [
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Top Score', value: '720', icon: Star },
-  { label: 'Students Taught', value: '15K+', icon: Users },
+  { label: 'Students Taught', value: '1,50K+', icon: Users },
   { label: 'Years Experience', value: '15+', icon: Award },
 ]
 
@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'Why should I choose Cerebrum for biology tutoring?',
     answer:
-      'Cerebrum Biology Academy offers AIIMS-trained faculty led by Dr. Shekhar Singh, 98% success rate, small batch sizes (10-15 students), personalized attention, and comprehensive study material. Our 15+ years experience and 15,000+ successful students prove our teaching methodology works.',
+      'Cerebrum Biology Academy offers AIIMS-trained faculty led by Dr. Shekhar Singh, 98% success rate, small batch sizes (10-15 students), personalized attention, and comprehensive study material. Our 15+ years experience and 1,50,000+ successful students prove our teaching methodology works.',
   },
   {
     question: 'What makes a good biology tutor?',
@@ -169,7 +169,7 @@ export default function BiologyTutorPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              AIIMS Trained Faculty | 98% Success Rate | 15,000+ Students
+              AIIMS Trained Faculty | 98% Success Rate | 1,50,000+ Students
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

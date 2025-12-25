@@ -1,0 +1,51 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e6] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e11]:
+      - button "Open issues overlay" [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "0"
+          - generic [ref=e15]: "1"
+        - generic [ref=e16]: Issue
+      - button "Collapse issues badge" [ref=e17]:
+        - img [ref=e18]
+  - alert [ref=e20]
+  - generic [ref=e22]:
+    - img [ref=e24]
+    - generic [ref=e26]:
+      - heading "Install Cerebrum Biology App" [level=3] [ref=e27]
+      - paragraph [ref=e28]: Get instant access to offline learning, mock tests, and AI tutor on your home screen!
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: "📱 How to install on iPhone:"
+        - list [ref=e31]:
+          - listitem [ref=e32]:
+            - text: Tap the
+            - strong [ref=e33]: Share
+            - text: button
+            - img [ref=e35]
+          - listitem [ref=e37]:
+            - text: Scroll down and tap
+            - strong [ref=e38]: "\"Add to Home Screen\""
+          - listitem [ref=e39]:
+            - text: Tap
+            - strong [ref=e40]: Add
+            - text: to confirm
+      - generic [ref=e41]:
+        - button "Not Now" [ref=e42] [cursor=pointer]
+        - button "Got It!" [ref=e43] [cursor=pointer]
+    - button "Close" [ref=e44] [cursor=pointer]:
+      - img [ref=e45]
+  - generic [ref=e48]:
+    - generic [ref=e49]:
+      - img [ref=e51]
+      - heading "Page Error" [level=1] [ref=e53]
+      - paragraph [ref=e54]: Failed to load this page. Please try refreshing your browser.
+    - generic [ref=e55]:
+      - button "Reload Page" [ref=e56] [cursor=pointer]
+      - button "Go Home" [ref=e57] [cursor=pointer]
+  - region "Notifications"
+```

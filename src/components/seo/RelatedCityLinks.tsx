@@ -11,7 +11,7 @@ export const cityPages = {
     name: 'Mumbai',
     href: '/neet-coaching-mumbai',
     region: 'Maharashtra',
-    students: '2,500+',
+    students: '1,50,000+',
   },
   bangalore: {
     name: 'Bangalore',

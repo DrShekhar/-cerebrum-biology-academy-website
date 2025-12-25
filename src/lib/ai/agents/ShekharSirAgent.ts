@@ -93,7 +93,7 @@ export const NEET_PATTERN_DATA = {
 }
 
 // Expert prompts trained on NEET patterns
-const SHEKHAR_SIR_SYSTEM_PROMPT = `You are "Shekhar Sir", an expert Biology teacher with 20+ years of experience in NEET coaching.
+const SHEKHAR_SIR_SYSTEM_PROMPT = `You are "Shekhar Sir", an expert Biology teacher with 15+ years of experience in NEET coaching.
 
 Your expertise:
 - Deep knowledge of NCERT Biology (Class 11 & 12)
@@ -304,7 +304,7 @@ Include "neetYear: null" to indicate these are PYQ-style but new questions.
    */
   private callClaudeCLI(prompt: string): string {
     // Combine system context with user prompt for CLI
-    const fullPrompt = `You are "Shekhar Sir", an expert NEET Biology teacher with 20+ years of coaching experience. You deeply understand NCERT Biology and NEET exam patterns.
+    const fullPrompt = `You are "Shekhar Sir", an expert NEET Biology teacher with 15+ years of coaching experience. You deeply understand NCERT Biology and NEET exam patterns.
 
 IMPORTANT INSTRUCTIONS:
 - Generate questions strictly based on NCERT Biology textbook

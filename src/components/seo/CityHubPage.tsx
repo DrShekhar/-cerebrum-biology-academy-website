@@ -55,7 +55,7 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS-Trained Faculty',
-    description: 'Learn from Dr. Shekhar Singh, AIIMS alumnus with 10+ years experience',
+    description: 'Learn from Dr. Shekhar C Singh, AIIMS New Delhi Alumnus with 15+ years experience',
   },
   {
     icon: Users,
@@ -142,7 +142,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     name: `Cerebrum Biology Academy - ${data.cityName}`,
     description: data.metaDescription,
     url: `${baseUrl}/biology-classes-${data.slug}`,
-    telephone: '+91-8826444334',
+    telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     priceRange: '₹₹',

@@ -271,7 +271,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     },
     benefits: {
       title: 'What Makes Cerebrum Biology Academy Stand Out',
-      subtitle: "Here's why 2,500+ students chose us over big-name coaching institutes",
+      subtitle: "Here's why 1,50,000+ students chose us over big-name coaching institutes",
       items: [
         {
           icon: 'graduation',
@@ -314,7 +314,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     stats: [
       { value: '98%', label: 'Selection Rate' },
       { value: '330+', label: 'Avg NEET Biology Score' },
-      { value: '2,500+', label: 'Successful Students' },
+      { value: '1,50,000+', label: 'Successful Students' },
       { value: '50%', label: 'Lower Than Big Coaching' },
     ],
     testimonials: [
@@ -363,7 +363,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       duration: '12 months comprehensive program',
       batchSize: '10-15 students maximum',
       features: [
-        'Faculty: AIIMS graduate with 10+ years experience',
+        'Faculty: AIIMS graduate with 15+ years experience',
         'Batch Size: Maximum 10-15 students',
         'Success Rate: 98% NEET qualification',
         'Teaching: Concept-based + exam-oriented approach',
@@ -414,7 +414,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Why Choose Cerebrum Academy | NEET Biology Coaching',
     metaDescription:
-      'Discover why 2,500+ students chose Cerebrum Biology Academy for NEET preparation. AIIMS faculty, 98% success rate, small batches, and affordable fees.',
+      'Discover why 1,50,000+ students chose Cerebrum Biology Academy for NEET preparation. AIIMS faculty, 98% success rate, small batches, and affordable fees.',
     keywords: [
       'why cerebrum',
       'cerebrum biology academy',
@@ -498,7 +498,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '10+', label: 'Years Teaching Experience' },
+      { value: '15+', label: 'Years Teaching Experience' },
       { value: 'AIIMS', label: 'Faculty Background' },
       { value: '15', label: 'Max Batch Size' },
       { value: '98%', label: 'NEET Success Rate' },
@@ -521,7 +521,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Who is Dr. Shekhar?',
         answer:
-          'Dr. Shekhar is an AIIMS graduate with over 10 years of experience teaching NEET Biology. He has personally mentored 2,500+ students, many of whom are now doctors at premier medical colleges across India. His teaching philosophy focuses on concept-building rather than rote memorization.',
+          'Dr. Shekhar is an AIIMS graduate with over 15 years of experience teaching NEET Biology. He has personally mentored 1,50,000+ students, many of whom are now doctors at premier medical colleges across India. His teaching philosophy focuses on concept-building rather than rote memorization.',
       },
       {
         question: 'How is Cerebrum different from big coaching chains?',
@@ -567,7 +567,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     cta: {
       title: 'Experience the Cerebrum Difference',
       subtitle:
-        'Join the 2,500+ students who discovered what effective NEET coaching really looks like. Start with a free demo class.',
+        'Join the 1,50,000+ students who discovered what effective NEET coaching really looks like. Start with a free demo class.',
       primaryButton: {
         text: 'Book Free Demo',
         link: '/book-demo',

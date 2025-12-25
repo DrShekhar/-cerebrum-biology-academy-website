@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Online Biology Classes | Learn Biology Online - Cerebrum Biology Academy',
   description:
-    'Join the best online biology classes for Class 9-12. Learn biology online with AIIMS-trained faculty, live interactive sessions, recorded lectures & NEET preparation. 15,000+ students, 98% success rate.',
+    'Join the best online biology classes for Class 9-12. Learn biology online with AIIMS-trained faculty, live interactive sessions, recorded lectures & NEET preparation. 1,50,000+ students, 98% success rate.',
   keywords: [
     'online biology classes',
     'online biology classes for class 11',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Biology Classes - Learn from India's Best Faculty",
     description:
-      'Join 15,000+ students learning biology online. Live classes, 500+ video hours, AIIMS faculty, NEET preparation. Start your free demo today!',
+      'Join 1,50,000+ students learning biology online. Live classes, 500+ video hours, AIIMS faculty, NEET preparation. Start your free demo today!',
     url: 'https://cerebrumbiologyacademy.com/online-biology-classes',
     siteName: 'Cerebrum Biology Academy',
     images: [

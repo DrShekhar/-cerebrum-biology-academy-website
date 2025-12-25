@@ -18,9 +18,11 @@ import {
   GraduationCap,
   Globe,
   Wifi,
+  Phone,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 const northIndiaStates = [
   {
@@ -214,6 +216,17 @@ export default function NeetCoachingNorthIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href={getPhoneLink('primary')}>
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-green-500 text-white hover:bg-green-600 animate-pulse"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now: {CONTACT_INFO.phone.display.primary}
+                </Button>
+              </a>
+
               <Link href="/demo-booking">
                 <Button
                   variant="secondary"
@@ -564,6 +577,17 @@ export default function NeetCoachingNorthIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href={getPhoneLink('primary')}>
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-green-500 text-white hover:bg-green-600 animate-pulse"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: {CONTACT_INFO.phone.display.primary}
+                </Button>
+              </a>
+
               <Link href="/demo-booking">
                 <Button
                   variant="secondary"

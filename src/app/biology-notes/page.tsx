@@ -97,7 +97,7 @@ export default async function BiologyNotesIndexPage() {
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Comprehensive study material covering all NEET Biology topics. Written by Dr. Shekhar
-              C Singh, AIIMS alumnus with 14+ years of teaching experience.
+              C Singh, AIIMS New Delhi Alumnus with 15+ years of teaching experience.
             </p>
 
             {/* Stats */}

@@ -461,7 +461,7 @@ export const onlineBiologyClassesClass11: SEOLandingContent = {
         icon: 'award',
         title: 'Proven Results',
         description:
-          '45+ AIIMS selections, 2,500+ successful students. Results speak for themselves.',
+          '65+ AIIMS selections, 1,50,000+ successful students. Results speak for themselves.',
       },
     ],
   },
@@ -531,7 +531,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
 
   title: 'Best Biology Tutor for Class 11 | AIIMS Faculty',
   metaDescription:
-    "Learn from India's best biology tutor for Class 11. Dr. Shekhar, AIIMS alumnus with 15+ years experience, has mentored 45+ AIIMS selections. Book demo now!",
+    "Learn from India's best biology tutor for Class 11. Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience, has mentored 65+ AIIMS selections. Book demo now!",
   keywords: [
     'best biology tutor class 11',
     'biology teacher for NEET class 11',
@@ -543,7 +543,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
   hero: {
     headline: 'Learn From The Best Biology Tutor in India',
     subheadline:
-      'Dr. Shekhar, AIIMS alumnus with 15+ years of experience, has personally mentored 45+ AIIMS selections.',
+      'Dr. Shekhar C Singh, AIIMS alumnus with 15+ years of experience, has personally mentored 65+ AIIMS selections.',
     highlightedText: 'Your Teacher Decides Your Rank',
     ctaText: 'Meet Dr. Shekhar',
     ctaLink: '/faculty',
@@ -592,8 +592,8 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
       },
       {
         icon: 'award',
-        title: '45+ AIIMS Selections',
-        description: 'Personally mentored 45+ students to AIIMS and 500+ to top medical colleges.',
+        title: '65+ AIIMS Selections',
+        description: 'Personally mentored 65+ students to AIIMS and 1000+ to top medical colleges.',
       },
       {
         icon: 'book-open',
@@ -624,7 +624,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
     {
       question: 'Who is the best biology tutor for NEET Class 11?',
       answer:
-        'The best biology tutor is someone who has cracked competitive medical exams themselves and has proven teaching results. Dr. Shekhar, our lead faculty, is an AIIMS Delhi alumnus with 45+ AIIMS selections and 15+ years of NEET coaching experience. His students consistently score 320+ in NEET Biology.',
+        'The best biology tutor is someone who has cracked competitive medical exams themselves and has proven teaching results. Dr. Shekhar C Singh, our lead faculty, is an AIIMS Delhi alumnus with 65+ AIIMS selections and 15+ years of NEET coaching experience. His students consistently score 320+ in NEET Biology.',
     },
     {
       question: 'How to find a good biology tutor for Class 11?',
@@ -671,7 +671,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
     courseName: 'Class 11 Biology with Expert Tutor',
     provider: 'Cerebrum Biology Academy',
     description:
-      "Learn Class 11 Biology from India's top tutor Dr. Shekhar, AIIMS alumnus with 45+ AIIMS selections and 15+ years experience.",
+      "Learn Class 11 Biology from India's top tutor Dr. Shekhar C Singh, AIIMS alumnus with 65+ AIIMS selections and 15+ years experience.",
     duration: 'P1Y',
     price: 75000,
     priceCurrency: 'INR',

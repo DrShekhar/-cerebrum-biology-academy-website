@@ -37,9 +37,9 @@ const instituteHighlights = [
   },
   {
     icon: Users,
-    title: '15,000+ Alumni',
+    title: '1,50,000+ Alumni',
     description: 'Doctors serving across India and abroad.',
-    stat: '15K+',
+    stat: '1,50K+',
   },
   {
     icon: Award,
@@ -112,7 +112,7 @@ const courses = [
 const successMetrics = [
   { label: 'Years Experience', value: '15+', icon: Building2 },
   { label: 'Success Rate', value: '98%', icon: Trophy },
-  { label: 'Total Alumni', value: '15K+', icon: Users },
+  { label: 'Total Alumni', value: '1,50K+', icon: Users },
   { label: 'Top Score', value: '720', icon: Star },
 ]
 
@@ -196,7 +196,7 @@ export default function NeetCoachingInstitutePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              15+ Years Experience | 98% Success Rate | 15,000+ Selections
+              15+ Years Experience | 98% Success Rate | 1,50,000+ Selections
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -426,7 +426,7 @@ export default function NeetCoachingInstitutePage() {
               Join the Best NEET Coaching Institute Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              15+ years of excellence, 98% success rate, 15,000+ successful alumni
+              15+ years of excellence, 98% success rate, 1,50,000+ successful alumni
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -465,7 +465,7 @@ export default function NeetCoachingInstitutePage() {
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>15,000+ Alumni</span>
+                <span>1,50,000+ Alumni</span>
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />

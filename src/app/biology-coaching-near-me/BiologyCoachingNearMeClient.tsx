@@ -31,7 +31,7 @@ const centers = [
   },
   {
     name: 'Rohini Center',
-    address: 'DC Chowk, Sector 9, Rohini',
+    address: 'DC Chauk, Sector 9, Rohini',
     areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town', 'Ashok Vihar'],
     students: 380,
     rating: 4.8,
@@ -39,7 +39,7 @@ const centers = [
   },
   {
     name: 'Gurgaon Center',
-    address: 'M2K Corporate Park, Sector 50',
+    address: 'Unit 17, M2K Corporate Park, Sector 51 (Mayfield Garden)',
     areas: ['DLF Phase 1-5', 'Sector 14', 'Sohna Road', 'Golf Course Road'],
     students: 320,
     rating: 4.8,

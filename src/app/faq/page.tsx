@@ -104,7 +104,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Who are the faculty members?',
         answer:
-          'Our faculty comprises AIIMS and top medical college graduates with 10+ years of NEET coaching experience. Led by Dr. Shekhar C Singh (AIIMS New Delhi), our team has collectively mentored 2500+ successful NEET candidates.',
+          'Our faculty comprises AIIMS and top medical college graduates with 15+ years of NEET coaching experience. Led by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), our team has collectively mentored 1,50,000+ successful NEET candidates.',
       },
       {
         question: 'What is the teaching methodology?',

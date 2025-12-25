@@ -74,7 +74,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Reduce revision time by 60%',
       'Confidence in biology section',
     ],
-    socialProof: 'Watched by 15,000+ NEET students with 95% improvement rate',
+    socialProof: 'Watched by 1,50,000+ NEET students with 95% improvement rate',
   },
   {
     id: 'free-neet-biology-assessment',

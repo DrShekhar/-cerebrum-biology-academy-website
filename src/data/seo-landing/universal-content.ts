@@ -246,7 +246,7 @@ export const neetBiologyOnlineCoaching: SEOLandingContent = {
       {
         icon: 'shuffle',
         question: 'Confused by multiple coaching options?',
-        solution: '15+ years, 100+ top college selections. Proven track record you can trust.',
+        solution: '15+ years, 1000+ top college selections. Proven track record you can trust.',
       },
       {
         icon: 'map-pin',
@@ -313,7 +313,7 @@ export const neetBiologyOnlineCoaching: SEOLandingContent = {
     {
       question: 'Who teaches in your NEET biology online coaching?',
       answer:
-        'Dr. Shekhar (AIIMS Delhi alumnus) leads our coaching. He has 15+ years of NEET teaching experience and has produced 100+ top medical college selections. Team includes experienced biology educators with competitive exam expertise.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus) leads our coaching. He has 15+ years of NEET teaching experience and has produced 1000+ top medical college selections. Team includes experienced biology educators with competitive exam expertise.',
     },
     {
       question: 'Is online coaching enough for NEET biology or do I need offline too?',
@@ -334,7 +334,7 @@ export const neetBiologyOnlineCoaching: SEOLandingContent = {
 
   cta: {
     title: 'Master Biology, Crack NEET',
-    subtitle: 'Join the online coaching that has produced 100+ medical doctors.',
+    subtitle: 'Join the online coaching that has produced 1000+ medical doctors.',
     primaryButton: {
       text: 'Explore NEET Courses',
       link: '/courses',
@@ -364,7 +364,7 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
 
   title: 'Best Biology Teacher for NEET | Dr. Shekhar Online Classes',
   metaDescription:
-    "Learn from India's best biology teacher for NEET. Dr. Shekhar, AIIMS alumnus with 100+ top college selections. Live online classes. Book demo now!",
+    "Learn from India's best biology teacher for NEET. Dr. Shekhar C Singh, AIIMS alumnus with 1000+ top college selections. Live online classes. Book demo now!",
   keywords: [
     'best biology teacher for NEET',
     'best online biology teacher',
@@ -497,7 +497,7 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
     courseName: 'NEET Biology with Dr. Shekhar',
     provider: 'Cerebrum Biology Academy',
     description:
-      "Learn NEET Biology from India's best teacher Dr. Shekhar, AIIMS alumnus with 100+ top college selections.",
+      "Learn NEET Biology from India's best teacher Dr. Shekhar C Singh, AIIMS alumnus with 1000+ top college selections.",
     duration: 'P1Y',
     price: 75000,
     priceCurrency: 'INR',

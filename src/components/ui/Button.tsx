@@ -13,8 +13,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-lg',
-        primary: 'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-lg',
+        default: 'bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-sm hover:shadow-lg',
+        primary: 'bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-sm hover:shadow-lg',
         secondary:
           'bg-white hover:bg-navy-50 text-navy-700 border-2 border-navy-300 hover:border-navy-400 font-semibold',
         outline:
@@ -23,20 +23,20 @@ const buttonVariants = cva(
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         // Legacy aliases - map to standard variants (for backwards compatibility during migration)
         success_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         urgency_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         trust_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         premium_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         phone_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         demo_cta:
-          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+          'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-lg font-semibold',
         secondary_cta:
           'bg-white border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 font-semibold',
-        link: 'text-teal-600 underline-offset-4 hover:underline',
+        link: 'text-blue-600 underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-11 min-h-[44px] px-4 py-2 text-sm',

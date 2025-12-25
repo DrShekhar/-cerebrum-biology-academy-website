@@ -333,7 +333,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
     ascent: {
       successRate: 94.2,
       avgRank: 'Top 2000',
-      students: '15,000+',
+      students: '1,50,000+',
       colleges: 'Government Medical',
     },
     pursuit: {

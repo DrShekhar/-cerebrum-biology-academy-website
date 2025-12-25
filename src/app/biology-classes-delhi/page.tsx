@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: 'Biology Classes in Delhi | Best NEET Biology Coaching | Cerebrum Academy',
   description:
-    'Join the best biology classes in Delhi with AIIMS-trained faculty. 3 centers in Rohini, South Extension & Gurugram. 98% success rate, 15000+ students. Book free demo!',
+    'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   keywords: [
     'biology classes in delhi',
     'biology coaching delhi',
@@ -125,7 +125,7 @@ const faqs = [
   {
     question: 'Which is the best biology coaching in Delhi for NEET?',
     answer:
-      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 3 centers in Delhi NCR - Rohini, South Extension, and Gurugram.',
+      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 4 centers in Delhi NCR - Rohini, South Extension, Gurugram, and Faridabad.',
   },
   {
     question: 'What is the fee for biology classes in Delhi?',
@@ -165,7 +165,7 @@ const faqs = [
 ]
 
 const stats = [
-  { value: '15,000+', label: 'Students Trained', icon: Users },
+  { value: '1,50,000+', label: 'Students Trained', icon: Users },
   { value: '98%', label: 'Success Rate', icon: Trophy },
   { value: '3', label: 'Centers in Delhi NCR', icon: Building },
   { value: '4.9/5', label: 'Student Rating', icon: Star },
@@ -175,7 +175,7 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS-Trained Faculty',
-    description: 'Learn from Dr. Shekhar Singh, AIIMS alumnus with 10+ years teaching experience',
+    description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years teaching experience',
   },
   {
     icon: Users,
@@ -213,7 +213,7 @@ export default function BiologyClassesDelhiPage() {
     '@id': `${baseUrl}/biology-classes-delhi#organization`,
     name: 'Cerebrum Biology Academy - Delhi',
     description:
-      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 3 centers in Rohini, South Extension, and Gurugram.',
+      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 4 centers in Rohini, South Extension, Gurugram, and Faridabad.',
     url: `${baseUrl}/biology-classes-delhi`,
     telephone: '+91-8826444334',
     email: 'info@cerebrumbiologyacademy.com',
@@ -360,7 +360,7 @@ export default function BiologyClassesDelhiPage() {
           <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-4xl text-center">
               <div className="mb-6 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-sm font-medium backdrop-blur-sm">
-                <MapPin className="mr-2 h-4 w-4 text-yellow-400" />3 Centers in Delhi NCR
+                <MapPin className="mr-2 h-4 w-4 text-yellow-400" />4 Centers in Delhi NCR
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -369,7 +369,7 @@ export default function BiologyClassesDelhiPage() {
 
               <p className="mb-8 text-xl text-blue-100 md:text-2xl">
                 Join Delhi&apos;s top-rated biology coaching with AIIMS-trained faculty. NEET & Board
-                preparation with 98% success rate. 15,000+ students trust us!
+                preparation with 98% success rate. 1,50,000+ students trust us!
               </p>
 
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
@@ -587,7 +587,7 @@ export default function BiologyClassesDelhiPage() {
                   </h2>
                   <p className="mb-6 text-gray-600">
                     With over 10 years of teaching experience and an AIIMS Delhi background, Dr.
-                    Shekhar Singh has helped 15,000+ students achieve their medical dreams. His
+                    Shekhar Singh has helped 1,50,000+ students achieve their medical dreams. His
                     unique teaching methodology makes complex biology concepts simple and
                     memorable.
                   </p>
@@ -598,7 +598,7 @@ export default function BiologyClassesDelhiPage() {
                     </li>
                     <li className="flex items-center gap-3">
                       <Trophy className="h-5 w-5 text-blue-600" />
-                      <span className="text-gray-700">15,000+ Students Mentored</span>
+                      <span className="text-gray-700">1,50,000+ Students Mentored</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <Star className="h-5 w-5 text-blue-600" />
@@ -688,7 +688,7 @@ export default function BiologyClassesDelhiPage() {
               Start Your NEET Journey in Delhi Today!
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Join 15,000+ successful students. Book a free demo class at your nearest center.
+              Join 1,50,000+ successful students. Book a free demo class at your nearest center.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

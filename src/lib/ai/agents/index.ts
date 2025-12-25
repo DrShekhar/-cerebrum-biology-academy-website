@@ -4,7 +4,7 @@
  * Two expert AI agents for NEET Biology question generation and verification:
  *
  * 1. Shekhar Sir - Expert Question Generator
- *    - 20+ years NEET coaching experience simulation
+ *    - 15+ years NEET coaching experience simulation
  *    - Trained on NEET PYQ patterns (2010-2025)
  *    - Generates NCERT-aligned questions
  *

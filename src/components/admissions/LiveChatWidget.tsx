@@ -64,7 +64,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
       id: 'faculty',
       question: 'Who are the faculty members?',
       answer:
-        'Our faculty includes AIIMS-trained experts with 10+ years of NEET coaching experience. Dr. Shekhar (Biology) leads our team with proven results.',
+        'Our faculty includes AIIMS-trained experts with 15+ years of NEET coaching experience. Dr. Shekhar C Singh (Biology) leads our team with proven results.',
       icon: <Users className="w-4 h-4" />,
     },
   ]

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function OnlineClassesPage() {
   const heroStats = [
-    { number: '15,000+', label: 'Online Students Trained', sublabel: 'Across 28 states' },
+    { number: '1,50,000+', label: 'Online Students Trained', sublabel: 'Across 28 states' },
     { number: '94.7%', label: 'Online Success Rate', sublabel: 'NEET Qualification' },
     { number: '24/7', label: 'Learning Support', sublabel: 'Never miss a concept' },
     { number: '99.9%', label: 'Platform Uptime', sublabel: 'Reliable technology' },
@@ -322,7 +322,7 @@ export default function OnlineClassesPage() {
             <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto">
               Experience India&apos;s most advanced online NEET Biology coaching. HD live classes,
               interactive learning, and personalized attention - all from the comfort of your home.
-              Join 15,000+ successful online students.
+              Join 1,50,000+ successful online students.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 md:mb-12">
               <Link
@@ -741,7 +741,7 @@ export default function OnlineClassesPage() {
             </div>
             <div className="flex items-center justify-center">
               <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              <span>Trusted by 15,000+ students nationwide</span>
+              <span>Trusted by 1,50,000+ students nationwide</span>
             </div>
           </div>
         </div>

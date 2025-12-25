@@ -136,7 +136,7 @@ export async function GET(request: NextRequest) {
         agents: {
           generator: {
             name: 'Shekhar Sir',
-            description: 'Expert Biology teacher with 20+ years NEET coaching experience',
+            description: 'Expert Biology teacher with 15+ years NEET coaching experience',
             capabilities: [
               'NEET PYQ pattern analysis',
               'NCERT-aligned question generation',

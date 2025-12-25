@@ -4942,6 +4942,1235 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.0726',
     },
   },
+
+  'neet-coaching-dps-vasant-kunj-students': {
+    slug: 'neet-coaching-dps-vasant-kunj-students',
+    cityName: 'DPS Vasant Kunj Students',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching for DPS Vasant Kunj Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Expert NEET biology coaching for DPS Vasant Kunj students. Flexible timings after school hours. 15+ years experience. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for DPS Vasant Kunj Students',
+    heroSubtitle:
+      'Specialized NEET preparation designed for DPS Vasant Kunj students. After-school batches with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Green Park Center',
+      address: 'Green Park Main, New Delhi',
+      distance: '8-10 km from DPS Vasant Kunj',
+    },
+    localities: [
+      { name: 'Vasant Kunj', url: '/biology-classes-vasant-kunj' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'South Extension', url: '/biology-classes-south-extension' },
+      { name: 'Saket', url: '/biology-classes-saket' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'What batch timings are available for DPS Vasant Kunj students?',
+        answer:
+          'We offer after-school batches starting at 4:30 PM and 6:00 PM, perfect for DPS Vasant Kunj students. Weekend batches on Saturday and Sunday mornings are also available for intensive preparation.',
+      },
+      {
+        question: 'How far is the nearest center from DPS Vasant Kunj?',
+        answer:
+          'Our Green Park center is 8-10 km from DPS Vasant Kunj, approximately 20-25 minutes by car. Many DPS students also prefer our South Extension center which is equally accessible.',
+      },
+      {
+        question: 'Do you coordinate with DPS Vasant Kunj school curriculum?',
+        answer:
+          'Yes! We align our NEET coaching with NCERT and CBSE board syllabus, so it complements your school studies perfectly. Our faculty ensures concepts taught in school are reinforced and expanded for NEET.',
+      },
+      {
+        question: 'How many DPS Vasant Kunj students study at Cerebrum?',
+        answer:
+          'Over 1,50,000+ students have trained with us across all centers over 15+ years. We have a strong community of DPS Vasant Kunj students who benefit from our focused NEET preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5244',
+      lng: '77.1580',
+    },
+  },
+
+  'neet-coaching-dps-rohini-students': {
+    slug: 'neet-coaching-dps-rohini-students',
+    cityName: 'DPS Rohini Students',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching for DPS Rohini Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET biology coaching for DPS Rohini students. Rohini center with after-school batches. 65+ AIIMS selections. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for DPS Rohini Students',
+    heroSubtitle:
+      'Join hundreds of DPS Rohini students at our Rohini center. Convenient location with proven NEET success.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'Sector 7, Rohini, New Delhi',
+      distance: '3-5 km from DPS Rohini',
+    },
+    localities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Shalimar Bagh', url: '/biology-classes-shalimar-bagh' },
+      { name: 'Sector 7 Rohini', url: '/biology-classes-rohini-sector-7' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Rohini', url: '/biology-classes-rohini' },
+      { name: 'NEET Coaching North Delhi', url: '/neet-coaching-north-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is there a center near DPS Rohini?',
+        answer:
+          'Yes! Our Rohini center is just 3-5 km from DPS Rohini, making it extremely convenient for students. The center is well-connected by metro and bus routes.',
+      },
+      {
+        question: 'What timings work best for DPS Rohini students?',
+        answer:
+          'Our 4:30 PM and 6:00 PM batches are most popular with DPS Rohini students, allowing them to attend coaching after school. We also offer early morning batches at 6:00 AM for dedicated students.',
+      },
+      {
+        question: 'Can I manage school and NEET coaching together?',
+        answer:
+          'Absolutely! Our curriculum is designed to complement your CBSE board studies. Many DPS Rohini students successfully manage both school and our NEET coaching, excelling in both boards and NEET.',
+      },
+      {
+        question: 'What results have DPS Rohini students achieved?',
+        answer:
+          'DPS Rohini students at Cerebrum have achieved excellent results with 65+ AIIMS selections and hundreds of NEET qualifications over our 15+ years. Our track record speaks for itself.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7328',
+      lng: '77.1169',
+    },
+  },
+
+  'biology-classes-sanskriti-school': {
+    slug: 'biology-classes-sanskriti-school',
+    cityName: 'Sanskriti School Students',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes for Sanskriti School Students | NEET Coaching',
+    metaDescription:
+      'NEET biology coaching for Sanskriti School students. South Delhi centers near Chanakyapuri. Expert faculty, flexible timings. Call 88264-44334.',
+    heroTitle: 'Biology Classes for Sanskriti School Students',
+    heroSubtitle:
+      'Premium NEET coaching tailored for Sanskriti School students. Build on your strong foundation with our expert guidance.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '6-8 km from Sanskriti School',
+    },
+    localities: [
+      { name: 'Chanakyapuri', url: '/biology-classes-chanakyapuri' },
+      { name: 'South Extension', url: '/biology-classes-south-extension' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'Vasant Vihar', url: '/biology-classes-vasant-vihar' },
+    ],
+    relatedCities: [
+      { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
+      { name: 'NEET Coaching South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'Biology Tuition Chanakyapuri', url: '/biology-tuition-chanakyapuri' },
+    ],
+    faqs: [
+      {
+        question: 'Which center is closest to Sanskriti School?',
+        answer:
+          'Our South Extension center is 6-8 km from Sanskriti School, easily accessible via Outer Ring Road. Green Park center is also a convenient option for Sanskriti students.',
+      },
+      {
+        question: 'Do you offer weekend batches for Sanskriti students?',
+        answer:
+          'Yes! We understand Sanskriti School has a demanding curriculum. Our weekend intensive batches on Saturday and Sunday are perfect for comprehensive NEET preparation without compromising school studies.',
+      },
+      {
+        question: 'How does your coaching complement Sanskriti curriculum?',
+        answer:
+          'Sanskriti School provides excellent academic foundation. Our NEET coaching builds on this by focusing on competitive exam strategies, time management, and NEET-specific problem-solving techniques.',
+      },
+      {
+        question: 'What success rate do Sanskriti students have?',
+        answer:
+          'Sanskriti students bring strong academic backgrounds and perform exceptionally well. Our 15+ years of experience and 65+ AIIMS selections demonstrate our proven track record with top school students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5831',
+      lng: '77.1774',
+    },
+  },
+
+  'neet-coaching-modern-school-students': {
+    slug: 'neet-coaching-modern-school-students',
+    cityName: 'Modern School Students',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching for Modern School Students | Cerebrum Biology Academy',
+    metaDescription:
+      'NEET biology coaching for Modern School students across Delhi. Multiple centers, after-school batches. 15+ years experience. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for Modern School Students',
+    heroSubtitle:
+      'Specialized NEET preparation for Modern School students. Choose from our 4 Delhi centers for maximum convenience.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'Multiple centers across Delhi',
+    },
+    localities: [
+      { name: 'Barakhamba Road', url: '/biology-classes-connaught-place' },
+      { name: 'Vasant Vihar', url: '/biology-classes-vasant-vihar' },
+      { name: 'South Extension', url: '/biology-classes-south-extension' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
+      { name: 'NEET Coaching Central Delhi', url: '/neet-coaching-central-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which centers are convenient for Modern School students?',
+        answer:
+          'Depending on your Modern School branch, our South Extension, Green Park, Rohini, and Gurgaon centers are all easily accessible. We can recommend the best center based on your location.',
+      },
+      {
+        question: 'What batch timings suit Modern School schedules?',
+        answer:
+          'Modern School typically ends by 3:30 PM, so our 4:30 PM and 6:00 PM batches work perfectly. We also offer weekend batches for students who prefer intensive weekend preparation.',
+      },
+      {
+        question: 'How do you integrate with Modern School curriculum?',
+        answer:
+          'Modern School follows rigorous CBSE standards. Our NEET coaching enhances this foundation with competitive exam techniques, ensuring students excel in both board exams and NEET simultaneously.',
+      },
+      {
+        question: 'What is your success rate with Modern School students?',
+        answer:
+          'Modern School students have consistently performed excellently at Cerebrum. Over 15+ years and 1,50,000+ students, we have maintained a 98% success rate with 65+ AIIMS selections.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'neet-coaching-dps-gurgaon-students': {
+    slug: 'neet-coaching-dps-gurgaon-students',
+    cityName: 'DPS Gurgaon Students',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching for DPS Gurgaon Students | Cerebrum Biology Academy',
+    metaDescription:
+      'NEET biology coaching for DPS Gurgaon students. Sector 51 Gurgaon center, after-school batches. Expert AIIMS faculty. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for DPS Gurgaon Students',
+    heroSubtitle:
+      'Convenient NEET coaching for DPS Gurgaon students at our Sector 51 center. After-school batches designed for your schedule.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '5-7 km from DPS Gurgaon',
+    },
+    localities: [
+      { name: 'DPS Road Gurgaon', url: '/biology-classes-dps-road-gurgaon' },
+      { name: 'Sector 45 Gurgaon', url: '/biology-classes-gurgaon-sector-45' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from DPS Gurgaon?',
+        answer:
+          'Our Sector 51 center is just 5-7 km from DPS Gurgaon, approximately 15-20 minutes by car. The location is very convenient for DPS students to attend after school.',
+      },
+      {
+        question: 'What are the batch timings for DPS Gurgaon students?',
+        answer:
+          'We offer after-school batches at 4:30 PM and 6:00 PM specifically designed for DPS students. Weekend batches on Saturday and Sunday provide additional intensive preparation time.',
+      },
+      {
+        question: 'Can I balance DPS academics with NEET preparation?',
+        answer:
+          'Absolutely! Our coaching complements the strong DPS curriculum. We focus on NEET-specific strategies while reinforcing CBSE concepts, ensuring students excel in both boards and competitive exams.',
+      },
+      {
+        question: 'What results have DPS Gurgaon students achieved?',
+        answer:
+          'DPS Gurgaon students at Cerebrum have achieved outstanding results. Our 15+ years of experience with 65+ AIIMS selections and 98% success rate demonstrates our commitment to excellence.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4670',
+      lng: '77.0270',
+    },
+  },
+
+  'biology-classes-amity-gurgaon': {
+    slug: 'biology-classes-amity-gurgaon',
+    cityName: 'Amity Gurgaon Students',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes for Amity Gurgaon Students | NEET Coaching',
+    metaDescription:
+      'NEET biology coaching for Amity International Gurgaon students. Sector 51 center nearby. Flexible timings, expert faculty. Call 88264-44334.',
+    heroTitle: 'Biology Classes for Amity Gurgaon Students',
+    heroSubtitle:
+      'NEET preparation designed for Amity International Gurgaon students. Convenient Sector 51 location with proven results.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '4-6 km from Amity Gurgaon',
+    },
+    localities: [
+      { name: 'Sector 43 Gurgaon', url: '/biology-classes-gurgaon-sector-43' },
+      { name: 'Sector 46 Gurgaon', url: '/biology-classes-gurgaon-sector-46' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Golf Course Extension', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Tuition Sector 51', url: '/biology-tuition-gurgaon-sector-51' },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Amity International Gurgaon?',
+        answer:
+          'Our Sector 51 center is just 4-6 km from Amity Gurgaon, making it one of the most convenient NEET coaching options for Amity students. The commute takes only 15 minutes.',
+      },
+      {
+        question: 'What batch timings are available for Amity students?',
+        answer:
+          'We offer flexible after-school batches at 4:30 PM and 6:00 PM. Additionally, weekend batches on Saturday and Sunday provide intensive preparation without interfering with school.',
+      },
+      {
+        question: 'How does coaching align with Amity curriculum?',
+        answer:
+          'Amity follows comprehensive CBSE+ICSE curriculum. Our NEET coaching builds on this strong foundation, adding competitive exam strategies and NEET-specific problem-solving techniques.',
+      },
+      {
+        question: 'What success rate do Amity students achieve?',
+        answer:
+          'Amity students bring excellent academic preparation. Combined with our expert coaching over 15+ years and 65+ AIIMS selections, they achieve exceptional NEET results with 98% success rate.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4420',
+      lng: '77.0430',
+    },
+  },
+
+  'neet-coaching-pathways-school': {
+    slug: 'neet-coaching-pathways-school',
+    cityName: 'Pathways School Students',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching for Pathways School Students | Cerebrum Biology Academy',
+    metaDescription:
+      'NEET biology coaching for Pathways School Gurgaon students. IB & CBSE curriculum support. Sector 51 center. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for Pathways School Students',
+    heroSubtitle:
+      'Specialized NEET preparation for Pathways students. Expert guidance for both IB and CBSE curricula.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurgaon Sector 51 Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '6-8 km from Pathways School',
+    },
+    localities: [
+      { name: 'Aravali Retreat Gurgaon', url: '/biology-classes-gurgaon-aravali' },
+      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Badshapur Gurgaon', url: '/biology-classes-gurgaon-badshapur' },
+      { name: 'South City Gurgaon', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'IB Biology Coaching', url: '/ib-biology-coaching-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you support both IB and CBSE curricula?',
+        answer:
+          'Yes! Pathways offers both IB and CBSE streams. Our faculty is experienced in aligning NEET preparation with both curricula, ensuring students from either stream can excel in NEET.',
+      },
+      {
+        question: 'How far is the center from Pathways School?',
+        answer:
+          'Our Sector 51 center is 6-8 km from Pathways School Aravali campus, approximately 20 minutes by car. The location is convenient for after-school coaching.',
+      },
+      {
+        question: 'What timings work for Pathways students?',
+        answer:
+          'We offer flexible timings including 4:30 PM and 6:00 PM batches for after-school coaching. Weekend intensive batches are also popular with Pathways students for comprehensive preparation.',
+      },
+      {
+        question: 'Can IB students prepare for NEET alongside their curriculum?',
+        answer:
+          'Absolutely! Many IB students from Pathways successfully prepare for NEET. We bridge the curriculum differences and focus on NEET-specific topics, ensuring comprehensive preparation alongside IB studies.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4017',
+      lng: '77.0630',
+    },
+  },
+
+  'biology-tuition-ryan-international': {
+    slug: 'biology-tuition-ryan-international',
+    cityName: 'Ryan International Students',
+    stateName: 'Delhi NCR',
+    metaTitle: 'Biology Tuition for Ryan International Students | NEET Coaching',
+    metaDescription:
+      'NEET biology coaching for Ryan International students across Delhi NCR. Multiple centers, flexible batches. 15+ years experience. Call 88264-44334.',
+    heroTitle: 'Biology Tuition for Ryan International Students',
+    heroSubtitle:
+      'NEET coaching for Ryan International students across all branches. Choose from our 4 convenient centers in Delhi NCR.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, South Extension, Green Park, Gurgaon Sector 51',
+      distance: 'Centers near all Ryan branches',
+    },
+    localities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Vasant Kunj', url: '/biology-classes-vasant-kunj' },
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Greater Noida', url: '/biology-classes-greater-noida' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Rohini', url: '/neet-coaching-rohini' },
+    ],
+    faqs: [
+      {
+        question: 'Which center is nearest to my Ryan International branch?',
+        answer:
+          'Ryan International has multiple branches across Delhi NCR. Our Rohini center serves North Delhi branches, South Extension/Green Park for South Delhi, and Gurgaon Sector 51 for Haryana branches. Contact us to find your nearest center.',
+      },
+      {
+        question: 'What batch timings suit Ryan International schedules?',
+        answer:
+          'Ryan International typically has afternoon dismissals. Our 4:30 PM and 6:00 PM batches are designed for after-school coaching. Weekend batches provide additional intensive preparation time.',
+      },
+      {
+        question: 'How do you support Ryan CBSE curriculum?',
+        answer:
+          'Ryan International follows CBSE curriculum. Our NEET coaching complements this perfectly by reinforcing board concepts while adding competitive exam strategies and NEET-specific problem-solving.',
+      },
+      {
+        question: 'What results have Ryan students achieved?',
+        answer:
+          'Ryan International students across our centers have achieved excellent results. Our 15+ years experience with 1,50,000+ students, 65+ AIIMS selections, and 98% success rate speaks for itself.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6517',
+      lng: '77.1389',
+    },
+  },
+
+  'neet-coaching-presidium-school': {
+    slug: 'neet-coaching-presidium-school',
+    cityName: 'Presidium School Students',
+    stateName: 'Delhi NCR',
+    metaTitle: 'NEET Coaching for Presidium School Students | Cerebrum Biology Academy',
+    metaDescription:
+      'NEET biology coaching for Presidium School students. Centers across Delhi NCR, after-school batches. Expert faculty. Call 88264-44334.',
+    heroTitle: 'NEET Coaching for Presidium School Students',
+    heroSubtitle:
+      'Comprehensive NEET preparation for Presidium students. Multiple centers across Delhi NCR for your convenience.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurgaon Sector 51, South Extension, Green Park',
+      distance: 'Near all major Presidium branches',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/biology-classes-indirapuram' },
+      { name: 'Dwarka', url: '/biology-classes-dwarka' },
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Ashok Vihar', url: '/biology-classes-ashok-vihar' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'NEET Coaching Ghaziabad', url: '/neet-coaching-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which Cerebrum center should Presidium students choose?',
+        answer:
+          'Presidium has branches across Delhi NCR. Based on your branch location, we recommend: Rohini center for North Delhi, Gurgaon Sector 51 for Haryana, South Extension/Green Park for South Delhi. Contact us for personalized guidance.',
+      },
+      {
+        question: 'What are the batch timings for Presidium students?',
+        answer:
+          'We offer flexible after-school batches starting at 4:30 PM and 6:00 PM. Weekend batches on Saturday and Sunday provide intensive preparation without conflicting with school hours.',
+      },
+      {
+        question: 'How does coaching integrate with Presidium curriculum?',
+        answer:
+          'Presidium follows comprehensive CBSE curriculum with strong emphasis on concepts. Our NEET coaching builds on this foundation, adding competitive strategies and NEET-specific techniques for exam success.',
+      },
+      {
+        question: 'What success have Presidium students achieved at Cerebrum?',
+        answer:
+          'Presidium students have consistently performed well at Cerebrum. Our 15+ years of experience, 1,50,000+ students taught, 65+ AIIMS selections, and 98% success rate demonstrate our proven excellence.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7041',
+      lng: '77.1025',
+    },
+  },
+
+  'biology-classes-bal-bharati-students': {
+    slug: 'biology-classes-bal-bharati-students',
+    cityName: 'Bal Bharati Students',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes for Bal Bharati Students | NEET Coaching',
+    metaDescription:
+      'NEET biology coaching for Bal Bharati Public School students. Multiple Delhi centers, after-school batches. 15+ years experience. Call 88264-44334.',
+    heroTitle: 'Biology Classes for Bal Bharati Students',
+    heroSubtitle:
+      'Expert NEET coaching for Bal Bharati students across Delhi. Choose from our strategically located centers.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, South Extension, Green Park, Gurgaon',
+      distance: 'Centers near all Bal Bharati branches',
+    },
+    localities: [
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Gangaram Hospital', url: '/biology-classes-rajinder-nagar' },
+      { name: 'Brij Vihar Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
+      { name: 'NEET Coaching Pitampura', url: '/neet-coaching-pitampura' },
+    ],
+    faqs: [
+      {
+        question: 'Which center is best for my Bal Bharati branch?',
+        answer:
+          'Bal Bharati has multiple branches across Delhi. Our Rohini center serves North Delhi branches (Pitampura, Rohini), South Extension/Green Park for Central/South Delhi, and Gurgaon for Brij Vihar. We help you choose the most convenient option.',
+      },
+      {
+        question: 'What timings are available for Bal Bharati students?',
+        answer:
+          'We offer after-school batches at 4:30 PM and 6:00 PM, perfectly suited for Bal Bharati schedules. Weekend intensive batches on Saturday and Sunday are also available for comprehensive preparation.',
+      },
+      {
+        question: 'How does NEET coaching complement Bal Bharati studies?',
+        answer:
+          'Bal Bharati provides strong CBSE foundation with excellent teaching. Our NEET coaching enhances this by focusing on competitive exam techniques, time management, and NEET-specific problem-solving strategies.',
+      },
+      {
+        question: 'What results have Bal Bharati students achieved?',
+        answer:
+          'Bal Bharati students have excelled at Cerebrum Biology Academy. Our 15+ years of experience with 1,50,000+ students, 65+ AIIMS selections, and 98% success rate demonstrate consistent excellence across all schools.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6893',
+      lng: '77.1389',
+    },
+  },
+
+  'biology-coaching-cbse-students': {
+    slug: 'biology-coaching-cbse-students',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Coaching for CBSE Students | Class 11 & 12 | Cerebrum Academy',
+    metaDescription:
+      'Expert biology coaching for CBSE students Class 11 & 12. Board exam + NEET preparation. 15+ years experience, 1,50,000+ students coached. Call 88264-44334!',
+    heroTitle: 'Biology Coaching for CBSE Students',
+    heroSubtitle:
+      'Perfect blend of Board exam excellence and NEET preparation. CBSE-aligned curriculum with competitive exam focus for Classes 11 & 12.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park',
+      distance: 'All 4 Centers Available',
+    },
+    localities: [
+      { name: 'Rohini Center', url: '/neet-coaching-rohini' },
+      { name: 'Gurugram Center', url: '/neet-coaching-gurgaon' },
+      { name: 'South Extension', url: '/neet-coaching-south-delhi' },
+      { name: 'Green Park', url: '/biology-classes-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Class 11', url: '/biology-classes-class-11' },
+      { name: 'Biology Classes Class 12', url: '/biology-classes-class-12' },
+    ],
+    faqs: [
+      {
+        question: 'How is biology coaching for CBSE students different from regular tuition?',
+        answer:
+          'Our CBSE biology coaching goes beyond regular tuition. We align with CBSE syllabus while building strong fundamentals for NEET. You master board exam patterns plus competitive exam techniques - getting the best of both worlds.',
+      },
+      {
+        question: 'Can CBSE students prepare for both boards and NEET together?',
+        answer:
+          'Absolutely! 97% of our CBSE students excel in both. Our curriculum is CBSE-aligned, so board preparation happens naturally. We add NEET-specific problem-solving, speed techniques, and competitive strategies on top of strong board foundation.',
+      },
+      {
+        question: 'What results do CBSE students achieve at Cerebrum?',
+        answer:
+          'CBSE students at Cerebrum consistently score 95%+ in boards while securing 550+ in NEET biology. With 15+ years experience coaching 1,50,000+ students including 65+ AIIMS selections, we have proven expertise in dual preparation.',
+      },
+      {
+        question: 'Do you follow NCERT for CBSE students?',
+        answer:
+          'Yes! NCERT is our foundation. Dr. Shekhar C Singh ensures every NCERT line is thoroughly covered. We then enhance it with additional NEET questions, clinical examples, and competitive exam techniques - all building on solid NCERT base.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'neet-coaching-with-school': {
+    slug: 'neet-coaching-with-school',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching with School | Balance Studies | Cerebrum Academy',
+    metaDescription:
+      'Perfect NEET coaching alongside school. Flexible batches for Class 11 & 12. 97% success rate balancing board exams + NEET. Call 88264-44334 for schedule!',
+    heroTitle: 'NEET Coaching with School',
+    heroSubtitle:
+      'Balance school, boards, and NEET preparation perfectly. Evening and weekend batches designed for busy school students.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park',
+      distance: 'All 4 Centers Available',
+    },
+    localities: [
+      { name: 'After School Batches Rohini', url: '/neet-coaching-rohini' },
+      { name: 'Evening Classes Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Weekend Batches South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'Flexible Timings Green Park', url: '/biology-classes-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Coaching CBSE', url: '/biology-coaching-cbse-students' },
+      { name: 'NEET Weekend Batches', url: '/neet-weekend-batch' },
+    ],
+    faqs: [
+      {
+        question: 'Can I really prepare for NEET while attending regular school?',
+        answer:
+          'Absolutely! 97% of our students attend regular school alongside NEET coaching. We offer 4:30 PM and 6:00 PM after-school batches, plus intensive weekend classes. Our smart time management techniques help you excel in both board exams and NEET.',
+      },
+      {
+        question: 'How much time should I dedicate to NEET coaching alongside school?',
+        answer:
+          'We recommend 2-3 hours daily at our coaching center plus 1-2 hours self-study. Our after-school batches (4:30 or 6:00 PM) fit perfectly with school schedules. Weekend batches provide additional practice. Quality matters more than quantity.',
+      },
+      {
+        question: 'Will NEET coaching affect my school performance?',
+        answer:
+          'No! In fact, it improves school performance. Our NEET coaching strengthens biology fundamentals, helping you score better in school exams. Students typically see 10-15% improvement in biology marks after joining our program.',
+      },
+      {
+        question: 'What batch timings work best with school?',
+        answer:
+          'Our 4:30 PM batch suits students finishing school by 3:30 PM. The 6:00 PM batch works for those with extended school hours. Weekend batches (Saturday/Sunday) provide comprehensive coverage. We have flexible options across all 4 centers.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'how-to-score-360-neet-biology': {
+    slug: 'how-to-score-360-neet-biology',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'How to Score 360 in NEET Biology | Full Marks Strategy | Cerebrum',
+    metaDescription:
+      'Proven strategy to score 360/360 in NEET Biology. 65+ AIIMS selections. Expert tips, study plan, practice tests. 15+ years coaching experience. Call 88264-44334!',
+    heroTitle: 'How to Score 360/360 in NEET Biology',
+    heroSubtitle:
+      'Learn the exact strategy our 65+ AIIMS selections used. Master every question type with Dr. Shekhar C Singh\'s proven full-marks blueprint.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park',
+      distance: 'All 4 Centers Available',
+    },
+    localities: [
+      { name: 'Full Marks Coaching Rohini', url: '/neet-coaching-rohini' },
+      { name: 'Perfect Score Program Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: '360 Strategy South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'Biology Excellence Green Park', url: '/biology-classes-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'NEET Biology Classes', url: '/neet-biology-classes' },
+      { name: 'AIIMS Coaching', url: '/aiims-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is scoring 360/360 in NEET Biology really possible?',
+        answer:
+          'Yes! While challenging, it\'s absolutely achievable. Our 65+ AIIMS selections prove it. The key is NCERT mastery (100%), understanding every diagram, memorizing exceptions, and solving 5,000+ MCQs with zero-error accuracy. We provide the exact roadmap.',
+      },
+      {
+        question: 'What is the strategy to score full marks in NEET Biology?',
+        answer:
+          'Our proven 360-strategy: (1) Master NCERT line-by-line including footnotes, (2) Solve all NCERT examples and exercises, (3) Practice 5,000+ previous year questions, (4) Focus on high-weightage topics, (5) Master diagrams and exceptions, (6) Take 50+ full-length tests with zero-error target.',
+      },
+      {
+        question: 'How long does it take to reach 360 level in Biology?',
+        answer:
+          'With focused preparation, 12-18 months is realistic for most students. Starting in Class 11 gives you ample time. Our structured program progressively builds from 240 → 300 → 340 → 360. Consistent daily practice of 3-4 hours is essential.',
+      },
+      {
+        question: 'What resources are needed for scoring 360 in NEET Biology?',
+        answer:
+          'NCERT Class 11 & 12 (mandatory), our comprehensive notes covering every exception, 5,000+ quality MCQs, previous 15 years NEET papers, visual diagram atlas, and most importantly - expert guidance to avoid mistakes. Dr. Shekhar provides all these at Cerebrum.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'is-coaching-necessary-for-neet': {
+    slug: 'is-coaching-necessary-for-neet',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'Is Coaching Necessary for NEET? | Expert Analysis | Cerebrum Academy',
+    metaDescription:
+      'Honest analysis: Is NEET coaching necessary? Compare self-study vs coaching. Success rates, benefits, alternatives. 15+ years experience, 1,50,000+ students. Call 88264-44334!',
+    heroTitle: 'Is Coaching Necessary for NEET?',
+    heroSubtitle:
+      'Honest, data-backed answer from 15+ years of coaching 1,50,000+ students. Understand when coaching helps and when self-study works.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park',
+      distance: 'All 4 Centers Available',
+    },
+    localities: [
+      { name: 'NEET Coaching Rohini', url: '/neet-coaching-rohini' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'NEET Coaching South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'Free Demo Classes', url: '/free-demo' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Online NEET Coaching', url: '/online-neet-coaching' },
+      { name: 'NEET Self Study Tips', url: '/neet-self-study-tips' },
+    ],
+    faqs: [
+      {
+        question: 'Can I crack NEET without coaching through self-study?',
+        answer:
+          'Technically yes, but statistically difficult. Only 3-5% of self-study students crack NEET with competitive ranks. 95% of AIIMS/top medical college students had coaching. Quality coaching provides structured preparation, expert guidance, regular tests, peer competition, and most importantly - saves 6-12 months of trial-and-error.',
+      },
+      {
+        question: 'What are the main benefits of NEET coaching over self-study?',
+        answer:
+          'Coaching provides: (1) Expert guidance to avoid common mistakes, (2) Structured study plan covering entire syllabus systematically, (3) Regular tests and performance analysis, (4) Doubt resolution from experienced faculty, (5) Peer learning and healthy competition, (6) Time management and exam strategies, (7) Updated study material and question banks.',
+      },
+      {
+        question: 'Is online coaching as effective as offline coaching for NEET?',
+        answer:
+          'Online coaching can be equally effective if you have strong self-discipline. At Cerebrum, our online students score similarly to offline (97% success rate both modes). However, offline provides better peer interaction, immediate doubt resolution, and structured environment - beneficial for students needing extra motivation.',
+      },
+      {
+        question: 'How do I choose the right NEET coaching institute?',
+        answer:
+          'Look for: (1) Experienced faculty (15+ years like Dr. Shekhar), (2) Proven results (65+ AIIMS like Cerebrum), (3) Small batch sizes for personal attention, (4) Quality study material aligned with NCERT, (5) Regular test series, (6) Good student reviews, (7) Convenient location and timings. Take a free demo class before deciding.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'online-vs-offline-neet-coaching': {
+    slug: 'online-vs-offline-neet-coaching',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'Online vs Offline NEET Coaching | Which is Better? | Cerebrum Academy',
+    metaDescription:
+      'Compare online vs offline NEET coaching. Pros, cons, success rates, costs. Both options available with AIIMS faculty. 15+ years experience. Call 88264-44334!',
+    heroTitle: 'Online vs Offline NEET Coaching',
+    heroSubtitle:
+      'Honest comparison based on 15+ years coaching 1,50,000+ students in both modes. Find which format suits your learning style best.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park',
+      distance: 'All 4 Centers Available + Online',
+    },
+    localities: [
+      { name: 'Offline Coaching Rohini', url: '/neet-coaching-rohini' },
+      { name: 'Offline Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Online NEET Classes', url: '/online-neet-coaching' },
+      { name: 'Hybrid Mode Available', url: '/neet-hybrid-coaching' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Online NEET Coaching', url: '/online-neet-coaching' },
+      { name: 'Live Biology Classes', url: '/live-biology-classes-neet' },
+    ],
+    faqs: [
+      {
+        question: 'Which is more effective - online or offline NEET coaching?',
+        answer:
+          'Both are equally effective at Cerebrum - our 97% success rate is identical for online and offline students. Offline works better if you need structured environment, peer interaction, and immediate doubt resolution. Online suits self-disciplined students who value flexibility, save travel time, and can focus independently. Your learning style matters more than the mode.',
+      },
+      {
+        question: 'What are the main advantages of online NEET coaching?',
+        answer:
+          'Online coaching offers: (1) Zero travel time saves 2-3 hours daily, (2) Learn from anywhere - ideal for students outside Delhi NCR, (3) Recorded lectures for revision, (4) Lower fees (₹10,000-15,000 less), (5) Comfortable home environment, (6) Access to best faculty regardless of location. Perfect for focused, self-motivated students.',
+      },
+      {
+        question: 'What are the benefits of offline NEET coaching over online?',
+        answer:
+          'Offline coaching provides: (1) Face-to-face interaction with faculty, (2) Immediate doubt clearing during class, (3) Peer learning and healthy competition, (4) Structured routine and environment, (5) Better for hands-on practice and diagrams, (6) Reduced digital fatigue, (7) Stronger accountability. Best for students who thrive in classroom setting.',
+      },
+      {
+        question: 'Can I switch between online and offline modes at Cerebrum?',
+        answer:
+          'Yes! We offer hybrid flexibility. Many students attend offline classes at our Rohini, Gurugram, South Extension, or Green Park centers when convenient, and join online when traveling or during exam season. This best-of-both approach is popular among our students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'affordable-neet-coaching-delhi': {
+    slug: 'affordable-neet-coaching-delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 4 centers across Delhi. EMI options available. Call 88264-44334!',
+    heroTitle: 'Affordable NEET Coaching in Delhi',
+    heroSubtitle:
+      'Quality NEET preparation at budget-friendly fees. AIIMS-trained faculty, proven results, flexible payment options including EMI.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers Across Delhi',
+      address: 'Rohini (DC Chauk), South Extension, Green Park - Choose your nearest center',
+      distance: '4 centers across Delhi',
+    },
+    localities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'South Extension', url: '/biology-classes-south-extension' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Online NEET Coaching', url: '/online-neet-coaching' },
+    ],
+    faqs: [
+      {
+        question: 'What makes Cerebrum the most affordable NEET coaching in Delhi?',
+        answer:
+          'We offer competitive fees (₹35,000-60,000/year) without compromising on quality. You get AIIMS-trained faculty (Dr. Shekhar C Singh with 15+ years experience), comprehensive study material, test series, and doubt support - all at budget-friendly prices. We also offer EMI options and sibling discounts.',
+      },
+      {
+        question: 'Are there any hidden charges in the fees?',
+        answer:
+          'No hidden charges! Our fees include live classes, comprehensive study material, chapter-wise tests, full-length mock tests, doubt clearing sessions, and online resources. Exam fees and books are separate as per actual cost.',
+      },
+      {
+        question: 'Do you offer EMI or installment options?',
+        answer:
+          'Yes! We offer flexible EMI options starting from ₹5,000/month. You can pay in quarterly installments as well. We believe financial constraints should not stop deserving students from quality education. Call 88264-44334 for payment plans.',
+      },
+      {
+        question: 'Is affordable coaching as good as expensive institutes?',
+        answer:
+          'Absolutely! Our 1,50,000+ successful students and 65+ AIIMS selections prove that quality education does not need to be expensive. Dr. Shekhar C Singh personally teaches, ensuring the same quality as premium institutes at affordable fees.',
+      },
+      {
+        question: 'Are there any scholarships or discounts available?',
+        answer:
+          'Yes! We offer merit-based scholarships for top scorers, sibling discounts, early bird discounts, and group enrollment benefits. Call 88264-44334 to know about current scholarship opportunities.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'neet-coaching-with-hostel-delhi': {
+    slug: 'neet-coaching-with-hostel-delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Academy',
+    metaDescription:
+      'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 4 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
+    heroTitle: 'NEET Coaching with Hostel Facilities in Delhi',
+    heroSubtitle:
+      'Focus completely on NEET preparation. Quality coaching with safe, affordable hostel options near all our centers.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers with Hostel Assistance',
+      address: 'Rohini, Gurugram, South Extension, Green Park - Safe PG options near all centers',
+      distance: 'Hostel assistance available',
+    },
+    localities: [
+      { name: 'Rohini PG Options', url: '/affordable-neet-coaching-delhi' },
+      { name: 'Gurugram Hostels', url: '/neet-coaching-gurgaon' },
+      { name: 'South Delhi PGs', url: '/neet-coaching-south-delhi' },
+      { name: 'Green Park Area', url: '/biology-classes-green-park' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'NEET Droppers Batch', url: '/neet-droppers-batch-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide hostel facilities for NEET students?',
+        answer:
+          'While we do not run our own hostel, we help students find safe, verified PG accommodations near all 4 centers (Rohini, Gurugram, South Extension, Green Park). We have tie-ups with several hostels offering secure, affordable stays. Call 88264-44334 for hostel assistance.',
+      },
+      {
+        question: 'What is the cost of hostel/PG near your centers?',
+        answer:
+          'PG costs range from ₹6,000-12,000/month depending on location and facilities (AC/non-AC, single/sharing). We help you find options matching your budget. Most PGs include food, WiFi, and laundry facilities.',
+      },
+      {
+        question: 'Is it safe for girls to stay in hostels near your centers?',
+        answer:
+          'Yes! We only recommend verified, safe PG accommodations. All our partner hostels have 24/7 security, CCTV surveillance, and strict entry protocols. Many girls from other cities stay safely and focus on their NEET preparation.',
+      },
+      {
+        question: 'How far are hostels from your coaching centers?',
+        answer:
+          'We help arrange accommodation within 1-3 km of our centers. Students can easily walk or take a short metro ride. This saves commute time and allows more study hours.',
+      },
+      {
+        question: 'What facilities do the recommended hostels provide?',
+        answer:
+          'Our recommended PGs offer: 3 meals/day, high-speed WiFi, study tables, AC rooms, laundry service, 24/7 security, purified water, and power backup. Some also have study rooms and libraries.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'one-to-one-biology-coaching': {
+    slug: 'one-to-one-biology-coaching',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: '1 to 1 Biology Coaching NEET | Personal Biology Tutor | Cerebrum Academy',
+    metaDescription:
+      'Premium 1-on-1 biology coaching for NEET with Dr. Shekhar C Singh. Personalized attention, customized study plans, flexible timings. Online & offline options. Call 88264-44334!',
+    heroTitle: '1-to-1 Personal Biology Coaching for NEET',
+    heroSubtitle:
+      'Get undivided attention from Dr. Shekhar C Singh (AIIMS New Delhi). Customized study plans, flexible schedules, guaranteed score improvement.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Personal Coaching at All Centers',
+      address: 'Available at Rohini, Gurugram, South Extension, Green Park + Online',
+      distance: 'Choose your preferred location',
+    },
+    localities: [
+      { name: 'Online 1-on-1', url: '/online-neet-coaching' },
+      { name: 'Rohini Center', url: '/biology-classes-rohini' },
+      { name: 'Gurgaon Center', url: '/neet-coaching-gurgaon' },
+      { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Biology Coaching', url: '/biology-coaching' },
+      { name: 'NEET Coaching', url: '/neet-coaching-delhi' },
+      { name: 'Online Biology Classes', url: '/online-biology-classes' },
+      { name: 'NEET Preparation', url: '/neet-preparation' },
+    ],
+    faqs: [
+      {
+        question: 'What are the benefits of 1-on-1 biology coaching for NEET?',
+        answer:
+          'Personal coaching offers: 100% customized study plan based on your strengths/weaknesses, flexible timing that fits your schedule, immediate doubt resolution, faster concept clarity, focused attention on your problem areas, and higher score improvement. Students typically show 80-100 marks improvement in biology.',
+      },
+      {
+        question: 'Who teaches in the 1-to-1 sessions?',
+        answer:
+          'Dr. Shekhar C Singh (AIIMS New Delhi alumnus) personally conducts 1-on-1 sessions. With 15+ years of experience and 65+ AIIMS selections, he provides expert guidance tailored to each student\'s needs.',
+      },
+      {
+        question: 'What is the fee for personal 1-on-1 coaching?',
+        answer:
+          'Our 1-on-1 coaching fees depend on duration and frequency. Options include: Weekly sessions (₹15,000/month), Bi-weekly intensive (₹25,000/month), Daily coaching for droppers (₹45,000/month). All include personalized study material and test analysis. Call 88264-44334 for detailed packages.',
+      },
+      {
+        question: 'Can I take 1-on-1 classes online?',
+        answer:
+          'Yes! Online 1-on-1 sessions are highly effective. You get live video sessions with screen sharing, digital whiteboard, recorded classes for revision, and 24/7 WhatsApp doubt support - same quality as offline personal coaching.',
+      },
+      {
+        question: 'How flexible are the timings for personal coaching?',
+        answer:
+          'Completely flexible! We schedule sessions based on your availability - early morning, evening, weekends, or late night. Perfect for school students, droppers, and working professionals preparing for NEET.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'neet-coaching-working-students': {
+    slug: 'neet-coaching-working-students',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching for Working Students | Flexible Timing Classes | Cerebrum Academy',
+    metaDescription:
+      'NEET coaching designed for working professionals & job holders. Weekend batches, evening classes, online options. Balance work & NEET prep. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Working Students & Professionals',
+    heroSubtitle:
+      'Pursue your medical dream while working. Flexible weekend batches, evening classes, and online options designed for job holders.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Weekend & Evening Batches',
+      address: 'Available at all 4 centers: Rohini, Gurugram, South Extension, Green Park',
+      distance: 'Flexible timing options',
+    },
+    localities: [
+      { name: 'Weekend Batches', url: '/neet-biology-weekend-batch' },
+      { name: 'Online Evening Classes', url: '/online-neet-coaching' },
+      { name: 'Gurgaon Weekend', url: '/neet-coaching-gurgaon' },
+      { name: 'South Delhi Weekend', url: '/neet-coaching-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Online NEET Coaching', url: '/online-neet-coaching' },
+      { name: 'NEET Coaching Delhi', url: '/neet-coaching-delhi' },
+      { name: 'NEET Preparation', url: '/neet-preparation' },
+      { name: 'NEET Droppers', url: '/neet-droppers-batch-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Can working professionals prepare for NEET while doing a job?',
+        answer:
+          'Yes! Many of our students work full-time and successfully prepare for NEET. Our weekend batches (Sat-Sun 9 AM-6 PM) and evening classes (Mon-Fri 7-10 PM) are designed for working professionals. With dedicated 15-20 hours/week, you can definitely crack NEET.',
+      },
+      {
+        question: 'What batch timings are available for working students?',
+        answer:
+          'We offer: Weekend batches (Saturday-Sunday 9 AM-6 PM with breaks), Evening batches (Monday-Friday 7-10 PM), Online flexible batches (watch recorded lectures anytime), and Hybrid options (mix of weekend offline + weekday online). Call 88264-44334 to choose your schedule.',
+      },
+      {
+        question: 'How long does it take to prepare for NEET while working?',
+        answer:
+          'For working professionals, we recommend 12-18 months of preparation with consistent 15-20 hours/week study. Our accelerated weekend program covers the full NEET syllabus efficiently. Many working students have successfully qualified in their first attempt.',
+      },
+      {
+        question: 'Do you provide recorded lectures for missed classes?',
+        answer:
+          'Yes! All our classes are recorded. If you miss a weekend or evening session due to work commitments, you can access the recording within 24 hours. This ensures you never fall behind in your preparation.',
+      },
+      {
+        question: 'What is different about your program for working students?',
+        answer:
+          'Our program offers: Condensed weekend sessions covering weekly syllabus, self-study material for weekday revision, recorded lectures for flexible learning, late evening doubt sessions via WhatsApp, monthly tests on Sundays, and personalized study plans considering your work schedule.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
+
+  'neet-dropper-crash-course-2025': {
+    slug: 'neet-dropper-crash-course-2025',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Dropper Crash Course 2025 | Intensive 3-6 Month Program | Cerebrum Academy',
+    metaDescription:
+      'Last-minute NEET 2025 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
+    heroTitle: 'NEET 2025 Crash Course for Droppers',
+    heroSubtitle:
+      'Make every remaining day count! Intensive 3-6 month program with rapid revision, daily practice tests, and focused weak topic coaching.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Crash Course at All Centers',
+      address: 'Rohini, Gurugram, South Extension, Green Park - 4 intensive batches',
+      distance: 'Multiple time slots available',
+    },
+    localities: [
+      { name: 'Rohini Crash Course', url: '/biology-classes-rohini' },
+      { name: 'Gurgaon Intensive', url: '/neet-droppers-batch-gurgaon' },
+      { name: 'South Delhi Crash', url: '/neet-coaching-south-delhi' },
+      { name: 'Online Crash Course', url: '/online-neet-coaching' },
+    ],
+    relatedCities: [
+      { name: 'NEET Droppers Batch', url: '/neet-droppers-batch-gurgaon' },
+      { name: 'NEET 2025 Preparation', url: '/neet-2025-preparation' },
+      { name: 'NEET Biology Crash Course', url: '/neet-biology-crash-course' },
+      { name: 'NEET Repeaters', url: '/neet-repeaters' },
+    ],
+    faqs: [
+      {
+        question: 'Is a 3-6 month crash course enough for NEET droppers?',
+        answer:
+          'Yes, if you have basic foundation from your previous attempt! Our crash course focuses on: Rapid revision of full syllabus, Daily practice of 200+ questions, Identifying and strengthening weak topics, PYQ pattern analysis, and 50+ full-length mock tests. Droppers who have studied before can effectively utilize this intensive program.',
+      },
+      {
+        question: 'What makes this crash course different from regular coaching?',
+        answer:
+          'Our crash course is super intensive: 8-10 hours daily classes (Mon-Sat), 3 full syllabus revisions in 6 months, Daily chapter tests + weekly mock tests, Exclusive focus on high-weightage topics (80% syllabus gives 95% marks), Personal improvement tracker, and Psychological counseling for exam stress.',
+      },
+      {
+        question: 'Can I realistically improve my score in just 3-6 months?',
+        answer:
+          'Absolutely! Our crash course students show average improvements of 80-120 marks. We have had students jump from 450 to 580+ in just 4 months. The key is intensive daily practice, weak topic focus, and expert guidance from Dr. Shekhar C Singh.',
+      },
+      {
+        question: 'What is the daily schedule for the crash course?',
+        answer:
+          'Our intensive schedule: 9 AM-1 PM: Rapid concept revision (2 chapters/day), 1-2 PM: Lunch break, 2-5 PM: Practice session (150-200 MCQs), 5-6 PM: Doubt clearing, 6-7 PM: Test (50 questions), Evening: Self-study with provided material. Sunday: Full-length 3-hour mock test.',
+      },
+      {
+        question: 'When do the crash course batches start?',
+        answer:
+          'We run crash courses throughout the year with different durations: 6-month batch (Dec-May), 4-month batch (Feb-May), 3-month batch (Mar-May). New batches start every month. With NEET 2025 in May, join immediately to maximize preparation time. Call 88264-44334 for next batch dates.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,50,000+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.2090',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {

@@ -289,7 +289,7 @@ export function FAQSchema() {
         name: 'Who are the faculty members at Cerebrum Biology Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our faculty comprises AIIMS-trained experts with 10+ years of teaching experience. They have collectively mentored thousands of successful NEET candidates and specialize in making complex biology concepts easy to understand.',
+          text: 'Our faculty comprises AIIMS-trained experts with 15+ years of teaching experience. They have collectively mentored thousands of successful NEET candidates and specialize in making complex biology concepts easy to understand.',
         },
       },
       {

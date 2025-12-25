@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Dr. Shekhar C Singh - Director | Cerebrum Biology Academy',
   description:
-    'Meet Dr. Shekhar C Singh, AIIMS faculty and Director of Cerebrum Biology Academy. 15+ years experience, 2500+ students mentored, 98% NEET success rate. Book a demo class today.',
+    'Meet Dr. Shekhar C Singh, AIIMS faculty and Director of Cerebrum Biology Academy. 15+ years experience, 1,50,000+ students mentored, 98% NEET success rate. Book a demo class today.',
   keywords:
     'Dr. Shekhar Singh, AIIMS faculty, NEET biology teacher, Cerebrum Biology Academy, NEET coach, biology mentor',
   openGraph: {

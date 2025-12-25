@@ -153,7 +153,7 @@ export default function BestZoologyTeacherForNeetPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
-              { icon: Users, value: '15,000+', label: 'Students Taught' },
+              { icon: Users, value: '1,50,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Teaching NEET' },
             ].map((stat, index) => (
@@ -349,7 +349,7 @@ export default function BestZoologyTeacherForNeetPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Learn from the Best Zoology Teacher</h2>
             <p className="mb-8 text-xl text-emerald-100">
-              Join 15,000+ students who achieved NEET success with our expert zoology teaching
+              Join 1,50,000+ students who achieved NEET success with our expert zoology teaching
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

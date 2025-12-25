@@ -152,7 +152,7 @@ export default function OnlineNeetCoachingPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
-              { icon: Users, value: '15,000+', label: 'Students Online' },
+              { icon: Users, value: '1,50,000+', label: 'Students Online' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '500+', label: 'Video Hours' },
             ].map((stat, index) => (

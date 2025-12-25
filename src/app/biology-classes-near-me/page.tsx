@@ -29,13 +29,13 @@ const offlineCenters = [
   },
   {
     name: 'Gurugram Center',
-    address: 'M2K Corporate Park, Sector 50, Gurugram 122018',
+    address: 'Unit 17, M2K Corporate Park, Sector 51 (Mayfield Garden), Gurugram 122018',
     areas: ['DLF', 'Sushant Lok', 'Golf Course Road', 'Sector 56'],
     status: 'Open',
   },
   {
     name: 'South Delhi Center',
-    address: 'Block B, South Extension Part 2, Delhi 110049',
+    address: 'Block D, Near McD, South Extension Part 2, Delhi 110049',
     areas: ['GK', 'Hauz Khas', 'Vasant Vihar', 'Defence Colony'],
     status: 'Open',
   },

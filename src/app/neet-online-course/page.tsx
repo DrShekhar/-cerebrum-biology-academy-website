@@ -119,7 +119,7 @@ export default function NeetOnlineCoursePage() {
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">NEET Online Course</h1>
             <p className="mb-8 text-xl text-purple-100">
               Comprehensive NEET online course with 500+ video lectures, practice tests, and
-              complete study material. Join 15,000+ students with 98% success rate!
+              complete study material. Join 1,50,000+ students with 98% success rate!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -145,7 +145,7 @@ export default function NeetOnlineCoursePage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '98%', label: 'Success Rate' },
-              { icon: Users, value: '15,000+', label: 'Students' },
+              { icon: Users, value: '1,50,000+', label: 'Students' },
               { icon: Video, value: '500+', label: 'Video Hours' },
               { icon: Star, value: '4.9/5', label: 'Course Rating' },
             ].map((stat, index) => (

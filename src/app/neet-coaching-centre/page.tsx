@@ -35,7 +35,7 @@ const centers = [
   },
   {
     name: 'Gurugram Center',
-    address: 'M2K Corporate Park, Sector 50',
+    address: 'Unit 17, M2K Corporate Park, Sector 51 (Mayfield Garden)',
     city: 'Gurugram',
     pincode: '122018',
     phone: '+918826444334',
@@ -46,8 +46,8 @@ const centers = [
   },
   {
     name: 'South Extension Center',
-    address: 'Block B, South Extension 2',
-    city: 'South Delhi',
+    address: 'Block D, Near McD, South Extension Part 2',
+    city: 'New Delhi',
     pincode: '110049',
     phone: '+918826444334',
     features: ['Prime Location', 'Well-Connected', 'Spacious Classrooms'],

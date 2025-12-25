@@ -204,7 +204,7 @@ export function LeadCaptureModal({
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">✓</span>
-                    <span>Created by AIIMS faculty with 14+ years experience</span>
+                    <span>Created by AIIMS faculty with 15+ years experience</span>
                   </li>
                 </ul>
               </div>

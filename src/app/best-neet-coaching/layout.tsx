@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in India 2025 | Top Rated Biology Classes',
   description:
-    'Looking for the best NEET coaching? Cerebrum Biology Academy - 98% success rate, AIIMS trained faculty, 15,000+ selections. Best coaching for NEET with proven results!',
+    'Looking for the best NEET coaching? Cerebrum Biology Academy - 98% success rate, AIIMS trained faculty, 1,50,000+ selections. Best coaching for NEET with proven results!',
   keywords: [
     'best NEET coaching',
     'best coaching for NEET',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching in India 2025 | Top Rated Biology Classes',
     description:
-      "Best NEET coaching with 98% success rate, AIIMS trained faculty, 15,000+ selections. Join India's top-rated NEET coaching institute.",
+      "Best NEET coaching with 98% success rate, AIIMS trained faculty, 1,50,000+ selections. Join India's top-rated NEET coaching institute.",
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.cerebrumbiologyacademy.com/best-neet-coaching',

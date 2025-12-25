@@ -5,7 +5,7 @@ export const facultyMembers: Faculty[] = [
   {
     id: 'dr-shekhar-singh',
     name: 'Dr. Shekhar C Singh',
-    qualification: 'AIIMS New Delhi',
+    qualification: 'AIIMS New Delhi Alumnus',
     experience: '15+ years',
     specialization: [],
     image:
@@ -18,14 +18,14 @@ export const facultyMembers: Faculty[] = [
       'Founded Delhi Science Foundation and Quark Education',
       'Student Sadhna Sirin: 695 marks in NEET 2023, 100%ile Biology (Delhi-NCR Rank 1)',
       'Student Priya Sehgal: Perfect 360/360 Biology score',
-      'Mentored 2500+ students to medical college admissions',
+      'Mentored 1,50,000+ students to medical college admissions',
     ],
     teachingStyle:
       'Believes "all humans are equally talented; hard work done smartly brings extraordinary success." Focuses on converting underperforming students into high achievers through unconventional teaching approaches that extend beyond textbooks to include life skills and character development.',
     successRate: 98,
     studentTestimonial:
       'Dr. Shekhar Sir made Biology so clear and interesting. His unique teaching methods helped me score 695 marks in NEET. - Sadhna Sirin',
-    studentsGuided: 2500,
+    studentsGuided: 150000,
     rating: 4.9,
   },
   {

@@ -22,7 +22,7 @@ export default function BiologyTutorOnlinePage() {
         name: 'What qualifications does the biology tutor have?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Dr. Shekhar is AIIMS-trained with 15+ years teaching experience and 2500+ NEET selections. He specializes in CBSE, ICSE, and NEET biology preparation.',
+          text: 'Dr. Shekhar is AIIMS-trained with 15+ years teaching experience and 1,50,000+ NEET selections. He specializes in CBSE, ICSE, and NEET biology preparation.',
         },
       },
       {
@@ -245,7 +245,7 @@ export default function BiologyTutorOnlinePage() {
                     <div className="text-sm text-blue-200">Years Experience</div>
                   </div>
                   <div className="rounded-lg bg-white/10 p-4 text-center backdrop-blur-sm">
-                    <div className="text-2xl font-bold md:text-3xl">2500+</div>
+                    <div className="text-2xl font-bold md:text-3xl">1,50,000+</div>
                     <div className="text-sm text-blue-200">NEET Selections</div>
                   </div>
                   <div className="rounded-lg bg-white/10 p-4 text-center backdrop-blur-sm">

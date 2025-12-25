@@ -1,7 +1,7 @@
 'use client'
 
 interface LocalBusinessSchemaProps {
-  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'faridabad'
+  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'
 }
 
 // Detailed location data with geo coordinates
@@ -14,7 +14,7 @@ const locationData = {
     addressRegion: 'Delhi',
     postalCode: '110085',
     geo: { lat: '28.7143', lng: '77.1117' },
-    phone: '+91-8826444334',
+    phone: '+91-88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-north-delhi',
     image: 'https://cerebrumbiologyacademy.com/locations/rohini-center.jpg',
     priceRange: '₹₹',
@@ -49,11 +49,11 @@ const locationData = {
     addressRegion: 'Haryana',
     postalCode: '122018',
     geo: { lat: '28.4153', lng: '77.0499' },
-    phone: '+91-8826444334',
+    phone: '+91-88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
     image: 'https://cerebrumbiologyacademy.com/locations/gurugram-center.jpg',
     priceRange: '₹₹',
-    nearbyLandmarks: ['Sector 50 Gurugram', 'Golf Course Extension Road', 'Sohna Road'],
+    nearbyLandmarks: ['Sector 51 Gurugram', 'Golf Course Extension Road', 'Sohna Road'],
     studentCount: '620',
     reviews: [
       {
@@ -84,7 +84,7 @@ const locationData = {
     addressRegion: 'Delhi',
     postalCode: '110049',
     geo: { lat: '28.5725', lng: '77.2217' },
-    phone: '+91-8826444334',
+    phone: '+91-88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
     image: 'https://cerebrumbiologyacademy.com/locations/south-extension-center.jpg',
     priceRange: '₹₹',
@@ -111,6 +111,41 @@ const locationData = {
       },
     ],
   },
+  'green-park': {
+    name: 'Cerebrum Biology Academy - Green Park',
+    address: 'Green Park Extension, New Delhi',
+    streetAddress: 'Green Park Extension',
+    addressLocality: 'Green Park',
+    addressRegion: 'Delhi',
+    postalCode: '110016',
+    geo: { lat: '28.5597', lng: '77.2089' },
+    phone: '+91-88264-44334',
+    url: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
+    image: 'https://cerebrumbiologyacademy.com/locations/green-park-center.jpg',
+    priceRange: '₹₹',
+    nearbyLandmarks: ['Green Park Metro Station', 'IIT Delhi', 'Hauz Khas'],
+    studentCount: '720',
+    reviews: [
+      {
+        author: 'Nisha Sharma',
+        rating: 5,
+        date: '2024-09-12',
+        body: 'Excellent location near Green Park metro. Dr. Shekhar C Singh teaching methodology is amazing. Scored 685 in NEET 2024!',
+      },
+      {
+        author: 'Karan Mehra',
+        rating: 5,
+        date: '2024-08-20',
+        body: 'Best biology coaching in South Delhi. The faculty explains even the most complex topics with ease. Highly recommend!',
+      },
+      {
+        author: 'Riya Bansal',
+        rating: 5,
+        date: '2024-07-15',
+        body: 'Joined for NEET dropper batch. The personalized attention and test series helped me improve by 150 marks.',
+      },
+    ],
+  },
   faridabad: {
     name: 'Cerebrum Biology Academy - Faridabad',
     address: 'Sector 15, Near Crown Interiors Mall',
@@ -119,7 +154,7 @@ const locationData = {
     addressRegion: 'Haryana',
     postalCode: '121007',
     geo: { lat: '28.3870', lng: '77.3070' },
-    phone: '+91-8826444334',
+    phone: '+91-88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
     image: 'https://cerebrumbiologyacademy.com/locations/faridabad-center.jpg',
     priceRange: '₹₹',
@@ -203,7 +238,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     ],
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Singh',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
@@ -371,10 +406,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
 export function AllLocationsSchema() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'faridabad'> = [
+  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'> = [
     'rohini',
     'gurugram',
     'south-extension',
+    'green-park',
     'faridabad',
   ]
 
@@ -387,12 +423,12 @@ export function AllLocationsSchema() {
       'Best NEET Biology Coaching in Delhi NCR with 4 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
-    telephone: '+91-8826444334',
+    telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
     foundingDate: '2018',
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Singh',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },

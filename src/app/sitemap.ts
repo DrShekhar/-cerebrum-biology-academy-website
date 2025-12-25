@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/mdx'
 import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
+import { getAllAreaSlugs } from '@/data/localAreas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.cerebrumbiologyacademy.com'
+  // Use non-www URL to match middleware redirect behavior
+  const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a static date representing when site content was last updated
   // This is better for SEO than dynamic dates that change on every build
   const lastUpdated = new Date('2025-12-22T00:00:00.000Z')
@@ -20,6 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamically generate SEO landing page URLs
   const seoSlugs = getAllSEOSlugs()
   const seoLandingRoutes: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  // Dynamically generate local area page URLs (e.g., /best-biology-coaching-gurgaon)
+  const localAreaSlugs = getAllAreaSlugs()
+  const localAreaRoutes: MetadataRoute.Sitemap = localAreaSlugs.map((slug) => ({
     url: `${baseUrl}/${slug}`,
     lastModified: lastUpdated,
     changeFrequency: 'weekly' as const,
@@ -109,6 +120,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     // SEO landing pages for keyword targeting
     ...seoLandingRoutes,
+    // Local area pages for [localSlug] route (e.g., /best-biology-coaching-gurgaon)
+    ...localAreaRoutes,
     {
       url: `${baseUrl}/gallery`,
       lastModified: lastUpdated,

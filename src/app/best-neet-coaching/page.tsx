@@ -31,9 +31,9 @@ const whyBest = [
   },
   {
     icon: Users,
-    title: '15,000+ Selections',
+    title: '1,50,000+ Selections',
     description: 'Over 15 years, we have helped thousands achieve their medical dreams.',
-    stat: '15K+',
+    stat: '1,50K+',
   },
   {
     icon: Award,
@@ -93,7 +93,7 @@ const faqs = [
   {
     question: 'What makes Cerebrum the best NEET coaching?',
     answer:
-      'Cerebrum Biology Academy stands out with a 98% success rate, AIIMS-trained faculty, small batch sizes (10-15 students), comprehensive study material, and personalized attention. Our 15+ years of experience and 15,000+ selections prove our teaching methodology works.',
+      'Cerebrum Biology Academy stands out with a 98% success rate, AIIMS-trained faculty, small batch sizes (10-15 students), comprehensive study material, and personalized attention. Our 15+ years of experience and 1,50,000+ selections prove our teaching methodology works.',
   },
   {
     question: 'How is the teaching quality at Cerebrum?',
@@ -208,7 +208,7 @@ export default function BestNeetCoachingPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              98% Success Rate | AIIMS Trained Faculty | 15,000+ Selections
+              98% Success Rate | AIIMS Trained Faculty | 1,50,000+ Selections
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -426,7 +426,7 @@ export default function BestNeetCoachingPage() {
               Join India&apos;s Best NEET Coaching Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              98% success rate, AIIMS trained faculty, 15,000+ selections. Your medical dream starts
+              98% success rate, AIIMS trained faculty, 1,50,000+ selections. Your medical dream starts
               here!
             </p>
 
@@ -466,7 +466,7 @@ export default function BestNeetCoachingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>15,000+ Selections</span>
+                <span>1,50,000+ Selections</span>
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
