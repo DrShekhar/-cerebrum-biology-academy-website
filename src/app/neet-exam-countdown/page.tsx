@@ -24,26 +24,68 @@ import {
   Sparkles,
   Timer,
   Zap,
-  Brain,
+  Leaf,
   Beaker,
   Atom,
-  Leaf,
+  Star,
+  Rocket,
+  Trophy,
 } from 'lucide-react'
 
 // NEET 2026 Exam Date - May 3, 2026, 2:00 PM IST
 const NEET_2026_DATE = new Date('2026-05-03T14:00:00+05:30')
-const NEET_2025_DATE = new Date('2025-05-04T14:00:00+05:30') // For progress calculation
+const NEET_2025_DATE = new Date('2025-05-04T14:00:00+05:30')
 
 // Important Dates
 const IMPORTANT_DATES = [
-  { event: 'Registration Opens', date: 'Feb 7, 2026', status: 'upcoming' },
-  { event: 'Registration Closes', date: 'Mar 7, 2026', status: 'upcoming' },
-  { event: 'Correction Window', date: 'Mar 10-15, 2026', status: 'upcoming' },
-  { event: 'Admit Card Release', date: 'Apr 30, 2026', status: 'upcoming' },
-  { event: 'NEET 2026 Exam', date: 'May 3, 2026', status: 'upcoming' },
-  { event: 'Answer Key Release', date: 'May 10, 2026', status: 'upcoming' },
-  { event: 'Result Declaration', date: 'June 5, 2026', status: 'upcoming' },
-  { event: 'Counselling Begins', date: 'July 2026', status: 'upcoming' },
+  {
+    event: 'Registration Opens',
+    date: 'Feb 7, 2026',
+    icon: FileText,
+    color: 'from-blue-500 to-indigo-500',
+  },
+  {
+    event: 'Registration Closes',
+    date: 'Mar 7, 2026',
+    icon: Clock,
+    color: 'from-indigo-500 to-violet-500',
+  },
+  {
+    event: 'Correction Window',
+    date: 'Mar 10-15, 2026',
+    icon: FileText,
+    color: 'from-violet-500 to-purple-500',
+  },
+  {
+    event: 'Admit Card Release',
+    date: 'Apr 30, 2026',
+    icon: Award,
+    color: 'from-purple-500 to-fuchsia-500',
+  },
+  {
+    event: 'NEET 2026 Exam',
+    date: 'May 3, 2026',
+    icon: Star,
+    color: 'from-amber-500 to-orange-500',
+  },
+  {
+    event: 'Answer Key Release',
+    date: 'May 10, 2026',
+    icon: CheckCircle,
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    event: 'Result Declaration',
+    date: 'June 5, 2026',
+    icon: Trophy,
+    color: 'from-green-500 to-green-600',
+  },
+  {
+    event: 'Counselling Begins',
+    date: 'July 2026',
+    icon: GraduationCap,
+    color: 'from-blue-500 to-indigo-600',
+  },
 ]
 
 // Topper Quotes
@@ -54,7 +96,8 @@ const TOPPER_QUOTES = [
     year: '2024',
   },
   {
-    quote: 'Consistency beats intensity. 6 hours of focused study daily is better than 12 hours once a week.',
+    quote:
+      'Consistency beats intensity. 6 hours of focused study daily is better than 12 hours once a week.',
     author: 'Akanksha Singh, AIR 2',
     year: '2023',
   },
@@ -74,7 +117,8 @@ const TOPPER_QUOTES = [
     year: '2020',
   },
   {
-    quote: 'Focus on weak areas in the morning when your mind is fresh. Revise strong topics at night.',
+    quote:
+      'Focus on weak areas in the morning when your mind is fresh. Revise strong topics at night.',
     author: 'Aman Kumar, AIR 15',
     year: '2024',
   },
@@ -82,10 +126,30 @@ const TOPPER_QUOTES = [
 
 // Preparation Phases
 const PHASES = [
-  { name: 'Foundation', minDays: 180, color: 'blue', tip: 'Focus on building strong concepts from NCERT. Complete syllabus coverage.' },
-  { name: 'Consolidation', minDays: 90, color: 'purple', tip: 'Solve topic-wise questions. Identify and work on weak areas.' },
-  { name: 'Revision', minDays: 30, color: 'orange', tip: 'Intensive revision. Focus on high-weightage topics and formulas.' },
-  { name: 'Final Sprint', minDays: 0, color: 'red', tip: 'Mock tests daily. Light revision. Focus on time management and accuracy.' },
+  {
+    name: 'Foundation',
+    minDays: 180,
+    color: 'blue',
+    tip: 'Focus on building strong concepts from NCERT. Complete syllabus coverage.',
+  },
+  {
+    name: 'Consolidation',
+    minDays: 90,
+    color: 'purple',
+    tip: 'Solve topic-wise questions. Identify and work on weak areas.',
+  },
+  {
+    name: 'Revision',
+    minDays: 30,
+    color: 'orange',
+    tip: 'Intensive revision. Focus on high-weightage topics and formulas.',
+  },
+  {
+    name: 'Final Sprint',
+    minDays: 0,
+    color: 'red',
+    tip: 'Mock tests daily. Light revision. Focus on time management and accuracy.',
+  },
 ]
 
 interface TimeLeft {
@@ -97,7 +161,13 @@ interface TimeLeft {
 }
 
 export default function NEETExamCountdownPage() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 })
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    total: 0,
+  })
   const [studyHoursPerDay, setStudyHoursPerDay] = useState(6)
   const [targetScore, setTargetScore] = useState(650)
   const [category, setCategory] = useState('General')
@@ -107,16 +177,12 @@ export default function NEETExamCountdownPage() {
   const [currentQuote, setCurrentQuote] = useState(0)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
+  const [showToast, setShowToast] = useState(false)
 
-  // Calculate time left
   const calculateTimeLeft = useCallback((): TimeLeft => {
     const now = new Date()
     const difference = NEET_2026_DATE.getTime() - now.getTime()
-
-    if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 }
-    }
-
+    if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 }
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
@@ -126,7 +192,6 @@ export default function NEETExamCountdownPage() {
     }
   }, [])
 
-  // Load streak from localStorage
   useEffect(() => {
     setMounted(true)
     const savedStreak = localStorage.getItem('neetStreak')
@@ -146,13 +211,11 @@ export default function NEETExamCountdownPage() {
         setStreak(parseInt(savedStreak))
         setLastStudyDate(savedLastDate)
       } else {
-        // Streak broken
         setStreak(0)
         localStorage.setItem('neetStreak', '0')
       }
     }
 
-    // Rotate quotes every 10 seconds
     const quoteInterval = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % TOPPER_QUOTES.length)
     }, 10000)
@@ -160,18 +223,12 @@ export default function NEETExamCountdownPage() {
     return () => clearInterval(quoteInterval)
   }, [])
 
-  // Update countdown every second
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft())
-    }, 1000)
-
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000)
     setTimeLeft(calculateTimeLeft())
-
     return () => clearInterval(timer)
   }, [calculateTimeLeft])
 
-  // Mark as studied today
   const markStudied = () => {
     const today = new Date().toDateString()
     const newStreak = streak + 1
@@ -182,30 +239,26 @@ export default function NEETExamCountdownPage() {
     localStorage.setItem('neetLastStudyDate', today)
   }
 
-  // Calculate study metrics
   const totalStudyHours = timeLeft.days * studyHoursPerDay
-  const biologyHours = Math.round(totalStudyHours * 0.5) // 50% for Biology (90 questions)
-  const physicsHours = Math.round(totalStudyHours * 0.25) // 25% for Physics (45 questions)
-  const chemistryHours = Math.round(totalStudyHours * 0.25) // 25% for Chemistry (45 questions)
+  const biologyHours = Math.round(totalStudyHours * 0.5)
+  const physicsHours = Math.round(totalStudyHours * 0.25)
+  const chemistryHours = Math.round(totalStudyHours * 0.25)
 
-  // Calculate preparation progress
-  const totalPrepDays = Math.floor((NEET_2026_DATE.getTime() - NEET_2025_DATE.getTime()) / (1000 * 60 * 60 * 24))
+  const totalPrepDays = Math.floor(
+    (NEET_2026_DATE.getTime() - NEET_2025_DATE.getTime()) / (1000 * 60 * 60 * 24)
+  )
   const daysPassed = totalPrepDays - timeLeft.days
   const progressPercent = Math.min(100, Math.max(0, Math.round((daysPassed / totalPrepDays) * 100)))
 
-  // Get current phase
   const getCurrentPhase = () => {
     for (const phase of PHASES) {
-      if (timeLeft.days >= phase.minDays) {
-        return phase
-      }
+      if (timeLeft.days >= phase.minDays) return phase
     }
     return PHASES[PHASES.length - 1]
   }
 
   const currentPhase = getCurrentPhase()
 
-  // Get recommended cutoff based on target and category
   const getRecommendedCutoff = () => {
     const cutoffs: Record<string, Record<number, string>> = {
       General: { 600: 'Top 50,000', 650: 'Top 15,000', 700: 'Top 1,000' },
@@ -217,10 +270,6 @@ export default function NEETExamCountdownPage() {
     return cutoffs[category]?.[targetScore] || 'Top 50,000'
   }
 
-  // Toast state for share feedback
-  const [showToast, setShowToast] = useState(false)
-
-  // Share function
   const shareCountdown = () => {
     const text = `Only ${timeLeft.days} days left for NEET 2026! I'm preparing with Cerebrum Biology Academy. Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
     if (navigator.share) {
@@ -232,11 +281,9 @@ export default function NEETExamCountdownPage() {
     }
   }
 
-  // Check if exam day or past
   const isExamDay = timeLeft.days === 0 && timeLeft.hours <= 24
   const isExamOver = timeLeft.total <= 0
 
-  // FAQ Data
   const faqs = [
     {
       q: 'When is NEET 2026 exam date?',
@@ -262,10 +309,14 @@ export default function NEETExamCountdownPage() {
 
   if (!mounted) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-indigo-50 to-white">
+      <div className="flex min-h-screen items-center justify-center bg-[#0a0a1a]">
         <div className="text-center">
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600"></div>
-          <p className="mt-4 text-gray-600">Loading countdown...</p>
+          <div className="relative mx-auto h-20 w-20">
+            <div className="absolute inset-0 animate-ping rounded-full bg-violet-500/30" />
+            <div className="absolute inset-2 animate-spin rounded-full border-4 border-transparent border-t-violet-500" />
+            <div className="absolute inset-4 rounded-full bg-gradient-to-br from-violet-600 to-indigo-600" />
+          </div>
+          <p className="mt-6 text-lg font-medium text-violet-300">Loading countdown...</p>
         </div>
       </div>
     )
@@ -273,7 +324,6 @@ export default function NEETExamCountdownPage() {
 
   return (
     <>
-      {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -282,7 +332,7 @@ export default function NEETExamCountdownPage() {
             '@type': 'WebApplication',
             name: 'NEET 2026 Exam Countdown Timer',
             description:
-              'Live countdown to NEET 2026 exam with study planner, progress tracker, and preparation tips. Track days left for NEET UG 2026.',
+              'Live countdown to NEET 2026 exam with study planner, progress tracker, and preparation tips.',
             url: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -291,321 +341,461 @@ export default function NEETExamCountdownPage() {
         }}
       />
 
-      {/* Toast Notification */}
+      {/* Toast */}
       {showToast && (
-        <div className="fixed top-4 right-4 z-50 animate-pulse rounded-lg bg-green-600 px-4 py-3 text-white shadow-lg">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-5 w-5" />
-            <span>Countdown copied to clipboard!</span>
+        <div className="fixed right-4 top-4 z-50 animate-bounce rounded-2xl bg-gradient-to-r from-green-500 to-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
+          <div className="flex items-center gap-3">
+            <CheckCircle className="h-6 w-6" />
+            <span className="font-semibold">Copied to clipboard!</span>
           </div>
         </div>
       )}
 
-      <main className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-blue-50">
-        {/* Hero Section - Main Countdown */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 pb-16 pt-12 text-white md:pb-24 md:pt-20">
-          {/* Animated Background */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -right-20 -top-20 h-64 w-64 animate-pulse rounded-full bg-white/10" />
-            <div className="absolute -bottom-32 -left-32 h-96 w-96 animate-pulse rounded-full bg-white/5" style={{ animationDelay: '1s' }} />
-            <div className="absolute right-1/4 top-1/3 h-32 w-32 animate-bounce rounded-full bg-white/5" style={{ animationDelay: '2s', animationDuration: '3s' }} />
-          </div>
+      <main className="relative min-h-screen overflow-hidden bg-[#0a0a1a]">
+        {/* Animated Background */}
+        <div className="pointer-events-none fixed inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent" />
+          <div className="absolute -left-40 top-0 h-[500px] w-[500px] animate-pulse rounded-full bg-violet-600/10 blur-[120px]" />
+          <div
+            className="absolute -right-40 top-1/3 h-[400px] w-[400px] animate-pulse rounded-full bg-indigo-600/10 blur-[100px]"
+            style={{ animationDelay: '1s' }}
+          />
+          <div
+            className="absolute -bottom-40 left-1/3 h-[600px] w-[600px] animate-pulse rounded-full bg-fuchsia-600/10 blur-[140px]"
+            style={{ animationDelay: '2s' }}
+          />
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        </div>
 
+        {/* Hero Section */}
+        <section className="relative pb-20 pt-8 md:pb-32 md:pt-12">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-indigo-200">
-              <Link href="/" className="hover:text-white hover:underline">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/neet-tools" className="hover:text-white hover:underline">NEET Tools</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Exam Countdown</span>
+            <nav className="mb-8 flex items-center gap-2 text-sm text-violet-400/70">
+              <Link href="/" className="transition-colors hover:text-violet-300">
+                Home
+              </Link>
+              <span className="text-violet-600">/</span>
+              <Link href="/neet-tools" className="transition-colors hover:text-violet-300">
+                NEET Tools
+              </Link>
+              <span className="text-violet-600">/</span>
+              <span className="text-violet-300">Exam Countdown</span>
             </nav>
 
             <div className="text-center">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                <Timer className="h-4 w-4" />
-                Live Countdown to NEET 2026
+              {/* Badge */}
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2.5 backdrop-blur-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                </span>
+                <span className="text-sm font-medium text-violet-300">
+                  Live Countdown to NEET 2026
+                </span>
               </div>
 
-              <h1 className="mb-6 text-3xl font-bold md:text-5xl lg:text-6xl">
-                NEET 2026 Exam Countdown
+              {/* Title */}
+              <h1 className="mb-4 text-4xl font-black tracking-tight text-white md:text-6xl lg:text-7xl">
+                <span className="bg-gradient-to-r from-white via-violet-200 to-white bg-clip-text text-transparent">
+                  NEET 2026
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
+                  Exam Countdown
+                </span>
               </h1>
 
-              {/* Main Countdown Display */}
-              <div className="mx-auto mb-8 grid max-w-4xl grid-cols-4 gap-3 md:gap-6">
+              <p className="mx-auto mb-10 max-w-2xl text-lg text-violet-300/70">
+                Every second counts. Track your journey to becoming a doctor.
+              </p>
+
+              {/* Main Countdown */}
+              <div className="mx-auto mb-10 grid max-w-4xl grid-cols-4 gap-3 md:gap-5">
                 {[
-                  { value: timeLeft.days, label: 'Days' },
-                  { value: timeLeft.hours, label: 'Hours' },
-                  { value: timeLeft.minutes, label: 'Minutes' },
-                  { value: timeLeft.seconds, label: 'Seconds' },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-2xl bg-white/10 p-4 backdrop-blur-sm md:p-6">
-                    <div className="text-4xl font-bold tabular-nums md:text-6xl lg:text-7xl">
-                      {item.value.toString().padStart(2, '0')}
+                  { value: timeLeft.days, label: 'Days', color: 'from-violet-500 to-indigo-500' },
+                  { value: timeLeft.hours, label: 'Hours', color: 'from-indigo-500 to-blue-500' },
+                  {
+                    value: timeLeft.minutes,
+                    label: 'Minutes',
+                    color: 'from-blue-500 to-violet-500',
+                  },
+                  {
+                    value: timeLeft.seconds,
+                    label: 'Seconds',
+                    color: 'from-fuchsia-500 to-violet-500',
+                  },
+                ].map((item, idx) => (
+                  <div key={item.label} className="group relative">
+                    {/* Glow Effect */}
+                    <div
+                      className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${item.color} opacity-50 blur-lg transition-all duration-500 group-hover:opacity-75`}
+                    />
+
+                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl md:rounded-3xl md:p-6">
+                      {/* Inner Glow */}
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-10`}
+                      />
+
+                      <div className="relative">
+                        <div
+                          className={`bg-gradient-to-r ${item.color} bg-clip-text text-5xl font-black tabular-nums text-transparent md:text-7xl lg:text-8xl`}
+                        >
+                          {item.value.toString().padStart(2, '0')}
+                        </div>
+                        <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-violet-400 md:text-sm">
+                          {item.label}
+                        </div>
+                      </div>
                     </div>
-                    <div className="mt-1 text-sm font-medium text-indigo-200 md:text-base">{item.label}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Exam Date Info */}
-              <div className="mb-6 flex flex-wrap items-center justify-center gap-4 text-sm md:text-base">
-                <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>May 3, 2026</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
-                  <Clock className="h-4 w-4" />
-                  <span>2:00 PM - 5:20 PM</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
-                  <FileText className="h-4 w-4" />
-                  <span>Pen & Paper Mode</span>
-                </div>
+              {/* Exam Info Pills */}
+              <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
+                {[
+                  { icon: Calendar, text: 'May 3, 2026' },
+                  { icon: Clock, text: '2:00 PM - 5:20 PM' },
+                  { icon: FileText, text: 'Pen & Paper Mode' },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-sm text-violet-300 backdrop-blur-sm"
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.text}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Share Button */}
               <button
                 onClick={shareCountdown}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-indigo-600 transition-all hover:bg-indigo-50 hover:shadow-lg"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-4 font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30"
               >
-                <Share2 className="h-5 w-5" />
-                Share Countdown
+                <span className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 transition-opacity group-hover:opacity-100" />
+                <Share2 className="relative h-5 w-5" />
+                <span className="relative">Share Countdown</span>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Preparation Phase Indicator */}
-        <section className="relative -mt-8 px-4 sm:px-6 lg:px-8">
+        {/* Phase Indicator */}
+        <section className="relative -mt-4 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div className={`rounded-2xl bg-gradient-to-r ${
-              currentPhase.color === 'blue' ? 'from-blue-500 to-blue-600' :
-              currentPhase.color === 'purple' ? 'from-purple-500 to-purple-600' :
-              currentPhase.color === 'orange' ? 'from-orange-500 to-orange-600' :
-              'from-red-500 to-red-600'
-            } p-6 text-white shadow-xl`}>
-              <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20">
-                    <Zap className="h-7 w-7" />
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-violet-600/20 via-indigo-600/20 to-violet-600/20 p-1 backdrop-blur-xl">
+              <div className="rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <div className="absolute inset-0 animate-ping rounded-2xl bg-amber-500/30" />
+                      <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 shadow-lg shadow-amber-500/30">
+                        <Zap className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-violet-400">Current Phase</p>
+                      <h3 className="text-2xl font-bold text-white md:text-3xl">
+                        {currentPhase.name}
+                      </h3>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-white/80">Current Preparation Phase</p>
-                    <h3 className="text-2xl font-bold">{currentPhase.name} Phase</h3>
-                  </div>
+                  <p className="max-w-md text-center text-violet-300/80 md:text-right">
+                    {currentPhase.tip}
+                  </p>
                 </div>
-                <div className="text-center md:text-right">
-                  <p className="max-w-md text-sm text-white/90">{currentPhase.tip}</p>
-                </div>
-              </div>
 
-              {/* Phase Progress */}
-              <div className="mt-6">
-                <div className="mb-2 flex justify-between text-sm">
-                  {PHASES.map((phase, idx) => (
-                    <span key={phase.name} className={phase.name === currentPhase.name ? 'font-bold' : 'text-white/60'}>
-                      {phase.name}
-                    </span>
-                  ))}
+                {/* Progress Bar */}
+                <div className="mt-8">
+                  <div className="mb-3 flex justify-between text-xs font-medium text-violet-400">
+                    {PHASES.map((phase) => (
+                      <span
+                        key={phase.name}
+                        className={phase.name === currentPhase.name ? 'text-white' : ''}
+                      >
+                        {phase.name}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="h-3 overflow-hidden rounded-full bg-violet-900/50">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-indigo-500 transition-all duration-1000"
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
+                  <p className="mt-3 text-center text-sm text-violet-400">
+                    <span className="font-bold text-white">{progressPercent}%</span> of your NEET
+                    journey completed
+                  </p>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-white/20">
-                  <div
-                    className="h-full rounded-full bg-white transition-all duration-1000"
-                    style={{ width: `${progressPercent}%` }}
-                  />
-                </div>
-                <p className="mt-2 text-center text-sm text-white/80">
-                  {progressPercent}% of preparation journey completed
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Important Dates Timeline */}
-        <section className="px-4 py-12 sm:px-6 lg:px-8">
+        {/* Important Dates */}
+        <section className="relative px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-2 text-center text-2xl font-bold text-gray-900 md:text-3xl">
-              NEET 2026 Important Dates
-            </h2>
-            <p className="mb-8 text-center text-sm text-gray-500">
-              <AlertCircle className="mr-1 inline-block h-4 w-4" />
-              Tentative dates based on previous years. Official dates will be announced by NTA.
-            </p>
+            <div className="mb-12 text-center">
+              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
+                Important{' '}
+                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                  Dates
+                </span>
+              </h2>
+              <p className="flex items-center justify-center gap-2 text-sm text-violet-400/70">
+                <AlertCircle className="h-4 w-4" />
+                Tentative dates based on previous years. Official dates will be announced by NTA.
+              </p>
+            </div>
 
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-4 top-0 hidden h-full w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-blue-500 md:left-1/2 md:block" />
-
-              <div className="space-y-4 md:space-y-0">
-                {IMPORTANT_DATES.map((item, idx) => (
-                  <div key={item.event} className={`relative flex items-center gap-4 md:justify-center ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                    <div className={`w-full rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:shadow-md md:w-5/12 ${item.event === 'NEET 2026 Exam' ? 'border-indigo-300 bg-indigo-50' : ''}`}>
-                      <div className="flex items-center gap-3">
-                        <div className={`flex h-10 w-10 items-center justify-center rounded-full ${item.event === 'NEET 2026 Exam' ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-600'}`}>
-                          <Calendar className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <h3 className={`font-semibold ${item.event === 'NEET 2026 Exam' ? 'text-indigo-900' : 'text-gray-900'}`}>
-                            {item.event}
-                          </h3>
-                          <p className="text-sm text-gray-600">{item.date}</p>
-                        </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {IMPORTANT_DATES.map((item, idx) => {
+                const Icon = item.icon
+                const isExam = item.event === 'NEET 2026 Exam'
+                return (
+                  <div
+                    key={item.event}
+                    className={`group relative overflow-hidden rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                      isExam
+                        ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/20 to-orange-500/20'
+                        : 'border-white/10 bg-white/5 hover:border-violet-500/30 hover:bg-white/10'
+                    }`}
+                  >
+                    {isExam && (
+                      <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-amber-500/20 blur-2xl" />
+                    )}
+                    <div className="relative p-5">
+                      <div
+                        className={`mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r ${item.color} shadow-lg`}
+                      >
+                        <Icon className="h-6 w-6 text-white" />
                       </div>
+                      <h3
+                        className={`mb-1 font-semibold ${isExam ? 'text-amber-300' : 'text-white'}`}
+                      >
+                        {item.event}
+                      </h3>
+                      <p className="text-sm text-violet-400">{item.date}</p>
                     </div>
-                    {/* Timeline Dot */}
-                    <div className={`absolute left-4 hidden h-4 w-4 rounded-full border-4 border-white md:left-1/2 md:block md:-translate-x-1/2 ${item.event === 'NEET 2026 Exam' ? 'bg-indigo-600' : 'bg-purple-500'}`} />
                   </div>
-                ))}
-              </div>
+                )
+              })}
             </div>
           </div>
         </section>
 
         {/* Study Calculator + Quick Stats */}
-        <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+        <section className="relative px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* Study Time Calculator */}
-              <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 shadow-sm">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white">
-                    <Calculator className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Study Time Calculator</h3>
-                    <p className="text-sm text-gray-600">Plan your preparation hours</p>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <label className="mb-2 block text-sm font-medium text-gray-700">
-                    Hours you can study per day
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <input
-                      type="range"
-                      min="2"
-                      max="12"
-                      value={studyHoursPerDay}
-                      onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
-                      className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-blue-200 accent-blue-600"
-                      aria-label="Study hours per day"
-                      aria-valuemin={2}
-                      aria-valuemax={12}
-                      aria-valuenow={studyHoursPerDay}
-                    />
-                    <span className="w-16 rounded-lg bg-blue-600 px-3 py-2 text-center font-bold text-white">
-                      {studyHoursPerDay}h
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-3 rounded-xl bg-white p-4">
-                  {isExamOver ? (
-                    <div className="text-center py-4">
-                      <Award className="mx-auto h-12 w-12 text-green-600 mb-2" />
-                      <p className="text-xl font-bold text-gray-900">NEET 2026 Completed!</p>
-                      <p className="text-sm text-gray-600">Hope you did your best!</p>
+            <div className="grid gap-6 lg:grid-cols-2">
+              {/* Study Calculator */}
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl transition-all hover:border-blue-500/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-500/25">
+                      <Calculator className="h-7 w-7 text-white" />
                     </div>
-                  ) : isExamDay ? (
-                    <div className="text-center py-4">
-                      <Sparkles className="mx-auto h-12 w-12 text-indigo-600 mb-2 animate-pulse" />
-                      <p className="text-xl font-bold text-gray-900">Exam Day!</p>
-                      <p className="text-sm text-gray-600">All the best! You&apos;ve prepared well.</p>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Study Calculator</h3>
+                      <p className="text-sm text-violet-400">Plan your preparation hours</p>
                     </div>
-                  ) : (
-                    <>
-                      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-                        <span className="font-medium text-gray-700">Total Hours Remaining</span>
-                        <span className="text-2xl font-bold text-blue-600">{totalStudyHours.toLocaleString()}h</span>
+                  </div>
+
+                  <div className="mb-6">
+                    <label className="mb-3 block text-sm font-medium text-violet-300">
+                      Hours you can study per day
+                    </label>
+                    <div className="flex items-center gap-4">
+                      <input
+                        type="range"
+                        min="2"
+                        max="12"
+                        value={studyHoursPerDay}
+                        onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
+                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-violet-900/50 accent-blue-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500 [&::-webkit-slider-thumb]:to-indigo-500 [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-blue-500/50"
+                        aria-label="Study hours per day"
+                        aria-valuemin={2}
+                        aria-valuemax={12}
+                        aria-valuenow={studyHoursPerDay}
+                      />
+                      <span className="w-16 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-2 text-center font-bold text-white shadow-lg shadow-blue-500/25">
+                        {studyHoursPerDay}h
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    {isExamOver ? (
+                      <div className="py-6 text-center">
+                        <Award className="mx-auto mb-3 h-14 w-14 text-green-500" />
+                        <p className="text-xl font-bold text-white">NEET 2026 Completed!</p>
+                        <p className="text-violet-400">Hope you did your best!</p>
                       </div>
-                      <div className="flex items-center justify-between py-2">
-                        <div className="flex items-center gap-2">
-                          <Leaf className="h-5 w-5 text-green-600" />
-                          <span className="text-gray-600">Biology (50%)</span>
+                    ) : isExamDay ? (
+                      <div className="py-6 text-center">
+                        <Sparkles className="mx-auto mb-3 h-14 w-14 animate-pulse text-amber-500" />
+                        <p className="text-xl font-bold text-white">Exam Day!</p>
+                        <p className="text-violet-400">All the best! You&apos;ve prepared well.</p>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                          <span className="font-medium text-violet-300">Total Hours Remaining</span>
+                          <span className="text-3xl font-bold text-blue-400">
+                            {totalStudyHours.toLocaleString()}h
+                          </span>
                         </div>
-                        <span className="font-semibold text-green-600">{biologyHours}h</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2">
-                        <div className="flex items-center gap-2">
-                          <Atom className="h-5 w-5 text-purple-600" />
-                          <span className="text-gray-600">Physics (25%)</span>
-                        </div>
-                        <span className="font-semibold text-purple-600">{physicsHours}h</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2">
-                        <div className="flex items-center gap-2">
-                          <Beaker className="h-5 w-5 text-orange-600" />
-                          <span className="text-gray-600">Chemistry (25%)</span>
-                        </div>
-                        <span className="font-semibold text-orange-600">{chemistryHours}h</span>
-                      </div>
-                    </>
-                  )}
+                        {[
+                          {
+                            subject: 'Biology',
+                            hours: biologyHours,
+                            percent: '50%',
+                            color: 'from-green-500 to-green-600',
+                            icon: Leaf,
+                          },
+                          {
+                            subject: 'Physics',
+                            hours: physicsHours,
+                            percent: '25%',
+                            color: 'from-violet-500 to-purple-600',
+                            icon: Atom,
+                          },
+                          {
+                            subject: 'Chemistry',
+                            hours: chemistryHours,
+                            percent: '25%',
+                            color: 'from-orange-500 to-amber-600',
+                            icon: Beaker,
+                          },
+                        ].map((item) => (
+                          <div
+                            key={item.subject}
+                            className="flex items-center justify-between py-2"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-r ${item.color}`}
+                              >
+                                <item.icon className="h-4 w-4 text-white" />
+                              </div>
+                              <span className="text-violet-300">
+                                {item.subject} ({item.percent})
+                              </span>
+                            </div>
+                            <span className="font-semibold text-white">{item.hours}h</span>
+                          </div>
+                        ))}
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
 
               {/* Quick Stats */}
-              <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-purple-50 to-pink-50 p-6 shadow-sm">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
-                    <Target className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">NEET 2026 Quick Stats</h3>
-                    <p className="text-sm text-gray-600">Exam pattern at a glance</p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-white p-4 text-center shadow-sm">
-                    <div className="text-3xl font-bold text-purple-600">180</div>
-                    <div className="text-sm text-gray-600">Total Questions</div>
-                    <div className="mt-1 text-xs text-gray-400">(45 per subject)</div>
-                  </div>
-                  <div className="rounded-xl bg-white p-4 text-center shadow-sm">
-                    <div className="text-3xl font-bold text-purple-600">720</div>
-                    <div className="text-sm text-gray-600">Total Marks</div>
-                    <div className="mt-1 text-xs text-gray-400">(+4 per correct)</div>
-                  </div>
-                  <div className="rounded-xl bg-white p-4 text-center shadow-sm">
-                    <div className="text-3xl font-bold text-purple-600">3:20</div>
-                    <div className="text-sm text-gray-600">Duration</div>
-                    <div className="mt-1 text-xs text-gray-400">(3 hours 20 min)</div>
-                  </div>
-                  <div className="rounded-xl bg-white p-4 text-center shadow-sm">
-                    <div className="text-3xl font-bold text-red-500">-1</div>
-                    <div className="text-sm text-gray-600">Negative Marking</div>
-                    <div className="mt-1 text-xs text-gray-400">(per wrong answer)</div>
-                  </div>
-                </div>
-
-                {/* Subject Distribution */}
-                <div className="mt-6 rounded-xl bg-white p-4 shadow-sm">
-                  <h4 className="mb-3 font-semibold text-gray-800">Question Distribution</h4>
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="h-3 w-3 rounded-full bg-green-500"></span>
-                        Biology (Botany + Zoology)
-                      </span>
-                      <span className="font-semibold">90 Q (360 marks)</span>
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl transition-all hover:border-fuchsia-500/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/10 to-violet-600/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-violet-600 shadow-lg shadow-fuchsia-500/25">
+                      <Target className="h-7 w-7 text-white" />
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="h-3 w-3 rounded-full bg-purple-500"></span>
-                        Physics
-                      </span>
-                      <span className="font-semibold">45 Q (180 marks)</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Quick Stats</h3>
+                      <p className="text-sm text-violet-400">Exam pattern at a glance</p>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="h-3 w-3 rounded-full bg-orange-500"></span>
-                        Chemistry
-                      </span>
-                      <span className="font-semibold">45 Q (180 marks)</span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      {
+                        value: '180',
+                        label: 'Total Questions',
+                        sub: '45 per subject',
+                        color: 'from-violet-500 to-indigo-500',
+                      },
+                      {
+                        value: '720',
+                        label: 'Total Marks',
+                        sub: '+4 per correct',
+                        color: 'from-indigo-500 to-blue-500',
+                      },
+                      {
+                        value: '3:20',
+                        label: 'Duration',
+                        sub: '3 hours 20 min',
+                        color: 'from-blue-500 to-violet-500',
+                      },
+                      {
+                        value: '-1',
+                        label: 'Negative Marking',
+                        sub: 'per wrong answer',
+                        color: 'from-red-500 to-orange-500',
+                      },
+                    ].map((stat) => (
+                      <div
+                        key={stat.label}
+                        className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center transition-all hover:bg-white/10"
+                      >
+                        <div
+                          className={`bg-gradient-to-r ${stat.color} bg-clip-text text-3xl font-bold text-transparent`}
+                        >
+                          {stat.value}
+                        </div>
+                        <div className="mt-1 text-sm font-medium text-violet-300">{stat.label}</div>
+                        <div className="text-xs text-violet-500">({stat.sub})</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Subject Distribution */}
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <h4 className="mb-4 font-semibold text-white">Question Distribution</h4>
+                    <div className="space-y-3">
+                      {[
+                        {
+                          subject: 'Biology',
+                          questions: 90,
+                          marks: 360,
+                          percent: 50,
+                          color: 'bg-green-500',
+                        },
+                        {
+                          subject: 'Physics',
+                          questions: 45,
+                          marks: 180,
+                          percent: 25,
+                          color: 'bg-violet-500',
+                        },
+                        {
+                          subject: 'Chemistry',
+                          questions: 45,
+                          marks: 180,
+                          percent: 25,
+                          color: 'bg-orange-500',
+                        },
+                      ].map((item) => (
+                        <div key={item.subject}>
+                          <div className="mb-1 flex items-center justify-between text-sm">
+                            <span className="text-violet-300">{item.subject}</span>
+                            <span className="font-medium text-white">
+                              {item.questions} Q ({item.marks} marks)
+                            </span>
+                          </div>
+                          <div className="h-2 overflow-hidden rounded-full bg-violet-900/50">
+                            <div
+                              className={`h-full rounded-full ${item.color}`}
+                              style={{ width: `${item.percent}%` }}
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -614,228 +804,273 @@ export default function NEETExamCountdownPage() {
           </div>
         </section>
 
-        {/* Personalization + Streak Tracker */}
-        <section className="px-4 py-12 sm:px-6 lg:px-8">
+        {/* Target + Streak */}
+        <section className="relative px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* Personalization */}
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-600 text-white">
-                    <Sparkles className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Your Target</h3>
-                    <p className="text-sm text-gray-600">Set your goal and track progress</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-700">Target Score</label>
-                    <div className="flex gap-2">
-                      {[600, 650, 700].map((score) => (
-                        <button
-                          key={score}
-                          onClick={() => setTargetScore(score)}
-                          className={`flex-1 rounded-lg px-4 py-3 font-semibold transition-all ${
-                            targetScore === score
-                              ? 'bg-green-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                          }`}
-                        >
-                          {score}+
-                        </button>
-                      ))}
+            <div className="grid gap-6 lg:grid-cols-2">
+              {/* Target Score */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl">
+                <div className="rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg shadow-green-500/25">
+                      <Trophy className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Your Target</h3>
+                      <p className="text-sm text-violet-400">Set your goal and track progress</p>
                     </div>
                   </div>
 
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-700">Category</label>
-                    <select
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
-                    >
-                      <option value="General">General</option>
-                      <option value="EWS">EWS</option>
-                      <option value="OBC-NCL">OBC-NCL</option>
-                      <option value="SC">SC</option>
-                      <option value="ST">ST</option>
-                    </select>
-                  </div>
-
-                  <div className="rounded-xl bg-green-50 p-4">
-                    <div className="flex items-center gap-2 text-green-800">
-                      <Award className="h-5 w-5" />
-                      <span className="font-semibold">Expected Rank Range</span>
+                  <div className="space-y-5">
+                    <div>
+                      <label className="mb-3 block text-sm font-medium text-violet-300">
+                        Target Score
+                      </label>
+                      <div className="flex gap-3">
+                        {[600, 650, 700].map((score) => (
+                          <button
+                            key={score}
+                            onClick={() => setTargetScore(score)}
+                            className={`flex-1 rounded-xl px-4 py-3 font-bold transition-all ${
+                              targetScore === score
+                                ? 'bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg shadow-green-500/25'
+                                : 'border border-white/10 bg-white/5 text-violet-300 hover:bg-white/10'
+                            }`}
+                          >
+                            {score}+
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                    <p className="mt-1 text-2xl font-bold text-green-600">{getRecommendedCutoff()}</p>
-                    <p className="mt-1 text-sm text-green-700">
-                      With {targetScore}+ marks in {category} category
-                    </p>
+
+                    <div>
+                      <label className="mb-3 block text-sm font-medium text-violet-300">
+                        Category
+                      </label>
+                      <select
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
+                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
+                      >
+                        <option value="General" className="bg-[#0f0f24]">
+                          General
+                        </option>
+                        <option value="EWS" className="bg-[#0f0f24]">
+                          EWS
+                        </option>
+                        <option value="OBC-NCL" className="bg-[#0f0f24]">
+                          OBC-NCL
+                        </option>
+                        <option value="SC" className="bg-[#0f0f24]">
+                          SC
+                        </option>
+                        <option value="ST" className="bg-[#0f0f24]">
+                          ST
+                        </option>
+                      </select>
+                    </div>
+
+                    <div className="rounded-2xl bg-gradient-to-r from-green-500/20 to-green-600/20 p-5">
+                      <div className="flex items-center gap-2 text-green-400">
+                        <Award className="h-5 w-5" />
+                        <span className="font-semibold">Expected Rank Range</span>
+                      </div>
+                      <p className="mt-2 text-3xl font-bold text-green-400">
+                        {getRecommendedCutoff()}
+                      </p>
+                      <p className="mt-1 text-sm text-green-400/70">
+                        With {targetScore}+ marks in {category} category
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Daily Streak Tracker */}
-              <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-orange-50 to-red-50 p-6 shadow-sm">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-600 text-white">
-                    <Flame className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Study Streak</h3>
-                    <p className="text-sm text-gray-600">Build consistency, build success</p>
-                  </div>
-                </div>
-
-                <div className="mb-6 text-center">
-                  <div className="inline-flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-red-500 text-white shadow-lg">
+              {/* Streak Tracker */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1 backdrop-blur-xl">
+                <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 blur-3xl" />
+                <div className="relative rounded-[22px] bg-[#0f0f24]/80 p-6 md:p-8">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg shadow-orange-500/25">
+                      <Flame className="h-7 w-7 text-white" />
+                    </div>
                     <div>
-                      <Flame className="mx-auto h-8 w-8" />
-                      <div className="text-4xl font-bold">{streak}</div>
-                      <div className="text-xs">day streak</div>
+                      <h3 className="text-xl font-bold text-white">Study Streak</h3>
+                      <p className="text-sm text-violet-400">Build consistency, build success</p>
                     </div>
                   </div>
-                </div>
 
-                {studiedToday ? (
-                  <div className="rounded-xl bg-green-100 p-4 text-center">
-                    <CheckCircle className="mx-auto h-8 w-8 text-green-600" />
-                    <p className="mt-2 font-semibold text-green-800">Great job! You studied today!</p>
-                    <p className="text-sm text-green-600">Come back tomorrow to extend your streak</p>
+                  <div className="mb-6 text-center">
+                    <div className="relative mx-auto h-36 w-36">
+                      {/* Outer Ring */}
+                      <div
+                        className="absolute inset-0 animate-spin rounded-full border-4 border-orange-500/20"
+                        style={{ animationDuration: '8s' }}
+                      />
+                      <div className="absolute inset-2 rounded-full border-2 border-dashed border-orange-500/30" />
+                      {/* Inner Circle */}
+                      <div className="absolute inset-4 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-red-500 shadow-xl shadow-orange-500/30">
+                        <Flame className="h-8 w-8 text-white" />
+                        <div className="text-4xl font-black text-white">{streak}</div>
+                        <div className="text-xs font-medium text-white/80">day streak</div>
+                      </div>
+                    </div>
                   </div>
-                ) : (
-                  <div className="text-center">
-                    <p className="mb-4 text-gray-600">Did you study today?</p>
-                    <button
-                      onClick={markStudied}
-                      className="w-full rounded-xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-semibold text-white transition-all hover:from-orange-600 hover:to-red-600 hover:shadow-lg"
-                    >
-                      Yes, I Studied Today!
-                    </button>
-                  </div>
-                )}
+
+                  {studiedToday ? (
+                    <div className="rounded-2xl bg-gradient-to-r from-green-500/20 to-green-600/20 p-5 text-center">
+                      <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
+                      <p className="mt-3 text-lg font-bold text-green-400">
+                        Great job! You studied today!
+                      </p>
+                      <p className="text-sm text-green-400/70">
+                        Come back tomorrow to extend your streak
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="text-center">
+                      <p className="mb-4 text-violet-400">Did you study today?</p>
+                      <button
+                        onClick={markStudied}
+                        className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-bold text-white shadow-lg shadow-orange-500/25 transition-all hover:shadow-xl hover:shadow-orange-500/30"
+                      >
+                        <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-0 transition-opacity group-hover:opacity-100" />
+                        <span className="relative flex items-center justify-center gap-2">
+                          <Flame className="h-5 w-5" />
+                          Yes, I Studied Today!
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Topper Quote */}
-        <section className="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-12 text-white sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <Quote className="mx-auto mb-4 h-12 w-12 text-white/50" />
-            <blockquote className="mb-4 text-xl font-medium md:text-2xl">
-              &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
-            </blockquote>
-            <cite className="text-indigo-200">
-              — {TOPPER_QUOTES[currentQuote].author}, NEET {TOPPER_QUOTES[currentQuote].year}
-            </cite>
-            <div className="mt-6 flex justify-center gap-2">
-              {TOPPER_QUOTES.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentQuote(idx)}
-                  className={`h-2 w-2 rounded-full transition-all ${idx === currentQuote ? 'w-6 bg-white' : 'bg-white/40'}`}
-                />
+        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-violet-600/20 via-fuchsia-600/20 to-indigo-600/20 p-1 backdrop-blur-xl">
+              <div className="rounded-[22px] bg-[#0f0f24]/80 p-8 text-center md:p-12">
+                <Quote className="mx-auto mb-6 h-12 w-12 text-violet-500/50" />
+                <blockquote className="mb-6 text-xl font-medium text-white md:text-2xl lg:text-3xl">
+                  &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
+                </blockquote>
+                <cite className="text-violet-400">
+                  — {TOPPER_QUOTES[currentQuote].author}, NEET {TOPPER_QUOTES[currentQuote].year}
+                </cite>
+                <div className="mt-8 flex justify-center gap-2">
+                  {TOPPER_QUOTES.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentQuote(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === currentQuote
+                          ? 'w-8 bg-gradient-to-r from-violet-500 to-fuchsia-500'
+                          : 'w-2 bg-violet-700 hover:bg-violet-600'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* More Tools */}
+        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
+                More{' '}
+                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                  NEET Tools
+                </span>
+              </h2>
+              <p className="text-violet-400/70">Complete your preparation with our free tools</p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  href: '/neet-college-predictor',
+                  icon: Building2,
+                  title: 'College Predictor',
+                  desc: 'Find medical colleges based on your expected rank. 470+ colleges database.',
+                  color: 'from-blue-500 to-indigo-500',
+                },
+                {
+                  href: '/neet-rank-predictor',
+                  icon: TrendingUp,
+                  title: 'Rank Predictor',
+                  desc: 'Predict your All India Rank based on expected score with accuracy.',
+                  color: 'from-orange-500 to-amber-500',
+                },
+                {
+                  href: '/neet-study-plan-generator',
+                  icon: BookOpen,
+                  title: 'Study Plan Generator',
+                  desc: 'Get personalized week-by-week study schedule for NEET Biology.',
+                  color: 'from-green-500 to-green-600',
+                },
+              ].map((tool) => (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-violet-500/30 hover:bg-white/10"
+                >
+                  <div
+                    className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${tool.color} shadow-lg transition-transform group-hover:scale-110`}
+                  >
+                    <tool.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-bold text-white group-hover:text-violet-300">
+                    {tool.title}
+                  </h3>
+                  <p className="mb-4 text-sm text-violet-400/70">{tool.desc}</p>
+                  <span
+                    className={`inline-flex items-center gap-1 bg-gradient-to-r ${tool.color} bg-clip-text text-sm font-semibold text-transparent`}
+                  >
+                    Try Now{' '}
+                    <ArrowRight className="h-4 w-4 text-violet-400 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Tool Integration */}
-        <section className="px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="mb-2 text-center text-2xl font-bold text-gray-900 md:text-3xl">
-              More NEET Tools
-            </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
-              Complete your preparation with our other free tools
-            </p>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              <Link
-                href="/neet-college-predictor"
-                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-blue-300 hover:shadow-md"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
-                  <Building2 className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-blue-600">
-                  College Predictor
-                </h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Find medical colleges based on your expected rank. 470+ colleges database.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-blue-600">
-                  Try Now <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-
-              <Link
-                href="/neet-rank-predictor"
-                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-orange-300 hover:shadow-md"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 text-orange-600 transition-colors group-hover:bg-orange-600 group-hover:text-white">
-                  <TrendingUp className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-orange-600">
-                  Rank Predictor
-                </h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Predict your All India Rank based on expected score with accuracy.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-orange-600">
-                  Try Now <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-
-              <Link
-                href="/neet-study-plan-generator"
-                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-green-300 hover:shadow-md"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-600 transition-colors group-hover:bg-green-600 group-hover:text-white">
-                  <BookOpen className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:text-green-600">
-                  Study Plan Generator
-                </h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Get personalized week-by-week study schedule for NEET Biology.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-green-600">
-                  Try Now <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
+        {/* FAQ */}
+        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
-              Frequently Asked Questions
+            <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
+              Frequently Asked{' '}
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Questions
+              </span>
             </h2>
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="rounded-xl border border-gray-200 bg-white shadow-sm">
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:border-violet-500/30"
+                >
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                     className="flex w-full items-center justify-between p-5 text-left"
                   >
-                    <span className="font-semibold text-gray-900">{faq.q}</span>
-                    {expandedFaq === idx ? (
-                      <ChevronUp className="h-5 w-5 text-gray-500" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-500" />
-                    )}
+                    <span className="font-semibold text-white">{faq.q}</span>
+                    <div
+                      className={`flex h-8 w-8 items-center justify-center rounded-lg bg-violet-500/20 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
+                    >
+                      <ChevronDown className="h-5 w-5 text-violet-400" />
+                    </div>
                   </button>
                   {expandedFaq === idx && (
-                    <div className="border-t border-gray-100 px-5 pb-5 pt-3">
-                      <p className="text-gray-600">{faq.a}</p>
+                    <div className="border-t border-white/10 px-5 pb-5 pt-3">
+                      <p className="text-violet-300/80">{faq.a}</p>
                     </div>
                   )}
                 </div>
@@ -844,28 +1079,40 @@ export default function NEETExamCountdownPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-16 text-white sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 text-3xl font-bold">Start Your NEET 2026 Journey Today</h2>
-            <p className="mb-8 text-lg text-indigo-100">
-              Every day counts. Begin your preparation with Cerebrum Biology Academy.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-indigo-600 transition-all hover:bg-indigo-50 hover:shadow-lg"
-              >
-                <GraduationCap className="h-5 w-5" />
-                Join Our Course
-              </Link>
-              <Link
-                href="/neet-tools"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
-              >
-                Explore All Tools
-                <ArrowRight className="h-5 w-5" />
-              </Link>
+        {/* CTA */}
+        <section className="relative px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="relative overflow-hidden rounded-3xl border border-violet-500/30 bg-gradient-to-r from-violet-600/30 via-fuchsia-600/30 to-indigo-600/30 p-1">
+              <div className="rounded-[22px] bg-[#0f0f24]/90 px-8 py-16 text-center backdrop-blur-xl">
+                <Rocket className="mx-auto mb-6 h-16 w-16 text-violet-400" />
+                <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+                  Start Your NEET 2026 Journey
+                </h2>
+                <p className="mb-8 text-lg text-violet-300/70">
+                  Every day counts. Begin your preparation with Cerebrum Biology Academy.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link
+                    href="/contact"
+                    className="group relative overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-4 font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <span className="relative flex items-center gap-2">
+                      <GraduationCap className="h-5 w-5" />
+                      Join Our Course
+                    </span>
+                  </Link>
+                  <Link
+                    href="/neet-tools"
+                    className="rounded-full border border-violet-500/50 px-8 py-4 font-semibold text-violet-300 transition-all hover:border-violet-500 hover:bg-violet-500/10"
+                  >
+                    <span className="flex items-center gap-2">
+                      Explore All Tools
+                      <ArrowRight className="h-5 w-5" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
