@@ -380,7 +380,7 @@ export interface LeadCaptureConfig {
 }
 
 export const LEAD_CAPTURE_CONFIG: LeadCaptureConfig = {
-  softPromptAfter: 5,
+  softPromptAfter: 999999, // Disabled - only prompt once at hardPromptAfter
   hardPromptAfter: 10,
   requiredFields: ['phone'],
 }

@@ -92,6 +92,95 @@ export default function NEETBiologyMCQPage() {
   const sessionStartTimeRef = useRef<number>(Date.now())
   const [sessionTimeElapsed, setSessionTimeElapsed] = useState(0)
 
+  // Helper function to generate storage key for answered question IDs
+  const getAnsweredIdsStorageKey = useCallback(() => {
+    const parts = ['mcq_answered_ids']
+    if (selectedTopic) parts.push(`topic_${selectedTopic}`)
+    if (selectedChapter) parts.push(`chapter_${selectedChapter}`)
+    parts.push(`source_${contentSource}`)
+    if (contentSource === 'pyq' && selectedPYQYear) parts.push(`year_${selectedPYQYear}`)
+    return parts.join('_')
+  }, [selectedTopic, selectedChapter, contentSource, selectedPYQYear])
+
+  // Load answered IDs from localStorage for resume functionality
+  const loadAnsweredIdsFromStorage = useCallback(() => {
+    try {
+      const key = getAnsweredIdsStorageKey()
+      const stored = localStorage.getItem(key)
+      if (stored) {
+        const ids = JSON.parse(stored) as string[]
+        return new Set(ids)
+      }
+    } catch (err) {
+      console.error('Failed to load answered IDs from storage:', err)
+    }
+    return new Set<string>()
+  }, [getAnsweredIdsStorageKey])
+
+  // Save answered IDs to localStorage
+  const saveAnsweredIdsToStorage = useCallback(
+    (ids: Set<string>) => {
+      try {
+        const key = getAnsweredIdsStorageKey()
+        localStorage.setItem(key, JSON.stringify(Array.from(ids)))
+      } catch (err) {
+        console.error('Failed to save answered IDs to storage:', err)
+      }
+    },
+    [getAnsweredIdsStorageKey]
+  )
+
+  // Helper to reorder options so "All of the above" type options are always last (option D)
+  const reorderOptionsForAllOfTheAbove = useCallback((question: MCQQuestion): MCQQuestion => {
+    const allOfAbovePatterns = [
+      /^all\s+(of\s+)?the\s+above$/i,
+      /^all\s+(of\s+)?these$/i,
+      /^all\s+are\s+correct$/i,
+      /^all\s+(of\s+)?the\s+above\s+(are\s+)?(correct|true)$/i,
+      /^both\s+\(?[a-d]\)?\s*(and|&)\s*\(?[a-d]\)?$/i,
+    ]
+
+    const optionLabels: ('A' | 'B' | 'C' | 'D')[] = ['A', 'B', 'C', 'D']
+    const options = [...question.options]
+    let correctAnswer = question.correctAnswer
+
+    // Find index of "All of the above" type option
+    const allOfAboveIndex = options.findIndex((opt) =>
+      allOfAbovePatterns.some((pattern) => pattern.test(opt.trim()))
+    )
+
+    // If found and not already last (index 3), reorder
+    if (allOfAboveIndex !== -1 && allOfAboveIndex !== 3 && options.length === 4) {
+      const allOfAboveOption = options[allOfAboveIndex]
+      const originalLabel = optionLabels[allOfAboveIndex]
+
+      // Remove from current position
+      options.splice(allOfAboveIndex, 1)
+      // Add to end
+      options.push(allOfAboveOption)
+
+      // Update correct answer if needed
+      if (correctAnswer === originalLabel) {
+        // The correct answer was the "All of the above" option, now it's D
+        correctAnswer = 'D'
+      } else if (correctAnswer === 'D') {
+        // D was correct but now moved to allOfAboveIndex position
+        correctAnswer = originalLabel
+      } else {
+        // Handle shifting of options between original position and end
+        const correctIndex = optionLabels.indexOf(correctAnswer)
+        if (correctIndex > allOfAboveIndex) {
+          // Options after allOfAboveIndex shift up by 1
+          correctAnswer = optionLabels[correctIndex - 1]
+        }
+      }
+
+      return { ...question, options, correctAnswer }
+    }
+
+    return question
+  }, [])
+
   // Initialize session and load user data
   useEffect(() => {
     const initSession = async () => {
@@ -173,6 +262,16 @@ export default function NEETBiologyMCQPage() {
     setIsLoadingQuestions(true)
     setError(null)
 
+    // Load persisted answered IDs for resume functionality (practice mode only)
+    let currentAnsweredIds = answeredIds
+    if (quizMode === 'practice') {
+      const persistedIds = loadAnsweredIdsFromStorage()
+      if (persistedIds.size > 0) {
+        setAnsweredIds(persistedIds)
+        currentAnsweredIds = persistedIds
+      }
+    }
+
     try {
       // Review mode - fetch from review API
       if (quizMode === 'review' && freeUserId) {
@@ -183,7 +282,9 @@ export default function NEETBiologyMCQPage() {
 
         const reviewData = await reviewRes.json()
         if (reviewData.success && reviewData.data.questions.length > 0) {
-          setQuestions(reviewData.data.questions)
+          // Reorder options so "All of the above" is always option D
+          const reorderedQuestions = reviewData.data.questions.map(reorderOptionsForAllOfTheAbove)
+          setQuestions(reorderedQuestions)
           setCurrentQuestionIndex(0)
           setReviewDueCount(reviewData.data.stats.totalDue || 0)
           setTimerKey((prev) => prev + 1) // Reset timer
@@ -218,9 +319,9 @@ export default function NEETBiologyMCQPage() {
 
       params.append('limit', questionCount.toString())
 
-      // Exclude already answered questions
-      if (answeredIds.size > 0) {
-        params.append('excludeIds', Array.from(answeredIds).join(','))
+      // Exclude already answered questions (use currentAnsweredIds for persisted IDs)
+      if (currentAnsweredIds.size > 0) {
+        params.append('excludeIds', Array.from(currentAnsweredIds).join(','))
       }
 
       const res = await fetch(`/api/mcq/questions?${params}`)
@@ -228,7 +329,9 @@ export default function NEETBiologyMCQPage() {
 
       const data = await res.json()
       if (data.success && data.data.questions.length > 0) {
-        setQuestions(data.data.questions)
+        // Reorder options so "All of the above" is always option D
+        const reorderedQuestions = data.data.questions.map(reorderOptionsForAllOfTheAbove)
+        setQuestions(reorderedQuestions)
         setCurrentQuestionIndex(0)
         setTimerKey((prev) => prev + 1) // Reset timer for new questions
         // Show info toast if fewer questions than requested
@@ -263,6 +366,8 @@ export default function NEETBiologyMCQPage() {
     questionCount,
     answeredIds,
     showToast,
+    loadAnsweredIdsFromStorage,
+    reorderOptionsForAllOfTheAbove,
   ])
 
   // Handle answer submission
@@ -332,8 +437,12 @@ export default function NEETBiologyMCQPage() {
           ])
         }
 
-        // Mark question as answered
-        setAnsweredIds((prev) => new Set([...prev, question.id]))
+        // Mark question as answered and persist to localStorage for resume
+        setAnsweredIds((prev) => {
+          const newIds = new Set([...prev, question.id])
+          saveAnsweredIdsToStorage(newIds)
+          return newIds
+        })
 
         // Update user stats if available
         if (freeUserId && userStats) {
@@ -383,7 +492,7 @@ export default function NEETBiologyMCQPage() {
         throw error
       }
     },
-    [questions, currentQuestionIndex, sessionId, freeUserId, userStats, hasLeadCaptured, showToast]
+    [questions, currentQuestionIndex, sessionId, freeUserId, userStats, hasLeadCaptured, showToast, saveAnsweredIdsToStorage]
   )
 
   // Handle next question
@@ -537,6 +646,8 @@ export default function NEETBiologyMCQPage() {
   const handleStartQuiz = () => {
     setQuizStarted(true)
     fetchQuestions()
+    // Scroll to top of the page so user sees the question
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   // Reset quiz (called after confirmation)
