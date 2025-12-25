@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a static date representing when site content was last updated
   // This is better for SEO than dynamic dates that change on every build
-  const lastUpdated = new Date('2025-12-22T00:00:00.000Z')
+  const lastUpdated = new Date('2025-12-25T00:00:00.000Z')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -1580,6 +1580,210 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
+    },
+    // Online Biology Tutor Pages - Phase 1 SEO Enhancement
+    {
+      url: `${baseUrl}/online-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-class-9`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-class-10`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-class-11`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-class-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-neet`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/online-biology-tutor-droppers`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/neet-biology-tutor-online`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    // NEET Biology Tutor Pages - Phase 1 SEO Enhancement
+    {
+      url: `${baseUrl}/neet-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-biology-tutor-class-11`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/neet-biology-tutor-class-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/neet-biology-tutor-droppers`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    // Delhi NCR Biology Tutor Locality Pages - Phase 2 SEO Enhancement
+    {
+      url: `${baseUrl}/biology-tutor-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-east-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-west-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-north-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-south-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-dwarka`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-janakpuri`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-laxmi-nagar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-pitampura`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    // Noida Biology Tutor Locality Pages - Phase 2 SEO Enhancement
+    {
+      url: `${baseUrl}/biology-tutor-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-noida-sector-18`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-noida-sector-62`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-noida-sector-137`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-greater-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    // Ghaziabad Biology Tutor Locality Pages - Phase 2 SEO Enhancement
+    {
+      url: `${baseUrl}/biology-tutor-ghaziabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-indirapuram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-vaishali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    // Faridabad & Haryana Biology Tutor Locality Pages - Phase 2 SEO Enhancement
+    {
+      url: `${baseUrl}/biology-tutor-faridabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-ballabhgarh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
     },
     // Class 9 Biology SEO Pages
     {
