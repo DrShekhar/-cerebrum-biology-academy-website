@@ -4,15 +4,15 @@ import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import {
-  BookOpenIcon,
-  AcademicCapIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  StarIcon,
-  ClockIcon,
-  ArrowRightIcon,
-  BeakerIcon,
-} from '@heroicons/react/24/outline'
+  BookOpen,
+  GraduationCap,
+  BarChart2,
+  Users,
+  Star,
+  Clock,
+  ArrowRight,
+  FlaskConical,
+} from 'lucide-react'
 
 const FreeResourcesHub = () => {
   const [selectedCurriculum, setSelectedCurriculum] = useState('NEET')
@@ -23,7 +23,7 @@ const FreeResourcesHub = () => {
       id: 'chapter-notes',
       title: 'Chapter Notes',
       description: 'Complete chapter summaries with key points, diagrams, and quick revision',
-      icon: BookOpenIcon,
+      icon: BookOpen,
       count: '500+ Notes',
       color: 'from-blue-500 to-blue-600',
       href: '/resources/notes',
@@ -33,7 +33,7 @@ const FreeResourcesHub = () => {
       id: 'ai-tests',
       title: 'AI Test Generator',
       description: 'Create unlimited customized test papers with AI-powered questions',
-      icon: BeakerIcon,
+      icon: FlaskConical,
       count: 'Unlimited Tests',
       color: 'from-purple-500 to-purple-600',
       href: '/resources/test-generator',
@@ -43,7 +43,7 @@ const FreeResourcesHub = () => {
       id: 'question-bank',
       title: 'Question Bank',
       description: '10,000+ practice questions with detailed explanations',
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
       count: '10,000+ Questions',
       color: 'from-green-500 to-green-600',
       href: '/resources/questions',
@@ -53,7 +53,7 @@ const FreeResourcesHub = () => {
       id: 'performance',
       title: 'Performance Analytics',
       description: 'Track your progress with detailed analysis and recommendations',
-      icon: ChartBarIcon,
+      icon: BarChart2,
       count: 'Smart Insights',
       color: 'from-orange-500 to-orange-600',
       href: '/resources/analytics',
@@ -208,7 +208,7 @@ const FreeResourcesHub = () => {
                       )}
                     >
                       Access Now
-                      <ArrowRightIcon className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ const FreeResourcesHub = () => {
         {/* Additional Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-xl p-6">
-            <UserGroupIcon className="h-8 w-8 text-green-600 mb-4" />
+            <Users className="h-8 w-8 text-green-600 mb-4" />
             <h3 className="text-lg font-bold mb-2">Community Learning</h3>
             <p className="text-gray-600 mb-4">
               Join study groups, share doubts, and learn from peers in our interactive community
@@ -255,7 +255,7 @@ const FreeResourcesHub = () => {
           </div>
 
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
-            <StarIcon className="h-8 w-8 text-purple-600 mb-4" />
+            <Star className="h-8 w-8 text-purple-600 mb-4" />
             <h3 className="text-lg font-bold mb-2">Achievements & Badges</h3>
             <p className="text-gray-600 mb-4">
               Earn points, unlock achievements, and track your learning milestones
@@ -269,7 +269,7 @@ const FreeResourcesHub = () => {
           </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-xl p-6">
-            <ClockIcon className="h-8 w-8 text-orange-600 mb-4" />
+            <Clock className="h-8 w-8 text-orange-600 mb-4" />
             <h3 className="text-lg font-bold mb-2">Study Planner</h3>
             <p className="text-gray-600 mb-4">
               AI-generated study schedules based on your exam dates and weaknesses

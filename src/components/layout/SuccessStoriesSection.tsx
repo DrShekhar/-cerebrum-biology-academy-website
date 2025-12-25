@@ -4,30 +4,29 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  PlayCircleIcon,
+  PlayCircle,
   FunnelIcon,
-  MagnifyingGlassIcon,
-  PhoneIcon,
-  ChatBubbleLeftRightIcon,
-  AcademicCapIcon,
-  TrophyIcon,
-  HeartIcon,
-  UserGroupIcon,
-  ChartBarIcon,
-  CalendarDaysIcon,
-  MapPinIcon,
-  CheckBadgeIcon,
+  Search,
+  Phone,
+  MessageSquare,
+  GraduationCap,
+  Trophy,
+  Heart,
+  Users,
+  BarChart2,
+  CalendarDays,
+  MapPin,
+  BadgeCheck,
   NewspaperIcon,
-  DocumentTextIcon,
-  ArrowTrendingUpIcon,
-  SparklesIcon,
-  FaceSmileIcon,
-  StarIcon,
-  ArrowRightIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/24/outline'
-import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/react/24/solid'
+  FileText,
+  TrendingUp,
+  Sparkles,
+  Smile,
+  Star,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface SuccessStoriesSectionProps {
@@ -370,11 +369,11 @@ export function SuccessStoriesSection({
   ]
 
   const categories = [
-    { id: 'all', name: 'All Success Stories', icon: TrophyIcon, count: successStories.length },
-    { id: 'low-scorer', name: 'Failed by <50 marks', icon: ArrowTrendingUpIcon, count: 3 },
-    { id: 'multiple-attempts', name: '3+ Attempts', icon: CalendarDaysIcon, count: 1 },
-    { id: 'gave-up', name: 'Almost Gave Up', icon: HeartIcon, count: 1 },
-    { id: 'biology-weak', name: 'Biology Weakness', icon: ChartBarIcon, count: 1 },
+    { id: 'all', name: 'All Success Stories', icon: Trophy, count: successStories.length },
+    { id: 'low-scorer', name: 'Failed by <50 marks', icon: TrendingUp, count: 3 },
+    { id: 'multiple-attempts', name: '3+ Attempts', icon: CalendarDays, count: 1 },
+    { id: 'gave-up', name: 'Almost Gave Up', icon: Heart, count: 1 },
+    { id: 'biology-weak', name: 'Biology Weakness', icon: BarChart2, count: 1 },
   ]
 
   // Filter stories based on category and search
@@ -424,7 +423,7 @@ export function SuccessStoriesSection({
           className="text-center space-y-8 mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-100 to-green-100 border border-emerald-200 rounded-full px-4 py-2">
-            <FaceSmileIcon className="h-5 w-5 text-emerald-600" />
+            <Smile className="h-5 w-5 text-emerald-600" />
             <span className="text-sm font-semibold text-emerald-800">
               Real Students • Real Transformations • Real Doctors
             </span>
@@ -450,7 +449,7 @@ export function SuccessStoriesSection({
               <div className="aspect-video bg-gradient-to-br from-teal-600 to-navy-600 rounded-lg flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="relative text-center text-white space-y-4">
-                  <PlayCircleIcon className="h-20 w-20 mx-auto mb-4 text-white/90 hover:text-white transition-colors cursor-pointer" />
+                  <PlayCircle className="h-20 w-20 mx-auto mb-4 text-white/90 hover:text-white transition-colors cursor-pointer" />
                   <h3 className="text-2xl font-bold">2-Minute Emotional Journey</h3>
                   <p className="text-lg">Watch their complete transformation stories</p>
                 </div>
@@ -461,10 +460,10 @@ export function SuccessStoriesSection({
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { value: 397, suffix: '+', label: 'Highest Score Jump', icon: ArrowTrendingUpIcon },
-              { value: 95, suffix: '%', label: 'Success Rate', icon: TrophyIcon },
-              { value: 3, suffix: 'x', label: 'Failed Before Success', icon: HeartIcon },
-              { value: 100, suffix: '%', label: 'Biology Perfect Scores', icon: ChartBarIcon },
+              { value: 397, suffix: '+', label: 'Highest Score Jump', icon: TrendingUp },
+              { value: 95, suffix: '%', label: 'Success Rate', icon: Trophy },
+              { value: 3, suffix: 'x', label: 'Failed Before Success', icon: Heart },
+              { value: 100, suffix: '%', label: 'Biology Perfect Scores', icon: BarChart2 },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -517,7 +516,7 @@ export function SuccessStoriesSection({
           {/* Search and Tools */}
           <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
             <div className="relative max-w-md w-full">
-              <MagnifyingGlassIcon className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+              <Search className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search by name, city, college..."
@@ -534,7 +533,7 @@ export function SuccessStoriesSection({
                 onClick={() => setShowQuiz(true)}
                 className="flex items-center gap-2"
               >
-                <UserGroupIcon className="h-5 w-5" />
+                <Users className="h-5 w-5" />
                 Find Students Like Me
               </PremiumButton>
 
@@ -640,7 +639,7 @@ export function SuccessStoriesSection({
               size="lg"
               className="bg-teal-600 text-white hover:bg-teal-700 shadow-lg hover:shadow-xl"
             >
-              <PhoneIcon className="h-6 w-6" />
+              <Phone className="h-6 w-6" />
               Book Your Success Consultation
             </PremiumButton>
             <PremiumButton
@@ -687,14 +686,14 @@ function SuccessStoryCard({
               className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
             />
             {story.isVerified && (
-              <CheckBadgeIcon className="h-6 w-6 text-blue-500 absolute -bottom-1 -right-1" />
+              <BadgeCheck className="h-6 w-6 text-blue-500 absolute -bottom-1 -right-1" />
             )}
           </div>
 
           <div>
             <h3 className="text-xl font-bold text-gray-900">{story.name}</h3>
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-              <MapPinIcon className="h-4 w-4" />
+              <MapPin className="h-4 w-4" />
               {story.hometown}
             </div>
           </div>
@@ -719,7 +718,7 @@ function SuccessStoryCard({
                     transition={{ duration: 1.5, delay: 0.5 }}
                   />
                 </div>
-                <ArrowRightIcon className="h-5 w-5 text-blue-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-1" />
+                <ArrowRight className="h-5 w-5 text-blue-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-1" />
               </div>
               <div className="text-center mt-2">
                 <span className="text-sm font-semibold text-green-600">+{improvement} marks</span>
@@ -742,7 +741,7 @@ function SuccessStoryCard({
         {/* College and Status */}
         <div className="bg-blue-50 rounded-lg p-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <AcademicCapIcon className="h-5 w-5 text-blue-600" />
+            <GraduationCap className="h-5 w-5 text-blue-600" />
             <span className="font-semibold text-blue-900">{story.college}</span>
           </div>
           <div className="text-sm text-blue-700">{story.currentStatus}</div>
@@ -760,7 +759,7 @@ function SuccessStoryCard({
               key={index}
               className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center gap-1"
             >
-              <CheckBadgeIcon className="h-3 w-3" />
+              <BadgeCheck className="h-3 w-3" />
               {badge}
             </span>
           ))}
@@ -775,7 +774,7 @@ function SuccessStoryCard({
               onClick={() => onVideoPlay?.(story.id)}
               className="w-full flex items-center justify-center gap-2"
             >
-              <PlayCircleIcon className="h-5 w-5" />
+              <PlayCircle className="h-5 w-5" />
               Watch Full Story
             </PremiumButton>
           )}
@@ -787,7 +786,7 @@ function SuccessStoryCard({
               onClick={() => onContactStudent?.(story.id)}
               className="flex items-center justify-center gap-2"
             >
-              <ChatBubbleLeftRightIcon className="h-4 w-4" />
+              <MessageSquare className="h-4 w-4" />
               Message
             </PremiumButton>
 
@@ -796,7 +795,7 @@ function SuccessStoryCard({
               size="sm"
               className="flex items-center justify-center gap-2"
             >
-              <DocumentTextIcon className="h-4 w-4" />
+              <FileText className="h-4 w-4" />
               Full Story
             </PremiumButton>
           </div>
@@ -915,7 +914,7 @@ function InstagramStyleStories({
               onClick={() => onContactStudent?.(currentStory.id)}
               className="w-full"
             >
-              <ChatBubbleLeftRightIcon className="h-5 w-5" />
+              <MessageSquare className="h-5 w-5" />
               Message {currentStory.name}
             </PremiumButton>
           </div>
@@ -928,7 +927,7 @@ function InstagramStyleStories({
             disabled={currentIndex === 0}
             className="p-2 rounded-full bg-gray-100 disabled:opacity-50"
           >
-            <ChevronLeftIcon className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
 
           <button
@@ -936,7 +935,7 @@ function InstagramStyleStories({
             disabled={currentIndex === stories.length - 1}
             className="p-2 rounded-full bg-gray-100 disabled:opacity-50"
           >
-            <ChevronRightIcon className="h-6 w-6" />
+            <ChevronRight className="h-6 w-6" />
           </button>
         </div>
       </PremiumCard>

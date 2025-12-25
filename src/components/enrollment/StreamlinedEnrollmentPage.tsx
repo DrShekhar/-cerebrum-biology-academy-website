@@ -3,30 +3,22 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  ChevronRightIcon,
-  ChevronLeftIcon,
-  CalendarDaysIcon,
-  CurrencyRupeeIcon,
-  ShieldCheckIcon,
-  ChatBubbleLeftRightIcon,
-  PhoneIcon,
-  ExclamationTriangleIcon,
-  StarIcon,
-  TrophyIcon,
-  FireIcon,
-  UsersIcon,
-} from '@heroicons/react/24/outline'
-import {
-  CheckCircleIcon as CheckCircleSolid,
-  ClockIcon as ClockSolid,
-  UserGroupIcon as UserGroupSolid,
-  AcademicCapIcon as AcademicCapSolid,
-  ShieldCheckIcon as ShieldCheckSolid,
-} from '@heroicons/react/24/solid'
+  CheckCircle2,
+  Clock,
+  Users,
+  GraduationCap,
+  ChevronRight,
+  ChevronLeft,
+  CalendarDays,
+  IndianRupee,
+  ShieldCheck,
+  MessageSquare,
+  Phone,
+  AlertTriangle,
+  Star,
+  Trophy,
+  Flame,
+} from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { EnrollmentProgress } from '@/components/ui/ProgressIndicators'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
@@ -80,11 +72,11 @@ export function StreamlinedEnrollmentPage({
   const [enrollmentStats, setEnrollmentStats] = useState({ thisMonth: 2847, seatsLeft: 12 })
 
   const steps = [
-    { id: 0, title: 'Assessment', icon: AcademicCapIcon, iconSolid: AcademicCapSolid },
-    { id: 1, title: 'Counseling', icon: UserGroupIcon, iconSolid: UserGroupSolid },
-    { id: 2, title: 'Plan Selection', icon: CheckCircleIcon, iconSolid: CheckCircleSolid },
-    { id: 3, title: 'Enrollment', icon: ClockIcon, iconSolid: ClockSolid },
-    { id: 4, title: 'Success', icon: TrophyIcon, iconSolid: TrophyIcon },
+    { id: 0, title: 'Assessment', icon: GraduationCap, iconSolid: GraduationCap },
+    { id: 1, title: 'Counseling', icon: Users, iconSolid: Users },
+    { id: 2, title: 'Plan Selection', icon: CheckCircle2, iconSolid: CheckCircle2 },
+    { id: 3, title: 'Enrollment', icon: Clock, iconSolid: Clock },
+    { id: 4, title: 'Success', icon: Trophy, iconSolid: Trophy },
   ]
 
   // Mock assessment questions
@@ -259,7 +251,7 @@ export function StreamlinedEnrollmentPage({
             {/* Urgency Timer */}
             <div className="bg-red-100 border border-red-200 rounded-xl p-4 text-center">
               <div className="flex items-center justify-center space-x-2 text-red-600 mb-2">
-                <FireIcon className="w-5 h-5" />
+                <Flame className="w-5 h-5" />
                 <span className="text-sm font-medium">Early Bird Discount Ends In:</span>
               </div>
               <div className="text-2xl font-bold text-red-700">{formatTime(urgencyTimer)}</div>
@@ -299,7 +291,7 @@ export function StreamlinedEnrollmentPage({
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <AcademicCapSolid className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
+                  <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Free NEET Biology Assessment
                   </h2>
@@ -382,7 +374,7 @@ export function StreamlinedEnrollmentPage({
               {assessmentResult && (
                 <PremiumCard variant="premium" size="lg" className="mb-8">
                   <div className="text-center mb-6">
-                    <TrophyIcon className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-3" />
+                    <Trophy className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-3" />
                     <h3 className="text-2xl font-bold text-gray-900">Your Assessment Results</h3>
                   </div>
 
@@ -432,7 +424,7 @@ export function StreamlinedEnrollmentPage({
 
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <UserGroupSolid className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
+                  <Users className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Book Your Counseling Session
                   </h2>
@@ -455,7 +447,7 @@ export function StreamlinedEnrollmentPage({
                     >
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-3">
-                          <CalendarDaysIcon className="w-6 h-6 text-blue-500" />
+                          <CalendarDays className="w-6 h-6 text-blue-500" />
                           <div>
                             <div className="font-semibold text-gray-900">{slot.date}</div>
                             <div className="text-gray-600">{slot.time}</div>
@@ -493,11 +485,11 @@ export function StreamlinedEnrollmentPage({
                   <p className="text-gray-600 mb-4">Can't find a suitable slot?</p>
                   <div className="flex justify-center space-x-4">
                     <PremiumButton onClick={onWhatsAppContact} variant="secondary" size="md">
-                      <ChatBubbleLeftRightIcon className="w-5 h-5 mr-2" />
+                      <MessageSquare className="w-5 h-5 mr-2" />
                       WhatsApp Us
                     </PremiumButton>
                     <PremiumButton onClick={onCallNow} variant="medical" size="md">
-                      <PhoneIcon className="w-5 h-5 mr-2" />
+                      <Phone className="w-5 h-5 mr-2" />
                       Call Now
                     </PremiumButton>
                   </div>
@@ -516,7 +508,7 @@ export function StreamlinedEnrollmentPage({
               className="max-w-6xl mx-auto"
             >
               <div className="text-center mb-8">
-                <CheckCircleSolid className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Success Plan</h2>
                 <p className="text-gray-600 text-lg">
                   Customized plans based on your assessment results
@@ -567,7 +559,7 @@ export function StreamlinedEnrollmentPage({
                     <div className="space-y-3 mb-6">
                       {plan.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3">
-                          <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                          <CheckCircle2 className="w-5 h-5 text-green-500" />
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -588,7 +580,7 @@ export function StreamlinedEnrollmentPage({
               <div className="grid md:grid-cols-2 gap-6">
                 <PremiumCard variant="hover" className="bg-red-50 border-red-200">
                   <div className="flex items-center space-x-4">
-                    <ExclamationTriangleIcon className="w-8 h-8 text-red-500" />
+                    <AlertTriangle className="w-8 h-8 text-red-500" />
                     <div>
                       <div className="font-bold text-red-800">
                         Only {enrollmentStats.seatsLeft} seats left!
@@ -608,7 +600,7 @@ export function StreamlinedEnrollmentPage({
 
                 <PremiumCard variant="hover" className="bg-green-50 border-green-200">
                   <div className="flex items-center space-x-4">
-                    <UsersIcon className="w-8 h-8 text-green-500" />
+                    <Users className="w-8 h-8 text-green-500" />
                     <div>
                       <div className="font-bold text-green-800">
                         <AnimatedCounter value={enrollmentStats.thisMonth} /> students enrolled
@@ -632,7 +624,7 @@ export function StreamlinedEnrollmentPage({
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <ClockSolid className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
+                  <Clock className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Complete Your Enrollment
                   </h2>
@@ -757,19 +749,19 @@ export function StreamlinedEnrollmentPage({
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="flex items-center space-x-3">
-                        <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
                         <span className="text-yellow-800">10% Instant Discount</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
                         <span className="text-yellow-800">0% EMI for 12 months</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
                         <span className="text-yellow-800">7-day money-back guarantee</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
                         <span className="text-yellow-800">Free study material kit</span>
                       </div>
                     </div>
@@ -782,7 +774,7 @@ export function StreamlinedEnrollmentPage({
                       size="lg"
                       className="px-12 py-4"
                     >
-                      <ShieldCheckIcon className="w-6 h-6 mr-3" />
+                      <ShieldCheck className="w-6 h-6 mr-3" />
                       Secure Enrollment & Payment
                     </PremiumButton>
                     <p className="text-sm text-gray-500 mt-3">
@@ -808,7 +800,7 @@ export function StreamlinedEnrollmentPage({
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
                 >
-                  <TrophyIcon className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-yellow-500 mx-auto mb-6" />
+                  <Trophy className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-yellow-500 mx-auto mb-6" />
                 </motion.div>
 
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">🎉 Enrollment Successful!</h2>
@@ -820,21 +812,21 @@ export function StreamlinedEnrollmentPage({
                   <h3 className="text-lg font-bold text-green-800 mb-4">What happens next?</h3>
                   <div className="space-y-3 text-left">
                     <div className="flex items-center space-x-3">
-                      <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-500" />
                       <span className="text-green-800">
                         Enrollment confirmation SMS & email sent
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-500" />
                       <span className="text-green-800">Counselor will call within 2 hours</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-500" />
                       <span className="text-green-800">Study material kit dispatch initiated</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircleSolid className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-500" />
                       <span className="text-green-800">Access to student portal activated</span>
                     </div>
                   </div>
@@ -842,7 +834,7 @@ export function StreamlinedEnrollmentPage({
 
                 <div className="flex justify-center space-x-4">
                   <PremiumButton onClick={onWhatsAppContact} variant="secondary" size="lg">
-                    <ChatBubbleLeftRightIcon className="w-5 h-5 mr-2" />
+                    <MessageSquare className="w-5 h-5 mr-2" />
                     Join WhatsApp Group
                   </PremiumButton>
                   <PremiumButton
@@ -864,26 +856,26 @@ export function StreamlinedEnrollmentPage({
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-6 text-sm">
             <div className="flex items-center space-x-2">
-              <ShieldCheckSolid className="w-5 h-5 text-green-500" />
+              <ShieldCheck className="w-5 h-5 text-green-500" />
               <span className="text-gray-700">SSL Secured</span>
             </div>
             <div className="flex items-center space-x-2">
-              <UsersIcon className="w-5 h-5 text-blue-500" />
+              <Users className="w-5 h-5 text-blue-500" />
               <span className="text-gray-700">2,847 enrolled this month</span>
             </div>
             <div className="flex items-center space-x-2">
-              <StarIcon className="w-5 h-5 text-yellow-500" />
+              <Star className="w-5 h-5 text-yellow-500" />
               <span className="text-gray-700">4.9/5 rating</span>
             </div>
           </div>
 
           <div className="flex items-center space-x-3">
             <PremiumButton onClick={onWhatsAppContact} variant="secondary" size="sm">
-              <ChatBubbleLeftRightIcon className="w-4 h-4 mr-2" />
+              <MessageSquare className="w-4 h-4 mr-2" />
               WhatsApp
             </PremiumButton>
             <PremiumButton onClick={onCallNow} variant="medical" size="sm">
-              <PhoneIcon className="w-4 h-4 mr-2" />
+              <Phone className="w-4 h-4 mr-2" />
               Call Now
             </PremiumButton>
           </div>

@@ -6,16 +6,15 @@ import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSys
 import { ParentFlow } from '@/components/conversion/ParentFlow'
 import { QuizProgress } from '@/components/ui/ProgressIndicators'
 import {
-  ChevronRightIcon,
-  SparklesIcon,
-  AcademicCapIcon,
-  ClockIcon,
-  CheckCircleIcon,
-  StarIcon,
-  PhoneIcon,
-  DocumentArrowDownIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+  ChevronRight,
+  Sparkles,
+  GraduationCap,
+  Clock,
+  CheckCircle2,
+  Star,
+  Phone,
+  FileDown,
+} from 'lucide-react'
 
 interface QuizAnswer {
   userType: string // student or parent
@@ -556,14 +555,14 @@ export function EnhancedCourseFinderQuiz({
         <div className="text-center space-y-6">
           {/* Match Score */}
           <div className="flex items-center justify-center gap-2 text-blue-600 text-sm">
-            <SparklesIcon className="h-4 w-4" />
+            <Sparkles className="h-4 w-4" />
             <span>{recommendation.primary.match}% Perfect Match Found!</span>
           </div>
 
           {/* Primary Recommendation */}
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <StarSolid className="h-5 w-5 text-purple-600" />
+              <Star className="h-5 w-5 text-purple-600" />
               <span className="text-xs font-semibold text-purple-600 uppercase tracking-wide">
                 RECOMMENDED FOR YOU
               </span>
@@ -594,7 +593,7 @@ export function EnhancedCourseFinderQuiz({
                 <ul className="space-y-1">
                   {recommendation.primary.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckCircleIcon className="h-3 w-3 text-blue-600 flex-shrink-0" />
+                      <CheckCircle2 className="h-3 w-3 text-blue-600 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -605,7 +604,7 @@ export function EnhancedCourseFinderQuiz({
                 <ul className="space-y-1">
                   {recommendation.primary.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-center gap-2 text-gray-700">
-                      <StarIcon className="h-3 w-3 text-purple-600 flex-shrink-0" />
+                      <Star className="h-3 w-3 text-purple-600 flex-shrink-0" />
                       {highlight}
                     </li>
                   ))}
@@ -651,7 +650,7 @@ export function EnhancedCourseFinderQuiz({
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3"
             >
               Enroll Now
-              <ChevronRightIcon className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5" />
             </PremiumButton>
 
             <div className="grid grid-cols-2 gap-3">
@@ -659,14 +658,14 @@ export function EnhancedCourseFinderQuiz({
                 onClick={handleBookCounseling}
                 className="flex items-center justify-center gap-2 py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm"
               >
-                <PhoneIcon className="h-4 w-4" />
+                <Phone className="h-4 w-4" />
                 Book Counseling
               </button>
               <button
                 onClick={handleDownloadDetails}
                 className="flex items-center justify-center gap-2 py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors text-sm"
               >
-                <DocumentArrowDownIcon className="h-4 w-4" />
+                <FileDown className="h-4 w-4" />
                 Download Details
               </button>
             </div>

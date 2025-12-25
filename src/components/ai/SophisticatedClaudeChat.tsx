@@ -4,17 +4,17 @@ import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import {
-  ChatBubbleLeftRightIcon,
-  MicrophoneIcon,
-  PhotoIcon,
-  PaperAirplaneIcon,
-  SparklesIcon,
-  BeakerIcon,
-  AcademicCapIcon,
-  LightBulbIcon,
-  BookOpenIcon,
-  StopIcon,
-} from '@heroicons/react/24/outline'
+  MessageSquare,
+  Mic,
+  Image,
+  Send,
+  Sparkles,
+  FlaskConical,
+  GraduationCap,
+  Lightbulb,
+  BookOpen,
+  Square,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface Message {
@@ -62,28 +62,28 @@ export function SophisticatedClaudeChat({
   const quickPrompts = [
     {
       id: 'genetics',
-      icon: BeakerIcon,
+      icon: FlaskConical,
       title: 'Genetics Mastery',
       prompt: "Explain Mendel's laws with modern molecular insights",
       category: 'Molecular Biology',
     },
     {
       id: 'physiology',
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
       title: 'Human Physiology',
       prompt: 'Describe cardiac cycle with latest research findings',
       category: 'Physiology',
     },
     {
       id: 'ecology',
-      icon: LightBulbIcon,
+      icon: Lightbulb,
       title: 'Ecosystem Dynamics',
       prompt: 'Analyze population growth models in ecology',
       category: 'Ecology',
     },
     {
       id: 'neet-strategy',
-      icon: BookOpenIcon,
+      icon: BookOpen,
       title: 'NEET Strategy',
       prompt: 'Create a study plan for scoring 350+ in Biology',
       category: 'Exam Prep',
@@ -195,7 +195,7 @@ export function SophisticatedClaudeChat({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <SparklesIcon className="h-6 w-6" />
+                <Sparkles className="h-6 w-6" />
               </div>
               <div>
                 <h2 className="text-xl font-bold">Cerebrum AI Biology Mentor</h2>
@@ -259,7 +259,7 @@ export function SophisticatedClaudeChat({
               >
                 {message.type !== 'user' && (
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                    <SparklesIcon className="h-5 w-5" />
+                    <Sparkles className="h-5 w-5" />
                   </div>
                 )}
 
@@ -303,7 +303,7 @@ export function SophisticatedClaudeChat({
               className="flex gap-4"
             >
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
-                <SparklesIcon className="h-5 w-5" />
+                <Sparkles className="h-5 w-5" />
               </div>
               <div className="bg-gray-50 rounded-2xl p-4">
                 <div className="flex gap-1">
@@ -342,9 +342,9 @@ export function SophisticatedClaudeChat({
               whileTap={{ scale: 0.95 }}
             >
               {isRecording ? (
-                <StopIcon className="h-5 w-5" />
+                <Square className="h-5 w-5" />
               ) : (
-                <MicrophoneIcon className="h-5 w-5" />
+                <Mic className="h-5 w-5" />
               )}
             </motion.button>
 
@@ -354,7 +354,7 @@ export function SophisticatedClaudeChat({
               className="w-12 h-12 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-xl flex items-center justify-center transition-colors"
               whileTap={{ scale: 0.95 }}
             >
-              <PhotoIcon className="h-5 w-5" />
+              <Image className="h-5 w-5" />
             </motion.button>
 
             {/* Text Input */}
@@ -383,7 +383,7 @@ export function SophisticatedClaudeChat({
               )}
               whileTap={{ scale: 0.95 }}
             >
-              <PaperAirplaneIcon className="h-5 w-5" />
+              <Send className="h-5 w-5" />
             </motion.button>
           </div>
 

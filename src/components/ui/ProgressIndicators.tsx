@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { CheckIcon } from '@heroicons/react/24/solid'
+import { Check } from 'lucide-react'
 
 interface ScrollProgressBarProps {
   className?: string
@@ -108,7 +108,7 @@ export function FormSteps({
                       }
                     `}
                   >
-                    {isCompleted ? <CheckIcon className="w-4 h-4" /> : <span>{index + 1}</span>}
+                    {isCompleted ? <Check className="w-4 h-4" /> : <span>{index + 1}</span>}
                   </div>
                   {showLabels && (
                     <div className="text-center mt-2">
@@ -185,7 +185,7 @@ export function FormSteps({
               whileHover={{ scale: isActive ? 1.05 : 1 }}
               whileTap={{ scale: 0.95 }}
             >
-              {isCompleted ? <CheckIcon className="w-4 h-4" /> : <span>{index + 1}</span>}
+              {isCompleted ? <Check className="w-4 h-4" /> : <span>{index + 1}</span>}
             </motion.div>
             {showLabels && (
               <div className="text-center mt-2">

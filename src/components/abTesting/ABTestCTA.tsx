@@ -4,12 +4,12 @@ import React from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { Button } from '@/components/ui/Button'
 import {
-  ArrowRightIcon,
-  UserGroupIcon,
-  TrophyIcon,
-  PlayIcon,
-  StarIcon,
-} from '@heroicons/react/24/outline'
+  ArrowRight,
+  Users,
+  Trophy,
+  Play,
+  Star,
+} from 'lucide-react'
 
 interface ABTestCTAProps {
   context: 'primary' | 'secondary' | 'footer' | 'pricing'
@@ -57,13 +57,13 @@ export function ABTestCTA({ context, onClick, className = '', size = 'md' }: ABT
 
     switch (variant) {
       case 'action_oriented':
-        return <PlayIcon className="h-4 w-4 ml-2" />
+        return <Play className="h-4 w-4 ml-2" />
       case 'benefit_focused':
-        return <TrophyIcon className="h-4 w-4 ml-2" />
+        return <Trophy className="h-4 w-4 ml-2" />
       case 'social_proof':
-        return <UserGroupIcon className="h-4 w-4 ml-2" />
+        return <Users className="h-4 w-4 ml-2" />
       default:
-        return <ArrowRightIcon className="h-4 w-4 ml-2" />
+        return <ArrowRight className="h-4 w-4 ml-2" />
     }
   }
 
@@ -115,7 +115,7 @@ export function ABTestCTA({ context, onClick, className = '', size = 'md' }: ABT
       {variant === 'social_proof' && context === 'primary' && (
         <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-1 animate-pulse">
           <div className="flex items-center gap-1">
-            <StarIcon className="h-3 w-3" />
+            <Star className="h-3 w-3" />
             <span>4.9</span>
           </div>
         </div>

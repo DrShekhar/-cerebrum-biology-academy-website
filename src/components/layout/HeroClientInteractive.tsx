@@ -2,12 +2,12 @@
 
 import { useEffect, useState, memo } from 'react'
 import {
-  PlayIcon,
-  StarIcon,
-  ClockIcon,
-  SparklesIcon,
-  AcademicCapIcon,
-} from '@heroicons/react/24/outline'
+  Play,
+  Star,
+  Clock,
+  Sparkles,
+  GraduationCap,
+} from 'lucide-react'
 import { useI18n } from '@/contexts/I18nContext'
 
 const AnimatedCounter = memo(({ value, suffix = '' }: { value: string; suffix?: string }) => {
@@ -94,7 +94,7 @@ export function HeroClientInteractive() {
           href="/demo-booking"
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
+          <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
           {t('bookDemo')}
         </a>
 
@@ -102,7 +102,7 @@ export function HeroClientInteractive() {
           href="/success-stories"
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <StarIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
+          <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
           {t('seeSuccessStories')}
         </a>
       </div>
@@ -140,7 +140,7 @@ export function HeroClientInteractive() {
         className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
         style={{ animationDelay: '0.5s' }}
       >
-        <ClockIcon className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
+        <Clock className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
         <span className="text-red-100 text-xs xs:text-sm sm:text-base">
           {t('nextBatchStarting')}: <span className="font-bold">January 15, 2026</span> •{' '}
           {t('onlySeatsLeft')}
@@ -153,7 +153,7 @@ export function HeroClientInteractive() {
         style={{ animationDelay: '0.6s' }}
       >
         <div className="flex items-center gap-2 text-yellow-200">
-          <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
+          <Sparkles className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
           <span className="text-xs xs:text-sm sm:text-base">
             {t('earlyBirdDiscount').replace('{days}', timeLeft.days.toString())}
           </span>
@@ -162,7 +162,7 @@ export function HeroClientInteractive() {
           href="/neet-2026-preparation"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
         >
-          <AcademicCapIcon className="w-4 h-4" />
+          <GraduationCap className="w-4 h-4" />
           NEET 2026
         </a>
       </div>

@@ -3,34 +3,26 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  ChevronRightIcon,
-  PlayCircleIcon,
-  StarIcon,
-  TrophyIcon,
-  FireIcon,
-  UsersIcon,
-  PhoneIcon,
-  ChatBubbleLeftRightIcon,
-  XMarkIcon,
-  GiftIcon,
-  HeartIcon,
-  ExclamationTriangleIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  VideoCameraIcon,
-  CalendarDaysIcon,
-} from '@heroicons/react/24/outline'
-import {
-  CheckCircleIcon as CheckCircleSolid,
-  StarIcon as StarSolid,
-  TrophyIcon as TrophySolid,
-  UserGroupIcon as UserGroupSolid,
-  HeartIcon as HeartSolid,
-} from '@heroicons/react/24/solid'
+  CheckCircle2,
+  Clock,
+  Users,
+  GraduationCap,
+  ChevronRight,
+  PlayCircle,
+  Star,
+  Trophy,
+  Flame,
+  Phone,
+  MessageSquare,
+  X,
+  Gift,
+  Heart,
+  AlertTriangle,
+  ShieldCheck,
+  FileText,
+  Video,
+  CalendarDays,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 
@@ -257,14 +249,14 @@ export function SecondChanceNEETLanding({
                 {/* Trust Indicators */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
                   <div className="flex items-center space-x-2">
-                    <TrophySolid className="w-5 h-5 text-yellow-500" />
+                    <Trophy className="w-5 h-5 text-yellow-500" />
                     <span className="font-medium">
                       <AnimatedCounter value={liveStats.repeatersCleared} /> Repeaters Cleared in
                       2024
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <UserGroupSolid className="w-5 h-5 text-blue-500" />
+                    <Users className="w-5 h-5 text-blue-500" />
                     <span className="font-medium">Max 15 Students Per Batch</span>
                   </div>
                 </div>
@@ -281,7 +273,7 @@ export function SecondChanceNEETLanding({
                   <div className="relative bg-gradient-to-br from-red-100 to-red-200 aspect-square flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-20 h-20 mx-auto mb-4 bg-red-300 rounded-full flex items-center justify-center">
-                        <ExclamationTriangleIcon className="w-10 h-10 text-red-600" />
+                        <AlertTriangle className="w-10 h-10 text-red-600" />
                       </div>
                       <div className="text-2xl font-bold text-red-800">Before</div>
                       <div className="text-sm text-red-700">Score: 156/720</div>
@@ -290,7 +282,7 @@ export function SecondChanceNEETLanding({
                   <div className="relative bg-gradient-to-br from-green-100 to-green-200 aspect-square flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-20 h-20 mx-auto mb-4 bg-green-300 rounded-full flex items-center justify-center">
-                        <TrophyIcon className="w-10 h-10 text-green-600" />
+                        <Trophy className="w-10 h-10 text-green-600" />
                       </div>
                       <div className="text-2xl font-bold text-green-800">After</div>
                       <div className="text-sm text-green-700">Score: 612/720</div>
@@ -298,7 +290,7 @@ export function SecondChanceNEETLanding({
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <ChevronRightIcon className="w-12 h-12 text-green-500 bg-white rounded-full p-2 shadow-lg" />
+                  <ChevronRight className="w-12 h-12 text-green-500 bg-white rounded-full p-2 shadow-lg" />
                 </div>
               </motion.div>
             </div>
@@ -312,7 +304,7 @@ export function SecondChanceNEETLanding({
               <PremiumCard variant="luxury" size="lg" className="bg-white shadow-2xl">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <DocumentTextIcon className="w-8 h-8 text-white" />
+                    <FileText className="w-8 h-8 text-white" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Get Your Free Failure Analysis Report
@@ -443,7 +435,7 @@ export function SecondChanceNEETLanding({
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <PlayCircleIcon className="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform" />
+                        <PlayCircle className="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform" />
                       </div>
                     </div>
                   </div>
@@ -460,7 +452,7 @@ export function SecondChanceNEETLanding({
                           </div>
                           <div className="text-sm text-gray-600">Before</div>
                         </div>
-                        <ChevronRightIcon className="w-6 h-6 text-gray-400" />
+                        <ChevronRight className="w-6 h-6 text-gray-400" />
                         <div className="text-center">
                           <div className="text-2xl font-bold text-green-600">
                             {successStories[currentTestimonial].afterScore}
@@ -531,7 +523,7 @@ export function SecondChanceNEETLanding({
               </svg>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <StarSolid key={i} className="w-5 h-5 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 text-yellow-400" />
                 ))}
               </div>
               <span className="font-bold text-gray-900">4.8</span>
@@ -548,7 +540,7 @@ export function SecondChanceNEETLanding({
             {/* Problem Section */}
             <div>
               <div className="text-center mb-8">
-                <ExclamationTriangleIcon className="w-16 h-16 text-red-500 mx-auto mb-4" />
+                <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-red-600 mb-4">Why You Failed</h2>
                 <p className="text-gray-600">Understanding the root causes of failure</p>
               </div>
@@ -600,7 +592,7 @@ export function SecondChanceNEETLanding({
             {/* Solution Section */}
             <div>
               <div className="text-center mb-8">
-                <TrophySolid className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <Trophy className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-green-600 mb-4">
                   Why You'll Succeed With Us
                 </h2>
@@ -671,7 +663,7 @@ export function SecondChanceNEETLanding({
                 className="bg-white/10 backdrop-blur-md border-white/20"
               >
                 <div className="text-center">
-                  <ClockIcon className="w-12 h-12 mx-auto mb-4" />
+                  <Clock className="w-12 h-12 mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">Next Batch Starts In:</h3>
                   <div className="text-3xl font-bold mb-2">{formatTime(urgencyTimer)}</div>
                   <p className="text-white/80">January 15th, 2025</p>
@@ -684,7 +676,7 @@ export function SecondChanceNEETLanding({
                 className="bg-white/10 backdrop-blur-md border-white/20"
               >
                 <div className="text-center">
-                  <UserGroupIcon className="w-12 h-12 mx-auto mb-4" />
+                  <Users className="w-12 h-12 mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">Seats Remaining:</h3>
                   <div className="text-3xl font-bold mb-2">{liveStats.seatsLeft}/50</div>
                   <div className="w-full bg-white/20 rounded-full h-2">
@@ -701,7 +693,7 @@ export function SecondChanceNEETLanding({
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-3">
-                  <GiftIcon className="w-8 h-8" />
+                  <Gift className="w-8 h-8" />
                   <h3 className="text-xl font-bold">Early Bird Discount</h3>
                 </div>
                 <p className="text-lg">Enroll today and save ₹15,000 on course fees</p>
@@ -709,7 +701,7 @@ export function SecondChanceNEETLanding({
 
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-3">
-                  <HeartSolid className="w-8 h-8" />
+                  <Heart className="w-8 h-8" />
                   <h3 className="text-xl font-bold">Free Tablet</h3>
                 </div>
                 <p className="text-lg">Study material tablet for first 50 enrollments</p>
@@ -723,7 +715,7 @@ export function SecondChanceNEETLanding({
                 size="xl"
                 className="bg-white text-red-600 hover:bg-gray-100"
               >
-                <CalendarDaysIcon className="w-6 h-6 mr-3" />
+                <CalendarDays className="w-6 h-6 mr-3" />
                 Book Free Counseling Now
               </PremiumButton>
             </div>
@@ -755,7 +747,7 @@ export function SecondChanceNEETLanding({
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
                 >
                   <span className="text-lg font-medium text-gray-900">{faq.question}</span>
-                  <ChevronRightIcon
+                  <ChevronRight
                     className={`w-5 h-5 text-gray-400 transition-transform ${
                       faq.isOpen ? 'rotate-90' : ''
                     }`}
@@ -802,7 +794,7 @@ export function SecondChanceNEETLanding({
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
-                <CalendarDaysIcon className="w-5 h-5 mr-2" />
+                <CalendarDays className="w-5 h-5 mr-2" />
                 Book Free Counseling
               </PremiumButton>
 
@@ -812,7 +804,7 @@ export function SecondChanceNEETLanding({
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
-                <DocumentTextIcon className="w-5 h-5 mr-2" />
+                <FileText className="w-5 h-5 mr-2" />
                 Download Success Stories
               </PremiumButton>
 
@@ -822,22 +814,22 @@ export function SecondChanceNEETLanding({
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
-                <VideoCameraIcon className="w-5 h-5 mr-2" />
+                <Video className="w-5 h-5 mr-2" />
                 Take Virtual Tour
               </PremiumButton>
             </div>
 
             <div className="flex justify-center space-x-6 mt-8 text-sm">
               <div className="flex items-center space-x-2">
-                <ShieldCheckIcon className="w-5 h-5" />
+                <ShieldCheck className="w-5 h-5" />
                 <span>100% Money Back Guarantee</span>
               </div>
               <div className="flex items-center space-x-2">
-                <HeartSolid className="w-5 h-5" />
+                <Heart className="w-5 h-5" />
                 <span>Emotional Support Included</span>
               </div>
               <div className="flex items-center space-x-2">
-                <TrophySolid className="w-5 h-5" />
+                <Trophy className="w-5 h-5" />
                 <span>90% Success Rate</span>
               </div>
             </div>
@@ -864,11 +856,11 @@ export function SecondChanceNEETLanding({
                 onClick={() => setShowExitIntent(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
               >
-                <XMarkIcon className="w-6 h-6" />
+                <X className="w-6 h-6" />
               </button>
 
               <div className="text-center">
-                <GiftIcon className="w-16 h-16 text-red-500 mx-auto mb-4" />
+                <Gift className="w-16 h-16 text-red-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Wait! Get 50% Off on Diagnostic Test
                 </h3>
@@ -900,11 +892,11 @@ export function SecondChanceNEETLanding({
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-3 z-40">
         <div className="flex space-x-3">
           <PremiumButton onClick={onCallNow} variant="secondary" size="sm" className="flex-1">
-            <PhoneIcon className="w-4 h-4 mr-2" />
+            <Phone className="w-4 h-4 mr-2" />
             Call Now
           </PremiumButton>
           <PremiumButton onClick={onWhatsAppContact} variant="medical" size="sm" className="flex-1">
-            <ChatBubbleLeftRightIcon className="w-4 h-4 mr-2" />
+            <MessageSquare className="w-4 h-4 mr-2" />
             WhatsApp
           </PremiumButton>
         </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { PhoneIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Phone, Menu, X } from 'lucide-react'
 
 interface FixedHeaderProps {
   className?: string
@@ -66,7 +66,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
               className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 p-2"
               aria-label="Call us"
             >
-              <PhoneIcon className="w-5 h-5" />
+              <Phone className="w-5 h-5" />
             </button>
             <button
               onClick={toggleMobileMenu}
@@ -74,9 +74,9 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <XMarkIcon className="w-6 h-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <Bars3Icon className="w-6 h-6" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -120,7 +120,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                     }}
                     className="w-full flex items-center justify-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors duration-200 py-2"
                   >
-                    <PhoneIcon className="w-5 h-5" />
+                    <Phone className="w-5 h-5" />
                     Call Now
                   </button>
                 </div>

@@ -3,27 +3,22 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  DevicePhoneMobileIcon,
-  SparklesIcon,
-  AcademicCapIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ClockIcon,
-  PlayCircleIcon,
-  ChatBubbleBottomCenterTextIcon,
-  TrophyIcon,
-  BoltIcon,
-  ArrowDownTrayIcon,
+  Smartphone,
+  Sparkles,
+  GraduationCap,
+  BarChart2,
+  Users,
+  Clock,
+  PlayCircle,
+  MessageCircle,
+  Trophy,
+  Zap,
+  Download,
   QrCodeIcon,
-  StarIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/24/outline'
-import {
-  StarIcon as StarSolid,
-  SparklesIcon as SparklesSolid,
-  TrophyIcon as TrophySolid,
-} from '@heroicons/react/24/solid'
+  Star,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 
 interface MobileAppPromoSectionProps {
@@ -69,7 +64,7 @@ export function MobileAppPromoSection({
       title: 'AI Doubt Solver',
       description:
         'Instant biology doubt resolution with photo-based question solving. Available 24/7.',
-      icon: SparklesSolid,
+      icon: Sparkles,
       gradient: 'from-purple-500 to-blue-500',
       stats: '50K+ doubts solved daily',
     },
@@ -78,7 +73,7 @@ export function MobileAppPromoSection({
       title: 'Personalized Study Plan',
       description:
         'Daily targets based on weak areas with adaptive learning algorithm and progress tracking.',
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
       gradient: 'from-green-500 to-teal-500',
       stats: 'AI-powered adaptation',
     },
@@ -87,7 +82,7 @@ export function MobileAppPromoSection({
       title: 'Live Classes',
       description:
         'Attend classes from anywhere with interactive doubt sessions and recorded lectures.',
-      icon: PlayCircleIcon,
+      icon: PlayCircle,
       gradient: 'from-red-500 to-pink-500',
       stats: '500+ hours of content',
     },
@@ -95,7 +90,7 @@ export function MobileAppPromoSection({
       id: 'mock-tests',
       title: 'Mock Tests',
       description: 'Chapter-wise tests and full NEET mock exams with instant results and analysis.',
-      icon: ClockIcon,
+      icon: Clock,
       gradient: 'from-orange-500 to-yellow-500',
       stats: '1000+ practice tests',
     },
@@ -103,7 +98,7 @@ export function MobileAppPromoSection({
       id: 'performance-analytics',
       title: 'Performance Analytics',
       description: 'Weakness identification, peer comparison, and predictive score analysis.',
-      icon: ChartBarIcon,
+      icon: BarChart2,
       gradient: 'from-indigo-500 to-purple-500',
       stats: 'ML-powered insights',
     },
@@ -111,7 +106,7 @@ export function MobileAppPromoSection({
       id: 'community-support',
       title: 'Community Support',
       description: 'Connect with batch mates, study groups, and daily motivational content.',
-      icon: UserGroupIcon,
+      icon: Users,
       gradient: 'from-cyan-500 to-blue-500',
       stats: '25K+ active community',
     },
@@ -207,8 +202,8 @@ export function MobileAppPromoSection({
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <DevicePhoneMobileIcon className="w-12 h-12 text-blue-400" />
-            <SparklesSolid className="w-8 h-8 text-yellow-400" />
+            <Smartphone className="w-12 h-12 text-blue-400" />
+            <Sparkles className="w-8 h-8 text-yellow-400" />
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -245,7 +240,7 @@ export function MobileAppPromoSection({
             >
               <div className="flex items-center justify-center space-x-1 text-3xl font-bold text-yellow-400">
                 <span>{appStats.rating}</span>
-                <StarSolid className="w-6 h-6" />
+                <Star className="w-6 h-6" />
               </div>
               <div className="text-blue-200 text-sm">Rating</div>
             </motion.div>
@@ -374,14 +369,14 @@ export function MobileAppPromoSection({
                 onClick={prevScreenshot}
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
               >
-                <ChevronLeftIcon className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
 
               <button
                 onClick={nextScreenshot}
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
               >
-                <ChevronRightIcon className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5" />
               </button>
 
               {/* Screenshot Indicators */}
@@ -408,9 +403,9 @@ export function MobileAppPromoSection({
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg mb-8">
-            <TrophySolid className="w-6 h-6" />
+            <Trophy className="w-6 h-6" />
             <span>Download now and get 7 days premium access FREE!</span>
-            <BoltIcon className="w-6 h-6" />
+            <Zap className="w-6 h-6" />
           </div>
         </motion.div>
 
@@ -494,7 +489,7 @@ export function MobileAppPromoSection({
               size="sm"
               className="border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white"
             >
-              <ChatBubbleBottomCenterTextIcon className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               Text APP to 92999-12345
             </PremiumButton>
           </div>

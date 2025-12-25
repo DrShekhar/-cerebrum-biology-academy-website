@@ -3,11 +3,11 @@
 import { ABTestDashboard } from '@/components/abTesting/ABTestDashboard'
 import { useState } from 'react'
 import {
-  BeakerIcon,
-  ChartBarIcon,
-  Cog6ToothIcon,
-  DocumentArrowDownIcon,
-} from '@heroicons/react/24/outline'
+  FlaskConical,
+  BarChart2,
+  Settings,
+  FileDown,
+} from 'lucide-react'
 
 export default function ABTestingPage() {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'settings' | 'export'>('dashboard')
@@ -18,7 +18,7 @@ export default function ABTestingPage() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <BeakerIcon className="h-8 w-8 text-blue-600" />
+            <FlaskConical className="h-8 w-8 text-blue-600" />
             <h1 className="text-3xl font-bold text-gray-900">A/B Testing Center</h1>
           </div>
           <p className="text-gray-600 max-w-2xl">
@@ -38,7 +38,7 @@ export default function ABTestingPage() {
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             }`}
           >
-            <ChartBarIcon className="h-4 w-4" />
+            <BarChart2 className="h-4 w-4" />
             Dashboard
           </button>
           <button
@@ -49,7 +49,7 @@ export default function ABTestingPage() {
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             }`}
           >
-            <Cog6ToothIcon className="h-4 w-4" />
+            <Settings className="h-4 w-4" />
             Settings
           </button>
           <button
@@ -60,7 +60,7 @@ export default function ABTestingPage() {
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             }`}
           >
-            <DocumentArrowDownIcon className="h-4 w-4" />
+            <FileDown className="h-4 w-4" />
             Export
           </button>
         </div>

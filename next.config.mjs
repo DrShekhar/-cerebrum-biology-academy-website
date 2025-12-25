@@ -58,10 +58,10 @@ const nextConfig = {
                 chunks: 'all',
                 priority: 35,
               },
-              // UI components (Radix, Heroicons)
+              // UI components (Radix, Lucide)
               ui: {
                 name: 'ui',
-                test: /[\\/]node_modules[\\/](@radix-ui|@heroicons|lucide-react)[\\/]/,
+                test: /[\\/]node_modules[\\/](@radix-ui|lucide-react)[\\/]/,
                 chunks: 'all',
                 priority: 30,
               },
@@ -185,7 +185,6 @@ const nextConfig = {
     // Optimize package imports for smaller bundles
     optimizePackageImports: [
       'lucide-react',
-      '@heroicons/react',
       '@radix-ui/react-icons',
       'framer-motion',
       'date-fns',

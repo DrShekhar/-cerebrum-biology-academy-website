@@ -4,13 +4,13 @@ import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
-  CheckCircleIcon,
-  PhoneIcon,
-  ChatBubbleLeftRightIcon,
-  ClockIcon,
-  DocumentTextIcon,
-  CalendarDaysIcon,
-} from '@heroicons/react/24/outline'
+  CheckCircle2,
+  Phone,
+  MessageSquare,
+  Clock,
+  FileText,
+  CalendarDays,
+} from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 
@@ -139,7 +139,7 @@ function ThankYouContent() {
             transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
             className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >
-            <CheckCircleIcon className="w-12 h-12 text-white" />
+            <CheckCircle2 className="w-12 h-12 text-white" />
           </motion.div>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -160,13 +160,13 @@ function ThankYouContent() {
             <PremiumCard variant="premium" size="lg" className="bg-green-50 border-green-200">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                  <ChatBubbleLeftRightIcon className="w-6 h-6 text-white" />
+                  <MessageSquare className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-green-800 mb-2">WhatsApp Delivery</h3>
                   <p className="text-green-700 mb-3">{content.whatsappMessage}</p>
                   <div className="flex items-center space-x-2 text-sm">
-                    <ClockIcon className="w-4 h-4 text-green-600" />
+                    <Clock className="w-4 h-4 text-green-600" />
                     <span className="text-green-600 font-medium">ETA: {formatTime(countdown)}</span>
                   </div>
                 </div>
@@ -183,13 +183,13 @@ function ThankYouContent() {
             <PremiumCard variant="premium" size="lg" className="bg-blue-50 border-blue-200">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                  <PhoneIcon className="w-6 h-6 text-white" />
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-blue-800 mb-2">Counselor Call</h3>
                   <p className="text-blue-700 mb-3">{content.callMessage}</p>
                   <div className="flex items-center space-x-2 text-sm">
-                    <ClockIcon className="w-4 h-4 text-blue-600" />
+                    <Clock className="w-4 h-4 text-blue-600" />
                     <span className="text-blue-600 font-medium">Within 2 hours</span>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ function ThankYouContent() {
         >
           <PremiumCard variant="luxury" size="lg">
             <div className="text-center mb-8">
-              <DocumentTextIcon className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
+              <FileText className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
                 What Happens Next?
               </h2>
@@ -258,7 +258,7 @@ function ThankYouContent() {
               size="lg"
               className="w-full sm:w-auto min-h-[44px]"
             >
-              <ChatBubbleLeftRightIcon className="w-5 h-5 mr-3" />
+              <MessageSquare className="w-5 h-5 mr-3" />
               WhatsApp Now
             </PremiumButton>
 
@@ -268,7 +268,7 @@ function ThankYouContent() {
               size="lg"
               className="w-full sm:w-auto min-h-[44px]"
             >
-              <PhoneIcon className="w-5 h-5 mr-3" />
+              <Phone className="w-5 h-5 mr-3" />
               Call +91 88264 44334
             </PremiumButton>
 
@@ -278,7 +278,7 @@ function ThankYouContent() {
               size="lg"
               className="w-full sm:w-auto min-h-[44px]"
             >
-              <CalendarDaysIcon className="w-5 h-5 mr-3" />
+              <CalendarDays className="w-5 h-5 mr-3" />
               Book Free Counseling
             </PremiumButton>
           </div>

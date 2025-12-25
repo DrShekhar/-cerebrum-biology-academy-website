@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  PhoneIcon,
-  BookOpenIcon,
-  PlayIcon,
-  AcademicCapIcon,
-  ChatBubbleLeftIcon,
-  ClockIcon,
-} from '@heroicons/react/24/outline'
+  Phone,
+  BookOpen,
+  Play,
+  GraduationCap,
+  MessageCircle,
+  Clock,
+} from 'lucide-react'
 
 interface TouchAction {
   id: string
@@ -50,7 +50,7 @@ export function EnhancedTouchInterface({
       id: 'demo',
       label: 'Free Demo',
       hindi: 'फ्री डेमो',
-      icon: PlayIcon,
+      icon: Play,
       action: () => onDemoBooking?.(),
       color: 'bg-gradient-to-r from-green-500 to-green-600',
       priority: 'high',
@@ -59,7 +59,7 @@ export function EnhancedTouchInterface({
       id: 'call',
       label: 'Call Now',
       hindi: 'कॉल करें',
-      icon: PhoneIcon,
+      icon: Phone,
       action: () => onCallNow?.(),
       color: 'bg-gradient-to-r from-blue-500 to-blue-600',
       priority: 'high',
@@ -68,7 +68,7 @@ export function EnhancedTouchInterface({
       id: 'courses',
       label: 'View Courses',
       hindi: 'कोर्सेज देखें',
-      icon: BookOpenIcon,
+      icon: BookOpen,
       action: () => {
         const coursesElement = document.querySelector('#courses')
         const offsetTop = coursesElement instanceof HTMLElement ? coursesElement.offsetTop : 800
@@ -84,7 +84,7 @@ export function EnhancedTouchInterface({
       id: 'chat',
       label: 'Ask Doubts',
       hindi: 'डाउट पूछें',
-      icon: ChatBubbleLeftIcon,
+      icon: MessageCircle,
       action: () => onChatOpen?.(),
       color: 'bg-gradient-to-r from-orange-500 to-orange-600',
       priority: 'medium',
@@ -136,7 +136,7 @@ export function EnhancedTouchInterface({
               </span>
             </div>
             <div className="flex items-center gap-1">
-              <ClockIcon className="h-3 w-3 text-blue-600" />
+              <Clock className="h-3 w-3 text-blue-600" />
               <span className="text-blue-700 font-medium">
                 {showHindi ? '24/7 सपोर्ट' : '24/7 Support'}
               </span>

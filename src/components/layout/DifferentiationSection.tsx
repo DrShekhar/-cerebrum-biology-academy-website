@@ -4,23 +4,22 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView, useMotionValue, useTransform } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  CheckCircleIcon,
-  XMarkIcon,
-  StarIcon,
-  TrophyIcon,
-  HeartIcon,
-  ShieldCheckIcon,
-  AcademicCapIcon,
-  UsersIcon,
-  ClockIcon,
-  CurrencyRupeeIcon,
-  PhoneIcon,
-  DocumentArrowDownIcon,
-  PlayCircleIcon,
-  LightBulbIcon,
-  FireIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid, TrophyIcon as Phoenix } from '@heroicons/react/24/solid'
+  CheckCircle2,
+  X,
+  Star,
+  Trophy,
+  Heart,
+  ShieldCheck,
+  GraduationCap,
+  Users,
+  Clock,
+  IndianRupee,
+  Phone,
+  FileDown,
+  PlayCircle,
+  Lightbulb,
+  Flame,
+} from 'lucide-react'
 
 interface DifferentiationSectionProps {
   onBookTrial?: () => void
@@ -110,7 +109,7 @@ const uniqueFeatures = [
     id: 'specialists',
     title: 'Second Chance Specialists',
     description: 'We ONLY teach failed students. Our entire curriculum is designed for repeaters.',
-    icon: Phoenix,
+    icon: Trophy,
     color: 'from-amber-600 to-amber-700',
     stats: '3000+ failed students converted',
     benefit: 'Specialized failure analysis & recovery',
@@ -119,7 +118,7 @@ const uniqueFeatures = [
     id: 'emotional',
     title: 'Emotional Support System',
     description: 'In-house psychologist, parent counseling, peer support groups for mental health.',
-    icon: HeartIcon,
+    icon: Heart,
     color: 'from-teal-500 to-teal-600',
     stats: '95% stress reduction reported',
     benefit: 'Mental health = Academic performance',
@@ -128,7 +127,7 @@ const uniqueFeatures = [
     id: 'guarantee',
     title: 'Small Batch Guarantee',
     description: 'Never more than 25 students. Personal attention tracked daily with Dr. Shekhar.',
-    icon: UsersIcon,
+    icon: Users,
     color: 'from-navy-600 to-navy-700',
     stats: 'Max 25 students per batch',
     benefit: 'Individual attention guaranteed',
@@ -137,7 +136,7 @@ const uniqueFeatures = [
     id: 'transparency',
     title: 'Transparent Results',
     description: 'Third-party audited success rates. Published mark improvements with proof.',
-    icon: ShieldCheckIcon,
+    icon: ShieldCheck,
     color: 'from-teal-600 to-teal-700',
     stats: 'KPMG audited results',
     benefit: 'No false claims, pure transparency',
@@ -146,7 +145,7 @@ const uniqueFeatures = [
     id: 'payback',
     title: 'Pay After Results',
     description: '40% upfront, 60% after NEET. Performance-linked fee structure available.',
-    icon: CurrencyRupeeIcon,
+    icon: IndianRupee,
     color: 'from-amber-700 to-amber-800',
     stats: '60% fees after results',
     benefit: 'Success-aligned payment model',
@@ -215,7 +214,7 @@ export function DifferentiationSection({
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center gap-2 bg-amber-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
-            <FireIcon className="w-5 h-5 text-amber-400" />
+            <Flame className="w-5 h-5 text-amber-400" />
             <span className="text-amber-300 font-medium">The Brutal Truth</span>
           </div>
 
@@ -257,7 +256,7 @@ export function DifferentiationSection({
                     <th className="text-center py-4 px-6">
                       <div className="flex flex-col items-center gap-2">
                         <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center">
-                          <TrophyIcon className="w-6 h-6 text-white" />
+                          <Trophy className="w-6 h-6 text-white" />
                         </div>
                         <span className="font-bold text-teal-400">Cerebrum Biology</span>
                         <span className="text-xs text-teal-300">Failed Student Specialists</span>
@@ -266,7 +265,7 @@ export function DifferentiationSection({
                     <th className="text-center py-4 px-6">
                       <div className="flex flex-col items-center gap-2">
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
-                          <AcademicCapIcon className="w-6 h-6 text-gray-300" />
+                          <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
                         <span className="font-medium text-gray-300">Allen</span>
                         <span className="text-xs text-gray-400">Mass Production</span>
@@ -275,7 +274,7 @@ export function DifferentiationSection({
                     <th className="text-center py-4 px-6">
                       <div className="flex flex-col items-center gap-2">
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
-                          <AcademicCapIcon className="w-6 h-6 text-gray-300" />
+                          <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
                         <span className="font-medium text-gray-300">Aakash</span>
                         <span className="text-xs text-gray-400">Corporate Chain</span>
@@ -284,7 +283,7 @@ export function DifferentiationSection({
                     <th className="text-center py-4 px-6">
                       <div className="flex flex-col items-center gap-2">
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
-                          <AcademicCapIcon className="w-6 h-6 text-gray-300" />
+                          <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
                         <span className="font-medium text-gray-300">JPT Biology</span>
                         <span className="text-xs text-gray-400">Local Academy</span>
@@ -315,7 +314,7 @@ export function DifferentiationSection({
                         <div className="flex items-center justify-center gap-2">
                           <span className="text-2xl">{row.cereb_icon}</span>
                           <span className="font-semibold text-teal-400">{row.cerebrum}</span>
-                          {row.highlight && <CheckCircleIcon className="w-5 h-5 text-teal-400" />}
+                          {row.highlight && <CheckCircle2 className="w-5 h-5 text-teal-400" />}
                         </div>
                       </td>
                       <td className="py-4 px-6 text-center">
@@ -498,7 +497,7 @@ export function DifferentiationSection({
               className="w-full group relative overflow-hidden"
             >
               <div className="flex items-center justify-center gap-3">
-                <PlayCircleIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 <span>Book Trial Class</span>
               </div>
               <div className="absolute inset-0 bg-teal-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -511,7 +510,7 @@ export function DifferentiationSection({
               className="w-full group"
             >
               <div className="flex items-center justify-center gap-3">
-                <PhoneIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                <Phone className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 <span>Talk to Our Students</span>
               </div>
             </PremiumButton>
@@ -523,7 +522,7 @@ export function DifferentiationSection({
               className="w-full group"
             >
               <div className="flex items-center justify-center gap-3">
-                <DocumentArrowDownIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                <FileDown className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 <span>Download Comparison</span>
               </div>
             </PremiumButton>

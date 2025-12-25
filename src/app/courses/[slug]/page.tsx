@@ -9,6 +9,18 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
+export async function generateStaticParams() {
+  const newCourseParams = coursePrograms.map((course) => ({
+    slug: course.id,
+  }))
+
+  const oldCourseParams = detailedCourses.map((course) => ({
+    slug: course.slug,
+  }))
+
+  return [...newCourseParams, ...oldCourseParams]
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
 

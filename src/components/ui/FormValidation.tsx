@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CheckCircleIcon, ExclamationCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { CheckCircle2, AlertCircle, X } from 'lucide-react'
 
 // Validation Rules
 export interface ValidationRule {
@@ -293,7 +293,7 @@ export function ValidatedInput({
                 exit={{ scale: 0, rotate: 90 }}
                 transition={{ duration: 0.2 }}
               >
-                <ExclamationCircleIcon className="w-5 h-5 text-red-500" />
+                <AlertCircle className="w-5 h-5 text-red-500" />
               </motion.div>
             )}
             {isValid && (
@@ -304,7 +304,7 @@ export function ValidatedInput({
                 exit={{ scale: 0, rotate: 90 }}
                 transition={{ duration: 0.2 }}
               >
-                <CheckCircleIcon className="w-5 h-5 text-emerald-500" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -321,7 +321,7 @@ export function ValidatedInput({
             transition={{ duration: 0.2 }}
             className="flex items-center space-x-1 text-sm text-red-600"
           >
-            <ExclamationCircleIcon className="w-4 h-4 flex-shrink-0" />
+            <AlertCircle className="w-4 h-4 flex-shrink-0" />
             <span>{error}</span>
           </motion.div>
         )}
@@ -409,7 +409,7 @@ export function ValidatedSelect({
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}
               >
-                <ExclamationCircleIcon className="w-5 h-5 text-red-500" />
+                <AlertCircle className="w-5 h-5 text-red-500" />
               </motion.div>
             )}
             {isValid && (
@@ -419,7 +419,7 @@ export function ValidatedSelect({
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}
               >
-                <CheckCircleIcon className="w-5 h-5 text-emerald-500" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -435,7 +435,7 @@ export function ValidatedSelect({
             exit={{ opacity: 0, y: -10 }}
             className="flex items-center space-x-1 text-sm text-red-600"
           >
-            <ExclamationCircleIcon className="w-4 h-4" />
+            <AlertCircle className="w-4 h-4" />
             <span>{error}</span>
           </motion.div>
         )}
@@ -474,7 +474,7 @@ export function ErrorSummary({
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
-                <ExclamationCircleIcon className="w-5 h-5 text-red-500" />
+                <AlertCircle className="w-5 h-5 text-red-500" />
                 <h3 className="text-sm font-medium text-red-800">{title}</h3>
               </div>
               <ul className="space-y-1">
@@ -492,7 +492,7 @@ export function ErrorSummary({
               onClick={onClose}
               className="ml-3 text-red-400 hover:text-red-600 transition-colors"
             >
-              <XMarkIcon className="w-5 h-5" />
+              <X className="w-5 h-5" />
             </button>
           </div>
         </div>

@@ -3,18 +3,18 @@
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
-  BookOpenIcon,
-  BookmarkIcon,
+  BookOpen,
+  Bookmark,
   ShareIcon,
   PrinterIcon,
-  MagnifyingGlassIcon,
-  AdjustmentsHorizontalIcon,
-  StarIcon,
-  ClockIcon,
+  Search,
+  SlidersHorizontal,
+  Star,
+  Clock,
   TagIcon,
-  ArrowDownTrayIcon,
-} from '@heroicons/react/24/outline'
-import { BookmarkIcon as BookmarkSolidIcon } from '@heroicons/react/24/solid'
+  Download,
+} from 'lucide-react'
+import { Bookmark as BookmarkSolidIcon } from 'lucide-react'
 
 interface ChapterNote {
   id: string
@@ -166,7 +166,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <BookOpenIcon className="h-12 w-12 mx-auto mb-4" />
+            <BookOpen className="h-12 w-12 mx-auto mb-4" />
             <h1 className="text-3xl md:text-4xl font-bold mb-4">📚 Chapter Notes Library</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
               Access comprehensive Biology notes with key points, diagrams, and quick revision
@@ -182,7 +182,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
             {/* Search */}
             <div className="flex-1 relative">
-              <MagnifyingGlassIcon className="h-5 w-5 absolute left-3 top-3 text-gray-400" />
+              <Search className="h-5 w-5 absolute left-3 top-3 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search notes by title or tags..."
@@ -320,7 +320,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
                       {note.isBookmarked ? (
                         <BookmarkSolidIcon className="h-5 w-5 text-yellow-500" />
                       ) : (
-                        <BookmarkIcon className="h-5 w-5 text-gray-400" />
+                        <Bookmark className="h-5 w-5 text-gray-400" />
                       )}
                     </button>
                   </div>
@@ -328,15 +328,15 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
                   {/* Stats */}
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
-                      <StarIcon className="h-4 w-4 text-yellow-500" />
+                      <Star className="h-4 w-4 text-yellow-500" />
                       {note.rating}
                     </div>
                     <div className="flex items-center gap-1">
-                      <ClockIcon className="h-4 w-4" />
+                      <Clock className="h-4 w-4" />
                       {note.estimatedTime}m
                     </div>
                     <div className="flex items-center gap-1">
-                      <ArrowDownTrayIcon className="h-4 w-4" />
+                      <Download className="h-4 w-4" />
                       {note.downloadCount}
                     </div>
                   </div>
@@ -379,7 +379,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
                       onClick={() => handleDownload(note)}
                       className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center gap-2"
                     >
-                      <ArrowDownTrayIcon className="h-4 w-4" />
+                      <Download className="h-4 w-4" />
                       Download PDF
                     </button>
                     <button
@@ -403,7 +403,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
                           {note.grade.replace('CLASS_', 'Class ')}
                         </span>
                         <div className="flex items-center gap-1 text-sm text-gray-600">
-                          <StarIcon className="h-4 w-4 text-yellow-500" />
+                          <Star className="h-4 w-4 text-yellow-500" />
                           {note.rating}
                         </div>
                       </div>
@@ -413,11 +413,11 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
 
                       <div className="flex items-center gap-6 text-sm text-gray-600">
                         <div className="flex items-center gap-1">
-                          <ClockIcon className="h-4 w-4" />
+                          <Clock className="h-4 w-4" />
                           {note.estimatedTime} min read
                         </div>
                         <div className="flex items-center gap-1">
-                          <ArrowDownTrayIcon className="h-4 w-4" />
+                          <Download className="h-4 w-4" />
                           {note.downloadCount} downloads
                         </div>
                         <div>{note.viewCount} views</div>
@@ -432,14 +432,14 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
                         {note.isBookmarked ? (
                           <BookmarkSolidIcon className="h-5 w-5 text-yellow-500" />
                         ) : (
-                          <BookmarkIcon className="h-5 w-5 text-gray-400" />
+                          <Bookmark className="h-5 w-5 text-gray-400" />
                         )}
                       </button>
                       <button
                         onClick={() => handleDownload(note)}
                         className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                       >
-                        <ArrowDownTrayIcon className="h-5 w-5 text-gray-600" />
+                        <Download className="h-5 w-5 text-gray-600" />
                       </button>
                       <button
                         onClick={() => handleShare(note)}
@@ -457,7 +457,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
 
         {filteredNotes.length === 0 && (
           <div className="text-center py-12">
-            <BookOpenIcon className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <BookOpen className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">No notes found</h3>
             <p className="text-gray-600">Try adjusting your search criteria or filters</p>
           </div>

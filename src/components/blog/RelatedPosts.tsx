@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ClockIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { Clock, ArrowRight } from 'lucide-react'
 import { BlogPostMeta } from '@/types/blog'
 import { DifficultyBadge } from './DifficultyBadge'
 import { blogCategories } from '@/lib/blog/mdx'
@@ -48,12 +48,12 @@ export function RelatedPosts({ posts, title = 'Continue Reading' }: RelatedPosts
 
                     <div className="mt-3 flex items-center justify-between text-sm text-gray-500">
                       <span className="flex items-center gap-1">
-                        <ClockIcon className="w-4 h-4" />
+                        <Clock className="w-4 h-4" />
                         {post.readTime} min read
                       </span>
                       <span className="flex items-center gap-1 text-blue-600 font-medium group-hover:gap-2 transition-all">
                         Read
-                        <ArrowRightIcon className="w-4 h-4" />
+                        <ArrowRight className="w-4 h-4" />
                       </span>
                     </div>
                   </div>

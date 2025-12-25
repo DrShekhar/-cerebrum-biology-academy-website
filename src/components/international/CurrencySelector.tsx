@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { CurrencyService, SupportedCurrency, PriceData } from '@/lib/international/currencyService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
-import { ChevronDownIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { ChevronDown, Globe } from 'lucide-react'
 
 interface CurrencySelectorProps {
   onCurrencyChange?: (currency: SupportedCurrency) => void
@@ -70,11 +70,11 @@ export function CurrencySelector({
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
       >
-        <GlobeAltIcon className="h-4 w-4 text-gray-500" />
+        <Globe className="h-4 w-4 text-gray-500" />
         <span className="font-medium text-gray-900">
           {selectedCurrencyInfo.symbol} {selectedCurrencyInfo.code}
         </span>
-        <ChevronDownIcon
+        <ChevronDown
           className={`h-4 w-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>

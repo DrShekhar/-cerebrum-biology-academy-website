@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ListBulletIcon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { List, ChevronDown, X } from 'lucide-react'
 import { TableOfContentsItem } from '@/types/blog'
 
 interface TableOfContentsProps {
@@ -60,7 +60,7 @@ export function TableOfContents({ items, title = 'Table of Contents' }: TableOfC
       {/* Desktop TOC - Sidebar */}
       <nav className="hidden lg:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4">
         <h4 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <ListBulletIcon className="w-4 h-4" />
+          <List className="w-4 h-4" />
           {title}
         </h4>
         <ul className="space-y-2 border-l-2 border-gray-200">
@@ -87,9 +87,9 @@ export function TableOfContents({ items, title = 'Table of Contents' }: TableOfC
           onClick={() => setIsOpen(true)}
           className="fixed bottom-24 right-4 z-40 flex items-center gap-2 bg-white shadow-lg rounded-full px-4 py-3 border border-gray-200 hover:shadow-xl transition-shadow"
         >
-          <ListBulletIcon className="w-5 h-5 text-gray-700" />
+          <List className="w-5 h-5 text-gray-700" />
           <span className="text-sm font-medium text-gray-700">Contents</span>
-          <ChevronDownIcon className="w-4 h-4 text-gray-500" />
+          <ChevronDown className="w-4 h-4 text-gray-500" />
         </button>
 
         {/* Mobile Drawer */}
@@ -102,14 +102,14 @@ export function TableOfContents({ items, title = 'Table of Contents' }: TableOfC
             <div className="fixed bottom-0 left-0 right-0 bg-white rounded-t-3xl z-50 max-h-[70vh] overflow-hidden animate-slide-up">
               <div className="flex items-center justify-between p-4 border-b">
                 <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                  <ListBulletIcon className="w-5 h-5" />
+                  <List className="w-5 h-5" />
                   {title}
                 </h4>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-full hover:bg-gray-100"
                 >
-                  <XMarkIcon className="w-5 h-5 text-gray-500" />
+                  <X className="w-5 h-5 text-gray-500" />
                 </button>
               </div>
               <div className="overflow-y-auto max-h-[calc(70vh-60px)] p-4">

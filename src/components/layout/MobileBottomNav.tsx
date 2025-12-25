@@ -5,20 +5,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
   HomeIcon,
-  BookOpenIcon,
-  BeakerIcon,
-  TrophyIcon,
-  PhoneIcon,
-  PlayIcon,
-} from '@heroicons/react/24/outline'
-import {
-  HomeIcon as HomeSolid,
-  BookOpenIcon as BookSolid,
-  BeakerIcon as BeakerSolid,
-  TrophyIcon as TrophySolid,
-  PhoneIcon as PhoneSolid,
-  PlayIcon as PlaySolid,
-} from '@heroicons/react/24/solid'
+  BookOpen,
+  FlaskConical,
+  Trophy,
+  Phone,
+  Play,
+} from 'lucide-react'
 
 interface MobileBottomNavProps {
   className?: string
@@ -28,7 +20,6 @@ interface NavItem {
   href: string
   label: string
   icon: React.ComponentType<{ className?: string }>
-  iconSolid: React.ComponentType<{ className?: string }>
   highlight?: boolean
   isExternal?: boolean
 }
@@ -41,26 +32,22 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       href: '/',
       label: 'Home',
       icon: HomeIcon,
-      iconSolid: HomeSolid,
     },
     {
       href: '/demo-booking',
       label: 'Demo',
-      icon: PlayIcon,
-      iconSolid: PlaySolid,
+      icon: Play,
       highlight: true,
     },
     {
       href: '/tests',
       label: 'Tests',
-      icon: BookOpenIcon,
-      iconSolid: BookSolid,
+      icon: BookOpen,
     },
     {
       href: '/results',
       label: 'Results',
-      icon: TrophyIcon,
-      iconSolid: TrophySolid,
+      icon: Trophy,
     },
   ]
 
@@ -88,7 +75,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       <div className="grid grid-cols-4 gap-1 bg-white">
         {navItems.map((item) => {
           const active = isActive(item.href)
-          const IconComponent = active ? item.iconSolid : item.icon
+          const IconComponent = item.icon
 
           if (item.isExternal) {
             return (

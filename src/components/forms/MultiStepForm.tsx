@@ -2,7 +2,7 @@
 
 import { useState, useEffect, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline'
+import { Check, Clock } from 'lucide-react'
 
 export type FormDataRecord = Record<string, unknown>
 
@@ -177,7 +177,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
                     }`}
                   >
                     {status === 'completed' ? (
-                      <CheckIcon className="w-5 h-5" />
+                      <Check className="w-5 h-5" />
                     ) : (
                       <span className="text-sm font-medium">{index + 1}</span>
                     )}
@@ -232,7 +232,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
           exit={{ opacity: 0, y: -10 }}
           className="mb-4 flex items-center justify-center text-sm text-green-600"
         >
-          <ClockIcon className="w-4 h-4 mr-1" />
+          <Clock className="w-4 h-4 mr-1" />
           Progress saved automatically
         </motion.div>
       )}

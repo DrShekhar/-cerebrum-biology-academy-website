@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { TimezoneService, ClassSchedule, TimezoneInfo } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
-import { ClockIcon, GlobeAltIcon, UsersIcon, CalendarIcon } from '@heroicons/react/24/outline'
+import { Clock, Globe, Users, Calendar } from 'lucide-react'
 
 interface TimezoneScheduleProps {
   onScheduleSelect?: (schedule: ClassSchedule) => void
@@ -103,7 +103,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-3">
-            <GlobeAltIcon className="h-6 w-6 text-blue-600" />
+            <Globe className="h-6 w-6 text-blue-600" />
             <div>
               <h3 className="text-lg font-semibold text-gray-900">Your Timezone</h3>
               <p className="text-sm text-gray-600">Optimized schedules for your location</p>
@@ -120,7 +120,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
         {timezoneInfo && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center space-x-3">
-              <ClockIcon className="h-5 w-5 text-gray-400" />
+              <Clock className="h-5 w-5 text-gray-400" />
               <div>
                 <div className="font-medium text-gray-900">
                   {TimezoneService.getLocalTime(userTimezone)}
@@ -130,7 +130,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
             </div>
 
             <div className="flex items-center space-x-3">
-              <GlobeAltIcon className="h-5 w-5 text-gray-400" />
+              <Globe className="h-5 w-5 text-gray-400" />
               <div>
                 <div className="font-medium text-gray-900">{timezoneInfo.offset}</div>
                 <div className="text-sm text-gray-500">{timezoneInfo.country}</div>
@@ -206,7 +206,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
       {/* Recommended Class Schedules */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center space-x-3 mb-6">
-          <CalendarIcon className="h-6 w-6 text-blue-600" />
+          <Calendar className="h-6 w-6 text-blue-600" />
           <div>
             <h3 className="text-lg font-semibold text-gray-900">Recommended Class Schedules</h3>
             <p className="text-sm text-gray-600">Classes optimized for your timezone</p>
@@ -215,7 +215,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
 
         {recommendedSchedules.length === 0 ? (
           <div className="text-center py-8">
-            <ClockIcon className="h-12 w-12 text-gray-300 mx-auto mb-4" />
+            <Clock className="h-12 w-12 text-gray-300 mx-auto mb-4" />
             <p className="text-gray-500">No schedules available for your timezone</p>
             <p className="text-sm text-gray-400 mt-1">All classes are recorded for later viewing</p>
           </div>
@@ -262,7 +262,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
 
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2">
-                      <ClockIcon className="h-4 w-4 text-gray-400" />
+                      <Clock className="h-4 w-4 text-gray-400" />
                       <span className="text-sm text-gray-700">
                         {userTzSchedule.startTime} - {userTzSchedule.endTime}
                       </span>
@@ -274,12 +274,12 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
                     </div>
 
                     <div className="flex items-center space-x-2">
-                      <CalendarIcon className="h-4 w-4 text-gray-400" />
+                      <Calendar className="h-4 w-4 text-gray-400" />
                       <span className="text-sm text-gray-700">{schedule.days.join(', ')}</span>
                     </div>
 
                     <div className="flex items-center space-x-2">
-                      <UsersIcon className="h-4 w-4 text-gray-400" />
+                      <Users className="h-4 w-4 text-gray-400" />
                       <span className="text-sm text-gray-700">
                         {schedule.enrolled}/{schedule.capacity} students
                       </span>
@@ -294,7 +294,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
                     </div>
 
                     <div className="flex items-center space-x-2">
-                      <GlobeAltIcon className="h-4 w-4 text-gray-400" />
+                      <Globe className="h-4 w-4 text-gray-400" />
                       <span className="text-sm text-gray-700">
                         Language:{' '}
                         {schedule.language === 'mixed' ? 'Hindi + English' : schedule.language}

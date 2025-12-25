@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { EnrollmentCTA } from './ABTestCTA'
 import {
-  CheckIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  StarIcon,
-  TrophyIcon,
-} from '@heroicons/react/24/outline'
+  Check,
+  Clock,
+  ShieldCheck,
+  Star,
+  Trophy,
+} from 'lucide-react'
 
 interface PricingTier {
   id: string
@@ -85,7 +85,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
           {/* Urgency Timer */}
           {pricingConfig.urgencyTimer && (
             <div className="mt-6 inline-flex items-center gap-4 bg-red-50 border border-red-200 rounded-lg px-6 py-3">
-              <ClockIcon className="h-5 w-5 text-red-600" />
+              <Clock className="h-5 w-5 text-red-600" />
               <span className="text-red-800 font-medium">Limited Time Offer Ends In:</span>
               <div className="flex gap-2 font-mono text-red-900 font-bold">
                 <span>{String(timeLeft.hours).padStart(2, '0')}</span>:
@@ -98,7 +98,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
           {/* Guarantee Badge */}
           {pricingConfig.guaranteeBadge && (
             <div className="mt-4 inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
-              <ShieldCheckIcon className="h-5 w-5 text-green-600" />
+              <ShieldCheck className="h-5 w-5 text-green-600" />
               <span className="text-green-800 font-medium">
                 {pricingConfig.guaranteeText || '100% Money Back Guarantee'}
               </span>
@@ -125,7 +125,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                      <StarIcon className="h-4 w-4" />
+                      <Star className="h-4 w-4" />
                       Most Popular
                     </div>
                   </div>
@@ -165,7 +165,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-600">{feature}</span>
                       </li>
                     ))}
@@ -175,7 +175,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
                   {pricingConfig.guaranteeBadge && tier.guarantee && (
                     <div className="mb-6 p-3 bg-green-50 border border-green-200 rounded-lg">
                       <div className="flex items-center gap-2 text-green-800">
-                        <TrophyIcon className="h-4 w-4" />
+                        <Trophy className="h-4 w-4" />
                         <span className="text-sm font-medium">{tier.guarantee}</span>
                       </div>
                     </div>

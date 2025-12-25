@@ -3,18 +3,18 @@
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
-  AcademicCapIcon,
-  MagnifyingGlassIcon,
+  GraduationCap,
+  Search,
   FunnelIcon,
-  ClockIcon,
-  CheckCircleIcon,
+  Clock,
+  CheckCircle2,
   XCircleIcon,
-  BookmarkIcon,
-  EyeIcon,
+  Bookmark,
+  Eye,
   TagIcon,
-  BeakerIcon,
-} from '@heroicons/react/24/outline'
-import { BookmarkIcon as BookmarkSolidIcon } from '@heroicons/react/24/solid'
+  FlaskConical,
+} from 'lucide-react'
+import { Bookmark as BookmarkSolidIcon } from 'lucide-react'
 
 interface Question {
   id: string
@@ -332,7 +332,7 @@ const QuestionBankBrowser = ({ className }: QuestionBankBrowserProps) => {
       <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <BeakerIcon className="h-12 w-12 mx-auto mb-4" />
+            <FlaskConical className="h-12 w-12 mx-auto mb-4" />
             <h1 className="text-3xl md:text-4xl font-bold mb-4">📖 Practice Question Bank</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
               Access 10,000+ Biology questions with detailed explanations and instant feedback
@@ -347,7 +347,7 @@ const QuestionBankBrowser = ({ className }: QuestionBankBrowserProps) => {
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
             {/* Search */}
             <div className="flex-1 relative">
-              <MagnifyingGlassIcon className="h-5 w-5 absolute left-3 top-3 text-gray-400" />
+              <Search className="h-5 w-5 absolute left-3 top-3 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search questions by topic, keywords, or tags..."
@@ -516,15 +516,15 @@ const QuestionBankBrowser = ({ className }: QuestionBankBrowserProps) => {
                   {/* Stats */}
                   <div className="flex items-center gap-6 mb-4 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
-                      <ClockIcon className="h-4 w-4" />
+                      <Clock className="h-4 w-4" />
                       {Math.floor(question.timeLimit / 60)}m {question.timeLimit % 60}s
                     </div>
                     <div className="flex items-center gap-1">
-                      <EyeIcon className="h-4 w-4" />
+                      <Eye className="h-4 w-4" />
                       {question.totalAttempts} attempts
                     </div>
                     <div className="flex items-center gap-1">
-                      <CheckCircleIcon className="h-4 w-4 text-green-500" />
+                      <CheckCircle2 className="h-4 w-4 text-green-500" />
                       {getSuccessRate(question)}% success rate
                     </div>
                   </div>
@@ -556,7 +556,7 @@ const QuestionBankBrowser = ({ className }: QuestionBankBrowserProps) => {
                     {question.isBookmarked ? (
                       <BookmarkSolidIcon className="h-5 w-5 text-yellow-500" />
                     ) : (
-                      <BookmarkIcon className="h-5 w-5 text-gray-400" />
+                      <Bookmark className="h-5 w-5 text-gray-400" />
                     )}
                   </button>
 
@@ -574,7 +574,7 @@ const QuestionBankBrowser = ({ className }: QuestionBankBrowserProps) => {
 
         {filteredQuestions.length === 0 && (
           <div className="text-center py-12">
-            <AcademicCapIcon className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <GraduationCap className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">No questions found</h3>
             <p className="text-gray-600">Try adjusting your search criteria or filters</p>
           </div>

@@ -8,14 +8,14 @@ import {
 import { TimezoneService } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import {
-  PhoneIcon,
-  EnvelopeIcon,
-  ClockIcon,
-  GlobeAltIcon,
-  MapPinIcon,
-  ChatBubbleLeftRightIcon,
-  DevicePhoneMobileIcon,
-} from '@heroicons/react/24/outline'
+  Phone,
+  Mail,
+  Clock,
+  Globe,
+  MapPin,
+  MessageSquare,
+  Smartphone,
+} from 'lucide-react'
 
 interface GlobalContactSupportProps {
   countryCode?: string
@@ -128,15 +128,15 @@ export function GlobalContactSupport({
   const getMethodIcon = (method: string) => {
     switch (method) {
       case 'phone':
-        return <PhoneIcon className="h-5 w-5" />
+        return <Phone className="h-5 w-5" />
       case 'whatsapp':
-        return <DevicePhoneMobileIcon className="h-5 w-5" />
+        return <Smartphone className="h-5 w-5" />
       case 'email':
-        return <EnvelopeIcon className="h-5 w-5" />
+        return <Mail className="h-5 w-5" />
       case 'chat':
-        return <ChatBubbleLeftRightIcon className="h-5 w-5" />
+        return <MessageSquare className="h-5 w-5" />
       default:
-        return <PhoneIcon className="h-5 w-5" />
+        return <Phone className="h-5 w-5" />
     }
   }
 
@@ -175,7 +175,7 @@ export function GlobalContactSupport({
       {/* Contact Header */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center space-x-3 mb-4">
-          <GlobeAltIcon className="h-6 w-6 text-blue-600" />
+          <Globe className="h-6 w-6 text-blue-600" />
           <h3 className="text-xl font-semibold text-gray-900">Get In Touch</h3>
         </div>
 
@@ -210,7 +210,7 @@ export function GlobalContactSupport({
             </div>
             <div className="text-right">
               <div className="flex items-center space-x-1 text-sm text-gray-600">
-                <ClockIcon className="h-4 w-4" />
+                <Clock className="h-4 w-4" />
                 <span>{localTime}</span>
               </div>
               <div className="text-xs text-gray-500">{contactInfo.hours}</div>
@@ -225,7 +225,7 @@ export function GlobalContactSupport({
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <PhoneIcon className="h-5 w-5 text-blue-600" />
+              <Phone className="h-5 w-5 text-blue-600" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">Phone Call</h4>
@@ -240,7 +240,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('phone', contactInfo.phone)}
               className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
             >
-              <PhoneIcon className="h-5 w-5" />
+              <Phone className="h-5 w-5" />
               <span>Call Now</span>
             </button>
 
@@ -256,7 +256,7 @@ export function GlobalContactSupport({
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-              <DevicePhoneMobileIcon className="h-5 w-5 text-green-600" />
+              <Smartphone className="h-5 w-5 text-green-600" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">WhatsApp</h4>
@@ -271,7 +271,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('whatsapp', contactInfo.whatsapp)}
               className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
             >
-              <DevicePhoneMobileIcon className="h-5 w-5" />
+              <Smartphone className="h-5 w-5" />
               <span>Chat on WhatsApp</span>
             </button>
 
@@ -285,7 +285,7 @@ export function GlobalContactSupport({
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-              <EnvelopeIcon className="h-5 w-5 text-purple-600" />
+              <Mail className="h-5 w-5 text-purple-600" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">Email</h4>
@@ -300,7 +300,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('email', contactInfo.email)}
               className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
             >
-              <EnvelopeIcon className="h-5 w-5" />
+              <Mail className="h-5 w-5" />
               <span>Send Email</span>
             </button>
 
@@ -314,7 +314,7 @@ export function GlobalContactSupport({
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-              <MapPinIcon className="h-5 w-5 text-gray-600" />
+              <MapPin className="h-5 w-5 text-gray-600" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">Office Location</h4>
@@ -326,7 +326,7 @@ export function GlobalContactSupport({
             <div className="text-sm text-gray-700">{contactInfo.address}</div>
 
             <button className="w-full bg-gray-500 hover:bg-gray-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
-              <MapPinIcon className="h-5 w-5" />
+              <MapPin className="h-5 w-5" />
               <span>Get Directions</span>
             </button>
 
@@ -351,7 +351,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('whatsapp', contactInfo.whatsapp)}
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
             >
-              <DevicePhoneMobileIcon className="h-5 w-5" />
+              <Smartphone className="h-5 w-5" />
               <span>Start WhatsApp Chat</span>
             </button>
           )}
@@ -361,7 +361,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('phone', contactInfo.phone)}
               className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
             >
-              <PhoneIcon className="h-5 w-5" />
+              <Phone className="h-5 w-5" />
               <span>Call Now</span>
             </button>
           )}
@@ -371,7 +371,7 @@ export function GlobalContactSupport({
               onClick={() => handleContactClick('email', contactInfo.email)}
               className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
             >
-              <EnvelopeIcon className="h-5 w-5" />
+              <Mail className="h-5 w-5" />
               <span>Send Email</span>
             </button>
           )}

@@ -4,17 +4,17 @@ import React, { useState, useEffect } from 'react'
 import { ABTestingService, ABTestResults } from '@/lib/abTesting/abTestingService'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import {
-  ChartBarIcon,
-  TrophyIcon,
-  ExclamationTriangleIcon,
-  ClockIcon,
-  UsersIcon,
-  CursorArrowRaysIcon,
-  CheckBadgeIcon,
-  PlayIcon,
+  BarChart2,
+  Trophy,
+  AlertTriangle,
+  Clock,
+  Users,
+  MousePointerClick,
+  BadgeCheck,
+  Play,
   PauseIcon,
-  StopIcon,
-} from '@heroicons/react/24/outline'
+  Square,
+} from 'lucide-react'
 
 interface ABTestDashboardProps {
   testId?: string
@@ -87,7 +87,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <ChartBarIcon className="h-6 w-6 text-blue-600" />
+            <BarChart2 className="h-6 w-6 text-blue-600" />
             A/B Test Analytics
           </h2>
           <p className="text-gray-600 mt-1">Monitor and analyze test performance</p>
@@ -101,7 +101,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
             {refreshing ? (
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
             ) : (
-              <ClockIcon className="h-4 w-4" />
+              <Clock className="h-4 w-4" />
             )}
             Refresh
           </button>
@@ -109,7 +109,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
             onClick={exportData}
             className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2"
           >
-            <ChartBarIcon className="h-4 w-4" />
+            <BarChart2 className="h-4 w-4" />
             Export
           </button>
         </div>
@@ -139,7 +139,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <UsersIcon className="h-5 w-5 text-blue-600" />
+                <Users className="h-5 w-5 text-blue-600" />
                 <span className="text-sm font-medium text-blue-900">Total Visitors</span>
               </div>
               <div className="text-2xl font-bold text-blue-900">
@@ -149,7 +149,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
 
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <CursorArrowRaysIcon className="h-5 w-5 text-green-600" />
+                <MousePointerClick className="h-5 w-5 text-green-600" />
                 <span className="text-sm font-medium text-green-900">Total Conversions</span>
               </div>
               <div className="text-2xl font-bold text-green-900">
@@ -159,7 +159,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
 
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <TrophyIcon className="h-5 w-5 text-purple-600" />
+                <Trophy className="h-5 w-5 text-purple-600" />
                 <span className="text-sm font-medium text-purple-900">Best Conversion Rate</span>
               </div>
               <div className="text-2xl font-bold text-purple-900">
@@ -172,7 +172,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <CheckBadgeIcon className="h-5 w-5 text-yellow-600" />
+                <BadgeCheck className="h-5 w-5 text-yellow-600" />
                 <span className="text-sm font-medium text-yellow-900">Confidence</span>
               </div>
               <div className="text-2xl font-bold text-yellow-900">
@@ -194,13 +194,13 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
             >
               <div className="flex items-center gap-2 mb-2">
                 {results.recommendedAction === 'stop_winner' && (
-                  <TrophyIcon className="h-5 w-5 text-green-600" />
+                  <Trophy className="h-5 w-5 text-green-600" />
                 )}
                 {results.recommendedAction === 'stop_inconclusive' && (
-                  <ExclamationTriangleIcon className="h-5 w-5 text-yellow-600" />
+                  <AlertTriangle className="h-5 w-5 text-yellow-600" />
                 )}
                 {results.recommendedAction === 'continue' && (
-                  <PlayIcon className="h-5 w-5 text-blue-600" />
+                  <Play className="h-5 w-5 text-blue-600" />
                 )}
                 <span className="font-semibold">
                   {results.recommendedAction === 'stop_winner' && 'Winner Found!'}
@@ -235,7 +235,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
                     <h4 className="font-medium text-gray-900">{variant.name}</h4>
                     {variant.isWinner && (
                       <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                        <TrophyIcon className="h-3 w-3" />
+                        <Trophy className="h-3 w-3" />
                         Winner
                       </span>
                     )}

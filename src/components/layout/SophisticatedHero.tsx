@@ -9,17 +9,17 @@ import {
   PremiumTooltip,
 } from '@/components/ui/PremiumDesignSystem'
 import {
-  AcademicCapIcon,
-  SparklesIcon,
-  PlayIcon,
-  PhoneIcon,
-  TrophyIcon,
-  BeakerIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-} from '@heroicons/react/24/outline'
+  GraduationCap,
+  Sparkles,
+  Play,
+  Phone,
+  Trophy,
+  FlaskConical,
+  BarChart2,
+  Globe,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
-import { StarIcon } from '@heroicons/react/24/solid'
+import { Star } from 'lucide-react'
 
 interface SophisticatedHeroProps {
   onDemoBooking?: () => void
@@ -74,10 +74,10 @@ export function SophisticatedHero({
   ]
 
   const achievements = [
-    { value: 98, suffix: '%', label: 'NEET Success Rate', icon: TrophyIcon },
-    { value: 330, prefix: '', suffix: '+', label: 'Average Biology Score', icon: ChartBarIcon },
-    { value: 695, suffix: '', label: 'Top Score (Sadhna)', icon: AcademicCapIcon },
-    { value: 2500, suffix: '+', label: 'Students Mentored', icon: GlobeAltIcon },
+    { value: 98, suffix: '%', label: 'NEET Success Rate', icon: Trophy },
+    { value: 330, prefix: '', suffix: '+', label: 'Average Biology Score', icon: BarChart2 },
+    { value: 695, suffix: '', label: 'Top Score (Sadhna)', icon: GraduationCap },
+    { value: 2500, suffix: '+', label: 'Students Mentored', icon: Globe },
   ]
 
   useEffect(() => {
@@ -150,7 +150,7 @@ export function SophisticatedHero({
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2"
             >
-              <SparklesIcon className="h-5 w-5 text-blue-600" />
+              <Sparkles className="h-5 w-5 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800">
                 Harvard-Caliber Biology Education • Silicon Valley Innovation
               </span>
@@ -214,7 +214,7 @@ export function SophisticatedHero({
                 onClick={onDemoBooking}
                 className="flex items-center justify-center gap-3 group"
               >
-                <PlayIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
+                <Play className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 Experience World-Class Demo
                 <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">FREE</span>
               </PremiumButton>
@@ -225,7 +225,7 @@ export function SophisticatedHero({
                 onClick={onCallNow}
                 className="flex items-center justify-center gap-3"
               >
-                <PhoneIcon className="h-6 w-6" />
+                <Phone className="h-6 w-6" />
                 Speak with Dr. Shekhar
               </PremiumButton>
             </motion.div>
@@ -240,17 +240,17 @@ export function SophisticatedHero({
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <StarIcon key={i} className="h-4 w-4 text-yellow-400" />
+                    <Star key={i} className="h-4 w-4 text-yellow-400" />
                   ))}
                 </div>
                 <span className="font-medium">4.9/5 Rating • 2,847 Reviews</span>
               </div>
               <div className="flex items-center gap-2">
-                <BeakerIcon className="h-5 w-5 text-green-600" />
+                <FlaskConical className="h-5 w-5 text-green-600" />
                 <span>Research-Backed Methodology</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrophyIcon className="h-5 w-5 text-blue-600" />
+                <Trophy className="h-5 w-5 text-blue-600" />
                 <span>500+ AIIMS Success Stories</span>
               </div>
             </motion.div>
@@ -307,7 +307,7 @@ export function SophisticatedHero({
                   <div className="flex justify-between items-center">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400" />
                       ))}
                     </div>
                     <div className="text-sm text-gray-500">NEET 2024 Success</div>

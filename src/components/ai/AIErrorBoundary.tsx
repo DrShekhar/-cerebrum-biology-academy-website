@@ -3,11 +3,11 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import {
-  ExclamationTriangleIcon,
-  ArrowPathIcon,
-  ChatBubbleBottomCenterTextIcon,
-  PhoneIcon,
-} from '@heroicons/react/24/outline'
+  AlertTriangle,
+  RefreshCw,
+  MessageCircle,
+  Phone,
+} from 'lucide-react'
 import { clientAIDebugger } from '@/lib/ai/clientDebugger'
 import { AIDebugger } from '@/lib/ai/aiDebugger'
 
@@ -163,7 +163,7 @@ Please help resolve this AI system issue.
           className="flex flex-col items-center justify-center p-6 bg-red-50 border-2 border-red-200 rounded-xl max-w-md mx-auto"
         >
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2 }}>
-            <ExclamationTriangleIcon className="w-16 h-16 text-red-500 mb-4" />
+            <AlertTriangle className="w-16 h-16 text-red-500 mb-4" />
           </motion.div>
 
           <h2 className="text-xl font-bold text-red-800 mb-2 text-center">
@@ -214,7 +214,7 @@ Please help resolve this AI system issue.
                 onClick={this.handleRetry}
                 className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex-1"
               >
-                <ArrowPathIcon className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4" />
                 <span>Try Again</span>
               </motion.button>
             )}
@@ -225,7 +225,7 @@ Please help resolve this AI system issue.
               onClick={this.handleFallbackChat}
               className="flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex-1"
             >
-              <ChatBubbleBottomCenterTextIcon className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4" />
               <span>Contact Support</span>
             </motion.button>
           </div>
@@ -237,7 +237,7 @@ Please help resolve this AI system issue.
             onClick={this.handleContactSupport}
             className="flex items-center space-x-2 text-red-600 hover:text-red-800 mt-3 text-sm transition-colors"
           >
-            <PhoneIcon className="w-4 h-4" />
+            <Phone className="w-4 h-4" />
             <span>Email Error Report</span>
           </motion.button>
 

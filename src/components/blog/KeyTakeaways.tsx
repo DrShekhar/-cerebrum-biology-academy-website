@@ -1,6 +1,6 @@
 'use client'
 
-import { LightBulbIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import { Lightbulb, CheckCircle2 } from 'lucide-react'
 
 interface KeyTakeawaysProps {
   takeaways: string[]
@@ -17,7 +17,7 @@ export function KeyTakeaways({ takeaways, title = 'Key Takeaways' }: KeyTakeaway
       <div className="relative">
         <div className="flex items-center gap-3 mb-4">
           <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-            <LightBulbIcon className="w-5 h-5" />
+            <Lightbulb className="w-5 h-5" />
           </div>
           <h3 className="text-lg font-bold text-gray-900">{title}</h3>
         </div>
@@ -35,7 +35,7 @@ export function KeyTakeaways({ takeaways, title = 'Key Takeaways' }: KeyTakeaway
 
         <div className="mt-5 pt-4 border-t border-blue-200/50">
           <p className="text-xs text-gray-500 flex items-center gap-1">
-            <CheckCircleIcon className="w-4 h-4 text-green-500" />
+            <CheckCircle2 className="w-4 h-4 text-green-500" />
             <span>Remember these points for your NEET preparation</span>
           </p>
         </div>

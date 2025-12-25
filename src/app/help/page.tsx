@@ -3,26 +3,26 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import {
-  MagnifyingGlassIcon,
-  XMarkIcon,
-  ChevronDownIcon,
+  Search,
+  X,
+  ChevronDown,
   ChevronUpIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  ChatBubbleLeftRightIcon,
-  RocketLaunchIcon,
-  AcademicCapIcon,
-  PlayCircleIcon,
-  BookOpenIcon,
-  ComputerDesktopIcon,
-  CreditCardIcon,
+  Phone,
+  Mail,
+  MessageSquare,
+  Rocket,
+  GraduationCap,
+  PlayCircle,
+  BookOpen,
+  Monitor,
+  CreditCard,
   UserCircleIcon,
-  ClipboardDocumentCheckIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  LightBulbIcon,
-  QuestionMarkCircleIcon,
-} from '@heroicons/react/24/outline'
+  ClipboardCheck,
+  ShieldCheck,
+  Sparkles,
+  Lightbulb,
+  HelpCircle,
+} from 'lucide-react'
 import {
   allFAQs,
   helpCategories,
@@ -34,16 +34,16 @@ import {
 } from '@/data/helpCenter'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  RocketLaunchIcon: RocketLaunchIcon,
-  AcademicCapIcon: AcademicCapIcon,
-  PlayCircleIcon: PlayCircleIcon,
-  BookOpenIcon: BookOpenIcon,
-  ComputerDesktopIcon: ComputerDesktopIcon,
-  CreditCardIcon: CreditCardIcon,
+  Rocket: Rocket,
+  GraduationCap: GraduationCap,
+  PlayCircle: PlayCircle,
+  BookOpen: BookOpen,
+  Monitor: Monitor,
+  CreditCard: CreditCard,
   UserCircleIcon: UserCircleIcon,
-  ClipboardDocumentCheckIcon: ClipboardDocumentCheckIcon,
-  ChatBubbleLeftRightIcon: ChatBubbleLeftRightIcon,
-  ShieldCheckIcon: ShieldCheckIcon,
+  ClipboardCheck: ClipboardCheck,
+  MessageSquare: MessageSquare,
+  ShieldCheck: ShieldCheck,
 }
 
 const colorMap: Record<string, { bg: string; text: string; border: string; hover: string }> = {
@@ -162,7 +162,7 @@ export default function HelpCenterPage() {
           {isExpanded ? (
             <ChevronUpIcon className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
           ) : (
-            <ChevronDownIcon className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
+            <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
           )}
         </button>
         {isExpanded && (
@@ -192,7 +192,7 @@ export default function HelpCenterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-              <QuestionMarkCircleIcon className="w-5 h-5" />
+              <HelpCircle className="w-5 h-5" />
               <span className="font-semibold text-sm">We are here to help</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
@@ -205,7 +205,7 @@ export default function HelpCenterPage() {
 
           <div className="max-w-3xl mx-auto">
             <div className="relative">
-              <MagnifyingGlassIcon className="absolute left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search your question... (e.g., 'How do I enroll?', 'payment methods', 'demo class')"
@@ -223,7 +223,7 @@ export default function HelpCenterPage() {
                   onClick={clearSearch}
                   className="absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                 >
-                  <XMarkIcon className="w-6 h-6" />
+                  <X className="w-6 h-6" />
                 </button>
               )}
             </div>
@@ -333,7 +333,7 @@ export default function HelpCenterPage() {
           <div>
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full mb-4">
-                <SparklesIcon className="w-5 h-5" />
+                <Sparkles className="w-5 h-5" />
                 <span className="font-semibold">Most Asked Questions</span>
               </div>
               <h2 className="text-3xl font-bold text-gray-900">Popular Questions</h2>
@@ -375,7 +375,7 @@ export default function HelpCenterPage() {
             ) : (
               <div className="text-center py-16">
                 <div className="text-gray-400 mb-4">
-                  <QuestionMarkCircleIcon className="w-20 h-20 mx-auto" />
+                  <HelpCircle className="w-20 h-20 mx-auto" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">No results found</h3>
                 <p className="text-gray-600 mb-6">
@@ -396,7 +396,7 @@ export default function HelpCenterPage() {
         <div className="mt-12 sm:mt-14 md:mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
           <div className="text-center mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4">
-              <LightBulbIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="font-semibold text-xs sm:text-sm">Still need help?</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
@@ -409,7 +409,7 @@ export default function HelpCenterPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all">
-              <PhoneIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Call Us</h3>
               <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
                 Mon-Sun, 9 AM - 9 PM
@@ -423,7 +423,7 @@ export default function HelpCenterPage() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
-              <EnvelopeIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <Mail className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Email Us</h3>
               <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
                 Response within 4-6 hours
@@ -437,7 +437,7 @@ export default function HelpCenterPage() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
-              <ChatBubbleLeftRightIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Live Chat</h3>
               <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
                 Instant support available
@@ -475,7 +475,7 @@ export default function HelpCenterPage() {
 
         <div className="mt-12 bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6">
           <div className="flex items-start gap-4">
-            <LightBulbIcon className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
+            <Lightbulb className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Did not find what you were looking for?
@@ -490,14 +490,14 @@ export default function HelpCenterPage() {
                   href="mailto:support@cerebrumacademy.in?subject=Help Center Inquiry"
                   className="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
-                  <EnvelopeIcon className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                   Email Your Question
                 </a>
                 <a
                   href="tel:+918826444334"
                   className="inline-flex items-center gap-2 px-5 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
-                  <PhoneIcon className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                   Call Support
                 </a>
               </div>

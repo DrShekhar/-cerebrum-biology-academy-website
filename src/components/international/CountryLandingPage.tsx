@@ -6,17 +6,17 @@ import { CurrencySelector, InternationalPricingCard } from './CurrencySelector'
 import { TimezoneSchedule } from './TimezoneSchedule'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import {
-  GlobeAltIcon,
-  StarIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  CheckCircleIcon,
-  ChartBarIcon,
-  ClockIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from '@heroicons/react/24/outline'
+  Globe,
+  Star,
+  Users,
+  GraduationCap,
+  CheckCircle2,
+  BarChart2,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+} from 'lucide-react'
 
 interface CountryLandingPageProps {
   countryContent: CountryContent
@@ -72,7 +72,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <GlobeAltIcon className="h-8 w-8 text-blue-300" />
+                <Globe className="h-8 w-8 text-blue-300" />
                 <span className="text-blue-300 font-semibold">{countryContent.name}</span>
               </div>
 
@@ -145,7 +145,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                     onClick={() => handleContactClick('phone')}
                     className="flex items-center space-x-3 hover:text-blue-300 transition-colors"
                   >
-                    <PhoneIcon className="h-5 w-5" />
+                    <Phone className="h-5 w-5" />
                     <span>{countryContent.contactInfo.phone}</span>
                   </a>
                   <a
@@ -159,7 +159,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                     <span>WhatsApp: {countryContent.contactInfo.whatsapp}</span>
                   </a>
                   <div className="flex items-center space-x-3 text-blue-200">
-                    <ClockIcon className="h-5 w-5" />
+                    <Clock className="h-5 w-5" />
                     <span>{countryContent.contactInfo.hours}</span>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
             {countryContent.localOffers.map((offer, index) => (
               <div key={index} className="bg-teal-50 border border-teal-200 rounded-xl p-6">
                 <div className="flex items-start space-x-3">
-                  <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                  <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-800 font-medium">{offer}</p>
                   </div>
@@ -228,7 +228,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
               <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <div className="flex items-start space-x-4 mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <UserGroupIcon className="h-6 w-6 text-blue-600" />
+                    <Users className="h-6 w-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
@@ -246,7 +246,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                   </div>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
-                      <StarIcon key={i} className="h-4 w-4 fill-current" />
+                      <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
                 </div>
@@ -336,7 +336,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                 key={index}
                 className="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-200"
               >
-                <AcademicCapIcon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <GraduationCap className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <h4 className="font-semibold text-gray-900 text-sm">{university}</h4>
               </div>
             ))}
@@ -357,7 +357,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <PhoneIcon className="h-6 w-6 text-blue-600 mt-1" />
+                  <Phone className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
                     <p className="text-gray-600">{countryContent.contactInfo.phone}</p>
@@ -368,7 +368,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <EnvelopeIcon className="h-6 w-6 text-blue-600 mt-1" />
+                  <Mail className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">{countryContent.contactInfo.email}</p>
@@ -376,7 +376,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MapPinIcon className="h-6 w-6 text-blue-600 mt-1" />
+                  <MapPin className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Address</h4>
                     <p className="text-gray-600">{countryContent.contactInfo.address}</p>
@@ -384,7 +384,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <ClockIcon className="h-6 w-6 text-blue-600 mt-1" />
+                  <Clock className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Business Hours</h4>
                     <p className="text-gray-600">{countryContent.contactInfo.hours}</p>

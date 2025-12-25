@@ -6,16 +6,15 @@ import { QuickQuizFlow } from './QuickQuizFlow'
 import { InstantEnrollment } from './InstantEnrollment'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  SparklesIcon,
-  TrophyIcon,
-  ClockIcon,
-  UsersIcon,
-  CheckCircleIcon,
-  StarIcon,
-  PhoneIcon,
-  ChatBubbleLeftRightIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+  Sparkles,
+  Trophy,
+  Clock,
+  Users,
+  CheckCircle2,
+  Star,
+  Phone,
+  MessageSquare,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface QuizResult {
@@ -108,25 +107,25 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
 
   const conversionFeatures = [
     {
-      icon: ClockIcon,
+      icon: Clock,
       title: '2-Minute Enrollment',
       description: 'Complete signup to first class access',
       color: 'text-blue-600',
     },
     {
-      icon: TrophyIcon,
+      icon: Trophy,
       title: '94.2% Success Rate',
       description: 'Proven track record of student success',
       color: 'text-green-600',
     },
     {
-      icon: SparklesIcon,
+      icon: Sparkles,
       title: 'Instant Course Match',
       description: 'AI-powered course recommendation',
       color: 'text-purple-600',
     },
     {
-      icon: UsersIcon,
+      icon: Users,
       title: '5000+ Students',
       description: 'Join the success community',
       color: 'text-orange-600',
@@ -165,13 +164,13 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <TrophyIcon className="h-4 w-4 text-yellow-400" />
+                <Trophy className="h-4 w-4 text-yellow-400" />
                 <span>
                   <AnimatedCounter value={liveStats.enrollmentsToday} /> enrolled today
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <StarSolid className="h-4 w-4 text-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400" />
                 <span>
                   <AnimatedCounter value={liveStats.successRate} suffix="%" /> success rate
                 </span>
@@ -238,7 +237,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                   onClick={handleCallNow}
                   className="bg-teal-600 hover:bg-teal-700 text-white"
                 >
-                  <PhoneIcon className="h-5 w-5" />
+                  <Phone className="h-5 w-5" />
                   Call Now - Get Instant Admission
                 </PremiumButton>
 
@@ -248,7 +247,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                   onClick={handleWhatsAppChat}
                   className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10"
                 >
-                  <ChatBubbleLeftRightIcon className="h-5 w-5" />
+                  <MessageSquare className="h-5 w-5" />
                   WhatsApp Chat
                 </PremiumButton>
               </div>
@@ -256,11 +255,11 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               {/* Trust Indicators */}
               <div className="flex flex-col xs:flex-row items-start xs:items-center gap-3 xs:gap-6 text-xs sm:text-sm">
                 <div className="flex items-center gap-1">
-                  <CheckCircleIcon className="h-4 w-4 text-green-400" />
+                  <CheckCircle2 className="h-4 w-4 text-green-400" />
                   <span>100% Refund Guarantee</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <UsersIcon className="h-4 w-4 text-blue-400" />
+                  <Users className="h-4 w-4 text-blue-400" />
                   <span>5000+ Happy Students</span>
                 </div>
               </div>
@@ -303,7 +302,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                             <div className="font-semibold text-white">{testimonial.name}</div>
                             <div className="flex">
                               {[...Array(testimonial.rating)].map((_, i) => (
-                                <StarSolid key={i} className="h-4 w-4 text-yellow-400" />
+                                <Star key={i} className="h-4 w-4 text-yellow-400" />
                               ))}
                             </div>
                           </div>

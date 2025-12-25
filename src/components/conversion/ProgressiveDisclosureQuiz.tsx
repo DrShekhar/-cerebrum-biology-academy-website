@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
-import { ChevronRightIcon, SparklesIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
+import { ChevronRight, Sparkles, GraduationCap } from 'lucide-react'
 
 interface ProgressiveDisclosureQuizProps {
   onComplete?: (result: QuizResult) => void
@@ -166,7 +166,7 @@ export function ProgressiveDisclosureQuiz({
       >
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm">
-            <SparklesIcon className="h-4 w-4" />
+            <Sparkles className="h-4 w-4" />
             <span>Perfect Match Found!</span>
           </div>
 
@@ -186,7 +186,7 @@ export function ProgressiveDisclosureQuiz({
               </div>
             </div>
             <div className="text-xs text-gray-400 flex items-center gap-1">
-              <AcademicCapIcon className="h-3 w-3" />
+              <GraduationCap className="h-3 w-3" />
               <span>94.2% success rate • AIIMS faculty</span>
             </div>
           </div>
@@ -199,7 +199,7 @@ export function ProgressiveDisclosureQuiz({
               className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white py-3"
             >
               Enroll Now
-              <ChevronRightIcon className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5" />
             </PremiumButton>
 
             <div className="flex gap-2">

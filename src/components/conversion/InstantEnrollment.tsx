@@ -4,16 +4,16 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  CreditCardIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  PhoneIcon,
-  CheckCircleIcon,
-  XMarkIcon,
+  CreditCard,
+  ShieldCheck,
+  Clock,
+  Phone,
+  CheckCircle2,
+  X,
   UserIcon,
-  EnvelopeIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline'
+  Mail,
+  Heart,
+} from 'lucide-react'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -166,7 +166,7 @@ export function InstantEnrollment({
               onClick={onClose}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors"
             >
-              <XMarkIcon className="h-5 w-5" />
+              <X className="h-5 w-5" />
             </button>
 
             <div className="space-y-4">
@@ -178,7 +178,7 @@ export function InstantEnrollment({
               {/* Urgency Timer */}
               <div className="bg-white/20 rounded-lg p-3 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <ClockIcon className="h-5 w-5 text-orange-300" />
+                  <Clock className="h-5 w-5 text-orange-300" />
                   <span className="font-semibold">Limited Time Offer Expires In:</span>
                 </div>
                 <div className="text-xl font-bold text-orange-300">{formatTime(urgencyTimer)}</div>
@@ -270,7 +270,7 @@ export function InstantEnrollment({
                     Email Address *
                   </label>
                   <div className="relative">
-                    <EnvelopeIcon className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                    <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                     <input
                       type="email"
                       value={formData.email}
@@ -287,7 +287,7 @@ export function InstantEnrollment({
                     Phone Number *
                   </label>
                   <div className="relative">
-                    <PhoneIcon className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                    <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                     <input
                       type="tel"
                       value={formData.phone}
@@ -354,7 +354,7 @@ export function InstantEnrollment({
                     </div>
                   ) : (
                     <>
-                      <CreditCardIcon className="h-5 w-5 mr-2" />
+                      <CreditCard className="h-5 w-5 mr-2" />
                       Proceed to Payment - ₹{pricing.final.toLocaleString()}
                     </>
                   )}
@@ -373,15 +373,15 @@ export function InstantEnrollment({
             {/* Trust Indicators */}
             <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-200 text-sm text-gray-600">
               <div className="flex items-center gap-1">
-                <ShieldCheckIcon className="h-4 w-4 text-green-500" />
+                <ShieldCheck className="h-4 w-4 text-green-500" />
                 100% Secure Payment
               </div>
               <div className="flex items-center gap-1">
-                <HeartIcon className="h-4 w-4 text-red-500" />
+                <Heart className="h-4 w-4 text-red-500" />
                 100% Refund Guarantee
               </div>
               <div className="flex items-center gap-1">
-                <CheckCircleIcon className="h-4 w-4 text-blue-500" />
+                <CheckCircle2 className="h-4 w-4 text-blue-500" />
                 5000+ Happy Students
               </div>
             </div>
@@ -405,7 +405,7 @@ export function InstantEnrollment({
         >
           <div className="p-8 text-center space-y-6">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-              <CheckCircleIcon className="h-12 w-12 text-green-600" />
+              <CheckCircle2 className="h-12 w-12 text-green-600" />
             </div>
 
             <div className="space-y-2">

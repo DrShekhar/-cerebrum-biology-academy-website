@@ -4,18 +4,18 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumCard, PremiumButton, PremiumProgress } from '@/components/ui/PremiumDesignSystem'
 import {
-  BeakerIcon,
-  BookOpenIcon,
-  AcademicCapIcon,
-  ChartBarIcon,
-  SparklesIcon,
-  ClockIcon,
-  TrophyIcon,
-  CogIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  PlayIcon,
-} from '@heroicons/react/24/outline'
+  FlaskConical,
+  BookOpen,
+  GraduationCap,
+  BarChart2,
+  Sparkles,
+  Clock,
+  Trophy,
+  Settings,
+  Globe,
+  Lightbulb,
+  Play,
+} from 'lucide-react'
 
 interface BiologyModule {
   id: string
@@ -52,7 +52,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       neetWeight: 25,
       aimsWeight: 30,
       researchBased: true,
-      icon: BeakerIcon,
+      icon: FlaskConical,
     },
     {
       id: 'cell-biology',
@@ -66,7 +66,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       neetWeight: 20,
       aimsWeight: 25,
       researchBased: true,
-      icon: CogIcon,
+      icon: Settings,
     },
     {
       id: 'physiology',
@@ -80,7 +80,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       neetWeight: 30,
       aimsWeight: 25,
       researchBased: true,
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
     },
     {
       id: 'ecology',
@@ -94,7 +94,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       neetWeight: 15,
       aimsWeight: 10,
       researchBased: true,
-      icon: GlobeAltIcon,
+      icon: Globe,
     },
     {
       id: 'evolution',
@@ -108,7 +108,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       neetWeight: 10,
       aimsWeight: 10,
       researchBased: true,
-      icon: LightBulbIcon,
+      icon: Lightbulb,
     },
   ]
 
@@ -151,7 +151,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200 rounded-full px-6 py-3 mb-6">
-            <BookOpenIcon className="h-6 w-6 text-blue-600" />
+            <BookOpen className="h-6 w-6 text-blue-600" />
             <span className="font-semibold text-blue-800">Harvard-Stanford Caliber Curriculum</span>
           </div>
 
@@ -292,7 +292,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                         </div>
 
                         <PremiumButton variant="medical" size="md" className="w-full">
-                          <PlayIcon className="h-5 w-5 mr-2" />
+                          <Play className="h-5 w-5 mr-2" />
                           Start Learning Journey
                         </PremiumButton>
                       </motion.div>
@@ -332,7 +332,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                     className="bg-white rounded-xl p-6 shadow-lg border hover:shadow-xl transition-shadow"
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <SparklesIcon className="h-5 w-5 text-blue-600" />
+                      <Sparkles className="h-5 w-5 text-blue-600" />
                       <span className="text-sm font-medium text-blue-600">{research.journal}</span>
                       <span className="text-sm text-gray-500">{research.year}</span>
                     </div>
@@ -370,7 +370,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <AcademicCapIcon className="h-8 w-8 text-white" />
+                    <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">AIIMS Faculty</h4>
                   <p className="text-sm text-gray-700">
@@ -380,7 +380,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <BookOpenIcon className="h-8 w-8 text-white" />
+                    <BookOpen className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Research Integration</h4>
                   <p className="text-sm text-gray-700">
@@ -390,7 +390,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrophyIcon className="h-8 w-8 text-white" />
+                    <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Proven Results</h4>
                   <p className="text-sm text-gray-700">
@@ -401,7 +401,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
               <div className="pt-8">
                 <PremiumButton variant="luxury" size="lg" className="mx-auto">
-                  <AcademicCapIcon className="h-6 w-6 mr-2" />
+                  <GraduationCap className="h-6 w-6 mr-2" />
                   Experience Harvard-Level Education
                 </PremiumButton>
               </div>

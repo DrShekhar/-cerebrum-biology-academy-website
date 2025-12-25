@@ -1,7 +1,7 @@
 'use client'
 
 import { NEETWeightage } from '@/types/blog'
-import { BookOpenIcon, FireIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { BookOpen, Flame, Sparkles } from 'lucide-react'
 
 interface NEETTopicBadgeProps {
   chapter: string
@@ -43,13 +43,13 @@ export function NEETTopicBadge({ chapter, weightage, size = 'md' }: NEETTopicBad
   }
 
   const IconComponent =
-    config?.icon === 'fire' ? FireIcon : config?.icon === 'sparkles' ? SparklesIcon : BookOpenIcon
+    config?.icon === 'fire' ? Flame : config?.icon === 'sparkles' ? Sparkles : BookOpen
 
   return (
     <div
       className={`inline-flex items-center gap-2 rounded-lg border ${sizeClasses[size]} ${config?.color || 'text-blue-600 bg-blue-50 border-blue-200'}`}
     >
-      <BookOpenIcon className={iconSizes[size]} />
+      <BookOpen className={iconSizes[size]} />
       <span className="font-medium">{chapter}</span>
       {weightage && (
         <>

@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronRightIcon, StarIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { ChevronRight, Star, CheckCircle2 } from 'lucide-react'
 
 interface Course {
   id: string
@@ -107,7 +106,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
               {course.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                    <StarSolid className="h-3 w-3" />
+                    <Star className="h-3 w-3" />
                     POPULAR
                   </div>
                 </div>
@@ -133,7 +132,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
                 >
                   Explore {course.title}
-                  <ChevronRightIcon className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4" />
                 </button>
               </div>
             </motion.div>
@@ -167,7 +166,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                         <ul className="space-y-2">
                           {course.details.features.map((feature, index) => (
                             <li key={index} className="flex items-center gap-2">
-                              <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0" />
+                              <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                               <span className="text-gray-700">{feature}</span>
                             </li>
                           ))}
@@ -181,7 +180,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                         <div className="space-y-3 mb-6">
                           {course.details.highlights.map((highlight, index) => (
                             <div key={index} className="flex items-center gap-2">
-                              <StarIcon className="h-5 w-5 text-yellow-500" />
+                              <Star className="h-5 w-5 text-yellow-500" />
                               <span className="text-gray-700">{highlight}</span>
                             </div>
                           ))}

@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  ChevronRightIcon,
-  CheckCircleIcon,
-  SparklesIcon,
-  TrophyIcon,
-  ClockIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-} from '@heroicons/react/24/outline'
+  ChevronRight,
+  CheckCircle2,
+  Sparkles,
+  Trophy,
+  Clock,
+  Users,
+  GraduationCap,
+} from 'lucide-react'
 
 interface QuickQuizFlowProps {
   onComplete?: (result: QuizResult) => void
@@ -174,7 +174,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
         <div className="text-center space-y-6 p-6">
           <div className="space-y-2">
             <div className="flex items-center justify-center gap-2 text-sm text-blue-600 font-semibold">
-              <SparklesIcon className="h-5 w-5" />
+              <Sparkles className="h-5 w-5" />
               <span>PERSONALIZED COURSE FINDER</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900">
@@ -207,13 +207,13 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
             onClick={handleStartQuiz}
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4"
           >
-            <ClockIcon className="h-5 w-5" />
+            <Clock className="h-5 w-5" />
             Start 2-Minute Quiz
-            <ChevronRightIcon className="h-5 w-5" />
+            <ChevronRight className="h-5 w-5" />
           </PremiumButton>
 
           <div className="text-xs text-gray-500 flex items-center justify-center gap-1">
-            <CheckCircleIcon className="h-4 w-4 text-green-500" />
+            <CheckCircle2 className="h-4 w-4 text-green-500" />
             Used by 5,000+ students • 100% Free
           </div>
         </div>
@@ -266,7 +266,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
                   <span className="font-medium text-gray-900 group-hover:text-blue-700">
                     {option.label}
                   </span>
-                  <ChevronRightIcon className="h-5 w-5 text-gray-400 group-hover:text-blue-500" />
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-500" />
                 </div>
               </motion.button>
             ))}
@@ -313,7 +313,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
           {/* Header */}
           <div className="text-center space-y-2">
             <div className="flex items-center justify-center gap-2 text-sm text-green-600 font-semibold">
-              <TrophyIcon className="h-5 w-5" />
+              <Trophy className="h-5 w-5" />
               <span>PERSONALIZED RECOMMENDATION</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Perfect Course Found!</h3>
@@ -353,7 +353,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               </div>
 
               <div className="flex items-center gap-2 text-sm text-green-700 bg-green-100 rounded-lg p-3">
-                <CheckCircleIcon className="h-5 w-5" />
+                <CheckCircle2 className="h-5 w-5" />
                 <span>100% Refund Guarantee • Personal Mentorship • 24/7 Support</span>
               </div>
             </div>
@@ -367,7 +367,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               onClick={handleEnrollNow}
               className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4"
             >
-              <AcademicCapIcon className="h-5 w-5" />
+              <GraduationCap className="h-5 w-5" />
               Enroll Now - Start Your Success Journey
               <span className="bg-white/20 px-2 py-1 rounded-full text-xs ml-2">LIMITED SEATS</span>
             </PremiumButton>

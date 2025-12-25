@@ -1,6 +1,6 @@
 'use client'
 
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface BlogPaginationProps {
   currentPage: number
@@ -56,7 +56,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-100'
         }`}
       >
-        <ChevronLeftIcon className="w-4 h-4" />
+        <ChevronLeft className="w-4 h-4" />
         <span className="hidden sm:inline">Previous</span>
       </button>
 
@@ -90,7 +90,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         }`}
       >
         <span className="hidden sm:inline">Next</span>
-        <ChevronRightIcon className="w-4 h-4" />
+        <ChevronRight className="w-4 h-4" />
       </button>
     </nav>
   )

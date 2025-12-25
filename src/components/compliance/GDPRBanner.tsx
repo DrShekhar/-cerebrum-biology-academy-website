@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { XMarkIcon, ShieldCheckIcon, CogIcon } from '@heroicons/react/24/outline'
+import { X, ShieldCheck, Settings } from 'lucide-react'
 import { GTMService } from '@/lib/analytics/gtmService'
 import { FacebookPixelService } from '@/lib/analytics/facebookPixelService'
 
@@ -172,7 +172,7 @@ export const GDPRBanner = ({
             <div className="py-4">
               <div className="flex items-start justify-between">
                 <div className="flex items-start space-x-3">
-                  <ShieldCheckIcon className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+                  <ShieldCheck className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
                   <div className="flex-1">
                     <h3 className="text-sm font-semibold mb-1">Privacy & Cookies Notice</h3>
                     <p className="text-sm opacity-90 mb-3">
@@ -207,7 +207,7 @@ export const GDPRBanner = ({
                   className="p-1 hover:opacity-70 transition-opacity"
                   aria-label="Close banner"
                 >
-                  <XMarkIcon className="w-5 h-5" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
 
@@ -234,7 +234,7 @@ export const GDPRBanner = ({
                   onClick={() => setShowDetails(true)}
                   className="px-4 py-2 text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors flex items-center space-x-1"
                 >
-                  <CogIcon className="w-4 h-4" />
+                  <Settings className="w-4 h-4" />
                   <span>Customize</span>
                 </button>
               </div>
@@ -248,7 +248,7 @@ export const GDPRBanner = ({
                   onClick={() => setShowDetails(false)}
                   className="p-1 hover:opacity-70 transition-opacity"
                 >
-                  <XMarkIcon className="w-5 h-5" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
 

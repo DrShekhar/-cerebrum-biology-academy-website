@@ -9,13 +9,13 @@ import {
 import { CurrencyService, SupportedCurrency } from '@/lib/international/currencyService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import {
-  CreditCardIcon,
-  BanknotesIcon,
-  DevicePhoneMobileIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  ExclamationTriangleIcon,
-} from '@heroicons/react/24/outline'
+  CreditCard,
+  Banknote,
+  Smartphone,
+  ShieldCheck,
+  Clock,
+  AlertTriangle,
+} from 'lucide-react'
 
 interface InternationalPaymentFormProps {
   courseType: keyof typeof CurrencyService.BASE_PRICES
@@ -182,15 +182,15 @@ export function InternationalPaymentForm({
   const getMethodIcon = (method: PaymentMethod) => {
     switch (method.type) {
       case 'card':
-        return <CreditCardIcon className="h-5 w-5" />
+        return <CreditCard className="h-5 w-5" />
       case 'bank':
-        return <BanknotesIcon className="h-5 w-5" />
+        return <Banknote className="h-5 w-5" />
       case 'wallet':
-        return <DevicePhoneMobileIcon className="h-5 w-5" />
+        return <Smartphone className="h-5 w-5" />
       case 'bnpl':
-        return <ClockIcon className="h-5 w-5" />
+        return <Clock className="h-5 w-5" />
       default:
-        return <CreditCardIcon className="h-5 w-5" />
+        return <CreditCard className="h-5 w-5" />
     }
   }
 
@@ -200,7 +200,7 @@ export function InternationalPaymentForm({
     return (
       <div className={`bg-red-50 border border-red-200 rounded-xl p-6 ${className}`}>
         <div className="flex items-center space-x-3 mb-4">
-          <ExclamationTriangleIcon className="h-6 w-6 text-red-600" />
+          <AlertTriangle className="h-6 w-6 text-red-600" />
           <h3 className="text-lg font-semibold text-red-900">Payment Not Available</h3>
         </div>
         <p className="text-red-700 mb-4">
@@ -381,20 +381,20 @@ export function InternationalPaymentForm({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center space-x-2">
-                <ClockIcon className="h-4 w-4 text-blue-600" />
+                <Clock className="h-4 w-4 text-blue-600" />
                 <span className="text-sm text-blue-700">
                   Estimated time: {paymentGuide.estimatedTime}
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <ShieldCheckIcon className="h-4 w-4 text-blue-600" />
+                <ShieldCheck className="h-4 w-4 text-blue-600" />
                 <span className="text-sm text-blue-700">Secure payment</span>
               </div>
             </div>
 
             <div className="bg-blue-100 rounded-lg p-3">
               <div className="flex items-start space-x-2">
-                <ShieldCheckIcon className="h-4 w-4 text-blue-600 mt-0.5" />
+                <ShieldCheck className="h-4 w-4 text-blue-600 mt-0.5" />
                 <p className="text-sm text-blue-800">{paymentGuide.securityNote}</p>
               </div>
             </div>
@@ -425,11 +425,11 @@ export function InternationalPaymentForm({
 
         <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-500">
           <div className="flex items-center space-x-1">
-            <ShieldCheckIcon className="h-4 w-4" />
+            <ShieldCheck className="h-4 w-4" />
             <span>Secure Payment</span>
           </div>
           <div className="flex items-center space-x-1">
-            <ClockIcon className="h-4 w-4" />
+            <Clock className="h-4 w-4" />
             <span>Instant Access</span>
           </div>
         </div>

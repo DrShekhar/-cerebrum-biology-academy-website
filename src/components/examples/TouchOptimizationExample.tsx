@@ -18,7 +18,7 @@ import {
   useTouchOptimization,
   useNativeTouchGestures,
 } from '@/components/ui/TouchOptimization'
-import { PhoneIcon, ChatBubbleLeftRightIcon, PlayIcon } from '@heroicons/react/24/outline'
+import { Phone, MessageSquare, Play } from 'lucide-react'
 
 /**
  * Example implementations showing how to use touch optimization components
@@ -110,7 +110,7 @@ export function TouchCourseSelectionExample() {
             className="bg-blue-600 text-white font-semibold py-4 rounded-xl flex items-center justify-center space-x-2"
             onClick={() => setShowModal(true)}
           >
-            <PlayIcon className="w-5 h-5" />
+            <Play className="w-5 h-5" />
             <span>Watch Demo</span>
           </TouchTarget>
 
@@ -132,7 +132,7 @@ export function TouchCourseSelectionExample() {
         />
 
         {/* Floating Action Button */}
-        <FloatingActionButton icon={<PhoneIcon className="w-6 h-6" />} onClick={handleCall} />
+        <FloatingActionButton icon={<Phone className="w-6 h-6" />} onClick={handleCall} />
 
         {/* Course Details Modal */}
         <MobileModal isOpen={showModal} onClose={() => setShowModal(false)} title="Course Details">

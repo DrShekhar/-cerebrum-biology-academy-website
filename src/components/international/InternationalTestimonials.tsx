@@ -7,13 +7,13 @@ import {
 } from '@/lib/international/countryContentService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import {
-  StarIcon,
+  Star,
   UserCircleIcon,
-  AcademicCapIcon,
-  MapPinIcon,
-  CalendarIcon,
-  TrophyIcon,
-} from '@heroicons/react/24/outline'
+  GraduationCap,
+  MapPin,
+  Calendar,
+  Trophy,
+} from 'lucide-react'
 
 interface InternationalTestimonialsProps {
   countryCode?: string
@@ -146,7 +146,7 @@ export function InternationalTestimonials({
   if (testimonials.length === 0) {
     return (
       <div className={`text-center py-12 ${className}`}>
-        <TrophyIcon className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+        <Trophy className="h-16 w-16 text-gray-300 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-gray-900 mb-2">No Testimonials Available</h3>
         <p className="text-gray-600">
           We're collecting success stories from your region. Check back soon!
@@ -184,13 +184,13 @@ export function InternationalTestimonials({
                   {testimonial.name}
                 </h4>
                 <div className="flex items-center space-x-1 text-sm text-gray-600">
-                  <MapPinIcon className="h-3 w-3" />
+                  <MapPin className="h-3 w-3" />
                   <span>{testimonial.location}</span>
                 </div>
               </div>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="h-4 w-4 fill-current" />
+                  <Star key={i} className="h-4 w-4 fill-current" />
                 ))}
               </div>
             </div>
@@ -203,7 +203,7 @@ export function InternationalTestimonials({
             {/* Achievements */}
             <div className="space-y-2 mb-4">
               <div className="flex items-center space-x-2">
-                <TrophyIcon className="h-4 w-4 text-yellow-500" />
+                <Trophy className="h-4 w-4 text-yellow-500" />
                 <span
                   className={`text-xs px-2 py-1 rounded-full font-semibold ${getScoreColor(testimonial.score)}`}
                 >
@@ -212,13 +212,13 @@ export function InternationalTestimonials({
               </div>
 
               <div className="flex items-center space-x-2">
-                <AcademicCapIcon className="h-4 w-4 text-blue-500" />
+                <GraduationCap className="h-4 w-4 text-blue-500" />
                 <span className="text-xs text-gray-600">{testimonial.course}</span>
               </div>
 
               {testimonial.university && (
                 <div className="flex items-center space-x-2">
-                  <AcademicCapIcon className="h-4 w-4 text-green-500" />
+                  <GraduationCap className="h-4 w-4 text-green-500" />
                   <span className="text-xs font-medium text-green-700">
                     {testimonial.university}
                   </span>
@@ -226,7 +226,7 @@ export function InternationalTestimonials({
               )}
 
               <div className="flex items-center space-x-2">
-                <CalendarIcon className="h-4 w-4 text-gray-400" />
+                <Calendar className="h-4 w-4 text-gray-400" />
                 <span className="text-xs text-gray-500">{testimonial.year}</span>
               </div>
             </div>
@@ -254,7 +254,7 @@ export function InternationalTestimonials({
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{selectedTestimonial.name}</h3>
                     <div className="flex items-center space-x-2 text-gray-600">
-                      <MapPinIcon className="h-4 w-4" />
+                      <MapPin className="h-4 w-4" />
                       <span>{selectedTestimonial.location}</span>
                     </div>
                   </div>
@@ -277,13 +277,13 @@ export function InternationalTestimonials({
               {/* Achievement Highlights */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg p-4 text-center">
-                  <TrophyIcon className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                  <Trophy className="h-8 w-8 text-green-600 mx-auto mb-2" />
                   <div className="font-bold text-green-900">{selectedTestimonial.score}</div>
                   <div className="text-xs text-green-700">Score Achieved</div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4 text-center">
-                  <AcademicCapIcon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                  <GraduationCap className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                   <div className="font-bold text-blue-900 text-sm">
                     {selectedTestimonial.course}
                   </div>
@@ -291,7 +291,7 @@ export function InternationalTestimonials({
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4 text-center">
-                  <CalendarIcon className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                  <Calendar className="h-8 w-8 text-purple-600 mx-auto mb-2" />
                   <div className="font-bold text-purple-900">{selectedTestimonial.year}</div>
                   <div className="text-xs text-purple-700">Success Year</div>
                 </div>
@@ -301,7 +301,7 @@ export function InternationalTestimonials({
               {selectedTestimonial.university && (
                 <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-4 mb-6">
                   <div className="flex items-center space-x-3">
-                    <AcademicCapIcon className="h-6 w-6 text-yellow-600" />
+                    <GraduationCap className="h-6 w-6 text-yellow-600" />
                     <div>
                       <div className="font-semibold text-yellow-900">Currently Studying At</div>
                       <div className="text-yellow-800">{selectedTestimonial.university}</div>
@@ -323,7 +323,7 @@ export function InternationalTestimonials({
               <div className="text-center">
                 <div className="flex justify-center text-yellow-400 mb-2">
                   {[...Array(5)].map((_, i) => (
-                    <StarIcon key={i} className="h-6 w-6 fill-current" />
+                    <Star key={i} className="h-6 w-6 fill-current" />
                   ))}
                 </div>
                 <p className="text-sm text-gray-600">

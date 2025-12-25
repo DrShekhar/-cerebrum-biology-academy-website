@@ -1,4 +1,4 @@
-import { TrophyIcon } from '@heroicons/react/24/outline'
+import { Trophy } from 'lucide-react'
 import { HeroClientInteractive } from './HeroClientInteractive'
 
 interface HeroSectionProps {
@@ -61,7 +61,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
-            <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
+            <Trophy className="w-5 h-5 mr-2 text-green-300" />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
               #1 NEET Biology Coaching • 98% Success Rate
             </span>

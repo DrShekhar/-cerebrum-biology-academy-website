@@ -4,21 +4,21 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import {
-  CheckCircleIcon,
+  CheckCircle2,
   XCircleIcon,
-  SparklesIcon,
-  AcademicCapIcon,
-  ClockIcon,
-  UserGroupIcon,
-  BeakerIcon,
-  TrophyIcon,
-  CalendarIcon,
-  ShieldCheckIcon,
-  CreditCardIcon,
-  MagnifyingGlassIcon,
-  XMarkIcon,
-  ChevronDownIcon,
-} from '@heroicons/react/24/outline'
+  Sparkles,
+  GraduationCap,
+  Clock,
+  Users,
+  FlaskConical,
+  Trophy,
+  Calendar,
+  ShieldCheck,
+  CreditCard,
+  Search,
+  X,
+  ChevronDown,
+} from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'
 import {
@@ -304,7 +304,7 @@ export default function PricingPage() {
               {(expandedFeatures.has(tierKey) ? tier.features : tier.features.slice(0, 3)).map(
                 (feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">{feature}</span>
                   </div>
                 )
@@ -324,12 +324,12 @@ export default function PricingPage() {
                 >
                   {expandedFeatures.has(tierKey) ? (
                     <>
-                      <ChevronDownIcon className="w-4 h-4 rotate-180 transition-transform" />
+                      <ChevronDown className="w-4 h-4 rotate-180 transition-transform" />
                       <span>Show less</span>
                     </>
                   ) : (
                     <>
-                      <ChevronDownIcon className="w-4 h-4 transition-transform" />
+                      <ChevronDown className="w-4 h-4 transition-transform" />
                       <span>+{tier.features.length - 3} more features</span>
                     </>
                   )}
@@ -343,7 +343,7 @@ export default function PricingPage() {
             className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-xl mb-3 transition-colors flex items-center justify-center gap-2 text-sm"
           >
             <span>View Payment Options</span>
-            <ChevronDownIcon
+            <ChevronDown
               className={`w-5 h-5 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
             />
           </button>
@@ -423,7 +423,7 @@ export default function PricingPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5 text-green-300" />
+              <ShieldCheck className="w-4 sm:w-5 h-4 sm:h-5 text-green-300" />
               <span className="font-semibold text-xs sm:text-sm tracking-wide">
                 Trusted by 5,000+ NEET aspirants
               </span>
@@ -474,7 +474,7 @@ export default function PricingPage() {
         <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-xl pb-4 sm:pb-6 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 border-b border-gray-100 shadow-sm">
           <div className="mb-5 sm:mb-6">
             <div className="relative max-w-xl mx-auto">
-              <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search courses..."
@@ -487,7 +487,7 @@ export default function PricingPage() {
                   onClick={() => setSearchQuery('')}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
                 >
-                  <XMarkIcon className="w-5 h-5" />
+                  <X className="w-5 h-5" />
                 </button>
               )}
             </div>
@@ -949,7 +949,7 @@ export default function PricingPage() {
                     <p className="font-semibold flex items-center gap-1">
                       {tier.mentorship ? (
                         <>
-                          <CheckCircleIcon className="w-4 h-4 text-green-500" /> Yes
+                          <CheckCircle2 className="w-4 h-4 text-green-500" /> Yes
                         </>
                       ) : (
                         <>
@@ -970,7 +970,7 @@ export default function PricingPage() {
                         key={feature}
                         className="inline-flex items-center gap-1 text-xs bg-white px-2 py-1 rounded-full border"
                       >
-                        <CheckCircleIcon className="w-3 h-3 text-green-500" />
+                        <CheckCircle2 className="w-3 h-3 text-green-500" />
                         {feature}
                       </span>
                     )
@@ -1019,58 +1019,58 @@ export default function PricingPage() {
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">AIIMS Faculty</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Study Materials</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Mock Tests</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">AI Doubt Resolution</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Personal Mentorship</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
@@ -1079,10 +1079,10 @@ export default function PricingPage() {
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">1-on-1 Doubt Sessions</td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
@@ -1130,17 +1130,17 @@ export default function PricingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
-                  icon: TrophyIcon,
+                  icon: Trophy,
                   title: '98% Success Rate',
                   desc: '27 students in Top 1000 AIR. Proven track record of excellence.',
                 },
                 {
-                  icon: AcademicCapIcon,
+                  icon: GraduationCap,
                   title: 'AIIMS Faculty',
                   desc: 'Learn from Dr. Shekhar (AIIMS alumnus) - 15+ years experience',
                 },
                 {
-                  icon: UserGroupIcon,
+                  icon: Users,
                   title: 'Small Batch Sizes',
                   desc: 'Pinnacle (10-12), Ascent (16-25), or Pursuit (30-40). Personal attention guaranteed.',
                 },
@@ -1206,7 +1206,7 @@ export default function PricingPage() {
               >
                 <summary className="cursor-pointer flex items-center justify-between gap-4 p-4 sm:p-5 font-semibold text-gray-900 text-sm sm:text-base">
                   <span>{faq.q}</span>
-                  <ChevronDownIcon className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
                 </summary>
                 <p
                   className="text-gray-600 text-sm sm:text-base px-4 sm:px-5 pb-4 sm:pb-5 leading-relaxed"
@@ -1246,7 +1246,7 @@ export default function PricingPage() {
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-sm text-gray-700">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheckIcon className="w-4 h-4" />
+                  <ShieldCheck className="w-4 h-4" />
                   Secure payment via Razorpay
                 </span>
                 <span className="flex items-center gap-1.5">

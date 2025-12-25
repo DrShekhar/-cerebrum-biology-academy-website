@@ -3,18 +3,18 @@
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
-  ChartBarIcon,
-  ArrowTrendingUpIcon as TrendingUpIcon,
-  ArrowTrendingDownIcon as TrendingDownIcon,
-  ClockIcon,
-  AcademicCapIcon,
-  BoltIcon,
-  CalendarIcon,
-  ExclamationTriangleIcon,
-  CheckCircleIcon,
+  BarChart2,
+  TrendingUp as TrendingUpIcon,
+  TrendingDown as TrendingDownIcon,
+  Clock,
+  GraduationCap,
+  Zap,
+  Calendar,
+  AlertTriangle,
+  CheckCircle2,
   UserIcon,
-  BookOpenIcon,
-} from '@heroicons/react/24/outline'
+  BookOpen,
+} from 'lucide-react'
 
 interface PerformanceData {
   subject: string
@@ -166,7 +166,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
               Track your progress and identify areas for improvement
             </p>
           </div>
-          <ChartBarIcon className="h-12 w-12 opacity-80" />
+          <BarChart2 className="h-12 w-12 opacity-80" />
         </div>
 
         {/* Key Metrics */}
@@ -196,7 +196,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
           <div className="bg-white rounded-xl shadow-lg p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-purple-100 rounded-lg">
-                <BoltIcon className="h-6 w-6 text-purple-600" />
+                <Zap className="h-6 w-6 text-purple-600" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">NEET Rank Prediction</h3>
@@ -383,7 +383,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
         <div className="bg-white rounded-xl shadow-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-orange-100 rounded-lg">
-              <ExclamationTriangleIcon className="h-6 w-6 text-orange-600" />
+              <AlertTriangle className="h-6 w-6 text-orange-600" />
             </div>
             <h3 className="text-xl font-bold">Priority Action Items</h3>
           </div>
@@ -424,14 +424,14 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
         <div className="bg-white rounded-xl shadow-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-green-100 rounded-lg">
-              <CheckCircleIcon className="h-6 w-6 text-green-600" />
+              <CheckCircle2 className="h-6 w-6 text-green-600" />
             </div>
             <h3 className="text-xl font-bold">Achievements This Month</h3>
           </div>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Cell Biology Mastery</div>
                 <div className="text-sm text-green-700">
@@ -441,7 +441,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
             </div>
 
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Study Streak Record</div>
                 <div className="text-sm text-green-700">12-day streak - your longest yet!</div>
@@ -449,7 +449,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
             </div>
 
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Speed Improvement</div>
                 <div className="text-sm text-green-700">

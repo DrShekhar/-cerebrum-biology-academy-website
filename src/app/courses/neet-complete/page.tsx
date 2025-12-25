@@ -4,21 +4,21 @@ import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import {
-  BookOpenIcon,
-  AcademicCapIcon,
-  ClockIcon,
+  BookOpen,
+  GraduationCap,
+  Clock,
   UserIcon,
-  CheckCircleIcon,
-  PlayIcon,
-  DocumentTextIcon,
-  BeakerIcon,
-  ChartBarIcon,
-  StarIcon,
-  CalendarIcon,
-  UsersIcon,
-  GlobeAltIcon,
-  TrophyIcon,
-} from '@heroicons/react/24/outline'
+  CheckCircle2,
+  Play,
+  FileText,
+  FlaskConical,
+  BarChart2,
+  Star,
+  Calendar,
+  Users,
+  Globe,
+  Trophy,
+} from 'lucide-react'
 
 const NEETCompletePage = () => {
   const [activeTab, setActiveTab] = useState<
@@ -374,23 +374,23 @@ const NEETCompletePage = () => {
 
   const courseFeatures = [
     {
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
       title: 'Harvard-Level Academic Rigor',
       description:
         'Research-backed curriculum with latest scientific discoveries and evidence-based teaching',
     },
     {
-      icon: BeakerIcon,
+      icon: FlaskConical,
       title: 'Interactive Laboratory Simulations',
       description: '3D molecular visualizations and virtual experiments for hands-on learning',
     },
     {
-      icon: ChartBarIcon,
+      icon: BarChart2,
       title: 'AI-Powered Analytics',
       description: 'Personalized learning paths with weakness identification and progress tracking',
     },
     {
-      icon: UsersIcon,
+      icon: Users,
       title: 'Expert Faculty Mentorship',
       description: 'PhD-qualified faculty with active research backgrounds and proven NEET success',
     },
@@ -458,11 +458,11 @@ const NEETCompletePage = () => {
                 <h3 className="text-2xl font-bold mb-6">Course Overview</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <ClockIcon className="h-5 w-5 text-yellow-400" />
+                    <Clock className="h-5 w-5 text-yellow-400" />
                     <span>12 months comprehensive program</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <BookOpenIcon className="h-5 w-5 text-yellow-400" />
+                    <BookOpen className="h-5 w-5 text-yellow-400" />
                     <span>38 chapters with research connections</span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -470,7 +470,7 @@ const NEETCompletePage = () => {
                     <span>1:20 student-faculty ratio</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <TrophyIcon className="h-5 w-5 text-yellow-400" />
+                    <Trophy className="h-5 w-5 text-yellow-400" />
                     <span>Guaranteed 300+ score improvement</span>
                   </div>
                 </div>
@@ -485,11 +485,11 @@ const NEETCompletePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8 overflow-x-auto">
             {[
-              { id: 'overview', label: 'Overview', icon: BookOpenIcon },
-              { id: 'curriculum', label: 'Curriculum', icon: AcademicCapIcon },
+              { id: 'overview', label: 'Overview', icon: BookOpen },
+              { id: 'curriculum', label: 'Curriculum', icon: GraduationCap },
               { id: 'faculty', label: 'Faculty', icon: UserIcon },
-              { id: 'testimonials', label: 'Success Stories', icon: StarIcon },
-              { id: 'pricing', label: 'Pricing', icon: DocumentTextIcon },
+              { id: 'testimonials', label: 'Success Stories', icon: Star },
+              { id: 'pricing', label: 'Pricing', icon: FileText },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -542,7 +542,7 @@ const NEETCompletePage = () => {
                     <ul className="space-y-3">
                       {category.outcomes.map((outcome, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{outcome}</span>
                         </li>
                       ))}
@@ -620,7 +620,7 @@ const NEETCompletePage = () => {
                                 <ul className="text-sm text-gray-600 space-y-1">
                                   {chapter.learningObjectives.map((objective, objIndex) => (
                                     <li key={objIndex} className="flex items-start gap-2">
-                                      <CheckCircleIcon className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                                       {objective}
                                     </li>
                                   ))}
@@ -634,7 +634,7 @@ const NEETCompletePage = () => {
                                 <ul className="text-sm text-gray-600 space-y-1">
                                   {chapter.researchConnections.map((research, resIndex) => (
                                     <li key={resIndex} className="flex items-start gap-2">
-                                      <BeakerIcon className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                      <FlaskConical className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                                       {research}
                                     </li>
                                   ))}
@@ -698,7 +698,7 @@ const NEETCompletePage = () => {
                       <ul className="space-y-2">
                         {faculty.research.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <BeakerIcon className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                            <FlaskConical className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{item}</span>
                           </li>
                         ))}
@@ -710,7 +710,7 @@ const NEETCompletePage = () => {
                       <ul className="space-y-2">
                         {faculty.achievements.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <TrophyIcon className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <Trophy className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{item}</span>
                           </li>
                         ))}
@@ -754,7 +754,7 @@ const NEETCompletePage = () => {
                   </blockquote>
 
                   <button className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
-                    <PlayIcon className="h-4 w-4" />
+                    <Play className="h-4 w-4" />
                     Watch Video Testimonial
                   </button>
                 </div>
@@ -834,7 +834,7 @@ const NEETCompletePage = () => {
                       'Success guarantee program',
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}

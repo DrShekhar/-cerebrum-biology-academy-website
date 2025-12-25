@@ -9,19 +9,18 @@ import {
   AnimatedCounter,
 } from '@/components/ui/PremiumDesignSystem'
 import {
-  AcademicCapIcon,
-  HeartIcon,
-  TrophyIcon,
-  PhoneIcon,
-  DocumentArrowDownIcon,
-  ClockIcon,
-  UserGroupIcon,
-  SparklesIcon,
-  CheckCircleIcon,
-  StarIcon,
-  BookOpenIcon,
-} from '@heroicons/react/24/outline'
-import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/react/24/solid'
+  GraduationCap,
+  Heart,
+  Trophy,
+  Phone,
+  FileDown,
+  Clock,
+  Users,
+  Sparkles,
+  CheckCircle2,
+  Star,
+  BookOpen,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface EmotionalHeroSectionProps {
@@ -86,15 +85,15 @@ export function EmotionalHeroSection({
   ]
 
   const successStats = [
-    { value: 1247, label: 'MBBS Seats Secured', icon: AcademicCapIcon },
-    { value: 342, label: 'Government Colleges', icon: TrophyIcon },
-    { value: 94.2, suffix: '%', label: 'NEET Success Rate', icon: HeartIcon },
+    { value: 1247, label: 'MBBS Seats Secured', icon: GraduationCap },
+    { value: 342, label: 'Government Colleges', icon: Trophy },
+    { value: 94.2, suffix: '%', label: 'NEET Success Rate', icon: Heart },
     {
       value: 5000,
       prefix: '',
       suffix: '+',
       label: 'Students Achieved Dreams',
-      icon: UserGroupIcon,
+      icon: Users,
     },
   ]
 
@@ -164,11 +163,11 @@ export function EmotionalHeroSection({
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
-            <TrophyIcon className="h-5 w-5 text-yellow-300" />
+            <Trophy className="h-5 w-5 text-yellow-300" />
             <span>
               🎯 98% NEET Success Rate | 247 AIIMS Selections | Next batch starting January 15, 2025
             </span>
-            <SparklesIcon className="h-5 w-5 text-yellow-300 animate-pulse" />
+            <Sparkles className="h-5 w-5 text-yellow-300 animate-pulse" />
           </div>
         </div>
       </motion.div>
@@ -214,7 +213,7 @@ export function EmotionalHeroSection({
               delay: i * 0.5,
             }}
           >
-            <HeartSolid className="h-4 w-4 text-teal-300/50" />
+            <Heart className="h-4 w-4 text-teal-300/50" />
           </motion.div>
         ))}
       </div>
@@ -258,7 +257,7 @@ export function EmotionalHeroSection({
                   key={index}
                   className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-semibold text-white"
                 >
-                  <CheckCircleIcon className="h-4 w-4 text-green-300 inline mr-2" />
+                  <CheckCircle2 className="h-4 w-4 text-green-300 inline mr-2" />
                   {badge}
                 </div>
               ))}
@@ -300,7 +299,7 @@ export function EmotionalHeroSection({
                 onClick={() => (window.location.href = '/quick-enroll')}
                 className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 group"
               >
-                <SparklesIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
+                <Sparkles className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 Take 2-Min Quiz & Enroll Instantly
                 <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">
                   12-15% CONVERSION
@@ -313,7 +312,7 @@ export function EmotionalHeroSection({
                 onClick={() => (window.location.href = '/explore-courses')}
                 className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                <BookOpenIcon className="h-6 w-6" />
+                <BookOpen className="h-6 w-6" />
                 Explore Courses in Detail
                 <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">
                   8-10% CONVERSION
@@ -429,10 +428,10 @@ export function EmotionalHeroSection({
                   <div className="flex justify-between items-center">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <StarSolid key={i} className="h-5 w-5 text-yellow-400" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400" />
                       ))}
                     </div>
-                    <HeartSolid className="h-6 w-6 text-red-400 animate-pulse" />
+                    <Heart className="h-6 w-6 text-red-400 animate-pulse fill-current" />
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -446,7 +445,7 @@ export function EmotionalHeroSection({
             >
               <div className="text-center space-y-4">
                 <div className="flex items-center justify-center gap-2 text-amber-300">
-                  <ClockIcon className="h-5 w-5" />
+                  <Clock className="h-5 w-5" />
                   <span className="font-semibold">Next Batch Starting Soon</span>
                 </div>
 

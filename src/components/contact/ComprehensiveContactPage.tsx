@@ -3,32 +3,24 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
+  Phone,
+  MapPin,
+  Clock,
   UserIcon,
-  ChatBubbleLeftRightIcon,
-  EnvelopeIcon,
-  CalendarDaysIcon,
-  AcademicCapIcon,
-  CreditCardIcon,
-  ComputerDesktopIcon,
-  HeartIcon,
-  ExclamationTriangleIcon,
-  StarIcon,
-  ArrowTopRightOnSquareIcon,
-  VideoCameraIcon,
-  GlobeAltIcon,
-  CheckCircleIcon,
-} from '@heroicons/react/24/outline'
-import {
-  PhoneIcon as PhoneSolid,
-  MapPinIcon as MapPinSolid,
-  ClockIcon as ClockSolid,
-  ChatBubbleLeftRightIcon as ChatSolid,
-  HeartIcon as HeartSolid,
-  CheckCircleIcon as CheckCircleSolid,
-} from '@heroicons/react/24/solid'
+  MessageSquare,
+  Mail,
+  CalendarDays,
+  GraduationCap,
+  CreditCard,
+  Monitor,
+  Heart,
+  AlertTriangle,
+  Star,
+  ExternalLink,
+  Video,
+  Globe,
+  CheckCircle2,
+} from 'lucide-react'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
@@ -152,7 +144,7 @@ export function ComprehensiveContactPage({
       id: 'academic',
       title: 'Academic Support',
       description: 'Get help with studies, doubts, and academic performance',
-      icon: AcademicCapIcon,
+      icon: GraduationCap,
       gradient: 'from-blue-500 to-purple-500',
       services: [
         'Doubt clearing sessions',
@@ -186,7 +178,7 @@ export function ComprehensiveContactPage({
       id: 'technical',
       title: 'Technical Support',
       description: 'Resolve app, website, and technical issues quickly',
-      icon: ComputerDesktopIcon,
+      icon: Monitor,
       gradient: 'from-orange-500 to-red-500',
       services: [
         'App troubleshooting',
@@ -203,7 +195,7 @@ export function ComprehensiveContactPage({
       id: 'counseling',
       title: 'Counseling Support',
       description: 'Mental health, career guidance, and personal support',
-      icon: HeartIcon,
+      icon: Heart,
       gradient: 'from-pink-500 to-purple-500',
       services: [
         'Career counseling',
@@ -297,7 +289,7 @@ export function ComprehensiveContactPage({
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
-                <PhoneSolid className="w-5 h-5 mr-3" />
+                <Phone className="w-5 h-5 mr-3" />
                 Call Now: {selectedCenterData.phone}
               </PremiumButton>
 
@@ -309,7 +301,7 @@ export function ComprehensiveContactPage({
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
-                <ChatSolid className="w-5 h-5 mr-3" />
+                <MessageSquare className="w-5 h-5 mr-3" />
                 WhatsApp Support
               </PremiumButton>
 
@@ -319,7 +311,7 @@ export function ComprehensiveContactPage({
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
-                <CalendarDaysIcon className="w-5 h-5 mr-3" />
+                <CalendarDays className="w-5 h-5 mr-3" />
                 Book Counseling
               </PremiumButton>
             </div>
@@ -375,7 +367,7 @@ export function ComprehensiveContactPage({
                     {/* Header */}
                     <div className="flex items-center space-x-4">
                       <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                        <MapPinSolid className="w-8 h-8 text-white" />
+                        <MapPin className="w-8 h-8 text-white" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">
@@ -391,7 +383,7 @@ export function ComprehensiveContactPage({
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-3">
                         <div className="flex items-start space-x-3">
-                          <MapPinIcon className="w-5 h-5 text-gray-500 mt-1" />
+                          <MapPin className="w-5 h-5 text-gray-500 mt-1" />
                           <div>
                             <div className="font-medium text-gray-900">Address</div>
                             <div className="text-gray-600 text-sm">
@@ -404,7 +396,7 @@ export function ComprehensiveContactPage({
                         </div>
 
                         <div className="flex items-center space-x-3">
-                          <PhoneIcon className="w-5 h-5 text-gray-500" />
+                          <Phone className="w-5 h-5 text-gray-500" />
                           <div>
                             <div className="font-medium text-gray-900">Phone</div>
                             <div className="text-blue-600 text-sm">{selectedCenterData.phone}</div>
@@ -414,7 +406,7 @@ export function ComprehensiveContactPage({
 
                       <div className="space-y-3">
                         <div className="flex items-start space-x-3">
-                          <ClockIcon className="w-5 h-5 text-gray-500 mt-1" />
+                          <Clock className="w-5 h-5 text-gray-500 mt-1" />
                           <div>
                             <div className="font-medium text-gray-900">Timings</div>
                             <div className="text-gray-600 text-sm">
@@ -457,7 +449,7 @@ export function ComprehensiveContactPage({
                         variant="primary"
                         size="sm"
                       >
-                        <PhoneIcon className="w-4 h-4 mr-2" />
+                        <Phone className="w-4 h-4 mr-2" />
                         Call
                       </PremiumButton>
 
@@ -466,7 +458,7 @@ export function ComprehensiveContactPage({
                         variant="secondary"
                         size="sm"
                       >
-                        <ArrowTopRightOnSquareIcon className="w-4 h-4 mr-2" />
+                        <ExternalLink className="w-4 h-4 mr-2" />
                         Directions
                       </PremiumButton>
 
@@ -475,7 +467,7 @@ export function ComprehensiveContactPage({
                         variant="luxury"
                         size="sm"
                       >
-                        <CalendarDaysIcon className="w-4 h-4 mr-2" />
+                        <CalendarDays className="w-4 h-4 mr-2" />
                         Visit
                       </PremiumButton>
 
@@ -484,7 +476,7 @@ export function ComprehensiveContactPage({
                         variant="secondary"
                         size="sm"
                       >
-                        <VideoCameraIcon className="w-4 h-4 mr-2" />
+                        <Video className="w-4 h-4 mr-2" />
                         Tour
                       </PremiumButton>
                     </div>
@@ -551,7 +543,7 @@ export function ComprehensiveContactPage({
                   <p className="text-gray-600 text-sm mb-4">{option.description}</p>
                   <div className="space-y-2 text-xs">
                     <div className="flex items-center justify-center space-x-2">
-                      <ClockSolid className="w-4 h-4 text-green-500" />
+                      <Clock className="w-4 h-4 text-green-500" />
                       <span className="text-green-600 font-medium">{option.responseTime}</span>
                     </div>
                   </div>
@@ -593,7 +585,7 @@ export function ComprehensiveContactPage({
                         <div className="space-y-2">
                           {selectedSupportData.services.map((service, index) => (
                             <div key={index} className="flex items-center space-x-3">
-                              <CheckCircleSolid className="w-4 h-4 text-green-500" />
+                              <CheckCircle2 className="w-4 h-4 text-green-500" />
                               <span className="text-gray-700 text-sm">{service}</span>
                             </div>
                           ))}
@@ -626,7 +618,7 @@ export function ComprehensiveContactPage({
                         variant="medical"
                         size="md"
                       >
-                        <ChatBubbleLeftRightIcon className="w-4 h-4 mr-2" />
+                        <MessageSquare className="w-4 h-4 mr-2" />
                         WhatsApp Now
                       </PremiumButton>
 
@@ -635,7 +627,7 @@ export function ComprehensiveContactPage({
                         variant="secondary"
                         size="md"
                       >
-                        <PhoneIcon className="w-4 h-4 mr-2" />
+                        <Phone className="w-4 h-4 mr-2" />
                         Call Center
                       </PremiumButton>
                     </div>
@@ -720,7 +712,7 @@ export function ComprehensiveContactPage({
                         type="submit"
                         className="w-full bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 hover:scale-102 flex items-center justify-center"
                       >
-                        <EnvelopeIcon className="w-5 h-5 mr-3" />
+                        <Mail className="w-5 h-5 mr-3" />
                         Send Inquiry
                       </button>
                     </form>
@@ -756,20 +748,20 @@ export function ComprehensiveContactPage({
                 {
                   type: 'WhatsApp',
                   time: 'Within 5 minutes',
-                  icon: ChatSolid,
+                  icon: MessageSquare,
                   color: 'text-green-600',
                 },
-                { type: 'Phone Call', time: 'Immediate', icon: PhoneSolid, color: 'text-blue-600' },
+                { type: 'Phone Call', time: 'Immediate', icon: Phone, color: 'text-blue-600' },
                 {
                   type: 'Email',
                   time: 'Within 2 hours',
-                  icon: EnvelopeIcon,
+                  icon: Mail,
                   color: 'text-purple-600',
                 },
                 {
                   type: 'Center Visit',
                   time: 'No appointment needed',
-                  icon: MapPinSolid,
+                  icon: MapPin,
                   color: 'text-orange-600',
                 },
               ].map((item, index) => (
@@ -793,28 +785,28 @@ export function ComprehensiveContactPage({
         >
           <PremiumCard variant="default" className="bg-red-50 border-red-200">
             <div className="text-center mb-6">
-              <ExclamationTriangleIcon className="w-12 h-12 text-red-500 mx-auto mb-4" />
+              <AlertTriangle className="w-12 h-12 text-red-500 mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Emergency Support</h2>
               <p className="text-gray-600">24/7 help for urgent situations</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <HeartSolid className="w-8 h-8 text-red-500 mx-auto mb-3" />
+                <Heart className="w-8 h-8 text-red-500 mx-auto mb-3 fill-current" />
                 <h3 className="font-bold text-gray-900 mb-2">Mental Health Helpline</h3>
                 <p className="text-red-600 font-medium">+91 88264 44340</p>
                 <p className="text-gray-600 text-sm">24/7 counseling support</p>
               </div>
 
               <div className="text-center">
-                <ExclamationTriangleIcon className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+                <AlertTriangle className="w-8 h-8 text-orange-500 mx-auto mb-3 fill-current" />
                 <h3 className="font-bold text-gray-900 mb-2">Medical Emergency</h3>
                 <p className="text-orange-600 font-medium">+91 88264 44341</p>
                 <p className="text-gray-600 text-sm">Medical assistance & contacts</p>
               </div>
 
               <div className="text-center">
-                <PhoneSolid className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+                <Phone className="w-8 h-8 text-blue-500 mx-auto mb-3 fill-current" />
                 <h3 className="font-bold text-gray-900 mb-2">Parent Concern Hotline</h3>
                 <p className="text-blue-600 font-medium">+91 88264 44342</p>
                 <p className="text-gray-600 text-sm">Dedicated parent support</p>
@@ -836,7 +828,7 @@ export function ComprehensiveContactPage({
             <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-sm">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <ChatSolid className="w-5 h-5 text-white" />
+                  <MessageSquare className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Need Help?</div>

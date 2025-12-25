@@ -4,13 +4,12 @@ import React from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { Button } from '@/components/ui/Button'
 import {
-  ArrowRightIcon,
-  ClockIcon,
-  StarIcon,
-  PlayIcon,
-  PhoneIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid'
+  ArrowRight,
+  Clock,
+  Star,
+  Play,
+  Phone,
+} from 'lucide-react'
 
 interface ABTestHeroProps {
   onCtaClick?: () => void
@@ -66,7 +65,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             {/* Urgency Badge */}
             {isUrgencyVariant && (
               <div className="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-pulse">
-                <ClockIcon className="h-4 w-4" />
+                <Clock className="h-4 w-4" />
                 <span>Only 50 Seats Left - Hurry!</span>
               </div>
             )}
@@ -75,7 +74,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <StarIconSolid key={i} className="h-4 w-4 text-yellow-400" />
+                  <Star key={i} className="h-4 w-4 text-yellow-400" />
                 ))}
               </div>
               <span>4.9/5 ★ Rated by 2,847 Students</span>
@@ -118,9 +117,9 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
                 className={`${heroConfig.ctaColor} hover:scale-105 transition-all duration-300 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl group`}
                 size="lg"
               >
-                <PlayIcon className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 {heroConfig.ctaText}
-                <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
 
               <Button
@@ -129,7 +128,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
                 className="border-2 border-green-600 text-green-600 hover:bg-green-50 font-semibold py-4 px-6 rounded-xl transition-all duration-300"
                 size="lg"
               >
-                <PhoneIcon className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </Button>
             </div>
@@ -183,7 +182,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
               </p>
               <div className="flex mt-3">
                 {[...Array(5)].map((_, i) => (
-                  <StarIconSolid key={i} className="h-4 w-4 text-yellow-300" />
+                  <Star key={i} className="h-4 w-4 text-yellow-300" />
                 ))}
               </div>
             </div>

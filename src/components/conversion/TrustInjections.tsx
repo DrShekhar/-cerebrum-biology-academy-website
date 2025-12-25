@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  CheckCircleIcon,
-  UserGroupIcon,
-  ShieldCheckIcon,
-  CreditCardIcon,
-  ClockIcon,
-  StarIcon,
-  ExclamationTriangleIcon,
-} from '@heroicons/react/24/outline'
+  CheckCircle2,
+  Users,
+  ShieldCheck,
+  CreditCard,
+  Clock,
+  Star,
+  AlertTriangle,
+} from 'lucide-react'
 
 // Trust Elements Configuration
 export const TrustInjections = {
@@ -33,17 +33,17 @@ export const TrustInjections = {
 function TrustNearPrice() {
   const trustPoints = [
     {
-      icon: CheckCircleIcon,
+      icon: CheckCircle2,
       text: 'No hidden charges',
       color: 'text-emerald-600',
     },
     {
-      icon: CreditCardIcon,
+      icon: CreditCard,
       text: 'EMI available',
       color: 'text-blue-600',
     },
     {
-      icon: ShieldCheckIcon,
+      icon: ShieldCheck,
       text: 'Refund guarantee',
       color: 'text-purple-600',
     },
@@ -147,7 +147,7 @@ function SocialProofNearCTA() {
 
         {/* Trust Badge */}
         <div className="flex items-center space-x-1">
-          <StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
+          <Star className="w-4 h-4 text-yellow-500 fill-current" />
           <span className="text-sm font-semibold text-slate-700">4.9</span>
         </div>
       </div>
@@ -224,7 +224,7 @@ function ExitIntentOffer() {
 
           {/* Content */}
           <div className="text-center">
-            <ExclamationTriangleIcon className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+            <AlertTriangle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
 
             <h3 className="text-2xl font-bold text-slate-800 mb-2">
               Wait! Get 50% off on diagnostic test
@@ -237,7 +237,7 @@ function ExitIntentOffer() {
             {/* Timer */}
             <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-6">
               <div className="flex items-center justify-center space-x-2">
-                <ClockIcon className="w-5 h-5 text-red-500" />
+                <Clock className="w-5 h-5 text-red-500" />
                 <span className="text-red-700 font-semibold">
                   Offer expires in: {formatTime(timeLeft)}
                 </span>
@@ -247,15 +247,15 @@ function ExitIntentOffer() {
             {/* Benefits */}
             <div className="text-left mb-6 space-y-2">
               <div className="flex items-center space-x-2">
-                <CheckCircleIcon className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span className="text-sm text-slate-700">Complete NEET Biology assessment</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircleIcon className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span className="text-sm text-slate-700">Personalized study plan</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircleIcon className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span className="text-sm text-slate-700">Free counseling session</span>
               </div>
             </div>
@@ -368,7 +368,7 @@ function RecentActivityFeed() {
               className="flex items-center space-x-2 text-xs"
             >
               <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                <UserGroupIcon className="w-3 h-3 text-emerald-600" />
+                <Users className="w-3 h-3 text-emerald-600" />
               </div>
               <div className="flex-1">
                 <span className="font-medium text-slate-700">{activity.name}</span>
@@ -395,7 +395,7 @@ function GuaranteeBanner() {
       className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg p-4 mb-4"
     >
       <div className="flex items-center space-x-3">
-        <ShieldCheckIcon className="w-8 h-8 flex-shrink-0" />
+        <ShieldCheck className="w-8 h-8 flex-shrink-0" />
         <div>
           <h4 className="font-semibold">100% Score Improvement Guarantee</h4>
           <p className="text-sm opacity-90">

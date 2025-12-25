@@ -9,16 +9,16 @@ import {
 } from '@/utils/nativeTouchGestures'
 import {
   HomeIcon,
-  BookOpenIcon,
-  ChatBubbleLeftRightIcon,
+  BookOpen,
+  MessageSquare,
   UserCircleIcon,
-  PhoneIcon,
-  PlayIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronDownIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+  Phone,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  X,
+} from 'lucide-react'
 
 // Touch Target Component - Ensures minimum 48px touch targets
 interface TouchTargetProps {
@@ -176,7 +176,7 @@ export function MobileActionBar({
           className="flex-1 bg-blue-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
           onClick={onCallClick}
         >
-          <PhoneIcon className="w-5 h-5" />
+          <Phone className="w-5 h-5" />
           <span>Call</span>
         </TouchTarget>
 
@@ -185,7 +185,7 @@ export function MobileActionBar({
           className="flex-1 bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
           onClick={onWhatsAppClick}
         >
-          <ChatBubbleLeftRightIcon className="w-5 h-5" />
+          <MessageSquare className="w-5 h-5" />
           <span>WhatsApp</span>
         </TouchTarget>
 
@@ -194,7 +194,7 @@ export function MobileActionBar({
           className="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
           onClick={onEnrollClick}
         >
-          <BookOpenIcon className="w-5 h-5" />
+          <BookOpen className="w-5 h-5" />
           <span>Enroll</span>
         </TouchTarget>
       </div>
@@ -211,8 +211,8 @@ interface ThumbNavigationProps {
 export function ThumbNavigation({ currentPage, onNavigate }: ThumbNavigationProps) {
   const navItems = [
     { id: 'home', icon: HomeIcon, label: 'Home' },
-    { id: 'courses', icon: BookOpenIcon, label: 'Courses' },
-    { id: 'chat', icon: ChatBubbleLeftRightIcon, label: 'Chat' },
+    { id: 'courses', icon: BookOpen, label: 'Courses' },
+    { id: 'chat', icon: MessageSquare, label: 'Chat' },
     { id: 'profile', icon: UserCircleIcon, label: 'Profile' },
   ]
 
@@ -242,7 +242,7 @@ interface FloatingActionButtonProps {
 }
 
 export function FloatingActionButton({
-  icon = <PhoneIcon className="w-6 h-6" />,
+  icon = <Phone className="w-6 h-6" />,
   onClick,
   variant = 'primary',
 }: FloatingActionButtonProps) {
@@ -294,7 +294,7 @@ export function MobileModal({ isOpen, onClose, title, children }: MobileModalPro
             className="p-2 text-slate-500 hover:text-slate-700"
             onClick={onClose}
           >
-            <XMarkIcon className="w-6 h-6" />
+            <X className="w-6 h-6" />
           </TouchTarget>
         </div>
 
@@ -440,7 +440,7 @@ export function PullToRefresh({
         {refreshing ? (
           <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
         ) : (
-          <ChevronDownIcon className="w-5 h-5" />
+          <ChevronDown className="w-5 h-5" />
         )}
       </div>
 
@@ -606,7 +606,7 @@ export function EnhancedQuickActionButton({
 
   const actionConfig = {
     call: {
-      icon: <PhoneIcon className="w-6 h-6" />,
+      icon: <Phone className="w-6 h-6" />,
       bgColor: 'bg-blue-600',
       label: 'Call Now',
       action: () => {
@@ -615,7 +615,7 @@ export function EnhancedQuickActionButton({
       },
     },
     whatsapp: {
-      icon: <ChatBubbleLeftRightIcon className="w-6 h-6" />,
+      icon: <MessageSquare className="w-6 h-6" />,
       bgColor: 'bg-green-600',
       label: 'WhatsApp',
       action: () => {
@@ -642,7 +642,7 @@ export function EnhancedQuickActionButton({
       },
     },
     enroll: {
-      icon: <BookOpenIcon className="w-6 h-6" />,
+      icon: <BookOpen className="w-6 h-6" />,
       bgColor: 'bg-gradient-to-r from-emerald-500 to-blue-500',
       label: 'Enroll Now',
       action: () => {
@@ -651,7 +651,7 @@ export function EnhancedQuickActionButton({
       },
     },
     demo: {
-      icon: <PlayIcon className="w-6 h-6" />,
+      icon: <Play className="w-6 h-6" />,
       bgColor: 'bg-orange-600',
       label: 'Book Demo',
       action: () => {

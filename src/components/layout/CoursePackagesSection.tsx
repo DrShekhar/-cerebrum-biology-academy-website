@@ -4,24 +4,23 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
-  AcademicCapIcon,
-  TrophyIcon,
-  ClockIcon,
-  CurrencyRupeeIcon,
-  UserGroupIcon,
-  BookOpenIcon,
-  CalendarDaysIcon,
-  PhoneIcon,
+  CheckCircle2,
+  Star,
+  Sparkles,
+  GraduationCap,
+  Trophy,
+  Clock,
+  IndianRupee,
+  Users,
+  BookOpen,
+  CalendarDays,
+  Phone,
   CalculatorIcon,
-  GiftIcon,
-  ArrowRightIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid, TrophyIcon as CrownIcon } from '@heroicons/react/24/solid'
+  Gift,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react'
 
 interface CoursePackagesSectionProps {
   onBookDemo?: (packageName: string) => void
@@ -300,7 +299,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           className="text-center space-y-6 mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2">
-            <CrownIcon className="h-5 w-5 text-blue-600" />
+            <Trophy className="h-5 w-5 text-blue-600" />
             <span className="text-sm font-semibold text-blue-800">
               Specialized Programs for Failed NEET Students
             </span>
@@ -329,7 +328,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
             className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-4 max-w-md mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-2">
-              <GiftIcon className="h-6 w-6" />
+              <Gift className="h-6 w-6" />
               <span className="font-bold text-lg">Early Bird Offer</span>
             </div>
             <div className="text-center">
@@ -409,7 +408,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
                       disabled={currentPackage === 0}
                       className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
                     >
-                      <ChevronLeftIcon className="h-6 w-6" />
+                      <ChevronLeft className="h-6 w-6" />
                     </button>
 
                     <div className="flex gap-2">
@@ -431,7 +430,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
                       disabled={currentPackage === coursePackages.length - 1}
                       className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
                     >
-                      <ChevronRightIcon className="h-6 w-6" />
+                      <ChevronRight className="h-6 w-6" />
                     </button>
                   </div>
                 </div>
@@ -503,7 +502,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
 
           {/* Scholarship Checker */}
           <PremiumCard variant="premium" size="md" className="text-center">
-            <GiftIcon className="h-12 w-12 text-green-600 mx-auto mb-4" />
+            <Gift className="h-12 w-12 text-green-600 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-gray-900 mb-2">Scholarship Check</h3>
             <p className="text-gray-600 text-sm mb-4">See if you qualify for discounts</p>
             <PremiumButton variant="primary" size="sm" className="w-full">
@@ -513,7 +512,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
 
           {/* Group Discount */}
           <PremiumCard variant="premium" size="md" className="text-center">
-            <UserGroupIcon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+            <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-gray-900 mb-2">Group Discount</h3>
             <p className="text-gray-600 text-sm mb-4">Up to 20% off for groups</p>
             <PremiumButton variant="primary" size="sm" className="w-full">
@@ -523,7 +522,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
 
           {/* Refer & Earn */}
           <PremiumCard variant="premium" size="md" className="text-center">
-            <SparklesIcon className="h-12 w-12 text-orange-600 mx-auto mb-4" />
+            <Sparkles className="h-12 w-12 text-orange-600 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-gray-900 mb-2">Refer & Earn</h3>
             <p className="text-gray-600 text-sm mb-4">₹25,000 for each referral</p>
             <PremiumButton variant="primary" size="sm" className="w-full">
@@ -541,7 +540,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           className="mt-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
         >
           <div className="max-w-3xl mx-auto space-y-6">
-            <TrophyIcon className="h-16 w-16 mx-auto text-yellow-300" />
+            <Trophy className="h-16 w-16 mx-auto text-yellow-300" />
             <h3 className="text-3xl font-bold">Our Success Guarantee</h3>
             <p className="text-xl leading-relaxed">
               We're so confident in our teaching methodology that we offer a
@@ -619,7 +618,7 @@ function PackageCard({
           <div className="flex items-center justify-center gap-2">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <StarSolid key={i} className="h-4 w-4 text-yellow-400" />
+                <Star key={i} className="h-4 w-4 text-yellow-400" />
               ))}
             </div>
             <span className="text-sm font-semibold text-green-600">{pkg.successRate}% Success</span>
@@ -648,7 +647,7 @@ function PackageCard({
           <div className="space-y-3">
             {pkg.features.slice(0, featured ? 6 : 4).map((feature, index) => (
               <div key={index} className="flex items-start gap-2">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-gray-700">{feature}</span>
               </div>
             ))}
@@ -664,7 +663,7 @@ function PackageCard({
         <div className="bg-blue-50 rounded-lg p-3 space-y-2">
           {pkg.highlights.slice(0, compact ? 2 : 4).map((highlight, index) => (
             <div key={index} className="flex items-center gap-2">
-              <TrophyIcon className="h-4 w-4 text-blue-600" />
+              <Trophy className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-medium text-blue-800">{highlight}</span>
             </div>
           ))}
@@ -673,12 +672,12 @@ function PackageCard({
         {/* Meta Info */}
         <div className="grid grid-cols-2 gap-4 text-center text-sm">
           <div>
-            <UserGroupIcon className="h-5 w-5 text-gray-400 mx-auto mb-1" />
+            <Users className="h-5 w-5 text-gray-400 mx-auto mb-1" />
             <div className="font-medium">{pkg.batchSize} Students</div>
             <div className="text-gray-500">Batch Size</div>
           </div>
           <div>
-            <CalendarDaysIcon className="h-5 w-5 text-gray-400 mx-auto mb-1" />
+            <CalendarDays className="h-5 w-5 text-gray-400 mx-auto mb-1" />
             <div className="font-medium">{pkg.duration}</div>
             <div className="text-gray-500">Duration</div>
           </div>
@@ -692,7 +691,7 @@ function PackageCard({
             onClick={() => onBookDemo(pkg.name)}
             className="w-full"
           >
-            <PhoneIcon className="h-5 w-5" />
+            <Phone className="h-5 w-5" />
             Book Demo Class
           </PremiumButton>
 

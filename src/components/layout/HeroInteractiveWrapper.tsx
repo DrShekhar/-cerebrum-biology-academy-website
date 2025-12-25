@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { PlayIcon, StarIcon } from '@heroicons/react/24/outline'
+import { Play, Star } from 'lucide-react'
 
 const HeroClientInteractive = dynamic(
   () => import('./HeroClientInteractive').then((mod) => mod.HeroClientInteractive),
@@ -20,14 +20,14 @@ function HeroPlaceholder() {
           href="/demo-booking"
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30"
         >
-          <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6" />
+          <Play className="h-5 xs:h-6 w-5 xs:w-6" />
           Book Free Demo
         </a>
         <a
           href="/success-stories"
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg"
         >
-          <StarIcon className="h-5 xs:h-6 w-5 xs:w-6" />
+          <Star className="h-5 xs:h-6 w-5 xs:w-6" />
           See Success Stories
         </a>
       </div>

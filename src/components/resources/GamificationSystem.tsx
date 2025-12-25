@@ -3,17 +3,17 @@
 import React, { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import {
-  TrophyIcon,
-  FireIcon,
-  StarIcon,
-  BoltIcon,
-  AcademicCapIcon,
-  UserGroupIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  ChartBarIcon,
-} from '@heroicons/react/24/outline'
-import { TrophyIcon as TrophySolidIcon } from '@heroicons/react/24/solid'
+  Trophy,
+  Flame,
+  Star,
+  Zap,
+  GraduationCap,
+  Users,
+  CheckCircle2,
+  Clock,
+  BarChart2,
+} from 'lucide-react'
+import { Trophy as TrophyIcon } from 'lucide-react'
 
 interface Achievement {
   id: string
@@ -185,24 +185,24 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white/10 rounded-lg p-4 text-center">
-            <FireIcon className="h-6 w-6 mx-auto mb-2" />
+            <Flame className="h-6 w-6 mx-auto mb-2" />
             <div className="text-2xl font-bold">{userProgress.studyStreak}</div>
             <div className="text-sm opacity-90">Day Streak</div>
           </div>
           <div className="bg-white/10 rounded-lg p-4 text-center">
-            <TrophyIcon className="h-6 w-6 mx-auto mb-2" />
+            <Trophy className="h-6 w-6 mx-auto mb-2" />
             <div className="text-2xl font-bold">
               {userProgress.achievements.filter((a) => a.isCompleted).length}
             </div>
             <div className="text-sm opacity-90">Achievements</div>
           </div>
           <div className="bg-white/10 rounded-lg p-4 text-center">
-            <ChartBarIcon className="h-6 w-6 mx-auto mb-2" />
+            <BarChart2 className="h-6 w-6 mx-auto mb-2" />
             <div className="text-2xl font-bold">#{userProgress.rank}</div>
             <div className="text-sm opacity-90">Global Rank</div>
           </div>
           <div className="bg-white/10 rounded-lg p-4 text-center">
-            <StarIcon className="h-6 w-6 mx-auto mb-2" />
+            <Star className="h-6 w-6 mx-auto mb-2" />
             <div className="text-2xl font-bold">{userProgress.level}</div>
             <div className="text-sm opacity-90">Level</div>
           </div>
@@ -250,7 +250,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
           <div className="bg-white rounded-xl shadow-lg p-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-green-100 rounded-lg">
-                <CheckCircleIcon className="h-6 w-6 text-green-600" />
+                <CheckCircle2 className="h-6 w-6 text-green-600" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Daily Goal</h3>
@@ -284,7 +284,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
 
             <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <FireIcon className="h-5 w-5 text-orange-600" />
+                <Flame className="h-5 w-5 text-orange-600" />
                 <span className="font-medium text-orange-800">Streak Bonus</span>
               </div>
               <p className="text-sm text-orange-700">
@@ -296,7 +296,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
           {/* Recent Achievements */}
           <div className="bg-white rounded-xl shadow-lg p-6">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <TrophyIcon className="h-6 w-6 text-yellow-600" />
+              <Trophy className="h-6 w-6 text-yellow-600" />
               Recent Achievements
             </h3>
 
@@ -470,7 +470,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
               ) : (
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 text-green-600">
-                    <CheckCircleIcon className="h-5 w-5" />
+                    <CheckCircle2 className="h-5 w-5" />
                     <span className="font-medium">Completed</span>
                   </div>
                   {achievement.earnedAt && (

@@ -4,22 +4,21 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
-  AcademicCapIcon,
-  ClockIcon,
-  TrophyIcon,
-  UserGroupIcon,
-  StarIcon,
-  CheckCircleIcon,
-  ChevronRightIcon,
-  PlayIcon,
-  PhoneIcon,
-  ChatBubbleLeftRightIcon,
-  BookOpenIcon,
-  BeakerIcon,
-  ChartBarIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+  GraduationCap,
+  Clock,
+  Trophy,
+  Users,
+  Star,
+  CheckCircle2,
+  ChevronRight,
+  Play,
+  Phone,
+  MessageSquare,
+  BookOpen,
+  FlaskConical,
+  BarChart2,
+  Heart,
+} from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface ExploratoryFlowProps {
@@ -245,7 +244,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
-            <ClockIcon className="h-4 w-4 text-blue-600" />
+            <Clock className="h-4 w-4 text-blue-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
@@ -304,11 +303,11 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                         <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
                         <div className="flex items-center gap-4 text-sm text-gray-600">
                           <div className="flex items-center gap-1">
-                            <ClockIcon className="h-4 w-4" />
+                            <Clock className="h-4 w-4" />
                             {course.duration}
                           </div>
                           <div className="flex items-center gap-1">
-                            <UserGroupIcon className="h-4 w-4" />
+                            <Users className="h-4 w-4" />
                             {course.batchSize} students/batch
                           </div>
                         </div>
@@ -340,7 +339,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                       <div className="text-center">
                         <div className="flex justify-center">
                           {[...Array(5)].map((_, i) => (
-                            <StarSolid
+                            <Star
                               key={i}
                               className={`h-4 w-4 ${i < Math.floor(course.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
                             />
@@ -359,7 +358,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                       <div className="grid grid-cols-2 gap-1">
                         {course.features.map((feature, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircleIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
                             {feature}
                           </div>
                         ))}
@@ -380,7 +379,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
 
                     {/* Faculty */}
                     <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
-                      <AcademicCapIcon className="h-4 w-4" />
+                      <GraduationCap className="h-4 w-4" />
                       <span>
                         Faculty: <span className="font-semibold">{course.faculty}</span>
                       </span>
@@ -409,7 +408,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
             >
               Compare Selected Courses
-              <ChevronRightIcon className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5" />
             </PremiumButton>
           </div>
         </div>
@@ -427,7 +426,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
-            <ClockIcon className="h-4 w-4 text-green-600" />
+            <Clock className="h-4 w-4 text-green-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
@@ -530,7 +529,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                       <td key={course.id} className="p-4 text-center">
                         <div className="flex justify-center">
                           {[...Array(5)].map((_, i) => (
-                            <StarSolid
+                            <Star
                               key={i}
                               className={`h-4 w-4 ${i < Math.floor(course.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
                             />
@@ -562,7 +561,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
               className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white"
             >
               Read Success Stories
-              <ChevronRightIcon className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5" />
             </PremiumButton>
           </div>
         </div>
@@ -578,7 +577,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
-            <ClockIcon className="h-4 w-4 text-purple-600" />
+            <Clock className="h-4 w-4 text-purple-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
@@ -660,7 +659,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                         {/* Video CTA */}
                         {story.videoUrl && (
                           <button className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg py-3 px-4 flex items-center justify-center gap-2 hover:from-red-600 hover:to-red-700 transition-colors">
-                            <PlayIcon className="h-5 w-5" />
+                            <Play className="h-5 w-5" />
                             Watch Video Story
                           </button>
                         )}
@@ -690,15 +689,15 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                         {/* Achievement Badges */}
                         <div className="flex flex-wrap gap-2">
                           <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full flex items-center gap-1">
-                            <TrophyIcon className="h-3 w-3" />
+                            <Trophy className="h-3 w-3" />
                             NEET Qualified
                           </span>
                           <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full flex items-center gap-1">
-                            <AcademicCapIcon className="h-3 w-3" />
+                            <GraduationCap className="h-3 w-3" />
                             Medical College
                           </span>
                           <span className="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full flex items-center gap-1">
-                            <HeartIcon className="h-3 w-3" />
+                            <Heart className="h-3 w-3" />
                             Dream Achieved
                           </span>
                         </div>
@@ -727,7 +726,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
             >
               Book Free Counseling
-              <ChevronRightIcon className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5" />
             </PremiumButton>
           </div>
         </div>
@@ -743,7 +742,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
-            <CheckCircleIcon className="h-4 w-4 text-green-600" />
+            <CheckCircle2 className="h-4 w-4 text-green-600" />
             <span>Journey Complete: {formatTime(progressTracking.timeSpent)}</span>
           </div>
           <div className="w-full bg-green-200 rounded-full h-2">
@@ -775,7 +774,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
           {/* Counseling Options */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <PremiumCard variant="luxury" className="text-center p-8">
-              <PhoneIcon className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+              <Phone className="h-16 w-16 text-blue-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Phone Counseling</h3>
               <p className="text-gray-600 mb-6">
                 Speak directly with our expert counselors. Get immediate answers to all your
@@ -795,7 +794,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
             </PremiumCard>
 
             <PremiumCard variant="luxury" className="text-center p-8">
-              <ChatBubbleLeftRightIcon className="h-16 w-16 text-green-600 mx-auto mb-4" />
+              <MessageSquare className="h-16 w-16 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">WhatsApp Consultation</h3>
               <p className="text-gray-600 mb-6">
                 Chat with our counselors on WhatsApp. Share documents and get personalized advice.
