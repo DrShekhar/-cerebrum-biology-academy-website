@@ -1,25 +1,23 @@
 import { Metadata } from 'next'
-import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { SchoolLandingPage } from '@/components/seo/SchoolLandingPage'
+import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
 
-const cityData = getCityData('neet-coaching-dps-rohini-students')!
+const pageData = getSchoolPageData('neet-coaching-dps-rohini-students')!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for DPS Rohini Students | Cerebrum Biology Academy',
-  description:
-    'Best NEET biology coaching for DPS Rohini students. Rohini center with after-school batches. 65+ AIIMS selections. Call 88264-44334.',
+  title: pageData.metaTitle,
+  description: pageData.metaDescription,
   keywords: [
-    'neet coaching dps rohini',
-    'biology tuition dps rohini students',
-    'neet preparation dps rohini',
-    'biology classes rohini',
-    'neet coaching north delhi',
-    'dps rohini neet coaching',
+    'neet coaching for dps rohini',
+    'dps rohini sector 24 neet',
+    'biology coaching dps rohini students',
+    'neet classes near dps rohini',
+    'after school neet coaching rohini',
+    'best coaching for dps rohini neet',
   ],
   openGraph: {
-    title: 'NEET Coaching for DPS Rohini Students | Cerebrum Biology Academy',
-    description:
-      'Best NEET biology coaching for DPS Rohini students. Rohini center with after-school batches. 65+ AIIMS selections.',
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-rohini-students',
     type: 'website',
   },
@@ -28,6 +26,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function DPSRohiniPage() {
-  return <CityHubPage data={cityData} />
+export default function NEETCoachingDPSRohiniPage() {
+  return <SchoolLandingPage data={pageData} />
 }

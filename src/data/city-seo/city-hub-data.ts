@@ -1333,6 +1333,128 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  indirapuram: {
+    slug: 'indirapuram',
+    cityName: 'Indirapuram',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'Biology Classes in Indirapuram | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Indirapuram for NEET preparation. AIIMS faculty, 98% success rate. Online + Rohini offline options. Book free demo: 88264-44334!',
+    heroTitle: 'Best Biology Classes in Indirapuram',
+    heroSubtitle:
+      'Premium NEET biology coaching for Indirapuram students. Learn from AIIMS faculty online or at our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini DC Chauk Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi',
+      distance: '15-18 km from Indirapuram',
+    },
+    localities: [
+      { name: 'Gyan Khand', url: '/biology-classes-ghaziabad' },
+      { name: 'Ahinsa Khand', url: '/biology-classes-ghaziabad' },
+      { name: 'Niti Khand', url: '/biology-classes-ghaziabad' },
+      { name: 'Shakti Khand', url: '/biology-classes-ghaziabad' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Vaishali', url: '/biology-classes-vaishali-ghaziabad' },
+      { name: 'Crossings Republik', url: '/biology-classes-crossings-republik' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching for Indirapuram students?',
+        answer:
+          'Cerebrum Biology Academy is the top choice for Indirapuram students. We offer live online classes and our Rohini center is accessible via metro. Our AIIMS-trained faculty and 98% success rate make us the preferred choice.',
+      },
+      {
+        question: 'Can I attend offline classes from Indirapuram?',
+        answer:
+          'Yes! Our Rohini center is accessible from Indirapuram via metro (Blue Line to Red Line). Many students also opt for hybrid mode - online classes with occasional offline sessions.',
+      },
+      {
+        question: 'What batch timings work best for Indirapuram students?',
+        answer:
+          'Our online batches at 6 PM and 8 PM are most popular among Indirapuram students. Weekend offline batches at Rohini are also available for intensive sessions.',
+      },
+      {
+        question: 'Do you provide study material for online students?',
+        answer:
+          'Absolutely! All students receive comprehensive study material, DPP sheets, test series, and recorded lectures for revision. The material is curated by AIIMS faculty for NEET-specific preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '450+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6353',
+      lng: '77.3572',
+    },
+  },
+
+  'crossings-republik': {
+    slug: 'crossings-republik',
+    cityName: 'Crossings Republik',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'Biology Classes in Crossings Republik | Best NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Crossings Republik for NEET preparation. AIIMS faculty, 98% success rate. Online + Rohini offline options. Book free demo today!',
+    heroTitle: 'Best Biology Classes in Crossings Republik',
+    heroSubtitle:
+      'Premium NEET biology coaching for Crossings Republik students. Learn from AIIMS faculty online or at our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini DC Chauk Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi',
+      distance: '18-20 km from Crossings Republik',
+    },
+    localities: [
+      { name: 'Gyan Khand', url: '/biology-classes-ghaziabad/indirapuram' },
+      { name: 'Ahinsa Khand', url: '/biology-classes-ghaziabad/indirapuram' },
+      { name: 'Shipra Sun City', url: '/biology-classes-ghaziabad/indirapuram' },
+      { name: 'Mahagun Moderne', url: '/biology-classes-ghaziabad' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Indirapuram', url: '/biology-classes-ghaziabad/indirapuram' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching for Crossings Republik students?',
+        answer:
+          'Cerebrum Biology Academy is the top choice for Crossings Republik students. We offer live online classes and our Rohini center is accessible via NH24 and metro. Our AIIMS-trained faculty and 98% success rate make us the preferred choice.',
+      },
+      {
+        question: 'Can I attend offline classes from Crossings Republik?',
+        answer:
+          'Yes! Our Rohini center is accessible from Crossings Republik. Many students also opt for our hybrid mode - online classes with occasional offline sessions for doubt clearing and tests.',
+      },
+      {
+        question: 'What is the fee for Crossings Republik students?',
+        answer:
+          'Our fee structure is uniform across all locations. Contact 88264-44334 for current fee details and installment options. We also offer scholarships for meritorious students.',
+      },
+      {
+        question: 'Do you provide study material for online students?',
+        answer:
+          'Absolutely! All students receive comprehensive study material, DPP sheets, test series, and recorded lectures for revision. The material is curated by AIIMS faculty for NEET-specific preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '200+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6350',
+      lng: '77.4200',
+    },
+  },
+
   manesar: {
     slug: 'manesar',
     cityName: 'Manesar',
@@ -1566,8 +1688,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Rohini at Vikas Surya Tower, DC Chauk. AIIMS faculty, 98% success rate. Near Metro. Book free demo class!',
     heroTitle: 'Best Biology Classes in Rohini',
-    heroSubtitle:
-      'Our flagship center at DC Chauk, Sector 9. Right next to metro station!',
+    heroSubtitle: 'Our flagship center at DC Chauk, Sector 9. Right next to metro station!',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
@@ -1632,7 +1753,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Top biology classes in Dwarka, Delhi for NEET & Boards. AIIMS faculty, 98% success rate. Near Dwarka Sector 21 Metro. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Dwarka',
     heroSubtitle:
-      'Delhi\'s #1 coaching hub now has premium NEET biology coaching. Learn from AIIMS-trained faculty.',
+      "Delhi's #1 coaching hub now has premium NEET biology coaching. Learn from AIIMS-trained faculty.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -1808,7 +1929,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best biology classes in Laxmi Nagar, East Delhi. AIIMS faculty, 98% success rate. Online + offline options. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Laxmi Nagar',
     heroSubtitle:
-      'East Delhi\'s top NEET biology coaching. AIIMS-trained faculty, proven 98% success rate.',
+      "East Delhi's top NEET biology coaching. AIIMS-trained faculty, proven 98% success rate.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
@@ -1915,8 +2036,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Best biology classes in Mayur Vihar, East Delhi. AIIMS faculty, 98% success rate. Near Noida border. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Mayur Vihar',
-    heroSubtitle:
-      'East Delhi\'s largest residential area gets premium NEET biology coaching.',
+    heroSubtitle: "East Delhi's largest residential area gets premium NEET biology coaching.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -1967,8 +2087,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Best biology classes in Uttam Nagar, West Delhi. Affordable NEET coaching with AIIMS faculty. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Uttam Nagar',
-    heroSubtitle:
-      'Quality NEET biology coaching at affordable fees. AIIMS-trained faculty.',
+    heroSubtitle: 'Quality NEET biology coaching at affordable fees. AIIMS-trained faculty.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2018,8 +2137,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Patel Nagar, Central Delhi. AIIMS-trained faculty, 98% success. Near Karol Bagh. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Patel Nagar',
-    heroSubtitle:
-      'Central Delhi location with premium NEET biology coaching. AIIMS faculty.',
+    heroSubtitle: 'Central Delhi location with premium NEET biology coaching. AIIMS faculty.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2070,7 +2188,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Premium biology classes in Vasant Kunj, South Delhi. AIIMS faculty, 98% success. Near South Extension center. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Vasant Kunj',
     heroSubtitle:
-      'South Delhi\'s premium locality gets premium NEET coaching. AIIMS-trained faculty.',
+      "South Delhi's premium locality gets premium NEET coaching. AIIMS-trained faculty.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2121,8 +2239,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Saket, South Delhi. Near South Extension center (5 km). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Saket',
-    heroSubtitle:
-      'Just 5 km from our South Extension center! Premium NEET biology coaching.',
+    heroSubtitle: 'Just 5 km from our South Extension center! Premium NEET biology coaching.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2172,8 +2289,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Best biology classes in Green Park, South Delhi. Walking distance from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Green Park',
-    heroSubtitle:
-      'Walking distance from our South Extension center! Premium NEET coaching.',
+    heroSubtitle: 'Walking distance from our South Extension center! Premium NEET coaching.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2223,8 +2339,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Model Town, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Model Town',
-    heroSubtitle:
-      'North Delhi\'s premium locality with premium NEET coaching. Near Rohini center.',
+    heroSubtitle: "North Delhi's premium locality with premium NEET coaching. Near Rohini center.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
@@ -2274,8 +2389,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Best biology classes in Shalimar Bagh, North Delhi. 5 km from Rohini center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Shalimar Bagh',
-    heroSubtitle:
-      'Just 5 km from our Rohini center! Premium NEET biology coaching.',
+    heroSubtitle: 'Just 5 km from our Rohini center! Premium NEET biology coaching.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
@@ -2325,8 +2439,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Ashok Vihar, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Ashok Vihar',
-    heroSubtitle:
-      'Premium NEET biology coaching for Ashok Vihar students. Near Rohini center.',
+    heroSubtitle: 'Premium NEET biology coaching for Ashok Vihar students. Near Rohini center.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
@@ -2377,7 +2490,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best biology classes near Nehru Place, South Delhi. Close to South Extension center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Nehru Place',
     heroSubtitle:
-      'South Delhi\'s commercial hub gets premium NEET coaching. Near South Extension center.',
+      "South Delhi's commercial hub gets premium NEET coaching. Near South Extension center.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2427,8 +2540,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Premium biology classes in Defence Colony, South Delhi. 3 km from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Defence Colony',
-    heroSubtitle:
-      'Just 3 km from our South Extension center! Premium NEET biology coaching.',
+    heroSubtitle: 'Just 3 km from our South Extension center! Premium NEET biology coaching.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2474,12 +2586,13 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'greater-kailash',
     cityName: 'Greater Kailash',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Greater Kailash | Best NEET Coaching GK Delhi | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes in Greater Kailash | Best NEET Coaching GK Delhi | Cerebrum Academy',
     metaDescription:
       'Premium biology classes in Greater Kailash (GK-I, GK-II), South Delhi. AIIMS faculty, 98% success. DPS GK students. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Greater Kailash',
     heroSubtitle:
-      'South Delhi\'s most affluent locality gets premium NEET biology coaching. Serving GK-I, GK-II & GK Enclave.',
+      "South Delhi's most affluent locality gets premium NEET biology coaching. Serving GK-I, GK-II & GK Enclave.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2542,7 +2655,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Top biology classes in Hauz Khas, near IIT Delhi. Premier coaching hub location. AIIMS faculty, 98% success. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Hauz Khas',
     heroSubtitle:
-      'South Delhi\'s premier coaching hub near IIT Delhi. Where serious NEET aspirants study.',
+      "South Delhi's premier coaching hub near IIT Delhi. Where serious NEET aspirants study.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2567,7 +2680,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is Hauz Khas good for NEET coaching?',
         answer:
-          'Hauz Khas is Delhi\'s premier coaching hub near IIT. Cerebrum Academy serves this area with premium NEET biology coaching. Our South Extension center + online options available. Call 88264-44334.',
+          "Hauz Khas is Delhi's premier coaching hub near IIT. Cerebrum Academy serves this area with premium NEET biology coaching. Our South Extension center + online options available. Call 88264-44334.",
       },
       {
         question: 'How far is Cerebrum from Hauz Khas Metro?',
@@ -2658,7 +2771,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Top biology classes in Malviya Nagar, South Delhi. Affordable quality coaching. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Malviya Nagar',
     heroSubtitle:
-      'Affordable yet premium NEET biology coaching in South Delhi\'s popular student hub.',
+      "Affordable yet premium NEET biology coaching in South Delhi's popular student hub.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2715,7 +2828,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best biology classes in CR Park (Chittaranjan Park), South Delhi. Academic community focus. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in CR Park',
     heroSubtitle:
-      'Serving Chittaranjan Park\'s academically-focused Bengali community. Premium NEET coaching.',
+      "Serving Chittaranjan Park's academically-focused Bengali community. Premium NEET coaching.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2740,12 +2853,12 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is there good biology coaching for CR Park students?',
         answer:
-          'Cerebrum Biology Academy serves CR Park\'s academic community. Many Bengali families trust us for NEET prep. Online + offline options. Call 88264-44334.',
+          "Cerebrum Biology Academy serves CR Park's academic community. Many Bengali families trust us for NEET prep. Online + offline options. Call 88264-44334.",
       },
       {
         question: 'Why do CR Park families choose Cerebrum?',
         answer:
-          'CR Park values academic excellence. Our AIIMS-trained faculty, 98% success rate, and structured approach matches the community\'s high standards. Call 88264-44334.',
+          "CR Park values academic excellence. Our AIIMS-trained faculty, 98% success rate, and structured approach matches the community's high standards. Call 88264-44334.",
       },
       {
         question: 'Is online coaching good for CR Park students?',
@@ -2772,8 +2885,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaDescription:
       'Top biology classes in Kalkaji, South Delhi. Near Kalkaji Temple & Lotus Temple. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Kalkaji',
-    heroSubtitle:
-      'Serving Kalkaji and surrounding areas. Near Kalkaji Temple and Lotus Temple.',
+    heroSubtitle: 'Serving Kalkaji and surrounding areas. Near Kalkaji Temple and Lotus Temple.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2830,7 +2942,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best biology classes in RK Puram (Sectors 1-13), South Delhi. Serving govt colony families. DPS RKP students. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in RK Puram',
     heroSubtitle:
-      'Serving South Delhi\'s largest government colony. All sectors (1-13) covered. DPS RK Puram students welcome.',
+      "Serving South Delhi's largest government colony. All sectors (1-13) covered. DPS RK Puram students welcome.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -2893,7 +3005,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Premium biology classes in Vasant Vihar, South Delhi. Elite locality, embassy area. Vasant Valley students. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Vasant Vihar',
     heroSubtitle:
-      'Ultra-premium NEET coaching for South Delhi\'s most elite locality. Vasant Valley & embassy families.',
+      "Ultra-premium NEET coaching for South Delhi's most elite locality. Vasant Valley & embassy families.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'South Delhi Center',
@@ -3247,7 +3359,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'munirka': {
+  munirka: {
     slug: 'munirka',
     cityName: 'Munirka',
     stateName: 'Delhi',
@@ -3447,7 +3559,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'alaknanda': {
+  alaknanda: {
     slug: 'alaknanda',
     cityName: 'Alaknanda',
     stateName: 'Delhi',
@@ -3502,7 +3614,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-dps-gurgaon',
     cityName: 'DPS Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Academy',
     metaDescription:
       'Best biology classes for DPS Gurgaon students (Sector 45 & 67C). NEET coaching in Sector 51 near DPS campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Classes for DPS Gurgaon Students',
@@ -3563,7 +3676,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-shri-ram-school-gurgaon',
     cityName: 'Shri Ram School Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Shri Ram School Students | NEET Coaching Aravali Moulsari | Cerebrum',
+    metaTitle:
+      'Biology Classes for Shri Ram School Students | NEET Coaching Aravali Moulsari | Cerebrum',
     metaDescription:
       'Best biology classes for The Shri Ram School (Aravali & Moulsari) students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for The Shri Ram School Students',
@@ -3591,7 +3705,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you offer biology coaching suitable for The Shri Ram School students?',
         answer:
-          'Yes! We understand the unique academic environment of TSRS. Our teaching methodology is designed to complement the school\'s progressive pedagogy while ensuring thorough NEET preparation.',
+          "Yes! We understand the unique academic environment of TSRS. Our teaching methodology is designed to complement the school's progressive pedagogy while ensuring thorough NEET preparation.",
       },
       {
         question: 'How far is Cerebrum from The Shri Ram School Aravali?',
@@ -3624,7 +3738,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-pathways-world-school',
     cityName: 'Pathways World School',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Pathways World School | NEET Coaching Aravali Hills | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Pathways World School | NEET Coaching Aravali Hills | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Pathways World School (Aravali Hills) students. NEET coaching in Sector 51 Gurgaon. IB & CBSE compatible. Call 88264-44334!',
     heroTitle: 'Biology Classes for Pathways World School Students',
@@ -3666,7 +3781,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is travel from Pathways Aravali to Sector 51 feasible?',
         answer:
-          'While it\'s a 25-30 minute drive, many Pathways students opt for our weekend batches or online classes. Day scholars often combine with pickup pools from Aravali area.',
+          "While it's a 25-30 minute drive, many Pathways students opt for our weekend batches or online classes. Day scholars often combine with pickup pools from Aravali area.",
       },
     ],
     stats: {
@@ -3684,7 +3799,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-gd-goenka-gurgaon',
     cityName: 'GD Goenka Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Academy',
     metaDescription:
       'Best biology classes for GD Goenka World School students. NEET coaching in Sector 51 Gurgaon, near Sohna Road. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for GD Goenka World School Students',
@@ -3711,7 +3827,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is Cerebrum Academy suitable for GD Goenka students?',
         answer:
-          'Absolutely! Many GD Goenka World School students study with us. Our teaching methodology complements the school\'s academic standards while focusing on NEET preparation.',
+          "Absolutely! Many GD Goenka World School students study with us. Our teaching methodology complements the school's academic standards while focusing on NEET preparation.",
       },
       {
         question: 'How do GD Goenka students travel to your Sector 51 center?',
@@ -3744,7 +3860,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-heritage-school-gurgaon',
     cityName: 'Heritage School Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Heritage Xperiential Learning School students. NEET coaching near Sector 62 Gurgaon. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Heritage School Students',
@@ -3769,9 +3886,9 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'How does Cerebrum complement Heritage School\'s experiential learning approach?',
+        question: "How does Cerebrum complement Heritage School's experiential learning approach?",
         answer:
-          'We appreciate Heritage\'s experiential pedagogy. Our teaching uses practical examples, visual learning, and conceptual understanding - aligning with experiential methods while adding NEET-specific rigor.',
+          "We appreciate Heritage's experiential pedagogy. Our teaching uses practical examples, visual learning, and conceptual understanding - aligning with experiential methods while adding NEET-specific rigor.",
       },
       {
         question: 'Is the Sector 51 center convenient for Heritage School students?',
@@ -3804,7 +3921,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-amity-gurgaon',
     cityName: 'Amity Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Amity International School Gurgaon students. NEET coaching in Sector 51, near Sector 46. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Amity International School Students',
@@ -3864,7 +3982,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-scottish-high-gurgaon',
     cityName: 'Scottish High Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Scottish High International School students. NEET coaching in Sector 51 Gurgaon, near Sushant Lok. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Scottish High Students',
@@ -3924,7 +4043,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-suncity-school-gurgaon',
     cityName: 'Suncity School Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Suncity World School students. NEET coaching in Sector 51 Gurgaon, near Sector 54. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Suncity World School Students',
@@ -4018,7 +4138,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you offer home tuition for biology in Gurgaon?',
         answer:
-          'While we don\'t offer home tuition, our center-based coaching provides superior resources, peer learning, and systematic preparation. Many families find our Sector 51 center convenient from Eldeco Acacia, Central Park, and surrounding areas.',
+          "While we don't offer home tuition, our center-based coaching provides superior resources, peer learning, and systematic preparation. Many families find our Sector 51 center convenient from Eldeco Acacia, Central Park, and surrounding areas.",
       },
       {
         question: 'What is the fee for biology tuition in Gurgaon?',
@@ -4106,7 +4226,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-home-tuition-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Academy',
+    metaTitle:
+      'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Academy',
     metaDescription:
       'Looking for biology home tuition in Gurgaon? Try our superior center-based coaching in Sector 51. Better resources, peer learning, 98% results. 88264-44334!',
     heroTitle: 'Biology Coaching Near Your Home in Gurgaon',
@@ -4407,7 +4528,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-manav-rachna-gurgaon',
     cityName: 'Manav Rachna Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Manav Rachna School students. NEET coaching accessible from Faridabad & Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Manav Rachna Students',
@@ -4467,12 +4589,13 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-shikshanter-gurgaon',
     cityName: 'Shikshanter Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Shikshanter School Gurgaon students. NEET coaching in Sector 51, near Sector 40. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Shikshanter School Students',
     heroSubtitle:
-      'Expert NEET biology coaching for Shikshanter students. Our progressive teaching complements your school\'s experiential approach.',
+      "Expert NEET biology coaching for Shikshanter students. Our progressive teaching complements your school's experiential approach.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurgaon Sector 51 Center',
@@ -4494,7 +4617,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is Cerebrum good for Shikshanter students who prefer experiential learning?',
         answer:
-          'Absolutely! We use practical examples, visual learning, and hands-on understanding that aligns with Shikshanter\'s progressive pedagogy while adding NEET-specific exam strategies.',
+          "Absolutely! We use practical examples, visual learning, and hands-on understanding that aligns with Shikshanter's progressive pedagogy while adding NEET-specific exam strategies.",
       },
       {
         question: 'How far is Cerebrum from Shikshanter School?',
@@ -4588,7 +4711,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-euro-international-gurgaon',
     cityName: 'Euro International Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Academy',
+    metaTitle:
+      'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Academy',
     metaDescription:
       'Best biology classes for Euro International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Euro International School Students',
@@ -5243,66 +5367,6 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'biology-classes-amity-gurgaon': {
-    slug: 'biology-classes-amity-gurgaon',
-    cityName: 'Amity Gurgaon Students',
-    stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Amity Gurgaon Students | NEET Coaching',
-    metaDescription:
-      'NEET biology coaching for Amity International Gurgaon students. Sector 51 center nearby. Flexible timings, expert faculty. Call 88264-44334.',
-    heroTitle: 'Biology Classes for Amity Gurgaon Students',
-    heroSubtitle:
-      'NEET preparation designed for Amity International Gurgaon students. Convenient Sector 51 location with proven results.',
-    hasOfflineCenter: true,
-    nearestCenter: {
-      name: 'Gurgaon Sector 51 Center',
-      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
-      distance: '4-6 km from Amity Gurgaon',
-    },
-    localities: [
-      { name: 'Sector 43 Gurgaon', url: '/biology-classes-gurgaon-sector-43' },
-      { name: 'Sector 46 Gurgaon', url: '/biology-classes-gurgaon-sector-46' },
-      { name: 'Sector 51 Gurgaon', url: '/biology-classes-gurgaon-sector-51' },
-      { name: 'Golf Course Extension', url: '/biology-classes-golf-course-road-gurgaon' },
-    ],
-    relatedCities: [
-      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
-      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
-      { name: 'Biology Tuition Sector 51', url: '/biology-tuition-gurgaon-sector-51' },
-    ],
-    faqs: [
-      {
-        question: 'How close is Cerebrum to Amity International Gurgaon?',
-        answer:
-          'Our Sector 51 center is just 4-6 km from Amity Gurgaon, making it one of the most convenient NEET coaching options for Amity students. The commute takes only 15 minutes.',
-      },
-      {
-        question: 'What batch timings are available for Amity students?',
-        answer:
-          'We offer flexible after-school batches at 4:30 PM and 6:00 PM. Additionally, weekend batches on Saturday and Sunday provide intensive preparation without interfering with school.',
-      },
-      {
-        question: 'How does coaching align with Amity curriculum?',
-        answer:
-          'Amity follows comprehensive CBSE+ICSE curriculum. Our NEET coaching builds on this strong foundation, adding competitive exam strategies and NEET-specific problem-solving techniques.',
-      },
-      {
-        question: 'What success rate do Amity students achieve?',
-        answer:
-          'Amity students bring excellent academic preparation. Combined with our expert coaching over 15+ years and 65+ AIIMS selections, they achieve exceptional NEET results with 98% success rate.',
-      },
-    ],
-    stats: {
-      studentsFromCity: '1,50,000+',
-      successRate: '98%',
-      rating: '4.9',
-    },
-    geoCoordinates: {
-      lat: '28.4420',
-      lng: '77.0430',
-    },
-  },
-
   'neet-coaching-pathways-school': {
     slug: 'neet-coaching-pathways-school',
     cityName: 'Pathways School Students',
@@ -5672,7 +5736,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Proven strategy to score 360/360 in NEET Biology. 65+ AIIMS selections. Expert tips, study plan, practice tests. 15+ years coaching experience. Call 88264-44334!',
     heroTitle: 'How to Score 360/360 in NEET Biology',
     heroSubtitle:
-      'Learn the exact strategy our 65+ AIIMS selections used. Master every question type with Dr. Shekhar C Singh\'s proven full-marks blueprint.',
+      "Learn the exact strategy our 65+ AIIMS selections used. Master every question type with Dr. Shekhar C Singh's proven full-marks blueprint.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -5694,7 +5758,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is scoring 360/360 in NEET Biology really possible?',
         answer:
-          'Yes! While challenging, it\'s absolutely achievable. Our 65+ AIIMS selections prove it. The key is NCERT mastery (100%), understanding every diagram, memorizing exceptions, and solving 5,000+ MCQs with zero-error accuracy. We provide the exact roadmap.',
+          "Yes! While challenging, it's absolutely achievable. Our 65+ AIIMS selections prove it. The key is NCERT mastery (100%), understanding every diagram, memorizing exceptions, and solving 5,000+ MCQs with zero-error accuracy. We provide the exact roadmap.",
       },
       {
         question: 'What is the strategy to score full marks in NEET Biology?',
@@ -5847,7 +5911,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'affordable-neet-coaching-delhi',
     cityName: 'Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Academy',
+    metaTitle:
+      'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Academy',
     metaDescription:
       'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 4 centers across Delhi. EMI options available. Call 88264-44334!',
     heroTitle: 'Affordable NEET Coaching in Delhi',
@@ -6011,7 +6076,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who teaches in the 1-to-1 sessions?',
         answer:
-          'Dr. Shekhar C Singh (AIIMS New Delhi alumnus) personally conducts 1-on-1 sessions. With 15+ years of experience and 65+ AIIMS selections, he provides expert guidance tailored to each student\'s needs.',
+          "Dr. Shekhar C Singh (AIIMS New Delhi alumnus) personally conducts 1-on-1 sessions. With 15+ years of experience and 65+ AIIMS selections, he provides expert guidance tailored to each student's needs.",
       },
       {
         question: 'What is the fee for personal 1-on-1 coaching?',
@@ -6169,6 +6234,1968 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.6139',
       lng: '77.2090',
+    },
+  },
+
+  // Missing entries - Noida areas
+  'noida-sector-137': {
+    slug: 'noida-sector-137',
+    cityName: 'Noida Sector 137',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'Biology Classes in Noida Sector 137 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Noida Sector 137. Online & offline options. AIIMS faculty, 98% success rate. Call for NEET preparation!',
+    heroTitle: 'Biology Classes in Noida Sector 137',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for Noida Sector 137 students. Join online classes or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '35 km from Noida Sector 137',
+    },
+    localities: [
+      { name: 'Sector 62', url: '/biology-classes-noida/sector-62' },
+      { name: 'Greater Noida', url: '/biology-classes-greater-noida' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Greater Noida', url: '/biology-classes-greater-noida' },
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching for Noida Sector 137 students?',
+        answer:
+          'Cerebrum Biology Academy offers excellent online classes for Noida Sector 137 students with AIIMS-trained faculty and 98% success rate. Students can also attend our South Delhi center.',
+      },
+      {
+        question: 'Do you have an offline center near Noida Sector 137?',
+        answer:
+          'We offer live online classes for Noida Sector 137 students. Our nearest offline center is in South Extension, Delhi (35 km away). Many students prefer our hybrid mode.',
+      },
+      {
+        question: 'What is the fee for biology classes for Noida Sector 137 students?',
+        answer:
+          'Online biology coaching fees range from ₹35,000 to ₹60,000 per year. This includes live classes, study material, test series, and doubt support.',
+      },
+      {
+        question: 'How do online classes work for Noida Sector 137 students?',
+        answer:
+          'Our online classes are live and interactive with real-time faculty interaction, instant doubt resolution, and comprehensive study material delivered to your location.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '25+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4952',
+      lng: '77.4064',
+    },
+  },
+
+  'noida-sector-62': {
+    slug: 'noida-sector-62',
+    cityName: 'Noida Sector 62',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'Biology Classes in Noida Sector 62 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Noida Sector 62. Online & offline options. AIIMS faculty, 98% success rate. Call for NEET preparation!',
+    heroTitle: 'Biology Classes in Noida Sector 62',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for Noida Sector 62 students. Join online classes or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '25 km from Noida Sector 62',
+    },
+    localities: [
+      { name: 'Sector 18', url: '/biology-classes-noida/sector-18' },
+      { name: 'Sector 137', url: '/biology-classes-noida-sector-137' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Indirapuram', url: '/biology-classes-indirapuram' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching for Noida Sector 62 students?',
+        answer:
+          'Cerebrum Biology Academy offers excellent online classes for Noida Sector 62 students with AIIMS-trained faculty and 98% success rate.',
+      },
+      {
+        question: 'Do you have an offline center near Noida Sector 62?',
+        answer:
+          'We offer live online classes for Noida Sector 62 students. Our nearest offline center is in South Extension, Delhi (25 km away).',
+      },
+      {
+        question: 'What is the fee for biology classes for Noida Sector 62 students?',
+        answer:
+          'Online biology coaching fees range from ₹35,000 to ₹60,000 per year. This includes live classes, study material, and test series.',
+      },
+      {
+        question: 'How do I join biology classes from Noida Sector 62?',
+        answer:
+          'You can book a free demo class online or call us. We offer flexible batch timings for Noida students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '45+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6271',
+      lng: '77.3734',
+    },
+  },
+
+  'greater-noida-west': {
+    slug: 'greater-noida-west',
+    cityName: 'Greater Noida West',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Greater Noida West | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Greater Noida West. Online classes with AIIMS faculty, 98% success rate. Book free demo!',
+    heroTitle: 'NEET Coaching in Greater Noida West',
+    heroSubtitle:
+      'Top-rated biology coaching for Greater Noida West students. Live online classes with proven results.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '40 km from Greater Noida West',
+    },
+    localities: [
+      { name: 'Noida Extension', url: '/biology-classes-noida/noida-extension' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Greater Noida', url: '/biology-classes-greater-noida' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Greater Noida', url: '/biology-classes-greater-noida' },
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching for Greater Noida West students?',
+        answer:
+          'Cerebrum Biology Academy provides excellent online NEET coaching for Greater Noida West students with AIIMS-trained faculty and comprehensive study material.',
+      },
+      {
+        question: 'Do you have an offline center in Greater Noida West?',
+        answer:
+          'Currently, we offer live online classes for Greater Noida West students. Our nearest offline center is in South Delhi.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Greater Noida West students?',
+        answer:
+          'NEET coaching fees range from ₹35,000 to ₹60,000 per year for online classes, including all study material and test series.',
+      },
+      {
+        question: 'How effective are online classes for NEET preparation?',
+        answer:
+          'Our online classes are live and interactive with real-time doubt resolution. We have achieved 97% success rate with online students.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '30+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6139',
+      lng: '77.4380',
+    },
+  },
+
+  // Ghaziabad areas
+  'vaishali-ghaziabad': {
+    slug: 'vaishali-ghaziabad',
+    cityName: 'Vaishali Ghaziabad',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Vaishali Ghaziabad | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Vaishali Ghaziabad. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
+    heroTitle: 'NEET Coaching in Vaishali Ghaziabad',
+    heroSubtitle:
+      'Top-rated biology coaching for Vaishali students. Join online or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '20 km from Vaishali',
+    },
+    localities: [
+      { name: 'Vasundhara', url: '/neet-coaching-vasundhara-ghaziabad' },
+      { name: 'Kaushambi', url: '/neet-coaching-kaushambi' },
+      { name: 'Indirapuram', url: '/biology-classes-indirapuram' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Vaishali Ghaziabad?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Vaishali students with AIIMS-trained faculty and 98% success rate.',
+      },
+      {
+        question: 'How far is the nearest offline center from Vaishali?',
+        answer:
+          'Our South Delhi center is about 20 km from Vaishali. We also offer live online classes for convenience.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Vaishali students?',
+        answer:
+          'NEET coaching fees range from ₹35,000 to ₹75,000 per year depending on online or offline mode.',
+      },
+      {
+        question: 'Do you have students from Vaishali?',
+        answer:
+          'Yes, we have 60+ students from Vaishali who attend both online and offline classes with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6509',
+      lng: '77.3409',
+    },
+  },
+
+  'vasundhara-ghaziabad': {
+    slug: 'vasundhara-ghaziabad',
+    cityName: 'Vasundhara Ghaziabad',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Vasundhara Ghaziabad | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Vasundhara Ghaziabad. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
+    heroTitle: 'NEET Coaching in Vasundhara Ghaziabad',
+    heroSubtitle:
+      'Top-rated biology coaching for Vasundhara students. Join online or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '18 km from Vasundhara',
+    },
+    localities: [
+      { name: 'Vaishali', url: '/neet-coaching-vaishali-ghaziabad' },
+      { name: 'Kaushambi', url: '/neet-coaching-kaushambi' },
+      { name: 'Indirapuram', url: '/biology-classes-indirapuram' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Vasundhara Ghaziabad?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Vasundhara students with AIIMS-trained faculty and comprehensive study material.',
+      },
+      {
+        question: 'How far is the nearest offline center from Vasundhara?',
+        answer:
+          'Our South Delhi center is about 18 km from Vasundhara via NH9. We also offer convenient live online classes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Vasundhara students?',
+        answer: 'NEET coaching fees range from ₹35,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Vasundhara?',
+        answer:
+          'Yes, we have 55+ students from Vasundhara attending both online and offline classes with 98% success rate.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '55+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6692',
+      lng: '77.3389',
+    },
+  },
+
+  kaushambi: {
+    slug: 'kaushambi',
+    cityName: 'Kaushambi',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Kaushambi | Biology Classes Ghaziabad | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Kaushambi. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
+    heroTitle: 'NEET Coaching in Kaushambi',
+    heroSubtitle:
+      'Top-rated biology coaching for Kaushambi students. Join online or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '15 km from Kaushambi',
+    },
+    localities: [
+      { name: 'Vaishali', url: '/neet-coaching-vaishali-ghaziabad' },
+      { name: 'Vasundhara', url: '/neet-coaching-vasundhara-ghaziabad' },
+      { name: 'Indirapuram', url: '/biology-classes-indirapuram' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Kaushambi?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Kaushambi students with AIIMS-trained faculty and 98% success rate.',
+      },
+      {
+        question: 'How far is the nearest offline center from Kaushambi?',
+        answer:
+          'Our South Delhi center is about 15 km from Kaushambi Metro Station via Anand Vihar. We also offer live online classes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Kaushambi students?',
+        answer:
+          'NEET coaching fees range from ₹35,000 to ₹75,000 per year depending on mode of study.',
+      },
+      {
+        question: 'Do you provide study material for Kaushambi students?',
+        answer:
+          'Yes, all students receive comprehensive NCERT-focused study material, test series, and practice questions delivered to their location.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6432',
+      lng: '77.3192',
+    },
+  },
+
+  // Delhi West areas
+  'punjabi-bagh': {
+    slug: 'punjabi-bagh',
+    cityName: 'Punjabi Bagh',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Punjabi Bagh | NEET Coaching Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Punjabi Bagh. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Punjabi Bagh',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for Punjabi Bagh students. Join online or visit our Rohini center.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '12 km from Punjabi Bagh',
+    },
+    localities: [
+      { name: 'Paschim Vihar', url: '/neet-coaching-paschim-vihar' },
+      { name: 'Rajouri Garden', url: '/neet-coaching-rajouri-garden' },
+      { name: 'Patel Nagar', url: '/biology-classes-patel-nagar' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Punjabi Bagh?',
+        answer:
+          'Cerebrum Biology Academy offers excellent biology coaching for Punjabi Bagh students with AIIMS-trained faculty and 98% success rate.',
+      },
+      {
+        question: 'How far is the nearest center from Punjabi Bagh?',
+        answer:
+          'Our Rohini center is about 12 km from Punjabi Bagh. We also offer live online classes for convenience.',
+      },
+      {
+        question: 'What is the fee for biology classes for Punjabi Bagh students?',
+        answer:
+          'Biology coaching fees range from ₹35,000 to ₹75,000 per year depending on online or offline mode.',
+      },
+      {
+        question: 'Do you have students from Punjabi Bagh?',
+        answer:
+          'Yes, we have 40+ students from Punjabi Bagh attending both online and offline classes with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '40+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6692',
+      lng: '77.1310',
+    },
+  },
+
+  'paschim-vihar': {
+    slug: 'paschim-vihar',
+    cityName: 'Paschim Vihar',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Paschim Vihar | Biology Classes Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Paschim Vihar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Paschim Vihar',
+    heroSubtitle:
+      'Top-rated biology coaching for Paschim Vihar students. Join online or visit our Rohini center.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '10 km from Paschim Vihar',
+    },
+    localities: [
+      { name: 'Punjabi Bagh', url: '/biology-classes-punjabi-bagh' },
+      { name: 'Rajouri Garden', url: '/neet-coaching-rajouri-garden' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Paschim Vihar?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Paschim Vihar students with AIIMS-trained faculty and proven 98% success rate.',
+      },
+      {
+        question: 'How far is the Rohini center from Paschim Vihar?',
+        answer:
+          'Our Rohini center is about 10 km from Paschim Vihar, easily accessible via metro or road. We also offer live online classes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Paschim Vihar students?',
+        answer: 'NEET coaching fees range from ₹35,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Paschim Vihar?',
+        answer:
+          'Yes, we have 45+ students from Paschim Vihar with excellent results in NEET examinations.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '45+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6704',
+      lng: '77.1025',
+    },
+  },
+
+  'rajouri-garden': {
+    slug: 'rajouri-garden',
+    cityName: 'Rajouri Garden',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rajouri Garden | Biology Classes Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Rajouri Garden. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rajouri Garden',
+    heroSubtitle:
+      'Top-rated biology coaching for Rajouri Garden students. Join online or visit our centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '14 km from Rajouri Garden',
+    },
+    localities: [
+      { name: 'Punjabi Bagh', url: '/biology-classes-punjabi-bagh' },
+      { name: 'Paschim Vihar', url: '/neet-coaching-paschim-vihar' },
+      { name: 'Patel Nagar', url: '/biology-classes-patel-nagar' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Karol Bagh', url: '/biology-classes-karol-bagh' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rajouri Garden?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Rajouri Garden students with AIIMS-trained faculty and comprehensive study material.',
+      },
+      {
+        question: 'How far is the nearest center from Rajouri Garden?',
+        answer:
+          'Our Rohini center is about 14 km from Rajouri Garden. We also offer convenient live online classes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Rajouri Garden students?',
+        answer:
+          'NEET coaching fees range from ₹35,000 to ₹75,000 per year depending on online or offline mode.',
+      },
+      {
+        question: 'Do you have students from Rajouri Garden?',
+        answer:
+          'Yes, we have 35+ students from Rajouri Garden with excellent track record in NEET.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '35+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6414',
+      lng: '77.1214',
+    },
+  },
+
+  'tilak-nagar': {
+    slug: 'tilak-nagar',
+    cityName: 'Tilak Nagar',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Tilak Nagar | NEET Coaching Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Tilak Nagar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Tilak Nagar',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for Tilak Nagar students. Join online or visit our centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Green Park Center',
+      address: 'Near Green Park Metro, New Delhi',
+      distance: '15 km from Tilak Nagar',
+    },
+    localities: [
+      { name: 'Janakpuri', url: '/biology-classes-delhi/janakpuri' },
+      { name: 'Rajouri Garden', url: '/neet-coaching-rajouri-garden' },
+      { name: 'Uttam Nagar', url: '/biology-classes-uttam-nagar' },
+    ],
+    relatedCities: [
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Dwarka', url: '/biology-classes-dwarka' },
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Tilak Nagar?',
+        answer:
+          'Cerebrum Biology Academy offers excellent biology coaching for Tilak Nagar students with AIIMS-trained faculty and 98% success rate.',
+      },
+      {
+        question: 'How far is the nearest center from Tilak Nagar?',
+        answer:
+          'Our Green Park center is about 15 km from Tilak Nagar. We also offer live online classes for convenience.',
+      },
+      {
+        question: 'What is the fee for biology classes for Tilak Nagar students?',
+        answer:
+          'Biology coaching fees range from ₹35,000 to ₹75,000 per year depending on mode of study.',
+      },
+      {
+        question: 'Do you have students from Tilak Nagar?',
+        answer:
+          'Yes, we have 30+ students from Tilak Nagar attending both online and offline classes successfully.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '30+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6414',
+      lng: '77.0933',
+    },
+  },
+
+  // East Delhi area
+  'nirman-vihar': {
+    slug: 'nirman-vihar',
+    cityName: 'Nirman Vihar',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Nirman Vihar | Biology Classes Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Nirman Vihar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Nirman Vihar',
+    heroSubtitle:
+      'Top-rated biology coaching for Nirman Vihar students. Join online or visit our Delhi centers.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '18 km from Nirman Vihar',
+    },
+    localities: [
+      { name: 'Preet Vihar', url: '/biology-classes-preet-vihar' },
+      { name: 'Laxmi Nagar', url: '/biology-classes-laxmi-nagar' },
+      { name: 'Mayur Vihar', url: '/biology-classes-mayur-vihar' },
+    ],
+    relatedCities: [
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Nirman Vihar?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Nirman Vihar students with AIIMS-trained faculty and comprehensive study material.',
+      },
+      {
+        question: 'How far is the nearest center from Nirman Vihar?',
+        answer:
+          'Our South Delhi center is about 18 km from Nirman Vihar. We also offer convenient live online classes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Nirman Vihar students?',
+        answer: 'NEET coaching fees range from ₹35,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Nirman Vihar?',
+        answer:
+          'Yes, we have 35+ students from Nirman Vihar with excellent results in NEET examinations.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '35+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6352',
+      lng: '77.2952',
+    },
+  },
+
+  // Rohini Sectors
+  'dc-chowk-rohini': {
+    slug: 'dc-chowk-rohini',
+    cityName: 'DC Chowk Rohini',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching at DC Chowk Rohini | Biology Center Sector 9 | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching at DC Chowk Rohini center. AIIMS faculty, 98% success rate. Walk-in at Sector 9! Call 88264-44334',
+    heroTitle: 'NEET Coaching at DC Chowk Rohini',
+    heroSubtitle:
+      'Visit our flagship Rohini center at DC Chowk, Sector 9. Premium NEET coaching with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: 'In DC Chowk',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 3', url: '/neet-coaching-rohini-sector-3' },
+      { name: 'Sector 5', url: '/neet-coaching-rohini-sector-5' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the DC Chowk Rohini center located?',
+        answer:
+          'Our Rohini center is located at DC Chauk, Sector 9, Rohini, New Delhi 110085. It is easily accessible from all Rohini sectors.',
+      },
+      {
+        question: 'What courses are available at DC Chowk center?',
+        answer:
+          'We offer biology classes for Class 11, Class 12, and NEET Dropper batch at our Rohini center with AIIMS-trained faculty.',
+      },
+      {
+        question: 'What are the batch timings at DC Chowk Rohini?',
+        answer:
+          'Morning batches (8-10 AM), afternoon batches (2-4 PM), and evening batches (6-8 PM) are available. Weekend batches also offered.',
+      },
+      {
+        question: 'What is the fee at DC Chowk Rohini center?',
+        answer:
+          'Biology coaching fees range from ₹45,000 to ₹75,000 per year. This includes all study material and test series.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7416',
+      lng: '77.1025',
+    },
+  },
+
+  'rohini-west': {
+    slug: 'rohini-west',
+    cityName: 'Rohini West',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Tuition in Rohini West | NEET Coaching Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best biology tuition in Rohini West. Center at DC Chowk Sector 9. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    heroTitle: 'Biology Tuition in Rohini West',
+    heroSubtitle:
+      'Top-rated NEET coaching for Rohini West students. Visit our DC Chowk center in Sector 9.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '2 km from Rohini West',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 16', url: '/biology-classes-rohini-sector-16' },
+      { name: 'Sector 24', url: '/biology-classes-rohini-sector-24' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Shalimar Bagh', url: '/biology-classes-shalimar-bagh' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology tuition in Rohini West?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is the best choice for Rohini West students with AIIMS faculty and 98% success rate.',
+      },
+      {
+        question: 'How far is the center from Rohini West?',
+        answer:
+          'Our DC Chowk center is just 2 km from Rohini West, easily accessible by metro or road.',
+      },
+      {
+        question: 'What is the fee for biology tuition in Rohini West?',
+        answer:
+          'Biology tuition fees range from ₹45,000 to ₹75,000 per year with EMI options available.',
+      },
+      {
+        question: 'Do you have students from Rohini West?',
+        answer: 'Yes, we have 80+ students from Rohini West with excellent NEET results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '80+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7296',
+      lng: '77.0844',
+    },
+  },
+
+  'rohini-sector-3': {
+    slug: 'rohini-sector-3',
+    cityName: 'Rohini Sector 3',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 3 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 3. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 3',
+    heroSubtitle:
+      'Top-rated biology coaching for Sector 3 students. Visit our nearby DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '2 km from Sector 3',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 5', url: '/neet-coaching-rohini-sector-5' },
+      { name: 'Sector 7', url: '/neet-coaching-rohini-sector-7' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 3?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is ideal for Sector 3 students, just 2 km away with AIIMS faculty.',
+      },
+      {
+        question: 'How do I reach the center from Sector 3?',
+        answer:
+          'The DC Chowk center is easily accessible from Sector 3 by metro or auto-rickshaw, just 5 minutes away.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 3 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 3?',
+        answer: 'Yes, we have 50+ students from Sector 3 with excellent track record.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7205',
+      lng: '77.1105',
+    },
+  },
+
+  'rohini-sector-5': {
+    slug: 'rohini-sector-5',
+    cityName: 'Rohini Sector 5',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 5 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 5. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 5',
+    heroSubtitle: 'Top-rated biology coaching for Sector 5 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '1.5 km from Sector 5',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 3', url: '/neet-coaching-rohini-sector-3' },
+      { name: 'Sector 7', url: '/neet-coaching-rohini-sector-7' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 5?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is perfect for Sector 5 students, just 1.5 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 5?',
+        answer: 'The DC Chowk center is very close to Sector 5, just 3 minutes by metro or auto.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 5 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 5?',
+        answer: 'Yes, we have 60+ students from Sector 5 attending our center daily.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7285',
+      lng: '77.1155',
+    },
+  },
+
+  'rohini-sector-7': {
+    slug: 'rohini-sector-7',
+    cityName: 'Rohini Sector 7',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 7 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 7. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 7',
+    heroSubtitle: 'Top-rated biology coaching for Sector 7 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '1 km from Sector 7',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 5', url: '/neet-coaching-rohini-sector-5' },
+      { name: 'Sector 8', url: '/neet-coaching-rohini-sector-8' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 7?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is ideal for Sector 7 students, just 1 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 7?',
+        answer: 'The DC Chowk center is walking distance from Sector 7, just 2 minutes away.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 7 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 7?',
+        answer: 'Yes, we have 70+ students from Sector 7, many walk to our center daily.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '70+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7335',
+      lng: '77.1105',
+    },
+  },
+
+  'rohini-sector-8': {
+    slug: 'rohini-sector-8',
+    cityName: 'Rohini Sector 8',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 8 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 8. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 8',
+    heroSubtitle: 'Top-rated biology coaching for Sector 8 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '500m from Sector 8',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 7', url: '/neet-coaching-rohini-sector-7' },
+      { name: 'Sector 11', url: '/biology-classes-rohini-sector-11' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 8?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is perfect for Sector 8 students, just 500m away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 8?',
+        answer: 'The DC Chowk center is very close to Sector 8, walking distance of 5 minutes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 8 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 8?',
+        answer: 'Yes, we have 75+ students from Sector 8, most walk to our center.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '75+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7365',
+      lng: '77.1075',
+    },
+  },
+
+  'rohini-sector-11': {
+    slug: 'rohini-sector-11',
+    cityName: 'Rohini Sector 11',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Rohini Sector 11 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Rohini Sector 11. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Rohini Sector 11',
+    heroSubtitle: 'Top-rated NEET coaching for Sector 11 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '1.5 km from Sector 11',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 13', url: '/biology-classes-rohini-sector-13' },
+      { name: 'Sector 8', url: '/neet-coaching-rohini-sector-8' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Rohini Sector 11?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is ideal for Sector 11 students, 1.5 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 11?',
+        answer:
+          'The DC Chowk center is easily accessible from Sector 11 by metro or auto, just 5 minutes.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 11 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 11?',
+        answer: 'Yes, we have 65+ students from Sector 11 with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '65+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7405',
+      lng: '77.1155',
+    },
+  },
+
+  'rohini-sector-13': {
+    slug: 'rohini-sector-13',
+    cityName: 'Rohini Sector 13',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Rohini Sector 13 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Rohini Sector 13. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Rohini Sector 13',
+    heroSubtitle: 'Top-rated NEET coaching for Sector 13 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '2 km from Sector 13',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 11', url: '/biology-classes-rohini-sector-11' },
+      { name: 'Sector 14', url: '/neet-coaching-rohini-sector-14' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Rohini Sector 13?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is perfect for Sector 13 students, just 2 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 13?',
+        answer:
+          'The DC Chowk center is easily accessible from Sector 13 by metro or auto, about 5 minutes.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 13 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 13?',
+        answer: 'Yes, we have 55+ students from Sector 13 with excellent NEET results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '55+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7445',
+      lng: '77.1085',
+    },
+  },
+
+  'rohini-sector-14': {
+    slug: 'rohini-sector-14',
+    cityName: 'Rohini Sector 14',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 14 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 14. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 14',
+    heroSubtitle: 'Top-rated biology coaching for Sector 14 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '2.5 km from Sector 14',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 13', url: '/biology-classes-rohini-sector-13' },
+      { name: 'Sector 15', url: '/neet-coaching-rohini-sector-15' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 14?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is ideal for Sector 14 students, 2.5 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 14?',
+        answer:
+          'The DC Chowk center is accessible from Sector 14 by metro or auto, about 7 minutes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 14 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 14?',
+        answer: 'Yes, we have 50+ students from Sector 14 with excellent track record.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7485',
+      lng: '77.1105',
+    },
+  },
+
+  'rohini-sector-15': {
+    slug: 'rohini-sector-15',
+    cityName: 'Rohini Sector 15',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 15 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 15. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 15',
+    heroSubtitle: 'Top-rated biology coaching for Sector 15 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '3 km from Sector 15',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 14', url: '/neet-coaching-rohini-sector-14' },
+      { name: 'Sector 16', url: '/biology-classes-rohini-sector-16' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 15?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is excellent for Sector 15 students, 3 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 15?',
+        answer:
+          'The DC Chowk center is accessible from Sector 15 by metro or auto, about 8 minutes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 15 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 15?',
+        answer: 'Yes, we have 45+ students from Sector 15 with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '45+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7525',
+      lng: '77.1125',
+    },
+  },
+
+  'rohini-sector-16': {
+    slug: 'rohini-sector-16',
+    cityName: 'Rohini Sector 16',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Rohini Sector 16 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Rohini Sector 16. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Rohini Sector 16',
+    heroSubtitle: 'Top-rated NEET coaching for Sector 16 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '3.5 km from Sector 16',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 15', url: '/neet-coaching-rohini-sector-15' },
+      { name: 'Sector 22', url: '/neet-coaching-rohini-sector-22' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Rohini Sector 16?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is ideal for Sector 16 students, 3.5 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 16?',
+        answer:
+          'The DC Chowk center is accessible from Sector 16 by metro or auto, about 10 minutes.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 16 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 16?',
+        answer: 'Yes, we have 40+ students from Sector 16 attending our center.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '40+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.7565',
+      lng: '77.1065',
+    },
+  },
+
+  'rohini-sector-22': {
+    slug: 'rohini-sector-22',
+    cityName: 'Rohini Sector 22',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching in Rohini Sector 22 | Biology Center | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Rohini Sector 22. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Rohini Sector 22',
+    heroSubtitle: 'Top-rated biology coaching for Sector 22 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '5 km from Sector 22',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 16', url: '/biology-classes-rohini-sector-16' },
+      { name: 'Sector 24', url: '/biology-classes-rohini-sector-24' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Rohini Sector 22?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is excellent for Sector 22 students, 5 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 22?',
+        answer:
+          'The DC Chowk center is accessible from Sector 22 by metro or auto, about 12 minutes.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 22 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 22?',
+        answer: 'Yes, we have 35+ students from Sector 22 with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '35+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.7645',
+      lng: '77.1125',
+    },
+  },
+
+  'rohini-sector-24': {
+    slug: 'rohini-sector-24',
+    cityName: 'Rohini Sector 24',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Classes in Rohini Sector 24 | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Rohini Sector 24. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Rohini Sector 24',
+    heroSubtitle: 'Top-rated NEET coaching for Sector 24 students. Visit our DC Chowk center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      distance: '6 km from Sector 24',
+    },
+    localities: [
+      { name: 'Sector 9', url: '/biology-classes-rohini' },
+      { name: 'Sector 22', url: '/neet-coaching-rohini-sector-22' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Rohini Sector 24?',
+        answer:
+          'Cerebrum Biology Academy at DC Chowk is a good choice for Sector 24 students, 6 km away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 24?',
+        answer:
+          'The DC Chowk center is accessible from Sector 24 by metro or auto, about 15 minutes.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 24 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Rohini Sector 24?',
+        answer: 'Yes, we have 30+ students from Sector 24 attending our center.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '30+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.7685',
+      lng: '77.1105',
+    },
+  },
+
+  // Gurgaon Sectors
+  'gurgaon-sector-43': {
+    slug: 'gurgaon-sector-43',
+    cityName: 'Sector 43 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 43 Gurgaon. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Sector 43 Gurgaon',
+    heroSubtitle:
+      'Top-rated biology coaching for Sector 43 students. Visit our Sector 51 center, just 10 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 minutes from Sector 43',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 45', url: '/neet-coaching-gurgaon-sector-45' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Sector 43 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is ideal for Sector 43 students, just 10 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 43?',
+        answer:
+          'Our Sector 51 center is easily accessible from Sector 43 via Golf Course Road, about 10 minutes by car.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 43 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Sector 43?',
+        answer: 'Yes, we have 40+ students from Sector 43 with excellent NEET results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '40+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4515',
+      lng: '77.0735',
+    },
+  },
+
+  'gurgaon-sector-45': {
+    slug: 'gurgaon-sector-45',
+    cityName: 'Sector 45 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching near Sector 45 Gurgaon & DPS. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Sector 45 Gurgaon',
+    heroSubtitle:
+      'Top-rated biology coaching for Sector 45 & DPS Gurgaon students. Visit our Sector 51 center, just 10 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 minutes from Sector 45',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 43', url: '/biology-classes-gurgaon-sector-43' },
+      { name: 'DPS Gurgaon', url: '/neet-coaching-dps-gurgaon-students' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Sector 45 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is ideal for Sector 45 & DPS area students, just 10 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 45?',
+        answer:
+          'Our Sector 51 center is easily accessible from Sector 45 via Golf Course Road, about 10 minutes by car.',
+      },
+      {
+        question: 'Do you have students from DPS Gurgaon Sector 45?',
+        answer:
+          'Yes, we have 80+ students from DPS Gurgaon. It is the largest school batch at our Gurugram center.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 45 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year. EMI options available.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '80+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4440',
+      lng: '77.0650',
+    },
+  },
+
+  'gurgaon-sector-55': {
+    slug: 'gurgaon-sector-55',
+    cityName: 'Sector 55 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 55 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Sector 55 Gurgaon. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Sector 55 Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for Sector 55 students. Visit our Sector 51 center, just 7 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '7 minutes from Sector 55',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 57', url: '/biology-classes-gurgaon-sector-57' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Sector 55 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is perfect for Sector 55 students, just 7 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 55?',
+        answer:
+          'Our Sector 51 center is very close to Sector 55, about 7 minutes by car via Golf Course Extension Road.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 55 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Sector 55?',
+        answer: 'Yes, we have 50+ students from Sector 55 attending our center regularly.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4195',
+      lng: '77.0966',
+    },
+  },
+
+  'gurgaon-sector-60': {
+    slug: 'gurgaon-sector-60',
+    cityName: 'Sector 60 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 60 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Sector 60 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Sector 60 Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for Sector 60 students. Visit our Sector 51 center, just 12 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12 minutes from Sector 60',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 56', url: '/biology-classes-gurgaon-sector-56' },
+      { name: 'Sector 61', url: '/neet-coaching-gurgaon-sector-61' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Sector 60 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is ideal for Sector 60 students, just 12 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 60?',
+        answer:
+          'Our Sector 51 center is accessible from Sector 60 via Golf Course Road, about 12 minutes by car.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 60 students?',
+        answer: 'Biology coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Sector 60?',
+        answer: 'Yes, we have 35+ students from Sector 60 with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '35+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4095',
+      lng: '77.0866',
+    },
+  },
+
+  'gurgaon-sector-61': {
+    slug: 'gurgaon-sector-61',
+    cityName: 'Sector 61 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 61 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 61 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Sector 61 Gurgaon',
+    heroSubtitle:
+      'Top-rated biology coaching for Sector 61 students. Visit our Sector 51 center, just 15 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15 minutes from Sector 61',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 60', url: '/biology-classes-gurgaon-sector-60' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Sector 61 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is excellent for Sector 61 students, just 15 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Sector 61?',
+        answer:
+          'Our Sector 51 center is accessible from Sector 61 via Golf Course Road, about 15 minutes by car.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 61 students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year.',
+      },
+      {
+        question: 'Do you have students from Sector 61?',
+        answer: 'Yes, we have 30+ students from Sector 61 with excellent track record.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '30+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4015',
+      lng: '77.0866',
+    },
+  },
+
+  'gurgaon-sector-73': {
+    slug: 'gurgaon-sector-73',
+    cityName: 'Sector 73 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Sector 73 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Sector 73 Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Sector 73 Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for Sector 73 students. Visit our Sector 51 center or join online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '20 minutes from Sector 73',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 82', url: '/neet-coaching-gurgaon-sector-82' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Sector 73 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy offers excellent coaching for Sector 73 students with both offline (Sector 51) and online options.',
+      },
+      {
+        question: 'How do I reach the center from Sector 73?',
+        answer:
+          'Our Sector 51 center is about 20 minutes from Sector 73 via Sohna Road. We also offer convenient online classes.',
+      },
+      {
+        question: 'What is the fee for biology classes for Sector 73 students?',
+        answer: 'Biology coaching fees range from ₹35,000 to ₹75,000 per year depending on mode.',
+      },
+      {
+        question: 'Do you have students from Sector 73?',
+        answer:
+          'Yes, we have 25+ students from Sector 73 attending both online and offline classes.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '25+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.3935',
+      lng: '77.0766',
+    },
+  },
+
+  'gurgaon-sector-82': {
+    slug: 'gurgaon-sector-82',
+    cityName: 'Sector 82 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 82 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 82 Gurgaon. Center in Sector 51 (25 min) or online. AIIMS faculty, 98% success!',
+    heroTitle: 'NEET Coaching in Sector 82 Gurgaon',
+    heroSubtitle:
+      'Top-rated biology coaching for Sector 82 students. Visit our Sector 51 center or join live online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '25 minutes from Sector 82',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 73', url: '/biology-classes-gurgaon-sector-73' },
+      { name: 'New Gurgaon', url: '/biology-classes-new-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Sector 82 Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy offers excellent NEET coaching for Sector 82 students with both offline and online options.',
+      },
+      {
+        question: 'How do I reach the center from Sector 82?',
+        answer:
+          'Our Sector 51 center is about 25 minutes from Sector 82. We recommend our hybrid or online mode for convenience.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Sector 82 students?',
+        answer:
+          'NEET coaching fees range from ₹35,000 to ₹75,000 per year depending on online or offline mode.',
+      },
+      {
+        question: 'Do you have students from Sector 82?',
+        answer:
+          'Yes, we have 20+ students from Sector 82, mostly attending online or hybrid classes.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '20+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.3845',
+      lng: '77.0566',
+    },
+  },
+
+  // More Gurgaon areas
+  'cyber-city-gurgaon': {
+    slug: 'cyber-city-gurgaon',
+    cityName: 'Cyber City Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in Cyber City Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes for Cyber City Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in Cyber City Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for Cyber City professionals and students. Visit our Sector 51 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15 minutes from Cyber City',
+    },
+    localities: [
+      { name: 'DLF Cyber City', url: '/biology-classes-cyber-city-gurgaon' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 2', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching near Cyber City?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is ideal for Cyber City area students, just 15 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Cyber City?',
+        answer:
+          'Our Sector 51 center is easily accessible from Cyber City via MG Road and NH48, about 15 minutes by car.',
+      },
+      {
+        question: 'What is the fee for biology classes for Cyber City area students?',
+        answer:
+          'Biology coaching fees range from ₹45,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Cyber City area?',
+        answer:
+          'Yes, we have 30+ students from Cyber City and nearby DLF areas with excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '30+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4950',
+      lng: '77.0890',
+    },
+  },
+
+  'new-gurgaon': {
+    slug: 'new-gurgaon',
+    cityName: 'New Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Classes in New Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in New Gurgaon. Center in Sector 51 or online. AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'Biology Classes in New Gurgaon',
+    heroSubtitle:
+      'Top-rated NEET coaching for New Gurgaon students. Visit our Sector 51 center or join online classes.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '30 minutes from New Gurgaon',
+    },
+    localities: [
+      { name: 'Sector 82', url: '/neet-coaching-gurgaon-sector-82' },
+      { name: 'Sector 73', url: '/biology-classes-gurgaon-sector-73' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in New Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy offers excellent coaching for New Gurgaon students with both offline (Sector 51) and online options.',
+      },
+      {
+        question: 'How do I reach the center from New Gurgaon?',
+        answer:
+          'Our Sector 51 center is about 30 minutes from New Gurgaon via Sohna Road. We recommend hybrid or online mode for convenience.',
+      },
+      {
+        question: 'What is the fee for biology classes for New Gurgaon students?',
+        answer:
+          'Biology coaching fees range from ₹35,000 to ₹75,000 per year depending on online or offline mode.',
+      },
+      {
+        question: 'Do you have students from New Gurgaon?',
+        answer:
+          'Yes, we have 35+ students from New Gurgaon attending both online and offline classes.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '35+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.3835',
+      lng: '77.0466',
+    },
+  },
+
+  'udyog-vihar-gurgaon': {
+    slug: 'udyog-vihar-gurgaon',
+    cityName: 'Udyog Vihar Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Udyog Vihar Gurgaon | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Udyog Vihar Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
+    heroTitle: 'NEET Coaching in Udyog Vihar Gurgaon',
+    heroSubtitle:
+      'Top-rated biology coaching for Udyog Vihar students. Visit our Sector 51 center, just 20 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '20 minutes from Udyog Vihar',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'MG Road', url: '/biology-classes-mg-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon', url: '/biology-classes-gurgaon' },
+      { name: 'DLF Gurgaon', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Udyog Vihar Gurgaon?',
+        answer:
+          'Cerebrum Biology Academy with center in Sector 51 is excellent for Udyog Vihar students, just 20 minutes away.',
+      },
+      {
+        question: 'How do I reach the center from Udyog Vihar?',
+        answer:
+          'Our Sector 51 center is accessible from Udyog Vihar via MG Road or NH48, about 20 minutes by car.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Udyog Vihar students?',
+        answer: 'NEET coaching fees range from ₹45,000 to ₹75,000 per year. EMI options available.',
+      },
+      {
+        question: 'Do you have students from Udyog Vihar?',
+        answer: 'Yes, we have 25+ students from Udyog Vihar with excellent track record.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '25+',
+      successRate: '98%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4974',
+      lng: '77.0838',
     },
   },
 }

@@ -1,25 +1,23 @@
 import { Metadata } from 'next'
-import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { SchoolLandingPage } from '@/components/seo/SchoolLandingPage'
+import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
 
-const cityData = getCityData('neet-coaching-dps-gurgaon-students')!
+const pageData = getSchoolPageData('neet-coaching-dps-gurgaon-students')!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for DPS Gurgaon Students | Cerebrum Biology Academy',
-  description:
-    'NEET biology coaching for DPS Gurgaon students. Sector 51 Gurgaon center, after-school batches. Expert AIIMS faculty. Call 88264-44334.',
+  title: pageData.metaTitle,
+  description: pageData.metaDescription,
   keywords: [
-    'neet coaching dps gurgaon',
-    'biology tuition dps gurgaon students',
-    'dps gurgaon neet preparation',
-    'biology classes gurgaon',
-    'neet coaching sector 51 gurgaon',
-    'dps gurgaon biology coaching',
+    'neet coaching for dps gurgaon',
+    'dps gurgaon sector 45 neet',
+    'biology coaching dps gurgaon students',
+    'neet classes near dps gurgaon',
+    'after school neet coaching sector 51',
+    'best coaching for dps gurgaon neet',
   ],
   openGraph: {
-    title: 'NEET Coaching for DPS Gurgaon Students | Cerebrum Biology Academy',
-    description:
-      'NEET biology coaching for DPS Gurgaon students. Sector 51 Gurgaon center, after-school batches. Expert AIIMS faculty.',
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-gurgaon-students',
     type: 'website',
   },
@@ -28,6 +26,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function DPSGurgaonPage() {
-  return <CityHubPage data={cityData} />
+export default function NEETCoachingDPSGurgaonPage() {
+  return <SchoolLandingPage data={pageData} />
 }

@@ -1,25 +1,23 @@
 import { Metadata } from 'next'
-import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { SchoolLandingPage } from '@/components/seo/SchoolLandingPage'
+import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
 
-const cityData = getCityData('neet-coaching-modern-school-students')!
+const pageData = getSchoolPageData('neet-coaching-modern-school-students')!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Modern School Students | Cerebrum Biology Academy',
-  description:
-    'NEET biology coaching for Modern School students across Delhi. Multiple centers, after-school batches. 15+ years experience. Call 88264-44334.',
+  title: pageData.metaTitle,
+  description: pageData.metaDescription,
   keywords: [
-    'neet coaching modern school',
-    'biology tuition modern school students',
-    'modern school neet preparation',
-    'biology classes delhi',
-    'neet coaching central delhi',
-    'modern school biology coaching',
+    'neet coaching for modern school',
+    'modern school barakhamba neet',
+    'biology coaching modern school students',
+    'neet classes connaught place',
+    'after school neet coaching central delhi',
+    'best coaching for modern school neet',
   ],
   openGraph: {
-    title: 'NEET Coaching for Modern School Students | Cerebrum Biology Academy',
-    description:
-      'NEET biology coaching for Modern School students across Delhi. Multiple centers, after-school batches. 15+ years experience.',
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-modern-school-students',
     type: 'website',
   },
@@ -28,6 +26,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ModernSchoolPage() {
-  return <CityHubPage data={cityData} />
+export default function NEETCoachingModernSchoolPage() {
+  return <SchoolLandingPage data={pageData} />
 }
