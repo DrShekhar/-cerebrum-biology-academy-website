@@ -1,10 +1,13 @@
 /**
  * Twilio Verify OTP Service
  * Secure OTP authentication via SMS, WhatsApp, and Email
+ *
+ * NOTE: Uses dynamic import to prevent 2.13MB twilio package from
+ * being bundled into client-side code.
  */
 
-import twilio from 'twilio'
 import crypto from 'crypto'
+import type { Twilio } from 'twilio'
 
 // Environment validation - fail if not configured in production
 function getRequiredEnv(key: string): string {
@@ -23,9 +26,23 @@ const TWILIO_ACCOUNT_SID = getRequiredEnv('TWILIO_ACCOUNT_SID')
 const TWILIO_AUTH_TOKEN = getRequiredEnv('TWILIO_AUTH_TOKEN')
 const TWILIO_VERIFY_SERVICE_SID = getRequiredEnv('TWILIO_VERIFY_SERVICE_SID')
 
-// Initialize Twilio client only if credentials are available
-const twilioClient =
-  TWILIO_ACCOUNT_SID && TWILIO_AUTH_TOKEN ? twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) : null
+// Lazy-load Twilio client to reduce bundle size
+let twilioClientPromise: Promise<Twilio | null> | null = null
+
+async function getTwilioClient(): Promise<Twilio | null> {
+  if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN) {
+    return null
+  }
+
+  if (!twilioClientPromise) {
+    twilioClientPromise = import('twilio').then((twilioModule) => {
+      const twilio = twilioModule.default
+      return twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+    })
+  }
+
+  return twilioClientPromise
+}
 
 export type OTPChannel = 'sms' | 'whatsapp' | 'email'
 
@@ -96,6 +113,9 @@ function formatPhoneNumber(phone: string, countryCode: string = '+91'): string {
  */
 export async function sendOTP(to: string, channel: OTPChannel): Promise<SendOTPResult> {
   try {
+    // Get Twilio client (lazy loaded)
+    const twilioClient = await getTwilioClient()
+
     // Development mock mode
     if (!twilioClient) {
       const mockOTP = generateSecureOTP()
@@ -165,6 +185,9 @@ export async function verifyOTP(
   channel: OTPChannel
 ): Promise<VerifyOTPResult> {
   try {
+    // Get Twilio client (lazy loaded)
+    const twilioClient = await getTwilioClient()
+
     // Development mock mode - accept any 6-digit code
     if (!twilioClient) {
       const isValid = /^\d{6}$/.test(code)

@@ -3,6 +3,11 @@ import createMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import bundleAnalyzer from '@next/bundle-analyzer'
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -184,14 +189,13 @@ const nextConfig = {
       '@radix-ui/react-icons',
       'framer-motion',
       'date-fns',
-      'lodash',
-      'katex',
-      'react-katex',
       'zod',
       '@radix-ui/react-dialog',
       '@radix-ui/react-select',
       '@radix-ui/react-tabs',
       'react-hook-form',
+      '@anthropic-ai/sdk',
+      'openai',
     ],
   },
 
@@ -735,7 +739,7 @@ const withMDX = createMDX({
   },
 })
 
-export default withSentryConfig(withMDX(nextConfig), {
+export default withSentryConfig(withBundleAnalyzer(withMDX(nextConfig)), {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
