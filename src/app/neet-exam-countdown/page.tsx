@@ -34,61 +34,87 @@ import {
   Moon,
 } from 'lucide-react'
 
-// NEET 2026 Exam Date - May 3, 2026, 2:00 PM IST
-const NEET_2026_DATE = new Date('2026-05-03T14:00:00+05:30')
-const NEET_2025_DATE = new Date('2025-05-04T14:00:00+05:30')
+// NEET Exam Dates - First Sunday of May each year, 2:00 PM IST
+const NEET_EXAM_DATES: Record<number, Date> = {
+  2026: new Date('2026-05-03T14:00:00+05:30'), // May 3, 2026
+  2027: new Date('2027-05-02T14:00:00+05:30'), // May 2, 2027
+  2028: new Date('2028-05-07T14:00:00+05:30'), // May 7, 2028
+  2029: new Date('2029-05-06T14:00:00+05:30'), // May 6, 2029
+}
+
+// Available years for selection
+const AVAILABLE_YEARS = [2026, 2027, 2028, 2029]
+
+// Get the default year based on current date (select next upcoming exam)
+const getDefaultYear = (): number => {
+  const now = new Date()
+  for (const year of AVAILABLE_YEARS) {
+    if (NEET_EXAM_DATES[year].getTime() > now.getTime()) {
+      return year
+    }
+  }
+  return AVAILABLE_YEARS[AVAILABLE_YEARS.length - 1]
+}
 
 // Important Dates - Using brand colors: Red #E25553, Blue #4A8FE7, Yellow #D99E18, Green #34C759
-const IMPORTANT_DATES = [
-  {
-    event: 'Registration Opens',
-    date: 'Feb 7, 2026',
-    icon: FileText,
-    color: 'from-[#4A8FE7] to-[#3A7FD7]',
-  },
-  {
-    event: 'Registration Closes',
-    date: 'Mar 7, 2026',
-    icon: Clock,
-    color: 'from-[#D99E18] to-[#C98E08]',
-  },
-  {
-    event: 'Correction Window',
-    date: 'Mar 10-15, 2026',
-    icon: FileText,
-    color: 'from-[#4A8FE7] to-[#3A7FD7]',
-  },
-  {
-    event: 'Admit Card Release',
-    date: 'Apr 30, 2026',
-    icon: Award,
-    color: 'from-[#34C759] to-[#28A745]',
-  },
-  {
-    event: 'NEET 2026 Exam',
-    date: 'May 3, 2026',
-    icon: Star,
-    color: 'from-[#E25553] to-[#D24543]',
-  },
-  {
-    event: 'Answer Key Release',
-    date: 'May 10, 2026',
-    icon: CheckCircle,
-    color: 'from-[#D99E18] to-[#C98E08]',
-  },
-  {
-    event: 'Result Declaration',
-    date: 'June 5, 2026',
-    icon: Trophy,
-    color: 'from-[#34C759] to-[#28A745]',
-  },
-  {
-    event: 'Counselling Begins',
-    date: 'July 2026',
-    icon: GraduationCap,
-    color: 'from-[#4A8FE7] to-[#3A7FD7]',
-  },
-]
+// Function to generate year-specific important dates
+const getImportantDates = (year: number) => {
+  // Get the exam date for the year
+  const examDate = NEET_EXAM_DATES[year]
+  const examDay = examDate.getDate()
+  const examMonth = examDate.toLocaleDateString('en-US', { month: 'short' })
+
+  return [
+    {
+      event: 'Registration Opens',
+      date: `Feb 7, ${year}`,
+      icon: FileText,
+      color: 'from-[#4A8FE7] to-[#3A7FD7]',
+    },
+    {
+      event: 'Registration Closes',
+      date: `Mar 7, ${year}`,
+      icon: Clock,
+      color: 'from-[#D99E18] to-[#C98E08]',
+    },
+    {
+      event: 'Correction Window',
+      date: `Mar 10-15, ${year}`,
+      icon: FileText,
+      color: 'from-[#4A8FE7] to-[#3A7FD7]',
+    },
+    {
+      event: 'Admit Card Release',
+      date: `Apr 30, ${year}`,
+      icon: Award,
+      color: 'from-[#34C759] to-[#28A745]',
+    },
+    {
+      event: `NEET ${year} Exam`,
+      date: `${examMonth} ${examDay}, ${year}`,
+      icon: Star,
+      color: 'from-[#E25553] to-[#D24543]',
+    },
+    {
+      event: 'Answer Key Release',
+      date: `May 10, ${year}`,
+      icon: CheckCircle,
+      color: 'from-[#D99E18] to-[#C98E08]',
+    },
+    {
+      event: 'Result Declaration',
+      date: `June 5, ${year}`,
+      icon: Trophy,
+      color: 'from-[#34C759] to-[#28A745]',
+    },
+    {
+      event: 'Counselling Begins',
+      date: `July ${year}`,
+      icon: GraduationCap,
+      color: 'from-[#4A8FE7] to-[#3A7FD7]',
+    },
+  ]
+}
 
 // Topper Quotes
 const TOPPER_QUOTES = [
@@ -220,10 +246,13 @@ export default function NEETExamCountdownPage() {
   const [mounted, setMounted] = useState(false)
   const [showToast, setShowToast] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(true)
+  const [selectedYear, setSelectedYear] = useState<number>(getDefaultYear())
+  const [isYearDropdownOpen, setIsYearDropdownOpen] = useState(false)
 
   const calculateTimeLeft = useCallback((): TimeLeft => {
     const now = new Date()
-    const difference = NEET_2026_DATE.getTime() - now.getTime()
+    const targetDate = NEET_EXAM_DATES[selectedYear]
+    const difference = targetDate.getTime() - now.getTime()
     if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 }
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -232,7 +261,7 @@ export default function NEETExamCountdownPage() {
       seconds: Math.floor((difference / 1000) % 60),
       total: difference,
     }
-  }, [])
+  }, [selectedYear])
 
   useEffect(() => {
     setMounted(true)
@@ -241,6 +270,15 @@ export default function NEETExamCountdownPage() {
     const savedTheme = localStorage.getItem('neetCountdownTheme')
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark')
+    }
+
+    // Load selected year preference
+    const savedYear = localStorage.getItem('neetCountdownYear')
+    if (savedYear) {
+      const year = parseInt(savedYear)
+      if (AVAILABLE_YEARS.includes(year)) {
+        setSelectedYear(year)
+      }
     }
 
     const savedStreak = localStorage.getItem('neetStreak')
@@ -284,6 +322,12 @@ export default function NEETExamCountdownPage() {
     localStorage.setItem('neetCountdownTheme', newTheme ? 'dark' : 'light')
   }
 
+  const changeYear = (year: number) => {
+    setSelectedYear(year)
+    setIsYearDropdownOpen(false)
+    localStorage.setItem('neetCountdownYear', year.toString())
+  }
+
   const markStudied = () => {
     const today = new Date().toDateString()
     const newStreak = streak + 1
@@ -299,8 +343,19 @@ export default function NEETExamCountdownPage() {
   const physicsHours = Math.round(totalStudyHours * 0.25)
   const chemistryHours = Math.round(totalStudyHours * 0.25)
 
+  // Calculate prep days from previous year's exam to selected year's exam
+  const getPreviousYearDate = () => {
+    const prevYear = selectedYear - 1
+    if (NEET_EXAM_DATES[prevYear]) {
+      return NEET_EXAM_DATES[prevYear]
+    }
+    // Default to one year before if previous year not in our list
+    return new Date(NEET_EXAM_DATES[selectedYear].getTime() - 365 * 24 * 60 * 60 * 1000)
+  }
+
   const totalPrepDays = Math.floor(
-    (NEET_2026_DATE.getTime() - NEET_2025_DATE.getTime()) / (1000 * 60 * 60 * 24)
+    (NEET_EXAM_DATES[selectedYear].getTime() - getPreviousYearDate().getTime()) /
+      (1000 * 60 * 60 * 24)
   )
   const daysPassed = totalPrepDays - timeLeft.days
   const progressPercent = Math.min(100, Math.max(0, Math.round((daysPassed / totalPrepDays) * 100)))
@@ -326,9 +381,9 @@ export default function NEETExamCountdownPage() {
   }
 
   const shareCountdown = () => {
-    const text = `Only ${timeLeft.days} days left for NEET 2026! I'm preparing with Cerebrum Biology Academy. Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
+    const text = `Only ${timeLeft.days} days left for NEET ${selectedYear}! I'm preparing with Cerebrum Biology Academy. Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
     if (navigator.share) {
-      navigator.share({ title: 'NEET 2026 Countdown', text, url: window.location.href })
+      navigator.share({ title: `NEET ${selectedYear} Countdown`, text, url: window.location.href })
     } else {
       navigator.clipboard.writeText(text)
       setShowToast(true)
@@ -339,26 +394,34 @@ export default function NEETExamCountdownPage() {
   const isExamDay = timeLeft.days === 0 && timeLeft.hours <= 24
   const isExamOver = timeLeft.total <= 0
 
+  // Dynamic FAQs based on selected year
+  const examDate = NEET_EXAM_DATES[selectedYear]
+  const examDateStr = examDate.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
+
   const faqs = [
     {
-      q: 'When is NEET 2026 exam date?',
-      a: 'NEET 2026 is expected to be held on May 3, 2026 (first Sunday of May), from 2:00 PM to 5:20 PM. The official date will be confirmed by NTA in their notification.',
+      q: `When is NEET ${selectedYear} exam date?`,
+      a: `NEET ${selectedYear} is expected to be held on ${examDateStr} (first Sunday of May), from 2:00 PM to 5:20 PM. The official date will be confirmed by NTA in their notification.`,
     },
     {
-      q: 'What is the NEET 2026 exam pattern?',
-      a: 'NEET 2026 will have 200 questions (180 to attempt) from Physics (45), Chemistry (45), and Biology (90). Each correct answer gives +4 marks, wrong answer -1 mark. Total marks: 720.',
+      q: `What is the NEET ${selectedYear} exam pattern?`,
+      a: `NEET ${selectedYear} will have 200 questions (180 to attempt) from Physics (45), Chemistry (45), and Biology (90). Each correct answer gives +4 marks, wrong answer -1 mark. Total marks: 720.`,
     },
     {
       q: 'How many hours should I study daily for NEET?',
       a: 'Ideally 6-8 hours of focused study daily. Quality matters more than quantity. Include breaks using the Pomodoro technique. Consistency is key.',
     },
     {
-      q: 'Is NCERT enough for NEET 2026?',
+      q: `Is NCERT enough for NEET ${selectedYear}?`,
       a: 'NCERT covers 90%+ of NEET Biology syllabus. For Physics and Chemistry, NCERT is essential but you may need additional practice from reference books like HC Verma, MS Chouhan.',
     },
     {
-      q: 'When will NEET 2026 registration start?',
-      a: 'NEET 2026 registration is expected to start in the first week of February 2026. The window usually remains open for about one month.',
+      q: `When will NEET ${selectedYear} registration start?`,
+      a: `NEET ${selectedYear} registration is expected to start in the first week of February ${selectedYear}. The window usually remains open for about one month.`,
     },
   ]
 
@@ -451,9 +514,8 @@ export default function NEETExamCountdownPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
-            name: 'NEET 2026 Exam Countdown Timer',
-            description:
-              'Live countdown to NEET 2026 exam with study planner, progress tracker, and preparation tips.',
+            name: `NEET ${selectedYear} Exam Countdown Timer`,
+            description: `Live countdown to NEET ${selectedYear} exam with study planner, progress tracker, and preparation tips.`,
             url: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -524,17 +586,64 @@ export default function NEETExamCountdownPage() {
             </nav>
 
             <div className="text-center">
-              {/* Badge */}
-              <div
-                className={`mb-6 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 backdrop-blur-sm ${isDarkMode ? 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10' : 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10'}`}
-              >
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                </span>
-                <span className={`text-sm font-medium ${theme.textAccent}`}>
-                  Live Countdown to NEET 2026
-                </span>
+              {/* Year Selector + Badge */}
+              <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
+                {/* Year Selector Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => setIsYearDropdownOpen(!isYearDropdownOpen)}
+                    className={`flex items-center gap-2 rounded-full border px-4 py-2.5 font-semibold transition-all duration-300 ${
+                      isDarkMode
+                        ? 'border-[#E25553]/50 bg-[#E25553]/20 text-white hover:bg-[#E25553]/30'
+                        : 'border-[#E25553]/50 bg-[#E25553]/10 text-gray-900 hover:bg-[#E25553]/20'
+                    }`}
+                  >
+                    <Calendar className="h-4 w-4 text-[#E25553]" />
+                    <span>NEET {selectedYear}</span>
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${isYearDropdownOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {isYearDropdownOpen && (
+                    <div
+                      className={`absolute left-1/2 top-full z-50 mt-2 w-36 -translate-x-1/2 overflow-hidden rounded-xl border shadow-xl ${
+                        isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-white'
+                      }`}
+                    >
+                      {AVAILABLE_YEARS.map((year) => (
+                        <button
+                          key={year}
+                          onClick={() => changeYear(year)}
+                          className={`flex w-full items-center justify-between px-4 py-3 text-left transition-colors ${
+                            selectedYear === year
+                              ? isDarkMode
+                                ? 'bg-[#E25553]/20 text-[#E25553]'
+                                : 'bg-[#E25553]/10 text-[#E25553]'
+                              : isDarkMode
+                                ? 'text-gray-300 hover:bg-gray-700'
+                                : 'text-gray-700 hover:bg-gray-100'
+                          }`}
+                        >
+                          <span className="font-medium">NEET {year}</span>
+                          {selectedYear === year && (
+                            <CheckCircle className="h-4 w-4 text-[#E25553]" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Live Badge */}
+                <div
+                  className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 backdrop-blur-sm ${isDarkMode ? 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10' : 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10'}`}
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                  </span>
+                  <span className={`text-sm font-medium ${theme.textAccent}`}>Live Countdown</span>
+                </div>
               </div>
 
               {/* Title */}
@@ -544,7 +653,7 @@ export default function NEETExamCountdownPage() {
                 <span
                   className={`bg-clip-text text-transparent ${isDarkMode ? 'bg-gradient-to-r from-white via-[#4A8FE7]/30 to-white' : 'bg-gradient-to-r from-gray-900 via-[#4A8FE7] to-gray-900'}`}
                 >
-                  NEET 2026
+                  NEET {selectedYear}
                 </span>
                 <br />
                 <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
@@ -606,7 +715,14 @@ export default function NEETExamCountdownPage() {
               {/* Exam Info Pills */}
               <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
                 {[
-                  { icon: Calendar, text: 'May 3, 2026' },
+                  {
+                    icon: Calendar,
+                    text: NEET_EXAM_DATES[selectedYear].toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    }),
+                  },
                   { icon: Clock, text: '2:00 PM - 5:20 PM' },
                   { icon: FileText, text: 'Pen & Paper Mode' },
                 ].map((item, idx) => (
@@ -705,9 +821,9 @@ export default function NEETExamCountdownPage() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {IMPORTANT_DATES.map((item, idx) => {
+              {getImportantDates(selectedYear).map((item, idx) => {
                 const Icon = item.icon
-                const isExam = item.event === 'NEET 2026 Exam'
+                const isExam = item.event === `NEET ${selectedYear} Exam`
                 return (
                   <div
                     key={item.event}
@@ -792,7 +908,7 @@ export default function NEETExamCountdownPage() {
                       <div className="py-6 text-center">
                         <Award className="mx-auto mb-3 h-14 w-14 text-green-500" />
                         <p className={`text-xl font-bold ${theme.textPrimary}`}>
-                          NEET 2026 Completed!
+                          NEET {selectedYear} Completed!
                         </p>
                         <p className={theme.textMuted}>Hope you did your best!</p>
                       </div>
@@ -1298,7 +1414,7 @@ export default function NEETExamCountdownPage() {
               >
                 <Rocket className={`mx-auto mb-6 h-16 w-16 ${theme.textAccent}`} />
                 <h2 className={`mb-4 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
-                  Start Your NEET 2026 Journey
+                  Start Your NEET {selectedYear} Journey
                 </h2>
                 <p className={`mb-8 text-lg ${theme.textSecondary}`}>
                   Every day counts. Begin your preparation with Cerebrum Biology Academy.
