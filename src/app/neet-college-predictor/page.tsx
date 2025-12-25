@@ -134,6 +134,16 @@ export default function NEETCollegePredictorPage() {
     return Math.round(750000 + (350 - score) * 6000)
   }
 
+  // Generate URL-friendly slug from college name
+  const generateSlug = (name: string): string => {
+    return name
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim()
+  }
+
   // Auto-convert marks to rank when marks change
   useEffect(() => {
     if (inputMode === 'marks' && marks) {
@@ -1572,7 +1582,12 @@ _Powered by Cerebrum Biology Academy_`
                                     </span>
                                   )}
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900">{college.name}</h3>
+                                <Link
+                                  href={`/neet-college-predictor/college/${generateSlug(college.name)}`}
+                                  className="text-lg font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                                >
+                                  {college.name}
+                                </Link>
                                 <div className="mt-1 flex items-center gap-1 text-gray-600">
                                   <MapPin className="h-4 w-4" />
                                   <span className="text-sm">{college.state}</span>
