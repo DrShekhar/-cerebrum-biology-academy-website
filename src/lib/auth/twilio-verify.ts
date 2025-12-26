@@ -9,39 +9,53 @@
 import crypto from 'crypto'
 import type { Twilio } from 'twilio'
 
-// Environment validation - fail if not configured in production
-function getRequiredEnv(key: string): string {
-  const value = process.env[key]
-  if (!value) {
-    if (process.env.NODE_ENV === 'production') {
-      throw new Error(`Missing required environment variable: ${key}`)
-    }
-    console.warn(`[DEV] Missing ${key} - OTP verification will be mocked`)
-    return ''
-  }
-  return value
-}
+// Lazy environment access - read at runtime, not build time
+// This prevents build failures when env vars are missing during static analysis
+function getTwilioEnv() {
+  const accountSid = process.env.TWILIO_ACCOUNT_SID || ''
+  const authToken = process.env.TWILIO_AUTH_TOKEN || ''
+  const verifyServiceSid = process.env.TWILIO_VERIFY_SERVICE_SID || ''
 
-const TWILIO_ACCOUNT_SID = getRequiredEnv('TWILIO_ACCOUNT_SID')
-const TWILIO_AUTH_TOKEN = getRequiredEnv('TWILIO_AUTH_TOKEN')
-const TWILIO_VERIFY_SERVICE_SID = getRequiredEnv('TWILIO_VERIFY_SERVICE_SID')
+  const isConfigured = Boolean(accountSid && authToken && verifyServiceSid)
+
+  if (!isConfigured && process.env.NODE_ENV === 'development') {
+    console.warn('[DEV] Twilio not configured - OTP verification will be mocked')
+  }
+
+  return { accountSid, authToken, verifyServiceSid, isConfigured }
+}
 
 // Lazy-load Twilio client to reduce bundle size
 let twilioClientPromise: Promise<Twilio | null> | null = null
+let cachedEnv: ReturnType<typeof getTwilioEnv> | null = null
 
 async function getTwilioClient(): Promise<Twilio | null> {
-  if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN) {
+  // Lazy evaluate environment on first call
+  if (!cachedEnv) {
+    cachedEnv = getTwilioEnv()
+  }
+
+  if (!cachedEnv.isConfigured) {
     return null
   }
 
   if (!twilioClientPromise) {
+    const env = cachedEnv
     twilioClientPromise = import('twilio').then((twilioModule) => {
       const twilio = twilioModule.default
-      return twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+      return twilio(env.accountSid, env.authToken)
     })
   }
 
   return twilioClientPromise
+}
+
+// Lazy getter for verify service SID
+function getVerifyServiceSid(): string {
+  if (!cachedEnv) {
+    cachedEnv = getTwilioEnv()
+  }
+  return cachedEnv.verifyServiceSid
 }
 
 export type OTPChannel = 'sms' | 'whatsapp' | 'email'
@@ -132,7 +146,7 @@ export async function sendOTP(to: string, channel: OTPChannel): Promise<SendOTPR
     const formattedTo = channel === 'email' ? to : formatPhoneNumber(to)
 
     const verification = await twilioClient.verify.v2
-      .services(TWILIO_VERIFY_SERVICE_SID)
+      .services(getVerifyServiceSid())
       .verifications.create({
         to: formattedTo,
         channel: channel,
@@ -202,7 +216,7 @@ export async function verifyOTP(
     const formattedTo = channel === 'email' ? to : formatPhoneNumber(to)
 
     const verificationCheck = await twilioClient.verify.v2
-      .services(TWILIO_VERIFY_SERVICE_SID)
+      .services(getVerifyServiceSid())
       .verificationChecks.create({
         to: formattedTo,
         code: code,
