@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { DM_Sans } from 'next/font/google'
 import {
   Calendar,
   Clock,
@@ -20,7 +21,6 @@ import {
   FileText,
   AlertCircle,
   ChevronDown,
-  Timer,
   Leaf,
   Beaker,
   Atom,
@@ -28,6 +28,13 @@ import {
   Rocket,
   Trophy,
 } from 'lucide-react'
+
+// Distinctive font for countdown numbers
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-dm-sans',
+})
 
 // NEET Exam Dates - First Sunday of May each year, 2:00 PM IST
 const NEET_EXAM_DATES: Record<number, Date> = {
@@ -426,26 +433,45 @@ export default function NEETExamCountdownPage() {
               </p>
 
               {/* Countdown Cards */}
-              <div className="mx-auto mb-8 grid max-w-3xl grid-cols-4 gap-3 md:gap-4">
+              <div className="mx-auto mb-8 grid max-w-3xl grid-cols-4 gap-2 sm:gap-4">
                 {[
-                  { value: timeLeft.days, label: 'Days', color: 'bg-red-500' },
-                  { value: timeLeft.hours, label: 'Hours', color: 'bg-blue-500' },
-                  { value: timeLeft.minutes, label: 'Minutes', color: 'bg-amber-500' },
-                  { value: timeLeft.seconds, label: 'Seconds', color: 'bg-green-500' },
+                  {
+                    value: timeLeft.days,
+                    label: 'Days',
+                    color: 'text-red-500',
+                    borderColor: 'border-t-red-500',
+                  },
+                  {
+                    value: timeLeft.hours,
+                    label: 'Hours',
+                    color: 'text-blue-500',
+                    borderColor: 'border-t-blue-500',
+                  },
+                  {
+                    value: timeLeft.minutes,
+                    label: 'Minutes',
+                    color: 'text-amber-500',
+                    borderColor: 'border-t-amber-500',
+                  },
+                  {
+                    value: timeLeft.seconds,
+                    label: 'Seconds',
+                    color: 'text-green-500',
+                    borderColor: 'border-t-green-500',
+                  },
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-2xl bg-white border border-gray-100 shadow-sm p-4 md:p-6"
+                    className={`rounded-2xl bg-white border border-gray-100 shadow-sm px-2 py-4 sm:p-4 md:p-6 border-t-4 ${item.borderColor}`}
                   >
                     <div
-                      className={`mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl ${item.color} md:h-12 md:w-12`}
+                      className={`${dmSans.className} text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl tabular-nums`}
                     >
-                      <Timer className="h-5 w-5 text-white md:h-6 md:w-6" />
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
                       {item.value.toString().padStart(2, '0')}
                     </div>
-                    <div className="mt-1 text-xs font-medium uppercase tracking-wide text-gray-500 md:text-sm">
+                    <div
+                      className={`mt-1 text-xs font-semibold uppercase tracking-wide ${item.color} md:text-sm`}
+                    >
                       {item.label}
                     </div>
                   </div>
@@ -489,7 +515,7 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* Phase Indicator */}
-        <section className="py-8 px-4 sm:px-6">
+        <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="mx-auto max-w-3xl">
             <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
               <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -552,7 +578,7 @@ export default function NEETExamCountdownPage() {
                 return (
                   <div
                     key={item.event}
-                    className={`rounded-2xl bg-white border p-4 transition-all hover:shadow-md ${
+                    className={`rounded-2xl bg-white border p-4 transition-all hover:shadow-md hover:-translate-y-0.5 ${
                       isExam ? 'border-red-200 bg-red-50' : 'border-gray-100 shadow-sm'
                     }`}
                   >
@@ -573,7 +599,7 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* Study Calculator + Quick Stats */}
-        <section className="py-8 px-4 sm:px-6">
+        <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-6 lg:grid-cols-2">
               {/* Study Calculator */}
@@ -840,9 +866,9 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* Topper Quote */}
-        <section className="py-8 px-4 sm:px-6">
+        <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-8 text-center">
+            <div className="rounded-2xl bg-slate-50 border border-gray-100 p-8 text-center border-l-4 border-l-blue-500">
               <Quote className="mx-auto mb-4 h-8 w-8 text-blue-200" />
               <blockquote className="mb-4 text-lg font-medium text-gray-900 md:text-xl">
                 &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
@@ -896,7 +922,7 @@ export default function NEETExamCountdownPage() {
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="group rounded-2xl bg-white border border-gray-100 shadow-sm p-5 transition-all hover:shadow-md hover:border-blue-200"
+                  className="group rounded-2xl bg-white border border-gray-100 shadow-sm p-5 transition-all hover:shadow-md hover:border-blue-200 hover:-translate-y-1"
                 >
                   <div
                     className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${tool.color} transition-transform group-hover:scale-110`}
@@ -918,7 +944,7 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-8 px-4 sm:px-6">
+        <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">
               Frequently Asked Questions
@@ -927,7 +953,7 @@ export default function NEETExamCountdownPage() {
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden"
+                  className="rounded-2xl bg-slate-50 border border-gray-100 overflow-hidden transition-all hover:shadow-sm"
                 >
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
