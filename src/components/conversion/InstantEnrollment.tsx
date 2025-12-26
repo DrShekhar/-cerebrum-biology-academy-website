@@ -205,7 +205,7 @@ export function InstantEnrollment({
             {/* Pricing Display */}
             <PremiumCard
               variant="luxury"
-              className="bg-gradient-to-br from-green-50 to-green-50 border-green-200"
+              className="bg-green-50 border-green-200"
             >
               <div className="p-4 space-y-3">
                 <div className="flex items-center justify-between">

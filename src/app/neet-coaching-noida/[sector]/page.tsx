@@ -694,7 +694,7 @@ export default function SectorPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
+                className="bg-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">

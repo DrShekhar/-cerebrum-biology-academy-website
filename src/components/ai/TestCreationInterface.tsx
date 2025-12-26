@@ -1983,7 +1983,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                   </div>
 
                   {/* Test Settings Summary */}
-                  <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-lg p-6">
+                  <div className="bg-green-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
                       <Settings className="w-5 h-5 mr-2 text-green-600" />
                       Test Settings

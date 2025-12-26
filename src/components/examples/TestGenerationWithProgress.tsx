@@ -253,7 +253,7 @@ export default function TestGenerationWithProgress() {
               animate={{ opacity: 1, scale: 1 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}

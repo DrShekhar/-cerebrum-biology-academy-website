@@ -59,7 +59,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
 
   if (isSubmitted) {
     return (
-      <div className="my-8 p-6 bg-gradient-to-br from-green-50 to-green-50 border border-green-200 rounded-2xl shadow-lg animate-fade-in">
+      <div className="my-8 p-6 bg-green-50 border border-green-200 rounded-2xl shadow-lg animate-fade-in">
         <div className="flex items-center gap-4 text-green-700">
           <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
             <CheckCircle className="w-7 h-7" />

@@ -246,7 +246,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl overflow-hidden border border-green-100"
+                className="bg-green-50 rounded-xl overflow-hidden border border-green-100"
               >
                 <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
                   <h3 className="text-xl font-bold">{option.class}</h3>

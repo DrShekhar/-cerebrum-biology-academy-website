@@ -325,7 +325,7 @@ export default function NeetCoachingEastIndiaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 border border-green-100"
+                className="bg-green-50 rounded-xl p-8 border border-green-100"
               >
                 <item.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>

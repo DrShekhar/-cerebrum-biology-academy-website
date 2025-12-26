@@ -188,7 +188,7 @@ export default function CourseFinderPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-200">
+              <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="w-8 h-8 rounded-lg bg-green-600 flex items-center justify-center">
                     <svg

@@ -643,7 +643,7 @@ export default function DrShekharSinghPage() {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-8 border-2 border-green-200 text-center"
+                className="bg-green-50 rounded-2xl p-8 border-2 border-green-200 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}

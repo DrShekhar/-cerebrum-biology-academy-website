@@ -334,7 +334,7 @@ export default function BulkOperationsWithProgress() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200 rounded-xl p-6"
+                  className="bg-green-50 border-2 border-green-200 rounded-xl p-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-green-100 rounded-full">

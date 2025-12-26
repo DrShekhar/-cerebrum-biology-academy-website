@@ -726,7 +726,7 @@ export default function Class9VsClass10Page() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 shadow-lg">
+            <div className="bg-green-50 rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Readiness Checklist</h3>
               <div className="space-y-4">
                 {readinessChecklist.map((item, index) => (

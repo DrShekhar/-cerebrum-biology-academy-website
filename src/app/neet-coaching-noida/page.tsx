@@ -290,7 +290,7 @@ export default function NeetCoachingNoidaPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.03 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-5 border border-green-100"
+                className="bg-green-50 rounded-xl p-5 border border-green-100"
               >
                 <Building2 className="w-6 h-6 text-green-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>

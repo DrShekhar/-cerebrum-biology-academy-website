@@ -281,7 +281,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
       <PremiumCard
         variant="luxury"
         size="lg"
-        className={`bg-gradient-to-br from-green-50 to-green-50 border-green-200 ${className}`}
+        className={`bg-green-50 border-green-200 ${className}`}
       >
         <div className="p-6 space-y-6">
           {/* Confetti Effect */}

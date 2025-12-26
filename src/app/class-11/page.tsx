@@ -411,7 +411,7 @@ export default function Class11Page() {
       </section>
 
       {/* Learning Methodology */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-green-50">
+      <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"

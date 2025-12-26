@@ -147,7 +147,7 @@ function RescheduleContent() {
 
   if (success) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-50 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-green-50 p-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

@@ -56,7 +56,7 @@ const tierConfigs = {
     name: 'Pursuit',
     subtitle: 'Great Value',
     color: 'bg-green-600',
-    bgColor: 'bg-gradient-to-br from-green-50 to-green-50',
+    bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
     textColor: 'text-green-700',
     icon: Zap,

@@ -355,7 +355,7 @@ export default function NCERTBiologyClass11Page() {
       </section>
 
       {/* Why Study at Cerebrum */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-green-50">
+      <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -422,7 +422,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6">
+              <div className="bg-green-50 rounded-2xl p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Core Values</h4>
                 <div className="space-y-2">
                   {['Academic Excellence', 'Scientific Rigor', 'Student Success', 'Innovation'].map(

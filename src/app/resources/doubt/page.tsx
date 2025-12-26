@@ -230,7 +230,7 @@ export default function DoubtResolutionPage() {
                 key={index}
                 className={`relative rounded-2xl p-8 transition-all hover:shadow-xl ${
                   channel.highlight
-                    ? 'bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200'
+                    ? 'bg-green-50 border-2 border-green-200'
                     : 'bg-gray-50 border border-gray-100'
                 }`}
               >

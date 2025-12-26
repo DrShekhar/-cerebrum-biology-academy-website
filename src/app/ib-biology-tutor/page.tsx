@@ -418,14 +418,14 @@ export default function IBBiologyTutorPage() {
                   title: 'Evolution & Biodiversity',
                   description:
                     'Natural selection, classification, cladistics, and evolutionary evidence',
-                  color: 'from-green-700 to-green-700',
+                  color: 'bg-green-700',
                 },
                 {
                   icon: Brain,
                   title: 'Human Physiology',
                   description:
                     'Digestion, cardiovascular, respiratory, nervous, and immune systems',
-                  color: 'from-green-700 to-green-700',
+                  color: 'bg-green-700',
                 },
               ].map((topic, index) => (
                 <motion.div
@@ -447,7 +447,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* Additional HL Topics Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-green-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
@@ -619,7 +619,7 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={scaleIn}
-                  className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
+                  className="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
                 >
                   <div className="bg-gradient-to-br from-green-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                     <paper.icon className="w-6 h-6 text-white" />
@@ -780,7 +780,7 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
+                  className="bg-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                 >
                   <div className="bg-gradient-to-br from-green-600 to-green-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
@@ -794,7 +794,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-green-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial="hidden"

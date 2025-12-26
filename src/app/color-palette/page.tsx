@@ -530,7 +530,7 @@ const gradients: GradientSwatch[] = [
   },
   {
     name: 'Green 50 to Teal 50',
-    classes: 'bg-gradient-to-br from-green-50 to-green-50',
+    classes: 'bg-green-50',
     usage: 'Bio-themed section backgrounds (46+ uses)',
   },
   {

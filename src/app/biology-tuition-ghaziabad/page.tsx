@@ -328,7 +328,7 @@ export default function BiologyTuitionGhaziabadPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-4 text-center border border-green-100"
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
               >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>

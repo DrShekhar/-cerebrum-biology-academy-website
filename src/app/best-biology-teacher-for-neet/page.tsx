@@ -277,7 +277,7 @@ export default function BestBiologyTeacherForNeetPage() {
             {neetResults.map((result, index) => (
               <div
                 key={result.year}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 text-center border-2 border-green-100 animate-fade-in-up"
+                className="bg-green-50 rounded-xl p-8 text-center border-2 border-green-100 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-3xl font-bold text-green-600 mb-2">NEET {result.year}</h3>

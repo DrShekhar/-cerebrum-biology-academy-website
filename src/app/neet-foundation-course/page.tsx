@@ -571,7 +571,7 @@ export default function NeetFoundationCoursePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 border-2 border-green-200"
+              className="bg-green-50 rounded-xl p-8 border-2 border-green-200"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">

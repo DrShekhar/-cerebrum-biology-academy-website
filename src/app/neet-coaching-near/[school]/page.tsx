@@ -405,7 +405,7 @@ export default function SchoolNEETCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
+                className="bg-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center mb-4">
                   <Calendar className="w-6 h-6 text-green-600 mr-2" />

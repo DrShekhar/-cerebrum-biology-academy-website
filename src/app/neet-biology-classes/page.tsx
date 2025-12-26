@@ -325,7 +325,7 @@ export default function NeetBiologyClassesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
+                className="bg-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center justify-between mb-4">
                   <topic.icon className="w-10 h-10 text-green-600" />
