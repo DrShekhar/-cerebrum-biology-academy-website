@@ -1,6 +1,6 @@
 'use client'
 
-import { useUser } from '@clerk/nextjs'
+import { useSafeUser } from '@/hooks/useSafeClerk'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -102,7 +102,7 @@ const roles: RoleOption[] = [
 ]
 
 export default function SelectRolePage() {
-  const { user, isLoaded } = useUser()
+  const { user, isLoaded } = useSafeUser()
   const router = useRouter()
   const [isOwner, setIsOwner] = useState(false)
 

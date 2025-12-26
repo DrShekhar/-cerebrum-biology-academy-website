@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
-import { useUser } from '@clerk/nextjs'
+import { useSafeUser } from '@/hooks/useSafeClerk'
 
 // Owner phone number - only this number gets multi-role access
 const OWNER_PHONE = '+919999744334'
@@ -87,7 +87,7 @@ export default function DashboardPage() {
   const { user, isLoading, isAuthenticated } = useAuth()
   const { isDevMode } = useUserFlow()
   const router = useRouter()
-  const { user: clerkUser, isLoaded: clerkLoaded } = useUser()
+  const { user: clerkUser, isLoaded: clerkLoaded } = useSafeUser()
 
   useEffect(() => {
     // Check if user is the owner by phone number - redirect to role selection
