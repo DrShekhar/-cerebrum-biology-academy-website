@@ -2,8 +2,36 @@
 
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
+import { useClerkAvailable } from '@/hooks/useSafeClerk'
 
 export function ClerkAuthButtons() {
+  const isClerkAvailable = useClerkAvailable()
+
+  // If Clerk is not available, show simple login link
+  if (!isClerkAvailable) {
+    return (
+      <Link
+        href="/sign-in"
+        className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 group"
+      >
+        <svg
+          className="w-4 h-4 transition-transform group-hover:scale-110"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+          />
+        </svg>
+        <span>Login</span>
+      </Link>
+    )
+  }
+
   return (
     <>
       <SignedOut>
@@ -55,6 +83,28 @@ export function ClerkAuthButtons() {
 }
 
 export function ClerkAuthButtonsMobile() {
+  const isClerkAvailable = useClerkAvailable()
+
+  // If Clerk is not available, show simple login button
+  if (!isClerkAvailable) {
+    return (
+      <Link
+        href="/sign-in"
+        className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+          />
+        </svg>
+        Sign In
+      </Link>
+    )
+  }
+
   return (
     <>
       <SignedOut>

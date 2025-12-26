@@ -2,7 +2,7 @@
 
 import { useState, ReactNode } from 'react'
 import { useSession, signOut } from 'next-auth/react'
-import { useClerk } from '@clerk/nextjs'
+import { useSafeClerk } from '@/hooks/useSafeClerk'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -49,7 +49,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { signOut: clerkSignOut } = useClerk()
+  const { signOut: clerkSignOut } = useSafeClerk()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
   const { data: session, status } = useSession({
     required: false,

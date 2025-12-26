@@ -1,13 +1,13 @@
 'use client'
 
-import { useUser } from '@clerk/nextjs'
+import { useSafeUser } from '@/hooks/useSafeClerk'
 import { useState, useEffect } from 'react'
 
 // Owner phone number - only this number gets multi-role access
 const OWNER_PHONE = '+919999744334'
 
 export function useOwnerAccess() {
-  const { user, isLoaded } = useUser()
+  const { user, isLoaded } = useSafeUser()
   const [isOwner, setIsOwner] = useState(false)
   const [isCheckingOwner, setIsCheckingOwner] = useState(true)
 
