@@ -493,7 +493,7 @@ function TestimonialCard({ testimonial }: { testimonial: ParentTestimonial }) {
         {/* Verification Badge */}
         {testimonial.socialProof.verified && (
           <div className="flex justify-end mb-4">
-            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+            <div className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
               <CheckCircle className="w-3 h-3 mr-1 fill-current" />
               Verified Parent
             </div>
@@ -813,7 +813,7 @@ export default function ParentTestimonialsSection({
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 text-center">
+      <div className="bg-indigo-500 text-white p-8 text-center">
         <h3 className="text-2xl font-bold mb-2">Join Our Parent Community</h3>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
           Experience the same satisfaction and success that these parents have seen with their

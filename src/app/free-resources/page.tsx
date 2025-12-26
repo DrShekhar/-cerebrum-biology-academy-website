@@ -160,14 +160,14 @@ export default function FreeResourcesPage() {
                 </Link>
                 <Link
                   href="/neet-biology-mcq?isNcertBased=true"
-                  className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-500/30 hover:scale-[1.02] transition-all border border-white/20"
+                  className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-600/30 hover:scale-[1.02] transition-all border border-white/20"
                 >
                   <BookOpen className="w-5 h-5" />
                   NCERT Based MCQs
                 </Link>
                 <Link
                   href="/neet-biology-mcq?isPYQOnly=true"
-                  className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-500/30 hover:scale-[1.02] transition-all border border-white/20"
+                  className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-600/30 hover:scale-[1.02] transition-all border border-white/20"
                 >
                   <FileText className="w-5 h-5" />
                   NEET PYQs

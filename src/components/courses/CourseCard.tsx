@@ -20,7 +20,7 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
   const tierColors = {
     pinnacle: 'from-purple-600 to-pink-600',
     ascent: 'from-blue-600 to-indigo-600',
-    pursuit: 'from-green-600 to-teal-600',
+    pursuit: 'bg-green-600',
   }
 
   const tierNames = {
@@ -140,7 +140,7 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           <div className="space-y-2">
             {tierDetails.additionalBenefits.slice(0, 3).map((benefit, index) => (
               <div key={index} className="flex items-start text-xs sm:text-sm text-gray-700">
-                <span className="text-green-500 mr-2 mt-0.5 flex-shrink-0">✓</span>
+                <span className="text-green-600 mr-2 mt-0.5 flex-shrink-0">✓</span>
                 <span>{benefit}</span>
               </div>
             ))}

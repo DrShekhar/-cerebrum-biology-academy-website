@@ -241,7 +241,7 @@ export function EnhancedMobileNavigation({
             const content = (
               <div className={`nav-item flex flex-col items-center justify-center py-2 px-1 min-h-touch-md transition-all duration-200 touch-target ripple-effect ${
                 item.highlight
-                  ? 'text-emerald-600 bg-emerald-50'
+                  ? 'text-green-600 bg-green-50'
                   : active
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-gray-500 hover:text-gray-700'
@@ -370,7 +370,7 @@ export function EnhancedMobileNavigation({
                   </div>
                 </div>
               ) : (
-                <div className="p-6 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-200">
+                <div className="p-6 bg-gray-50 border-b border-gray-200">
                   <div className="text-center">
                     <Zap className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                     <div className="font-medium text-gray-900 mb-1">

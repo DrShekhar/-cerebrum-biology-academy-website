@@ -63,15 +63,15 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
           name: 'Advanced Plus',
           tagline: 'Most Popular Choice',
           icon: Zap,
-          gradient: 'from-teal-600 to-teal-700',
-          cardGradient: 'from-teal-50 to-teal-100',
-          borderGradient: 'from-teal-400 to-teal-500',
-          textColor: 'text-teal-900',
+          gradient: 'from-green-600 to-green-700',
+          cardGradient: 'from-green-50 to-green-100',
+          borderGradient: 'from-green-500 to-green-600',
+          textColor: 'text-green-800',
           accentColor: 'teal',
           description: 'Comprehensive NEET preparation with proven track record',
           features: ['Live Classes', 'Test Series', 'Study Material'],
-          bgPattern: 'bg-gradient-to-br from-teal-500/5 to-teal-600/5',
-          shimmer: 'from-teal-400/20 via-teal-500/20 to-teal-400/20',
+          bgPattern: 'bg-gradient-to-br from-green-600/5 to-green-600/5',
+          shimmer: 'from-green-500/20 via-green-600/20 to-green-500/20',
         }
       case 'pursuit':
         return {
@@ -182,7 +182,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
-              className="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
+              className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
             >
               <Star className="w-3 h-3" />
               <span>POPULAR</span>
@@ -288,9 +288,9 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               whileHover={{ scale: 1.05 }}
               className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30"
             >
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               <span className="font-semibold text-gray-700">NEET Focused</span>
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
             </motion.div>
           </div>
         </div>
@@ -476,7 +476,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
             >
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Free Demo Class</span>
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               </span>
             </motion.button>
           </div>

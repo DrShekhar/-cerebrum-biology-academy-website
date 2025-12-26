@@ -533,10 +533,10 @@ const VoiceIntegrationHub: React.FC = () => {
         className="text-center space-y-4"
       >
         <div className="flex items-center justify-center gap-3">
-          <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Mic className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             Voice Learning Hub
           </h1>
         </div>
@@ -573,7 +573,7 @@ const VoiceIntegrationHub: React.FC = () => {
             className={`p-4 rounded-full shadow-lg transition-all ${
               isSpeaking
                 ? 'bg-orange-500 hover:bg-orange-600 text-white'
-                : 'bg-green-500 hover:bg-green-600 text-white disabled:opacity-50'
+                : 'bg-green-600 hover:bg-green-600 text-white disabled:opacity-50'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

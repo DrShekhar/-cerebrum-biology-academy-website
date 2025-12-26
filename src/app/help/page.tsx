@@ -78,10 +78,10 @@ const colorMap: Record<string, { bg: string; text: string; border: string; hover
     hover: 'hover:bg-cyan-100',
   },
   emerald: {
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-600',
-    border: 'border-emerald-200',
-    hover: 'hover:bg-emerald-100',
+    bg: 'bg-green-50',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    hover: 'hover:bg-green-100',
   },
   orange: {
     bg: 'bg-orange-50',
@@ -96,10 +96,10 @@ const colorMap: Record<string, { bg: string; text: string; border: string; hover
     hover: 'hover:bg-pink-100',
   },
   teal: {
-    bg: 'bg-teal-50',
-    text: 'text-teal-600',
-    border: 'border-teal-200',
-    hover: 'hover:bg-teal-100',
+    bg: 'bg-green-50',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    hover: 'hover:bg-green-100',
   },
   gray: {
     bg: 'bg-gray-50',
@@ -187,7 +187,7 @@ export default function HelpCenterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -393,7 +393,7 @@ export default function HelpCenterPage() {
           </div>
         )}
 
-        <div className="mt-12 sm:mt-14 md:mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
+        <div className="mt-12 sm:mt-14 md:mt-16 bg-indigo-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
           <div className="text-center mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4">
               <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5" />

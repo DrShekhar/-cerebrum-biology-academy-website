@@ -73,28 +73,28 @@ export default function IGCSEBiologyTutorPage() {
         'Theory Papers',
         'Alternative to Practical',
       ],
-      gradient: 'from-cyan-500 to-teal-600',
+      gradient: 'from-cyan-500 to-green-600',
     },
     {
       name: 'Edexcel IGCSE',
       code: '4BI1',
       icon: '📘',
       features: ['Paper 1B & 2B', 'International Focus', 'Controlled Assessment', 'Science Award'],
-      gradient: 'from-teal-500 to-cyan-600',
+      gradient: 'from-green-600 to-cyan-600',
     },
     {
       name: 'AQA GCSE',
       code: '8461',
       icon: '🧬',
       features: ['Foundation & Higher', 'Combined Science', 'Required Practicals', 'Trilogy'],
-      gradient: 'from-cyan-600 to-teal-700',
+      gradient: 'from-cyan-600 to-green-700',
     },
     {
       name: 'OCR GCSE',
       code: 'J247',
       icon: '🔬',
       features: ['Gateway Science', 'Practical Endorsement', 'Synoptic Assessment', 'A & B'],
-      gradient: 'from-teal-600 to-cyan-700',
+      gradient: 'from-green-600 to-cyan-700',
     },
   ]
 
@@ -147,7 +147,7 @@ export default function IGCSEBiologyTutorPage() {
     {
       grade: 'A',
       percentage: '80-89%',
-      color: 'from-green-400 to-emerald-500',
+      color: 'from-green-400 to-green-600',
       tips: 'Strong knowledge, good exam technique',
     },
     {
@@ -205,7 +205,7 @@ export default function IGCSEBiologyTutorPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-teal-700 py-20 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-700 py-20 text-white">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -404,7 +404,7 @@ export default function IGCSEBiologyTutorPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-teal-100 p-8"
+              className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-green-100 p-8"
             >
               <h3 className="mb-4 text-2xl font-bold text-gray-900">
                 Tips for Achieving Top Grades
@@ -586,7 +586,7 @@ export default function IGCSEBiologyTutorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-teal-700 py-20 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-700 py-20 text-white">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"

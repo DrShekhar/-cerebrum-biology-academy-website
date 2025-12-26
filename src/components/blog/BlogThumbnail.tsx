@@ -200,7 +200,7 @@ export const BlogThumbnail = memo(function BlogThumbnail({
   // Fallback with nice gradient and icon
   return (
     <div
-      className={`relative w-full ${sizeClasses[size]} bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl overflow-hidden ${className}`}
+      className={`relative w-full ${sizeClasses[size]} bg-blue-500 rounded-xl overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80">
         <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-2">

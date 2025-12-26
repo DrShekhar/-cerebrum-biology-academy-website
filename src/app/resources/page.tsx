@@ -45,7 +45,7 @@ const FreeResourcesHub = () => {
       description: '10,000+ practice questions with detailed explanations',
       icon: GraduationCap,
       count: '10,000+ Questions',
-      color: 'from-green-500 to-green-600',
+      color: 'bg-green-600',
       href: '/resources/questions',
       features: ['Previous Year Papers', 'Topic-wise Filter', 'Difficulty Levels', 'Solutions'],
     },
@@ -83,7 +83,7 @@ const FreeResourcesHub = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 text-white">
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">🎁 Free Biology Resources</h1>
@@ -193,7 +193,7 @@ const FreeResourcesHub = () => {
                     <div className="grid grid-cols-2 gap-2 mb-6">
                       {resource.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
                           {feature}
                         </div>
                       ))}
@@ -227,7 +227,7 @@ const FreeResourcesHub = () => {
             {topics.map((topic, idx) => (
               <div
                 key={topic}
-                className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4 text-center hover:shadow-md transition-all"
+                className="bg-gray-50 border border-blue-200 rounded-lg p-4 text-center hover:shadow-md transition-all"
               >
                 <div className="text-2xl mb-2">
                   {['🧬', '🧪', '🌱', '❤️', '🌿', '🌍', '🔬', '👶'][idx % 8]}
@@ -281,7 +281,7 @@ const FreeResourcesHub = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
+        <div className="bg-indigo-500 rounded-xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">🚀 Ready to Accelerate Your Biology Learning?</h3>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
             Join 50,000+ students who are already using our free resources to excel in Biology.

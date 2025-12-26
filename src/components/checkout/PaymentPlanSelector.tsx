@@ -98,7 +98,7 @@ export function PaymentPlanSelector({ prices, selectedPlan, onSelect }: PaymentP
             >
               {plan.recommended && (
                 <div className="absolute -top-3 right-4">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 px-3 py-1 text-xs font-semibold text-white shadow-md">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-green-600 px-3 py-1 text-xs font-semibold text-white shadow-md">
                     <Sparkles className="h-3 w-3" />
                     Best Value
                   </span>

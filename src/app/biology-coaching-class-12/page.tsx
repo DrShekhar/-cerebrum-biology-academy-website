@@ -138,7 +138,7 @@ export default function BiologyClass12Page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -184,7 +184,7 @@ export default function BiologyClass12Page() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +91 88264 44334
@@ -245,19 +245,19 @@ export default function BiologyClass12Page() {
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-bold text-gray-900 text-lg">{unit.unit}</h3>
-                  <span className="bg-teal-100 text-teal-700 text-sm font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">
                     {unit.weightage}
                   </span>
                 </div>
                 <ul className="space-y-2 mb-4">
                   {unit.chapters.map((chapter) => (
                     <li key={chapter} className="flex items-center text-gray-600 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {chapter}
                     </li>
                   ))}
                 </ul>
-                <div className="text-sm text-teal-600 font-medium">{unit.questions} in NEET</div>
+                <div className="text-sm text-green-600 font-medium">{unit.questions} in NEET</div>
               </motion.div>
             ))}
           </div>
@@ -275,9 +275,9 @@ export default function BiologyClass12Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 text-center border border-teal-100"
+                className="bg-gradient-to-br from-green-50 to-cyan-50 rounded-xl p-6 text-center border border-green-100"
               >
-                <feature.icon className="w-12 h-12 text-teal-600 mx-auto mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
@@ -320,7 +320,7 @@ export default function BiologyClass12Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -352,7 +352,7 @@ export default function BiologyClass12Page() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-700"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View All Courses

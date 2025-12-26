@@ -162,7 +162,7 @@ export default function NeetFoundationCoursePage() {
       description:
         'Start before the competition, build stronger fundamentals, achieve higher success rates',
       icon: Rocket,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Stress-Free Learning',
@@ -322,7 +322,7 @@ export default function NeetFoundationCoursePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -571,10 +571,10 @@ export default function NeetFoundationCoursePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 border-2 border-emerald-200"
+              className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 border-2 border-green-200"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
                   <Rocket className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Class 10 Foundation</h3>
@@ -587,7 +587,7 @@ export default function NeetFoundationCoursePage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-emerald-600 to-teal-600"
+                  className="w-full bg-green-600"
                 >
                   Explore Class 10 Program
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -638,7 +638,7 @@ export default function NeetFoundationCoursePage() {
                 <div className="space-y-2">
                   {phase.topics.map((topic, idx) => (
                     <div key={idx} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-1" />
                       <span className="text-sm text-gray-700">{topic}</span>
                     </div>
                   ))}
@@ -656,7 +656,7 @@ export default function NeetFoundationCoursePage() {
       <PhotoGallerySection showFeaturedOnly={true} maxPhotos={6} />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

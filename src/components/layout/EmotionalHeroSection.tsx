@@ -159,7 +159,7 @@ export function EmotionalHeroSection({
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="relative z-50 bg-teal-600 text-white py-3 px-4"
+        className="relative z-50 bg-green-600 text-white py-3 px-4"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
@@ -176,7 +176,7 @@ export function EmotionalHeroSection({
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -213,7 +213,7 @@ export function EmotionalHeroSection({
               delay: i * 0.5,
             }}
           >
-            <Heart className="h-4 w-4 text-teal-300/50" />
+            <Heart className="h-4 w-4 text-green-400/50" />
           </motion.div>
         ))}
       </div>
@@ -232,16 +232,16 @@ export function EmotionalHeroSection({
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-amber-200">Master Biology,</span>
                 <br />
-                <span className="text-teal-300">Conquer NEET,</span>
+                <span className="text-green-400">Conquer NEET,</span>
                 <br />
                 <span className="text-white">Become a Doctor</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-slate-100 leading-relaxed max-w-2xl">
                 Join <span className="font-bold text-amber-300">5,000+ students</span> who
-                <span className="font-bold text-teal-300"> achieved their medical dreams</span> with
+                <span className="font-bold text-green-400"> achieved their medical dreams</span> with
                 India's premier
-                <span className="font-bold text-teal-200"> Biology coaching academy</span>
+                <span className="font-bold text-green-200"> Biology coaching academy</span>
               </p>
             </motion.div>
 
@@ -297,7 +297,7 @@ export function EmotionalHeroSection({
                 variant="medical"
                 size="lg"
                 onClick={() => (window.location.href = '/quick-enroll')}
-                className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 group"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-green-600/25 transition-all duration-300 group"
               >
                 <Sparkles className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 Take 2-Min Quiz & Enroll Instantly
@@ -325,18 +325,18 @@ export function EmotionalHeroSection({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="bg-teal-900/30 backdrop-blur-sm border border-teal-300/30 rounded-lg p-4"
+              className="bg-green-800/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-4"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-teal-300">Quick Eligibility Check</h3>
-                  <p className="text-sm text-teal-200">
+                  <h3 className="text-lg font-semibold text-green-400">Quick Eligibility Check</h3>
+                  <p className="text-sm text-green-200">
                     See if you qualify for our success guarantee
                   </p>
                 </div>
                 <button
                   onClick={handleEligibilityCheck}
-                  className="bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+                  className="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
                   Check Now
                 </button>
@@ -404,7 +404,7 @@ export function EmotionalHeroSection({
                     <img
                       src={emotionalTestimonials[currentTestimonial].image}
                       alt={emotionalTestimonials[currentTestimonial].name}
-                      className="w-16 h-16 rounded-full object-cover border-3 border-teal-300"
+                      className="w-16 h-16 rounded-full object-cover border-3 border-green-400"
                     />
                     <div>
                       <h3 className="text-xl font-bold text-white">
@@ -482,7 +482,7 @@ export function EmotionalHeroSection({
         >
           <div className="flex items-center gap-6 text-sm font-semibold">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               <span className="text-gray-800">
                 <AnimatedCounter value={liveCounter} /> MBBS Seats
               </span>

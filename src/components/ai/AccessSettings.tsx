@@ -455,7 +455,7 @@ const AccessSettings: React.FC = () => {
                         schedule: { ...prev.schedule, startDateTime: e.target.value },
                       }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -472,7 +472,7 @@ const AccessSettings: React.FC = () => {
                         schedule: { ...prev.schedule, endDateTime: e.target.value },
                       }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -486,7 +486,7 @@ const AccessSettings: React.FC = () => {
                         schedule: { ...prev.schedule, timezone: e.target.value },
                       }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   >
                     <option value="Asia/Kolkata">Asia/Kolkata (IST)</option>
                     <option value="America/New_York">America/New_York (EST)</option>
@@ -573,7 +573,7 @@ const AccessSettings: React.FC = () => {
                         schedule: { ...prev.schedule, gracePeriod: parseInt(e.target.value) || 0 },
                       }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -592,7 +592,7 @@ const AccessSettings: React.FC = () => {
                         schedule: { ...prev.schedule, bufferTime: parseInt(e.target.value) || 0 },
                       }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -1313,7 +1313,7 @@ const AccessSettings: React.FC = () => {
             {/* Attempt Configuration */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <RotateCcw className="w-5 h-5 text-teal-600" />
+                <RotateCcw className="w-5 h-5 text-green-600" />
                 Attempt Limits
               </h3>
 
@@ -1336,7 +1336,7 @@ const AccessSettings: React.FC = () => {
                       }))
                     }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.attemptLimits.enabled ? 'bg-teal-600' : 'bg-gray-200'
+                      configuration.attemptLimits.enabled ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                   >
                     <span
@@ -1367,7 +1367,7 @@ const AccessSettings: React.FC = () => {
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       />
                     </div>
 
@@ -1386,7 +1386,7 @@ const AccessSettings: React.FC = () => {
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="24h">24 Hours</option>
                         <option value="7d">7 Days</option>
@@ -1410,7 +1410,7 @@ const AccessSettings: React.FC = () => {
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="block">Block Access</option>
                         <option value="reduce_time">Reduce Time</option>
@@ -1433,7 +1433,7 @@ const AccessSettings: React.FC = () => {
                           }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
                             configuration.attemptLimits.progressSaving
-                              ? 'bg-teal-600'
+                              ? 'bg-green-600'
                               : 'bg-gray-200'
                           }`}
                         >
@@ -1461,7 +1461,7 @@ const AccessSettings: React.FC = () => {
                           }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
                             configuration.attemptLimits.resumeEnabled
-                              ? 'bg-teal-600'
+                              ? 'bg-green-600'
                               : 'bg-gray-200'
                           }`}
                         >

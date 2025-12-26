@@ -136,7 +136,7 @@ export function OptimisticProgressCard({ userId, initialProgress }: OptimisticPr
         <button
           onClick={() => handleCompleteSession(85)}
           disabled={isLoading}
-          className="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           <CheckCircle className="w-5 h-5" />
           <span>Complete Practice Session</span>

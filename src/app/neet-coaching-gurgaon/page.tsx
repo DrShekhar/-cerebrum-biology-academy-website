@@ -142,7 +142,7 @@ export default function NEETCoachingGurgaonPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -169,7 +169,7 @@ export default function NEETCoachingGurgaonPage() {
                 Best NEET Coaching in Gurgaon - Expert Biology Classes
               </h1>
 
-              <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Join Cerebrum Biology Academy for specialized NEET biology coaching. Easy access
                 from all Gurgaon sectors via Rapid Metro and Yellow Line. Weekend batches available
                 for working professionals&apos; children.
@@ -178,14 +178,14 @@ export default function NEETCoachingGurgaonPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   Call: 8826444334
                 </Link>
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center gap-2 bg-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-400 transition-colors border border-white/30"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors border border-white/30"
                 >
                   Book Free Demo Class
                 </Link>
@@ -222,8 +222,8 @@ export default function NEETCoachingGurgaonPage() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
                 >
-                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -267,7 +267,7 @@ export default function NEETCoachingGurgaonPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800">{area.name}</h3>
-                      <p className="text-teal-600 text-sm font-medium">{area.distance}</p>
+                      <p className="text-green-600 text-sm font-medium">{area.distance}</p>
                       <p className="text-gray-500 text-xs mt-1">{area.description}</p>
                     </div>
                   </div>
@@ -292,7 +292,7 @@ export default function NEETCoachingGurgaonPage() {
                     <br />
                     <strong>Then:</strong> Short auto/cab to Panchsheel Enclave (5 min)
                     <br />
-                    <span className="text-teal-600 font-medium">
+                    <span className="text-green-600 font-medium">
                       Total journey: 50-60 minutes from most Gurgaon areas
                     </span>
                   </p>
@@ -342,7 +342,7 @@ export default function NEETCoachingGurgaonPage() {
                   transition={{ delay: index * 0.05 }}
                   className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3"
                 >
-                  <GraduationCap className="w-5 h-5 text-teal-600 flex-shrink-0" />
+                  <GraduationCap className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{school}</span>
                 </motion.div>
               ))}
@@ -378,8 +378,8 @@ export default function NEETCoachingGurgaonPage() {
                   Medical College!&quot;
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                    <span className="text-teal-600 font-bold">AS</span>
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 font-bold">AS</span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800">Aanya Sharma</p>
@@ -418,7 +418,7 @@ export default function NEETCoachingGurgaonPage() {
                   className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
@@ -429,7 +429,7 @@ export default function NEETCoachingGurgaonPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+        <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -437,20 +437,20 @@ export default function NEETCoachingGurgaonPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Gurgaon</h2>
-              <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join the growing community of successful NEET aspirants from Gurgaon. Book your free
                 demo class today and experience the Cerebrum difference.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book Free Demo Class
                 </Link>
                 <Link
                   href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-teal-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 transition-colors border border-white/30"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-500 transition-colors border border-white/30"
                 >
                   <Phone className="w-5 h-5" />
                   Call: 8826444334

@@ -319,7 +319,7 @@ export default function BiologyClassesNearMePage() {
       </section>
 
       {/* Online Classes Option */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div

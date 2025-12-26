@@ -22,7 +22,7 @@ const activities: Activity[] = [
     location: 'Rohini Center',
     time: '2 minutes ago',
     icon: UserCheck,
-    color: 'from-green-500 to-emerald-600',
+    color: 'bg-green-600',
   },
   {
     id: '2',
@@ -58,7 +58,7 @@ const activities: Activity[] = [
     location: 'Live Sessions',
     time: 'now',
     icon: Users,
-    color: 'from-teal-500 to-green-600',
+    color: 'bg-green-600',
   },
   {
     id: '6',
@@ -76,7 +76,7 @@ const activities: Activity[] = [
     location: 'Rohini Center',
     time: '28 minutes ago',
     icon: UserCheck,
-    color: 'from-green-500 to-emerald-600',
+    color: 'bg-green-600',
   },
   {
     id: '8',
@@ -180,8 +180,8 @@ export function LiveActivityFeed({
               <div className="flex items-center justify-center mt-2">
                 <div className="flex items-center space-x-2">
                   <div className="relative">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75" />
+                    <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
+                    <div className="absolute inset-0 w-2 h-2 bg-green-600 rounded-full animate-ping opacity-75" />
                   </div>
                   <span className="text-xs text-gray-500 font-medium">Live Activity</span>
                 </div>
@@ -199,8 +199,8 @@ export function LiveActivityFeed({
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold text-gray-900 flex items-center">
             <div className="relative mr-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75" />
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
+              <div className="absolute inset-0 w-2 h-2 bg-green-600 rounded-full animate-ping opacity-75" />
             </div>
             Live Activity
           </h3>
@@ -237,12 +237,12 @@ export function LiveActivityFeed({
 
   // Inline variant
   return (
-    <div className={`bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 ${className}`}>
+    <div className={`bg-gray-50 rounded-2xl p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2">
           <div className="relative">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-            <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75" />
+            <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
+            <div className="absolute inset-0 w-3 h-3 bg-green-600 rounded-full animate-ping opacity-75" />
           </div>
           <h3 className="text-xl font-bold text-gray-900">Live Student Activity</h3>
         </div>

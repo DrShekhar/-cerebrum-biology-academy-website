@@ -26,7 +26,7 @@ const NeomorphismClaudeChatBoard = dynamic(
     loading: () => (
       <div className="h-96 flex items-center justify-center bg-gradient-to-br from-gray-100 via-gray-50 to-blue-50 rounded-3xl">
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse">
+          <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse">
             <Brain className="w-8 h-8 text-white" />
           </div>
           <p className="text-gray-600">Loading AI Doubt Resolution Bot...</p>
@@ -262,7 +262,7 @@ export default function DoubtResolutionPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-red-600 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Real-time Social Proof Banner */}
           <div className="mb-6 sm:mb-8 flex justify-center">
@@ -273,7 +273,7 @@ export default function DoubtResolutionPage() {
               </span>
               <div className="hidden sm:flex -space-x-2">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white" />
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white" />
+                <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white" />
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-red-500 border-2 border-white" />
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function DoubtResolutionPage() {
               </h3>
               <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-600/20 flex items-center justify-center flex-shrink-0">
                     <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
                   </div>
                   <div>
@@ -488,7 +488,7 @@ export default function DoubtResolutionPage() {
 
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center mb-4 gap-3 sm:gap-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center sm:text-left">
@@ -556,7 +556,7 @@ export default function DoubtResolutionPage() {
 
           {/* Call to Action */}
           <div className="text-center mt-8 sm:mt-10 md:mt-12">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
+            <div className="bg-indigo-500 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                 Try the AI Assistant Above!
               </h3>
@@ -660,7 +660,7 @@ export default function DoubtResolutionPage() {
               >
                 {/* Video Thumbnail Placeholder */}
                 {story.hasVideo && (
-                  <div className="relative bg-gradient-to-br from-red-100 to-pink-100 h-40 sm:h-48 flex items-center justify-center group cursor-pointer">
+                  <div className="relative bg-gradient-to-br bg-red-100 h-40 sm:h-48 flex items-center justify-center group cursor-pointer">
                     {/* Placeholder gradient background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-pink-600/20" />
 

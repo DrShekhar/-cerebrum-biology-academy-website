@@ -76,7 +76,7 @@ export function TestResults({
         <div className="bg-white rounded-3xl shadow-lg p-8 mb-8">
           {/* Score Summary */}
           <div className="text-center mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mx-auto mb-6">
+            <div className="w-32 h-32 rounded-full bg-blue-500 flex items-center justify-center mx-auto mb-6">
               <div className="text-white">
                 <div className="text-3xl font-bold">{percentage}%</div>
                 <div className="text-sm">Score</div>
@@ -116,7 +116,7 @@ export function TestResults({
             <div className="w-full bg-gray-200 rounded-full h-3">
               <div 
                 className={`h-3 rounded-full transition-all ${
-                  percentage >= 80 ? 'bg-green-500' :
+                  percentage >= 80 ? 'bg-green-600' :
                   percentage >= 60 ? 'bg-blue-500' :
                   percentage >= 40 ? 'bg-yellow-500' :
                   'bg-red-500'
@@ -167,7 +167,7 @@ export function TestResults({
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="text-sm font-semibold text-gray-600">Q{index + 1}</span>
                         <span className={`w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold ${
-                          isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                          isCorrect ? 'bg-green-600 text-white' : 'bg-red-500 text-white'
                         }`}>
                           {isCorrect ? '✓' : '✗'}
                         </span>

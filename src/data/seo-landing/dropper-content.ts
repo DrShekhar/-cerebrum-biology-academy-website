@@ -379,7 +379,7 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
     highlightedText: '360 Marks in Biology = Top Rank',
     ctaText: 'Boost Your Biology Score',
     ctaLink: '/courses/neet-dropper',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {

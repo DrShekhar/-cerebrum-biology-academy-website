@@ -302,7 +302,7 @@ export default function ErrorReportsPage() {
                                 onClick={() => setUpdatedAnswer(opt)}
                                 className={`flex-1 py-2 rounded-lg font-bold ${
                                   updatedAnswer === opt
-                                    ? 'bg-green-500 text-white'
+                                    ? 'bg-green-600 text-white'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                 }`}
                               >

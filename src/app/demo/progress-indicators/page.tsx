@@ -235,8 +235,8 @@ function FileUploadDemo() {
   return (
     <Card className="p-6 space-y-6">
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-emerald-100 rounded-lg">
-          <Upload className="w-6 h-6 text-emerald-600" />
+        <div className="p-2 bg-green-100 rounded-lg">
+          <Upload className="w-6 h-6 text-green-600" />
         </div>
         <div>
           <h2 className="text-xl font-bold text-slate-900">File Upload</h2>
@@ -272,7 +272,7 @@ function FileUploadDemo() {
           />
         </div>
       ) : (
-        <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer">
+        <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:border-green-600 transition-colors cursor-pointer">
           <Upload className="w-12 h-12 text-slate-400 mx-auto mb-3" />
           <p className="text-sm text-slate-600">Click to upload or drag and drop</p>
         </div>

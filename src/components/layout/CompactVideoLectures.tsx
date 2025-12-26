@@ -154,7 +154,7 @@ export function CompactVideoLectures() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link href="/video-lectures">
-              <Button variant="primary" size="xl" className="bg-teal-600 hover:bg-teal-700">
+              <Button variant="primary" size="xl" className="bg-green-600 hover:bg-green-700">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Browse All Lectures
               </Button>
@@ -169,7 +169,7 @@ export function CompactVideoLectures() {
           {/* Trust Indicators */}
           <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
               <span>HD Quality</span>
             </div>
             <div className="flex items-center">

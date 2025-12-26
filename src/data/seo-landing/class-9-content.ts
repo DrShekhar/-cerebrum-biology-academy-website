@@ -81,7 +81,7 @@ export const class9BiologyTuitionOnline: SEOLandingContent = {
     highlightedText: 'Smart Parents Start Their Kids Early',
     ctaText: 'View Foundation Course',
     ctaLink: '/courses/class-9-foundation',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {
@@ -233,7 +233,7 @@ export const neetFoundationClass9: SEOLandingContent = {
     highlightedText: 'Winners Start Before the Race Begins',
     ctaText: 'Explore Foundation Program',
     ctaLink: '/courses/class-9-foundation',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -382,7 +382,7 @@ export const onlineBiologyClassesClass9: SEOLandingContent = {
     highlightedText: 'Watch Your Child Fall in Love with Biology',
     ctaText: 'See Sample Class',
     ctaLink: '/free-resources?type=class-9-sample',
-    backgroundGradient: 'from-cyan-900 via-teal-900 to-green-900',
+    backgroundGradient: 'from-cyan-900 via-green-800 to-green-900',
   },
 
   painPoints: {

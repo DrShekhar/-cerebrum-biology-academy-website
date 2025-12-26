@@ -666,7 +666,7 @@ const Lifecycle: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
                     <span className="font-medium">Auto-save Status</span>
                   </div>
                   <div className="text-sm text-gray-600">
@@ -793,7 +793,7 @@ const Lifecycle: React.FC = () => {
                       type="checkbox"
                       checked={publishSettings.publishImmediately}
                       onChange={(e) => setPublishSettings(prev => ({ ...prev, publishImmediately: e.target.checked }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Publish immediately</span>
                   </label>
@@ -809,7 +809,7 @@ const Lifecycle: React.FC = () => {
                         type="date"
                         value={publishSettings.publishDate}
                         onChange={(e) => setPublishSettings(prev => ({ ...prev, publishDate: e.target.value }))}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -820,7 +820,7 @@ const Lifecycle: React.FC = () => {
                         type="time"
                         value={publishSettings.publishTime}
                         onChange={(e) => setPublishSettings(prev => ({ ...prev, publishTime: e.target.value }))}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -832,7 +832,7 @@ const Lifecycle: React.FC = () => {
                       type="checkbox"
                       checked={publishSettings.notifyStudents}
                       onChange={(e) => setPublishSettings(prev => ({ ...prev, notifyStudents: e.target.checked }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Notify students</span>
                   </label>
@@ -847,7 +847,7 @@ const Lifecycle: React.FC = () => {
                       value={publishSettings.notificationMessage}
                       onChange={(e) => setPublishSettings(prev => ({ ...prev, notificationMessage: e.target.value }))}
                       rows={3}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                 )}
@@ -868,7 +868,7 @@ const Lifecycle: React.FC = () => {
                     }))}
                     min="1"
                     max="5"
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -1179,7 +1179,7 @@ const Lifecycle: React.FC = () => {
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium">{window.name}</h4>
                         <div className="flex items-center gap-2">
-                          <span className={`w-3 h-3 rounded-full ${window.isActive ? 'bg-green-500' : 'bg-gray-300'}`} />
+                          <span className={`w-3 h-3 rounded-full ${window.isActive ? 'bg-green-600' : 'bg-gray-300'}`} />
                           <button className="text-red-600 hover:text-red-800">
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -1336,7 +1336,7 @@ const Lifecycle: React.FC = () => {
                           refreshContent: e.target.checked
                         }
                       }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Refresh question content</span>
                   </label>
@@ -1352,7 +1352,7 @@ const Lifecycle: React.FC = () => {
                           updateDifficulty: e.target.checked
                         }
                       }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Update difficulty levels</span>
                   </label>
@@ -1368,7 +1368,7 @@ const Lifecycle: React.FC = () => {
                           addNewQuestions: e.target.checked
                         }
                       }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Add new questions</span>
                   </label>
@@ -1384,7 +1384,7 @@ const Lifecycle: React.FC = () => {
                           removeOutdated: e.target.checked
                         }
                       }))}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Remove outdated questions</span>
                   </label>
@@ -2012,7 +2012,7 @@ const Lifecycle: React.FC = () => {
               <div className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full" />
+                    <div className="w-3 h-3 bg-green-600 rounded-full" />
                     <div className="flex-1">
                       <div className="font-medium text-green-800">Test Published</div>
                       <div className="text-sm text-green-600">January 16, 2024 at 3:00 PM</div>

@@ -42,7 +42,7 @@ export function TierSelector({ tiers, selectedTier, onSelect }: TierSelectorProp
             >
               {isPopular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-md">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-3 py-1 text-xs font-semibold text-white shadow-md">
                     <Star className="h-3 w-3 fill-current" />
                     Most Popular
                   </span>

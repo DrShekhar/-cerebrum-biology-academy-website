@@ -47,8 +47,8 @@ export function MilestoneIndicator({
       gradient: 'from-blue-400 to-blue-600',
     },
     green: {
-      bg: 'bg-green-500',
-      border: 'border-green-500',
+      bg: 'bg-green-600',
+      border: 'border-green-600',
       text: 'text-green-600',
       gradient: 'from-green-400 to-green-600',
     },

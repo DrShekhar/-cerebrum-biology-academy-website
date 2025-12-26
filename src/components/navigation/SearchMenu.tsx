@@ -213,7 +213,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       href: '/admissions',
       label: 'Admission',
       icon: ChevronRight,
-      gradient: 'from-green-500 to-green-600',
+      gradient: 'bg-green-600',
       bgGradient: 'from-green-50 to-green-100',
       hoverBg: 'hover:from-green-100 hover:to-green-200',
       textColor: 'text-green-700',
@@ -223,11 +223,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       href: 'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20your%20courses',
       label: 'WhatsApp',
       icon: MessageSquare,
-      gradient: 'from-emerald-500 to-emerald-600',
-      bgGradient: 'from-emerald-50 to-emerald-100',
-      hoverBg: 'hover:from-emerald-100 hover:to-emerald-200',
-      textColor: 'text-emerald-700',
-      iconBg: 'bg-emerald-600',
+      gradient: 'bg-green-600',
+      bgGradient: 'from-green-50 to-green-100',
+      hoverBg: 'hover:from-green-100 hover:to-green-200',
+      textColor: 'text-green-700',
+      iconBg: 'bg-green-600',
       external: true,
     },
     {
@@ -641,7 +641,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                         <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                         For You
                       </h3>
-                      <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border border-purple-200 rounded-2xl p-3 sm:p-4 shadow-md">
+                      <div className="bg-indigo-50 border border-purple-200 rounded-2xl p-3 sm:p-4 shadow-md">
                         <p className="text-xs text-purple-700 font-medium mb-2 sm:mb-3">
                           Based on your class ({userClass}) and goal ({userGoal})
                         </p>

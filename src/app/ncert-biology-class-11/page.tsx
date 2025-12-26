@@ -107,10 +107,10 @@ const faqs = [
 
 const colorMap: Record<string, { bg: string; text: string; border: string; light: string }> = {
   emerald: {
-    bg: 'bg-emerald-500',
-    text: 'text-emerald-600',
-    border: 'border-emerald-200',
-    light: 'bg-emerald-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
   blue: {
     bg: 'bg-blue-500',
@@ -125,10 +125,10 @@ const colorMap: Record<string, { bg: string; text: string; border: string; light
     light: 'bg-purple-50',
   },
   teal: {
-    bg: 'bg-teal-500',
-    text: 'text-teal-600',
-    border: 'border-teal-200',
-    light: 'bg-teal-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
   rose: {
     bg: 'bg-rose-500',
@@ -144,7 +144,7 @@ export default function NCERTBiologyClass11Page() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-600 via-green-600 to-cyan-700 text-white overflow-hidden">
         {/* Animated background blobs */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -202,14 +202,14 @@ export default function NCERTBiologyClass11Page() {
                   href="https://www.amazon.in/Biology-Textbook-Class-11-2024-25/dp/8195334792"
                   target="_blank"
                 >
-                  <Button className="bg-white text-emerald-700 hover:bg-white/90 font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
+                  <Button className="bg-white text-green-700 hover:bg-white/90 font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
                     <ShoppingCart className="w-5 h-5" />
                     Buy on Amazon
                     <ExternalLink className="w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/demo">
-                  <Button className="bg-emerald-500/20 border border-white/30 hover:bg-emerald-500/30 text-white font-semibold px-6 py-3 rounded-xl">
+                  <Button className="bg-green-600/20 border border-white/30 hover:bg-green-600/30 text-white font-semibold px-6 py-3 rounded-xl">
                     Book Free Demo
                   </Button>
                 </Link>
@@ -240,7 +240,7 @@ export default function NCERTBiologyClass11Page() {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-10">
                 <div className="flex items-start gap-6">
-                  <div className="w-32 h-40 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
+                  <div className="w-32 h-40 bg-green-600 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
                     <BookOpen className="w-12 h-12 text-white" />
                   </div>
                   <div className="flex-1">
@@ -252,12 +252,12 @@ export default function NCERTBiologyClass11Page() {
                       Essential for NEET, AIIMS, and board examination preparation.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                      <div className="text-center p-3 bg-emerald-50 rounded-lg">
-                        <div className="font-semibold text-emerald-700">Publisher</div>
+                      <div className="text-center p-3 bg-green-50 rounded-lg">
+                        <div className="font-semibold text-green-700">Publisher</div>
                         <div className="text-sm text-gray-600">NCERT</div>
                       </div>
-                      <div className="text-center p-3 bg-teal-50 rounded-lg">
-                        <div className="font-semibold text-teal-700">Edition</div>
+                      <div className="text-center p-3 bg-green-50 rounded-lg">
+                        <div className="font-semibold text-green-700">Edition</div>
                         <div className="text-sm text-gray-600">2024-25</div>
                       </div>
                       <div className="text-center p-3 bg-cyan-50 rounded-lg">
@@ -273,7 +273,7 @@ export default function NCERTBiologyClass11Page() {
                       href="https://www.amazon.in/Biology-Textbook-Class-11-2024-25/dp/8195334792"
                       target="_blank"
                     >
-                      <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+                      <Button className="bg-green-600 hover:from-green-700 hover:to-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
                         <ShoppingCart className="w-5 h-5" />
                         Buy from Amazon India
                         <ExternalLink className="w-4 h-4" />
@@ -355,7 +355,7 @@ export default function NCERTBiologyClass11Page() {
       </section>
 
       {/* Why Study at Cerebrum */}
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-green-50 to-green-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -448,7 +448,7 @@ export default function NCERTBiologyClass11Page() {
                 title: 'Trueman Biology Vol 1',
                 description: 'Detailed theory and practice questions',
                 link: '/trueman-biology-for-neet',
-                color: 'from-red-500 to-rose-500',
+                color: 'bg-red-600',
               },
               {
                 title: 'MTG Biology for NEET',
@@ -471,7 +471,7 @@ export default function NCERTBiologyClass11Page() {
                     >
                       <BookOpen className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                       {book.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{book.description}</p>
@@ -513,7 +513,7 @@ export default function NCERTBiologyClass11Page() {
                 >
                   <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
                   {openFaq === idx ? (
-                    <ChevronUp className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-green-600 flex-shrink-0" />
                   ) : (
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
@@ -530,7 +530,7 @@ export default function NCERTBiologyClass11Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white">
+      <section className="py-16 bg-gradient-to-br from-green-600 via-green-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -543,12 +543,12 @@ export default function NCERTBiologyClass11Page() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/demo">
-                <Button className="bg-white text-emerald-700 hover:bg-white/90 font-semibold px-8 py-3 rounded-xl">
+                <Button className="bg-white text-green-700 hover:bg-white/90 font-semibold px-8 py-3 rounded-xl">
                   Book Free Demo Class
                 </Button>
               </Link>
               <Link href="tel:+918826444334">
-                <Button className="bg-emerald-500/20 border border-white/30 hover:bg-emerald-500/30 text-white font-semibold px-8 py-3 rounded-xl">
+                <Button className="bg-green-600/20 border border-white/30 hover:bg-green-600/30 text-white font-semibold px-8 py-3 rounded-xl">
                   Call +91 88264 44334
                 </Button>
               </Link>

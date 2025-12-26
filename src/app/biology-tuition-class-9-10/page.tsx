@@ -274,7 +274,7 @@ export default function BiologyClass910Page() {
                     <ul className="space-y-2">
                       {program.topics.map((topic) => (
                         <li key={topic} className="flex items-start text-gray-600 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           {topic}
                         </li>
                       ))}

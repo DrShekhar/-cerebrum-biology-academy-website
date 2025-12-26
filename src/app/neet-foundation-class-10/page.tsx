@@ -335,7 +335,7 @@ export default function NEETFoundationClass10Page() {
                 <ul className="space-y-1">
                   {unit.chapters.map((chapter) => (
                     <li key={chapter} className="text-sm text-gray-600 flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                       {chapter}
                     </li>
                   ))}

@@ -680,7 +680,7 @@ function RecommendationDisplay({ recommendation }: { recommendation: CourseRecom
               ? 'from-purple-600 to-indigo-600'
               : theme.color === 'blue'
                 ? 'from-blue-600 to-cyan-600'
-                : 'from-green-600 to-emerald-600'
+                : 'bg-green-600'
           } text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-opacity`}
         >
           Select This Course
@@ -802,7 +802,7 @@ export default function PersonalizationInterface({
       className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden ${className}`}
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold mb-2">AI-Powered Course Personalization</h2>
@@ -958,7 +958,7 @@ export default function PersonalizationInterface({
                   disabled={
                     !profileAnalysis || profileAnalysis.recommendationReadiness === 'insufficient'
                   }
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {profileAnalysis?.recommendationReadiness === 'insufficient'
                     ? 'Complete Profile to Get Recommendations'

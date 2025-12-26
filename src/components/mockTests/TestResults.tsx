@@ -73,7 +73,7 @@ export function TestResults({
       attempted: 5,
       correct: 4,
       percentage: 80,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       subject: 'Genetics',
@@ -177,7 +177,7 @@ export function TestResults({
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+      <div className="bg-indigo-500 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center"
@@ -250,7 +250,7 @@ export function TestResults({
             >
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-500" />
+                  <CheckCircle className="w-8 h-8 text-green-600" />
                   <span className="text-2xl font-bold text-green-600">{correctAnswers}</span>
                 </div>
                 <h3 className="font-semibold text-gray-900">Correct Answers</h3>
@@ -455,7 +455,7 @@ export function TestResults({
                           Q{index + 1}
                         </span>
                         {isCorrect ? (
-                          <CheckCircle className="w-6 h-6 text-green-500" />
+                          <CheckCircle className="w-6 h-6 text-green-600" />
                         ) : userAnswer ? (
                           <XCircle className="w-6 h-6 text-red-500" />
                         ) : (
@@ -487,7 +487,7 @@ export function TestResults({
                             key={option.id}
                             className={`p-3 rounded-lg border ${
                               option.id === question.correctAnswer
-                                ? 'border-green-500 bg-green-50'
+                                ? 'border-green-600 bg-green-50'
                                 : option.id === userAnswer && userAnswer !== question.correctAnswer
                                 ? 'border-red-500 bg-red-50'
                                 : 'border-gray-200'
@@ -497,7 +497,7 @@ export function TestResults({
                               <span className="font-medium mr-3">({option.id.toUpperCase()})</span>
                               <span>{option.text}</span>
                               {option.id === question.correctAnswer && (
-                                <CheckCircle className="w-5 h-5 text-green-500 ml-auto" />
+                                <CheckCircle className="w-5 h-5 text-green-600 ml-auto" />
                               )}
                               {option.id === userAnswer && userAnswer !== question.correctAnswer && (
                                 <XCircle className="w-5 h-5 text-red-500 ml-auto" />

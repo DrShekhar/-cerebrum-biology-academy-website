@@ -17,9 +17,9 @@ import {
 } from 'lucide-react'
 
 const botanyTopics = [
-  { name: 'Plant Physiology', questions: '10-12', percentage: '12%', color: 'bg-green-500' },
-  { name: 'Ecology & Environment', questions: '10-12', percentage: '12%', color: 'bg-emerald-500' },
-  { name: 'Plant Kingdom', questions: '5-6', percentage: '6%', color: 'bg-teal-500' },
+  { name: 'Plant Physiology', questions: '10-12', percentage: '12%', color: 'bg-green-600' },
+  { name: 'Ecology & Environment', questions: '10-12', percentage: '12%', color: 'bg-green-600' },
+  { name: 'Plant Kingdom', questions: '5-6', percentage: '6%', color: 'bg-green-600' },
   { name: 'Cell Biology', questions: '8-10', percentage: '10%', color: 'bg-lime-500' },
   { name: 'Molecular Biology', questions: '5-6', percentage: '6%', color: 'bg-cyan-500' },
   { name: 'Plant Morphology', questions: '2-3', percentage: '3%', color: 'bg-blue-500' },
@@ -71,7 +71,7 @@ export default function BotanyTeacherPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -277,7 +277,7 @@ export default function BotanyTeacherPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/best-botany-teacher-for-neet"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Best Botany Teacher for NEET
             </Link>
@@ -304,7 +304,7 @@ export default function BotanyTeacherPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-green-600 to-emerald-600 py-16 text-white">
+      <section className="bg-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Ready to Master Botany?</h2>

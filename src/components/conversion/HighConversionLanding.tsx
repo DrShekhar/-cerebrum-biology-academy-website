@@ -139,7 +139,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
         {/* Background Effects */}
         <div className="absolute inset-0">
           <motion.div
-            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-teal-600/10 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-green-500/15 to-green-600/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               x: [0, 50, 0],
@@ -192,7 +192,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                     Master Biology,
                   </span>
                   <br />
-                  <span className="text-emerald-300">Conquer NEET,</span>
+                  <span className="text-green-400">Conquer NEET,</span>
                   <br />
                   <span className="text-blue-300">Become a Doctor</span>
                 </h1>
@@ -235,7 +235,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                   variant="medical"
                   size="lg"
                   onClick={handleCallNow}
-                  className="bg-teal-600 hover:bg-teal-700 text-white"
+                  className="bg-green-600 hover:bg-green-700 text-white"
                 >
                   <Phone className="h-5 w-5" />
                   Call Now - Get Instant Admission

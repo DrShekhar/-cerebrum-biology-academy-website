@@ -156,7 +156,7 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
               <span>Score</span>
             </div>
             <div className="flex items-center gap-2 text-xs">
-              <div className="w-3 h-0.5 bg-green-500" style={{ borderTop: '2px dashed' }}></div>
+              <div className="w-3 h-0.5 bg-green-600" style={{ borderTop: '2px dashed' }}></div>
               <span>Accuracy</span>
             </div>
           </div>

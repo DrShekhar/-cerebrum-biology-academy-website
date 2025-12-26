@@ -143,7 +143,7 @@ export function TopicAnalytics({ freeUserId, onTopicSelect }: TopicAnalyticsProp
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'improving':
-        return <TrendingUp className="w-4 h-4 text-green-500" />
+        return <TrendingUp className="w-4 h-4 text-green-600" />
       case 'declining':
         return <TrendingDown className="w-4 h-4 text-red-500" />
       case 'stable':
@@ -154,7 +154,7 @@ export function TopicAnalytics({ freeUserId, onTopicSelect }: TopicAnalyticsProp
   }
 
   const getAccuracyColor = (accuracy: number) => {
-    if (accuracy >= 80) return 'bg-green-500'
+    if (accuracy >= 80) return 'bg-green-600'
     if (accuracy >= 60) return 'bg-yellow-500'
     if (accuracy >= 40) return 'bg-orange-500'
     return 'bg-red-500'
@@ -416,7 +416,7 @@ export function TopicAnalytics({ freeUserId, onTopicSelect }: TopicAnalyticsProp
 
           {reviewStats.dueToday === 0 && reviewStats.totalScheduled > 0 && (
             <div className="text-center p-4 bg-green-50 rounded-lg">
-              <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-2" />
+              <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-2" />
               <p className="text-green-700 font-medium">All caught up!</p>
               <p className="text-green-600 text-sm">No reviews due today</p>
             </div>
@@ -426,7 +426,7 @@ export function TopicAnalytics({ freeUserId, onTopicSelect }: TopicAnalyticsProp
 
       {/* Recommended Topics */}
       {recommendedTopics.length > 0 && (
-        <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 text-white">
+        <div className="bg-green-600 rounded-xl p-4 text-white">
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Award className="w-5 h-5" />
             Recommended Practice

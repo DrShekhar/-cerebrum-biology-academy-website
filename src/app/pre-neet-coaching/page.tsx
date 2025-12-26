@@ -264,7 +264,7 @@ export default function PreNEETCoachingPage() {
                 <ul className="space-y-2">
                   {item.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                       {benefit}
                     </li>
                   ))}

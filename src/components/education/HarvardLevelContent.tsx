@@ -150,7 +150,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200 rounded-full px-6 py-3 mb-6">
+          <div className="inline-flex items-center gap-2 bg-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-6">
             <BookOpen className="h-6 w-6 text-blue-600" />
             <span className="font-semibold text-blue-800">Harvard-Stanford Caliber Curriculum</span>
           </div>
@@ -210,7 +210,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                   {/* Module Header */}
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">
+                      <div className="p-3 bg-indigo-500 rounded-xl text-white">
                         <module.icon className="h-6 w-6" />
                       </div>
                       <div>
@@ -279,7 +279,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                         transition={{ duration: 0.3 }}
                         className="border-t pt-6 space-y-4"
                       >
-                        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                        <div className="bg-gray-50 rounded-lg p-4">
                           <h4 className="font-semibold text-gray-900 mb-2">
                             Key Learning Outcomes
                           </h4>
@@ -355,7 +355,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
           <PremiumCard
             variant="premium"
             size="xl"
-            className="bg-gradient-to-br from-blue-50 to-purple-50"
+            className="bg-gray-50"
           >
             <div className="space-y-8">
               <div>
@@ -369,7 +369,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">AIIMS Faculty</h4>
@@ -379,7 +379,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <BookOpen className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Research Integration</h4>

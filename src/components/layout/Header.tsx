@@ -128,7 +128,7 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-3 group">
               {/* Beautiful Brain Logo */}
               <div className="relative">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
                     src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
@@ -140,7 +140,7 @@ const Header = () => {
                   />
                 </div>
                 {/* Teal glow effect on hover */}
-                <div className="absolute inset-0 bg-teal-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                <div className="absolute inset-0 bg-green-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
               {/* Mobile: Compact brand display */}
@@ -201,7 +201,7 @@ const Header = () => {
                     <span>{t(item.labelKey)}</span>
                     {item.badge && (
                       <span
-                        className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
+                        className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
                         aria-label={`${item.badge} success rate`}
                       >
                         {item.badge}
@@ -315,7 +315,7 @@ const Header = () => {
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{t(item.labelKey)}</span>
                       {item.badge && (
-                        <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                        <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                           {item.badge}
                         </span>
                       )}

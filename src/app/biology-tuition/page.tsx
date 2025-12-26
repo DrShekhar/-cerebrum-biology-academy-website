@@ -71,7 +71,7 @@ const tuitionByClass = [
     description: 'Foundation building for NEET aspirants. Strong conceptual clarity from early years.',
     highlights: ['NCERT-focused curriculum', 'Foundation for NEET', 'Board exam preparation'],
     icon: BookOpen,
-    color: 'from-green-500 to-green-600',
+    color: 'bg-green-600',
   },
   {
     title: 'Class 11 Biology Tuition',
@@ -208,7 +208,7 @@ export default function BiologyTuitionPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl" />
@@ -302,7 +302,7 @@ export default function BiologyTuitionPage() {
                     <ul className="space-y-2 mb-6">
                       {course.highlights.map((highlight) => (
                         <li key={highlight} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                           {highlight}
                         </li>
                       ))}
@@ -343,7 +343,7 @@ export default function BiologyTuitionPage() {
                     <div className="grid grid-cols-2 gap-3 mb-6">
                       {mode.features.map((feature) => (
                         <div key={feature} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
                       ))}

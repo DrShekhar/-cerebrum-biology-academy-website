@@ -89,7 +89,7 @@ export function VideoTestimonialsSection() {
   const activeTestimonial = VIDEO_TESTIMONIALS[activeIndex]
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -131,7 +131,7 @@ export function VideoTestimonialsSection() {
               ) : (
                 <>
                   <div
-                    className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center cursor-pointer group"
+                    className="w-full h-full bg-indigo-500 flex items-center justify-center cursor-pointer group"
                     onClick={() => setIsPlaying(true)}
                   >
                     <div className="text-center text-white p-8">
@@ -174,7 +174,7 @@ export function VideoTestimonialsSection() {
 
               {/* Student Info */}
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
                   {activeTestimonial.studentName.charAt(0)}
                 </div>
                 <div>

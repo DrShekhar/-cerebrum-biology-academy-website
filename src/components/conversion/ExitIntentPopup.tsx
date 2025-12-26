@@ -122,7 +122,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
       ],
       visual: {
         icon: <Gift className="w-8 h-8" />,
-        gradient: 'from-red-500 to-pink-500',
+        gradient: 'bg-red-600',
         accentColor: 'red',
       },
       socialProof: {
@@ -156,7 +156,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
       ],
       visual: {
         icon: <Users className="w-8 h-8" />,
-        gradient: 'from-emerald-500 to-blue-500',
+        gradient: 'from-green-600 to-blue-500',
         accentColor: 'emerald',
       },
       socialProof: {
@@ -564,7 +564,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
               )}
 
               {selectedOffer.offerDetails.bonusValue && (
-                <div className="text-2xl font-bold text-emerald-600 mb-2">
+                <div className="text-2xl font-bold text-green-600 mb-2">
                   {selectedOffer.offerDetails.bonusValue}
                 </div>
               )}
@@ -580,7 +580,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
             <div className="space-y-2">
               {selectedOffer.personalizedElements.map((element, index) => (
                 <div key={index} className="flex items-center gap-2 text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span>{element}</span>
                 </div>
               ))}
@@ -589,7 +589,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
             {/* Social proof */}
             <div className="bg-gray-50 rounded-lg p-4 text-center">
               <div className="flex items-center justify-center gap-2 text-gray-700">
-                <Users className="w-5 h-5 text-emerald-500" />
+                <Users className="w-5 h-5 text-green-600" />
                 <span className="font-semibold">
                   {selectedOffer.socialProof.count.toLocaleString()}
                 </span>
@@ -600,13 +600,13 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
             {/* Risk reversal */}
             <div>
               <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                <Shield className="w-5 h-5 text-emerald-500" />
+                <Shield className="w-5 h-5 text-green-600" />
                 100% Risk-Free Guarantee
               </h4>
               <div className="space-y-2">
                 {selectedOffer.riskReversal.map((item, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}

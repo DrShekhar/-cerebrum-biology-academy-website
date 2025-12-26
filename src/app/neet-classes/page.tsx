@@ -282,7 +282,7 @@ export default function NeetClassesPage() {
                 <ul className="space-y-2">
                   {type.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}

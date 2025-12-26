@@ -116,7 +116,7 @@ export function BiologyCoachingNearMeClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
@@ -219,7 +219,7 @@ export function BiologyCoachingNearMeClient() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-4">
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold">{center.name}</h3>
                     <div className="flex items-center">
@@ -250,7 +250,7 @@ export function BiologyCoachingNearMeClient() {
                   <div className="border-t pt-3">
                     {center.features.map((feature) => (
                       <div key={feature} className="flex items-center text-sm text-gray-600 mb-1">
-                        <CheckCircle className="w-3 h-3 mr-2 text-green-500" />
+                        <CheckCircle className="w-3 h-3 mr-2 text-green-600" />
                         {feature}
                       </div>
                     ))}
@@ -298,7 +298,7 @@ export function BiologyCoachingNearMeClient() {
                 <ul className="space-y-2">
                   {course.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-600 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -395,7 +395,7 @@ export function BiologyCoachingNearMeClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

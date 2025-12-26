@@ -39,7 +39,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Success Rate',
     sublabel: 'NEET Qualification 2023-24',
     icon: Trophy,
-    color: 'from-green-500 to-emerald-600',
+    color: 'bg-green-600',
     verified: true,
   },
   {
@@ -66,7 +66,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Faculty',
     sublabel: 'Dr. Shekhar (AIIMS Delhi)',
     icon: GraduationCap,
-    color: 'from-teal-500 to-cyan-500',
+    color: 'from-green-600 to-cyan-500',
     verified: true,
   },
   {
@@ -94,7 +94,7 @@ export function TrustSignalsBanner({
   if (variant === 'compact') {
     return (
       <div
-        className={`bg-gradient-to-r from-blue-50 via-purple-50 to-teal-50 py-4 xs:py-5 sm:py-6 border-y border-blue-100 ${className}`}
+        className={`bg-gradient-to-r from-blue-50 via-purple-50 to-green-50 py-4 xs:py-5 sm:py-6 border-y border-blue-100 ${className}`}
       >
         <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-4 xs:gap-5 sm:gap-6 md:gap-8">

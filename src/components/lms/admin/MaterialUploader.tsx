@@ -200,7 +200,7 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
           isDragging
             ? 'border-blue-500 bg-blue-50'
             : file
-              ? 'border-green-500 bg-green-50'
+              ? 'border-green-600 bg-green-50'
               : 'border-gray-300 hover:border-gray-400'
         }`}
       >

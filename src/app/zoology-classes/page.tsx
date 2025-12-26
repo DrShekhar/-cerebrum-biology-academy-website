@@ -70,7 +70,7 @@ const faqs = [
 
 export default function ZoologyClassesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -91,7 +91,7 @@ export default function ZoologyClassesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-cyan-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-cyan-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -107,14 +107,14 @@ export default function ZoologyClassesPage() {
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Zoology Classes for NEET 2026
             </h1>
-            <p className="mb-8 text-xl text-teal-100">
+            <p className="mb-8 text-xl text-green-100">
               Join expert-led zoology batches covering 50% of NEET Biology. Regular, Crash Course &
               Dropper batches available in offline and online formats.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-teal-600 shadow-lg transition hover:bg-teal-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
               >
                 Book Free Demo
               </Link>
@@ -150,7 +150,7 @@ export default function ZoologyClassesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <h3 className="mb-2 text-2xl font-bold text-teal-600">{batch.name}</h3>
+                <h3 className="mb-2 text-2xl font-bold text-green-600">{batch.name}</h3>
                 <div className="mb-4 text-gray-600">
                   <p>
                     <Clock className="mr-2 inline h-4 w-4" />
@@ -164,7 +164,7 @@ export default function ZoologyClassesPage() {
                 <ul className="space-y-2">
                   {batch.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-teal-500" />
+                      <CheckCircle className="h-4 w-4 text-green-600" />
                       {feature}
                     </li>
                   ))}
@@ -192,7 +192,7 @@ export default function ZoologyClassesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-10 w-10 text-teal-600" />
+                <stat.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -228,7 +228,7 @@ export default function ZoologyClassesPage() {
                       <h4 className="font-semibold text-gray-900">{topic.name}</h4>
                       <p className="text-sm text-gray-600">{topic.chapters} chapters</p>
                     </div>
-                    <span className="rounded-full bg-teal-100 px-3 py-1 text-sm font-semibold text-teal-700">
+                    <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
                       {topic.weightage}
                     </span>
                   </motion.div>
@@ -292,7 +292,7 @@ export default function ZoologyClassesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <feature.icon className="mb-4 h-10 w-10 text-teal-600" />
+                <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
               </motion.div>
@@ -344,7 +344,7 @@ export default function ZoologyClassesPage() {
             </Link>
             <Link
               href="/best-zoology-teacher-for-neet"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Best Zoology Teacher for NEET
             </Link>
@@ -365,17 +365,17 @@ export default function ZoologyClassesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-teal-600 to-cyan-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-green-600 to-cyan-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Enroll in Zoology Classes Today</h2>
-            <p className="mb-8 text-xl text-teal-100">
+            <p className="mb-8 text-xl text-green-100">
               New batches starting soon - secure your seat for NEET 2026!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-teal-600 shadow-lg transition hover:bg-teal-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
               >
                 Book Free Demo Class
               </Link>

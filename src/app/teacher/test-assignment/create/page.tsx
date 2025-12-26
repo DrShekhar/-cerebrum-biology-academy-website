@@ -213,7 +213,7 @@ export default function CreateTestAssignmentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
@@ -714,7 +714,7 @@ export default function CreateTestAssignmentPage() {
                   Save as Draft
                 </Button>
                 <Button
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                  className="bg-indigo-500 hover:bg-indigo-600 text-white"
                   onClick={() => handleCreateTest(false)}
                   disabled={isGenerating}
                 >
@@ -730,7 +730,7 @@ export default function CreateTestAssignmentPage() {
               </>
             ) : (
               <Button
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                className="bg-indigo-500 hover:bg-indigo-600 text-white"
                 onClick={() => {
                   const stepOrder: Step[] = ['basic', 'questions', 'assign', 'review']
                   const currentIndex = stepOrder.indexOf(currentStep)

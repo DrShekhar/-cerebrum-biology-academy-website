@@ -163,7 +163,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
             </div>
             <div className="w-full bg-slate-700 rounded-full h-2">
               <div
-                className="bg-gradient-to-r from-emerald-500 to-blue-500 h-2 rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
@@ -194,21 +194,21 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className={`bg-slate-800 rounded-xl p-6 border ${item.emphasis ? 'border-emerald-500/50 bg-emerald-900/20' : 'border-slate-700'}`}
+                        className={`bg-slate-800 rounded-xl p-6 border ${item.emphasis ? 'border-green-600/50 bg-green-800/20' : 'border-slate-700'}`}
                       >
                         <div className="flex items-start gap-4">
                           <div
-                            className={`p-3 rounded-lg ${item.emphasis ? 'bg-emerald-600/20' : 'bg-blue-600/20'}`}
+                            className={`p-3 rounded-lg ${item.emphasis ? 'bg-green-600/20' : 'bg-blue-600/20'}`}
                           >
                             <item.icon
-                              className={`w-6 h-6 ${item.emphasis ? 'text-emerald-400' : 'text-blue-400'}`}
+                              className={`w-6 h-6 ${item.emphasis ? 'text-green-500' : 'text-blue-400'}`}
                             />
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
                             <p className="text-gray-300 mb-3">{item.description}</p>
                             <div
-                              className={`text-lg font-bold ${item.emphasis ? 'text-emerald-400' : 'text-blue-400'}`}
+                              className={`text-lg font-bold ${item.emphasis ? 'text-green-500' : 'text-blue-400'}`}
                             >
                               {item.stat}
                             </div>
@@ -259,7 +259,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                     ))}
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl p-6 border border-purple-600/30">
+                  <div className="bg-purple-600/20 rounded-xl p-6 border border-purple-600/30">
                     <h4 className="text-lg font-semibold text-white mb-3">Faculty Meet & Greet</h4>
                     <p className="text-gray-300 mb-4">
                       Meet our faculty personally during the admission process. We believe
@@ -293,7 +293,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                         <p className="text-gray-400">Complete NEET Biology Program</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl font-bold text-emerald-400">
+                        <div className="text-3xl font-bold text-green-500">
                           {feeTransparency.totalFee}
                         </div>
                         <div className="text-sm text-gray-400">For 12 months</div>
@@ -311,8 +311,8 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
 
                     <div className="border-t border-slate-600 pt-4">
                       <div className="flex justify-between items-center">
-                        <span className="text-emerald-400 font-semibold">You Save</span>
-                        <span className="text-emerald-400 font-bold">
+                        <span className="text-green-500 font-semibold">You Save</span>
+                        <span className="text-green-500 font-bold">
                           {feeTransparency.savings}
                         </span>
                       </div>
@@ -356,19 +356,19 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className={`bg-slate-800 rounded-xl p-6 border ${index === 1 ? 'border-emerald-500 bg-emerald-900/20' : 'border-slate-700'} cursor-pointer hover:border-emerald-500/50 transition-colors`}
+                        className={`bg-slate-800 rounded-xl p-6 border ${index === 1 ? 'border-green-600 bg-green-800/20' : 'border-slate-700'} cursor-pointer hover:border-green-600/50 transition-colors`}
                       >
                         <div className="flex justify-between items-center">
                           <div>
                             <div className="text-lg font-semibold text-white mb-1">
                               {option.duration} EMI
                               {index === 1 && (
-                                <span className="ml-2 text-xs bg-emerald-600 text-white px-2 py-1 rounded-full">
+                                <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded-full">
                                   POPULAR
                                 </span>
                               )}
                             </div>
-                            <div className="text-2xl font-bold text-emerald-400 mb-1">
+                            <div className="text-2xl font-bold text-green-500 mb-1">
                               {option.amount}
                             </div>
                             <div className="text-sm text-gray-400">{option.processing}</div>
@@ -459,7 +459,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-600/30">
+                  <div className="bg-blue-600/20 rounded-xl p-6 border border-blue-600/30">
                     <h4 className="text-lg font-semibold text-white mb-3">What Parents Ask Us</h4>
                     <div className="grid md:grid-cols-2 gap-4 text-gray-300">
                       <div>• "How do you ensure my child's progress?"</div>
@@ -500,7 +500,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                         </p>
                         <div className="grid md:grid-cols-3 gap-4 mb-6">
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-emerald-400">3</div>
+                            <div className="text-2xl font-bold text-green-500">3</div>
                             <div className="text-sm text-gray-400">Centers in Delhi NCR</div>
                           </div>
                           <div className="text-center">
@@ -517,7 +517,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-emerald-600/20 rounded-xl p-6 border border-emerald-600/30">
+                    <div className="bg-green-600/20 rounded-xl p-6 border border-green-600/30">
                       <h4 className="text-lg font-semibold text-white mb-3">What You'll See</h4>
                       <ul className="space-y-2 text-gray-300">
                         <li>• Modern classrooms with smart boards</li>
@@ -545,7 +545,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                   <div className="text-center">
                     <button
                       onClick={() => handleAction('schedule-center-visit')}
-                      className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors inline-flex items-center gap-3"
+                      className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors inline-flex items-center gap-3"
                     >
                       <MapPin className="w-6 h-6" />
                       Schedule Center Visit
@@ -573,14 +573,14 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
               {currentStep < steps.length - 1 ? (
                 <button
                   onClick={handleNext}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Next Step
                 </button>
               ) : (
                 <button
                   onClick={() => handleAction('schedule-parent-meeting')}
-                  className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
                 >
                   Schedule Parent Meeting
                 </button>

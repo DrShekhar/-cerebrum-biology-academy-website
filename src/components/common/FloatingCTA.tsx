@@ -56,14 +56,14 @@ export const FloatingCTA = memo(function FloatingCTA() {
       icon: Phone,
       label: 'Call Now',
       href: 'tel:+918826444334',
-      color: 'bg-green-500 hover:bg-green-600',
+      color: 'bg-green-600 hover:bg-green-600',
       action: 'call',
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
       href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
-      color: 'bg-emerald-500 hover:bg-emerald-600',
+      color: 'bg-green-600 hover:bg-green-600',
       action: 'whatsapp',
       external: true,
     },
@@ -129,7 +129,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
           {/* Main Floating Button - smaller and less intrusive */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="relative w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation"
+            className="relative w-12 h-12 bg-indigo-500 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation"
           >
             {/* Progress Ring - smaller */}
             <svg className="absolute inset-0 w-12 h-12 transform -rotate-90">

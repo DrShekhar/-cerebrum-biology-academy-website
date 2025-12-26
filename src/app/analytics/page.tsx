@@ -202,7 +202,7 @@ export default function AnalyticsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
+      <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center"

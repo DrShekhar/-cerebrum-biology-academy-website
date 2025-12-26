@@ -190,7 +190,7 @@ export default function BrochurePage() {
                 <div className="space-y-2 mb-6">
                   {brochure.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -235,7 +235,7 @@ export default function BrochurePage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Brochures Sent Successfully!
                 </h3>

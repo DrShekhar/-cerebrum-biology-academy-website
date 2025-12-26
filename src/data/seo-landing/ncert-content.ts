@@ -82,7 +82,7 @@ export const ncertBiologyClass11: SEOLandingContent = {
     highlightedText: '95% of NEET Questions Are NCERT-Based',
     ctaText: 'Start Class 11 Course',
     ctaLink: '/courses?class=class-11',
-    backgroundGradient: 'from-emerald-900 via-green-900 to-teal-900',
+    backgroundGradient: 'from-green-800 via-green-900 to-green-800',
   },
 
   painPoints: {
@@ -238,7 +238,7 @@ export const ncertBiologyClass12: SEOLandingContent = {
     highlightedText: 'Class 12 NCERT = Highest Weightage in NEET',
     ctaText: 'Start Class 12 Course',
     ctaLink: '/courses?class=class-12',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -702,7 +702,7 @@ export const ncertBiologyNotesClass11: SEOLandingContent = {
     highlightedText: 'NCERT Simplified, Made Memorable',
     ctaText: 'Access Notes Course',
     ctaLink: '/courses?class=class-11',
-    backgroundGradient: 'from-cyan-900 via-teal-900 to-emerald-900',
+    backgroundGradient: 'from-cyan-900 via-green-800 to-green-800',
   },
 
   painPoints: {

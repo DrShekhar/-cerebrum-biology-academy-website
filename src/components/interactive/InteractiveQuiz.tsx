@@ -112,7 +112,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
   const getScoreGrade = (score: number, total: number) => {
     const percentage = (score / total) * 100
     if (percentage >= 90) return { grade: 'A+', color: 'text-green-600', message: 'Excellent!' }
-    if (percentage >= 80) return { grade: 'A', color: 'text-green-500', message: 'Great work!' }
+    if (percentage >= 80) return { grade: 'A', color: 'text-green-600', message: 'Great work!' }
     if (percentage >= 70) return { grade: 'B+', color: 'text-blue-600', message: 'Good job!' }
     if (percentage >= 60) return { grade: 'B', color: 'text-blue-500', message: 'Keep improving!' }
     return { grade: 'C', color: 'text-orange-500', message: 'Need more practice!' }
@@ -234,7 +234,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
   return (
     <div className={cn('bg-white rounded-3xl shadow-xl overflow-hidden', className)}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">{title}</h2>
           <div className="flex items-center gap-4">
@@ -300,7 +300,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
                   !showResult && 'hover:border-blue-300 hover:bg-blue-50',
                   !showResult && isSelected && 'border-blue-500 bg-blue-50',
                   !showResult && !isSelected && 'border-gray-200 bg-gray-50',
-                  showResult && isCorrectOption && 'border-green-500 bg-green-50',
+                  showResult && isCorrectOption && 'border-green-600 bg-green-50',
                   showResult && isSelected && !isCorrectOption && 'border-red-500 bg-red-50',
                   showResult && !isSelected && !isCorrectOption && 'border-gray-200 bg-gray-50'
                 )}
@@ -314,7 +314,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
                     className={cn(
                       'w-8 h-8 rounded-full border-2 flex items-center justify-center font-semibold',
                       !showResult && 'border-gray-300 text-gray-500',
-                      showResult && isCorrectOption && 'border-green-500 bg-green-500 text-white',
+                      showResult && isCorrectOption && 'border-green-600 bg-green-600 text-white',
                       showResult &&
                         isSelected &&
                         !isCorrectOption &&

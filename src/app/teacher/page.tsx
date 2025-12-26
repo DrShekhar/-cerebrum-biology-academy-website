@@ -136,7 +136,7 @@ export default function TeacherDashboardPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -222,7 +222,7 @@ export default function TeacherDashboardPage() {
                   title="Take Attendance"
                   description="Mark today's attendance"
                   href="/teacher/attendance"
-                  color="from-green-500 to-green-600"
+                  color="bg-green-600"
                 />
                 <QuickActionCard
                   icon={MessageCircle}
@@ -438,7 +438,7 @@ function ActivityItem({ activity }: { activity: RecentActivity }) {
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="animate-pulse">

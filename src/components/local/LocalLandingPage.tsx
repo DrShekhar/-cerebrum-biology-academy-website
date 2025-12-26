@@ -305,13 +305,13 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   viewport={{ once: true }}
                 >
                   {/* Success Badge */}
-                  <div className="absolute -top-3 left-6 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute -top-3 left-6 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                     NEET Rank: {testimonial.neetScore.rank}
                   </div>
 
                   {/* Student Info */}
                   <div className="text-center mb-6 mt-4">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
+                    <div className="w-20 h-20 mx-auto bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                       {testimonial.name.charAt(0)}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">{testimonial.name}</h3>

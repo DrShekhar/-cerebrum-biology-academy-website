@@ -407,7 +407,7 @@ const NEETCompletePage = () => {
                 <div className="bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
                   #1 NEET Biology Course
                 </div>
-                <div className="bg-green-500 text-green-900 px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-green-600 text-green-900 px-3 py-1 rounded-full text-sm font-bold">
                   98% Success Rate
                 </div>
               </div>
@@ -542,7 +542,7 @@ const NEETCompletePage = () => {
                     <ul className="space-y-3">
                       {category.outcomes.map((outcome, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{outcome}</span>
                         </li>
                       ))}
@@ -553,7 +553,7 @@ const NEETCompletePage = () => {
             </section>
 
             {/* Research Integration */}
-            <section className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8">
+            <section className="bg-gray-50 border border-purple-200 rounded-xl p-8">
               <h2 className="text-3xl font-bold mb-6 text-center">Research-Backed Excellence</h2>
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
@@ -585,7 +585,7 @@ const NEETCompletePage = () => {
 
             {Object.entries(curriculum).map(([className, classData]) => (
               <div key={className} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6">
+                <div className="bg-gradient-to-r from-blue-600 to-green-700 text-white p-6">
                   <h3 className="text-2xl font-bold">{className}</h3>
                   <p className="text-blue-100">Duration: {classData.duration}</p>
                 </div>
@@ -620,7 +620,7 @@ const NEETCompletePage = () => {
                                 <ul className="text-sm text-gray-600 space-y-1">
                                   {chapter.learningObjectives.map((objective, objIndex) => (
                                     <li key={objIndex} className="flex items-start gap-2">
-                                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                      <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                                       {objective}
                                     </li>
                                   ))}
@@ -684,7 +684,7 @@ const NEETCompletePage = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               {facultyHighlights.map((faculty, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+                  <div className="bg-indigo-500 text-white p-6">
                     <h3 className="text-2xl font-bold mb-2">{faculty.name}</h3>
                     <p className="text-blue-100 mb-2">{faculty.credentials}</p>
                     <p className="text-blue-200">
@@ -710,7 +710,7 @@ const NEETCompletePage = () => {
                       <ul className="space-y-2">
                         {faculty.achievements.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <Trophy className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <Trophy className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{item}</span>
                           </li>
                         ))}
@@ -834,7 +834,7 @@ const NEETCompletePage = () => {
                       'Success guarantee program',
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}

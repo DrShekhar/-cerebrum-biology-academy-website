@@ -83,7 +83,7 @@ export function NcertFilter({
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-200">
+    <div className="bg-gray-50 rounded-xl p-4 border border-blue-200">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="text-xl">📚</span>

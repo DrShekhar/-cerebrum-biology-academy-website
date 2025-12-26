@@ -693,7 +693,7 @@ export function AIEducationDashboard() {
               >
                 <Settings className="w-5 h-5" />
               </button>
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                 <User className="w-4 h-4 text-white" />
               </div>
             </div>
@@ -917,7 +917,7 @@ export function AIEducationDashboard() {
                           ? 'text-purple-500'
                           : prediction.color === 'blue'
                             ? 'text-blue-500'
-                            : 'text-green-500'
+                            : 'text-green-600'
 
                       const gradientClass =
                         prediction.color === 'purple'
@@ -983,7 +983,7 @@ export function AIEducationDashboard() {
                       href="/demo-booking"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
                       aria-label="Book Free Demo"
                     >
                       <Calendar className="w-4 h-4" />
@@ -1016,7 +1016,7 @@ export function AIEducationDashboard() {
                 <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
                   <div className="flex items-center justify-between mb-6 sm:mb-8">
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
-                      <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-500" />
+                      <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-600" />
                       Recent Activity
                     </h3>
                     {recentActivities.length > 0 && (
@@ -1067,7 +1067,7 @@ export function AIEducationDashboard() {
                             </p>
                           </div>
                           {activity.success && (
-                            <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                            <CheckCircle className="w-4 h-4 text-green-600 mt-1" />
                           )}
                         </motion.div>
                       ))}
@@ -1127,7 +1127,7 @@ export function AIEducationDashboard() {
                   {[
                     { subject: 'Cell Biology', progress: 85, colorClass: 'text-purple-500' },
                     { subject: 'Genetics', progress: 72, colorClass: 'text-blue-500' },
-                    { subject: 'Ecology', progress: 90, colorClass: 'text-green-500' },
+                    { subject: 'Ecology', progress: 90, colorClass: 'text-green-600' },
                     { subject: 'Physiology', progress: 68, colorClass: 'text-orange-500' },
                   ].map((subject, index) => (
                     <motion.div

@@ -309,7 +309,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
         <ul className="text-sm text-gray-700 space-y-1">
           {course.features.map((feature, index) => (
             <li key={index} className="flex items-center">
-              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+              <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
               {feature}
             </li>
           ))}
@@ -319,7 +319,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? (
           <div className="flex items-center justify-center">

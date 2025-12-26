@@ -50,9 +50,9 @@ const regions = [
     countries: nriRegions['Southeast Asia'],
     studentCount: '120+',
     highlight: 'GIIS Network',
-    color: 'from-emerald-500 to-teal-500',
-    bgColor: 'bg-emerald-50',
-    borderColor: 'border-emerald-200',
+    color: 'bg-green-600',
+    bgColor: 'bg-green-50',
+    borderColor: 'border-green-200',
   },
   {
     name: 'South Asia',
@@ -93,7 +93,7 @@ const features = [
     icon: GraduationCap,
     title: 'AIIMS Trained Faculty',
     description: "Expert doctors from India's top medical institutions with 15+ years experience.",
-    color: 'bg-green-500',
+    color: 'bg-green-600',
   },
   {
     icon: BookOpen,
@@ -348,7 +348,7 @@ export function NRIStudentsHubPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 text-6xl">🇦🇪</div>
@@ -409,7 +409,7 @@ export function NRIStudentsHubPage() {
                   <Button
                     variant="secondary"
                     size="lg"
-                    className="bg-green-500 text-white hover:bg-green-600"
+                    className="bg-green-600 text-white hover:bg-green-600"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Us
@@ -497,7 +497,7 @@ export function NRIStudentsHubPage() {
                   <Button
                     type="submit"
                     variant="primary"
-                    className="w-full bg-green-500 hover:bg-green-600 text-white py-3"
+                    className="w-full bg-green-600 hover:bg-green-600 text-white py-3"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -518,7 +518,7 @@ export function NRIStudentsHubPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Thank You!</h3>
                   <p className="text-gray-600 mb-4">Our counselor will call you within 1 hour.</p>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" className="bg-green-500 text-white">
+                    <Button variant="secondary" className="bg-green-600 text-white">
                       <MessageCircle className="w-4 h-4 mr-2" />
                       Chat on WhatsApp Now
                     </Button>
@@ -529,15 +529,15 @@ export function NRIStudentsHubPage() {
               {/* Trust Badges */}
               <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100">
                 <div className="flex items-center text-xs text-gray-500">
-                  <Shield className="w-4 h-4 mr-1 text-green-500" />
+                  <Shield className="w-4 h-4 mr-1 text-green-600" />
                   Secure
                 </div>
                 <div className="flex items-center text-xs text-gray-500">
-                  <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
+                  <CheckCircle className="w-4 h-4 mr-1 text-green-600" />
                   No Spam
                 </div>
                 <div className="flex items-center text-xs text-gray-500">
-                  <Phone className="w-4 h-4 mr-1 text-green-500" />
+                  <Phone className="w-4 h-4 mr-1 text-green-600" />
                   Free Call
                 </div>
               </div>
@@ -547,7 +547,7 @@ export function NRIStudentsHubPage() {
       </section>
 
       {/* Free Tools Section */}
-      <section className="py-12 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-12 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-8"
@@ -777,7 +777,7 @@ export function NRIStudentsHubPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100"
+                className="bg-indigo-50 rounded-xl p-6 border border-purple-100"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="text-4xl">{testimonial.avatar}</div>
@@ -788,7 +788,7 @@ export function NRIStudentsHubPage() {
                     </p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
                   NEET Score: {testimonial.score}
                 </div>
                 <p className="text-gray-700 italic">"{testimonial.quote}"</p>
@@ -872,7 +872,7 @@ export function NRIStudentsHubPage() {
             <Link
               href={whatsappLink}
               target="_blank"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               Chat with us on WhatsApp
@@ -914,7 +914,7 @@ export function NRIStudentsHubPage() {
                 className={`bg-white rounded-xl shadow-lg p-6 relative ${course.popular ? 'ring-2 ring-purple-500' : ''}`}
               >
                 {course.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-4 py-1 rounded-full">
                     MOST POPULAR
                   </div>
                 )}
@@ -929,20 +929,20 @@ export function NRIStudentsHubPage() {
                 </div>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     Live interactive classes
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     Digital study materials
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     WhatsApp doubt support
                   </li>
                 </ul>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button variant="primary" className="w-full bg-green-500 hover:bg-green-600">
+                  <Button variant="primary" className="w-full bg-green-600 hover:bg-green-600">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Reserve Your Seat
                   </Button>
@@ -970,7 +970,7 @@ export function NRIStudentsHubPage() {
       </section>
 
       {/* NEET Centers Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -1045,7 +1045,7 @@ export function NRIStudentsHubPage() {
               >
                 <Link href={article.link}>
                   <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow group">
-                    <div className="h-40 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                    <div className="h-40 bg-indigo-100 flex items-center justify-center">
                       <span className="text-6xl">{article.image}</span>
                     </div>
                     <div className="p-6">
@@ -1103,7 +1103,7 @@ export function NRIStudentsHubPage() {
                 key={board}
                 className="bg-white rounded-xl p-6 text-center border border-gray-200 shadow-sm"
               >
-                <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-3" />
+                <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-3" />
                 <div className="font-semibold text-gray-900">{board}</div>
               </div>
             ))}
@@ -1119,7 +1119,7 @@ export function NRIStudentsHubPage() {
       </section>
 
       {/* Final CTA Section with Urgency */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1165,7 +1165,7 @@ export function NRIStudentsHubPage() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="bg-green-500 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
+                  className="bg-green-600 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                   <span className="truncate">WhatsApp Us</span>

@@ -47,10 +47,10 @@ const cardVariants = {
     bgGradient: 'from-blue-50 to-cyan-50',
   },
   'test-score': {
-    gradient: 'from-green-500 to-teal-500',
+    gradient: 'bg-green-600',
     icon: Target,
     color: 'green',
-    bgGradient: 'from-green-50 to-teal-50',
+    bgGradient: 'from-green-50 to-green-50',
   },
   streak: {
     gradient: 'from-orange-500 to-red-500',
@@ -88,7 +88,7 @@ export function ProgressCard({
     const gradientMap: Record<string, [string, string]> = {
       'from-purple-500 to-pink-500': ['#a855f7', '#ec4899'],
       'from-blue-500 to-cyan-500': ['#3b82f6', '#06b6d4'],
-      'from-green-500 to-teal-500': ['#22c55e', '#14b8a6'],
+      'bg-green-600': ['#22c55e', '#16a34a'],
       'from-orange-500 to-red-500': ['#f97316', '#ef4444'],
     }
     return gradientMap[gradientClass] || ['#a855f7', '#ec4899']
@@ -259,7 +259,7 @@ export function ProgressCard({
                   animate={{ y: [0, -2, 0] }}
                   transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 mr-1" />
+                  <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 mr-1" />
                 </motion.div>
                 <span className="text-xs sm:text-sm text-green-600 font-medium">{change}</span>
                 <span className="text-xs sm:text-sm text-gray-500 ml-1">this week</span>

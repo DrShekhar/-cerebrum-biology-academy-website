@@ -91,7 +91,7 @@ export function PainPointsSection({ painPoints }: PainPointsSectionProps) {
                   <div>
                     <p className="text-lg font-semibold text-gray-900">{point.question}</p>
                     <div className="mt-3 flex items-start gap-2">
-                      <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500 text-xs text-white">
+                      <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-xs text-white">
                         ✓
                       </span>
                       <p className="text-gray-600">{point.solution}</p>

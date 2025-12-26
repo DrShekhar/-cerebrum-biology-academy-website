@@ -527,7 +527,7 @@ const MobileMultimodalInterface: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className={`${getLayoutClasses()} min-h-screen bg-gradient-to-br from-blue-50 to-purple-50`}
+      className={`${getLayoutClasses()} min-h-screen bg-gray-50`}
     >
       {/* Mobile Header */}
       <motion.header
@@ -537,7 +537,7 @@ const MobileMultimodalInterface: React.FC = () => {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
+            <div className="p-2 bg-indigo-500 rounded-lg">
               <Brain className="w-5 h-5 text-white" />
             </div>
             <div>

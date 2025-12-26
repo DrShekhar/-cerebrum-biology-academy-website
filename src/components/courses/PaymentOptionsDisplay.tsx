@@ -12,8 +12,8 @@ export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDi
     switch (tier) {
       case 'pinnacle': return 'from-purple-600 to-pink-600'
       case 'ascent': return 'from-blue-600 to-indigo-600'
-      case 'pursuit': return 'from-green-600 to-teal-600'
-      default: return 'from-blue-600 to-purple-600'
+      case 'pursuit': return 'bg-green-600'
+      default: return 'from-indigo-500 to-indigo-600'
     }
   }
 

@@ -270,7 +270,7 @@ export default function DrShekharSinghPage() {
               <li>
                 <Link
                   href="/"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 rounded"
+                  className="flex items-center text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 rounded"
                   aria-label="Go to home page"
                 >
                   <Home className="w-4 h-4" aria-hidden="true" />
@@ -281,7 +281,7 @@ export default function DrShekharSinghPage() {
                 <ChevronRight className="w-4 h-4 text-gray-600 mx-2" aria-hidden="true" />
                 <Link
                   href="/faculty"
-                  className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 rounded px-1"
+                  className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 rounded px-1"
                   aria-label="Go to faculty page"
                 >
                   Faculty
@@ -303,7 +303,7 @@ export default function DrShekharSinghPage() {
           aria-label="Dr. Shekhar Singh profile overview"
         >
           <div className="absolute inset-0 opacity-10" aria-hidden="true">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-500 animate-pulse" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -316,7 +316,7 @@ export default function DrShekharSinghPage() {
               <div className="space-y-6">
                 <div className="relative w-64 h-64 mx-auto md:mx-0">
                   <div
-                    className="absolute inset-0 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full blur-2xl opacity-50"
+                    className="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-full blur-2xl opacity-50"
                     aria-hidden="true"
                   />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
@@ -328,7 +328,7 @@ export default function DrShekharSinghPage() {
                         loading="eager"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                      <div className="w-full h-full bg-blue-500 flex items-center justify-center">
                         <GraduationCap
                           className="w-24 h-24 text-white"
                           aria-hidden="true"
@@ -349,7 +349,7 @@ export default function DrShekharSinghPage() {
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20"
                     role="listitem"
                   >
-                    <div className="text-3xl font-bold text-teal-300" aria-label="14 plus years">
+                    <div className="text-3xl font-bold text-green-400" aria-label="14 plus years">
                       14+
                     </div>
                     <div className="text-xs text-white/80">Years Exp.</div>
@@ -380,15 +380,15 @@ export default function DrShekharSinghPage() {
 
               <div>
                 <motion.div
-                  className="inline-flex items-center bg-teal-500/20 backdrop-blur-sm border border-teal-300/30 px-4 py-2 rounded-full mb-4"
+                  className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-400/30 px-4 py-2 rounded-full mb-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                   role="status"
                   aria-label="Position: Director and Chief Educator"
                 >
-                  <Sparkles className="w-4 h-4 mr-2 text-teal-300" aria-hidden="true" />
-                  <span className="text-teal-100 text-sm font-medium">
+                  <Sparkles className="w-4 h-4 mr-2 text-green-400" aria-hidden="true" />
+                  <span className="text-green-100 text-sm font-medium">
                     Director & Chief Educator
                   </span>
                 </motion.div>
@@ -416,7 +416,7 @@ export default function DrShekharSinghPage() {
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6" role="group">
                   <Link
                     href="/demo-booking"
-                    className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-blue-900"
+                    className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-blue-900"
                     aria-label="Book a demo class with Dr. Shekhar Singh"
                   >
                     <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -447,7 +447,7 @@ export default function DrShekharSinghPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 md:p-12 border-2 border-blue-100"
+              className="bg-gray-50 rounded-3xl p-8 md:p-12 border-2 border-blue-100"
             >
               <div className="flex items-start space-x-4 mb-6">
                 <Quote className="w-12 h-12 text-blue-600 flex-shrink-0" aria-hidden="true" />
@@ -553,7 +553,7 @@ export default function DrShekharSinghPage() {
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className="w-10 h-10 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0"
                       aria-hidden="true"
                     >
                       <CheckCircle className="w-5 h-5 text-white" />
@@ -565,7 +565,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <motion.div
-              className="mt-12 bg-gradient-to-br from-green-600 to-teal-600 rounded-3xl p-8 text-white text-center"
+              className="mt-12 bg-green-600 rounded-3xl p-8 text-white text-center"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -643,13 +643,13 @@ export default function DrShekharSinghPage() {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 border-2 border-green-200 text-center"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-8 border-2 border-green-200 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Top Rank Producer</h3>
@@ -683,7 +683,7 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
                 <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -703,7 +703,7 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
                 <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -719,7 +719,7 @@ export default function DrShekharSinghPage() {
         </section>
 
         <section
-          className="py-16 bg-gradient-to-br from-purple-50 to-blue-50"
+          className="py-16 bg-indigo-50"
           role="region"
           aria-labelledby="student-results-heading"
         >
@@ -762,7 +762,7 @@ export default function DrShekharSinghPage() {
                       <h3 className="font-bold text-lg text-gray-900">{result.name}</h3>
                       <p className="text-sm text-gray-600">NEET {result.year}</p>
                     </div>
-                    <CheckCircle2 className="w-8 h-8 text-green-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-8 h-8 text-green-600 flex-shrink-0" />
                   </div>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
@@ -789,7 +789,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <motion.div
-              className="mt-12 bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-8 border-2 border-green-200"
+              className="mt-12 bg-gradient-to-r from-green-50 to-green-50 rounded-2xl p-8 border-2 border-green-200"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -799,7 +799,7 @@ export default function DrShekharSinghPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {trustBadges.map((badge, index) => (
                     <div key={index} className="flex flex-col items-center">
-                      <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mb-3">
+                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center mb-3">
                         <badge.icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="font-bold text-gray-900 text-lg">{badge.label}</div>
@@ -845,7 +845,7 @@ export default function DrShekharSinghPage() {
                 >
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="w-full flex-shrink-0 px-4">
-                      <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12 border-2 border-purple-200">
+                      <div className="bg-indigo-50 rounded-3xl p-8 md:p-12 border-2 border-purple-200">
                         <div className="flex items-center justify-center mb-6">
                           <div className="flex space-x-1">
                             {[...Array(testimonial.rating)].map((_, i) => (
@@ -949,7 +949,7 @@ export default function DrShekharSinghPage() {
                   description:
                     "Completed medical education from one of India's most prestigious institutions",
                   icon: GraduationCap,
-                  color: 'from-blue-500 to-purple-500',
+                  color: 'from-indigo-500 to-indigo-600',
                 },
                 {
                   year: '2011-2015',
@@ -957,7 +957,7 @@ export default function DrShekharSinghPage() {
                   description:
                     'Pioneered innovative teaching methodologies for NEET Biology preparation',
                   icon: Sparkles,
-                  color: 'from-green-500 to-teal-500',
+                  color: 'bg-green-600',
                 },
                 {
                   year: '2015-2020',
@@ -972,7 +972,7 @@ export default function DrShekharSinghPage() {
                   title: 'Founded Cerebrum Biology Academy',
                   description: 'Established premier NEET Biology coaching with 98% success rate',
                   icon: Trophy,
-                  color: 'from-red-500 to-pink-500',
+                  color: 'bg-red-600',
                 },
               ].map((milestone, index) => (
                 <motion.div
@@ -1005,7 +1005,7 @@ export default function DrShekharSinghPage() {
         </section>
 
         <section
-          className="py-16 bg-gradient-to-br from-blue-900 to-purple-900 text-white"
+          className="py-16 bg-indigo-900 text-white"
           role="region"
           aria-labelledby="contact-heading"
         >
@@ -1024,7 +1024,7 @@ export default function DrShekharSinghPage() {
                   Book a personal consultation with Dr. Shekhar and experience the teaching that has
                   transformed 2,500+ students
                 </p>
-                <div className="inline-flex items-center bg-green-500/20 border border-green-400/30 px-4 py-2 rounded-full">
+                <div className="inline-flex items-center bg-green-600/20 border border-green-400/30 px-4 py-2 rounded-full">
                   <Clock className="w-4 h-4 mr-2 text-green-300" />
                   <span className="text-green-100 text-sm font-medium">
                     Response Time: Within 24 hours
@@ -1041,7 +1041,7 @@ export default function DrShekharSinghPage() {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-4">
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -1055,7 +1055,7 @@ export default function DrShekharSinghPage() {
                   </p>
                   <Link
                     href="/demo-booking"
-                    className="inline-flex items-center justify-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="inline-flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Session
@@ -1070,7 +1070,7 @@ export default function DrShekharSinghPage() {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                       <MessageCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>

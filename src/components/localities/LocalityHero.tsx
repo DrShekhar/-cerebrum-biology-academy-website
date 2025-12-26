@@ -12,7 +12,7 @@ export default function LocalityHero({ locality }: LocalityHeroProps) {
   const whatsappLink = `https://wa.me/918826444334?text=Hi, I'm interested in NEET Biology coaching in ${locality.displayName}`
 
   return (
-    <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 md:py-20">
+    <section className="bg-indigo-500 text-white py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-blue-100 mb-6">

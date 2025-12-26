@@ -96,7 +96,7 @@ export function SophisticatedHero({
       <div className="absolute inset-0">
         {/* Animated Gradient Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"
           animate={{
             x: mousePosition.x * 0.1,
             y: mousePosition.y * 0.1,
@@ -148,7 +148,7 @@ export function SophisticatedHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2"
+              className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2"
             >
               <Sparkles className="h-5 w-5 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800">
@@ -166,17 +166,17 @@ export function SophisticatedHero({
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-navy-900">Master Biology</span>
                 <br />
-                <span className="text-teal-700">Like a Harvard Professor</span>
+                <span className="text-green-700">Like a Harvard Professor</span>
               </h1>
 
               <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">
-                Experience world-class NEET Biology preparation with
+                Experience NEET Biology preparation with
                 <PremiumTooltip content="AIIMS Graduate • 15+ Years Experience • 500+ AIIMS Selections">
                   <span className="font-semibold text-blue-700 cursor-help"> Dr. Shekhar's </span>
                 </PremiumTooltip>
-                revolutionary teaching methodology.
-                <span className="font-semibold text-green-700">98% success rate</span> speaks
-                volumes.
+                proven teaching methods.{' '}
+                <span className="font-semibold text-green-700">1.5 lakh+ students</span> guided to
+                success.
               </p>
             </motion.div>
 
@@ -334,7 +334,7 @@ export function SophisticatedHero({
             {/* Real-time Success Indicator */}
             <PremiumCard variant="premium" size="md" className="text-center">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
                 <span className="text-lg font-semibold text-gray-800">Live Success Updates</span>
               </div>
               <p className="text-gray-600">

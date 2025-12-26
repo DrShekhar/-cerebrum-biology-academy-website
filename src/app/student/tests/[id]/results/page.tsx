@@ -237,8 +237,8 @@ export default function TestResultsPage() {
               className={cn(
                 'p-6 text-white',
                 isPassed
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-600'
-                  : 'bg-gradient-to-r from-red-500 to-rose-600'
+                  ? 'bg-green-600'
+                  : 'bg-red-600'
               )}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -299,7 +299,7 @@ export default function TestResultsPage() {
 
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-2">
-                    <BarChart3 className="w-8 h-8 text-green-500" />
+                    <BarChart3 className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900">
                     {results.questionsAttempted}/{testData.totalQuestions}
@@ -321,7 +321,7 @@ export default function TestResultsPage() {
             <Card className="border-l-4 border-l-green-500">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-8 h-8 text-green-500" />
+                  <CheckCircle className="w-8 h-8 text-green-600" />
                   <div>
                     <div className="text-2xl font-bold text-gray-900">
                       {results.questionsCorrect}
@@ -514,7 +514,7 @@ export default function TestResultsPage() {
                                       className={cn(
                                         'w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold',
                                         isCorrect
-                                          ? 'bg-green-500 text-white'
+                                          ? 'bg-green-600 text-white'
                                           : isSelected
                                             ? 'bg-red-500 text-white'
                                             : 'bg-gray-200 text-gray-600'

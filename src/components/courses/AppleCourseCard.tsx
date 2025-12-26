@@ -36,9 +36,9 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
     ascent: {
       name: 'Ascent',
       gradient: 'from-slate-900 to-slate-700',
-      accentColor: 'from-teal-600 to-teal-700',
-      bgColor: 'bg-teal-50/50',
-      borderColor: 'border-teal-200/60',
+      accentColor: 'from-green-600 to-green-700',
+      bgColor: 'bg-green-50/50',
+      borderColor: 'border-green-200/60',
     },
     pursuit: {
       name: 'Pursuit',
@@ -244,7 +244,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
                 <div className="text-slate-600 text-xs mb-1">
                   {formatCurrency(tierPricing?.price || pricing.minPrice)} per year
                 </div>
-                <div className="text-xs font-medium text-emerald-600">0% EMI available</div>
+                <div className="text-xs font-medium text-green-600">0% EMI available</div>
               </div>
             </div>
 
@@ -260,7 +260,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
                       transition={{ delay: 0.2 + index * 0.1, ...springConfig }}
                       className="flex items-center text-xs text-slate-700"
                     >
-                      <CheckCircle className="w-3 h-3 text-emerald-600 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-green-600 mr-2 flex-shrink-0" />
                       <span className="line-clamp-1">{highlight}</span>
                     </motion.div>
                   )
@@ -303,10 +303,10 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setShowDemoModal(true)}
                   className="
-                    flex-1 bg-emerald-50 text-emerald-700
+                    flex-1 bg-green-50 text-green-700
                     py-3 rounded-2xl font-semibold text-sm
-                    border border-emerald-200/60
-                    hover:bg-emerald-100 transition-colors duration-200
+                    border border-green-200/60
+                    hover:bg-green-100 transition-colors duration-200
                   "
                 >
                   Demo Class

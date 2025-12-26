@@ -165,7 +165,7 @@ export default function PaymentsPage() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
-        return <CheckCircle className="w-4 h-4 text-green-500" />
+        return <CheckCircle className="w-4 h-4 text-green-600" />
       case 'pending':
         return <Clock className="w-4 h-4 text-yellow-500" />
       case 'failed':

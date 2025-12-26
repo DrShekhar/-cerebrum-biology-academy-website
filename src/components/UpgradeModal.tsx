@@ -136,7 +136,7 @@ export function UpgradeModal({
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="flex gap-3 p-4 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100"
+                        className="flex gap-3 p-4 rounded-lg bg-gray-50 border border-blue-100"
                       >
                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
                           {item.icon}
@@ -150,7 +150,7 @@ export function UpgradeModal({
                   </div>
 
                   {/* Pricing Highlight */}
-                  <div className="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-xl p-6 mb-6">
+                  <div className="bg-gradient-to-r from-green-50 to-green-50 border-2 border-green-200 rounded-xl p-6 mb-6">
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <div className="text-sm text-gray-600">Starting from</div>
@@ -189,7 +189,7 @@ export function UpgradeModal({
                       <Button
                         variant="primary"
                         size="lg"
-                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                        className="w-full bg-indigo-500 hover:bg-indigo-600"
                       >
                         {defaultCtaText}
                       </Button>
@@ -207,7 +207,7 @@ export function UpgradeModal({
                         98% Success Rate
                       </span>
                       <span className="flex items-center gap-1">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                         2,500+ Students
                       </span>
                     </div>
@@ -244,7 +244,7 @@ export function LockedFeatureCard({ title, description, onUpgradeClick }: Locked
       {/* Lock overlay */}
       <div className="absolute inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl">
         <div className="text-center p-6 max-w-sm">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
             <Lock className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -252,7 +252,7 @@ export function LockedFeatureCard({ title, description, onUpgradeClick }: Locked
           <Button
             onClick={onUpgradeClick}
             variant="primary"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+            className="bg-indigo-500 hover:bg-indigo-600"
           >
             Unlock Feature
           </Button>

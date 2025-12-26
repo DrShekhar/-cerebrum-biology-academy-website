@@ -271,8 +271,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
   const getBadgeStyles = (color: string) => {
     const styles = {
       gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
-      blue: 'bg-teal-600 text-white',
-      green: 'bg-gradient-to-r from-green-500 to-emerald-600 text-white',
+      blue: 'bg-green-600 text-white',
+      green: 'bg-gradient-to-r from-green-600 to-green-700 text-white',
     }
     return styles[color as keyof typeof styles] || styles.blue
   }
@@ -280,7 +280,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
   const getCategoryStyles = (category: string) => {
     const styles = {
       premium: 'border-2 border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50',
-      standard: 'border-2 border-teal-400 bg-navy-50',
+      standard: 'border-2 border-green-500 bg-navy-50',
       foundation: 'border border-gray-300 bg-gradient-to-br from-gray-50 to-slate-50',
       crash: 'border border-orange-300 bg-gradient-to-br from-orange-50 to-red-50',
     }
@@ -298,7 +298,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           transition={{ duration: 0.8 }}
           className="text-center space-y-6 mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2">
+          <div className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2">
             <Trophy className="h-5 w-5 text-blue-600" />
             <span className="text-sm font-semibold text-blue-800">
               Specialized Programs for Failed NEET Students
@@ -325,7 +325,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-4 max-w-md mx-auto"
+            className="bg-red-600 text-white rounded-xl p-4 max-w-md mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-2">
               <Gift className="h-6 w-6" />
@@ -537,7 +537,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
+          className="mt-16 bg-green-600 rounded-2xl p-8 text-white text-center"
         >
           <div className="max-w-3xl mx-auto space-y-6">
             <Trophy className="h-16 w-16 mx-auto text-yellow-300" />
@@ -647,7 +647,7 @@ function PackageCard({
           <div className="space-y-3">
             {pkg.features.slice(0, featured ? 6 : 4).map((feature, index) => (
               <div key={index} className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-gray-700">{feature}</span>
               </div>
             ))}
@@ -881,8 +881,8 @@ function EMICalculatorModal({
 function getBadgeStyles(color: string) {
   const styles = {
     gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
-    blue: 'bg-teal-600 text-white',
-    green: 'bg-gradient-to-r from-green-500 to-emerald-600 text-white',
+    blue: 'bg-green-600 text-white',
+    green: 'bg-gradient-to-r from-green-600 to-green-700 text-white',
   }
   return styles[color as keyof typeof styles] || styles.blue
 }

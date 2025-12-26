@@ -96,7 +96,7 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
       {/* Question Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
             Multiple Correct
           </span>
           <span className="text-gray-500 text-sm">Question {questionNumber}</span>
@@ -118,7 +118,7 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
             {question.estimatedTimeSeconds}s
           </span>
           {question.maxSelections && (
-            <span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">
+            <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">
               Max: {question.maxSelections}
             </span>
           )}
@@ -185,23 +185,23 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
               onMouseLeave={() => setHoveredOption(null)}
               className={cn(
                 'w-full text-left p-4 rounded-lg border-2 transition-all duration-200 cursor-pointer',
-                'hover:shadow-md focus-within:ring-2 focus-within:ring-emerald-500',
+                'hover:shadow-md focus-within:ring-2 focus-within:ring-green-600',
                 // Selected state styling
                 isSelected
                   ? showStatus
                     ? isCorrect
-                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                      ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                       : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
-                    : 'border-emerald-500 bg-emerald-50 text-emerald-900 shadow-lg'
+                    : 'border-green-600 bg-green-50 text-green-800 shadow-lg'
                   : // Correct answer highlighting in explanation mode
                     showStatus && isCorrect
-                    ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                    ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                     : // Default and hover states
                       isHovered && !isDisabled
-                      ? 'border-emerald-300 bg-emerald-25 shadow-md'
+                      ? 'border-green-400 bg-green-50 shadow-md'
                       : isDisabled
                         ? 'border-gray-200 bg-gray-50 text-gray-500 cursor-not-allowed'
-                        : 'border-gray-200 hover:border-emerald-300 hover:bg-gray-50'
+                        : 'border-gray-200 hover:border-green-400 hover:bg-gray-50'
               )}
               role="checkbox"
               aria-checked={isSelected}
@@ -222,11 +222,11 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
                     isSelected
                       ? showStatus
                         ? isCorrect
-                          ? 'bg-green-500 border-green-500'
+                          ? 'bg-green-600 border-green-600'
                           : 'bg-red-500 border-red-500'
-                        : 'bg-emerald-500 border-emerald-500'
+                        : 'bg-green-600 border-green-600'
                       : showStatus && isCorrect
-                        ? 'bg-green-500 border-green-500'
+                        ? 'bg-green-600 border-green-600'
                         : 'border-gray-300'
                   )}
                 >
@@ -254,13 +254,13 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
                     isSelected
                       ? showStatus
                         ? isCorrect
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : 'bg-red-500 text-white'
-                        : 'bg-emerald-500 text-white'
+                        : 'bg-green-600 text-white'
                       : showStatus && isCorrect
-                        ? 'bg-green-500 text-white'
+                        ? 'bg-green-600 text-white'
                         : isHovered && !isDisabled
-                          ? 'bg-emerald-200 text-emerald-800'
+                          ? 'bg-green-200 text-green-700'
                           : 'bg-gray-200 text-gray-700'
                   )}
                 >
@@ -310,9 +310,9 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
 
       {/* Explanation */}
       {showExplanation && (
-        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-emerald-500">
+        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-green-600">
           <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-white text-sm">
+            <span className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm">
               ℹ
             </span>
             Explanation
@@ -328,7 +328,7 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
                 const optionLabel = String.fromCharCode(65 + optionIndex)
                 return (
                   <div key={index} className="text-sm text-gray-600 flex items-center gap-2">
-                    <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                    <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                       {optionLabel}
                     </span>
                     {answer}
@@ -347,8 +347,8 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
           )}
 
           {question.timeManagementTip && (
-            <div className="mt-3 p-3 bg-emerald-50 rounded border border-emerald-200">
-              <p className="text-sm text-emerald-700">
+            <div className="mt-3 p-3 bg-green-50 rounded border border-green-200">
+              <p className="text-sm text-green-700">
                 <strong>💡 Time Management Tip:</strong> {question.timeManagementTip}
               </p>
             </div>

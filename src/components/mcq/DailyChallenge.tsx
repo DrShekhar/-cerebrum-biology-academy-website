@@ -158,7 +158,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-lg overflow-hidden"
+        className="bg-indigo-500 rounded-2xl shadow-lg overflow-hidden"
       >
         <div className="p-6 text-white">
           <div className="flex items-center gap-3 mb-4">
@@ -230,7 +230,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+              className="h-full bg-blue-500"
               initial={{ width: 0 }}
               animate={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
             />
@@ -346,7 +346,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
           className={`p-8 text-center ${
             result?.isPerfect || isAlreadyCompleted
               ? 'bg-gradient-to-br from-yellow-400 to-orange-500'
-              : 'bg-gradient-to-br from-blue-500 to-purple-600'
+              : 'bg-indigo-500'
           } text-white`}
         >
           <p className="text-6xl mb-4">

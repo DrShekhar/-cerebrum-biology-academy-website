@@ -136,7 +136,7 @@ export default function AnalyticsPage() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white"
+            className="bg-indigo-500 rounded-xl p-6 text-white"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -467,7 +467,7 @@ export default function AnalyticsPage() {
                   { stage: 'Demo Confirmed', count: 680, color: 'bg-violet-500' },
                   { stage: 'Demo Attended', count: 510, color: 'bg-pink-500' },
                   { stage: 'Enrolled', count: 280, color: 'bg-rose-500' },
-                  { stage: 'Paid', count: 245, color: 'bg-green-500' },
+                  { stage: 'Paid', count: 245, color: 'bg-green-600' },
                 ].map((item, index, arr) => {
                   const prevCount = index > 0 ? arr[index - 1].count : item.count
                   const dropoff =
@@ -556,7 +556,7 @@ export default function AnalyticsPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-xl text-white"
+                className="bg-green-600 p-6 rounded-xl text-white"
               >
                 <div className="text-sm opacity-90">Overall Conversion</div>
                 <div className="text-3xl font-bold mt-2">1.63%</div>
@@ -598,7 +598,7 @@ export default function AnalyticsPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0" />
                   <span>
                     <strong>Payment completion (87.5%)</strong> is excellent - payment flow is
                     optimized
@@ -647,7 +647,7 @@ export default function AnalyticsPage() {
               >
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-green-100 rounded-full">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-600">Active Users</p>
@@ -731,7 +731,7 @@ export default function AnalyticsPage() {
                     className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg"
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
                       <div>
                         <span className="text-sm font-medium capitalize">
                           {activity.type.replace('_', ' ')}

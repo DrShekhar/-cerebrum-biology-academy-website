@@ -111,7 +111,7 @@ const TOP_COLLEGES = [
   { name: 'AIIMS Rishikesh', students: 67, color: 'text-purple-600', bgColor: 'bg-purple-50' },
   { name: 'MAMC Delhi', students: 54, color: 'text-green-600', bgColor: 'bg-green-50' },
   { name: 'JIPMER Puducherry', students: 37, color: 'text-orange-600', bgColor: 'bg-orange-50' },
-  { name: 'KGMC Lucknow', students: 45, color: 'text-teal-600', bgColor: 'bg-teal-50' },
+  { name: 'KGMC Lucknow', students: 45, color: 'text-green-600', bgColor: 'bg-green-50' },
   { name: 'GMC Nagpur', students: 52, color: 'text-pink-600', bgColor: 'bg-pink-50' },
   { name: 'BHU Varanasi', students: 41, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
   { name: 'VMMC Delhi', students: 38, color: 'text-red-600', bgColor: 'bg-red-50' },
@@ -153,8 +153,8 @@ const METHODOLOGY = [
     icon: Zap,
     title: 'Regular Testing',
     description: 'Weekly mock tests simulating real NEET environment to build speed and accuracy.',
-    color: 'text-teal-600',
-    bgColor: 'bg-teal-50',
+    color: 'text-green-600',
+    bgColor: 'bg-green-50',
   },
   {
     icon: Heart,
@@ -196,7 +196,7 @@ export default function ResultsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm">
@@ -205,7 +205,7 @@ export default function ResultsPage() {
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
-            Our Students&apos; <span className="text-teal-600">Success Stories</span>
+            Our Students&apos; <span className="text-green-600">Success Stories</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
@@ -309,8 +309,8 @@ export default function ResultsPage() {
             <div className="text-xs sm:text-sm font-medium text-gray-700">Avg. Improvement</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 shadow-lg hover:shadow-xl transition-shadow">
-            <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-teal-600 mx-auto mb-3 sm:mb-4" />
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
+            <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mx-auto mb-3 sm:mb-4" />
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.totalStudents}
             </div>
@@ -415,7 +415,7 @@ export default function ResultsPage() {
                   {420 + NEET_2024_RESULTS.averageImprovement}
                 </div>
                 <div className="text-sm text-gray-600 mb-4">Average Final Score</div>
-                <div className="h-2 bg-green-500 rounded-full"></div>
+                <div className="h-2 bg-green-600 rounded-full"></div>
               </div>
             </div>
 
@@ -426,7 +426,7 @@ export default function ResultsPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-green-600 rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>65%</strong> improved by 250+ marks
                   </span>
@@ -479,7 +479,7 @@ export default function ResultsPage() {
         </section>
 
         <section id="book-demo" className="mb-8">
-          <Card className="bg-gradient-to-r from-teal-600 to-blue-600 text-white p-8 md:p-12 shadow-2xl">
+          <Card className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 md:p-12 shadow-2xl">
             <div className="text-center max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5" />
@@ -500,7 +500,7 @@ export default function ResultsPage() {
                 <Button
                   size="xl"
                   variant="secondary"
-                  className="bg-white text-teal-600 hover:bg-blue-50 shadow-lg hover:shadow-xl"
+                  className="bg-white text-green-600 hover:bg-blue-50 shadow-lg hover:shadow-xl"
                 >
                   Book Your Free Demo Class
                   <ChevronRight className="h-6 w-6 ml-2" />
@@ -509,7 +509,7 @@ export default function ResultsPage() {
                 <Button
                   size="xl"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-2 border-white text-white hover:bg-white hover:text-green-600"
                 >
                   Talk to Our Success Coach
                 </Button>

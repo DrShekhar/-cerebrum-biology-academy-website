@@ -136,7 +136,7 @@ export default function FeesPage() {
       title: 'Bank Transfer',
       methods: ['NEFT/RTGS', 'IMPS', 'Cheque/DD', 'Cash Deposit'],
       icon: Shield,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       title: 'EMI Options',
@@ -157,7 +157,7 @@ export default function FeesPage() {
       title: 'Early Bird Discount',
       description: 'Register 2 months before course start',
       discount: 'Up to 15%',
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Sibling Discount',
@@ -189,7 +189,7 @@ export default function FeesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
+      <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <motion.h1
@@ -293,7 +293,7 @@ export default function FeesPage() {
                 <div className="space-y-3 mb-8">
                   {course.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -400,7 +400,7 @@ export default function FeesPage() {
                 <div className="space-y-3">
                   {method.methods.map((paymentMethod, idx) => (
                     <div key={idx} className="flex items-center justify-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       <span className="text-gray-700">{paymentMethod}</span>
                     </div>
                   ))}
@@ -477,7 +477,7 @@ export default function FeesPage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-600 mr-4 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">{service}</span>
                   </motion.div>
                 ))}
@@ -485,7 +485,7 @@ export default function FeesPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-3xl p-8 text-white"
+              className="bg-blue-500 rounded-3xl p-8 text-white"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -523,7 +523,7 @@ export default function FeesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Secure Your Seat?</h2>
           <p className="text-xl text-purple-100 mb-8">

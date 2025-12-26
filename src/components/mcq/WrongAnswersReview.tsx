@@ -70,7 +70,7 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300"
+              className="h-full bg-green-600 transition-all duration-300"
               style={{ width: `${reviewProgress}%` }}
             />
           </div>
@@ -101,7 +101,7 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
                   <div className="flex items-center gap-2 flex-1 min-w-0">
                     <span
                       className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                        isReviewed ? 'bg-green-500 text-white' : 'bg-red-100 text-red-700'
+                        isReviewed ? 'bg-green-600 text-white' : 'bg-red-100 text-red-700'
                       }`}
                     >
                       {isReviewed ? <CheckCircle className="w-4 h-4" /> : index + 1}
@@ -141,7 +141,7 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
 
                     {/* NCERT Reference */}
                     {item.question.isNcertBased && (
-                      <div className="flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg w-fit">
+                      <div className="flex items-center gap-1.5 text-xs text-green-700 bg-green-50 px-2 py-1 rounded-lg w-fit">
                         <BookOpen className="w-3 h-3" />
                         <span>
                           Class {item.question.ncertClass} | Ch.{item.question.ncertChapter}
@@ -172,7 +172,7 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
                             <span
                               className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
                                 isCorrect
-                                  ? 'bg-green-500 text-white'
+                                  ? 'bg-green-600 text-white'
                                   : isWrong
                                     ? 'bg-red-500 text-white'
                                     : 'bg-gray-200 text-gray-600'
@@ -208,7 +208,7 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
                         <span className="font-bold text-red-600">{item.selectedAnswer}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                         <span className="text-gray-500">Correct:</span>
                         <span className="font-bold text-green-600">{item.correctAnswer}</span>
                       </div>

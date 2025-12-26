@@ -62,7 +62,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       case 'tier2':
         return 'from-blue-600 to-indigo-600'
       case 'tier3':
-        return 'from-green-600 to-teal-600'
+        return 'bg-green-600'
       default:
         return 'from-gray-600 to-slate-600'
     }
@@ -346,7 +346,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
           </div>
 
           <motion.div variants={itemVariants} className="mt-8">
-            <Card className="p-6 border-4 border-green-500 bg-green-50">
+            <Card className="p-6 border-4 border-green-600 bg-green-50">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-green-800 mb-4">Cerebrum Biology Academy</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -248,7 +248,7 @@ export default function BiologyDroppersPage() {
                 <ul className="space-y-2">
                   {phase.activities.map((activity) => (
                     <li key={activity} className="flex items-center text-gray-600 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {activity}
                     </li>
                   ))}
@@ -283,7 +283,7 @@ export default function BiologyDroppersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-100"
+                className="bg-gradient-to-br bg-red-50 rounded-xl p-6 border border-red-100"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center text-red-700 font-bold text-lg">
@@ -367,7 +367,7 @@ export default function BiologyDroppersPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white">
+      <section className="py-16 md:py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

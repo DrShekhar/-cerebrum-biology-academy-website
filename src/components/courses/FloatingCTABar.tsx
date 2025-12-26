@@ -133,7 +133,7 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
       </div>
 
       {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-500 to-red-600 text-white py-2">
+      <div className="bg-red-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-sm">
             <span className="font-medium">🔥 Limited Time Offer:</span>

@@ -429,11 +429,11 @@ export default function ChapterPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white overflow-hidden">
+        <section className="relative py-16 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <Link
               href="/neet-biology"
-              className="inline-flex items-center gap-2 text-teal-200 hover:text-white mb-6 transition-colors"
+              className="inline-flex items-center gap-2 text-green-200 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to All Chapters
@@ -450,19 +450,19 @@ export default function ChapterPage() {
                   Class {chapter.class}
                 </span>
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm">{chapter.unit}</span>
-                <span className="bg-teal-500 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-green-600 px-3 py-1 rounded-full text-sm font-medium">
                   {chapter.weightage} Weightage
                 </span>
               </div>
 
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{chapter.name} - NEET Biology</h1>
 
-              <p className="text-lg text-teal-100 mb-6 max-w-3xl">{chapter.description}</p>
+              <p className="text-lg text-green-100 mb-6 max-w-3xl">{chapter.description}</p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Join Expert Classes
                   <ArrowRight className="w-5 h-5" />
@@ -477,28 +477,28 @@ export default function ChapterPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                <Target className="w-8 h-8 text-teal-600" />
+                <Target className="w-8 h-8 text-green-600" />
                 <div>
                   <div className="text-xl font-bold text-gray-800">{chapter.weightage}</div>
                   <div className="text-gray-600 text-sm">NEET Weightage</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                <FileText className="w-8 h-8 text-teal-600" />
+                <FileText className="w-8 h-8 text-green-600" />
                 <div>
                   <div className="text-xl font-bold text-gray-800">{chapter.questionsPerYear}</div>
                   <div className="text-gray-600 text-sm">Questions/Year</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                <BookOpen className="w-8 h-8 text-teal-600" />
+                <BookOpen className="w-8 h-8 text-green-600" />
                 <div>
                   <div className="text-xl font-bold text-gray-800">Class {chapter.class}</div>
                   <div className="text-gray-600 text-sm">NCERT Level</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                <Brain className="w-8 h-8 text-teal-600" />
+                <Brain className="w-8 h-8 text-green-600" />
                 <div>
                   <div className="text-xl font-bold text-gray-800">{chapter.keyTopics.length}</div>
                   <div className="text-gray-600 text-sm">Key Topics</div>
@@ -522,13 +522,13 @@ export default function ChapterPage() {
                   className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-teal-600" />
+                    <BookOpen className="w-5 h-5 text-green-600" />
                     Key Topics in {chapter.name}
                   </h2>
                   <ul className="space-y-2">
                     {chapter.keyTopics.map((topic, index) => (
                       <li key={index} className="flex items-start gap-3 p-2 bg-gray-50 rounded-lg">
-                        <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{topic}</span>
                       </li>
                     ))}
@@ -543,14 +543,14 @@ export default function ChapterPage() {
                   className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                    <Brain className="w-5 h-5 text-teal-600" />
+                    <Brain className="w-5 h-5 text-green-600" />
                     Important Concepts for NEET
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {chapter.importantConcepts.map((concept, index) => (
                       <span
                         key={index}
-                        className="bg-teal-50 text-teal-700 px-3 py-1.5 rounded-full text-sm font-medium"
+                        className="bg-green-50 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium"
                       >
                         {concept}
                       </span>
@@ -563,16 +563,16 @@ export default function ChapterPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-teal-50 to-white rounded-xl shadow-lg p-6 border border-teal-100"
+                  className="bg-gradient-to-br from-green-50 to-white rounded-xl shadow-lg p-6 border border-green-100"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                    <Target className="w-5 h-5 text-teal-600" />
+                    <Target className="w-5 h-5 text-green-600" />
                     NEET Preparation Tips for {chapter.name}
                   </h2>
                   <ul className="space-y-3">
                     {chapter.neetTips.map((tip, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-teal-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                        <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                           {index + 1}
                         </div>
                         <span className="text-gray-700">{tip}</span>
@@ -589,22 +589,22 @@ export default function ChapterPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl p-6 text-white"
+                  className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white"
                 >
                   <h3 className="font-bold text-lg mb-3">Master {chapter.name}</h3>
-                  <p className="text-teal-100 text-sm mb-4">
+                  <p className="text-green-100 text-sm mb-4">
                     Join our expert-led classes for in-depth understanding and guaranteed NEET
                     success.
                   </p>
                   <Link
                     href="/demo-booking"
-                    className="block w-full bg-white text-teal-700 py-3 rounded-lg font-semibold text-center hover:bg-teal-50 transition-colors"
+                    className="block w-full bg-white text-green-700 py-3 rounded-lg font-semibold text-center hover:bg-green-50 transition-colors"
                   >
                     Book Free Demo
                   </Link>
                   <Link
                     href="tel:+918826444334"
-                    className="flex items-center justify-center gap-2 mt-3 text-teal-100 hover:text-white"
+                    className="flex items-center justify-center gap-2 mt-3 text-green-100 hover:text-white"
                   >
                     <Phone className="w-4 h-4" />
                     Call: 8826444334
@@ -625,9 +625,9 @@ export default function ChapterPage() {
                         <Link
                           key={related.slug}
                           href={`/neet-biology/${related.slug}`}
-                          className="block p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors group"
+                          className="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors group"
                         >
-                          <span className="text-gray-700 group-hover:text-teal-700 font-medium">
+                          <span className="text-gray-700 group-hover:text-green-700 font-medium">
                             {related.name}
                           </span>
                         </Link>
@@ -647,19 +647,19 @@ export default function ChapterPage() {
                   <div className="space-y-2">
                     <Link
                       href="/neet-biology"
-                      className="block p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors"
+                      className="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors"
                     >
                       All Biology Chapters
                     </Link>
                     <Link
                       href="/neet-2025-preparation"
-                      className="block p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors"
+                      className="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors"
                     >
                       NEET 2026 Preparation
                     </Link>
                     <Link
                       href="/courses"
-                      className="block p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors"
+                      className="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors"
                     >
                       Our Courses
                     </Link>
@@ -682,14 +682,14 @@ export default function ChapterPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo-booking"
-                className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Book Free Demo Class
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/neet-biology"
-                className="inline-flex items-center gap-2 bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border border-teal-200"
+                className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border border-green-200"
               >
                 <ArrowLeft className="w-5 h-5" />
                 All Chapters

@@ -151,7 +151,7 @@ export function SendMessageModal({ lead, isOpen, onClose, onSuccess }: SendMessa
       label: 'WhatsApp',
       icon: '💬',
       description: '98% open rate',
-      selectedClasses: 'border-green-500 bg-green-50 ring-2 ring-green-500/20',
+      selectedClasses: 'border-green-600 bg-green-50 ring-2 ring-green-600/20',
       unselectedClasses: 'border-gray-200 hover:border-gray-300 hover:shadow-sm',
     },
     SMS: {

@@ -143,7 +143,7 @@ export default function TestGenerationWithProgress() {
     <div className="max-w-4xl mx-auto space-y-6 p-6">
       <Card className="p-8">
         <div className="flex items-center gap-4 mb-8">
-          <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Sparkles className="w-8 h-8 text-white" />
           </div>
           <div>
@@ -233,9 +233,9 @@ export default function TestGenerationWithProgress() {
                     <p className="text-2xl font-bold text-blue-600">{currentStep + 1}</p>
                     <p className="text-xs text-blue-800 font-medium">Current Step</p>
                   </div>
-                  <div className="bg-emerald-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-emerald-600">{Math.round(percentage)}%</p>
-                    <p className="text-xs text-emerald-800 font-medium">Progress</p>
+                  <div className="bg-green-50 rounded-lg p-4 text-center">
+                    <p className="text-2xl font-bold text-green-600">{Math.round(percentage)}%</p>
+                    <p className="text-xs text-green-700 font-medium">Progress</p>
                   </div>
                   <div className="bg-amber-50 rounded-lg p-4 text-center">
                     <p className="text-2xl font-bold text-amber-600">{estimatedTimeRemaining}s</p>
@@ -253,20 +253,20 @@ export default function TestGenerationWithProgress() {
               animate={{ opacity: 1, scale: 1 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-br from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-xl p-8 text-center">
+              <div className="bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', delay: 0.2 }}
-                  className="inline-flex p-4 bg-emerald-100 rounded-full mb-4"
+                  className="inline-flex p-4 bg-green-100 rounded-full mb-4"
                 >
-                  <CheckCircle2 className="w-12 h-12 text-emerald-600" />
+                  <CheckCircle2 className="w-12 h-12 text-green-600" />
                 </motion.div>
 
-                <h2 className="text-2xl font-bold text-emerald-900 mb-2">
+                <h2 className="text-2xl font-bold text-green-800 mb-2">
                   Test Generated Successfully!
                 </h2>
-                <p className="text-emerald-700 mb-6">
+                <p className="text-green-700 mb-6">
                   Your test with {generatedTest.questions} questions is ready to download
                 </p>
 
@@ -299,7 +299,7 @@ export default function TestGenerationWithProgress() {
               animate={{ opacity: 1, scale: 1 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-br from-red-50 to-rose-50 border-2 border-red-200 rounded-xl p-8 text-center">
+              <div className="bg-gradient-to-br bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center">
                 <div className="inline-flex p-4 bg-red-100 rounded-full mb-4">
                   <AlertCircle className="w-12 h-12 text-red-600" />
                 </div>

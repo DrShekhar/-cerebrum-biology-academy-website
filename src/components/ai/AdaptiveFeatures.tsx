@@ -373,10 +373,10 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Brain className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             Adaptive Features
           </h1>
         </motion.div>
@@ -421,7 +421,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 label: 'Prerequisites',
                 value: configuration.prerequisites.length,
                 icon: CheckCircle2,
-                color: 'from-green-500 to-emerald-500',
+                color: 'bg-green-600',
               },
               {
                 label: 'Branching Rules',
@@ -445,7 +445,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 label: 'Time Extensions',
                 value: configuration.timeExtensionRules.filter((r) => r.isActive).length,
                 icon: Clock,
-                color: 'from-teal-500 to-green-500',
+                color: 'bg-green-600',
               },
               {
                 label: 'Adaptive Features',
@@ -723,7 +723,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   questionId: e.target.value,
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             >
                               <option value="">Select Question</option>
                               {mockQuestions.map((q) => (
@@ -745,7 +745,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   fallbackAction: e.target.value,
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             >
                               <option value="skip">Skip Question</option>
                               <option value="show_alternative">Show Alternative</option>
@@ -1298,12 +1298,12 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 <div className="bg-white rounded-xl p-6 border">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-teal-600" />
+                      <Clock className="w-5 h-5 text-green-600" />
                       Performance-Based Time Extension
                     </h3>
                     <button
                       onClick={addTimeExtensionRule}
-                      className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
+                      className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
                     >
                       <Plus className="w-4 h-4" />
                       Add Time Rule
@@ -1351,7 +1351,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   name: e.target.value,
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             />
                           </div>
 
@@ -1369,7 +1369,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   },
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             >
                               <option value="accuracy">Accuracy</option>
                               <option value="avg_time_per_question">Avg Time per Question</option>
@@ -1393,7 +1393,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   },
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             />
                           </div>
 
@@ -1411,7 +1411,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   },
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             >
                               <option value="fixed">Fixed Time (minutes)</option>
                               <option value="percentage">Percentage of Original</option>
@@ -1434,7 +1434,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                                   },
                                 })
                               }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             />
                           </div>
 
@@ -1455,13 +1455,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               }
                               min="1"
                               max="5"
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             />
                           </div>
                         </div>
 
-                        <div className="mt-4 p-3 bg-teal-50 rounded-lg border border-teal-200">
-                          <div className="flex items-center gap-2 text-teal-800 text-sm">
+                        <div className="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                          <div className="flex items-center gap-2 text-green-800 text-sm">
                             <Clock className="w-4 h-4" />
                             <span>
                               When {rule.triggerCondition.metric} ≥{' '}

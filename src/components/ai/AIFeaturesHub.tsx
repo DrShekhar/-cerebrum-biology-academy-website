@@ -108,8 +108,8 @@ const aiFeatures: AIFeature[] = [
       'Guided tours',
       'Sample interactions',
     ],
-    color: 'from-green-500 to-emerald-600',
-    bgGradient: 'from-green-50 to-emerald-50',
+    color: 'bg-green-600',
+    bgGradient: 'from-green-50 to-green-50',
   },
   {
     id: 'ai-monitoring',
@@ -209,7 +209,7 @@ export default function AIFeaturesHub() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       {/* Header Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <div className="relative overflow-hidden bg-indigo-600 text-white">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center">
@@ -224,8 +224,7 @@ export default function AIFeaturesHub() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Experience the future of education with our cutting-edge AI features designed
-              specifically for biology students
+              AI study tools designed specifically for NEET Biology students
             </p>
 
             {/* Quick Stats */}
@@ -258,7 +257,7 @@ export default function AIFeaturesHub() {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200">
               <div
-                className={`w-2 h-2 rounded-full ${isCheckingAPIs ? 'bg-yellow-500 animate-pulse' : Object.values(apiStatus).every((s) => s.status === 'operational') ? 'bg-green-500' : 'bg-orange-500'}`}
+                className={`w-2 h-2 rounded-full ${isCheckingAPIs ? 'bg-yellow-500 animate-pulse' : Object.values(apiStatus).every((s) => s.status === 'operational') ? 'bg-green-600' : 'bg-orange-500'}`}
               ></div>
               <span className="text-sm font-medium text-gray-700">
                 {isCheckingAPIs
@@ -354,7 +353,7 @@ export default function AIFeaturesHub() {
                   <ul className="grid grid-cols-2 gap-2">
                     {feature.features.map((item, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-600">
-                        <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -422,7 +421,7 @@ export default function AIFeaturesHub() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">NEET-Focused</h3>

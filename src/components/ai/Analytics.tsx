@@ -528,7 +528,7 @@ const Analytics: React.FC = () => {
             <div className="text-sm text-gray-600">Balance</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-teal-600">{analyticsData.overallMetrics.outcomesCoverage}%</div>
+            <div className="text-2xl font-bold text-green-600">{analyticsData.overallMetrics.outcomesCoverage}%</div>
             <div className="text-sm text-gray-600">Coverage</div>
           </div>
         </div>
@@ -715,7 +715,7 @@ const Analytics: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                item.status === 'optimal' ? 'bg-green-500' :
+                                item.status === 'optimal' ? 'bg-green-600' :
                                 item.status === 'high' ? 'bg-red-500' : 'bg-yellow-500'
                               }`}
                               style={{ width: `${item.percentage}%` }}
@@ -742,7 +742,7 @@ const Analytics: React.FC = () => {
                           <div key={item.level} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                             <div className="flex items-center gap-3">
                               <div className={`w-4 h-4 rounded-full ${
-                                item.level === 'easy' ? 'bg-green-500' :
+                                item.level === 'easy' ? 'bg-green-600' :
                                 item.level === 'medium' ? 'bg-yellow-500' : 'bg-red-500'
                               }`} />
                               <span className="font-medium capitalize">{item.level}</span>
@@ -963,7 +963,7 @@ const Analytics: React.FC = () => {
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div
                                 className={`h-3 rounded-full ${
-                                  topic.status === 'balanced' ? 'bg-green-500' :
+                                  topic.status === 'balanced' ? 'bg-green-600' :
                                   topic.status === 'overrepresented' ? 'bg-red-500' : 'bg-yellow-500'
                                 }`}
                                 style={{ width: `${(topic.percentage / topic.recommendedPercentage) * 100}%` }}
@@ -991,7 +991,7 @@ const Analytics: React.FC = () => {
                           <span className="text-gray-600">Difficulty breakdown:</span>
                           <div className="flex items-center gap-2">
                             <div className="flex items-center gap-1">
-                              <div className="w-3 h-3 bg-green-500 rounded-full" />
+                              <div className="w-3 h-3 bg-green-600 rounded-full" />
                               <span>Easy: {topic.difficultyDistribution.easy}</span>
                             </div>
                             <div className="flex items-center gap-1">
@@ -1158,7 +1158,7 @@ const Analytics: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                outcome.coverage >= 80 ? 'bg-green-500' :
+                                outcome.coverage >= 80 ? 'bg-green-600' :
                                 outcome.coverage >= 60 ? 'bg-yellow-500' : 'bg-red-500'
                               }`}
                               style={{ width: `${outcome.coverage}%` }}
@@ -1348,7 +1348,7 @@ const Analytics: React.FC = () => {
                             <span className="text-sm font-medium text-green-600">+3.3%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-green-500 h-2 rounded-full" style={{ width: '65%' }} />
+                            <div className="bg-green-600 h-2 rounded-full" style={{ width: '65%' }} />
                           </div>
                         </div>
 

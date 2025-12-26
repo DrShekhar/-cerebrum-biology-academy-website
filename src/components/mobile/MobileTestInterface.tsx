@@ -284,7 +284,7 @@ export function MobileTestInterface({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'answered':
-        return 'bg-green-500 text-white'
+        return 'bg-green-600 text-white'
       case 'flagged':
         return 'bg-yellow-500 text-white'
       case 'current':
@@ -627,7 +627,7 @@ export function MobileTestInterface({
                 {/* Legend */}
                 <div className="grid grid-cols-2 gap-4 text-xs">
                   <div className="flex items-center">
-                    <div className="w-3 h-3 rounded bg-green-500 mr-2" />
+                    <div className="w-3 h-3 rounded bg-green-600 mr-2" />
                     Answered
                   </div>
                   <div className="flex items-center">

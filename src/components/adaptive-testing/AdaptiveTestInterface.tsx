@@ -416,10 +416,10 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
           {/* Header */}
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+              <div className="p-3 bg-indigo-500 rounded-xl">
                 <Brain className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
                 Adaptive Test
               </h1>
             </div>
@@ -454,7 +454,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
           {/* Instructions */}
           {instructions.length > 0 && (
-            <div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+            <div className="mb-8 p-6 bg-gray-50 rounded-lg border border-blue-200">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5 text-blue-600" />
                 Instructions
@@ -475,7 +475,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
             <button
               onClick={startTest}
               disabled={loading}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 flex items-center gap-2 mx-auto text-lg font-medium"
+              className="bg-indigo-500 text-white px-8 py-4 rounded-xl hover:bg-indigo-600 transition-all disabled:opacity-50 flex items-center gap-2 mx-auto text-lg font-medium"
             >
               {loading ? (
                 <>

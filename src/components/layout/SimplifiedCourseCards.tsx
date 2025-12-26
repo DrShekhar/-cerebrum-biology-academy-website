@@ -166,7 +166,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                         <ul className="space-y-2">
                           {course.details.features.map((feature, index) => (
                             <li key={index} className="flex items-center gap-2">
-                              <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
                               <span className="text-gray-700">{feature}</span>
                             </li>
                           ))}

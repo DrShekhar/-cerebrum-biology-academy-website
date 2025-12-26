@@ -192,7 +192,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           <div className="flex items-center space-x-4">
             <motion.div
-              className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center"
+              className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center"
               style={neomorphStyles.shadowNeomorphInset}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -286,7 +286,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                     <motion.div
                       className={`p-4 rounded-2xl shadow-neomorph ${
                         message.type === 'user'
-                          ? 'bg-gradient-to-br from-blue-400 to-purple-500 text-white ml-auto'
+                          ? 'bg-blue-500 text-white ml-auto'
                           : 'bg-gray-100 text-gray-800'
                       }`}
                       whileHover={{ scale: 1.02 }}
@@ -326,8 +326,8 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                   <motion.div
                     className={`w-8 h-8 rounded-full shadow-neomorph flex items-center justify-center text-xs font-bold ${
                       message.type === 'user'
-                        ? 'order-1 mr-3 bg-gradient-to-br from-green-400 to-teal-500 text-white'
-                        : 'order-2 ml-3 bg-gradient-to-br from-blue-400 to-purple-500 text-white'
+                        ? 'order-1 mr-3 bg-gradient-to-br from-green-400 to-green-700 text-white'
+                        : 'order-2 ml-3 bg-blue-500 text-white'
                     }`}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -347,7 +347,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                   exit={{ opacity: 0, y: -20 }}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 shadow-neomorph flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-blue-500 shadow-neomorph flex items-center justify-center">
                       <span className="text-xs">👨‍🏫</span>
                     </div>
                     <motion.div
@@ -399,7 +399,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                 </motion.button>
 
                 <motion.button
-                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-green-500 transition-colors"
+                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-green-600 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsRecording(!isRecording)}
@@ -433,7 +433,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
               <motion.button
                 className={`w-12 h-12 rounded-xl shadow-neomorph flex items-center justify-center transition-all duration-200 ${
                   inputMessage.trim()
-                    ? 'bg-gradient-to-br from-blue-400 to-purple-500 text-white shadow-neomorph-pressed'
+                    ? 'bg-blue-500 text-white shadow-neomorph-pressed'
                     : 'bg-gray-100 text-gray-400'
                 }`}
                 whileHover={{ scale: inputMessage.trim() ? 1.05 : 1 }}

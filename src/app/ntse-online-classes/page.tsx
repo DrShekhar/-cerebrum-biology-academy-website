@@ -294,7 +294,7 @@ export default function NTSEOnlineClassesPage() {
               <ul className="space-y-2">
                 {ntseSyllabus.mat.map((topic) => (
                   <li key={topic} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
                     {topic}
                   </li>
                 ))}
@@ -315,7 +315,7 @@ export default function NTSEOnlineClassesPage() {
               <ul className="space-y-2">
                 {ntseSyllabus.sat.map((topic) => (
                   <li key={topic} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
                     {topic}
                   </li>
                 ))}

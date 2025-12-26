@@ -232,7 +232,7 @@ export function RealTimeSocialProof() {
           <div className="mt-3">
             <motion.div className="h-1 bg-gray-100 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-green-500 rounded-full"
+                className="h-full bg-green-600 rounded-full"
                 initial={{ width: '0%' }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 4, ease: 'linear' }}
@@ -295,7 +295,7 @@ export function LiveStatsCounter() {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
       <div className="flex items-center space-x-2 mb-4">
-        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
         <h3 className="text-lg font-semibold text-gray-900">
           {language === 'hi' ? 'लाइव आंकड़े' : 'Live Stats'}
         </h3>
@@ -358,7 +358,7 @@ export function RecentJoinsTicket() {
             className="flex items-center justify-between text-sm"
           >
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <div className="w-2 h-2 bg-green-600 rounded-full" />
               <span className="font-medium text-gray-900">{student.name}</span>
               <span className="text-gray-500">from {student.location}</span>
             </div>

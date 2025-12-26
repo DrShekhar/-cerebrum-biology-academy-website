@@ -214,7 +214,7 @@ export default function FileUploadWithProgress() {
                     <div
                       className={`
                       p-2 rounded-lg flex-shrink-0
-                      ${file.status === 'complete' ? 'bg-emerald-100 text-emerald-600' : 'bg-blue-100 text-blue-600'}
+                      ${file.status === 'complete' ? 'bg-green-100 text-green-600' : 'bg-blue-100 text-blue-600'}
                     `}
                     >
                       {file.status === 'complete' ? (
@@ -260,7 +260,7 @@ export default function FileUploadWithProgress() {
                       )}
 
                       {file.status === 'complete' && (
-                        <div className="flex items-center gap-2 text-sm text-emerald-600">
+                        <div className="flex items-center gap-2 text-sm text-green-600">
                           <CheckCircle2 className="w-4 h-4" />
                           <span className="font-medium">Upload complete</span>
                         </div>

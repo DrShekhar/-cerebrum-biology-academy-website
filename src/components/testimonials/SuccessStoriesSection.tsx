@@ -26,7 +26,7 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       {/* Score Improvement Header */}
-      <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white relative overflow-hidden">
+      <div className="bg-green-600 p-6 text-white relative overflow-hidden">
         <motion.div
           className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"
           animate={{ scale: [1, 1.2, 1] }}
@@ -100,14 +100,14 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
         {/* Strategy */}
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-            <TrendingUp className="w-4 h-4 mr-2 text-green-500" />
+            <TrendingUp className="w-4 h-4 mr-2 text-green-600" />
             Winning Strategy
           </h4>
           <p className="text-sm text-gray-600">{story.strategy}</p>
         </div>
 
         {/* Quote */}
-        <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 relative">
+        <div className="bg-gray-50 rounded-xl p-4 relative">
           <Quote className="absolute top-2 left-2 w-6 h-6 text-blue-200" />
           <p className="text-sm text-gray-700 italic pl-6">"{story.quote}"</p>
         </div>
@@ -182,7 +182,7 @@ export function SuccessStoriesSection({
           >
             <Link
               href="/success-stories"
-              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
               <GraduationCap className="w-5 h-5 mr-2" />
               View All Success Stories

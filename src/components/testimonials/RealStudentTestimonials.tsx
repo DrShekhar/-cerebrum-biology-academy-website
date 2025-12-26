@@ -73,7 +73,7 @@ export function RealStudentTestimonials({
                   className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 >
                   <div
-                    className="relative aspect-video bg-gradient-to-br from-blue-600 to-purple-600 cursor-pointer group"
+                    className="relative aspect-video bg-indigo-500 cursor-pointer group"
                     onClick={() => openVideoModal(testimonial)}
                   >
                     {testimonial.youtubeId ? (
@@ -102,7 +102,7 @@ export function RealStudentTestimonials({
                       </div>
                     )}
 
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                       {testimonial.year}
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export function RealStudentTestimonials({
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-4 mb-4">
+                    <div className="bg-gray-50 rounded-2xl p-4 mb-4">
                       <p className="text-sm font-semibold text-gray-800 mb-1">Achievement</p>
                       <p className="text-sm text-gray-700">{testimonial.achievement}</p>
                     </div>
@@ -241,7 +241,7 @@ export function RealStudentTestimonials({
                 />
               </div>
 
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50">
+              <div className="p-6 bg-gray-50">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">

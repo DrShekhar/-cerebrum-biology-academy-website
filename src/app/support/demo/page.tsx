@@ -309,7 +309,7 @@ export default function DemoPage() {
               <button
                 type="submit"
                 disabled={!selectedCourse || !selectedTimeSlot}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-indigo-500 text-white py-4 rounded-xl hover:bg-indigo-600 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Book Free Demo Class</span>
@@ -339,7 +339,7 @@ export default function DemoPage() {
             {facultyPreview.map((faculty, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 text-center"
+                className="bg-gray-50 rounded-2xl p-8 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}

@@ -415,10 +415,10 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl">
+          <div className="p-3 bg-green-600 rounded-xl">
             <Share2 className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-green-600 bg-clip-text text-transparent">
             Test Distribution
           </h1>
         </motion.div>
@@ -446,7 +446,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all whitespace-nowrap ${
                 activeTab === id
-                  ? 'bg-white text-emerald-600 shadow-md'
+                  ? 'bg-white text-green-600 shadow-md'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -471,7 +471,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
             {/* Link Generation */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Link className="w-5 h-5 text-emerald-600" />
+                <Link className="w-5 h-5 text-green-600" />
                 Generate Online Test Link
               </h3>
 
@@ -483,7 +483,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   <select
                     value={selectedTest}
                     onChange={(e) => setSelectedTest(e.target.value)}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   >
                     <option value="">Choose a test...</option>
                     <option value="NEET Biology Mock Test 1">NEET Biology Mock Test 1</option>
@@ -500,7 +500,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <input
                       type="date"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -510,7 +510,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="number"
                       placeholder="Unlimited"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -518,7 +518,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 <button
                   onClick={generateOnlineLink}
                   disabled={loading || !selectedTest}
-                  className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
@@ -534,17 +534,17 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </button>
 
                 {generatedLink && (
-                  <div className="mt-4 p-4 bg-emerald-50 rounded-lg">
+                  <div className="mt-4 p-4 bg-green-50 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
-                        <p className="text-sm text-emerald-700 font-medium">Generated Link:</p>
-                        <p className="text-emerald-800 font-mono text-sm break-all">
+                        <p className="text-sm text-green-700 font-medium">Generated Link:</p>
+                        <p className="text-green-700 font-mono text-sm break-all">
                           {generatedLink}
                         </p>
                       </div>
                       <button
                         onClick={() => copyToClipboard(generatedLink)}
-                        className="ml-2 p-2 text-emerald-600 hover:bg-emerald-100 rounded-lg transition-colors"
+                        className="ml-2 p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
                       >
                         <Copy className="w-4 h-4" />
                       </button>
@@ -590,7 +590,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => copyToClipboard(dist.url || '')}
-                            className="p-2 text-gray-400 hover:text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors"
+                            className="p-2 text-gray-400 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors"
                           >
                             <Copy className="w-4 h-4" />
                           </button>
@@ -936,7 +936,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     onChange={(e) => setSmsSettings({ ...smsSettings, recipients: e.target.value })}
                     placeholder="+1234567890, +0987654321"
                     rows={3}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -949,7 +949,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     onChange={(e) => setSmsSettings({ ...smsSettings, message: e.target.value })}
                     rows={3}
                     maxLength={160}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                   <div className="text-xs text-gray-500 mt-1">
                     {smsSettings.message.length}/160 characters
@@ -964,7 +964,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <select
                       value={smsSettings.provider}
                       onChange={(e) => setSmsSettings({ ...smsSettings, provider: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="twilio">Twilio</option>
                       <option value="aws-sns">AWS SNS</option>
@@ -981,7 +981,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       onChange={(e) =>
                         setSmsSettings({ ...smsSettings, scheduleDate: e.target.value })
                       }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -1087,7 +1087,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-3">
                           <div
-                            className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-500' : 'bg-red-500'}`}
+                            className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-600' : 'bg-red-500'}`}
                           />
                           <h4 className="font-medium text-gray-800">{lms.name}</h4>
                           <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
@@ -1227,7 +1227,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       value={embedOptions.width}
                       onChange={(e) => setEmbedOptions({ ...embedOptions, width: e.target.value })}
                       placeholder="100%"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -1237,7 +1237,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       value={embedOptions.height}
                       onChange={(e) => setEmbedOptions({ ...embedOptions, height: e.target.value })}
                       placeholder="600px"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -1249,7 +1249,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     onChange={(e) =>
                       setEmbedOptions({ ...embedOptions, theme: e.target.value as any })
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   >
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
@@ -1265,7 +1265,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       onChange={(e) =>
                         setEmbedOptions({ ...embedOptions, showHeader: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Show header</span>
                   </label>
@@ -1276,7 +1276,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       onChange={(e) =>
                         setEmbedOptions({ ...embedOptions, showFooter: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Show footer</span>
                   </label>
@@ -1287,7 +1287,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       onChange={(e) =>
                         setEmbedOptions({ ...embedOptions, autoStart: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Auto-start test</span>
                   </label>
@@ -1298,7 +1298,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       onChange={(e) =>
                         setEmbedOptions({ ...embedOptions, responsiveMode: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                     />
                     <span className="ml-2 text-sm text-gray-700">Responsive mode</span>
                   </label>
@@ -1313,7 +1313,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     }
                     placeholder="/* Custom CSS styles */"
                     rows={4}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent font-mono text-sm"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono text-sm"
                   />
                 </div>
 

@@ -134,7 +134,7 @@ export function GoogleReviewsWidget({
       <div className={`bg-white rounded-2xl p-6 shadow-lg border border-gray-100 ${className}`}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
               <svg viewBox="0 0 24 24" className="w-7 h-7">
                 <path
                   fill="white"
@@ -167,7 +167,7 @@ export function GoogleReviewsWidget({
           {displayReviews.slice(0, 2).map((review) => (
             <div key={review.id} className="bg-gray-50 rounded-xl p-4">
               <div className="flex items-center space-x-2 mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-white text-sm font-bold">
                   {review.authorName[0]}
                 </div>
                 <div className="flex-1">
@@ -255,7 +255,7 @@ export function GoogleReviewsWidget({
               viewport={{ once: true }}
             >
               <div className="flex items-start space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
                   {review.authorName[0]}
                 </div>
                 <div className="flex-1">

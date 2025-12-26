@@ -114,7 +114,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             required
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="Enter your full name"
           />
         </div>
@@ -132,7 +132,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="your.email@example.com"
           />
         </div>
@@ -149,7 +149,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             required
             value={formData.class}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
           >
             <option value="10th">Class 10th</option>
             <option value="11th">Class 11th</option>
@@ -170,7 +170,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             type="text"
             value={formData.parentName}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="Enter parent/guardian name"
           />
         </div>
@@ -187,7 +187,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             type="tel"
             value={formData.parentPhone}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="+91 98765 43210"
           />
         </div>
@@ -204,7 +204,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             type="text"
             value={formData.schoolName}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="Enter your school/college name"
           />
         </div>
@@ -221,7 +221,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             type="text"
             value={formData.city}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             placeholder="Enter your city"
           />
         </div>
@@ -237,7 +237,7 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
             name="referralSource"
             value={formData.referralSource}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
           >
             <option value="">Select an option</option>
             <option value="Google Search">Google Search</option>

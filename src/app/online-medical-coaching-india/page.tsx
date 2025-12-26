@@ -142,7 +142,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -187,7 +187,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View All Programs
@@ -243,10 +243,10 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 className="bg-white rounded-xl shadow-lg p-8"
               >
                 <div className="flex items-center mb-4">
-                  <GraduationCap className="w-10 h-10 text-teal-600 mr-3" />
+                  <GraduationCap className="w-10 h-10 text-green-600 mr-3" />
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">{exam.name}</h3>
-                    <div className="text-teal-600 font-semibold">{exam.students} Students</div>
+                    <div className="text-green-600 font-semibold">{exam.students} Students</div>
                   </div>
                 </div>
                 <p className="text-gray-500 text-sm mb-3">{exam.fullName}</p>
@@ -282,7 +282,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-teal-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -317,7 +317,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.03 }}
                 viewport={{ once: true }}
-                className="bg-teal-100 text-teal-700 px-4 py-2 rounded-full font-medium"
+                className="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium"
               >
                 {state}
               </motion.span>
@@ -352,7 +352,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -363,7 +363,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -396,7 +396,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

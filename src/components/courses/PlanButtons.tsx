@@ -51,8 +51,8 @@ export function PlanButtons({
         accentColor: 'navy',
       },
       ascent: {
-        gradient: 'from-teal-600 to-teal-700',
-        cardGradient: 'from-teal-50 to-teal-100',
+        gradient: 'from-green-600 to-green-700',
+        cardGradient: 'from-green-50 to-green-100',
         accentColor: 'teal',
       },
       pursuit: {
@@ -107,7 +107,7 @@ export function PlanButtons({
         ],
         badge: {
           text: 'POPULAR',
-          gradient: 'from-teal-500 to-teal-600',
+          gradient: 'bg-green-600',
           icon: Star,
         },
         popular: true,
@@ -174,7 +174,7 @@ export function PlanButtons({
                 {isSelected && (
                   <motion.div
                     layoutId={`plan-selection-${seriesId}`}
-                    className="absolute -inset-1 bg-gradient-to-r from-teal-500/20 to-teal-600/20 rounded-3xl blur-sm"
+                    className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
@@ -312,7 +312,7 @@ export function PlanButtons({
                       exit={{ opacity: 0, scale: 0.8 }}
                       className="absolute bottom-4 right-4"
                     >
-                      <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                      <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
                         <Check className="w-3 h-3 text-white" />
                       </div>
                     </motion.div>

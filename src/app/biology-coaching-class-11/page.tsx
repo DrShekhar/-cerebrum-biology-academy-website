@@ -152,7 +152,7 @@ export default function BiologyClass11Page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -266,7 +266,7 @@ export default function BiologyClass11Page() {
                 <ul className="space-y-2 mb-4">
                   {unit.chapters.map((chapter) => (
                     <li key={chapter} className="flex items-center text-gray-600 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {chapter}
                     </li>
                   ))}
@@ -377,7 +377,7 @@ export default function BiologyClass11Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

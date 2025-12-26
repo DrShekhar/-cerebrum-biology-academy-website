@@ -335,7 +335,7 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
       <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-emerald-600" />
+            <Shield className="w-5 h-5 text-green-600" />
             <span className="font-medium text-gray-900">Progress Saved</span>
             {!isOnline && <WifiOff className="w-4 h-4 text-orange-500" />}
           </div>
@@ -344,7 +344,7 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
             <button
               onClick={handleManualSave}
               disabled={saveState.status === 'saving'}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors"
             >
               {getStatusIcon()}
               {getStatusText()}
@@ -362,7 +362,7 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <motion.div
-                className="bg-emerald-600 h-2 rounded-full"
+                className="bg-green-600 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${progressPercentage}%` }}
                 transition={{ duration: 0.5 }}

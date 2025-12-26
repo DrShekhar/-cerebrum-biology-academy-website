@@ -81,7 +81,7 @@ export const neetBiologyCoachingClass12: SEOLandingContent = {
     highlightedText: 'The Next 12 Months Decide Your Future',
     ctaText: 'View Complete Course Details',
     ctaLink: '/class-12',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -234,7 +234,7 @@ export const class12BiologyTuitionOnline: SEOLandingContent = {
     highlightedText: 'One Tuition, Two Goals Achieved',
     ctaText: 'Explore Our Approach',
     ctaLink: '/class-12',
-    backgroundGradient: 'from-emerald-900 via-teal-900 to-cyan-900',
+    backgroundGradient: 'from-green-800 via-green-800 to-cyan-900',
   },
 
   painPoints: {

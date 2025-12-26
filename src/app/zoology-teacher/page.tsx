@@ -20,8 +20,8 @@ const zoologyTopics = [
   { name: 'Human Reproduction', questions: '10-12', percentage: '12%', color: 'bg-purple-500' },
   { name: 'Animal Kingdom', questions: '6-8', percentage: '8%', color: 'bg-blue-500' },
   { name: 'Structural Organisation', questions: '3-4', percentage: '4%', color: 'bg-cyan-500' },
-  { name: 'Evolution', questions: '3-4', percentage: '4%', color: 'bg-teal-500' },
-  { name: 'Human Health & Disease', questions: '3-4', percentage: '4%', color: 'bg-emerald-500' },
+  { name: 'Evolution', questions: '3-4', percentage: '4%', color: 'bg-green-600' },
+  { name: 'Human Health & Disease', questions: '3-4', percentage: '4%', color: 'bg-green-600' },
 ]
 
 const faqs = [

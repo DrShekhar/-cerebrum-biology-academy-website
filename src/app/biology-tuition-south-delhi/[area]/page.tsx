@@ -253,7 +253,7 @@ export default function BiologyTuitionAreaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -343,7 +343,7 @@ export default function BiologyTuitionAreaPage() {
               <ul className="space-y-2">
                 {area.nearbyMetro.map((metro) => (
                   <li key={metro} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {metro}
                   </li>
                 ))}
@@ -355,16 +355,16 @@ export default function BiologyTuitionAreaPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-emerald-50 rounded-xl p-6"
+              className="bg-green-50 rounded-xl p-6"
             >
               <div className="flex items-center mb-4">
-                <MapPin className="w-6 h-6 text-emerald-600 mr-2" />
+                <MapPin className="w-6 h-6 text-green-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Key Landmarks</h3>
               </div>
               <ul className="space-y-2">
                 {area.landmarks.map((landmark) => (
                   <li key={landmark} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {landmark}
                   </li>
                 ))}
@@ -376,16 +376,16 @@ export default function BiologyTuitionAreaPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-teal-50 rounded-xl p-6"
+              className="bg-green-50 rounded-xl p-6"
             >
               <div className="flex items-center mb-4">
-                <GraduationCap className="w-6 h-6 text-teal-600 mr-2" />
+                <GraduationCap className="w-6 h-6 text-green-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Schools We Serve</h3>
               </div>
               <ul className="space-y-2">
                 {area.schools.map((school) => (
                   <li key={school} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {school}
                   </li>
                 ))}
@@ -421,7 +421,7 @@ export default function BiologyTuitionAreaPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4">
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
                   <h3 className="text-xl font-bold">{option.class}</h3>
                   <p className="text-sm opacity-90">{option.duration}</p>
                 </div>
@@ -429,19 +429,19 @@ export default function BiologyTuitionAreaPage() {
                   <div className="text-2xl font-bold text-green-600 mb-4">{option.fee}</div>
                   <ul className="space-y-2 mb-4 text-sm text-gray-600">
                     <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       Complete NCERT Coverage
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       Board Exam Focus
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       NEET Foundation
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       Weekly Tests
                     </li>
                   </ul>
@@ -498,7 +498,7 @@ export default function BiologyTuitionAreaPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

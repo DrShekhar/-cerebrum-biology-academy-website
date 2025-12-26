@@ -120,7 +120,7 @@ export default function StudentStoryPage({ params }: Props) {
       </div>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-16 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Inspired by {story.studentName}&apos;s Journey?

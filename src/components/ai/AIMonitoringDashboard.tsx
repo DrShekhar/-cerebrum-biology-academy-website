@@ -362,7 +362,7 @@ export default function AIMonitoringDashboard() {
           </p>
           <button
             onClick={() => window.history.back()}
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
           >
             Go Back
           </button>
@@ -393,7 +393,7 @@ export default function AIMonitoringDashboard() {
           <p className="text-gray-600 mb-6">{error}</p>
           <button
             onClick={fetchMetrics}
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
           >
             Retry
           </button>
@@ -426,7 +426,7 @@ export default function AIMonitoringDashboard() {
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -457,7 +457,7 @@ export default function AIMonitoringDashboard() {
                       <Bot className="w-4 h-4" />
                       <span>CRM Agents</span>
                       {agentStats && agentStats.running > 0 && (
-                        <span className="ml-1 px-1.5 py-0.5 bg-green-500 text-white text-xs rounded-full animate-pulse">
+                        <span className="ml-1 px-1.5 py-0.5 bg-green-600 text-white text-xs rounded-full animate-pulse">
                           {agentStats.running}
                         </span>
                       )}
@@ -509,7 +509,7 @@ export default function AIMonitoringDashboard() {
               <div className="flex space-x-2">
                 <button
                   onClick={() => handleExport('json')}
-                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-all text-sm"
+                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-lg transition-all text-sm"
                 >
                   <Download className="w-4 h-4" />
                   <span>JSON</span>
@@ -551,7 +551,7 @@ export default function AIMonitoringDashboard() {
                 title="Completed"
                 value={String(agentStats?.completed || 0)}
                 icon={CheckCircle}
-                color="from-green-500 to-emerald-500"
+                color="bg-green-600"
                 trend="up"
                 change="Successfully finished"
               />
@@ -559,7 +559,7 @@ export default function AIMonitoringDashboard() {
                 title="Failed"
                 value={String(agentStats?.failed || 0)}
                 icon={XCircle}
-                color="from-red-500 to-pink-500"
+                color="bg-red-600"
                 trend={agentStats?.failed ? 'down' : 'neutral'}
                 change="Need attention"
               />
@@ -575,7 +575,7 @@ export default function AIMonitoringDashboard() {
                   </h3>
                   <button
                     onClick={triggerAgentProcessing}
-                    className="flex items-center space-x-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-all text-sm"
+                    className="flex items-center space-x-2 px-3 py-1.5 bg-blue-500 text-white rounded-lg hover:shadow-lg transition-all text-sm"
                   >
                     <Play className="w-4 h-4" />
                     <span>Process Now</span>
@@ -757,7 +757,7 @@ export default function AIMonitoringDashboard() {
                 title="Total Cost"
                 value={`$${stats.cost.toFixed(2)}`}
                 icon={DollarSign}
-                color="from-green-500 to-emerald-500"
+                color="bg-green-600"
                 trend={metrics ? 'up' : 'neutral'}
                 change={`$${metrics?.costPerRequest.toFixed(4)}/req`}
               />
@@ -815,7 +815,7 @@ export default function AIMonitoringDashboard() {
               {/* Cost Breakdown */}
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                  <PieChart className="w-5 h-5 mr-2 text-green-500" />
+                  <PieChart className="w-5 h-5 mr-2 text-green-600" />
                   Cost by Provider
                 </h3>
                 <div className="space-y-4">
@@ -829,7 +829,7 @@ export default function AIMonitoringDashboard() {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
-                          className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500"
+                          className="bg-green-600 h-2 rounded-full transition-all duration-500"
                           style={{ width: `${item.percentage}%` }}
                         />
                       </div>
@@ -867,7 +867,7 @@ export default function AIMonitoringDashboard() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-500" />
+                      <CheckCircle className="w-6 h-6 text-green-600" />
                       <div>
                         <p className="text-sm font-medium text-gray-700">Success Rate</p>
                         <p className="text-xs text-gray-500">Overall request success</p>
@@ -1017,7 +1017,7 @@ function MetricCard({ title, value, icon: Icon, color, trend, change }: MetricCa
       </div>
       <p className="text-3xl font-bold text-gray-800 mb-2">{value}</p>
       <div className="flex items-center space-x-2">
-        {trend === 'up' && <TrendingUp className="w-4 h-4 text-green-500" />}
+        {trend === 'up' && <TrendingUp className="w-4 h-4 text-green-600" />}
         {trend === 'down' && <TrendingDown className="w-4 h-4 text-red-500" />}
         <span
           className={`text-sm ${trend === 'up' ? 'text-green-600' : trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}
@@ -1038,7 +1038,7 @@ interface ProviderStatusProps {
 }
 
 function ProviderStatus({ name, healthy, requests, circuitStatus }: ProviderStatusProps) {
-  const statusColor = healthy ? 'bg-green-500' : 'bg-red-500'
+  const statusColor = healthy ? 'bg-green-600' : 'bg-red-500'
   const circuitColor =
     circuitStatus === 'closed'
       ? 'text-green-600'
@@ -1080,7 +1080,7 @@ function ResponseTimeBar({ label, value, max }: ResponseTimeBarProps) {
   const percentage = Math.min((value / max) * 100, 100)
   const color =
     value < 500
-      ? 'from-green-500 to-green-400'
+      ? 'from-green-600 to-green-400'
       : value < 1000
         ? 'from-yellow-500 to-yellow-400'
         : 'from-red-500 to-red-400'
@@ -1118,13 +1118,13 @@ function formatAgentType(type: string): string {
 function getAgentIcon(type: string) {
   const iconMap: Record<string, React.ReactNode> = {
     LEAD_QUALIFIER: <Users className="w-4 h-4 text-blue-500" />,
-    NURTURE: <MessageSquare className="w-4 h-4 text-green-500" />,
+    NURTURE: <MessageSquare className="w-4 h-4 text-green-600" />,
     CALL_PREP: <Phone className="w-4 h-4 text-purple-500" />,
     CONTENT_GENERATOR: <FileText className="w-4 h-4 text-orange-500" />,
     CALL_TRANSCRIPTION: <FileText className="w-4 h-4 text-cyan-500" />,
     CALL_SUMMARY: <FileText className="w-4 h-4 text-indigo-500" />,
     ACTION_EXTRACTOR: <CheckCircle className="w-4 h-4 text-pink-500" />,
-    PRODUCT_AGENT: <ShoppingCart className="w-4 h-4 text-emerald-500" />,
+    PRODUCT_AGENT: <ShoppingCart className="w-4 h-4 text-green-600" />,
   }
   return iconMap[type] || <Bot className="w-4 h-4 text-gray-500" />
 }
@@ -1133,8 +1133,8 @@ function getStatusColor(status: string): string {
   const colorMap: Record<string, string> = {
     PENDING: 'bg-yellow-500',
     SCHEDULED: 'bg-blue-500',
-    RUNNING: 'bg-green-500 animate-pulse',
-    COMPLETED: 'bg-green-500',
+    RUNNING: 'bg-green-600 animate-pulse',
+    COMPLETED: 'bg-green-600',
     FAILED: 'bg-red-500',
     CANCELLED: 'bg-gray-500',
   }

@@ -228,7 +228,7 @@ export function ExitIntentPopup({
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 flex-shrink-0" />
                             <span className="text-xs sm:text-sm text-gray-700 font-medium">
                               {benefit}
                             </span>
@@ -409,7 +409,7 @@ export function ExitIntentPopup({
                       <div className="grid grid-cols-1 gap-2 mb-6 max-h-40 overflow-y-auto">
                         {catalogFeatures.map((feature, index) => (
                           <div key={index} className="flex items-start">
-                            <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-gray-700">{feature}</span>
                           </div>
                         ))}

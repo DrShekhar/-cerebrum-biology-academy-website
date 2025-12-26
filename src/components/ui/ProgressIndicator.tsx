@@ -54,10 +54,10 @@ export function ProgressIndicator({
       border: 'border-blue-500',
     },
     emerald: {
-      bg: 'bg-emerald-500',
-      text: 'text-emerald-600',
-      ring: 'ring-emerald-500/20',
-      border: 'border-emerald-500',
+      bg: 'bg-green-600',
+      text: 'text-green-600',
+      ring: 'ring-green-600/20',
+      border: 'border-green-600',
     },
     purple: {
       bg: 'bg-purple-500',
@@ -154,7 +154,7 @@ export function ProgressIndicator({
               />
             ) : success ? (
               <CheckCircle2
-                className={cn('w-6 h-6 text-emerald-500', sizes.circle === 'w-8 h-8' && 'w-4 h-4')}
+                className={cn('w-6 h-6 text-green-600', sizes.circle === 'w-8 h-8' && 'w-4 h-4')}
               />
             ) : (
               <span className={cn('font-semibold', colors.text, sizes.text)}>
@@ -289,7 +289,7 @@ export function ProgressIndicator({
                 {error}
               </span>
             ) : success ? (
-              <span className="flex items-center gap-2 text-emerald-600">
+              <span className="flex items-center gap-2 text-green-600">
                 <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                 Complete!
               </span>

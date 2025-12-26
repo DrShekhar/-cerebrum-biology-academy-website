@@ -390,7 +390,7 @@ function FeedbackDemo({
 
         <button
           onClick={() => setShowDemo(true)}
-          className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+          className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-600"
         >
           Trigger Demo Feedback Survey
         </button>
@@ -423,7 +423,7 @@ function FeedbackDemo({
               <span>Rating Scales (1-5, 1-10)</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               <span>Text Responses</span>
             </div>
             <div className="flex items-center space-x-2">

@@ -351,7 +351,7 @@ export default function LocationsPage() {
                           {location.neetAspirants.toLocaleString()}+ aspirants
                         </p>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-green-500" />
+                      <ChevronRight className="w-4 h-4 text-green-600" />
                     </div>
                   </Card>
                 </Link>

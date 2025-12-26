@@ -215,7 +215,7 @@ const TestTemplates: React.FC = () => {
       name: 'Unit Tests',
       description: 'Tests covering multiple related chapters',
       icon: <FileText className="w-5 h-5" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       isExpanded: false,
       templates: [
         {
@@ -304,7 +304,7 @@ const TestTemplates: React.FC = () => {
       name: 'Competitive Exams',
       description: 'NEET, JEE and other competitive exam patterns',
       icon: <Target className="w-5 h-5" />,
-      color: 'from-red-500 to-orange-500',
+      color: 'bg-red-600',
       isExpanded: false,
       templates: [
         {
@@ -496,7 +496,7 @@ const TestTemplates: React.FC = () => {
       name: 'Revision Tests',
       description: 'Tests for exam preparation and revision',
       icon: <RefreshCw className="w-5 h-5" />,
-      color: 'from-teal-500 to-green-500',
+      color: 'bg-green-600',
       isExpanded: false,
       templates: [
         {
@@ -1184,7 +1184,7 @@ const TestTemplates: React.FC = () => {
                             <div
                               className={`h-2 rounded-full ${
                                 level === 'easy'
-                                  ? 'bg-green-500'
+                                  ? 'bg-green-600'
                                   : level === 'medium'
                                     ? 'bg-yellow-500'
                                     : 'bg-red-500'

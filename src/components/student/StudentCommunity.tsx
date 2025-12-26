@@ -243,7 +243,7 @@ export function StudentCommunity() {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-600 to-navy-700 rounded-lg p-6 text-white">
+      <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-lg p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">

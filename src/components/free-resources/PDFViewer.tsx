@@ -92,7 +92,7 @@ export default function PDFViewer({ fileUrl, title }: PDFViewerProps) {
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 z-5">
           <div className="text-center">
-            <Loader2 className="w-12 h-12 animate-spin text-green-500 mx-auto mb-4" />
+            <Loader2 className="w-12 h-12 animate-spin text-green-600 mx-auto mb-4" />
             <p className="text-gray-400">Loading PDF...</p>
           </div>
         </div>

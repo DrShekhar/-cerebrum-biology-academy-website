@@ -183,9 +183,9 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {countryContent.localOffers.map((offer, index) => (
-              <div key={index} className="bg-teal-50 border border-teal-200 rounded-xl p-6">
+              <div key={index} className="bg-green-50 border border-green-200 rounded-xl p-6">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                  <CheckCircle2 className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-800 font-medium">{offer}</p>
                   </div>

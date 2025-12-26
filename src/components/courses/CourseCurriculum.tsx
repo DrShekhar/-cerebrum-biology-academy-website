@@ -94,7 +94,7 @@ export function CourseCurriculum({ course }: CourseCurriculumProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {module.topics.map((topic, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle className="h-3 w-3 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="h-3 w-3 text-green-600 flex-shrink-0" />
                       {topic}
                     </div>
                   ))}
@@ -245,7 +245,7 @@ export function CourseCurriculum({ course }: CourseCurriculumProps) {
         )}
 
         {/* Additional Information */}
-        <Card className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <Card className="mt-12 bg-indigo-500 text-white">
           <div className="p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>

@@ -74,7 +74,7 @@ const locations = [
       { name: 'Shalimar Bagh', slug: 'shalimar-bagh', students: 80, metro: 'Red Line' },
       { name: 'Ashok Vihar', slug: 'ashok-vihar', students: 70, metro: 'Red Line' },
     ],
-    color: 'from-red-600 to-red-800',
+    color: 'bg-red-600',
   },
   {
     city: 'West Delhi',
@@ -85,7 +85,7 @@ const locations = [
       { name: 'Uttam Nagar', slug: 'uttam-nagar', students: 85, metro: 'Blue Line' },
       { name: 'Patel Nagar', slug: 'patel-nagar', students: 75, metro: 'Blue Line' },
     ],
-    color: 'from-teal-600 to-teal-800',
+    color: 'from-green-600 to-green-800',
   },
 ]
 
@@ -151,7 +151,7 @@ export function BiologyTuitionNearMeClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-blue-800 to-purple-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-blue-800 to-purple-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl" />
@@ -212,7 +212,7 @@ export function BiologyTuitionNearMeClient() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +91 88264 44334
@@ -272,7 +272,7 @@ export function BiologyTuitionNearMeClient() {
                         >
                           <div className="flex items-center">
                             <MapPin className="w-4 h-4 text-gray-400 mr-2" />
-                            <span className="font-medium text-gray-700 group-hover:text-teal-600">
+                            <span className="font-medium text-gray-700 group-hover:text-green-600">
                               {area.name}
                             </span>
                           </div>
@@ -317,8 +317,8 @@ export function BiologyTuitionNearMeClient() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-6 text-center"
               >
-                <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-7 h-7 text-green-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -363,7 +363,7 @@ export function BiologyTuitionNearMeClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -395,7 +395,7 @@ export function BiologyTuitionNearMeClient() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-700"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +91 88264 44334

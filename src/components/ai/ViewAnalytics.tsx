@@ -274,7 +274,7 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+        <div className="bg-indigo-500 text-white p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <BarChart3 className="w-8 h-8" />
@@ -391,9 +391,9 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
                       </div>
                     </div>
 
-                    <div className="backdrop-blur-lg bg-green-500/10 rounded-xl p-6 border border-white/20 shadow-lg">
+                    <div className="backdrop-blur-lg bg-green-600/10 rounded-xl p-6 border border-white/20 shadow-lg">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                           <Users className="w-6 h-6 text-white" />
                         </div>
                         <div>
@@ -433,14 +433,14 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
                       </div>
                     </div>
 
-                    <div className="backdrop-blur-lg bg-teal-500/10 rounded-xl p-6 border border-white/20 shadow-lg">
+                    <div className="backdrop-blur-lg bg-green-600/10 rounded-xl p-6 border border-white/20 shadow-lg">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center">
+                        <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                           <Brain className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-gray-800">Total Attempts</h3>
-                          <p className="text-3xl font-bold text-teal-600">
+                          <p className="text-3xl font-bold text-green-600">
                             {analyticsData.overview.totalAttempts}
                           </p>
                         </div>
@@ -661,7 +661,7 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-5 h-5 text-green-500" />
+                        <CheckCircle className="w-5 h-5 text-green-600" />
                         <span className="text-sm font-medium text-gray-600">Tests Completed</span>
                       </div>
                       <p className="text-2xl font-bold text-green-600 mt-1">
@@ -704,7 +704,7 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="bg-white rounded-xl border border-gray-200 p-6">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                        <Zap className="w-5 h-5 mr-2 text-green-500" />
+                        <Zap className="w-5 h-5 mr-2 text-green-600" />
                         Live Activity
                       </h3>
                       <div className="space-y-4">

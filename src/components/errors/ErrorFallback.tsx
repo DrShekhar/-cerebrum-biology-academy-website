@@ -22,7 +22,7 @@ export function ErrorFallback({ error, reset, showDetails = false, context }: Er
   }
 
   return (
-    <div className="min-h-[400px] bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center px-4 py-8">
+    <div className="min-h-[400px] bg-gradient-to-br bg-red-50 flex items-center justify-center px-4 py-8">
       <div className="max-w-2xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className="w-20 h-20 md:w-24 md:h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">

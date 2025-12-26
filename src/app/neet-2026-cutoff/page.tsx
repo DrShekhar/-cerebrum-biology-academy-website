@@ -219,7 +219,7 @@ export default function NEET2026CutoffPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-green-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -442,7 +442,7 @@ export default function NEET2026CutoffPage() {
 
             <div className="mx-auto max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
               <table className="w-full">
-                <thead className="bg-teal-600 text-white">
+                <thead className="bg-green-600 text-white">
                   <tr>
                     <th className="px-6 py-4 text-left">State</th>
                     <th className="px-6 py-4 text-center">General</th>
@@ -474,7 +474,7 @@ export default function NEET2026CutoffPage() {
         {/* Preparation CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-teal-700">
+            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-green-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">
@@ -519,7 +519,7 @@ export default function NEET2026CutoffPage() {
                   </div>
                 </div>
                 <div className="hidden md:block">
-                  <div className="relative h-full min-h-[400px] bg-gradient-to-br from-green-500/30 to-transparent">
+                  <div className="relative h-full min-h-[400px] bg-gradient-to-br from-green-600/30 to-transparent">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <GraduationCap className="h-48 w-48 text-white/20" />
                     </div>

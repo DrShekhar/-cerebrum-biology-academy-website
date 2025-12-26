@@ -115,7 +115,7 @@ export default function InternationalProgramsPage() {
       title: 'Documentation & Visa Support',
       description:
         'Complete assistance with educational transcripts, equivalency certificates, and visa documentation for medical admissions',
-      benefit: 'Seamless application process',
+      benefit: 'Smooth application process',
       countries: 'All major study destinations',
     },
     {
@@ -167,7 +167,7 @@ export default function InternationalProgramsPage() {
       score: 'NEET Score: 681/720',
       college: 'AIIMS Delhi',
       story:
-        "Moving from IGCSE to NEET seemed impossible, but Cerebrum's international program made it seamless. The timezone-flexible classes and cultural orientation helped me adapt to the Indian system while maintaining my Canadian study schedule.",
+        "Moving from IGCSE to NEET seemed impossible, but Cerebrum's international program made the transition smooth. The timezone-flexible classes and cultural orientation helped me adapt to the Indian system while maintaining my Canadian study schedule.",
       improvement: '+195 points improvement',
       flag: '🇨🇦',
       highlight: 'Cross-curriculum transition expertise',
@@ -309,9 +309,8 @@ export default function InternationalProgramsPage() {
               Global Excellence in Medical Education
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-6 sm:mb-8 max-w-3xl mx-auto">
-              Comprehensive NEET Biology coaching designed for international students and Indians
-              abroad. Seamlessly bridge global curricula with Indian medical entrance requirements
-              across 47+ countries.
+              NEET Biology coaching designed for international students and Indians abroad. Bridge
+              global curricula with Indian medical entrance requirements across 47+ countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
               <Link
@@ -583,7 +582,7 @@ export default function InternationalProgramsPage() {
                   <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                         <span className="text-xs sm:text-sm md:text-base text-gray-600">
                           {feature}
                         </span>

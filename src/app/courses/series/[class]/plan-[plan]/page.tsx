@@ -349,7 +349,7 @@ export default function PlanDetailsPage() {
                     Enroll Now - ₹{planDetails.price.toLocaleString()}
                   </button>
                   <button
-                    className={`${accent === 'purple' ? 'bg-purple-500 hover:bg-purple-400' : accent === 'blue' ? 'bg-blue-500 hover:bg-blue-400' : 'bg-green-500 hover:bg-green-400'} text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2`}
+                    className={`${accent === 'purple' ? 'bg-purple-500 hover:bg-purple-400' : accent === 'blue' ? 'bg-blue-500 hover:bg-blue-400' : 'bg-green-600 hover:bg-green-400'} text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2`}
                   >
                     <Shield className="w-5 h-5" />
                     Book Free Demo Class

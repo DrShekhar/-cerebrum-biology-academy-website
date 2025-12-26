@@ -60,7 +60,7 @@ export default function ResourceFilter({
           placeholder="Search resources..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+          className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
         />
       </div>
 
@@ -73,7 +73,7 @@ export default function ResourceFilter({
           <select
             value={selectedType}
             onChange={(e) => onTypeChange(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
           >
             {types.map((type) => (
               <option key={type.value} value={type.value}>
@@ -88,7 +88,7 @@ export default function ResourceFilter({
           <select
             value={selectedClass}
             onChange={(e) => onClassChange(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
           >
             {classes.map((cls) => (
               <option key={cls.value} value={cls.value}>

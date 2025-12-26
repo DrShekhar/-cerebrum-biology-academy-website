@@ -153,7 +153,7 @@ export function LeadScoreBreakdown({ score, breakdown }: { score: number; breakd
   const sections = [
     { label: 'Demographic', value: breakdown.demographic, max: 25, color: 'bg-blue-500' },
     { label: 'Behavioral', value: breakdown.behavioral, max: 30, color: 'bg-purple-500' },
-    { label: 'Engagement', value: breakdown.engagement, max: 30, color: 'bg-green-500' },
+    { label: 'Engagement', value: breakdown.engagement, max: 30, color: 'bg-green-600' },
     { label: 'Timeline', value: breakdown.timeline, max: 15, color: 'bg-orange-500' },
   ]
 

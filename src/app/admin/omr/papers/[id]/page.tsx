@@ -238,7 +238,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
                 name="title"
                 value={formData.title}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
 
@@ -249,7 +249,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
                 value={formData.description}
                 onChange={handleChange}
                 rows={3}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
 
@@ -260,7 +260,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
                   name="targetClass"
                   value={formData.targetClass}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
                 >
                   <option value="11th">Class 11th</option>
                   <option value="12th">Class 12th</option>
@@ -274,7 +274,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
                   name="status"
                   value={formData.status}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
                 >
                   <option value="DRAFT">Draft</option>
                   <option value="ACTIVE">Active</option>
@@ -290,7 +290,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
                     name="isActive"
                     checked={formData.isActive}
                     onChange={handleChange}
-                    className="w-4 h-4 text-green-600 rounded focus:ring-green-500"
+                    className="w-4 h-4 text-green-600 rounded focus:ring-green-600"
                   />
                   <span className="text-sm font-medium text-gray-700">Active</span>
                 </label>

@@ -163,7 +163,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             <span>{batch.days.join(', ')}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <Users className="h-4 w-4 text-green-500" />
+            <Users className="h-4 w-4 text-green-600" />
             <span>Faculty: {batch.faculty}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
@@ -186,7 +186,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             <div 
               className={`h-2 rounded-full transition-all ${
                 occupancyRate >= 80 ? 'bg-red-500' : 
-                occupancyRate >= 60 ? 'bg-yellow-500' : 'bg-green-500'
+                occupancyRate >= 60 ? 'bg-yellow-500' : 'bg-green-600'
               }`}
               style={{ width: `${occupancyRate}%` }}
             ></div>
@@ -277,7 +277,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
               <div className="flex justify-between">
                 <span className="text-gray-600">Makeup Classes:</span>
                 <span className="font-medium flex items-center gap-1">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-600" />
                   {course.schedule.makeupClasses ? 'Available' : 'Not Available'}
                 </span>
               </div>

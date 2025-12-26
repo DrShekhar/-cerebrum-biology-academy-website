@@ -64,7 +64,7 @@ export function ProgressBar({
 // SIMPLIFIED page loader - NO TIMEOUT TRAPS
 export function CerebrumPageLoader({ message = 'Loading...' }: { message?: string }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="text-center">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

@@ -32,7 +32,7 @@ export function ScrollProgressBar({
   }, [])
 
   const gradients = {
-    emerald: 'from-emerald-500 to-emerald-600',
+    emerald: 'bg-green-600',
     blue: 'from-blue-500 to-blue-600',
     purple: 'from-purple-500 to-purple-600',
   }
@@ -99,7 +99,7 @@ export function FormSteps({
                       transition-all duration-300 ${sizeClasses.text}
                       ${
                         isCompleted
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : isActive
                             ? 'bg-blue-500 text-white ring-4 ring-blue-500/20'
                             : isAccessible
@@ -117,7 +117,7 @@ export function FormSteps({
                           isActive
                             ? 'text-blue-600'
                             : isCompleted
-                              ? 'text-emerald-600'
+                              ? 'text-green-600'
                               : 'text-slate-600'
                         }`}
                       >
@@ -135,7 +135,7 @@ export function FormSteps({
                   <div className="flex-1 mx-2">
                     <div className="h-px bg-slate-200 relative">
                       <motion.div
-                        className="h-full bg-emerald-500"
+                        className="h-full bg-green-600"
                         initial={{ width: 0 }}
                         animate={{
                           width: completedSteps.includes(index) ? '100%' : '0%',
@@ -176,7 +176,7 @@ export function FormSteps({
                 transition-all duration-300 ${sizeClasses.text}
                 ${
                   isCompleted
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-green-600 text-white'
                     : isActive
                       ? 'bg-blue-500 text-white ring-4 ring-blue-500/20'
                       : 'bg-slate-300 text-slate-600'
@@ -191,7 +191,7 @@ export function FormSteps({
               <div className="text-center mt-2">
                 <div
                   className={`font-medium ${sizeClasses.text} ${
-                    isActive ? 'text-blue-600' : isCompleted ? 'text-emerald-600' : 'text-slate-600'
+                    isActive ? 'text-blue-600' : isCompleted ? 'text-green-600' : 'text-slate-600'
                   }`}
                 >
                   {step.label}
@@ -234,7 +234,7 @@ export function QuizProgress({
       </div>
       <div className="w-full bg-slate-200 rounded-full h-2">
         <motion.div
-          className="bg-gradient-to-r from-emerald-500 to-blue-500 h-2 rounded-full"
+          className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 0.5, ease: 'easeOut' }}

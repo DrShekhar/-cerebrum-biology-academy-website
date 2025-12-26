@@ -193,7 +193,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
       id: 'preview',
       name: 'Review & Generate',
       icon: <Eye className="w-4 h-4" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       isExpanded: false,
       tabs: [
         {
@@ -421,7 +421,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
 
                               <div className="flex items-center gap-1">
                                 {tab.hasErrors && <AlertCircle className="w-4 h-4 text-red-500" />}
-                                {tab.isCompleted && <Check className="w-4 h-4 text-green-500" />}
+                                {tab.isCompleted && <Check className="w-4 h-4 text-green-600" />}
                               </div>
                             </button>
                           ))}
@@ -482,7 +482,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                   <button
                     onClick={onGenerate}
                     disabled={isGenerating}
-                    className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     {isGenerating ? (
                       <>
@@ -788,7 +788,7 @@ const GenerateComponent: React.FC<{
     <div className="bg-white rounded-xl p-6 border text-center">
       <div className="space-y-6">
         <div className="flex justify-center">
-          <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
+          <div className="p-4 bg-indigo-500 rounded-full">
             <Brain className="w-12 h-12 text-white" />
           </div>
         </div>
@@ -803,7 +803,7 @@ const GenerateComponent: React.FC<{
         <button
           onClick={onGenerate}
           disabled={isGenerating}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+          className="w-full bg-indigo-500 text-white py-4 px-6 rounded-lg font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
         >
           {isGenerating ? (
             <>

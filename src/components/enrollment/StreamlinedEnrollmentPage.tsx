@@ -236,13 +236,13 @@ export function StreamlinedEnrollmentPage({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header with Progress Indicator */}
       <div className="bg-white shadow-lg border-b">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold text-indigo-600">
                 Secure Your NEET Success
               </h1>
               <p className="text-gray-600 mt-2">Join 2,847 students who enrolled this month</p>
@@ -508,7 +508,7 @@ export function StreamlinedEnrollmentPage({
               className="max-w-6xl mx-auto"
             >
               <div className="text-center mb-8">
-                <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-600 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Success Plan</h2>
                 <p className="text-gray-600 text-lg">
                   Customized plans based on your assessment results
@@ -521,7 +521,7 @@ export function StreamlinedEnrollmentPage({
                     key={plan.id}
                     className={`relative border-2 rounded-2xl p-6 cursor-pointer transition-all ${
                       plan.recommended
-                        ? 'border-purple-500 shadow-2xl bg-gradient-to-br from-purple-50 to-blue-50'
+                        ? 'border-purple-500 shadow-2xl bg-indigo-50'
                         : 'border-gray-200 hover:border-blue-500 hover:shadow-lg'
                     }`}
                     whileHover={{ scale: 1.02 }}
@@ -529,7 +529,7 @@ export function StreamlinedEnrollmentPage({
                   >
                     {plan.recommended && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        <div className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           ⭐ Most Popular
                         </div>
                       </div>
@@ -559,7 +559,7 @@ export function StreamlinedEnrollmentPage({
                     <div className="space-y-3 mb-6">
                       {plan.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3">
-                          <CheckCircle2 className="w-5 h-5 text-green-500" />
+                          <CheckCircle2 className="w-5 h-5 text-green-600" />
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -600,7 +600,7 @@ export function StreamlinedEnrollmentPage({
 
                 <PremiumCard variant="hover" className="bg-green-50 border-green-200">
                   <div className="flex items-center space-x-4">
-                    <Users className="w-8 h-8 text-green-500" />
+                    <Users className="w-8 h-8 text-green-600" />
                     <div>
                       <div className="font-bold text-green-800">
                         <AnimatedCounter value={enrollmentStats.thisMonth} /> students enrolled
@@ -749,19 +749,19 @@ export function StreamlinedEnrollmentPage({
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-600" />
                         <span className="text-yellow-800">10% Instant Discount</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-600" />
                         <span className="text-yellow-800">0% EMI for 12 months</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-600" />
                         <span className="text-yellow-800">7-day money-back guarantee</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <CheckCircle2 className="w-5 h-5 text-green-600" />
                         <span className="text-yellow-800">Free study material kit</span>
                       </div>
                     </div>
@@ -812,21 +812,21 @@ export function StreamlinedEnrollmentPage({
                   <h3 className="text-lg font-bold text-green-800 mb-4">What happens next?</h3>
                   <div className="space-y-3 text-left">
                     <div className="flex items-center space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-600" />
                       <span className="text-green-800">
                         Enrollment confirmation SMS & email sent
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-600" />
                       <span className="text-green-800">Counselor will call within 2 hours</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-600" />
                       <span className="text-green-800">Study material kit dispatch initiated</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-green-600" />
                       <span className="text-green-800">Access to student portal activated</span>
                     </div>
                   </div>
@@ -856,7 +856,7 @@ export function StreamlinedEnrollmentPage({
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-6 text-sm">
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="w-5 h-5 text-green-500" />
+              <ShieldCheck className="w-5 h-5 text-green-600" />
               <span className="text-gray-700">SSL Secured</span>
             </div>
             <div className="flex items-center space-x-2">

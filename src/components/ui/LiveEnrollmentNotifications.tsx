@@ -255,7 +255,7 @@ export function LiveEnrollmentNotifications({
   const getNotificationStyle = (urgency: string) => {
     switch (urgency) {
       case 'high':
-        return 'bg-gradient-to-r from-red-50 to-orange-50 border-l-red-500 shadow-red-100'
+        return 'bg-gradient-to-r bg-red-50 border-l-red-500 shadow-red-100'
       case 'medium':
         return 'bg-gradient-to-r from-yellow-50 to-amber-50 border-l-yellow-500 shadow-yellow-100'
       default:
@@ -287,7 +287,7 @@ export function LiveEnrollmentNotifications({
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        className="bg-gradient-to-r from-emerald-600 to-green-600 text-white p-3 rounded-lg shadow-lg"
+        className="bg-gradient-to-r from-green-600 to-green-700 text-white p-3 rounded-lg shadow-lg"
       >
         <div className="flex items-center mb-2">
           <TrendingUp className="w-4 h-4 mr-2" />
@@ -366,7 +366,7 @@ export function LiveEnrollmentNotifications({
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-3 rounded-lg shadow-lg text-center"
+          className="bg-red-600 text-white p-3 rounded-lg shadow-lg text-center"
         >
           <div className="flex items-center justify-center mb-1">
             <Zap className="w-4 h-4 mr-1" />

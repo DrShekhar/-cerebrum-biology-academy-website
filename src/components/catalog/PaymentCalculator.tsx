@@ -78,7 +78,7 @@ export function PaymentCalculator({ courses, onClose }: PaymentCalculatorProps) 
         className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+        <div className="bg-indigo-500 text-white p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Calculator className="h-6 w-6" />
@@ -149,7 +149,7 @@ export function PaymentCalculator({ courses, onClose }: PaymentCalculatorProps) 
                         onClick={() => setSelectedInstallment(option)}
                         className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                           selectedInstallment === option
-                            ? 'border-green-500 bg-green-50'
+                            ? 'border-green-600 bg-green-50'
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -289,7 +289,7 @@ export function PaymentCalculator({ courses, onClose }: PaymentCalculatorProps) 
                           </div>
 
                           {plan.savings > 0 && (
-                            <div className="bg-green-100 border-l-4 border-green-500 rounded-lg p-4">
+                            <div className="bg-green-100 border-l-4 border-green-600 rounded-lg p-4">
                               <div className="flex items-center gap-2">
                                 <TrendingUp className="h-5 w-5 text-green-600" />
                                 <p className="font-medium text-green-800">

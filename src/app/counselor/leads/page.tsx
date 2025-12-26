@@ -54,8 +54,8 @@ const stages = [
   { id: 'DEMO_COMPLETED', title: 'Demo Done', color: 'bg-indigo-500' },
   { id: 'OFFER_SENT', title: 'Offer Sent', color: 'bg-orange-500' },
   { id: 'NEGOTIATING', title: 'Negotiating', color: 'bg-yellow-500' },
-  { id: 'PAYMENT_PLAN_CREATED', title: 'Payment Plan', color: 'bg-teal-500' },
-  { id: 'ENROLLED', title: 'Enrolled', color: 'bg-green-500' },
+  { id: 'PAYMENT_PLAN_CREATED', title: 'Payment Plan', color: 'bg-green-600' },
+  { id: 'ENROLLED', title: 'Enrolled', color: 'bg-green-600' },
 ]
 
 export default function LeadsPage() {

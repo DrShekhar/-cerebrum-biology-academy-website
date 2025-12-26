@@ -440,7 +440,7 @@ const SeriesInfo = {
     name: 'INTENSIVE/SGP',
     tagline: 'Elite Intensive Training',
     batchSize: 'Ultra-selective',
-    color: 'bg-gradient-to-r from-red-600 to-pink-600',
+    color: 'bg-red-600',
     icon: <Zap className="w-5 h-5" />,
   },
 }
@@ -510,7 +510,7 @@ const PlanCard = ({
             .slice(0, showAllFeatures ? plan.features.length : 2)
             .map((feature: string, index: number) => (
               <li key={index} className="flex items-start gap-2 text-xs">
-                <Check className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                <Check className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{feature}</span>
               </li>
             ))}
@@ -631,7 +631,7 @@ const CourseCard = ({ course }: { course: CourseCard }) => {
       </div>
 
       {/* Guarantee */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4">
+      <div className="bg-gray-50 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-1">
           <Award className="w-4 h-4 text-blue-600" />
           <span className="font-medium text-blue-900 text-sm">{course.guarantee}</span>

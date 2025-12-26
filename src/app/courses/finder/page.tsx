@@ -193,7 +193,7 @@ export default function CourseFinderPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-green-700 to-green-800 py-20">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -203,9 +203,9 @@ export default function CourseFinderPage() {
             </div>
             <h1 className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
               Find Your Perfect
-              <span className="block text-emerald-300">NEET Course</span>
+              <span className="block text-green-400">NEET Course</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-emerald-100">
+            <p className="mx-auto max-w-2xl text-lg text-green-100">
               Answer a few questions and let us recommend the best course for your NEET preparation
               journey. Personalized recommendations based on your goals and preferences.
             </p>
@@ -222,7 +222,7 @@ export default function CourseFinderPage() {
                 key={index}
                 className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-8 w-8 text-emerald-600" />
+                <stat.icon className="mx-auto mb-3 h-8 w-8 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
@@ -244,7 +244,7 @@ export default function CourseFinderPage() {
                 </div>
                 <div className="h-2 overflow-hidden rounded-full bg-gray-200">
                   <div
-                    className="h-full bg-emerald-600 transition-all duration-300"
+                    className="h-full bg-green-600 transition-all duration-300"
                     style={{ width: `${(currentStep / 4) * 100}%` }}
                   />
                 </div>
@@ -254,7 +254,7 @@ export default function CourseFinderPage() {
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <div className="text-center">
-                    <BookOpen className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
+                    <BookOpen className="mx-auto mb-4 h-12 w-12 text-green-600" />
                     <h2 className="mb-2 text-2xl font-bold text-gray-900">
                       What is your current academic status?
                     </h2>
@@ -282,8 +282,8 @@ export default function CourseFinderPage() {
                         onClick={() => handleAnswer('currentClass', option.value)}
                         className={`flex items-center justify-between rounded-xl border-2 p-4 text-left transition-all ${
                           answers.currentClass === option.value
-                            ? 'border-emerald-600 bg-emerald-50'
-                            : 'border-gray-200 hover:border-emerald-300'
+                            ? 'border-green-600 bg-green-50'
+                            : 'border-gray-200 hover:border-green-400'
                         }`}
                       >
                         <div>
@@ -291,7 +291,7 @@ export default function CourseFinderPage() {
                           <div className="text-sm text-gray-600">{option.desc}</div>
                         </div>
                         {answers.currentClass === option.value && (
-                          <CheckCircle className="h-6 w-6 text-emerald-600" />
+                          <CheckCircle className="h-6 w-6 text-green-600" />
                         )}
                       </button>
                     ))}
@@ -303,7 +303,7 @@ export default function CourseFinderPage() {
               {currentStep === 2 && (
                 <div className="space-y-6">
                   <div className="text-center">
-                    <Target className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
+                    <Target className="mx-auto mb-4 h-12 w-12 text-green-600" />
                     <h2 className="mb-2 text-2xl font-bold text-gray-900">
                       When are you planning to appear for NEET?
                     </h2>
@@ -327,8 +327,8 @@ export default function CourseFinderPage() {
                         onClick={() => handleAnswer('targetYear', option.value)}
                         className={`flex items-center justify-between rounded-xl border-2 p-4 text-left transition-all ${
                           answers.targetYear === option.value
-                            ? 'border-emerald-600 bg-emerald-50'
-                            : 'border-gray-200 hover:border-emerald-300'
+                            ? 'border-green-600 bg-green-50'
+                            : 'border-gray-200 hover:border-green-400'
                         }`}
                       >
                         <div>
@@ -336,7 +336,7 @@ export default function CourseFinderPage() {
                           <div className="text-sm text-gray-600">{option.desc}</div>
                         </div>
                         {answers.targetYear === option.value && (
-                          <CheckCircle className="h-6 w-6 text-emerald-600" />
+                          <CheckCircle className="h-6 w-6 text-green-600" />
                         )}
                       </button>
                     ))}
@@ -348,7 +348,7 @@ export default function CourseFinderPage() {
               {currentStep === 3 && (
                 <div className="space-y-6">
                   <div className="text-center">
-                    <Clock className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
+                    <Clock className="mx-auto mb-4 h-12 w-12 text-green-600" />
                     <h2 className="mb-2 text-2xl font-bold text-gray-900">
                       How much time can you dedicate daily?
                     </h2>
@@ -384,8 +384,8 @@ export default function CourseFinderPage() {
                         onClick={() => handleAnswer('studyHours', option.value)}
                         className={`flex items-center justify-between rounded-xl border-2 p-4 text-left transition-all ${
                           answers.studyHours === option.value
-                            ? 'border-emerald-600 bg-emerald-50'
-                            : 'border-gray-200 hover:border-emerald-300'
+                            ? 'border-green-600 bg-green-50'
+                            : 'border-gray-200 hover:border-green-400'
                         }`}
                       >
                         <div>
@@ -393,7 +393,7 @@ export default function CourseFinderPage() {
                           <div className="text-sm text-gray-600">{option.desc}</div>
                         </div>
                         {answers.studyHours === option.value && (
-                          <CheckCircle className="h-6 w-6 text-emerald-600" />
+                          <CheckCircle className="h-6 w-6 text-green-600" />
                         )}
                       </button>
                     ))}
@@ -405,7 +405,7 @@ export default function CourseFinderPage() {
               {currentStep === 4 && (
                 <div className="space-y-6">
                   <div className="text-center">
-                    <IndianRupee className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
+                    <IndianRupee className="mx-auto mb-4 h-12 w-12 text-green-600" />
                     <h2 className="mb-2 text-2xl font-bold text-gray-900">
                       What is your budget for the course?
                     </h2>
@@ -435,8 +435,8 @@ export default function CourseFinderPage() {
                         onClick={() => handleAnswer('budget', option.value)}
                         className={`flex items-center justify-between rounded-xl border-2 p-4 text-left transition-all ${
                           answers.budget === option.value
-                            ? 'border-emerald-600 bg-emerald-50'
-                            : 'border-gray-200 hover:border-emerald-300'
+                            ? 'border-green-600 bg-green-50'
+                            : 'border-gray-200 hover:border-green-400'
                         }`}
                       >
                         <div>
@@ -444,7 +444,7 @@ export default function CourseFinderPage() {
                           <div className="text-sm text-gray-600">{option.desc}</div>
                         </div>
                         {answers.budget === option.value && (
-                          <CheckCircle className="h-6 w-6 text-emerald-600" />
+                          <CheckCircle className="h-6 w-6 text-green-600" />
                         )}
                       </button>
                     ))}
@@ -474,7 +474,7 @@ export default function CourseFinderPage() {
                     (currentStep === 3 && !answers.studyHours) ||
                     (currentStep === 4 && !answers.budget)
                   }
-                  className="flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 font-medium text-white transition-all hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                  className="flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition-all hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-gray-300"
                 >
                   {currentStep === 4 ? 'Get Recommendations' : 'Next'}
                   <ArrowRight className="h-5 w-5" />
@@ -485,8 +485,8 @@ export default function CourseFinderPage() {
             /* Results Section */
             <div className="space-y-6">
               <div className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-                  <Sparkles className="h-8 w-8 text-emerald-600" />
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                  <Sparkles className="h-8 w-8 text-green-600" />
                 </div>
                 <h2 className="mb-2 text-2xl font-bold text-gray-900">
                   Your Personalized Recommendations
@@ -501,11 +501,11 @@ export default function CourseFinderPage() {
                   <div
                     key={index}
                     className={`rounded-2xl border-2 bg-white p-6 shadow-lg transition-all hover:shadow-xl ${
-                      index === 0 ? 'border-emerald-500' : 'border-gray-100'
+                      index === 0 ? 'border-green-600' : 'border-gray-100'
                     }`}
                   >
                     {index === 0 && (
-                      <div className="mb-4 inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700">
+                      <div className="mb-4 inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
                         <Star className="h-4 w-4" />
                         Best Match
                       </div>
@@ -516,7 +516,7 @@ export default function CourseFinderPage() {
                         <p className="text-sm text-gray-600">{course.ideal}</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-emerald-600">{course.match}%</div>
+                        <div className="text-2xl font-bold text-green-600">{course.match}%</div>
                         <div className="text-xs text-gray-500">Match</div>
                       </div>
                     </div>
@@ -533,14 +533,14 @@ export default function CourseFinderPage() {
                     <ul className="mb-4 grid grid-cols-2 gap-2">
                       {course.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-emerald-500" />
+                          <CheckCircle className="h-4 w-4 text-green-600" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <Link
                       href={`/courses/${course.slug}`}
-                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-3 font-medium text-white transition-all hover:bg-emerald-700"
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3 font-medium text-white transition-all hover:bg-green-700"
                     >
                       View Course Details
                       <ArrowRight className="h-5 w-5" />
@@ -552,7 +552,7 @@ export default function CourseFinderPage() {
               <div className="text-center">
                 <button
                   onClick={resetFinder}
-                  className="text-emerald-600 hover:text-emerald-700 hover:underline"
+                  className="text-green-600 hover:text-green-700 hover:underline"
                 >
                   Start Over
                 </button>
@@ -579,7 +579,7 @@ export default function CourseFinderPage() {
                 key={index}
                 className="rounded-xl border border-gray-100 bg-gray-50 p-6 text-center"
               >
-                <feature.icon className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
+                <feature.icon className="mx-auto mb-4 h-12 w-12 text-green-600" />
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-sm text-gray-600">{feature.description}</p>
               </div>
@@ -646,19 +646,19 @@ export default function CourseFinderPage() {
               <Link
                 key={index}
                 href={category.href}
-                className="group flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-emerald-300 hover:shadow-lg"
+                className="group flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-green-400 hover:shadow-lg"
               >
-                <div className="rounded-lg bg-emerald-100 p-3">
-                  <category.icon className="h-6 w-6 text-emerald-600" />
+                <div className="rounded-lg bg-green-100 p-3">
+                  <category.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 font-semibold text-gray-900 group-hover:text-emerald-600">
+                  <h3 className="mb-1 font-semibold text-gray-900 group-hover:text-green-600">
                     {category.title}
                   </h3>
                   <p className="mb-2 text-sm text-gray-600">{category.desc}</p>
-                  <span className="text-xs text-emerald-600">{category.courses} Courses</span>
+                  <span className="text-xs text-green-600">{category.courses} Courses</span>
                 </div>
-                <ArrowRight className="h-5 w-5 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-emerald-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-green-600" />
               </Link>
             ))}
           </div>
@@ -666,24 +666,24 @@ export default function CourseFinderPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-emerald-600 py-16">
+      <section className="bg-green-600 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-4 text-3xl font-bold text-white">Need Help Choosing?</h2>
-          <p className="mb-8 text-lg text-emerald-100">
+          <p className="mb-8 text-lg text-green-100">
             Our academic counselors are here to guide you. Book a free consultation and get
             personalized course recommendations.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-emerald-600 transition-all hover:bg-gray-100"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-green-600 transition-all hover:bg-gray-100"
             >
               <MessageCircle className="h-5 w-5" />
               Talk to a Counselor
             </Link>
             <Link
               href="/courses"
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-all hover:bg-white hover:text-emerald-600"
+              className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-all hover:bg-white hover:text-green-600"
             >
               Browse All Courses
               <ArrowRight className="h-5 w-5" />

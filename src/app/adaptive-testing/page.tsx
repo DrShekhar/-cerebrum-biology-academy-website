@@ -104,7 +104,7 @@ const AdaptiveTestingPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -114,23 +114,23 @@ const AdaptiveTestingPage: React.FC = () => {
             className="text-center space-y-8"
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <div className="p-3 sm:p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+              <div className="p-3 sm:p-4 bg-indigo-500 rounded-xl">
                 <Brain className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-center sm:text-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-indigo-500 bg-clip-text text-transparent text-center sm:text-left">
                 Adaptive Testing System
               </h1>
             </div>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Revolutionary AI-powered assessment that adapts to student performance in real-time,
-              providing personalized difficulty progression and comprehensive learning analytics.
+              AI-powered assessment that adapts to student performance in real-time, providing
+              personalized difficulty progression and detailed learning analytics.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button
                 onClick={handleStartDemo}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg font-medium shadow-lg"
+                className="bg-indigo-500 text-white px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl hover:bg-indigo-600 transition-all flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg font-medium shadow-lg"
               >
                 <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                 Try Live Demo
@@ -177,8 +177,8 @@ const AdaptiveTestingPage: React.FC = () => {
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Adaptive Features</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our system combines cutting-edge psychometric models with AI to deliver the most
-              accurate and efficient assessment experience.
+              Our system combines proven psychometric models with AI to deliver accurate and
+              efficient assessment experiences.
             </p>
           </motion.div>
 
@@ -221,7 +221,7 @@ const AdaptiveTestingPage: React.FC = () => {
                   'Cognitive Load',
                   'Engagement Metrics',
                 ],
-                color: 'from-green-500 to-emerald-500',
+                color: 'bg-green-600',
               },
               {
                 icon: Target,
@@ -247,13 +247,13 @@ const AdaptiveTestingPage: React.FC = () => {
                   'Remediation Plans',
                   'Progress Monitoring',
                 ],
-                color: 'from-teal-500 to-blue-500',
+                color: 'from-green-600 to-blue-500',
               },
               {
                 icon: Activity,
                 title: 'Adaptive Engine',
                 description:
-                  'Orchestrates all components for seamless adaptive testing with comprehensive reporting.',
+                  'Orchestrates all components for smooth adaptive testing with detailed reporting.',
                 features: [
                   'Session Management',
                   'API Integration',
@@ -293,7 +293,7 @@ const AdaptiveTestingPage: React.FC = () => {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -753,7 +753,7 @@ const AdaptiveTestingPage: React.FC = () => {
             <div className="mt-8 pt-6 border-t">
               <button
                 onClick={handleStartDemo}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-3 text-lg font-medium"
+                className="w-full bg-indigo-500 text-white py-4 rounded-xl hover:bg-indigo-600 transition-all flex items-center justify-center gap-3 text-lg font-medium"
               >
                 <Play className="w-5 h-5" />
                 Start Adaptive Test Demo
@@ -765,7 +765,7 @@ const AdaptiveTestingPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

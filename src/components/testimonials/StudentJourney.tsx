@@ -81,7 +81,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl text-white p-8 mb-8">
+      <div className="bg-indigo-500 rounded-3xl text-white p-8 mb-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl font-bold mb-4">{student.name}&apos;s NEET Success Journey</h1>

@@ -144,7 +144,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
               <h3 className="text-2xl font-bold text-green-600">{stats.paid}</h3>
               <p className="text-gray-600">Confirmed Payments</p>
             </div>
-            <CheckCircle className="w-8 h-8 text-green-500" />
+            <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
         </motion.div>
 
@@ -276,7 +276,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
                       }
                       className={`px-3 py-1 rounded-full text-sm font-medium border-0 focus:ring-2 focus:ring-offset-2 ${
                         enrollment.paymentStatus === 'paid'
-                          ? 'bg-green-100 text-green-800 focus:ring-green-500'
+                          ? 'bg-green-100 text-green-800 focus:ring-green-600'
                           : enrollment.paymentStatus === 'pending'
                             ? 'bg-orange-100 text-orange-800 focus:ring-orange-500'
                             : 'bg-red-100 text-red-800 focus:ring-red-500'

@@ -35,7 +35,7 @@ export function LiveStudyMetricsExample() {
         <h3 className="text-lg font-semibold text-gray-900">Live Study Metrics</h3>
         <div className="flex items-center space-x-2">
           <div
-            className={`h-2 w-2 rounded-full ${socket.isConnected ? 'bg-green-500' : 'bg-red-500'}`}
+            className={`h-2 w-2 rounded-full ${socket.isConnected ? 'bg-green-600' : 'bg-red-500'}`}
           />
           <span className="text-sm text-gray-600">{socket.status}</span>
           {socket.isConnected && socket.latency > 0 && (
@@ -109,7 +109,7 @@ export function CollaborativeStudySessionExample() {
             <div className="text-xs text-gray-500">Joined 10 mins ago</div>
           </div>
           <div className="ml-auto">
-            <span className="inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            <span className="inline-flex h-2 w-2 rounded-full bg-green-600"></span>
           </div>
         </div>
 
@@ -120,7 +120,7 @@ export function CollaborativeStudySessionExample() {
             <div className="text-xs text-gray-500">Joined 5 mins ago</div>
           </div>
           <div className="ml-auto">
-            <span className="inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            <span className="inline-flex h-2 w-2 rounded-full bg-green-600"></span>
           </div>
         </div>
       </div>

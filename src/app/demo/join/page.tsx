@@ -123,7 +123,7 @@ function JoinDemoContent() {
           <div className="space-y-3">
             <a
               href="https://wa.me/918826444334"
-              className="flex items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
+              className="flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
             >
               <span>📱</span> Contact on WhatsApp
             </a>

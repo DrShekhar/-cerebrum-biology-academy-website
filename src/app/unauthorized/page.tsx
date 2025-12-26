@@ -5,7 +5,7 @@ import { ShieldX, Home, LogIn, ArrowLeft } from 'lucide-react'
 
 export default function UnauthorizedPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br bg-red-50 flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
           <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto">

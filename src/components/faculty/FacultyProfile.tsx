@@ -175,7 +175,7 @@ export function FacultyProfile({ facultyId }: Props) {
                 <ul className="space-y-3">
                   {faculty.achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{achievement}</span>
                     </li>
                   ))}

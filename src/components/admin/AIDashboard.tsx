@@ -245,7 +245,7 @@ export default function AIDashboard() {
                   <div
                     className={`w-3 h-3 rounded-full ${
                       provider.status === 'online'
-                        ? 'bg-green-500'
+                        ? 'bg-green-600'
                         : provider.status === 'degraded'
                           ? 'bg-yellow-500'
                           : 'bg-red-500'

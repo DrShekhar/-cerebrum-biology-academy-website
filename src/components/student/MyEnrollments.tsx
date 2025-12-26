@@ -91,7 +91,7 @@ export function MyEnrollments() {
 
           <motion.a
             href="/enrollment"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white"
+            className="bg-indigo-500 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -195,7 +195,7 @@ export function MyEnrollments() {
             <div
               className={`px-6 py-4 ${
                 enrollment.paymentStatus === 'paid'
-                  ? 'bg-green-50 border-l-4 border-green-500'
+                  ? 'bg-green-50 border-l-4 border-green-600'
                   : enrollment.paymentStatus === 'pending'
                     ? 'bg-orange-50 border-l-4 border-orange-500'
                     : 'bg-red-50 border-l-4 border-red-500'
@@ -430,7 +430,7 @@ export function MyEnrollments() {
                       <h5 className="font-medium text-gray-900 mb-2">Recent Activity</h5>
                       <div className="space-y-2">
                         <div className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                           Completed: Chapter 4 Quiz - 85% score
                         </div>
                         <div className="flex items-center text-sm text-gray-600">

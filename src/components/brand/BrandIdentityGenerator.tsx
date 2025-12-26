@@ -282,7 +282,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                     <div className="space-y-2 text-sm">
                       {currentLogo.usage.recommended.slice(0, 3).map((usage, index) => (
                         <div key={index} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full" />
+                          <div className="w-2 h-2 bg-green-600 rounded-full" />
                           <span className="text-gray-700">{usage}</span>
                         </div>
                       ))}
@@ -372,7 +372,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                     key={i}
                     className="group relative bg-gray-50 rounded-xl p-4 hover:bg-gray-100 cursor-pointer transition-colors"
                   >
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mx-auto mb-2" />
+                    <div className="w-8 h-8 bg-blue-500 rounded-lg mx-auto mb-2" />
                     <div className="text-xs text-center text-gray-600">Icon {i + 1}</div>
 
                     {/* Hover Actions */}
@@ -404,7 +404,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
 
             {/* Brand DNA */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6">
+              <div className="bg-gray-50 rounded-2xl p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Brand DNA</h4>
                 <div className="space-y-4">
                   <div>
@@ -422,13 +422,13 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Core Values</h4>
                 <div className="space-y-2">
                   {['Academic Excellence', 'Scientific Rigor', 'Student Success', 'Innovation'].map(
                     (value) => (
                       <div key={value} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full" />
+                        <div className="w-2 h-2 bg-green-600 rounded-full" />
                         <span className="text-gray-700">{value}</span>
                       </div>
                     )
@@ -543,7 +543,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
             </div>
 
             {/* Download Brand Assets */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+            <div className="bg-indigo-500 rounded-2xl p-8 text-white text-center">
               <h4 className="text-2xl font-bold mb-4">Complete Brand Asset Package</h4>
               <p className="text-blue-100 mb-6">
                 Download the complete brand identity package including logos, icons, color palettes,

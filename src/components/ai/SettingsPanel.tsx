@@ -195,7 +195,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
   const colorSchemes = [
     { id: 'purple', label: 'Purple', color: 'from-purple-500 to-pink-500' },
     { id: 'blue', label: 'Blue', color: 'from-blue-500 to-cyan-500' },
-    { id: 'green', label: 'Green', color: 'from-green-500 to-emerald-500' },
+    { id: 'green', label: 'Green', color: 'bg-green-600' },
     { id: 'orange', label: 'Orange', color: 'from-orange-500 to-red-500' },
   ]
 
@@ -376,7 +376,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               )
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.notifications.email ? 'bg-green-500' : 'bg-gray-300'
+                              settings.notifications.email ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div
@@ -400,7 +400,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               updateSettings('notifications', 'push', !settings.notifications.push)
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.notifications.push ? 'bg-green-500' : 'bg-gray-300'
+                              settings.notifications.push ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div
@@ -436,7 +436,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               )
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.notifications.studyReminders ? 'bg-green-500' : 'bg-gray-300'
+                              settings.notifications.studyReminders ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div
@@ -466,7 +466,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               )
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.notifications.testReminders ? 'bg-green-500' : 'bg-gray-300'
+                              settings.notifications.testReminders ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div
@@ -579,7 +579,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                           <div className="mt-2 flex items-center space-x-2">
                             <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
                               <div
-                                className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all"
+                                className="h-full bg-blue-500 transition-all"
                                 style={{
                                   width: `${(settings.profile.studyGoal / 12) * 100}%`,
                                 }}
@@ -620,7 +620,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                   >
                     <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                        <Shield className="w-5 h-5 mr-2 text-green-500" />
+                        <Shield className="w-5 h-5 mr-2 text-green-600" />
                         Data & Privacy
                       </h3>
                       <div className="space-y-4">
@@ -640,7 +640,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               )
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.privacy.dataSharing ? 'bg-green-500' : 'bg-gray-300'
+                              settings.privacy.dataSharing ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div
@@ -663,7 +663,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               updateSettings('privacy', 'analytics', !settings.privacy.analytics)
                             }
                             className={`relative w-12 h-6 rounded-full transition-colors ${
-                              settings.privacy.analytics ? 'bg-green-500' : 'bg-gray-300'
+                              settings.privacy.analytics ? 'bg-green-600' : 'bg-gray-300'
                             }`}
                           >
                             <div

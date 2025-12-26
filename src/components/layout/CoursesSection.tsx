@@ -202,7 +202,7 @@ export function CoursesSection() {
                       key={featureIndex}
                       className="flex items-start text-sm xs:text-base text-gray-600"
                     >
-                      <CheckCircle className="w-4 xs:w-5 h-4 xs:h-5 text-green-500 mr-2 xs:mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 xs:w-5 h-4 xs:h-5 text-green-600 mr-2 xs:mr-3 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -235,7 +235,7 @@ export function CoursesSection() {
         {/* Bottom CTA */}
         <div
           ref={ctaAnim.ref}
-          className={`text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white mx-2 transition-all duration-600 ${
+          className={`text-center bg-indigo-500 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white mx-2 transition-all duration-600 ${
             ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
         >

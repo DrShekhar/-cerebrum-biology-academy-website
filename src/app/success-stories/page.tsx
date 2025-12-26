@@ -147,7 +147,7 @@ export default function SuccessStoriesPage() {
             </div>
 
             <div className="bg-green-50 rounded-3xl p-8 text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-green-900 mb-2">+212 Marks</h3>
@@ -177,7 +177,7 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-8 sm:py-12 md:py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-8 sm:py-12 md:py-20 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Ready to Write Your Success Story?

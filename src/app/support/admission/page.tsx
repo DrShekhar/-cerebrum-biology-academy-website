@@ -301,7 +301,7 @@ export default function AdmissionPage() {
                 <div className="space-y-2">
                   {course.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      <CheckCircle className="w-4 h-4 text-green-600" />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -331,7 +331,7 @@ export default function AdmissionPage() {
             {eligibilityCriteria.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100"
+                className="bg-gray-50 rounded-2xl p-6 border border-blue-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -340,7 +340,7 @@ export default function AdmissionPage() {
                 <div className="space-y-3">
                   {item.criteria.map((criterion, idx) => (
                     <div key={idx} className="flex items-start space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{criterion}</span>
                     </div>
                   ))}

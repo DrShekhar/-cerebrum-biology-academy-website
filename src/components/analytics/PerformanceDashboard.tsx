@@ -331,7 +331,7 @@ export function PerformanceDashboard({
                   key={index}
                   className={`p-6 rounded-2xl border-l-4 ${
                     insight.type === 'success'
-                      ? 'bg-green-50 border-green-500'
+                      ? 'bg-green-50 border-green-600'
                       : insight.type === 'warning'
                         ? 'bg-yellow-50 border-yellow-500'
                         : 'bg-blue-50 border-blue-500'
@@ -481,7 +481,7 @@ export function PerformanceDashboard({
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Score Distribution</h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-green-50 rounded-2xl p-6 text-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Trophy className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-green-600 mb-1">
@@ -598,7 +598,7 @@ export function PerformanceDashboard({
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Insights</h2>
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6">
+              <div className="bg-gray-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
                   <Brain className="w-8 h-8 text-purple-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Learning Pattern Analysis</h3>
@@ -613,7 +613,7 @@ export function PerformanceDashboard({
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6">
+              <div className="bg-gradient-to-r from-green-50 to-green-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
                   <Zap className="w-8 h-8 text-green-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Speed vs Accuracy</h3>

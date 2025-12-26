@@ -458,9 +458,9 @@ export function AIStudyBuddy({
   const currentPersonalityData = personalities[currentPersonality]
 
   return (
-    <div className="ai-study-buddy bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-purple-200 overflow-hidden shadow-lg">
+    <div className="ai-study-buddy bg-indigo-50 rounded-2xl border border-purple-200 overflow-hidden shadow-lg">
       {/* Header */}
-      <div className="p-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <div className="p-6 bg-indigo-500 text-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -482,7 +482,7 @@ export function AIStudyBuddy({
             <button
               onClick={() => setIsActive(!isActive)}
               className={`p-2 rounded-lg transition-colors ${
-                isActive ? 'bg-green-500' : 'bg-gray-500'
+                isActive ? 'bg-green-600' : 'bg-gray-500'
               }`}
             >
               {isActive ? '🟢' : '⭕'}
@@ -617,9 +617,9 @@ export function AIStudyBuddy({
                               ? 'bg-red-500'
                               : value > 0.4
                                 ? 'bg-yellow-500'
-                                : 'bg-green-500'
+                                : 'bg-green-600'
                             : value > 0.7
-                              ? 'bg-green-500'
+                              ? 'bg-green-600'
                               : value > 0.4
                                 ? 'bg-yellow-500'
                                 : 'bg-red-500'

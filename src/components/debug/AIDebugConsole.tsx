@@ -53,7 +53,7 @@ export default function AIDebugConsole({
         onClick={() => setIsOpen(!isOpen)}
         className={`
           px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200
-          ${isEnabled ? 'bg-green-500 text-white shadow-lg' : 'bg-gray-600 text-gray-200 shadow-md'}
+          ${isEnabled ? 'bg-green-600 text-white shadow-lg' : 'bg-gray-600 text-gray-200 shadow-md'}
           ${activeRequests > 0 ? 'animate-pulse' : ''}
           hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500
         `}
@@ -165,7 +165,7 @@ export default function AIDebugConsole({
                               log.type === 'request'
                                 ? 'bg-blue-900/30 border-blue-500'
                                 : log.type === 'response'
-                                  ? 'bg-green-900/30 border-green-500'
+                                  ? 'bg-green-900/30 border-green-600'
                                   : 'bg-red-900/30 border-red-500'
                             }
                           `}

@@ -22,9 +22,9 @@ export function PaymentOptionsDisplay({
       case 'ascent':
         return 'from-blue-600 to-indigo-600'
       case 'pursuit':
-        return 'from-green-600 to-teal-600'
+        return 'bg-green-600'
       default:
-        return 'from-blue-600 to-purple-600'
+        return 'from-indigo-500 to-indigo-600'
     }
   }
 

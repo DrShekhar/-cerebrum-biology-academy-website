@@ -872,7 +872,7 @@ const SecurityFeatures: React.FC = () => {
             {/* Tab Switch Settings */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <RotateCcw className="w-5 h-5 text-teal-600" />
+                <RotateCcw className="w-5 h-5 text-green-600" />
                 Tab Switch Detection
               </h3>
 
@@ -888,7 +888,7 @@ const SecurityFeatures: React.FC = () => {
                       tabSwitch: { ...prev.tabSwitch, enabled: !prev.tabSwitch.enabled }
                     }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.tabSwitch.enabled ? 'bg-teal-600' : 'bg-gray-200'
+                      configuration.tabSwitch.enabled ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                   >
                     <span
@@ -919,7 +919,7 @@ const SecurityFeatures: React.FC = () => {
                               tabSwitch: { ...prev.tabSwitch, [key]: !prev.tabSwitch[key as keyof TabSwitchSettings] }
                             }))}
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.tabSwitch[key as keyof TabSwitchSettings] ? 'bg-teal-600' : 'bg-gray-200'
+                              configuration.tabSwitch[key as keyof TabSwitchSettings] ? 'bg-green-600' : 'bg-gray-200'
                             }`}
                           >
                             <span
@@ -946,7 +946,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             tabSwitch: { ...prev.tabSwitch, warningThreshold: parseInt(e.target.value) || 1 }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                         />
                       </div>
 
@@ -963,7 +963,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             tabSwitch: { ...prev.tabSwitch, allowedSwitches: parseInt(e.target.value) || 0 }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -981,7 +981,7 @@ const SecurityFeatures: React.FC = () => {
                           ...prev,
                           tabSwitch: { ...prev.tabSwitch, gracePeriod: parseInt(e.target.value) || 0 }
                         }))}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       />
                     </div>
                   </>
@@ -998,9 +998,9 @@ const SecurityFeatures: React.FC = () => {
                 </h3>
 
                 <div className="space-y-4">
-                  <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
-                    <h4 className="font-medium text-teal-800 mb-3">Detection Policy</h4>
-                    <div className="text-sm text-teal-700 space-y-1">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-medium text-green-800 mb-3">Detection Policy</h4>
+                    <div className="text-sm text-green-700 space-y-1">
                       <div>• Warnings after {configuration.tabSwitch.warningThreshold} violations</div>
                       <div>• Allowed switches: {configuration.tabSwitch.allowedSwitches}</div>
                       <div>• Grace period: {configuration.tabSwitch.gracePeriod} seconds</div>
@@ -1012,7 +1012,7 @@ const SecurityFeatures: React.FC = () => {
                     <h4 className="font-medium text-gray-800 mb-3">Current Session</h4>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="bg-white rounded p-3 border">
-                        <div className="text-2xl font-bold text-teal-600">0</div>
+                        <div className="text-2xl font-bold text-green-600">0</div>
                         <div className="text-gray-600">Tab Switches</div>
                       </div>
                       <div className="bg-white rounded p-3 border">
@@ -1439,7 +1439,7 @@ const SecurityFeatures: React.FC = () => {
             {/* Plagiarism Settings */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Search className="w-5 h-5 text-emerald-600" />
+                <Search className="w-5 h-5 text-green-600" />
                 Plagiarism Detection
               </h3>
 
@@ -1455,7 +1455,7 @@ const SecurityFeatures: React.FC = () => {
                       plagiarism: { ...prev.plagiarism, enabled: !prev.plagiarism.enabled }
                     }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.plagiarism.enabled ? 'bg-emerald-600' : 'bg-gray-200'
+                      configuration.plagiarism.enabled ? 'bg-green-600' : 'bg-gray-200'
                     }`}
                   >
                     <span
@@ -1488,7 +1488,7 @@ const SecurityFeatures: React.FC = () => {
                               plagiarism: { ...prev.plagiarism, [key]: !prev.plagiarism[key as keyof PlagiarismSettings] }
                             }))}
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.plagiarism[key as keyof PlagiarismSettings] ? 'bg-emerald-600' : 'bg-gray-200'
+                              configuration.plagiarism[key as keyof PlagiarismSettings] ? 'bg-green-600' : 'bg-gray-200'
                             }`}
                           >
                             <span
@@ -1553,7 +1553,7 @@ const SecurityFeatures: React.FC = () => {
                                   }))
                                 }
                               }}
-                              className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                              className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                             />
                             <span className="text-sm text-gray-700 capitalize">{source.replace('_', ' ')}</span>
                           </label>
@@ -1574,9 +1574,9 @@ const SecurityFeatures: React.FC = () => {
                 </h3>
 
                 <div className="space-y-4">
-                  <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                    <h4 className="font-medium text-emerald-800 mb-2">Detection Methods</h4>
-                    <ul className="text-sm text-emerald-700 space-y-1">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-medium text-green-700 mb-2">Detection Methods</h4>
+                    <ul className="text-sm text-green-700 space-y-1">
                       <li>✓ Text similarity analysis</li>
                       <li>✓ Semantic content matching</li>
                       <li>✓ AI-generated text patterns</li>

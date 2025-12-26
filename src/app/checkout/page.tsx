@@ -752,7 +752,7 @@ function CheckoutContent() {
                         className={cn(
                           'w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium',
                           isActive && 'bg-blue-600 text-white',
-                          isCompleted && 'bg-green-500 text-white',
+                          isCompleted && 'bg-green-600 text-white',
                           !isActive && !isCompleted && 'bg-gray-200 text-gray-500'
                         )}
                       >
@@ -766,7 +766,7 @@ function CheckoutContent() {
                       <div
                         className={cn(
                           'w-8 h-0.5 mx-1',
-                          index < currentStepIndex ? 'bg-green-500' : 'bg-gray-200'
+                          index < currentStepIndex ? 'bg-green-600' : 'bg-gray-200'
                         )}
                       />
                     )}
@@ -866,15 +866,15 @@ function CheckoutContent() {
 
                   <div className="mt-6 space-y-3 border-t border-gray-100 pt-4">
                     <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       <span>30-day money-back guarantee</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       <span>Instant access after payment</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       <span>24/7 support available</span>
                     </div>
                   </div>

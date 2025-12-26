@@ -182,10 +182,10 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
         personalizedMessage: `We understand your budget constraints and want to help you achieve your dreams!`,
         icon: <Heart className="w-6 h-6" />,
         color: {
-          primary: 'text-emerald-600',
-          secondary: 'text-emerald-800',
-          background: 'bg-emerald-50',
-          border: 'border-emerald-200',
+          primary: 'text-green-600',
+          secondary: 'text-green-700',
+          background: 'bg-green-50',
+          border: 'border-green-200',
         },
         badge: 'NEED BASED',
         claimLimit: 30,
@@ -461,7 +461,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                 <div className="space-y-1">
                   {offer.eligibilityReasons.map((reason, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                       <span>{reason}</span>
                     </div>
                   ))}
@@ -491,7 +491,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <motion.div
-                      className={`h-2 rounded-full ${offer.urgencyLevel === 'critical' ? 'bg-red-500' : 'bg-emerald-500'}`}
+                      className={`h-2 rounded-full ${offer.urgencyLevel === 'critical' ? 'bg-red-500' : 'bg-green-600'}`}
                       initial={{ width: 0 }}
                       animate={{ width: `${(offer.claimedCount / offer.claimLimit) * 100}%` }}
                       transition={{ duration: 1, delay: 0.5 }}
@@ -510,7 +510,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                     className="p-1 hover:bg-gray-100 rounded transition-colors"
                   >
                     {copiedCode === offer.code ? (
-                      <CheckCircle className="w-4 h-4 text-emerald-500" />
+                      <CheckCircle className="w-4 h-4 text-green-600" />
                     ) : (
                       <Copy className="w-4 h-4 text-gray-500" />
                     )}
@@ -530,7 +530,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                         ? 'bg-gray-100 text-gray-500 cursor-not-allowed'
                         : isExpired
                           ? 'bg-gray-100 text-gray-500 cursor-not-allowed'
-                          : 'bg-gradient-to-r from-emerald-600 to-blue-600 text-white hover:from-emerald-700 hover:to-blue-700 shadow-lg hover:shadow-xl'
+                          : 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 shadow-lg hover:shadow-xl'
                     }
                   `}
                   whileHover={!isClaimed && !isExpired ? { scale: 1.02 } : {}}

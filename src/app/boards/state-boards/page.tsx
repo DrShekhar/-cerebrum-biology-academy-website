@@ -153,7 +153,7 @@ export default function StateBoardsPage() {
   const getStateColorClass = (index: number) => {
     const colors = [
       'border-orange-500 bg-orange-50',
-      'border-green-500 bg-green-50',
+      'border-green-600 bg-green-50',
       'border-blue-500 bg-blue-50',
       'border-purple-500 bg-purple-50',
       'border-red-500 bg-red-50',

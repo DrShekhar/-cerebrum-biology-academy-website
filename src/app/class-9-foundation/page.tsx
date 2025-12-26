@@ -165,7 +165,7 @@ export default function Class9FoundationPage() {
       title: 'NCERT Foundation',
       description: 'Complete NCERT Class 9 Biology coverage with NEET concept building',
       icon: BookOpen,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Interactive Learning',
@@ -216,7 +216,7 @@ export default function Class9FoundationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -292,7 +292,7 @@ export default function Class9FoundationPage() {
 
                 <div className="space-y-4">
                   <div className="flex items-start bg-white/10 rounded-lg p-4">
-                    <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <Trophy className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -537,7 +537,7 @@ export default function Class9FoundationPage() {
       <PhotoGallerySection showFeaturedOnly={true} maxPhotos={6} />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

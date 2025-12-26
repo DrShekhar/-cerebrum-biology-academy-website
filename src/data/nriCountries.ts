@@ -546,7 +546,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       {
         title: 'FIFA World Cup Legacy',
         description:
-          'Post-2022, Qatar has enhanced digital infrastructure making online learning seamless.',
+          'Post-2022, Qatar has enhanced digital infrastructure making online learning easy.',
       },
     ],
     faqs: [
@@ -607,7 +607,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
         city: 'Doha',
         score: '612/720',
         quote:
-          'The Qatar afternoon timing worked perfectly. Excellent internet connectivity made live classes seamless.',
+          'The Qatar afternoon timing worked perfectly. Excellent internet connectivity made live classes smooth.',
         college: 'Grant Medical College',
         avatar: '👨‍🎓',
       },
@@ -799,7 +799,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       {
         title: 'Island Connectivity',
         description:
-          'Despite being an island nation, Bahrain has excellent internet for seamless online learning.',
+          'Despite being an island nation, Bahrain has excellent internet for smooth online learning.',
       },
       {
         title: 'Personal Attention',
@@ -1265,7 +1265,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
         city: 'Lalitpur',
         score: '588/720',
         quote:
-          'Almost same timezone meant I could attend all live classes. The open border policy makes studying in India seamless.',
+          'Almost same timezone meant I could attend all live classes. The open border policy makes studying in India easier.',
         college: 'Seth GS Medical College',
         avatar: '👨‍🎓',
       },
@@ -1703,7 +1703,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       city: 'Jakarta',
       score: '565/720',
       quote:
-        'Even without a NEET center in Indonesia, Cerebrum made my preparation seamless. Traveled to Singapore for the exam confidently.',
+        'Even without a NEET center in Indonesia, Cerebrum helped me prepare. Traveled to Singapore for the exam confidently.',
     },
     testimonials: [
       {
@@ -1711,7 +1711,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
         city: 'Jakarta',
         score: '565/720',
         quote:
-          'Even without a NEET center in Indonesia, Cerebrum made my preparation seamless. Traveled to Singapore for the exam confidently.',
+          'Even without a NEET center in Indonesia, Cerebrum helped me prepare. Traveled to Singapore for the exam confidently.',
         college: 'B.J. Medical College',
         avatar: '👨‍🎓',
       },

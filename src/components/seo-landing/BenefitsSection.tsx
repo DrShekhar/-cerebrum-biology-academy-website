@@ -101,10 +101,10 @@ export function BenefitsSection({ benefits }: BenefitsSectionProps) {
                 className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 transition-all hover:border-blue-200 hover:shadow-lg"
               >
                 {/* Gradient Background on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gray-50 opacity-0 transition-opacity group-hover:opacity-100" />
 
                 <div className="relative">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-lg">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white shadow-lg">
                     <Icon className="h-6 w-6" />
                   </div>
 

@@ -500,10 +500,10 @@ const ARVRInfrastructure: React.FC = () => {
         className="text-center space-y-4"
       >
         <div className="flex items-center justify-center gap-3">
-          <div className="p-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Glasses className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             AR/VR Biology Learning Hub
           </h1>
         </div>
@@ -663,7 +663,7 @@ const ARVRInfrastructure: React.FC = () => {
                           {experience.interactions.slice(0, 3).map((interaction, index) => (
                             <div key={index} className="flex items-center gap-2">
                               <div
-                                className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                                className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-600' : 'bg-red-500'}`}
                               />
                               <span className="text-xs text-gray-600">{interaction.type}</span>
                             </div>
@@ -675,7 +675,7 @@ const ARVRInfrastructure: React.FC = () => {
                         <div className="space-y-1">
                           {experience.requiredCapabilities.map((capability, index) => (
                             <div key={index} className="flex items-center gap-2">
-                              <CheckCircle className="w-3 h-3 text-green-500" />
+                              <CheckCircle className="w-3 h-3 text-green-600" />
                               <span className="text-xs text-gray-600">{capability}</span>
                             </div>
                           ))}
@@ -783,7 +783,7 @@ const ARVRInfrastructure: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <div
-                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
                         />
                         <span className="font-medium text-gray-800">{capability.name}</span>
                       </div>
@@ -836,7 +836,7 @@ const ARVRInfrastructure: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <div
-                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
                         />
                         <span className="font-medium text-gray-800">{capability.name}</span>
                       </div>
@@ -915,7 +915,7 @@ const ARVRInfrastructure: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-600 pl-4">
                   <h4 className="font-semibold text-gray-800 mb-2">
                     Step 2: Prepare Your Environment
                   </h4>

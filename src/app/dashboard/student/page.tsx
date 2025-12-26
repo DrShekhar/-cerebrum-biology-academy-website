@@ -224,7 +224,7 @@ export default function StudentDashboard() {
   return (
     <DashboardErrorBoundary fallbackMessage="Your dashboard encountered an error. Please try refreshing the page.">
       <DashboardAccessControl dashboardType="ANALYTICS" fallbackRoute="/student/dashboard">
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-3 sm:p-6">
+        <div className="min-h-screen bg-gray-50 p-3 sm:p-6">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
             {/* Header - Mobile Optimized */}
             <div className="flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-0">
@@ -581,7 +581,7 @@ function MetricCard({
 
 function LoadingDashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-3 sm:p-6">
+    <div className="min-h-screen bg-gray-50 p-3 sm:p-6">
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
         <div className="animate-pulse">
           <div className="h-6 sm:h-8 bg-gray-300 rounded w-2/3 sm:w-1/3 mb-3 sm:mb-4"></div>

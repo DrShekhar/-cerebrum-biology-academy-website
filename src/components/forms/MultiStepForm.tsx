@@ -170,7 +170,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
                   <div
                     className={`relative flex items-center justify-center w-10 h-10 rounded-full border-2 ${
                       status === 'completed'
-                        ? 'bg-green-500 border-green-500 text-white'
+                        ? 'bg-green-600 border-green-600 text-white'
                         : status === 'current'
                           ? 'bg-blue-600 border-blue-600 text-white'
                           : 'bg-white border-gray-300 text-gray-500'
@@ -201,7 +201,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
                   {index < steps.length - 1 && (
                     <div
                       className={`flex-1 h-0.5 mx-4 ${
-                        status === 'completed' ? 'bg-green-500' : 'bg-gray-300'
+                        status === 'completed' ? 'bg-green-600' : 'bg-gray-300'
                       }`}
                     />
                   )}

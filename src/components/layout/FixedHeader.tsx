@@ -46,7 +46,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-emerald-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-green-500 transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -57,13 +57,13 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
           <div className="flex items-center gap-3">
             <button
               onClick={handleBookDemo}
-              className="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+              className="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
             >
               Book Demo
             </button>
             <button
               onClick={handleCall}
-              className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 p-2"
+              className="text-green-500 hover:text-green-300 transition-colors duration-200 p-2"
               aria-label="Call us"
             >
               <Phone className="w-5 h-5" />
@@ -97,7 +97,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block text-gray-300 hover:text-emerald-400 transition-colors duration-200 py-2"
+                    className="block text-gray-300 hover:text-green-500 transition-colors duration-200 py-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -109,7 +109,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                       handleBookDemo()
                       setMobileMenuOpen(false)
                     }}
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     Book Demo
                   </button>
@@ -118,7 +118,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                       handleCall()
                       setMobileMenuOpen(false)
                     }}
-                    className="w-full flex items-center justify-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors duration-200 py-2"
+                    className="w-full flex items-center justify-center gap-2 text-green-500 hover:text-green-300 transition-colors duration-200 py-2"
                   >
                     <Phone className="w-5 h-5" />
                     Call Now

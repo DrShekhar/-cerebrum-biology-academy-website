@@ -399,7 +399,7 @@ export const getBadgeInfo = (badge: string) => {
   const badgeData = {
     recommended: {
       text: 'Recommended',
-      color: 'bg-green-500',
+      color: 'bg-green-600',
       icon: '⭐',
     },
     premium: {

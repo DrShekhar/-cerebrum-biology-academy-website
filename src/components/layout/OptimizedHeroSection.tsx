@@ -131,7 +131,7 @@ export function OptimizedHeroSection({
   return (
     <div
       ref={containerRef}
-      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
+      className={`relative min-h-screen bg-gradient-to-br bg-indigo-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
     >
       {/* Video Background (if provided) - lazy load */}
       {showVideo && videoUrl && (
@@ -154,7 +154,7 @@ export function OptimizedHeroSection({
       {/* Background - CSS only, no external image for faster LCP */}
       <div className="absolute inset-0">
         {/* CSS gradient orbs - no JS animation for performance */}
-        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-pulse-slow" />
         <div
           className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow"
           style={{ animationDelay: '2s' }}
@@ -171,7 +171,7 @@ export function OptimizedHeroSection({
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
         <div className="w-full animate-fade-in-up">
           {/* Badge - LCP critical, render immediately */}
-          <div className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6">
             <Trophy className="w-5 h-5 mr-2 text-green-300" />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
               #1 {t('heroTitle')} • {t('heroSubtitle')}
@@ -202,7 +202,7 @@ export function OptimizedHeroSection({
                 variant="medical"
                 size="lg"
                 onClick={() => router.push('/demo-booking')}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 group text-sm xs:text-base md:text-lg border border-green-400/30"
+                className="bg-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 group text-sm xs:text-base md:text-lg border border-green-400/30"
               >
                 <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
                 {t('bookDemo')}

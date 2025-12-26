@@ -290,7 +290,7 @@ export function SecondChanceNEETLanding({
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <ChevronRight className="w-12 h-12 text-green-500 bg-white rounded-full p-2 shadow-lg" />
+                  <ChevronRight className="w-12 h-12 text-green-600 bg-white rounded-full p-2 shadow-lg" />
                 </div>
               </motion.div>
             </div>
@@ -363,7 +363,7 @@ export function SecondChanceNEETLanding({
 
                   <button
                     type="submit"
-                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50"
+                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-600 via-green-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50"
                   >
                     Get My Success Plan
                   </button>
@@ -491,7 +491,7 @@ export function SecondChanceNEETLanding({
           <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center space-x-8 text-sm">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
                 <span className="text-green-800 font-medium">Live Results:</span>
               </div>
               <div className="text-green-700">Arjun S. just got AIIMS Delhi (Score: 612)</div>
@@ -592,7 +592,7 @@ export function SecondChanceNEETLanding({
             {/* Solution Section */}
             <div>
               <div className="text-center mb-8">
-                <Trophy className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <Trophy className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-green-600 mb-4">
                   Why You'll Succeed With Us
                 </h2>
@@ -627,7 +627,7 @@ export function SecondChanceNEETLanding({
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500"
+                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -647,7 +647,7 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Urgency Section */}
-      <div className="py-16 bg-teal-600 text-white">
+      <div className="py-16 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -774,7 +774,7 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Final CTA Section */}
-      <div className="py-16 bg-navy-900 border-t-4 border-teal-500 text-white">
+      <div className="py-16 bg-navy-900 border-t-4 border-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

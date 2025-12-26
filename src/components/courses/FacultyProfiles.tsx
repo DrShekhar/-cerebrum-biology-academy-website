@@ -137,7 +137,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
                   {faculty.experience}
                 </div>
                 <div className="flex items-center gap-1">
-                  <BookOpen className="h-4 w-4 text-green-500" />
+                  <BookOpen className="h-4 w-4 text-green-600" />
                   {faculty.teachingExperience}
                 </div>
               </div>
@@ -178,7 +178,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
           {/* Student Feedback */}
           <div className="mb-6">
             <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-              <MessageCircle className="h-4 w-4 text-green-500" />
+              <MessageCircle className="h-4 w-4 text-green-600" />
               Student Feedback
             </h4>
             <div className="space-y-3">
@@ -205,7 +205,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
           </div>
 
           {/* Teaching Stats */}
-          <div className="grid grid-cols-3 gap-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+          <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg">
             <div className="text-center">
               <div className="text-lg font-bold text-blue-600">98%</div>
               <div className="text-xs text-gray-600">Success Rate</div>
@@ -271,7 +271,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
         </div>
 
         {/* Faculty Features */}
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <Card className="bg-indigo-500 text-white">
           <div className="p-8">
             <h3 className="text-2xl font-bold mb-6 text-center">
               Why Our Faculty Makes the Difference

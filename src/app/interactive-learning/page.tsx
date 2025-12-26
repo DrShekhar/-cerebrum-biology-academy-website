@@ -77,7 +77,7 @@ export default function InteractiveLearningPage() {
       title: 'Ecosystem Dynamics',
       description: 'Interactive ecosystem models showing energy flow and cycles',
       features: ['Photosynthesis pathways', 'Food web interactions', 'Nutrient cycling'],
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -143,10 +143,10 @@ export default function InteractiveLearningPage() {
         </AcademicHeadline>
 
         <AcademicParagraph size="large" className="text-blue-100 max-w-5xl mx-auto mb-12">
-          Experience <strong>cutting-edge interactive learning technology</strong> that transforms
-          abstract biological concepts into engaging 3D visualizations, simulations, and adaptive
-          assessments. Our research-backed platform accelerates understanding and retention through
-          immersive educational experiences.
+          Experience <strong>interactive learning technology</strong> that transforms abstract
+          biological concepts into engaging 3D visualizations, simulations, and adaptive assessments.
+          Our research-backed platform accelerates understanding and retention through immersive
+          educational experiences.
           <ResearchCitation
             source="Interactive Learning Effectiveness Study"
             year="2024"
@@ -202,7 +202,7 @@ export default function InteractiveLearningPage() {
         <SectionHeader
           subtitle="Immersive Learning"
           title="Interactive Biology Concepts"
-          description="Explore fundamental biological processes through cutting-edge 3D animations and simulations"
+          description="Explore fundamental biological processes through advanced 3D animations and simulations"
           variant="center"
         />
 
@@ -225,7 +225,7 @@ export default function InteractiveLearningPage() {
       <ContentSection background="white">
         <SectionHeader
           subtitle="Advanced Pedagogy"
-          title="Revolutionary Learning Methods"
+          title="Proven Learning Methods"
           description="Research-backed interactive techniques that accelerate understanding and retention"
           variant="center"
         />
@@ -328,7 +328,7 @@ export default function InteractiveLearningPage() {
         <AcademicGrid columns={4} gap="medium">
           {interactiveFeatures.map((feature, index) => (
             <AcademicCard key={index} variant="minimal" hover={true} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
 

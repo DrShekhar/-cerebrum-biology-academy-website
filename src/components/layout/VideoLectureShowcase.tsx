@@ -217,7 +217,7 @@ export function VideoLectureShowcase() {
             {[
               { icon: Play, label: '200+', sublabel: 'Video Lectures', color: 'text-indigo-600' },
               { icon: Clock, label: '100+', sublabel: 'Hours Content', color: 'text-blue-600' },
-              { icon: Users, label: '50K+', sublabel: 'Views', color: 'text-emerald-600' },
+              { icon: Users, label: '50K+', sublabel: 'Views', color: 'text-green-600' },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-yellow-600' },
             ].map((stat, index) => (
               <motion.div
@@ -403,7 +403,7 @@ export function VideoLectureShowcase() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center bg-teal-600 rounded-3xl p-12 text-white"
+          className="text-center bg-green-600 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

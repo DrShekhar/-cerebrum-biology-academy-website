@@ -902,7 +902,7 @@ const UICustomization: React.FC = () => {
                               type="text"
                               value={colors.background}
                               onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'background', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm font-mono"
+                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
                             />
                           </div>
                         </div>
@@ -920,7 +920,7 @@ const UICustomization: React.FC = () => {
                               type="text"
                               value={colors.text}
                               onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'text', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm font-mono"
+                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
                             />
                           </div>
                         </div>
@@ -938,7 +938,7 @@ const UICustomization: React.FC = () => {
                               type="text"
                               value={colors.border}
                               onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'border', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm font-mono"
+                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
                             />
                           </div>
                         </div>
@@ -1352,7 +1352,7 @@ const UICustomization: React.FC = () => {
                 className="bg-white rounded-xl p-6 border"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5 text-teal-600" />
+                  <BarChart3 className="w-5 h-5 text-green-600" />
                   Progress Bar Style
                 </h3>
 
@@ -1364,7 +1364,7 @@ const UICustomization: React.FC = () => {
                       <select
                         value={customizationData.progressBarSettings.style}
                         onChange={(e) => updateProgressBarSettings({ style: e.target.value as any })}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="thin">Thin</option>
                         <option value="thick">Thick</option>
@@ -1378,7 +1378,7 @@ const UICustomization: React.FC = () => {
                       <select
                         value={customizationData.progressBarSettings.position}
                         onChange={(e) => updateProgressBarSettings({ position: e.target.value as any })}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="top">Top</option>
                         <option value="bottom">Bottom</option>
@@ -1402,7 +1402,7 @@ const UICustomization: React.FC = () => {
                           type="text"
                           value={customizationData.progressBarSettings.color}
                           onChange={(e) => updateProgressBarSettings({ color: e.target.value })}
-                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono"
+                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
                         />
                       </div>
                     </div>
@@ -1420,7 +1420,7 @@ const UICustomization: React.FC = () => {
                           type="text"
                           value={customizationData.progressBarSettings.backgroundColor}
                           onChange={(e) => updateProgressBarSettings({ backgroundColor: e.target.value })}
-                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono"
+                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
                         />
                       </div>
                     </div>
@@ -1433,7 +1433,7 @@ const UICustomization: React.FC = () => {
                       type="text"
                       value={customizationData.progressBarSettings.height}
                       onChange={(e) => updateProgressBarSettings({ height: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       placeholder="8px"
                     />
                   </div>
@@ -1443,7 +1443,7 @@ const UICustomization: React.FC = () => {
                     <select
                       value={customizationData.progressBarSettings.animation}
                       onChange={(e) => updateProgressBarSettings({ animation: e.target.value as any })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="none">None</option>
                       <option value="pulse">Pulse</option>
@@ -1459,7 +1459,7 @@ const UICustomization: React.FC = () => {
                         type="checkbox"
                         checked={customizationData.progressBarSettings.showPercentage}
                         onChange={(e) => updateProgressBarSettings({ showPercentage: e.target.checked })}
-                        className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                        className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                       />
                       <span className="ml-2 text-sm text-gray-700">Show percentage</span>
                     </label>
@@ -1468,7 +1468,7 @@ const UICustomization: React.FC = () => {
                         type="checkbox"
                         checked={customizationData.progressBarSettings.showTimeRemaining}
                         onChange={(e) => updateProgressBarSettings({ showTimeRemaining: e.target.checked })}
-                        className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                        className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                       />
                       <span className="ml-2 text-sm text-gray-700">Show time remaining</span>
                     </label>

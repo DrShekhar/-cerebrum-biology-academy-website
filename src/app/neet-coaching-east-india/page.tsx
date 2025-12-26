@@ -169,7 +169,7 @@ export default function NeetCoachingEastIndiaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-teal-800 to-emerald-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -270,7 +270,7 @@ export default function NeetCoachingEastIndiaPage() {
               >
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${
-                    state.priority === 'high' ? 'ring-2 ring-green-500' : ''
+                    state.priority === 'high' ? 'ring-2 ring-green-600' : ''
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -325,7 +325,7 @@ export default function NeetCoachingEastIndiaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 border border-green-100"
               >
                 <item.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -407,7 +407,7 @@ export default function NeetCoachingEastIndiaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-teal-600 to-emerald-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

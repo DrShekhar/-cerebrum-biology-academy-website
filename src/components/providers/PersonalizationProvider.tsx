@@ -200,7 +200,7 @@ export function PersonalizedHeroMessage() {
   const message = getPersonalizedContent('hero_message')
 
   return message ? (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-4 mb-6">
+    <div className="bg-gray-50 border border-blue-200 rounded-xl p-4 mb-6">
       <p className="text-blue-800 font-medium text-center">{message}</p>
     </div>
   ) : null

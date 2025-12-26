@@ -143,7 +143,7 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
                 'w-48 h-12 text-center text-xl font-semibold rounded-lg border-2 transition-all duration-200',
                 'focus:outline-none focus:ring-2 focus:ring-indigo-500',
                 !isValid && inputValue !== '' && 'border-red-500 bg-red-50',
-                answerStatus?.isCorrect && 'border-green-500 bg-green-50',
+                answerStatus?.isCorrect && 'border-green-600 bg-green-50',
                 answerStatus && !answerStatus.isCorrect && 'border-red-500 bg-red-50',
                 !answerStatus && isValid && 'border-indigo-300 focus:border-indigo-500',
                 (showExplanation || isReviewMode) && 'bg-gray-100 cursor-not-allowed'
@@ -157,7 +157,7 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
                 {!isValid ? (
                   <span className="text-red-500 text-xl">✗</span>
                 ) : answerStatus?.isCorrect ? (
-                  <span className="text-green-500 text-xl">✓</span>
+                  <span className="text-green-600 text-xl">✓</span>
                 ) : answerStatus && !answerStatus.isCorrect ? (
                   <span className="text-red-500 text-xl">✗</span>
                 ) : null}

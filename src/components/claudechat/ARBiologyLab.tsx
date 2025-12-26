@@ -1,5 +1,5 @@
 /**
- * AR Biology Lab - Revolutionary AR-powered Biology learning experience
+ * AR Biology Lab - AR-powered Biology learning
  * Point camera at any object → See Biology concepts overlay
  */
 
@@ -269,9 +269,9 @@ export function ARBiologyLab({ onDetection, onVoiceExplanation }: ARBiologyLabPr
   }
 
   return (
-    <div className="ar-biology-lab bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-200 overflow-hidden">
+    <div className="ar-biology-lab bg-gray-50 rounded-2xl border border-blue-200 overflow-hidden">
       {/* Header */}
-      <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="p-6 bg-indigo-500 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold">🔬 AR Biology Lab</h2>
@@ -342,7 +342,7 @@ export function ARBiologyLab({ onDetection, onVoiceExplanation }: ARBiologyLabPr
 
               {/* Speaking Indicator */}
               {isSpeaking && (
-                <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-2">
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-2">
                   <Volume2 className="w-4 h-4 animate-pulse" />
                   <span>Shekhar Sir Speaking...</span>
                 </div>
@@ -415,7 +415,7 @@ export function ARBiologyLab({ onDetection, onVoiceExplanation }: ARBiologyLabPr
                     <button
                       onClick={() => generateVoiceExplanation(currentDetection)}
                       disabled={isSpeaking}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium flex items-center justify-center space-x-2 disabled:opacity-50"
+                      className="flex-1 bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium flex items-center justify-center space-x-2 disabled:opacity-50"
                     >
                       <Volume2 className="w-4 h-4" />
                       <span>{isSpeaking ? 'Speaking...' : 'Hear Explanation'}</span>

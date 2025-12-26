@@ -159,7 +159,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="max-w-4xl"
@@ -169,7 +169,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
           >
             <div className="flex items-center space-x-3 mb-4">
               <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                test.isPremium ? 'bg-yellow-500 text-yellow-900' : 'bg-green-500 text-green-900'
+                test.isPremium ? 'bg-yellow-500 text-yellow-900' : 'bg-green-600 text-green-900'
               }`}>
                 {test.isPremium ? 'PREMIUM' : 'FREE'}
               </span>
@@ -255,7 +255,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
                 <ul className="space-y-4">
                   {test.instructions.map((instruction, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{instruction}</span>
                     </li>
                   ))}

@@ -32,11 +32,11 @@ const rankings = [
 
 const achievements = [
   { icon: Trophy, value: '500+', label: 'Medical Selections', color: 'text-yellow-500' },
-  { icon: Target, value: '98%', label: 'Success Rate', color: 'text-green-500' },
+  { icon: Target, value: '98%', label: 'Success Rate', color: 'text-green-600' },
   { icon: Users, value: '5,000+', label: 'Students Taught', color: 'text-blue-500' },
   { icon: Star, value: '4.9/5', label: 'Google Rating', color: 'text-orange-500' },
   { icon: GraduationCap, value: 'AIIMS', label: 'Expert Faculty', color: 'text-purple-500' },
-  { icon: Clock, value: '10+', label: 'Years Experience', color: 'text-teal-500' },
+  { icon: Clock, value: '10+', label: 'Years Experience', color: 'text-green-600' },
 ]
 
 const cityData = [
@@ -160,7 +160,7 @@ export function BestNEETCoachingDelhiNCRClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-96 h-96 bg-yellow-400 rounded-full blur-3xl" />
@@ -260,7 +260,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                 viewport={{ once: true }}
                 className={`flex items-center justify-between p-4 rounded-xl ${
                   item.highlight
-                    ? 'bg-gradient-to-r from-yellow-50 to-green-50 border-2 border-green-500'
+                    ? 'bg-gradient-to-r from-yellow-50 to-green-50 border-2 border-green-600'
                     : 'bg-gray-50 border border-gray-200'
                 }`}
               >
@@ -278,7 +278,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                     >
                       {item.name}
                       {item.highlight && (
-                        <span className="ml-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">
+                        <span className="ml-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded">
                           RECOMMENDED
                         </span>
                       )}
@@ -362,7 +362,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6"
+                className="bg-indigo-50 rounded-xl p-6"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{city.city}</h3>
@@ -414,7 +414,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                 className="bg-white rounded-xl p-6 shadow-md"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-14 h-14 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div className="ml-3">
@@ -469,7 +469,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

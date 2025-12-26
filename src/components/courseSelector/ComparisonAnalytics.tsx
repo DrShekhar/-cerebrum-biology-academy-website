@@ -291,7 +291,7 @@ export default function ComparisonAnalytics({
             {analytics.valueAnalysis.map((course, index) => {
               const percentage = (course.valueScore / 100) * 100
               const barColor =
-                index === 0 ? 'bg-green-500' : index === 1 ? 'bg-blue-500' : 'bg-gray-400'
+                index === 0 ? 'bg-green-600' : index === 1 ? 'bg-blue-500' : 'bg-gray-400'
 
               return (
                 <div key={course.id} className="space-y-2">
@@ -360,7 +360,7 @@ export default function ComparisonAnalytics({
         </div>
 
         {/* Recommendation Summary */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-200">
+        <div className="bg-gray-50 rounded-lg p-6 border border-blue-200">
           <h4 className="font-bold text-gray-900 mb-3 flex items-center">
             <Award className="w-5 h-5 mr-2 text-blue-600" />
             Our Recommendation

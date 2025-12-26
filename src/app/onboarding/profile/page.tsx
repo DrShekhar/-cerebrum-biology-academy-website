@@ -25,7 +25,7 @@ const TRACK_OPTIONS: TrackOption[] = [
     description: 'Comprehensive preparation for NEET medical entrance exam',
     icon: <Target className="w-8 h-8" />,
     goals: ['NEET 2026', 'NEET 2026', 'NEET 2027', 'NEET Dropper'],
-    color: 'from-blue-600 to-purple-600',
+    color: 'from-indigo-500 to-indigo-600',
   },
   {
     id: 'REGULAR',
@@ -33,7 +33,7 @@ const TRACK_OPTIONS: TrackOption[] = [
     description: 'Class 11 & 12 Biology curriculum and board exam preparation',
     icon: <BookOpen className="w-8 h-8" />,
     goals: ['Class 11 Biology', 'Class 12 Biology', 'CBSE Board Exam'],
-    color: 'from-green-600 to-teal-600',
+    color: 'bg-green-600',
   },
 ]
 
@@ -120,7 +120,7 @@ export default function OnboardingProfilePage() {
   // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
             <Brain className="w-8 h-8 text-white" />
@@ -144,14 +144,14 @@ export default function OnboardingProfilePage() {
     (step === 3 && targetScore >= 300)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mb-4"
+            className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4"
           >
             <Brain className="w-8 h-8 text-white" />
           </motion.div>
@@ -339,7 +339,7 @@ export default function OnboardingProfilePage() {
             className="space-y-6"
           >
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 text-white mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-500 text-white mb-4">
                 <Target className="w-8 h-8" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Set Your Target Score</h2>

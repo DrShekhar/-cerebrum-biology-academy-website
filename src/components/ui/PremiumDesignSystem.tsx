@@ -85,9 +85,9 @@ export function PremiumButton({
     secondary:
       'bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 text-white shadow-lg shadow-gray-500/25',
     luxury:
-      'bg-gradient-to-r from-purple-600 via-indigo-700 to-blue-800 text-white shadow-lg shadow-purple-500/25',
+      'bg-indigo-700 text-white shadow-lg shadow-purple-500/25',
     medical:
-      'bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25',
+      'bg-gradient-to-r from-green-600 via-green-700 to-blue-800 text-white shadow-lg shadow-green-500/25',
   }
 
   return (
@@ -208,7 +208,7 @@ export function PremiumStat({
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <div className="text-4xl font-bold bg-indigo-500 bg-clip-text text-transparent">
         {prefix}
         {displayValue.toFixed(decimals)}
         {suffix}
@@ -486,7 +486,7 @@ export function PremiumProgress({
       )}
       <div className={cn('w-full bg-gray-200 rounded-full overflow-hidden', sizeClasses[size])}>
         <motion.div
-          className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
+          className="h-full bg-indigo-500 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 1.5, ease: 'easeOut' }}

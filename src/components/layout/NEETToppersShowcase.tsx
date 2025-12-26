@@ -198,7 +198,7 @@ export function NEETToppersShowcase({
                 sublabel: 'Max Improvement',
                 color: 'text-red-600',
               },
-              { icon: Award, label: '94.2%', sublabel: 'Success Rate', color: 'text-emerald-600' },
+              { icon: Award, label: '94.2%', sublabel: 'Success Rate', color: 'text-green-600' },
             ].map((metric, index) => (
               <motion.div
                 key={metric.label}
@@ -251,7 +251,7 @@ export function NEETToppersShowcase({
                       </div>
 
                       {/* Achievement Badge */}
-                      <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                         Rank {currentTopperData.rank}
                       </div>
                     </div>
@@ -279,7 +279,7 @@ export function NEETToppersShowcase({
 
                     {/* Improvement Stats */}
                     {currentTopperData.improvement && (
-                      <div className="inline-flex items-center bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium">
+                      <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
                         <TrendingUp className="w-4 h-4 mr-2" />+{currentTopperData.improvement}{' '}
                         marks improvement
                       </div>
@@ -323,7 +323,7 @@ export function NEETToppersShowcase({
                             </div>
                             <div>
                               <span className="text-gray-600">Improvement:</span>
-                              <span className="font-bold text-emerald-600 ml-2">
+                              <span className="font-bold text-green-600 ml-2">
                                 +{currentTopperData.improvement} marks
                               </span>
                             </div>
@@ -432,7 +432,7 @@ export function NEETToppersShowcase({
                     Rank {topper.rank}
                   </span>
                   {topper.improvement && (
-                    <span className="text-emerald-600 font-medium">
+                    <span className="text-green-600 font-medium">
                       +{topper.improvement} marks
                     </span>
                   )}

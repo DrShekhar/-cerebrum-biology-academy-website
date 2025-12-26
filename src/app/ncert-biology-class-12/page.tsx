@@ -117,16 +117,16 @@ const colorMap: Record<string, { bg: string; text: string; border: string; light
     light: 'bg-blue-50',
   },
   teal: {
-    bg: 'bg-teal-500',
-    text: 'text-teal-600',
-    border: 'border-teal-200',
-    light: 'bg-teal-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
   emerald: {
-    bg: 'bg-emerald-500',
-    text: 'text-emerald-600',
-    border: 'border-emerald-200',
-    light: 'bg-emerald-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
 }
 
@@ -497,7 +497,7 @@ export default function NCERTBiologyClass12Page() {
               {
                 title: 'Class 11 NCERT',
                 href: '/ncert-biology-class-11',
-                color: 'from-emerald-500 to-teal-500',
+                color: 'bg-green-600',
               },
               {
                 title: 'NCERT Fingertips',
@@ -507,7 +507,7 @@ export default function NCERTBiologyClass12Page() {
               {
                 title: 'Trueman Biology',
                 href: '/trueman-biology-for-neet',
-                color: 'from-red-500 to-rose-500',
+                color: 'bg-red-600',
               },
               {
                 title: 'Best Books for NEET',

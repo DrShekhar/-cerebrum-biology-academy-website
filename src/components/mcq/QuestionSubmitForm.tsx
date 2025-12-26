@@ -203,7 +203,7 @@ export function QuestionSubmitForm({
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
+      <div className="bg-green-600 p-6 text-white">
         <h2 className="text-2xl font-bold flex items-center gap-3">
           <span className="text-3xl">✍️</span>
           Contribute a Question
@@ -262,7 +262,7 @@ export function QuestionSubmitForm({
                   value={formData.question}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   placeholder="Enter your NEET Biology question here..."
                 />
                 <p className="text-xs text-gray-500 mt-1">
@@ -280,7 +280,7 @@ export function QuestionSubmitForm({
                     <span
                       className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
                         formData.correctAnswer === option
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : 'bg-gray-100 text-gray-700'
                       }`}
                     >
@@ -291,7 +291,7 @@ export function QuestionSubmitForm({
                       name={`option${option}`}
                       value={formData[`option${option}` as keyof FormData] as string}
                       onChange={handleChange}
-                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600"
                       placeholder={`Option ${option}`}
                     />
                     <button
@@ -327,7 +327,7 @@ export function QuestionSubmitForm({
                   value={formData.explanation}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   placeholder="Explain why the correct answer is right and why others are wrong..."
                 />
                 <p className="text-xs text-gray-500 mt-1">
@@ -351,7 +351,7 @@ export function QuestionSubmitForm({
                         chapter: '',
                       }))
                     }}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600"
                   >
                     <option value="">Select Topic</option>
                     {BIOLOGY_TOPICS.map((topic) => (
@@ -368,7 +368,7 @@ export function QuestionSubmitForm({
                     value={formData.chapter}
                     onChange={handleChange}
                     disabled={!formData.topic}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 disabled:bg-gray-100"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 disabled:bg-gray-100"
                   >
                     <option value="">Select Chapter</option>
                     {chapters.map((chapter) => (
@@ -438,7 +438,7 @@ export function QuestionSubmitForm({
                         pyqYear: e.target.value ? parseInt(e.target.value) : null,
                       }))
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600"
                   >
                     <option value="">Select Year</option>
                     {PYQ_YEARS.map((year) => (
@@ -460,7 +460,7 @@ export function QuestionSubmitForm({
                   name="source"
                   value={formData.source}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600"
                   placeholder="e.g., NCERT Chapter 5, Page 87"
                 />
               </div>

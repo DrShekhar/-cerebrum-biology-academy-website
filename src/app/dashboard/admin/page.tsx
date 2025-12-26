@@ -113,7 +113,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 p-6">
+    <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex justify-between items-start">
@@ -144,7 +144,7 @@ export default function AdminDashboard() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-gray-900">System Online</span>
                 </div>
                 <div className="text-sm text-gray-600">
@@ -555,7 +555,7 @@ function MetricCard({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent':
-        return 'border-green-500 bg-green-50'
+        return 'border-green-600 bg-green-50'
       case 'good':
         return 'border-blue-500 bg-blue-50'
       case 'warning':
@@ -666,7 +666,7 @@ function PerformanceMetric({
 
 function LoadingDashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 p-6">
+    <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         <div className="animate-pulse">
           <div className="h-8 bg-gray-300 rounded w-1/3 mb-4"></div>

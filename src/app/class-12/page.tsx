@@ -97,7 +97,7 @@ export default function Class12Page() {
       description:
         'Every topic taught with NEET exam perspective and previous year questions analysis',
       icon: Target,
-      color: 'from-red-500 to-pink-500',
+      color: 'bg-red-600',
     },
     {
       title: 'Board + NEET Integration',
@@ -109,7 +109,7 @@ export default function Class12Page() {
       title: 'Advanced Problem Solving',
       description: 'Complex NEET-level questions and application-based problems for depth',
       icon: Brain,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Regular Mock Tests',
@@ -137,7 +137,7 @@ export default function Class12Page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Urgency */}
-      <section className="relative bg-gradient-to-br from-red-600 via-purple-600 to-indigo-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-red-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Urgency Banner */}
@@ -235,7 +235,7 @@ export default function Class12Page() {
               className="relative"
             >
               {/* NEET 2026 Countdown */}
-              <div className="bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl p-8 text-center mb-6">
+              <div className="bg-red-600 rounded-3xl p-8 text-center mb-6">
                 <h3 className="text-2xl font-bold mb-4">NEET 2026 Countdown</h3>
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                   <div>
@@ -284,7 +284,7 @@ export default function Class12Page() {
                   </div>
 
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
-                    <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -382,7 +382,7 @@ export default function Class12Page() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100"
+                className="bg-gradient-to-r bg-red-50 rounded-xl p-6 border border-red-100"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">
@@ -454,7 +454,7 @@ export default function Class12Page() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-red-100 to-pink-100 rounded-xl p-8">
+            <div className="bg-gradient-to-r bg-red-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 🎯 Total NEET Biology Weightage: 70 marks (Class 12 contributes 50+ marks)
               </h3>
@@ -466,7 +466,7 @@ export default function Class12Page() {
                 variant="primary"
                 size="xl"
                 onClick={handleDemoBooking}
-                className="bg-gradient-to-r from-red-600 to-pink-600 animate-pulse"
+                className="bg-red-600 animate-pulse"
               >
                 <Target className="w-5 h-5 mr-2" />
                 Start NEET-Focused Class 12 Prep
@@ -483,7 +483,7 @@ export default function Class12Page() {
       <ParentTestimonialsSection />
 
       {/* Final Urgent CTA */}
-      <section className="py-20 bg-gradient-to-r from-red-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

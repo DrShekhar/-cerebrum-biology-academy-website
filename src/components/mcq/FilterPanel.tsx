@@ -30,8 +30,8 @@ const difficulties: {
     value: 'EASY',
     label: 'Easy',
     color: 'border-green-300 hover:border-green-400 hover:bg-green-50',
-    dotColor: 'bg-green-500',
-    activeColor: 'bg-green-100 border-green-500 text-green-800',
+    dotColor: 'bg-green-600',
+    activeColor: 'bg-green-100 border-green-600 text-green-800',
   },
   {
     value: 'MEDIUM',

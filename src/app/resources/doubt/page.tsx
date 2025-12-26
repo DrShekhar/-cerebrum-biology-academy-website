@@ -185,7 +185,7 @@ export default function DoubtResolutionPage() {
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Ask on WhatsApp
@@ -230,13 +230,13 @@ export default function DoubtResolutionPage() {
                 key={index}
                 className={`relative rounded-2xl p-8 transition-all hover:shadow-xl ${
                   channel.highlight
-                    ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200'
+                    ? 'bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200'
                     : 'bg-gray-50 border border-gray-100'
                 }`}
               >
                 {channel.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -244,7 +244,7 @@ export default function DoubtResolutionPage() {
 
                 <div
                   className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                    channel.highlight ? 'bg-green-500 text-white' : 'bg-blue-100 text-blue-600'
+                    channel.highlight ? 'bg-green-600 text-white' : 'bg-blue-100 text-blue-600'
                   }`}
                 >
                   <channel.icon className="w-7 h-7" />
@@ -261,7 +261,7 @@ export default function DoubtResolutionPage() {
                 <ul className="space-y-2 mb-6">
                   {channel.features.map((feature, i) => (
                     <li key={i} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
                       {feature}
                     </li>
                   ))}
@@ -273,7 +273,7 @@ export default function DoubtResolutionPage() {
                   rel={channel.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all ${
                     channel.highlight
-                      ? 'bg-green-500 hover:bg-green-600 text-white'
+                      ? 'bg-green-600 hover:bg-green-600 text-white'
                       : 'bg-blue-600 hover:bg-blue-700 text-white'
                   }`}
                 >
@@ -405,7 +405,7 @@ export default function DoubtResolutionPage() {
       </section>
 
       {/* Expert Faculty */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -445,7 +445,7 @@ export default function DoubtResolutionPage() {
 
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   DS
                 </div>
                 <div className="ml-4">
@@ -523,7 +523,7 @@ export default function DoubtResolutionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-r from-green-600 to-emerald-600">
+      <section className="py-16 sm:py-20 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <MessageCircle className="w-16 h-16 text-white/80 mx-auto mb-6" />
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Still Have Questions?</h2>

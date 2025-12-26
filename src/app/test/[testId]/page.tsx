@@ -287,23 +287,23 @@ export default function TestPage() {
               <h3 className="text-lg font-bold text-gray-900 mb-4">Test Instructions</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
+                  <span className="text-green-600 mr-3">✓</span>
                   All questions are compulsory and carry equal marks (4 marks each)
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
+                  <span className="text-green-600 mr-3">✓</span>
                   Each question has 4 options with only one correct answer
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
+                  <span className="text-green-600 mr-3">✓</span>
                   You can navigate between questions and review your answers
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
+                  <span className="text-green-600 mr-3">✓</span>
                   Test will auto-submit when time expires
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
+                  <span className="text-green-600 mr-3">✓</span>
                   No negative marking for this test
                 </li>
               </ul>

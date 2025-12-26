@@ -40,7 +40,7 @@ const neetSyllabus2025: SEOLandingContent = {
     highlightedText: '2025',
     ctaText: 'Get Syllabus PDF',
     ctaLink: '/resources',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -245,7 +245,7 @@ const neetEligibilityCriteria: SEOLandingContent = {
     highlightedText: 'Eligibility',
     ctaText: 'Check Your Eligibility',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-green-900 via-teal-900 to-cyan-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-cyan-900',
   },
 
   painPoints: {
@@ -860,7 +860,7 @@ const neetBiologySyllabus2025: SEOLandingContent = {
     highlightedText: '360 Marks',
     ctaText: 'Get Biology Roadmap',
     ctaLink: '/resources',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {
@@ -1064,7 +1064,7 @@ const neetBotanySyllabus: SEOLandingContent = {
     highlightedText: '170+',
     ctaText: 'Get Botany Roadmap',
     ctaLink: '/resources',
-    backgroundGradient: 'from-lime-900 via-green-900 to-emerald-900',
+    backgroundGradient: 'from-lime-900 via-green-900 to-green-800',
   },
 
   painPoints: {
@@ -1462,7 +1462,7 @@ const neetPreparationGuide: SEOLandingContent = {
     highlightedText: 'Complete',
     ctaText: 'Start Your Journey',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-blue-900 via-cyan-900 to-teal-900',
+    backgroundGradient: 'from-blue-900 via-cyan-900 to-green-800',
   },
 
   painPoints: {
@@ -2073,7 +2073,7 @@ const neetResultAnalysis: SEOLandingContent = {
     highlightedText: 'Prediction',
     ctaText: 'Check College Predictor',
     ctaLink: '/resources',
-    backgroundGradient: 'from-emerald-900 via-green-900 to-teal-900',
+    backgroundGradient: 'from-green-800 via-green-900 to-green-800',
   },
 
   painPoints: {
@@ -2477,7 +2477,7 @@ const neetSyllabus2026: SEOLandingContent = {
     highlightedText: '2026',
     ctaText: 'Get Syllabus PDF',
     ctaLink: '/resources',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -2680,7 +2680,7 @@ const neetEligibility2026: SEOLandingContent = {
     highlightedText: '2026',
     ctaText: 'Check Your Eligibility',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-green-900 via-teal-900 to-cyan-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-cyan-900',
   },
 
   painPoints: {

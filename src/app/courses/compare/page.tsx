@@ -235,7 +235,7 @@ export default function CourseComparePage() {
 
   const BooleanCell = ({ value }: { value: boolean }) =>
     value ? (
-      <CheckCircle className="mx-auto h-5 w-5 text-emerald-500" />
+      <CheckCircle className="mx-auto h-5 w-5 text-green-600" />
     ) : (
       <XCircle className="mx-auto h-5 w-5 text-gray-300" />
     )
@@ -522,7 +522,7 @@ export default function CourseComparePage() {
                 <ul className="mb-4 space-y-2">
                   {course.highlights.slice(0, 3).map((highlight, index) => (
                     <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-emerald-500" />
+                      <CheckCircle className="h-4 w-4 text-green-600" />
                       {highlight}
                     </li>
                   ))}

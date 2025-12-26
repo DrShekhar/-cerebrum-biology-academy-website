@@ -132,7 +132,7 @@ export function TrialExpiredModal({
             aria-modal="true"
             aria-labelledby="modal-title"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-blue-50 opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-blue-50 opacity-50"></div>
 
             <div className="relative overflow-y-auto max-h-[90vh] custom-scrollbar">
               {onClose && (
@@ -151,7 +151,7 @@ export function TrialExpiredModal({
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-                    className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-teal-600 to-blue-600 rounded-full mb-6"
+                    className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-600 to-blue-600 rounded-full mb-6"
                   >
                     <Lock className="w-10 h-10 text-white" />
                   </motion.div>
@@ -180,8 +180,8 @@ export function TrialExpiredModal({
                           className="p-5 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-teal-100 to-blue-100 rounded-lg flex items-center justify-center">
-                              <benefit.icon className="w-5 h-5 text-teal-600" />
+                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
+                              <benefit.icon className="w-5 h-5 text-green-600" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <h3 className="font-semibold text-gray-900 mb-1 text-sm">
@@ -196,7 +196,7 @@ export function TrialExpiredModal({
                       ))}
                     </div>
 
-                    <div className="bg-gradient-to-r from-teal-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white mb-6">
+                    <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white mb-6">
                       <div className="flex items-center justify-between flex-wrap gap-4">
                         <div>
                           <h3 className="text-2xl font-bold mb-2">Special Offer</h3>
@@ -214,7 +214,7 @@ export function TrialExpiredModal({
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                       <button
                         onClick={onUpgrade || (() => (window.location.href = '/pricing'))}
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
                       >
                         <Crown className="w-5 h-5" />
                         <span>Upgrade Now & Save 20%</span>
@@ -222,7 +222,7 @@ export function TrialExpiredModal({
 
                       <button
                         onClick={() => setShowContactForm(true)}
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-teal-600 hover:text-teal-600 transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-green-600 hover:text-green-600 transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
                       >
                         <Mail className="w-5 h-5" />
                         <span>Request Extension</span>
@@ -234,7 +234,7 @@ export function TrialExpiredModal({
                         Have questions?{' '}
                         <button
                           onClick={onContactUs || (() => (window.location.href = '/contact'))}
-                          className="text-teal-600 hover:text-teal-700 font-semibold underline focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 rounded px-1"
+                          className="text-green-600 hover:text-green-700 font-semibold underline focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 rounded px-1"
                         >
                           Contact our support team
                         </button>
@@ -279,7 +279,7 @@ export function TrialExpiredModal({
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900"
                             placeholder="your.email@example.com"
                           />
                         </div>
@@ -300,7 +300,7 @@ export function TrialExpiredModal({
                             required
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900"
                             placeholder="+91 98765 43210"
                           />
                         </div>
@@ -318,7 +318,7 @@ export function TrialExpiredModal({
                           rows={4}
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none text-gray-900"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none text-gray-900"
                           placeholder="Tell us why you need more time..."
                         />
                       </div>
@@ -334,7 +334,7 @@ export function TrialExpiredModal({
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                          className="flex-1 px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
                         >
                           {isSubmitting ? 'Submitting...' : 'Submit Request'}
                         </button>

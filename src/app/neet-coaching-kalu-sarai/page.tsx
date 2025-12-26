@@ -159,9 +159,9 @@ export default function NEETCoachingKaluSarai() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white overflow-hidden">
+        <section className="relative py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 right-10 w-60 h-60 bg-yellow-300 rounded-full blur-3xl" />
@@ -183,7 +183,7 @@ export default function NEETCoachingKaluSarai() {
                 Best NEET Coaching in Kalu Sarai
               </h1>
 
-              <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
                 Join Delhi&apos;s most trusted NEET Biology coaching in the heart of India&apos;s
                 coaching capital. AIIMS faculty, proven results, and the perfect academic
                 environment near IIT Delhi.
@@ -192,13 +192,13 @@ export default function NEETCoachingKaluSarai() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class
                 </Link>
                 <a
                   href="tel:+918826444334"
-                  className="inline-flex items-center justify-center gap-2 bg-teal-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-500 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   Call: 8826-444-334
@@ -232,15 +232,15 @@ export default function NEETCoachingKaluSarai() {
                 className="bg-white p-8 rounded-2xl shadow-lg"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
-                    <Building className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Building className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">India&apos;s Coaching Capital</h3>
                 </div>
                 <ul className="space-y-3">
                   {whyKaluSarai.map((reason, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{reason}</span>
                     </li>
                   ))}
@@ -254,8 +254,8 @@ export default function NEETCoachingKaluSarai() {
                 className="bg-white p-8 rounded-2xl shadow-lg"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
-                    <Train className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Train className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Excellent Connectivity</h3>
                 </div>
@@ -320,8 +320,8 @@ export default function NEETCoachingKaluSarai() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -357,7 +357,7 @@ export default function NEETCoachingKaluSarai() {
                   className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
                 >
                   <p className="font-medium text-gray-900">{area.name}</p>
-                  <p className="text-sm text-teal-600">{area.distance}</p>
+                  <p className="text-sm text-green-600">{area.distance}</p>
                 </motion.div>
               ))}
             </div>
@@ -365,7 +365,7 @@ export default function NEETCoachingKaluSarai() {
         </section>
 
         {/* Testimonial Section */}
-        <section className="py-16 px-4 bg-teal-50">
+        <section className="py-16 px-4 bg-green-50">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -385,8 +385,8 @@ export default function NEETCoachingKaluSarai() {
                 instantly.&quot;
               </blockquote>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                  <span className="text-teal-600 font-bold">AK</span>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="text-green-600 font-bold">AK</span>
                 </div>
                 <div>
                   <p className="font-medium text-gray-900">Ananya Kapoor</p>
@@ -428,7 +428,7 @@ export default function NEETCoachingKaluSarai() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+        <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -436,7 +436,7 @@ export default function NEETCoachingKaluSarai() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey in Kalu Sarai</h2>
-              <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join the coaching hub that has produced thousands of doctors. Book your FREE demo
                 class today!
               </p>
@@ -444,7 +444,7 @@ export default function NEETCoachingKaluSarai() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class
                 </Link>
@@ -452,13 +452,13 @@ export default function NEETCoachingKaluSarai() {
                   href="https://wa.me/918826444334?text=Hi!%20I%20am%20interested%20in%20NEET%20coaching%20in%20Kalu%20Sarai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
                 >
                   WhatsApp Us
                 </a>
               </div>
 
-              <div className="mt-8 flex items-center justify-center gap-6 text-teal-100">
+              <div className="mt-8 flex items-center justify-center gap-6 text-green-100">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5" />
                   <span>Mon-Sat: 8AM-8PM</span>

@@ -152,10 +152,10 @@ const faqs = [
 
 const colorMap: Record<string, { bg: string; text: string; border: string; light: string }> = {
   emerald: {
-    bg: 'bg-emerald-500',
-    text: 'text-emerald-600',
-    border: 'border-emerald-200',
-    light: 'bg-emerald-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
   orange: {
     bg: 'bg-orange-500',
@@ -177,10 +177,10 @@ const colorMap: Record<string, { bg: string; text: string; border: string; light
     light: 'bg-blue-50',
   },
   teal: {
-    bg: 'bg-teal-500',
-    text: 'text-teal-600',
-    border: 'border-teal-200',
-    light: 'bg-teal-50',
+    bg: 'bg-green-600',
+    text: 'text-green-600',
+    border: 'border-green-200',
+    light: 'bg-green-50',
   },
 }
 
@@ -190,7 +190,7 @@ export default function BestBiologyBooksPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white overflow-hidden">
+      <section className="relative bg-indigo-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
@@ -268,11 +268,11 @@ export default function BestBiologyBooksPage() {
       </section>
 
       {/* Quick Summary */}
-      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+      <section className="py-8 bg-gradient-to-r from-green-50 to-green-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-700">
-              <span className="font-bold text-emerald-600">Pro Tip:</span> For most students, just{' '}
+              <span className="font-bold text-green-600">Pro Tip:</span> For most students, just{' '}
               <span className="font-semibold">NCERT + NCERT Fingertips + Previous Year Papers</span>{' '}
               is enough to score 340+ in NEET Biology.
             </p>
@@ -325,7 +325,7 @@ export default function BestBiologyBooksPage() {
                           <div className="flex items-center gap-2 mb-1">
                             <h3 className="text-xl font-bold text-gray-900">{book.name}</h3>
                             {book.mustHave && (
-                              <span className="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">
+                              <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">
                                 Must Have
                               </span>
                             )}
@@ -575,7 +575,7 @@ export default function BestBiologyBooksPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white">
+      <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

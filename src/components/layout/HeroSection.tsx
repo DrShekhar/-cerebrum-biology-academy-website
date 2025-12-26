@@ -33,12 +33,12 @@ function FloatingParticle({
 export function HeroSection({ className = '' }: HeroSectionProps) {
   return (
     <div
-      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
+      className={`relative min-h-screen bg-indigo-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
     >
       {/* Background - CSS only, no external image for faster LCP */}
       <div className="absolute inset-0">
         {/* CSS gradient orbs - no JS animation for performance */}
-        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-pulse-slow" />
         <div
           className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow"
           style={{ animationDelay: '2s' }}
@@ -58,7 +58,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
         <div className="w-full">
           {/* Badge - Animated (non-LCP element) */}
           <div
-            className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"
+            className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
             <Trophy className="w-5 h-5 mr-2 text-green-300" />

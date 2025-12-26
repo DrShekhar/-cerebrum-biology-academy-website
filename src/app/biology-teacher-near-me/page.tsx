@@ -38,11 +38,11 @@ const offlineCenters = [
     timing: 'Mon-Sat: 8 AM - 8 PM',
     phone: '+91 88264 44334',
     highlight: true,
-    color: 'from-teal-500 to-emerald-500',
-    bgColor: 'bg-teal-50',
-    borderColor: 'border-teal-200',
-    iconBg: 'bg-teal-100',
-    iconColor: 'text-teal-600',
+    color: 'bg-green-600',
+    bgColor: 'bg-green-50',
+    borderColor: 'border-green-200',
+    iconBg: 'bg-green-100',
+    iconColor: 'text-green-600',
   },
   {
     name: 'Gurugram Center',
@@ -187,7 +187,7 @@ export default function BiologyTeacherNearMePage() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 text-center mb-2">
@@ -199,7 +199,7 @@ export default function BiologyTeacherNearMePage() {
             <div className="space-y-4">
               <button
                 onClick={() => handleLocationSelect(true)}
-                className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-3"
+                className="w-full py-4 bg-indigo-500 text-white rounded-2xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-3"
               >
                 <Building className="w-5 h-5" />
                 Delhi NCR (can attend offline)
@@ -217,7 +217,7 @@ export default function BiologyTeacherNearMePage() {
       )}
 
       {/* Hero Section - Premium Gradient Design */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-purple-700 text-white overflow-hidden">
+      <section className="relative bg-indigo-600 text-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -322,7 +322,7 @@ export default function BiologyTeacherNearMePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4 mr-2" />4 Centers in Delhi NCR
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -345,7 +345,7 @@ export default function BiologyTeacherNearMePage() {
                 >
                   {center.highlight && (
                     <div className="absolute -top-3 left-6">
-                      <span className="inline-flex items-center bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
+                      <span className="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
                         <Sparkles className="w-3 h-3 mr-1" />
                         Flagship Center
                       </span>
@@ -414,7 +414,7 @@ export default function BiologyTeacherNearMePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Globe className="w-4 h-4 mr-2" />
                 Pan-India Online Classes
               </div>
@@ -441,8 +441,8 @@ export default function BiologyTeacherNearMePage() {
                     className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-emerald-50 rounded-xl">
-                        <feature.icon className="w-5 h-5 text-emerald-600" />
+                      <div className="p-2 bg-green-50 rounded-xl">
+                        <feature.icon className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1">{feature.title}</h4>
@@ -454,7 +454,7 @@ export default function BiologyTeacherNearMePage() {
               </div>
 
               <Link href="/demo-booking">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700">
                   <Video className="w-5 h-5 mr-2" />
                   Try Free Online Demo
                 </Button>
@@ -471,21 +471,21 @@ export default function BiologyTeacherNearMePage() {
               <OnlineClassIllustration className="w-full max-w-md mx-auto mb-8" />
 
               {/* Student Count Card */}
-              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-8 text-white">
+              <div className="bg-green-600 rounded-3xl p-8 text-white">
                 <Globe className="w-12 h-12 mb-4 opacity-80" />
                 <h3 className="text-2xl font-bold mb-3">Students from 15+ States</h3>
-                <p className="text-emerald-100 mb-6">
+                <p className="text-green-100 mb-6">
                   Maharashtra, Karnataka, Tamil Nadu, Kerala, Gujarat, Rajasthan, UP, Bihar, West
                   Bengal and more. Plus NRI students from UAE, USA, UK!
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 text-center">
                     <div className="text-3xl font-bold">500+</div>
-                    <div className="text-sm text-emerald-100">Online Students</div>
+                    <div className="text-sm text-green-100">Online Students</div>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 text-center">
                     <div className="text-3xl font-bold">98%</div>
-                    <div className="text-sm text-emerald-100">Success Rate</div>
+                    <div className="text-sm text-green-100">Success Rate</div>
                   </div>
                 </div>
               </div>
@@ -509,7 +509,7 @@ export default function BiologyTeacherNearMePage() {
           </motion.div>
 
           <div className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200">
-            <div className="grid grid-cols-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <div className="grid grid-cols-3 bg-indigo-500 text-white">
               <div className="p-6 font-semibold">Feature</div>
               <div className="p-6 font-semibold text-center border-x border-white/20">Offline</div>
               <div className="p-6 font-semibold text-center">Online</div>
@@ -533,13 +533,13 @@ export default function BiologyTeacherNearMePage() {
                 <div className="p-5 font-medium text-gray-900">{row.feature}</div>
                 <div className="p-5 text-center text-gray-700 border-x border-gray-200">
                   <div className="flex items-center justify-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
                     {row.offline}
                   </div>
                 </div>
                 <div className="p-5 text-center text-gray-700">
                   <div className="flex items-center justify-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
                     {row.online}
                   </div>
                 </div>
@@ -601,7 +601,7 @@ export default function BiologyTeacherNearMePage() {
       </section>
 
       {/* CTA Section - Premium Gradient */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white relative overflow-hidden">
+      <section className="py-20 bg-indigo-600 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <motion.div
             className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"

@@ -140,7 +140,7 @@ export function PerformanceChart({ data, period }: PerformanceChartProps) {
                 key={i}
                 className={`h-6 rounded-sm ${
                   hasActivity
-                    ? 'bg-green-500'
+                    ? 'bg-green-600'
                     : date > new Date()
                     ? 'bg-gray-100'
                     : 'bg-gray-200'

@@ -1,6 +1,6 @@
 /**
  * Enhanced VoiceChat with Voice Memos iOS-inspired UI
- * Revolutionary voice learning experience with Shekhar Sir's voice synthesis
+ * Voice learning with Shekhar Sir's voice synthesis
  */
 
 'use client'
@@ -667,7 +667,7 @@ export function EnhancedVoiceChat({
                 <Volume2 size={16} />
                 <span>AI Enhanced</span>
               </motion.div>
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <div className="w-2 h-2 bg-green-600 rounded-full" />
             </div>
           </div>
         </motion.div>

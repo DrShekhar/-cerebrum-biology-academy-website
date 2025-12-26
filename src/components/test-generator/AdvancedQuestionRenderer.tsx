@@ -156,11 +156,11 @@ const AdvancedQuestionRenderer: React.FC<AdvancedQuestionRendererProps> = ({
                       isSelected
                         ? showExplanation
                           ? isCorrect
-                            ? "border-green-500 bg-green-50 text-green-900"
+                            ? "border-green-600 bg-green-50 text-green-900"
                             : "border-red-500 bg-red-50 text-red-900"
                           : "border-blue-500 bg-blue-50 text-blue-900"
                         : showExplanation && isCorrect
-                          ? "border-green-500 bg-green-50 text-green-900"
+                          ? "border-green-600 bg-green-50 text-green-900"
                           : "border-gray-200 hover:border-blue-300 hover:bg-gray-50"
                     )}
                   >
@@ -170,11 +170,11 @@ const AdvancedQuestionRenderer: React.FC<AdvancedQuestionRendererProps> = ({
                         isSelected
                           ? showExplanation
                             ? isCorrect
-                              ? "bg-green-500 text-white"
+                              ? "bg-green-600 text-white"
                               : "bg-red-500 text-white"
                             : "bg-blue-500 text-white"
                           : showExplanation && isCorrect
-                            ? "bg-green-500 text-white"
+                            ? "bg-green-600 text-white"
                             : "bg-gray-200 text-gray-700"
                       )}>
                         {optionLabel}

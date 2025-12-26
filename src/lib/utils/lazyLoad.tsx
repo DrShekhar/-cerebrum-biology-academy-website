@@ -13,7 +13,7 @@ export const LoadingSkeleton = ({
   className?: string
 }) => (
   <div
-    className={`${height} bg-gradient-to-r from-blue-50/50 to-purple-50/50 animate-pulse rounded-lg ${className}`}
+    className={`${height} bg-gray-50/50 animate-pulse rounded-lg ${className}`}
     role="status"
     aria-label="Loading..."
   />

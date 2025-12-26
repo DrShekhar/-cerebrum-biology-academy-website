@@ -376,7 +376,7 @@ export default function BiologyTutorOnlinePage() {
                     {option.features.map((feature) => (
                       <li key={feature} className="flex items-center text-gray-700">
                         <svg
-                          className="mr-3 h-5 w-5 text-green-500"
+                          className="mr-3 h-5 w-5 text-green-600"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >

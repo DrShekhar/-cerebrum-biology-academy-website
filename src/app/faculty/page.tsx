@@ -36,7 +36,7 @@ export default function FacultyPage() {
       description: 'PhD botanists covering plant sciences comprehensively',
       faculty: 12,
       icon: BookOpen,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Genetics & Molecular Biology',
@@ -234,7 +234,7 @@ export default function FacultyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                <div className="relative h-48 bg-indigo-500">
                   {faculty.image ? (
                     <Image
                       src={faculty.image}
@@ -333,7 +333,7 @@ export default function FacultyPage() {
             </div>
 
             <motion.div
-              className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8"
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -342,7 +342,7 @@ export default function FacultyPage() {
               <div className="space-y-4">
                 {facultyHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
                     <span className="text-gray-700">{highlight}</span>
                   </div>
                 ))}
@@ -396,7 +396,7 @@ export default function FacultyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Learn from the Best Biology Faculty

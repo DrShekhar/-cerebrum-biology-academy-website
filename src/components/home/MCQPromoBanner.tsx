@@ -209,7 +209,7 @@ export const MCQPromoBanner = memo(function MCQPromoBanner() {
             label="Free Forever"
             icon={Microscope}
             delay={0.6}
-            gradient="bg-gradient-to-br from-emerald-500 to-emerald-600"
+            gradient="bg-green-600"
           />
         </div>
 

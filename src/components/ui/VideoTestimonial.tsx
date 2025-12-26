@@ -81,7 +81,7 @@ export function VideoTestimonial({
             </div>
 
             {/* Success Badge */}
-            <div className="absolute top-4 left-4 bg-gradient-to-r from-emerald-500 to-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="absolute top-4 left-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
               ✓ Success Story
             </div>
 
@@ -91,7 +91,7 @@ export function VideoTestimonial({
             </div>
 
             {/* Cerebrum Badge */}
-            <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
               Cerebrum Student
             </div>
           </div>
@@ -113,14 +113,14 @@ export function VideoTestimonial({
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
             <h3 className="text-lg font-bold text-gray-900 mb-1">{studentName}</h3>
-            <p className="text-emerald-600 font-semibold text-sm mb-2">{achievement}</p>
+            <p className="text-green-600 font-semibold text-sm mb-2">{achievement}</p>
             <p className="text-gray-600 text-sm">{college}</p>
           </div>
 
           {/* Score Badge */}
-          <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-lg px-3 py-2 text-center">
-            <div className="text-lg font-bold text-emerald-700">{score}</div>
-            <div className="text-xs text-emerald-600">NEET Score</div>
+          <div className="bg-gradient-to-r from-green-50 to-green-50 border border-green-200 rounded-lg px-3 py-2 text-center">
+            <div className="text-lg font-bold text-green-700">{score}</div>
+            <div className="text-xs text-green-600">NEET Score</div>
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export function VideoTestimonial({
             <span>Cerebrum Biology Academy</span>
           </div>
 
-          <div className="flex items-center text-sm text-emerald-600">
+          <div className="flex items-center text-sm text-green-600">
             <Award className="w-4 h-4 mr-1" />
             <span className="font-medium">Medical College</span>
           </div>
@@ -196,7 +196,7 @@ export function CompactVideoTestimonial({
                 <Play className="w-4 h-4 text-white ml-0.5" fill="white" />
               </div>
             </div>
-            <div className="absolute top-2 right-2 bg-emerald-500 text-white px-2 py-1 rounded text-xs font-semibold">
+            <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-semibold">
               ✓ Success
             </div>
           </div>
@@ -213,14 +213,14 @@ export function CompactVideoTestimonial({
       {/* Compact Info */}
       <div className="p-4">
         <h4 className="font-semibold text-gray-900 text-sm mb-1">{studentName}</h4>
-        <p className="text-emerald-600 text-xs font-medium mb-2">{achievement}</p>
+        <p className="text-green-600 text-xs font-medium mb-2">{achievement}</p>
         <div className="flex items-center justify-between">
           <div className="flex text-yellow-400">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-3 h-3 fill-current" />
             ))}
           </div>
-          <span className="text-sm font-bold text-emerald-700">{score}</span>
+          <span className="text-sm font-bold text-green-700">{score}</span>
         </div>
       </div>
     </motion.div>

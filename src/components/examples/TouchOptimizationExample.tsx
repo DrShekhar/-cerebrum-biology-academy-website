@@ -228,7 +228,7 @@ function CourseDetailsForm({
       <div className="form-group">
         <label className="block text-sm font-medium text-slate-700 mb-2">Target Exam</label>
         <select
-          className="w-full px-4 py-3 border-2 border-slate-300 rounded-xl focus:border-emerald-500 focus:ring-emerald-100 focus:ring-3 focus:outline-none"
+          className="w-full px-4 py-3 border-2 border-slate-300 rounded-xl focus:border-green-600 focus:ring-green-100 focus:ring-3 focus:outline-none"
           value={formData.target}
           onChange={(e) => handleInputChange('target', e.target.value)}
           style={{ fontSize: '16px' }}
@@ -242,7 +242,7 @@ function CourseDetailsForm({
 
       <button
         type="submit"
-        className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold py-4 rounded-xl mt-6 min-h-[48px] active:scale-95 transition-transform"
+        className="w-full bg-gradient-to-r from-green-600 to-blue-500 text-white font-semibold py-4 rounded-xl mt-6 min-h-[48px] active:scale-95 transition-transform"
       >
         Complete Enrollment
       </button>
@@ -270,7 +270,7 @@ export function TouchHomepageExample() {
       content: (
         <div>
           <p className="mb-2">Discover our comprehensive NEET Biology courses</p>
-          <span className="text-emerald-600 font-semibold">3 courses available</span>
+          <span className="text-green-600 font-semibold">3 courses available</span>
         </div>
       ),
       action: () => {
@@ -341,7 +341,7 @@ export function TouchHomepageExample() {
             <h3 className="text-lg font-bold text-slate-800 mb-4 text-center">Our Track Record</h3>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-emerald-600">10K+</div>
+                <div className="text-2xl font-bold text-green-600">10K+</div>
                 <div className="text-sm text-slate-600">Students</div>
               </div>
               <div>
@@ -479,7 +479,7 @@ export function TouchQuizExample() {
           variant="heavy"
           className={`w-full py-4 rounded-xl font-semibold transition-all duration-200 ${
             selectedAnswer !== null
-              ? 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white'
+              ? 'bg-gradient-to-r from-green-600 to-blue-500 text-white'
               : 'bg-slate-300 text-slate-500 cursor-not-allowed'
           }`}
           onClick={selectedAnswer !== null ? handleNextQuestion : undefined}

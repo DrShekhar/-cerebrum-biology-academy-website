@@ -85,7 +85,7 @@ const OfflineIndicator = () => {
 const DataUsageIndicator = ({ usageMB }: { usageMB: number }) => {
   if (usageMB < 10) return null
 
-  const color = usageMB > 50 ? 'text-red-500' : usageMB > 30 ? 'text-yellow-500' : 'text-green-500'
+  const color = usageMB > 50 ? 'text-red-500' : usageMB > 30 ? 'text-yellow-500' : 'text-green-600'
 
   return (
     <div

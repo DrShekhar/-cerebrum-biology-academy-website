@@ -322,7 +322,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
       <motion.div
-        className="px-6 py-4 bg-gradient-to-r from-blue-50 to-purple-50 border-b"
+        className="px-6 py-4 bg-gray-50 border-b"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -331,7 +331,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
           <div className="flex items-center space-x-2">
             <motion.div
               className={`w-3 h-3 rounded-full ${
-                isRecording ? 'bg-red-500' : hasRecording ? 'bg-green-500' : 'bg-gray-300'
+                isRecording ? 'bg-red-500' : hasRecording ? 'bg-green-600' : 'bg-gray-300'
               }`}
               animate={{
                 scale: isRecording ? [1, 1.2, 1] : 1,

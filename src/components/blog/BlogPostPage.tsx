@@ -258,7 +258,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     <div className="flex items-center space-x-6">
                       {/* Author */}
                       <div className="flex items-center">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-medium mr-4">
+                        <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium mr-4">
                           {meta.author.name.charAt(0)}
                         </div>
                         <div>

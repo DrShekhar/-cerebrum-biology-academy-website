@@ -202,7 +202,7 @@ export default function DemoBookingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="pt-12 pb-8">
         <div className="max-w-7xl mx-auto px-4">
@@ -219,7 +219,7 @@ export default function DemoBookingPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               Experience World-Class
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-indigo-500">
                 NEET Biology Teaching
               </span>
             </h1>
@@ -416,7 +416,7 @@ export default function DemoBookingPage() {
               </div>
 
               {/* Why Choose Us */}
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 text-white shadow-lg">
+              <div className="bg-indigo-500 rounded-3xl p-8 text-white shadow-lg">
                 <h3 className="text-2xl font-bold mb-6">Why 2,500+ Students Choose Us</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">

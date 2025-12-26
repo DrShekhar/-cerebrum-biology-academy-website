@@ -50,7 +50,7 @@ export default function OptimisticUIDemo() {
         <div className="bg-white border-b border-gray-200 shadow-sm">
           <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="flex items-start space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <div className="flex-1">
@@ -236,7 +236,7 @@ export default function OptimisticUIDemo() {
           </div>
 
           {/* Documentation Link */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
+          <div className="mt-12 bg-indigo-500 rounded-2xl p-8 text-white shadow-2xl">
             <h2 className="text-3xl font-bold mb-4">Want to Learn More?</h2>
             <p className="text-blue-100 text-lg mb-6">
               Check out our comprehensive documentation for implementation details, API patterns,

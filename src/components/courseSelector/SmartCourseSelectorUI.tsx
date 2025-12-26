@@ -50,7 +50,7 @@ function ProgressIndicator({
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+            className="h-full bg-blue-500"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -64,7 +64,7 @@ function ProgressIndicator({
               <motion.div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all ${
                   i < currentStep
-                    ? 'bg-green-500 text-white'
+                    ? 'bg-green-600 text-white'
                     : i === currentStep
                       ? 'bg-blue-500 text-white'
                       : 'bg-gray-200 text-gray-400'
@@ -199,7 +199,7 @@ function getSeriesTheme(seriesId: string) {
       }
     case 'pursuit':
       return {
-        gradient: 'from-green-500 to-emerald-600',
+        gradient: 'bg-green-600',
         bg: 'bg-green-50',
         border: 'border-green-200',
         text: 'text-green-900',
@@ -478,7 +478,7 @@ function RecommendationCard({
                 transition={{ delay: index * 0.1 }}
                 className="flex items-start text-sm text-gray-700"
               >
-                <Check className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                 <span>{reason}</span>
               </motion.div>
             ))}

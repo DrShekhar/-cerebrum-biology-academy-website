@@ -52,7 +52,7 @@ export function EnhancedTouchInterface({
       hindi: 'फ्री डेमो',
       icon: Play,
       action: () => onDemoBooking?.(),
-      color: 'bg-gradient-to-r from-green-500 to-green-600',
+      color: 'bg-green-600',
       priority: 'high',
     },
     {
@@ -130,7 +130,7 @@ export function EnhancedTouchInterface({
         <div className="bg-gradient-to-r from-green-50 to-blue-50 px-4 py-2 border-b">
           <div className="flex items-center justify-center gap-6 text-xs">
             <div className="flex items-center gap-1">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
               <span className="text-green-700 font-medium">
                 {showHindi ? '94.2% सफलता दर' : '94.2% Success Rate'}
               </span>

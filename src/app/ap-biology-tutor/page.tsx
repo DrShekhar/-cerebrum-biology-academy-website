@@ -111,7 +111,7 @@ const scoreDistribution = [
     score: 5,
     percentage: '~15%',
     description: 'Extremely Well Qualified',
-    color: 'from-green-500 to-emerald-600',
+    color: 'bg-green-600',
   },
   {
     score: 4,
@@ -135,7 +135,7 @@ const scoreDistribution = [
     score: 1,
     percentage: '~10%',
     description: 'No Recommendation',
-    color: 'from-red-400 to-red-600',
+    color: 'bg-red-600',
   },
 ]
 
@@ -243,7 +243,7 @@ export default function APBiologyTutorPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
+        <div className="absolute inset-0 bg-indigo-100" />
 
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -516,7 +516,7 @@ export default function APBiologyTutorPage() {
           </div>
 
           <motion.div
-            className="mt-12 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl p-8 max-w-4xl mx-auto"
+            className="mt-12 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}

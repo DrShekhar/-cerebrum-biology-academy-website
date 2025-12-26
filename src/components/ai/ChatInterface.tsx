@@ -87,7 +87,7 @@ export function ChatInterface({ isOpen, onClose, messages, onSendMessage, isLoad
                 message.sender === 'user'
                   ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
                   : message.type === 'recommendation'
-                  ? 'bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border border-green-200'
+                  ? 'bg-gradient-to-r from-green-100 to-green-100 text-green-800 border border-green-200'
                   : 'bg-gray-100 text-gray-800'
               }`}
             >

@@ -333,7 +333,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
 
                 <div className="grid md:grid-cols-3 gap-8 items-start">
                   <div className="text-center">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6">
+                    <div className="w-48 h-48 mx-auto bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6">
                       {course.instructor.name.charAt(0)}
                     </div>
 

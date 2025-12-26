@@ -86,7 +86,7 @@ export function TrustBadges() {
             >
               {badge.verified && (
                 <div className="absolute top-2 right-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
               )}
 
@@ -200,7 +200,7 @@ export function PaymentTrustIndicators() {
               </div>
             )}
             {method.secure && (
-              <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-1 rounded">
+              <div className="absolute -top-1 -right-1 bg-green-600 text-white text-xs px-1 rounded">
                 <Lock className="w-2 h-2" />
               </div>
             )}

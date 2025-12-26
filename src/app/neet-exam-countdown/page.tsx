@@ -529,7 +529,7 @@ export default function NEETExamCountdownPage() {
 
       {/* Toast */}
       {showToast && (
-        <div className="fixed right-4 top-20 z-50 animate-bounce rounded-2xl bg-gradient-to-r from-green-500 to-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
+        <div className="fixed right-4 top-20 z-50 animate-bounce rounded-2xl bg-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
           <div className="flex items-center gap-3">
             <CheckCircle className="h-6 w-6" />
             <span className="font-semibold">Copied to clipboard!</span>
@@ -640,7 +640,7 @@ export default function NEETExamCountdownPage() {
                 >
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-600" />
                   </span>
                   <span className={`text-sm font-medium ${theme.textAccent}`}>Live Countdown</span>
                 </div>
@@ -906,7 +906,7 @@ export default function NEETExamCountdownPage() {
                   >
                     {isExamOver ? (
                       <div className="py-6 text-center">
-                        <Award className="mx-auto mb-3 h-14 w-14 text-green-500" />
+                        <Award className="mx-auto mb-3 h-14 w-14 text-green-600" />
                         <p className={`text-xl font-bold ${theme.textPrimary}`}>
                           NEET {selectedYear} Completed!
                         </p>
@@ -935,7 +935,7 @@ export default function NEETExamCountdownPage() {
                             subject: 'Biology',
                             hours: biologyHours,
                             percent: '50%',
-                            color: 'from-green-500 to-green-600',
+                            color: 'bg-green-600',
                             icon: Leaf,
                           },
                           {
@@ -1018,7 +1018,7 @@ export default function NEETExamCountdownPage() {
                         value: '-1',
                         label: 'Negative Marking',
                         sub: 'per wrong answer',
-                        color: 'from-red-500 to-orange-500',
+                        color: 'bg-red-600',
                       },
                     ].map((stat) => (
                       <div
@@ -1052,7 +1052,7 @@ export default function NEETExamCountdownPage() {
                           questions: 90,
                           marks: 360,
                           percent: 50,
-                          color: 'bg-green-500',
+                          color: 'bg-green-600',
                         },
                         {
                           subject: 'Physics',
@@ -1102,7 +1102,7 @@ export default function NEETExamCountdownPage() {
               >
                 <div className={`rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
                   <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg shadow-green-500/25">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 shadow-lg shadow-green-500/25">
                       <Trophy className="h-7 w-7 text-white" />
                     </div>
                     <div>
@@ -1125,7 +1125,7 @@ export default function NEETExamCountdownPage() {
                             onClick={() => setTargetScore(score)}
                             className={`flex-1 rounded-xl px-4 py-3 font-bold transition-all ${
                               targetScore === score
-                                ? 'bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg shadow-green-500/25'
+                                ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25'
                                 : `border ${theme.cardBorder} ${theme.cardBg} ${theme.textSecondary} hover:bg-opacity-80`
                             }`}
                           >
@@ -1142,7 +1142,7 @@ export default function NEETExamCountdownPage() {
                       <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
-                        className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500/20 ${theme.inputBg} ${theme.inputBorder} ${theme.textPrimary} ${theme.inputFocus}`}
+                        className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600/20 ${theme.inputBg} ${theme.inputBorder} ${theme.textPrimary} ${theme.inputFocus}`}
                       >
                         <option
                           value="General"
@@ -1169,13 +1169,13 @@ export default function NEETExamCountdownPage() {
                     </div>
 
                     <div
-                      className={`rounded-2xl p-5 ${isDarkMode ? 'bg-gradient-to-r from-green-500/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
+                      className={`rounded-2xl p-5 ${isDarkMode ? 'bg-gradient-to-r from-green-600/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
                     >
-                      <div className="flex items-center gap-2 text-green-500">
+                      <div className="flex items-center gap-2 text-green-600">
                         <Award className="h-5 w-5" />
                         <span className="font-semibold">Expected Rank Range</span>
                       </div>
-                      <p className="mt-2 text-3xl font-bold text-green-500">
+                      <p className="mt-2 text-3xl font-bold text-green-600">
                         {getRecommendedCutoff()}
                       </p>
                       <p
@@ -1229,10 +1229,10 @@ export default function NEETExamCountdownPage() {
 
                   {studiedToday ? (
                     <div
-                      className={`rounded-2xl p-5 text-center ${isDarkMode ? 'bg-gradient-to-r from-green-500/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
+                      className={`rounded-2xl p-5 text-center ${isDarkMode ? 'bg-gradient-to-r from-green-600/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
                     >
-                      <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
-                      <p className="mt-3 text-lg font-bold text-green-500">
+                      <CheckCircle className="mx-auto h-10 w-10 text-green-600" />
+                      <p className="mt-3 text-lg font-bold text-green-600">
                         Great job! You studied today!
                       </p>
                       <p
@@ -1248,7 +1248,7 @@ export default function NEETExamCountdownPage() {
                         onClick={markStudied}
                         className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-bold text-white shadow-lg shadow-orange-500/25 transition-all hover:shadow-xl hover:shadow-orange-500/30"
                       >
-                        <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-0 transition-opacity group-hover:opacity-100" />
+                        <span className="absolute inset-0 bg-red-600 opacity-0 transition-opacity group-hover:opacity-100" />
                         <span className="relative flex items-center justify-center gap-2">
                           <Flame className="h-5 w-5" />
                           Yes, I Studied Today!
@@ -1332,7 +1332,7 @@ export default function NEETExamCountdownPage() {
                   icon: BookOpen,
                   title: 'Study Plan Generator',
                   desc: 'Get personalized week-by-week study schedule for NEET Biology.',
-                  color: 'from-green-500 to-green-600',
+                  color: 'bg-green-600',
                 },
               ].map((tool) => (
                 <Link

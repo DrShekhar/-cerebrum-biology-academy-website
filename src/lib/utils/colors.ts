@@ -8,7 +8,7 @@
  *
  * Example Usage:
  * - ✅ Good: className="bg-slate-900 text-white"
- * - ✅ Good: className="bg-teal-600 hover:bg-teal-700"
+ * - ✅ Good: className="bg-green-600 hover:bg-green-700"
  * - ❌ Avoid: style={{ background: 'var(--cerebrum-navy-900)' }}
  * - ❌ Avoid: Custom CSS with color vars unless absolutely necessary
  */
@@ -38,16 +38,16 @@ export const colorMapping = {
 
   // Teal (Accent) - Maps to Tailwind teal
   teal: {
-    900: 'teal-900', // var(--cerebrum-teal-900) → bg-teal-900
-    800: 'teal-800', // var(--cerebrum-teal-800) → bg-teal-800
-    700: 'teal-700', // var(--cerebrum-teal-700) → bg-teal-700
-    600: 'teal-600', // var(--cerebrum-teal-600) → bg-teal-600
-    500: 'teal-500', // var(--cerebrum-teal-500) → bg-teal-500
-    400: 'teal-400', // var(--cerebrum-teal-400) → bg-teal-400
-    300: 'teal-300', // var(--cerebrum-teal-300) → bg-teal-300
-    200: 'teal-200', // var(--cerebrum-teal-200) → bg-teal-200
-    100: 'teal-100', // var(--cerebrum-teal-100) → bg-teal-100
-    50: 'teal-50', // var(--cerebrum-teal-50) → bg-teal-50
+    900: 'green-800', // var(--cerebrum-green-800) → bg-green-800
+    800: 'green-800', // var(--cerebrum-green-800) → bg-green-800
+    700: 'green-700', // var(--cerebrum-green-700) → bg-green-700
+    600: 'green-600', // var(--cerebrum-green-600) → bg-green-600
+    500: 'green-600', // var(--cerebrum-green-600) → bg-green-600
+    400: 'green-500', // var(--cerebrum-green-500) → bg-green-500
+    300: 'green-400', // var(--cerebrum-green-400) → bg-green-400
+    200: 'green-200', // var(--cerebrum-green-200) → bg-green-200
+    100: 'green-100', // var(--cerebrum-green-100) → bg-green-100
+    50: 'green-50', // var(--cerebrum-green-50) → bg-green-50
   },
 
   // Gold (Achievement) - Maps to Tailwind amber
@@ -88,13 +88,13 @@ export const colorMapping = {
 
 export const colorCombinations = {
   // Primary buttons
-  primaryButton: 'bg-teal-600 hover:bg-teal-700 text-white',
+  primaryButton: 'bg-green-600 hover:bg-green-700 text-white',
 
   // Secondary buttons
   secondaryButton: 'bg-slate-200 hover:bg-slate-300 text-slate-900',
 
   // Success states
-  success: 'bg-teal-50 border-teal-200 text-teal-900',
+  success: 'bg-green-50 border-green-200 text-green-800',
 
   // Warning states
   warning: 'bg-amber-50 border-amber-200 text-amber-900',
@@ -124,7 +124,7 @@ export const colorCombinations = {
  * @returns Tailwind utility class string
  *
  * @example
- * getTailwindClass('teal', 600, 'bg') // Returns: 'bg-teal-600'
+ * getTailwindClass('teal', 600, 'bg') // Returns: 'bg-green-600'
  * getTailwindClass('navy', 900, 'text') // Returns: 'text-slate-900'
  */
 export function getTailwindClass(
@@ -152,7 +152,7 @@ export function getTailwindClass(
 export const cssVars = {
   // Only use these when Tailwind classes won't work
   navy900: 'var(--cerebrum-navy-900)',
-  teal600: 'var(--cerebrum-teal-600)',
+  teal600: 'var(--cerebrum-green-600)',
   gold500: 'var(--cerebrum-gold-500)',
   blue600: 'var(--cerebrum-blue-600)',
 } as const

@@ -54,7 +54,7 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
         <Card className="w-full max-w-md mx-4 p-6 text-center">
           <div className="mb-4">
-            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+            <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-green-700 mb-2">Demo Class Booked!</h3>
             <p className="text-gray-600">
               Thank you for your interest! Our counselor will contact you within 24 hours to

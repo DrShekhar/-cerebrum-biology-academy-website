@@ -164,7 +164,7 @@ export default async function CertificateDetailPage({ params }: { params: { id: 
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5" />
                     <div>
                       <p className="text-sm text-gray-600">Issue Date</p>
                       <p className="font-semibold text-gray-900">

@@ -265,7 +265,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
       case 'course':
         return <BookOpen className="h-4 w-4 text-blue-500" />
       case 'faculty':
-        return <Users className="h-4 w-4 text-green-500" />
+        return <Users className="h-4 w-4 text-green-600" />
       case 'resource':
         return <FileText className="h-4 w-4 text-purple-500" />
       default:
@@ -289,7 +289,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
                 <Brain className="h-6 w-6 text-white" />
               </div>
               <div className="hidden sm:block">
@@ -378,7 +378,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                               href="/courses/finder"
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
-                              className="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-teal-700 hover:shadow-lg transition-all duration-200"
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-green-700 hover:shadow-lg transition-all duration-200"
                             >
                               Find Course
                               <ArrowRight className="h-4 w-4" />
@@ -497,7 +497,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   href="https://wa.me/918826444334"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
@@ -519,7 +519,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   href="/demo-booking"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Book Demo
                 </motion.a>
@@ -562,7 +562,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
                       <Brain className="h-5 w-5 text-white" />
                     </div>
                     <div>
@@ -646,7 +646,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 <div className="mt-8 space-y-3">
                   <a
                     href="https://wa.me/918826444334"
-                    className="flex items-center justify-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-medium"
+                    className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-xl font-medium"
                   >
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp Us
@@ -660,7 +660,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   </a>
                   <a
                     href="/demo-booking"
-                    className="flex items-center justify-center gap-2 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium"
+                    className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium"
                   >
                     <Video className="h-5 w-5" />
                     Book Demo Class

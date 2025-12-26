@@ -230,7 +230,7 @@ export default function AdminTestsPage() {
                 </Button>
               </Link>
               <Link href="/admin/tests/create">
-                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white">
                   <Plus className="w-4 h-4 mr-2" />
                   Create Test Template
                 </Button>
@@ -271,7 +271,7 @@ export default function AdminTestsPage() {
               icon={<Calendar className="w-5 h-5" />}
               label="This Month"
               value={stats.testsThisMonth}
-              color="text-teal-600 bg-teal-50"
+              color="text-green-600 bg-green-50"
             />
             <StatCard
               icon={<TrendingUp className="w-5 h-5" />}
@@ -320,7 +320,7 @@ export default function AdminTestsPage() {
                     Create your first test template for the organization
                   </p>
                   <Link href="/admin/tests/create">
-                    <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                    <Button className="bg-indigo-500 hover:bg-indigo-600 text-white">
                       <Plus className="w-4 h-4 mr-2" />
                       Create Test Template
                     </Button>

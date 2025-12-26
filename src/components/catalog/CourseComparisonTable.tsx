@@ -183,9 +183,9 @@ const COMPARISON_FEATURES: ComparisonFeature[] = [
 const getSeriesDesign = (series: string) => {
   const designs = {
     Foundation: {
-      color: 'bg-green-500',
+      color: 'bg-green-600',
       badge: '🌱 Foundation',
-      gradient: 'from-green-50 to-emerald-50',
+      gradient: 'from-green-50 to-green-50',
     },
     Pursuit: { color: 'bg-blue-500', badge: '🎯 Pursuit', gradient: 'from-blue-50 to-sky-50' },
     Ascent: { color: 'bg-purple-500', badge: '🚀 Ascent', gradient: 'from-purple-50 to-violet-50' },
@@ -194,7 +194,7 @@ const getSeriesDesign = (series: string) => {
       badge: '👑 Pinnacle',
       gradient: 'from-amber-50 to-yellow-50',
     },
-    Intensive: { color: 'bg-red-500', badge: '🔥 Intensive', gradient: 'from-red-50 to-orange-50' },
+    Intensive: { color: 'bg-red-500', badge: '🔥 Intensive', gradient: 'bg-red-50' },
   }
   return designs[series as keyof typeof designs] || designs.Pursuit
 }
@@ -420,7 +420,7 @@ export function CourseComparisonTable({
       className={`bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden ${className}`}
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <TrendingUp className="h-6 w-6" />

@@ -280,9 +280,9 @@ export function VoiceChat({
   ]
 
   return (
-    <div className="voice-chat bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-purple-200 overflow-hidden">
+    <div className="voice-chat bg-indigo-50 rounded-2xl border border-purple-200 overflow-hidden">
       {/* Header */}
-      <div className="p-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <div className="p-6 bg-indigo-500 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold">🎤 Voice Chat with Shekhar Sir</h2>

@@ -370,7 +370,7 @@ export default function KotaVsOnlinePage() {
                       >
                         <div className="flex items-center justify-center">
                           {row.winner === 'cerebrum' && (
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                           )}
                           <span
                             className={`font-semibold ${row.winner === 'cerebrum' ? 'text-green-700' : ''}`}
@@ -393,7 +393,7 @@ export default function KotaVsOnlinePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-8 max-w-3xl mx-auto">
+            <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8 max-w-3xl mx-auto">
               <Star className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Cerebrum Wins on 11 Out of 12 Factors
@@ -406,7 +406,7 @@ export default function KotaVsOnlinePage() {
                 variant="primary"
                 size="xl"
                 onClick={handleDemoBooking}
-                className="bg-gradient-to-r from-green-600 to-emerald-600"
+                className="bg-green-600"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Experience the Difference - Book Free Demo
@@ -482,7 +482,7 @@ export default function KotaVsOnlinePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl p-4 sm:p-6 md:p-8">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-4 sm:p-6 md:p-8">
               <DollarSign className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4" />
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">₹2,57,000</div>
               <div className="text-xl sm:text-2xl mb-4">Total Annual Savings</div>
@@ -503,7 +503,7 @@ export default function KotaVsOnlinePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br bg-red-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"

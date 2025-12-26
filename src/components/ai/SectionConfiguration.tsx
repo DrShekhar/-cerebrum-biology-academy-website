@@ -342,10 +342,10 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl">
+          <div className="p-3 bg-green-600 rounded-xl">
             <Settings className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-green-600 bg-clip-text text-transparent">
             Section Configuration
           </h1>
         </motion.div>
@@ -368,7 +368,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             label: 'Total Questions',
             value: totals.totalQuestions,
             icon: Target,
-            color: 'from-green-500 to-emerald-500',
+            color: 'bg-green-600',
           },
           {
             label: 'Total Marks',
@@ -407,7 +407,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           <button
             onClick={createSection}
             disabled={sections.length >= maxSections}
-            className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Plus className="w-4 h-4" />
             Add Section
@@ -462,7 +462,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               exit={{ opacity: 0, y: -20 }}
               className={`bg-white rounded-xl border-2 transition-all ${
                 activeSection === section.id
-                  ? 'border-emerald-500 shadow-lg'
+                  ? 'border-green-600 shadow-lg'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
             >
@@ -474,7 +474,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <span className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-sm font-medium">
+                      <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-medium">
                         #{section.order}
                       </span>
                       <h3 className="text-lg font-semibold">{section.name}</h3>
@@ -566,7 +566,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               type="text"
                               value={section.name}
                               onChange={(e) => updateSection(section.id, { name: e.target.value })}
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             />
                           </div>
 
@@ -580,7 +580,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 updateSection(section.id, { description: e.target.value })
                               }
                               rows={3}
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                               placeholder="Brief description of this section"
                             />
                           </div>
@@ -602,7 +602,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                   })
                                 }
                                 min="1"
-                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                               />
                             </div>
                             <div>
@@ -618,7 +618,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                   })
                                 }
                                 min="1"
-                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                               />
                             </div>
                           </div>
@@ -643,7 +643,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 {section.isMandatory ? (
                                   <Lock className="w-4 h-4 text-red-500" />
                                 ) : (
-                                  <Unlock className="w-4 h-4 text-green-500" />
+                                  <Unlock className="w-4 h-4 text-green-600" />
                                 )}
                               </label>
 
@@ -719,7 +719,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 }
                                 min="1"
                                 max={section.timeLimit}
-                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                               />
                             </div>
                           )}
@@ -742,7 +742,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                   newInstructions[idx] = e.target.value
                                   updateSection(section.id, { instructions: newInstructions })
                                 }}
-                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                                 placeholder={`Instruction ${idx + 1}`}
                               />
                               <button
@@ -763,7 +763,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               const newInstructions = [...section.instructions, '']
                               updateSection(section.id, { instructions: newInstructions })
                             }}
-                            className="text-emerald-600 hover:text-emerald-700 text-sm flex items-center gap-1"
+                            className="text-green-600 hover:text-green-700 text-sm flex items-center gap-1"
                           >
                             <Plus className="w-3 h-3" />
                             Add Instruction
@@ -957,7 +957,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                             }
                             min="0"
                             max={section.totalMarks}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             placeholder="Minimum marks to pass"
                           />
                         </div>
@@ -977,7 +977,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                             }
                             min="0"
                             max={section.totalMarks}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                             placeholder="Marks to qualify for next round"
                           />
                         </div>
@@ -1046,23 +1046,23 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             ))}
           </div>
 
-          <div className="mt-6 p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-            <h4 className="font-medium text-emerald-800 mb-2">Test Summary</h4>
+          <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+            <h4 className="font-medium text-green-700 mb-2">Test Summary</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
               <div>
-                <span className="text-emerald-600">Total Sections:</span>
+                <span className="text-green-600">Total Sections:</span>
                 <span className="ml-2 font-medium">{sections.length}</span>
               </div>
               <div>
-                <span className="text-emerald-600">Total Questions:</span>
+                <span className="text-green-600">Total Questions:</span>
                 <span className="ml-2 font-medium">{totals.totalQuestions}</span>
               </div>
               <div>
-                <span className="text-emerald-600">Total Marks:</span>
+                <span className="text-green-600">Total Marks:</span>
                 <span className="ml-2 font-medium">{totals.totalMarks}</span>
               </div>
               <div>
-                <span className="text-emerald-600">Total Time:</span>
+                <span className="text-green-600">Total Time:</span>
                 <span className="ml-2 font-medium">{totals.totalTime} min</span>
               </div>
             </div>
@@ -1113,7 +1113,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               }
             }}
             disabled={validationErrors.length > 0}
-            className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             <CheckCircle2 className="w-4 h-4" />
             Apply Configuration

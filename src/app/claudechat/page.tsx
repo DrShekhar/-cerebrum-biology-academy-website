@@ -166,7 +166,7 @@ export default function ClaudeChatPage() {
       <div className="bg-white shadow-lg p-4 border-b">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
               <span className="text-white text-xl">🤖</span>
             </div>
             <div>
@@ -208,8 +208,8 @@ export default function ClaudeChatPage() {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
                     message.type === 'user'
-                      ? 'bg-gradient-to-br from-green-400 to-teal-500 text-white'
-                      : 'bg-gradient-to-br from-blue-400 to-purple-500 text-white'
+                      ? 'bg-gradient-to-br from-green-400 to-green-700 text-white'
+                      : 'bg-blue-500 text-white'
                   }`}
                 >
                   {message.type === 'user' ? '👨‍🎓' : '🤖'}
@@ -219,7 +219,7 @@ export default function ClaudeChatPage() {
                 <div
                   className={`p-4 rounded-2xl shadow-md ${
                     message.type === 'user'
-                      ? 'bg-gradient-to-br from-blue-400 to-purple-500 text-white'
+                      ? 'bg-blue-500 text-white'
                       : 'bg-white text-gray-800'
                   }`}
                 >
@@ -248,7 +248,7 @@ export default function ClaudeChatPage() {
           {isThinking && (
             <div className="flex justify-start animate-fadeIn">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
                   <span className="text-xs">🤖</span>
                 </div>
                 <div className="bg-white p-4 rounded-2xl shadow-md flex items-center space-x-2">
@@ -293,7 +293,7 @@ export default function ClaudeChatPage() {
           <button
             className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200 ${
               inputMessage.trim() && !isThinking
-                ? 'bg-gradient-to-br from-blue-400 to-purple-500 text-white hover:shadow-lg hover:scale-105 active:scale-95'
+                ? 'bg-blue-500 text-white hover:shadow-lg hover:scale-105 active:scale-95'
                 : 'bg-gray-100 text-gray-400 cursor-not-allowed'
             }`}
             onClick={handleSendMessage}

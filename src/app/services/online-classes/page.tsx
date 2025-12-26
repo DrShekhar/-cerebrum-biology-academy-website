@@ -90,7 +90,7 @@ export default function OnlineClassesPage() {
       icon: Smartphone,
       title: 'Multi-Device Learning',
       description:
-        'Seamlessly switch between phone, tablet, laptop, or smart TV. Your progress syncs across all devices',
+        'Switch between phone, tablet, laptop, or smart TV. Your progress syncs across all devices',
       benefit: 'Learn anywhere, anytime, on any device',
     },
     {
@@ -367,8 +367,8 @@ export default function OnlineClassesPage() {
               Next-Generation Learning Technology
             </h2>
             <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              Experience cutting-edge educational technology that makes online learning more
-              engaging and effective than traditional classroom teaching
+              Experience modern educational technology that makes online learning more engaging
+              and effective than traditional classroom teaching
             </p>
           </div>
 
@@ -574,7 +574,7 @@ export default function OnlineClassesPage() {
                   <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                         <span className="text-xs sm:text-sm md:text-base text-gray-600">
                           {feature}
                         </span>

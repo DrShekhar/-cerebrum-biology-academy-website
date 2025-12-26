@@ -271,7 +271,7 @@ export default function NeetCoachingGurugramPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -317,7 +317,7 @@ export default function NeetCoachingGurugramPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Course Details
@@ -375,19 +375,19 @@ export default function NeetCoachingGurugramPage() {
                 <Link href={`/locations/gurugram/${locality.slug}`}>
                   <div
                     className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
-                      locality.priority === 'high' ? 'ring-2 ring-emerald-500' : ''
+                      locality.priority === 'high' ? 'ring-2 ring-green-600' : ''
                     }`}
                   >
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
-                      <MapPin className="w-5 h-5 text-emerald-600" />
+                      <MapPin className="w-5 h-5 text-green-600" />
                     </div>
-                    <div className="text-2xl font-bold text-emerald-600 mb-1">
+                    <div className="text-2xl font-bold text-green-600 mb-1">
                       {locality.students}
                     </div>
                     <div className="text-sm text-gray-500">{locality.highlight}</div>
                     {locality.priority === 'high' && (
-                      <div className="mt-2 inline-flex items-center text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">
+                      <div className="mt-2 inline-flex items-center text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
                         <Star className="w-3 h-3 mr-1" />
                         High Demand Area
                       </div>
@@ -426,9 +426,9 @@ export default function NeetCoachingGurugramPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 border border-emerald-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 border border-green-100"
               >
-                <item.icon className="w-12 h-12 text-emerald-600 mb-4" />
+                <item.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </motion.div>
@@ -482,7 +482,7 @@ export default function NeetCoachingGurugramPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
-                <feature.icon className="w-12 h-12 text-emerald-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -517,7 +517,7 @@ export default function NeetCoachingGurugramPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-emerald-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -528,7 +528,7 @@ export default function NeetCoachingGurugramPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -561,7 +561,7 @@ export default function NeetCoachingGurugramPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

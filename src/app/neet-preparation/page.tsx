@@ -207,7 +207,7 @@ export default function NeetPreparationPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-700 via-cyan-700 to-blue-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-700 via-cyan-700 to-blue-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -252,7 +252,7 @@ export default function NeetPreparationPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-700"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View NEET Course
@@ -307,17 +307,17 @@ export default function NeetPreparationPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-6 shadow-lg relative"
               >
-                <div className="absolute -top-3 left-4 bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className="absolute -top-3 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
                   {phase.phase}
                 </div>
-                <phase.icon className="w-10 h-10 text-teal-600 mb-4 mt-2" />
+                <phase.icon className="w-10 h-10 text-green-600 mb-4 mt-2" />
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{phase.title}</h3>
-                <div className="text-sm text-teal-600 font-medium mb-2">{phase.duration}</div>
+                <div className="text-sm text-green-600 font-medium mb-2">{phase.duration}</div>
                 <p className="text-gray-600 text-sm mb-4">{phase.description}</p>
                 <ul className="space-y-1">
                   {phase.topics.map((topic) => (
                     <li key={topic} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {topic}
                     </li>
                   ))}
@@ -402,7 +402,7 @@ export default function NeetPreparationPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
-                <feature.icon className="w-12 h-12 text-teal-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -437,7 +437,7 @@ export default function NeetPreparationPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -448,7 +448,7 @@ export default function NeetPreparationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -480,7 +480,7 @@ export default function NeetPreparationPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

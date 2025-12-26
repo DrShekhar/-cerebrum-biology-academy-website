@@ -97,7 +97,7 @@ export function EnhancedCoursesListingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             NEET Biology Courses
@@ -256,7 +256,7 @@ export function EnhancedCoursesListingPage() {
                   <div className="text-left space-y-2">
                     {tier.highlights.slice(0, 3).map((highlight, index) => (
                       <div key={index} className="flex items-center text-sm text-gray-700">
-                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-green-600 mr-2">✓</span>
                         {highlight}
                       </div>
                     ))}
@@ -267,7 +267,7 @@ export function EnhancedCoursesListingPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-12 sm:mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
+          <div className="mt-12 sm:mt-16 text-center bg-indigo-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
             <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Ready to Start Your NEET Journey?
             </h3>

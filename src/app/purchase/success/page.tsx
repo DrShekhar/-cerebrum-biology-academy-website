@@ -284,7 +284,7 @@ function PurchaseSuccessContent() {
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <Link
             href="/student/dashboard"
-            className="block bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-6 text-white hover:shadow-xl transition-all group"
+            className="block bg-green-600 rounded-2xl p-6 text-white hover:shadow-xl transition-all group"
           >
             <div className="flex items-start justify-between mb-4">
               <BookOpen className="w-8 h-8" />

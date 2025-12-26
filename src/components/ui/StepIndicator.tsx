@@ -50,12 +50,12 @@ export function StepIndicator({
       text: 'text-blue-600',
     },
     emerald: {
-      active: 'bg-emerald-500 text-white border-emerald-500',
-      completed: 'bg-emerald-500 text-white border-emerald-500',
+      active: 'bg-green-600 text-white border-green-600',
+      completed: 'bg-green-600 text-white border-green-600',
       pending: 'bg-slate-100 text-slate-400 border-slate-300',
       error: 'bg-red-500 text-white border-red-500',
-      connector: 'bg-emerald-500',
-      text: 'text-emerald-600',
+      connector: 'bg-green-600',
+      text: 'text-green-600',
     },
     purple: {
       active: 'bg-purple-500 text-white border-purple-500',
@@ -168,7 +168,7 @@ export function StepIndicator({
           <motion.p
             className={cn('font-medium', sizes.text, {
               [colors.text]: status === 'in-progress',
-              'text-emerald-600': status === 'completed',
+              'text-green-600': status === 'completed',
               'text-slate-500': status === 'pending',
               'text-red-600': status === 'error',
             })}

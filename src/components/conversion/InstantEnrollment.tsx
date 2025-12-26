@@ -161,7 +161,7 @@ export function InstantEnrollment({
           className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-2xl relative">
+          <div className="bg-indigo-500 text-white p-6 rounded-t-2xl relative">
             <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors"
@@ -205,7 +205,7 @@ export function InstantEnrollment({
             {/* Pricing Display */}
             <PremiumCard
               variant="luxury"
-              className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200"
+              className="bg-gradient-to-br from-green-50 to-green-50 border-green-200"
             >
               <div className="p-4 space-y-3">
                 <div className="flex items-center justify-between">
@@ -345,7 +345,7 @@ export function InstantEnrollment({
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 px-8 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {loading ? (
                     <div className="flex items-center gap-2">
@@ -373,7 +373,7 @@ export function InstantEnrollment({
             {/* Trust Indicators */}
             <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-200 text-sm text-gray-600">
               <div className="flex items-center gap-1">
-                <ShieldCheck className="h-4 w-4 text-green-500" />
+                <ShieldCheck className="h-4 w-4 text-green-600" />
                 100% Secure Payment
               </div>
               <div className="flex items-center gap-1">
@@ -429,7 +429,7 @@ export function InstantEnrollment({
               variant="medical"
               size="lg"
               onClick={onClose}
-              className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white"
+              className="w-full bg-green-600 hover:from-green-700 hover:to-green-700 text-white"
             >
               Continue to Dashboard
             </PremiumButton>

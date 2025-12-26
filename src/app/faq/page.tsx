@@ -453,7 +453,7 @@ export default function FAQPage() {
           )}
 
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div className="mt-16 bg-indigo-500 rounded-2xl p-8 md:p-12 text-white text-center">
             <MessageCircle className="w-12 h-12 mx-auto mb-4 opacity-80" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Still have questions?</h2>
             <p className="text-blue-100 mb-8 max-w-xl mx-auto">
@@ -465,7 +465,7 @@ export default function FAQPage() {
                 href="https://wa.me/918826444334"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Us

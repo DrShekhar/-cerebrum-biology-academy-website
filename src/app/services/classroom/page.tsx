@@ -484,7 +484,7 @@ export default function ClassroomCoachingPage() {
         border: 'border-green-600',
         text: 'text-green-600',
         button: 'bg-green-600 hover:bg-green-700',
-        gradient: 'from-green-600 to-emerald-600',
+        gradient: 'bg-green-600',
       },
     }
     return colorMap[color as keyof typeof colorMap] || colorMap.green
@@ -493,7 +493,7 @@ export default function ClassroomCoachingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
@@ -559,7 +559,7 @@ export default function ClassroomCoachingPage() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500"
+                  className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-600"
                 >
                   <div className="flex items-start mb-3 sm:mb-4">
                     <div className="p-2 sm:p-3 bg-green-50 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
@@ -627,7 +627,7 @@ export default function ClassroomCoachingPage() {
                   <div className="grid grid-cols-1 gap-2 sm:gap-3">
                     {lab.equipment.map((item, itemIndex) => (
                       <div key={itemIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                         <span className="text-xs sm:text-sm text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -666,7 +666,7 @@ export default function ClassroomCoachingPage() {
                         {reason.title}
                       </h3>
                       <div className="space-y-2 sm:space-y-3">
-                        <div className="p-2 sm:p-3 bg-green-50 rounded-lg border-l-3 border-green-500">
+                        <div className="p-2 sm:p-3 bg-green-50 rounded-lg border-l-3 border-green-600">
                           <div className="font-medium text-green-800 text-xs sm:text-sm mb-1">
                             ✅ Classroom Advantage:
                           </div>
@@ -708,7 +708,7 @@ export default function ClassroomCoachingPage() {
                 className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-3 sm:mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
                     {story.name.charAt(0)}
                   </div>
                   <div className="ml-3 sm:ml-4">
@@ -768,7 +768,7 @@ export default function ClassroomCoachingPage() {
             {batchSchedules.map((batch, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border-l-4 border-green-500"
+                className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border-l-4 border-green-600"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 sm:mb-4 gap-2">
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{batch.name}</h3>
@@ -789,7 +789,7 @@ export default function ClassroomCoachingPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {batch.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 mr-2 flex-shrink-0" />
                       <span className="text-xs sm:text-sm text-gray-600">{feature}</span>
                     </div>
                   ))}
@@ -833,7 +833,7 @@ export default function ClassroomCoachingPage() {
                   <div className="grid grid-cols-1 gap-2">
                     {facility.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                         <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -862,11 +862,11 @@ export default function ClassroomCoachingPage() {
             {pricingTiers.map((tier, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-shadow ${tier.popular ? 'ring-2 ring-green-500 relative' : ''}`}
+                className={`bg-white rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-shadow ${tier.popular ? 'ring-2 ring-green-600 relative' : ''}`}
               >
                 {tier.popular && (
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <span className="bg-green-500 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
+                    <span className="bg-green-600 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -890,7 +890,7 @@ export default function ClassroomCoachingPage() {
                   <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                         <span className="text-xs sm:text-sm md:text-base text-gray-600">
                           {feature}
                         </span>
@@ -1123,7 +1123,7 @@ export default function ClassroomCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
             Ready to Experience Traditional Learning Excellence?

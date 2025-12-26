@@ -196,7 +196,7 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
     switch (tier) {
       case 'pinnacle': return { text: 'Most Premium', color: 'bg-purple-500' }
       case 'ascent': return { text: 'Most Popular', color: 'bg-blue-500' }
-      case 'pursuit': return { text: 'Best Value', color: 'bg-green-500' }
+      case 'pursuit': return { text: 'Best Value', color: 'bg-green-600' }
     }
   }
 
@@ -249,7 +249,7 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
           <div className="space-y-3 mb-6">
             {details.additionalBenefits.slice(0, 4).map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -377,21 +377,21 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
                             <td className="py-3 px-4 text-gray-700">{feature.feature}</td>
                             <td className="text-center py-3 px-4">
                               {feature.pursuit ? (
-                                <Check className="h-4 w-4 text-green-500 mx-auto" />
+                                <Check className="h-4 w-4 text-green-600 mx-auto" />
                               ) : (
                                 <X className="h-4 w-4 text-gray-300 mx-auto" />
                               )}
                             </td>
                             <td className="text-center py-3 px-4">
                               {feature.ascent ? (
-                                <Check className="h-4 w-4 text-green-500 mx-auto" />
+                                <Check className="h-4 w-4 text-green-600 mx-auto" />
                               ) : (
                                 <X className="h-4 w-4 text-gray-300 mx-auto" />
                               )}
                             </td>
                             <td className="text-center py-3 px-4">
                               {feature.pinnacle ? (
-                                <Check className="h-4 w-4 text-green-500 mx-auto" />
+                                <Check className="h-4 w-4 text-green-600 mx-auto" />
                               ) : (
                                 <X className="h-4 w-4 text-gray-300 mx-auto" />
                               )}
@@ -487,7 +487,7 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
 
         {/* Final CTA */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8">
+          <div className="bg-indigo-500 text-white rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">Ready to Start Your NEET Journey?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join thousands of successful students and take the first step towards your medical career.

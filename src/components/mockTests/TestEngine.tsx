@@ -177,7 +177,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   const getQuestionStatusColor = (status: string) => {
     switch (status) {
       case 'current': return 'bg-blue-600 text-white'
-      case 'answered': return 'bg-green-500 text-white'
+      case 'answered': return 'bg-green-600 text-white'
       case 'answered-marked': return 'bg-purple-500 text-white'
       case 'marked': return 'bg-yellow-500 text-white'
       case 'not-visited': return 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -221,7 +221,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
             <ul className="space-y-3">
               {test.instructions.map((instruction, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{instruction}</span>
                 </li>
               ))}
@@ -333,7 +333,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
               {/* Legend */}
               <div className="mb-6 space-y-2 text-sm">
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-500 rounded mr-3"></div>
+                  <div className="w-6 h-6 bg-green-600 rounded mr-3"></div>
                   <span>Answered</span>
                 </div>
                 <div className="flex items-center">

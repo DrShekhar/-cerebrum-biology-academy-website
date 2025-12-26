@@ -159,7 +159,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
             </button>
 
             {/* Step Indicator */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-3xl">
+            <div className="bg-indigo-500 text-white p-6 rounded-t-3xl">
               <div className="flex items-center justify-between mb-4">
                 <h2 id="enrollment-modal-title" className="text-2xl font-bold">
                   Enroll in {course.title}

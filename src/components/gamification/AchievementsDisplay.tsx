@@ -110,7 +110,7 @@ export function AchievementsDisplay({
                       {achievement.title}
                     </h4>
                     {achievement.isCompleted && (
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 ml-2" />
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 ml-2" />
                     )}
                   </div>
 

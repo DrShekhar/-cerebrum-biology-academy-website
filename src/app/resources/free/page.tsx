@@ -190,10 +190,10 @@ export default function FreeResourcesPage() {
         border: 'border-blue-500',
       },
       green: {
-        bg: 'bg-green-500',
+        bg: 'bg-green-600',
         text: 'text-green-600',
         light: 'bg-green-50',
-        border: 'border-green-500',
+        border: 'border-green-600',
       },
       purple: {
         bg: 'bg-purple-500',

@@ -34,7 +34,7 @@ export function TagArchivePage({ tag, posts }: TagArchivePageProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 text-white py-16">
+      <section className="bg-indigo-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">

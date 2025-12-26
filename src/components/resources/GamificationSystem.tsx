@@ -149,7 +149,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
   }
 
   const getProgressColor = (progress: number) => {
-    if (progress >= 80) return 'bg-green-500'
+    if (progress >= 80) return 'bg-green-600'
     if (progress >= 60) return 'bg-yellow-500'
     if (progress >= 40) return 'bg-orange-500'
     return 'bg-red-500'
@@ -168,7 +168,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
   return (
     <div className={cn('max-w-6xl mx-auto', className)}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 text-white rounded-xl p-8 mb-8">
+      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white rounded-xl p-8 mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-3xl font-bold mb-2">Your Learning Journey</h1>
@@ -499,7 +499,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
                 className={cn(
                   'flex items-center gap-4 p-4 rounded-lg transition-all',
                   user.isCurrentUser
-                    ? 'bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 shadow-md'
+                    ? 'bg-gray-50 border-2 border-blue-200 shadow-md'
                     : 'bg-gray-50 hover:bg-gray-100'
                 )}
               >

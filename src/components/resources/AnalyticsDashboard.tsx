@@ -135,7 +135,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
   const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
     switch (trend) {
       case 'up':
-        return <TrendingUpIcon className="h-4 w-4 text-green-500" />
+        return <TrendingUpIcon className="h-4 w-4 text-green-600" />
       case 'down':
         return <TrendingDownIcon className="h-4 w-4 text-red-500" />
       case 'stable':
@@ -150,7 +150,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
   }
 
   const getProgressColor = (score: number) => {
-    if (score >= 85) return 'bg-green-500'
+    if (score >= 85) return 'bg-green-600'
     if (score >= 70) return 'bg-yellow-500'
     return 'bg-red-500'
   }
@@ -158,7 +158,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
   return (
     <div className={cn('max-w-7xl mx-auto', className)}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 mb-8">
+      <div className="bg-indigo-500 text-white rounded-xl p-8 mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-3xl font-bold mb-2">Performance Analytics</h1>
@@ -212,7 +212,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
                 Predicted Rank Range: {analytics.predictions.probabilityRange}
               </div>
 
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-4">
+              <div className="bg-gray-50 border border-purple-200 rounded-lg p-4">
                 <div className="text-sm font-medium text-purple-800 mb-2">📚 Recommendation</div>
                 <div className="text-sm text-purple-700">
                   Study {analytics.predictions.recommendedStudyHours} hours daily to improve rank by
@@ -284,7 +284,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
                     <div className="flex-1">
                       <div className="w-full bg-gray-200 rounded-full h-3">
                         <div
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500"
+                          className="bg-blue-500 h-3 rounded-full transition-all duration-500"
                           style={{ width: `${(value / maxValue) * 100}%` }}
                         ></div>
                       </div>
@@ -431,7 +431,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
 
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Cell Biology Mastery</div>
                 <div className="text-sm text-green-700">
@@ -441,7 +441,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
             </div>
 
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Study Streak Record</div>
                 <div className="text-sm text-green-700">12-day streak - your longest yet!</div>
@@ -449,7 +449,7 @@ const AnalyticsDashboard = ({ className, userId }: AnalyticsDashboardProps) => {
             </div>
 
             <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <div className="font-medium text-green-800">Speed Improvement</div>
                 <div className="text-sm text-green-700">

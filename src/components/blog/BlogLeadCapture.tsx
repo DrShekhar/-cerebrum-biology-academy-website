@@ -59,7 +59,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
 
   if (isSubmitted) {
     return (
-      <div className="my-8 p-6 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg animate-fade-in">
+      <div className="my-8 p-6 bg-gradient-to-br from-green-50 to-green-50 border border-green-200 rounded-2xl shadow-lg animate-fade-in">
         <div className="flex items-center gap-4 text-green-700">
           <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
             <CheckCircle className="w-7 h-7" />
@@ -79,7 +79,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
   return (
     <div className="my-10 relative overflow-hidden rounded-2xl shadow-xl">
       {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700" />
+      <div className="absolute inset-0 bg-indigo-600" />
 
       {/* Animated decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl animate-pulse" />

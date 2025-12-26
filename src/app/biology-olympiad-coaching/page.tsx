@@ -179,7 +179,7 @@ export default function BiologyOlympiadCoachingPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-800 to-emerald-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -189,12 +189,12 @@ export default function BiologyOlympiadCoachingPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
-              <Globe className="w-5 h-5 mr-2 text-teal-300" />
+              <Globe className="w-5 h-5 mr-2 text-green-400" />
               Biology Olympiad Coaching
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-teal-300">Biology Olympiad</span> Coaching
+              <span className="text-green-400">Biology Olympiad</span> Coaching
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -212,7 +212,7 @@ export default function BiologyOlympiadCoachingPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-teal-400 text-black hover:bg-teal-300"
+                  className="bg-green-500 text-black hover:bg-green-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
@@ -223,7 +223,7 @@ export default function BiologyOlympiadCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View All Olympiads
@@ -233,22 +233,22 @@ export default function BiologyOlympiadCoachingPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Trophy className="w-8 h-8 mx-auto mb-2 text-teal-300" />
+                <Trophy className="w-8 h-8 mx-auto mb-2 text-green-400" />
                 <div className="text-2xl font-bold">NSEB</div>
                 <div className="text-sm opacity-80">to IBO Pathway</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Users className="w-8 h-8 mx-auto mb-2 text-teal-300" />
+                <Users className="w-8 h-8 mx-auto mb-2 text-green-400" />
                 <div className="text-2xl font-bold">8-10</div>
                 <div className="text-sm opacity-80">Students/Batch</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <BookOpen className="w-8 h-8 mx-auto mb-2 text-teal-300" />
+                <BookOpen className="w-8 h-8 mx-auto mb-2 text-green-400" />
                 <div className="text-2xl font-bold">UG Level</div>
                 <div className="text-sm opacity-80">Syllabus</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Star className="w-8 h-8 mx-auto mb-2 text-teal-300" />
+                <Star className="w-8 h-8 mx-auto mb-2 text-green-400" />
                 <div className="text-2xl font-bold">50+</div>
                 <div className="text-sm opacity-80">INBO Qualifiers</div>
               </div>
@@ -285,16 +285,16 @@ export default function BiologyOlympiadCoachingPage() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-100 h-full">
-                  <stage.icon className="w-12 h-12 text-teal-600 mb-4" />
-                  <div className="text-sm text-teal-600 font-semibold mb-1">{stage.stage}</div>
+                <div className="bg-gradient-to-br from-green-50 to-cyan-50 rounded-xl p-6 border border-green-100 h-full">
+                  <stage.icon className="w-12 h-12 text-green-600 mb-4" />
+                  <div className="text-sm text-green-600 font-semibold mb-1">{stage.stage}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{stage.name}</h3>
                   <p className="text-gray-600 mb-2">{stage.description}</p>
                   <span className="text-sm text-gray-500">{stage.date}</span>
                 </div>
                 {index < olympiadPathway.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-teal-400" />
+                    <ArrowRight className="w-6 h-6 text-green-500" />
                   </div>
                 )}
               </motion.div>
@@ -332,10 +332,10 @@ export default function BiologyOlympiadCoachingPage() {
                 className="bg-white rounded-xl p-6 shadow-lg"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                    <unit.icon className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <unit.icon className="w-6 h-6 text-green-600" />
                   </div>
-                  <span className="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {unit.weightage}
                   </span>
                 </div>
@@ -343,7 +343,7 @@ export default function BiologyOlympiadCoachingPage() {
                 <ul className="space-y-1">
                   {unit.topics.map((topic) => (
                     <li key={topic} className="text-sm text-gray-600 flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                       {topic}
                     </li>
                   ))}
@@ -379,7 +379,7 @@ export default function BiologyOlympiadCoachingPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-teal-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -414,7 +414,7 @@ export default function BiologyOlympiadCoachingPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -425,7 +425,7 @@ export default function BiologyOlympiadCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-emerald-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -445,7 +445,7 @@ export default function BiologyOlympiadCoachingPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-teal-400 text-black hover:bg-teal-300"
+                  className="bg-green-500 text-black hover:bg-green-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo
@@ -456,7 +456,7 @@ export default function BiologyOlympiadCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

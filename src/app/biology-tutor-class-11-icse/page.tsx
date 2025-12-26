@@ -128,7 +128,7 @@ export default function BiologyTutorClass11ICSEPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -172,7 +172,7 @@ export default function BiologyTutorClass11ICSEPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Course Details
@@ -235,18 +235,18 @@ export default function BiologyTutorClass11ICSEPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center">
-                    <section.icon className="w-7 h-7 text-teal-600" />
+                  <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
+                    <section.icon className="w-7 h-7 text-green-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{section.unit}</h3>
-                    <p className="text-teal-600 font-medium">{section.title}</p>
+                    <p className="text-green-600 font-medium">{section.title}</p>
                   </div>
                 </div>
                 <ul className="space-y-2">
                   {section.topics.map((topic) => (
                     <li key={topic} className="flex items-center text-gray-700">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
                       {topic}
                     </li>
                   ))}
@@ -280,7 +280,7 @@ export default function BiologyTutorClass11ICSEPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-teal-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -313,7 +313,7 @@ export default function BiologyTutorClass11ICSEPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -324,7 +324,7 @@ export default function BiologyTutorClass11ICSEPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -353,7 +353,7 @@ export default function BiologyTutorClass11ICSEPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

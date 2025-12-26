@@ -58,7 +58,7 @@ export default function LocalityFAQ({ locality }: LocalityFAQProps) {
             href={`https://wa.me/918826444334?text=Hi, I have a question about NEET Biology coaching in ${locality.displayName}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+            className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
           >
             Chat with us on WhatsApp
           </a>

@@ -213,7 +213,7 @@ const CourseCard = ({
       {/* NEET Focused Badge */}
       {course.isNEETFocused && (
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
           <span className="text-green-600 text-sm font-medium">NEET Focused</span>
         </div>
       )}
@@ -244,7 +244,7 @@ const CourseCard = ({
         <ul className="space-y-2">
           {course.features.map((feature, index) => (
             <li key={index} className="flex items-start gap-2 text-sm">
-              <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+              <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
               <span className="text-gray-700">{feature}</span>
             </li>
           ))}
@@ -325,7 +325,7 @@ export default function PremiumCourseCards() {
         <h3 className="text-xl font-semibold text-gray-900 mb-4">
           Not sure which course is right for you?
         </h3>
-        <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+        <button className="px-6 py-3 bg-indigo-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
           Take Our Course Recommendation Quiz
         </button>
       </div>

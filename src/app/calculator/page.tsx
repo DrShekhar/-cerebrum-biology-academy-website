@@ -153,10 +153,10 @@ export default function CalculatorPage() {
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, { bg: string; text: string; light: string; border: string }> = {
       green: {
-        bg: 'bg-green-500',
+        bg: 'bg-green-600',
         text: 'text-green-600',
         light: 'bg-green-50',
-        border: 'border-green-500',
+        border: 'border-green-600',
       },
       blue: {
         bg: 'bg-blue-500',

@@ -647,7 +647,7 @@ export default function StudentTestPage() {
                       isAnswered && isMarked
                         ? 'bg-yellow-500 text-white'
                         : isAnswered
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : isMarked
                             ? 'bg-yellow-100 text-yellow-800 border border-yellow-300'
                             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -661,7 +661,7 @@ export default function StudentTestPage() {
 
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded bg-green-500"></div>
+                <div className="w-4 h-4 rounded bg-green-600"></div>
                 <span className="text-gray-600">Answered ({getAnsweredCount()})</span>
               </div>
               <div className="flex items-center gap-2">

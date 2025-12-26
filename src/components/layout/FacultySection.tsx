@@ -134,7 +134,7 @@ export function FacultySection() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                  <div className="w-full h-full bg-blue-500 flex items-center justify-center">
                     <GraduationCap className="w-10 xs:w-11 sm:w-12 h-10 xs:h-11 sm:h-12 text-white" />
                   </div>
                 )}

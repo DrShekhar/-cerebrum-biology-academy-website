@@ -169,7 +169,7 @@ export default function NeetCoachingCentrePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-teal-800 to-cyan-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -267,7 +267,7 @@ export default function NeetCoachingCentrePage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-6">
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
                   <div className="flex items-center justify-between">
                     <h3 className="text-2xl font-bold">{center.name}</h3>
                     <div className="bg-white/20 px-3 py-1 rounded-full text-sm">
@@ -355,7 +355,7 @@ export default function NeetCoachingCentrePage() {
       </section>
 
       {/* Online Option */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

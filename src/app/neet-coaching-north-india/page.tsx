@@ -187,7 +187,7 @@ export default function NeetCoachingNorthIndiaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -220,7 +220,7 @@ export default function NeetCoachingNorthIndiaPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-green-500 text-white hover:bg-green-600 animate-pulse"
+                  className="bg-green-600 text-white hover:bg-green-600 animate-pulse"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now: {CONTACT_INFO.phone.display.primary}
@@ -560,7 +560,7 @@ export default function NeetCoachingNorthIndiaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -581,7 +581,7 @@ export default function NeetCoachingNorthIndiaPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-green-500 text-white hover:bg-green-600 animate-pulse"
+                  className="bg-green-600 text-white hover:bg-green-600 animate-pulse"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: {CONTACT_INFO.phone.display.primary}

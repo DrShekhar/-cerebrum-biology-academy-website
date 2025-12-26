@@ -149,7 +149,7 @@ export default function BiologyCoachingPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -193,7 +193,7 @@ export default function BiologyCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Coaching Programs
@@ -241,7 +241,7 @@ export default function BiologyCoachingPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <feature.icon className="w-12 h-12 text-emerald-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -276,11 +276,11 @@ export default function BiologyCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-6 border border-emerald-100 hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100 hover:shadow-lg transition-shadow"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{program.title}</h3>
-                  <span className="bg-emerald-600 text-white text-xs px-3 py-1 rounded-full">
+                  <span className="bg-green-600 text-white text-xs px-3 py-1 rounded-full">
                     {program.status}
                   </span>
                 </div>
@@ -293,7 +293,7 @@ export default function BiologyCoachingPage() {
                 <ul className="space-y-2">
                   {program.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-600 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-600 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -304,7 +304,7 @@ export default function BiologyCoachingPage() {
 
           <div className="text-center mt-10">
             <Link href="/demo-booking">
-              <Button variant="primary" size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+              <Button variant="primary" size="lg" className="bg-green-600 hover:bg-green-700">
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Free Counseling
               </Button>
@@ -314,7 +314,7 @@ export default function BiologyCoachingPage() {
       </section>
 
       {/* What You Get */}
-      <section className="py-20 bg-emerald-50">
+      <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -351,7 +351,7 @@ export default function BiologyCoachingPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-lg p-4 shadow flex items-center"
               >
-                <CheckCircle className="w-6 h-6 text-emerald-600 mr-3 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{item}</span>
               </motion.div>
             ))}
@@ -385,7 +385,7 @@ export default function BiologyCoachingPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-emerald-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -396,7 +396,7 @@ export default function BiologyCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -428,7 +428,7 @@ export default function BiologyCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

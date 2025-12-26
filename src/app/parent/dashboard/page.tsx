@@ -371,7 +371,7 @@ export default function ParentDashboard() {
         </div>
       </div>
 
-      <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+      <div className="mt-8 bg-indigo-500 rounded-xl p-6 text-white">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h3 className="text-lg font-semibold">Need Help?</h3>

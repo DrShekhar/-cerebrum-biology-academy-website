@@ -53,7 +53,7 @@ const class12Syllabus = [
     unit: 'Unit 9: Biotechnology',
     chapters: ['Biotechnology: Principles & Processes', 'Biotechnology and Its Applications'],
     neetWeightage: '10%',
-    color: 'bg-emerald-100 border-emerald-300',
+    color: 'bg-green-100 border-green-400',
   },
   {
     unit: 'Unit 10: Ecology',

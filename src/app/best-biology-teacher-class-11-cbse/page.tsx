@@ -282,7 +282,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
               className="space-y-6"
             >
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">60% NEET Syllabus Coverage</h3>
                   <p className="text-gray-600">
@@ -291,7 +291,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">Foundation for Class 12</h3>
                   <p className="text-gray-600">
@@ -300,7 +300,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">High-Scoring Topics</h3>
                   <p className="text-gray-600">
@@ -309,7 +309,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">Early Start Advantage</h3>
                   <p className="text-gray-600">

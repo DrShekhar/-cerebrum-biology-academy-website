@@ -158,7 +158,7 @@ export function Leaderboard({ freeUserId, compact = false, onRequireLogin }: Lea
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+      <div className="bg-indigo-500 p-6 text-white">
         <h2 className="text-2xl font-bold flex items-center gap-3">
           <span className="text-3xl">🏆</span>
           MCQ Champions
@@ -292,7 +292,7 @@ function LeaderboardRow({
       {/* Avatar & Name */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold">
+          <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
             {entry.name.charAt(0).toUpperCase()}
           </div>
           <div className="min-w-0">

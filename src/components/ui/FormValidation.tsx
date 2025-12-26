@@ -266,7 +266,7 @@ export function ValidatedInput({
               hasError
                 ? 'border-red-300 bg-red-50'
                 : isValid
-                  ? 'border-emerald-300 bg-emerald-50'
+                  ? 'border-green-400 bg-green-50'
                   : focused
                     ? 'border-purple-300 bg-purple-50'
                     : 'border-gray-300'
@@ -275,7 +275,7 @@ export function ValidatedInput({
               hasError
                 ? 'focus:ring-red-500'
                 : isValid
-                  ? 'focus:ring-emerald-500'
+                  ? 'focus:ring-green-600'
                   : 'focus:ring-purple-500'
             }
             focus:ring-2 focus:ring-opacity-20 focus:border-transparent
@@ -304,7 +304,7 @@ export function ValidatedInput({
                 exit={{ scale: 0, rotate: 90 }}
                 transition={{ duration: 0.2 }}
               >
-                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -378,14 +378,14 @@ export function ValidatedSelect({
               hasError
                 ? 'border-red-300 bg-red-50'
                 : isValid
-                  ? 'border-emerald-300 bg-emerald-50'
+                  ? 'border-green-400 bg-green-50'
                   : 'border-gray-300'
             }
             ${
               hasError
                 ? 'focus:ring-red-500'
                 : isValid
-                  ? 'focus:ring-emerald-500'
+                  ? 'focus:ring-green-600'
                   : 'focus:ring-purple-500'
             }
             focus:ring-2 focus:ring-opacity-20 focus:border-transparent
@@ -419,7 +419,7 @@ export function ValidatedSelect({
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}
               >
-                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
               </motion.div>
             )}
           </AnimatePresence>

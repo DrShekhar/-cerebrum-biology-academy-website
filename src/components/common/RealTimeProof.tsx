@@ -37,7 +37,7 @@ export function RealTimeProof() {
       location: 'Mumbai',
       action: 'got admission in AIIMS Delhi',
       icon: Trophy,
-      color: 'bg-emerald-500',
+      color: 'bg-green-600',
     },
     {
       type: 'demo',
@@ -71,7 +71,7 @@ export function RealTimeProof() {
       location: 'Chennai',
       action: 'secured MBBS seat in JIPMER',
       icon: Trophy,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -179,7 +179,7 @@ export function RealTimeProof() {
 
                 {/* Live indicator */}
                 <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                   <span className="text-xs text-green-600 font-medium">Live</span>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export function RealTimeProof() {
             initial={{ width: '100%' }}
           >
             <motion.div
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+              className="h-full bg-blue-500 rounded-full"
               initial={{ width: '100%' }}
               animate={{ width: '0%' }}
               transition={{ duration: 6, ease: 'linear' }}

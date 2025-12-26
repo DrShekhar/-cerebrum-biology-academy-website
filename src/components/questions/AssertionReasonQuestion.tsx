@@ -114,12 +114,12 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
                 isSelected
                   ? showExplanation
                     ? isCorrect
-                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                      ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                       : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
                     : 'border-purple-500 bg-purple-50 text-purple-900 shadow-lg'
                   : // Correct answer highlighting in explanation mode
                     showExplanation && isCorrect
-                    ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                    ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                     : // Default state
                       isHovered
                       ? 'border-purple-300 bg-purple-25 shadow-md'
@@ -138,11 +138,11 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
                     isSelected
                       ? showExplanation
                         ? isCorrect
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : 'bg-red-500 text-white'
                         : 'bg-purple-500 text-white'
                       : showExplanation && isCorrect
-                        ? 'bg-green-500 text-white'
+                        ? 'bg-green-600 text-white'
                         : isHovered
                           ? 'bg-purple-200 text-purple-800'
                           : 'bg-gray-200 text-gray-700'

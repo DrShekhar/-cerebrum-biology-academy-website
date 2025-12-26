@@ -547,7 +547,7 @@ export function SecureTestEnvironment({
               {/* Security Status */}
               <div className="flex items-center space-x-2">
                 <div
-                  className={`w-3 h-3 rounded-full ${securityStatus.riskLevel === 'low' ? 'bg-green-500' : 'bg-red-500'}`}
+                  className={`w-3 h-3 rounded-full ${securityStatus.riskLevel === 'low' ? 'bg-green-600' : 'bg-red-500'}`}
                 ></div>
                 <span className="text-sm text-gray-600">Security: {securityStatus.riskLevel}</span>
               </div>

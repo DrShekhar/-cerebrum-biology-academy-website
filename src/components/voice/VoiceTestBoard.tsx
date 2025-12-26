@@ -106,7 +106,7 @@ const VoiceTestBoard: React.FC = () => {
       >
         <h1 className="text-4xl font-bold text-gray-800 mb-4">🎯 Shekhar Sir Voice Test</h1>
         <p className="text-lg text-gray-600 mb-6">
-          Test the revolutionary AI voice synthesis in Hindi, English, and Hinglish
+          Test the AI voice feature in Hindi, English, and Hinglish
         </p>
 
         {/* Voice Status */}

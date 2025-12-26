@@ -36,7 +36,7 @@ export const facultyMembers: Faculty[] = [
     specialization: ['Plant Biology', 'Ecology', 'Genetics'],
     image: getPlaceholderAvatar('Priya Sharma', 200, '7C3AED', 'fff'),
     designation: 'Senior Faculty - Botany',
-    bio: 'Dr. Priya Sharma is a renowned botanist with expertise in plant sciences. Her research background from IISc brings cutting-edge knowledge to NEET preparation.',
+    bio: 'Dr. Priya Sharma is a botanist with expertise in plant sciences. Her research background from IISc brings specialized knowledge to NEET preparation.',
     achievements: [
       'PhD from IISc Bangalore in Plant Physiology',
       'Published 8 research papers in international journals',
@@ -101,7 +101,7 @@ export const facultyMembers: Faculty[] = [
     specialization: ['Cell Biology', 'Biochemistry', 'Biophysics', 'Molecular Processes'],
     image: getPlaceholderAvatar('Vikram Joshi', 200, '059669', 'fff'),
     designation: 'Senior Faculty - Cell Biology',
-    bio: 'Dr. Vikram Joshi brings cutting-edge research experience from TIFR to make cell biology and biochemistry concepts crystal clear for NEET aspirants.',
+    bio: 'Dr. Vikram Joshi brings research experience from TIFR to make cell biology and biochemistry concepts clear for NEET aspirants.',
     achievements: [
       'PhD from TIFR Mumbai in Cell Biology',
       'Published 12 research papers in cell biology',

@@ -51,13 +51,13 @@ export const premiumAnimations = {
 
 export const premiumGradients = {
   // Academic Excellence gradients
-  academicBlue: 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600',
+  academicBlue: 'bg-indigo-600',
   scholarlyPurple: 'bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600',
-  researchGreen: 'bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600',
+  researchGreen: 'bg-gradient-to-r from-green-600 via-green-600 to-green-600',
   innovationOrange: 'bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600',
 
   // Subtle academic backgrounds
-  softAcademic: 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50',
+  softAcademic: 'bg-gray-50',
   paperWhite: 'bg-gradient-to-br from-gray-50 via-white to-blue-50',
   scholarlyGray: 'bg-gradient-to-br from-gray-100 via-slate-100 to-blue-100',
 

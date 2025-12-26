@@ -235,7 +235,7 @@ const SERIES_INFO = {
     name: 'Pursuit',
     icon: Gem,
     color: 'green',
-    gradient: 'from-green-500 to-emerald-600',
+    gradient: 'bg-green-600',
     bg: 'bg-green-50',
     border: 'border-green-200',
     text: 'text-green-900',
@@ -329,7 +329,7 @@ export default function CourseComparisonTable({
   return (
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Course Series Comparison</h2>
           <p className="text-blue-100">

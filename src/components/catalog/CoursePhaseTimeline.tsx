@@ -36,9 +36,9 @@ const COURSE_PHASES: TimelinePhase[] = [
       primary: '#10B981',
       secondary: '#059669',
       gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-      text: 'text-emerald-900',
-      accent: 'text-emerald-700',
-      glowColor: 'shadow-emerald-500/25',
+      text: 'text-green-800',
+      accent: 'text-green-700',
+      glowColor: 'shadow-green-500/25',
     },
     icon: <Brain className="h-6 w-6" />,
     keyPoints: [
@@ -152,14 +152,14 @@ export function CoursePhaseTimeline({
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-indigo-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <Clock className="w-4 h-4" />
             12-Month Transformation Journey
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-indigo-500 bg-clip-text text-transparent">
               Learning Journey
             </span>
             <br />
@@ -178,12 +178,12 @@ export function CoursePhaseTimeline({
           {/* Desktop: Horizontal Timeline */}
           <div className={`${isMobile ? 'hidden' : 'block'}`}>
             {/* Connecting Line */}
-            <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-teal-200 to-teal-400 rounded-full">
+            <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-green-200 to-green-500 rounded-full">
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: currentPhase / 4 } : {}}
                 transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="h-full bg-gradient-to-r from-teal-500 to-teal-600 rounded-full origin-left"
+                className="h-full bg-green-600 rounded-full origin-left"
               />
             </div>
 
@@ -207,7 +207,7 @@ export function CoursePhaseTimeline({
                       initial={{ scale: 0 }}
                       animate={isInView ? { scale: 1 } : {}}
                       transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                      className={`w-8 h-8 rounded-full border-4 border-white ${phase.id <= currentPhase ? 'bg-teal-600' : 'bg-gray-300'} shadow-lg`}
+                      className={`w-8 h-8 rounded-full border-4 border-white ${phase.id <= currentPhase ? 'bg-green-600' : 'bg-gray-300'} shadow-lg`}
                       style={{
                         opacity: phase.id <= currentPhase ? 1 : 0.5,
                       }}
@@ -302,12 +302,12 @@ export function CoursePhaseTimeline({
           {/* Mobile: Vertical Timeline */}
           <div className={`${isMobile ? 'block' : 'hidden'} relative`}>
             {/* Vertical Connecting Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-200 to-teal-400 rounded-full">
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-200 to-green-500 rounded-full">
               <motion.div
                 initial={{ scaleY: 0 }}
                 animate={isInView ? { scaleY: currentPhase / 4 } : {}}
                 transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="w-full bg-gradient-to-b from-teal-500 to-teal-600 rounded-full origin-top"
+                className="w-full bg-green-600 rounded-full origin-top"
               />
             </div>
 
@@ -331,7 +331,7 @@ export function CoursePhaseTimeline({
                       initial={{ scale: 0 }}
                       animate={isInView ? { scale: 1 } : {}}
                       transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                      className={`w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center ${phase.id <= currentPhase ? 'bg-teal-600' : 'bg-gray-300'}`}
+                      className={`w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center ${phase.id <= currentPhase ? 'bg-green-600' : 'bg-gray-300'}`}
                       style={{
                         opacity: phase.id <= currentPhase ? 1 : 0.5,
                       }}
@@ -418,7 +418,7 @@ export function CoursePhaseTimeline({
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 bg-navy-900 border-t-4 border-teal-500 rounded-2xl p-8 text-center text-white"
+          className="mt-16 bg-navy-900 border-t-4 border-green-600 rounded-2xl p-8 text-center text-white"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">

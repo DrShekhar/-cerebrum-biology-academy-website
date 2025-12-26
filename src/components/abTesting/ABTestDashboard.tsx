@@ -258,7 +258,7 @@ export function ABTestDashboard({ testId, showAllTests = true }: ABTestDashboard
                 {/* Progress Bar */}
                 <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
                   <div
-                    className={`h-2 rounded-full ${variant.isWinner ? 'bg-green-500' : 'bg-blue-500'}`}
+                    className={`h-2 rounded-full ${variant.isWinner ? 'bg-green-600' : 'bg-blue-500'}`}
                     style={{
                       width: `${Math.min(100, (variant.conversionRate / Math.max(...Object.values(results.variants).map((v) => v.conversionRate))) * 100)}%`,
                     }}

@@ -275,7 +275,7 @@ export default function ResultsPage() {
                       <span className="text-sm font-medium">{student.college}</span>
                     </div>
                     <div className="flex items-center">
-                      <TrendingUp className="w-4 h-4 text-green-500 mr-2" />
+                      <TrendingUp className="w-4 h-4 text-green-600 mr-2" />
                       <span className="text-sm text-gray-700">{student.improvement}</span>
                     </div>
                     <div className="flex items-center">
@@ -460,7 +460,7 @@ export default function ResultsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-16 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Join Our Success Story?</h2>
           <p className="text-xl text-blue-100 mb-8">

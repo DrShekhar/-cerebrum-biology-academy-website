@@ -62,7 +62,7 @@ export function DifficultyBadge({
             className={`${barSizes[size]} rounded-sm ${
               bar <= config.bars
                 ? difficulty === 'Beginner'
-                  ? 'bg-green-500'
+                  ? 'bg-green-600'
                   : difficulty === 'Intermediate'
                     ? 'bg-yellow-500'
                     : 'bg-red-500'

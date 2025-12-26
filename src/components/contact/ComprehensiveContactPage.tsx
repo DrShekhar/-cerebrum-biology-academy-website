@@ -54,7 +54,7 @@ interface SupportOption {
   title: string
   description: string
   icon: React.ComponentType<{ className?: string }>
-  gradient: string
+  bgColor: string
   services: string[]
   responseTime: string
   availability: string
@@ -145,7 +145,7 @@ export function ComprehensiveContactPage({
       title: 'Academic Support',
       description: 'Get help with studies, doubts, and academic performance',
       icon: GraduationCap,
-      gradient: 'from-blue-500 to-purple-500',
+      bgColor: 'bg-blue-500',
       services: [
         'Doubt clearing sessions',
         'Extra class requests',
@@ -162,7 +162,7 @@ export function ComprehensiveContactPage({
       title: 'Admission Support',
       description: 'Complete guidance for enrollment and course selection',
       icon: UserIcon,
-      gradient: 'from-green-500 to-teal-500',
+      bgColor: 'bg-green-600',
       services: [
         'Course selection help',
         'Fee structure queries',
@@ -179,7 +179,7 @@ export function ComprehensiveContactPage({
       title: 'Technical Support',
       description: 'Resolve app, website, and technical issues quickly',
       icon: Monitor,
-      gradient: 'from-orange-500 to-red-500',
+      bgColor: 'bg-orange-500',
       services: [
         'App troubleshooting',
         'Online class problems',
@@ -196,7 +196,7 @@ export function ComprehensiveContactPage({
       title: 'Counseling Support',
       description: 'Mental health, career guidance, and personal support',
       icon: Heart,
-      gradient: 'from-pink-500 to-purple-500',
+      bgColor: 'bg-purple-500',
       services: [
         'Career counseling',
         'Parent-teacher meetings',
@@ -267,9 +267,9 @@ export function ComprehensiveContactPage({
     supportOptions.find((s) => s.id === selectedSupport) || supportOptions[0]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <div className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -366,7 +366,7 @@ export function ComprehensiveContactPage({
                   <div className="space-y-6">
                     {/* Header */}
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
                         <MapPin className="w-8 h-8 text-white" />
                       </div>
                       <div>
@@ -535,7 +535,7 @@ export function ComprehensiveContactPage({
                   }`}
                 >
                   <div
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${option.gradient} flex items-center justify-center mx-auto mb-4`}
+                    className={`w-16 h-16 rounded-full ${option.bgColor} flex items-center justify-center mx-auto mb-4`}
                   >
                     <option.icon className="w-8 h-8 text-white" />
                   </div>
@@ -543,7 +543,7 @@ export function ComprehensiveContactPage({
                   <p className="text-gray-600 text-sm mb-4">{option.description}</p>
                   <div className="space-y-2 text-xs">
                     <div className="flex items-center justify-center space-x-2">
-                      <Clock className="w-4 h-4 text-green-500" />
+                      <Clock className="w-4 h-4 text-green-600" />
                       <span className="text-green-600 font-medium">{option.responseTime}</span>
                     </div>
                   </div>
@@ -567,7 +567,7 @@ export function ComprehensiveContactPage({
                   <div>
                     <div className="flex items-center space-x-4 mb-6">
                       <div
-                        className={`w-12 h-12 rounded-full bg-gradient-to-r ${selectedSupportData.gradient} flex items-center justify-center`}
+                        className={`w-12 h-12 rounded-full ${selectedSupportData.bgColor} flex items-center justify-center`}
                       >
                         <selectedSupportData.icon className="w-6 h-6 text-white" />
                       </div>
@@ -585,7 +585,7 @@ export function ComprehensiveContactPage({
                         <div className="space-y-2">
                           {selectedSupportData.services.map((service, index) => (
                             <div key={index} className="flex items-center space-x-3">
-                              <CheckCircle2 className="w-4 h-4 text-green-500" />
+                              <CheckCircle2 className="w-4 h-4 text-green-600" />
                               <span className="text-gray-700 text-sm">{service}</span>
                             </div>
                           ))}
@@ -710,7 +710,7 @@ export function ComprehensiveContactPage({
 
                       <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 hover:scale-102 flex items-center justify-center"
+                        className="w-full bg-gradient-to-r from-green-600 via-green-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 hover:scale-102 flex items-center justify-center"
                       >
                         <Mail className="w-5 h-5 mr-3" />
                         Send Inquiry
@@ -827,7 +827,7 @@ export function ComprehensiveContactPage({
           >
             <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-sm">
               <div className="flex items-center space-x-3 mb-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 text-white" />
                 </div>
                 <div>

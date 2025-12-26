@@ -132,7 +132,7 @@ export function QuestionCard({
 
     if (result) {
       if (option === result.correctAnswer) {
-        return `${baseClasses} border-green-500 bg-gradient-to-r from-green-50 to-emerald-50 shadow-md animate-correct-pulse-botanical`
+        return `${baseClasses} border-green-600 bg-gradient-to-r from-green-50 to-green-50 shadow-md animate-correct-pulse-botanical`
       }
       if (option === selectedAnswer && !result.isCorrect) {
         return `${baseClasses} border-coral-500 bg-gradient-to-r from-coral-50 to-red-50 shadow-sm animate-shake-wrong`
@@ -168,7 +168,7 @@ export function QuestionCard({
             <span
               className={`w-1.5 h-1.5 rounded-full ${
                 question.difficulty === 'EASY'
-                  ? 'bg-green-500'
+                  ? 'bg-green-600'
                   : question.difficulty === 'HARD'
                     ? 'bg-coral-500'
                     : 'bg-amber-500'
@@ -270,7 +270,7 @@ export function QuestionCard({
             <span
               className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm font-mono transition-colors ${
                 result && optionLabels[index] === result.correctAnswer
-                  ? 'bg-green-500 text-white shadow-md'
+                  ? 'bg-green-600 text-white shadow-md'
                   : result && optionLabels[index] === selectedAnswer && !result.isCorrect
                     ? 'bg-coral-500 text-white shadow-md'
                     : selectedAnswer === optionLabels[index]
@@ -283,7 +283,7 @@ export function QuestionCard({
             </span>
             <span className="text-left text-ink text-base flex-1">{option}</span>
             {result && optionLabels[index] === result.correctAnswer && (
-              <span className="text-green-500 text-lg font-bold" aria-label="Correct answer">
+              <span className="text-green-600 text-lg font-bold" aria-label="Correct answer">
                 ✓
               </span>
             )}
@@ -327,7 +327,7 @@ export function QuestionCard({
             <div
               className={`p-4 rounded-xl ${
                 result.isCorrect
-                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 animate-correct-pulse-botanical'
+                  ? 'bg-gradient-to-r from-green-50 to-green-50 border-2 border-green-300 animate-correct-pulse-botanical'
                   : 'bg-gradient-to-r from-coral-50 to-red-50 border-2 border-coral-300 animate-shake-wrong'
               }`}
             >

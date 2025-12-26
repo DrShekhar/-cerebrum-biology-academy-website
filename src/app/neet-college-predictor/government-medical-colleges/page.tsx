@@ -177,13 +177,13 @@ export default function GovernmentMedicalCollegesPage() {
                   placeholder="Search by college name or state..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                 />
               </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'cutoff' | 'fees' | 'seats')}
-                className="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500"
+                className="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-600"
               >
                 <option value="cutoff">Sort by Cutoff Rank</option>
                 <option value="fees">Sort by Fees (Low to High)</option>

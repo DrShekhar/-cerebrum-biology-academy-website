@@ -42,7 +42,7 @@ export default function CourseFinderPage() {
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10 px-4">
             <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse flex-shrink-0" />
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse flex-shrink-0" />
               <span className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
                 5000+ Students
               </span>
@@ -92,8 +92,8 @@ export default function CourseFinderPage() {
                 Get your recommendation in just 3 questions
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-emerald-500">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-green-500">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                 <svg
                   className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                   fill="none"
@@ -188,9 +188,9 @@ export default function CourseFinderPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200">
+              <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
+                  <span className="w-8 h-8 rounded-lg bg-green-600 flex items-center justify-center">
                     <svg
                       className="w-5 h-5 text-white"
                       fill="none"
@@ -209,19 +209,19 @@ export default function CourseFinderPage() {
                 </h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-600 font-bold">•</span>
+                    <span className="text-green-600 font-bold">•</span>
                     <span>Algorithm based on 5000+ student outcomes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-600 font-bold">•</span>
+                    <span className="text-green-600 font-bold">•</span>
                     <span>Success patterns from AIIMS selections</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-600 font-bold">•</span>
+                    <span className="text-green-600 font-bold">•</span>
                     <span>Optimized for different learning styles</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-600 font-bold">•</span>
+                    <span className="text-green-600 font-bold">•</span>
                     <span>Regularly updated with latest results</span>
                   </li>
                 </ul>

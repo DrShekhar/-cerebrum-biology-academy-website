@@ -308,7 +308,7 @@ export default function SchoolNEETCoachingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
@@ -405,7 +405,7 @@ export default function SchoolNEETCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center mb-4">
                   <Calendar className="w-6 h-6 text-green-600 mr-2" />
@@ -444,7 +444,7 @@ export default function SchoolNEETCoachingPage() {
                 viewport={{ once: true }}
                 className="flex items-center bg-white rounded-lg p-4 shadow-sm"
               >
-                <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-700">{reason}</span>
               </motion.div>
             ))}
@@ -501,7 +501,7 @@ export default function SchoolNEETCoachingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

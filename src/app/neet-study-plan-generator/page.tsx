@@ -246,7 +246,7 @@ export default function StudyPlanGeneratorPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-green-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
@@ -305,7 +305,7 @@ export default function StudyPlanGeneratorPage() {
                       <select
                         value={currentClass}
                         onChange={(e) => setCurrentClass(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
                       >
                         <option value="11">Class 11 (2-year plan)</option>
                         <option value="12">Class 12 (1-year plan)</option>
@@ -320,7 +320,7 @@ export default function StudyPlanGeneratorPage() {
                       <select
                         value={monthsRemaining}
                         onChange={(e) => setMonthsRemaining(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
                       >
                         <option value="3">3 Months</option>
                         <option value="6">6 Months</option>
@@ -338,7 +338,7 @@ export default function StudyPlanGeneratorPage() {
                       <select
                         value={hoursPerDay}
                         onChange={(e) => setHoursPerDay(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
                       >
                         <option value="2">2 Hours</option>
                         <option value="3">3 Hours</option>
@@ -355,7 +355,7 @@ export default function StudyPlanGeneratorPage() {
                       <select
                         value={targetScore}
                         onChange={(e) => setTargetScore(e.target.value)}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
                       >
                         <option value="280">280+ (Good)</option>
                         <option value="300">300+ (Very Good)</option>
@@ -388,7 +388,7 @@ export default function StudyPlanGeneratorPage() {
                           onClick={() => toggleWeakSubject(topic)}
                           className={`rounded-lg border px-3 py-2 text-sm transition-colors ${
                             weakSubjects.includes(topic)
-                              ? 'border-green-500 bg-green-50 text-green-700'
+                              ? 'border-green-600 bg-green-50 text-green-700'
                               : 'border-gray-200 bg-gray-50 text-gray-600 hover:border-green-300'
                           }`}
                         >
@@ -403,7 +403,7 @@ export default function StudyPlanGeneratorPage() {
 
                   <button
                     onClick={generateStudyPlan}
-                    className="w-full rounded-lg bg-gradient-to-r from-green-600 to-teal-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:from-green-700 hover:to-teal-700"
+                    className="w-full rounded-lg bg-green-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:from-green-700 hover:to-green-700"
                   >
                     Generate My Study Plan
                   </button>
@@ -456,7 +456,7 @@ export default function StudyPlanGeneratorPage() {
                               setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))
                             }
                             placeholder="Enter 10-digit mobile number"
-                            className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                            className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
                           />
                         </div>
                       </div>
@@ -545,7 +545,7 @@ export default function StudyPlanGeneratorPage() {
                             key={taskIndex}
                             className="flex items-start gap-2 text-sm text-gray-600"
                           >
-                            <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
+                            <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                             <span>{task}</span>
                           </div>
                         ))}
@@ -618,7 +618,7 @@ export default function StudyPlanGeneratorPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-teal-700">
+            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-green-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">
@@ -651,7 +651,7 @@ export default function StudyPlanGeneratorPage() {
                   </Link>
                 </div>
                 <div className="hidden md:block">
-                  <div className="relative h-full min-h-[300px] bg-gradient-to-br from-green-500/30 to-transparent">
+                  <div className="relative h-full min-h-[300px] bg-gradient-to-br from-green-600/30 to-transparent">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <GraduationCap className="h-48 w-48 text-white/20" />
                     </div>

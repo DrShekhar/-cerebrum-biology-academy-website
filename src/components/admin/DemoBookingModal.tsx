@@ -196,8 +196,8 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center py-8"
               >
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-emerald-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Demo Booked Successfully!</h3>
                 <p className="text-gray-600 mb-4">
@@ -302,7 +302,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                               <div className="flex items-center justify-between">
                                 <span className="font-medium">{course.name}</span>
                                 {course.popular && (
-                                  <span className="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded-full">
+                                  <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">
                                     Popular
                                   </span>
                                 )}

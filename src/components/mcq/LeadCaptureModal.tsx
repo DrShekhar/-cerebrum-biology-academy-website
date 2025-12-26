@@ -85,7 +85,7 @@ export function LeadCaptureModal({
             className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+            <div className="bg-indigo-500 p-6 text-white">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl">🎉</span>
                 {variant === 'soft' && (
@@ -181,7 +181,7 @@ export function LeadCaptureModal({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
+                className="w-full py-3 px-4 bg-indigo-500 text-white rounded-lg font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
               >
                 {isSubmitting ? 'Saving...' : 'Save Progress & Continue'}
               </button>
@@ -202,16 +202,16 @@ export function LeadCaptureModal({
               <p className="text-xs text-gray-500 mb-2">By saving, you get:</p>
               <ul className="text-xs text-gray-600 space-y-1">
                 <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Save your streak & XP permanently
+                  <span className="text-green-600">✓</span> Save your streak & XP permanently
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Appear on the leaderboard
+                  <span className="text-green-600">✓</span> Appear on the leaderboard
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Get daily practice reminders
+                  <span className="text-green-600">✓</span> Get daily practice reminders
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Unlock badges and achievements
+                  <span className="text-green-600">✓</span> Unlock badges and achievements
                 </li>
               </ul>
             </div>

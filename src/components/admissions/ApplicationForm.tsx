@@ -401,19 +401,19 @@ export default function ApplicationForm() {
               <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>You will receive a WhatsApp confirmation shortly</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>Our counselor will call you within 2 hours</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>Free diagnostic test will be scheduled</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>Payment link will be sent after counseling</span>
                 </li>
               </ul>
@@ -443,7 +443,7 @@ export default function ApplicationForm() {
     <div className="min-h-screen bg-gray-50 py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 sm:px-8 py-6 sm:py-8">
+          <div className="bg-indigo-500 px-6 sm:px-8 py-6 sm:py-8">
             <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
               NEET Admission Application
             </h1>
@@ -476,7 +476,7 @@ export default function ApplicationForm() {
                   <div
                     className={`w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold transition-all ${
                       step < currentStep
-                        ? 'bg-green-500 text-white'
+                        ? 'bg-green-600 text-white'
                         : step === currentStep
                           ? 'bg-blue-600 text-white ring-4 ring-blue-200'
                           : 'bg-gray-200 text-gray-500'
@@ -487,7 +487,7 @@ export default function ApplicationForm() {
                   {step < totalSteps && (
                     <div
                       className={`hidden sm:block h-1 w-full mt-5 -ml-full ${
-                        step < currentStep ? 'bg-green-500' : 'bg-gray-200'
+                        step < currentStep ? 'bg-green-600' : 'bg-gray-200'
                       }`}
                     />
                   )}
@@ -1225,7 +1225,7 @@ export default function ApplicationForm() {
                           <div
                             className={`border-2 border-dashed rounded-xl p-6 sm:p-8 text-center transition-all ${
                               formData.documents[doc.field]
-                                ? 'border-green-500 bg-green-50'
+                                ? 'border-green-600 bg-green-50'
                                 : 'border-gray-300 hover:border-blue-400'
                             }`}
                           >
@@ -1244,7 +1244,7 @@ export default function ApplicationForm() {
                             >
                               {formData.documents[doc.field] ? (
                                 <>
-                                  <CheckCircle className="w-10 h-10 sm:w-12 sm:h-12 text-green-500 mb-2" />
+                                  <CheckCircle className="w-10 h-10 sm:w-12 sm:h-12 text-green-600 mb-2" />
                                   <p className="text-sm font-medium text-green-700">
                                     {formData.documents[doc.field]?.name}
                                   </p>

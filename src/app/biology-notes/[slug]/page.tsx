@@ -218,7 +218,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
 
         {/* Lead Magnet CTA */}
         {topic.lead_magnets && (
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="mt-12 bg-indigo-500 rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0 md:mr-8">
                 <h3 className="text-2xl font-bold mb-2">Want the Complete Study Material?</h3>

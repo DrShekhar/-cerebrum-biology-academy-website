@@ -9,7 +9,7 @@ import AIFeaturesHub from '@/components/ai/AIFeaturesHub'
 export const metadata = {
   title: 'AI Features | Cerebrum Biology Academy',
   description:
-    'Explore our cutting-edge AI-powered educational features including ClaudeChat, Voice Training, and AI Monitoring',
+    'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology',
   keywords: ['AI education', 'ClaudeChat', 'AI tutoring', 'voice training', 'NEET preparation'],
 }
 

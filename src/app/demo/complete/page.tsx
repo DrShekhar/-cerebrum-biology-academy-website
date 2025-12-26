@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function DemoCompletePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 p-4">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -63,7 +63,7 @@ export default function DemoCompletePage() {
 
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20just%20attended%20a%20demo%20class%20and%20want%20to%20know%20more%20about%20enrollment."
-              className="flex items-center justify-center gap-2 rounded-lg bg-green-500 px-4 sm:px-6 py-3 font-semibold text-white transition hover:bg-green-600 min-h-[48px] text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 sm:px-6 py-3 font-semibold text-white transition hover:bg-green-600 min-h-[48px] text-sm sm:text-base"
             >
               <span>📱</span> <span className="truncate">Chat with Us on WhatsApp</span>
             </a>

@@ -179,7 +179,7 @@ export function VideoShowcase({
               )}
 
               {/* Cerebrum Branding */}
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                 Cerebrum Faculty
               </div>
             </div>
@@ -243,14 +243,14 @@ export function VideoShowcase({
           {/* Trust Indicators */}
           <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
             <div className="flex items-center text-sm text-gray-500">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-3">
+              <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center mr-3">
                 <BookOpen className="w-4 h-4 text-white" />
               </div>
               <span className="font-medium">Dr. Shekhar Singh - Cerebrum Faculty</span>
             </div>
 
             <div className="text-right text-sm text-gray-500">
-              <div className="font-medium text-emerald-600">✓ AIIMS Qualified</div>
+              <div className="font-medium text-green-600">✓ AIIMS Qualified</div>
               <div className="text-xs">Expert NEET Biology Coach</div>
             </div>
           </div>

@@ -27,7 +27,7 @@ const iconMap = {
 const colorMap = {
   mcq: 'from-blue-500 to-blue-600',
   rank: 'from-purple-500 to-purple-600',
-  college: 'from-green-500 to-green-600',
+  college: 'bg-green-600',
   notes: 'from-orange-500 to-orange-600',
   quiz: 'from-pink-500 to-pink-600',
 }

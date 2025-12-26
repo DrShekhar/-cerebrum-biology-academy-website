@@ -69,7 +69,7 @@ export default function StudentCoursesPage() {
 
   if (authLoading || isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-12 h-12 text-blue-600 animate-spin mx-auto mb-4" />
           <p className="text-gray-600">Loading your courses...</p>
@@ -80,7 +80,7 @@ export default function StudentCoursesPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <Card className="max-w-md w-full">
           <CardContent className="p-8 text-center">
             <GraduationCap className="w-16 h-16 text-blue-600 mx-auto mb-4" />
@@ -100,7 +100,7 @@ export default function StudentCoursesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -184,7 +184,7 @@ export default function StudentCoursesPage() {
                 title="Practice Tests"
                 description="Test your knowledge"
                 href="/mock-tests"
-                color="from-green-500 to-green-600"
+                color="bg-green-600"
               />
               <QuickLinkCard
                 icon={<BookOpen className="w-6 h-6" />}

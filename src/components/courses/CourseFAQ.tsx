@@ -347,7 +347,7 @@ export function CourseFAQ({ course }: CourseFAQProps) {
         </div>
 
         {/* Contact Section */}
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8">
+        <Card className="bg-indigo-500 text-white p-8">
           <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Still Have Questions?</h3>
             <p className="text-blue-100 mb-6">

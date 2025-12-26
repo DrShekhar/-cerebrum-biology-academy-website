@@ -195,7 +195,7 @@ export function QuickInquiryForm({
         animate={{ opacity: 1, scale: 1 }}
         className={`${isHero ? 'bg-white/10 backdrop-blur-sm' : 'bg-green-50'} rounded-2xl p-6 text-center`}
       >
-        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
           <Check className="w-8 h-8 text-white" />
         </div>
         <h3 className={`text-xl font-bold mb-2 ${isHero ? 'text-white' : 'text-gray-900'}`}>

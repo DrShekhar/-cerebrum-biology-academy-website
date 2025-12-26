@@ -560,7 +560,7 @@ export function EnhancedCourseFinderQuiz({
           </div>
 
           {/* Primary Recommendation */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
+          <div className="bg-gray-50 rounded-xl p-6 border border-blue-100">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Star className="h-5 w-5 text-purple-600" />
               <span className="text-xs font-semibold text-purple-600 uppercase tracking-wide">
@@ -647,7 +647,7 @@ export function EnhancedCourseFinderQuiz({
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
             >
               Enroll Now
               <ChevronRight className="h-5 w-5" />
@@ -732,7 +732,7 @@ export function EnhancedCourseFinderQuiz({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(option.value)}
-                className="quiz-option bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100"
+                className="quiz-option bg-gray-50 hover:bg-gray-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100"
               >
                 <div className="font-medium">{option.label}</div>
                 {option.description && (

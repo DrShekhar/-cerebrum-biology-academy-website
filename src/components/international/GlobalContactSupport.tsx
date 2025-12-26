@@ -145,7 +145,7 @@ export function GlobalContactSupport({
       case 'phone':
         return 'bg-blue-500 hover:bg-blue-600'
       case 'whatsapp':
-        return 'bg-green-500 hover:bg-green-600'
+        return 'bg-green-600 hover:bg-green-600'
       case 'email':
         return 'bg-purple-500 hover:bg-purple-600'
       case 'chat':
@@ -193,7 +193,7 @@ export function GlobalContactSupport({
           <div className="flex items-center space-x-3">
             <div
               className={`w-3 h-3 rounded-full ${
-                isBusinessHours ? 'bg-green-500' : 'bg-amber-500'
+                isBusinessHours ? 'bg-green-600' : 'bg-amber-500'
               }`}
             ></div>
             <div className="flex-1">
@@ -269,7 +269,7 @@ export function GlobalContactSupport({
 
             <button
               onClick={() => handleContactClick('whatsapp', contactInfo.whatsapp)}
-              className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              className="w-full bg-green-600 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
             >
               <Smartphone className="h-5 w-5" />
               <span>Chat on WhatsApp</span>
@@ -336,7 +336,7 @@ export function GlobalContactSupport({
       </div>
 
       {/* Preferred Contact Method */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
+      <div className="bg-gray-50 border border-blue-200 rounded-xl p-6">
         <div className="text-center">
           <h4 className="text-lg font-semibold text-gray-900 mb-2">
             💡 Recommended Contact Method
@@ -349,7 +349,7 @@ export function GlobalContactSupport({
           {contactInfo.preferredContact.toLowerCase().includes('whatsapp') && (
             <button
               onClick={() => handleContactClick('whatsapp', contactInfo.whatsapp)}
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
+              className="bg-green-600 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
             >
               <Smartphone className="h-5 w-5" />
               <span>Start WhatsApp Chat</span>

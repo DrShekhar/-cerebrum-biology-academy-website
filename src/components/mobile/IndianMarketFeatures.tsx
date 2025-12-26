@@ -154,7 +154,7 @@ export function IndianMarketFeatures({
 
     switch (networkInfo.effectiveType) {
       case '4g':
-        return 'text-green-500'
+        return 'text-green-600'
       case '3g':
         return 'text-yellow-500'
       case '2g':

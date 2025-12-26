@@ -40,7 +40,7 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
       {/* Question Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
             Statement Based
           </span>
           <span className="text-gray-500 text-sm">Question {questionNumber}</span>
@@ -82,8 +82,8 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
       </div>
 
       {/* Statements Section */}
-      <div className="mb-8 p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg border border-teal-200">
-        <h3 className="font-semibold text-teal-900 mb-4 text-center">
+      <div className="mb-8 p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
+        <h3 className="font-semibold text-green-800 mb-4 text-center">
           Evaluate the following statements:
         </h3>
 
@@ -101,11 +101,11 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                   'p-4 rounded-lg border-2 transition-all duration-200',
                   showStatus
                     ? isCorrect
-                      ? 'border-green-500 bg-green-50'
+                      ? 'border-green-600 bg-green-50'
                       : 'border-red-500 bg-red-50'
                     : isHovered
-                      ? 'border-teal-400 bg-teal-50 shadow-md'
-                      : 'border-teal-300 bg-white hover:border-teal-400'
+                      ? 'border-green-500 bg-green-50 shadow-md'
+                      : 'border-green-400 bg-white hover:border-green-500'
                 )}
               >
                 <div className="flex items-start gap-3">
@@ -115,9 +115,9 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                       'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0',
                       showStatus
                         ? isCorrect
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : 'bg-red-500 text-white'
-                        : 'bg-teal-500 text-white'
+                        : 'bg-green-600 text-white'
                     )}
                   >
                     {index + 1}
@@ -187,18 +187,18 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                 disabled={showExplanation || isReviewMode}
                 className={cn(
                   'w-full text-left p-4 rounded-lg border-2 transition-all duration-200',
-                  'focus:outline-none focus:ring-2 focus:ring-teal-500 hover:shadow-md',
+                  'focus:outline-none focus:ring-2 focus:ring-green-600 hover:shadow-md',
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                        ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                         : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
-                      : 'border-teal-500 bg-teal-50 text-teal-900 shadow-lg'
+                      : 'border-green-600 bg-green-50 text-green-800 shadow-lg'
                     : showExplanation && isCorrect
-                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                      ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                       : isHovered
-                        ? 'border-teal-300 bg-teal-25 shadow-md'
-                        : 'border-gray-200 hover:border-teal-300 hover:bg-gray-50',
+                        ? 'border-green-400 bg-green-50 shadow-md'
+                        : 'border-gray-200 hover:border-green-400 hover:bg-gray-50',
                   (showExplanation || isReviewMode) && 'cursor-not-allowed'
                 )}
                 aria-label={`Option ${optionLabel}: ${option}`}
@@ -212,13 +212,13 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                       isSelected
                         ? showExplanation
                           ? isCorrect
-                            ? 'bg-green-500 text-white'
+                            ? 'bg-green-600 text-white'
                             : 'bg-red-500 text-white'
-                          : 'bg-teal-500 text-white'
+                          : 'bg-green-600 text-white'
                         : showExplanation && isCorrect
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : isHovered
-                            ? 'bg-teal-200 text-teal-800'
+                            ? 'bg-green-200 text-green-800'
                             : 'bg-gray-200 text-gray-700'
                     )}
                   >
@@ -240,12 +240,12 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
 
       {/* Statement Analysis in Explanation Mode */}
       {showExplanation && (
-        <div className="mb-6 p-5 bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg border border-teal-200">
-          <h4 className="font-semibold text-teal-900 mb-3">Statement Analysis:</h4>
+        <div className="mb-6 p-5 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border border-green-200">
+          <h4 className="font-semibold text-green-800 mb-3">Statement Analysis:</h4>
           <div className="space-y-3">
             {question.statements.map((statement, index) => (
               <div key={statement.id} className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-teal-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                   {index + 1}
                 </span>
                 <div className="flex-1">
@@ -269,9 +269,9 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
 
       {/* Explanation */}
       {showExplanation && (
-        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-teal-500">
+        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-green-600">
           <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center text-white text-sm">
+            <span className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm">
               ℹ
             </span>
             Explanation
@@ -287,8 +287,8 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
           )}
 
           {question.timeManagementTip && (
-            <div className="mt-3 p-3 bg-teal-50 rounded border border-teal-200">
-              <p className="text-sm text-teal-700">
+            <div className="mt-3 p-3 bg-green-50 rounded border border-green-200">
+              <p className="text-sm text-green-700">
                 <strong>💡 Time Management Tip:</strong> {question.timeManagementTip}
               </p>
             </div>

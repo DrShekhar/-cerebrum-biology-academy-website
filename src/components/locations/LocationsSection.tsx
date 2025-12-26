@@ -27,7 +27,7 @@ export function LocationsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="h-40 xs:h-44 sm:h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="h-40 xs:h-44 sm:h-48 bg-indigo-500 flex items-center justify-center">
                 <MapPin className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 text-white" />
               </div>
 

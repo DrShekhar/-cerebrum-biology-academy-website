@@ -155,7 +155,7 @@ export default function BiologyTuitionSouthDelhiPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -246,9 +246,9 @@ export default function BiologyTuitionSouthDelhiPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl overflow-hidden border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl overflow-hidden border border-green-100"
               >
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4">
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
                   <h3 className="text-xl font-bold">{option.class}</h3>
                   <p className="text-sm opacity-90">{option.focus}</p>
                 </div>
@@ -257,7 +257,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                   <ul className="space-y-2 mb-4">
                     {option.features.map((feature) => (
                       <li key={feature} className="flex items-center text-gray-600 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -300,13 +300,13 @@ export default function BiologyTuitionSouthDelhiPage() {
                 viewport={{ once: true }}
               >
                 <Link href={`/biology-tuition-south-delhi/${area.slug}`}>
-                  <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all border-l-4 border-green-500 hover:border-green-600">
+                  <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all border-l-4 border-green-600 hover:border-green-600">
                     <div className="flex items-start justify-between">
                       <div>
                         <h3 className="font-semibold text-gray-900">{area.name}</h3>
                         <p className="text-sm text-gray-500">{area.description}</p>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-green-500" />
+                      <ArrowRight className="w-5 h-5 text-green-600" />
                     </div>
                   </div>
                 </Link>
@@ -361,7 +361,7 @@ export default function BiologyTuitionSouthDelhiPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

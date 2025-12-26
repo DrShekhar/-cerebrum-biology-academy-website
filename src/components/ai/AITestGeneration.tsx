@@ -593,10 +593,10 @@ const AITestGeneration: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Brain className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             AI Test Generation
           </h1>
         </motion.div>
@@ -989,7 +989,7 @@ const AITestGeneration: React.FC = () => {
             <div className="bg-white rounded-xl p-8 border">
               <div className="space-y-6">
                 <div className="flex justify-center">
-                  <div className="p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full">
+                  <div className="p-4 bg-indigo-500 rounded-full">
                     <Brain className="w-12 h-12 text-white" />
                   </div>
                 </div>
@@ -1025,7 +1025,7 @@ const AITestGeneration: React.FC = () => {
                   disabled={isGenerating}
                   whileHover={isGenerating ? {} : { scale: 1.05 }}
                   whileTap={isGenerating ? {} : { scale: 0.98 }}
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto"
+                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto"
                 >
                   {isGenerating ? (
                     <>

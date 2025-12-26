@@ -163,7 +163,7 @@ export function AuthenticTestimonials() {
   if (!currentTestimonial) return null
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
@@ -233,7 +233,7 @@ export function AuthenticTestimonials() {
                         height={80}
                         className="rounded-full object-cover"
                       />
-                      <div className="absolute -bottom-1 -right-1 bg-green-500 border-2 border-white rounded-full p-1">
+                      <div className="absolute -bottom-1 -right-1 bg-green-600 border-2 border-white rounded-full p-1">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
                     </div>

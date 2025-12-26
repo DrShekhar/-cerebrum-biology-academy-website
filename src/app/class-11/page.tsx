@@ -116,7 +116,7 @@ export default function Class11Page() {
       title: 'Interactive Learning',
       description: 'Practical demonstrations, models, and visual learning aids',
       icon: Eye,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
     {
       title: 'Regular Assessment',
@@ -136,7 +136,7 @@ export default function Class11Page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -210,7 +210,7 @@ export default function Class11Page() {
 
                 <div className="space-y-4">
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
-                    <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                       <Star className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -411,7 +411,7 @@ export default function Class11Page() {
       </section>
 
       {/* Learning Methodology */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-green-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -453,7 +453,7 @@ export default function Class11Page() {
                 description:
                   'Regular testing and feedback to identify weak areas and ensure steady improvement throughout the year.',
                 icon: TrendingUp,
-                color: 'from-emerald-400 to-teal-500',
+                color: 'from-green-500 to-green-600',
               },
             ].map((method, index) => (
               <motion.div
@@ -494,7 +494,7 @@ export default function Class11Page() {
       <PhotoGallerySection showFeaturedOnly={true} maxPhotos={6} />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

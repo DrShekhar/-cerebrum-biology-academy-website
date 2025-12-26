@@ -201,7 +201,7 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
     <div className={`max-w-4xl mx-auto ${className}`}>
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-8 text-white">
+        <div className="bg-indigo-500 px-6 py-8 text-white">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold">Welcome, {user.name}!</h1>

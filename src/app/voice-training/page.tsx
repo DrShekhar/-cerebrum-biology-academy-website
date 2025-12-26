@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 
 const VoiceTrainingStudio = dynamic(() => import('@/components/voice/VoiceTrainingStudio'), {
   loading: () => (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center">
         <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
           <div className="w-8 h-8 bg-white rounded-full" />

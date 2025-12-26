@@ -52,7 +52,7 @@ const units = [
   {
     name: 'Structural Organisation',
     icon: Leaf,
-    color: 'bg-emerald-100 text-emerald-600',
+    color: 'bg-green-100 text-green-600',
     chapters: [
       {
         name: 'Morphology of Flowering Plants',
@@ -198,7 +198,7 @@ const units = [
   {
     name: 'Ecology and Environment',
     icon: Leaf,
-    color: 'bg-teal-100 text-teal-600',
+    color: 'bg-green-100 text-green-600',
     chapters: [
       { name: 'Organisms and Populations', slug: 'organisms-and-populations', weightage: '3%' },
       { name: 'Ecosystem', slug: 'ecosystem', weightage: '3%' },
@@ -224,7 +224,7 @@ export default function NEETBiologyPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -251,7 +251,7 @@ export default function NEETBiologyPage() {
                 NEET Biology - Complete Chapter-wise Guide
               </h1>
 
-              <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Master all {totalChapters} chapters of NEET Biology with our comprehensive study
                 resources. NCERT-focused content with NEET weightage analysis for each chapter.
               </p>
@@ -259,14 +259,14 @@ export default function NEETBiologyPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Start Free Demo
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-400 transition-colors border border-white/30"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors border border-white/30"
                 >
                   <Phone className="w-5 h-5" />
                   Call: 8826444334
@@ -281,19 +281,19 @@ export default function NEETBiologyPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4">
-                <div className="text-3xl font-bold text-teal-600">{totalChapters}</div>
+                <div className="text-3xl font-bold text-green-600">{totalChapters}</div>
                 <div className="text-gray-600 text-sm">Total Chapters</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-teal-600">10</div>
+                <div className="text-3xl font-bold text-green-600">10</div>
                 <div className="text-gray-600 text-sm">Major Units</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-teal-600">90</div>
+                <div className="text-3xl font-bold text-green-600">90</div>
                 <div className="text-gray-600 text-sm">Questions in NEET</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-teal-600">360</div>
+                <div className="text-3xl font-bold text-green-600">360</div>
                 <div className="text-gray-600 text-sm">Marks (50%)</div>
               </div>
             </div>
@@ -344,15 +344,15 @@ export default function NEETBiologyPage() {
                       <Link
                         key={chapter.slug}
                         href={`/neet-biology/${chapter.slug}`}
-                        className="flex items-center justify-between p-3 bg-gray-50 hover:bg-teal-50 rounded-lg transition-colors group"
+                        className="flex items-center justify-between p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors group"
                       >
                         <div className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-gray-400 group-hover:text-teal-600" />
-                          <span className="text-gray-700 group-hover:text-teal-700 font-medium text-sm">
+                          <CheckCircle className="w-4 h-4 text-gray-400 group-hover:text-green-600" />
+                          <span className="text-gray-700 group-hover:text-green-700 font-medium text-sm">
                             {chapter.name}
                           </span>
                         </div>
-                        <span className="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded">
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">
                           {chapter.weightage}
                         </span>
                       </Link>
@@ -401,8 +401,8 @@ export default function NEETBiologyPage() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6 text-center"
                 >
-                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -413,7 +413,7 @@ export default function NEETBiologyPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+        <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -421,20 +421,20 @@ export default function NEETBiologyPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-4">Ready to Master NEET Biology?</h2>
-              <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join Cerebrum Biology Academy and get expert guidance for all {totalChapters}{' '}
                 chapters. Our NCERT-focused approach ensures you&apos;re fully prepared for NEET.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book Free Demo Class
                 </Link>
                 <Link
                   href="/courses"
-                  className="inline-flex items-center gap-2 bg-teal-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 transition-colors border border-white/30"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-500 transition-colors border border-white/30"
                 >
                   View All Courses
                 </Link>

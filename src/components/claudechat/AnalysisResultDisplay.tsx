@@ -109,7 +109,7 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
     >
       {/* Header */}
       <motion.div
-        className="px-6 py-4 bg-gradient-to-r from-blue-50 to-purple-50 border-b"
+        className="px-6 py-4 bg-gray-50 border-b"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -117,7 +117,7 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <motion.div
-              className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center"
+              className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <Brain className="w-5 h-5 text-white" />
@@ -446,7 +446,7 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
           </motion.button>
 
           <motion.button
-            className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+            className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-600"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

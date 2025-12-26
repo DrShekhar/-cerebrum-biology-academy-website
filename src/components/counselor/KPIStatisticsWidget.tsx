@@ -75,8 +75,8 @@ export function KPIStatisticsWidget({ metrics, calculated, period }: KPIStatisti
       title: 'Revenue Generated',
       value: `₹${metrics.revenueGenerated.toLocaleString('en-IN')}`,
       icon: DollarSign,
-      color: 'text-emerald-600',
-      bgColor: 'bg-emerald-50',
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
     },
     {
       title: 'Demos Scheduled',

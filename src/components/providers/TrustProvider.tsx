@@ -218,7 +218,7 @@ function FloatingTrustIndicators() {
       <div
         className={`rounded-full p-2 animate-scale-in ${
           trustLevel === 'high'
-            ? 'bg-green-500'
+            ? 'bg-green-600'
             : trustLevel === 'medium'
               ? 'bg-yellow-500'
               : 'bg-red-500'
@@ -385,7 +385,7 @@ export function LiveEnrollmentCounter() {
   return (
     <div className="bg-green-50 border border-green-200 rounded-lg p-3">
       <div className="flex items-center space-x-2">
-        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+        <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
         <span className="text-sm font-medium text-green-800">
           {currentCount.toLocaleString()} students learning live
         </span>
@@ -401,7 +401,7 @@ export function TrustBadgeForCTA() {
   return (
     <div className="flex items-center space-x-4 text-sm text-gray-600 mt-3">
       <div className="flex items-center space-x-1">
-        <CheckCircle className="w-4 h-4 text-green-500" />
+        <CheckCircle className="w-4 h-4 text-green-600" />
         <span>Trusted by {Math.floor(metrics.totalStudents / 1000)}K+ students</span>
       </div>
       <div className="flex items-center space-x-1">

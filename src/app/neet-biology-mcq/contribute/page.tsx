@@ -171,7 +171,7 @@ export default function ContributePage() {
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-green-500 to-teal-500"
+                    className="h-full bg-green-600"
                     style={{
                       width: `${
                         (userStats.questionsApproved /

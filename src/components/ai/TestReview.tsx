@@ -316,10 +316,10 @@ const TestReview: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+          <div className="p-3 bg-indigo-500 rounded-xl">
             <Eye className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             Test Review & Preview
           </h1>
         </motion.div>
@@ -1308,7 +1308,7 @@ const TestReview: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                difficulty === 'easy' ? 'bg-green-500' :
+                                difficulty === 'easy' ? 'bg-green-600' :
                                 difficulty === 'medium' ? 'bg-yellow-500' :
                                 'bg-red-500'
                               }`}
@@ -1365,7 +1365,7 @@ const TestReview: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                item.color === 'green' ? 'bg-green-500' :
+                                item.color === 'green' ? 'bg-green-600' :
                                 item.color === 'yellow' ? 'bg-yellow-500' :
                                 item.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
                               }`}
@@ -1515,7 +1515,7 @@ const TestReview: React.FC = () => {
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
-                              className="h-2 rounded-full bg-green-500"
+                              className="h-2 rounded-full bg-green-600"
                               style={{ width: `${percentage}%` }}
                             />
                           </div>
@@ -1570,7 +1570,7 @@ const TestReview: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                coverageRatio >= 0.8 ? 'bg-green-500' :
+                                coverageRatio >= 0.8 ? 'bg-green-600' :
                                 coverageRatio >= 0.5 ? 'bg-yellow-500' :
                                 'bg-red-500'
                               }`}

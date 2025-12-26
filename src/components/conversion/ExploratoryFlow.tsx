@@ -239,7 +239,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
   if (currentStep === 'explore') {
     return (
       <div
-        className={`min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 ${className}`}
+        className={`min-h-screen bg-gray-50 py-12 ${className}`}
       >
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
@@ -358,7 +358,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                       <div className="grid grid-cols-2 gap-1">
                         {course.features.map((feature, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0" />
                             {feature}
                           </div>
                         ))}
@@ -405,7 +405,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
               size="lg"
               onClick={() => handleStepNavigation('compare')}
               disabled={selectedCourses.length === 0}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+              className="bg-blue-600 hover:bg-blue-700 text-white"
             >
               Compare Selected Courses
               <ChevronRight className="h-5 w-5" />
@@ -658,7 +658,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
 
                         {/* Video CTA */}
                         {story.videoUrl && (
-                          <button className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg py-3 px-4 flex items-center justify-center gap-2 hover:from-red-600 hover:to-red-700 transition-colors">
+                          <button className="w-full bg-red-600 text-white rounded-lg py-3 px-4 flex items-center justify-center gap-2 hover:from-red-600 hover:to-red-700 transition-colors">
                             <Play className="h-5 w-5" />
                             Watch Video Story
                           </button>

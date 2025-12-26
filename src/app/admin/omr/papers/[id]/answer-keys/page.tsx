@@ -314,7 +314,7 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
               onChange={(e) => setCsvData(e.target.value)}
               rows={10}
               placeholder="1,A&#10;2,B&#10;3,C&#10;4,D&#10;..."
-              className="w-full px-4 py-3 border rounded-lg font-mono text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-3 border rounded-lg font-mono text-sm focus:ring-2 focus:ring-green-600 focus:border-transparent"
             />
             <div className="flex justify-end gap-3 mt-4">
               <Button variant="outline" onClick={() => setCsvMode(false)}>
@@ -379,7 +379,7 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
                     <select
                       value={answers[qNo] || ''}
                       onChange={(e) => handleAnswerChange(qNo, e.target.value)}
-                      className="w-full px-2 py-1 text-sm border rounded focus:ring-2 focus:ring-green-500"
+                      className="w-full px-2 py-1 text-sm border rounded focus:ring-2 focus:ring-green-600"
                     >
                       <option value="">-</option>
                       {ANSWER_OPTIONS.map((opt) => (

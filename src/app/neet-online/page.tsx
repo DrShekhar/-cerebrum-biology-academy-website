@@ -98,7 +98,7 @@ export default function NeetOnlinePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-teal-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -316,7 +316,7 @@ export default function NeetOnlinePage() {
             </Link>
             <Link
               href="/neet-preparation"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               NEET Preparation
             </Link>
@@ -325,7 +325,7 @@ export default function NeetOnlinePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-cyan-600 to-teal-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-cyan-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Start Your NEET Online Journey</h2>

@@ -393,7 +393,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       name: 'Mock Tests',
       description: 'Full-length NEET simulation tests',
       icon: <Target className="w-5 h-5" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       count: templates.filter((t) => t.category === 'mock').length,
     },
     {
@@ -417,7 +417,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       name: 'Diagnostic Tests',
       description: 'Identify knowledge gaps',
       icon: <Search className="w-5 h-5" />,
-      color: 'from-red-500 to-rose-500',
+      color: 'bg-red-600',
       count: templates.filter((t) => t.category === 'diagnostic').length,
     },
   ]

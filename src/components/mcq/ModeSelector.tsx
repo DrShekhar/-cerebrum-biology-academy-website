@@ -56,7 +56,7 @@ export function ModeSelector({
       border: 'border-green-200',
       text: 'text-green-700',
       icon: 'text-green-600',
-      ring: 'ring-green-500',
+      ring: 'ring-green-600',
     },
     blue: {
       bg: 'bg-blue-50',

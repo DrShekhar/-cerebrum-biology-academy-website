@@ -278,7 +278,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
                         isCurrent
                           ? 'bg-blue-600 text-white'
                           : isAnswered
-                          ? 'bg-green-500 text-white hover:bg-green-600'
+                          ? 'bg-green-600 text-white hover:bg-green-600'
                           : isMarked
                           ? 'bg-yellow-500 text-white hover:bg-yellow-600'
                           : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
@@ -293,7 +293,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
               {/* Legend */}
               <div className="space-y-2 text-xs">
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-green-500 rounded"></div>
+                  <div className="w-4 h-4 bg-green-600 rounded"></div>
                   <span>Answered</span>
                 </div>
                 <div className="flex items-center space-x-2">

@@ -721,7 +721,7 @@ _Powered by Cerebrum Biology Academy_`
         <div
           className={`flex items-center gap-3 rounded-full px-6 py-3 shadow-lg ${
             toast.count > 0
-              ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white'
+              ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
               : 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white'
           }`}
         >
@@ -1352,7 +1352,7 @@ _Powered by Cerebrum Biology Academy_`
                         disabled={isLoading}
                         className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-semibold text-white transition-all disabled:opacity-70 ${
                           hasSearched
-                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700'
+                            ? 'bg-green-600 hover:from-green-700 hover:to-green-700'
                             : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
                         }`}
                       >
@@ -1370,7 +1370,7 @@ _Powered by Cerebrum Biology Academy_`
 
                     {/* Success Summary */}
                     {showResults && results.length > 0 && (
-                      <div className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 p-4">
+                      <div className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gradient-to-r from-green-50 to-green-50 p-4">
                         <div className="flex items-center gap-3">
                           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
                             <CheckCircle className="h-5 w-5 text-green-600" />

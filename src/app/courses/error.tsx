@@ -123,8 +123,8 @@ export default function CoursesError({ error, reset }: ErrorProps) {
               href="/demo-booking"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-emerald-200">
-                <BookOpen className="w-5 h-5 text-emerald-600" />
+              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-200">
+                <BookOpen className="w-5 h-5 text-green-600" />
               </div>
               <div className="text-left">
                 <div className="font-medium text-gray-900">Free Demo</div>

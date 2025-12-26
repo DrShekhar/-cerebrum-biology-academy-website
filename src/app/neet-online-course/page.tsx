@@ -20,7 +20,7 @@ import {
 const courseModules = [
   { name: 'Physics', chapters: 30, hours: '150+', color: 'bg-orange-500' },
   { name: 'Chemistry', chapters: 30, hours: '150+', color: 'bg-purple-500' },
-  { name: 'Biology', chapters: 38, hours: '200+', color: 'bg-green-500' },
+  { name: 'Biology', chapters: 38, hours: '200+', color: 'bg-green-600' },
 ]
 
 const courseIncludes = [
@@ -331,7 +331,7 @@ export default function NeetOnlineCoursePage() {
             </Link>
             <Link
               href="/neet-preparation"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               NEET Preparation
             </Link>

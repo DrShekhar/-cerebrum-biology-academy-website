@@ -296,7 +296,7 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
       <div className={`${theme.bg} p-6 relative`}>
         {/* Verification Badge */}
         {story.socialProof.verified && (
-          <div className="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center">
+          <div className="absolute top-4 right-4 bg-green-600 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center">
             <Star className="w-3 h-3 mr-1 fill-current" />
             Verified
           </div>
@@ -509,7 +509,7 @@ export default function SuccessStoriesCarousel({
       className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden ${className}`}
     >
       {/* Header with Stats */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8">
+      <div className="bg-indigo-500 text-white p-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold mb-2">🎉 Student Success Stories</h2>
           <p className="text-blue-100 text-lg">
@@ -627,7 +627,7 @@ export default function SuccessStoriesCarousel({
           <button className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
             🎯 Book FREE Demo Class
           </button>
-          <button className="bg-green-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-400 transition-colors">
+          <button className="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-400 transition-colors">
             💬 Talk to Success Counselor
           </button>
         </div>

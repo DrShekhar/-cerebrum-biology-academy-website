@@ -64,7 +64,7 @@ export const cellBiologyTuition: SEOLandingContent = {
     highlightedText: 'Cell = The Unit of Life = Unit of Marks',
     ctaText: 'Master Cell Biology',
     ctaLink: '/courses',
-    backgroundGradient: 'from-teal-900 via-cyan-900 to-blue-900',
+    backgroundGradient: 'from-green-800 via-cyan-900 to-blue-900',
   },
 
   painPoints: {
@@ -408,7 +408,7 @@ export const geneticsBiologyTuition: SEOLandingContent = {
     highlightedText: 'Genetics = Highest Weightage Chapter',
     ctaText: 'Master Genetics',
     ctaLink: '/courses',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {
@@ -752,7 +752,7 @@ export const biodiversityConservationClass12: SEOLandingContent = {
     highlightedText: '3-4 Direct Questions Every NEET',
     ctaText: 'Master Biodiversity',
     ctaLink: '/courses?class=class-12',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-lime-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-lime-900',
   },
 
   painPoints: {
@@ -1094,7 +1094,7 @@ export const plantPhysiologyClass11: SEOLandingContent = {
     highlightedText: 'Unit V = Most Questions from Class 11',
     ctaText: 'Master Plant Physiology',
     ctaLink: '/courses?class=class-11',
-    backgroundGradient: 'from-green-900 via-lime-900 to-emerald-900',
+    backgroundGradient: 'from-green-900 via-lime-900 to-green-800',
   },
 
   painPoints: {
@@ -1266,7 +1266,7 @@ export const livingWorldNcert: SEOLandingContent = {
     highlightedText: 'Foundation Chapter for Diversity Units',
     ctaText: 'Start with Basics',
     ctaLink: '/courses?class=class-11',
-    backgroundGradient: 'from-teal-900 via-cyan-900 to-sky-900',
+    backgroundGradient: 'from-green-800 via-cyan-900 to-sky-900',
   },
 
   painPoints: {
@@ -1609,7 +1609,7 @@ export const botanyZoologyTuition: SEOLandingContent = {
     highlightedText: '180 Botany + 180 Zoology = 360 Biology',
     ctaText: 'Master Both Sections',
     ctaLink: '/courses',
-    backgroundGradient: 'from-green-900 via-teal-900 to-cyan-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-cyan-900',
   },
 
   painPoints: {
@@ -1778,7 +1778,7 @@ export const ecologyBiologyTuition: SEOLandingContent = {
     highlightedText: 'Ecology Unit = 10-12 Questions',
     ctaText: 'Master Ecology',
     ctaLink: '/courses',
-    backgroundGradient: 'from-lime-900 via-green-900 to-emerald-900',
+    backgroundGradient: 'from-lime-900 via-green-900 to-green-800',
   },
   painPoints: {
     title: 'Ecology Too Factual?',

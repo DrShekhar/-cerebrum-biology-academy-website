@@ -330,7 +330,7 @@ export const PhotosynthesisAnimation: React.FC<{ className?: string }> = ({ clas
         animate={isActive && inView ? { scale: [1, 1.05, 1] } : {}}
         transition={{ duration: 3, repeat: Infinity }}
       >
-        <Leaf className="w-32 h-32 text-green-500 fill-current" />
+        <Leaf className="w-32 h-32 text-green-600 fill-current" />
 
         {/* CO2 molecules */}
         <motion.div
@@ -425,7 +425,7 @@ export const NeuronFiringAnimation: React.FC<{ className?: string }> = ({ classN
 
       {/* Synapse */}
       <motion.div
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full"
+        className="absolute right-8 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-600 rounded-full"
         animate={
           firing && inView
             ? {
@@ -514,7 +514,7 @@ export const BiologyConceptExplorer: React.FC<{ className?: string }> = ({ class
       id: 'cell',
       name: 'Cell Division',
       icon: Microscope,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
       description: 'Understand mitosis and meiosis processes',
     },
     {
@@ -528,7 +528,7 @@ export const BiologyConceptExplorer: React.FC<{ className?: string }> = ({ class
       id: 'photosynthesis',
       name: 'Photosynthesis',
       icon: Leaf,
-      color: 'bg-emerald-500',
+      color: 'bg-green-600',
       description: 'Discover how plants convert light to energy',
     },
     {

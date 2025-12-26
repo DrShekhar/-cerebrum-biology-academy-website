@@ -87,7 +87,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
           setIsOpen(true)
           trackChatWidget.opened()
         }}
-        className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl z-40 flex items-center gap-2 group"
+        className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-indigo-500 text-white p-4 rounded-full shadow-2xl z-40 flex items-center gap-2 group"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 50 }}
@@ -96,7 +96,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
       >
         <HelpCircle className="w-6 h-6" />
         <span className="hidden sm:inline text-sm font-medium pr-1">Quick Help</span>
-        <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-600 rounded-full animate-pulse" />
       </motion.button>
 
       {/* Chat Modal */}
@@ -110,7 +110,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
             style={{ maxHeight: 'calc(100vh - 200px)' }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
+            <div className="bg-indigo-500 text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -166,7 +166,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
                     onClick={() =>
                       handleWhatsAppRedirect(`Hi, I have a question about: ${selectedFAQ.question}`)
                     }
-                    className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-colors"
+                    className="w-full bg-green-600 hover:bg-green-600 text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />
                     Chat on WhatsApp
@@ -205,7 +205,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
                           handleWhatsAppRedirect()
                           trackWhatsAppClick('chat_widget')
                         }}
-                        className="bg-green-500 hover:bg-green-600 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+                        className="bg-green-600 hover:bg-green-600 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
                       >
                         <MessageCircle className="w-4 h-4" />
                         WhatsApp

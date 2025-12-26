@@ -159,7 +159,7 @@ export default function NEETBiologyCoachingPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -203,7 +203,7 @@ export default function NEETBiologyCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Courses
@@ -251,7 +251,7 @@ export default function NEETBiologyCoachingPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <feature.icon className="w-12 h-12 text-emerald-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -287,16 +287,16 @@ export default function NEETBiologyCoachingPage() {
               >
                 <Link
                   href={link.href}
-                  className="block bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition group"
+                  className="block bg-green-50 rounded-xl p-6 hover:bg-green-100 transition group"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-emerald-700">
+                      <h3 className="font-semibold text-gray-900 group-hover:text-green-700">
                         {link.name}
                       </h3>
                       <p className="text-sm text-gray-600">{link.desc}</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-emerald-600 group-hover:translate-x-1 transition" />
+                    <ArrowRight className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition" />
                   </div>
                 </Link>
               </motion.div>
@@ -462,7 +462,7 @@ export default function NEETBiologyCoachingPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-emerald-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -473,7 +473,7 @@ export default function NEETBiologyCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -502,7 +502,7 @@ export default function NEETBiologyCoachingPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-emerald-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

@@ -176,7 +176,7 @@ export default function NTSEBiologyPreparationPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-lime-900 via-green-800 to-emerald-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-lime-900 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -295,7 +295,7 @@ export default function NTSEBiologyPreparationPage() {
                 <ul className="space-y-1">
                   {unit.chapters.map((chapter) => (
                     <li key={chapter} className="text-sm text-gray-600 flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                       {chapter}
                     </li>
                   ))}
@@ -415,7 +415,7 @@ export default function NTSEBiologyPreparationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-lime-600 via-green-600 to-emerald-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-lime-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

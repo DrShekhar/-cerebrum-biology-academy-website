@@ -59,7 +59,7 @@ export function NotificationCenter({
         location: story.student.location,
         timestamp: 'Just now',
         icon: <Trophy className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-600',
+        color: 'bg-green-600',
       })
     }
 
@@ -91,7 +91,7 @@ export function NotificationCenter({
         message: '28 new students joined NEET Biology courses today',
         location: 'Multiple Cities',
         icon: <BookOpen className="w-4 h-4" />,
-        color: 'from-teal-500 to-cyan-600',
+        color: 'from-green-600 to-cyan-600',
       },
     ]
 
@@ -174,7 +174,7 @@ export function NotificationCenter({
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
               </div>
               <div className="text-xs text-gray-400 font-mono">LIVE</div>
             </div>

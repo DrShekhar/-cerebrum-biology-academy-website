@@ -425,11 +425,11 @@ export function PersonalizedStudentDashboard() {
   // Loading state - Mobile Optimized with Skeletons
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50 pb-20 md:pb-0">
+      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50 pb-20 md:pb-0">
         <div className="bg-white shadow-lg border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center flex-shrink-0 animate-pulse">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0 animate-pulse">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
@@ -462,11 +462,11 @@ export function PersonalizedStudentDashboard() {
   // Empty state - Mobile Optimized
   if (recentSessions.length === 0 && !isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50">
+      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50">
         <div className="bg-white shadow-lg border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
@@ -486,7 +486,7 @@ export function PersonalizedStudentDashboard() {
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-12 text-center"
           >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-teal-600 to-navy-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-green-600 to-navy-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
               <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -499,14 +499,14 @@ export function PersonalizedStudentDashboard() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
               <a
                 href="/mock-tests"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-teal-600 to-navy-700 text-white rounded-xl font-semibold hover:shadow-lg transition-all touch-action-manipulation min-h-touch active:scale-95"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-navy-700 text-white rounded-xl font-semibold hover:shadow-lg transition-all touch-action-manipulation min-h-touch active:scale-95"
               >
                 <Target className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Take Your First Test
               </a>
               <a
                 href="/practice"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-teal-600 hover:text-teal-600 transition-all touch-action-manipulation min-h-touch active:scale-95"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-green-600 hover:text-green-600 transition-all touch-action-manipulation min-h-touch active:scale-95"
               >
                 <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Browse Practice Questions
@@ -521,7 +521,7 @@ export function PersonalizedStudentDashboard() {
   return (
     <div
       ref={dashboardRef}
-      className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50 pb-20 md:pb-0"
+      className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50 pb-20 md:pb-0"
       {...pullToRefresh.handlers}
     >
       <a
@@ -557,7 +557,7 @@ export function PersonalizedStudentDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-0 sm:flex-nowrap">
             <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
@@ -698,7 +698,7 @@ export function PersonalizedStudentDashboard() {
               className="space-y-4 sm:space-y-8"
             >
               {/* NEET Score Prediction Card - Mobile Optimized */}
-              <div className="bg-gradient-to-r from-teal-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
+              <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
@@ -820,7 +820,7 @@ export function PersonalizedStudentDashboard() {
 
                 <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-2 sm:mb-4">
-                    <Target className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
+                    <Target className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
                     <span className="text-xl sm:text-2xl font-bold text-gray-900">
                       {recentSessions.length}
                     </span>
@@ -833,13 +833,13 @@ export function PersonalizedStudentDashboard() {
 
                 <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-2 sm:mb-4">
-                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-teal-600" />
+                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
                     <span className="text-xl sm:text-2xl font-bold text-gray-900">
                       {neetProgress.rank || '-'}
                     </span>
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600">National Rank</div>
-                  <div className="text-xs sm:text-sm text-teal-600">
+                  <div className="text-xs sm:text-sm text-green-600">
                     {neetProgress.percentile}th percentile
                   </div>
                 </div>
@@ -859,7 +859,7 @@ export function PersonalizedStudentDashboard() {
                         className="flex items-center justify-between p-3 sm:p-4 bg-green-50 rounded-lg"
                       >
                         <div className="flex items-center min-w-0 flex-1">
-                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
                           <span className="font-medium text-sm sm:text-base text-gray-900 truncate">
                             {area}
                           </span>
@@ -1048,7 +1048,7 @@ export function PersonalizedStudentDashboard() {
               className="space-y-4 sm:space-y-8"
             >
               {/* Study Timer - Mobile Optimized */}
-              <div className="bg-gradient-to-r from-navy-600 to-teal-600 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
+              <div className="bg-gradient-to-r from-navy-600 to-green-600 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
                 <div className="text-center">
                   <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
                     🎯 Focus Study Session
@@ -1057,7 +1057,7 @@ export function PersonalizedStudentDashboard() {
                     {formatTime(studyTimer)}
                   </div>
                   {currentSession && (
-                    <div className="text-sm sm:text-base text-teal-200 mb-4 sm:mb-6 truncate px-4">
+                    <div className="text-sm sm:text-base text-green-200 mb-4 sm:mb-6 truncate px-4">
                       Studying: {currentSession}
                     </div>
                   )}
@@ -1206,7 +1206,7 @@ export function PersonalizedStudentDashboard() {
                   weakAreaSheet.close()
                   setActiveTab('study')
                 }}
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-teal-600 to-navy-700 text-white rounded-xl font-semibold hover:shadow-lg transition-all min-h-[48px] touch-action-manipulation active:scale-95"
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-green-600 to-navy-700 text-white rounded-xl font-semibold hover:shadow-lg transition-all min-h-[48px] touch-action-manipulation active:scale-95"
               >
                 <Play className="w-5 h-5" />
                 <span>Start Now</span>
@@ -1217,7 +1217,7 @@ export function PersonalizedStudentDashboard() {
                   weakAreaSheet.close()
                   window.location.href = '/practice'
                 }}
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-teal-600 hover:text-teal-600 transition-all min-h-[48px] touch-action-manipulation active:scale-95"
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-green-600 hover:text-green-600 transition-all min-h-[48px] touch-action-manipulation active:scale-95"
               >
                 <BookOpen className="w-5 h-5" />
                 <span>Browse</span>

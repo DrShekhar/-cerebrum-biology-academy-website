@@ -181,7 +181,7 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
       <div className="bg-white rounded-xl p-4 border">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+            <div className="p-2 bg-blue-500 rounded-lg">
               <Eye className="w-5 h-5 text-white" />
             </div>
             <div>

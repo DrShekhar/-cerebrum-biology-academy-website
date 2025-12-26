@@ -258,7 +258,7 @@ export function SophisticatedClaudeChat({
                 )}
               >
                 {message.type !== 'user' && (
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     <Sparkles className="h-5 w-5" />
                   </div>
                 )}
@@ -302,7 +302,7 @@ export function SophisticatedClaudeChat({
               animate={{ opacity: 1, y: 0 }}
               className="flex gap-4"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+              <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white">
                 <Sparkles className="h-5 w-5" />
               </div>
               <div className="bg-gray-50 rounded-2xl p-4">

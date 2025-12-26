@@ -971,7 +971,7 @@ export function IntelligentChatbot() {
             aria-modal="true"
           >
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-t-2xl">
+            <div className="bg-indigo-500 text-white p-3 sm:p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">

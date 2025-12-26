@@ -227,7 +227,7 @@ export default function OMRCheckerPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter password"
-                    className="w-full px-4 py-3 text-center text-2xl tracking-widest border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent mb-4"
+                    className="w-full px-4 py-3 text-center text-2xl tracking-widest border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent mb-4"
                   />
                   {passwordError && (
                     <p className="text-red-500 text-sm text-center mb-4">{passwordError}</p>
@@ -257,7 +257,7 @@ export default function OMRCheckerPage() {
                     <button
                       key={subject.value}
                       onClick={() => handleSubjectSelect(subject.value)}
-                      className="p-6 border-2 rounded-xl hover:border-green-500 hover:bg-green-50 transition-all text-left"
+                      className="p-6 border-2 rounded-xl hover:border-green-600 hover:bg-green-50 transition-all text-left"
                     >
                       <FileText className="w-8 h-8 text-green-600 mb-3" />
                       <h3 className="font-semibold text-lg">{subject.label}</h3>
@@ -307,7 +307,7 @@ export default function OMRCheckerPage() {
                         disabled={!paper.isSubmissionOpen}
                         className={`w-full p-4 border-2 rounded-xl text-left transition-all ${
                           paper.isSubmissionOpen
-                            ? 'hover:border-green-500 hover:bg-green-50'
+                            ? 'hover:border-green-600 hover:bg-green-50'
                             : 'opacity-50 cursor-not-allowed'
                         }`}
                       >
@@ -374,7 +374,7 @@ export default function OMRCheckerPage() {
                     </p>
                     <div className="w-32 h-2 bg-gray-200 rounded-full mt-1">
                       <div
-                        className="h-full bg-green-500 rounded-full transition-all"
+                        className="h-full bg-green-600 rounded-full transition-all"
                         style={{
                           width: `${(answeredCount / selectedPaper.totalQuestions) * 100}%`,
                         }}
@@ -389,7 +389,7 @@ export default function OMRCheckerPage() {
                     placeholder="Your Name *"
                     value={studentInfo.name}
                     onChange={(e) => setStudentInfo({ ...studentInfo, name: e.target.value })}
-                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
                     required
                   />
                   <input
@@ -397,13 +397,13 @@ export default function OMRCheckerPage() {
                     placeholder="Phone Number *"
                     value={studentInfo.phone}
                     onChange={(e) => setStudentInfo({ ...studentInfo, phone: e.target.value })}
-                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
                     required
                   />
                   <select
                     value={studentInfo.class}
                     onChange={(e) => setStudentInfo({ ...studentInfo, class: e.target.value })}
-                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                    className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
                   >
                     <option value="11th">Class 11th</option>
                     <option value="12th">Class 12th</option>
@@ -430,7 +430,7 @@ export default function OMRCheckerPage() {
                                 onClick={() => handleAnswerSelect(qNo, opt)}
                                 className={`w-7 h-7 text-xs font-medium rounded-full border-2 transition-all ${
                                   answers[qNo] === opt
-                                    ? 'bg-green-500 border-green-500 text-white'
+                                    ? 'bg-green-600 border-green-600 text-white'
                                     : 'border-gray-300 hover:border-green-400'
                                 }`}
                               >

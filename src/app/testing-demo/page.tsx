@@ -167,23 +167,23 @@ export default function TestingDemoLandingPage() {
               <h4 className="text-lg font-semibold text-gray-800 mb-4">Analytics & Data</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                   Real-time event tracking
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                   Statistical analysis algorithms
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                   Machine learning insights
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                   Cross-data pattern recognition
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                   Automated optimization recommendations
                 </li>
               </ul>

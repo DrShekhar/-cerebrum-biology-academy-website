@@ -43,13 +43,13 @@ export function PricingComparisonTable({
   }
 
   const tierColors = {
-    pursuit: 'from-emerald-500 to-teal-600',
+    pursuit: 'bg-green-600',
     ascent: 'from-purple-500 to-indigo-600',
     pinnacle: 'from-amber-500 to-orange-600',
   }
 
   const tierBgColors = {
-    pursuit: 'bg-emerald-50 border-emerald-200',
+    pursuit: 'bg-green-50 border-green-200',
     ascent: 'bg-purple-50 border-purple-200',
     pinnacle: 'bg-amber-50 border-amber-200',
   }

@@ -61,7 +61,7 @@ export default async function MockTestsPage() {
   return (
     <div className="min-h-screen bg-gray-50 scroll-smooth">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             NEET Mock Tests

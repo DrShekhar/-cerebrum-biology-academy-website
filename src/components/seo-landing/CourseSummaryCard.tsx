@@ -48,7 +48,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className="flex items-start gap-3"
                 >
-                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
+                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
                     <Check className="h-3 w-3" />
                   </div>
                   <span className="text-gray-700">{feature}</span>
@@ -63,7 +63,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-600 p-8 text-white shadow-2xl"
+            className="relative overflow-hidden rounded-3xl bg-indigo-500 p-8 text-white shadow-2xl"
           >
             {/* Decorative Elements */}
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10" />

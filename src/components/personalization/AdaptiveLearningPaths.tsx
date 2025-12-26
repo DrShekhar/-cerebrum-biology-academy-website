@@ -480,7 +480,7 @@ export function AdaptiveLearningPaths() {
                       ? 'bg-red-500'
                       : milestone.importance === 'medium'
                         ? 'bg-yellow-500'
-                        : 'bg-green-500'
+                        : 'bg-green-600'
                   }`}
                 ></div>
               </div>
@@ -496,7 +496,7 @@ export function AdaptiveLearningPaths() {
           <div className="space-y-2">
             {studyPlan.adaptiveRecommendations.map((rec, index) => (
               <div key={index} className="flex items-start space-x-2 text-sm">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{rec}</span>
               </div>
             ))}
@@ -621,7 +621,7 @@ export function QuickAssessment() {
   const question = questions[currentQuestion]
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
+    <div className="bg-gray-50 rounded-xl p-6 border border-blue-200">
       <div className="text-center mb-6">
         <h3 className="text-lg font-bold text-gray-900 mb-2">
           Quick Assessment ({currentQuestion + 1}/{questions.length})

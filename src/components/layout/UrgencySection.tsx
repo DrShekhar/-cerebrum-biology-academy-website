@@ -75,7 +75,7 @@ export function UrgencySection() {
       title: 'Bonus Materials',
       description: 'Free NEET previous papers + exclusive study resources',
       remaining: 'Worth ₹5,000',
-      color: 'text-emerald-500 bg-emerald-50 border-emerald-200',
+      color: 'text-green-600 bg-green-50 border-green-200',
     },
   ]
 
@@ -113,7 +113,7 @@ export function UrgencySection() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-2xl p-6 mb-12 shadow-xl"
+          className="bg-red-600 text-white rounded-2xl p-6 mb-12 shadow-xl"
         >
           <div className="flex items-center justify-center space-x-3 mb-4">
             <AlertCircle className="w-8 h-8 animate-pulse" />
@@ -237,7 +237,7 @@ export function UrgencySection() {
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className="bg-gradient-to-r from-red-500 to-orange-500 h-full rounded-full"
+                    className="bg-red-600 h-full rounded-full"
                   />
                 </div>
                 <p className="text-sm text-gray-600">Only {batchInfo.remainingSeats} seats left!</p>
@@ -249,7 +249,7 @@ export function UrgencySection() {
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-xl font-bold text-gray-900">Live Enrollment Activity</h4>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                   <span className="text-sm text-green-600 font-medium">Live</span>
                 </div>
               </div>

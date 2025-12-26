@@ -91,7 +91,7 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
         }
       default:
         return {
-          bgGradient: 'from-blue-600 to-teal-600',
+          bgGradient: 'from-blue-600 to-green-600',
           icon: CheckCircle,
           iconColor: 'text-blue-100',
           title: 'Trial Active',

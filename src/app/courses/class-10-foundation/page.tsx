@@ -153,28 +153,28 @@ export default function Class10FoundationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Class 10th Biology Foundation
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-emerald-100 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8">
                 Master advanced Biology concepts while excelling in board exams. Perfect preparation
                 for NEET foundation with comprehensive life processes understanding.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/admissions"
-                  className="w-full sm:w-auto bg-white text-emerald-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
+                  className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Join Class 10 Foundation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
+                  className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Book Free Demo
                 </Link>
@@ -184,19 +184,19 @@ export default function Class10FoundationPage() {
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Class 10 Highlights</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Clock className="w-6 h-6 mr-3 text-emerald-300" />
+                  <Clock className="w-6 h-6 mr-3 text-green-400" />
                   <span>1 Year Advanced Program</span>
                 </div>
                 <div className="flex items-center">
-                  <Users className="w-6 h-6 mr-3 text-emerald-300" />
+                  <Users className="w-6 h-6 mr-3 text-green-400" />
                   <span>Premium Batch (Max 18 students)</span>
                 </div>
                 <div className="flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-emerald-300" />
+                  <Target className="w-6 h-6 mr-3 text-green-400" />
                   <span>Board + NEET Foundation</span>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="w-6 h-6 mr-3 text-emerald-300" />
+                  <Trophy className="w-6 h-6 mr-3 text-green-400" />
                   <span>90+ Board Score Target</span>
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default function Class10FoundationPage() {
                 key={index}
                 className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-3xl font-bold text-emerald-600 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-green-600 mb-2">{stat.number}</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
@@ -247,13 +247,13 @@ export default function Class10FoundationPage() {
             {boardFocus.map((board, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-emerald-600"
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{board.subject}</h3>
                 <div className="space-y-3">
                   {board.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </div>
                   ))}
@@ -312,7 +312,7 @@ export default function Class10FoundationPage() {
                   key={index}
                   className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <Icon className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+                  <Icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
                 </div>
@@ -336,12 +336,12 @@ export default function Class10FoundationPage() {
             {curriculum.map((unit, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-emerald-600"
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{unit.title}</h3>
                   <div className="text-right">
-                    <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium block mb-1">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium block mb-1">
                       {unit.duration}
                     </span>
                     <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium block mb-1">
@@ -355,7 +355,7 @@ export default function Class10FoundationPage() {
                 <div className="space-y-2">
                   {unit.topics.map((topic, topicIndex) => (
                     <div key={topicIndex} className="flex items-center">
-                      <BookOpen className="w-4 h-4 text-emerald-600 mr-2" />
+                      <BookOpen className="w-4 h-4 text-green-600 mr-2" />
                       <span className="text-gray-700">{topic}</span>
                     </div>
                   ))}
@@ -381,7 +381,7 @@ export default function Class10FoundationPage() {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <CheckCircle className="w-8 h-8 text-emerald-600 mb-4" />
+                <CheckCircle className="w-8 h-8 text-green-600 mb-4" />
                 <p className="text-gray-700 font-medium">{feature}</p>
               </div>
             ))}
@@ -390,7 +390,7 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Pricing & Enrollment */}
-      <section className="py-8 sm:py-12 md:py-16 bg-emerald-50">
+      <section className="py-8 sm:py-12 md:py-16 bg-green-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Excel in Board Exams & Beyond
@@ -432,9 +432,9 @@ export default function Class10FoundationPage() {
             </div>
           </div>
 
-          <div className="bg-teal-100 border border-teal-300 rounded-xl p-6">
-            <p className="text-teal-800 font-semibold mb-2">🏆 Board Excellence Guarantee</p>
-            <p className="text-teal-700">
+          <div className="bg-green-100 border border-green-400 rounded-xl p-6">
+            <p className="text-green-800 font-semibold mb-2">🏆 Board Excellence Guarantee</p>
+            <p className="text-green-700">
               Score 90+ in Class 10 boards or get additional coaching until you achieve the target -
               absolutely FREE!
             </p>

@@ -169,7 +169,7 @@ const greenColors: ColorSwatch[] = [
   },
   {
     name: 'Green 500',
-    tailwind: 'bg-green-500',
+    tailwind: 'bg-green-600',
     hex: '#22c55e',
     usage: 'Success buttons, icons',
     count: 179,
@@ -238,34 +238,34 @@ const purpleColors: ColorSwatch[] = [
 const tealColors: ColorSwatch[] = [
   {
     name: 'Teal 700',
-    tailwind: 'bg-teal-700',
+    tailwind: 'bg-green-700',
     hex: '#0f766e',
     usage: 'Teal hover states',
     count: 28,
   },
   {
     name: 'Teal 600',
-    tailwind: 'bg-teal-600',
+    tailwind: 'bg-green-600',
     hex: '#0d9488',
     usage: 'Teal buttons, links',
     count: 152,
   },
-  { name: 'Teal 500', tailwind: 'bg-teal-500', hex: '#14b8a6', usage: 'Teal accents', count: 28 },
+  { name: 'Teal 500', tailwind: 'bg-green-600', hex: '#14b8a6', usage: 'Teal accents', count: 28 },
   {
     name: 'Teal 400',
-    tailwind: 'bg-teal-400',
+    tailwind: 'bg-green-500',
     hex: '#2dd4bf',
     usage: 'Icons on dark bg',
     count: 20,
   },
   {
     name: 'Teal 100',
-    tailwind: 'bg-teal-100',
+    tailwind: 'bg-green-100',
     hex: '#ccfbf1',
     usage: 'Teal backgrounds',
     count: 51,
   },
-  { name: 'Teal 50', tailwind: 'bg-teal-50', hex: '#f0fdfa', usage: 'Subtle teal bg', count: 55 },
+  { name: 'Teal 50', tailwind: 'bg-green-50', hex: '#f0fdfa', usage: 'Subtle teal bg', count: 55 },
 ]
 
 const yellowColors: ColorSwatch[] = [
@@ -398,14 +398,14 @@ const indigoColors: ColorSwatch[] = [
 const emeraldColors: ColorSwatch[] = [
   {
     name: 'Emerald 600',
-    tailwind: 'bg-emerald-600',
+    tailwind: 'bg-green-600',
     hex: '#059669',
     usage: 'Emerald accents',
     count: 121,
   },
   {
     name: 'Emerald 500',
-    tailwind: 'bg-emerald-500',
+    tailwind: 'bg-green-600',
     hex: '#10b981',
     usage: 'Emerald buttons',
     count: 18,
@@ -462,7 +462,7 @@ const gradients: GradientSwatch[] = [
   // Blue-Purple gradients (most common)
   {
     name: 'Blue to Purple',
-    classes: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    classes: 'bg-indigo-500',
     usage: 'Primary CTA buttons, hero text, badges (132+ uses)',
   },
   {
@@ -472,7 +472,7 @@ const gradients: GradientSwatch[] = [
   },
   {
     name: 'Blue via Indigo to Purple',
-    classes: 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600',
+    classes: 'bg-indigo-600',
     usage: 'Premium hero sections (33+ uses)',
   },
   {
@@ -484,29 +484,29 @@ const gradients: GradientSwatch[] = [
   // Green gradients
   {
     name: 'Green to Teal',
-    classes: 'bg-gradient-to-r from-green-600 to-teal-600',
+    classes: 'bg-green-600',
     usage: 'Success states, biology-themed sections (47+ uses)',
   },
   {
     name: 'Green to Emerald',
-    classes: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    classes: 'bg-green-600',
     usage: 'Nature/bio themed elements (35+ uses)',
   },
   {
     name: 'Emerald to Teal',
-    classes: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    classes: 'bg-green-600',
     usage: 'Biology topic cards (30+ uses)',
   },
 
   // Teal gradients
   {
     name: 'Teal to Blue',
-    classes: 'bg-gradient-to-r from-teal-600 to-blue-600',
+    classes: 'bg-gradient-to-r from-green-600 to-blue-600',
     usage: 'Teal-themed sections (37+ uses)',
   },
   {
     name: 'Teal 600 to 700',
-    classes: 'bg-gradient-to-r from-teal-600 to-teal-700',
+    classes: 'bg-gradient-to-r from-green-600 to-green-700',
     usage: 'Monochromatic teal buttons (28+ uses)',
   },
 
@@ -525,12 +525,12 @@ const gradients: GradientSwatch[] = [
   // Light background gradients
   {
     name: 'Blue 50 to Purple 50',
-    classes: 'bg-gradient-to-br from-blue-50 to-purple-50',
+    classes: 'bg-gray-50',
     usage: 'Card backgrounds, sections (129+ uses)',
   },
   {
     name: 'Green 50 to Teal 50',
-    classes: 'bg-gradient-to-br from-green-50 to-teal-50',
+    classes: 'bg-gradient-to-br from-green-50 to-green-50',
     usage: 'Bio-themed section backgrounds (46+ uses)',
   },
   {
@@ -552,7 +552,7 @@ const gradients: GradientSwatch[] = [
   },
   {
     name: 'Blue 900 to Purple 900',
-    classes: 'bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900',
+    classes: 'bg-gradient-to-br bg-indigo-900',
     usage: 'Legacy hero sections (being replaced)',
   },
 ]
@@ -604,9 +604,9 @@ const combinations: CombinationSwatch[] = [
   },
   {
     name: 'Teal Info Card',
-    bgClass: 'bg-teal-50',
-    textClass: 'text-teal-800',
-    borderClass: 'border border-teal-200',
+    bgClass: 'bg-green-50',
+    textClass: 'text-green-800',
+    borderClass: 'border border-green-200',
     usage: 'Bio-themed info cards',
   },
   {
@@ -680,7 +680,7 @@ export default function ColorPalettePage() {
             onClick={() => setActiveTab('gradients')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
               activeTab === 'gradients'
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                ? 'bg-indigo-500 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -799,10 +799,10 @@ export default function ColorPalettePage() {
         <div className="mt-16 border-t-2 border-gray-200 pt-12">
           <h2 className="text-2xl font-bold text-black mb-8">Live Button Examples</h2>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">
+            <button className="bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold">
               Blue-Purple Gradient
             </button>
-            <button className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold">
+            <button className="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-lg font-semibold">
               Green-Teal Gradient
             </button>
             <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold">
@@ -811,7 +811,7 @@ export default function ColorPalettePage() {
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
               Solid Blue 600
             </button>
-            <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
               Solid Teal 600
             </button>
             <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">

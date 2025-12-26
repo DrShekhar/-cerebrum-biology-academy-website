@@ -61,7 +61,7 @@ const STAGE_COLUMNS: { id: LeadStage; title: string; color: string }[] = [
   { id: 'NEGOTIATING', title: 'Negotiating', color: 'bg-orange-100' },
   { id: 'PAYMENT_PENDING', title: 'Payment Pending', color: 'bg-red-100' },
   { id: 'ENROLLED', title: 'Enrolled', color: 'bg-green-100' },
-  { id: 'ACTIVE_STUDENT', title: 'Active', color: 'bg-emerald-100' },
+  { id: 'ACTIVE_STUDENT', title: 'Active', color: 'bg-green-100' },
 ]
 
 // Draggable Lead Card Component

@@ -1422,7 +1422,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                 </div>
 
                 {/* Difficulty Distribution - Moved to bottom */}
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+                <div className="bg-gradient-to-r from-green-50 to-green-50 rounded-xl p-6 border border-green-200">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-lg font-semibold text-gray-800 flex items-center">
                       <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
@@ -1602,7 +1602,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                             .find(m => m.id === testConfig.questionCreationMethod)
                             ?.features.map((feature, index) => (
                             <li key={index} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                               {feature}
                             </li>
                           ))}
@@ -1629,7 +1629,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                     </div>
 
                     {/* Question Creation Tools */}
-                    <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200">
+                    <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-purple-200">
                       <div className="flex items-center justify-between mb-4">
                         <div>
                           <h5 className="font-semibold text-gray-800">Question Creation Tools</h5>
@@ -1643,7 +1643,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                       <div className="flex flex-wrap gap-3">
                         <button
                           onClick={handleQuestionBuilderOpen}
-                          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                          className="flex items-center space-x-2 px-6 py-3 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-200 shadow-lg hover:shadow-xl"
                         >
                           <FileText className="w-5 h-5" />
                           <span>Create Question</span>
@@ -1664,7 +1664,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                         )}
 
                         {testConfig.questionCreationMethod === 'ai-generated' && (
-                          <button className="flex items-center space-x-2 px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors">
+                          <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                             <Zap className="w-5 h-5" />
                             <span>Generate with AI</span>
                           </button>
@@ -1983,7 +1983,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                   </div>
 
                   {/* Test Settings Summary */}
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
+                  <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
                       <Settings className="w-5 h-5 mr-2 text-green-600" />
                       Test Settings
@@ -2115,7 +2115,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                 <button
                   onClick={handleCreateTest}
                   disabled={!canProceedToNextStep()}
-                  className="px-6 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center"
+                  className="px-6 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   Create Test

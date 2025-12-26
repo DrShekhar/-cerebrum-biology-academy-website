@@ -65,7 +65,7 @@ export function BookingSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -170,7 +170,7 @@ export function BookingSection() {
 
             {/* Quick Stats */}
             <motion.div
-              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
+              className="bg-indigo-500 rounded-2xl p-8 text-white"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}

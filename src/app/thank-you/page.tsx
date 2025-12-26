@@ -137,7 +137,7 @@ function ThankYouContent() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-            className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6"
           >
             <CheckCircle2 className="w-12 h-12 text-white" />
           </motion.div>
@@ -159,7 +159,7 @@ function ThankYouContent() {
           >
             <PremiumCard variant="premium" size="lg" className="bg-green-50 border-green-200">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
                   <MessageSquare className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -291,7 +291,7 @@ function ThankYouContent() {
           transition={{ delay: 0.9 }}
           className="text-center"
         >
-          <PremiumCard variant="premium" className="bg-gradient-to-r from-blue-50 to-purple-50">
+          <PremiumCard variant="premium" className="bg-gray-50">
             <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="text-center">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">
@@ -332,7 +332,7 @@ export default function ThankYouPage() {
       fallback={
         <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 flex items-center justify-center">
           <div className="text-center">
-            <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600">Loading...</p>
           </div>
         </div>

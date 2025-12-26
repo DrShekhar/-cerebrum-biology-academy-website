@@ -96,7 +96,7 @@ export function ParentTestimonialsSection({
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center bg-teal-100 text-teal-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center bg-green-100 text-green-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Heart className="w-5 h-5 mr-2" />
             Parent Testimonials - Real Stories of Trust
           </div>
@@ -117,7 +117,7 @@ export function ParentTestimonialsSection({
                 icon: TrendingUp,
                 label: `${parentSuccessMetrics.averageImprovement}+`,
                 sublabel: 'Avg. Improvement',
-                color: 'text-emerald-600',
+                color: 'text-green-600',
               },
               {
                 icon: ThumbsUp,
@@ -180,13 +180,13 @@ export function ParentTestimonialsSection({
                   {/* Parent Info */}
                   <div className="text-center md:text-left">
                     <div className="relative inline-block mb-6">
-                      <div className="w-24 h-24 bg-navy-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg border-2 border-teal-600">
+                      <div className="w-24 h-24 bg-navy-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg border-2 border-green-600">
                         {currentTestimonialData.parentName
                           .split(' ')
                           .map((n) => n[0])
                           .join('')}
                       </div>
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
                         <Verified className="w-5 h-5 text-white" />
                       </div>
                     </div>
@@ -209,7 +209,7 @@ export function ParentTestimonialsSection({
                     </div>
 
                     {/* Student Achievement Badge */}
-                    <div className="inline-flex items-center bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
                       <Award className="w-4 h-4 mr-2" />
                       Child: {currentTestimonialData.studentAchievement}
                     </div>
@@ -218,14 +218,14 @@ export function ParentTestimonialsSection({
                   {/* Testimonial Content */}
                   <div className="md:col-span-2">
                     <div className="relative">
-                      <Quote className="w-12 h-12 text-teal-200 absolute -top-4 -left-4" />
+                      <Quote className="w-12 h-12 text-green-200 absolute -top-4 -left-4" />
                       <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6 pl-8">
                         "{currentTestimonialData.testimonial}"
                       </blockquote>
                     </div>
 
                     {/* Student Details */}
-                    <div className="bg-teal-50 rounded-xl p-6 mb-6 border border-teal-100">
+                    <div className="bg-green-50 rounded-xl p-6 mb-6 border border-green-100">
                       <h4 className="font-semibold text-gray-900 mb-3">Success Story Details:</h4>
                       <div className="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
@@ -245,14 +245,14 @@ export function ParentTestimonialsSection({
                             <>
                               <div>
                                 <span className="text-gray-600">Score Improvement:</span>
-                                <span className="font-medium text-emerald-600 ml-2">
+                                <span className="font-medium text-green-600 ml-2">
                                   {currentTestimonialData.beforeScore} →{' '}
                                   {currentTestimonialData.afterScore}
                                 </span>
                               </div>
                               <div>
                                 <span className="text-gray-600">Improvement:</span>
-                                <span className="font-bold text-emerald-600 ml-2">
+                                <span className="font-bold text-green-600 ml-2">
                                   +
                                   {currentTestimonialData.afterScore -
                                     currentTestimonialData.beforeScore}{' '}
@@ -305,7 +305,7 @@ export function ParentTestimonialsSection({
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? 'bg-teal-600' : 'bg-white/50'
+                    index === currentTestimonial ? 'bg-green-600' : 'bg-white/50'
                   }`}
                 />
               ))}
@@ -335,7 +335,7 @@ export function ParentTestimonialsSection({
                   className="bg-white rounded-xl shadow-lg p-6 border border-navy-200"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-teal-600">
+                    <div className="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-green-600">
                       {testimonial.parentName
                         .split(' ')
                         .map((n) => n[0])
@@ -360,7 +360,7 @@ export function ParentTestimonialsSection({
                     <span>
                       {testimonial.studentName} → {testimonial.college}
                     </span>
-                    <span className="text-emerald-600 font-medium">
+                    <span className="text-green-600 font-medium">
                       {testimonial.beforeScore &&
                         testimonial.afterScore &&
                         `+${testimonial.afterScore - testimonial.beforeScore} marks`}
@@ -423,7 +423,7 @@ export function ParentTestimonialsSection({
               <span>4.9/5 Rating</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-teal-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
               <span>96.2% Recommend</span>
             </div>
           </div>

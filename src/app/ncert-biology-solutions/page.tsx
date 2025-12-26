@@ -254,10 +254,10 @@ export default function NCERTBiologySolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 opacity-5" />
+          <div className="absolute inset-0 bg-green-600 opacity-5" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-12">
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -282,7 +282,7 @@ export default function NCERTBiologySolutionsPage() {
                 </a>
                 <a
                   href="#class-12"
-                  className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors"
+                  className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
                 >
                   Class 12 Solutions
                   <ChevronRight className="w-5 h-5 ml-2" />
@@ -297,7 +297,7 @@ export default function NCERTBiologySolutionsPage() {
                 <div className="text-sm text-gray-600">Chapters Covered</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
-                <div className="text-3xl font-bold text-teal-600 mb-1">1000+</div>
+                <div className="text-3xl font-bold text-green-600 mb-1">1000+</div>
                 <div className="text-sm text-gray-600">Solved Questions</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
@@ -329,8 +329,8 @@ export default function NCERTBiologySolutionsPage() {
                 </p>
               </div>
               <div className="text-center p-6">
-                <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-7 h-7 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">NEET Focused</h3>
                 <p className="text-sm text-gray-600">
@@ -427,7 +427,7 @@ export default function NCERTBiologySolutionsPage() {
                   16 Chapters | 5 Units | Complete NCERT Coverage
                 </p>
               </div>
-              <div className="hidden md:flex items-center bg-teal-100 text-teal-800 px-4 py-2 rounded-lg">
+              <div className="hidden md:flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-lg">
                 <BookOpen className="w-5 h-5 mr-2" />
                 NCERT 2024-25
               </div>
@@ -439,7 +439,7 @@ export default function NCERTBiologySolutionsPage() {
                   key={unitIndex}
                   className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
                 >
-                  <div className="bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-4">
+                  <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
                     <h3 className="text-lg font-semibold text-white">{unit.unit}</h3>
                   </div>
                   <div className="divide-y divide-gray-100">
@@ -449,7 +449,7 @@ export default function NCERTBiologySolutionsPage() {
                         className="px-6 py-4 hover:bg-gray-50 transition-colors flex items-center justify-between"
                       >
                         <div className="flex items-center space-x-4">
-                          <span className="w-10 h-10 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center font-bold">
+                          <span className="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">
                             {chapter.number}
                           </span>
                           <div>
@@ -460,7 +460,7 @@ export default function NCERTBiologySolutionsPage() {
                         <div className="flex items-center space-x-3">
                           <Link
                             href={`/biology-notes/class-12/${chapter.slug}`}
-                            className="inline-flex items-center px-4 py-2 bg-teal-50 text-teal-700 rounded-lg hover:bg-teal-100 transition-colors text-sm font-medium"
+                            className="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium"
                           >
                             View Solutions
                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -492,8 +492,8 @@ export default function NCERTBiologySolutionsPage() {
                   Understand concepts first, then verify with our explanations.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6">
-                <div className="w-12 h-12 bg-teal-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">
                   2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Attempt Questions</h3>
@@ -537,7 +537,7 @@ export default function NCERTBiologySolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600">
+        <section className="py-16 bg-green-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need More Help with NEET Biology?

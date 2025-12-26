@@ -69,7 +69,7 @@ export default async function FacultyProfilePage({ params }: Props) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -188,7 +188,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                   <div className="space-y-4">
                     {faculty.achievements.map((achievement, index) => (
                       <div key={index} className="flex items-start">
-                        <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
+                        <CheckCircle className="w-6 h-6 text-green-600 mr-4 mt-1 flex-shrink-0" />
                         <p className="text-gray-700">{achievement}</p>
                       </div>
                     ))}
@@ -232,7 +232,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                   {faculty.specialization.map((subject, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-2xl p-6"
+                      className="bg-blue-500 text-white rounded-2xl p-6"
                     >
                       <BookOpen className="w-8 h-8 mb-3" />
                       <h3 className="text-xl font-bold mb-2">{subject}</h3>
@@ -277,7 +277,7 @@ export default async function FacultyProfilePage({ params }: Props) {
 
               {/* Faculty Stats */}
               <motion.div
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-3xl p-8"
+                className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-3xl p-8"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -340,7 +340,7 @@ export default async function FacultyProfilePage({ params }: Props) {
       </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Learn from {faculty.name}?</h2>
           <p className="text-xl text-purple-100 mb-8">

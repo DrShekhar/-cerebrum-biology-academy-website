@@ -165,7 +165,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-600">{feature}</span>
                       </li>
                     ))}

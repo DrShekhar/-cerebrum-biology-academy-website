@@ -62,10 +62,10 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
           icon: Zap,
           gradient: 'from-slate-900 to-slate-700',
           cardBg: 'bg-white',
-          accentColor: 'from-emerald-600 to-green-600',
+          accentColor: 'bg-green-600',
           textColor: 'text-slate-900',
           mutedColor: 'text-slate-500',
-          badge: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'POPULAR' },
+          badge: { bg: 'bg-green-100', text: 'text-green-700', label: 'POPULAR' },
           description: 'Comprehensive NEET preparation with proven methodology',
         }
       case 'pursuit':
@@ -433,7 +433,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
               >
                 <span className="flex items-center justify-center gap-2">
                   <span>Book Demo Class</span>
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
                 </span>
               </motion.button>
             </div>

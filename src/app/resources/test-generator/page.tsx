@@ -487,7 +487,7 @@ export default function TestGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       {/* Self-Practice Notice */}
-      <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-2 px-4 text-center text-sm">
+      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-2 px-4 text-center text-sm">
         <span className="font-medium">Self-Practice Mode</span> - Practice at your own pace. For
         official tests assigned by your teacher, check your{' '}
         <a href="/student/dashboard" className="underline hover:no-underline">
@@ -500,7 +500,7 @@ export default function TestGeneratorPage() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -744,7 +744,7 @@ export default function TestGeneratorPage() {
                           <span className="text-gray-700">Include Previous Year Questions</span>
                         </label>
 
-                        <label className="flex items-center space-x-3 col-span-2 mt-4 p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200">
+                        <label className="flex items-center space-x-3 col-span-2 mt-4 p-3 bg-gray-50 rounded-xl border border-purple-200">
                           <input
                             type="checkbox"
                             checked={useAIMode}
@@ -915,7 +915,7 @@ export default function TestGeneratorPage() {
                     className={`w-full py-4 rounded-xl font-semibold text-lg text-white ${
                       useAIMode
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-indigo-500 hover:bg-indigo-600'
                     }`}
                   >
                     {isGenerating ? (
@@ -951,7 +951,7 @@ export default function TestGeneratorPage() {
                           className={`h-3 rounded-full transition-all duration-300 ${
                             useAIMode
                               ? 'bg-gradient-to-r from-purple-600 to-pink-600'
-                              : 'bg-gradient-to-r from-blue-600 to-purple-600'
+                              : 'bg-indigo-500'
                           }`}
                           style={{ width: `${generationProgress}%` }}
                         />
@@ -1017,7 +1017,7 @@ export default function TestGeneratorPage() {
                     <ul className="space-y-2">
                       {generatedTest.instructions.map((instruction, index) => (
                         <li key={index} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{instruction}</span>
                         </li>
                       ))}

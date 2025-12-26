@@ -2,7 +2,7 @@
 
 export default function TestLearningPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8">
+    <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           🎯 Personalized Learning Path - Test
@@ -10,7 +10,7 @@ export default function TestLearningPage() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* NEET Score Card */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+          <div className="bg-indigo-500 rounded-2xl p-6 text-white">
             <h2 className="text-2xl font-bold mb-4">NEET Score Prediction</h2>
             <div className="space-y-4">
               <div>

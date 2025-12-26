@@ -33,7 +33,7 @@ export function TopicAnalysisChart({ data }: TopicAnalysisChartProps) {
                 <div
                   className={`h-full transition-all duration-500 ease-out ${
                     topic.accuracy >= 80
-                      ? 'bg-green-500'
+                      ? 'bg-green-600'
                       : topic.accuracy >= 60
                       ? 'bg-yellow-500'
                       : 'bg-red-500'

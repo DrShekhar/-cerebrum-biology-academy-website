@@ -70,7 +70,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
     <section className="py-12 px-4 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+          <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center shadow-lg">
             <MessageSquare className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -120,7 +120,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting || !question.trim()}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-4 h-4" />
                     Ask on WhatsApp

@@ -62,7 +62,7 @@ export default function NEET2026PreparationPage() {
       title: 'AIIMS Faculty',
       description: 'Learn from ex-AIIMS doctors and NEET biology experts with 15+ years experience',
       icon: Award,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -107,7 +107,7 @@ export default function NEET2026PreparationPage() {
       duration: '18 Months',
       features: ['Extra time for preparation', 'Thorough concept building', 'Multiple revisions'],
       price: '₹75,000',
-      color: 'from-green-500 to-teal-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -154,11 +154,11 @@ export default function NEET2026PreparationPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Urgency Banner */}
-        <div className="relative bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3">
+        <div className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-3">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center flex-wrap gap-2">
               <Clock className="w-5 h-5" />
@@ -256,7 +256,7 @@ export default function NEET2026PreparationPage() {
                         item.status === 'exam'
                           ? 'bg-yellow-500/20'
                           : item.status === 'active'
-                            ? 'bg-green-500/20'
+                            ? 'bg-green-600/20'
                             : 'bg-white/5'
                       }`}
                     >
@@ -287,7 +287,7 @@ export default function NEET2026PreparationPage() {
                   ))}
                 </div>
 
-                <div className="mt-6 p-4 bg-green-500/20 rounded-lg text-center">
+                <div className="mt-6 p-4 bg-green-600/20 rounded-lg text-center">
                   <p className="text-sm font-medium">Start NOW for maximum preparation time!</p>
                 </div>
               </div>
@@ -393,7 +393,7 @@ export default function NEET2026PreparationPage() {
                 <ul className="space-y-2 mb-4">
                   {batch.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-600 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -459,7 +459,7 @@ export default function NEET2026PreparationPage() {
       <ParentTestimonialsSection />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

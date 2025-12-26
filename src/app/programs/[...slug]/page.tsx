@@ -246,7 +246,7 @@ const programsData: Record<string, ProgramData> = {
           'Our course is designed to cover both. NCERT is the base for NEET Biology, so you prepare for both simultaneously.',
       },
     ],
-    gradient: 'from-green-500 to-emerald-600',
+    gradient: 'bg-green-600',
     icon: '🌱',
   },
   'class-12-intensive': {
@@ -626,7 +626,7 @@ const programsData: Record<string, ProgramData> = {
           'You can book sessions through our app or WhatsApp. Slots available throughout the week.',
       },
     ],
-    gradient: 'from-teal-500 to-cyan-600',
+    gradient: 'from-green-600 to-cyan-600',
     icon: '❓',
   },
 }
@@ -661,7 +661,7 @@ const defaultProgram: ProgramData = {
       answer: 'Contact us on WhatsApp at +91 88264-44334 for detailed information.',
     },
   ],
-  gradient: 'from-blue-500 to-purple-600',
+  gradient: 'from-indigo-500 to-indigo-600',
   icon: '🎓',
 }
 
@@ -722,7 +722,7 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
                   href="https://wa.me/918826444334"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all"
+                  className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp
@@ -798,7 +798,7 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
                 key={index}
                 className="flex items-start p-4 bg-gray-50 rounded-xl hover:shadow-md transition-all"
               >
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700">{feature}</span>
               </div>
             ))}

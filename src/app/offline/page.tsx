@@ -44,12 +44,12 @@ export default function OfflinePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span className="text-3xl">✅</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-800 mb-4">कनेक्शन बहाल हो गया!</h1>
           <p className="text-gray-600 mb-4">Connection Restored! Redirecting...</p>
-          <div className="w-8 h-8 border-3 border-green-500 border-t-transparent rounded-full animate-spin mx-auto" />
+          <div className="w-8 h-8 border-3 border-green-600 border-t-transparent rounded-full animate-spin mx-auto" />
         </motion.div>
       </div>
     )
@@ -96,15 +96,15 @@ export default function OfflinePage() {
           </h3>
           <div className="space-y-3 text-sm text-gray-600">
             <div className="flex items-center">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
               Cached biology lessons • कैश्ड जीव विज्ञान पाठ
             </div>
             <div className="flex items-center">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
               Previous notes & progress • पिछले नोट्स और प्रगति
             </div>
             <div className="flex items-center">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
               Practice questions • अभ्यास प्रश्न
             </div>
           </div>

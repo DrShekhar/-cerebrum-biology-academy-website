@@ -120,12 +120,12 @@ export function FacultyVideoSection() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[
               { icon: Users, label: '2,847+', sublabel: 'Students Placed', color: 'text-blue-600' },
-              { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-emerald-600' },
+              { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
               {
                 icon: BookOpen,
                 label: '247',
                 sublabel: 'AIIMS Selections',
-                color: 'text-teal-600',
+                color: 'text-green-600',
               },
               { icon: Star, label: '4.9/5', sublabel: 'Student Rating', color: 'text-yellow-600' },
             ].map((stat, index) => (

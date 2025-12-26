@@ -158,7 +158,7 @@ export default function BiologyMajorCoursesPage() {
     {
       name: 'Molecular Biology',
       icon: Dna,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
       topics: ['DNA Replication', 'Transcription', 'Translation', 'Gene Expression'],
     },
     {
@@ -188,19 +188,19 @@ export default function BiologyMajorCoursesPage() {
     {
       name: 'Ecology',
       icon: TreeDeciduous,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       topics: ['Ecosystems', 'Biodiversity', 'Conservation', 'Climate Change'],
     },
     {
       name: 'Evolutionary Biology',
       icon: Leaf,
-      color: 'from-lime-500 to-green-500',
+      color: 'from-lime-500 to-green-600',
       topics: ['Natural Selection', 'Speciation', 'Phylogenetics', 'Adaptation'],
     },
     {
       name: 'Immunology',
       icon: Shield,
-      color: 'from-red-500 to-rose-500',
+      color: 'bg-red-600',
       topics: ['Immune Response', 'Antibodies', 'Vaccines', 'Autoimmunity'],
     },
   ]
@@ -225,7 +225,7 @@ export default function BiologyMajorCoursesPage() {
       title: 'Nursing Students',
       description: 'Anatomy, physiology, microbiology, and pathophysiology for nursing programs',
       icon: UserCheck,
-      color: 'from-teal-600 to-cyan-700',
+      color: 'from-green-600 to-cyan-700',
       benefits: ['Clinical Sciences', 'Patient Care Biology', 'Nursing Exams'],
     },
     {
@@ -239,7 +239,7 @@ export default function BiologyMajorCoursesPage() {
       title: 'Research Aspirants',
       description: 'Research methodology, experimental design, and academic writing support',
       icon: Search,
-      color: 'from-emerald-600 to-green-700',
+      color: 'from-green-600 to-green-700',
       benefits: ['Research Design', 'Data Analysis', 'Scientific Writing'],
     },
   ]
@@ -443,7 +443,7 @@ export default function BiologyMajorCoursesPage() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>

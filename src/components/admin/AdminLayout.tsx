@@ -509,7 +509,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               {/* Real-time indicators */}
               <div className="flex items-center space-x-2 text-sm">
                 <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                   <span className="text-gray-600">Live</span>
                 </div>
                 <span className="text-gray-400">|</span>

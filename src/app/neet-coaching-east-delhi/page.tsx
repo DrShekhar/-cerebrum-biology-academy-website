@@ -220,7 +220,7 @@ export default function NEETCoachingEastDelhiPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-teal-900 py-20">
+      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-green-800 py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,12 +228,12 @@ export default function NEETCoachingEastDelhiPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
               #1 NEET Coaching for East Delhi Students
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Best NEET Coaching in{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-400">
                 East Delhi
               </span>
             </h1>
@@ -272,7 +272,7 @@ export default function NEETCoachingEastDelhiPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center p-6 rounded-xl bg-gray-50"
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-3 text-teal-600" />
+                <stat.icon className="w-8 h-8 mx-auto mb-3 text-green-600" />
                 <div className="text-3xl font-bold text-navy-900">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
               </motion.div>
@@ -309,10 +309,10 @@ export default function NEETCoachingEastDelhiPage() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
                 <Link href={`/neet-coaching-east-delhi/${area.slug}`}>
-                  <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-teal-200 h-full">
+                  <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-green-200 h-full">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-5 h-5 text-teal-600" />
+                        <MapPin className="w-5 h-5 text-green-600" />
                         <h3 className="font-semibold text-navy-900">{area.name}</h3>
                       </div>
                       <span
@@ -323,7 +323,7 @@ export default function NEETCoachingEastDelhiPage() {
                               ? 'bg-purple-100 text-purple-700'
                               : area.type === 'commercial'
                                 ? 'bg-blue-100 text-blue-700'
-                                : 'bg-teal-100 text-teal-700'
+                                : 'bg-green-100 text-green-700'
                         }`}
                       >
                         {area.type === 'coaching-hub'
@@ -346,7 +346,7 @@ export default function NEETCoachingEastDelhiPage() {
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center text-teal-600 text-sm font-medium">
+                    <div className="flex items-center text-green-600 text-sm font-medium">
                       View Details <ArrowRight className="w-4 h-4 ml-1" />
                     </div>
                   </div>
@@ -385,8 +385,8 @@ export default function NEETCoachingEastDelhiPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-50 rounded-xl p-6 text-center"
               >
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -417,7 +417,7 @@ export default function NEETCoachingEastDelhiPage() {
             <div className="bg-white rounded-2xl overflow-hidden">
               <div className="grid grid-cols-3 bg-gray-100 p-4 font-semibold">
                 <div className="text-gray-600">Feature</div>
-                <div className="text-teal-600 text-center">Cerebrum Academy</div>
+                <div className="text-green-600 text-center">Cerebrum Academy</div>
                 <div className="text-gray-600 text-center">Laxmi Nagar Centers</div>
               </div>
               {[
@@ -433,7 +433,7 @@ export default function NEETCoachingEastDelhiPage() {
                   className={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
                 >
                   <div className="text-gray-700">{feature}</div>
-                  <div className="text-center text-teal-600 font-medium flex items-center justify-center gap-2">
+                  <div className="text-center text-green-600 font-medium flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4" /> {cerebrum}
                   </div>
                   <div className="text-center text-gray-500">{others}</div>
@@ -482,7 +482,7 @@ export default function NEETCoachingEastDelhiPage() {
                   <div className="text-sm text-gray-500 flex items-center gap-2">
                     <MapPin className="w-3 h-3" /> {testimonial.area}
                   </div>
-                  <div className="text-sm text-teal-600 font-medium mt-1">{testimonial.score}</div>
+                  <div className="text-sm text-green-600 font-medium mt-1">{testimonial.score}</div>
                   <div className="text-sm text-gray-600">{testimonial.college}</div>
                 </div>
               </motion.div>
@@ -543,7 +543,7 @@ export default function NEETCoachingEastDelhiPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-600">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-cyan-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -553,7 +553,7 @@ export default function NEETCoachingEastDelhiPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Journey?
             </h2>
-            <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-green-100 mb-8 max-w-2xl mx-auto">
               Join 500+ successful students from East Delhi. Book your FREE demo class today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -563,7 +563,7 @@ export default function NEETCoachingEastDelhiPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white hover:text-teal-600"
+                className="bg-transparent border-white text-white hover:bg-white hover:text-green-600"
                 asChild
               >
                 <a href="tel:+918826444334">

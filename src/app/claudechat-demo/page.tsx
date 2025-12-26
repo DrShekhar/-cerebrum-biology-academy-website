@@ -1,6 +1,6 @@
 /**
  * ClaudeChat Board Demo Page
- * Showcase the revolutionary AI-powered education platform
+ * Showcase the AI-powered education platform
  */
 
 'use client'
@@ -42,9 +42,9 @@ export default function ClaudeChatDemo() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="bg-indigo-500 text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6 flex items-center justify-center space-x-4">
@@ -52,7 +52,7 @@ export default function ClaudeChatDemo() {
               <span>ClaudeChat Board</span>
             </h1>
             <p className="text-2xl mb-8 opacity-90">
-              The "iPhone of Education" - Revolutionary AI-Powered Biology Learning
+              AI-Powered Biology Learning Built for NEET Success
             </p>
             <p className="text-lg mb-12 max-w-3xl mx-auto opacity-80">
               🎤 Voice questions in Hindi/English/Hinglish • 📸 AR Biology Lab • 🎨 Interactive
@@ -75,13 +75,13 @@ export default function ClaudeChatDemo() {
         </div>
       </div>
 
-      {/* Revolutionary Features */}
+      {/* Key Features */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">🚀 10 Revolutionary Features</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">10 Features That Make Learning Easier</h2>
             <p className="text-xl text-gray-600">
-              Making ClaudeChat Board the most advanced education platform in the world
+              Tools designed by NEET educators to help you study smarter
             </p>
           </div>
 
@@ -89,73 +89,73 @@ export default function ClaudeChatDemo() {
             {[
               {
                 icon: '📱',
-                title: 'AR Biology Lab in Your Phone',
+                title: 'AR Biology Lab',
                 description:
-                  'Point camera at any object → See Biology concepts overlay with 3D models and real-time analysis',
-                impact: '10x faster visual learning',
+                  'Point your camera at objects to see Biology concepts with 3D models and labels',
+                impact: 'Visual learning aid',
               },
               {
                 icon: '🤖',
-                title: 'AI Study Buddy Personalities',
+                title: 'AI Study Modes',
                 description:
-                  'Motivational Coach, Study Partner, Exam Warrior - adapts to your emotional state and learning style',
-                impact: '95% engagement increase',
+                  'Choose between Motivational Coach, Study Partner, or Exam Practice modes based on what you need',
+                impact: 'Adapts to your mood',
               },
               {
                 icon: '🎤',
-                title: 'Multi-language Voice Chat',
+                title: 'Voice Chat in Your Language',
                 description:
-                  "Ask questions in English, Hindi, or Hinglish - get explanations in Shekhar Sir's synthesized voice",
-                impact: 'Native language comfort',
+                  "Ask questions in English, Hindi, or Hinglish - hear explanations in Shekhar Sir's voice",
+                impact: 'Hindi/English support',
               },
               {
                 icon: '📊',
-                title: 'Predictive Success AI',
+                title: 'Score Prediction',
                 description:
-                  'NEET score prediction with 95% accuracy, weakness identification before you realize',
-                impact: '40% score improvement',
+                  'Get estimated NEET scores based on your practice tests and identify weak topics early',
+                impact: 'Know where you stand',
               },
               {
                 icon: '🎮',
-                title: 'Viral Social Learning',
+                title: 'Study with Friends',
                 description:
-                  'Study streaks with friends, group study rooms, peer teaching rewards, biology meme generator',
-                impact: '300% retention rate',
+                  'Study streaks, group study rooms, peer teaching, and fun biology challenges',
+                impact: 'Makes studying social',
               },
               {
                 icon: '👨‍👩‍👧‍👦',
-                title: 'Parent Intelligence Dashboard',
+                title: 'Parent Dashboard',
                 description:
-                  'Real-time study analytics, automated WhatsApp reports, benchmark comparisons',
-                impact: 'Family engagement boost',
+                  'Parents can track study time, progress reports, and get WhatsApp updates',
+                impact: 'Keep parents informed',
               },
               {
                 icon: '🎯',
-                title: 'Biology Vision Technology',
+                title: 'Biology Vision',
                 description:
-                  'Point at ANY object → instant explanation, real-world recognition, AR overlays',
-                impact: 'Breakthrough innovation',
+                  'Point at any object and get instant Biology explanations with AR overlays',
+                impact: 'Learn from real world',
               },
               {
                 icon: '∞',
-                title: 'AI-Generated Practice Infinity',
+                title: 'Unlimited Practice',
                 description:
-                  'Unlimited practice questions tailored to weaknesses, real-time difficulty adjustment',
-                impact: 'Personalized mastery',
+                  'AI generates practice questions based on your weak areas with adjusting difficulty',
+                impact: 'Never run out of MCQs',
               },
               {
                 icon: '🧠',
-                title: 'Smart Content Creation',
+                title: 'Auto Notes & Flowcharts',
                 description:
-                  "Auto-generate notes from textbook pages, create flowcharts, convert text to Shekhar Sir's voice",
-                impact: 'Effortless learning',
+                  "Upload textbook pages to generate notes, flowcharts, or audio in Shekhar Sir's voice",
+                impact: 'Save study time',
               },
               {
                 icon: '🌐',
-                title: 'Global Network Effects',
+                title: 'Student Community',
                 description:
-                  'Study groups by location/performance, peer tutoring marketplace, collaborative challenges',
-                impact: 'Worldwide community',
+                  'Find study groups by location, get help from peers, join collaborative challenges',
+                impact: 'Learn together',
               },
             ].map((feature, index) => (
               <div
@@ -174,12 +174,12 @@ export default function ClaudeChatDemo() {
         </div>
       </div>
 
-      {/* Market Impact */}
+      {/* Our Track Record */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">📈 Market Domination Strategy</h2>
-            <p className="text-xl text-gray-600">From ₹2L to ₹50L+ monthly revenue in 12 months</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Track Record</h2>
+            <p className="text-xl text-gray-600">Results from Cerebrum Biology Academy students</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -187,79 +187,76 @@ export default function ClaudeChatDemo() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">1M+</div>
-              <div className="text-gray-600">Students in 6 months</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">1.5L+</div>
+              <div className="text-gray-600">Students guided</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-green-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">₹50L+</div>
-              <div className="text-gray-600">Monthly revenue target</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">695</div>
+              <div className="text-gray-600">Top NEET score (Sadhna Sirin)</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-purple-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
-              <div className="text-gray-600">NEET success rate</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">15+</div>
+              <div className="text-gray-600">Years teaching NEET Biology</div>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-blue-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
-              <div className="text-gray-600">Countries reached</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">NRI</div>
+              <div className="text-gray-600">Students from 10+ countries</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Implementation Phases */}
+      {/* Development Roadmap */}
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">🗓️ Implementation Roadmap</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">What We're Building</h2>
             <p className="text-xl text-gray-600">
-              Strategic rollout for maximum impact and sustainable growth
+              Our development plan for ClaudeChat Board features
             </p>
           </div>
 
           <div className="space-y-8">
             {[
               {
-                phase: 'Phase 1: Core Revolution',
-                weeks: 'Weeks 1-5',
-                revenue: '₹2L/month',
+                phase: 'Phase 1: Core Features',
+                timeline: 'Current',
                 features: [
-                  "Voice synthesis with Shekhar Sir's voice",
-                  'Picture upload and AI analysis',
-                  'Multi-language support (English/Hindi/Hinglish)',
-                  'Basic AR features',
+                  "Voice explanations in Shekhar Sir's voice",
+                  'Upload photos of textbook pages for explanation',
+                  'Hindi, English, and Hinglish support',
+                  'Basic Biology AR features',
                 ],
                 status: 'In Development',
               },
               {
-                phase: 'Phase 2: Viral Features',
-                weeks: 'Weeks 6-10',
-                revenue: '₹10L/month',
+                phase: 'Phase 2: Social Features',
+                timeline: 'Coming Soon',
                 features: [
-                  'Social learning and study streaks',
-                  'Parent dashboard integration',
-                  'Gamification elements',
-                  'Predictive AI features',
+                  'Study streaks and friend challenges',
+                  'Parent dashboard with progress reports',
+                  'Gamification and rewards',
+                  'Score prediction based on practice',
                 ],
                 status: 'Planning',
               },
               {
-                phase: 'Phase 3: Market Domination',
-                weeks: 'Weeks 11-15',
-                revenue: '₹50L/month',
+                phase: 'Phase 3: Advanced Features',
+                timeline: 'Future',
                 features: [
-                  'Advanced AR Biology Lab',
-                  'B2B platform development',
-                  'International expansion prep',
-                  'Advanced analytics and insights',
+                  'Full AR Biology Lab experience',
+                  'Peer tutoring and study groups',
+                  'NRI student features',
+                  'Detailed learning analytics',
                 ],
                 status: 'Future',
               },
@@ -268,16 +265,14 @@ export default function ClaudeChatDemo() {
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">{phase.phase}</h3>
-                    <p className="text-gray-600">
-                      {phase.weeks} • Target: {phase.revenue}
-                    </p>
+                    <p className="text-gray-600">{phase.timeline}</p>
                   </div>
                   <div
                     className={`px-4 py-2 rounded-full text-sm font-medium ${
                       phase.status === 'In Development'
                         ? 'bg-blue-100 text-blue-700'
                         : phase.status === 'Planning'
-                          ? 'bg-yellow-100 text-yellow-700'
+                          ? 'bg-amber-100 text-amber-700'
                           : 'bg-gray-100 text-gray-700'
                     }`}
                   >
@@ -299,12 +294,11 @@ export default function ClaudeChatDemo() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="py-20 bg-indigo-500 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future of Education?</h2>
+          <h2 className="text-4xl font-bold mb-6">Try ClaudeChat Board</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join the revolution that's transforming how students learn Biology and achieve NEET
-            success
+            See how AI can help you learn Biology faster and prepare for NEET
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -313,10 +307,10 @@ export default function ClaudeChatDemo() {
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
             >
               <Play className="w-6 h-6" />
-              <span>Try Live Demo Now</span>
+              <span>Try Live Demo</span>
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center space-x-2">
-              <span>Book Personal Demo</span>
+              <span>Book a Demo Call</span>
               <ArrowRight className="w-6 h-6" />
             </button>
           </div>
@@ -324,18 +318,18 @@ export default function ClaudeChatDemo() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <Heart className="w-8 h-8 mx-auto mb-2" />
-              <div className="text-lg font-medium">Students Love It</div>
-              <div className="text-sm opacity-80">95% satisfaction rate</div>
+              <div className="text-lg font-medium">Student Feedback</div>
+              <div className="text-sm opacity-80">4.9/5 rating from students</div>
             </div>
             <div>
               <Award className="w-8 h-8 mx-auto mb-2" />
-              <div className="text-lg font-medium">Proven Results</div>
-              <div className="text-sm opacity-80">98% NEET success rate</div>
+              <div className="text-lg font-medium">AIIMS Faculty</div>
+              <div className="text-sm opacity-80">Dr. Shekhar C Singh, AIIMS Delhi</div>
             </div>
             <div>
               <Globe className="w-8 h-8 mx-auto mb-2" />
-              <div className="text-lg font-medium">Global Reach</div>
-              <div className="text-sm opacity-80">50+ countries served</div>
+              <div className="text-lg font-medium">NRI Students</div>
+              <div className="text-sm opacity-80">Students from 10+ countries</div>
             </div>
           </div>
         </div>

@@ -103,7 +103,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-800 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -147,7 +147,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Course Details
@@ -210,18 +210,18 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center">
-                    <section.icon className="w-7 h-7 text-teal-600" />
+                  <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
+                    <section.icon className="w-7 h-7 text-green-600" />
                   </div>
                   <div>
-                    <span className="text-sm text-teal-600 font-semibold">{section.unit}</span>
+                    <span className="text-sm text-green-600 font-semibold">{section.unit}</span>
                     <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
                   </div>
                 </div>
                 <ul className="space-y-2">
                   {section.topics.map((topic) => (
                     <li key={topic} className="flex items-center text-gray-700">
-                      <CheckCircle className="w-5 h-5 mr-3 text-teal-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-600 flex-shrink-0" />
                       {topic}
                     </li>
                   ))}
@@ -256,7 +256,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
               className="space-y-6"
             >
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">Deeper Conceptual Coverage</h3>
                   <p className="text-gray-600">
@@ -265,7 +265,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">NCERT Supplement</h3>
                   <p className="text-gray-600">
@@ -274,7 +274,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">Practical Application</h3>
                   <p className="text-gray-600">
@@ -283,7 +283,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-900">Language Skills</h3>
                   <p className="text-gray-600">
@@ -298,28 +298,28 @@ export default function BestBiologyTeacherClass11ICSEPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-teal-50 rounded-2xl p-8"
+              className="bg-green-50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our ISC-Specific Approach</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-teal-600" />
+                  <Award className="w-5 h-5 text-green-600" />
                   <span>Complete ISC syllabus coverage</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <BookOpen className="w-5 h-5 text-teal-600" />
+                  <BookOpen className="w-5 h-5 text-green-600" />
                   <span>NCERT integration for NEET</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Star className="w-5 h-5 text-teal-600" />
+                  <Star className="w-5 h-5 text-green-600" />
                   <span>ISC-pattern question practice</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <MessageCircle className="w-5 h-5 text-teal-600" />
+                  <MessageCircle className="w-5 h-5 text-green-600" />
                   <span>Specialized ISC doubt sessions</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Target className="w-5 h-5 text-teal-600" />
+                  <Target className="w-5 h-5 text-green-600" />
                   <span>Board + NEET dual preparation</span>
                 </li>
               </ul>
@@ -352,7 +352,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -363,7 +363,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -392,7 +392,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-600"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

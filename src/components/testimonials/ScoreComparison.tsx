@@ -82,7 +82,7 @@ export function ScoreComparison({
         bg: 'bg-green-50',
         text: 'text-green-900',
         accent: 'text-green-600',
-        bar: 'bg-green-500',
+        bar: 'bg-green-600',
         light: 'bg-green-100',
       },
       blue: {
@@ -160,7 +160,7 @@ export function ScoreComparison({
                 animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                <ArrowRight className="w-8 h-8 text-green-500" />
+                <ArrowRight className="w-8 h-8 text-green-600" />
               </motion.div>
               <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold inline-block">
                 +<AnimatedNumber value={improvements.total} /> marks
@@ -297,7 +297,7 @@ export function ScoreComparison({
                   </div>
                   <div className="flex items-center">
                     {improvements[subject.key] >= 0 ? (
-                      <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
+                      <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
                     ) : (
                       <TrendingDown className="w-4 h-4 text-red-500 mr-1" />
                     )}

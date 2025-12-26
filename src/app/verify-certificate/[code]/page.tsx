@@ -63,7 +63,7 @@ export default async function VerifyCertificatePage({ params }: { params: { code
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
+    <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <div className="inline-block p-4 bg-blue-100 rounded-full mb-4">
@@ -77,7 +77,7 @@ export default async function VerifyCertificatePage({ params }: { params: { code
 
         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
           <div
-            className={`px-8 py-6 ${verified ? 'bg-gradient-to-r from-green-500 to-green-600' : 'bg-gradient-to-r from-red-500 to-red-600'}`}
+            className={`px-8 py-6 ${verified ? 'bg-green-600' : 'bg-red-600'}`}
           >
             <div className="flex items-center justify-center gap-3 text-white">
               {verified ? (

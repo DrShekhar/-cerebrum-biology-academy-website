@@ -55,13 +55,13 @@ const tierConfigs = {
   pursuit: {
     name: 'Pursuit',
     subtitle: 'Great Value',
-    color: 'from-green-500 to-emerald-500',
-    bgColor: 'bg-gradient-to-br from-green-50 to-emerald-50',
+    color: 'bg-green-600',
+    bgColor: 'bg-gradient-to-br from-green-50 to-green-50',
     borderColor: 'border-green-200',
     textColor: 'text-green-700',
     icon: Zap,
     badge: 'VALUE',
-    badgeColor: 'bg-green-500 text-white',
+    badgeColor: 'bg-green-600 text-white',
     recommended: false,
   },
 }

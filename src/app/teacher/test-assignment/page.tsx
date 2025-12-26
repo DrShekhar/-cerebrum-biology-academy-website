@@ -281,7 +281,7 @@ export default function TeacherTestAssignmentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -293,7 +293,7 @@ export default function TeacherTestAssignmentPage() {
               <p className="text-gray-600 mt-1">Create and manage MCQ tests for your students</p>
             </div>
             <Link href="/teacher/test-assignment/create">
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+              <Button className="bg-indigo-500 hover:bg-indigo-600 text-white">
                 <Plus className="w-4 h-4 mr-2" />
                 Create Test Assignment
               </Button>
@@ -376,7 +376,7 @@ export default function TeacherTestAssignmentPage() {
                     Create your first test assignment to evaluate your students
                   </p>
                   <Link href="/teacher/test-assignment/create">
-                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                    <Button className="bg-indigo-500 hover:bg-indigo-600 text-white">
                       <Plus className="w-4 h-4 mr-2" />
                       Create Test Assignment
                     </Button>
@@ -447,7 +447,7 @@ export default function TeacherTestAssignmentPage() {
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                           <div
-                            className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full transition-all"
+                            className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full transition-all"
                             style={{
                               width: `${(test.submissionStats.submitted / test.submissionStats.total) * 100}%`,
                             }}
@@ -555,7 +555,7 @@ function StatCard({
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="animate-pulse">

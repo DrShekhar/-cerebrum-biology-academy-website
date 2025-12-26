@@ -45,7 +45,7 @@ export default function DropperPage() {
       description:
         'No board exam pressure - 100% dedicated NEET preparation with intensive coaching',
       icon: Target,
-      color: 'from-red-500 to-pink-500',
+      color: 'bg-red-600',
     },
     {
       title: 'Weakness Analysis & Fixing',
@@ -64,7 +64,7 @@ export default function DropperPage() {
       title: 'Mental Conditioning',
       description: 'Build unshakeable confidence and exam temperament for NEET success',
       icon: Shield,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -115,7 +115,7 @@ export default function DropperPage() {
       duration: '3 months',
       focus: 'Full-length mocks, weak area strengthening, and exam strategy',
       icon: Target,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
     },
     {
       phase: 'Phase 4: Final Sprint',
@@ -389,19 +389,19 @@ export default function DropperPage() {
                       {index === 0 && (
                         <>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Complete syllabus revision
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Concept clarity sessions
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Weakness identification
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Study plan customization
                           </li>
                         </>
@@ -409,19 +409,19 @@ export default function DropperPage() {
                       {index === 1 && (
                         <>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Chapter-wise test series
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Previous year questions
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Advanced problem solving
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Speed and accuracy drills
                           </li>
                         </>
@@ -429,19 +429,19 @@ export default function DropperPage() {
                       {index === 2 && (
                         <>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Full-length mock tests
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Performance analysis
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Weak area strengthening
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Time management training
                           </li>
                         </>
@@ -449,19 +449,19 @@ export default function DropperPage() {
                       {index === 3 && (
                         <>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Final revision strategy
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Confidence building sessions
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Exam day preparation
                           </li>
                           <li className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-3 text-green-500" />
+                            <CheckCircle className="w-4 h-4 mr-3 text-green-600" />
                             Mental conditioning
                           </li>
                         </>

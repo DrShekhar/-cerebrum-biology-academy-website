@@ -163,7 +163,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
   return (
     <div className={cn('min-h-screen bg-gray-50', className)}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="bg-indigo-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <BookOpen className="h-12 w-12 mx-auto mb-4" />

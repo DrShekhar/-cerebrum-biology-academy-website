@@ -119,7 +119,7 @@ export function BatchSelector({ batches, selectedBatch, onSelect }: BatchSelecto
                   <div
                     className={cn(
                       'h-full rounded-full transition-all',
-                      isLowSeats ? 'bg-red-500' : 'bg-green-500'
+                      isLowSeats ? 'bg-red-500' : 'bg-green-600'
                     )}
                     style={{ width: `${seatsPercentage}%` }}
                   />

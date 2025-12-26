@@ -84,7 +84,7 @@ const tools = [
       'Get a personalized week-by-week study schedule for NEET Biology based on your available time and weak areas.',
     href: '/neet-study-plan-generator',
     icon: Calendar,
-    color: 'from-green-500 to-teal-500',
+    color: 'bg-green-600',
     bgColor: 'bg-green-100',
     iconColor: 'text-green-600',
     features: ['Personalized schedule', 'Topic prioritization', 'Downloadable plan'],
@@ -223,7 +223,7 @@ export default function NEETToolsPage() {
                   <ul className="mb-4 space-y-2">
                     {tool.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-sm text-gray-500">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <CheckCircle className="h-4 w-4 text-green-600" />
                         {feature}
                       </li>
                     ))}

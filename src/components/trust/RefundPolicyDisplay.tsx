@@ -189,7 +189,7 @@ const RefundPolicyDisplay: React.FC = () => {
         className="text-center mb-8"
       >
         <div className="flex items-center justify-center gap-3 mb-4">
-          <Shield className="w-10 h-10 text-emerald-600" />
+          <Shield className="w-10 h-10 text-green-600" />
           <h2 className="text-3xl font-bold text-gray-900">Transparent Refund Policy</h2>
         </div>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -210,8 +210,8 @@ const RefundPolicyDisplay: React.FC = () => {
             onClick={() => setActiveTab(id as any)}
             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
               activeTab === id
-                ? 'bg-emerald-600 text-white shadow-lg'
-                : 'bg-white text-gray-600 border border-gray-200 hover:bg-emerald-50'
+                ? 'bg-green-600 text-white shadow-lg'
+                : 'bg-white text-gray-600 border border-gray-200 hover:bg-green-50'
             }`}
           >
             <Icon className="w-5 h-5" />
@@ -280,7 +280,7 @@ const RefundPolicyDisplay: React.FC = () => {
                                 key={index}
                                 className="flex items-center gap-2 text-sm text-gray-600"
                               >
-                                <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                                 {condition}
                               </li>
                             ))}
@@ -326,7 +326,7 @@ const RefundPolicyDisplay: React.FC = () => {
                         courseFee: Number(e.target.value),
                       }))
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600"
                     placeholder="75000"
                   />
                 </div>
@@ -340,7 +340,7 @@ const RefundPolicyDisplay: React.FC = () => {
                     onChange={(e) =>
                       setCalculatorInputs((prev) => ({ ...prev, courseType: e.target.value }))
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   >
                     <option value="ascent">Ascent Series</option>
                     <option value="pinnacle">Pinnacle Series</option>
@@ -358,7 +358,7 @@ const RefundPolicyDisplay: React.FC = () => {
                     onChange={(e) =>
                       setCalculatorInputs((prev) => ({ ...prev, enrollmentDate: e.target.value }))
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   />
                 </div>
 
@@ -372,7 +372,7 @@ const RefundPolicyDisplay: React.FC = () => {
                     onChange={(e) =>
                       setCalculatorInputs((prev) => ({ ...prev, withdrawalDate: e.target.value }))
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600"
                   />
                 </div>
               </div>
@@ -382,7 +382,7 @@ const RefundPolicyDisplay: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl p-6 space-y-4"
+                    className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-4"
                   >
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Refund Calculation</h4>
 
@@ -421,7 +421,7 @@ const RefundPolicyDisplay: React.FC = () => {
                               <span className="text-lg font-semibold text-gray-900">
                                 Refund Amount:
                               </span>
-                              <span className="text-2xl font-bold text-emerald-600">
+                              <span className="text-2xl font-bold text-green-600">
                                 ₹{calculation.refundAmount.toLocaleString()}
                               </span>
                             </div>
@@ -497,7 +497,7 @@ const RefundPolicyDisplay: React.FC = () => {
                 ].map((processStep, index) => (
                   <div key={processStep.step} className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
                         {processStep.icon}
                       </div>
                     </div>
@@ -557,13 +557,13 @@ const RefundPolicyDisplay: React.FC = () => {
             </div>
 
             {/* Contact Support */}
-            <div className="bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
               <h3 className="text-2xl font-semibold mb-4">Still Have Questions?</h3>
-              <p className="text-emerald-100 mb-6">
+              <p className="text-green-100 mb-6">
                 Our dedicated support team is here to help with your refund queries
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-medium hover:bg-emerald-50 transition-colors">
+                <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-50 transition-colors">
                   Contact Support
                 </button>
                 <button className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">

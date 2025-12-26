@@ -27,7 +27,7 @@ export function RelatedPosts({ posts, title = 'Continue Reading' }: RelatedPosts
               <Link href={`/blog/${post.slug}`} className="block">
                 <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-200 transition-all duration-300">
                   {/* Featured Image Placeholder */}
-                  <div className="h-36 bg-gradient-to-br from-blue-100 to-purple-100 relative">
+                  <div className="h-36 bg-indigo-100 relative">
                     {post.difficulty && (
                       <div className="absolute top-3 right-3">
                         <DifficultyBadge difficulty={post.difficulty} size="sm" showLabel={false} />

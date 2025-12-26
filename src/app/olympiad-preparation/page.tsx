@@ -39,7 +39,7 @@ const olympiads = [
     eligibility: 'Class 8-12',
     benefits: 'IBO pathway, international exposure',
     link: '/biology-olympiad-coaching',
-    color: 'from-teal-500 to-green-500',
+    color: 'bg-green-600',
   },
   {
     name: 'KVPY',

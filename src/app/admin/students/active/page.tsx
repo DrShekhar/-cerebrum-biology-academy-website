@@ -335,7 +335,7 @@ export default function ActiveStudentsPage() {
                 <div className="space-y-1">
                   {student.recentAchievements.slice(0, 2).map((achievement, idx) => (
                     <p key={idx} className="text-xs text-gray-600 flex items-center">
-                      <CheckCircle className="w-3 h-3 mr-2 text-green-500" />
+                      <CheckCircle className="w-3 h-3 mr-2 text-green-600" />
                       {achievement}
                     </p>
                   ))}

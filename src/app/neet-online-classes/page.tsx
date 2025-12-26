@@ -318,7 +318,7 @@ export default function NeetOnlineClassesPage() {
             </Link>
             <Link
               href="/neet-classes"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               NEET Classes
             </Link>

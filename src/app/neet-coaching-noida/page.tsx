@@ -137,7 +137,7 @@ export default function NeetCoachingNoidaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -290,7 +290,7 @@ export default function NeetCoachingNoidaPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.03 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-5 border border-green-100"
               >
                 <Building2 className="w-6 h-6 text-green-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
@@ -519,7 +519,7 @@ export default function NeetCoachingNoidaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

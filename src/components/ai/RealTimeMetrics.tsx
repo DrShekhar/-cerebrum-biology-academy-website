@@ -397,7 +397,7 @@ export function RealTimeMetrics() {
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up':
-        return <ArrowUp className="w-3 h-3 text-green-500" />
+        return <ArrowUp className="w-3 h-3 text-green-600" />
       case 'down':
         return <ArrowDown className="w-3 h-3 text-red-500" />
       default:
@@ -410,7 +410,7 @@ export function RealTimeMetrics() {
       case 'doubt_resolved':
         return <Brain className="w-4 h-4 text-purple-500" />
       case 'test_completed':
-        return <Target className="w-4 h-4 text-green-500" />
+        return <Target className="w-4 h-4 text-green-600" />
       case 'login':
         return <Users className="w-4 h-4 text-blue-500" />
       case 'achievement':
@@ -434,7 +434,7 @@ export function RealTimeMetrics() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <Signal className={`w-5 h-5 ${isConnected ? 'text-green-500' : 'text-red-500'}`} />
+            <Signal className={`w-5 h-5 ${isConnected ? 'text-green-600' : 'text-red-500'}`} />
             <span className="text-sm font-medium text-gray-700">
               {isConnected ? 'Connected' : 'Disconnected'}
             </span>
@@ -560,7 +560,7 @@ export function RealTimeMetrics() {
                           : metric.color === 'indigo'
                             ? 'bg-indigo-100'
                             : metric.color === 'teal'
-                              ? 'bg-teal-100'
+                              ? 'bg-green-100'
                               : 'bg-gray-100'
                 }`}
               >
@@ -577,7 +577,7 @@ export function RealTimeMetrics() {
                             : metric.color === 'indigo'
                               ? 'text-indigo-600'
                               : metric.color === 'teal'
-                                ? 'text-teal-600'
+                                ? 'text-green-600'
                                 : 'text-gray-600'
                   }`}
                 >
@@ -617,7 +617,7 @@ export function RealTimeMetrics() {
         {/* System Health */}
         <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <Activity className="w-5 h-5 mr-2 text-green-500" />
+            <Activity className="w-5 h-5 mr-2 text-green-600" />
             System Health
           </h3>
           <div className="space-y-3">
@@ -630,7 +630,7 @@ export function RealTimeMetrics() {
                       <div
                         className={`h-2 rounded-full transition-all duration-500 ${
                           metric.status === 'healthy'
-                            ? 'bg-green-500'
+                            ? 'bg-green-600'
                             : metric.status === 'warning'
                               ? 'bg-yellow-500'
                               : 'bg-red-500'
@@ -649,7 +649,7 @@ export function RealTimeMetrics() {
                 <div
                   className={`w-2 h-2 rounded-full ${
                     metric.status === 'healthy'
-                      ? 'bg-green-500'
+                      ? 'bg-green-600'
                       : metric.status === 'warning'
                         ? 'bg-yellow-500'
                         : 'bg-red-500'

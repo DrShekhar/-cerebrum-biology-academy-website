@@ -59,7 +59,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       successRate: '78%',
       difficulty: 'Beginner to Intermediate',
       color: 'text-green-600',
-      bgGradient: 'from-green-50 to-emerald-50',
+      bgGradient: 'from-green-50 to-green-50',
       icon: BookOpen,
       popular: false
     },
@@ -175,7 +175,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
           >
             {option.popular && (
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                   <Star className="w-4 h-4 mr-1" />
                   Most Popular
                 </span>
@@ -221,7 +221,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
               <div className="space-y-3 mb-8">
                 {option.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
                 ))}

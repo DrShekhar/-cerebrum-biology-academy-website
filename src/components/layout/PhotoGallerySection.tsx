@@ -154,13 +154,13 @@ export function PhotoGallerySection({
                 label: galleryStats.yearsOfMemories + '+',
                 sublabel: 'Years',
                 icon: Calendar,
-                color: 'text-emerald-600',
+                color: 'text-green-600',
               },
               {
                 label: galleryStats.studentsDocumented + '+',
                 sublabel: 'Students',
                 icon: Users,
-                color: 'text-teal-600',
+                color: 'text-green-600',
               },
               {
                 label: galleryStats.successMoments + '+',
@@ -279,9 +279,9 @@ export function PhotoGallerySection({
                         photo.category === 'classroom'
                           ? 'from-blue-400 to-blue-600'
                           : photo.category === 'celebrations'
-                            ? 'from-emerald-400 to-emerald-600'
+                            ? 'from-green-500 to-green-600'
                             : photo.category === 'seminars'
-                              ? 'from-teal-400 to-teal-600'
+                              ? 'from-green-500 to-green-600'
                               : photo.category === 'awards'
                                 ? 'from-yellow-400 to-yellow-600'
                                 : photo.category === 'mentoring'
@@ -305,9 +305,9 @@ export function PhotoGallerySection({
                               photo.category === 'classroom'
                                 ? 'bg-blue-100 text-blue-700'
                                 : photo.category === 'celebrations'
-                                  ? 'bg-emerald-100 text-emerald-700'
+                                  ? 'bg-green-100 text-green-700'
                                   : photo.category === 'seminars'
-                                    ? 'bg-teal-100 text-teal-700'
+                                    ? 'bg-green-100 text-green-700'
                                     : photo.category === 'awards'
                                       ? 'bg-yellow-100 text-yellow-700'
                                       : photo.category === 'mentoring'
@@ -400,7 +400,7 @@ export function PhotoGallerySection({
                 </button>
 
                 {/* Photo */}
-                <div className="aspect-video bg-gradient-to-br from-teal-400 to-navy-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="aspect-video bg-gradient-to-br from-green-500 to-navy-600 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center text-white p-8">
                     <Camera className="w-20 h-20 mx-auto mb-4 opacity-60" />
                     <h3 className="text-2xl font-bold mb-2">{lightboxPhoto.title}</h3>
@@ -477,7 +477,7 @@ export function PhotoGallerySection({
             <Button
               variant="secondary"
               size="xl"
-              className="bg-teal-600 text-white hover:bg-teal-700 shadow-lg hover:shadow-xl"
+              className="bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl"
               onClick={handleDemoBooking}
             >
               <BookOpen className="w-5 h-5 mr-2" />

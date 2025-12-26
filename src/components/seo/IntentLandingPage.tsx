@@ -258,7 +258,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
                     key={benefit.title}
                     className="flex items-start gap-4 rounded-xl border border-gray-200 p-6"
                   >
-                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-green-500" />
+                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-green-600" />
                     <div>
                       <h3 className="mb-1 font-semibold text-gray-900">{benefit.title}</h3>
                       <p className="text-sm text-gray-600">{benefit.description}</p>

@@ -135,7 +135,7 @@ const stats = [
     icon: Award,
     value: '98%',
     label: 'NEET Qualification',
-    color: 'text-emerald-600',
+    color: 'text-green-600',
   },
   {
     icon: Target,
@@ -295,9 +295,9 @@ export default function TestimonialsPage() {
                 {/* Stats */}
                 <div className="flex flex-wrap gap-3 sm:gap-4 pt-4 border-t border-gray-100">
                   <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 flex-shrink-0" />
+                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
                     <span className="text-gray-600">Improvement:</span>
-                    <span className="font-semibold text-emerald-600 whitespace-nowrap">
+                    <span className="font-semibold text-green-600 whitespace-nowrap">
                       {testimonial.improvement}
                     </span>
                   </div>

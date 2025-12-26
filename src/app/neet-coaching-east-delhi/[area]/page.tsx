@@ -313,7 +313,7 @@ export default function EastDelhiAreaPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-800 via-cyan-900 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
@@ -325,19 +325,19 @@ export default function EastDelhiAreaPage() {
           >
             <Link
               href="/neet-coaching-east-delhi"
-              className="inline-flex items-center text-teal-300 hover:text-teal-200 mb-4"
+              className="inline-flex items-center text-green-400 hover:text-green-200 mb-4"
             >
               <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
               Back to East Delhi
             </Link>
 
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 ml-4">
-              <MapPin className="w-5 h-5 mr-2 text-teal-300" />
+              <MapPin className="w-5 h-5 mr-2 text-green-400" />
               {area.fullName}
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Best <span className="text-teal-300">NEET Coaching in {area.name}</span>
+              Best <span className="text-green-400">NEET Coaching in {area.name}</span>
             </h1>
 
             <p className="text-lg md:text-xl opacity-90 mb-4">{area.description}</p>
@@ -350,7 +350,7 @@ export default function EastDelhiAreaPage() {
                   variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
-                  className="bg-teal-500 text-white hover:bg-teal-400 font-bold"
+                  className="bg-green-600 text-white hover:bg-green-500 font-bold"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
@@ -361,7 +361,7 @@ export default function EastDelhiAreaPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-teal-900"
+                  className="border-white text-white hover:bg-white hover:text-green-800"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +91-88264-44334
@@ -394,15 +394,15 @@ export default function EastDelhiAreaPage() {
               className="bg-gray-50 rounded-xl p-6"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                  <Train className="w-6 h-6 text-teal-600" />
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <Train className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-lg">Nearest Metro Stations</h3>
               </div>
               <ul className="space-y-2">
                 {area.nearbyMetro.map((metro) => (
                   <li key={metro} className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-teal-500" />
+                    <CheckCircle className="w-4 h-4 text-green-600" />
                     {metro}
                   </li>
                 ))}
@@ -498,8 +498,8 @@ export default function EastDelhiAreaPage() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 text-center shadow-sm"
               >
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.desc}</p>
@@ -530,18 +530,18 @@ export default function EastDelhiAreaPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-teal-300 transition-colors"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-green-400 transition-colors"
               >
                 <h3 className="font-semibold text-xl text-navy-900 mb-2">{course.name}</h3>
                 <div className="flex items-center gap-2 text-gray-600 mb-4">
                   <Clock className="w-4 h-4" />
                   {course.duration}
                 </div>
-                <div className="text-3xl font-bold text-teal-600 mb-4">{course.fee}</div>
+                <div className="text-3xl font-bold text-green-600 mb-4">{course.fee}</div>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-teal-500" />
+                      <CheckCircle className="w-4 h-4 text-green-600" />
                       {feature}
                     </li>
                   ))}
@@ -572,7 +572,7 @@ export default function EastDelhiAreaPage() {
           <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <Train className="w-5 h-5" />
                 </div>
                 <div>
@@ -584,7 +584,7 @@ export default function EastDelhiAreaPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
@@ -601,13 +601,13 @@ export default function EastDelhiAreaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-600">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-cyan-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Preparation?
             </h2>
-            <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-green-100 mb-8 max-w-2xl mx-auto">
               Join successful students from {area.name}. Book your FREE demo class today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -617,7 +617,7 @@ export default function EastDelhiAreaPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white hover:text-teal-600"
+                className="bg-transparent border-white text-white hover:bg-white hover:text-green-600"
                 asChild
               >
                 <a href="tel:+918826444334">

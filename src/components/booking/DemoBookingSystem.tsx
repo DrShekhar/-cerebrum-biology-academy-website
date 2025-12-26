@@ -136,7 +136,7 @@ export function DemoBookingSystem() {
   const getAvailabilityColor = (spotsLeft: number): string => {
     if (spotsLeft === 0) return 'bg-red-500'
     if (spotsLeft <= 2) return 'bg-yellow-500'
-    return 'bg-green-500'
+    return 'bg-green-600'
   }
 
   const handleInputChange = (field: keyof BookingData, value: string | string[]) => {
@@ -627,7 +627,7 @@ export function DemoBookingSystem() {
       {/* Add bottom padding on mobile to account for sticky navigation */}
       <div className="bg-white rounded-lg shadow-lg overflow-hidden pb-20 md:pb-0">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 md:p-6 text-white">
+        <div className="bg-indigo-500 p-4 md:p-6 text-white">
           <h1 className="text-xl md:text-2xl font-bold mb-2">
             Book Your Free NEET Biology Demo Class
           </h1>
@@ -658,7 +658,7 @@ export function DemoBookingSystem() {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     currentStep > index + 1
-                      ? 'bg-green-500 text-white'
+                      ? 'bg-green-600 text-white'
                       : currentStep === index + 1
                         ? 'bg-white text-blue-600'
                         : 'bg-blue-500 text-blue-200'
@@ -669,7 +669,7 @@ export function DemoBookingSystem() {
                 {index < stepTitles.length - 1 && (
                   <div
                     className={`w-12 h-0.5 mx-2 ${
-                      currentStep > index + 1 ? 'bg-green-500' : 'bg-blue-500'
+                      currentStep > index + 1 ? 'bg-green-600' : 'bg-blue-500'
                     }`}
                   />
                 )}
@@ -875,7 +875,7 @@ export function DemoBookingSystem() {
                             onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.studentName?.isValid
-                                ? 'border-green-500 focus:ring-green-500'
+                                ? 'border-green-600 focus:ring-green-600'
                                 : validationStates.studentName?.error
                                   ? 'border-red-500 focus:ring-red-500'
                                   : 'border-gray-300 focus:ring-blue-500'
@@ -885,7 +885,7 @@ export function DemoBookingSystem() {
                             style={{ fontSize: '16px' }}
                           />
                           {validationStates.studentName?.isValid && (
-                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-600" />
                           )}
                           {validationStates.studentName?.error && (
                             <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
@@ -911,7 +911,7 @@ export function DemoBookingSystem() {
                             onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.phone?.isValid
-                                ? 'border-green-500 focus:ring-green-500'
+                                ? 'border-green-600 focus:ring-green-600'
                                 : validationStates.phone?.error
                                   ? 'border-red-500 focus:ring-red-500'
                                   : 'border-gray-300 focus:ring-blue-500'
@@ -921,7 +921,7 @@ export function DemoBookingSystem() {
                             style={{ fontSize: '16px' }}
                           />
                           {validationStates.phone?.isValid && (
-                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-600" />
                           )}
                           {validationStates.phone?.error && (
                             <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
@@ -947,7 +947,7 @@ export function DemoBookingSystem() {
                             onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.email?.isValid
-                                ? 'border-green-500 focus:ring-green-500'
+                                ? 'border-green-600 focus:ring-green-600'
                                 : validationStates.email?.error
                                   ? 'border-red-500 focus:ring-red-500'
                                   : 'border-gray-300 focus:ring-blue-500'
@@ -957,7 +957,7 @@ export function DemoBookingSystem() {
                             style={{ fontSize: '16px' }}
                           />
                           {validationStates.email?.isValid && (
-                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-600" />
                           )}
                           {validationStates.email?.error && (
                             <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />

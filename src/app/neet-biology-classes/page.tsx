@@ -191,7 +191,7 @@ export default function NeetBiologyClassesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-700 via-emerald-700 to-teal-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-700 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -325,7 +325,7 @@ export default function NeetBiologyClassesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center justify-between mb-4">
                   <topic.icon className="w-10 h-10 text-green-600" />
@@ -337,7 +337,7 @@ export default function NeetBiologyClassesPage() {
                 <ul className="space-y-2">
                   {topic.chapters.map((chapter) => (
                     <li key={chapter} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                       {chapter}
                     </li>
                   ))}
@@ -349,7 +349,7 @@ export default function NeetBiologyClassesPage() {
       </section>
 
       {/* Syllabus Coverage */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -478,7 +478,7 @@ export default function NeetBiologyClassesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

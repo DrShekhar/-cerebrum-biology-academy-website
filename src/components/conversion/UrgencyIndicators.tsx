@@ -188,10 +188,10 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
         }
       default:
         return {
-          bg: 'bg-emerald-50 border-emerald-200',
-          text: 'text-emerald-800',
-          accent: 'text-emerald-600',
-          pulse: 'bg-emerald-500',
+          bg: 'bg-green-50 border-green-200',
+          text: 'text-green-700',
+          accent: 'text-green-600',
+          pulse: 'bg-green-600',
         }
     }
   }

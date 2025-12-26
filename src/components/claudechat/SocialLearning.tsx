@@ -472,7 +472,7 @@ export function SocialLearning({
                     </div>
                   </div>
                   {achievement.unlockedAt && (
-                    <div className="bg-green-500 text-white px-2 py-1 rounded-full text-xs">✓</div>
+                    <div className="bg-green-600 text-white px-2 py-1 rounded-full text-xs">✓</div>
                   )}
                 </div>
 

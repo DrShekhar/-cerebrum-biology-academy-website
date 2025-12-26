@@ -178,7 +178,7 @@ function getSeriesTheme(seriesId: string) {
       icon: Target,
     },
     pursuit: {
-      gradient: 'from-green-500 to-emerald-600',
+      gradient: 'bg-green-600',
       bg: 'bg-green-50',
       border: 'border-green-200',
       text: 'text-green-900',
@@ -229,7 +229,7 @@ function FeeStructureChart({ course }: { course: CourseData }) {
       {/* Visual bar */}
       <div className="mt-3 h-6 bg-gray-200 rounded-full overflow-hidden flex">
         <div className="bg-blue-500 flex-1" style={{ flex: 0.7 }} />
-        <div className="bg-green-500 flex-1" style={{ flex: 0.15 }} />
+        <div className="bg-green-600 flex-1" style={{ flex: 0.15 }} />
         <div className="bg-yellow-500 flex-1" style={{ flex: 0.1 }} />
         <div className="bg-red-500 flex-1" style={{ flex: 0.05 }} />
       </div>
@@ -624,7 +624,7 @@ export default function InteractiveComparisonMatrix({
   return (
     <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Interactive Course Comparison</h2>
           <p className="text-blue-100">

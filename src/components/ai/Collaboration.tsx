@@ -526,7 +526,7 @@ const Collaboration: React.FC = () => {
   const getStatusDotClass = (status: string) => {
     const color = getStatusColor(status)
     return color === 'yellow' ? 'bg-yellow-500' :
-      color === 'green' ? 'bg-green-500' :
+      color === 'green' ? 'bg-green-600' :
       color === 'red' ? 'bg-red-500' :
       color === 'orange' ? 'bg-orange-500' :
       color === 'blue' ? 'bg-blue-500' :
@@ -921,7 +921,7 @@ const Collaboration: React.FC = () => {
                     <select
                       value={newComment.questionId}
                       onChange={(e) => setNewComment(prev => ({ ...prev, questionId: e.target.value }))}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="q1">Question 1</option>
                       <option value="q2">Question 2</option>
@@ -936,7 +936,7 @@ const Collaboration: React.FC = () => {
                     <select
                       value={newComment.type}
                       onChange={(e) => setNewComment(prev => ({ ...prev, type: e.target.value as Comment['type'] }))}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="general">General</option>
                       <option value="suggestion">Suggestion</option>
@@ -953,7 +953,7 @@ const Collaboration: React.FC = () => {
                     <select
                       value={newComment.priority}
                       onChange={(e) => setNewComment(prev => ({ ...prev, priority: e.target.value as Comment['priority'] }))}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="low">Low</option>
                       <option value="medium">Medium</option>
@@ -970,7 +970,7 @@ const Collaboration: React.FC = () => {
                     value={newComment.content}
                     onChange={(e) => setNewComment(prev => ({ ...prev, content: e.target.value }))}
                     rows={4}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     placeholder="Enter your feedback or comment..."
                   />
                 </div>
@@ -997,7 +997,7 @@ const Collaboration: React.FC = () => {
                   <div key={comment.id} className="border-l-4 border-blue-200 pl-4">
                     <div className="flex justify-between items-start mb-2">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
                           {comment.authorName.split(' ').map(n => n[0]).join('')}
                         </div>
                         <div>
@@ -1098,7 +1098,7 @@ const Collaboration: React.FC = () => {
 
                     <div className="flex gap-4">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                        version.status === 'published' ? 'bg-green-500' :
+                        version.status === 'published' ? 'bg-green-600' :
                         version.status === 'approved' ? 'bg-blue-500' :
                         version.status === 'review' ? 'bg-yellow-500' :
                         'bg-gray-500'
@@ -1224,7 +1224,7 @@ const Collaboration: React.FC = () => {
 
                     <div className="flex gap-4">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
-                        activity.type === 'approval' ? 'bg-green-500' :
+                        activity.type === 'approval' ? 'bg-green-600' :
                         activity.type === 'comment' ? 'bg-blue-500' :
                         activity.type === 'version' ? 'bg-purple-500' :
                         activity.type === 'review' ? 'bg-yellow-500' :
@@ -1350,7 +1350,7 @@ const Collaboration: React.FC = () => {
             {/* Create Share Link */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Share2 className="w-5 h-5 text-teal-600" />
+                <Share2 className="w-5 h-5 text-green-600" />
                 Share Questions
               </h3>
 
@@ -1359,7 +1359,7 @@ const Collaboration: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Question
                   </label>
-                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
                     <option value="q1">Question 1 - Cell Biology</option>
                     <option value="q2">Question 2 - Genetics</option>
                     <option value="q3">Question 3 - Evolution</option>
@@ -1370,7 +1370,7 @@ const Collaboration: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Share Type
                   </label>
-                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
                     <option value="view">View Only</option>
                     <option value="collaborate">Collaborate</option>
                     <option value="copy">Copy & Edit</option>
@@ -1380,7 +1380,7 @@ const Collaboration: React.FC = () => {
                 <div className="flex items-end">
                   <button
                     onClick={() => createShareLink('q1', 'view')}
-                    className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
+                    className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
                   >
                     <Share2 className="w-4 h-4" />
                     Create Link

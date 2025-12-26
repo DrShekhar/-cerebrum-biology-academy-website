@@ -92,7 +92,7 @@ const CEREBRUM_COURSES: CourseCard[] = [
     badge: {
       text: 'ELITE',
       color: 'text-white',
-      bgColor: 'bg-teal-600',
+      bgColor: 'bg-green-600',
     },
     features: [
       'Classroom Teaching',
@@ -119,8 +119,8 @@ const CEREBRUM_COURSES: CourseCard[] = [
       primary: '#14B8A6',
       secondary: '#0D9488',
       gradient: 'linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)',
-      textColor: 'text-teal-900',
-      bgColor: 'bg-teal-50',
+      textColor: 'text-green-800',
+      bgColor: 'bg-green-50',
     },
     icon: <Crown className="h-10 w-10" />,
     popular: true,
@@ -306,7 +306,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Professional Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-navy-900">
-          <div className="absolute inset-0 bg-gradient-to-tr from-teal-600/10 via-transparent to-teal-500/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-green-600/10 via-transparent to-green-600/5"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(20,184,166,0.15),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(13,148,136,0.1),transparent_50%)]"></div>
         </div>
@@ -317,7 +317,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-teal-500 rounded-full"
+            className="absolute w-2 h-2 bg-green-600 rounded-full"
             animate={{
               y: [0, -200, 0],
               x: [0, Math.sin(i) * 50, 0],
@@ -372,7 +372,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               className="text-7xl md:text-9xl font-black text-white mb-8 leading-none tracking-tight"
             >
               <span className="block">Master</span>
-              <span className="block text-teal-400 animate-pulse">NEET Biology</span>
+              <span className="block text-green-500 animate-pulse">NEET Biology</span>
               <span className="block text-6xl md:text-7xl mt-4 text-gold-500">Excellence</span>
             </motion.h1>
 
@@ -384,9 +384,9 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               className="text-2xl md:text-3xl text-navy-300 max-w-5xl mx-auto leading-relaxed mb-12 font-light"
             >
               Join India's most{' '}
-              <span className="font-bold text-teal-400">elite Biology coaching</span> with
+              <span className="font-bold text-green-500">elite Biology coaching</span> with
               <span className="font-bold text-white"> Harvard-level pedagogy</span> and
-              <span className="font-bold text-teal-300"> evidence-based innovation</span>
+              <span className="font-bold text-green-400"> evidence-based innovation</span>
             </motion.p>
 
             {/* CTA Buttons */}
@@ -399,9 +399,9 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               <motion.button
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative bg-teal-600 hover:bg-teal-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-teal-500/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden"
+                className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden"
               >
-                <div className="absolute inset-0 bg-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Play className="h-7 w-7 group-hover:scale-125 transition-transform relative z-10" />
                 <span className="relative z-10">Start Free Demo</span>
                 <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform relative z-10" />
@@ -435,13 +435,13 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   number: '95%',
                   label: 'Success Rate',
                   icon: Target,
-                  color: 'from-green-400 to-emerald-500',
+                  color: 'from-green-400 to-green-600',
                 },
                 {
                   number: '15+',
                   label: 'Expert Faculty',
                   icon: Award,
-                  color: 'from-teal-400 to-teal-600',
+                  color: 'from-green-500 to-green-600',
                 },
               ].map((stat, idx) => (
                 <motion.div
@@ -477,7 +477,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
           >
             <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
               Choose Your
-              <span className="block text-teal-400">Excellence Path</span>
+              <span className="block text-green-500">Excellence Path</span>
             </h2>
             <p className="text-2xl text-white/80 max-w-4xl mx-auto font-light">
               From ultra-premium Pinnacle to value-driven Pursuit - we have the perfect NEET Biology
@@ -605,7 +605,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                           transition={{ delay: index * 0.2 + idx * 0.1 }}
                           className="flex items-center gap-3"
                         >
-                          <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                             <Check className="h-4 w-4 text-white" />
                           </div>
                           <span className="text-white/90">{highlight}</span>
@@ -652,13 +652,13 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               <h3 className="text-4xl font-black mb-4">
                 Why is Biology Fee Higher than Physics or Chemistry?
               </h3>
-              <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
+              <div className="w-20 h-1 bg-green-600 mx-auto rounded-full"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg">
@@ -668,28 +668,28 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   </span>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg">
                     Biology includes{' '}
-                    <span className="font-bold text-teal-300">two subjects: Zoology + Botany</span>
+                    <span className="font-bold text-green-400">two subjects: Zoology + Botany</span>
                   </span>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg">
                     Biology gets{' '}
-                    <span className="font-bold text-teal-300">more time (usually twice)</span> than
+                    <span className="font-bold text-green-400">more time (usually twice)</span> than
                     Physics or Chemistry
                   </span>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg">
@@ -714,7 +714,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
           >
             <h2 className="text-5xl font-black text-white mb-6">
               Frequently Asked
-              <span className="block text-teal-400">Questions</span>
+              <span className="block text-green-500">Questions</span>
             </h2>
             <p className="text-xl text-white/80">
               Everything you need to know about Cerebrum Biology Academy programs
@@ -773,7 +773,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             onClick={() => setShowHelp(true)}
-            className="fixed bottom-8 right-8 w-16 h-16 bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300"
+            className="fixed bottom-8 right-8 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300"
           >
             <HelpCircle className="h-8 w-8" />
           </motion.button>
@@ -789,7 +789,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
             className="fixed bottom-8 right-8 w-96 bg-black/80 backdrop-blur-2xl rounded-3xl border border-white/30 z-50 overflow-hidden"
           >
-            <div className="bg-teal-600 text-white p-6 flex items-center justify-between">
+            <div className="bg-green-600 text-white p-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <MessageCircle className="h-6 w-6" />
                 <span className="font-bold text-lg">Need Expert Help?</span>
@@ -811,7 +811,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
 
               <a
                 href="https://wa.me/918826444334"
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+                className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp Chat

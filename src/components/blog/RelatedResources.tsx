@@ -56,7 +56,7 @@ const hubPages = [
     title: 'Download Free Notes',
     description: 'NCERT summaries, PYQs, and study materials',
     icon: BookOpen,
-    color: 'bg-teal-50 text-teal-600 border-teal-200',
+    color: 'bg-green-50 text-green-600 border-green-200',
     matchCategories: ['chapter-guides', 'study-tips'],
     matchChapters: ['all'],
     priority: 5,
@@ -115,7 +115,7 @@ export function RelatedResources({ category, neetChapter, tags }: RelatedResourc
             >
               <div className="flex items-start gap-3">
                 <div
-                  className={`p-2 rounded-lg ${page.color.includes('blue') ? 'bg-blue-100' : page.color.includes('purple') ? 'bg-purple-100' : page.color.includes('green') ? 'bg-green-100' : page.color.includes('orange') ? 'bg-orange-100' : 'bg-teal-100'}`}
+                  className={`p-2 rounded-lg ${page.color.includes('blue') ? 'bg-blue-100' : page.color.includes('purple') ? 'bg-purple-100' : page.color.includes('green') ? 'bg-green-100' : page.color.includes('orange') ? 'bg-orange-100' : 'bg-green-100'}`}
                 >
                   <Icon className="w-5 h-5" />
                 </div>

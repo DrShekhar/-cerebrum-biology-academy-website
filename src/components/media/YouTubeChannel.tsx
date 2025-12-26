@@ -92,7 +92,7 @@ export function YouTubeChannel({
   }
 
   return (
-    <div className="w-full bg-gradient-to-br from-red-50 to-pink-50 py-16">
+    <div className="w-full bg-gradient-to-br bg-red-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"

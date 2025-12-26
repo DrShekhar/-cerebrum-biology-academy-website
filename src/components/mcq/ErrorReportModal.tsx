@@ -206,7 +206,7 @@ export function ErrorReportModal({
                               option === question.correctAnswer
                                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                 : suggestedAnswer === option
-                                  ? 'bg-green-500 text-white'
+                                  ? 'bg-green-600 text-white'
                                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                           >

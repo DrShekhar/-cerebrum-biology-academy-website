@@ -175,7 +175,7 @@ export function MobileChatInterface({
       {...swipeHandlers}
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-4 sm:py-5 shadow-lg">
+      <div className="bg-indigo-500 text-white px-4 py-4 sm:py-5 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -205,7 +205,7 @@ export function MobileChatInterface({
               <div
                 className={`max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 ${
                   message.role === 'user'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                    ? 'bg-indigo-500 text-white'
                     : 'bg-white shadow-md text-gray-800'
                 }`}
               >
@@ -270,7 +270,7 @@ export function MobileChatInterface({
             disabled={!input.trim() || isLoading}
             className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all shadow-md ${
               input.trim() && !isLoading
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg active:scale-95'
+                ? 'bg-indigo-500 text-white hover:shadow-lg active:scale-95'
                 : 'bg-gray-200 text-gray-400 cursor-not-allowed'
             }`}
             aria-label="Send message"

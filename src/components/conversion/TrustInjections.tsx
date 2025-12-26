@@ -35,7 +35,7 @@ function TrustNearPrice() {
     {
       icon: CheckCircle2,
       text: 'No hidden charges',
-      color: 'text-emerald-600',
+      color: 'text-green-600',
     },
     {
       icon: CreditCard,
@@ -111,7 +111,7 @@ function SocialProofNearCTA() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className="social-proof bg-gradient-to-r from-emerald-50 to-blue-50 border border-emerald-200 rounded-lg p-3 mb-4"
+      className="social-proof bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-3 mb-4"
     >
       <div className="flex items-center space-x-3">
         {/* Avatar Stack */}
@@ -127,7 +127,7 @@ function SocialProofNearCTA() {
               className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
             />
           ))}
-          <div className="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-white text-xs font-semibold shadow-sm">
+          <div className="w-8 h-8 rounded-full bg-green-600 border-2 border-white flex items-center justify-center text-white text-xs font-semibold shadow-sm">
             +
           </div>
         </div>
@@ -140,7 +140,7 @@ function SocialProofNearCTA() {
             animate={{ opacity: 1, y: 0 }}
             className="text-sm font-semibold text-slate-800"
           >
-            <span className="text-emerald-600">{enrollmentCount}</span> students enrolled this week
+            <span className="text-green-600">{enrollmentCount}</span> students enrolled this week
           </motion.p>
           <p className="text-xs text-slate-600">Join thousands of successful NEET aspirants</p>
         </div>
@@ -247,15 +247,15 @@ function ExitIntentOffer() {
             {/* Benefits */}
             <div className="text-left mb-6 space-y-2">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
                 <span className="text-sm text-slate-700">Complete NEET Biology assessment</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
                 <span className="text-sm text-slate-700">Personalized study plan</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
                 <span className="text-sm text-slate-700">Free counseling session</span>
               </div>
             </div>
@@ -352,7 +352,7 @@ function RecentActivityFeed() {
   return (
     <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-4">
       <h4 className="text-sm font-semibold text-slate-700 mb-3 flex items-center">
-        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+        <div className="w-2 h-2 bg-green-600 rounded-full mr-2 animate-pulse"></div>
         Live Activity
       </h4>
 
@@ -367,8 +367,8 @@ function RecentActivityFeed() {
               transition={{ duration: 0.3 }}
               className="flex items-center space-x-2 text-xs"
             >
-              <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                <Users className="w-3 h-3 text-emerald-600" />
+              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                <Users className="w-3 h-3 text-green-600" />
               </div>
               <div className="flex-1">
                 <span className="font-medium text-slate-700">{activity.name}</span>
@@ -392,7 +392,7 @@ function GuaranteeBanner() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg p-4 mb-4"
+      className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg p-4 mb-4"
     >
       <div className="flex items-center space-x-3">
         <ShieldCheck className="w-8 h-8 flex-shrink-0" />

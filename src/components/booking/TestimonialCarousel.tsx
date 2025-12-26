@@ -51,7 +51,7 @@ const testimonials: Testimonial[] = [
     score: '658/720',
     image: '/testimonials/rohan.jpg',
     quote:
-      'After struggling for a year, the demo class showed me exactly what I was missing. Their approach to Biology is revolutionary!',
+      'After struggling for a year, the demo class showed me exactly what I was missing. Their way of teaching Biology finally made sense to me!',
     rating: 5,
     verified: true,
   },
@@ -108,7 +108,7 @@ export function TestimonialCarousel() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 mb-6">
+    <div className="bg-gray-50 rounded-xl p-6 mb-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-gray-900">
           What Students Say About Our Demo Classes
@@ -149,7 +149,7 @@ export function TestimonialCarousel() {
             <div className="bg-white rounded-lg p-6 shadow-lg">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-white font-bold text-xl">
                     {currentTestimonial.name.charAt(0)}
                   </div>
                 </div>

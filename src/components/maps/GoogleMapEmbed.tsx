@@ -43,7 +43,7 @@ export function GoogleMapEmbed({
         )}
 
         {hasError ? (
-          <div className="h-[300px] flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 p-6">
+          <div className="h-[300px] flex flex-col items-center justify-center bg-gray-50 p-6">
             <MapPin className="w-12 h-12 text-blue-600 mb-4" />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">{localityName} Location</h3>
             <p className="text-sm text-gray-600 text-center mb-4 max-w-sm">{centerAddress}</p>

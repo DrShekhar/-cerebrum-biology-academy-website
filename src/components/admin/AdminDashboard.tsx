@@ -143,7 +143,7 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
                   <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 </button>
                 <div className="flex items-center space-x-1 text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                   <span>Live</span>
                 </div>
               </div>
@@ -391,7 +391,7 @@ function OverviewTab({
                   <p className="text-2xl font-bold text-gray-900 mb-2">{metric.value}</p>
                   <div className="flex items-center">
                     {metric.direction === 'up' ? (
-                      <ArrowUpRight className="w-4 h-4 text-green-500 mr-1" />
+                      <ArrowUpRight className="w-4 h-4 text-green-600 mr-1" />
                     ) : (
                       <ArrowDownRight className="w-4 h-4 text-red-500 mr-1" />
                     )}
@@ -461,7 +461,7 @@ function OverviewTab({
               </div>
             </div>
             <div className="flex items-start space-x-3 p-3 bg-green-50 rounded-lg">
-              <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5" />
               <div>
                 <p className="text-sm font-medium text-green-800">High Conversion</p>
                 <p className="text-xs text-green-600">Above average this week</p>

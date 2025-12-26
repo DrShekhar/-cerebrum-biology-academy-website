@@ -345,13 +345,13 @@ export default function BotanyClassesPage() {
             </Link>
             <Link
               href="/best-botany-teacher-for-neet"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Best Botany Teacher for NEET
             </Link>
             <Link
               href="/zoology-classes"
-              className="rounded-lg bg-teal-100 px-4 py-2 text-teal-700 transition hover:bg-teal-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Zoology Classes
             </Link>

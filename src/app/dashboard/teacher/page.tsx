@@ -124,7 +124,7 @@ export default function TeacherDashboard() {
             <select
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
             >
               <option value="CLASS_9">Class 9</option>
               <option value="CLASS_10">Class 10</option>
@@ -197,13 +197,13 @@ export default function TeacherDashboard() {
                   placeholder="Search students..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                 />
               </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               >
                 <option value="score">Sort by Score</option>
                 <option value="name">Sort by Name</option>
@@ -219,7 +219,7 @@ export default function TeacherDashboard() {
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                        <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
                           {student.name.charAt(0).toUpperCase()}
                         </div>
                         <div>
@@ -303,7 +303,7 @@ export default function TeacherDashboard() {
                 <CardContent>
                   <div className="space-y-4">
                     {[
-                      { range: '90-100%', count: 5, color: 'bg-green-500' },
+                      { range: '90-100%', count: 5, color: 'bg-green-600' },
                       { range: '80-89%', count: 12, color: 'bg-blue-500' },
                       { range: '70-79%', count: 8, color: 'bg-yellow-500' },
                       { range: '60-69%', count: 4, color: 'bg-orange-500' },
@@ -354,7 +354,7 @@ export default function TeacherDashboard() {
                         <div
                           className={`h-2 rounded-full ${
                             topic.average >= 80
-                              ? 'bg-green-500'
+                              ? 'bg-green-600'
                               : topic.average >= 70
                                 ? 'bg-yellow-500'
                                 : 'bg-red-500'

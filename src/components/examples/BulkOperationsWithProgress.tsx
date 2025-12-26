@@ -296,9 +296,9 @@ export default function BulkOperationsWithProgress() {
                       Processed
                     </p>
                   </div>
-                  <div className="bg-emerald-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-emerald-600">{successCount}</p>
-                    <p className="text-xs text-emerald-800 font-medium">Success</p>
+                  <div className="bg-green-50 rounded-lg p-4 text-center">
+                    <p className="text-2xl font-bold text-green-600">{successCount}</p>
+                    <p className="text-xs text-green-700 font-medium">Success</p>
                   </div>
                   <div className="bg-red-50 rounded-lg p-4 text-center">
                     <p className="text-2xl font-bold text-red-600">{errorCount}</p>
@@ -334,17 +334,17 @@ export default function BulkOperationsWithProgress() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-xl p-6"
+                  className="bg-gradient-to-br from-green-50 to-green-50 border-2 border-green-200 rounded-xl p-6"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-emerald-100 rounded-full">
-                      <CheckCircle2 className="w-8 h-8 text-emerald-600" />
+                    <div className="p-3 bg-green-100 rounded-full">
+                      <CheckCircle2 className="w-8 h-8 text-green-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-emerald-900 mb-1">
+                      <h3 className="text-lg font-bold text-green-800 mb-1">
                         Operation Complete!
                       </h3>
-                      <p className="text-emerald-700 mb-3">
+                      <p className="text-green-700 mb-3">
                         Successfully processed {successCount} out of {totalItems} items
                         {errorCount > 0 && ` with ${errorCount} error${errorCount > 1 ? 's' : ''}`}
                       </p>

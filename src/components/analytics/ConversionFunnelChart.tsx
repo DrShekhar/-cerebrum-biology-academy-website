@@ -49,14 +49,14 @@ export function ConversionFunnelChart({
   const getStepColor = (category: string, index: number): string => {
     const colors = {
       blue: ['bg-blue-500', 'bg-blue-600', 'bg-blue-700', 'bg-blue-800', 'bg-blue-900'],
-      green: ['bg-green-500', 'bg-green-600', 'bg-green-700', 'bg-green-800', 'bg-green-900'],
+      green: ['bg-green-600', 'bg-green-600', 'bg-green-700', 'bg-green-800', 'bg-green-900'],
       purple: ['bg-purple-500', 'bg-purple-600', 'bg-purple-700', 'bg-purple-800', 'bg-purple-900'],
       gradient: [
         'bg-gradient-to-r from-blue-500 to-blue-600',
-        'bg-gradient-to-r from-green-500 to-green-600',
+        'bg-green-600',
         'bg-gradient-to-r from-yellow-500 to-yellow-600',
         'bg-gradient-to-r from-orange-500 to-orange-600',
-        'bg-gradient-to-r from-red-500 to-red-600',
+        'bg-red-600',
         'bg-gradient-to-r from-purple-500 to-purple-600',
       ],
     }
@@ -296,7 +296,7 @@ export function ConversionFunnelChart({
                           <div
                             className={`h-2 rounded-full ${
                               step.conversionRate >= 80
-                                ? 'bg-green-500'
+                                ? 'bg-green-600'
                                 : step.conversionRate >= 60
                                   ? 'bg-yellow-500'
                                   : 'bg-red-500'
@@ -377,7 +377,7 @@ export function LiveFunnelMonitor({ userId }: { userId: string }) {
     <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 border border-gray-200 max-w-sm">
       <div className="flex items-center justify-between mb-2">
         <h4 className="font-semibold text-sm">Live Funnel Tracking</h4>
-        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
       </div>
       <div className="text-xs text-gray-600 mb-1">
         Current Step: <span className="font-medium">{currentStepData.stepName}</span>

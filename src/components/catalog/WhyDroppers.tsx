@@ -134,7 +134,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
               </div>
 
               {/* Hover Accent */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </motion.div>
           ))}
         </div>

@@ -73,7 +73,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             {/* Logo - Server rendered for instant LCP */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
                     src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
@@ -84,7 +84,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
                     priority
                   />
                 </div>
-                <div className="absolute inset-0 bg-teal-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
+                <div className="absolute inset-0 bg-green-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
               </div>
 
               {/* Mobile brand */}
@@ -121,7 +121,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             >
               <Trophy className="w-5 h-5" />
               <span>Results</span>
-              <span className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+              <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                 98%
               </span>
             </Link>

@@ -89,7 +89,7 @@ export default async function BiologyNotesIndexPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 sm:py-20">
+      <div className="bg-indigo-500 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -233,7 +233,7 @@ export default async function BiologyNotesIndexPage() {
             ))}
 
             {/* CTA Section */}
-            <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 sm:p-12 text-white text-center">
+            <div className="mt-16 bg-indigo-500 rounded-2xl p-8 sm:p-12 text-white text-center">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Want More Comprehensive Study Material?
               </h2>

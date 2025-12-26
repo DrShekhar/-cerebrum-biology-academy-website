@@ -470,15 +470,15 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="p-3 bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200 rounded-xl shadow-lg"
+          className="p-3 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl shadow-lg"
         >
-          <div className="flex items-center gap-2 text-emerald-800">
+          <div className="flex items-center gap-2 text-green-700">
             <Users className="w-4 h-4" />
             <span className="text-sm font-medium">
               10,000+ students successfully qualified NEET
             </span>
           </div>
-          <div className="text-xs text-emerald-600 mt-1">
+          <div className="text-xs text-green-600 mt-1">
             94.2% qualification rate • Join them today!
           </div>
         </motion.div>

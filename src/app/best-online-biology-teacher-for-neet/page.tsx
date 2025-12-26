@@ -35,13 +35,13 @@ const topicWeightage = [
     class: '12',
     color: 'bg-purple-500',
   },
-  { topic: 'Plant Physiology', marks: 43, percentage: '12%', class: '11', color: 'bg-green-500' },
+  { topic: 'Plant Physiology', marks: 43, percentage: '12%', class: '11', color: 'bg-green-600' },
   {
     topic: 'Ecology & Environment',
     marks: 43,
     percentage: '12%',
     class: '12',
-    color: 'bg-emerald-500',
+    color: 'bg-green-600',
   },
   { topic: 'Reproduction', marks: 43, percentage: '12%', class: '12', color: 'bg-pink-500' },
   { topic: 'Cell Biology', marks: 36, percentage: '10%', class: '11', color: 'bg-orange-500' },
@@ -317,7 +317,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                 <div className="space-y-2 text-center">
                   <p className="text-3xl font-bold text-gray-900">{result.selections}+</p>
                   <p className="text-sm text-gray-500">Selections</p>
-                  <p className="font-semibold text-emerald-600">{result.topAir}</p>
+                  <p className="font-semibold text-green-600">{result.topAir}</p>
                   <p className="text-sm text-gray-500">{result.state}</p>
                 </div>
               </motion.div>
@@ -426,13 +426,13 @@ export default function BestOnlineBiologyTeacherNEETPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/online-biology-classes"
-              className="rounded-lg bg-teal-100 px-4 py-2 text-teal-700 transition hover:bg-teal-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Online Biology Classes
             </Link>
             <Link
               href="/best-biology-teacher-online"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Best Biology Teacher Online
             </Link>

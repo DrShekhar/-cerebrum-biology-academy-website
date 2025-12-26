@@ -68,7 +68,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
             {cta.tertiaryButton && (
               <Link
                 href={cta.tertiaryButton.link}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-green-400/50 bg-green-500/20 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-green-400/70 hover:bg-green-500/30"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-green-400/50 bg-green-600/20 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-green-400/70 hover:bg-green-600/30"
               >
                 <BookOpen className="h-5 w-5" />
                 {cta.tertiaryButton.text}
@@ -97,7 +97,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-green-500/20 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-green-500/30"
+                className="inline-flex items-center gap-2 rounded-full bg-green-600/20 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-green-600/30"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp Us

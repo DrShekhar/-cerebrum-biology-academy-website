@@ -184,7 +184,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
         </h3>
         <div className="bg-white p-6 rounded-xl border border-green-200 mb-6">
           <div className="flex items-center justify-center mb-4">
-            <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
+            <CheckCircle className="w-6 h-6 text-green-600 mr-2" />
             <span className="font-semibold text-gray-800">Confirmation Details</span>
           </div>
           <div className="space-y-3 text-sm text-gray-700">
@@ -238,7 +238,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
       className={`bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden ${className}`}
     >
       {/* Progress Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4">
+      <div className="bg-indigo-500 p-4">
         <div className="flex items-center justify-between text-white mb-2">
           <span className="font-semibold">Step {step} of 2</span>
           <span className="text-sm opacity-90">Book Your Free Demo - Just 2 Steps!</span>
@@ -424,30 +424,30 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
               />
             </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-200">
+            <div className="bg-gray-50 p-6 rounded-xl border border-blue-200">
               <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
                 <Zap className="w-5 h-5 text-blue-600 mr-2" />
                 What You'll Get in Demo Class:
               </h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                   Live 1-on-1 session with AIIMS faculty
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                   Cell Biology concept explanation with NEET focus
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                   Personalized NEET preparation strategy
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                   Doubt resolution and study tips
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                   Course roadmap for your goals
                 </li>
               </ul>
@@ -471,7 +471,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             <button
               type="button"
               onClick={nextStep}
-              className="ml-auto px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all text-sm sm:text-base min-h-[44px]"
+              className="ml-auto px-4 sm:px-6 py-3 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-all text-sm sm:text-base min-h-[44px]"
               disabled={
                 !formData.studentName ||
                 !formData.email ||

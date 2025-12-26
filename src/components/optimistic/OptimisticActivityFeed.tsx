@@ -57,10 +57,10 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
 
   const getColor = (type: Activity['type']) => {
     const colors = {
-      enrollment: 'from-green-500 to-emerald-600',
+      enrollment: 'bg-green-600',
       demo: 'from-blue-500 to-cyan-600',
       success: 'from-yellow-500 to-orange-500',
-      online: 'from-teal-500 to-green-600',
+      online: 'bg-green-600',
     }
     return colors[type]
   }
@@ -70,8 +70,8 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-gray-900 flex items-center">
           <div className="relative mr-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75" />
+            <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
+            <div className="absolute inset-0 w-2 h-2 bg-green-600 rounded-full animate-ping opacity-75" />
           </div>
           Live Activity Feed
         </h3>

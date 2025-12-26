@@ -68,7 +68,7 @@ export function WebSocketDemo() {
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex items-center space-x-2">
             <div
-              className={`h-3 w-3 rounded-full ${socket.isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}
+              className={`h-3 w-3 rounded-full ${socket.isConnected ? 'bg-green-600 animate-pulse' : 'bg-red-500'}`}
             />
             <span className="text-sm font-medium">
               {socket.status.charAt(0).toUpperCase() + socket.status.slice(1)}
@@ -157,14 +157,14 @@ export function WebSocketDemo() {
                     key={p.userId}
                     className="flex items-center space-x-3 rounded-md border border-gray-200 p-2"
                   >
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500" />
+                    <div className="h-10 w-10 rounded-full bg-blue-500" />
                     <div className="flex-1">
                       <p className="text-sm font-medium text-gray-900">{p.userName}</p>
                       <p className="text-xs text-gray-500">
                         Joined {Math.floor((Date.now() - p.joinedAt) / 60000)} mins ago
                       </p>
                     </div>
-                    <span className="h-2 w-2 rounded-full bg-green-500" />
+                    <span className="h-2 w-2 rounded-full bg-green-600" />
                   </div>
                 ))}
               </div>
@@ -270,7 +270,7 @@ export function WebSocketDemo() {
         </div>
       </div>
 
-      <div className="mt-8 rounded-lg border border-gray-200 bg-gradient-to-r from-blue-50 to-purple-50 p-6">
+      <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-6">
         <h3 className="mb-3 text-lg font-bold text-gray-900">💡 Integration Tips</h3>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex items-start">

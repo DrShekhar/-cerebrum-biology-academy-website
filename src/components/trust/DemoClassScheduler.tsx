@@ -234,7 +234,7 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
       className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
+      <div className="bg-indigo-500 text-white p-4">
         <div className="flex items-start justify-between">
           <div className="flex-grow">
             <h3 className="text-lg font-bold mb-2 line-clamp-2">{demoClass.title}</h3>
@@ -433,7 +433,7 @@ function TimeSlotGrid({
 
                 {/* Discount Badge */}
                 {slot.discount && slot.isAvailable && (
-                  <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                  <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded-full text-xs font-bold">
                     {slot.discount}% OFF
                   </div>
                 )}

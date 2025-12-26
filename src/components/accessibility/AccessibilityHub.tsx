@@ -513,7 +513,7 @@ const AccessibilityHub: React.FC = () => {
                 onClick={() => updateSettings({ audioDescriptions: !settings.audioDescriptions })}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
                   settings.audioDescriptions
-                    ? 'bg-green-500 text-white'
+                    ? 'bg-green-600 text-white'
                     : 'bg-gray-200 text-gray-700'
                 }`}
               >
@@ -1180,7 +1180,7 @@ const AccessibilityHub: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg"
+            className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg"
           >
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />

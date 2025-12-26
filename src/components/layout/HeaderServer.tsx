@@ -21,7 +21,7 @@ export function HeaderServer() {
             {/* Logo - Critical for LCP, server rendered */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 overflow-hidden">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 overflow-hidden">
                   <Image
                     src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
@@ -71,7 +71,7 @@ export function HeaderServer() {
               className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
             >
               <span>Results</span>
-              <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+              <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                 98%
               </span>
             </Link>

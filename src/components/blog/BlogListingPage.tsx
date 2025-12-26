@@ -219,7 +219,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -316,7 +316,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                           onClick={() => setShowSearchPreview(false)}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors"
                         >
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex-shrink-0 flex items-center justify-center">
+                          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex-shrink-0 flex items-center justify-center">
                             <BookOpen className="w-5 h-5 text-blue-600" />
                           </div>
                           <div className="flex-1 min-w-0">
@@ -643,7 +643,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                             }}
                             className="flex items-center hover:opacity-80 transition-opacity"
                           >
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-medium text-sm mr-3">
+                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium text-sm mr-3">
                               {paginatedPosts[0].author.name.charAt(0)}
                             </div>
                             <div>

@@ -191,13 +191,13 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
   const getUrgencyColor = () => {
     switch (urgencyLevel) {
       case 'high':
-        return 'from-red-500 to-orange-500'
+        return 'bg-red-600'
       case 'medium':
-        return 'from-emerald-500 to-blue-500'
+        return 'from-green-600 to-blue-500'
       case 'low':
-        return 'from-blue-500 to-purple-500'
+        return 'bg-blue-500'
       default:
-        return 'from-emerald-500 to-blue-500'
+        return 'from-green-600 to-blue-500'
     }
   }
 
@@ -237,7 +237,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
           )}
 
           {/* Online indicator */}
-          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full border-2 border-white flex items-center justify-center">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
           </div>
         </button>
@@ -358,8 +358,8 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                             className={`p-3 border rounded-lg cursor-pointer transition-all ${
                               slot.available
                                 ? selectedSlot === slot.id
-                                  ? 'border-emerald-500 bg-emerald-50'
-                                  : 'border-gray-200 hover:border-emerald-300 hover:bg-emerald-25'
+                                  ? 'border-green-600 bg-green-50'
+                                  : 'border-gray-200 hover:border-green-400 hover:bg-green-50'
                                 : 'border-gray-100 bg-gray-50 cursor-not-allowed'
                             }`}
                             onClick={() => slot.available && setSelectedSlot(slot.id)}
@@ -393,7 +393,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                               </div>
 
                               {slot.available && selectedSlot === slot.id && (
-                                <CheckCircle className="w-5 h-5 text-emerald-600" />
+                                <CheckCircle className="w-5 h-5 text-green-600" />
                               )}
                             </div>
                           </div>
@@ -416,7 +416,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                             }))
                           }
                           placeholder="What specific help do you need? (Course selection, study plan, etc.)"
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 text-sm"
                           rows={3}
                         />
                       </div>
@@ -432,7 +432,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                               urgency: e.target.checked ? 'urgent' : 'normal',
                             }))
                           }
-                          className="w-4 h-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+                          className="w-4 h-4 text-green-600 focus:ring-green-600 border-gray-300 rounded"
                         />
                         <label htmlFor="urgent" className="text-sm text-gray-700">
                           Urgent consultation needed
@@ -444,7 +444,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                     <button
                       onClick={() => handleWhatsAppClick(selectedSlot || undefined)}
                       disabled={!selectedSlot}
-                      className="w-full flex items-center justify-center gap-2 p-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      className="w-full flex items-center justify-center gap-2 p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     >
                       <Send className="w-4 h-4" />
                       Book via WhatsApp
@@ -459,7 +459,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
           <div className="mt-4 pt-4 border-t border-gray-100">
             <div className="grid grid-cols-3 gap-3 text-center">
               <div>
-                <div className="text-lg font-bold text-emerald-600">4.9⭐</div>
+                <div className="text-lg font-bold text-green-600">4.9⭐</div>
                 <div className="text-xs text-gray-600">Rating</div>
               </div>
               <div>

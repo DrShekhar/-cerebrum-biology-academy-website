@@ -111,7 +111,7 @@ interface MetricCardProps {
 function MetricCard({ title, value, change, changeLabel, icon: Icon, color }: MetricCardProps) {
   const colorClasses = {
     blue: 'bg-blue-50 text-blue-600 border-blue-200',
-    green: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+    green: 'bg-green-50 text-green-600 border-green-200',
     purple: 'bg-purple-50 text-purple-600 border-purple-200',
     orange: 'bg-orange-50 text-orange-600 border-orange-200',
     red: 'bg-red-50 text-red-600 border-red-200',
@@ -132,10 +132,10 @@ function MetricCard({ title, value, change, changeLabel, icon: Icon, color }: Me
           </p>
           <div className="flex items-center mt-2">
             <TrendingUp
-              className={`w-4 h-4 mr-1 ${change >= 0 ? 'text-emerald-500' : 'text-red-500'}`}
+              className={`w-4 h-4 mr-1 ${change >= 0 ? 'text-green-600' : 'text-red-500'}`}
             />
             <span
-              className={`text-sm font-medium ${change >= 0 ? 'text-emerald-600' : 'text-red-600'}`}
+              className={`text-sm font-medium ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}
             >
               {change >= 0 ? '+' : ''}
               {change}%
@@ -158,9 +158,9 @@ function ActivityIcon({ type }: { type: string }) {
     case 'demo_booking':
       return <Calendar className="w-4 h-4 text-blue-500" />
     case 'enrollment':
-      return <BookOpen className="w-4 h-4 text-emerald-500" />
+      return <BookOpen className="w-4 h-4 text-green-600" />
     case 'payment':
-      return <DollarSign className="w-4 h-4 text-green-500" />
+      return <DollarSign className="w-4 h-4 text-green-600" />
     case 'cart_abandonment':
       return <AlertCircle className="w-4 h-4 text-orange-500" />
     default:
@@ -299,7 +299,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between mt-4 p-4 bg-white rounded-lg shadow-sm border">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium">System Online</span>
               </div>
               <div className="text-sm text-gray-500">
@@ -386,15 +386,15 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Completed Today</h3>
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <CheckCircle className="w-5 h-5 text-emerald-600" />
+              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                <CheckCircle className="w-5 h-5 text-green-600" />
               </div>
             </div>
-            <div className="text-3xl font-bold text-emerald-600 mb-2">
+            <div className="text-3xl font-bold text-green-600 mb-2">
               {data.demos.completedToday}
             </div>
             <p className="text-sm text-gray-600">Average rating: {data.demos.averageRating}★</p>
-            <button className="mt-4 text-emerald-600 hover:text-emerald-700 font-medium text-sm">
+            <button className="mt-4 text-green-600 hover:text-green-700 font-medium text-sm">
               View Feedback →
             </button>
           </motion.div>
@@ -518,9 +518,9 @@ export default function AdminDashboard() {
               </span>
             </button>
 
-            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">
-              <Calendar className="w-5 h-5 text-gray-400 group-hover:text-emerald-600" />
-              <span className="text-sm font-medium text-gray-600 group-hover:text-emerald-700">
+            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors group">
+              <Calendar className="w-5 h-5 text-gray-400 group-hover:text-green-600" />
+              <span className="text-sm font-medium text-gray-600 group-hover:text-green-700">
                 Schedule Demo
               </span>
             </button>

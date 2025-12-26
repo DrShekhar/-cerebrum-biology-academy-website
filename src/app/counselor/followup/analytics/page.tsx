@@ -390,7 +390,7 @@ export default function FollowupAnalyticsPage() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <div
-                      className="bg-green-500 rounded-t"
+                      className="bg-green-600 rounded-t"
                       style={{
                         width: '40px',
                         height: `${Math.max(4, (trend.sent / Math.max(trend.total, 1)) * 100)}px`,
@@ -412,7 +412,7 @@ export default function FollowupAnalyticsPage() {
             </div>
             <div className="flex gap-4 mt-4 justify-center">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-green-500 rounded"></div>
+                <div className="w-4 h-4 bg-green-600 rounded"></div>
                 <span className="text-sm text-gray-600">Sent</span>
               </div>
               <div className="flex items-center gap-2">

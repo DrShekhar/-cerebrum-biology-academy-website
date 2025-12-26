@@ -34,8 +34,8 @@ const stageColors: Record<LeadStage, string> = {
   DEMO_COMPLETED: 'bg-indigo-500',
   OFFER_SENT: 'bg-orange-500',
   NEGOTIATING: 'bg-yellow-500',
-  PAYMENT_PLAN_CREATED: 'bg-teal-500',
-  ENROLLED: 'bg-green-500',
+  PAYMENT_PLAN_CREATED: 'bg-green-600',
+  ENROLLED: 'bg-green-600',
   ACTIVE_STUDENT: 'bg-green-600',
   LOST: 'bg-gray-500',
 }

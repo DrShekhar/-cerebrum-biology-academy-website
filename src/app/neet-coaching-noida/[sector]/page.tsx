@@ -503,7 +503,7 @@ export default function SectorPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
@@ -600,7 +600,7 @@ export default function SectorPage() {
               <ul className="space-y-2">
                 {data.nearbyMetro.map((metro) => (
                   <li key={metro} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {metro}
                   </li>
                 ))}
@@ -620,7 +620,7 @@ export default function SectorPage() {
               <ul className="space-y-2">
                 {data.societies.map((society) => (
                   <li key={society} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {society}
                   </li>
                 ))}
@@ -640,7 +640,7 @@ export default function SectorPage() {
               <ul className="space-y-2">
                 {data.schools.map((school) => (
                   <li key={school} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {school}
                   </li>
                 ))}
@@ -660,7 +660,7 @@ export default function SectorPage() {
               <ul className="space-y-2">
                 {data.landmarks.map((landmark) => (
                   <li key={landmark} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {landmark}
                   </li>
                 ))}
@@ -694,7 +694,7 @@ export default function SectorPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
@@ -768,7 +768,7 @@ export default function SectorPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

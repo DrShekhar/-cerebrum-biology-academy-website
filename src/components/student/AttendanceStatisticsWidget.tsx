@@ -166,7 +166,7 @@ export function AttendanceStatisticsWidget({
       <CardContent>
         <div className="space-y-4">
           {/* Main Attendance Percentage */}
-          <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+          <div className="text-center p-6 bg-gray-50 rounded-lg border border-blue-200">
             <div className="text-4xl font-bold text-blue-600 mb-1">
               {statistics.attendancePercentage}%
             </div>

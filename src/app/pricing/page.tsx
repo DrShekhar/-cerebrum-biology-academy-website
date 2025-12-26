@@ -211,11 +211,11 @@ export default function PricingPage() {
         borderColor: 'border-blue-200',
       },
       pursuit: {
-        bg: 'from-green-50 to-teal-50',
+        bg: 'from-green-50 to-green-50',
         textColor: 'text-green-900',
         badge: 'bg-green-100 text-green-700',
         floatingBadge: '💰 BEST VALUE',
-        badgeBg: 'bg-emerald-500',
+        badgeBg: 'bg-green-600',
         borderColor: 'border-green-200',
       },
     }
@@ -304,7 +304,7 @@ export default function PricingPage() {
               {(expandedFeatures.has(tierKey) ? tier.features : tier.features.slice(0, 3)).map(
                 (feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">{feature}</span>
                   </div>
                 )
@@ -367,7 +367,7 @@ export default function PricingPage() {
             </Link>
             <Link href={`/demo-booking?tier=${tier.tier}&class=${classData.class}`}>
               <button
-                className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-2.5 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl text-sm`}
+                className={`w-full bg-indigo-500 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-600 transition-all duration-200 hover:shadow-xl text-sm`}
               >
                 Enroll Now
               </button>
@@ -402,7 +402,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
       {/* Hero Section with enhanced gradient */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
+      <div className="relative bg-indigo-600 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
@@ -949,7 +949,7 @@ export default function PricingPage() {
                     <p className="font-semibold flex items-center gap-1">
                       {tier.mentorship ? (
                         <>
-                          <CheckCircle2 className="w-4 h-4 text-green-500" /> Yes
+                          <CheckCircle2 className="w-4 h-4 text-green-600" /> Yes
                         </>
                       ) : (
                         <>
@@ -970,7 +970,7 @@ export default function PricingPage() {
                         key={feature}
                         className="inline-flex items-center gap-1 text-xs bg-white px-2 py-1 rounded-full border"
                       >
-                        <CheckCircle2 className="w-3 h-3 text-green-500" />
+                        <CheckCircle2 className="w-3 h-3 text-green-600" />
                         {feature}
                       </span>
                     )
@@ -1019,58 +1019,58 @@ export default function PricingPage() {
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">AIIMS Faculty</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Study Materials</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Mock Tests</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">AI Doubt Resolution</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Personal Mentorship</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
@@ -1079,10 +1079,10 @@ export default function PricingPage() {
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">1-on-1 Doubt Sessions</td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 mx-auto" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
@@ -1111,7 +1111,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
+        <div className="relative bg-indigo-600 rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
@@ -1275,7 +1275,7 @@ export default function PricingPage() {
             </button>
           </Link>
           <Link href="tel:+918826444334">
-            <button className="bg-emerald-500 text-white font-bold py-3.5 px-5 rounded-xl text-sm shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-transform flex items-center gap-2">
+            <button className="bg-green-600 text-white font-bold py-3.5 px-5 rounded-xl text-sm shadow-lg shadow-green-500/25 active:scale-[0.98] transition-transform flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"

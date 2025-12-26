@@ -71,7 +71,7 @@ export function ClassSelector({ onClassSelect, selectedClass, showTitle = true }
             className={`relative p-6 rounded-3xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
               selected === option.id
                 ? option.color === 'blue' ? 'border-blue-500 bg-blue-50' :
-                  option.color === 'green' ? 'border-green-500 bg-green-50' :
+                  option.color === 'green' ? 'border-green-600 bg-green-50' :
                   'border-purple-500 bg-purple-50'
                 : 'border-gray-200 bg-white hover:border-gray-300'
             }`}
@@ -80,7 +80,7 @@ export function ClassSelector({ onClassSelect, selectedClass, showTitle = true }
             {selected === option.id && (
               <div className={`absolute top-4 right-4 w-6 h-6 rounded-full flex items-center justify-center ${
                 option.color === 'blue' ? 'bg-blue-500' :
-                option.color === 'green' ? 'bg-green-500' :
+                option.color === 'green' ? 'bg-green-600' :
                 'bg-purple-500'
               }`}>
                 <span className="text-white text-sm">✓</span>

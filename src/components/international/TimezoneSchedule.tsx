@@ -142,7 +142,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
                 className={`flex items-center space-x-3 p-3 rounded-lg ${availabilityStatus.bgColor} ${availabilityStatus.borderColor} border`}
               >
                 <div
-                  className={`w-2 h-2 rounded-full ${availabilityStatus.status === 'available' ? 'bg-green-500' : 'bg-amber-500'}`}
+                  className={`w-2 h-2 rounded-full ${availabilityStatus.status === 'available' ? 'bg-green-600' : 'bg-amber-500'}`}
                 ></div>
                 <div>
                   <div className={`font-medium ${availabilityStatus.color}`}>

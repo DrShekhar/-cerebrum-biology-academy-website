@@ -50,7 +50,7 @@ interface MobilePaymentViewProps {
 }
 
 const statusColors = {
-  PAID: 'bg-green-500',
+  PAID: 'bg-green-600',
   PENDING: 'bg-blue-500',
   OVERDUE: 'bg-red-500',
   CANCELLED: 'bg-gray-500',

@@ -117,7 +117,7 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
                 <ul className="space-y-2 mb-6">
                   {course.features.slice(0, 3).map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2 text-sm text-slate-700">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -355,7 +355,7 @@ export function TouchInput({
         className={`w-full px-4 py-3 border-2 rounded-xl transition-all duration-200 ${
           error
             ? 'border-red-500 focus:border-red-500 focus:ring-red-100'
-            : 'border-slate-300 focus:border-emerald-500 focus:ring-emerald-100'
+            : 'border-slate-300 focus:border-green-600 focus:ring-green-100'
         } focus:ring-3 focus:outline-none`}
         style={{ fontSize: '16px' }} // Prevent zoom on iOS
       />
@@ -643,7 +643,7 @@ export function EnhancedQuickActionButton({
     },
     enroll: {
       icon: <BookOpen className="w-6 h-6" />,
-      bgColor: 'bg-gradient-to-r from-emerald-500 to-blue-500',
+      bgColor: 'bg-gradient-to-r from-green-600 to-blue-500',
       label: 'Enroll Now',
       action: () => {
         HapticFeedback.enroll()

@@ -205,7 +205,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
             variant="medical"
             size="lg"
             onClick={handleStartQuiz}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4"
           >
             <Clock className="h-5 w-5" />
             Start 2-Minute Quiz
@@ -213,7 +213,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
           </PremiumButton>
 
           <div className="text-xs text-gray-500 flex items-center justify-center gap-1">
-            <CheckCircle2 className="h-4 w-4 text-green-500" />
+            <CheckCircle2 className="h-4 w-4 text-green-600" />
             Used by 5,000+ students • 100% Free
           </div>
         </div>
@@ -237,7 +237,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <motion.div
-                className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+                className="bg-blue-500 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.5 }}
@@ -281,7 +281,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
       <PremiumCard
         variant="luxury"
         size="lg"
-        className={`bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 ${className}`}
+        className={`bg-gradient-to-br from-green-50 to-green-50 border-green-200 ${className}`}
       >
         <div className="p-6 space-y-6">
           {/* Confetti Effect */}
@@ -365,7 +365,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4"
+              className="w-full bg-green-600 hover:from-green-700 hover:to-green-700 text-white py-4"
             >
               <GraduationCap className="h-5 w-5" />
               Enroll Now - Start Your Success Journey

@@ -18,9 +18,9 @@ import {
 } from 'lucide-react'
 
 const botanyTopics = [
-  { name: 'Plant Physiology', questions: '10-12', percentage: '12%', color: 'bg-emerald-500' },
-  { name: 'Ecology & Environment', questions: '10-12', percentage: '12%', color: 'bg-green-500' },
-  { name: 'Cell Biology', questions: '8-10', percentage: '10%', color: 'bg-teal-500' },
+  { name: 'Plant Physiology', questions: '10-12', percentage: '12%', color: 'bg-green-600' },
+  { name: 'Ecology & Environment', questions: '10-12', percentage: '12%', color: 'bg-green-600' },
+  { name: 'Cell Biology', questions: '8-10', percentage: '10%', color: 'bg-green-600' },
   { name: 'Plant Kingdom', questions: '5-6', percentage: '6%', color: 'bg-lime-500' },
   { name: 'Molecular Biology', questions: '5-6', percentage: '6%', color: 'bg-cyan-500' },
   { name: 'Plant Morphology', questions: '2-3', percentage: '3%', color: 'bg-blue-500' },
@@ -57,7 +57,7 @@ const faqs = [
 
 export default function BestBotanyTeacherForNeetPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -78,7 +78,7 @@ export default function BestBotanyTeacherForNeetPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-green-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -94,14 +94,14 @@ export default function BestBotanyTeacherForNeetPage() {
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Best Botany Teacher for NEET
             </h1>
-            <p className="mb-8 text-xl text-emerald-100">
+            <p className="mb-8 text-xl text-green-100">
               AIIMS-trained expert faculty with proven track record. Master Plant Physiology,
               Ecology, Cell Biology & Plant Kingdom to score 150+ in NEET Botany.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-emerald-600 shadow-lg transition hover:bg-emerald-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
               >
                 Book Free Demo
               </Link>
@@ -137,7 +137,7 @@ export default function BestBotanyTeacherForNeetPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <div className="mb-2 text-4xl font-bold text-emerald-600">{item.year}</div>
+                <div className="mb-2 text-4xl font-bold text-green-600">{item.year}</div>
                 <div className="mb-1 text-2xl font-semibold text-gray-900">
                   {item.students} Selected
                 </div>
@@ -165,7 +165,7 @@ export default function BestBotanyTeacherForNeetPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-10 w-10 text-emerald-600" />
+                <stat.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -272,7 +272,7 @@ export default function BestBotanyTeacherForNeetPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <feature.icon className="mb-4 h-10 w-10 text-emerald-600" />
+                <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
               </motion.div>
@@ -345,17 +345,17 @@ export default function BestBotanyTeacherForNeetPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-emerald-600 to-green-600 py-16 text-white">
+      <section className="bg-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Learn from the Best Botany Teacher</h2>
-            <p className="mb-8 text-xl text-emerald-100">
+            <p className="mb-8 text-xl text-green-100">
               Join 1,50,000+ students who achieved NEET success with our expert botany teaching
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-emerald-600 shadow-lg transition hover:bg-emerald-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
               >
                 Book Free Demo Class
               </Link>

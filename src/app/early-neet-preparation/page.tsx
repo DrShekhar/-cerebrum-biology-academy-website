@@ -138,7 +138,7 @@ export default function EarlyNeetPreparationPage() {
       description:
         'Students who start NEET preparation from Class 9-10 show 65% higher success rate compared to those who start in Class 11.',
       icon: BarChart3,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'bg-green-600',
       stat: '65% Higher',
     },
     {

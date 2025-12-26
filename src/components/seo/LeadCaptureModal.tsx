@@ -177,7 +177,7 @@ export function LeadCaptureModal({
           {!isSubmitted ? (
             <>
               <div className="text-center mb-6">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+                <div className="w-16 h-16 mx-auto bg-indigo-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                   <Download className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">{leadMagnetTitle}</h2>
@@ -285,7 +285,7 @@ export function LeadCaptureModal({
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
+                  className="w-full bg-indigo-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-600 focus:ring-4 focus:ring-blue-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
                 >
                   {isLoading ? (
                     <>
@@ -334,7 +334,7 @@ export function LeadCaptureModal({
                 )}
                 .
               </p>
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100 rounded-xl p-6 mb-6 text-left">
+              <div className="bg-gray-50 border border-blue-100 rounded-xl p-6 mb-6 text-left">
                 <h4 className="font-semibold text-blue-900 mb-3 flex items-center">
                   <CheckCircle className="w-5 h-5 mr-2" />
                   What's Next?
@@ -362,7 +362,7 @@ export function LeadCaptureModal({
               </div>
               <button
                 onClick={handleClose}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg"
+                className="bg-indigo-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-600 transition-all shadow-lg"
               >
                 Continue Studying
               </button>

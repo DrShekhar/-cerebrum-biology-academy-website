@@ -568,7 +568,7 @@ export default function SouthDelhiAreaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
@@ -657,7 +657,7 @@ export default function SouthDelhiAreaPage() {
               <ul className="space-y-2">
                 {area.nearbyMetro.map((metro) => (
                   <li key={metro} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {metro}
                   </li>
                 ))}
@@ -678,7 +678,7 @@ export default function SouthDelhiAreaPage() {
               <ul className="space-y-2">
                 {area.landmarks.map((landmark) => (
                   <li key={landmark} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {landmark}
                   </li>
                 ))}
@@ -699,7 +699,7 @@ export default function SouthDelhiAreaPage() {
               <ul className="space-y-2">
                 {area.schools.map((school) => (
                   <li key={school} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                     {school}
                   </li>
                 ))}
@@ -746,7 +746,7 @@ export default function SouthDelhiAreaPage() {
                   <ul className="space-y-2 mb-6">
                     {course.features.map((feature) => (
                       <li key={feature} className="flex items-center text-gray-600 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                         {feature}
                       </li>
                     ))}
@@ -804,7 +804,7 @@ export default function SouthDelhiAreaPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

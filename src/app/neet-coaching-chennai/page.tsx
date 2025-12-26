@@ -250,7 +250,7 @@ export default function NeetCoachingChennaiPage() {
         studentCount="2800"
         coordinates={{ lat: '13.0827', lng: '80.2707' }}
       />
-      <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-rose-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-red-800 to-red-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -400,7 +400,7 @@ export default function NeetCoachingChennaiPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-8 border border-red-100"
+                className="bg-gradient-to-br bg-red-50 rounded-xl p-8 border border-red-100"
               >
                 <item.icon className="w-12 h-12 text-red-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -503,7 +503,7 @@ export default function NeetCoachingChennaiPage() {
       <RelatedCityLinks currentCity="chennai" variant="default" />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white">
+      <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

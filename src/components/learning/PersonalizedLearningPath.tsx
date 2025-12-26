@@ -206,7 +206,7 @@ export function PersonalizedLearningPath() {
 
   if (!isAuthenticated || !currentPath) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <Brain className="w-16 h-16 text-blue-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Generating Your Learning Path</h2>
@@ -282,7 +282,7 @@ export function PersonalizedLearningPath() {
 
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <div className="flex items-center justify-between mb-4">
-              <Target className="w-8 h-8 text-green-500" />
+              <Target className="w-8 h-8 text-green-600" />
               <span className="text-2xl font-bold text-gray-900">
                 {analytics?.projectedScore || 0}
               </span>
@@ -357,7 +357,7 @@ export function PersonalizedLearningPath() {
                 </button>
                 <button
                   onClick={() => completeSession(activeSession.id)}
-                  className="flex items-center space-x-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600"
+                  className="flex items-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600"
                 >
                   <CheckCircle className="w-5 h-5" />
                   <span>Complete</span>
@@ -425,7 +425,7 @@ export function PersonalizedLearningPath() {
                         <div className="flex items-center space-x-2">
                           <span className="text-sm text-gray-600">{session.duration}min</span>
                           {completedSessions.includes(session.id) ? (
-                            <CheckCircle className="w-5 h-5 text-green-500" />
+                            <CheckCircle className="w-5 h-5 text-green-600" />
                           ) : (
                             <button
                               onClick={() => startSession(session)}

@@ -403,12 +403,12 @@ export function SuccessStoriesSection({
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'low-scorer': 'from-red-500 to-orange-500',
-      'multiple-attempts': 'from-blue-500 to-teal-500',
+      'low-scorer': 'bg-red-600',
+      'multiple-attempts': 'from-blue-500 to-green-600',
       'gave-up': 'from-navy-500 to-red-500',
-      'biology-weak': 'from-green-500 to-emerald-500',
+      'biology-weak': 'bg-green-600',
     }
-    return colors[category as keyof typeof colors] || 'from-blue-500 to-teal-500'
+    return colors[category as keyof typeof colors] || 'from-blue-500 to-green-600'
   }
 
   return (
@@ -422,9 +422,9 @@ export function SuccessStoriesSection({
           transition={{ duration: 0.8 }}
           className="text-center space-y-8 mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-100 to-green-100 border border-emerald-200 rounded-full px-4 py-2">
-            <Smile className="h-5 w-5 text-emerald-600" />
-            <span className="text-sm font-semibold text-emerald-800">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-green-100 border border-green-200 rounded-full px-4 py-2">
+            <Smile className="h-5 w-5 text-green-600" />
+            <span className="text-sm font-semibold text-green-700">
               Real Students • Real Transformations • Real Doctors
             </span>
           </div>
@@ -439,14 +439,14 @@ export function SuccessStoriesSection({
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Every doctor here <span className="font-bold text-red-600">failed NEET once</span>.
               Today they're saving lives.{' '}
-              <span className="font-bold text-emerald-600">Your story could be next.</span>
+              <span className="font-bold text-green-600">Your story could be next.</span>
             </p>
           </div>
 
           {/* Video Compilation Placeholder */}
           <motion.div whileHover={{ scale: 1.02 }} className="relative max-w-4xl mx-auto">
             <PremiumCard variant="luxury" size="lg" className="relative overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-teal-600 to-navy-600 rounded-lg flex items-center justify-center relative">
+              <div className="aspect-video bg-gradient-to-br from-green-600 to-navy-600 rounded-lg flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="relative text-center text-white space-y-4">
                   <PlayCircle className="h-20 w-20 mx-auto mb-4 text-white/90 hover:text-white transition-colors cursor-pointer" />
@@ -637,7 +637,7 @@ export function SuccessStoriesSection({
             <PremiumButton
               variant="luxury"
               size="lg"
-              className="bg-teal-600 text-white hover:bg-teal-700 shadow-lg hover:shadow-xl"
+              className="bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl"
             >
               <Phone className="h-6 w-6" />
               Book Your Success Consultation
@@ -711,7 +711,7 @@ function SuccessStoryCard({
               <div className="relative">
                 <div className="h-2 bg-gray-200 rounded-full">
                   <motion.div
-                    className="h-2 bg-gradient-to-r from-red-500 to-green-500 rounded-full"
+                    className="h-2 bg-gradient-to-r from-red-500 to-green-600 rounded-full"
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}
                     viewport={{ once: true }}
@@ -896,7 +896,7 @@ function InstagramStyleStories({
 
                   <div className="text-center">
                     <div
-                      className="bg-green-500 rounded-t-lg w-16 transition-all duration-1000 delay-500"
+                      className="bg-green-600 rounded-t-lg w-16 transition-all duration-1000 delay-500"
                       style={{ height: `${(currentStory.afterScore / 720) * 200}px` }}
                     />
                     <div className="mt-2">

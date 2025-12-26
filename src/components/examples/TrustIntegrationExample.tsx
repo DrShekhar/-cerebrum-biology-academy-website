@@ -30,7 +30,7 @@ export function CourseCardWithTrust() {
           <div className="flex items-baseline space-x-2 mb-2">
             <span className="text-3xl font-bold text-slate-800">₹15,999</span>
             <span className="text-lg text-slate-500 line-through">₹29,999</span>
-            <span className="bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-sm font-semibold">
+            <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-sm font-semibold">
               47% OFF
             </span>
           </div>
@@ -141,7 +141,7 @@ export function PricingPageWithTrust() {
             <ul className="space-y-3 mb-8">
               {plan.features.map((feature, index) => (
                 <li key={index} className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -194,12 +194,12 @@ export function EnrollmentFormWithTrust() {
       <div className="mb-8">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-semibold">
+            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
               ✓
             </div>
-            <span className="text-sm font-medium text-emerald-600">Course Selected</span>
+            <span className="text-sm font-medium text-green-600">Course Selected</span>
           </div>
-          <div className="flex-1 h-px bg-emerald-500"></div>
+          <div className="flex-1 h-px bg-green-600"></div>
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
               2
@@ -274,7 +274,7 @@ export function EnrollmentFormWithTrust() {
 // Example: Homepage hero with trust elements
 export function HeroWithTrust() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex items-center">
+    <div className="relative min-h-screen bg-indigo-900 flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -319,7 +319,7 @@ export function HeroWithTrust() {
             <div className="text-slate-300">Success Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">2000+</div>
+            <div className="text-4xl font-bold text-green-500 mb-2">2000+</div>
             <div className="text-slate-300">NEET Selections</div>
           </div>
           <div className="text-center">

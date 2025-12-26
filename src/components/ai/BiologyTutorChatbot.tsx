@@ -757,7 +757,7 @@ What would you like to explore today?`,
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               onClick={toggleChatbot}
-              className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
               <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
@@ -777,7 +777,7 @@ What would you like to explore today?`,
               className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 md:rounded-t-lg">
+              <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 md:rounded-t-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -847,7 +847,7 @@ What would you like to explore today?`,
                       >
                         <div className="flex items-start space-x-2">
                           {message.type === 'bot' && (
-                            <Bot className="w-4 h-4 mt-1 text-green-500" />
+                            <Bot className="w-4 h-4 mt-1 text-green-600" />
                           )}
                           <div className="flex-1">
                             <p className="text-sm whitespace-pre-wrap">{message.content}</p>
@@ -899,7 +899,7 @@ What would you like to explore today?`,
                   >
                     <div className="bg-gray-100 p-3 rounded-lg">
                       <div className="flex items-center space-x-2">
-                        <Bot className="w-4 h-4 text-green-500" />
+                        <Bot className="w-4 h-4 text-green-600" />
                         <div className="flex space-x-1">
                           <motion.div
                             className="w-2 h-2 bg-gray-400 rounded-full"

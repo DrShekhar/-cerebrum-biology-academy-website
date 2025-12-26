@@ -403,7 +403,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
       className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 relative">
+      <div className="bg-indigo-500 text-white p-6 relative">
         {/* Video intro button */}
         {faculty.socialProof.videoIntroUrl && (
           <button className="absolute top-4 right-4 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 transition-colors">
@@ -625,7 +625,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                 <ul className="space-y-1">
                   {faculty.credentials.memberships.map((membership, index) => (
                     <li key={index} className="text-sm text-gray-700 flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                      <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
                       {membership}
                     </li>
                   ))}
@@ -778,7 +778,7 @@ export default function FacultyCredentialsShowcase({
       className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden ${className}`}
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8">
+      <div className="bg-indigo-500 text-white p-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold mb-2">🎓 Meet Our Expert Faculty</h2>
           <p className="text-blue-100 text-lg">
@@ -853,7 +853,7 @@ export default function FacultyCredentialsShowcase({
           <button className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
             🎯 Book Faculty Interaction Session
           </button>
-          <button className="bg-green-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-400 transition-colors">
+          <button className="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-400 transition-colors">
             📚 View Complete Faculty Profiles
           </button>
         </div>

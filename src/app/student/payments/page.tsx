@@ -70,7 +70,7 @@ export default function StudentPaymentsPage() {
 
   if (!isAuthenticated || !user) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <Card className="max-w-md w-full">
           <CardContent className="p-8">
             <EmptyState
@@ -107,7 +107,7 @@ export default function StudentPaymentsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -264,7 +264,7 @@ export default function StudentPaymentsPage() {
                 </Card>
               )}
 
-              <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+              <Card className="bg-indigo-500 text-white">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <FileText className="w-8 h-8 opacity-80" />
@@ -342,7 +342,7 @@ function StatCard({
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
           <div className="animate-pulse">

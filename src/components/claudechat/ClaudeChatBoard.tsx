@@ -1,6 +1,6 @@
 /**
- * ClaudeChat Board - Revolutionary AI-Powered Education Platform
- * The "iPhone of Education" - Complete integrated learning experience
+ * ClaudeChat Board - AI-Powered Education Platform
+ * Complete integrated learning experience for NEET Biology
  */
 
 'use client'
@@ -213,9 +213,9 @@ export function ClaudeChatBoard({
   ]
 
   return (
-    <div className="claudechat-board min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="claudechat-board min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+      <div className="bg-indigo-500 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -223,7 +223,7 @@ export function ClaudeChatBoard({
                 <Brain className="w-8 h-8" />
                 <span>ClaudeChat Board</span>
               </h1>
-              <p className="opacity-90">Revolutionary AI-Powered Biology Learning</p>
+              <p className="opacity-90">AI-Powered Biology Learning for NEET</p>
             </div>
 
             <div className="flex items-center space-x-4">
@@ -244,7 +244,7 @@ export function ClaudeChatBoard({
               ) : (
                 <button
                   onClick={startSession}
-                  className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg font-medium transition-colors"
+                  className="bg-green-600 hover:bg-green-600 px-4 py-2 rounded-lg font-medium transition-colors"
                 >
                   Start Learning
                 </button>
@@ -303,7 +303,7 @@ export function ClaudeChatBoard({
               key={notification.id}
               className={`p-3 rounded-lg shadow-lg max-w-sm ${
                 notification.type === 'success'
-                  ? 'bg-green-500 text-white'
+                  ? 'bg-green-600 text-white'
                   : notification.type === 'warning'
                     ? 'bg-yellow-500 text-white'
                     : 'bg-blue-500 text-white'
@@ -423,7 +423,7 @@ export function ClaudeChatBoard({
                     </div>
                     <div className="text-sm text-gray-600">Total Study Time</div>
                   </div>
-                  <Target className="w-8 h-8 text-green-500" />
+                  <Target className="w-8 h-8 text-green-600" />
                 </div>
               </div>
 
@@ -529,7 +529,7 @@ export function ClaudeChatBoard({
                   >
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        achievement.earned ? 'bg-green-500' : 'bg-gray-400'
+                        achievement.earned ? 'bg-green-600' : 'bg-gray-400'
                       }`}
                     >
                       {achievement.earned ? (
@@ -562,7 +562,7 @@ export function ClaudeChatBoard({
       {!currentSession && (
         <button
           onClick={startSession}
-          className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white w-16 h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+          className="fixed bottom-8 right-8 bg-indigo-500 text-white w-16 h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
         >
           <Zap className="w-8 h-8 group-hover:scale-110 transition-transform" />
         </button>

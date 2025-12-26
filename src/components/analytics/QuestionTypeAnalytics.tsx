@@ -344,7 +344,7 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
                       <ul className="space-y-1">
                         {data.strengths.map((strength, idx) => (
                           <li key={idx} className="text-sm text-green-700 flex items-center gap-2">
-                            <span className="text-green-500">✓</span>
+                            <span className="text-green-600">✓</span>
                             {strength}
                           </li>
                         ))}

@@ -52,9 +52,9 @@ const SUCCESS_METRICS: MetricCard[] = [
       primary: '#10B981',
       secondary: '#059669',
       gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-      textColor: 'text-emerald-900',
-      iconBg: 'bg-emerald-50',
-      glowColor: 'shadow-emerald-500/25',
+      textColor: 'text-green-800',
+      iconBg: 'bg-green-50',
+      glowColor: 'shadow-green-500/25',
     },
   },
   {
@@ -303,7 +303,7 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
             duration: 0.4,
             delay: index * 0.15 + 1,
           }}
-          className="absolute top-4 right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center"
+          className="absolute top-4 right-4 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center"
         >
           <Award className="h-4 w-4 text-white" />
         </motion.div>
@@ -339,7 +339,7 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-indigo-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <TrendingUp className="w-4 h-4" />
             Success That Speaks Numbers
           </div>
@@ -347,7 +347,7 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Proven Track Record of
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-indigo-500 bg-clip-text text-transparent">
               Educational Excellence
             </span>
           </h2>

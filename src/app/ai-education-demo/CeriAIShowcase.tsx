@@ -47,9 +47,9 @@ const MobileChatInterface = dynamic(
     ),
   {
     loading: () => (
-      <div className="h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="h-full flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mx-auto mb-4 animate-pulse flex items-center justify-center">
+          <div className="w-16 h-16 bg-indigo-500 rounded-2xl mx-auto mb-4 animate-pulse flex items-center justify-center">
             <Brain className="w-8 h-8 text-white" />
           </div>
           <p className="text-gray-600 font-medium">Loading Ceri AI...</p>
@@ -135,7 +135,7 @@ function LiveQuestionCounter() {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-3xl p-8 text-white text-center relative overflow-hidden"
+      className="bg-green-600 rounded-3xl p-8 text-white text-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-10" />
       <div className="relative z-10">
@@ -190,7 +190,7 @@ function StudentSuccessMap() {
       </h3>
       <div className="relative aspect-[4/5] max-w-md mx-auto">
         {/* Simplified India outline */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-purple-50 rounded-3xl" />
+        <div className="absolute inset-0 bg-gray-50 rounded-3xl" />
 
         {/* City dots */}
         {cities.map((city) => (
@@ -256,9 +256,9 @@ function SampleQuestions({ onQuestionClick }: { onQuestionClick: (q: string) => 
   }
 
   const difficultyColors = {
-    easy: 'from-green-500 to-emerald-500',
+    easy: 'bg-green-600',
     medium: 'from-yellow-500 to-orange-500',
-    hard: 'from-red-500 to-pink-500',
+    hard: 'bg-red-600',
   }
 
   return (
@@ -357,9 +357,9 @@ function ComparisonSection() {
             </div>
 
             {/* Ceri AI */}
-            <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-6 border border-purple-400/30">
+            <div className="bg-indigo-500/20 rounded-2xl p-6 border border-purple-400/30">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
                   <Brain className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -402,14 +402,14 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
     {
       name: 'Human Physiology',
       icon: Heart,
-      color: 'from-red-500 to-orange-500',
+      color: 'bg-red-600',
       questions: 68,
       topics: ['Digestion', 'Respiration', 'Circulation'],
     },
     {
       name: 'Plant Biology',
       icon: Leaf,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       questions: 38,
       topics: ['Photosynthesis', 'Plant Hormones', 'Transport'],
     },
@@ -518,7 +518,7 @@ function BeforeAfterComparison() {
         {/* After */}
         <div className="bg-green-50 rounded-2xl p-6 border-2 border-green-200">
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+            <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3">
               <Check className="w-5 h-5 text-white" />
             </div>
             <h4 className="text-xl font-bold text-green-700">With Ceri AI</h4>
@@ -553,12 +553,12 @@ function BeforeAfterComparison() {
             ].map((item) => (
               <li key={item.label} className="flex items-center justify-between">
                 <span className="flex items-center text-gray-600">
-                  <item.icon className="w-4 h-4 mr-2 text-green-500" />
+                  <item.icon className="w-4 h-4 mr-2 text-green-600" />
                   {item.label}
                 </span>
                 <div className="text-right">
                   <span className="font-semibold text-green-600">{item.value}</span>
-                  <span className="block text-xs text-green-500">{item.improvement}</span>
+                  <span className="block text-xs text-green-600">{item.improvement}</span>
                 </div>
               </li>
             ))}
@@ -590,7 +590,7 @@ function NEETScorePredictor() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl p-8 text-white"
+      className="bg-indigo-500 rounded-3xl p-8 text-white"
     >
       <div className="flex items-center justify-center mb-6">
         <Calculator className="w-8 h-8 mr-3" />
@@ -766,7 +766,7 @@ function PricingSection() {
             }`}
           >
             {plan.popular && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                 Most Popular
               </div>
             )}
@@ -778,7 +778,7 @@ function PricingSection() {
             <ul className="space-y-3 mb-8">
               {plan.features.map((feature) => (
                 <li key={feature} className="flex items-center text-gray-600">
-                  <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -786,7 +786,7 @@ function PricingSection() {
             <button
               className={`w-full py-3 rounded-xl font-semibold transition-all ${
                 plan.popular
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:shadow-lg'
+                  ? 'bg-blue-500 text-white hover:shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -889,7 +889,7 @@ function FloatingParticles() {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-30"
+          className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-30"
           initial={{
             x: Math.random() * 100 + '%',
             y: Math.random() * 100 + '%',
@@ -958,7 +958,7 @@ function DemoBubble({ message, isAI, delay }: { message: string; isAI: boolean; 
       <div
         className={`max-w-[80%] rounded-2xl px-5 py-3 ${
           isAI
-            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+            ? 'bg-indigo-500 text-white'
             : 'bg-gray-100 text-gray-800'
         }`}
       >
@@ -1051,7 +1051,7 @@ export default function CeriAIShowcase() {
       title: 'Visual Analysis',
       description:
         'Upload diagrams, specimen images, or textbook pages. Ceri AI analyzes and explains complex visual concepts.',
-      gradient: 'from-green-500 to-emerald-500',
+      gradient: 'bg-green-600',
     },
     {
       icon: Zap,
@@ -1065,7 +1065,7 @@ export default function CeriAIShowcase() {
       title: 'NEET Focused',
       description:
         'Trained specifically on NEET Biology syllabus with 10+ years of past papers. Every answer is exam-relevant.',
-      gradient: 'from-red-500 to-pink-500',
+      gradient: 'bg-red-600',
     },
     {
       icon: TrendingUp,
@@ -1145,7 +1145,7 @@ export default function CeriAIShowcase() {
           >
             <button
               onClick={() => setShowChat(true)}
-              className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 flex items-center"
+              className="group relative px-8 py-4 bg-indigo-500 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 flex items-center"
             >
               <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
               Try Ceri AI Free
@@ -1234,7 +1234,7 @@ export default function CeriAIShowcase() {
                   onClick={() => setActiveDemo(index)}
                   className={`w-full flex items-center p-6 rounded-2xl transition-all duration-300 text-left ${
                     activeDemo === index
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-xl scale-105'
+                      ? 'bg-indigo-500 text-white shadow-xl scale-105'
                       : 'bg-white text-gray-700 shadow-md hover:shadow-lg hover:scale-102'
                   }`}
                 >
@@ -1267,13 +1267,13 @@ export default function CeriAIShowcase() {
               className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100 overflow-hidden"
             >
               <div className="flex items-center mb-6 pb-4 border-b border-gray-100">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+                <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center mr-3">
                   <Brain className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Ceri AI</h4>
-                  <div className="flex items-center text-sm text-green-500">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
+                  <div className="flex items-center text-sm text-green-600">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mr-2 animate-pulse" />
                     Online
                   </div>
                 </div>
@@ -1432,7 +1432,7 @@ export default function CeriAIShowcase() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-24 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1482,7 +1482,7 @@ export default function CeriAIShowcase() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="h-full flex flex-col">
-                <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <div className="flex items-center justify-between p-4 border-b bg-indigo-500 text-white">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mr-3">
                       <Brain className="w-5 h-5" />

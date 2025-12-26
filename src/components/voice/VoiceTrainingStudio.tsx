@@ -245,7 +245,7 @@ const VoiceTrainingStudio: React.FC = () => {
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
           <motion.div
-            className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full"
+            className="bg-blue-500 h-3 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${trainingProgress}%` }}
             transition={{ duration: 0.5 }}
@@ -465,7 +465,7 @@ const VoiceTrainingStudio: React.FC = () => {
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs text-gray-600 capitalize">{phrase.category}</span>
                     {completedPhrases.has(phrase.id) && (
-                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      <CheckCircle className="w-4 h-4 text-green-600" />
                     )}
                   </div>
                   <p className="text-sm text-gray-800 truncate">{phrase.text}</p>

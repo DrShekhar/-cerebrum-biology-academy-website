@@ -90,8 +90,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
       icon: Phone,
       label: language === 'hi' ? 'कॉल करें' : 'Call Now',
       action: () => window.open('tel:+918826444334'),
-      color: 'text-emerald-600',
-      bgColor: 'bg-emerald-50',
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
     },
     {
       icon: MessageCircle,
@@ -259,7 +259,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
             </div>
 
             {/* CTA Section */}
-            <div className="px-6 py-6 bg-gradient-to-r from-blue-50 to-purple-50">
+            <div className="px-6 py-6 bg-gray-50">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -277,7 +277,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                 <Link href="/demo-booking" onClick={onToggle}>
                   <motion.button
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold mobile-cta"
+                    className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta"
                   >
                     {language === 'hi' ? 'अभी बुक करें' : 'Book Now'}
                   </motion.button>

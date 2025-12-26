@@ -129,7 +129,7 @@ export function OptimisticTestSubmission({
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 text-white shadow-2xl"
+        className="bg-green-600 rounded-2xl p-8 text-white shadow-2xl"
       >
         <div className="text-center">
           <motion.div
@@ -229,7 +229,7 @@ export function OptimisticTestSubmission({
         <button
           onClick={handleSubmit}
           disabled={isLoading || data.status !== 'draft'}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
+          className="w-full bg-indigo-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
         >
           {isLoading ? (
             <>

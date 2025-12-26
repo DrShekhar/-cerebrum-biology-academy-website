@@ -37,7 +37,7 @@ export function CourseSystemDemo() {
       name: 'Course Cards',
       description: 'Tier-based course cards with pricing and features',
       icon: Grid3x3,
-      color: 'from-green-500 to-green-600',
+      color: 'bg-green-600',
     },
     {
       id: 'comparison',

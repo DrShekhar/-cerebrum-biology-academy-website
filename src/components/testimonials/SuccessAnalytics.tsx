@@ -110,7 +110,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
   return (
     <div className="max-w-7xl mx-auto space-y-8">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl text-white p-8">
+      <div className="bg-indigo-500 rounded-3xl text-white p-8">
         <h1 className="text-4xl font-bold mb-4">Success Analytics Dashboard</h1>
         <p className="text-blue-100 text-lg">
           Comprehensive analysis of student performance and achievements at Cerebrum Biology Academy
@@ -175,7 +175,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
               value={`+${data.averageImprovement}`}
               subtitle="Marks improvement"
               icon={TrendingUp}
-              color="bg-green-500"
+              color="bg-green-600"
               trend={12}
             />
             <StatCard

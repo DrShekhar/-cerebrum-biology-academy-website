@@ -162,7 +162,7 @@ export default function AssignmentDetailPage({ params }: { params: { id: string 
 
   if (error && !assignment) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
+      <div className="min-h-screen bg-gray-50 p-6">
         <div className="max-w-4xl mx-auto">
           <Card className="border-red-200">
             <CardContent className="p-6 text-center">
@@ -186,7 +186,7 @@ export default function AssignmentDetailPage({ params }: { params: { id: string 
   const hasSubmission = assignment.submission && assignment.submission.status !== 'NOT_SUBMITTED'
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Button
           variant="ghost"
@@ -443,7 +443,7 @@ function InfoItem({
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-pulse space-y-6">
           <div className="h-10 bg-gray-200 rounded w-1/4"></div>

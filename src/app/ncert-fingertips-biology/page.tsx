@@ -405,7 +405,7 @@ export default function NCERTFingertipsBiologyPage() {
               {
                 title: 'NCERT Class 11',
                 href: '/ncert-biology-class-11',
-                color: 'from-emerald-500 to-teal-500',
+                color: 'bg-green-600',
               },
               {
                 title: 'NCERT Class 12',
@@ -415,7 +415,7 @@ export default function NCERTFingertipsBiologyPage() {
               {
                 title: 'Trueman Biology',
                 href: '/trueman-biology-for-neet',
-                color: 'from-red-500 to-rose-500',
+                color: 'bg-red-600',
               },
               {
                 title: 'MTG Biology',

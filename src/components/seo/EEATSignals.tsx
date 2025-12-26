@@ -105,8 +105,8 @@ function SignalCard({
 }) {
   return (
     <div className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-      <div className="flex-shrink-0 p-2 bg-teal-50 rounded-lg">
-        <Icon className="w-5 h-5 text-teal-600" />
+      <div className="flex-shrink-0 p-2 bg-green-50 rounded-lg">
+        <Icon className="w-5 h-5 text-green-600" />
       </div>
       <div>
         <p className="font-semibold text-gray-900 text-sm">{label}</p>
@@ -124,7 +124,7 @@ function SignalBadge({
   label: string
 }) {
   return (
-    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">
+    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-xs font-medium">
       <Icon className="w-3.5 h-3.5" />
       {label}
     </span>
@@ -158,33 +158,33 @@ export function EEATSignals({
 
   if (variant === 'compact') {
     return (
-      <div className={`bg-gradient-to-br from-gray-50 to-teal-50/30 rounded-xl p-6 ${className}`}>
+      <div className={`bg-gradient-to-br from-gray-50 to-green-50/30 rounded-xl p-6 ${className}`}>
         <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Shield className="w-5 h-5 text-teal-600" />
+          <Shield className="w-5 h-5 text-green-600" />
           Why Trust Cerebrum Biology Academy?
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {showExperience && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-teal-600">10+</div>
+              <div className="text-2xl font-bold text-green-600">10+</div>
               <div className="text-xs text-gray-600">Years Experience</div>
             </div>
           )}
           {showAuthority && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-teal-600">98%</div>
+              <div className="text-2xl font-bold text-green-600">98%</div>
               <div className="text-xs text-gray-600">Success Rate</div>
             </div>
           )}
           {showExpertise && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-teal-600">500+</div>
+              <div className="text-2xl font-bold text-green-600">500+</div>
               <div className="text-xs text-gray-600">Medical Selections</div>
             </div>
           )}
           {showTrust && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-teal-600">4.8</div>
+              <div className="text-2xl font-bold text-green-600">4.8</div>
               <div className="text-xs text-gray-600">Student Rating</div>
             </div>
           )}
@@ -210,7 +210,7 @@ export function EEATSignals({
           {showExperience && (
             <div className="space-y-3">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wide">
-                <Clock className="w-4 h-4 text-teal-600" />
+                <Clock className="w-4 h-4 text-green-600" />
                 Experience
               </h3>
               <div className="space-y-3">
@@ -224,7 +224,7 @@ export function EEATSignals({
           {showExpertise && (
             <div className="space-y-3">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wide">
-                <GraduationCap className="w-4 h-4 text-teal-600" />
+                <GraduationCap className="w-4 h-4 text-green-600" />
                 Expertise
               </h3>
               <div className="space-y-3">
@@ -238,7 +238,7 @@ export function EEATSignals({
           {showAuthority && (
             <div className="space-y-3">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wide">
-                <Trophy className="w-4 h-4 text-teal-600" />
+                <Trophy className="w-4 h-4 text-green-600" />
                 Authority
               </h3>
               <div className="space-y-3">
@@ -252,7 +252,7 @@ export function EEATSignals({
           {showTrust && (
             <div className="space-y-3">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wide">
-                <Shield className="w-4 h-4 text-teal-600" />
+                <Shield className="w-4 h-4 text-green-600" />
                 Trust
               </h3>
               <div className="space-y-3">
@@ -358,10 +358,10 @@ export function AuthorityBadge({ className = '' }: { className?: string }) {
 export function TrustBadge({ className = '' }: { className?: string }) {
   return (
     <div
-      className={`inline-flex items-center gap-2 px-4 py-2 bg-teal-50 border border-teal-200 rounded-lg ${className}`}
+      className={`inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-lg ${className}`}
     >
-      <Shield className="w-4 h-4 text-teal-600" />
-      <span className="text-sm font-medium text-teal-800">Verified & Trusted</span>
+      <Shield className="w-4 h-4 text-green-600" />
+      <span className="text-sm font-medium text-green-800">Verified & Trusted</span>
     </div>
   )
 }

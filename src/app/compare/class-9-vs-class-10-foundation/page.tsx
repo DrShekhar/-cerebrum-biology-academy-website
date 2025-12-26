@@ -143,7 +143,7 @@ export default function Class9VsClass10Page() {
       focus: 'NCERT Class 9 + Basic NEET concepts',
       hours: '2-3 hrs/day',
       stress: 'Very Low',
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
     },
     {
       year: 'Year 2 (Class 10)',
@@ -194,7 +194,7 @@ export default function Class9VsClass10Page() {
       focus: 'Class 12 + NEET prep (intense pressure)',
       hours: '6-7 hrs/day',
       stress: 'Very High',
-      color: 'from-red-500 to-pink-500',
+      color: 'bg-red-600',
     },
   ]
 
@@ -292,7 +292,7 @@ export default function Class9VsClass10Page() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -427,7 +427,7 @@ export default function Class9VsClass10Page() {
                       >
                         <div className="flex items-center justify-center">
                           {row.winner === 'class9' && (
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                           )}
                           <span
                             className={`font-semibold ${row.winner === 'class9' ? 'text-green-700' : ''}`}
@@ -441,7 +441,7 @@ export default function Class9VsClass10Page() {
                       >
                         <div className="flex items-center justify-center">
                           {row.winner === 'class10' && (
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                           )}
                           <span className={row.winner === 'class9' ? 'text-gray-500' : ''}>
                             {row.class10}
@@ -462,7 +462,7 @@ export default function Class9VsClass10Page() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-8 max-w-3xl mx-auto">
+            <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8 max-w-3xl mx-auto">
               <Star className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Class 9 Start Wins on 11 Out of 12 Critical Factors
@@ -476,7 +476,7 @@ export default function Class9VsClass10Page() {
                   <Button
                     variant="primary"
                     size="xl"
-                    className="bg-gradient-to-r from-green-600 to-emerald-600"
+                    className="bg-green-600"
                   >
                     <Play className="w-5 h-5 mr-2" />
                     Start from Class 9 - Book Demo
@@ -618,7 +618,7 @@ export default function Class9VsClass10Page() {
                   <Button
                     variant="primary"
                     size="lg"
-                    className="bg-gradient-to-r from-green-600 to-emerald-600"
+                    className="bg-green-600"
                   >
                     <Rocket className="w-5 h-5 mr-2" />
                     Choose Relaxed Path - Class 9
@@ -726,7 +726,7 @@ export default function Class9VsClass10Page() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 shadow-lg">
+            <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Readiness Checklist</h3>
               <div className="space-y-4">
                 {readinessChecklist.map((item, index) => (
@@ -742,7 +742,7 @@ export default function Class9VsClass10Page() {
                     <div className="flex gap-4">
                       <div className="flex items-center">
                         {item.class9 ? (
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                          <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                         ) : (
                           <AlertCircle className="w-5 h-5 text-gray-300 mr-2" />
                         )}
@@ -797,7 +797,7 @@ export default function Class9VsClass10Page() {
 
       <ParentTestimonialsSection />
 
-      <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

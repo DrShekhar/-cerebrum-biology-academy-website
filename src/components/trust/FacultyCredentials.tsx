@@ -292,7 +292,7 @@ function FacultyDetailModal({ faculty, onClose }: { faculty: FacultyMember; onCl
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-t-2xl">
+        <div className="relative bg-indigo-500 text-white p-8 rounded-t-2xl">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-white hover:text-gray-200"
@@ -317,7 +317,7 @@ function FacultyDetailModal({ faculty, onClose }: { faculty: FacultyMember; onCl
                 className="w-24 h-24 rounded-full object-cover border-4 border-white"
               />
               {faculty.verified && (
-                <div className="absolute -bottom-1 -right-1 bg-green-500 text-white rounded-full p-1">
+                <div className="absolute -bottom-1 -right-1 bg-green-600 text-white rounded-full p-1">
                   <CheckCircle className="w-5 h-5" />
                 </div>
               )}
@@ -385,7 +385,7 @@ function FacultyDetailModal({ faculty, onClose }: { faculty: FacultyMember; onCl
             <div className="space-y-2">
               {faculty.qualification.map((qual, index) => (
                 <div key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <CheckCircle className="w-4 h-4 text-green-600" />
                   <span className="text-gray-700">{qual}</span>
                 </div>
               ))}
@@ -514,7 +514,7 @@ function FacultyStatsSection() {
   ]
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+    <div className="bg-gray-50 rounded-2xl p-8">
       <h3 className="text-xl font-bold text-gray-900 text-center mb-8">
         {language === 'hi' ? 'संकाय आंकड़े' : 'Faculty Statistics'}
       </h3>

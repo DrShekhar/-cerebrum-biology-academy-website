@@ -486,7 +486,7 @@ export function IntensiveNEETBiologyPage() {
                   </div>
                 </div>
                 <p className="text-white/80 leading-relaxed mb-4">"{testimonial.testimonial}"</p>
-                <div className="bg-green-500/20 text-green-400 px-3 py-2 rounded-lg text-sm font-semibold">
+                <div className="bg-green-600/20 text-green-400 px-3 py-2 rounded-lg text-sm font-semibold">
                   NEET Score: {testimonial.score}
                 </div>
               </motion.div>

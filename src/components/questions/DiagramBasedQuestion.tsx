@@ -232,11 +232,11 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                        ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                         : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
                       : 'border-cyan-500 bg-cyan-50 text-cyan-900 shadow-lg'
                     : showExplanation && isCorrect
-                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                      ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                       : isHovered
                         ? 'border-cyan-300 bg-cyan-25 shadow-md'
                         : 'border-gray-200 hover:border-cyan-300 hover:bg-gray-50',
@@ -253,11 +253,11 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                       isSelected
                         ? showExplanation
                           ? isCorrect
-                            ? 'bg-green-500 text-white'
+                            ? 'bg-green-600 text-white'
                             : 'bg-red-500 text-white'
                           : 'bg-cyan-500 text-white'
                         : showExplanation && isCorrect
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green-600 text-white'
                           : isHovered
                             ? 'bg-cyan-200 text-cyan-800'
                             : 'bg-gray-200 text-gray-700'

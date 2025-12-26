@@ -419,7 +419,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
       {/* Premium Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-indigo-100"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,121,198,0.2),transparent_50%)]"></div>
         </div>
@@ -673,7 +673,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 <motion.a
                   href="https://wa.me/918826444334"
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+                  className="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
                 >
                   <MessageCircle className="h-6 w-6" />
                   WhatsApp: 9188264443

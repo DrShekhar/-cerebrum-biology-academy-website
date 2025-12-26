@@ -292,7 +292,7 @@ function AdminPanel() {
                     type="text"
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     required
                   />
                 </div>
@@ -304,7 +304,7 @@ function AdminPanel() {
                   <textarea
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     rows={3}
                   />
                 </div>
@@ -315,7 +315,7 @@ function AdminPanel() {
                     <select
                       value={formData.type}
                       onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       {types.map((type) => (
                         <option key={type.value} value={type.value}>
@@ -330,7 +330,7 @@ function AdminPanel() {
                     <select
                       value={formData.classCategory}
                       onChange={(e) => setFormData({ ...formData, classCategory: e.target.value })}
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       {classes.map((cls) => (
                         <option key={cls.value} value={cls.value}>
@@ -357,7 +357,7 @@ function AdminPanel() {
                       <button
                         type="button"
                         onClick={() => fileInputRef.current?.click()}
-                        className="px-4 py-2 border border-dashed border-gray-300 rounded-lg hover:border-green-500 hover:bg-green-50 transition-colors flex items-center gap-2"
+                        className="px-4 py-2 border border-dashed border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition-colors flex items-center gap-2"
                       >
                         <Upload className="w-4 h-4" />
                         Choose File
@@ -382,7 +382,7 @@ function AdminPanel() {
                     <textarea
                       value={formData.content}
                       onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent font-mono text-sm"
+                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono text-sm"
                       rows={6}
                       placeholder="<p>Your announcement content here...</p>"
                     />
@@ -400,7 +400,7 @@ function AdminPanel() {
                       onChange={(e) =>
                         setFormData({ ...formData, priority: parseInt(e.target.value) || 0 })
                       }
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
 
@@ -412,7 +412,7 @@ function AdminPanel() {
                       type="date"
                       value={formData.expiresAt}
                       onChange={(e) => setFormData({ ...formData, expiresAt: e.target.value })}
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -423,7 +423,7 @@ function AdminPanel() {
                     id="isPublished"
                     checked={formData.isPublished}
                     onChange={(e) => setFormData({ ...formData, isPublished: e.target.checked })}
-                    className="w-4 h-4 text-green-600 rounded focus:ring-green-500"
+                    className="w-4 h-4 text-green-600 rounded focus:ring-green-600"
                   />
                   <label htmlFor="isPublished" className="text-sm font-medium text-gray-700">
                     Publish immediately

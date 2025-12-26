@@ -305,7 +305,7 @@ export default function DemoBookingsPage() {
           </motion.div>
 
           <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500"
+            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -315,7 +315,7 @@ export default function DemoBookingsPage() {
                 <p className="text-sm font-medium text-gray-600">Completed</p>
                 <p className="text-3xl font-bold text-gray-900 mt-2">{stats.completed}</p>
               </div>
-              <CheckCircle className="w-10 h-10 text-green-500" />
+              <CheckCircle className="w-10 h-10 text-green-600" />
             </div>
           </motion.div>
         </div>

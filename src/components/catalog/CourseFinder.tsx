@@ -83,7 +83,7 @@ const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 'primaryGoal',
     title: "What's your primary academic goal?",
     subtitle: 'Understanding your objectives helps us design the perfect preparation strategy',
-    icon: <Target className="h-8 w-8 text-green-500" />,
+    icon: <Target className="h-8 w-8 text-green-600" />,
     options: [
       {
         value: 'neet-only',
@@ -392,7 +392,7 @@ export function CourseFinder({
         >
           <button
             onClick={() => onCourseRecommended?.(recommendedCourse)}
-            className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+            className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
           >
             View Full Details
             <ArrowRight className="h-5 w-5" />
@@ -423,7 +423,7 @@ export function CourseFinder({
       className={`bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden ${className}`}
     >
       {/* Header with Progress */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+      <div className="bg-indigo-500 text-white p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             {currentQuestion.icon}

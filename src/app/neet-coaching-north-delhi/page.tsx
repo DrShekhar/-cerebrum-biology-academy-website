@@ -220,7 +220,7 @@ export default function NEETCoachingNorthDelhiPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 py-20">
+      <section className="relative bg-indigo-900 py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -25,7 +25,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
     subtitle: "Join India's Top Biology Faculty",
     subtext: 'Master Biology with Shekhar Sir - 98% Students Qualify NEET',
     ctaText: 'Book FREE Demo Class',
-    ctaColor: 'bg-gradient-to-r from-green-500 to-green-600',
+    ctaColor: 'bg-green-600',
   }
 
   const heroConfig = config || defaultConfig
@@ -97,7 +97,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             {/* Key Benefits */}
             <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700">Live Interactive Classes</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border">
@@ -166,7 +166,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             </div>
 
             {/* Featured Student Quote */}
-            <div className="bg-gradient-to-r from-green-500 to-blue-500 p-6 rounded-2xl text-white shadow-xl">
+            <div className="bg-gradient-to-r from-green-600 to-blue-500 p-6 rounded-2xl text-white shadow-xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
                   <span className="text-green-600 font-bold text-lg">A</span>

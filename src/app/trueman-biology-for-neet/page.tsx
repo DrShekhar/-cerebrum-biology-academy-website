@@ -99,7 +99,7 @@ export default function TruemanBiologyPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-600 via-rose-600 to-pink-600 text-white overflow-hidden">
+      <section className="relative bg-red-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
@@ -209,7 +209,7 @@ export default function TruemanBiologyPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-red-100 hover:border-red-300 transition-colors"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-500 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -269,7 +269,7 @@ export default function TruemanBiologyPage() {
                     target="_blank"
                     className="mt-6 block"
                   >
-                    <Button className="w-full bg-gradient-to-r from-red-500 to-rose-500 text-white hover:from-red-600 hover:to-rose-600 rounded-xl flex items-center justify-center gap-2">
+                    <Button className="w-full bg-red-600 text-white hover:bg-red-700 rounded-xl flex items-center justify-center gap-2">
                       <ShoppingCart className="w-4 h-4" />
                       Buy on Amazon
                       <ExternalLink className="w-4 h-4" />
@@ -299,7 +299,7 @@ export default function TruemanBiologyPage() {
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <thead>
-                <tr className="bg-gradient-to-r from-red-500 to-rose-500 text-white">
+                <tr className="bg-red-600 text-white">
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center">Trueman</th>
                   <th className="px-6 py-4 text-center">NCERT</th>
@@ -328,7 +328,7 @@ export default function TruemanBiologyPage() {
       </section>
 
       {/* Related Books */}
-      <section className="py-16 bg-gradient-to-br from-red-50 to-rose-50">
+      <section className="py-16 bg-gradient-to-br bg-red-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -346,7 +346,7 @@ export default function TruemanBiologyPage() {
               {
                 title: 'NCERT Class 11',
                 href: '/ncert-biology-class-11',
-                color: 'from-emerald-500 to-teal-500',
+                color: 'bg-green-600',
               },
               {
                 title: 'NCERT Class 12',
@@ -432,7 +432,7 @@ export default function TruemanBiologyPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-red-600 via-rose-600 to-pink-600 text-white">
+      <section className="py-16 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

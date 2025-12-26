@@ -410,7 +410,7 @@ export default function ServicesPage() {
                       <td className="px-6 py-4 text-center">
                         {typeof feature.online === 'boolean' ? (
                           feature.online ? (
-                            <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mx-auto" />
                           ) : (
                             <span className="text-gray-400">—</span>
                           )
@@ -421,7 +421,7 @@ export default function ServicesPage() {
                       <td className="px-6 py-4 text-center">
                         {typeof feature.classroom === 'boolean' ? (
                           feature.classroom ? (
-                            <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mx-auto" />
                           ) : (
                             <span className="text-gray-400">—</span>
                           )
@@ -432,7 +432,7 @@ export default function ServicesPage() {
                       <td className="px-6 py-4 text-center">
                         {typeof feature.international === 'boolean' ? (
                           feature.international ? (
-                            <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mx-auto" />
                           ) : (
                             <span className="text-gray-400">—</span>
                           )
@@ -442,7 +442,7 @@ export default function ServicesPage() {
                       </td>
                       <td className="px-6 py-4 text-center">
                         {feature.doubt ? (
-                          <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
+                          <CheckCircle className="w-5 h-5 text-green-600 mx-auto" />
                         ) : (
                           <span className="text-gray-400">—</span>
                         )}

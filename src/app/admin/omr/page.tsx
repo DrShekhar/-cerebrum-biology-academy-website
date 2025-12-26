@@ -193,14 +193,14 @@ export default function OMRAdminPage() {
                 placeholder="Search by paper code or title..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
 
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
             >
               <option value="">All Status</option>
               <option value="DRAFT">Draft</option>
@@ -212,7 +212,7 @@ export default function OMRAdminPage() {
             <select
               value={subjectFilter}
               onChange={(e) => setSubjectFilter(e.target.value)}
-              className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
             >
               <option value="">All Subjects</option>
               <option value="BIOLOGY_XI">Biology XI</option>

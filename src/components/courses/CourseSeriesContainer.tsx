@@ -189,7 +189,7 @@ export function CourseSeriesContainer({
                           animate={{ scale: 1 }}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                          className="flex-1 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                         >
                           Enroll Now
                         </motion.button>
@@ -227,7 +227,7 @@ export function CourseSeriesContainer({
             transition={{ duration: 0.5 }}
             className="col-span-full mt-8"
           >
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-6 border border-green-200 backdrop-blur-sm">
+            <div className="bg-gradient-to-r from-green-50 to-green-50 rounded-3xl p-6 border border-green-200 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                 📋 Your Selections for Class {selectedClass}
               </h3>
@@ -268,7 +268,7 @@ export function CourseSeriesContainer({
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all"
                 >
                   Proceed to Enrollment
                 </motion.button>

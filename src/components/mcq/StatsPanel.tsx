@@ -85,7 +85,7 @@ export function StatsPanel({
         </div>
 
         {/* Accuracy */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-2.5 text-center border border-green-200/50">
+        <div className="bg-gradient-to-br from-green-50 to-green-50 rounded-lg p-2.5 text-center border border-green-200/50">
           <div className="text-xl mb-0.5">🎯</div>
           <p className="text-lg font-bold font-mono text-green-600">{accuracy}%</p>
           <p className="text-[10px] text-green-700 font-medium">Accuracy</p>

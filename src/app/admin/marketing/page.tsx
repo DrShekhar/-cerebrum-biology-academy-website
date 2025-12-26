@@ -123,7 +123,7 @@ export default function MarketingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500"
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -132,7 +132,7 @@ export default function MarketingPage() {
                       {overview.activeCampaigns}
                     </p>
                   </div>
-                  <Target className="w-10 h-10 text-green-500" />
+                  <Target className="w-10 h-10 text-green-600" />
                 </div>
               </motion.div>
 
@@ -183,7 +183,7 @@ export default function MarketingPage() {
                   <p className="text-sm text-gray-600">Messages Sent</p>
                 </div>
                 <div className="text-center">
-                  <Mail className="w-8 h-8 text-green-500 mx-auto mb-2" />
+                  <Mail className="w-8 h-8 text-green-600 mx-auto mb-2" />
                   <p className="text-2xl font-bold text-gray-900">
                     {overview.weeklyMetrics.opened.toLocaleString()}
                   </p>
@@ -207,7 +207,7 @@ export default function MarketingPage() {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
+            <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Button

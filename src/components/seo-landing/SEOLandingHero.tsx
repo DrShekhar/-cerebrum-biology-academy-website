@@ -13,7 +13,7 @@ interface SEOLandingHeroProps {
 export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-gradient-to-br ${hero.backgroundGradient || 'from-blue-900 via-indigo-900 to-purple-900'} py-20 lg:py-28`}
+      className={`relative overflow-hidden ${hero.backgroundGradient ? `bg-gradient-to-br ${hero.backgroundGradient}` : 'bg-indigo-900'} py-20 lg:py-28`}
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">

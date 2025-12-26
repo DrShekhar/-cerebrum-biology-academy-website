@@ -82,7 +82,7 @@ export function ABTestCTA({ context, onClick, className = '', size = 'md' }: ABT
   const getVariantStyles = () => {
     switch (variant) {
       case 'action_oriented':
-        return 'bg-green-500 hover:bg-green-600 shadow-green-500/25'
+        return 'bg-green-600 hover:bg-green-600 shadow-green-500/25'
       case 'benefit_focused':
         return 'bg-blue-500 hover:bg-blue-600 shadow-blue-500/25'
       case 'social_proof':

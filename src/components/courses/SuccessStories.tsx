@@ -146,7 +146,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -171,7 +171,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
             <div className="text-sm text-gray-600">Top 100 Ranks</div>
           </Card>
           <Card className="p-4 text-center bg-white/80 backdrop-blur-sm">
-            <Target className="h-8 w-8 text-green-500 mx-auto mb-2" />
+            <Target className="h-8 w-8 text-green-600 mx-auto mb-2" />
             <div className="text-2xl font-bold text-gray-900">92%</div>
             <div className="text-sm text-gray-600">Success Rate</div>
           </Card>
@@ -189,7 +189,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
               {/* Student Photo & Rank */}
               <div className="text-center">
                 <div className="relative w-32 h-32 mx-auto mb-4">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                  <div className="w-full h-full bg-indigo-100 rounded-full flex items-center justify-center">
                     <div className="text-3xl font-bold text-blue-600">
                       {story.name.split(' ').map(n => n[0]).join('')}
                     </div>
@@ -233,13 +233,13 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
                     <div className="text-xs text-gray-500">Before</div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <TrendingUp className="h-6 w-6 text-green-500 mb-1" />
+                    <TrendingUp className="h-6 w-6 text-green-600 mb-1" />
                     <div className={`text-xl font-bold ${getImprovementColor(story.improvement)}`}>
                       +{story.improvement}
                     </div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-green-500">{story.afterScore}</div>
+                    <div className="text-2xl font-bold text-green-600">{story.afterScore}</div>
                     <div className="text-xs text-gray-500">After</div>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
                 {/* Progress Bar */}
                 <div className="mt-4 bg-gray-200 rounded-full h-3 max-w-xs mx-auto">
                   <div 
-                    className="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 h-3 rounded-full transition-all"
+                    className="bg-gradient-to-r from-red-500 via-yellow-500 to-green-600 h-3 rounded-full transition-all"
                     style={{ width: `${(story.afterScore / 720) * 100}%` }}
                   ></div>
                 </div>
@@ -325,7 +325,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
           {relevantStories.slice(1, 4).map((testimonial) => (
             <Card key={testimonial.id} className="p-4 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
                   <div className="text-sm font-bold text-blue-600">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
@@ -351,7 +351,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
         </div>
 
         {/* CTA Section */}
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8">
+        <Card className="bg-indigo-500 text-white p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Write Your Success Story?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">

@@ -81,7 +81,7 @@ export const onlineBiologyTuitionIndia: SEOLandingContent = {
     highlightedText: 'Geography Should Never Limit Your Dreams',
     ctaText: 'Explore All Courses',
     ctaLink: '/courses',
-    backgroundGradient: 'from-blue-900 via-indigo-900 to-purple-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -231,7 +231,7 @@ export const neetBiologyOnlineCoaching: SEOLandingContent = {
     highlightedText: 'Your Biology Score = Your NEET Rank',
     ctaText: 'Join NEET Coaching',
     ctaLink: '/courses',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {

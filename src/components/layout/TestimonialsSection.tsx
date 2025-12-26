@@ -42,7 +42,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -146,7 +146,7 @@ export function TestimonialsSection() {
                 {/* Student Image & Video */}
                 <div className="text-center">
                   <div className="relative inline-block">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white relative overflow-hidden">
+                    <div className="w-48 h-48 mx-auto bg-blue-500 rounded-full flex items-center justify-center text-white relative overflow-hidden">
                       {/* Placeholder for student image */}
                       <Users className="w-24 h-24 opacity-80" />
                       {testimonials[currentTestimonial].videoId && (
@@ -233,7 +233,7 @@ export function TestimonialsSection() {
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative aspect-video bg-gradient-to-br from-blue-400 to-purple-500">
+                <div className="relative aspect-video bg-blue-500">
                   {/* Placeholder thumbnail */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Youtube className="w-16 h-16 text-white opacity-80" />

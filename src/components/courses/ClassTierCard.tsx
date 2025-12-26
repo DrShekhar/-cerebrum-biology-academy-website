@@ -40,10 +40,10 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
     ascent: {
       name: 'Ascent Pro',
       tagline: 'Popular',
-      gradient: 'from-teal-600 to-teal-700',
-      bgColor: 'bg-teal-50/50',
-      borderColor: 'border-teal-200/60',
-      badge: { bg: 'bg-teal-100', text: 'text-teal-700', label: 'POPULAR' },
+      gradient: 'from-green-600 to-green-700',
+      bgColor: 'bg-green-50/50',
+      borderColor: 'border-green-200/60',
+      badge: { bg: 'bg-green-100', text: 'text-green-700', label: 'POPULAR' },
       description: 'Comprehensive NEET preparation with proven methodology',
       icon: '⚡',
     },
@@ -215,7 +215,7 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
                 <div className="text-slate-700 text-sm mb-1">
                   {formatCurrency(tierPricing?.price || tierInfo.priceRange.min)} per year
                 </div>
-                <div className="text-sm font-medium text-emerald-600">0% EMI available</div>
+                <div className="text-sm font-medium text-green-600">0% EMI available</div>
               </div>
             </div>
 
@@ -231,7 +231,7 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
                     transition={{ delay: 0.2 + index * 0.1, ...springConfig }}
                     className="flex items-center text-sm text-slate-700"
                   >
-                    <CheckCircle className="w-3 h-3 text-emerald-600 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-3 h-3 text-green-600 mr-2 flex-shrink-0" />
                     <span className="line-clamp-1">{highlight}</span>
                   </motion.div>
                 ))}
@@ -272,10 +272,10 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setShowDemoModal(true)}
                   className="
-                    flex-1 bg-emerald-50 text-emerald-700
+                    flex-1 bg-green-50 text-green-700
                     py-3 rounded-2xl font-semibold text-sm
-                    border border-emerald-200/60
-                    hover:bg-emerald-100 transition-colors duration-200
+                    border border-green-200/60
+                    hover:bg-green-100 transition-colors duration-200
                   "
                 >
                   Demo Class

@@ -170,7 +170,7 @@ export default function UsersSettingsPage() {
                   {users.filter((u) => u.status === 'active').length}
                 </p>
               </div>
-              <Check className="w-8 h-8 text-green-500" />
+              <Check className="w-8 h-8 text-green-600" />
             </div>
           </motion.div>
 
@@ -347,7 +347,7 @@ export default function UsersSettingsPage() {
         </div>
 
         {/* Role Permissions Info */}
-        <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
+        <div className="mt-8 bg-gray-50 rounded-xl p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-4">Role Permissions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div>

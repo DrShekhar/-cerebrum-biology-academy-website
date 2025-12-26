@@ -243,7 +243,7 @@ Key concepts covered:
       >
         <div className="text-center">
           <motion.div
-            className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4"
+            className="mx-auto w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4"
             animate={{
               rotate: isDragOver ? 360 : 0,
               scale: isDragOver ? 1.1 : 1,
@@ -270,7 +270,7 @@ Key concepts covered:
             </motion.button>
 
             <motion.button
-              className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 flex items-center space-x-2"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-600 flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={openCamera}
@@ -299,7 +299,7 @@ Key concepts covered:
       <AnimatePresence>
         {isAnalyzing && (
           <motion.div
-            className="mt-6 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border"
+            className="mt-6 p-6 bg-gray-50 rounded-2xl border"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -324,7 +324,7 @@ Key concepts covered:
 
             <div className="w-full bg-gray-200 rounded-full h-3">
               <motion.div
-                className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full"
+                className="bg-blue-500 h-3 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${analysisProgress}%` }}
                 transition={{ duration: 0.3 }}
@@ -413,7 +413,7 @@ Key concepts covered:
         transition={{ delay: 0.5 }}
       >
         <div className="flex items-start space-x-3">
-          <Zap className="w-5 h-5 text-green-500 mt-0.5" />
+          <Zap className="w-5 h-5 text-green-600 mt-0.5" />
           <div>
             <h4 className="font-semibold text-gray-800 mb-1">Pro Tips for Better Analysis</h4>
             <ul className="text-sm text-gray-600 space-y-1">

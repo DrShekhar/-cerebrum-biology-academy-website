@@ -65,7 +65,7 @@ export function MobileAppPromoSection({
       description:
         'Instant biology doubt resolution with photo-based question solving. Available 24/7.',
       icon: Sparkles,
-      gradient: 'from-purple-500 to-blue-500',
+      gradient: 'from-indigo-500 to-indigo-600',
       stats: '50K+ doubts solved daily',
     },
     {
@@ -74,7 +74,7 @@ export function MobileAppPromoSection({
       description:
         'Daily targets based on weak areas with adaptive learning algorithm and progress tracking.',
       icon: GraduationCap,
-      gradient: 'from-green-500 to-teal-500',
+      gradient: 'bg-green-600',
       stats: 'AI-powered adaptation',
     },
     {
@@ -83,7 +83,7 @@ export function MobileAppPromoSection({
       description:
         'Attend classes from anywhere with interactive doubt sessions and recorded lectures.',
       icon: PlayCircle,
-      gradient: 'from-red-500 to-pink-500',
+      gradient: 'bg-red-600',
       stats: '500+ hours of content',
     },
     {
@@ -502,7 +502,7 @@ export function MobileAppPromoSection({
       </div>
 
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl" />
     </section>
   )

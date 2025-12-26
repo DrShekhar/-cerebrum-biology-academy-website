@@ -250,7 +250,7 @@ export function CourseComparison({ courses, onClose }: CourseComparisonProps) {
                 <tr className="border-b border-gray-100 bg-green-25">
                   <td className="p-4 font-medium text-gray-900 bg-green-50 sticky left-0 z-10">
                     Total Savings
-                    <TrendingUp className="inline h-4 w-4 text-green-500 ml-1" />
+                    <TrendingUp className="inline h-4 w-4 text-green-600 ml-1" />
                   </td>
                   {courses.map((course) => {
                     const savings = calculateSavings(course)
@@ -287,7 +287,7 @@ export function CourseComparison({ courses, onClose }: CourseComparisonProps) {
                           .slice(0, expandedFeatures.includes(course.id) ? undefined : 5)
                           .map((feature, idx) => (
                             <div key={idx} className="text-sm text-gray-700 flex items-start gap-1">
-                              <Check className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <Check className="h-3 w-3 text-green-600 mt-0.5 flex-shrink-0" />
                               <span>{feature}</span>
                             </div>
                           ))}
@@ -346,7 +346,7 @@ export function CourseComparison({ courses, onClose }: CourseComparisonProps) {
                 key={course.id}
                 className={`p-4 rounded-xl border-2 ${
                   course.id === topRecommendation.id
-                    ? 'border-green-500 bg-green-50'
+                    ? 'border-green-600 bg-green-50'
                     : 'border-gray-200 bg-white'
                 }`}
               >

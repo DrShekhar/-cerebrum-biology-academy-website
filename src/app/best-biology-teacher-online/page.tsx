@@ -93,7 +93,7 @@ const faqs = [
 
 export default function BestBiologyTeacherOnlinePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -134,7 +134,7 @@ export default function BestBiologyTeacherOnlinePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -150,7 +150,7 @@ export default function BestBiologyTeacherOnlinePage() {
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
                 Best Biology Teacher Online
               </h1>
-              <p className="mb-8 text-xl text-emerald-100">
+              <p className="mb-8 text-xl text-green-100">
                 Learn from India&apos;s best online biology teacher with AIIMS background. 15+ years
                 of experience, 2,500+ NEET selections, and a teaching methodology that makes biology
                 simple and scoring.
@@ -158,7 +158,7 @@ export default function BestBiologyTeacherOnlinePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/demo"
-                  className="rounded-lg bg-white px-8 py-3 font-semibold text-emerald-600 shadow-lg transition hover:bg-emerald-50"
+                  className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
                 >
                   Book Free Demo
                 </Link>
@@ -184,7 +184,7 @@ export default function BestBiologyTeacherOnlinePage() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-800/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="rounded-lg bg-white/95 p-4 backdrop-blur">
                     <div className="flex items-center justify-between">
@@ -217,7 +217,7 @@ export default function BestBiologyTeacherOnlinePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <cred.icon className="mx-auto mb-3 h-10 w-10 text-emerald-600" />
+                <cred.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{cred.title}</div>
                 <div className="text-sm text-gray-600">{cred.desc}</div>
               </motion.div>
@@ -249,7 +249,7 @@ export default function BestBiologyTeacherOnlinePage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <p className="text-sm font-medium text-emerald-600">{item.metric}</p>
+                <p className="text-sm font-medium text-green-600">{item.metric}</p>
                 <p className="my-2 text-3xl font-bold text-gray-900">{item.value}</p>
                 <p className="text-gray-600">{item.detail}</p>
               </motion.div>
@@ -271,7 +271,7 @@ export default function BestBiologyTeacherOnlinePage() {
               <div className="space-y-4">
                 {teachingMethodology.map((method, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-emerald-500" />
+                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" />
                     <div>
                       <h4 className="font-semibold text-gray-900">{method.title}</h4>
                       <p className="text-sm text-gray-600">{method.desc}</p>
@@ -373,7 +373,7 @@ export default function BestBiologyTeacherOnlinePage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/online-biology-classes"
-              className="rounded-lg bg-teal-100 px-4 py-2 text-teal-700 transition hover:bg-teal-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Online Biology Classes
             </Link>
@@ -391,7 +391,7 @@ export default function BestBiologyTeacherOnlinePage() {
             </Link>
             <Link
               href="/best-biology-teacher-for-neet"
-              className="rounded-lg bg-emerald-100 px-4 py-2 text-emerald-700 transition hover:bg-emerald-200"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
             >
               Best Biology Teacher for NEET
             </Link>
@@ -400,17 +400,17 @@ export default function BestBiologyTeacherOnlinePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 py-16 text-white">
+      <section className="bg-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Experience the Best Biology Teaching Online</h2>
-            <p className="mb-8 text-xl text-emerald-100">
+            <p className="mb-8 text-xl text-green-100">
               Book a free demo class and see the difference yourself!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-emerald-600 shadow-lg transition hover:bg-emerald-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
               >
                 Book Free Demo
               </Link>

@@ -83,7 +83,7 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center"
+          className="mt-12 rounded-2xl bg-indigo-500 p-8 text-center"
         >
           <p className="text-lg text-white/90">Still have questions?</p>
           <p className="mt-2 text-2xl font-bold text-white">Talk to our academic counselor</p>

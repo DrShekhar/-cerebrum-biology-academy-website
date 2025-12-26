@@ -49,7 +49,7 @@ export function DashboardAccessControl({
   // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
             <div className="w-8 h-8 bg-white rounded-full" />
@@ -95,7 +95,7 @@ export function DashboardAccessControl({
       />
 
       {/* Access Denied Screen */}
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -200,7 +200,7 @@ export function DashboardAccessControl({
                     variant="primary"
                     size="lg"
                     onClick={() => router.push('/auth/signup')}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="flex-1 bg-indigo-500 hover:bg-indigo-600"
                   >
                     Sign Up Free
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -220,7 +220,7 @@ export function DashboardAccessControl({
                     variant="primary"
                     size="lg"
                     onClick={() => router.push('/courses')}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="flex-1 bg-indigo-500 hover:bg-indigo-600"
                   >
                     View Plans
                     <ArrowRight className="w-4 h-4 ml-2" />

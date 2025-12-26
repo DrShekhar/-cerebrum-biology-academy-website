@@ -183,7 +183,7 @@ class ABTestingService {
           config: {
             primaryText: 'Get Started Now',
             secondaryText: 'Join the Course',
-            style: 'bg-green-500 hover:bg-green-600',
+            style: 'bg-green-600 hover:bg-green-600',
             size: 'lg',
             addIcon: true,
           },

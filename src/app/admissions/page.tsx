@@ -155,7 +155,7 @@ export default function AdmissionsPage() {
         'Parent/Guardian presence (if minor)',
       ],
       icon: MessageSquare,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       step: 3,
@@ -349,7 +349,7 @@ export default function AdmissionsPage() {
       title: 'Payment Methods',
       description: 'Multiple secure payment options',
       icon: Wallet,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
       features: [
         { name: 'UPI', desc: 'Google Pay, PhonePe, Paytm' },
         { name: 'Cards', desc: 'Credit & Debit Cards' },
@@ -447,7 +447,7 @@ export default function AdmissionsPage() {
       criteria: 'Refer a friend who enrolls',
       benefit: '₹5,000 cashback',
       icon: Users,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -593,7 +593,7 @@ export default function AdmissionsPage() {
       </AnimatePresence>
 
       {/* Hero Section with Quick Inquiry Form */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Hero Content */}
@@ -760,7 +760,7 @@ export default function AdmissionsPage() {
                             <ul className="space-y-2 sm:space-y-3">
                               {step.details.map((detail, idx) => (
                                 <li key={idx} className="flex items-start">
-                                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
                                   <span className="text-sm sm:text-base text-gray-700">
                                     {detail}
                                   </span>
@@ -848,7 +848,7 @@ export default function AdmissionsPage() {
                 <ul className="space-y-2 sm:space-y-3">
                   {req.items.map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm sm:text-base text-gray-700">{item}</span>
                     </li>
                   ))}
@@ -981,7 +981,7 @@ export default function AdmissionsPage() {
                 <ul className="space-y-2 mb-6 sm:mb-8">
                   {batch.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -1015,7 +1015,7 @@ export default function AdmissionsPage() {
             <p className="text-gray-600 mb-4">Not sure which batch is right for you?</p>
             <Link
               href="/checkout"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-500 text-white font-semibold rounded-xl hover:bg-indigo-600 transition-all"
             >
               <ArrowRight className="w-5 h-5" />
               Start Self-Service Enrollment
@@ -1100,7 +1100,7 @@ export default function AdmissionsPage() {
           </div>
 
           <motion.div
-            className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8"
+            className="bg-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -1237,7 +1237,7 @@ export default function AdmissionsPage() {
               >
                 {/* Student Info Header */}
                 <div className="flex items-start gap-4 mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -1267,7 +1267,7 @@ export default function AdmissionsPage() {
 
                 {/* Results */}
                 <div className="border-t border-gray-200 pt-4 sm:pt-6 grid grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-3 sm:p-4">
+                  <div className="bg-gray-50 rounded-xl p-3 sm:p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <TrendingUp className="w-4 h-4 text-green-600" />
                       <span className="text-xs text-gray-600 font-medium">Score</span>
@@ -1430,7 +1430,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-12 sm:py-16 md:py-20 bg-indigo-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
@@ -1512,7 +1512,7 @@ export default function AdmissionsPage() {
       {/* Floating WhatsApp Button - Hidden on mobile when sticky bar is visible */}
       <motion.button
         onClick={() => handleWhatsAppContact()}
-        className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center z-40 group transition-all duration-300 hidden sm:flex"
+        className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 bg-green-600 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center z-40 group transition-all duration-300 hidden sm:flex"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 100 }}
@@ -1540,7 +1540,7 @@ export default function AdmissionsPage() {
           <div className="flex gap-2">
             <button
               onClick={() => handleWhatsAppContact()}
-              className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center"
+              className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center"
               aria-label="WhatsApp"
             >
               <MessageSquare className="w-5 h-5" />

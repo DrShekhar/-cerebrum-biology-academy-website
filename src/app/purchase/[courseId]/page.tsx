@@ -430,7 +430,7 @@ export default function PurchasePage() {
               className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                 !selectedPlan || loading
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:shadow-xl hover:scale-105'
+                  : 'bg-gradient-to-r from-green-600 to-green-700 text-white hover:shadow-xl hover:scale-105'
               }`}
             >
               {loading
@@ -446,7 +446,7 @@ export default function PurchasePage() {
 
         {/* Benefits Section */}
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
+          <div className="bg-green-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-6 text-center">What You Get</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">

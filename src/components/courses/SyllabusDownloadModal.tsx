@@ -50,7 +50,7 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
         <Card className="w-full max-w-md mx-4 p-6 text-center">
           <div className="mb-4">
-            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+            <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-green-700 mb-2">Syllabus Downloaded!</h3>
             <p className="text-gray-600 mb-4">
               The detailed syllabus has been sent to your email and downloaded to your device.
@@ -97,7 +97,7 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
           {/* Course Info */}
           <Card className="bg-gradient-to-r from-green-50 to-green-100 p-4 mb-6 border-green-200">
             <div className="flex items-center gap-4">
-              <div className="bg-green-500 text-white p-2 rounded-lg">
+              <div className="bg-green-600 text-white p-2 rounded-lg">
                 <Download className="h-5 w-5" />
               </div>
               <div>

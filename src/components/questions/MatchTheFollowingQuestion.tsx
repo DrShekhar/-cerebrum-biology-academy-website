@@ -167,7 +167,7 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                     "flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200",
                     "cursor-move select-none",
                     dragDropState.dragging === item.id && "opacity-50 scale-95",
-                    isMatched && matchStatus === 'correct' && "border-green-500 bg-green-50",
+                    isMatched && matchStatus === 'correct' && "border-green-600 bg-green-50",
                     isMatched && matchStatus === 'incorrect' && "border-red-500 bg-red-50",
                     !isMatched && "border-blue-300 bg-white hover:border-blue-400 hover:shadow-md",
                     (showExplanation || isReviewMode) && "cursor-default"
@@ -252,11 +252,11 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? "border-green-500 bg-green-50 text-green-900"
+                        ? "border-green-600 bg-green-50 text-green-900"
                         : "border-red-500 bg-red-50 text-red-900"
                       : "border-orange-500 bg-orange-50 text-orange-900"
                     : showExplanation && isCorrect
-                      ? "border-green-500 bg-green-50 text-green-900"
+                      ? "border-green-600 bg-green-50 text-green-900"
                       : "border-gray-200 hover:border-orange-300 hover:bg-gray-50"
                 )}
               >
@@ -266,11 +266,11 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                     isSelected
                       ? showExplanation
                         ? isCorrect
-                          ? "bg-green-500 text-white"
+                          ? "bg-green-600 text-white"
                           : "bg-red-500 text-white"
                         : "bg-orange-500 text-white"
                       : showExplanation && isCorrect
-                        ? "bg-green-500 text-white"
+                        ? "bg-green-600 text-white"
                         : "bg-gray-200 text-gray-700"
                   )}>
                     {optionLabel}

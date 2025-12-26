@@ -169,7 +169,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
       name: 'Content & Structure',
       description: 'Question bank and test structure',
       icon: <BookOpen className="w-4 h-4" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'bg-green-600',
       isExpanded: false,
       isRequired: false,
       completionPercentage: 40,
@@ -439,12 +439,12 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
   const getStatusIcon = (tab: NavigationTab) => {
     if (tab.hasErrors) return <AlertTriangle className="w-3 h-3 text-red-500" />
     if (tab.hasWarnings) return <AlertTriangle className="w-3 h-3 text-yellow-500" />
-    if (tab.isCompleted) return <CheckCircle2 className="w-3 h-3 text-green-500" />
+    if (tab.isCompleted) return <CheckCircle2 className="w-3 h-3 text-green-600" />
     return null
   }
 
   const getCompletionColor = (percentage: number) => {
-    if (percentage >= 90) return 'bg-green-500'
+    if (percentage >= 90) return 'bg-green-600'
     if (percentage >= 70) return 'bg-blue-500'
     if (percentage >= 40) return 'bg-yellow-500'
     return 'bg-gray-300'

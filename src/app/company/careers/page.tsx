@@ -421,7 +421,7 @@ export default function CareersPage() {
             {workCulture.map((culture, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100"
+                className="bg-gray-50 p-6 rounded-2xl border border-blue-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -524,7 +524,7 @@ export default function CareersPage() {
                             key={idx}
                             className="flex items-center space-x-2 text-sm text-gray-600"
                           >
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                             <span>{req}</span>
                           </li>
                         ))}
@@ -565,7 +565,7 @@ export default function CareersPage() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -738,7 +738,7 @@ export default function CareersPage() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold"
+                className="w-full bg-indigo-500 text-white py-4 rounded-xl hover:bg-indigo-600 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold"
               >
                 <Send className="w-5 h-5" />
                 <span>Submit Application</span>

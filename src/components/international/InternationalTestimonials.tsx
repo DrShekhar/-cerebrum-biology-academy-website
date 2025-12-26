@@ -176,7 +176,7 @@ export function InternationalTestimonials({
           >
             {/* Student Header */}
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
                 {testimonial.name.charAt(0)}
               </div>
               <div className="flex-1">
@@ -218,7 +218,7 @@ export function InternationalTestimonials({
 
               {testimonial.university && (
                 <div className="flex items-center space-x-2">
-                  <GraduationCap className="h-4 w-4 text-green-500" />
+                  <GraduationCap className="h-4 w-4 text-green-600" />
                   <span className="text-xs font-medium text-green-700">
                     {testimonial.university}
                   </span>
@@ -248,7 +248,7 @@ export function InternationalTestimonials({
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
                     {selectedTestimonial.name.charAt(0)}
                   </div>
                   <div>
@@ -336,7 +336,7 @@ export function InternationalTestimonials({
       )}
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
+      <div className="bg-indigo-500 rounded-xl p-8 text-center text-white">
         <h3 className="text-2xl font-bold mb-4">Ready to Join Our Success Stories?</h3>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
           Join thousands of students worldwide who achieved their medical dreams with our expert

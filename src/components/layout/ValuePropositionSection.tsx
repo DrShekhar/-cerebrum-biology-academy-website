@@ -31,7 +31,7 @@ export function ValuePropositionSection() {
       description:
         'AIIMS faculty-designed curriculum with proven methodology for maximum retention',
       icon: BookOpen,
-      color: 'from-teal-500 to-teal-600',
+      color: 'bg-green-600',
       benefits: ['Expert faculty guidance', 'High-yield topics focus', 'Regular assessments'],
     },
     {
@@ -39,7 +39,7 @@ export function ValuePropositionSection() {
       title: 'Performance Optimization',
       description: 'Continuous monitoring and strategy refinement for consistent improvement',
       icon: TrendingUp,
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'bg-green-600',
       benefits: ['Real-time progress tracking', 'Strategy adjustments', 'Guaranteed results'],
     },
   ]
@@ -121,9 +121,9 @@ export function ValuePropositionSection() {
                 >
                   {/* Connection Line */}
                   {index < successFramework.length - 1 && (
-                    <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-teal-200 z-10">
+                    <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-green-200 z-10">
                       <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                        <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                       </div>
                     </div>
                   )}
@@ -146,7 +146,7 @@ export function ValuePropositionSection() {
                     <div className="space-y-3">
                       {step.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-emerald-500 mr-3 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
                           <span className="text-gray-700">{benefit}</span>
                         </div>
                       ))}
@@ -192,7 +192,7 @@ export function ValuePropositionSection() {
                       <td className="py-6 px-6 font-medium text-gray-900">{row.metric}</td>
                       <td className="py-6 px-6 text-center text-gray-600">{row.traditional}</td>
                       <td className="py-6 px-6 text-center">
-                        <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-semibold">
+                        <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
                           {row.cerebrum}
                         </span>
                       </td>
@@ -233,7 +233,7 @@ export function ValuePropositionSection() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">{guarantee.title}</h4>
@@ -258,7 +258,7 @@ export function ValuePropositionSection() {
             <p className="text-blue-100 mb-6 text-lg">{t('joinThousands')}</p>
             <Link
               href="/demo-booking"
-              className="inline-block bg-teal-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               {t('bookFreeStrategy')}
             </Link>

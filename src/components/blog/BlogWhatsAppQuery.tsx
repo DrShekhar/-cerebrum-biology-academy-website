@@ -77,7 +77,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
       {/* Floating WhatsApp Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="font-medium hidden sm:inline">Ask a Doubt</span>
@@ -97,7 +97,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
           {/* Modal */}
           <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -153,13 +153,13 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
                   value={customQuery}
                   onChange={(e) => setCustomQuery(e.target.value)}
                   placeholder="Type your Biology doubt here..."
-                  className="w-full p-3 pr-12 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none text-sm"
+                  className="w-full p-3 pr-12 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none text-sm"
                   rows={3}
                 />
                 <button
                   onClick={handleCustomQuery}
                   disabled={!customQuery.trim()}
-                  className="absolute bottom-3 right-3 w-8 h-8 bg-green-500 hover:bg-green-600 disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors"
+                  className="absolute bottom-3 right-3 w-8 h-8 bg-green-600 hover:bg-green-600 disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors"
                 >
                   <Send className="w-4 h-4" />
                 </button>

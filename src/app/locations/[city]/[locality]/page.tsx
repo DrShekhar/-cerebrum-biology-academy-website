@@ -168,7 +168,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
       {/* Local Challenge & Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 md:p-12">
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               Understanding {locality.displayName} Students' Challenges
             </h2>
@@ -218,7 +218,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
               <ul className="space-y-2">
                 {locality.transportLinks.metros.slice(0, 3).map((metro, index) => (
                   <li key={index} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     <span className="text-sm">{metro}</span>
                   </li>
                 ))}
@@ -240,7 +240,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
               <ul className="space-y-2">
                 {locality.nearbyLandmarks.slice(0, 3).map((landmark, index) => (
                   <li key={index} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     <span className="text-sm">{landmark}</span>
                   </li>
                 ))}
@@ -348,15 +348,15 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
             {/* Payment Benefits */}
             <div className="space-y-2 text-sm text-gray-700 mb-8 text-center">
               <div className="flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                 <span>Flexible EMI options (0% interest available)</span>
               </div>
               <div className="flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                 <span>Up to 25% scholarship discounts for meritorious students</span>
               </div>
               <div className="flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
@@ -368,7 +368,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
               <div className="grid md:grid-cols-2 gap-4">
                 {locality.competition.ourAdvantage.map((advantage, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{advantage}</span>
                   </div>
                 ))}

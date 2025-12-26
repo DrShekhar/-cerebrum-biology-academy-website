@@ -13,7 +13,7 @@ export function StickyTrustBar() {
       icon: Trophy,
       value: '94.2%',
       label: 'NEET Success Rate',
-      color: 'text-emerald-600 bg-emerald-50 border-emerald-200',
+      color: 'text-green-600 bg-green-50 border-green-200',
     },
     {
       icon: Users,
@@ -103,11 +103,11 @@ export function StickyTrustBar() {
             {/* Center: Quick Stats */}
             <div className="hidden md:flex items-center space-x-6 text-sm">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                 <span className="text-gray-600">127 students online</span>
               </div>
               <div className="flex items-center space-x-2">
-                <TrendingUp className="w-4 h-4 text-emerald-500" />
+                <TrendingUp className="w-4 h-4 text-green-600" />
                 <span className="text-gray-600">+23% enrollment this month</span>
               </div>
             </div>

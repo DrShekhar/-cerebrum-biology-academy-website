@@ -103,7 +103,7 @@ export default function ContactPage() {
       icon: Phone,
       title: 'Call Us',
       details: ['+91 93119 46297', '+91 88264 44334 (Admissions)'],
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       icon: Mail,
@@ -133,7 +133,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -277,7 +277,7 @@ export default function ContactPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Message Sent Successfully!
                 </h3>

@@ -213,7 +213,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <Button
                     variant="secondary"
                     size="lg"
-                    className="bg-green-500 text-white hover:bg-green-600"
+                    className="bg-green-600 text-white hover:bg-green-600"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Us
@@ -301,7 +301,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <Button
                     type="submit"
                     variant="primary"
-                    className="w-full bg-green-500 hover:bg-green-600 text-white py-3"
+                    className="w-full bg-green-600 hover:bg-green-600 text-white py-3"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -322,7 +322,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <h3 className="text-lg font-bold text-black mb-2">Thank You!</h3>
                   <p className="text-gray-600 mb-4">Our counselor will call you within 1 hour.</p>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" className="bg-green-500 text-white">
+                    <Button variant="secondary" className="bg-green-600 text-white">
                       <MessageCircle className="w-4 h-4 mr-2" />
                       Chat on WhatsApp Now
                     </Button>
@@ -333,15 +333,15 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               {/* Trust Badges */}
               <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100">
                 <div className="flex items-center text-xs text-gray-500">
-                  <Shield className="w-4 h-4 mr-1 text-green-500" />
+                  <Shield className="w-4 h-4 mr-1 text-green-600" />
                   Secure
                 </div>
                 <div className="flex items-center text-xs text-gray-500">
-                  <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
+                  <CheckCircle className="w-4 h-4 mr-1 text-green-600" />
                   No Spam
                 </div>
                 <div className="flex items-center text-xs text-gray-500">
-                  <Phone className="w-4 h-4 mr-1 text-green-500" />
+                  <Phone className="w-4 h-4 mr-1 text-green-600" />
                   Free Call
                 </div>
               </div>
@@ -539,7 +539,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <ul className="space-y-2 mb-6">
                     {course.features.map((feature) => (
                       <li key={feature} className="flex items-start text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                         {feature}
                       </li>
                     ))}
@@ -669,7 +669,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
+                    <div className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
                       NEET Score: {testimonial.score}
                     </div>
                     <p className="text-gray-700 italic">"{testimonial.quote}"</p>
@@ -784,7 +784,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               Chat with us on WhatsApp
@@ -838,7 +838,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="bg-green-500 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
+                  className="bg-green-600 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                   <span className="truncate">WhatsApp Us</span>

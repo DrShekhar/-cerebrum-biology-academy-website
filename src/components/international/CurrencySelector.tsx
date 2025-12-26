@@ -116,7 +116,7 @@ export function CurrencySelector({
 
       {/* Price Example */}
       {showPriceExample && priceExample && (
-        <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg">
+        <div className="mt-3 p-3 bg-gray-50 border border-blue-200 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <div className="text-sm font-medium text-blue-900">Class 12th Course</div>
             {priceExample.savings && (
@@ -260,7 +260,7 @@ export function InternationalPricingCard({
           {features.map((feature, index) => (
             <li key={index} className="flex items-start space-x-2">
               <svg
-                className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0"
+                className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >

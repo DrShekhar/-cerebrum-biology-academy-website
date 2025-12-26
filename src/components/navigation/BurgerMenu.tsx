@@ -203,7 +203,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 <Link
                   href={dashboardInfo.href}
                   onClick={handleLinkClick}
-                  className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="flex items-center justify-between p-4 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <div className="flex items-center space-x-3">
                     <dashboardInfo.icon className="w-5 h-5" />
@@ -269,7 +269,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                   >
                     <button
                       onClick={() => handleSectionToggle(section.id)}
-                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-indigo-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
                       aria-expanded={isExpanded}
                     >
                       <div className="flex items-center space-x-3 relative z-10">
@@ -304,7 +304,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                                 key={item.id}
                                 href={item.href}
                                 onClick={handleLinkClick}
-                                className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                                className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
                               >
                                 <div className="flex-1 relative z-10">
                                   <div className="flex items-center space-x-2">
@@ -343,7 +343,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             </div>
 
             {/* Footer - Non-sticky to avoid blocking clicks */}
-            <div className="mt-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 sm:p-6">
+            <div className="mt-auto bg-indigo-500 text-white p-4 sm:p-6">
               <div className="text-center">
                 <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
                 <p className="text-blue-100 text-sm mb-4">

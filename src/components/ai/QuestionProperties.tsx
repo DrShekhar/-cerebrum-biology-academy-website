@@ -214,7 +214,7 @@ export function QuestionProperties({
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b border-gray-200">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
             <BookOpen className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -285,11 +285,11 @@ export function QuestionProperties({
                 <div className="flex space-x-3">
                   {['easy', 'medium', 'hard'].map(level => {
                     const color = getDifficultyColor(level)
-                    const activeClasses = color === 'green' ? 'border-green-500 bg-green-50 text-green-700' :
+                    const activeClasses = color === 'green' ? 'border-green-600 bg-green-50 text-green-700' :
                       color === 'yellow' ? 'border-yellow-500 bg-yellow-50 text-yellow-700' :
                       color === 'red' ? 'border-red-500 bg-red-50 text-red-700' : 'border-gray-500 bg-gray-50 text-gray-700'
 
-                    const dotClasses = color === 'green' ? 'bg-green-500' :
+                    const dotClasses = color === 'green' ? 'bg-green-600' :
                       color === 'yellow' ? 'bg-yellow-500' :
                       color === 'red' ? 'bg-red-500' : 'bg-gray-500'
 
@@ -444,7 +444,7 @@ export function QuestionProperties({
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {Object.entries(bloomsLevels).map(([level, details]) => {
                     const borderClass = details.color === 'blue' ? 'border-blue-500' :
-                      details.color === 'green' ? 'border-green-500' :
+                      details.color === 'green' ? 'border-green-600' :
                       details.color === 'purple' ? 'border-purple-500' :
                       details.color === 'orange' ? 'border-orange-500' :
                       details.color === 'red' ? 'border-red-500' :
@@ -458,7 +458,7 @@ export function QuestionProperties({
                       details.color === 'indigo' ? 'bg-indigo-50' : 'bg-gray-50'
 
                     const dotClass = details.color === 'blue' ? 'bg-blue-500' :
-                      details.color === 'green' ? 'bg-green-500' :
+                      details.color === 'green' ? 'bg-green-600' :
                       details.color === 'purple' ? 'bg-purple-500' :
                       details.color === 'orange' ? 'bg-orange-500' :
                       details.color === 'red' ? 'bg-red-500' :
@@ -896,7 +896,7 @@ export function QuestionProperties({
 
                   {properties.discrimination_index >= 0.3 && properties.reliability_coefficient >= 0.8 && (
                     <div className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span>Excellent question quality! This question effectively distinguishes student ability levels.</span>
                     </div>
                   )}

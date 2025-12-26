@@ -75,7 +75,7 @@ export function EmptyState({
     },
     success: {
       bg: 'bg-green-100',
-      iconColor: 'text-green-500',
+      iconColor: 'text-green-600',
     },
     warning: {
       bg: 'bg-orange-100',

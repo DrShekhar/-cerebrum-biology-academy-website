@@ -98,8 +98,8 @@ export default function AboutPage() {
       title: 'Student-Centric Approach',
       description:
         'Every decision prioritizes student success and well-being through personalized attention and comprehensive support systems.',
-      color: 'from-red-600 to-red-500',
-      pillGradient: 'from-red-700 to-red-600',
+      color: 'bg-red-600',
+      pillGradient: 'bg-red-600',
       metric: '98%',
       metricLabel: 'Success Rate',
     },
@@ -128,8 +128,8 @@ export default function AboutPage() {
       title: 'Collaborative Growth',
       description:
         'Integrated community of students, AIIMS faculty, and parents working together toward medical career success.',
-      color: 'from-emerald-600 to-emerald-500',
-      pillGradient: 'from-emerald-700 to-emerald-600',
+      color: 'bg-green-600',
+      pillGradient: 'from-green-700 to-green-600',
       metric: '27',
       metricLabel: 'Top 1000 AIR',
     },
@@ -175,7 +175,7 @@ export default function AboutPage() {
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
         {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
-          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -198,7 +198,7 @@ export default function AboutPage() {
             <div className="lg:col-span-3 space-y-5 sm:space-y-6 md:space-y-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-0.02em] leading-[1.05] mb-4 sm:mb-6 md:mb-8 antialiased">
                 From{' '}
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-blue-300 to-purple-300">
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-300 to-purple-300">
                   AIIMS Delhi
                 </span>{' '}
                 to Your Medical Dream
@@ -223,39 +223,39 @@ export default function AboutPage() {
                 .
               </p>
 
-              <p className="text-lg sm:text-xl lg:text-2xl text-teal-200/90 leading-relaxed font-light italic">
+              <p className="text-lg sm:text-xl lg:text-2xl text-green-200/90 leading-relaxed font-light italic">
                 This isn't just another coaching institute. It's what happens when AIIMS-level
                 expertise meets genuine care for every student's success.
               </p>
 
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-white/20 shadow-2xl space-y-3 sm:space-y-4">
                 <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-500/30 transition-colors">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-teal-300" strokeWidth={2} />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-600/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" strokeWidth={2} />
                   </div>
                   <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     47 AIIMS selections across 7 campuses
                   </p>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-500/30 transition-colors">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-teal-300" strokeWidth={2} />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-600/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" strokeWidth={2} />
                   </div>
                   <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     183 students in government medical colleges
                   </p>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-500/30 transition-colors">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-teal-300" strokeWidth={2} />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-600/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" strokeWidth={2} />
                   </div>
                   <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     12 students scored 700+ in NEET 2024
                   </p>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-500/30 transition-colors">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-teal-300" strokeWidth={2} />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-600/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" strokeWidth={2} />
                   </div>
                   <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     Batches limited to 50 students (we know each name)
@@ -268,7 +268,7 @@ export default function AboutPage() {
                   <Button
                     variant="primary"
                     size="xl"
-                    className="relative group overflow-hidden bg-teal-600 hover:bg-teal-700 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
+                    className="relative group overflow-hidden bg-green-600 hover:bg-green-700 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
                   >
                     {/* Shimmer effect on hover */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -314,7 +314,7 @@ export default function AboutPage() {
                       >
                         <div className="relative">
                           <achievement.icon
-                            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto text-teal-300 group-hover/stat:text-amber-200 transition-colors duration-300"
+                            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto text-green-400 group-hover/stat:text-amber-200 transition-colors duration-300"
                             strokeWidth={1.5}
                           />
                         </div>
@@ -338,7 +338,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">
+            <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">
               Academic Foundation
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 sm:mb-6 md:mb-8 tracking-tight">
@@ -357,16 +357,16 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 overflow-hidden group"
+              className="relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-green-400 transition-all duration-500 overflow-hidden group"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Content wrapper */}
               <div className="relative z-10">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <Target
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 mr-3 sm:mr-4 md:mr-5"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 mr-3 sm:mr-4 md:mr-5"
                     strokeWidth={1.5}
                   />
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
@@ -383,25 +383,25 @@ export default function AboutPage() {
 
                 <div className="space-y-4 pt-8 border-t border-gray-200">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Proven curriculum design
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Personalized learning pathways
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Technology-enhanced teaching
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Outcome-focused assessment
                     </span>
@@ -416,15 +416,15 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 overflow-hidden group"
+              className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-gray-200 hover:border-green-400 transition-all duration-500 overflow-hidden group"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Content wrapper */}
               <div className="relative z-10">
                 <div className="flex items-center mb-8">
-                  <Lightbulb className="w-16 h-16 text-teal-600 mr-5" strokeWidth={1.5} />
+                  <Lightbulb className="w-16 h-16 text-green-600 mr-5" strokeWidth={1.5} />
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
                     Our Vision
                   </h3>
@@ -441,25 +441,25 @@ export default function AboutPage() {
 
                 <div className="space-y-4 pt-8 border-t border-gray-200">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       National leadership in medical education
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       International research collaborations
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Healthcare innovation pipeline
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light">
                       Societal impact through graduates
                     </span>
@@ -475,7 +475,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+            <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Institutional Values
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
@@ -495,15 +495,15 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl hover:border-teal-300 hover:-translate-y-3 hover:scale-105 transition-all duration-500 group overflow-hidden"
+                className="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl hover:border-green-400 hover:-translate-y-3 hover:scale-105 transition-all duration-500 group overflow-hidden"
               >
                 {/* Animated gradient background on hover */}
-                <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 {/* Content wrapper for z-index */}
                 <div className="relative z-10">
                   {/* Icon with Solid Background */}
                   <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <value.icon className="w-10 h-10 text-teal-400" strokeWidth={1.5} />
+                    <value.icon className="w-10 h-10 text-green-500" strokeWidth={1.5} />
                   </div>
 
                   {/* Title */}
@@ -518,14 +518,14 @@ export default function AboutPage() {
 
                   {/* Metric - Elegant Display */}
                   <div className="bg-slate-800 text-white px-4 sm:px-6 py-4 rounded-2xl shadow-lg mb-6 group-hover:shadow-xl transition-shadow">
-                    <div className="text-4xl font-bold tabular-nums text-teal-400 leading-none mb-2">
+                    <div className="text-4xl font-bold tabular-nums text-green-500 leading-none mb-2">
                       {value.metric}
                     </div>
                     <div className="text-sm text-white/80 font-light">{value.metricLabel}</div>
                   </div>
 
                   {/* Badge */}
-                  <div className="inline-flex items-center bg-teal-500/10 border border-teal-600/30 text-teal-600 px-4 py-2 rounded-full text-xs font-semibold group-hover:bg-teal-500/20 transition-colors">
+                  <div className="inline-flex items-center bg-green-600/10 border border-green-600/30 text-green-600 px-4 py-2 rounded-full text-xs font-semibold group-hover:bg-green-600/20 transition-colors">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Verified Results
                   </div>
@@ -537,7 +537,7 @@ export default function AboutPage() {
           {/* Founder Origin Story - Editorial Style */}
           <div className="mt-32 pt-32 border-t border-gray-200">
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
-              <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+              <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 Our Founder
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
@@ -593,37 +593,37 @@ export default function AboutPage() {
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-teal-300 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <p className="text-white/90 text-lg font-light leading-relaxed">
-                      <strong className="text-teal-300 font-semibold">
+                      <strong className="text-green-400 font-semibold">
                         Scored 680/720 in NEET Biology
                       </strong>{' '}
                       (99.8 percentile, 2009)
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-teal-300 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <p className="text-white/90 text-lg font-light leading-relaxed">
                       Personally taught{' '}
-                      <strong className="text-teal-300 font-semibold">47 AIIMS selections</strong>{' '}
+                      <strong className="text-green-400 font-semibold">47 AIIMS selections</strong>{' '}
                       from 2015-2024
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-teal-300 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <p className="text-white/90 text-lg font-light leading-relaxed">
                       Developed the{' '}
-                      <strong className="text-teal-300 font-semibold">
+                      <strong className="text-green-400 font-semibold">
                         "Concept Pyramid" method
                       </strong>{' '}
                       used by 2,847+ students
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-teal-300 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <p className="text-white/90 text-lg font-light leading-relaxed">
                       Still teaches{' '}
-                      <strong className="text-teal-300 font-semibold">
+                      <strong className="text-green-400 font-semibold">
                         Class 12 batches every Sunday
                       </strong>
                       —refuses to stop classroom teaching
@@ -636,7 +636,7 @@ export default function AboutPage() {
                     "I don't need to run a coaching empire. I need every student who works with us
                     to feel like they have an AIIMS senior guiding them. That's the promise."
                   </p>
-                  <p className="text-base text-teal-300 font-semibold">— Dr. Shekhar C Singh</p>
+                  <p className="text-base text-green-400 font-semibold">— Dr. Shekhar C Singh</p>
                 </div>
               </motion.div>
             </div>
@@ -648,7 +648,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-white to-[#fdfcfa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-            <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+            <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Journey
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
@@ -661,7 +661,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line - Hidden on mobile, visible on desktop */}
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 via-purple-600 to-teal-500"></div>
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 via-purple-600 to-green-600"></div>
 
             <div className="space-y-12 lg:space-y-24">
               {milestones.map((milestone, index) => (
@@ -676,16 +676,16 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                 >
                   <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                    <div className="relative bg-white rounded-3xl shadow-lg p-10 hover:shadow-xl border border-gray-200 hover:border-teal-300 transition-all duration-500 group hover:-translate-y-2 overflow-hidden">
+                    <div className="relative bg-white rounded-3xl shadow-lg p-10 hover:shadow-xl border border-gray-200 hover:border-green-400 transition-all duration-500 group hover:-translate-y-2 overflow-hidden">
                       {/* Hover overlay */}
-                      <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative z-10">
                         <div className="flex items-center mb-6">
                           <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                            <milestone.icon className="w-10 h-10 text-teal-400" strokeWidth={1.5} />
+                            <milestone.icon className="w-10 h-10 text-green-500" strokeWidth={1.5} />
                           </div>
                           <div className="ml-6">
-                            <div className="text-4xl font-bold text-teal-600 tracking-tight">
+                            <div className="text-4xl font-bold text-green-600 tracking-tight">
                               {milestone.year}
                             </div>
                           </div>
@@ -696,9 +696,9 @@ export default function AboutPage() {
                         <p className="text-lg lg:text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
                           {milestone.description}
                         </p>
-                        <div className="bg-gradient-to-br from-teal-500/10 to-teal-500/5 rounded-2xl p-6 border-l-4 border-teal-600 backdrop-blur-sm">
+                        <div className="bg-gradient-to-br from-green-600/10 to-green-600/5 rounded-2xl p-6 border-l-4 border-green-600 backdrop-blur-sm">
                           <div className="flex items-center">
-                            <CheckCircle className="w-6 h-6 text-teal-600 mr-3 flex-shrink-0" />
+                            <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
                             <span className="text-black font-semibold text-base lg:text-lg">
                               {milestone.stats}
                             </span>
@@ -710,7 +710,7 @@ export default function AboutPage() {
 
                   {/* Timeline Dot - Only visible on desktop */}
                   <div className="hidden lg:block relative">
-                    <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full z-10 ring-8 ring-white shadow-xl"></div>
+                    <div className="w-6 h-6 bg-indigo-500 rounded-full z-10 ring-8 ring-white shadow-xl"></div>
                   </div>
 
                   <div className="hidden lg:block lg:w-1/2"></div>
@@ -725,7 +725,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-            <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+            <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Approach
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
@@ -740,7 +740,7 @@ export default function AboutPage() {
             {methodology.map((method, index) => (
               <motion.div
                 key={index}
-                className="relative bg-white rounded-3xl shadow-md p-10 border border-gray-200 hover:shadow-xl hover:border-teal-300 hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
+                className="relative bg-white rounded-3xl shadow-md p-10 border border-gray-200 hover:shadow-xl hover:border-green-400 hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -748,11 +748,11 @@ export default function AboutPage() {
                 whileHover={{ scale: 1.02 }}
               >
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
                   <div className="flex items-start gap-6 mb-8">
                     <div className="w-20 h-20 bg-slate-800 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl font-bold text-teal-400">{method.step}</span>
+                      <span className="text-3xl font-bold text-green-500">{method.step}</span>
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-black mb-3 leading-tight">
@@ -767,7 +767,7 @@ export default function AboutPage() {
                   <div className="space-y-4 pl-2">
                     {method.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700 text-base font-light leading-relaxed">
                           {feature}
                         </span>
@@ -791,7 +791,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="text-teal-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+              <div className="text-green-600 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 World-Class Teaching
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 tracking-tight">
@@ -805,7 +805,7 @@ export default function AboutPage() {
               <div className="space-y-5 mb-10">
                 {facultyHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg font-light leading-relaxed">
                       {highlight}
                     </span>
@@ -817,7 +817,7 @@ export default function AboutPage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300"
+                  className="bg-indigo-500 hover:bg-indigo-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
                   Meet Our Faculty
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -829,16 +829,16 @@ export default function AboutPage() {
               {facultyStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="relative bg-white rounded-3xl p-8 text-center shadow-md border border-gray-200 hover:shadow-xl hover:border-teal-300 hover:-translate-y-2 hover:scale-105 transition-all duration-500 group overflow-hidden"
+                  className="relative bg-white rounded-3xl p-8 text-center shadow-md border border-gray-200 hover:shadow-xl hover:border-green-400 hover:-translate-y-2 hover:scale-105 transition-all duration-500 group overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative z-10">
-                    <div className="text-5xl font-bold text-teal-600 mb-3 tracking-tight">
+                    <div className="text-5xl font-bold text-green-600 mb-3 tracking-tight">
                       {stat.number}
                     </div>
                     <div className="text-black font-semibold mb-2 text-lg">{stat.label}</div>
@@ -860,7 +860,7 @@ export default function AboutPage() {
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
         {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
-          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -885,7 +885,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-teal-300 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+            <div className="text-green-400 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Join Our Community
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tight leading-tight">
@@ -910,7 +910,7 @@ export default function AboutPage() {
                 <Button
                   variant="primary"
                   size="xl"
-                  className="bg-teal-600 hover:bg-teal-700 text-white font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg px-8 py-4"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg px-8 py-4"
                 >
                   Book Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />

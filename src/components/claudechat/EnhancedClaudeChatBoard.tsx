@@ -445,10 +445,10 @@ Want me to explain any specific part in more detail?`
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="flex flex-col h-screen bg-gray-50">
       {/* Enhanced Header */}
       <motion.div
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+        className="bg-indigo-500 text-white shadow-lg"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -486,7 +486,7 @@ Want me to explain any specific part in more detail?`
                 </motion.button>
               ) : (
                 <motion.button
-                  className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg font-medium"
+                  className="bg-green-600 hover:bg-green-600 px-4 py-2 rounded-lg font-medium"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={startSession}
@@ -576,7 +576,7 @@ Want me to explain any specific part in more detail?`
                     className={`w-10 h-10 rounded-full flex items-center justify-center ${
                       message.type === 'user'
                         ? 'bg-blue-500'
-                        : 'bg-gradient-to-br from-green-500 to-blue-600'
+                        : 'bg-gradient-to-br from-green-600 to-blue-600'
                     }`}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -717,7 +717,7 @@ Want me to explain any specific part in more detail?`
             >
               <div className="flex items-start space-x-3">
                 <motion.div
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center"
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}
                 >
@@ -813,7 +813,7 @@ Want me to explain any specific part in more detail?`
           whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
             <div className="text-sm">

@@ -40,7 +40,7 @@ const NavigationDashboard: React.FC = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'active':
-        return <CheckCircle className="w-4 h-4 text-green-500" />
+        return <CheckCircle className="w-4 h-4 text-green-600" />
       case 'beta':
         return <AlertCircle className="w-4 h-4 text-blue-500" />
       case 'coming-soon':
@@ -198,7 +198,7 @@ const NavigationDashboard: React.FC = () => {
         transition={{ delay: 0.1 }}
       >
         <motion.div
-          className="bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl cursor-pointer"
+          className="bg-indigo-500 text-white p-6 rounded-xl cursor-pointer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => openUrl('/test-voice')}
@@ -208,7 +208,7 @@ const NavigationDashboard: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-br from-green-500 to-teal-600 text-white p-6 rounded-xl cursor-pointer"
+          className="bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-xl cursor-pointer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => openUrl('/voice-training')}

@@ -95,7 +95,7 @@ export function FloatingActionButton({
         className={`w-14 h-14 md:w-16 md:h-16 rounded-full shadow-lg hover:shadow-xl transition-all touch-action-manipulation flex items-center justify-center ${
           isOpen
             ? 'bg-gray-700 hover:bg-gray-800'
-            : 'bg-gradient-to-r from-teal-600 to-navy-700 hover:from-teal-700 hover:to-navy-800'
+            : 'bg-gradient-to-r from-green-600 to-navy-700 hover:from-green-700 hover:to-navy-800'
         }`}
       >
         <AnimatePresence mode="wait">

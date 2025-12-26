@@ -252,7 +252,7 @@ const gcseBiologyTutorOnline: SEOLandingContent = {
     highlightedText: 'Perfect',
     ctaText: 'Get Matched with a Tutor',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-green-900 via-teal-900 to-blue-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-blue-900',
   },
 
   painPoints: {
@@ -452,7 +452,7 @@ const igcseBiologyTuition: SEOLandingContent = {
     highlightedText: 'A*',
     ctaText: 'Book Free Trial',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-purple-900 via-indigo-900 to-blue-900',
+    backgroundGradient: 'from-indigo-900 to-indigo-800',
   },
 
   painPoints: {
@@ -657,7 +657,7 @@ const igcseBiologyTutor: SEOLandingContent = {
     highlightedText: 'Expert',
     ctaText: 'Find Your Tutor',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-teal-900 via-cyan-900 to-blue-900',
+    backgroundGradient: 'from-green-800 via-cyan-900 to-blue-900',
   },
 
   painPoints: {
@@ -1262,7 +1262,7 @@ const aLevelBiologyTutor: SEOLandingContent = {
     highlightedText: 'A*s',
     ctaText: 'Find Your Tutor',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-emerald-900 via-teal-900 to-cyan-900',
+    backgroundGradient: 'from-green-800 via-green-800 to-cyan-900',
   },
 
   painPoints: {
@@ -1468,7 +1468,7 @@ const aLevelBiologyTuition: SEOLandingContent = {
     highlightedText: 'A*',
     ctaText: 'Start Learning Today',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-green-900 via-emerald-900 to-teal-900',
+    backgroundGradient: 'from-green-900 via-green-800 to-green-800',
   },
 
   painPoints: {

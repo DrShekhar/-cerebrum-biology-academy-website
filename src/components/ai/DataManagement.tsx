@@ -641,7 +641,7 @@ const DataManagement: React.FC = () => {
   const getStatusProgressClass = (status: string) => {
     const color = getStatusColor(status)
     return color === 'green'
-      ? 'bg-green-500'
+      ? 'bg-green-600'
       : color === 'yellow'
         ? 'bg-yellow-500'
         : color === 'gray'
@@ -673,10 +673,10 @@ const DataManagement: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-xl">
+          <div className="p-3 bg-gradient-to-r from-green-600 to-cyan-600 rounded-xl">
             <Database className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">
             Data Management
           </h1>
         </motion.div>
@@ -730,7 +730,7 @@ const DataManagement: React.FC = () => {
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all whitespace-nowrap ${
                 activeTab === id
-                  ? 'bg-white text-teal-600 shadow-md'
+                  ? 'bg-white text-green-600 shadow-md'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -755,7 +755,7 @@ const DataManagement: React.FC = () => {
             {/* Export Formats */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <Download className="w-5 h-5 text-teal-600" />
+                <Download className="w-5 h-5 text-green-600" />
                 Export Formats
               </h3>
 
@@ -768,8 +768,8 @@ const DataManagement: React.FC = () => {
                       className="border rounded-lg p-4 hover:shadow-md transition-shadow"
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-teal-100 rounded-lg">
-                          <IconComponent className="w-6 h-6 text-teal-600" />
+                        <div className="p-2 bg-green-100 rounded-lg">
+                          <IconComponent className="w-6 h-6 text-green-600" />
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">{format.name}</h4>
@@ -807,7 +807,7 @@ const DataManagement: React.FC = () => {
                             selectedTests.length > 0 ? selectedTests : ['test1']
                           )
                         }
-                        className="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors text-sm"
+                        className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
                       >
                         Export as {format.name}
                       </button>
@@ -1659,7 +1659,7 @@ const DataManagement: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-3">
-            <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2">
+            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2">
               <Download className="w-4 h-4" />
               Quick Export
             </button>

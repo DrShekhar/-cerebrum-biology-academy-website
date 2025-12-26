@@ -125,11 +125,11 @@ export default function IBBiologyTutorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 to-green-700 pt-20 pb-32">
+        <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-700 pt-20 pb-32">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-green-800/20 to-transparent"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -152,12 +152,12 @@ export default function IBBiologyTutorPage() {
               >
                 IB Biology Tutor
                 <br />
-                <span className="text-emerald-100">HL & SL Expert Tutoring</span>
+                <span className="text-green-100">HL & SL Expert Tutoring</span>
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
-                className="text-xl text-emerald-50 mb-8 max-w-3xl mx-auto"
+                className="text-xl text-green-50 mb-8 max-w-3xl mx-auto"
               >
                 Master the IB Diploma Programme Biology with personalized tutoring from experienced
                 educators. Specialized support for both Higher Level and Standard Level students.
@@ -170,15 +170,15 @@ export default function IBBiologyTutorPage() {
               >
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">250+</div>
-                  <div className="text-emerald-50">IB Students Taught</div>
+                  <div className="text-green-50">IB Students Taught</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">95%</div>
-                  <div className="text-emerald-50">Score 6-7 Grades</div>
+                  <div className="text-green-50">Score 6-7 Grades</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">100%</div>
-                  <div className="text-emerald-50">IB Certified Methods</div>
+                  <div className="text-green-50">IB Certified Methods</div>
                 </div>
               </motion.div>
 
@@ -189,7 +189,7 @@ export default function IBBiologyTutorPage() {
               >
                 <Link
                   href="/book-demo"
-                  className="group bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
+                  className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -198,7 +198,7 @@ export default function IBBiologyTutorPage() {
                   href="https://wa.me/918826444334"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-emerald-800/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-emerald-800/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
+                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
@@ -233,32 +233,32 @@ export default function IBBiologyTutorPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={scaleIn}
-                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-emerald-200"
+                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-emerald-100 p-3 rounded-xl">
-                    <BookOpen className="w-8 h-8 text-emerald-600" />
+                  <div className="bg-green-100 p-3 rounded-xl">
+                    <BookOpen className="w-8 h-8 text-green-600" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Standard Level (SL)</h3>
-                    <p className="text-emerald-600 font-semibold">150 Teaching Hours</p>
+                    <p className="text-green-600 font-semibold">150 Teaching Hours</p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="bg-emerald-50 rounded-xl p-4">
+                  <div className="bg-green-50 rounded-xl p-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Course Content</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <span>All core topics (95 hours)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <span>One option topic (15 hours)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <span>Practical work & IA (40 hours)</span>
                       </li>
                     </ul>
@@ -294,7 +294,7 @@ export default function IBBiologyTutorPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={scaleIn}
-                className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-8 shadow-xl border-2 border-emerald-400 relative overflow-hidden"
+                className="bg-gradient-to-br from-green-600 to-green-700 rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden"
               >
                 <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
                   RECOMMENDED
@@ -306,28 +306,28 @@ export default function IBBiologyTutorPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Higher Level (HL)</h3>
-                    <p className="text-emerald-100 font-semibold">240 Teaching Hours</p>
+                    <p className="text-green-100 font-semibold">240 Teaching Hours</p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <h4 className="font-semibold text-white mb-2">Course Content</h4>
-                    <ul className="space-y-2 text-emerald-50">
+                    <ul className="space-y-2 text-green-50">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
                         <span>All core topics (95 hours)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
                         <span>Additional HL topics (60 hours)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
                         <span>One option topic (25 hours)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
                         <span>Practical work & IA (60 hours)</span>
                       </li>
                     </ul>
@@ -335,7 +335,7 @@ export default function IBBiologyTutorPage() {
 
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <h4 className="font-semibold text-white mb-2">Assessment Breakdown</h4>
-                    <ul className="space-y-2 text-emerald-50">
+                    <ul className="space-y-2 text-green-50">
                       <li className="flex justify-between">
                         <span>Paper 1 (Multiple Choice)</span>
                         <span className="font-semibold">20%</span>
@@ -391,47 +391,47 @@ export default function IBBiologyTutorPage() {
                   title: 'Cell Biology',
                   description:
                     'Cell theory, structure, membranes, cell division, and cellular processes',
-                  color: 'from-emerald-500 to-green-500',
+                  color: 'bg-green-600',
                 },
                 {
                   icon: Dna,
                   title: 'Molecular Biology',
                   description:
                     'DNA structure, replication, transcription, translation, and protein synthesis',
-                  color: 'from-green-500 to-emerald-600',
+                  color: 'bg-green-600',
                 },
                 {
                   icon: BookMarked,
                   title: 'Genetics',
                   description:
                     'Mendelian genetics, chromosomes, gene expression, and genetic modification',
-                  color: 'from-emerald-600 to-green-600',
+                  color: 'bg-green-600',
                 },
                 {
                   icon: Leaf,
                   title: 'Ecology',
                   description: 'Species, communities, ecosystems, energy flow, and carbon cycling',
-                  color: 'from-green-600 to-emerald-700',
+                  color: 'from-green-600 to-green-700',
                 },
                 {
                   icon: Target,
                   title: 'Evolution & Biodiversity',
                   description:
                     'Natural selection, classification, cladistics, and evolutionary evidence',
-                  color: 'from-emerald-700 to-green-700',
+                  color: 'from-green-700 to-green-700',
                 },
                 {
                   icon: Brain,
                   title: 'Human Physiology',
                   description:
                     'Digestion, cardiovascular, respiratory, nervous, and immune systems',
-                  color: 'from-green-700 to-emerald-800',
+                  color: 'from-green-700 to-green-700',
                 },
               ].map((topic, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300"
+                  className="group bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-400"
                 >
                   <div
                     className={`bg-gradient-to-br ${topic.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
@@ -447,7 +447,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* Additional HL Topics Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 to-green-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-green-50">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
@@ -458,7 +458,7 @@ export default function IBBiologyTutorPage() {
             >
               <motion.div
                 variants={fadeInUp}
-                className="inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4"
               >
                 <Star className="w-4 h-4" />
                 HIGHER LEVEL ONLY
@@ -529,10 +529,10 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl p-6 shadow-lg border-2 border-emerald-200 hover:border-emerald-400 transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-emerald-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="bg-gradient-to-br from-green-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                       <topic.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -540,7 +540,7 @@ export default function IBBiologyTutorPage() {
                       <ul className="space-y-2">
                         {topic.topics.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-gray-700">
-                            <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -619,13 +619,13 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={scaleIn}
-                  className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-6 shadow-lg border-2 border-emerald-200 hover:border-emerald-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-br from-emerald-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-gradient-to-br from-green-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                     <paper.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{paper.title}</h3>
-                  <p className="text-emerald-600 font-semibold mb-3">{paper.subtitle}</p>
+                  <p className="text-green-600 font-semibold mb-3">{paper.subtitle}</p>
                   <div className="space-y-2 text-sm text-gray-700 mb-4">
                     <p>
                       <span className="font-semibold">SL:</span> {paper.sl}
@@ -633,7 +633,7 @@ export default function IBBiologyTutorPage() {
                     <p>
                       <span className="font-semibold">HL:</span> {paper.hl}
                     </p>
-                    <p className="text-emerald-700 font-semibold">{paper.weight}</p>
+                    <p className="text-green-700 font-semibold">{paper.weight}</p>
                   </div>
                   <p className="text-gray-600 text-sm">{paper.description}</p>
                 </motion.div>
@@ -643,7 +643,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* IA Support Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-green-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-700">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
@@ -655,7 +655,7 @@ export default function IBBiologyTutorPage() {
               <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-white mb-4">
                 Internal Assessment (IA) Support
               </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-emerald-50 max-w-3xl mx-auto">
+              <motion.p variants={fadeInUp} className="text-xl text-green-50 max-w-3xl mx-auto">
                 Comprehensive guidance to maximize your IA score (20% of final grade)
               </motion.p>
             </motion.div>
@@ -699,10 +699,10 @@ export default function IBBiologyTutorPage() {
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-emerald-50 mb-4">{item.description}</p>
+                  <p className="text-green-50 mb-4">{item.description}</p>
                   <ul className="space-y-2">
                     {item.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-emerald-100 text-sm">
+                      <li key={i} className="flex items-center gap-2 text-green-100 text-sm">
                         <CheckCircle className="w-4 h-4 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
@@ -780,9 +780,9 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100"
+                  className="bg-gradient-to-br from-green-50 to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                 >
-                  <div className="bg-gradient-to-br from-emerald-600 to-green-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-gradient-to-br from-green-600 to-green-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -794,7 +794,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 to-green-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-green-50">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial="hidden"
@@ -863,7 +863,7 @@ export default function IBBiologyTutorPage() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100"
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-green-100"
                 >
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
@@ -874,7 +874,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-green-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial="hidden"
@@ -888,7 +888,7 @@ export default function IBBiologyTutorPage() {
               >
                 Ready to Excel in IB Biology?
               </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-emerald-50 mb-8">
+              <motion.p variants={fadeInUp} className="text-xl text-green-50 mb-8">
                 Join 250+ successful IB Biology students. Book your free demo class today!
               </motion.p>
 
@@ -898,7 +898,7 @@ export default function IBBiologyTutorPage() {
               >
                 <Link
                   href="/book-demo"
-                  className="group bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
+                  className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -907,7 +907,7 @@ export default function IBBiologyTutorPage() {
                   href="https://wa.me/918826444334"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-emerald-800/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-emerald-800/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
+                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
@@ -916,7 +916,7 @@ export default function IBBiologyTutorPage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="flex items-center justify-center gap-6 text-emerald-50"
+                className="flex items-center justify-center gap-6 text-green-50"
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />

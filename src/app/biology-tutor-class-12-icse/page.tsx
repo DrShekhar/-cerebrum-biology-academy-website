@@ -296,7 +296,7 @@ export default function BiologyTutorClass12ICSEPage() {
                     <li key={topic} className="flex items-center text-gray-700">
                       <CheckCircle
                         className={`w-5 h-5 mr-3 flex-shrink-0 ${
-                          section.highlight ? 'text-rose-500' : 'text-green-500'
+                          section.highlight ? 'text-rose-500' : 'text-green-600'
                         }`}
                       />
                       {topic}

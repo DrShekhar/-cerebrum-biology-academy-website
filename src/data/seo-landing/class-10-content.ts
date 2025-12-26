@@ -378,7 +378,7 @@ export const onlineBiologyClassesClass10: SEOLandingContent = {
     highlightedText: 'Board Topper + NEET Ready',
     ctaText: 'See Class Schedule',
     ctaLink: '/courses/class-10-foundation',
-    backgroundGradient: 'from-teal-900 via-cyan-900 to-blue-900',
+    backgroundGradient: 'from-green-800 via-cyan-900 to-blue-900',
   },
 
   painPoints: {

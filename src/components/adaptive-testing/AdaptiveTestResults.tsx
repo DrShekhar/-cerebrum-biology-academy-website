@@ -124,7 +124,7 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
 
   const getMasteryColor = (level: string): string => {
     switch (level.toLowerCase()) {
-      case 'advanced': return 'from-green-500 to-emerald-500'
+      case 'advanced': return 'bg-green-600'
       case 'proficient': return 'from-blue-500 to-cyan-500'
       case 'developing': return 'from-yellow-500 to-orange-500'
       case 'beginning': return 'from-orange-500 to-red-500'
@@ -387,7 +387,7 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                 </div>
 
                 {/* Readiness Assessment */}
-                <div className="p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                <div className="p-6 bg-gray-50 rounded-lg border border-blue-200">
                   <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                     <Gauge className="w-5 h-5 text-blue-600" />
                     Readiness Assessment

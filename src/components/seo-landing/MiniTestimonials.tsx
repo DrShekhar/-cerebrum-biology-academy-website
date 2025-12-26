@@ -10,7 +10,7 @@ interface MiniTestimonialsProps {
 
 export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
   return (
-    <section className="bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 py-16 lg:py-24">
+    <section className="bg-indigo-900 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
 
               {/* Score Badge */}
               {testimonial.score && (
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-600/20 px-3 py-1">
                   <span className="text-sm font-semibold text-green-400">{testimonial.score}</span>
                 </div>
               )}
@@ -54,7 +54,7 @@ export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
               <div className="mt-6 border-t border-white/10 pt-4">
                 <div className="flex items-center gap-3">
                   {/* Avatar Placeholder */}
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-400 to-purple-500 text-lg font-bold text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-lg font-bold text-white">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>

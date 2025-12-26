@@ -260,7 +260,7 @@ export default function BiologyTutorGreaterNoidaPage() {
                 key={area.name}
                 className={`rounded-xl p-6 shadow-lg animate-fade-in-up ${
                   area.highlight
-                    ? 'bg-gradient-to-br from-green-500 to-blue-600 text-white border-2 border-yellow-400'
+                    ? 'bg-gradient-to-br from-green-600 to-blue-600 text-white border-2 border-yellow-400'
                     : 'bg-white border border-gray-100'
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
@@ -310,7 +310,7 @@ export default function BiologyTutorGreaterNoidaPage() {
                 className="text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>

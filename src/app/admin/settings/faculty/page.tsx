@@ -164,7 +164,7 @@ export default function FacultySettingsPage() {
                 <p className="text-sm font-medium text-gray-600">Total Students</p>
                 <p className="text-2xl font-bold text-gray-900">{totalStudents}</p>
               </div>
-              <Users className="w-8 h-8 text-green-500" />
+              <Users className="w-8 h-8 text-green-600" />
             </div>
           </motion.div>
 
@@ -240,7 +240,7 @@ export default function FacultySettingsPage() {
               {/* Faculty Header */}
               <div className="flex justify-between items-start mb-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
                     {member.name
                       .split(' ')
                       .map((n) => n[0])

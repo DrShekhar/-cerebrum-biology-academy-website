@@ -27,7 +27,7 @@ const benefits: Benefit[] = [
     icon: <Target className="w-6 h-6" />,
     title: 'NEET Strategy Session',
     description: 'Personalized roadmap',
-    color: 'from-green-500 to-green-600',
+    color: 'bg-green-600',
   },
   {
     icon: <Award className="w-6 h-6" />,

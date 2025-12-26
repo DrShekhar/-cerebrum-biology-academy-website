@@ -110,7 +110,7 @@ export default function CreatePaperPage() {
                 onChange={handleChange}
                 required
                 placeholder="e.g., BIO-XI-W1"
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
               <p className="text-xs text-gray-500 mt-1">Unique identifier for this paper</p>
             </div>
@@ -122,7 +122,7 @@ export default function CreatePaperPage() {
                 value={formData.subjectType}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               >
                 {SUBJECT_TYPES.map((type) => (
                   <option key={type.value} value={type.value}>
@@ -142,7 +142,7 @@ export default function CreatePaperPage() {
               onChange={handleChange}
               required
               placeholder="e.g., Biology XI Weekly Test 1"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             />
           </div>
 
@@ -154,7 +154,7 @@ export default function CreatePaperPage() {
               onChange={handleChange}
               rows={3}
               placeholder="Optional description for this paper..."
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
             />
           </div>
 
@@ -166,7 +166,7 @@ export default function CreatePaperPage() {
                 value={formData.targetClass}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               >
                 {TARGET_CLASSES.map((cls) => (
                   <option key={cls} value={cls}>
@@ -182,7 +182,7 @@ export default function CreatePaperPage() {
                 name="status"
                 value={formData.status}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               >
                 <option value="DRAFT">Draft</option>
                 <option value="ACTIVE">Active</option>
@@ -199,7 +199,7 @@ export default function CreatePaperPage() {
                 value={formData.examDate}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
 
@@ -213,7 +213,7 @@ export default function CreatePaperPage() {
                 value={formData.submissionStart}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
 
@@ -227,7 +227,7 @@ export default function CreatePaperPage() {
                 value={formData.submissionEnd}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
               />
             </div>
           </div>

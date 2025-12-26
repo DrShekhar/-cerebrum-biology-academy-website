@@ -368,7 +368,7 @@ export default function AreaPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-indigo-900 text-white py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
@@ -464,7 +464,7 @@ export default function AreaPage() {
               <ul className="space-y-2">
                 {data.nearbyMetro.map((metro) => (
                   <li key={metro} className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     {metro}
                   </li>
                 ))}
@@ -483,7 +483,7 @@ export default function AreaPage() {
               <ul className="space-y-2">
                 {data.societies.slice(0, 5).map((society) => (
                   <li key={society} className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     {society}
                   </li>
                 ))}
@@ -507,7 +507,7 @@ export default function AreaPage() {
               <ul className="space-y-2">
                 {data.schools.map((school) => (
                   <li key={school} className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     {school}
                   </li>
                 ))}
@@ -526,7 +526,7 @@ export default function AreaPage() {
               <ul className="space-y-2">
                 {data.landmarks.map((landmark) => (
                   <li key={landmark} className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                     {landmark}
                   </li>
                 ))}
@@ -634,7 +634,7 @@ export default function AreaPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <section className="py-12 md:py-16 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -181,13 +181,13 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                         className="bg-slate-800 rounded-xl p-6 border border-slate-700"
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-emerald-600/20 p-3 rounded-lg">
-                            <item.icon className="w-6 h-6 text-emerald-400" />
+                          <div className="bg-green-600/20 p-3 rounded-lg">
+                            <item.icon className="w-6 h-6 text-green-500" />
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
                             <p className="text-gray-300 mb-3">{item.description}</p>
-                            <div className="text-emerald-400 font-bold text-lg">{item.stat}</div>
+                            <div className="text-green-500 font-bold text-lg">{item.stat}</div>
                           </div>
                         </div>
                       </motion.div>
@@ -197,7 +197,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   <div className="flex justify-center pt-6">
                     <button
                       onClick={handleNext}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
                     >
                       See Our Success Numbers
                       <ArrowRight className="w-5 h-5" />
@@ -222,7 +222,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
 
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                      <div className="text-4xl font-bold text-emerald-400 mb-2">
+                      <div className="text-4xl font-bold text-green-500 mb-2">
                         {counters.students.toLocaleString()}+
                       </div>
                       <div className="text-white font-semibold">Students Taught</div>
@@ -249,7 +249,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   <div className="flex justify-center pt-6">
                     <button
                       onClick={handleNext}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
                     >
                       Hear From Our Students
                       <ArrowRight className="w-5 h-5" />
@@ -274,7 +274,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
 
                   <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
                     <div className="aspect-video bg-slate-700 rounded-lg relative overflow-hidden mb-4 cursor-pointer group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-blue-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20" />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="bg-white/90 rounded-full p-4 group-hover:bg-white transition-colors">
                           <Play className="w-8 h-8 text-slate-900 ml-1" />
@@ -287,7 +287,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
 
                     <div className="space-y-2">
                       <h4 className="text-lg font-semibold text-white">{testimonialVideo.title}</h4>
-                      <p className="text-emerald-400 font-medium">{testimonialVideo.student}</p>
+                      <p className="text-green-500 font-medium">{testimonialVideo.student}</p>
                       <p className="text-gray-400">{testimonialVideo.achievement}</p>
                     </div>
                   </div>
@@ -295,7 +295,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   <div className="flex justify-center pt-6">
                     <button
                       onClick={handleNext}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
                     >
                       Experience It Yourself
                       <ArrowRight className="w-5 h-5" />
@@ -322,29 +322,29 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 rounded-xl p-6 border border-emerald-600/30">
+                  <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-6 border border-green-600/30">
                     <div className="text-center mb-6">
                       <div className="text-3xl font-bold text-white mb-2">FREE Demo Class</div>
-                      <div className="text-emerald-400 text-lg">
+                      <div className="text-green-500 text-lg">
                         Worth ₹2,000 - Absolutely Free!
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4 mb-6">
                       <div className="flex items-center gap-3 text-white">
-                        <Calendar className="w-5 h-5 text-emerald-400" />
+                        <Calendar className="w-5 h-5 text-green-500" />
                         <span>1-hour live biology class</span>
                       </div>
                       <div className="flex items-center gap-3 text-white">
-                        <MessageCircle className="w-5 h-5 text-emerald-400" />
+                        <MessageCircle className="w-5 h-5 text-green-500" />
                         <span>Doubt resolution session</span>
                       </div>
                       <div className="flex items-center gap-3 text-white">
-                        <BookOpen className="w-5 h-5 text-emerald-400" />
+                        <BookOpen className="w-5 h-5 text-green-500" />
                         <span>Study material sample</span>
                       </div>
                       <div className="flex items-center gap-3 text-white">
-                        <Award className="w-5 h-5 text-emerald-400" />
+                        <Award className="w-5 h-5 text-green-500" />
                         <span>Personal counseling</span>
                       </div>
                     </div>
@@ -352,14 +352,14 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                     <div className="grid md:grid-cols-2 gap-4">
                       <button
                         onClick={() => handleAction('demo-class')}
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
                       >
                         <Calendar className="w-5 h-5" />
                         Book Free Demo
                       </button>
                       <button
                         onClick={() => handleAction('counseling')}
-                        className="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                        className="border border-green-600 text-green-500 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
                       >
                         <MessageCircle className="w-5 h-5" />
                         Get Counseling

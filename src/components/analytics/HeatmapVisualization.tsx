@@ -339,7 +339,7 @@ export function ElementHeatmapOverlay({
     if (intensity > 0.8) return 'bg-red-500'
     if (intensity > 0.6) return 'bg-orange-500'
     if (intensity > 0.4) return 'bg-yellow-500'
-    if (intensity > 0.2) return 'bg-green-500'
+    if (intensity > 0.2) return 'bg-green-600'
     return 'bg-blue-500'
   }
 

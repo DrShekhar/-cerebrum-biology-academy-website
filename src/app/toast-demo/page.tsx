@@ -13,7 +13,7 @@ export default function ToastDemoPage() {
       title: 'Success!',
       message: 'Your action was completed successfully.',
       icon: CheckCircle2,
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       variant: 'error' as const,
@@ -94,7 +94,7 @@ export default function ToastDemoPage() {
                   5000
                 )
               }
-              className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               Toast (5 seconds - Default)
             </button>
@@ -140,7 +140,7 @@ export default function ToastDemoPage() {
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Accessibility Features</h2>
           <div className="space-y-4 text-gray-700">
             <div className="flex items-start space-x-3">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">ARIA Live Regions</h3>
                 <p className="text-sm text-gray-600">
@@ -149,7 +149,7 @@ export default function ToastDemoPage() {
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Keyboard Navigation</h3>
                 <p className="text-sm text-gray-600">
@@ -158,7 +158,7 @@ export default function ToastDemoPage() {
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Semantic Roles</h3>
                 <p className="text-sm text-gray-600">
@@ -167,7 +167,7 @@ export default function ToastDemoPage() {
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Focus Management</h3>
                 <p className="text-sm text-gray-600">

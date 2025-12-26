@@ -578,7 +578,7 @@ export default function TeacherQuestionsPage() {
                             className={cn(
                               'p-3 rounded-lg border',
                               selectedQuestion.correctAnswer === key
-                                ? 'bg-green-50 border-green-500'
+                                ? 'bg-green-50 border-green-600'
                                 : 'bg-gray-50 border-gray-200'
                             )}
                           >

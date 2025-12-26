@@ -222,7 +222,7 @@ export default function RootLayout({
               .font-medium{font-weight:500}
               .rounded-full{border-radius:9999px}
               .rounded-lg{border-radius:.5rem}
-              .bg-green-500\\/20{background-color:rgb(34 197 94/.2)}
+              .bg-green-600\\/20{background-color:rgb(34 197 94/.2)}
               .border{border-width:1px}
               .border-green-300\\/30{border-color:rgb(134 239 172/.3)}
               .w-5{width:1.25rem}

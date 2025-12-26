@@ -50,7 +50,7 @@ export interface WizardStep {
 const PlaceholderStep: React.FC<WizardStepProps> = ({ data, onUpdate, onNext, onPrev }) => (
   <div className="p-8 text-center">
     <p className="text-gray-600 mb-4">This step component needs to be implemented.</p>
-    <button onClick={onNext} className="px-4 py-2 bg-emerald-600 text-white rounded">
+    <button onClick={onNext} className="px-4 py-2 bg-green-600 text-white rounded">
       Continue
     </button>
   </div>
@@ -356,7 +356,7 @@ const CourseWizardContainer: React.FC = () => {
             setWizardState((prev) => ({ ...prev, error: null }))
             resetWizard()
           }}
-          className="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
+          className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
         >
           Start Over
         </button>
@@ -365,7 +365,7 @@ const CourseWizardContainer: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Progress Header */}
         <div className="mb-8">
@@ -380,18 +380,18 @@ const CourseWizardContainer: React.FC = () => {
         {/* Main Content */}
         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
           {/* Step Header */}
-          <div className="bg-gradient-to-r from-emerald-600 to-blue-600 p-6 text-white">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 p-6 text-white">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                 {currentStepData.icon}
               </div>
               <div>
                 <h1 className="text-2xl font-bold">{currentStepData.title}</h1>
-                <p className="text-emerald-100 mt-1">{currentStepData.description}</p>
+                <p className="text-green-100 mt-1">{currentStepData.description}</p>
               </div>
             </div>
 
-            <div className="mt-4 flex items-center justify-between text-sm text-emerald-100">
+            <div className="mt-4 flex items-center justify-between text-sm text-green-100">
               <span>
                 Step {currentStep + 1} of {wizardSteps.length}
               </span>
@@ -405,7 +405,7 @@ const CourseWizardContainer: React.FC = () => {
           <div className="p-6 lg:p-8">
             {wizardState.isLoading ? (
               <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-emerald-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-green-600" />
                 <span className="ml-3 text-gray-600">Processing your preferences...</span>
               </div>
             ) : (
@@ -453,7 +453,7 @@ const CourseWizardContainer: React.FC = () => {
                 {currentStepData.optional && (
                   <button
                     onClick={handleNext}
-                    className="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
+                    className="text-green-600 hover:text-green-700 text-sm font-medium"
                   >
                     Skip this step
                   </button>
@@ -462,7 +462,7 @@ const CourseWizardContainer: React.FC = () => {
                 <button
                   onClick={handleNext}
                   disabled={!isStepValid(currentStep) && !currentStepData.optional}
-                  className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   {isLastStep ? (
                     <>

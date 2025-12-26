@@ -71,7 +71,7 @@ export default function Class12BiologyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="bg-indigo-500 text-white py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="max-w-full">
@@ -211,7 +211,7 @@ export default function Class12BiologyPage() {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-shadow"
+                  className="bg-indigo-50 rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-shadow"
                 >
                   <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
                   <p className="text-sm sm:text-base text-gray-700 font-medium">{item.feature}</p>

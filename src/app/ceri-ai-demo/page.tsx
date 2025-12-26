@@ -20,7 +20,7 @@ export default function CeriAIDemoPage() {
             </Link>
             <div className="flex items-center space-x-2">
               <Sparkles className="w-6 h-6 text-purple-600" />
-              <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-xl sm:text-2xl font-bold bg-indigo-500 bg-clip-text text-transparent">
                 Ceri AI Demo
               </h1>
             </div>
@@ -33,7 +33,7 @@ export default function CeriAIDemoPage() {
         <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -46,27 +46,27 @@ export default function CeriAIDemoPage() {
               </p>
               <ul className="space-y-2 text-sm sm:text-base text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
+                  <span className="text-green-600 mr-2">✓</span>
                   <span>
                     <strong>Real-time Streaming:</strong> Get instant responses as AI thinks
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
+                  <span className="text-green-600 mr-2">✓</span>
                   <span>
                     <strong>LaTeX Math Rendering:</strong> Beautiful formulas like $E = mc^2$ or
                     $\Delta G = \Delta H - T\Delta S$
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
+                  <span className="text-green-600 mr-2">✓</span>
                   <span>
                     <strong>Mobile-First Design:</strong> Perfect experience on phones, tablets, and
                     desktops
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
+                  <span className="text-green-600 mr-2">✓</span>
                   <span>
                     <strong>Smart Caching:</strong> Lightning-fast responses for common questions
                   </span>
@@ -116,7 +116,7 @@ export default function CeriAIDemoPage() {
 
       {/* Footer */}
       <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 text-white text-center">
+        <div className="bg-indigo-500 rounded-2xl p-6 sm:p-8 text-white text-center">
           <p className="text-base sm:text-lg">
             Start your NEET Biology preparation journey with Ceri AI today!
           </p>

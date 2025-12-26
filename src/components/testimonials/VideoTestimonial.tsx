@@ -155,7 +155,7 @@ export function VideoTestimonial({
           </AnimatePresence>
 
           {/* Achievement Badge */}
-          <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+          <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
             {achievement}
           </div>
         </div>

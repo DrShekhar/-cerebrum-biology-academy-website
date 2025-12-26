@@ -92,7 +92,7 @@ export const blogCategories: Record<string, BlogCategory> = {
     name: 'NCERT Analysis',
     slug: 'ncert-analysis',
     description: 'Line-by-line NCERT analysis for NEET preparation',
-    color: 'bg-teal-100 text-teal-800',
+    color: 'bg-green-100 text-green-800',
   },
   mnemonics: {
     id: '8',

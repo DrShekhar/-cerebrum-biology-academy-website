@@ -165,7 +165,7 @@ export function ProgressiveDisclosureQuiz({
         className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
       >
         <div className="text-center space-y-4">
-          <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm">
+          <div className="flex items-center justify-center gap-2 text-green-500 text-sm">
             <Sparkles className="h-4 w-4" />
             <span>Perfect Match Found!</span>
           </div>
@@ -179,7 +179,7 @@ export function ProgressiveDisclosureQuiz({
             <div className="flex justify-between items-center mb-2">
               <span className="text-white font-semibold">Course Fee</span>
               <div className="text-right">
-                <div className="text-2xl font-bold text-emerald-400">
+                <div className="text-2xl font-bold text-green-500">
                   ₹{result.pricing.toLocaleString()}
                 </div>
                 <div className="text-xs text-gray-400">One-time payment</div>
@@ -196,7 +196,7 @@ export function ProgressiveDisclosureQuiz({
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white py-3"
+              className="w-full bg-green-600 hover:from-green-600 hover:to-green-700 text-white py-3"
             >
               Enroll Now
               <ChevronRight className="h-5 w-5" />
@@ -232,13 +232,13 @@ export function ProgressiveDisclosureQuiz({
     >
       {/* Quiz Header */}
       <div className="text-center mb-4">
-        <p className="text-sm text-emerald-400 mb-1">Find your perfect course in 30 seconds</p>
+        <p className="text-sm text-green-500 mb-1">Find your perfect course in 30 seconds</p>
         <div className="flex justify-center gap-2">
           {quizSteps.map((_, index) => (
             <div
               key={index}
               className={`w-2 h-2 rounded-full transition-colors ${
-                index <= currentStep ? 'bg-emerald-400' : 'bg-slate-600'
+                index <= currentStep ? 'bg-green-500' : 'bg-slate-600'
               }`}
             />
           ))}
@@ -264,7 +264,7 @@ export function ProgressiveDisclosureQuiz({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(currentStepData.id, option.value)}
-                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-emerald-400"
+                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-green-500"
               >
                 <div className="font-medium">{option.label}</div>
                 {option.description && (
@@ -316,7 +316,7 @@ export function LiveTrustIndicators({ className = '' }: { className?: string }) 
         className="live-students bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
       >
         <div className="flex items-center gap-2 text-sm font-medium">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
           <span className="text-gray-800">
             <AnimatedCounter value={liveStats.studentsOnline} /> students online
           </span>
@@ -328,7 +328,7 @@ export function LiveTrustIndicators({ className = '' }: { className?: string }) 
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 100 }}
-        className="recent-enrollment bg-emerald-500/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
+        className="recent-enrollment bg-green-600/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
       >
         <div className="text-white text-sm font-medium">✅ {liveStats.recentEnrollment}</div>
       </motion.div>

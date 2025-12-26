@@ -2,7 +2,7 @@ export default function BiologyNotesLoading() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section Skeleton */}
-      <div className="bg-gradient-to-br from-green-800 via-emerald-900 to-teal-800 py-16">
+      <div className="bg-gradient-to-br from-green-800 via-green-800 to-green-800 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="h-10 bg-white/20 rounded-lg w-72 mx-auto mb-4 animate-pulse" />
           <div className="h-6 bg-white/10 rounded-lg w-[30rem] max-w-full mx-auto animate-pulse" />

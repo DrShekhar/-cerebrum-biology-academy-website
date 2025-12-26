@@ -54,7 +54,7 @@ function EnhancedSeriesCard({
         }
       case 'ascent':
         return {
-          gradient: 'from-green-500 to-emerald-600',
+          gradient: 'bg-green-600',
           bgCard: 'bg-green-50',
           border: 'border-green-200',
           text: 'text-green-900',
@@ -291,7 +291,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
       className={`min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 ${className}`}
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 relative overflow-hidden">
+      <section className="bg-indigo-500 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse" />
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-300 rounded-full blur-3xl animate-pulse" />
@@ -555,7 +555,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white"
+            className="mt-16 text-center bg-indigo-500 rounded-3xl p-12 text-white"
           >
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">

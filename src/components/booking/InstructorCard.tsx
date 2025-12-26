@@ -79,7 +79,7 @@ export function InstructorCard({ instructorName, isVisible }: InstructorCardProp
         >
           <div className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-white font-bold text-xl">
                 {instructor.fullName.split(' ')[1].charAt(0)}
               </div>
             </div>

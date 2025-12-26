@@ -671,7 +671,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                         : notification.type === 'warning'
                           ? 'text-yellow-500'
                           : notification.type === 'success'
-                            ? 'text-green-500'
+                            ? 'text-green-600'
                             : 'text-blue-500'
                     }`}
                   >

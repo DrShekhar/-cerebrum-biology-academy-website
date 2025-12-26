@@ -116,7 +116,7 @@ export default function ReferralPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <motion.div
@@ -124,7 +124,7 @@ export default function ReferralPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-indigo-500 rounded-full mb-6">
             <Gift className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -160,7 +160,7 @@ export default function ReferralPage() {
               icon: IndianRupee,
               title: 'You Earn',
               description: 'You earn Rs.500 for every successful referral',
-              color: 'from-green-500 to-green-600',
+              color: 'bg-green-600',
             },
           ].map((step, index) => (
             <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -218,7 +218,7 @@ export default function ReferralPage() {
             referralStats && (
               <div className="space-y-6">
                 {/* Referral Code Card */}
-                <Card className="p-8 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+                <Card className="p-8 bg-indigo-500 text-white">
                   <div className="text-center">
                     <p className="text-purple-100 mb-2">Your Referral Code</p>
                     <div className="flex items-center justify-center gap-4 mb-6">
@@ -257,7 +257,7 @@ export default function ReferralPage() {
                     <div className="flex justify-center gap-4">
                       <Button
                         onClick={shareOnWhatsApp}
-                        className="bg-green-500 hover:bg-green-600 text-white"
+                        className="bg-green-600 hover:bg-green-600 text-white"
                       >
                         <MessageCircle className="w-4 h-4 mr-2" />
                         WhatsApp

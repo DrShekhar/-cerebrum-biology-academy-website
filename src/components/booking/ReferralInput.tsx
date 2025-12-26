@@ -115,11 +115,11 @@ export function ReferralInput({ onReferralApplied, onReferralRemoved }: Referral
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-lg p-4 border-2 border-green-500"
+          className="bg-white rounded-lg p-4 border-2 border-green-600"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
               <div>
                 <p className="font-semibold text-green-900">Code Applied: {referralCode}</p>
                 <p className="text-sm text-green-700">You saved ₹{discount}! 🎉</p>
