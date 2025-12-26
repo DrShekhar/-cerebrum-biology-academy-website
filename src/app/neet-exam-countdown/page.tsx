@@ -20,32 +20,25 @@ import {
   FileText,
   AlertCircle,
   ChevronDown,
-  ChevronUp,
-  Sparkles,
   Timer,
-  Zap,
   Leaf,
   Beaker,
   Atom,
   Star,
   Rocket,
   Trophy,
-  Sun,
-  Moon,
 } from 'lucide-react'
 
 // NEET Exam Dates - First Sunday of May each year, 2:00 PM IST
 const NEET_EXAM_DATES: Record<number, Date> = {
-  2026: new Date('2026-05-03T14:00:00+05:30'), // May 3, 2026
-  2027: new Date('2027-05-02T14:00:00+05:30'), // May 2, 2027
-  2028: new Date('2028-05-07T14:00:00+05:30'), // May 7, 2028
-  2029: new Date('2029-05-06T14:00:00+05:30'), // May 6, 2029
+  2026: new Date('2026-05-03T14:00:00+05:30'),
+  2027: new Date('2027-05-02T14:00:00+05:30'),
+  2028: new Date('2028-05-07T14:00:00+05:30'),
+  2029: new Date('2029-05-06T14:00:00+05:30'),
 }
 
-// Available years for selection
 const AVAILABLE_YEARS = [2026, 2027, 2028, 2029]
 
-// Get the default year based on current date (select next upcoming exam)
 const getDefaultYear = (): number => {
   const now = new Date()
   for (const year of AVAILABLE_YEARS) {
@@ -56,62 +49,40 @@ const getDefaultYear = (): number => {
   return AVAILABLE_YEARS[AVAILABLE_YEARS.length - 1]
 }
 
-// Important Dates - Using brand colors: Red #E25553, Blue #4A8FE7, Yellow #D99E18, Green #34C759
-// Function to generate year-specific important dates
+// Important Dates with solid colors
 const getImportantDates = (year: number) => {
-  // Get the exam date for the year
   const examDate = NEET_EXAM_DATES[year]
   const examDay = examDate.getDate()
   const examMonth = examDate.toLocaleDateString('en-US', { month: 'short' })
 
   return [
-    {
-      event: 'Registration Opens',
-      date: `Feb 7, ${year}`,
-      icon: FileText,
-      color: 'from-[#4A8FE7] to-[#3A7FD7]',
-    },
-    {
-      event: 'Registration Closes',
-      date: `Mar 7, ${year}`,
-      icon: Clock,
-      color: 'from-[#D99E18] to-[#C98E08]',
-    },
+    { event: 'Registration Opens', date: `Feb 7, ${year}`, icon: FileText, color: 'bg-blue-500' },
+    { event: 'Registration Closes', date: `Mar 7, ${year}`, icon: Clock, color: 'bg-amber-500' },
     {
       event: 'Correction Window',
       date: `Mar 10-15, ${year}`,
       icon: FileText,
-      color: 'from-[#4A8FE7] to-[#3A7FD7]',
+      color: 'bg-blue-500',
     },
-    {
-      event: 'Admit Card Release',
-      date: `Apr 30, ${year}`,
-      icon: Award,
-      color: 'from-[#34C759] to-[#28A745]',
-    },
+    { event: 'Admit Card Release', date: `Apr 30, ${year}`, icon: Award, color: 'bg-green-500' },
     {
       event: `NEET ${year} Exam`,
       date: `${examMonth} ${examDay}, ${year}`,
       icon: Star,
-      color: 'from-[#E25553] to-[#D24543]',
+      color: 'bg-red-500',
     },
     {
       event: 'Answer Key Release',
       date: `May 10, ${year}`,
       icon: CheckCircle,
-      color: 'from-[#D99E18] to-[#C98E08]',
+      color: 'bg-amber-500',
     },
-    {
-      event: 'Result Declaration',
-      date: `June 5, ${year}`,
-      icon: Trophy,
-      color: 'from-[#34C759] to-[#28A745]',
-    },
+    { event: 'Result Declaration', date: `June 5, ${year}`, icon: Trophy, color: 'bg-green-500' },
     {
       event: 'Counselling Begins',
       date: `July ${year}`,
       icon: GraduationCap,
-      color: 'from-[#4A8FE7] to-[#3A7FD7]',
+      color: 'bg-blue-500',
     },
   ]
 }
@@ -144,12 +115,6 @@ const TOPPER_QUOTES = [
     author: 'Soyeb Aftab, AIR 1',
     year: '2020',
   },
-  {
-    quote:
-      'Focus on weak areas in the morning when your mind is fresh. Revise strong topics at night.',
-    author: 'Aman Kumar, AIR 15',
-    year: '2024',
-  },
 ]
 
 // Preparation Phases
@@ -157,26 +122,22 @@ const PHASES = [
   {
     name: 'Foundation',
     minDays: 180,
-    color: 'blue',
     tip: 'Focus on building strong concepts from NCERT. Complete syllabus coverage.',
   },
   {
     name: 'Consolidation',
     minDays: 90,
-    color: 'blue',
     tip: 'Solve topic-wise questions. Identify and work on weak areas.',
   },
   {
     name: 'Revision',
     minDays: 30,
-    color: 'orange',
     tip: 'Intensive revision. Focus on high-weightage topics and formulas.',
   },
   {
     name: 'Final Sprint',
     minDays: 0,
-    color: 'red',
-    tip: 'Mock tests daily. Light revision. Focus on time management and accuracy.',
+    tip: 'Mock tests daily. Light revision. Focus on time management.',
   },
 ]
 
@@ -186,45 +147,6 @@ interface TimeLeft {
   minutes: number
   seconds: number
   total: number
-}
-
-// iOS-style Theme Toggle Component
-function ThemeToggle({ isDark, onToggle }: { isDark: boolean; onToggle: () => void }) {
-  return (
-    <button
-      onClick={onToggle}
-      className={`fixed right-4 top-20 z-50 flex h-8 w-16 items-center rounded-full p-1 shadow-lg transition-all duration-300 md:right-6 md:top-24 md:h-9 md:w-[72px] ${
-        isDark ? 'bg-[#4A8FE7] shadow-[#4A8FE7]/30' : 'bg-[#D99E18] shadow-[#D99E18]/30'
-      }`}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-    >
-      {/* Track icons */}
-      <div className="absolute inset-0 flex items-center justify-between px-2">
-        <Sun
-          className={`h-4 w-4 transition-opacity duration-300 md:h-5 md:w-5 ${
-            isDark ? 'text-white/40' : 'text-white opacity-0'
-          }`}
-        />
-        <Moon
-          className={`h-4 w-4 transition-opacity duration-300 md:h-5 md:w-5 ${
-            isDark ? 'text-white opacity-0' : 'text-white/40'
-          }`}
-        />
-      </div>
-      {/* Sliding knob */}
-      <div
-        className={`flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-md transition-all duration-300 md:h-7 md:w-7 ${
-          isDark ? 'translate-x-8 md:translate-x-9' : 'translate-x-0'
-        }`}
-      >
-        {isDark ? (
-          <Moon className="h-3.5 w-3.5 text-[#4A8FE7] md:h-4 md:w-4" />
-        ) : (
-          <Sun className="h-3.5 w-3.5 text-[#D99E18] md:h-4 md:w-4" />
-        )}
-      </div>
-    </button>
-  )
 }
 
 export default function NEETExamCountdownPage() {
@@ -239,13 +161,11 @@ export default function NEETExamCountdownPage() {
   const [targetScore, setTargetScore] = useState(650)
   const [category, setCategory] = useState('General')
   const [streak, setStreak] = useState(0)
-  const [lastStudyDate, setLastStudyDate] = useState<string | null>(null)
   const [studiedToday, setStudiedToday] = useState(false)
   const [currentQuote, setCurrentQuote] = useState(0)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
   const [showToast, setShowToast] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(true)
   const [selectedYear, setSelectedYear] = useState<number>(getDefaultYear())
   const [isYearDropdownOpen, setIsYearDropdownOpen] = useState(false)
 
@@ -265,20 +185,10 @@ export default function NEETExamCountdownPage() {
 
   useEffect(() => {
     setMounted(true)
-
-    // Load theme preference
-    const savedTheme = localStorage.getItem('neetCountdownTheme')
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark')
-    }
-
-    // Load selected year preference
     const savedYear = localStorage.getItem('neetCountdownYear')
     if (savedYear) {
       const year = parseInt(savedYear)
-      if (AVAILABLE_YEARS.includes(year)) {
-        setSelectedYear(year)
-      }
+      if (AVAILABLE_YEARS.includes(year)) setSelectedYear(year)
     }
 
     const savedStreak = localStorage.getItem('neetStreak')
@@ -293,10 +203,8 @@ export default function NEETExamCountdownPage() {
       if (savedLastDate === today) {
         setStreak(parseInt(savedStreak))
         setStudiedToday(true)
-        setLastStudyDate(savedLastDate)
       } else if (lastDate.toDateString() === yesterday.toDateString()) {
         setStreak(parseInt(savedStreak))
-        setLastStudyDate(savedLastDate)
       } else {
         setStreak(0)
         localStorage.setItem('neetStreak', '0')
@@ -316,12 +224,6 @@ export default function NEETExamCountdownPage() {
     return () => clearInterval(timer)
   }, [calculateTimeLeft])
 
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode
-    setIsDarkMode(newTheme)
-    localStorage.setItem('neetCountdownTheme', newTheme ? 'dark' : 'light')
-  }
-
   const changeYear = (year: number) => {
     setSelectedYear(year)
     setIsYearDropdownOpen(false)
@@ -333,7 +235,6 @@ export default function NEETExamCountdownPage() {
     const newStreak = streak + 1
     setStreak(newStreak)
     setStudiedToday(true)
-    setLastStudyDate(today)
     localStorage.setItem('neetStreak', newStreak.toString())
     localStorage.setItem('neetLastStudyDate', today)
   }
@@ -343,13 +244,9 @@ export default function NEETExamCountdownPage() {
   const physicsHours = Math.round(totalStudyHours * 0.25)
   const chemistryHours = Math.round(totalStudyHours * 0.25)
 
-  // Calculate prep days from previous year's exam to selected year's exam
   const getPreviousYearDate = () => {
     const prevYear = selectedYear - 1
-    if (NEET_EXAM_DATES[prevYear]) {
-      return NEET_EXAM_DATES[prevYear]
-    }
-    // Default to one year before if previous year not in our list
+    if (NEET_EXAM_DATES[prevYear]) return NEET_EXAM_DATES[prevYear]
     return new Date(NEET_EXAM_DATES[selectedYear].getTime() - 365 * 24 * 60 * 60 * 1000)
   }
 
@@ -381,7 +278,7 @@ export default function NEETExamCountdownPage() {
   }
 
   const shareCountdown = () => {
-    const text = `Only ${timeLeft.days} days left for NEET ${selectedYear}! I'm preparing with Cerebrum Biology Academy. Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
+    const text = `Only ${timeLeft.days} days left for NEET ${selectedYear}! Check your countdown: cerebrumbiologyacademy.com/neet-exam-countdown`
     if (navigator.share) {
       navigator.share({ title: `NEET ${selectedYear} Countdown`, text, url: window.location.href })
     } else {
@@ -391,10 +288,8 @@ export default function NEETExamCountdownPage() {
     }
   }
 
-  const isExamDay = timeLeft.days === 0 && timeLeft.hours <= 24
   const isExamOver = timeLeft.total <= 0
 
-  // Dynamic FAQs based on selected year
   const examDate = NEET_EXAM_DATES[selectedYear]
   const examDateStr = examDate.toLocaleDateString('en-US', {
     month: 'long',
@@ -405,102 +300,28 @@ export default function NEETExamCountdownPage() {
   const faqs = [
     {
       q: `When is NEET ${selectedYear} exam date?`,
-      a: `NEET ${selectedYear} is expected to be held on ${examDateStr} (first Sunday of May), from 2:00 PM to 5:20 PM. The official date will be confirmed by NTA in their notification.`,
+      a: `NEET ${selectedYear} is expected on ${examDateStr} (first Sunday of May), 2:00 PM to 5:20 PM.`,
     },
     {
       q: `What is the NEET ${selectedYear} exam pattern?`,
-      a: `NEET ${selectedYear} will have 200 questions (180 to attempt) from Physics (45), Chemistry (45), and Biology (90). Each correct answer gives +4 marks, wrong answer -1 mark. Total marks: 720.`,
+      a: `200 questions (180 to attempt): Physics (45), Chemistry (45), Biology (90). +4 correct, -1 wrong. Total: 720 marks.`,
     },
     {
-      q: 'How many hours should I study daily for NEET?',
-      a: 'Ideally 6-8 hours of focused study daily. Quality matters more than quantity. Include breaks using the Pomodoro technique. Consistency is key.',
+      q: 'How many hours should I study daily?',
+      a: 'Ideally 6-8 hours of focused study daily. Quality matters more than quantity. Consistency is key.',
     },
     {
       q: `Is NCERT enough for NEET ${selectedYear}?`,
-      a: 'NCERT covers 90%+ of NEET Biology syllabus. For Physics and Chemistry, NCERT is essential but you may need additional practice from reference books like HC Verma, MS Chouhan.',
-    },
-    {
-      q: `When will NEET ${selectedYear} registration start?`,
-      a: `NEET ${selectedYear} registration is expected to start in the first week of February ${selectedYear}. The window usually remains open for about one month.`,
+      a: 'NCERT covers 90%+ of NEET Biology. For Physics and Chemistry, NCERT is essential plus practice books.',
     },
   ]
 
-  // Brand Colors from palette
-  // Red: #E25553, Blue: #4A8FE7, Yellow: #D99E18, Green: #34C759
-
-  // Theme-specific classes
-  const theme = {
-    // Backgrounds
-    pageBg: isDarkMode
-      ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900'
-      : 'bg-gradient-to-br from-gray-50 via-white to-slate-100',
-    cardBg: isDarkMode ? 'bg-white/5' : 'bg-white',
-    cardInnerBg: isDarkMode ? 'bg-slate-800/80' : 'bg-white',
-    cardBorder: isDarkMode ? 'border-white/10' : 'border-gray-200',
-    cardHoverBorder: isDarkMode ? 'hover:border-[#4A8FE7]/50' : 'hover:border-[#4A8FE7]/50',
-    cardShadow: isDarkMode ? 'shadow-lg shadow-black/20' : 'shadow-lg shadow-gray-200/50',
-
-    // Text
-    textPrimary: isDarkMode ? 'text-white' : 'text-gray-900',
-    textSecondary: isDarkMode ? 'text-gray-300' : 'text-gray-600',
-    textMuted: isDarkMode ? 'text-gray-400' : 'text-gray-500',
-    textAccent: isDarkMode ? 'text-[#4A8FE7]' : 'text-[#4A8FE7]',
-
-    // Brand Colors
-    colorRed: '#E25553',
-    colorBlue: '#4A8FE7',
-    colorYellow: '#D99E18',
-    colorGreen: '#34C759',
-
-    // Gradients using brand colors
-    gradientText: isDarkMode
-      ? 'bg-gradient-to-r from-[#4A8FE7] via-[#34C759] to-[#4A8FE7]'
-      : 'bg-gradient-to-r from-[#4A8FE7] to-[#34C759]',
-    gradientBg: isDarkMode
-      ? 'from-[#4A8FE7]/10 via-transparent to-[#34C759]/10'
-      : 'from-[#4A8FE7]/5 via-white to-[#34C759]/5',
-
-    // Buttons
-    buttonPrimary: isDarkMode
-      ? 'bg-[#4A8FE7] hover:bg-[#3A7FD7] shadow-[#4A8FE7]/25 hover:shadow-[#4A8FE7]/40'
-      : 'bg-[#4A8FE7] hover:bg-[#3A7FD7] shadow-[#4A8FE7]/30 hover:shadow-[#4A8FE7]/50',
-    buttonSecondary: isDarkMode
-      ? 'border-[#4A8FE7]/50 text-[#4A8FE7] hover:border-[#4A8FE7] hover:bg-[#4A8FE7]/10'
-      : 'border-[#4A8FE7] text-[#4A8FE7] hover:border-[#4A8FE7] hover:bg-[#4A8FE7]/5',
-
-    // Progress bars
-    progressBg: isDarkMode ? 'bg-gray-700' : 'bg-gray-200',
-
-    // Inputs
-    inputBg: isDarkMode ? 'bg-slate-800' : 'bg-white',
-    inputBorder: isDarkMode ? 'border-gray-600' : 'border-gray-300',
-    inputFocus: isDarkMode ? 'focus:border-[#4A8FE7]' : 'focus:border-[#4A8FE7]',
-
-    // Overlays
-    overlayGradient: isDarkMode
-      ? 'from-[#4A8FE7]/10 via-transparent to-transparent'
-      : 'from-[#4A8FE7]/5 via-transparent to-transparent',
-    gridPattern: isDarkMode
-      ? 'bg-[linear-gradient(rgba(74,143,231,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(74,143,231,0.03)_1px,transparent_1px)]'
-      : 'bg-[linear-gradient(rgba(74,143,231,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(74,143,231,0.04)_1px,transparent_1px)]',
-  }
-
   if (!mounted) {
     return (
-      <div
-        className={`flex min-h-screen items-center justify-center ${isDarkMode ? 'bg-slate-900' : 'bg-gray-50'}`}
-      >
+      <div className="flex min-h-screen items-center justify-center bg-slate-50">
         <div className="text-center">
-          <div className="relative mx-auto h-20 w-20">
-            <div className="absolute inset-0 animate-ping rounded-full bg-[#4A8FE7]/30" />
-            <div className="absolute inset-2 animate-spin rounded-full border-4 border-transparent border-t-[#4A8FE7]" />
-            <div className="absolute inset-4 rounded-full bg-[#4A8FE7]" />
-          </div>
-          <p
-            className={`mt-6 text-lg font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
-          >
-            Loading countdown...
-          </p>
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-blue-500 border-t-transparent" />
+          <p className="mt-4 text-gray-600">Loading countdown...</p>
         </div>
       </div>
     )
@@ -515,7 +336,7 @@ export default function NEETExamCountdownPage() {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: `NEET ${selectedYear} Exam Countdown Timer`,
-            description: `Live countdown to NEET ${selectedYear} exam with study planner, progress tracker, and preparation tips.`,
+            description: `Live countdown to NEET ${selectedYear} exam with study planner and preparation tips.`,
             url: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -524,109 +345,61 @@ export default function NEETExamCountdownPage() {
         }}
       />
 
-      {/* Theme Toggle */}
-      <ThemeToggle isDark={isDarkMode} onToggle={toggleTheme} />
-
       {/* Toast */}
       {showToast && (
-        <div className="fixed right-4 top-20 z-50 animate-bounce rounded-2xl bg-green-600 px-6 py-4 text-white shadow-2xl shadow-green-500/25">
-          <div className="flex items-center gap-3">
-            <CheckCircle className="h-6 w-6" />
-            <span className="font-semibold">Copied to clipboard!</span>
-          </div>
+        <div className="fixed right-4 top-20 z-50 flex items-center gap-2 rounded-full bg-green-500 px-4 py-2 text-white shadow-lg">
+          <CheckCircle className="h-4 w-4" />
+          <span className="text-sm font-medium">Copied to clipboard!</span>
         </div>
       )}
 
-      <main
-        className={`relative min-h-screen overflow-hidden transition-colors duration-500 ${theme.pageBg}`}
-      >
-        {/* Animated Background */}
-        <div className="pointer-events-none fixed inset-0">
-          <div
-            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${theme.overlayGradient}`}
-          />
-          <div
-            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] ${isDarkMode ? 'from-[#34C759]/10 via-transparent to-transparent' : 'from-[#4A8FE7]/10 via-transparent to-transparent'}`}
-          />
-          <div
-            className={`absolute -left-40 top-0 h-[500px] w-[500px] animate-pulse rounded-full blur-[120px] ${isDarkMode ? 'bg-[#4A8FE7]/10' : 'bg-[#4A8FE7]/15'}`}
-          />
-          <div
-            className={`absolute -right-40 top-1/3 h-[400px] w-[400px] animate-pulse rounded-full blur-[100px] ${isDarkMode ? 'bg-[#34C759]/10' : 'bg-[#34C759]/15'}`}
-            style={{ animationDelay: '1s' }}
-          />
-          <div
-            className={`absolute -bottom-40 left-1/3 h-[600px] w-[600px] animate-pulse rounded-full blur-[140px] ${isDarkMode ? 'bg-[#D99E18]/10' : 'bg-[#D99E18]/10'}`}
-            style={{ animationDelay: '2s' }}
-          />
-          {/* Grid Pattern */}
-          <div className={`absolute inset-0 ${theme.gridPattern} bg-[size:60px_60px]`} />
-        </div>
-
+      <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
-        <section className="relative pb-20 pt-8 md:pb-32 md:pt-12">
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-white border-b border-gray-100 py-12 md:py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
             {/* Breadcrumb */}
-            <nav className={`mb-8 flex items-center gap-2 text-sm ${theme.textMuted}`}>
-              <Link
-                href="/"
-                className={`transition-colors ${isDarkMode ? 'hover:text-[#4A8FE7]' : 'hover:text-[#4A8FE7]'}`}
-              >
+            <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
+              <Link href="/" className="hover:text-blue-500">
                 Home
               </Link>
-              <span className={isDarkMode ? 'text-[#4A8FE7]' : 'text-[#4A8FE7]/50'}>/</span>
-              <Link
-                href="/neet-tools"
-                className={`transition-colors ${isDarkMode ? 'hover:text-[#4A8FE7]' : 'hover:text-[#4A8FE7]'}`}
-              >
+              <span>/</span>
+              <Link href="/neet-tools" className="hover:text-blue-500">
                 NEET Tools
               </Link>
-              <span className={isDarkMode ? 'text-[#4A8FE7]' : 'text-[#4A8FE7]/50'}>/</span>
-              <span className={theme.textAccent}>Exam Countdown</span>
+              <span>/</span>
+              <span className="text-gray-800">Exam Countdown</span>
             </nav>
 
             <div className="text-center">
-              {/* Year Selector + Badge */}
+              {/* Year Selector + Live Badge */}
               <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
-                {/* Year Selector Dropdown */}
+                {/* Year Selector */}
                 <div className="relative">
                   <button
                     onClick={() => setIsYearDropdownOpen(!isYearDropdownOpen)}
-                    className={`flex items-center gap-2 rounded-full border px-4 py-2.5 font-semibold transition-all duration-300 ${
-                      isDarkMode
-                        ? 'border-[#E25553]/50 bg-[#E25553]/20 text-white hover:bg-[#E25553]/30'
-                        : 'border-[#E25553]/50 bg-[#E25553]/10 text-gray-900 hover:bg-[#E25553]/20'
-                    }`}
+                    className="flex items-center gap-2 rounded-full bg-red-50 border border-red-200 px-4 py-2 text-sm font-medium text-gray-800 hover:bg-red-100 transition-colors"
                   >
-                    <Calendar className="h-4 w-4 text-[#E25553]" />
+                    <Calendar className="h-4 w-4 text-red-500" />
                     <span>NEET {selectedYear}</span>
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform ${isYearDropdownOpen ? 'rotate-180' : ''}`}
+                      className={`h-4 w-4 text-gray-500 transition-transform ${isYearDropdownOpen ? 'rotate-180' : ''}`}
                     />
                   </button>
                   {isYearDropdownOpen && (
-                    <div
-                      className={`absolute left-1/2 top-full z-50 mt-2 w-36 -translate-x-1/2 overflow-hidden rounded-xl border shadow-xl ${
-                        isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-white'
-                      }`}
-                    >
+                    <div className="absolute left-1/2 top-full z-50 mt-2 w-36 -translate-x-1/2 rounded-xl bg-white border border-gray-200 shadow-lg overflow-hidden">
                       {AVAILABLE_YEARS.map((year) => (
                         <button
                           key={year}
                           onClick={() => changeYear(year)}
-                          className={`flex w-full items-center justify-between px-4 py-3 text-left transition-colors ${
+                          className={`flex w-full items-center justify-between px-4 py-3 text-left text-sm transition-colors ${
                             selectedYear === year
-                              ? isDarkMode
-                                ? 'bg-[#E25553]/20 text-[#E25553]'
-                                : 'bg-[#E25553]/10 text-[#E25553]'
-                              : isDarkMode
-                                ? 'text-gray-300 hover:bg-gray-700'
-                                : 'text-gray-700 hover:bg-gray-100'
+                              ? 'bg-blue-50 text-blue-600'
+                              : 'text-gray-700 hover:bg-gray-50'
                           }`}
                         >
-                          <span className="font-medium">NEET {year}</span>
+                          <span>NEET {year}</span>
                           {selectedYear === year && (
-                            <CheckCircle className="h-4 w-4 text-[#E25553]" />
+                            <CheckCircle className="h-4 w-4 text-blue-500" />
                           )}
                         </button>
                       ))}
@@ -635,85 +408,52 @@ export default function NEETExamCountdownPage() {
                 </div>
 
                 {/* Live Badge */}
-                <div
-                  className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 backdrop-blur-sm ${isDarkMode ? 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10' : 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10'}`}
-                >
+                <div className="inline-flex items-center gap-2 rounded-full bg-green-50 border border-green-200 px-4 py-2">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-600" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
                   </span>
-                  <span className={`text-sm font-medium ${theme.textAccent}`}>Live Countdown</span>
+                  <span className="text-sm font-medium text-green-700">Live Countdown</span>
                 </div>
               </div>
 
               {/* Title */}
-              <h1
-                className={`mb-4 text-4xl font-black tracking-tight md:text-6xl lg:text-7xl ${theme.textPrimary}`}
-              >
-                <span
-                  className={`bg-clip-text text-transparent ${isDarkMode ? 'bg-gradient-to-r from-white via-[#4A8FE7]/30 to-white' : 'bg-gradient-to-r from-gray-900 via-[#4A8FE7] to-gray-900'}`}
-                >
-                  NEET {selectedYear}
-                </span>
-                <br />
-                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
-                  Exam Countdown
-                </span>
+              <h1 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
+                NEET {selectedYear} Exam Countdown
               </h1>
-
-              <p className={`mx-auto mb-10 max-w-2xl text-lg ${theme.textSecondary}`}>
+              <p className="mx-auto mb-8 max-w-xl text-gray-600">
                 Every second counts. Track your journey to becoming a doctor.
               </p>
 
-              {/* Main Countdown */}
-              <div className="mx-auto mb-10 grid max-w-4xl grid-cols-4 gap-3 md:gap-5">
+              {/* Countdown Cards */}
+              <div className="mx-auto mb-8 grid max-w-3xl grid-cols-4 gap-3 md:gap-4">
                 {[
-                  { value: timeLeft.days, label: 'Days', color: 'from-[#E25553] to-[#D24543]' },
-                  { value: timeLeft.hours, label: 'Hours', color: 'from-[#4A8FE7] to-[#3A7FD7]' },
-                  {
-                    value: timeLeft.minutes,
-                    label: 'Minutes',
-                    color: 'from-[#D99E18] to-[#C98E08]',
-                  },
-                  {
-                    value: timeLeft.seconds,
-                    label: 'Seconds',
-                    color: 'from-[#34C759] to-[#28A745]',
-                  },
-                ].map((item, idx) => (
-                  <div key={item.label} className="group relative">
-                    {/* Glow Effect */}
+                  { value: timeLeft.days, label: 'Days', color: 'bg-red-500' },
+                  { value: timeLeft.hours, label: 'Hours', color: 'bg-blue-500' },
+                  { value: timeLeft.minutes, label: 'Minutes', color: 'bg-amber-500' },
+                  { value: timeLeft.seconds, label: 'Seconds', color: 'bg-green-500' },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl bg-white border border-gray-100 shadow-sm p-4 md:p-6"
+                  >
                     <div
-                      className={`absolute -inset-1 rounded-3xl bg-gradient-to-r ${item.color} blur-lg transition-all duration-500 ${isDarkMode ? 'opacity-50 group-hover:opacity-75' : 'opacity-30 group-hover:opacity-50'}`}
-                    />
-
-                    <div
-                      className={`relative overflow-hidden rounded-2xl border p-4 backdrop-blur-xl md:rounded-3xl md:p-6 ${theme.cardBorder} ${theme.cardBg}`}
+                      className={`mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl ${item.color} md:h-12 md:w-12`}
                     >
-                      {/* Inner Glow */}
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${item.color} ${isDarkMode ? 'opacity-10' : 'opacity-5'}`}
-                      />
-
-                      <div className="relative">
-                        <div
-                          className={`bg-gradient-to-r ${item.color} bg-clip-text text-5xl font-black tabular-nums text-transparent md:text-7xl lg:text-8xl`}
-                        >
-                          {item.value.toString().padStart(2, '0')}
-                        </div>
-                        <div
-                          className={`mt-2 text-xs font-semibold uppercase tracking-widest md:text-sm ${theme.textAccent}`}
-                        >
-                          {item.label}
-                        </div>
-                      </div>
+                      <Timer className="h-5 w-5 text-white md:h-6 md:w-6" />
+                    </div>
+                    <div className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
+                      {item.value.toString().padStart(2, '0')}
+                    </div>
+                    <div className="mt-1 text-xs font-medium uppercase tracking-wide text-gray-500 md:text-sm">
+                      {item.label}
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* Exam Info Pills */}
-              <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
+              {/* Exam Info */}
+              <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
                 {[
                   {
                     icon: Calendar,
@@ -728,9 +468,9 @@ export default function NEETExamCountdownPage() {
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm backdrop-blur-sm ${isDarkMode ? 'border-[#4A8FE7]/20 bg-[#4A8FE7]/10 text-[#4A8FE7]' : 'border-[#4A8FE7]/30 bg-[#4A8FE7]/10 text-[#4A8FE7]'}`}
+                    className="flex items-center gap-2 rounded-full bg-gray-50 border border-gray-200 px-3 py-1.5 text-sm text-gray-600"
                   >
-                    <item.icon className="h-4 w-4" />
+                    <item.icon className="h-4 w-4 text-gray-400" />
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -739,116 +479,92 @@ export default function NEETExamCountdownPage() {
               {/* Share Button */}
               <button
                 onClick={shareCountdown}
-                className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl ${theme.buttonPrimary}`}
+                className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-600 transition-colors"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-[#3A7FD7] to-[#4A8FE7] opacity-0 transition-opacity group-hover:opacity-100" />
-                <Share2 className="relative h-5 w-5" />
-                <span className="relative">Share Countdown</span>
+                <Share2 className="h-4 w-4" />
+                Share Countdown
               </button>
             </div>
           </div>
         </section>
 
         {/* Phase Indicator */}
-        <section className="relative -mt-4 px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div
-              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 backdrop-blur-xl ${isDarkMode ? 'border-white/10 from-[#4A8FE7]/20 via-[#34C759]/10 to-[#4A8FE7]/20' : 'border-[#4A8FE7]/20 from-[#4A8FE7]/10 via-[#34C759]/5 to-[#4A8FE7]/10'}`}
-            >
-              <div className={`rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
-                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                  <div className="flex items-center gap-4">
-                    <div className="relative">
-                      <div className="absolute inset-0 animate-ping rounded-2xl bg-amber-500/30" />
-                      <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 shadow-lg shadow-amber-500/30">
-                        <Zap className="h-8 w-8 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className={`text-sm font-medium ${theme.textAccent}`}>Current Phase</p>
-                      <h3 className={`text-2xl font-bold md:text-3xl ${theme.textPrimary}`}>
-                        {currentPhase.name}
-                      </h3>
-                    </div>
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
+              <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500">
+                    <Target className="h-6 w-6 text-white" />
                   </div>
-                  <p className={`max-w-md text-center md:text-right ${theme.textSecondary}`}>
-                    {currentPhase.tip}
-                  </p>
+                  <div>
+                    <p className="text-sm text-gray-500">Current Phase</p>
+                    <h3 className="text-xl font-bold text-gray-900">{currentPhase.name}</h3>
+                  </div>
                 </div>
+                <p className="text-center text-sm text-gray-600 md:text-right md:max-w-xs">
+                  {currentPhase.tip}
+                </p>
+              </div>
 
-                {/* Progress Bar */}
-                <div className="mt-8">
-                  <div
-                    className={`mb-3 flex justify-between text-xs font-medium ${theme.textMuted}`}
-                  >
-                    {PHASES.map((phase) => (
-                      <span
-                        key={phase.name}
-                        className={phase.name === currentPhase.name ? theme.textPrimary : ''}
-                      >
-                        {phase.name}
-                      </span>
-                    ))}
-                  </div>
-                  <div className={`h-3 overflow-hidden rounded-full ${theme.progressBg}`}>
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-[#E25553] via-[#D99E18] to-[#34C759] transition-all duration-1000"
-                      style={{ width: `${progressPercent}%` }}
-                    />
-                  </div>
-                  <p className={`mt-3 text-center text-sm ${theme.textMuted}`}>
-                    <span className={`font-bold ${theme.textPrimary}`}>{progressPercent}%</span> of
-                    your NEET journey completed
-                  </p>
+              {/* Progress Bar */}
+              <div className="mt-6">
+                <div className="mb-2 flex justify-between text-xs font-medium text-gray-400">
+                  {PHASES.map((phase) => (
+                    <span
+                      key={phase.name}
+                      className={phase.name === currentPhase.name ? 'text-gray-900' : ''}
+                    >
+                      {phase.name}
+                    </span>
+                  ))}
                 </div>
+                <div className="h-2 overflow-hidden rounded-full bg-gray-100">
+                  <div
+                    className="h-full rounded-full bg-blue-500 transition-all duration-1000"
+                    style={{ width: `${progressPercent}%` }}
+                  />
+                </div>
+                <p className="mt-2 text-center text-sm text-gray-500">
+                  <span className="font-semibold text-gray-900">{progressPercent}%</span> of your
+                  NEET journey completed
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Important Dates */}
-        <section className="relative px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-12 text-center">
-              <h2 className={`mb-3 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
-                Important{' '}
-                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>Dates</span>
-              </h2>
-              <p className={`flex items-center justify-center gap-2 text-sm ${theme.textMuted}`}>
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-6 text-center">
+              <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Important Dates</h2>
+              <p className="mt-1 flex items-center justify-center gap-1 text-sm text-gray-500">
                 <AlertCircle className="h-4 w-4" />
-                Tentative dates based on previous years. Official dates will be announced by NTA.
+                Tentative dates. Official dates announced by NTA.
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {getImportantDates(selectedYear).map((item, idx) => {
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {getImportantDates(selectedYear).map((item) => {
                 const Icon = item.icon
                 const isExam = item.event === `NEET ${selectedYear} Exam`
                 return (
                   <div
                     key={item.event}
-                    className={`group relative overflow-hidden rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                      isExam
-                        ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/20 to-orange-500/20'
-                        : `${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`
+                    className={`rounded-2xl bg-white border p-4 transition-all hover:shadow-md ${
+                      isExam ? 'border-red-200 bg-red-50' : 'border-gray-100 shadow-sm'
                     }`}
                   >
-                    {isExam && (
-                      <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-amber-500/20 blur-2xl" />
-                    )}
-                    <div className="relative p-5">
-                      <div
-                        className={`mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r ${item.color} shadow-lg`}
-                      >
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-                      <h3
-                        className={`mb-1 font-semibold ${isExam ? 'text-amber-500' : theme.textPrimary}`}
-                      >
-                        {item.event}
-                      </h3>
-                      <p className={`text-sm ${theme.textMuted}`}>{item.date}</p>
+                    <div
+                      className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${item.color}`}
+                    >
+                      <Icon className="h-5 w-5 text-white" />
                     </div>
+                    <h3 className={`font-semibold ${isExam ? 'text-red-600' : 'text-gray-900'}`}>
+                      {item.event}
+                    </h3>
+                    <p className="text-sm text-gray-500">{item.date}</p>
                   </div>
                 )
               })}
@@ -857,234 +573,152 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* Study Calculator + Quick Stats */}
-        <section className="relative px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-5xl">
             <div className="grid gap-6 lg:grid-cols-2">
               {/* Study Calculator */}
-              <div
-                className={`group relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
-              >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br from-[#4A8FE7]/10 to-[#3A7FD7]/10 opacity-0 transition-opacity group-hover:opacity-100`}
-                />
-                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
-                  <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#4A8FE7] to-[#3A7FD7] shadow-lg shadow-[#4A8FE7]/25">
-                      <Calculator className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Study Calculator</h3>
-                      <p className={`text-sm ${theme.textMuted}`}>Plan your preparation hours</p>
-                    </div>
+              <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500">
+                    <Calculator className="h-5 w-5 text-white" />
                   </div>
-
-                  <div className="mb-6">
-                    <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
-                      Hours you can study per day
-                    </label>
-                    <div className="flex items-center gap-4">
-                      <input
-                        type="range"
-                        min="2"
-                        max="12"
-                        value={studyHoursPerDay}
-                        onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
-                        className={`h-2 w-full cursor-pointer appearance-none rounded-full accent-[#4A8FE7] ${theme.progressBg} [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-[#4A8FE7] [&::-webkit-slider-thumb]:to-[#3A7FD7] [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-[#4A8FE7]/50`}
-                        aria-label="Study hours per day"
-                        aria-valuemin={2}
-                        aria-valuemax={12}
-                        aria-valuenow={studyHoursPerDay}
-                      />
-                      <span className="w-16 rounded-xl bg-gradient-to-r from-[#4A8FE7] to-[#3A7FD7] px-3 py-2 text-center font-bold text-white shadow-lg shadow-[#4A8FE7]/25">
-                        {studyHoursPerDay}h
-                      </span>
-                    </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Study Calculator</h3>
+                    <p className="text-sm text-gray-500">Plan your preparation hours</p>
                   </div>
+                </div>
 
-                  <div
-                    className={`space-y-3 rounded-2xl border p-5 ${theme.cardBorder} ${theme.cardBg}`}
-                  >
-                    {isExamOver ? (
-                      <div className="py-6 text-center">
-                        <Award className="mx-auto mb-3 h-14 w-14 text-green-600" />
-                        <p className={`text-xl font-bold ${theme.textPrimary}`}>
-                          NEET {selectedYear} Completed!
-                        </p>
-                        <p className={theme.textMuted}>Hope you did your best!</p>
+                <div className="mb-6">
+                  <label className="mb-2 block text-sm font-medium text-gray-700">
+                    Hours per day: {studyHoursPerDay}h
+                  </label>
+                  <input
+                    type="range"
+                    min="2"
+                    max="12"
+                    value={studyHoursPerDay}
+                    onChange={(e) => setStudyHoursPerDay(parseInt(e.target.value))}
+                    className="w-full h-2 rounded-full bg-gray-200 accent-blue-500"
+                  />
+                </div>
+
+                <div className="space-y-3 rounded-xl bg-gray-50 p-4">
+                  {isExamOver ? (
+                    <div className="text-center py-4">
+                      <Award className="mx-auto mb-2 h-10 w-10 text-green-500" />
+                      <p className="font-bold text-gray-900">NEET {selectedYear} Completed!</p>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+                        <span className="text-gray-600">Total Hours</span>
+                        <span className="text-2xl font-bold text-blue-500">
+                          {totalStudyHours.toLocaleString()}h
+                        </span>
                       </div>
-                    ) : isExamDay ? (
-                      <div className="py-6 text-center">
-                        <Sparkles className="mx-auto mb-3 h-14 w-14 animate-pulse text-amber-500" />
-                        <p className={`text-xl font-bold ${theme.textPrimary}`}>Exam Day!</p>
-                        <p className={theme.textMuted}>All the best! You&apos;ve prepared well.</p>
-                      </div>
-                    ) : (
-                      <>
-                        <div
-                          className={`flex items-center justify-between border-b pb-4 ${theme.cardBorder}`}
-                        >
-                          <span className={`font-medium ${theme.textSecondary}`}>
-                            Total Hours Remaining
-                          </span>
-                          <span className="text-3xl font-bold text-blue-500">
-                            {totalStudyHours.toLocaleString()}h
-                          </span>
-                        </div>
-                        {[
-                          {
-                            subject: 'Biology',
-                            hours: biologyHours,
-                            percent: '50%',
-                            color: 'bg-green-600',
-                            icon: Leaf,
-                          },
-                          {
-                            subject: 'Physics',
-                            hours: physicsHours,
-                            percent: '25%',
-                            color: 'from-[#4A8FE7] to-[#3A7FD7]',
-                            icon: Atom,
-                          },
-                          {
-                            subject: 'Chemistry',
-                            hours: chemistryHours,
-                            percent: '25%',
-                            color: 'from-orange-500 to-amber-600',
-                            icon: Beaker,
-                          },
-                        ].map((item) => (
-                          <div
-                            key={item.subject}
-                            className="flex items-center justify-between py-2"
-                          >
-                            <div className="flex items-center gap-3">
-                              <div
-                                className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-r ${item.color}`}
-                              >
-                                <item.icon className="h-4 w-4 text-white" />
-                              </div>
-                              <span className={theme.textSecondary}>
-                                {item.subject} ({item.percent})
-                              </span>
+                      {[
+                        {
+                          subject: 'Biology',
+                          hours: biologyHours,
+                          color: 'bg-green-500',
+                          icon: Leaf,
+                        },
+                        {
+                          subject: 'Physics',
+                          hours: physicsHours,
+                          color: 'bg-blue-500',
+                          icon: Atom,
+                        },
+                        {
+                          subject: 'Chemistry',
+                          hours: chemistryHours,
+                          color: 'bg-amber-500',
+                          icon: Beaker,
+                        },
+                      ].map((item) => (
+                        <div key={item.subject} className="flex items-center justify-between py-1">
+                          <div className="flex items-center gap-2">
+                            <div
+                              className={`flex h-7 w-7 items-center justify-center rounded-lg ${item.color}`}
+                            >
+                              <item.icon className="h-3.5 w-3.5 text-white" />
                             </div>
-                            <span className={`font-semibold ${theme.textPrimary}`}>
-                              {item.hours}h
-                            </span>
+                            <span className="text-sm text-gray-600">{item.subject}</span>
                           </div>
-                        ))}
-                      </>
-                    )}
-                  </div>
+                          <span className="font-medium text-gray-900">{item.hours}h</span>
+                        </div>
+                      ))}
+                    </>
+                  )}
                 </div>
               </div>
 
               {/* Quick Stats */}
-              <div
-                className={`group relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#E25553]/10 to-[#D99E18]/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
-                  <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E25553] to-[#D24543] shadow-lg shadow-[#E25553]/25">
-                      <Target className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Quick Stats</h3>
-                      <p className={`text-sm ${theme.textMuted}`}>Exam pattern at a glance</p>
-                    </div>
+              <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-500">
+                    <Target className="h-5 w-5 text-white" />
                   </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Quick Stats</h3>
+                    <p className="text-sm text-gray-500">Exam pattern at a glance</p>
+                  </div>
+                </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    {
+                      value: '180',
+                      label: 'Questions',
+                      sub: '45 per subject',
+                      color: 'text-red-500',
+                    },
+                    {
+                      value: '720',
+                      label: 'Total Marks',
+                      sub: '+4 per correct',
+                      color: 'text-blue-500',
+                    },
+                    {
+                      value: '3:20',
+                      label: 'Duration',
+                      sub: '3 hours 20 min',
+                      color: 'text-amber-500',
+                    },
+                    { value: '-1', label: 'Negative', sub: 'per wrong', color: 'text-gray-500' },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-xl bg-gray-50 p-3 text-center">
+                      <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
+                      <div className="text-sm font-medium text-gray-700">{stat.label}</div>
+                      <div className="text-xs text-gray-500">{stat.sub}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Subject Distribution */}
+                <div className="mt-4 rounded-xl bg-gray-50 p-4">
+                  <h4 className="mb-3 text-sm font-semibold text-gray-900">
+                    Question Distribution
+                  </h4>
+                  <div className="space-y-2">
                     {[
-                      {
-                        value: '180',
-                        label: 'Total Questions',
-                        sub: '45 per subject',
-                        color: 'from-[#E25553] to-[#D24543]',
-                      },
-                      {
-                        value: '720',
-                        label: 'Total Marks',
-                        sub: '+4 per correct',
-                        color: 'from-[#4A8FE7] to-[#3A7FD7]',
-                      },
-                      {
-                        value: '3:20',
-                        label: 'Duration',
-                        sub: '3 hours 20 min',
-                        color: 'from-[#D99E18] to-[#C98E08]',
-                      },
-                      {
-                        value: '-1',
-                        label: 'Negative Marking',
-                        sub: 'per wrong answer',
-                        color: 'bg-red-600',
-                      },
-                    ].map((stat) => (
-                      <div
-                        key={stat.label}
-                        className={`rounded-2xl border p-4 text-center transition-all ${theme.cardBorder} ${theme.cardBg} hover:bg-opacity-80`}
-                      >
-                        <div
-                          className={`bg-gradient-to-r ${stat.color} bg-clip-text text-3xl font-bold text-transparent`}
-                        >
-                          {stat.value}
+                      { subject: 'Biology', questions: 90, percent: 50, color: 'bg-green-500' },
+                      { subject: 'Physics', questions: 45, percent: 25, color: 'bg-blue-500' },
+                      { subject: 'Chemistry', questions: 45, percent: 25, color: 'bg-amber-500' },
+                    ].map((item) => (
+                      <div key={item.subject}>
+                        <div className="mb-1 flex items-center justify-between text-xs">
+                          <span className="text-gray-600">{item.subject}</span>
+                          <span className="font-medium text-gray-900">{item.questions} Q</span>
                         </div>
-                        <div className={`mt-1 text-sm font-medium ${theme.textSecondary}`}>
-                          {stat.label}
+                        <div className="h-1.5 overflow-hidden rounded-full bg-gray-200">
+                          <div
+                            className={`h-full rounded-full ${item.color}`}
+                            style={{ width: `${item.percent}%` }}
+                          />
                         </div>
-                        <div className={`text-xs ${theme.textMuted}`}>({stat.sub})</div>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Subject Distribution */}
-                  <div
-                    className={`mt-6 rounded-2xl border p-5 ${theme.cardBorder} ${theme.cardBg}`}
-                  >
-                    <h4 className={`mb-4 font-semibold ${theme.textPrimary}`}>
-                      Question Distribution
-                    </h4>
-                    <div className="space-y-3">
-                      {[
-                        {
-                          subject: 'Biology',
-                          questions: 90,
-                          marks: 360,
-                          percent: 50,
-                          color: 'bg-green-600',
-                        },
-                        {
-                          subject: 'Physics',
-                          questions: 45,
-                          marks: 180,
-                          percent: 25,
-                          color: 'bg-[#4A8FE7]',
-                        },
-                        {
-                          subject: 'Chemistry',
-                          questions: 45,
-                          marks: 180,
-                          percent: 25,
-                          color: 'bg-orange-500',
-                        },
-                      ].map((item) => (
-                        <div key={item.subject}>
-                          <div className="mb-1 flex items-center justify-between text-sm">
-                            <span className={theme.textSecondary}>{item.subject}</span>
-                            <span className={`font-medium ${theme.textPrimary}`}>
-                              {item.questions} Q ({item.marks} marks)
-                            </span>
-                          </div>
-                          <div className={`h-2 overflow-hidden rounded-full ${theme.progressBg}`}>
-                            <div
-                              className={`h-full rounded-full ${item.color}`}
-                              style={{ width: `${item.percent}%` }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -1093,271 +727,189 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* Target + Streak */}
-        <section className="relative px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-5xl">
             <div className="grid gap-6 lg:grid-cols-2">
               {/* Target Score */}
-              <div
-                className={`relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl ${theme.cardBorder} ${theme.cardBg}`}
-              >
-                <div className={`rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
-                  <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 shadow-lg shadow-green-500/25">
-                      <Trophy className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Your Target</h3>
-                      <p className={`text-sm ${theme.textMuted}`}>
-                        Set your goal and track progress
-                      </p>
+              <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500">
+                    <Trophy className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Your Target</h3>
+                    <p className="text-sm text-gray-500">Set your goal</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div>
+                    <label className="mb-2 block text-sm font-medium text-gray-700">
+                      Target Score
+                    </label>
+                    <div className="flex gap-2">
+                      {[600, 650, 700].map((score) => (
+                        <button
+                          key={score}
+                          onClick={() => setTargetScore(score)}
+                          className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors ${
+                            targetScore === score
+                              ? 'bg-green-500 text-white'
+                              : 'bg-gray-50 border border-gray-200 text-gray-700 hover:bg-gray-100'
+                          }`}
+                        >
+                          {score}+
+                        </button>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="space-y-5">
-                    <div>
-                      <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
-                        Target Score
-                      </label>
-                      <div className="flex gap-3">
-                        {[600, 650, 700].map((score) => (
-                          <button
-                            key={score}
-                            onClick={() => setTargetScore(score)}
-                            className={`flex-1 rounded-xl px-4 py-3 font-bold transition-all ${
-                              targetScore === score
-                                ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25'
-                                : `border ${theme.cardBorder} ${theme.cardBg} ${theme.textSecondary} hover:bg-opacity-80`
-                            }`}
-                          >
-                            {score}+
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className={`mb-3 block text-sm font-medium ${theme.textSecondary}`}>
-                        Category
-                      </label>
-                      <select
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                        className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600/20 ${theme.inputBg} ${theme.inputBorder} ${theme.textPrimary} ${theme.inputFocus}`}
-                      >
-                        <option
-                          value="General"
-                          className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}
-                        >
-                          General
-                        </option>
-                        <option value="EWS" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
-                          EWS
-                        </option>
-                        <option
-                          value="OBC-NCL"
-                          className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}
-                        >
-                          OBC-NCL
-                        </option>
-                        <option value="SC" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
-                          SC
-                        </option>
-                        <option value="ST" className={isDarkMode ? 'bg-[#0f0f24]' : 'bg-white'}>
-                          ST
-                        </option>
-                      </select>
-                    </div>
-
-                    <div
-                      className={`rounded-2xl p-5 ${isDarkMode ? 'bg-gradient-to-r from-green-600/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
+                  <div>
+                    <label className="mb-2 block text-sm font-medium text-gray-700">Category</label>
+                    <select
+                      value={category}
+                      onChange={(e) => setCategory(e.target.value)}
+                      className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-gray-900 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
                     >
-                      <div className="flex items-center gap-2 text-green-600">
-                        <Award className="h-5 w-5" />
-                        <span className="font-semibold">Expected Rank Range</span>
-                      </div>
-                      <p className="mt-2 text-3xl font-bold text-green-600">
-                        {getRecommendedCutoff()}
-                      </p>
-                      <p
-                        className={`mt-1 text-sm ${isDarkMode ? 'text-green-400/70' : 'text-green-600/70'}`}
-                      >
-                        With {targetScore}+ marks in {category} category
-                      </p>
+                      {['General', 'EWS', 'OBC-NCL', 'SC', 'ST'].map((cat) => (
+                        <option key={cat} value={cat}>
+                          {cat}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="rounded-xl bg-green-50 border border-green-100 p-4">
+                    <div className="flex items-center gap-2 text-green-700">
+                      <Award className="h-4 w-4" />
+                      <span className="text-sm font-medium">Expected Rank</span>
                     </div>
+                    <p className="mt-1 text-xl font-bold text-green-600">
+                      {getRecommendedCutoff()}
+                    </p>
+                    <p className="text-xs text-green-600/70">
+                      With {targetScore}+ in {category}
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Streak Tracker */}
-              <div
-                className={`relative overflow-hidden rounded-3xl border p-1 backdrop-blur-xl ${theme.cardBorder} ${theme.cardBg}`}
-              >
-                <div
-                  className={`absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br blur-3xl ${isDarkMode ? 'from-orange-500/20 to-red-500/20' : 'from-orange-200/50 to-red-200/50'}`}
-                />
-                <div className={`relative rounded-[22px] p-6 md:p-8 ${theme.cardInnerBg}`}>
-                  <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg shadow-orange-500/25">
-                      <Flame className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-bold ${theme.textPrimary}`}>Study Streak</h3>
-                      <p className={`text-sm ${theme.textMuted}`}>
-                        Build consistency, build success
-                      </p>
-                    </div>
+              <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500">
+                    <Flame className="h-5 w-5 text-white" />
                   </div>
-
-                  <div className="mb-6 text-center">
-                    <div className="relative mx-auto h-36 w-36">
-                      {/* Outer Ring */}
-                      <div
-                        className={`absolute inset-0 animate-spin rounded-full border-4 ${isDarkMode ? 'border-orange-500/20' : 'border-orange-300/30'}`}
-                        style={{ animationDuration: '8s' }}
-                      />
-                      <div
-                        className={`absolute inset-2 rounded-full border-2 border-dashed ${isDarkMode ? 'border-orange-500/30' : 'border-orange-400/40'}`}
-                      />
-                      {/* Inner Circle */}
-                      <div className="absolute inset-4 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-red-500 shadow-xl shadow-orange-500/30">
-                        <Flame className="h-8 w-8 text-white" />
-                        <div className="text-4xl font-black text-white">{streak}</div>
-                        <div className="text-xs font-medium text-white/80">day streak</div>
-                      </div>
-                    </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Study Streak</h3>
+                    <p className="text-sm text-gray-500">Build consistency</p>
                   </div>
-
-                  {studiedToday ? (
-                    <div
-                      className={`rounded-2xl p-5 text-center ${isDarkMode ? 'bg-gradient-to-r from-green-600/20 to-green-600/20' : 'bg-gradient-to-r from-green-50 to-green-100'}`}
-                    >
-                      <CheckCircle className="mx-auto h-10 w-10 text-green-600" />
-                      <p className="mt-3 text-lg font-bold text-green-600">
-                        Great job! You studied today!
-                      </p>
-                      <p
-                        className={`text-sm ${isDarkMode ? 'text-green-400/70' : 'text-green-600/70'}`}
-                      >
-                        Come back tomorrow to extend your streak
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="text-center">
-                      <p className={`mb-4 ${theme.textMuted}`}>Did you study today?</p>
-                      <button
-                        onClick={markStudied}
-                        className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-bold text-white shadow-lg shadow-orange-500/25 transition-all hover:shadow-xl hover:shadow-orange-500/30"
-                      >
-                        <span className="absolute inset-0 bg-red-600 opacity-0 transition-opacity group-hover:opacity-100" />
-                        <span className="relative flex items-center justify-center gap-2">
-                          <Flame className="h-5 w-5" />
-                          Yes, I Studied Today!
-                        </span>
-                      </button>
-                    </div>
-                  )}
                 </div>
+
+                <div className="mb-6 text-center">
+                  <div className="mx-auto flex h-28 w-28 flex-col items-center justify-center rounded-full bg-amber-500">
+                    <Flame className="h-6 w-6 text-white" />
+                    <div className="text-3xl font-bold text-white">{streak}</div>
+                    <div className="text-xs text-white/80">days</div>
+                  </div>
+                </div>
+
+                {studiedToday ? (
+                  <div className="rounded-xl bg-green-50 border border-green-100 p-4 text-center">
+                    <CheckCircle className="mx-auto mb-2 h-8 w-8 text-green-500" />
+                    <p className="font-semibold text-green-700">You studied today!</p>
+                    <p className="text-sm text-green-600/70">Come back tomorrow</p>
+                  </div>
+                ) : (
+                  <div className="text-center">
+                    <p className="mb-3 text-sm text-gray-500">Did you study today?</p>
+                    <button
+                      onClick={markStudied}
+                      className="w-full rounded-xl bg-amber-500 px-4 py-3 font-semibold text-white hover:bg-amber-600 transition-colors"
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        <Flame className="h-4 w-4" />
+                        Yes, I Studied Today!
+                      </span>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </section>
 
         {/* Topper Quote */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div
-              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 backdrop-blur-xl ${isDarkMode ? 'border-white/10 from-[#4A8FE7]/20 via-[#34C759]/10 to-[#4A8FE7]/20' : 'border-[#4A8FE7]/20 from-[#4A8FE7]/10 via-[#34C759]/5 to-[#4A8FE7]/10'}`}
-            >
-              <div className={`rounded-[22px] p-8 text-center md:p-12 ${theme.cardInnerBg}`}>
-                <Quote
-                  className={`mx-auto mb-6 h-12 w-12 ${isDarkMode ? 'text-[#4A8FE7]/50' : 'text-[#4A8FE7]/50'}`}
-                />
-                <blockquote
-                  className={`mb-6 text-xl font-medium md:text-2xl lg:text-3xl ${theme.textPrimary}`}
-                >
-                  &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
-                </blockquote>
-                <cite className={theme.textAccent}>
-                  — {TOPPER_QUOTES[currentQuote].author}, NEET {TOPPER_QUOTES[currentQuote].year}
-                </cite>
-                <div className="mt-8 flex justify-center gap-2">
-                  {TOPPER_QUOTES.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentQuote(idx)}
-                      className={`h-2 rounded-full transition-all ${
-                        idx === currentQuote
-                          ? 'w-8 bg-gradient-to-r from-[#4A8FE7] to-[#34C759]'
-                          : `w-2 ${isDarkMode ? 'bg-[#4A8FE7]/30 hover:bg-[#4A8FE7]/50' : 'bg-[#4A8FE7]/20 hover:bg-[#4A8FE7]/30'}`
-                      }`}
-                    />
-                  ))}
-                </div>
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-8 text-center">
+              <Quote className="mx-auto mb-4 h-8 w-8 text-blue-200" />
+              <blockquote className="mb-4 text-lg font-medium text-gray-900 md:text-xl">
+                &ldquo;{TOPPER_QUOTES[currentQuote].quote}&rdquo;
+              </blockquote>
+              <cite className="text-sm text-blue-500">
+                — {TOPPER_QUOTES[currentQuote].author}, NEET {TOPPER_QUOTES[currentQuote].year}
+              </cite>
+              <div className="mt-6 flex justify-center gap-2">
+                {TOPPER_QUOTES.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentQuote(idx)}
+                    className={`h-2 rounded-full transition-all ${
+                      idx === currentQuote ? 'w-6 bg-blue-500' : 'w-2 bg-gray-200 hover:bg-gray-300'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* More Tools */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-12 text-center">
-              <h2 className={`mb-3 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
-                More{' '}
-                <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
-                  NEET Tools
-                </span>
-              </h2>
-              <p className={theme.textMuted}>Complete your preparation with our free tools</p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-3">
+        <section className="py-8 px-4 sm:px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">More NEET Tools</h2>
+            <div className="grid gap-4 md:grid-cols-3">
               {[
                 {
                   href: '/neet-college-predictor',
                   icon: Building2,
                   title: 'College Predictor',
-                  desc: 'Find medical colleges based on your expected rank. 470+ colleges database.',
-                  color: 'from-[#4A8FE7] to-[#3A7FD7]',
+                  desc: 'Find colleges based on your rank',
+                  color: 'bg-blue-500',
                 },
                 {
                   href: '/neet-rank-predictor',
                   icon: TrendingUp,
                   title: 'Rank Predictor',
-                  desc: 'Predict your All India Rank based on expected score with accuracy.',
-                  color: 'from-orange-500 to-amber-500',
+                  desc: 'Predict your All India Rank',
+                  color: 'bg-amber-500',
                 },
                 {
                   href: '/neet-study-plan-generator',
                   icon: BookOpen,
-                  title: 'Study Plan Generator',
-                  desc: 'Get personalized week-by-week study schedule for NEET Biology.',
-                  color: 'bg-green-600',
+                  title: 'Study Plan',
+                  desc: 'Personalized study schedule',
+                  color: 'bg-green-500',
                 },
               ].map((tool) => (
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className={`group relative overflow-hidden rounded-2xl border p-6 transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
+                  className="group rounded-2xl bg-white border border-gray-100 shadow-sm p-5 transition-all hover:shadow-md hover:border-blue-200"
                 >
                   <div
-                    className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${tool.color} shadow-lg transition-transform group-hover:scale-110`}
+                    className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${tool.color} transition-transform group-hover:scale-110`}
                   >
-                    <tool.icon className="h-7 w-7 text-white" />
+                    <tool.icon className="h-5 w-5 text-white" />
                   </div>
-                  <h3
-                    className={`mb-2 text-lg font-bold transition-colors ${theme.textPrimary} group-hover:text-[#4A8FE7]`}
-                  >
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-500">
                     {tool.title}
                   </h3>
-                  <p className={`mb-4 text-sm ${theme.textMuted}`}>{tool.desc}</p>
-                  <span
-                    className={`inline-flex items-center gap-1 bg-gradient-to-r ${tool.color} bg-clip-text text-sm font-semibold text-transparent`}
-                  >
+                  <p className="mt-1 text-sm text-gray-500">{tool.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-blue-500">
                     Try Now{' '}
-                    <ArrowRight
-                      className={`h-4 w-4 transition-transform group-hover:translate-x-1 ${theme.textAccent}`}
-                    />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
               ))}
@@ -1366,35 +918,29 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* FAQ */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8">
+        <section className="py-8 px-4 sm:px-6">
           <div className="mx-auto max-w-3xl">
-            <h2 className={`mb-10 text-center text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
-              Frequently Asked{' '}
-              <span className={`bg-clip-text text-transparent ${theme.gradientText}`}>
-                Questions
-              </span>
+            <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">
+              Frequently Asked Questions
             </h2>
-
-            <div className="space-y-4">
+            <div className="space-y-3">
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className={`overflow-hidden rounded-2xl border backdrop-blur-sm transition-all ${theme.cardBorder} ${theme.cardBg} ${theme.cardHoverBorder}`}
+                  className="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden"
                 >
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                    className="flex w-full items-center justify-between p-5 text-left"
+                    className="flex w-full items-center justify-between p-4 text-left"
                   >
-                    <span className={`font-semibold ${theme.textPrimary}`}>{faq.q}</span>
-                    <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-lg transition-transform ${isDarkMode ? 'bg-[#4A8FE7]/20' : 'bg-[#4A8FE7]/10'} ${expandedFaq === idx ? 'rotate-180' : ''}`}
-                    >
-                      <ChevronDown className={`h-5 w-5 ${theme.textAccent}`} />
-                    </div>
+                    <span className="font-medium text-gray-900">{faq.q}</span>
+                    <ChevronDown
+                      className={`h-5 w-5 text-gray-400 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
+                    />
                   </button>
                   {expandedFaq === idx && (
-                    <div className={`border-t px-5 pb-5 pt-3 ${theme.cardBorder}`}>
-                      <p className={theme.textSecondary}>{faq.a}</p>
+                    <div className="border-t border-gray-100 px-4 pb-4 pt-2">
+                      <p className="text-sm text-gray-600">{faq.a}</p>
                     </div>
                   )}
                 </div>
@@ -1404,42 +950,29 @@ export default function NEETExamCountdownPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div
-              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-r p-1 ${isDarkMode ? 'border-[#4A8FE7]/30 from-[#4A8FE7]/30 via-[#34C759]/20 to-[#D99E18]/30' : 'border-[#4A8FE7]/30 from-[#4A8FE7]/20 via-[#34C759]/10 to-[#D99E18]/20'}`}
-            >
-              <div
-                className={`rounded-[22px] px-8 py-16 text-center backdrop-blur-xl ${theme.cardInnerBg}`}
-              >
-                <Rocket className={`mx-auto mb-6 h-16 w-16 ${theme.textAccent}`} />
-                <h2 className={`mb-4 text-3xl font-bold md:text-4xl ${theme.textPrimary}`}>
-                  Start Your NEET {selectedYear} Journey
-                </h2>
-                <p className={`mb-8 text-lg ${theme.textSecondary}`}>
-                  Every day counts. Begin your preparation with Cerebrum Biology Academy.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link
-                    href="/contact"
-                    className={`group relative overflow-hidden rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl ${theme.buttonPrimary}`}
-                  >
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#3A7FD7] to-[#4A8FE7] opacity-0 transition-opacity group-hover:opacity-100" />
-                    <span className="relative flex items-center gap-2">
-                      <GraduationCap className="h-5 w-5" />
-                      Join Our Course
-                    </span>
-                  </Link>
-                  <Link
-                    href="/neet-tools"
-                    className={`rounded-full border px-8 py-4 font-semibold transition-all ${theme.buttonSecondary}`}
-                  >
-                    <span className="flex items-center gap-2">
-                      Explore All Tools
-                      <ArrowRight className="h-5 w-5" />
-                    </span>
-                  </Link>
-                </div>
+        <section className="py-12 px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-2xl bg-blue-500 p-8 text-center text-white">
+              <Rocket className="mx-auto mb-4 h-12 w-12" />
+              <h2 className="mb-2 text-2xl font-bold">Start Your NEET {selectedYear} Journey</h2>
+              <p className="mb-6 text-blue-100">
+                Every day counts. Begin your preparation with Cerebrum Biology Academy.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
+                >
+                  <GraduationCap className="h-4 w-4" />
+                  Join Our Course
+                </Link>
+                <Link
+                  href="/neet-tools"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-white/50 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                >
+                  Explore Tools
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
