@@ -735,13 +735,14 @@ const nextConfig = {
           ...securityHeaders,
         ],
       },
-      // HTML pages - Short-term caching with revalidation
+      // HTML pages - Short cache to prevent stale CSS references (FOUC fix)
+      // Reduced from 3600s to 60s to ensure fresh HTML with correct CSS chunk names
       {
         source: '/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
+            value: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=60'
           },
           ...securityHeaders,
         ],

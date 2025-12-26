@@ -30,16 +30,16 @@ export const DynamicPWAProvider = dynamic(
   { ssr: false }
 )
 
-// PERFORMANCE: Lazy-load trial banner (not critical for initial render)
+// PERFORMANCE: Lazy-load trial banner with SSR for reduced FOUC
 export const DynamicTrialBanner = dynamic(
   () => import('@/components/trial/TrialBannerWrapper').then((mod) => mod.TrialBannerWrapper),
-  { ssr: false }
+  { ssr: true }
 )
 
-// Maintenance popup - shows after page load
+// Maintenance popup - SSR enabled for reduced FOUC
 export const DynamicMaintenancePopup = dynamic(
   () => import('@/components/ui/MaintenancePopup').then((mod) => mod.MaintenancePopup),
-  { ssr: false }
+  { ssr: true }
 )
 
 // Lazy-load Footer to defer framer-motion bundle (Footer uses motion components)
