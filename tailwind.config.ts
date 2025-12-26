@@ -27,6 +27,7 @@ const config: Config = {
       // Performance-optimized fonts for Indian languages
       fontFamily: {
         sans: [
+          'var(--font-geist-sans)',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',

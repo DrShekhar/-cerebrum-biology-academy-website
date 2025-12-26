@@ -171,7 +171,7 @@ export default function RootLayout({
               __html: `
               /* Critical render path - inline essential styles */
               *,::before,::after{box-sizing:border-box}
-              html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,sans-serif}
+              html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif}
               body{margin:0;line-height:inherit}
               /* Header critical styles */
               header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
