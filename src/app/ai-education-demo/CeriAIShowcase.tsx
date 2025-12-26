@@ -1089,7 +1089,7 @@ export default function CeriAIShowcase() {
       <motion.section
         ref={heroRef}
         style={{ opacity: heroOpacity, scale: heroScale }}
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center bg-slate-800 overflow-hidden"
       >
         <FloatingParticles />
 
@@ -1119,7 +1119,7 @@ export default function CeriAIShowcase() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight"
           >
             Meet{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Ceri AI
             </span>
           </motion.h1>

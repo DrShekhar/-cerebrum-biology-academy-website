@@ -43,8 +43,8 @@ const tierConfigs = {
   ascent: {
     name: 'Ascent',
     subtitle: 'Balanced Excellence',
-    color: 'from-blue-500 to-indigo-500',
-    bgColor: 'bg-gradient-to-br from-blue-50 to-indigo-50',
+    color: 'blue-600',
+    bgColor: 'bg-gray-50',
     borderColor: 'border-blue-200',
     textColor: 'text-blue-700',
     icon: Target,
@@ -270,7 +270,7 @@ export function TierComparison({
         </div>
 
         {/* Bottom CTA */}
-        <div className="p-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+        <div className="p-6 bg-blue-600 text-white">
           <div className="text-center">
             <h3 className="text-xl font-bold mb-2">Ready to Get Started?</h3>
             <p className="text-blue-100 mb-4">

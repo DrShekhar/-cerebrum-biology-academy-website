@@ -376,7 +376,7 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-3xl p-8 text-center text-white"
+          className="mt-16 bg-blue-600 rounded-3xl p-8 text-center text-white"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="h-6 w-6 text-red-300" />

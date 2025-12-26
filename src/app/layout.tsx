@@ -209,7 +209,6 @@ export default function RootLayout({
               .overflow-hidden{overflow:hidden}
               .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
               .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
-              .via-purple-900{--tw-gradient-stops:var(--tw-gradient-from),#581c87,var(--tw-gradient-to,#581c8700)}
               .to-blue-900{--tw-gradient-to:#1e3a8a}
               .text-yellow-300{color:#fcd34d}
               .text-yellow-200{color:#fef08a}

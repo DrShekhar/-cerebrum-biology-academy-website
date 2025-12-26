@@ -218,7 +218,7 @@ export default function BiologyMajorCoursesPage() {
       title: 'Biology Majors',
       description: 'Complete support for undergraduate biology curriculum and career preparation',
       icon: Microscope,
-      color: 'from-blue-600 to-indigo-700',
+      color: 'blue-600',
       benefits: ['Core Biology Courses', 'Elective Support', 'Career Guidance'],
     },
     {

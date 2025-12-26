@@ -2,7 +2,7 @@ export default function BlogPostLoading() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Header Skeleton */}
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 py-16">
+      <div className="bg-indigo-600 py-16">
         <div className="max-w-4xl mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6">

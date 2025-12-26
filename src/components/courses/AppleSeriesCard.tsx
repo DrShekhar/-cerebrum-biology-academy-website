@@ -49,7 +49,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
           icon: Crown,
           gradient: 'from-slate-900 to-slate-700',
           cardBg: 'bg-white',
-          accentColor: 'from-blue-600 to-indigo-600',
+          accentColor: 'bg-blue-600',
           textColor: 'text-slate-900',
           mutedColor: 'text-slate-500',
           badge: { bg: 'bg-indigo-100', text: 'text-indigo-700', label: 'ELITE' },

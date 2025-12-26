@@ -298,7 +298,7 @@ export default function DrShekharSinghPage() {
         </nav>
 
         <section
-          className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-navy-900 text-white py-12 md:py-16 lg:py-20 overflow-hidden"
+          className="relative bg-indigo-700 text-white py-12 md:py-16 lg:py-20 overflow-hidden"
           role="region"
           aria-label="Dr. Shekhar Singh profile overview"
         >
@@ -615,13 +615,13 @@ export default function DrShekharSinghPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200 text-center"
+                className="bg-gray-50 rounded-2xl p-8 border-2 border-blue-200 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">AIIMS Alumni</h3>

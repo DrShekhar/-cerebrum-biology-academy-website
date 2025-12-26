@@ -31,6 +31,7 @@ import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { BlogIllustrationLoader } from './BlogIllustrationLoader'
 import { FAQSchema, extractFAQsFromContent, generateTopicFAQs } from './FAQSchema'
 import { useBlogViews } from '@/hooks/useBlogViews'
@@ -392,6 +393,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-20 animate-fade-in-up">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
                   components={{
                     h1: ({ children }) => {
                       // Skip duplicate h1 if it matches the article title (already rendered in header)
@@ -486,7 +488,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                       </div>
                     ),
                     thead: ({ children }) => (
-                      <thead className="bg-gradient-to-r from-blue-50 to-indigo-50">
+                      <thead className="bg-gray-50">
                         {children}
                       </thead>
                     ),
@@ -568,7 +570,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               </div>
 
               {/* CTA Section */}
-              <div className="mt-16 p-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl text-white text-center animate-fade-in-up">
+              <div className="mt-16 p-8 bg-blue-600 rounded-3xl text-white text-center animate-fade-in-up">
                 <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
                 <p className="text-lg mb-8 opacity-90">
                   Get personalized guidance from AIIMS experts and achieve your medical college

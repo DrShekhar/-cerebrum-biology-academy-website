@@ -80,7 +80,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       successRate: '85%',
       difficulty: 'Intermediate to Advanced',
       color: 'text-blue-600',
-      bgGradient: 'from-blue-50 to-indigo-50',
+      bgGradient: 'bg-gray-50',
       icon: Target,
       popular: true
     },

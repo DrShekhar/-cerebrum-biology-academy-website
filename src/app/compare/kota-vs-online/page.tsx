@@ -439,7 +439,7 @@ export default function KotaVsOnlinePage() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                  <tr className="bg-blue-600 text-white">
                     <th className="px-6 py-4 text-left font-bold">Expense Category</th>
                     <th className="px-6 py-4 text-center font-bold">Kota (Annual)</th>
                     <th className="px-6 py-4 text-center font-bold">Cerebrum Online</th>
@@ -610,7 +610,7 @@ export default function KotaVsOnlinePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg"
               >
                 <div className="flex items-center mb-4">
                   <Trophy className="w-8 h-8 text-yellow-500 mr-3" />

@@ -384,7 +384,7 @@ export const onlineBiologyClassesClass12: SEOLandingContent = {
     highlightedText: 'Where NEET Dreams Come True',
     ctaText: 'See Class Schedule',
     ctaLink: '/class-12',
-    backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

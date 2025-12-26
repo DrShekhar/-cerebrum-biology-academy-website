@@ -93,7 +93,7 @@ export default function LocationsPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-blue-600 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto text-center text-white">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">

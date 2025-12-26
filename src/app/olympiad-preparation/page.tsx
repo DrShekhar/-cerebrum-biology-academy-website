@@ -30,7 +30,7 @@ const olympiads = [
     eligibility: 'Class 1-12',
     benefits: 'Cash prizes, medals, recognition',
     link: '/nso-coaching',
-    color: 'from-blue-500 to-indigo-500',
+    color: 'blue-600',
   },
   {
     name: 'NSEB',
@@ -177,7 +177,7 @@ export default function OlympiadPreparationPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-purple-800 to-violet-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -421,7 +421,7 @@ export default function OlympiadPreparationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

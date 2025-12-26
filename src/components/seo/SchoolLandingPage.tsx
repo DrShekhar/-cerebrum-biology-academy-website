@@ -195,7 +195,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
         </section>
 
         {/* Why Students Choose Us */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
+        <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -386,7 +386,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20 text-white">
+        <section className="bg-blue-600 py-20 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Ready to Join Other {data.schoolName} Students?

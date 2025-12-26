@@ -75,7 +75,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-16">
+      <section className="bg-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-2">
@@ -497,7 +497,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h2>
           <p className="text-xl mb-8 opacity-90">

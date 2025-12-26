@@ -308,7 +308,7 @@ export default function FAQPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-16">
+        <section className="bg-blue-600 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">

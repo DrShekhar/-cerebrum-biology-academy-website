@@ -181,7 +181,7 @@ export default function NeetCoachingOverseasPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-violet-900 via-purple-800 to-indigo-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -454,7 +454,7 @@ export default function NeetCoachingOverseasPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

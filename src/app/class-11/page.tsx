@@ -330,7 +330,7 @@ export default function Class11Page() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100"
+                className="bg-gray-50 rounded-xl p-6 border border-blue-100"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">

@@ -302,7 +302,7 @@ export default function BiologyTuitionClass11Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>

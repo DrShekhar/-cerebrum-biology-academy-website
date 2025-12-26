@@ -60,7 +60,7 @@ const regions = [
     countries: nriRegions['South Asia'],
     studentCount: '100+',
     highlight: 'Same Timezone',
-    color: 'from-blue-500 to-indigo-500',
+    color: 'blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
   },

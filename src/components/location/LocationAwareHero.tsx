@@ -75,7 +75,7 @@ export function LocationAwareHero({
 
   return (
     <motion.section
-      className={`relative py-20 px-4 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 overflow-hidden ${className}`}
+      className={`relative py-20 px-4 bg-blue-600 overflow-hidden ${className}`}
       variants={containerVariants}
       initial="hidden"
       animate={isVisible ? 'visible' : 'hidden'}

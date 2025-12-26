@@ -474,7 +474,7 @@ export default function DoubtResolutionPage() {
       </section>
 
       {/* AI Doubt Resolution - Supplementary Tool */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Supplementary Positioning */}
           <div className="text-center mb-6 sm:mb-8">

@@ -715,7 +715,7 @@ function CheckoutContent() {
     <>
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-8">
+      <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href={routes.admissions}
@@ -828,7 +828,7 @@ function CheckoutContent() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mt-6">
+              <div className="bg-gray-50 rounded-2xl p-6 mt-6">
                 <div className="flex items-start gap-3">
                   <Shield className="w-6 h-6 text-blue-600 mt-0.5" />
                   <div>
@@ -904,7 +904,7 @@ export default function CheckoutPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 px-4 flex items-center justify-center">
+        <div className="min-h-screen bg-gray-50 py-16 px-4 flex items-center justify-center">
           <div className="text-center">
             <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600 font-medium">Loading checkout...</p>

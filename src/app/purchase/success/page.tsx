@@ -207,7 +207,7 @@ function PurchaseSuccessContent() {
         </div>
 
         {(orderDetails.batchName || orderDetails.batchTiming) && (
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 mb-8 text-white">
+          <div className="bg-blue-600 rounded-2xl p-8 mb-8 text-white">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Calendar className="w-6 h-6" />
               Your Batch Details

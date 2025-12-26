@@ -682,7 +682,7 @@ export default function BiologyClassesDelhiPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20 text-white">
+        <section className="bg-blue-600 py-20 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Start Your NEET Journey in Delhi Today!

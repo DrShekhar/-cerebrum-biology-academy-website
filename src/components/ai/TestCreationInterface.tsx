@@ -726,7 +726,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                       <Target className="w-5 h-5 mr-2 text-green-600" />
                       Selection Summary
                     </h4>
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4">
+                    <div className="bg-gray-50 rounded-lg p-4">
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-600">Selected Chapters:</span>
@@ -794,7 +794,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                 </div>
 
                 {/* Basic Test Information */}
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                <div className="bg-gray-50 rounded-xl p-6 border border-blue-200">
                   <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                     <FileText className="w-5 h-5 mr-2 text-blue-600" />
                     Basic Test Information
@@ -1959,7 +1959,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Content Summary */}
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+                  <div className="bg-gray-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
                       <BookOpen className="w-5 h-5 mr-2 text-blue-600" />
                       Content Selection

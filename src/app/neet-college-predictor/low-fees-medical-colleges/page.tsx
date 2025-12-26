@@ -139,7 +139,7 @@ export default function LowFeesMedicalCollegesPage() {
         </Link>
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-8">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white">
+          <div className="bg-blue-600 px-6 py-8 text-white">
             <div className="flex items-center gap-2 mb-2">
               <Sparkles className="w-6 h-6" />
               <span className="text-blue-200 text-sm font-medium">Budget-Friendly Options</span>

@@ -49,7 +49,7 @@ export const AcademicHeadline: React.FC<AcademicHeadlineProps> = ({
       'text-blue-900 font-extrabold': variant === 'emphasis' && !gradient,
     },
     gradient &&
-      'bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent',
+      'bg-blue-600 bg-clip-text text-transparent',
     className
   )
 
@@ -302,7 +302,7 @@ export const AcademicEmphasis: React.FC<AcademicEmphasisProps> = ({
       'text-green-600': color === 'green' && variant !== 'highlight',
       'text-purple-600': color === 'purple' && variant !== 'highlight',
       'text-orange-600': color === 'orange' && variant !== 'highlight',
-      'from-blue-600 to-indigo-600': color === 'blue' && variant === 'achievement',
+      'bg-blue-600': color === 'blue' && variant === 'achievement',
       'bg-green-600 text-white': color === 'green' && variant === 'achievement',
       'from-purple-600 to-violet-600': color === 'purple' && variant === 'achievement',
       'from-orange-600 to-amber-600': color === 'orange' && variant === 'achievement',

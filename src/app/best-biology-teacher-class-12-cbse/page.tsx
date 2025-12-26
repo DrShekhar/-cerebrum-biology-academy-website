@@ -123,7 +123,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -300,7 +300,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8"
+              className="bg-gray-50 rounded-xl p-8"
             >
               <BookOpen className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Board Exams</h3>
@@ -315,7 +315,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8"
+              className="bg-gray-50 rounded-xl p-8"
             >
               <Target className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">NEET Attempt</h3>
@@ -330,7 +330,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8"
+              className="bg-gray-50 rounded-xl p-8"
             >
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Career Foundation</h3>

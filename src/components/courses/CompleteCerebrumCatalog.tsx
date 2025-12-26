@@ -418,7 +418,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
     <div className={`min-h-screen relative overflow-hidden ${className}`}>
       {/* Premium Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="absolute inset-0 bg-slate-800">
           <div className="absolute inset-0 bg-indigo-100"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,121,198,0.2),transparent_50%)]"></div>
@@ -446,7 +446,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
 
             <h1 className="text-7xl md:text-8xl font-black text-white mb-8 leading-none tracking-tight">
               <span className="block">Cerebrum Biology</span>
-              <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="block text-blue-400">
                 Course Catalog
               </span>
             </h1>

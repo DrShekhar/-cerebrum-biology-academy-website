@@ -661,7 +661,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line - Hidden on mobile, visible on desktop */}
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 via-purple-600 to-green-600"></div>
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-600"></div>
 
             <div className="space-y-12 lg:space-y-24">
               {milestones.map((milestone, index) => (

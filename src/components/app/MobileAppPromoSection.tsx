@@ -192,7 +192,7 @@ export function MobileAppPromoSection({
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+    <section className="py-20 bg-indigo-700 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -207,7 +207,7 @@ export function MobileAppPromoSection({
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Your NEET Success Partner
             </span>
             <br />

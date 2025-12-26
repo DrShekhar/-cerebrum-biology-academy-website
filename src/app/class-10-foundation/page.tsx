@@ -209,7 +209,7 @@ export default function Class10FoundationPage() {
         'Reduced future pressure',
       ],
       icon: BookOpen,
-      color: 'from-blue-500 to-indigo-500',
+      color: 'blue-600',
     },
     {
       title: 'Class 10 Passed Students',

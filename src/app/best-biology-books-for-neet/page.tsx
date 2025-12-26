@@ -447,7 +447,7 @@ export default function BestBiologyBooksPage() {
                 transition={{ delay: idx * 0.2 }}
                 className="bg-white rounded-2xl shadow-lg p-6"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
                   {idx + 1}
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-1">{phase.phase}</h3>
@@ -515,9 +515,9 @@ export default function BestBiologyBooksPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100"
+                className="bg-gray-50 rounded-2xl p-6 border border-blue-100"
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <tip.icon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{tip.title}</h3>

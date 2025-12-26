@@ -21,7 +21,7 @@ import {
   Award,
   Lightbulb,
 } from 'lucide-react'
-import { Footer } from '@/components/layout/Footer'
+
 
 interface FAQ {
   question: string
@@ -552,7 +552,7 @@ export default function DoubtResolutionPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

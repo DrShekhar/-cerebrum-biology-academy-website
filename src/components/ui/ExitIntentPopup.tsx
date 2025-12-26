@@ -360,7 +360,7 @@ export function ExitIntentPopup({
             ) : (
               <>
                 {/* Catalog Variant Header */}
-                <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-6 sm:px-8 py-6">
+                <div className="bg-blue-600 text-white px-6 sm:px-8 py-6">
                   <div className="flex items-center mb-4">
                     <div className="bg-white/20 rounded-full p-3 mr-4">
                       <Gift className="w-8 h-8" />

@@ -259,7 +259,7 @@ export function LiveEnrollmentNotifications({
       case 'medium':
         return 'bg-gradient-to-r from-yellow-50 to-amber-50 border-l-yellow-500 shadow-yellow-100'
       default:
-        return 'bg-gradient-to-r from-blue-50 to-indigo-50 border-l-blue-500 shadow-blue-100'
+        return 'bg-gray-50 border-l-blue-500 shadow-blue-100'
     }
   }
 

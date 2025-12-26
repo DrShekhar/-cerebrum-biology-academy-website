@@ -262,7 +262,7 @@ export default function NEET2026ExamDatePage() {
 
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-blue-600 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -446,7 +446,7 @@ export default function NEET2026ExamDatePage() {
         {/* Preparation Tips CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700">
+            <div className="overflow-hidden rounded-2xl bg-blue-600">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">

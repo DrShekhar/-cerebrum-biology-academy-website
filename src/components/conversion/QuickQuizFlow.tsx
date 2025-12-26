@@ -169,7 +169,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
       <PremiumCard
         variant="luxury"
         size="lg"
-        className={`bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 ${className}`}
+        className={`bg-gray-50 border-blue-200 ${className}`}
       >
         <div className="text-center space-y-6 p-6">
           <div className="space-y-2">

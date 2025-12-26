@@ -392,7 +392,7 @@ export const onlineBiologyClassesClass11: SEOLandingContent = {
     highlightedText: 'Learn Concepts, Not Just Answers',
     ctaText: 'See How Our Classes Work',
     ctaLink: '/class-11',
-    backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

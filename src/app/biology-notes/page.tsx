@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { PrismaClient } from '@/generated/prisma'
-import { Footer } from '@/components/layout/Footer'
+
 import { BookOpen, Search, Filter, TrendingUp, Clock } from 'lucide-react'
 import Link from 'next/link'
 
@@ -282,7 +282,7 @@ export default async function BiologyNotesIndexPage() {
         }}
       />
 
-      <Footer />
+      
     </div>
   )
 }

@@ -2,7 +2,7 @@ export default function CoursesLoading() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section Skeleton */}
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 py-16">
+      <div className="bg-indigo-600 py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="h-10 bg-white/20 rounded-lg w-64 mx-auto mb-4 animate-pulse" />
           <div className="h-6 bg-white/10 rounded-lg w-96 mx-auto mb-8 animate-pulse" />

@@ -744,7 +744,7 @@ _Powered by Cerebrum Biology Academy_`
 
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-blue-600 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
@@ -893,7 +893,7 @@ _Powered by Cerebrum Biology Academy_`
 
                     {/* Selected College Details */}
                     {selectedCollege && (
-                      <div className="rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+                      <div className="rounded-xl border border-blue-200 bg-gray-50 p-6">
                         <div className="mb-4 flex items-start justify-between">
                           <div>
                             <h3 className="text-xl font-bold text-gray-900">
@@ -1353,7 +1353,7 @@ _Powered by Cerebrum Biology Academy_`
                         className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-semibold text-white transition-all disabled:opacity-70 ${
                           hasSearched
                             ? 'bg-green-600 hover:from-green-700 hover:to-green-700'
-                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
+                            : 'bg-blue-600 hover:bg-blue-700'
                         }`}
                       >
                         {getButtonText()}
@@ -1775,7 +1775,7 @@ _Powered by Cerebrum Biology Academy_`
                     <div className="mt-8 text-center">
                       <button
                         onClick={loadMore}
-                        className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 font-semibold text-white transition-all hover:from-blue-700 hover:to-indigo-700"
+                        className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white transition-all hover:bg-blue-700"
                       >
                         <ArrowDown className="h-5 w-5" />
                         Load More ({results.length - visibleCount} remaining)
@@ -1835,7 +1835,7 @@ _Powered by Cerebrum Biology Academy_`
         {/* Data Source Section */}
         <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div className="rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 p-8">
+            <div className="rounded-xl bg-gray-50 p-8">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">About Our Data</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
@@ -1965,7 +1965,7 @@ _Powered by Cerebrum Biology Academy_`
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 px-4 py-16 text-white sm:px-6 lg:px-8">
+        <section className="bg-blue-600 px-4 py-16 text-white sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-4 text-3xl font-bold">Need Help with NEET Preparation?</h2>
             <p className="mb-8 text-lg text-blue-100">

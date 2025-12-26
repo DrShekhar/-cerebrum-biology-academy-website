@@ -361,7 +361,7 @@ export default function TruemanBiologyPage() {
               {
                 title: 'Best Biology Books',
                 href: '/best-biology-books-for-neet',
-                color: 'from-blue-500 to-indigo-500',
+                color: 'blue-600',
               },
             ].map((book, idx) => (
               <motion.div

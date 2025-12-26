@@ -146,7 +146,7 @@ export default function EarlyNeetPreparationPage() {
       description:
         'More time means deeper understanding. Early starters develop crystal-clear concepts that last throughout their preparation.',
       icon: Brain,
-      color: 'from-blue-500 to-indigo-500',
+      color: 'blue-600',
       stat: '100% Clarity',
     },
     {
@@ -247,7 +247,7 @@ export default function EarlyNeetPreparationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -507,7 +507,7 @@ export default function EarlyNeetPreparationPage() {
       </section>
 
       {/* Parent FAQs */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -549,7 +549,7 @@ export default function EarlyNeetPreparationPage() {
       <ParentTestimonialsSection />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+      <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -415,7 +415,7 @@ export default function NeetCoachingNorthIndiaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100"
+                className="bg-gray-50 rounded-xl p-8 border border-blue-100"
               >
                 <item.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -425,7 +425,7 @@ export default function NeetCoachingNorthIndiaPage() {
           </div>
 
           {/* Cost Comparison */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+          <div className="bg-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-6 text-center">
               Cost Comparison: Online vs Kota/Delhi Relocation
             </h3>

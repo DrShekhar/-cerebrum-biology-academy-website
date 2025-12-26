@@ -57,7 +57,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Local Focus */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 lg:py-28">
+      <section className="bg-blue-600 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -484,7 +484,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

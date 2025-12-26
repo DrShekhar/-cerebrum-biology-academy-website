@@ -235,7 +235,7 @@ export function LocationDetector({
           exit={{ y: -100, opacity: 0 }}
           className={`fixed top-0 left-0 right-0 z-50 ${className}`}
         >
-          <Card className="mx-4 mt-4 border-2 border-primary/20 shadow-lg bg-gradient-to-r from-blue-50 to-indigo-50">
+          <Card className="mx-4 mt-4 border-2 border-primary/20 shadow-lg bg-gray-50">
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">

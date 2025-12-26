@@ -77,7 +77,7 @@ const offlineCenters = [
     timing: 'Mon-Sat: 8 AM - 8 PM',
     phone: '+91 88264 44334',
     highlight: false,
-    color: 'from-blue-500 to-indigo-500',
+    color: 'blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
     iconBg: 'bg-blue-100',

@@ -24,7 +24,6 @@ import {
   FileText,
   PlayCircle,
 } from 'lucide-react'
-import { Footer } from '@/components/layout/Footer'
 
 interface ProgramData {
   name: string
@@ -944,8 +943,6 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

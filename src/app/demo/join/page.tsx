@@ -100,7 +100,7 @@ function JoinDemoContent() {
 
   if (sdkConfigured === null) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
         <div className="animate-pulse text-lg text-gray-600">Loading...</div>
       </div>
     )
@@ -108,7 +108,7 @@ function JoinDemoContent() {
 
   if (sdkConfigured === false) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ function JoinDemoContent() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ export default function JoinDemoPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="flex min-h-screen items-center justify-center bg-gray-50">
           <div className="animate-pulse text-lg text-gray-600">Loading...</div>
         </div>
       }

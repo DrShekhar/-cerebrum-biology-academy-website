@@ -420,7 +420,7 @@ export default function NCERTFingertipsBiologyPage() {
               {
                 title: 'MTG Biology',
                 href: '/mtg-biology-for-neet',
-                color: 'from-blue-500 to-indigo-500',
+                color: 'blue-600',
               },
             ].map((book, idx) => (
               <motion.div

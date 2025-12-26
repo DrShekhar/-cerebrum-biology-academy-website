@@ -855,7 +855,7 @@ export const ncertBiologyNotesClass12: SEOLandingContent = {
     highlightedText: 'Class 12 = 50% of NEET Biology',
     ctaText: 'Access Class 12 Notes',
     ctaLink: '/courses?class=class-12',
-    backgroundGradient: 'from-indigo-900 via-purple-900 to-violet-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

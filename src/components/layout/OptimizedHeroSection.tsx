@@ -147,7 +147,7 @@ export function OptimizedHeroSection({
           >
             <source src={videoUrl} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-purple-900/60 to-blue-900/80" />
+          <div className="absolute inset-0 bg-blue-900/70" />
         </div>
       )}
 

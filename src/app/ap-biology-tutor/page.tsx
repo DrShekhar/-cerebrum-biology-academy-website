@@ -241,7 +241,7 @@ export default function APBiologyTutorPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-blue-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-indigo-100" />
 
@@ -398,7 +398,7 @@ export default function APBiologyTutorPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg border-2 border-blue-200"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg border-2 border-blue-200"
               >
                 <h3 className="text-2xl font-bold text-blue-900 mb-4">{section.section}</h3>
 
@@ -442,7 +442,7 @@ export default function APBiologyTutorPage() {
           </div>
 
           <motion.div
-            className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-8 max-w-4xl mx-auto"
+            className="mt-12 bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -568,9 +568,9 @@ export default function APBiologyTutorPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 hover:shadow-xl transition-all border border-blue-100"
+                className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all border border-blue-100"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -621,7 +621,7 @@ export default function APBiologyTutorPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-800 text-white">
+      <section className="py-20 bg-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

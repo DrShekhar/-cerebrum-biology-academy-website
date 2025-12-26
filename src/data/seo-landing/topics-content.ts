@@ -1437,7 +1437,7 @@ export const dnaBiologyTuition: SEOLandingContent = {
     highlightedText: 'DNA Questions = Sure-Shot Marks',
     ctaText: 'Master DNA Biology',
     ctaLink: '/courses',
-    backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

@@ -60,7 +60,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       case 'tier1':
         return 'from-purple-600 to-pink-600'
       case 'tier2':
-        return 'from-blue-600 to-indigo-600'
+        return 'bg-blue-600'
       case 'tier3':
         return 'bg-green-600'
       default:

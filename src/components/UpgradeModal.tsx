@@ -104,7 +104,7 @@ export function UpgradeModal({
                 aria-labelledby="upgrade-modal-title"
               >
                 {/* Header */}
-                <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-white">
+                <div className="relative bg-blue-600 p-8 text-white">
                   <button
                     onClick={onClose}
                     className="absolute top-4 right-4 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors touch-manipulation"

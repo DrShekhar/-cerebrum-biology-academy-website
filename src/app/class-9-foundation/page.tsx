@@ -377,7 +377,7 @@ export default function Class9FoundationPage() {
                 className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -434,7 +434,7 @@ export default function Class9FoundationPage() {
       </section>
 
       {/* Curriculum Coverage */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"

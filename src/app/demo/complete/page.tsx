@@ -29,7 +29,7 @@ export default function DemoCompletePage() {
         </p>
 
         {/* Feedback Section */}
-        <div className="mb-8 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 p-6">
+        <div className="mb-8 rounded-xl bg-gray-50 p-6">
           <h2 className="mb-3 text-lg font-semibold text-gray-800">How was your experience?</h2>
           <div className="flex justify-center gap-4">
             {['😐', '🙂', '😊', '🤩'].map((emoji, index) => (
@@ -56,7 +56,7 @@ export default function DemoCompletePage() {
           <div className="grid gap-3">
             <Link
               href="/courses/neet-biology-pinnacle"
-              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 sm:px-6 py-3 font-semibold text-white transition hover:from-blue-700 hover:to-indigo-700 min-h-[48px] text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 sm:px-6 py-3 font-semibold text-white transition hover:bg-blue-700 min-h-[48px] text-sm sm:text-base"
             >
               <span>🚀</span> <span className="truncate">Explore Our Courses</span>
             </Link>

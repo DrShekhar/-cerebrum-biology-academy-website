@@ -67,8 +67,8 @@ const aiFeatures: AIFeature[] = [
       { label: 'Accuracy', value: '94.2%' },
       { label: 'Students Helped', value: '10,000+' },
     ],
-    color: 'from-blue-500 to-indigo-600',
-    bgGradient: 'from-blue-50 to-indigo-50',
+    color: 'blue-600',
+    bgGradient: 'bg-gray-50',
   },
   {
     id: 'voice-training',
@@ -445,7 +445,7 @@ export default function AIFeaturesHub() {
 
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-12 text-white shadow-2xl">
+        <div className="bg-blue-500 rounded-2xl p-12 text-white shadow-2xl">
           <Star className="w-16 h-16 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-4">Ready to Experience AI-Powered Learning?</h2>
           <p className="text-xl text-blue-100 mb-8">

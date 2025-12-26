@@ -315,7 +315,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"

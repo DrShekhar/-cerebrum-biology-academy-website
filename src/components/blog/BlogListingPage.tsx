@@ -221,7 +221,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -771,7 +771,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to Master NEET Biology?</h2>
           <p className="text-xl mb-8 opacity-90">

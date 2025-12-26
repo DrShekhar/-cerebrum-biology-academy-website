@@ -191,7 +191,7 @@ export default function CollegeProfilePage() {
         </Link>
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-8">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white">
+          <div className="bg-blue-600 px-6 py-8 text-white">
             <div className="flex items-start justify-between flex-wrap gap-4">
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold mb-2">{college.name}</h1>

@@ -15,7 +15,7 @@ export function ComingSoonPage({
   expectedDate,
 }: ComingSoonPageProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 py-16">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-16">
       <div className="max-w-lg w-full text-center">
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
           <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto">

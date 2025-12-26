@@ -70,7 +70,7 @@ export function NotificationCenter({
         message: 'Radha Tiwari from Machilipatnam requesting AIIMS Preparation Batch demo',
         location: 'Machilipatnam',
         icon: <Users className="w-4 h-4" />,
-        color: 'from-blue-500 to-indigo-600',
+        color: 'blue-600',
       },
       {
         title: 'Active Viewers',

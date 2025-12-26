@@ -41,7 +41,7 @@ const gcseBiologyTuition: SEOLandingContent = {
     highlightedText: 'Grade 9',
     ctaText: 'Start Your Free Trial',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-blue-900 via-purple-900 to-indigo-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {
@@ -1062,7 +1062,7 @@ const ibBiologyTutorOnline: SEOLandingContent = {
     highlightedText: 'Perfect',
     ctaText: 'Get Matched Now',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

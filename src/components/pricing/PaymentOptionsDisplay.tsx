@@ -20,7 +20,7 @@ export function PaymentOptionsDisplay({
       case 'pinnacle':
         return 'from-purple-600 to-pink-600'
       case 'ascent':
-        return 'from-blue-600 to-indigo-600'
+        return 'bg-blue-600'
       case 'pursuit':
         return 'bg-green-600'
       default:

@@ -203,7 +203,7 @@ export default function PricingPage() {
         borderColor: 'border-purple-200',
       },
       ascent: {
-        bg: 'from-blue-50 to-indigo-50',
+        bg: 'bg-gray-50',
         textColor: 'text-blue-900',
         badge: 'bg-blue-100 text-blue-700',
         floatingBadge: '🔥 MOST POPULAR',
@@ -1270,7 +1270,7 @@ export default function PricingPage() {
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/80 px-4 py-3 shadow-[0_-4px_30px_rgba(0,0,0,0.08)] z-50 safe-area-pb">
         <div className="flex gap-2.5 max-w-lg mx-auto">
           <Link href="/demo-booking" className="flex-1">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-transform">
+            <button className="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-transform">
               Book Free Demo
             </button>
           </Link>

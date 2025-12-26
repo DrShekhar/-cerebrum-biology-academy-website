@@ -99,7 +99,7 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20">
+      <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center"

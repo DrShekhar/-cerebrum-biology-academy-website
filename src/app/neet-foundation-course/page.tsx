@@ -542,7 +542,7 @@ export default function NeetFoundationCoursePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border-2 border-blue-200"
+              className="bg-gray-50 rounded-xl p-8 border-2 border-blue-200"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -558,7 +558,7 @@ export default function NeetFoundationCoursePage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+                  className="w-full bg-blue-600"
                 >
                   Explore Class 9 Program
                   <ArrowRight className="w-5 h-5 ml-2" />

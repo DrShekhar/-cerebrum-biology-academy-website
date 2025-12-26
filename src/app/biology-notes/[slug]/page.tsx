@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { PrismaClient } from '@/generated/prisma'
-import { Footer } from '@/components/layout/Footer'
+
 import { BookOpen, Clock, GraduationCap, Download, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
@@ -278,7 +278,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
               name: 'Cerebrum Biology Academy',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://cerebrumbiologyacademy.com/brain-logo.png',
+                url: 'https://cerebrumbiologyacademy.com/brain-logo.webp',
               },
             },
             datePublished: topic.publishedAt?.toISOString(),
@@ -294,7 +294,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
         }}
       />
 
-      <Footer />
+      
     </div>
   )
 }

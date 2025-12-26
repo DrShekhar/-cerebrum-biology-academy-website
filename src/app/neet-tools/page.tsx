@@ -72,7 +72,7 @@ const tools = [
       'Find medical colleges you can get admission in based on your NEET rank. Filter by state, category, and college type.',
     href: '/neet-college-predictor',
     icon: Building2,
-    color: 'from-blue-500 to-indigo-500',
+    color: 'blue-600',
     bgColor: 'bg-blue-100',
     iconColor: 'text-blue-600',
     features: ['100+ colleges database', 'State-wise filtering', 'Cutoff comparison'],

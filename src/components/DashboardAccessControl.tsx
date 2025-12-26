@@ -102,7 +102,7 @@ export function DashboardAccessControl({
           className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden"
         >
           {/* Header */}
-          <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-white">
+          <div className="relative bg-blue-600 p-8 text-white">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
                 <Lock className="w-8 h-8" />

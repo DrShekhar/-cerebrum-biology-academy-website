@@ -515,7 +515,7 @@ export default function Class9VsClass10Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg"
               >
                 <finding.icon className="w-12 h-12 text-indigo-600 mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{finding.title}</h3>
@@ -550,7 +550,7 @@ export default function Class9VsClass10Page() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -775,7 +775,7 @@ export default function Class9VsClass10Page() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 shadow-md"
+                  className="bg-gray-50 rounded-xl p-6 shadow-md"
                 >
                   <div className="font-bold text-gray-900 mb-4 text-lg">{item.question}</div>
                   <div className="grid md:grid-cols-2 gap-4">

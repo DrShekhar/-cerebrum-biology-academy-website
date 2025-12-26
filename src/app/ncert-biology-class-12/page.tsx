@@ -512,7 +512,7 @@ export default function NCERTBiologyClass12Page() {
               {
                 title: 'Best Books for NEET',
                 href: '/best-biology-books-for-neet',
-                color: 'from-blue-500 to-indigo-500',
+                color: 'blue-600',
               },
             ].map((link, idx) => (
               <motion.div

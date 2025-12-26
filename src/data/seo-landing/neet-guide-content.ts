@@ -1667,7 +1667,7 @@ const neetExamDetails: SEOLandingContent = {
     highlightedText: 'Everything',
     ctaText: 'Learn More',
     ctaLink: '/resources',
-    backgroundGradient: 'from-indigo-900 via-purple-900 to-pink-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {

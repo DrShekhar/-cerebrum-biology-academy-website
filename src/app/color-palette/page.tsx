@@ -467,7 +467,7 @@ const gradients: GradientSwatch[] = [
   },
   {
     name: 'Blue to Indigo',
-    classes: 'bg-gradient-to-r from-blue-600 to-indigo-600',
+    classes: 'bg-blue-600',
     usage: 'Secondary buttons, icons (40+ uses)',
   },
   {

@@ -485,7 +485,7 @@ export default function TestGeneratorPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Self-Practice Notice */}
       <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-2 px-4 text-center text-sm">
         <span className="font-medium">Self-Practice Mode</span> - Practice at your own pace. For

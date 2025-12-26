@@ -229,7 +229,7 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
     highlightedText: 'NEET 2026 Batch Now Enrolling',
     ctaText: 'Join NEET 2026 Batch',
     ctaLink: '/courses/neet-dropper',
-    backgroundGradient: 'from-violet-900 via-purple-900 to-fuchsia-900',
+    backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {
