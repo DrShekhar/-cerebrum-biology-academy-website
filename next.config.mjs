@@ -23,6 +23,17 @@ const nextConfig = {
 
   // Webpack configuration for polyfills and bundle optimization
   webpack: (config, { isServer }) => {
+    // FIX: Externalize worker-thread packages on server to prevent Turbopack bundling issues
+    if (isServer) {
+      config.externals = config.externals || []
+      config.externals.push(
+        '@modelcontextprotocol/sdk',
+        'bullmq',
+        'ioredis',
+        'worker_threads'
+      )
+    }
+
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -182,6 +193,14 @@ const nextConfig = {
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
+    // FIX: Server external packages to prevent worker thread bundling issues
+    serverExternalPackages: [
+      '@modelcontextprotocol/sdk',
+      'bullmq',
+      'ioredis',
+      '@prisma/client',
+      'prisma',
+    ],
     // Optimize package imports for smaller bundles
     optimizePackageImports: [
       'lucide-react',
