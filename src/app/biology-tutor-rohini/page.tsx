@@ -131,7 +131,7 @@ export default function BiologyTutorRohiniPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Rohini',
             description: 'Best Biology Tutor for Rohini students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-rohini',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-rohini',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

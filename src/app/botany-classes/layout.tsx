@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Comprehensive botany classes covering all NEET topics. Batch learning with AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/botany-classes',
+    url: 'https://cerebrumbiologyacademy.com/botany-classes',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Join our botany batches for comprehensive NEET preparation!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/botany-classes',
+    canonical: 'https://cerebrumbiologyacademy.com/botany-classes',
   },
 }
 

@@ -344,7 +344,7 @@ export default function NEETExamCountdownPage() {
             '@type': 'WebApplication',
             name: `NEET ${selectedYear} Exam Countdown Timer`,
             description: `Live countdown to NEET ${selectedYear} exam with study planner and preparation tips.`,
-            url: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
+            url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Personalized biology learning from home. Better than traditional tutors with structured curriculum.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/home-tuition-for-biology',
+    url: 'https://cerebrumbiologyacademy.com/home-tuition-for-biology',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert biology home tuition. AIIMS faculty, structured learning, proven results!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/home-tuition-for-biology',
+    canonical: 'https://cerebrumbiologyacademy.com/home-tuition-for-biology',
   },
 }
 

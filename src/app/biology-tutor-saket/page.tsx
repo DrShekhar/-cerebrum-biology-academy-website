@@ -130,7 +130,7 @@ export default function BiologyTutorSaketPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Saket',
             description: 'Best Biology Tutor for Saket students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-saket',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-saket',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for South India. AIIMS trained faculty, 98% success rate, 2,450+ students. English medium classes!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-south-india',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-south-india',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for South India. AIIMS trained faculty, 98% success rate. English medium!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-south-india',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-india',
   },
 }
 

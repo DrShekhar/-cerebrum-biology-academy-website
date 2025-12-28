@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Expert botany faculty for NEET. Plant Physiology, Ecology, Plant Kingdom - complete coverage!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-botany-teacher-for-neet',
+    url: 'https://cerebrumbiologyacademy.com/best-botany-teacher-for-neet',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Master 45% of NEET Biology with our expert botany faculty!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-botany-teacher-for-neet',
+    canonical: 'https://cerebrumbiologyacademy.com/best-botany-teacher-for-neet',
   },
 }
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 12 CBSE biology coaching from AIIMS trained faculty. NCERT-based teaching, board + NEET preparation.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-12-cbse',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-class-12-cbse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 12 biology coaching. Board + NEET prep. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-12-cbse',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-12-cbse',
   },
 }
 

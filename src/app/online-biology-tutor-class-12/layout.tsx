@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 12 biology tuition. NEET + Board exam preparation online!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-12',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-12',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'AIIMS faculty, NEET + Board prep, live classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-12',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-12',
   },
 }
 

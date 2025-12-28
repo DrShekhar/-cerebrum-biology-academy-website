@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET coaching for NRI students worldwide. AIIMS trained faculty, flexible timings, 630+ overseas students, NRI quota guidance.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-overseas',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-overseas',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Best NEET coaching for NRI students worldwide. AIIMS trained faculty, 98% success rate.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-overseas',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-overseas',
   },
 }
 

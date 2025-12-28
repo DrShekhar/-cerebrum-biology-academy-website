@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Build strong biology foundation with expert online tutor!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-9',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-9',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Expert biology foundation course, live online classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-9',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-9',
   },
 }
 

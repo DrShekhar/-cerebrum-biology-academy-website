@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Comprehensive zoology classes covering all NEET topics. Batch learning with AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/zoology-classes',
+    url: 'https://cerebrumbiologyacademy.com/zoology-classes',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Join our zoology batches for comprehensive NEET preparation!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/zoology-classes',
+    canonical: 'https://cerebrumbiologyacademy.com/zoology-classes',
   },
 }
 

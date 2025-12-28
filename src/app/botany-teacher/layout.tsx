@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Expert botany teaching focusing on Plant Physiology & Ecology. 45% NEET weightage!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/botany-teacher',
+    url: 'https://cerebrumbiologyacademy.com/botany-teacher',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty specializing in Botany. 45% of NEET Biology covered!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/botany-teacher',
+    canonical: 'https://cerebrumbiologyacademy.com/botany-teacher',
   },
 }
 

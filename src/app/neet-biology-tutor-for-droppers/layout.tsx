@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET Biology tutor for droppers - Dr. Shekhar C Singh, AIIMS Alumnus. Intensive 1-year course.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers',
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Intensive NEET dropper course by AIIMS Faculty. Score 650+ in your next attempt.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers',
   },
 }
 

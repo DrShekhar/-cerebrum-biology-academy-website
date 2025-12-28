@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 12 biology tuition. Dual focus on boards and NEET preparation with AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tuition-class-12',
+    url: 'https://cerebrumbiologyacademy.com/biology-tuition-class-12',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Ace boards and NEET together! AIIMS faculty, comprehensive preparation!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tuition-class-12',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-class-12',
   },
 }
 

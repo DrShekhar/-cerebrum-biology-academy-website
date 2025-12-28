@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Expert ISC Biology teaching. Complete ISC + NCERT for board and NEET success.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-class-12-icse',
+    url: 'https://cerebrumbiologyacademy.com/best-biology-teacher-class-12-icse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 12 ISC Biology teaching. ISC + NEET dual preparation!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-class-12-icse',
+    canonical: 'https://cerebrumbiologyacademy.com/best-biology-teacher-class-12-icse',
   },
 }
 

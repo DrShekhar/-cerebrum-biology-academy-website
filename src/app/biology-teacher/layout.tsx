@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert biology teaching with structured curriculum and batch learning. 98% success rate.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-teacher',
+    url: 'https://cerebrumbiologyacademy.com/biology-teacher',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty with 15+ years experience. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-teacher',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-teacher',
   },
 }
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET Biology tutor online - Dr. Shekhar C Singh, AIIMS Alumnus. Live interactive classes.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-biology-tutor-online',
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-online',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Live online NEET Biology classes by AIIMS Faculty. 98% success rate.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-biology-tutor-online',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-online',
   },
 }
 

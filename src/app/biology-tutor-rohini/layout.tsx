@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Rohini for NEET & Board exams. Expert coaching for all Rohini Sectors.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-rohini',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-rohini',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Rohini Delhi.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-rohini',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-rohini',
   },
 }
 

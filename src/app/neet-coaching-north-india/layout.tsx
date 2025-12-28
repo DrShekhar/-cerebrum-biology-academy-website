@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for North India. AIIMS trained faculty, 98% success rate, 4,100+ students. Save Rs 2.76 lakhs vs Kota migration!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-north-india',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-north-india',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for North India. AIIMS trained faculty, 98% success rate. No Kota migration needed!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-north-india',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-north-india',
   },
 }
 

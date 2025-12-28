@@ -132,7 +132,7 @@ export default function BiologyTutorCentralDelhiPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Central Delhi',
             description: 'Best Biology Tutor for Central Delhi students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-central-delhi',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-central-delhi',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

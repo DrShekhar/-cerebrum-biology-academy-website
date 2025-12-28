@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'NEET Rank Predictor 2026 - Free All India Rank Prediction Tool',
     description:
       'Free tool to predict your NEET 2026 All India Rank from marks. Get instant results with college admission chances.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-rank-predictor',
+    url: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
     type: 'website',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Predict your NEET 2026 rank from marks instantly. Free calculator with college chances.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-rank-predictor',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
   },
 }
 

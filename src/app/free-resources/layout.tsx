@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     description:
       'FREE study materials used by 2500+ successful students. Notes, PYQs, formula sheets!',
     type: 'website',
-    url: 'https://www.cerebrumbiologyacademy.com/free-resources',
+    url: 'https://cerebrumbiologyacademy.com/free-resources',
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/free-resources',
+    canonical: 'https://cerebrumbiologyacademy.com/free-resources',
   },
 }
 

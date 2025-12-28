@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET coaching institute with 15+ years experience, AIIMS trained faculty, 98% success rate. Join the top institute for NEET preparation!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-institute',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-institute',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Best NEET coaching institute with 15+ years experience. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-institute',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-institute',
   },
 }
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Find expert biology classes near your location. Online & offline options in Delhi NCR.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-classes-near-me',
+    url: 'https://cerebrumbiologyacademy.com/biology-classes-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Find the best biology classes near your location. Expert faculty, proven results!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-classes-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-classes-near-me',
   },
 }
 

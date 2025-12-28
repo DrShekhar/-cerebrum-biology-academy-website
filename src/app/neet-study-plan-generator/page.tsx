@@ -236,7 +236,7 @@ export default function StudyPlanGeneratorPage() {
             name: 'NEET Study Plan Generator 2026',
             description:
               'Free personalized NEET Biology study plan generator. Get week-by-week schedule based on your preparation time and weak areas.',
-            url: 'https://www.cerebrumbiologyacademy.com/neet-study-plan-generator',
+            url: 'https://cerebrumbiologyacademy.com/neet-study-plan-generator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Find the best NEET coaching centre near you. 4 centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad. 98% success rate!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-centre',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-centre',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Find the best NEET coaching centre near you. 4 centers + online classes. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-centre',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-centre',
   },
 }
 

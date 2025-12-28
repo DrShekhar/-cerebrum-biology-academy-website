@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Ghaziabad for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Ghaziabad.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
   },
 }
 

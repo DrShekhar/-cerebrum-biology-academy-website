@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 11 ICSE biology coaching from AIIMS trained faculty. ISC syllabus coverage, competitive exam prep.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-11-icse',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-class-11-icse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert ICSE biology coaching. AIIMS trained faculty, 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-11-icse',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-11-icse',
   },
 }
 

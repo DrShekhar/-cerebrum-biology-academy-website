@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'NEET 2026 Cutoff - Category Wise Expected Cutoff Marks',
     description:
       'Expected NEET 2026 cutoff marks for all categories. Qualifying percentile and marks for MBBS/BDS admission.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-2026-cutoff',
+    url: 'https://cerebrumbiologyacademy.com/neet-2026-cutoff',
     type: 'article',
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-2026-cutoff',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-2026-cutoff',
   },
 }
 
@@ -192,13 +192,13 @@ function BreadcrumbSchema() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.cerebrumbiologyacademy.com',
+        item: 'https://cerebrumbiologyacademy.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'NEET 2026 Cutoff',
-        item: 'https://www.cerebrumbiologyacademy.com/neet-2026-cutoff',
+        item: 'https://cerebrumbiologyacademy.com/neet-2026-cutoff',
       },
     ],
   }

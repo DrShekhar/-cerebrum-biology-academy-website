@@ -186,7 +186,7 @@ export default function NEETRankPredictorPage() {
             name: 'NEET Rank Predictor 2026',
             description:
               'Free NEET Rank Predictor tool to estimate your All India Rank based on marks. Get accurate predictions for NEET 2026.',
-            url: 'https://www.cerebrumbiologyacademy.com/neet-rank-predictor',
+            url: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
             offers: {
@@ -209,13 +209,13 @@ export default function NEETRankPredictorPage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://www.cerebrumbiologyacademy.com',
+                item: 'https://cerebrumbiologyacademy.com',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'NEET Rank Predictor',
-                item: 'https://www.cerebrumbiologyacademy.com/neet-rank-predictor',
+                item: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
               },
             ],
           }),

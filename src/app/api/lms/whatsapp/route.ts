@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
               text: `Welcome to Cerebrum Biology Academy LMS!
 
 You don't have an active account yet. Please visit our website to enroll in a course:
-https://www.cerebrumbiologyacademy.com/courses
+https://cerebrumbiologyacademy.com/courses
 
 After enrollment, you'll be able to access your courses here.`,
             },

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert State Board biology coaching for English medium students. NCERT-aligned syllabus, NEET preparation included.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-state-boards',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-state-boards',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert coaching for State Board students. NCERT-aligned, NEET prep included!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-state-boards',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-state-boards',
   },
 }
 

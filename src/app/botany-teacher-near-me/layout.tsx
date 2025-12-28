@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'Find expert botany teachers near you. Delhi NCR offline centers + Pan-India online classes.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/botany-teacher-near-me',
+    url: 'https://cerebrumbiologyacademy.com/botany-teacher-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Expert botany teachers in Delhi NCR & online across India!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/botany-teacher-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/botany-teacher-near-me',
   },
 }
 

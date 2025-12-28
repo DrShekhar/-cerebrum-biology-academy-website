@@ -144,7 +144,7 @@ export default function BiologyTutorGreaterNoidaPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Greater Noida',
             description: 'Best Biology Tutor in Greater Noida - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-greater-noida',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-greater-noida',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

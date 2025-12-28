@@ -131,7 +131,7 @@ export default function BiologyTutorIndirapuramPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Indirapuram',
             description: 'Best Biology Tutor for Indirapuram students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-indirapuram',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-indirapuram',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

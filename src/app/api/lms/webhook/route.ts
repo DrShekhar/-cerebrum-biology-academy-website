@@ -3,7 +3,7 @@
  *
  * Receives video processing status updates from Cloudflare Stream.
  * Configure webhook URL in Cloudflare Dashboard:
- * https://www.cerebrumbiologyacademy.com/api/lms/webhook
+ * https://cerebrumbiologyacademy.com/api/lms/webhook
  */
 
 import { NextRequest, NextResponse } from 'next/server'

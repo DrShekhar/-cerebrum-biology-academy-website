@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Find best biology tutors near you. 4 offline centers in Delhi NCR or join online from anywhere. AIIMS trained faculty, 98% success rate.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutors-near-me',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutors-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Find best biology tutors near you. AIIMS trained faculty, 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutors-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutors-near-me',
   },
 }
 

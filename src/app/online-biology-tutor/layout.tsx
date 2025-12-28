@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'Learn from AIIMS Alumnus Dr. Shekhar C Singh. Live interactive online biology classes for NEET & Boards!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor',
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'AIIMS faculty, 98% success rate, live interactive classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor',
   },
 }
 

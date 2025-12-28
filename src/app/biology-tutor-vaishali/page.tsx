@@ -131,7 +131,7 @@ export default function BiologyTutorVaishaliPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Vaishali',
             description: 'Best Biology Tutor for Vaishali students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-vaishali',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-vaishali',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

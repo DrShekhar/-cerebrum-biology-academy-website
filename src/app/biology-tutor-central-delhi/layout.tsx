@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Central Delhi for NEET & Board exams. Expert coaching in Connaught Place, Karol Bagh, Rajender Nagar.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-central-delhi',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-central-delhi',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Central Delhi localities.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-central-delhi',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-central-delhi',
   },
 }
 

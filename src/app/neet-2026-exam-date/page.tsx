@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'NEET 2026 Exam Date - Complete Schedule & Important Dates',
     description:
       'Get complete NEET 2026 exam schedule, registration dates, admit card release, and result dates. Official NTA information.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-2026-exam-date',
+    url: 'https://cerebrumbiologyacademy.com/neet-2026-exam-date',
     type: 'article',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       'NEET 2026 exam expected in May 2026. Get complete schedule, registration dates, and preparation timeline.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-2026-exam-date',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-2026-exam-date',
   },
 }
 
@@ -234,13 +234,13 @@ function BreadcrumbSchema() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.cerebrumbiologyacademy.com',
+        item: 'https://cerebrumbiologyacademy.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'NEET 2026 Exam Date',
-        item: 'https://www.cerebrumbiologyacademy.com/neet-2026-exam-date',
+        item: 'https://cerebrumbiologyacademy.com/neet-2026-exam-date',
       },
     ],
   }

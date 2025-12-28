@@ -131,7 +131,7 @@ export default function BiologyTutorNoidaSector18Page() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Noida Sector 18',
             description: 'Best Biology Tutor for Noida Sector 18 students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

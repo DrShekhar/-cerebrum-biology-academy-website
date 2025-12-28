@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'Find expert zoology teachers near you. Delhi NCR offline centers + Pan-India online classes.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/zoology-teacher-near-me',
+    url: 'https://cerebrumbiologyacademy.com/zoology-teacher-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Expert zoology teachers in Delhi NCR & online across India!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/zoology-teacher-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher-near-me',
   },
 }
 

@@ -142,7 +142,7 @@ export default function NEETCollegePredictorPage() {
             name: 'NEET College Predictor 2026',
             description:
               'Free tool to find medical colleges based on your NEET rank. Comprehensive database of 470+ Government and Private/Deemed medical colleges with AIQ and State Quota cutoffs.',
-            url: 'https://www.cerebrumbiologyacademy.com/neet-college-predictor',
+            url: 'https://cerebrumbiologyacademy.com/neet-college-predictor',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },

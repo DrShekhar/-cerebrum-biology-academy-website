@@ -131,7 +131,7 @@ export default function BiologyTutorGhaziabadPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Ghaziabad',
             description: 'Best Biology Tutor for Ghaziabad students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-ghaziabad',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

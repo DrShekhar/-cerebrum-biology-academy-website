@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for East India. AIIMS trained faculty, 98% success rate, 2,030+ students.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-coaching-east-india',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-east-india',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Top NEET Biology coaching for East India. AIIMS trained faculty, 98% success rate.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-coaching-east-india',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-east-india',
   },
 }
 

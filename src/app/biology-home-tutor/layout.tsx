@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Looking for biology home tutor? Learn why small batch coaching beats home tuition. AIIMS trained faculty, peer learning, proven results.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-home-tutor',
+    url: 'https://cerebrumbiologyacademy.com/biology-home-tutor',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Why ordinary home tutors fail and what actually works for NEET success.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-home-tutor',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-home-tutor',
   },
 }
 

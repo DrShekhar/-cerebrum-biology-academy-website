@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Find personalized biology tuition near your location. AIIMS-trained tutors, flexible timings.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tuition-near-me',
+    url: 'https://cerebrumbiologyacademy.com/biology-tuition-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert biology tuition with personalized attention. Book a free demo today!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tuition-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-near-me',
   },
 }
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in West Delhi for NEET & Board exams. Expert coaching in Janakpuri, Dwarka, Rajouri Garden.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-west-delhi',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-west-delhi',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in West Delhi localities.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-west-delhi',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-west-delhi',
   },
 }
 

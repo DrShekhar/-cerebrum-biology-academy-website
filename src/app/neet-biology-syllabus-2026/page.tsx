@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'NEET Biology Syllabus 2026 - Complete Chapter-wise Syllabus',
     description:
       'Complete NEET Biology syllabus for 2026 with Botany, Zoology topics from Class 11 & 12 NCERT.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
     type: 'article',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
   },
 }
 
@@ -292,13 +292,13 @@ function BreadcrumbSchema() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.cerebrumbiologyacademy.com',
+        item: 'https://cerebrumbiologyacademy.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'NEET Biology Syllabus 2026',
-        item: 'https://www.cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
+        item: 'https://cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
       },
     ],
   }

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Intensive dropper program online. Personalized attention, proven results!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-droppers',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-droppers',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Intensive NEET dropper program, live online classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-droppers',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-droppers',
   },
 }
 

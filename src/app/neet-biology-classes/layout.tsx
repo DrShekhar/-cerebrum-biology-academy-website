@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET Biology classes with AIIMS trained faculty. Complete NCERT coverage, 98% success rate. Best course for biology students!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-biology-classes',
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-classes',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Best NEET Biology classes with AIIMS trained faculty. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-biology-classes',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-classes',
   },
 }
 

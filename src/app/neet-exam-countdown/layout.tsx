@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     description:
       'Live countdown to NEET 2026 exam. Track preparation progress, study hours, and important dates.',
     type: 'website',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
+    url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
     images: [
       {
-        url: 'https://www.cerebrumbiologyacademy.com/og-neet-countdown.png',
+        url: 'https://cerebrumbiologyacademy.com/og-neet-countdown.png',
         width: 1200,
         height: 630,
         alt: 'NEET 2026 Exam Countdown Timer',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: 'Live countdown to NEET 2026. Track your preparation progress.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-exam-countdown',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
   },
 }
 

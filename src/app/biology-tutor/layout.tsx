@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert biology tutoring from AIIMS-trained faculty. 98% success rate, personalized attention. Best biology tutor for NEET, CBSE, ICSE preparation.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert biology tutoring from AIIMS-trained faculty. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor',
   },
 }
 

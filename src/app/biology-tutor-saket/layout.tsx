@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Saket for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-saket',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-saket',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Saket Delhi.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-saket',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-saket',
   },
 }
 

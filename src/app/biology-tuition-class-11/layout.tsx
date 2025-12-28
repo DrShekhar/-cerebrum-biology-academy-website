@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 11 biology tuition with AIIMS faculty. Build strong foundation for NEET success.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tuition-class-11',
+    url: 'https://cerebrumbiologyacademy.com/biology-tuition-class-11',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Build NEET foundation in Class 11. AIIMS faculty, 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tuition-class-11',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-class-11',
   },
 }
 

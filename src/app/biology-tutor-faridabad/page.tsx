@@ -131,7 +131,7 @@ export default function BiologyTutorFaridabadPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Faridabad',
             description: 'Best Biology Tutor for Faridabad students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-faridabad',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-faridabad',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

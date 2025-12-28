@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Learn NEET Biology from AIIMS faculty online. 500+ medical selections!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-neet',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-neet',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'AIIMS faculty, 98% success rate, live online classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-neet',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-neet',
   },
 }
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Free NEET Tools 2026 - Rank Predictor, College Finder & More',
     description:
       'All-in-one NEET preparation tools. Free rank predictor, college finder, study planner, and practice tests.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-tools',
+    url: 'https://cerebrumbiologyacademy.com/neet-tools',
     type: 'website',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'All NEET preparation tools in one place. Rank predictor, college finder, study planner & more.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-tools',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-tools',
   },
 }
 

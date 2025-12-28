@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best NEET classes with live interactive sessions, expert faculty. Available online and offline. 98% success rate!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-classes',
+    url: 'https://cerebrumbiologyacademy.com/neet-classes',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Best NEET classes with live sessions and expert faculty. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-classes',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-classes',
   },
 }
 

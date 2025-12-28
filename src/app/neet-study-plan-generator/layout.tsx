@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'NEET Study Plan Generator 2026 - Free Personalized Schedule',
     description:
       'Generate your personalized NEET Biology study plan. Week-by-week schedule optimized for your preparation time and weak areas.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-study-plan-generator',
+    url: 'https://cerebrumbiologyacademy.com/neet-study-plan-generator',
     type: 'website',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Create your personalized NEET Biology study schedule. Week-by-week plan based on your needs.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-study-plan-generator',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-study-plan-generator',
   },
 }
 

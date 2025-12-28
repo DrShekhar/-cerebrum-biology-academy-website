@@ -132,7 +132,7 @@ export default function BiologyTutorEastDelhiPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - East Delhi',
             description: 'Best Biology Tutor for East Delhi students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-east-delhi',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-east-delhi',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

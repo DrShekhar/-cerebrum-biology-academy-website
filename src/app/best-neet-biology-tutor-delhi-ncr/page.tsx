@@ -151,7 +151,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy',
             description: 'Best NEET Biology Tutor in Delhi NCR',
-            url: 'https://www.cerebrumbiologyacademy.com',
+            url: 'https://cerebrumbiologyacademy.com',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

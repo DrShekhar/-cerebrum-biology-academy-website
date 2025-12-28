@@ -130,7 +130,7 @@ export default function BiologyTutorJanakpuriPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Janakpuri',
             description: 'Best Biology Tutor for Janakpuri students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-janakpuri',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-janakpuri',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

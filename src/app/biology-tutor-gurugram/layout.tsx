@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Gurugram for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-gurugram',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',
   },
   twitter: {
     card: 'summary_large_image',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Gurugram.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-gurugram',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',
   },
 }
 

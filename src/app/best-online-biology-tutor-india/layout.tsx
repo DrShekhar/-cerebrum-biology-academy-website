@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'India\'s top-rated online biology tutor. 5000+ students, 98% success!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-online-biology-tutor-india',
+    url: 'https://cerebrumbiologyacademy.com/best-online-biology-tutor-india',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: '#1 rated, AIIMS faculty, 5000+ students trained!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-online-biology-tutor-india',
+    canonical: 'https://cerebrumbiologyacademy.com/best-online-biology-tutor-india',
   },
 }
 

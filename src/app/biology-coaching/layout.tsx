@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert biology coaching with structured curriculum and comprehensive study materials.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-coaching',
+    url: 'https://cerebrumbiologyacademy.com/biology-coaching',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert coaching for NEET & boards. 98% success rate, 15+ years experience!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-coaching',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-coaching',
   },
 }
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 11 biology tuition online. NCERT-focused teaching!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-11',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-11',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'AIIMS faculty, NCERT-based teaching, live classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-11',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-11',
   },
 }
 

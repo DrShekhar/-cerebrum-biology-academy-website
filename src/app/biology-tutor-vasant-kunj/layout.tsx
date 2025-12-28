@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Vasant Kunj for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Vasant Kunj Delhi.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
   },
 }
 

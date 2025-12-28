@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Complete NEET preparation course with expert guidance, mock tests, and study material. Start your NEET journey today!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-preparation',
+    url: 'https://cerebrumbiologyacademy.com/neet-preparation',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Complete NEET preparation course with expert guidance. Start your NEET journey today!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-preparation',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-preparation',
   },
 }
 

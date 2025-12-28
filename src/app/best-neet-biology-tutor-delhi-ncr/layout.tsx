@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Find the best NEET Biology tutor in Delhi NCR - Dr. Shekhar C Singh, AIIMS Alumnus. Coaching in Delhi, Noida, Greater Noida.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-neet-biology-tutor-delhi-ncr',
+    url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor-delhi-ncr',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Top NEET Biology coaching in Delhi NCR by AIIMS Faculty.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-neet-biology-tutor-delhi-ncr',
+    canonical: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor-delhi-ncr',
   },
 }
 

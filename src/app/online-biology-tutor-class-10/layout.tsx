@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 10 biology tuition. Board exam + NEET foundation!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-10',
+    url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-10',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Board exam prep + NEET foundation, live classes!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/online-biology-tutor-class-10',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-class-10',
   },
 }
 

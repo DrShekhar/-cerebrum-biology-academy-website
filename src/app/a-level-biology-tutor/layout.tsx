@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'Expert A-Level Biology tutoring for all exam boards. 92% A*/A rate, 400+ students. AS & A2 Level, past papers, university preparation.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/a-level-biology-tutor',
+    url: 'https://cerebrumbiologyacademy.com/a-level-biology-tutor',
   },
   twitter: {
     card: 'summary_large_image',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       'Expert A-Level Biology tutoring for Cambridge, Edexcel, AQA & OCR. 400+ students achieving top grades.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/a-level-biology-tutor',
+    canonical: 'https://cerebrumbiologyacademy.com/a-level-biology-tutor',
   },
 }
 

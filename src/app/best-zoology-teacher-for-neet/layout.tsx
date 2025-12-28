@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Expert zoology faculty for NEET. Human Physiology, Animal Kingdom, Reproduction - complete coverage!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-zoology-teacher-for-neet',
+    url: 'https://cerebrumbiologyacademy.com/best-zoology-teacher-for-neet',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Master 50% of NEET Biology with our expert zoology faculty!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-zoology-teacher-for-neet',
+    canonical: 'https://cerebrumbiologyacademy.com/best-zoology-teacher-for-neet',
   },
 }
 

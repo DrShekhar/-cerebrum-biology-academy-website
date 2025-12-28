@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Learn from AIIMS-trained faculty with 98% success rate. Book FREE demo today!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-for-neet',
+    url: 'https://cerebrumbiologyacademy.com/best-biology-teacher-for-neet',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty, 2500+ selections, 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-for-neet',
+    canonical: 'https://cerebrumbiologyacademy.com/best-biology-teacher-for-neet',
   },
 }
 

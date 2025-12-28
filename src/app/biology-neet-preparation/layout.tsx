@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Comprehensive NEET biology preparation with AIIMS faculty. 98% success rate, 2,500+ selections.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-neet-preparation',
+    url: 'https://cerebrumbiologyacademy.com/biology-neet-preparation',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Crack NEET with expert biology preparation. AIIMS faculty, proven results!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-neet-preparation',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-neet-preparation',
   },
 }
 

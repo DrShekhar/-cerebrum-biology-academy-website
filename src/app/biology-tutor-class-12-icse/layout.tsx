@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 12 ICSE biology coaching from AIIMS trained faculty. ISC board + NEET preparation.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-12-icse',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-class-12-icse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert ISC biology coaching. Board + NEET prep. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-12-icse',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-12-icse',
   },
 }
 

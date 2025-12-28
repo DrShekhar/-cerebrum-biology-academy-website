@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Noida for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida',
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Noida.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-noida',
   },
 }
 

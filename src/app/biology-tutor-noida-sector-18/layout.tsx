@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Noida Sector 18 for NEET & Board exams. Expert coaching by AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Noida Sector 18.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
   },
 }
 

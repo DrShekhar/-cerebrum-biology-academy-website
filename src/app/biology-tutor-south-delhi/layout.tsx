@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in South Delhi for NEET & Board exams. Expert coaching in GK-1, GK-2, Hauz Khas, Malviya Nagar.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-south-delhi',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-south-delhi',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in South Delhi localities.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-south-delhi',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-south-delhi',
   },
 }
 

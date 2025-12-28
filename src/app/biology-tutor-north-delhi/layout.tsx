@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in North Delhi for NEET & Board exams. Expert coaching in Rohini, Pitampura, Model Town.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-north-delhi',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-north-delhi',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in North Delhi localities.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-north-delhi',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-north-delhi',
   },
 }
 

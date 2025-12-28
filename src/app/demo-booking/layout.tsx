@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Experience our teaching with AIIMS-trained faculty. 45-min FREE demo, 2500+ selections. Book now!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/demo-booking',
+    url: 'https://cerebrumbiologyacademy.com/demo-booking',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty, 45-min FREE demo, limited slots!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/demo-booking',
+    canonical: 'https://cerebrumbiologyacademy.com/demo-booking',
   },
 }
 

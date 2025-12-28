@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Best Biology tutor in Dwarka for NEET & Board exams. Expert coaching for all Dwarka Sectors.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-dwarka',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-dwarka',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert NEET Biology coaching in Dwarka Delhi.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-dwarka',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-dwarka',
   },
 }
 

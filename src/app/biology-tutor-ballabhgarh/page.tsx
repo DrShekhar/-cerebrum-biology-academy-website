@@ -131,7 +131,7 @@ export default function BiologyTutorBallabhgarhPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Ballabhgarh',
             description: 'Best Biology Tutor for Ballabhgarh students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-ballabhgarh',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-ballabhgarh',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

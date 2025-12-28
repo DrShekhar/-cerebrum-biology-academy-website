@@ -131,7 +131,7 @@ export default function BiologyTutorDwarkaPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Dwarka',
             description: 'Best Biology Tutor for Dwarka students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-dwarka',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-dwarka',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

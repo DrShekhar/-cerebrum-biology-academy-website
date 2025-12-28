@@ -185,7 +185,7 @@ export default function BestOnlineBiologyTutorIndiaPage() {
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy',
             description: 'Best Online Biology Tutor in India for NEET',
-            url: 'https://www.cerebrumbiologyacademy.com',
+            url: 'https://cerebrumbiologyacademy.com',
             areaServed: {
               '@type': 'Country',
               name: 'India',

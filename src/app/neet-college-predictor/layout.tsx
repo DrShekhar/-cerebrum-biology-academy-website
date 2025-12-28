@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'NEET College Predictor 2026 - 100+ Colleges with 2024 Cutoffs',
     description:
       'Find medical colleges for your NEET rank. All 23 AIIMS, JIPMER, 50+ Govt & 40+ Private colleges with accurate 2024 MCC cutoff data.',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-college-predictor',
+    url: 'https://cerebrumbiologyacademy.com/neet-college-predictor',
     type: 'website',
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       'Most comprehensive NEET college finder with all AIIMS, Govt & Private colleges. Accurate 2024 cutoffs.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-college-predictor',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-college-predictor',
   },
 }
 

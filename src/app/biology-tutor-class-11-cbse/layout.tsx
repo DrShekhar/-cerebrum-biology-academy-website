@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert Class 11 CBSE biology coaching from AIIMS trained faculty. NCERT-based teaching, NEET foundation, small batches.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-11-cbse',
+    url: 'https://cerebrumbiologyacademy.com/biology-tutor-class-11-cbse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 11 biology coaching. AIIMS trained faculty, 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-tutor-class-11-cbse',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-11-cbse',
   },
 }
 

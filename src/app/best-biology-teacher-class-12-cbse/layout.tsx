@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 12 CBSE Biology teaching. Boards + NEET dual preparation.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-class-12-cbse',
+    url: 'https://cerebrumbiologyacademy.com/best-biology-teacher-class-12-cbse',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Expert Class 12 CBSE Biology teaching. 98% success rate!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-class-12-cbse',
+    canonical: 'https://cerebrumbiologyacademy.com/best-biology-teacher-class-12-cbse',
   },
 }
 

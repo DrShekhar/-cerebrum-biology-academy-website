@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty, 98% success rate. Delhi, Noida, Gurgaon. Book FREE demo!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
+    url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty, 98% success rate, Delhi-Noida-Gurgaon!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
+    canonical: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
   },
 }
 

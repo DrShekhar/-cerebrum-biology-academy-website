@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Find expert biology teachers near you. 4 offline centers in Delhi NCR + online classes available.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/biology-teacher-near-me',
+    url: 'https://cerebrumbiologyacademy.com/biology-teacher-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Find best biology teachers in Delhi NCR or join online from anywhere!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/biology-teacher-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-teacher-near-me',
   },
 }
 

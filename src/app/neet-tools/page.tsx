@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator. Plan your NEET journey with our AI-powered tools.',
     type: 'website',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-tools',
+    url: 'https://cerebrumbiologyacademy.com/neet-tools',
   },
 }
 
@@ -137,7 +137,7 @@ export default function NEETToolsPage() {
             name: 'Free NEET Preparation Tools 2026',
             description:
               'Collection of free NEET preparation tools including rank predictor, college predictor, and study plan generator.',
-            url: 'https://www.cerebrumbiologyacademy.com/neet-tools',
+            url: 'https://cerebrumbiologyacademy.com/neet-tools',
             mainEntity: {
               '@type': 'ItemList',
               itemListElement: tools.map((tool, index) => ({

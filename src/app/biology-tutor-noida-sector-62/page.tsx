@@ -131,7 +131,7 @@ export default function BiologyTutorNoidaSector62Page() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Noida Sector 62',
             description: 'Best Biology Tutor for Noida Sector 62 students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida-sector-62',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-62',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

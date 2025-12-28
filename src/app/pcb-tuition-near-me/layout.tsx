@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Expert PCB tuition for NEET aspirants. Physics, Chemistry & Biology with expert faculty.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/pcb-tuition-near-me',
+    url: 'https://cerebrumbiologyacademy.com/pcb-tuition-near-me',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Complete PCB coaching for NEET. Expert faculty, comprehensive preparation!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/pcb-tuition-near-me',
+    canonical: 'https://cerebrumbiologyacademy.com/pcb-tuition-near-me',
   },
 }
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Expert zoology teaching focusing on Human Physiology & Animal Kingdom. 50% NEET weightage!',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/zoology-teacher',
+    url: 'https://cerebrumbiologyacademy.com/zoology-teacher',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'AIIMS-trained faculty specializing in Zoology. 50% of NEET Biology covered!',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/zoology-teacher',
+    canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher',
   },
 }
 

@@ -130,7 +130,7 @@ export default function BiologyTutorVasantKunjPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Vasant Kunj',
             description: 'Best Biology Tutor for Vasant Kunj students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

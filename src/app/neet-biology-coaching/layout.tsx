@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Expert NEET Biology coaching by AIIMS alumni. 98% success rate, 2500+ selections. Live classes, study materials, mock tests.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.cerebrumbiologyacademy.com/neet-biology-coaching',
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Expert NEET Biology coaching by AIIMS alumni. 2500+ selections. Best preparation for NEET 2026.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/neet-biology-coaching',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',
   },
 }
 

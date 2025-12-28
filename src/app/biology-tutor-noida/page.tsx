@@ -131,7 +131,7 @@ export default function BiologyTutorNoidaPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Noida',
             description: 'Best Biology Tutor for Noida students - NEET & Board exam preparation',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-noida',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',

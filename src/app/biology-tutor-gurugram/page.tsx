@@ -132,7 +132,7 @@ export default function BiologyTutorGurugramPage() {
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Gurugram',
             description: 'Best Biology Tutor for Gurugram students - NEET & Board exam preparation with online classes',
-            url: 'https://www.cerebrumbiologyacademy.com/biology-tutor-gurugram',
+            url: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
