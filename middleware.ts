@@ -240,6 +240,13 @@ export default clerkMiddleware(async (auth, req) => {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow, nosnippet, noarchive, noimageindex')
   }
 
+  // SEO: Add noindex for pages with query params to prevent duplicate content
+  const searchQuery = req.nextUrl.search
+  const pagesWithQueryParamDuplicates = ['/blog', '/courses', '/demo-booking', '/enrollments']
+  if (searchQuery && pagesWithQueryParamDuplicates.some((p) => pathname === p || pathname.startsWith(p + '/'))) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow')
+  }
+
   // Production headers
   if (process.env.NODE_ENV === 'production') {
     response.headers.set(

@@ -9,7 +9,7 @@ export interface PageMetadata {
 
 export const seoConfig = {
   siteName: 'Cerebrum Biology Academy',
-  siteUrl: 'https://www.cerebrumbiologyacademy.com',
+  siteUrl: 'https://cerebrumbiologyacademy.com',
   defaultTitle:
     'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida | Cerebrum Academy',
   defaultDescription:

@@ -25,7 +25,23 @@ const EnhancedCoursesListingPage = dynamic(
   }
 )
 
-export const metadata: Metadata = generatePageMetadata('courses')
+interface CoursesPageProps {
+  searchParams: Promise<{ class?: string; category?: string }>
+}
+
+export async function generateMetadata({ searchParams }: CoursesPageProps): Promise<Metadata> {
+  const params = await searchParams
+  const hasQueryParams = params.class || params.category
+  const baseMetadata = generatePageMetadata('courses')
+
+  return {
+    ...baseMetadata,
+    alternates: {
+      canonical: 'https://cerebrumbiologyacademy.com/courses',
+    },
+    robots: hasQueryParams ? { index: false, follow: true } : { index: true, follow: true },
+  }
+}
 
 export default function CoursesPage() {
   return <EnhancedCoursesListingPage />
