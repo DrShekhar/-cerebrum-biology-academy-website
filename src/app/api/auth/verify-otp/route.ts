@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { signIn } from '@/lib/auth'
+import { SessionManager, CookieManager, addSecurityHeaders } from '@/lib/auth/config'
 import { z } from 'zod'
 
 // Validation schema for OTP verification
@@ -38,12 +38,14 @@ export async function POST(request: NextRequest) {
     // Validate input
     const validationResult = verifyOtpSchema.safeParse(body)
     if (!validationResult.success) {
-      return NextResponse.json(
-        {
-          error: 'Validation failed',
-          details: validationResult.error.issues,
-        },
-        { status: 400 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Validation failed',
+            details: validationResult.error.issues,
+          },
+          { status: 400 }
+        )
       )
     }
 
@@ -92,22 +94,28 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      return NextResponse.json({ error: 'Invalid or expired OTP' }, { status: 400 })
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Invalid or expired OTP' }, { status: 400 })
+      )
     }
 
     // Check if OTP is expired
     if (otpRecord.expiresAt < new Date()) {
-      return NextResponse.json(
-        { error: 'OTP has expired. Please request a new one.' },
-        { status: 400 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          { error: 'OTP has expired. Please request a new one.' },
+          { status: 400 }
+        )
       )
     }
 
     // Check attempt limit
     if (otpRecord.attempts >= 3) {
-      return NextResponse.json(
-        { error: 'Too many invalid attempts. Please request a new OTP.' },
-        { status: 400 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          { error: 'Too many invalid attempts. Please request a new OTP.' },
+          { status: 400 }
+        )
       )
     }
 
@@ -126,26 +134,30 @@ export async function POST(request: NextRequest) {
     if (purpose === 'registration') {
       // Validate required fields for registration
       if (!name || !role) {
-        return NextResponse.json(
-          { error: 'Name and role are required for registration' },
-          { status: 400 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'Name and role are required for registration' },
+            { status: 400 }
+          )
         )
       }
 
       // Check if user already exists
-      const existingUser = await prisma.user.findUnique({
+      const existingUser = await prisma.users.findFirst({
         where: { phone: mobile },
       })
 
       if (existingUser) {
-        return NextResponse.json(
-          { error: 'User already exists. Please login instead.' },
-          { status: 409 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'User already exists. Please login instead.' },
+            { status: 409 }
+          )
         )
       }
 
       // Create new user
-      user = await prisma.user.create({
+      user = await prisma.users.create({
         data: {
           name,
           email: email || `${mobile}@temp.cerebrumbiologyacademy.com`,
@@ -188,19 +200,21 @@ export async function POST(request: NextRequest) {
       }
     } else if (purpose === 'login') {
       // Get existing user
-      user = await prisma.user.findUnique({
+      user = await prisma.users.findFirst({
         where: { phone: mobile },
       })
 
       if (!user) {
-        return NextResponse.json(
-          { error: 'User not found. Please register first.' },
-          { status: 404 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'User not found. Please register first.' },
+            { status: 404 }
+          )
         )
       }
 
       // Update last active time
-      await prisma.user.update({
+      await prisma.users.update({
         where: { id: user.id },
         data: {
           lastActiveAt: new Date(),
@@ -210,13 +224,13 @@ export async function POST(request: NextRequest) {
 
     // Ensure user exists before proceeding
     if (!user) {
-      return NextResponse.json({ error: 'User authentication failed' }, { status: 500 })
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'User authentication failed' }, { status: 500 })
+      )
     }
 
-    // Log authentication event for monitoring
-    console.log(
-      `Auth event: ${purpose === 'registration' ? 'registration' : 'signin'} for user ${user.id} via OTP`
-    )
+    // Create session and generate tokens
+    const { accessToken, refreshToken } = await SessionManager.createSession(user)
 
     // Return success with user data (excluding password)
     const safeUser = {
@@ -229,16 +243,45 @@ export async function POST(request: NextRequest) {
       profile: user.profile,
     }
 
-    return NextResponse.json(
+    // Track analytics event
+    try {
+      await prisma.analyticsEvent.create({
+        data: {
+          userId: user.id,
+          eventType: 'auth',
+          eventName: purpose === 'registration' ? 'user_registered_otp' : 'user_login_otp',
+          properties: {
+            method: 'otp',
+            mobile: mobile.slice(0, 3) + '****' + mobile.slice(-2),
+          },
+          ipAddress:
+            request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
+          userAgent: request.headers.get('user-agent'),
+        },
+      })
+    } catch (analyticsError) {
+      console.error('Analytics tracking error:', analyticsError)
+    }
+
+    const response = NextResponse.json(
       {
+        success: true,
         message: `${purpose === 'registration' ? 'Registration' : 'Login'} successful`,
         user: safeUser,
-        token: 'jwt-token-would-go-here', // In production, generate JWT token
+        accessToken,
+        expiresIn: 15 * 60, // 15 minutes in seconds
       },
       { status: 200 }
     )
+
+    // Set HTTP-only cookies
+    CookieManager.setAuthCookies(response, accessToken, refreshToken)
+
+    return addSecurityHeaders(response)
   } catch (error) {
     console.error('Verify OTP error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return addSecurityHeaders(
+      NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    )
   }
 }

@@ -5,7 +5,7 @@
 
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -16,9 +16,7 @@ import { showToast } from '@/lib/toast'
 import type { ClassSession } from '@/types/attendance'
 
 interface AttendancePageProps {
-  params: {
-    sessionId: string
-  }
+  params: Promise<{ sessionId: string }>
 }
 
 interface Student {
@@ -45,6 +43,7 @@ interface SessionData {
 }
 
 export default function AttendanceMarkingPage({ params }: AttendancePageProps) {
+  const resolvedParams = use(params)
   const router = useRouter()
   const [data, setData] = useState<SessionData | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -52,12 +51,12 @@ export default function AttendanceMarkingPage({ params }: AttendancePageProps) {
 
   useEffect(() => {
     fetchSessionData()
-  }, [params.sessionId])
+  }, [resolvedParams.sessionId])
 
   const fetchSessionData = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch(`/api/teacher/attendance/${params.sessionId}`)
+      const response = await fetch(`/api/teacher/attendance/${resolvedParams.sessionId}`)
       const result = await response.json()
 
       if (result.success) {
@@ -78,7 +77,7 @@ export default function AttendanceMarkingPage({ params }: AttendancePageProps) {
   const handleSaveAttendance = async (records: any[]) => {
     setIsSubmitting(true)
     try {
-      const response = await fetch(`/api/teacher/attendance/${params.sessionId}`, {
+      const response = await fetch(`/api/teacher/attendance/${resolvedParams.sessionId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ records }),

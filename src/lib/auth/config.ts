@@ -208,16 +208,10 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
-    console.log('🔍 [v4] validateUserSession() - Using NextAuth auth() helper')
-
-    // IMPORTANT: In Next.js 15 App Router, we should use auth() from NextAuth
-    // instead of manually parsing cookies, as it handles the session correctly
+    // Use NextAuth auth() helper for session validation
     try {
       const { auth: getSession } = await import('@/lib/auth')
       const session = await getSession()
-
-      console.log('🔐 NextAuth session from auth():', !!session)
-      console.log('👤 User from session:', session?.user?.email, session?.user?.role)
 
       if (session && session.user) {
         // Normalize role to uppercase for consistency
@@ -234,71 +228,45 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
         }
       }
     } catch (authError) {
-      console.error('❌ NextAuth auth() error:', authError)
+      // Silent fallback to cookie parsing
     }
 
     // Fallback: Try manual cookie parsing (for backward compatibility)
-    console.log(
-      '📋 All cookies:',
-      request.cookies.getAll().map((c) => c.name)
-    )
-
     const nextAuthTokenCookie =
       request.cookies.get('__Secure-authjs.session-token') ||
       request.cookies.get('authjs.session-token') ||
       request.cookies.get('next-auth.session-token') ||
       request.cookies.get('__Secure-next-auth.session-token')
 
-    console.log('🔐 NextAuth token cookie found:', !!nextAuthTokenCookie)
-
     if (nextAuthTokenCookie) {
       try {
         const jwt = await import('jsonwebtoken')
         const secret = process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
 
-        if (!secret) {
-          console.error('❌ NEXTAUTH_SECRET not configured')
-          console.log('⚠️  Cannot validate NextAuth session without secret')
-        } else {
-          // Decode and verify the JWT token
+        if (secret) {
           const decoded = jwt.verify(nextAuthTokenCookie.value, secret) as any
 
-          console.log('✅ NextAuth JWT decoded:', !!decoded)
-          console.log('👤 NextAuth user from JWT:', decoded?.email, decoded?.role)
-
           if (decoded && decoded.email) {
-            // Get user from database to ensure we have the latest data
             const user = await prisma.users.findUnique({
               where: { email: decoded.email },
             })
 
             if (user) {
-              console.log('✅ Valid NextAuth session found for:', user.email)
               return {
                 valid: true,
                 userId: user.id,
                 role: user.role as UserRole,
                 email: user.email,
                 name: user.name,
-                expiresAt: new Date(Date.now() + 8 * 60 * 60 * 1000), // 8 hours from now
+                expiresAt: new Date(Date.now() + 8 * 60 * 60 * 1000),
                 permissions: getUserPermissions(user.role as UserRole),
               }
-            } else {
-              console.log('❌ User from JWT not found in database:', decoded.email)
             }
           }
         }
       } catch (nextAuthError: any) {
-        if (nextAuthError.name === 'TokenExpiredError') {
-          console.log('❌ NextAuth JWT token expired')
-        } else if (nextAuthError.name === 'JsonWebTokenError') {
-          console.log('❌ NextAuth JWT invalid:', nextAuthError.message)
-        } else {
-          console.error('NextAuth JWT validation error:', nextAuthError)
-        }
+        // Token expired or invalid - fall through to other auth methods
       }
-    } else {
-      console.log('⚠️  No NextAuth cookie found')
     }
 
     // Fall back to custom JWT token auth (for other authentication methods)
@@ -333,7 +301,7 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
     }
 
     // Update last active time
-    await prisma.user.update({
+    await prisma.users.update({
       where: { id: session.userId },
       data: { lastActiveAt: new Date() },
     })

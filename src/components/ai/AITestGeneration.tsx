@@ -14,7 +14,7 @@ import QuestionBank from './QuestionBank'
 import Distribution from './Distribution'
 import Analytics from './Analytics'
 import UICustomization from './UICustomization'
-import Lifecycle from './Lifecycle'
+import Lifecycle from './lifecycle'
 import TopicSelector from './TopicSelector'
 import { getAllUnits, getChapterById } from '@/data/neet-syllabus'
 import {

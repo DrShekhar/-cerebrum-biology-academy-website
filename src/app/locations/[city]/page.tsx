@@ -6,9 +6,9 @@ import { generateCityMetadata } from '@/lib/seo/localityMetadata'
 import { MapPin, Users, Award, TrendingUp, ChevronRight, School, Train } from 'lucide-react'
 
 interface CityPageProps {
-  params: {
+  params: Promise<{
     city: string
-  }
+  }>
 }
 
 // Generate static paths for all cities
@@ -23,8 +23,9 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
+  const resolvedParams = await params
   const localities = getAllLocalities()
-  const cityLocalities = localities.filter((loc) => loc.citySlug === params.city)
+  const cityLocalities = localities.filter((loc) => loc.citySlug === resolvedParams.city)
 
   if (cityLocalities.length === 0) {
     return {
@@ -34,12 +35,13 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   const cityName = cityLocalities[0].city
 
-  return generateCityMetadata(cityName, params.city, cityLocalities)
+  return generateCityMetadata(cityName, resolvedParams.city, cityLocalities)
 }
 
-export default function CityPage({ params }: CityPageProps) {
+export default async function CityPage({ params }: CityPageProps) {
+  const resolvedParams = await params
   const localities = getAllLocalities()
-  const cityLocalities = localities.filter((loc) => loc.citySlug === params.city)
+  const cityLocalities = localities.filter((loc) => loc.citySlug === resolvedParams.city)
 
   if (cityLocalities.length === 0) {
     notFound()

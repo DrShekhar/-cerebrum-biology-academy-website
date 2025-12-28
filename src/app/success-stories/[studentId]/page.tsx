@@ -7,11 +7,12 @@ import { ArrowLeft, Share2, Download, Heart } from 'lucide-react'
 import Link from 'next/link'
 
 interface Props {
-  params: { studentId: string }
+  params: Promise<{ studentId: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const story = getStoryById(params.studentId)
+  const resolvedParams = await params
+  const story = getStoryById(resolvedParams.studentId)
 
   if (!story) {
     return {
@@ -31,8 +32,9 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default function StudentStoryPage({ params }: Props) {
-  const story = getStoryById(params.studentId)
+export default async function StudentStoryPage({ params }: Props) {
+  const resolvedParams = await params
+  const story = getStoryById(resolvedParams.studentId)
 
   if (!story || !story.detailedJourney) {
     notFound()

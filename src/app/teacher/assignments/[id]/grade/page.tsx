@@ -5,7 +5,7 @@
 
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -31,9 +31,7 @@ import {
 import { showToast } from '@/lib/toast'
 
 interface GradingPageProps {
-  params: {
-    id: string
-  }
+  params: Promise<{ id: string }>
 }
 
 interface Student {
@@ -90,6 +88,7 @@ interface GradingFormData {
 }
 
 export default function AssignmentGradingPage({ params }: GradingPageProps) {
+  const resolvedParams = use(params)
   const router = useRouter()
   const [assignment, setAssignment] = useState<Assignment | null>(null)
   const [submissions, setSubmissions] = useState<Submission[]>([])
@@ -103,7 +102,7 @@ export default function AssignmentGradingPage({ params }: GradingPageProps) {
 
   useEffect(() => {
     fetchSubmissions()
-  }, [params.id, statusFilter, searchQuery])
+  }, [resolvedParams.id, statusFilter, searchQuery])
 
   const fetchSubmissions = async () => {
     setIsLoading(true)
@@ -113,7 +112,7 @@ export default function AssignmentGradingPage({ params }: GradingPageProps) {
       if (searchQuery) queryParams.append('search', searchQuery)
 
       const response = await fetch(
-        `/api/teacher/assignments/${params.id}/submissions?${queryParams.toString()}`
+        `/api/teacher/assignments/${resolvedParams.id}/submissions?${queryParams.toString()}`
       )
       const result = await response.json()
 
@@ -150,7 +149,7 @@ export default function AssignmentGradingPage({ params }: GradingPageProps) {
     setIsSubmitting(submissionId)
     try {
       const response = await fetch(
-        `/api/teacher/assignments/${params.id}/submissions/${submissionId}/grade`,
+        `/api/teacher/assignments/${resolvedParams.id}/submissions/${submissionId}/grade`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

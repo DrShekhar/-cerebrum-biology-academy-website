@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, use } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -24,7 +24,12 @@ import { cn } from '@/lib/utils'
 import { uploadFile, formatFileSize, getFileIcon } from '@/lib/fileUpload'
 import { Assignment, SubmissionStatus } from '@/types/assignment'
 
-export default function AssignmentDetailPage({ params }: { params: { id: string } }) {
+export default function AssignmentDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const resolvedParams = use(params)
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
   const router = useRouter()
   const [assignment, setAssignment] = useState<
@@ -67,7 +72,7 @@ export default function AssignmentDetailPage({ params }: { params: { id: string 
     async function fetchAssignment() {
       try {
         setLoading(true)
-        const response = await fetch(`/api/student/assignments/${params.id}`)
+        const response = await fetch(`/api/student/assignments/${resolvedParams.id}`)
         const data = await response.json()
 
         if (!response.ok) {
@@ -89,7 +94,7 @@ export default function AssignmentDetailPage({ params }: { params: { id: string 
     if (isAuthenticated && user?.role === 'STUDENT') {
       fetchAssignment()
     }
-  }, [isAuthenticated, user, params.id])
+  }, [isAuthenticated, user, resolvedParams.id])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || [])
@@ -124,7 +129,7 @@ export default function AssignmentDetailPage({ params }: { params: { id: string 
         }
       }
 
-      const response = await fetch(`/api/student/assignments/${params.id}/submit`, {
+      const response = await fetch(`/api/student/assignments/${resolvedParams.id}/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -9,9 +9,9 @@ import ReactMarkdown from 'react-markdown'
 const prisma = new PrismaClient()
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // Generate static params for all published topics (for ISR)
@@ -35,8 +35,9 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params
   const topic = await prisma.biology_topics.findUnique({
-    where: { slug: params.slug },
+    where: { slug: resolvedParams.slug },
     select: {
       metaTitle: true,
       title: true,
@@ -69,14 +70,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       authors: ['Dr. Shekhar C Singh'],
     },
     alternates: {
-      canonical: `https://cerebrumbiologyacademy.com/biology-notes/${params.slug}`,
+      canonical: `https://cerebrumbiologyacademy.com/biology-notes/${resolvedParams.slug}`,
     },
   }
 }
 
 export default async function BiologyTopicPage({ params }: PageProps) {
+  const resolvedParams = await params
   const topic = await prisma.biology_topics.findUnique({
-    where: { slug: params.slug },
+    where: { slug: resolvedParams.slug },
     include: {
       lead_magnets: true,
     },

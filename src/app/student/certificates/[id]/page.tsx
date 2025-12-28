@@ -49,7 +49,12 @@ async function getCertificate(id: string, studentId: string) {
   return certificate
 }
 
-export default async function CertificateDetailPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: Promise<{ id: string }>
+}
+
+export default async function CertificateDetailPage({ params }: PageProps) {
+  const resolvedParams = await params
   const session = await auth()
 
   if (!session?.user?.id) {
@@ -60,7 +65,7 @@ export default async function CertificateDetailPage({ params }: { params: { id: 
     redirect('/unauthorized')
   }
 
-  const certificate = await getCertificate(params.id, session.user.id)
+  const certificate = await getCertificate(resolvedParams.id, session.user.id)
 
   if (!certificate) {
     notFound()

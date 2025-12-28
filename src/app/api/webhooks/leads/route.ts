@@ -26,11 +26,33 @@ const genericLeadSchema = z.object({
   utmMedium: z.string().optional(),
   utmCampaign: z.string().optional(),
   // Source-specific fields (stored in metadata)
-  metadata: z.record(z.string(), z.any()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
   // Security
   signature: z.string().optional(),
   timestamp: z.string().optional(),
 })
+
+// Type for raw webhook payloads from various sources
+type SourcePayload = Record<string, unknown>
+
+// Type for Meta Ads field data array
+interface MetaFieldData {
+  name: string
+  values?: string[]
+}
+
+// Type for existing lead from database
+interface ExistingLeadRecord {
+  id: string
+  email: string | null
+  phone: string
+  courseInterest: string | null
+  assignedToId: string | null
+  assignedTo: {
+    name: string
+    email: string
+  } | null
+}
 
 type LeadSource =
   | 'sulekha'
@@ -52,47 +74,52 @@ interface ParsedLead {
   utmSource?: string
   utmMedium?: string
   utmCampaign?: string
-  metadata?: Record<string, any>
+  metadata?: Record<string, unknown>
 }
 
 /**
  * Source-specific parsers
  * Each parser normalizes the source's payload into our standard format
  */
-const parsers = {
-  sulekha: (payload: any): ParsedLead => {
+// Helper to safely get string from unknown payload
+const getString = (value: unknown): string | undefined => {
+  return typeof value === 'string' ? value : undefined
+}
+
+const parsers: Record<LeadSource, (payload: SourcePayload) => ParsedLead> = {
+  sulekha: (payload: SourcePayload): ParsedLead => {
     return {
-      studentName: payload.name || payload.customer_name || 'Unknown',
-      email: payload.email,
-      phone: payload.phone || payload.mobile || payload.contact_number,
-      courseInterest: payload.requirement || payload.course || 'Biology Coaching',
-      city: payload.city || payload.location,
-      grade: payload.class || payload.student_class,
-      message: payload.message || payload.description,
+      studentName: getString(payload.name) || getString(payload.customer_name) || 'Unknown',
+      email: getString(payload.email),
+      phone: getString(payload.phone) || getString(payload.mobile) || getString(payload.contact_number) || '',
+      courseInterest: getString(payload.requirement) || getString(payload.course) || 'Biology Coaching',
+      city: getString(payload.city) || getString(payload.location),
+      grade: getString(payload.class) || getString(payload.student_class),
+      message: getString(payload.message) || getString(payload.description),
       utmSource: 'sulekha',
       utmMedium: 'lead_aggregator',
-      utmCampaign: payload.campaign_id,
+      utmCampaign: getString(payload.campaign_id),
       metadata: {
         sulekhaLeadId: payload.lead_id,
         sulekhaCategory: payload.category,
-        leadQuality: payload.quality || 'standard',
+        leadQuality: getString(payload.quality) || 'standard',
         rawPayload: payload,
       },
     }
   },
 
-  justdial: (payload: any): ParsedLead => {
+  justdial: (payload: SourcePayload): ParsedLead => {
     return {
-      studentName: payload.name || payload.customer_name || 'Unknown',
-      email: payload.email,
-      phone: payload.phone || payload.mobile,
-      courseInterest: payload.requirement || payload.service_required || 'Biology Coaching',
-      city: payload.city || payload.area,
-      grade: payload.class,
-      message: payload.query || payload.message,
+      studentName: getString(payload.name) || getString(payload.customer_name) || 'Unknown',
+      email: getString(payload.email),
+      phone: getString(payload.phone) || getString(payload.mobile) || '',
+      courseInterest: getString(payload.requirement) || getString(payload.service_required) || 'Biology Coaching',
+      city: getString(payload.city) || getString(payload.area),
+      grade: getString(payload.class),
+      message: getString(payload.query) || getString(payload.message),
       utmSource: 'justdial',
       utmMedium: 'lead_aggregator',
-      utmCampaign: payload.campaign_id,
+      utmCampaign: getString(payload.campaign_id),
       metadata: {
         justdialLeadId: payload.lead_id,
         justdialCategory: payload.category,
@@ -103,20 +130,20 @@ const parsers = {
     }
   },
 
-  google_ads: (payload: any): ParsedLead => {
+  google_ads: (payload: SourcePayload): ParsedLead => {
     // Google Lead Form Extension format
-    const formData = payload.form_data || payload.user_column_data || {}
+    const formData = (payload.form_data || payload.user_column_data || {}) as SourcePayload
     return {
-      studentName: formData.full_name || formData.name || 'Unknown',
-      email: formData.email,
-      phone: formData.phone_number || formData.phone,
-      courseInterest: formData.course || formData.interested_in || 'Biology Coaching',
-      city: formData.city,
-      grade: formData.class || formData.grade,
-      message: formData.message || formData.comments,
+      studentName: getString(formData.full_name) || getString(formData.name) || 'Unknown',
+      email: getString(formData.email),
+      phone: getString(formData.phone_number) || getString(formData.phone) || '',
+      courseInterest: getString(formData.course) || getString(formData.interested_in) || 'Biology Coaching',
+      city: getString(formData.city),
+      grade: getString(formData.class) || getString(formData.grade),
+      message: getString(formData.message) || getString(formData.comments),
       utmSource: 'google_ads',
       utmMedium: 'cpc',
-      utmCampaign: payload.campaign_id || payload.google_key,
+      utmCampaign: getString(payload.campaign_id) || getString(payload.google_key),
       metadata: {
         googleLeadId: payload.lead_id || payload.google_key,
         campaignName: payload.campaign_name,
@@ -128,25 +155,25 @@ const parsers = {
     }
   },
 
-  meta_ads: (payload: any): ParsedLead => {
+  meta_ads: (payload: SourcePayload): ParsedLead => {
     // Facebook/Instagram Lead Ads format
-    const fieldData = payload.field_data || []
-    const getField = (name: string) => {
-      const field = fieldData.find((f: any) => f.name === name)
-      return field?.values?.[0] || null
+    const fieldData = (payload.field_data || []) as MetaFieldData[]
+    const getField = (name: string): string | undefined => {
+      const field = fieldData.find((f: MetaFieldData) => f.name === name)
+      return field?.values?.[0]
     }
 
     return {
       studentName: getField('full_name') || getField('name') || 'Unknown',
       email: getField('email'),
-      phone: getField('phone_number') || getField('phone'),
+      phone: getField('phone_number') || getField('phone') || '',
       courseInterest: getField('course') || getField('interested_in') || 'Biology Coaching',
       city: getField('city'),
       grade: getField('class') || getField('grade'),
       message: getField('message') || getField('comments'),
       utmSource: 'facebook',
       utmMedium: 'social',
-      utmCampaign: payload.campaign_id,
+      utmCampaign: getString(payload.campaign_id),
       metadata: {
         facebookLeadId: payload.leadgen_id || payload.id,
         formId: payload.form_id,
@@ -158,18 +185,18 @@ const parsers = {
     }
   },
 
-  direct_call: (payload: any): ParsedLead => {
+  direct_call: (payload: SourcePayload): ParsedLead => {
     return {
-      studentName: payload.name || payload.caller_name || 'Unknown',
-      email: payload.email,
-      phone: payload.phone || payload.caller_number,
-      courseInterest: payload.course || payload.inquiry || 'Biology Coaching',
-      city: payload.city,
-      grade: payload.class,
-      message: payload.notes || payload.call_summary,
+      studentName: getString(payload.name) || getString(payload.caller_name) || 'Unknown',
+      email: getString(payload.email),
+      phone: getString(payload.phone) || getString(payload.caller_number) || '',
+      courseInterest: getString(payload.course) || getString(payload.inquiry) || 'Biology Coaching',
+      city: getString(payload.city),
+      grade: getString(payload.class),
+      message: getString(payload.notes) || getString(payload.call_summary),
       utmSource: 'direct_call',
       utmMedium: 'phone',
-      utmCampaign: payload.campaign,
+      utmCampaign: getString(payload.campaign),
       metadata: {
         callDuration: payload.call_duration,
         callRecording: payload.recording_url,
@@ -180,40 +207,40 @@ const parsers = {
     }
   },
 
-  manual: (payload: any): ParsedLead => {
+  manual: (payload: SourcePayload): ParsedLead => {
     // For manually added leads (from form, admin panel, etc.)
     return {
-      studentName: payload.studentName || payload.name,
-      email: payload.email,
-      phone: payload.phone,
-      courseInterest: payload.courseInterest || 'Biology Coaching',
-      city: payload.city,
-      grade: payload.grade || payload.class,
-      message: payload.message || payload.notes,
-      utmSource: payload.utmSource || 'manual',
-      utmMedium: payload.utmMedium || 'direct',
-      utmCampaign: payload.utmCampaign,
+      studentName: getString(payload.studentName) || getString(payload.name) || 'Unknown',
+      email: getString(payload.email),
+      phone: getString(payload.phone) || '',
+      courseInterest: getString(payload.courseInterest) || 'Biology Coaching',
+      city: getString(payload.city),
+      grade: getString(payload.grade) || getString(payload.class),
+      message: getString(payload.message) || getString(payload.notes),
+      utmSource: getString(payload.utmSource) || 'manual',
+      utmMedium: getString(payload.utmMedium) || 'direct',
+      utmCampaign: getString(payload.utmCampaign),
       metadata: {
-        addedBy: payload.addedBy || 'system',
-        source: payload.source || 'manual_entry',
+        addedBy: getString(payload.addedBy) || 'system',
+        source: getString(payload.source) || 'manual_entry',
         rawPayload: payload,
       },
     }
   },
 
-  other: (payload: any): ParsedLead => {
+  other: (payload: SourcePayload): ParsedLead => {
     // Generic parser for unknown sources
     return {
-      studentName: payload.name || payload.studentName || 'Unknown',
-      email: payload.email,
-      phone: payload.phone || payload.mobile,
-      courseInterest: payload.course || payload.interest || 'Biology Coaching',
-      city: payload.city,
-      grade: payload.grade || payload.class,
-      message: payload.message || payload.notes,
-      utmSource: payload.source || 'other',
+      studentName: getString(payload.name) || getString(payload.studentName) || 'Unknown',
+      email: getString(payload.email),
+      phone: getString(payload.phone) || getString(payload.mobile) || '',
+      courseInterest: getString(payload.course) || getString(payload.interest) || 'Biology Coaching',
+      city: getString(payload.city),
+      grade: getString(payload.grade) || getString(payload.class),
+      message: getString(payload.message) || getString(payload.notes),
+      utmSource: getString(payload.source) || 'other',
       utmMedium: 'unknown',
-      utmCampaign: payload.campaign,
+      utmCampaign: getString(payload.campaign),
       metadata: {
         rawPayload: payload,
       },
@@ -227,9 +254,9 @@ const parsers = {
  */
 function verifySignature(
   source: LeadSource,
-  payload: any,
+  payload: SourcePayload,
   signature?: string,
-  timestamp?: string
+  _timestamp?: string
 ): boolean {
   // For now, return true - implement signature verification per source
   // In production, verify signatures based on each platform's method
@@ -360,7 +387,7 @@ function verifySignature(
 async function checkDuplicate(
   phone: string,
   email?: string
-): Promise<{ isDuplicate: boolean; existingLead?: any }> {
+): Promise<{ isDuplicate: boolean; existingLead?: ExistingLeadRecord }> {
   const existingLead = await prisma.lead.findFirst({
     where: {
       OR: [{ phone }, email ? { email } : {}].filter(Boolean),
@@ -378,7 +405,7 @@ async function checkDuplicate(
   if (existingLead) {
     return {
       isDuplicate: true,
-      existingLead,
+      existingLead: existingLead as ExistingLeadRecord,
     }
   }
 

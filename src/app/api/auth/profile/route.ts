@@ -51,7 +51,7 @@ const UpdateProfileSchema = z.object({
  */
 export const GET = withAuth(async (request: NextRequest, session) => {
   try {
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: session.userId },
       select: {
         id: true,
@@ -152,7 +152,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
 
     // Check if phone number is already taken by another user
     if (phone) {
-      const existingUser = await prisma.user.findFirst({
+      const existingUser = await prisma.users.findFirst({
         where: {
           phone,
           id: { not: session.userId },
@@ -173,7 +173,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     }
 
     // Get current user data to merge with updates
-    const currentUser = await prisma.user.findUnique({
+    const currentUser = await prisma.users.findUnique({
       where: { id: session.userId },
       select: { profile: true },
     })
@@ -191,7 +191,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
       : undefined
 
     // Update user profile
-    const updatedUser = await prisma.user.update({
+    const updatedUser = await prisma.users.update({
       where: { id: session.userId },
       data: {
         ...(name && { name }),

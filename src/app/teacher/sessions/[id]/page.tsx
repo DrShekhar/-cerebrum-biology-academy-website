@@ -5,7 +5,7 @@
 
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -33,12 +33,11 @@ import { cn } from '@/lib/utils'
 import type { ClassSession } from '@/types/attendance'
 
 interface SessionDetailPageProps {
-  params: {
-    id: string
-  }
+  params: Promise<{ id: string }>
 }
 
 export default function SessionDetailPage({ params }: SessionDetailPageProps) {
+  const resolvedParams = use(params)
   const router = useRouter()
   const [session, setSession] = useState<ClassSession | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -46,12 +45,12 @@ export default function SessionDetailPage({ params }: SessionDetailPageProps) {
 
   useEffect(() => {
     fetchSession()
-  }, [params.id])
+  }, [resolvedParams.id])
 
   const fetchSession = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch(`/api/teacher/sessions/${params.id}`)
+      const response = await fetch(`/api/teacher/sessions/${resolvedParams.id}`)
       const data = await response.json()
 
       if (data.success) {
@@ -75,7 +74,7 @@ export default function SessionDetailPage({ params }: SessionDetailPageProps) {
     }
 
     try {
-      const response = await fetch(`/api/teacher/sessions/${params.id}`, {
+      const response = await fetch(`/api/teacher/sessions/${resolvedParams.id}`, {
         method: 'DELETE',
       })
 

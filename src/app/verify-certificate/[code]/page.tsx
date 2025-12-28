@@ -38,8 +38,13 @@ async function verifyCertificate(code: string) {
   }
 }
 
-export default async function VerifyCertificatePage({ params }: { params: { code: string } }) {
-  const verificationData = await verifyCertificate(params.code)
+interface PageProps {
+  params: Promise<{ code: string }>
+}
+
+export default async function VerifyCertificatePage({ params }: PageProps) {
+  const resolvedParams = await params
+  const verificationData = await verifyCertificate(resolvedParams.code)
 
   if (!verificationData) {
     notFound()

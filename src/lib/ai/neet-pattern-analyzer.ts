@@ -105,7 +105,7 @@ export interface PatternInsight {
 
 export interface Evidence {
   source: string
-  data: any
+  data: Record<string, unknown>
   year: number
   relevance: number
 }
@@ -142,15 +142,15 @@ export class NEETPatternAnalyzer {
       class11Distribution: 0.44,
       class12Distribution: 0.56,
       topicDistribution: {
-        'genetics_evolution': 16,
-        'human_physiology': 14,
-        'plant_physiology': 12,
-        'cell_biology': 10,
-        'ecology': 9,
-        'reproduction': 8,
-        'biotechnology': 7,
-        'diversity': 6,
-        'molecular_biology': 8
+        genetics_evolution: 16,
+        human_physiology: 14,
+        plant_physiology: 12,
+        cell_biology: 10,
+        ecology: 9,
+        reproduction: 8,
+        biotechnology: 7,
+        diversity: 6,
+        molecular_biology: 8,
       },
       difficultyDistribution: { easy: 28, moderate: 46, difficult: 16 },
       questionTypes: { mcq: 90, assertion: 0, numerical: 0, matching: 0 },
@@ -159,10 +159,10 @@ export class NEETPatternAnalyzer {
         { category: 'general', marks: 164, percentile: 99.997, rank: 150 },
         { category: 'obc', marks: 137, percentile: 99.73, rank: 4800 },
         { category: 'sc', marks: 119, percentile: 98.64, rank: 24000 },
-        { category: 'st', marks: 113, percentile: 97.89, rank: 37500 }
+        { category: 'st', marks: 113, percentile: 97.89, rank: 37500 },
       ],
       newTopicsIntroduced: ['CRISPR applications', 'COVID-19 biology'],
-      discontinuedTopics: []
+      discontinuedTopics: [],
     },
     {
       year: 2023,
@@ -171,15 +171,15 @@ export class NEETPatternAnalyzer {
       class11Distribution: 0.45,
       class12Distribution: 0.55,
       topicDistribution: {
-        'genetics_evolution': 15,
-        'human_physiology': 15,
-        'plant_physiology': 11,
-        'cell_biology': 11,
-        'ecology': 8,
-        'reproduction': 9,
-        'biotechnology': 6,
-        'diversity': 7,
-        'molecular_biology': 8
+        genetics_evolution: 15,
+        human_physiology: 15,
+        plant_physiology: 11,
+        cell_biology: 11,
+        ecology: 8,
+        reproduction: 9,
+        biotechnology: 6,
+        diversity: 7,
+        molecular_biology: 8,
       },
       difficultyDistribution: { easy: 30, moderate: 45, difficult: 15 },
       questionTypes: { mcq: 90, assertion: 0, numerical: 0, matching: 0 },
@@ -188,47 +188,61 @@ export class NEETPatternAnalyzer {
         { category: 'general', marks: 162, percentile: 99.996, rank: 154 },
         { category: 'obc', marks: 134, percentile: 99.68, rank: 5200 },
         { category: 'sc', marks: 117, percentile: 98.42, rank: 26000 },
-        { category: 'st', marks: 111, percentile: 97.65, rank: 39000 }
+        { category: 'st', marks: 111, percentile: 97.65, rank: 39000 },
       ],
       newTopicsIntroduced: ['Monoclonal antibodies', 'Gene editing'],
-      discontinuedTopics: ['Some traditional biotech topics']
-    }
+      discontinuedTopics: ['Some traditional biotech topics'],
+    },
     // Additional years would be included in real implementation
   ]
 
   private readonly topicMetadata = {
-    'genetics_evolution': {
+    genetics_evolution: {
       name: 'Genetics and Evolution',
       class: '12',
       chapters: ['Heredity and Variation', 'Molecular Basis of Inheritance', 'Evolution'],
       importance: 'high',
       conceptualDensity: 'high',
-      mathematicalContent: 'medium'
+      mathematicalContent: 'medium',
     },
-    'human_physiology': {
+    human_physiology: {
       name: 'Human Physiology',
       class: '11',
-      chapters: ['Digestion', 'Breathing', 'Body Fluids', 'Excretory Products', 'Locomotion', 'Neural Control', 'Chemical Coordination'],
+      chapters: [
+        'Digestion',
+        'Breathing',
+        'Body Fluids',
+        'Excretory Products',
+        'Locomotion',
+        'Neural Control',
+        'Chemical Coordination',
+      ],
       importance: 'high',
       conceptualDensity: 'high',
-      mathematicalContent: 'low'
+      mathematicalContent: 'low',
     },
-    'plant_physiology': {
+    plant_physiology: {
       name: 'Plant Physiology',
       class: '11',
-      chapters: ['Transport in Plants', 'Mineral Nutrition', 'Photosynthesis', 'Respiration', 'Plant Growth'],
+      chapters: [
+        'Transport in Plants',
+        'Mineral Nutrition',
+        'Photosynthesis',
+        'Respiration',
+        'Plant Growth',
+      ],
       importance: 'high',
       conceptualDensity: 'high',
-      mathematicalContent: 'medium'
+      mathematicalContent: 'medium',
     },
-    'cell_biology': {
+    cell_biology: {
       name: 'Cell Structure and Function',
       class: '11',
       chapters: ['Cell: The Unit of Life', 'Biomolecules', 'Cell Cycle and Division'],
       importance: 'high',
       conceptualDensity: 'very_high',
-      mathematicalContent: 'low'
-    }
+      mathematicalContent: 'low',
+    },
   }
 
   private readonly predictiveModels: Record<string, PredictiveModel> = {
@@ -244,27 +258,27 @@ export class NEETPatternAnalyzer {
           factor: 'historical_frequency',
           weight: 0.35,
           impact: 'positive',
-          description: 'Historical frequency of topic in previous exams'
+          description: 'Historical frequency of topic in previous exams',
         },
         {
           factor: 'syllabus_changes',
           weight: 0.25,
           impact: 'positive',
-          description: 'Recent changes to NEET syllabus'
+          description: 'Recent changes to NEET syllabus',
         },
         {
           factor: 'difficulty_trend',
-          weight: 0.20,
+          weight: 0.2,
           impact: 'neutral',
-          description: 'Trend in question difficulty for topic'
+          description: 'Trend in question difficulty for topic',
         },
         {
           factor: 'current_relevance',
-          weight: 0.20,
+          weight: 0.2,
           impact: 'positive',
-          description: 'Current scientific and medical relevance'
-        }
-      ]
+          description: 'Current scientific and medical relevance',
+        },
+      ],
     },
 
     difficulty_progression: {
@@ -277,24 +291,24 @@ export class NEETPatternAnalyzer {
       factors: [
         {
           factor: 'previous_year_difficulty',
-          weight: 0.40,
+          weight: 0.4,
           impact: 'positive',
-          description: 'Difficulty level in previous year'
+          description: 'Difficulty level in previous year',
         },
         {
           factor: 'topic_complexity',
-          weight: 0.30,
+          weight: 0.3,
           impact: 'positive',
-          description: 'Inherent complexity of the topic'
+          description: 'Inherent complexity of the topic',
         },
         {
           factor: 'student_performance',
-          weight: 0.30,
+          weight: 0.3,
           impact: 'negative',
-          description: 'Overall student performance in previous years'
-        }
-      ]
-    }
+          description: 'Overall student performance in previous years',
+        },
+      ],
+    },
   }
 
   /**
@@ -336,7 +350,7 @@ export class NEETPatternAnalyzer {
       predictions,
       insights,
       adaptiveStrategies: strategies,
-      confidenceScore: this.calculateOverallConfidence(predictions, insights)
+      confidenceScore: this.calculateOverallConfidence(predictions, insights),
     }
   }
 
@@ -347,7 +361,7 @@ export class NEETPatternAnalyzer {
     const model = this.predictiveModels.topic_frequency
     const predictions: TopicPrediction[] = []
 
-    Object.keys(this.topicMetadata).forEach(topicId => {
+    Object.keys(this.topicMetadata).forEach((topicId) => {
       const historicalData = this.getTopicHistoricalData(topicId)
       const prediction = this.applyPredictiveModel(model, historicalData, topicId)
 
@@ -358,7 +372,7 @@ export class NEETPatternAnalyzer {
         difficulty: prediction.difficulty,
         reasoning: prediction.reasoning,
         confidence: prediction.confidence,
-        historicalSupport: historicalData.evidence
+        historicalSupport: historicalData.evidence,
       })
     })
 
@@ -374,11 +388,11 @@ export class NEETPatternAnalyzer {
     optimizationGoals: OptimizationGoals
   ): OptimizedSelection {
     // Apply NEET pattern matching
-    const scoredQuestions = availableQuestions.map(question => ({
+    const scoredQuestions = availableQuestions.map((question) => ({
       ...question,
       neetScore: this.calculateNEETScore(question),
       patternMatch: this.assessPatternMatch(question),
-      strategicValue: this.assessStrategicValue(question, optimizationGoals)
+      strategicValue: this.assessStrategicValue(question, optimizationGoals),
     }))
 
     // Apply optimization algorithm
@@ -396,7 +410,7 @@ export class NEETPatternAnalyzer {
       totalScore: selectedQuestions.reduce((sum, q) => sum + q.neetScore, 0),
       patternAlignment: validation.alignment,
       recommendations: validation.recommendations,
-      alternativeSelections: this.generateAlternatives(scoredQuestions, targetCount)
+      alternativeSelections: this.generateAlternatives(scoredQuestions, targetCount),
     }
   }
 
@@ -429,7 +443,11 @@ export class NEETPatternAnalyzer {
       milestones,
       studyStrategies: this.recommendStudyStrategies(gapAnalysis),
       riskMitigation: this.identifyRisks(gapAnalysis, timeRemaining),
-      successProbability: this.calculateSuccessProbability(studentProfile, targetScore, timeRemaining)
+      successProbability: this.calculateSuccessProbability(
+        studentProfile,
+        targetScore,
+        timeRemaining
+      ),
     }
   }
 
@@ -454,7 +472,7 @@ export class NEETPatternAnalyzer {
       impactAssessment,
       adaptations,
       urgency: this.calculateAdaptationUrgency(patternChanges),
-      confidenceLevel: this.assessAdaptationConfidence(adaptations)
+      confidenceLevel: this.assessAdaptationConfidence(adaptations),
     }
   }
 
@@ -464,9 +482,9 @@ export class NEETPatternAnalyzer {
   private analyzeTopicTrends(data: NEETExamPattern[]): TopicAnalysis[] {
     const topicAnalyses: TopicAnalysis[] = []
 
-    Object.keys(this.topicMetadata).forEach(topicId => {
+    Object.keys(this.topicMetadata).forEach((topicId) => {
       const yearlyFrequency: Record<number, number> = {}
-      data.forEach(yearData => {
+      data.forEach((yearData) => {
         yearlyFrequency[yearData.year] = yearData.topicDistribution[topicId] || 0
       })
 
@@ -485,10 +503,14 @@ export class NEETPatternAnalyzer {
         trend,
         predictionConfidence,
         nextYearProbability,
-        importanceScore: this.calculateImportanceScore(averageFrequency, trend, nextYearProbability),
+        importanceScore: this.calculateImportanceScore(
+          averageFrequency,
+          trend,
+          nextYearProbability
+        ),
         difficultyProgression: this.analyzeDifficultyProgression(topicId, data),
         questionVariations: this.identifyQuestionVariations(topicId, data),
-        commonMistakes: this.getCommonMistakes(topicId)
+        commonMistakes: this.getCommonMistakes(topicId),
       })
     })
 
@@ -496,40 +518,43 @@ export class NEETPatternAnalyzer {
   }
 
   private analyzeDifficultyTrends(data: NEETExamPattern[]): DifficultyTrendAnalysis {
-    const yearlyDifficulty = data.map(year => ({
+    const yearlyDifficulty = data.map((year) => ({
       year: year.year,
       easy: year.difficultyDistribution.easy,
       moderate: year.difficultyDistribution.moderate,
       difficult: year.difficultyDistribution.difficult,
-      averageMarks: year.averageMarks
+      averageMarks: year.averageMarks,
     }))
 
     return {
       yearlyDistribution: yearlyDifficulty,
       trends: {
-        easy: this.calculateTrend(yearlyDifficulty.map(y => y.easy)),
-        moderate: this.calculateTrend(yearlyDifficulty.map(y => y.moderate)),
-        difficult: this.calculateTrend(yearlyDifficulty.map(y => y.difficult))
+        easy: this.calculateTrend(yearlyDifficulty.map((y) => y.easy)),
+        moderate: this.calculateTrend(yearlyDifficulty.map((y) => y.moderate)),
+        difficult: this.calculateTrend(yearlyDifficulty.map((y) => y.difficult)),
       },
       predictedNextYear: this.predictNextYearDifficulty(yearlyDifficulty),
       correlationWithMarks: this.calculateCorrelation(
-        yearlyDifficulty.map(y => y.difficult),
-        yearlyDifficulty.map(y => y.averageMarks)
-      )
+        yearlyDifficulty.map((y) => y.difficult),
+        yearlyDifficulty.map((y) => y.averageMarks)
+      ),
     }
   }
 
   private analyzeQuestionFormats(data: NEETExamPattern[]): QuestionFormatAnalysis {
-    const formatTrends = data.map(year => ({
+    const formatTrends: HistoricalFormat[] = data.map((year) => ({
       year: year.year,
-      ...year.questionTypes
+      mcq: year.questionTypes.mcq || 0,
+      assertion: year.questionTypes.assertion || 0,
+      numerical: year.questionTypes.numerical || 0,
+      matching: year.questionTypes.matching || 0,
     }))
 
     return {
       historicalFormats: formatTrends,
       stability: this.calculateFormatStability(formatTrends),
       emergingFormats: this.identifyEmergingFormats(formatTrends),
-      predictions: this.predictFormatChanges(formatTrends)
+      predictions: this.predictFormatChanges(formatTrends),
     }
   }
 
@@ -555,8 +580,8 @@ export class NEETPatternAnalyzer {
     const patterns: CyclicalPattern[] = []
 
     // Analyze topic cycles
-    Object.keys(this.topicMetadata).forEach(topicId => {
-      const frequencies = data.map(year => year.topicDistribution[topicId] || 0)
+    Object.keys(this.topicMetadata).forEach((topicId) => {
+      const frequencies = data.map((year) => year.topicDistribution[topicId] || 0)
       const cycle = this.detectCycle(frequencies, topicId)
       if (cycle) {
         patterns.push(cycle)
@@ -582,10 +607,10 @@ export class NEETPatternAnalyzer {
       difficulty: difficultyPredictions,
       formats: formatPredictions,
       overallConfidence: this.calculatePredictionConfidence(
-        topicPredictions.map(p => p.confidence),
+        topicPredictions.map((p) => p.confidence),
         'average'
       ),
-      lastUpdated: new Date()
+      lastUpdated: new Date(),
     }
   }
 
@@ -598,15 +623,15 @@ export class NEETPatternAnalyzer {
     const insights: PatternInsight[] = []
 
     // High-priority topic insights
-    const highPriorityTopics = topicAnalysis.filter(t => t.importanceScore > 0.8)
-    highPriorityTopics.forEach(topic => {
+    const highPriorityTopics = topicAnalysis.filter((t) => t.importanceScore > 0.8)
+    highPriorityTopics.forEach((topic) => {
       insights.push({
         type: 'trend',
         description: `${topic.topicName} shows ${topic.trend} trend with ${topic.nextYearProbability.toFixed(1)}% probability`,
         confidence: topic.predictionConfidence,
         evidence: this.gatherTopicEvidence(topic),
         implication: `Focus preparation on ${topic.topicName} concepts`,
-        actionableAdvice: this.generateTopicAdvice(topic)
+        actionableAdvice: this.generateTopicAdvice(topic),
       })
     })
 
@@ -617,7 +642,7 @@ export class NEETPatternAnalyzer {
       confidence: 0.75,
       evidence: this.gatherDifficultyEvidence(difficultyAnalysis),
       implication: 'Adjust preparation strategy based on expected difficulty',
-      actionableAdvice: this.generateDifficultyAdvice(difficultyAnalysis)
+      actionableAdvice: this.generateDifficultyAdvice(difficultyAnalysis),
     })
 
     return insights
@@ -635,7 +660,7 @@ export class NEETPatternAnalyzer {
       description: 'Concentrate on topics with highest predicted importance',
       applicability: [
         { condition: 'time_remaining', threshold: 60, operator: 'less' },
-        { condition: 'current_score', threshold: 70, operator: 'greater' }
+        { condition: 'current_score', threshold: 70, operator: 'greater' },
       ],
       effectiveness: 0.85,
       implementation: [
@@ -644,26 +669,24 @@ export class NEETPatternAnalyzer {
           action: 'Identify top 5 predicted topics',
           resources: ['topic prediction data'],
           timeframe: '1 day',
-          expectedOutcome: 'Clear priority list'
+          expectedOutcome: 'Clear priority list',
         },
         {
           step: 2,
           action: 'Allocate 70% study time to these topics',
           resources: ['study schedule', 'practice materials'],
           timeframe: 'ongoing',
-          expectedOutcome: 'Improved performance in high-yield areas'
-        }
+          expectedOutcome: 'Improved performance in high-yield areas',
+        },
       ],
-      successMetrics: ['topic mastery score', 'mock test improvement']
+      successMetrics: ['topic mastery score', 'mock test improvement'],
     })
 
     // Adaptive difficulty strategy
     strategies.push({
       name: 'Adaptive Difficulty Training',
       description: 'Adjust practice difficulty based on predicted exam trends',
-      applicability: [
-        { condition: 'prediction_confidence', threshold: 0.7, operator: 'greater' }
-      ],
+      applicability: [{ condition: 'prediction_confidence', threshold: 0.7, operator: 'greater' }],
       effectiveness: 0.78,
       implementation: [
         {
@@ -671,10 +694,10 @@ export class NEETPatternAnalyzer {
           action: 'Analyze predicted difficulty distribution',
           resources: ['difficulty predictions'],
           timeframe: '1 day',
-          expectedOutcome: 'Understanding of expected difficulty'
-        }
+          expectedOutcome: 'Understanding of expected difficulty',
+        },
       ],
-      successMetrics: ['accuracy improvement', 'time management']
+      successMetrics: ['accuracy improvement', 'time management'],
     })
 
     return strategies
@@ -705,7 +728,7 @@ export class NEETPatternAnalyzer {
     if (trend === 'stable') trendConfidence = 0.8
     else if (trend === 'increasing' || trend === 'decreasing') trendConfidence = 0.7
 
-    return (stability * 0.6) + (trendConfidence * 0.4)
+    return stability * 0.6 + trendConfidence * 0.4
   }
 
   private calculateVariance(values: number[]): number {
@@ -737,69 +760,318 @@ export class NEETPatternAnalyzer {
       increasing: 1.3,
       stable: 1.0,
       decreasing: 0.7,
-      cyclical: 1.1
+      cyclical: 1.1,
     }
     score *= trendMultipliers[trend as keyof typeof trendMultipliers] || 1.0
 
     // Probability adjustment
-    score *= (probability / 100)
+    score *= probability / 100
 
     return Math.min(score, 1)
   }
 
   // Placeholder implementations for complex methods
-  private analyzeDifficultyProgression(topicId: string, data: NEETExamPattern[]): Record<number, string> { return {} }
-  private identifyQuestionVariations(topicId: string, data: NEETExamPattern[]): QuestionVariation[] { return [] }
-  private getCommonMistakes(topicId: string): PreviousYearMistake[] { return [] }
-  private predictNextYearDifficulty(data: any[]): any { return {} }
-  private calculateCorrelation(arr1: number[], arr2: number[]): number { return 0.5 }
-  private calculateFormatStability(data: any[]): number { return 0.8 }
-  private identifyEmergingFormats(data: any[]): string[] { return [] }
-  private predictFormatChanges(data: any[]): any { return {} }
-  private identifyNewTopicPatterns(data: NEETExamPattern[]): EmergingPattern[] { return [] }
-  private identifyEmphasisChanges(data: NEETExamPattern[]): EmergingPattern[] { return [] }
-  private identifyFormatInnovations(data: NEETExamPattern[]): EmergingPattern[] { return [] }
-  private detectCycle(frequencies: number[], topicId: string): CyclicalPattern | null { return null }
-  private detectDifficultyCycle(data: NEETExamPattern[]): CyclicalPattern | null { return null }
-  private predictDifficultyDistribution(data: NEETExamPattern[]): any { return {} }
-  private predictQuestionFormats(data: NEETExamPattern[]): any { return {} }
-  private gatherTopicEvidence(topic: TopicAnalysis): Evidence[] { return [] }
-  private generateTopicAdvice(topic: TopicAnalysis): string { return 'Focus on key concepts' }
-  private identifyDifficultyTrend(analysis: DifficultyTrendAnalysis): string { return 'moderate increase' }
-  private gatherDifficultyEvidence(analysis: DifficultyTrendAnalysis): Evidence[] { return [] }
-  private generateDifficultyAdvice(analysis: DifficultyTrendAnalysis): string { return 'Prepare for balanced difficulty' }
-  private calculateOverallConfidence(predictions: any, insights: PatternInsight[]): number { return 0.75 }
-  private getTopicHistoricalData(topicId: string): any { return { evidence: [] } }
-  private applyPredictiveModel(model: PredictiveModel, data: any, topicId: string): any {
+  private analyzeDifficultyProgression(
+    topicId: string,
+    data: NEETExamPattern[]
+  ): Record<number, string> {
+    return {}
+  }
+  private identifyQuestionVariations(
+    topicId: string,
+    data: NEETExamPattern[]
+  ): QuestionVariation[] {
+    return []
+  }
+  private getCommonMistakes(topicId: string): PreviousYearMistake[] {
+    return []
+  }
+  private predictNextYearDifficulty(data: YearlyDifficultyRecord[]): DifficultyPrediction {
+    return { easy: 30, moderate: 45, difficult: 15, confidence: 0.75 }
+  }
+  private calculateCorrelation(arr1: number[], arr2: number[]): number {
+    return 0.5
+  }
+  private calculateFormatStability(data: HistoricalFormat[]): number {
+    return 0.8
+  }
+  private identifyEmergingFormats(data: HistoricalFormat[]): string[] {
+    return []
+  }
+  private predictFormatChanges(data: HistoricalFormat[]): FormatPredictions {
+    return { expectedFormats: {}, changes: [], confidence: 0.75 }
+  }
+  private identifyNewTopicPatterns(data: NEETExamPattern[]): EmergingPattern[] {
+    return []
+  }
+  private identifyEmphasisChanges(data: NEETExamPattern[]): EmergingPattern[] {
+    return []
+  }
+  private identifyFormatInnovations(data: NEETExamPattern[]): EmergingPattern[] {
+    return []
+  }
+  private detectCycle(frequencies: number[], topicId: string): CyclicalPattern | null {
+    return null
+  }
+  private detectDifficultyCycle(data: NEETExamPattern[]): CyclicalPattern | null {
+    return null
+  }
+  private predictDifficultyDistribution(data: NEETExamPattern[]): DifficultyPrediction {
+    return { easy: 30, moderate: 45, difficult: 15, confidence: 0.75 }
+  }
+  private predictQuestionFormats(data: NEETExamPattern[]): FormatPredictions {
+    return { expectedFormats: {}, changes: [], confidence: 0.75 }
+  }
+  private gatherTopicEvidence(topic: TopicAnalysis): Evidence[] {
+    return []
+  }
+  private generateTopicAdvice(topic: TopicAnalysis): string {
+    return 'Focus on key concepts'
+  }
+  private identifyDifficultyTrend(analysis: DifficultyTrendAnalysis): string {
+    return 'moderate increase'
+  }
+  private gatherDifficultyEvidence(analysis: DifficultyTrendAnalysis): Evidence[] {
+    return []
+  }
+  private generateDifficultyAdvice(analysis: DifficultyTrendAnalysis): string {
+    return 'Prepare for balanced difficulty'
+  }
+  private calculateOverallConfidence(
+    predictions: PredictionSet,
+    insights: PatternInsight[]
+  ): number {
+    return 0.75
+  }
+  private getTopicHistoricalData(topicId: string): TopicHistoricalData {
+    return { yearlyData: {}, trend: 'stable', evidence: [] }
+  }
+  private applyPredictiveModel(
+    model: PredictiveModel,
+    data: TopicHistoricalData,
+    topicId: string
+  ): ModelPrediction {
     return {
       probability: 0.8,
       expectedQuestions: 4,
       difficulty: 'moderate',
       reasoning: 'Based on historical trends',
-      confidence: 0.75
+      confidence: 0.75,
     }
   }
-  private calculateNEETScore(question: QuestionCandidate): number { return 0.8 }
-  private assessPatternMatch(question: QuestionCandidate): number { return 0.75 }
-  private assessStrategicValue(question: QuestionCandidate, goals: OptimizationGoals): number { return 0.7 }
-  private applyOptimizationAlgorithm(questions: any[], count: number, goals: OptimizationGoals): any[] { return [] }
-  private validateAgainstPatterns(questions: any[]): any { return { alignment: 0.8, recommendations: [] } }
-  private generateAlternatives(questions: any[], count: number): any[] { return [] }
-  private analyzeStudentGaps(profile: StudentProfile, predictions: TopicPrediction[]): any { return {} }
-  private prioritizeStudyTopics(analysis: any, time: number, score: number): any[] { return [] }
-  private optimizeTimeAllocation(topics: any[], time: number): any { return {} }
-  private createStudyMilestones(topics: any[], time: number): any[] { return [] }
-  private recommendStudyStrategies(analysis: any): any[] { return [] }
-  private identifyRisks(analysis: any, time: number): any[] { return [] }
-  private calculateSuccessProbability(profile: StudentProfile, score: number, time: number): number { return 0.75 }
-  private detectPatternChanges(data: RealtimePatternData): any[] { return [] }
-  private assessSelectionImpact(selection: QuestionCandidate[], changes: any[]): any { return {} }
-  private generateAdaptations(impact: any, changes: any[]): any[] { return [] }
-  private calculateAdaptationUrgency(changes: any[]): 'low' | 'medium' | 'high' { return 'medium' }
-  private assessAdaptationConfidence(adaptations: any[]): number { return 0.8 }
+  private calculateNEETScore(question: QuestionCandidate): number {
+    return 0.8
+  }
+  private assessPatternMatch(question: QuestionCandidate): number {
+    return 0.75
+  }
+  private assessStrategicValue(question: QuestionCandidate, goals: OptimizationGoals): number {
+    return 0.7
+  }
+  private applyOptimizationAlgorithm(
+    questions: ScoredQuestion[],
+    count: number,
+    goals: OptimizationGoals
+  ): ScoredQuestion[] {
+    return []
+  }
+  private validateAgainstPatterns(questions: ScoredQuestion[]): ValidationResult {
+    return { alignment: 0.8, recommendations: [], issues: [] }
+  }
+  private generateAlternatives(questions: ScoredQuestion[], count: number): ScoredQuestion[][] {
+    return []
+  }
+  private analyzeStudentGaps(profile: StudentProfile, predictions: TopicPrediction[]): GapAnalysis {
+    return { gaps: [], strengths: [], recommendations: [] }
+  }
+  private prioritizeStudyTopics(
+    analysis: GapAnalysis,
+    time: number,
+    score: number
+  ): PrioritizedTopic[] {
+    return []
+  }
+  private optimizeTimeAllocation(topics: PrioritizedTopic[], time: number): TimeAllocation {
+    return { byTopic: {}, byDifficulty: {}, totalHours: 0 }
+  }
+  private createStudyMilestones(topics: PrioritizedTopic[], time: number): StudyMilestone[] {
+    return []
+  }
+  private recommendStudyStrategies(analysis: GapAnalysis): StudyStrategy[] {
+    return []
+  }
+  private identifyRisks(analysis: GapAnalysis, time: number): RiskMitigation[] {
+    return []
+  }
+  private calculateSuccessProbability(
+    profile: StudentProfile,
+    score: number,
+    time: number
+  ): number {
+    return 0.75
+  }
+  private detectPatternChanges(data: RealtimePatternData): PatternChange[] {
+    return []
+  }
+  private assessSelectionImpact(
+    selection: QuestionCandidate[],
+    changes: PatternChange[]
+  ): ImpactAssessment {
+    return { overallImpact: 0, affectedAreas: [], recommendations: [] }
+  }
+  private generateAdaptations(impact: ImpactAssessment, changes: PatternChange[]): Adaptation[] {
+    return []
+  }
+  private calculateAdaptationUrgency(changes: PatternChange[]): 'low' | 'medium' | 'high' {
+    return 'medium'
+  }
+  private assessAdaptationConfidence(adaptations: Adaptation[]): number {
+    return 0.8
+  }
 }
 
 // Supporting interfaces
+
+// Type for yearly difficulty records
+export interface YearlyDifficultyRecord {
+  year: number
+  easy: number
+  moderate: number
+  difficult: number
+  averageMarks: number
+}
+
+// Type for difficulty predictions
+export interface DifficultyPrediction {
+  easy: number
+  moderate: number
+  difficult: number
+  confidence: number
+}
+
+// Type for historical format records
+export interface HistoricalFormat {
+  year: number
+  mcq: number
+  assertion: number
+  numerical: number
+  matching: number
+}
+
+// Type for format predictions
+export interface FormatPredictions {
+  expectedFormats: Record<string, number>
+  changes: string[]
+  confidence: number
+}
+
+// Type for scored questions (extends QuestionCandidate)
+export interface ScoredQuestion extends QuestionCandidate {
+  neetScore: number
+  patternMatch: number
+  strategicValue: number
+}
+
+// Type for prioritized topics
+export interface PrioritizedTopic {
+  topicId: string
+  priority: number
+  estimatedTime: number
+  expectedGain: number
+}
+
+// Type for time allocation
+export interface TimeAllocation {
+  byTopic: Record<string, number>
+  byDifficulty: Record<string, number>
+  totalHours: number
+}
+
+// Type for study milestones
+export interface StudyMilestone {
+  week: number
+  goals: string[]
+  expectedScore: number
+  checkpoints: string[]
+}
+
+// Type for study strategies
+export interface StudyStrategy {
+  name: string
+  description: string
+  applicability: number
+  steps: string[]
+}
+
+// Type for risk mitigation
+export interface RiskMitigation {
+  risk: string
+  probability: number
+  impact: string
+  mitigation: string
+}
+
+// Type for pattern changes
+export interface PatternChange {
+  type: string
+  description: string
+  significance: number
+  affectedTopics: string[]
+}
+
+// Type for emerging trend data
+export interface EmergingTrendData {
+  trend: string
+  strength: number
+  timeframe: string
+  confidence: number
+}
+
+// Type for impact assessment
+export interface ImpactAssessment {
+  overallImpact: number
+  affectedAreas: string[]
+  recommendations: string[]
+}
+
+// Type for adaptations
+export interface Adaptation {
+  action: string
+  priority: number
+  expectedBenefit: number
+  timeframe: string
+}
+
+// Type for gap analysis
+export interface GapAnalysis {
+  gaps: { topic: string; severity: number }[]
+  strengths: string[]
+  recommendations: string[]
+}
+
+// Type for validation results
+export interface ValidationResult {
+  alignment: number
+  recommendations: string[]
+  issues: string[]
+}
+
+// Type for topic historical data
+export interface TopicHistoricalData {
+  yearlyData: Record<number, number>
+  trend: string
+  evidence: HistoricalEvidence[]
+}
+
+// Type for model prediction results
+export interface ModelPrediction {
+  probability: number
+  expectedQuestions: number
+  difficulty: string
+  reasoning: string
+  confidence: number
+}
+
 export interface AnalysisOptions {
   years?: number
   focusAreas?: string[]
@@ -822,17 +1094,17 @@ export interface NEETPatternAnalysis {
 }
 
 export interface DifficultyTrendAnalysis {
-  yearlyDistribution: any[]
+  yearlyDistribution: YearlyDifficultyRecord[]
   trends: Record<string, string>
-  predictedNextYear: any
+  predictedNextYear: DifficultyPrediction
   correlationWithMarks: number
 }
 
 export interface QuestionFormatAnalysis {
-  historicalFormats: any[]
+  historicalFormats: HistoricalFormat[]
   stability: number
   emergingFormats: string[]
-  predictions: any
+  predictions: FormatPredictions
 }
 
 export interface EmergingPattern {
@@ -851,8 +1123,8 @@ export interface CyclicalPattern {
 
 export interface PredictionSet {
   topics: TopicPrediction[]
-  difficulty: any
-  formats: any
+  difficulty: DifficultyPrediction
+  formats: FormatPredictions
   overallConfidence: number
   lastUpdated: Date
 }
@@ -873,11 +1145,11 @@ export interface OptimizationGoals {
 }
 
 export interface OptimizedSelection {
-  selectedQuestions: any[]
+  selectedQuestions: ScoredQuestion[]
   totalScore: number
   patternAlignment: number
   recommendations: string[]
-  alternativeSelections: any[]
+  alternativeSelections: ScoredQuestion[][]
 }
 
 export interface StudentProfile {
@@ -888,24 +1160,24 @@ export interface StudentProfile {
 }
 
 export interface StudyRecommendations {
-  prioritizedTopics: any[]
-  timeAllocation: any
-  milestones: any[]
-  studyStrategies: any[]
-  riskMitigation: any[]
+  prioritizedTopics: PrioritizedTopic[]
+  timeAllocation: TimeAllocation
+  milestones: StudyMilestone[]
+  studyStrategies: StudyStrategy[]
+  riskMitigation: RiskMitigation[]
   successProbability: number
 }
 
 export interface RealtimePatternData {
-  recentChanges: any[]
-  emergingTrends: any[]
+  recentChanges: PatternChange[]
+  emergingTrends: EmergingTrendData[]
   confidence: number
 }
 
 export interface AdaptationRecommendations {
-  patternChanges: any[]
-  impactAssessment: any
-  adaptations: any[]
+  patternChanges: PatternChange[]
+  impactAssessment: ImpactAssessment
+  adaptations: Adaptation[]
   urgency: 'low' | 'medium' | 'high'
   confidenceLevel: number
 }

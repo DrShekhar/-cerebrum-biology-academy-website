@@ -80,7 +80,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     }
 
     // Get current user with password hash
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: session.userId },
       select: {
         id: true,
@@ -133,7 +133,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     const newPasswordHash = await PasswordUtils.hash(newPassword)
 
     // Update password in database
-    await prisma.user.update({
+    await prisma.users.update({
       where: { id: session.userId },
       data: {
         passwordHash: newPasswordHash,

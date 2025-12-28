@@ -106,8 +106,20 @@ export function ProtectedContent({
     handleViolation('right_click')
   }
 
-  // Disable text selection
+  // Disable text selection (but allow form elements)
   const handleSelectStart = (e: React.SyntheticEvent) => {
+    const target = e.target as HTMLElement
+    const tagName = target.tagName.toLowerCase()
+    // Allow selection in form elements
+    if (
+      tagName === 'input' ||
+      tagName === 'textarea' ||
+      tagName === 'select' ||
+      target.isContentEditable ||
+      target.closest('input, textarea, select, [contenteditable="true"]')
+    ) {
+      return
+    }
     e.preventDefault()
   }
 
@@ -187,6 +199,18 @@ export function ProtectedContent({
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+        }
+
+        /* Allow form elements to be interactive */
+        .protected-content input,
+        .protected-content textarea,
+        .protected-content select,
+        .protected-content [contenteditable='true'] {
+          -webkit-user-select: text;
+          -moz-user-select: text;
+          -ms-user-select: text;
+          user-select: text;
+          pointer-events: auto;
         }
 
         .protected-content img {

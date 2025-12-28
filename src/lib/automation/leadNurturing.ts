@@ -11,7 +11,7 @@
  * Uses Prisma database for persistence
  */
 
-import { prisma } from '../prisma'
+import { prisma } from '@/lib/prisma'
 import { LeadStage as PrismaLeadStage, FollowupAction, QueueStatus } from '../../generated/prisma'
 import {
   sendWhatsAppMessage,

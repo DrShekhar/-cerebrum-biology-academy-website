@@ -54,7 +54,7 @@ const UpdateSettingsSchema = z.object({
  */
 export const GET = withAuth(async (request: NextRequest, session) => {
   try {
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: session.userId },
       select: {
         id: true,
@@ -184,7 +184,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     const { notifications, privacy, study, accessibility } = result.data
 
     // Get current user profile
-    const currentUser = await prisma.user.findUnique({
+    const currentUser = await prisma.users.findUnique({
       where: { id: session.userId },
       select: { profile: true },
     })
@@ -219,7 +219,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     }
 
     // Update user profile
-    const updatedUser = await prisma.user.update({
+    const updatedUser = await prisma.users.update({
       where: { id: session.userId },
       data: { profile: updatedProfile },
       select: {
@@ -314,7 +314,7 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
     }
 
     // Get user with password hash
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: session.userId },
       select: {
         email: true,
@@ -372,7 +372,7 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
     await SessionManager.terminateAllUserSessions(session.userId)
 
     // Soft delete user (mark as deleted but keep data for analytics)
-    await prisma.user.update({
+    await prisma.users.update({
       where: { id: session.userId },
       data: {
         email: `deleted_${session.userId}@deleted.com`,

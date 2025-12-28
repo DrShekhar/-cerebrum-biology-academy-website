@@ -98,6 +98,225 @@ interface ExperimentStep {
   }
 }
 
+// Type for expected values in checkpoints and results
+type ExpectedValue = string | number | boolean | number[] | { min: number; max: number } | null
+
+// Lab action data types
+interface EquipmentInteractionData {
+  equipmentId: string
+  action: string
+  settings?: Record<string, number | string | boolean>
+}
+
+interface MeasurementData {
+  equipment: string
+  parameter: string
+  value: number
+  units: string
+  method: string
+}
+
+interface ObservationData {
+  stepId: string
+  observation: string
+  category: 'visual' | 'measurement' | 'behavior' | 'anomaly'
+}
+
+interface ProcedureStepData {
+  complete: boolean
+  notes?: string
+}
+
+interface SafetyCheckData {
+  checkType: string
+  passed: boolean
+}
+
+type LabActionData =
+  | EquipmentInteractionData
+  | MeasurementData
+  | ObservationData
+  | ProcedureStepData
+  | SafetyCheckData
+
+interface LabAction {
+  type: 'equipment_interaction' | 'measurement' | 'observation' | 'procedure_step' | 'safety_check'
+  equipmentId?: string
+  data: LabActionData
+  timestamp?: Date
+}
+
+// Action processing result
+interface ActionProcessingResult {
+  success: boolean
+  feedback: string
+  warnings: string[]
+}
+
+// Immersive experience types
+interface LightingConfig {
+  ambient: number
+  directional: number
+  point_lights?: number
+  shadows: boolean
+}
+
+interface PhysicsConfig {
+  enabled: boolean
+  gravity: number
+  collision_detection: boolean
+  fluid_simulation: boolean
+  molecular_dynamics: boolean
+}
+
+interface AudioConfig {
+  ambient: string
+  equipment: string
+  voice_guidance: boolean
+  spatial_audio: boolean
+}
+
+interface EquipmentModel {
+  id: string
+  model: string
+  position: { x: number; y: number; z: number }
+  interactive: boolean
+}
+
+interface WorkspaceConfig {
+  bench_space: { width: number; height: number; depth: number }
+  storage: { shelves: number; capacity: number }
+  waste_disposal: { types: string[] }
+  safety_equipment: string[]
+}
+
+interface SafetyOverlays {
+  hazard_warnings: boolean
+  safety_zones: boolean
+  emergency_procedures: boolean
+  ppe_reminders: boolean
+}
+
+interface SceneConfig {
+  environment: {
+    lighting: LightingConfig
+    physics: PhysicsConfig
+    audio: AudioConfig
+  }
+  equipment: EquipmentModel[]
+  workspace: WorkspaceConfig
+  safety: SafetyOverlays
+}
+
+interface GestureMap {
+  pick_up: string
+  pour: string
+  mix: string
+  focus: string
+  measure: string
+}
+
+interface VoiceCommands {
+  equipment: string[]
+  measurements: string[]
+  navigation: string[]
+  safety: string[]
+}
+
+interface HapticConfig {
+  texture_simulation: boolean
+  force_feedback: boolean
+  temperature: boolean
+  vibration: boolean
+}
+
+interface EyeTrackingConfig {
+  gaze_interaction: boolean
+  attention_analysis: boolean
+  reading_comprehension: boolean
+  focus_assistance: boolean
+}
+
+interface InteractionMap {
+  gestures: GestureMap
+  voice: VoiceCommands
+  haptic: HapticConfig | null
+  eye_tracking: EyeTrackingConfig | null
+}
+
+interface PhysicsEngine {
+  gravity: number
+  collision_detection: boolean
+  fluid_dynamics: boolean
+  molecular_simulation: boolean
+  real_time_rendering: boolean
+}
+
+interface HapticFeedback {
+  force_feedback: boolean
+  texture_simulation: boolean
+  temperature_simulation: boolean
+  vibration_patterns: VibrationPatterns
+}
+
+interface VibrationPatterns {
+  success: string
+  error: string
+  warning: string
+  completion: string
+}
+
+interface EquipmentAccess {
+  primary_researcher: string[]
+  data_analyst: string[]
+  observer: string[]
+  safety_monitor: string[]
+}
+
+interface SharedWorkspace {
+  equipment_access: EquipmentAccess
+  data_sharing: {
+    real_time_sync: boolean
+    version_control: boolean
+    conflict_resolution: string
+  }
+  communication: {
+    voice_chat: boolean
+    text_chat: boolean
+    annotation_system: boolean
+    screen_sharing: boolean
+  }
+}
+
+// Error analysis types for lab reports
+interface ErrorAnalysisItem {
+  type: string
+  description: string
+  impact: string
+  correction: string
+}
+
+interface ImprovementSuggestion {
+  area: string
+  suggestion: string
+  priority: 'low' | 'medium' | 'high'
+}
+
+// Visualization configuration types
+interface VisualizationData {
+  labels?: string[]
+  values?: number[]
+  series?: { name: string; data: number[] }[]
+}
+
+interface VisualizationConfig {
+  title?: string
+  xLabel?: string
+  yLabel?: string
+  colors?: string[]
+  interactive?: boolean
+}
+
 interface Checkpoint {
   id: string
   description: string
@@ -105,7 +324,7 @@ interface Checkpoint {
     type: 'visual' | 'measurement' | 'calculation' | 'observation'
     criteria: string
     tolerance?: number
-    expected_value?: any
+    expected_value?: ExpectedValue
   }
   hints: string[]
   feedback: {
@@ -135,7 +354,7 @@ interface TroubleshootingGuide {
 interface ExperimentResult {
   type: 'quantitative' | 'qualitative' | 'observational' | 'computational'
   description: string
-  expectedValue: any
+  expectedValue: ExpectedValue
   tolerance: number
   units?: string
   visualization: {
@@ -338,17 +557,7 @@ export class VirtualLabEngine {
    */
   async processLabAction(
     sessionId: string,
-    action: {
-      type:
-        | 'equipment_interaction'
-        | 'measurement'
-        | 'observation'
-        | 'procedure_step'
-        | 'safety_check'
-      equipmentId?: string
-      data: any
-      timestamp?: Date
-    }
+    action: LabAction
   ): Promise<{
     success: boolean
     feedback: string
@@ -411,10 +620,10 @@ export class VirtualLabEngine {
     sessionId: string,
     platform: 'ar' | 'vr'
   ): Promise<{
-    sceneConfig: any
-    interactionMap: any
-    physicsEngine: any
-    hapticFeedback: any
+    sceneConfig: SceneConfig
+    interactionMap: InteractionMap
+    physicsEngine: PhysicsEngine
+    hapticFeedback: HapticFeedback | null
   }> {
     const session = this.activeSessions.get(sessionId)
     if (!session) throw new Error(`Session ${sessionId} not found`)
@@ -479,7 +688,7 @@ export class VirtualLabEngine {
   ): Promise<{
     collaborationId: string
     roles: Record<string, string>
-    sharedWorkspace: any
+    sharedWorkspace: SharedWorkspace
     communicationChannels: string[]
   }> {
     const session = this.activeSessions.get(sessionId)
@@ -770,7 +979,10 @@ export class VirtualLabEngine {
     session.aiGuidance.push(welcomeGuidance)
   }
 
-  private async processEquipmentInteraction(session: LabSession, action: any): Promise<any> {
+  private async processEquipmentInteraction(
+    session: LabSession,
+    action: LabAction
+  ): Promise<ActionProcessingResult> {
     // Simulate equipment interaction processing
     return {
       success: true,
@@ -779,15 +991,19 @@ export class VirtualLabEngine {
     }
   }
 
-  private async processMeasurement(session: LabSession, action: any): Promise<any> {
+  private async processMeasurement(
+    session: LabSession,
+    action: LabAction
+  ): Promise<ActionProcessingResult> {
+    const data = action.data as MeasurementData
     const measurement: ExperimentMeasurement = {
       timestamp: new Date(),
-      equipment: action.data.equipment,
-      parameter: action.data.parameter,
-      value: action.data.value,
-      units: action.data.units,
+      equipment: data.equipment,
+      parameter: data.parameter,
+      value: data.value,
+      units: data.units,
       accuracy: 0.95,
-      method: action.data.method,
+      method: data.method,
     }
 
     session.measurements.push(measurement)
@@ -799,12 +1015,16 @@ export class VirtualLabEngine {
     }
   }
 
-  private async processObservation(session: LabSession, action: any): Promise<any> {
+  private async processObservation(
+    session: LabSession,
+    action: LabAction
+  ): Promise<ActionProcessingResult> {
+    const data = action.data as ObservationData
     const observation: StudentObservation = {
       timestamp: new Date(),
-      stepId: action.data.stepId,
-      observation: action.data.observation,
-      category: action.data.category,
+      stepId: data.stepId,
+      observation: data.observation,
+      category: data.category,
       confidence: 0.8,
     }
 
@@ -817,9 +1037,13 @@ export class VirtualLabEngine {
     }
   }
 
-  private async processProcedureStep(session: LabSession, action: any): Promise<any> {
+  private async processProcedureStep(
+    session: LabSession,
+    action: LabAction
+  ): Promise<ActionProcessingResult> {
+    const data = action.data as ProcedureStepData
     // Advance to next step if current step is complete
-    if (action.data.complete) {
+    if (data.complete) {
       session.currentStep++
       session.progress =
         (session.currentStep / this.experiments.get(session.experimentId)!.procedures.length) * 100
@@ -832,7 +1056,10 @@ export class VirtualLabEngine {
     }
   }
 
-  private async processSafetyCheck(session: LabSession, action: any): Promise<any> {
+  private async processSafetyCheck(
+    session: LabSession,
+    action: LabAction
+  ): Promise<ActionProcessingResult> {
     return {
       success: true,
       feedback: 'Safety check completed',
@@ -842,8 +1069,8 @@ export class VirtualLabEngine {
 
   private async generateAIGuidance(
     session: LabSession,
-    action: any,
-    result: any
+    action: LabAction,
+    result: ActionProcessingResult
   ): Promise<AIGuidanceEvent | undefined> {
     if (!result.success) {
       return {
@@ -884,13 +1111,13 @@ export class VirtualLabEngine {
   }
 
   // Additional helper methods for immersive experience generation
-  private generateLighting(platform: 'ar' | 'vr'): any {
+  private generateLighting(platform: 'ar' | 'vr'): LightingConfig {
     return platform === 'ar'
       ? { ambient: 0.6, directional: 0.4, shadows: true }
       : { ambient: 0.3, directional: 0.7, point_lights: 3, shadows: true }
   }
 
-  private generatePhysicsConfig(environment: LabEnvironment): any {
+  private generatePhysicsConfig(environment: LabEnvironment): PhysicsConfig {
     return {
       enabled: environment.physics.enabled,
       gravity: 9.81,
@@ -900,7 +1127,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateAudioConfig(experiment: VirtualLabExperiment): any {
+  private generateAudioConfig(experiment: VirtualLabExperiment): AudioConfig {
     return {
       ambient: 'lab_atmosphere.mp3',
       equipment: 'equipment_sounds.mp3',
@@ -909,7 +1136,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateEquipmentModels(equipment: string[], platform: 'ar' | 'vr'): any {
+  private generateEquipmentModels(equipment: string[], platform: 'ar' | 'vr'): EquipmentModel[] {
     // Equipment are now IDs that reference VirtualEquipment objects
     // Generate mock equipment models from IDs
     return equipment.map((equipmentId) => ({
@@ -920,7 +1147,10 @@ export class VirtualLabEngine {
     }))
   }
 
-  private generateWorkspace(experiment: VirtualLabExperiment, platform: 'ar' | 'vr'): any {
+  private generateWorkspace(
+    experiment: VirtualLabExperiment,
+    platform: 'ar' | 'vr'
+  ): WorkspaceConfig {
     return {
       bench_space: { width: 2, height: 1, depth: 1 },
       storage: { shelves: 3, capacity: 20 },
@@ -929,7 +1159,10 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateSafetyOverlays(experiment: VirtualLabExperiment, platform: 'ar' | 'vr'): any {
+  private generateSafetyOverlays(
+    experiment: VirtualLabExperiment,
+    platform: 'ar' | 'vr'
+  ): SafetyOverlays {
     return {
       hazard_warnings: true,
       safety_zones: true,
@@ -938,7 +1171,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateGestureMap(platform: 'ar' | 'vr'): any {
+  private generateGestureMap(platform: 'ar' | 'vr'): GestureMap {
     return {
       pick_up: 'pinch_and_lift',
       pour: 'tilt_motion',
@@ -948,7 +1181,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateVoiceCommands(experiment: VirtualLabExperiment): any {
+  private generateVoiceCommands(experiment: VirtualLabExperiment): VoiceCommands {
     return {
       equipment: ['start centrifuge', 'adjust microscope', 'set timer'],
       measurements: ['record measurement', 'save observation'],
@@ -957,7 +1190,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateHapticFeedback(platform: 'ar' | 'vr'): any {
+  private generateHapticFeedback(platform: 'ar' | 'vr'): HapticConfig | null {
     return platform === 'vr'
       ? {
           texture_simulation: true,
@@ -968,7 +1201,7 @@ export class VirtualLabEngine {
       : null
   }
 
-  private generateEyeTracking(): any {
+  private generateEyeTracking(): EyeTrackingConfig {
     return {
       gaze_interaction: true,
       attention_analysis: true,
@@ -977,7 +1210,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateVibrationPatterns(experiment: VirtualLabExperiment): any {
+  private generateVibrationPatterns(experiment: VirtualLabExperiment): VibrationPatterns {
     return {
       success: 'short_pulse',
       error: 'double_pulse',
@@ -986,7 +1219,7 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateEquipmentAccess(roles: Record<string, string>): any {
+  private generateEquipmentAccess(roles: Record<string, string>): EquipmentAccess {
     return {
       primary_researcher: ['all_equipment'],
       data_analyst: ['measurement_tools', 'computers'],
@@ -1085,14 +1318,14 @@ interface LabResults {
 interface LabAnalysis {
   data_quality: string
   statistical_significance: number
-  error_analysis: any[]
-  improvement_suggestions: any[]
+  error_analysis: ErrorAnalysisItem[]
+  improvement_suggestions: ImprovementSuggestion[]
 }
 
 interface LabVisualization {
   type: string
-  data: any
-  config: any
+  data: VisualizationData
+  config: VisualizationConfig
 }
 
 interface PerformanceEvaluation {

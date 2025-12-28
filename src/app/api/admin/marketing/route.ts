@@ -1,6 +1,92 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { adminDb as db } from '@/lib/db-admin'
-import { MarketingCampaign, AbandonedCart } from '@/lib/admin-schema'
+import type { MarketingCampaign } from '@/lib/admin-schema'
+
+// Type definitions for marketing data
+// Note: CampaignRecord is a standalone interface to avoid status type conflicts with MarketingCampaign
+interface CampaignRecord {
+  id: string
+  name: string
+  type: 'whatsapp' | 'sms' | 'email' | 'facebook' | 'google' | 'mixed'
+  status: 'draft' | 'scheduled' | 'active' | 'paused' | 'completed' | 'failed'
+  metrics: {
+    sent: number
+    delivered: number
+    opened: number
+    clicked: number
+    converted: number
+    unsubscribed: number
+    cost: number
+  }
+}
+
+interface AbandonedCartRecord {
+  id: string
+  userId: string
+  totalAmount: number
+  abandonedAt: number
+  recovered: boolean
+  finalPurchaseAmount?: number
+  user?: UserRecord
+}
+
+interface DemoBookingRecord {
+  id: string
+  userId: string
+  source: string
+  createdAt: number
+  convertedToEnrollment: boolean
+  conversionDate?: number
+}
+
+interface EnrollmentRecord {
+  id: string
+  userId: string
+  enrollmentDate: number
+  finalAmount: number
+}
+
+interface UserRecord {
+  id: string
+  email: string
+  phone?: string
+  profile?: {
+    currentClass?: string
+    city?: string
+  }
+}
+
+interface TargetAudienceCriteria {
+  demographics: {
+    class: ('10th' | '11th' | '12th' | 'Dropper')[]
+    city?: string[]
+    state?: string[]
+    score_range?: { min: number; max: number }
+  }
+  behavior: {
+    enrollment_status?: ('enrolled' | 'demo_taken' | 'lead' | 'inactive')[]
+    last_activity_days?: number
+    course_interest?: string[]
+  }
+  customSegment?: string
+}
+
+interface PeriodMetrics {
+  enrollments: number
+  demoBookings: number
+  newUsers: number
+  conversionRate: number
+}
+
+interface CampaignExecutionResult {
+  sent: number
+  delivered: number
+  failed: number
+}
+
+// Use a more flexible type for InstantDB query conditions
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type WhereConditions = Record<string, any>
 
 // GET /api/admin/marketing - Get marketing campaigns and automation data
 export async function GET(request: NextRequest) {
@@ -97,7 +183,7 @@ export async function POST(request: NextRequest) {
 
 // Helper function to get campaigns
 async function getCampaigns(status: string | null, page: number, limit: number) {
-  const whereConditions: any = {}
+  const whereConditions: WhereConditions = {}
   if (status) whereConditions.status = status
 
   const campaigns = await db.query({
@@ -146,7 +232,9 @@ async function getAbandonedCarts(page: number, limit: number) {
   })
 
   // Calculate recovery opportunities
-  const recoveryOpportunities = calculateRecoveryOpportunities(abandonedCarts.abandonedCarts)
+  const recoveryOpportunities = calculateRecoveryOpportunities(
+    abandonedCarts.abandonedCarts as unknown as AbandonedCartRecord[]
+  )
 
   return NextResponse.json({
     success: true,
@@ -192,48 +280,36 @@ async function getAutomationMetrics() {
     }),
   ])
 
+  const campaignRecords = campaigns.marketingCampaigns as CampaignRecord[]
+  const cartRecords = abandonedCarts.abandonedCarts as AbandonedCartRecord[]
+  const demoRecords = demoBookings.demoBookings as DemoBookingRecord[]
+  const enrollmentRecords = enrollments.enrollments as EnrollmentRecord[]
+
   const automationMetrics = {
     campaigns: {
-      total: campaigns.marketingCampaigns.length,
-      active: campaigns.marketingCampaigns.filter((c: any) => c.status === 'active').length,
-      totalSent: campaigns.marketingCampaigns.reduce(
-        (sum: number, c: any) => sum + c.metrics.sent,
-        0
-      ),
-      totalConverted: campaigns.marketingCampaigns.reduce(
-        (sum: number, c: any) => sum + c.metrics.converted,
-        0
-      ),
+      total: campaignRecords.length,
+      active: campaignRecords.filter((c) => c.status === 'active').length,
+      totalSent: campaignRecords.reduce((sum, c) => sum + c.metrics.sent, 0),
+      totalConverted: campaignRecords.reduce((sum, c) => sum + c.metrics.converted, 0),
     },
     abandonedCarts: {
-      total: abandonedCarts.abandonedCarts.length,
-      recovered: abandonedCarts.abandonedCarts.filter((cart: any) => cart.recovered).length,
-      totalValue: abandonedCarts.abandonedCarts.reduce(
-        (sum: number, cart: any) => sum + cart.totalAmount,
-        0
-      ),
-      recoveredValue: abandonedCarts.abandonedCarts
-        .filter((cart: any) => cart.recovered)
-        .reduce((sum: number, cart: any) => sum + (cart.finalPurchaseAmount || 0), 0),
+      total: cartRecords.length,
+      recovered: cartRecords.filter((cart) => cart.recovered).length,
+      totalValue: cartRecords.reduce((sum, cart) => sum + cart.totalAmount, 0),
+      recoveredValue: cartRecords
+        .filter((cart) => cart.recovered)
+        .reduce((sum, cart) => sum + (cart.finalPurchaseAmount || 0), 0),
     },
     whatsappEngagement: {
-      demoBookingConversions: demoBookings.demoBookings.filter(
-        (demo: any) => demo.source === 'whatsapp' && demo.convertedToEnrollment
+      demoBookingConversions: demoRecords.filter(
+        (demo) => demo.source === 'whatsapp' && demo.convertedToEnrollment
       ).length,
-      totalWhatsappLeads: demoBookings.demoBookings.filter(
-        (demo: any) => demo.source === 'whatsapp'
-      ).length,
+      totalWhatsappLeads: demoRecords.filter((demo) => demo.source === 'whatsapp').length,
     },
     overallPerformance: {
-      conversionRate: calculateOverallConversionRate(
-        demoBookings.demoBookings,
-        enrollments.enrollments
-      ),
-      averageTimeToConversion: calculateAverageTimeToConversion(
-        demoBookings.demoBookings,
-        enrollments.enrollments
-      ),
-      customerLifetimeValue: calculateCLV(enrollments.enrollments),
+      conversionRate: calculateOverallConversionRate(demoRecords, enrollmentRecords),
+      averageTimeToConversion: calculateAverageTimeToConversion(demoRecords, enrollmentRecords),
+      customerLifetimeValue: calculateCLV(enrollmentRecords),
     },
   }
 
@@ -351,9 +427,9 @@ async function executeCampaign(campaignId: string) {
 }
 
 // Helper functions for campaign execution
-async function getTargetAudience(criteria: any) {
+async function getTargetAudience(criteria: TargetAudienceCriteria): Promise<UserRecord[]> {
   // Build complex query based on targeting criteria
-  const whereConditions: any = {}
+  const whereConditions: WhereConditions = {}
 
   if (criteria.demographics?.class) {
     whereConditions['profile.currentClass'] = { $in: criteria.demographics.class }
@@ -373,10 +449,13 @@ async function getTargetAudience(criteria: any) {
     },
   })
 
-  return users.users
+  return users.users as UserRecord[]
 }
 
-async function executeWhatsAppCampaign(campaign: MarketingCampaign, targetUsers: any[]) {
+async function executeWhatsAppCampaign(
+  campaign: MarketingCampaign,
+  targetUsers: UserRecord[]
+): Promise<CampaignExecutionResult> {
   // WhatsApp API integration
   console.log(`Executing WhatsApp campaign: ${campaign.name}`)
 
@@ -388,7 +467,10 @@ async function executeWhatsAppCampaign(campaign: MarketingCampaign, targetUsers:
   }
 }
 
-async function executeSMSCampaign(campaign: MarketingCampaign, targetUsers: any[]) {
+async function executeSMSCampaign(
+  campaign: MarketingCampaign,
+  targetUsers: UserRecord[]
+): Promise<CampaignExecutionResult> {
   // SMS API integration
   console.log(`Executing SMS campaign: ${campaign.name}`)
 
@@ -399,7 +481,10 @@ async function executeSMSCampaign(campaign: MarketingCampaign, targetUsers: any[
   }
 }
 
-async function executeEmailCampaign(campaign: MarketingCampaign, targetUsers: any[]) {
+async function executeEmailCampaign(
+  campaign: MarketingCampaign,
+  targetUsers: UserRecord[]
+): Promise<CampaignExecutionResult> {
   // Email API integration
   console.log(`Executing Email campaign: ${campaign.name}`)
 
@@ -411,7 +496,13 @@ async function executeEmailCampaign(campaign: MarketingCampaign, targetUsers: an
 }
 
 // Helper calculation functions
-function calculateRecoveryOpportunities(carts: any[]) {
+interface RecoveryOpportunities {
+  highValue: number
+  recentAbandonment: number
+  totalPotentialRevenue: number
+}
+
+function calculateRecoveryOpportunities(carts: AbandonedCartRecord[]): RecoveryOpportunities {
   const highValue = carts.filter((cart) => cart.totalAmount > 10000).length
   const recentAbandonment = carts.filter(
     (cart) => Date.now() - cart.abandonedAt < 24 * 60 * 60 * 1000
@@ -424,25 +515,31 @@ function calculateRecoveryOpportunities(carts: any[]) {
   }
 }
 
-function calculateOverallConversionRate(demos: any[], enrollments: any[]) {
+function calculateOverallConversionRate(
+  demos: DemoBookingRecord[],
+  _enrollments: EnrollmentRecord[]
+): number {
   if (demos.length === 0) return 0
   const converted = demos.filter((demo) => demo.convertedToEnrollment).length
   return (converted / demos.length) * 100
 }
 
-function calculateAverageTimeToConversion(demos: any[], enrollments: any[]) {
+function calculateAverageTimeToConversion(
+  demos: DemoBookingRecord[],
+  _enrollments: EnrollmentRecord[]
+): number {
   const convertedDemos = demos.filter((demo) => demo.convertedToEnrollment && demo.conversionDate)
   if (convertedDemos.length === 0) return 0
 
   const totalTime = convertedDemos.reduce(
-    (sum, demo) => sum + (demo.conversionDate - demo.createdAt),
+    (sum, demo) => sum + ((demo.conversionDate || 0) - demo.createdAt),
     0
   )
 
   return totalTime / convertedDemos.length / (24 * 60 * 60 * 1000) // Days
 }
 
-function calculateCLV(enrollments: any[]) {
+function calculateCLV(enrollments: EnrollmentRecord[]): number {
   // Simplified CLV calculation
   const totalRevenue = enrollments.reduce(
     (sum, enrollment) => sum + (enrollment.finalAmount || 0),
@@ -452,7 +549,7 @@ function calculateCLV(enrollments: any[]) {
   return enrollments.length > 0 ? totalRevenue / enrollments.length : 0
 }
 
-async function getMetricsForPeriod(startTime: number, endTime: number) {
+async function getMetricsForPeriod(startTime: number, endTime: number): Promise<PeriodMetrics> {
   // Get metrics for specific time period
   const data = await db.query({
     enrollments: {
@@ -475,8 +572,17 @@ async function getMetricsForPeriod(startTime: number, endTime: number) {
   }
 }
 
-function generateMarketingRecommendations(weeklyMetrics: any, monthlyMetrics: any) {
-  const recommendations = []
+interface MarketingRecommendation {
+  type: 'conversion' | 'lead_generation'
+  priority: 'high' | 'medium' | 'low'
+  message: string
+}
+
+function generateMarketingRecommendations(
+  weeklyMetrics: PeriodMetrics,
+  monthlyMetrics: PeriodMetrics
+): MarketingRecommendation[] {
+  const recommendations: MarketingRecommendation[] = []
 
   if (weeklyMetrics.conversionRate < monthlyMetrics.conversionRate) {
     recommendations.push({

@@ -4,11 +4,12 @@ import { getAreaBySlug, getAllAreaSlugs } from '@/data/localAreas'
 import { LocalLandingPage } from '@/components/local/LocalLandingPage'
 
 interface Props {
-  params: { localSlug: string }
+  params: Promise<{ localSlug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const area = getAreaBySlug(params.localSlug)
+  const resolvedParams = await params
+  const area = getAreaBySlug(resolvedParams.localSlug)
 
   if (!area) {
     return {
@@ -52,8 +53,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function LocalAreaPage({ params }: Props) {
-  const area = getAreaBySlug(params.localSlug)
+export default async function LocalAreaPage({ params }: Props) {
+  const resolvedParams = await params
+  const area = getAreaBySlug(resolvedParams.localSlug)
 
   if (!area) {
     notFound()

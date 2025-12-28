@@ -8,6 +8,7 @@
 
 import crypto from 'crypto'
 import type { Twilio } from 'twilio'
+import { RateLimitService } from '@/lib/cache/redis'
 
 // Lazy environment access - read at runtime, not build time
 // This prevents build failures when env vars are missing during static analysis
@@ -267,36 +268,49 @@ export async function sendOTPMultiChannel(
 }
 
 /**
- * Rate limit check using Redis or in-memory (for Twilio's built-in isn't enough)
+ * Rate limit check using Redis with in-memory fallback
  */
 const rateLimitStore = new Map<string, { count: number; resetAt: number }>()
 
-export function checkOTPRateLimit(
+export async function checkOTPRateLimit(
   identifier: string,
   maxAttempts: number = 5,
   windowMs: number = 60 * 60 * 1000 // 1 hour
-): { allowed: boolean; remainingAttempts: number; resetAt?: Date } {
-  const now = Date.now()
-  const record = rateLimitStore.get(identifier)
+): Promise<{ allowed: boolean; remainingAttempts: number; resetAt?: Date }> {
+  const windowSeconds = Math.ceil(windowMs / 1000)
 
-  // No record or expired - allow
-  if (!record || now > record.resetAt) {
-    rateLimitStore.set(identifier, { count: 1, resetAt: now + windowMs })
-    return { allowed: true, remainingAttempts: maxAttempts - 1 }
-  }
-
-  // Check limit
-  if (record.count >= maxAttempts) {
+  try {
+    const result = await RateLimitService.checkIPRateLimit(
+      `otp:${identifier}`,
+      maxAttempts,
+      windowSeconds
+    )
     return {
-      allowed: false,
-      remainingAttempts: 0,
-      resetAt: new Date(record.resetAt),
+      allowed: result.allowed,
+      remainingAttempts: result.remaining,
+      resetAt: result.allowed ? undefined : new Date(result.resetTime),
     }
-  }
+  } catch (error) {
+    // Fallback to in-memory
+    const now = Date.now()
+    const record = rateLimitStore.get(identifier)
 
-  // Increment and allow
-  record.count++
-  return { allowed: true, remainingAttempts: maxAttempts - record.count }
+    if (!record || now > record.resetAt) {
+      rateLimitStore.set(identifier, { count: 1, resetAt: now + windowMs })
+      return { allowed: true, remainingAttempts: maxAttempts - 1 }
+    }
+
+    if (record.count >= maxAttempts) {
+      return {
+        allowed: false,
+        remainingAttempts: 0,
+        resetAt: new Date(record.resetAt),
+      }
+    }
+
+    record.count++
+    return { allowed: true, remainingAttempts: maxAttempts - record.count }
+  }
 }
 
 /**

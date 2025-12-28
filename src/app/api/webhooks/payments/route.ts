@@ -6,15 +6,55 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 
+// Type definitions for webhook payloads
+type PaymentProvider = 'razorpay' | 'stripe' | 'paypal'
+
+interface RazorpayWebhookPayload {
+  event?: {
+    id: string
+    type: string
+  }
+  payload: Record<string, unknown>
+}
+
+interface StripeWebhookPayload {
+  id: string
+  type: string
+  created: number
+  data: {
+    object: Record<string, unknown>
+  }
+}
+
+interface PayPalWebhookPayload {
+  id: string
+  event_type: string
+  create_time: string
+  resource: Record<string, unknown>
+}
+
 // Webhook event types
 interface WebhookEvent {
   id: string
   type: string
-  data: any
+  data: WebhookEventData
   created: Date
-  provider: 'razorpay' | 'stripe' | 'paypal'
+  provider: PaymentProvider
   signature: string
   processed: boolean
+}
+
+interface WebhookEventData {
+  id?: string
+  customer_id?: string
+  subscription_id?: string
+  [key: string]: unknown
+}
+
+interface PaymentEventMetadata {
+  source?: string
+  campaign?: string
+  [key: string]: string | undefined
 }
 
 interface PaymentEvent {
@@ -26,7 +66,16 @@ interface PaymentEvent {
   method: string
   user_id?: string
   subscription_id?: string
-  metadata: any
+  metadata: PaymentEventMetadata
+}
+
+// Result types for processed events
+interface ProcessedEventResult {
+  status: 'processed' | 'ignored'
+  action?: string
+  payment_id?: string
+  subscription_id?: string
+  dispute_id?: string
 }
 
 interface SubscriptionEvent {
@@ -168,11 +217,11 @@ function parseWebhookEvent(body: string, provider: string): WebhookEvent {
   }
 }
 
-function parseRazorpayEvent(data: any): WebhookEvent {
+function parseRazorpayEvent(data: RazorpayWebhookPayload): WebhookEvent {
   return {
     id: data.event?.id || `evt_${Date.now()}`,
     type: data.event?.type || 'unknown',
-    data: data.payload,
+    data: data.payload as WebhookEventData,
     created: new Date(),
     provider: 'razorpay',
     signature: '',
@@ -180,11 +229,11 @@ function parseRazorpayEvent(data: any): WebhookEvent {
   }
 }
 
-function parseStripeEvent(data: any): WebhookEvent {
+function parseStripeEvent(data: StripeWebhookPayload): WebhookEvent {
   return {
     id: data.id,
     type: data.type,
-    data: data.data.object,
+    data: data.data.object as WebhookEventData,
     created: new Date(data.created * 1000),
     provider: 'stripe',
     signature: '',
@@ -192,11 +241,11 @@ function parseStripeEvent(data: any): WebhookEvent {
   }
 }
 
-function parsePayPalEvent(data: any): WebhookEvent {
+function parsePayPalEvent(data: PayPalWebhookPayload): WebhookEvent {
   return {
     id: data.id,
     type: data.event_type,
-    data: data.resource,
+    data: data.resource as WebhookEventData,
     created: new Date(data.create_time),
     provider: 'paypal',
     signature: '',
@@ -207,7 +256,7 @@ function parsePayPalEvent(data: any): WebhookEvent {
 /**
  * Process webhook event based on type
  */
-async function processWebhookEvent(event: WebhookEvent): Promise<any> {
+async function processWebhookEvent(event: WebhookEvent): Promise<ProcessedEventResult> {
   switch (event.type) {
     // Payment events
     case 'payment.captured':
@@ -255,7 +304,7 @@ async function processWebhookEvent(event: WebhookEvent): Promise<any> {
 /**
  * Handle successful payment
  */
-async function handlePaymentSuccess(event: WebhookEvent): Promise<any> {
+async function handlePaymentSuccess(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
   console.log(`✅ Payment successful: ${paymentData.id}`)
@@ -287,7 +336,7 @@ async function handlePaymentSuccess(event: WebhookEvent): Promise<any> {
 /**
  * Handle failed payment
  */
-async function handlePaymentFailure(event: WebhookEvent): Promise<any> {
+async function handlePaymentFailure(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
   console.log(`❌ Payment failed: ${paymentData.id}`)
@@ -316,7 +365,7 @@ async function handlePaymentFailure(event: WebhookEvent): Promise<any> {
 /**
  * Handle subscription payment
  */
-async function handleSubscriptionPayment(event: WebhookEvent): Promise<any> {
+async function handleSubscriptionPayment(event: WebhookEvent): Promise<ProcessedEventResult> {
   const subscriptionData = event.data
 
   console.log(`🔄 Subscription payment: ${subscriptionData.id}`)
@@ -343,7 +392,7 @@ async function handleSubscriptionPayment(event: WebhookEvent): Promise<any> {
 /**
  * Handle subscription cancellation
  */
-async function handleSubscriptionCancellation(event: WebhookEvent): Promise<any> {
+async function handleSubscriptionCancellation(event: WebhookEvent): Promise<ProcessedEventResult> {
   const subscriptionData = event.data
 
   console.log(`❌ Subscription cancelled: ${subscriptionData.id}`)
@@ -373,7 +422,7 @@ async function handleSubscriptionCancellation(event: WebhookEvent): Promise<any>
 /**
  * Handle payment refund or dispute
  */
-async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<any> {
+async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
   console.log(`💰 Payment refund/dispute: ${paymentData.id}`)
@@ -400,7 +449,7 @@ async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<any> {
 /**
  * Handle dispute/chargeback
  */
-async function handleDispute(event: WebhookEvent): Promise<any> {
+async function handleDispute(event: WebhookEvent): Promise<ProcessedEventResult> {
   const disputeData = event.data
 
   console.log(`⚠️ Dispute created: ${disputeData.id}`)
@@ -425,43 +474,43 @@ async function handleDispute(event: WebhookEvent): Promise<any> {
 }
 
 // Helper functions (mock implementations)
-async function updatePaymentStatus(paymentId: string, status: string) {
+async function updatePaymentStatus(paymentId: string | undefined, status: string): Promise<void> {
   console.log(`💾 Updated payment ${paymentId} status to ${status}`)
 }
 
-async function updateSubscriptionStatus(subscriptionId: string, status: string) {
+async function updateSubscriptionStatus(subscriptionId: string | undefined, status: string): Promise<void> {
   console.log(`💾 Updated subscription ${subscriptionId} status to ${status}`)
 }
 
-async function updateSubscriptionBilling(subscriptionData: any) {
+async function updateSubscriptionBilling(subscriptionData: WebhookEventData): Promise<void> {
   console.log(`💾 Updated subscription billing for ${subscriptionData.id}`)
 }
 
-async function resetUsageLimits(customerId: string) {
+async function resetUsageLimits(customerId: string | undefined): Promise<void> {
   console.log(`🔄 Reset usage limits for customer ${customerId}`)
 }
 
-async function updateUserAccess(customerId: string, accessLevel: string) {
+async function updateUserAccess(customerId: string | undefined, accessLevel: string): Promise<void> {
   console.log(`🔑 Updated user access for ${customerId} to ${accessLevel}`)
 }
 
-async function sendPaymentConfirmation(paymentData: any) {
+async function sendPaymentConfirmation(paymentData: WebhookEventData): Promise<void> {
   console.log(`📧 Sent payment confirmation for ${paymentData.id}`)
 }
 
-async function sendPaymentFailureNotification(paymentData: any) {
+async function sendPaymentFailureNotification(paymentData: WebhookEventData): Promise<void> {
   console.log(`📧 Sent payment failure notification for ${paymentData.id}`)
 }
 
-async function sendBillingConfirmation(subscriptionData: any) {
+async function sendBillingConfirmation(subscriptionData: WebhookEventData): Promise<void> {
   console.log(`📧 Sent billing confirmation for ${subscriptionData.id}`)
 }
 
-async function sendCancellationConfirmation(subscriptionData: any) {
+async function sendCancellationConfirmation(subscriptionData: WebhookEventData): Promise<void> {
   console.log(`📧 Sent cancellation confirmation for ${subscriptionData.id}`)
 }
 
-async function handleFailedSubscriptionPayment(subscriptionId: string) {
+async function handleFailedSubscriptionPayment(subscriptionId: string | undefined): Promise<void> {
   console.log(`🔄 Handling failed subscription payment for ${subscriptionId}`)
 
   // Implement dunning management
@@ -471,61 +520,61 @@ async function handleFailedSubscriptionPayment(subscriptionId: string) {
   // 4. If failed after 30 days, cancel subscription
 }
 
-async function scheduleAccessRevocation(subscriptionData: any) {
+async function scheduleAccessRevocation(subscriptionData: WebhookEventData): Promise<void> {
   console.log(`⏰ Scheduled access revocation for ${subscriptionData.id}`)
 }
 
-async function triggerRetentionCampaign(customerId: string) {
+async function triggerRetentionCampaign(customerId: string | undefined): Promise<void> {
   console.log(`🎯 Triggered retention campaign for ${customerId}`)
 }
 
-async function createDisputeRecord(disputeData: any) {
+async function createDisputeRecord(disputeData: WebhookEventData): Promise<void> {
   console.log(`📝 Created dispute record for ${disputeData.id}`)
 }
 
-async function gatherDisputeEvidence(disputeData: any) {
+async function gatherDisputeEvidence(disputeData: WebhookEventData): Promise<void> {
   console.log(`📋 Gathering dispute evidence for ${disputeData.id}`)
 }
 
-async function notifyFinanceTeam(disputeData: any) {
+async function notifyFinanceTeam(disputeData: WebhookEventData): Promise<void> {
   console.log(`📞 Notified finance team about dispute ${disputeData.id}`)
 }
 
-async function trackPaymentAnalytics(eventType: string, data: any) {
+async function trackPaymentAnalytics(eventType: string, data: WebhookEventData): Promise<void> {
   console.log(`📊 Tracked payment analytics: ${eventType}`)
 }
 
-async function updateSubscriptionAnalytics(data: any) {
+async function updateSubscriptionAnalytics(data: WebhookEventData): Promise<void> {
   console.log(`📊 Updated subscription analytics for ${data.id}`)
 }
 
-async function updateChurnAnalytics(data: any) {
+async function updateChurnAnalytics(data: WebhookEventData): Promise<void> {
   console.log(`📊 Updated churn analytics for ${data.id}`)
 }
 
-async function updateRiskMetrics(data: any) {
+async function updateRiskMetrics(data: WebhookEventData): Promise<void> {
   console.log(`⚠️ Updated risk metrics for dispute ${data.id}`)
 }
 
-async function processRefund(paymentData: any) {
+async function processRefund(paymentData: WebhookEventData): Promise<void> {
   console.log(`💸 Processing refund for ${paymentData.id}`)
 }
 
-async function sendRefundNotification(paymentData: any) {
+async function sendRefundNotification(paymentData: WebhookEventData): Promise<void> {
   console.log(`📧 Sent refund notification for ${paymentData.id}`)
 }
 
-async function handleCustomerCreated(event: WebhookEvent) {
+async function handleCustomerCreated(event: WebhookEvent): Promise<ProcessedEventResult> {
   console.log(`👤 New customer created: ${event.data.id}`)
   return { status: 'processed', action: 'customer_onboarded' }
 }
 
-async function handleCustomerUpdated(event: WebhookEvent) {
+async function handleCustomerUpdated(event: WebhookEvent): Promise<ProcessedEventResult> {
   console.log(`👤 Customer updated: ${event.data.id}`)
   return { status: 'processed', action: 'customer_updated' }
 }
 
-async function handleSubscriptionUpdate(event: WebhookEvent) {
+async function handleSubscriptionUpdate(event: WebhookEvent): Promise<ProcessedEventResult> {
   console.log(`🔄 Subscription updated: ${event.data.id}`)
   return { status: 'processed', action: 'subscription_updated' }
 }

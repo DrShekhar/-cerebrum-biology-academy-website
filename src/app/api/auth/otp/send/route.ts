@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
     const rateLimitKey = `otp:${channel}:${to}`
     let rateLimit
     try {
-      rateLimit = checkOTPRateLimit(rateLimitKey, 5, 60 * 60 * 1000)
+      rateLimit = await checkOTPRateLimit(rateLimitKey, 5, 60 * 60 * 1000)
     } catch (error) {
       console.error('Rate limit check failed:', error)
       // FAIL CLOSED - deny on error

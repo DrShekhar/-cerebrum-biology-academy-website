@@ -16,25 +16,63 @@ class MockPrismaClient {
     }
   }
 
-  user = {
+  users = {
     findUnique: async () => {
-      this.logWarning('user.findUnique')
+      this.logWarning('users.findUnique')
+      return null
+    },
+    findFirst: async () => {
+      this.logWarning('users.findFirst')
       return null
     },
     findMany: async () => {
-      this.logWarning('user.findMany')
+      this.logWarning('users.findMany')
       return []
     },
     create: async () => {
-      this.logWarning('user.create')
+      this.logWarning('users.create')
       return null
     },
     update: async () => {
-      this.logWarning('user.update')
+      this.logWarning('users.update')
       return null
     },
     delete: async () => {
-      this.logWarning('user.delete')
+      this.logWarning('users.delete')
+      return null
+    },
+  }
+
+  whatsapp_otp = {
+    findFirst: async () => {
+      this.logWarning('whatsapp_otp.findFirst')
+      return null
+    },
+    create: async () => {
+      this.logWarning('whatsapp_otp.create')
+      return null
+    },
+    update: async () => {
+      this.logWarning('whatsapp_otp.update')
+      return null
+    },
+    delete: async () => {
+      this.logWarning('whatsapp_otp.delete')
+      return null
+    },
+    count: async () => {
+      this.logWarning('whatsapp_otp.count')
+      return 0
+    },
+  }
+
+  otpVerification = {
+    findMany: async () => {
+      this.logWarning('otpVerification.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('otpVerification.create')
       return null
     },
   }

@@ -1,4 +1,4 @@
-import { prisma } from '../prisma'
+import { prisma } from '@/lib/prisma'
 import { hashPassword } from '../auth'
 import type { UserRole } from '../../generated/prisma'
 
@@ -13,7 +13,7 @@ export async function createUser(data: {
 }) {
   const passwordHash = data.password ? await hashPassword(data.password) : undefined
 
-  return prisma.user.create({
+  return prisma.users.create({
     data: {
       email: data.email,
       name: data.name,
@@ -27,7 +27,7 @@ export async function createUser(data: {
 
 // Get user by email
 export async function getUserByEmail(email: string) {
-  return prisma.user.findUnique({
+  return prisma.users.findUnique({
     where: { email },
     include: {
       enrollments: {
@@ -43,7 +43,7 @@ export async function getUserByEmail(email: string) {
 
 // Get user by ID
 export async function getUserById(id: string) {
-  return prisma.user.findUnique({
+  return prisma.users.findUnique({
     where: { id },
     include: {
       enrollments: {
@@ -59,7 +59,7 @@ export async function getUserById(id: string) {
 
 // Update user profile
 export async function updateUserProfile(userId: string, profile: any) {
-  return prisma.user.update({
+  return prisma.users.update({
     where: { id: userId },
     data: {
       profile,
@@ -70,7 +70,7 @@ export async function updateUserProfile(userId: string, profile: any) {
 
 // Update user's last active timestamp
 export async function updateLastActive(userId: string) {
-  return prisma.user.update({
+  return prisma.users.update({
     where: { id: userId },
     data: {
       lastActiveAt: new Date(),
@@ -99,7 +99,7 @@ export async function getUsers(options: {
   }
 
   const [users, total] = await Promise.all([
-    prisma.user.findMany({
+    prisma.users.findMany({
       where,
       skip,
       take: limit,
@@ -119,7 +119,7 @@ export async function getUsers(options: {
         },
       },
     }),
-    prisma.user.count({ where }),
+    prisma.users.count({ where }),
   ])
 
   return {

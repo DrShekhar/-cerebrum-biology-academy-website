@@ -17,6 +17,7 @@ import {
   trackUser,
   trackEvent,
 } from '../interakt'
+import { RateLimitService } from '@/lib/cache/redis'
 
 // In-memory OTP store (use Redis in production)
 const otpStore = new Map<
@@ -36,7 +37,7 @@ const MAX_VERIFY_ATTEMPTS = 3
 const RESEND_COOLDOWN_SECONDS = 60
 const MAX_OTPS_PER_HOUR = 5
 
-// Rate limiting store (use Redis in production)
+// Rate limiting store (fallback when Redis unavailable)
 const rateLimitStore = new Map<
   string,
   {
@@ -77,26 +78,37 @@ function normalizePhone(phone: string): string {
 }
 
 /**
- * Check rate limit for phone number
+ * Check rate limit for phone number using Redis with fallback
  */
-function checkRateLimit(phone: string): { allowed: boolean; remaining: number } {
+async function checkRateLimit(phone: string): Promise<{ allowed: boolean; remaining: number }> {
   const normalizedPhone = normalizePhone(phone)
-  const now = new Date()
-  const hourAgo = new Date(now.getTime() - 60 * 60 * 1000)
 
-  const rateLimit = rateLimitStore.get(normalizedPhone)
+  try {
+    const result = await RateLimitService.checkIPRateLimit(
+      `whatsapp-otp:${normalizedPhone}`,
+      MAX_OTPS_PER_HOUR,
+      3600 // 1 hour in seconds
+    )
+    return { allowed: result.allowed, remaining: result.remaining }
+  } catch (error) {
+    // Fallback to in-memory
+    const now = new Date()
+    const hourAgo = new Date(now.getTime() - 60 * 60 * 1000)
 
-  if (!rateLimit || rateLimit.windowStart < hourAgo) {
-    rateLimitStore.set(normalizedPhone, { count: 1, windowStart: now })
-    return { allowed: true, remaining: MAX_OTPS_PER_HOUR - 1 }
+    const rateLimit = rateLimitStore.get(normalizedPhone)
+
+    if (!rateLimit || rateLimit.windowStart < hourAgo) {
+      rateLimitStore.set(normalizedPhone, { count: 1, windowStart: now })
+      return { allowed: true, remaining: MAX_OTPS_PER_HOUR - 1 }
+    }
+
+    if (rateLimit.count >= MAX_OTPS_PER_HOUR) {
+      return { allowed: false, remaining: 0 }
+    }
+
+    rateLimit.count++
+    return { allowed: true, remaining: MAX_OTPS_PER_HOUR - rateLimit.count }
   }
-
-  if (rateLimit.count >= MAX_OTPS_PER_HOUR) {
-    return { allowed: false, remaining: 0 }
-  }
-
-  rateLimit.count++
-  return { allowed: true, remaining: MAX_OTPS_PER_HOUR - rateLimit.count }
 }
 
 /**
@@ -107,7 +119,7 @@ export async function sendOTP(phone: string, name?: string): Promise<SendOTPResu
     const normalizedPhone = normalizePhone(phone)
 
     // Check rate limit
-    const { allowed, remaining } = checkRateLimit(phone)
+    const { allowed, remaining } = await checkRateLimit(phone)
     if (!allowed) {
       return {
         success: false,

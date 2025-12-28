@@ -426,6 +426,7 @@ export enum AuditAction {
   TOOL_REQUEST = 'tool_request',
   SERVER_START = 'server_start',
   SERVER_STOP = 'server_stop',
+  ANALYTICS_REQUEST = 'analytics_request',
 }
 
 export enum AuditStatus {

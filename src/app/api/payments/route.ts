@@ -8,6 +8,75 @@ import { AdvancedPaymentEngine } from '@/lib/payments/AdvancedPaymentEngine'
 import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
 
+// Type definitions for payment API requests
+interface CreateSubscriptionData {
+  userId: string
+  planId: string
+  paymentMethodId: string
+  billingCycle?: 'monthly' | 'quarterly' | 'yearly'
+  promotionalCode?: string
+  quantity?: number
+}
+
+interface UpgradeSubscriptionData {
+  subscriptionId: string
+  newPlanId: string
+}
+
+interface CancelSubscriptionData {
+  subscriptionId: string
+}
+
+interface UsageBillingData {
+  subscriptionId: string
+  usageData: {
+    studyRoomHours: number
+    aiInteractions: number
+    videoStorageGb: number
+    assessmentGenerations: number
+    liveSessionMinutes: number
+  }
+}
+
+interface PromotionalCodeData {
+  promotionalCode: string
+}
+
+interface ReferralData {
+  referrerUserId: string
+  refereeUserId: string
+  programId: string
+}
+
+interface AffiliateAccountData {
+  userId: string
+}
+
+interface PricingData {
+  planId: string
+  region?: string
+}
+
+interface PaymentMethodData {
+  type: 'card' | 'upi' | 'netbanking'
+  makeDefault?: boolean
+}
+
+interface OneTimePaymentData {
+  amount: number
+  currency?: string
+  paymentMethod: string
+  items: Array<{ name: string; amount: number }>
+}
+
+interface BillingHistoryData {
+  userId: string
+}
+
+interface DemoData {
+  demo?: boolean
+}
+
 // Initialize payment engine
 const cacheManagers = getCacheManagers()
 const distributedCache = cacheManagers.distributed
@@ -124,7 +193,7 @@ export async function GET(request: NextRequest) {
 
 // Action Handlers
 
-async function createSubscription(data: any) {
+async function createSubscription(data: CreateSubscriptionData) {
   const result = await paymentEngine.createSubscription(
     data.userId,
     data.planId,
@@ -178,7 +247,7 @@ async function createSubscription(data: any) {
   })
 }
 
-async function upgradeSubscription(data: any) {
+async function upgradeSubscription(data: UpgradeSubscriptionData) {
   // Implementation for subscription upgrade with prorated billing
   return NextResponse.json({
     success: true,
@@ -205,7 +274,7 @@ async function upgradeSubscription(data: any) {
   })
 }
 
-async function cancelSubscription(data: any) {
+async function cancelSubscription(data: CancelSubscriptionData) {
   return NextResponse.json({
     success: true,
     action: 'cancel_subscription',
@@ -229,7 +298,7 @@ async function cancelSubscription(data: any) {
   })
 }
 
-async function processUsageBilling(data: any) {
+async function processUsageBilling(data: UsageBillingData) {
   const result = await paymentEngine.processUsageBilling(data.subscriptionId, {
     study_room_hours: data.usageData.studyRoomHours,
     ai_interactions: data.usageData.aiInteractions,
@@ -287,7 +356,7 @@ async function processUsageBilling(data: any) {
   })
 }
 
-async function applyPromotionalCode(data: any) {
+async function applyPromotionalCode(data: PromotionalCodeData) {
   return NextResponse.json({
     success: true,
     action: 'apply_promotional_code',
@@ -314,7 +383,7 @@ async function applyPromotionalCode(data: any) {
   })
 }
 
-async function processReferral(data: any) {
+async function processReferral(data: ReferralData) {
   const result = await paymentEngine.processReferral(
     data.referrerUserId,
     data.refereeUserId,
@@ -371,7 +440,7 @@ async function processReferral(data: any) {
   })
 }
 
-async function createAffiliateAccount(data: any) {
+async function createAffiliateAccount(data: AffiliateAccountData) {
   return NextResponse.json({
     success: true,
     action: 'create_affiliate_account',
@@ -436,7 +505,7 @@ async function createAffiliateAccount(data: any) {
   })
 }
 
-async function calculatePricing(data: any) {
+async function calculatePricing(data: PricingData) {
   return NextResponse.json({
     success: true,
     action: 'calculate_pricing',
@@ -490,7 +559,7 @@ async function calculatePricing(data: any) {
   })
 }
 
-async function setupPaymentMethod(data: any) {
+async function setupPaymentMethod(data: PaymentMethodData) {
   return NextResponse.json({
     success: true,
     action: 'setup_payment_method',
@@ -523,7 +592,7 @@ async function setupPaymentMethod(data: any) {
   })
 }
 
-async function processOneTimePayment(data: any) {
+async function processOneTimePayment(data: OneTimePaymentData) {
   return NextResponse.json({
     success: true,
     action: 'process_one_time_payment',
@@ -558,7 +627,7 @@ async function processOneTimePayment(data: any) {
   })
 }
 
-async function getBillingHistory(data: any) {
+async function getBillingHistory(data: BillingHistoryData) {
   return NextResponse.json({
     success: true,
     action: 'get_billing_history',
@@ -608,7 +677,7 @@ async function getBillingHistory(data: any) {
   })
 }
 
-async function demonstratePaymentSystem(data: any) {
+async function demonstratePaymentSystem(data: DemoData) {
   console.log('💰 Demonstrating complete payment and monetization system...')
 
   const analytics = await paymentEngine.getSubscriptionAnalytics('month')

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { addSecurityHeaders } from '@/lib/auth/config'
 import { z } from 'zod'
 import axios from 'axios'
 
@@ -72,7 +73,7 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
     // Fallback to mock in development if credentials not configured
     if (!authKey) {
       if (process.env.NODE_ENV === 'development') {
-        console.log(`📱 SMS OTP for ${mobile}: ${otp} (MOCK - MSG91 not configured)`)
+        // Mock success in development without logging actual OTP
         return true
       }
       console.error('MSG91 credentials not configured')
@@ -122,9 +123,7 @@ async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Pr
     // Fallback to mock in development if credentials not configured
     if (!authKey || !whatsappTemplateId) {
       if (process.env.NODE_ENV === 'development') {
-        console.log(
-          `💬 WhatsApp OTP for ${whatsapp}: ${otp} (MOCK - MSG91 WhatsApp not configured)`
-        )
+        // Mock success in development without logging actual OTP
         return true
       }
       console.error('MSG91 WhatsApp credentials not configured')
@@ -196,12 +195,14 @@ export async function POST(request: NextRequest) {
     // Validate input
     const validationResult = sendOtpSchema.safeParse(body)
     if (!validationResult.success) {
-      return NextResponse.json(
-        {
-          error: 'Validation failed',
-          details: validationResult.error.issues,
-        },
-        { status: 400 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Validation failed',
+            details: validationResult.error.issues,
+          },
+          { status: 400 }
+        )
       )
     }
 
@@ -220,13 +221,15 @@ export async function POST(request: NextRequest) {
         errorMessage += ` Please try again after ${waitTimeHours} hour(s).`
       }
 
-      return NextResponse.json(
-        {
-          error: errorMessage,
-          waitTime: rateLimitResult.waitTime,
-          canRetryAt: Date.now() + (rateLimitResult.waitTime || 0),
-        },
-        { status: 429 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: errorMessage,
+            waitTime: rateLimitResult.waitTime,
+            canRetryAt: Date.now() + (rateLimitResult.waitTime || 0),
+          },
+          { status: 429 }
+        )
       )
     }
 
@@ -237,16 +240,18 @@ export async function POST(request: NextRequest) {
 
     // Check if user exists for login purpose
     if (purpose === 'login') {
-      const existingUser = await prisma.user.findUnique({
+      const existingUser = await prisma.users.findFirst({
         where: {
           phone: mobile,
         },
       })
 
       if (!existingUser) {
-        return NextResponse.json(
-          { error: 'Mobile number not registered. Please sign up first.' },
-          { status: 404 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'Mobile number not registered. Please sign up first.' },
+            { status: 404 }
+          )
         )
       }
     }
@@ -273,24 +278,25 @@ export async function POST(request: NextRequest) {
       whatsappSuccess = await sendWhatsAppOTP(whatsapp, otp)
     }
 
-    console.log(
-      `OTP sent successfully to ${mobile} (SMS: ${smsSuccess}, WhatsApp: ${whatsappSuccess})`
-    )
-
-    return NextResponse.json(
-      {
-        message: 'OTP sent successfully',
-        otpId, // Return for verification
-        expiresAt,
-        sentVia: {
-          sms: smsSuccess,
-          whatsapp: whatsappSuccess,
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          success: true,
+          message: 'OTP sent successfully',
+          otpId, // Return for verification
+          expiresAt,
+          sentVia: {
+            sms: smsSuccess,
+            whatsapp: whatsappSuccess,
+          },
         },
-      },
-      { status: 200 }
+        { status: 200 }
+      )
     )
   } catch (error) {
     console.error('Send OTP error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return addSecurityHeaders(
+      NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    )
   }
 }

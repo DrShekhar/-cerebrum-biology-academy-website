@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get fresh user data
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: payload.userId },
       select: {
         id: true,

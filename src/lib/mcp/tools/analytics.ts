@@ -17,13 +17,204 @@ import type {
   DifficultyLevel,
   BiologyUnit,
 } from '../types'
-import { AgentType, AgentCapability } from '../types'
+import { AgentType, AgentCapability, AuditAction } from '../types'
+import type { SecurityManager } from '../security/encryption'
+import type { AuditLogger } from '../security/audit'
+
+// Analytics data types
+interface StudySession {
+  timestamp: string | Date
+  accuracy: number
+  topic: string
+  timeSpent: number
+  expectedTime: number
+  questionsAttempted: number
+  correctAnswers: number
+}
+
+interface PerformanceHistoryRecord extends StudySession {
+  sessionId: string
+  unitId?: string
+  difficulty?: string
+}
+
+interface BenchmarkData {
+  accuracy: number
+  rank: number
+  percentile?: number
+  category?: string
+}
+
+interface BiologyUnitAnalysis {
+  unit: BiologyUnit
+  mastery: number
+  accuracy: number
+  timeInvestment: number
+  efficiency: number
+}
+
+interface TopicMasteryAnalysis {
+  mastered: number
+  inProgress: number
+  masteryRate: number
+}
+
+interface StudyPatternHour {
+  hour: number
+  averageAccuracy: number
+  sessionCount: number
+}
+
+interface StudyPatterns {
+  bestHour: StudyPatternHour
+  patterns: StudyPatternHour[]
+}
+
+interface PerformanceMetricsAnalysis {
+  overallAccuracy: number
+  improvementRate: number
+  consistencyScore: number
+  speedAccuracy: number
+  biologyUnits: BiologyUnitAnalysis[]
+  topicMastery: TopicMasteryAnalysis
+  weakAreas: string[]
+  strengths: string[]
+  studyPatterns: StudyPatterns
+  peakPerformanceTime: StudyPatternHour
+  learningVelocity: number
+  peerComparison: PeerComparison
+  benchmarkStatus: BenchmarkComparison
+  rankingTrends: RankingTrends
+}
+
+interface PerformanceAnalysis {
+  studentId: string
+  timeframe: string | undefined
+  metrics: PerformanceMetricsAnalysis
+  insights: PerformanceInsight[]
+  recommendations: string[]
+  alerts: PerformanceAlert[]
+}
+
+interface ProgressAnalysis {
+  timeline: ProgressTimelineEntry[]
+  milestones: Milestone[]
+  trends: TrendAnalysis
+  projections: ProgressProjection
+  gaps: LearningGap[]
+}
+
+interface ComparisonAnalysis {
+  peerComparison: PeerComparison
+  batchPosition: BatchPosition
+  nationalPosition: NationalPosition
+  improvementComparison: ImprovementComparison
+}
+
+interface AnalyticsNarrative {
+  narrative: string
+  summary: string
+  keyPoints: string[]
+  tone: 'encouraging' | 'neutral' | 'concerned'
+}
+
+interface ProgressTimelineEntry {
+  date: Date
+  progress: number
+  topic: string
+  accuracy: number
+}
+
+interface Milestone {
+  title: string
+  achievedAt: Date
+  type: 'accuracy' | 'completion' | 'streak' | 'improvement'
+  value: number
+}
+
+interface TrendAnalysis {
+  direction: 'improving' | 'stable' | 'declining'
+  rate: number
+  confidence: number
+}
+
+interface ProgressProjection {
+  targetDate: Date
+  expectedProgress: number
+  confidence: number
+  factors: string[]
+}
+
+interface LearningGap {
+  topic: string
+  severity: 'minor' | 'moderate' | 'major'
+  suggestedAction: string
+}
+
+interface PeerComparison {
+  percentile: number
+  aboveAverage: boolean
+  topPerformerGap: number
+}
+
+interface BatchPosition {
+  rank: number
+  totalStudents: number
+  percentile: number
+}
+
+interface NationalPosition {
+  estimatedRank: number
+  percentile: number
+  confidence: number
+}
+
+interface ImprovementComparison {
+  studentRate: number
+  peerAverageRate: number
+  ranking: number
+}
+
+interface PerformanceAlert {
+  type: 'warning' | 'critical' | 'info'
+  message: string
+  metric: string
+  value: number
+  threshold: number
+}
+
+interface BenchmarkComparison {
+  performance: 'below_average' | 'average' | 'above_average' | 'excellent'
+  percentile: number
+  comparison: string
+}
+
+interface RankingTrends {
+  direction: 'up' | 'stable' | 'down'
+  recentChange: number
+  weeklyAverage: number
+}
+
+interface GeneralAnalytics {
+  studentId: string
+  overview: string
+  status: 'active' | 'inactive' | 'new'
+  lastActivity: Date | null
+}
+
+type AnalyticsResult =
+  | PerformanceAnalysis
+  | ProgressAnalysis
+  | PredictiveModel
+  | ComparisonAnalysis
+  | PerformanceInsight[]
+  | GeneralAnalytics
 
 interface AgentConfig {
   anthropic: Anthropic
   redis: Redis
-  securityManager: any
-  auditLogger: any
+  securityManager: SecurityManager
+  auditLogger: AuditLogger
 }
 
 interface AnalyticsQuery {
@@ -31,14 +222,14 @@ interface AnalyticsQuery {
   studentId?: string
   timeframe?: 'daily' | 'weekly' | 'monthly' | 'yearly'
   metrics?: string[]
-  filters?: Record<string, any>
+  filters?: Record<string, string | number | boolean>
 }
 
 interface PerformanceInsight {
   type: 'strength' | 'weakness' | 'improvement' | 'concern' | 'achievement'
   title: string
   description: string
-  evidence: any[]
+  evidence: (string | number)[]
   recommendation: string
   priority: 'low' | 'medium' | 'high' | 'critical'
   actionable: boolean
@@ -70,13 +261,13 @@ export class AnalyticsAgent implements EducationalAgent {
 
   private anthropic: Anthropic
   private redis: Redis
-  private securityManager: any
-  private auditLogger: any
+  private securityManager: SecurityManager
+  private auditLogger: AuditLogger
 
   // Analytics data stores
   private studentData: Map<string, StudentProgress> = new Map()
-  private performanceHistory: Map<string, any[]> = new Map()
-  private benchmarkData: Map<string, any> = new Map()
+  private performanceHistory: Map<string, PerformanceHistoryRecord[]> = new Map()
+  private benchmarkDataStore: Map<string, BenchmarkData> = new Map()
   private predictiveModels: Map<string, PredictiveModel> = new Map()
 
   // Analytics configuration
@@ -111,14 +302,20 @@ export class AnalyticsAgent implements EducationalAgent {
       const analyticsQuery = this.parseAnalyticsQuery(query)
 
       // Log analytics request
-      await this.auditLogger.logAction('analytics_request', {
+      await this.auditLogger.logAction(AuditAction.ANALYTICS_REQUEST, {
         studentId: query.studentId,
         queryType: analyticsQuery.type,
         timeframe: analyticsQuery.timeframe,
         metrics: analyticsQuery.metrics,
       })
 
-      let analyticsResult: any
+      let analyticsResult:
+        | PerformanceAnalysis
+        | ProgressAnalysis
+        | PredictiveModel
+        | ComparisonAnalysis
+        | PerformanceInsight[]
+        | GeneralAnalytics
       let confidence: number
 
       switch (analyticsQuery.type) {
@@ -203,7 +400,10 @@ export class AnalyticsAgent implements EducationalAgent {
   /**
    * Analyze student performance with detailed metrics
    */
-  private async analyzePerformance(studentId: string, query: AnalyticsQuery): Promise<any> {
+  private async analyzePerformance(
+    studentId: string,
+    query: AnalyticsQuery
+  ): Promise<PerformanceAnalysis> {
     const studentProgress = await this.getStudentProgress(studentId)
     const performanceHistory = await this.getPerformanceHistory(studentId, query.timeframe)
 
@@ -245,7 +445,10 @@ export class AnalyticsAgent implements EducationalAgent {
   /**
    * Analyze student progress over time
    */
-  private async analyzeProgress(studentId: string, query: AnalyticsQuery): Promise<any> {
+  private async analyzeProgress(
+    studentId: string,
+    query: AnalyticsQuery
+  ): Promise<ProgressAnalysis> {
     const progressData = await this.getProgressTimeline(studentId, query.timeframe)
 
     return {
@@ -313,7 +516,10 @@ export class AnalyticsAgent implements EducationalAgent {
   /**
    * Perform comparative analysis
    */
-  private async performComparison(studentId: string, query: AnalyticsQuery): Promise<any> {
+  private async performComparison(
+    studentId: string,
+    query: AnalyticsQuery
+  ): Promise<ComparisonAnalysis> {
     const studentData = await this.getStudentProgress(studentId)
     const peerData = await this.getPeerData(studentId)
     const batchAverages = await this.getBatchAverages()
@@ -396,7 +602,10 @@ export class AnalyticsAgent implements EducationalAgent {
   /**
    * Generate AI-powered narrative for analytics
    */
-  private async generateAnalyticsNarrative(analyticsResult: any, studentId: string): Promise<any> {
+  private async generateAnalyticsNarrative(
+    analyticsResult: AnalyticsResult,
+    studentId: string
+  ): Promise<AnalyticsNarrative> {
     const prompt = `
 Create a personalized performance narrative for a NEET Biology student based on this analytics data:
 
@@ -478,7 +687,7 @@ Length: 400-500 words total.
     return progress.performanceMetrics.overallAccuracy
   }
 
-  private calculateImprovementRate(history: any[]): number {
+  private calculateImprovementRate(history: StudySession[]): number {
     if (history.length < 2) return 0
 
     const recent = history.slice(-5) // Last 5 data points
@@ -490,7 +699,7 @@ Length: 400-500 words total.
     return ((recentAvg - oldAvg) / oldAvg) * 100
   }
 
-  private calculateConsistencyScore(history: any[]): number {
+  private calculateConsistencyScore(history: StudySession[]): number {
     if (history.length < 3) return 100
 
     const accuracies = history.map((item) => item.accuracy)
@@ -503,7 +712,7 @@ Length: 400-500 words total.
     return Math.max(0, 100 - standardDeviation * 2)
   }
 
-  private calculateSpeedAccuracy(history: any[]): number {
+  private calculateSpeedAccuracy(history: StudySession[]): number {
     // Calculate balance between speed and accuracy
     const speedAccuracyScores = history.map((item) => {
       const timeEfficiency = Math.max(0, 100 - (item.timeSpent / item.expectedTime) * 100)
@@ -513,7 +722,7 @@ Length: 400-500 words total.
     return speedAccuracyScores.reduce((sum, score) => sum + score, 0) / speedAccuracyScores.length
   }
 
-  private analyzeBiologyUnits(progress: StudentProgress): any {
+  private analyzeBiologyUnits(progress: StudentProgress): BiologyUnitAnalysis[] {
     return progress.unitProgress.map((unit) => ({
       unit: unit.unit,
       mastery: unit.completed,
@@ -523,7 +732,7 @@ Length: 400-500 words total.
     }))
   }
 
-  private analyzeTopicMastery(progress: StudentProgress): any {
+  private analyzeTopicMastery(progress: StudentProgress): TopicMasteryAnalysis {
     return {
       mastered: progress.strengths.length,
       inProgress: progress.weaknesses.length,
@@ -541,7 +750,7 @@ Length: 400-500 words total.
     return progress.strengths.map((topic) => topic.name)
   }
 
-  private analyzeStudyPatterns(history: any[]): any {
+  private analyzeStudyPatterns(history: StudySession[]): StudyPatterns {
     // Analyze when student studies most effectively
     const hourlyPerformance = new Map<number, number[]>()
 
@@ -553,26 +762,33 @@ Length: 400-500 words total.
       hourlyPerformance.get(hour)!.push(session.accuracy)
     })
 
-    const patterns = Array.from(hourlyPerformance.entries()).map(([hour, accuracies]) => ({
-      hour,
-      averageAccuracy: accuracies.reduce((sum, acc) => sum + acc, 0) / accuracies.length,
-      sessionCount: accuracies.length,
-    }))
+    const patterns: StudyPatternHour[] = Array.from(hourlyPerformance.entries()).map(
+      ([hour, accuracies]) => ({
+        hour,
+        averageAccuracy: accuracies.reduce((sum, acc) => sum + acc, 0) / accuracies.length,
+        sessionCount: accuracies.length,
+      })
+    )
+
+    const defaultPattern: StudyPatternHour = { hour: 0, averageAccuracy: 0, sessionCount: 0 }
 
     return {
-      bestHour: patterns.reduce((best, current) =>
-        current.averageAccuracy > best.averageAccuracy ? current : best
-      ),
+      bestHour:
+        patterns.length > 0
+          ? patterns.reduce((best, current) =>
+              current.averageAccuracy > best.averageAccuracy ? current : best
+            )
+          : defaultPattern,
       patterns,
     }
   }
 
-  private identifyPeakTimes(history: any[]): any {
+  private identifyPeakTimes(history: StudySession[]): StudyPatternHour {
     const studyPatterns = this.analyzeStudyPatterns(history)
     return studyPatterns.bestHour
   }
 
-  private calculateLearningVelocity(history: any[]): number {
+  private calculateLearningVelocity(history: StudySession[]): number {
     // Rate of knowledge acquisition over time
     if (history.length < 5) return 0
 
@@ -604,7 +820,7 @@ Length: 400-500 words total.
     return Math.floor(Math.random() * 500000) + 175000
   }
 
-  private identifyRiskFactors(progress: StudentProgress, history: any[]): string[] {
+  private identifyRiskFactors(progress: StudentProgress, history: StudySession[]): string[] {
     const risks: string[] = []
 
     if (progress.performanceMetrics.consistencyScore < 60) {
@@ -666,8 +882,8 @@ Length: 400-500 words total.
 
   private async getPerformanceHistory(
     studentId: string,
-    timeframe: string = 'monthly'
-  ): Promise<any[]> {
+    timeframe: string | undefined = 'monthly'
+  ): Promise<StudySession[]> {
     const key = `performance_history:${studentId}:${timeframe}`
     const data = await this.redis.get(key)
     return data ? JSON.parse(data) : []
@@ -675,8 +891,8 @@ Length: 400-500 words total.
 
   private async getProgressTimeline(
     studentId: string,
-    timeframe: string = 'weekly'
-  ): Promise<any[]> {
+    timeframe: string | undefined = 'weekly'
+  ): Promise<ProgressTimelineEntry[]> {
     const key = `progress_timeline:${studentId}:${timeframe}`
     const data = await this.redis.get(key)
     return data ? JSON.parse(data) : []
@@ -728,7 +944,7 @@ Length: 400-500 words total.
     }
   }
 
-  private generateActionableRecommendations(analyticsResult: any): any[] {
+  private generateActionableRecommendations(analyticsResult: AnalyticsResult): string[] {
     return [
       'Focus on weak areas identified',
       'Maintain consistency in study schedule',
@@ -736,7 +952,7 @@ Length: 400-500 words total.
     ]
   }
 
-  private compareToBenchmark(analyticsResult: any): any {
+  private compareToBenchmark(analyticsResult: AnalyticsResult): BenchmarkComparison {
     return {
       performance: 'above_average',
       percentile: 75,
@@ -744,7 +960,7 @@ Length: 400-500 words total.
     }
   }
 
-  private calculateDataPoints(analyticsResult: any): number {
+  private calculateDataPoints(analyticsResult: AnalyticsResult): number {
     return 150 // Number of data points used in analysis
   }
 
@@ -796,57 +1012,63 @@ Length: 400-500 words total.
     }
 
     for (const [key, value] of Object.entries(benchmarks)) {
-      this.benchmarkData.set(key, value)
+      this.benchmarkDataStore.set(key, value)
     }
   }
 
   // Placeholder methods for complex calculations
-  private identifyMilestones(progressData: any[]): any[] {
+  private identifyMilestones(progressData: ProgressTimelineEntry[]): Milestone[] {
     return []
   }
-  private analyzeTrends(progressData: any[]): any {
-    return {}
+  private analyzeTrends(progressData: ProgressTimelineEntry[]): TrendAnalysis {
+    return { direction: 'stable', rate: 0, confidence: 0 }
   }
-  private projectFutureProgress(progressData: any[]): any {
-    return {}
+  private projectFutureProgress(progressData: ProgressTimelineEntry[]): ProgressProjection {
+    return { targetDate: new Date(), expectedProgress: 0, confidence: 0, factors: [] }
   }
-  private identifyLearningGaps(progressData: any[]): any[] {
+  private identifyLearningGaps(progressData: ProgressTimelineEntry[]): LearningGap[] {
     return []
   }
-  private compareToPeers(studentId: string, studentData: any): any {
-    return {}
+  private compareToPeers(studentId: string, studentData: StudentProgress): PeerComparison {
+    return { percentile: 50, aboveAverage: false, topPerformerGap: 0 }
   }
-  private calculateBatchPosition(studentData: any, batchAverages: any): any {
-    return {}
+  private calculateBatchPosition(
+    studentData: StudentProgress,
+    batchAverages: BenchmarkData
+  ): BatchPosition {
+    return { rank: 0, totalStudents: 0, percentile: 0 }
   }
-  private estimateNationalPosition(studentData: any): any {
-    return {}
+  private estimateNationalPosition(studentData: StudentProgress): NationalPosition {
+    return { estimatedRank: 0, percentile: 0, confidence: 0 }
   }
-  private compareImprovement(studentId: string, peerData: any): any {
-    return {}
+  private compareImprovement(
+    studentId: string,
+    peerData: StudentProgress[]
+  ): ImprovementComparison {
+    return { studentRate: 0, peerAverageRate: 0, ranking: 0 }
   }
-  private generatePerformanceInsights(metrics: any): any[] {
+  private generatePerformanceInsights(metrics: PerformanceMetricsAnalysis): PerformanceInsight[] {
     return []
   }
-  private generatePerformanceRecommendations(metrics: any): any[] {
+  private generatePerformanceRecommendations(metrics: PerformanceMetricsAnalysis): string[] {
     return []
   }
-  private identifyPerformanceAlerts(metrics: any): any[] {
+  private identifyPerformanceAlerts(metrics: PerformanceMetricsAnalysis): PerformanceAlert[] {
     return []
   }
-  private compareToBenchmarks(progress: any): any {
-    return {}
+  private compareToBenchmarks(progress: StudentProgress): BenchmarkComparison {
+    return { performance: 'average', percentile: 50, comparison: '' }
   }
-  private analyzeRankingTrends(history: any[]): any {
-    return {}
+  private analyzeRankingTrends(history: StudySession[]): RankingTrends {
+    return { direction: 'stable', recentChange: 0, weeklyAverage: 0 }
   }
-  private generateGeneralAnalytics(studentId: string): any {
-    return {}
+  private generateGeneralAnalytics(studentId: string): GeneralAnalytics {
+    return { studentId, overview: '', status: 'new', lastActivity: null }
   }
-  private async getPeerData(studentId: string): Promise<any> {
-    return {}
+  private async getPeerData(studentId: string): Promise<StudentProgress[]> {
+    return []
   }
-  private async getBatchAverages(): Promise<any> {
-    return {}
+  private async getBatchAverages(): Promise<BenchmarkData> {
+    return { accuracy: 0, rank: 0 }
   }
 }

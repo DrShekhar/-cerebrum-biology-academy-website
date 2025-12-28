@@ -1,10 +1,12 @@
 import { NextRequest } from 'next/server'
+import { RateLimitService } from '@/lib/cache/redis'
 
 interface RateLimitStore {
   count: number
   resetTime: number
 }
 
+// In-memory fallback when Redis is unavailable
 const rateLimitStore = new Map<string, RateLimitStore>()
 
 export interface RateLimitConfig {
@@ -24,8 +26,31 @@ export async function rateLimit(
   config: RateLimitConfig = { maxRequests: 10, windowMs: 60 * 60 * 1000 }
 ): Promise<RateLimitResult> {
   const identifier = getClientIdentifier(req)
-  const now = Date.now()
+  const windowSeconds = Math.ceil(config.windowMs / 1000)
 
+  try {
+    // Use Redis-based rate limiting (primary)
+    const result = await RateLimitService.checkIPRateLimit(
+      identifier,
+      config.maxRequests,
+      windowSeconds
+    )
+
+    return {
+      success: result.allowed,
+      limit: config.maxRequests,
+      remaining: result.remaining,
+      reset: result.resetTime,
+    }
+  } catch (error) {
+    // Fallback to in-memory rate limiting if Redis fails
+    console.warn('Redis rate limiting failed, using in-memory fallback:', error)
+    return inMemoryRateLimit(identifier, config)
+  }
+}
+
+function inMemoryRateLimit(identifier: string, config: RateLimitConfig): RateLimitResult {
+  const now = Date.now()
   const existingLimit = rateLimitStore.get(identifier)
 
   if (!existingLimit || now > existingLimit.resetTime) {
@@ -79,4 +104,7 @@ export function cleanupExpiredEntries(): void {
   }
 }
 
-setInterval(cleanupExpiredEntries, 60 * 60 * 1000)
+// Cleanup in-memory entries periodically (fallback only)
+if (typeof setInterval !== 'undefined') {
+  setInterval(cleanupExpiredEntries, 60 * 60 * 1000)
+}

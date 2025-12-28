@@ -117,7 +117,7 @@ async function verifySession(session: any): Promise<AdminVerificationResult> {
       }
     }
 
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { email: session.user.email },
       select: {
         id: true,
@@ -164,7 +164,7 @@ export async function requireAdminRole(allowedRoles: string[] = ['ADMIN', 'SUPER
     }
 
     if (verification.adminId) {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.users.findUnique({
         where: { id: verification.adminId },
         select: { role: true },
       })
