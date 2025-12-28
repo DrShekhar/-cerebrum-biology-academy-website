@@ -420,12 +420,12 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/locations/bangalore/:area*',
+        source: '/locations/bangalore/:area+',
         destination: '/neet-coaching-bangalore',
         permanent: true,
       },
       {
-        source: '/locations/:city/:area*',
+        source: '/locations/:city/:area+',
         destination: '/locations/:city',
         permanent: true,
       },
