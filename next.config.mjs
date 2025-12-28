@@ -16,9 +16,12 @@ const nextConfig = {
   // CRITICAL FIX: Remove console.log from production builds
   // This prevents PII leaks and improves performance
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn'], // Keep error and warn for debugging
-    } : false,
+    removeConsole:
+      process.env.NODE_ENV === 'production'
+        ? {
+            exclude: ['error', 'warn'], // Keep error and warn for debugging
+          }
+        : false,
   },
 
   // Webpack configuration for polyfills and bundle optimization
@@ -26,12 +29,7 @@ const nextConfig = {
     // FIX: Externalize worker-thread packages on server to prevent Turbopack bundling issues
     if (isServer) {
       config.externals = config.externals || []
-      config.externals.push(
-        '@modelcontextprotocol/sdk',
-        'bullmq',
-        'ioredis',
-        'worker_threads'
-      )
+      config.externals.push('@modelcontextprotocol/sdk', 'bullmq', 'ioredis', 'worker_threads')
     }
 
     if (!isServer) {
@@ -105,9 +103,9 @@ const nextConfig = {
                 chunks: 'async',
                 priority: 5,
                 reuseExistingChunk: true,
-              }
-            }
-          }
+              },
+            },
+          },
         }
       }
     }
@@ -419,16 +417,10 @@ const nextConfig = {
         destination: '/neet-coaching-south-india',
         permanent: true,
       },
-      {
-        source: '/locations/bangalore/:area+',
-        destination: '/neet-coaching-bangalore',
-        permanent: true,
-      },
-      {
-        source: '/locations/:city/:area+',
-        destination: '/locations/:city',
-        permanent: true,
-      },
+      // NOTE: Removed problematic redirects that were causing infinite loops:
+      // - /locations/bangalore/:area+ → These URLs should serve the actual locality pages
+      // - /locations/:city/:area+ → Same issue - was incorrectly redirecting valid locality pages
+      // The locality pages at /locations/[city]/[locality]/page.tsx now serve correctly
       {
         source: '/laxmi-nagar',
         destination: '/neet-coaching-east-delhi',
@@ -647,9 +639,7 @@ const nextConfig = {
   // Generate stable build IDs for better caching
   generateBuildId: async () => {
     // Use Vercel git SHA if available, otherwise timestamp
-    return process.env.VERCEL_GIT_COMMIT_SHA ||
-           process.env.BUILD_ID ||
-           `build-${Date.now()}`
+    return process.env.VERCEL_GIT_COMMIT_SHA || process.env.BUILD_ID || `build-${Date.now()}`
   },
 
   // Strategic caching + security headers (OPTIMIZED for performance)
@@ -719,7 +709,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=86400'
+            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=86400',
           },
           ...securityHeaders,
         ],
@@ -742,7 +732,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=60'
+            value: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=60',
           },
           ...securityHeaders,
         ],
