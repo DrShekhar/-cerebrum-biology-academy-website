@@ -53,6 +53,9 @@ export async function generateStaticParams() {
   }))
 }
 
+// Return 404 for any slug not in generateStaticParams
+export const dynamicParams = false
+
 export default async function LocalAreaPage({ params }: Props) {
   const resolvedParams = await params
   const area = getAreaBySlug(resolvedParams.localSlug)

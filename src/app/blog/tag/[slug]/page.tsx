@@ -39,6 +39,9 @@ export async function generateStaticParams() {
   }))
 }
 
+// Return 404 for any slug not in generateStaticParams
+export const dynamicParams = false
+
 export default async function TagPage({ params }: Props) {
   const { slug } = await params
   const tagName = decodeURIComponent(slug).replace(/-/g, ' ')

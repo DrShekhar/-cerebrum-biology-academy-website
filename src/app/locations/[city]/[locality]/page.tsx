@@ -40,6 +40,9 @@ export async function generateStaticParams() {
   }))
 }
 
+// Return 404 for any locality not in generateStaticParams
+export const dynamicParams = false
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: LocalityPageProps): Promise<Metadata> {
   const resolvedParams = await params

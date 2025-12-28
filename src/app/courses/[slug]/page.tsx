@@ -21,6 +21,9 @@ export async function generateStaticParams() {
   return [...newCourseParams, ...oldCourseParams]
 }
 
+// Return 404 for any slug not in generateStaticParams
+export const dynamicParams = false
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
 

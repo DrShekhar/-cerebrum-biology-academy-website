@@ -55,6 +55,9 @@ export async function generateStaticParams() {
   }))
 }
 
+// Return 404 for any slug not in generateStaticParams
+export const dynamicParams = false
+
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params
   const postData = getPostBySlug(slug)
