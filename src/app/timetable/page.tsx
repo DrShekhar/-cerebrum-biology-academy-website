@@ -72,21 +72,23 @@ function BatchCard({
   selectedLocation,
 }: {
   batch: Batch
-  selectedLocation: Location | 'ALL'
+  selectedLocation: Location | 'ALL' | 'ONLINE'
 }) {
   const colors = classTypeColors[batch.classType]
   const isAvailable = batch.status === 'AVAILABLE'
 
   // Determine if this batch is available offline at the selected location
-  const isOfflineAvailable = selectedLocation === 'ALL' || batch.offlineLocation === selectedLocation
-  const isOnlineOnly = selectedLocation !== 'ALL' && batch.offlineLocation !== selectedLocation
+  const isOfflineAvailable =
+    selectedLocation === 'ALL' ||
+    (selectedLocation !== 'ONLINE' && batch.offlineLocation === selectedLocation)
+  const isOnlineOnly =
+    selectedLocation === 'ONLINE' ||
+    (selectedLocation !== 'ALL' && batch.offlineLocation !== selectedLocation)
 
   return (
     <div
       className={`overflow-hidden rounded-xl border-2 transition-all hover:shadow-lg ${
-        isOnlineOnly
-          ? 'border-indigo-300 bg-indigo-50'
-          : `${colors.border} ${colors.bg}`
+        isOnlineOnly ? 'border-indigo-300 bg-indigo-50' : `${colors.border} ${colors.bg}`
       }`}
     >
       {/* Header */}
@@ -186,9 +188,7 @@ function CombinationCard({ combination }: { combination: BatchCombination }) {
       {/* Header */}
       <div
         className={`flex items-center justify-between px-4 py-2 text-white ${
-          combinationType === 'different_days'
-            ? 'bg-indigo-600'
-            : 'bg-purple-600'
+          combinationType === 'different_days' ? 'bg-indigo-600' : 'bg-purple-600'
         }`}
       >
         <div className="flex items-center gap-2">
@@ -267,9 +267,7 @@ function CombinationCard({ combination }: { combination: BatchCombination }) {
         {/* Online Badge */}
         <div className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-indigo-100 px-3 py-2">
           <Wifi className="h-4 w-4 text-indigo-600" />
-          <span className="text-sm font-medium text-indigo-700">
-            Both batches available Online
-          </span>
+          <span className="text-sm font-medium text-indigo-700">Both batches available Online</span>
         </div>
       </div>
     </div>
@@ -414,15 +412,17 @@ function TestScheduleSection({ classType }: { classType: ClassType }) {
 
 export default function TimetablePage() {
   const [selectedClassType, setSelectedClassType] = useState<ClassType>('CLASS_11')
-  const [selectedLocation, setSelectedLocation] = useState<Location | 'ALL'>('ALL')
-  const [combinationFilter, setCombinationFilter] = useState<'all' | 'different_days' | 'same_days'>('all')
+  const [selectedLocation, setSelectedLocation] = useState<Location | 'ALL' | 'ONLINE'>('ALL')
+  const [combinationFilter, setCombinationFilter] = useState<
+    'all' | 'different_days' | 'same_days'
+  >('all')
 
   const allBatches = filterBatches(selectedClassType, selectedLocation)
   const colors = classTypeColors[selectedClassType]
 
   // Sort batches: offline-available first, then online-only
   const filteredBatches = useMemo(() => {
-    if (selectedLocation === 'ALL') {
+    if (selectedLocation === 'ALL' || selectedLocation === 'ONLINE') {
       return allBatches
     }
     // Sort so batches at selected location appear first
@@ -546,10 +546,11 @@ export default function TimetablePage() {
             <div className="flex flex-wrap gap-3">
               <select
                 value={selectedLocation}
-                onChange={(e) => setSelectedLocation(e.target.value as Location | 'ALL')}
+                onChange={(e) => setSelectedLocation(e.target.value as Location | 'ALL' | 'ONLINE')}
                 className={`rounded-lg border ${colors.border} bg-white px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500`}
               >
                 <option value="ALL">All Locations</option>
+                <option value="ONLINE">Online Only</option>
                 {locations.map((loc) => (
                   <option key={loc} value={loc}>
                     {locationLabels[loc]}
@@ -561,7 +562,9 @@ export default function TimetablePage() {
               {selectedClassType === 'PINNACLE_ZA' && (
                 <select
                   value={combinationFilter}
-                  onChange={(e) => setCombinationFilter(e.target.value as 'all' | 'different_days' | 'same_days')}
+                  onChange={(e) =>
+                    setCombinationFilter(e.target.value as 'all' | 'different_days' | 'same_days')
+                  }
                   className="rounded-lg border border-indigo-300 bg-white px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
                   <option value="all">All Combinations</option>
@@ -575,26 +578,44 @@ export default function TimetablePage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        {/* Info Banner for Location Filter */}
-        {selectedLocation !== 'ALL' && selectedClassType !== 'PINNACLE_ZA' && (
+        {/* Info Banner for Online Only */}
+        {selectedLocation === 'ONLINE' && selectedClassType !== 'PINNACLE_ZA' && (
           <div className="mb-6 rounded-xl border-2 border-indigo-300 bg-indigo-50 p-4">
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-indigo-600 mt-0.5" />
+              <Wifi className="h-5 w-5 text-indigo-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-indigo-900 mb-1">
-                  Showing batches for {locationLabels[selectedLocation]}
-                </p>
+                <p className="font-semibold text-indigo-900 mb-1">Online Classes</p>
                 <p className="text-sm text-indigo-800">
-                  <span className="font-medium text-green-700">Offline / Hybrid / Online:</span> Attend at{' '}
-                  {locationLabels[selectedLocation]} center, join online, or mix both.
-                  <br />
-                  <span className="font-medium text-indigo-700">Online Only:</span> Batches at other
-                  centers - available for online attendance.
+                  All batches support online attendance. Choose any batch timing that works for you
+                  - attend live classes from anywhere!
                 </p>
               </div>
             </div>
           </div>
         )}
+
+        {/* Info Banner for Location Filter */}
+        {selectedLocation !== 'ALL' &&
+          selectedLocation !== 'ONLINE' &&
+          selectedClassType !== 'PINNACLE_ZA' && (
+            <div className="mb-6 rounded-xl border-2 border-indigo-300 bg-indigo-50 p-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-indigo-600 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-indigo-900 mb-1">
+                    Showing batches for {locationLabels[selectedLocation]}
+                  </p>
+                  <p className="text-sm text-indigo-800">
+                    <span className="font-medium text-green-700">Offline / Hybrid / Online:</span>{' '}
+                    Attend at {locationLabels[selectedLocation]} center, join online, or mix both.
+                    <br />
+                    <span className="font-medium text-indigo-700">Online Only:</span> Batches at
+                    other centers - available for online attendance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
         {/* Info Banner for Droppers */}
         {selectedClassType === 'DROPPERS' && (
@@ -613,11 +634,13 @@ export default function TimetablePage() {
             <div className="flex items-start gap-3">
               <Zap className="h-5 w-5 text-indigo-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-indigo-900 mb-1">Pinnacle ZA - Mix & Match Schedule</p>
+                <p className="font-semibold text-indigo-900 mb-1">
+                  Pinnacle ZA - Mix & Match Schedule
+                </p>
                 <p className="text-sm text-indigo-800">
-                  For Droppers who want flexible scheduling. Choose any Class 11th batch + any Class 12th batch
-                  that don&apos;t clash. You attend both separately - same syllabus as regular Dropper batches,
-                  but with more timing options!
+                  For Droppers who want flexible scheduling. Choose any Class 11th batch + any Class
+                  12th batch that don&apos;t clash. You attend both separately - same syllabus as
+                  regular Dropper batches, but with more timing options!
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   <span className="inline-flex items-center gap-1 rounded-full bg-indigo-100 px-2 py-1 text-xs font-medium text-indigo-700">

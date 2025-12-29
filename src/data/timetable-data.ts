@@ -263,7 +263,7 @@ export function getBatchesByClassType(classType: ClassType): Batch[] {
 
 export function filterBatches(
   classType: ClassType,
-  location: Location | 'ALL'
+  location: Location | 'ALL' | 'ONLINE'
 ): Batch[] {
   // Always return ALL batches for the class type
   // The UI will mark batches differently based on whether they match the selected location
