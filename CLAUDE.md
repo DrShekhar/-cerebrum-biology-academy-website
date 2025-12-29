@@ -71,6 +71,8 @@ Full-stack educational platform for NEET Biology preparation built with Next.js 
 - Use **Yellow 400** or **Orange** instead of Yellow 500
 - Use **Red 50** instead of Red 100 for error backgrounds
 
+**NO GRADIENTS:** Do not use gradient colors (e.g., `bg-gradient-to-r`, `from-*`, `to-*`). Use solid/single colors only.
+
 ### Authentication
 
 - NextAuth config: `src/lib/auth/config.ts`

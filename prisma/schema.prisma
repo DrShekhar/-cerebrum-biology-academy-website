@@ -3842,3 +3842,74 @@ model quiz_participants {
   @@unique([sessionId, name])
   @@index([sessionId])
 }
+
+// =====================================================
+// BATCH TIMETABLE MANAGEMENT
+// =====================================================
+
+enum BatchClassType {
+  CLASS_11
+  CLASS_12
+  DROPPERS
+}
+
+enum BatchLocation {
+  GURUGRAM
+  SOUTH_EXT
+  ROHINI
+}
+
+enum BatchStatus {
+  AVAILABLE
+  FULL
+}
+
+// Batch Timetable Model
+model batches {
+  id              String          @id @default(cuid())
+  classType       BatchClassType
+  batchNumber     Int
+  days            String[]        // ['Mon', 'Wed'] or ['Sat', 'Sun']
+  startTime       String          // '18:00' format
+  endTime         String          // '19:30' format
+  offlineLocation BatchLocation
+  hasOnline       Boolean         @default(true)
+  status          BatchStatus     @default(AVAILABLE)
+  displayOrder    Int             @default(0)
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@unique([classType, batchNumber])
+  @@index([classType, status])
+  @@index([offlineLocation])
+}
+
+// NEET Class Options
+model neet_classes {
+  id              String          @id @default(cuid())
+  classType       BatchClassType
+  optionADay      String          // 'Wednesday'
+  optionATime     String          // '7:30 - 8:30 PM'
+  optionBDay      String          // 'Sunday'
+  optionBTime     String          // '6:15 - 7:15 PM'
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@unique([classType])
+}
+
+// Test Schedule
+model test_schedules {
+  id              String          @id @default(cuid())
+  classType       BatchClassType
+  day             String          // 'Monday'
+  time            String          // '8:30 - 9:30 PM'
+  mode            String          // 'Online (can request offline)'
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@unique([classType])
+}
