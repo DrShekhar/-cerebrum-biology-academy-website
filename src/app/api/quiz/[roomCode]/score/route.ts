@@ -143,25 +143,32 @@ export async function POST(
       return { round, session: updatedSession }
     })
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        round: {
-          id: result.round.id,
-          roundNumber: result.round.roundNumber,
-          answeringTeam: result.round.answeringTeam,
-          outcome: result.round.outcome,
-          pointsChange: result.round.pointsChange,
-          note: result.round.note,
-        },
-        session: {
-          teamAScore: result.session.teamAScore,
-          teamBScore: result.session.teamBScore,
-          currentRound: result.session.currentRound,
-          status: result.session.status,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          round: {
+            id: result.round.id,
+            roundNumber: result.round.roundNumber,
+            answeringTeam: result.round.answeringTeam,
+            outcome: result.round.outcome,
+            pointsChange: result.round.pointsChange,
+            note: result.round.note,
+          },
+          session: {
+            teamAScore: result.session.teamAScore,
+            teamBScore: result.session.teamBScore,
+            currentRound: result.session.currentRound,
+            status: result.session.status,
+          },
         },
       },
-    })
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate',
+        },
+      }
+    )
   } catch (error) {
     console.error('Error updating score:', error)
     return NextResponse.json(
@@ -234,21 +241,28 @@ export async function DELETE(
       return updatedSession
     })
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        undoneRound: {
-          roundNumber: lastRound.roundNumber,
-          answeringTeam: lastRound.answeringTeam,
-          pointsChange: lastRound.pointsChange,
-        },
-        session: {
-          teamAScore: result.teamAScore,
-          teamBScore: result.teamBScore,
-          currentRound: result.currentRound,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          undoneRound: {
+            roundNumber: lastRound.roundNumber,
+            answeringTeam: lastRound.answeringTeam,
+            pointsChange: lastRound.pointsChange,
+          },
+          session: {
+            teamAScore: result.teamAScore,
+            teamBScore: result.teamBScore,
+            currentRound: result.currentRound,
+          },
         },
       },
-    })
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate',
+        },
+      }
+    )
   } catch (error) {
     console.error('Error undoing last round:', error)
     return NextResponse.json(

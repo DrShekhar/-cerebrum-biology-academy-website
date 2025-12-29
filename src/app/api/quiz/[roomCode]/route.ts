@@ -38,43 +38,52 @@ export async function GET(
       )
     }
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        id: session.id,
-        roomCode: session.roomCode,
-        title: session.title,
-        format: session.format,
-        questionMode: session.questionMode,
-        status: session.status,
-        teamAName: session.teamAName,
-        teamBName: session.teamBName,
-        teamAScore: session.teamAScore,
-        teamBScore: session.teamBScore,
-        currentRound: session.currentRound,
-        totalRounds: session.totalRounds,
-        scoringRules: session.scoringRules,
-        rounds: session.rounds.map((r) => ({
-          id: r.id,
-          roundNumber: r.roundNumber,
-          answeringTeam: r.answeringTeam,
-          outcome: r.outcome,
-          pointsChange: r.pointsChange,
-          note: r.note,
-          createdAt: r.createdAt,
-        })),
-        participants: session.participants.map((p) => ({
-          id: p.id,
-          name: p.name,
-          team: p.team,
-          isHost: p.isHost,
-          joinedAt: p.joinedAt,
-        })),
-        startedAt: session.startedAt,
-        endedAt: session.endedAt,
-        createdAt: session.createdAt,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          id: session.id,
+          roomCode: session.roomCode,
+          title: session.title,
+          format: session.format,
+          questionMode: session.questionMode,
+          status: session.status,
+          teamAName: session.teamAName,
+          teamBName: session.teamBName,
+          teamAScore: session.teamAScore,
+          teamBScore: session.teamBScore,
+          currentRound: session.currentRound,
+          totalRounds: session.totalRounds,
+          scoringRules: session.scoringRules,
+          rounds: session.rounds.map((r) => ({
+            id: r.id,
+            roundNumber: r.roundNumber,
+            answeringTeam: r.answeringTeam,
+            outcome: r.outcome,
+            pointsChange: r.pointsChange,
+            note: r.note,
+            createdAt: r.createdAt,
+          })),
+          participants: session.participants.map((p) => ({
+            id: p.id,
+            name: p.name,
+            team: p.team,
+            isHost: p.isHost,
+            joinedAt: p.joinedAt,
+          })),
+          startedAt: session.startedAt,
+          endedAt: session.endedAt,
+          createdAt: session.createdAt,
+        },
       },
-    })
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          Pragma: 'no-cache',
+          Expires: '0',
+        },
+      }
+    )
   } catch (error) {
     console.error('Error fetching quiz session:', error)
     return NextResponse.json(

@@ -56,7 +56,13 @@ export default function StudentViewPage() {
 
   const fetchSession = useCallback(async () => {
     try {
-      const res = await fetch(`/api/quiz/${roomCode}`)
+      // Add cache-busting timestamp to prevent stale data
+      const res = await fetch(`/api/quiz/${roomCode}?t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      })
       const data = await res.json()
       if (data.success) {
         setSession(data.data)
@@ -74,7 +80,8 @@ export default function StudentViewPage() {
 
   useEffect(() => {
     fetchSession()
-    const interval = setInterval(fetchSession, 2000)
+    // Poll every 1 second for real-time score updates
+    const interval = setInterval(fetchSession, 1000)
     return () => clearInterval(interval)
   }, [fetchSession])
 

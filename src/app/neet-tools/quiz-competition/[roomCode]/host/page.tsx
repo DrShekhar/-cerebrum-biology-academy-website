@@ -84,7 +84,13 @@ export default function HostControlPanel() {
 
   const fetchSession = useCallback(async () => {
     try {
-      const res = await fetch(`/api/quiz/${roomCode}`)
+      // Add cache-busting timestamp to prevent stale data
+      const res = await fetch(`/api/quiz/${roomCode}?t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      })
       const data = await res.json()
       if (data.success) {
         setSession(data.data)
