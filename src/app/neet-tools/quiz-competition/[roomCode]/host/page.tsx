@@ -158,7 +158,8 @@ export default function HostControlPanel() {
   }, [fetchMessages])
 
   const copyRoomCode = async () => {
-    await navigator.clipboard.writeText(roomCode)
+    const fullLink = `${window.location.origin}/neet-tools/quiz-competition/${roomCode}/view`
+    await navigator.clipboard.writeText(fullLink)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -419,7 +420,7 @@ export default function HostControlPanel() {
               ) : (
                 <>
                   <Copy className="h-5 w-5" />
-                  Copy Code
+                  Copy Link
                 </>
               )}
             </button>
