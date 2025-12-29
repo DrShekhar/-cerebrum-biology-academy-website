@@ -3715,25 +3715,130 @@ model question_diagrams {
 // NCERT Chapter reference table (for easy lookup)
 model ncert_chapters {
   id              String          @id @default(cuid())
-  
+
   class           Int             // 11 or 12
   unitNo          Int
   unitName        String
   chapterNo       Int
   chapterName     String
-  
+
   // Important figures in this chapter
   keyFigures      Json?           // [{figNo: "19.2", title: "Nephron", priority: 5}]
-  
+
   // Topics covered
   topics          String[]
-  
+
   // NEET weightage
   neetWeightage   Int             @default(1)  // 1-5
   avgQuestionsPerYear Float?
-  
+
   createdAt       DateTime        @default(now())
-  
+
   @@unique([class, chapterNo])
   @@index([class])
+}
+
+// =====================================================
+// CLASSROOM QUIZ COMPETITION TOOL
+// =====================================================
+
+enum QuizFormat {
+  MODERATOR              // Teacher asks, teams can pass
+  TEAMS_ASK_EACH_OTHER   // Teams ask each other, no passing
+}
+
+enum QuizQuestionMode {
+  SIMPLE_SCOREBOARD      // Verbal questions, manual scoring only
+  PRELOADED              // Questions from database
+}
+
+enum QuizSessionStatus {
+  WAITING                // Room created, waiting for start
+  IN_PROGRESS            // Quiz is active
+  PAUSED                 // Temporarily paused
+  COMPLETED              // Quiz finished
+}
+
+enum QuizTeam {
+  TEAM_A
+  TEAM_B
+}
+
+enum RoundOutcome {
+  CORRECT                // Full points awarded
+  INCORRECT              // Points deducted
+  PASSED                 // Passed to other team
+  PARTIAL                // Partial marks awarded
+  SKIPPED                // Question skipped
+}
+
+// Quiz Competition Session
+model quiz_sessions {
+  id            String              @id @default(cuid())
+  roomCode      String              @unique @db.VarChar(6)
+  title         String
+  format        QuizFormat
+  questionMode  QuizQuestionMode
+  status        QuizSessionStatus   @default(WAITING)
+  createdById   String
+
+  // Team configuration
+  teamAName     String              @default("Team A")
+  teamBName     String              @default("Team B")
+  teamAScore    Int                 @default(0)
+  teamBScore    Int                 @default(0)
+
+  // Quiz progress
+  currentRound  Int                 @default(0)
+  totalRounds   Int?
+
+  // Scoring rules: { correct: 20, wrong: -10, pass: -10, partial: { half: 10 } }
+  scoringRules  Json                @default("{\"correct\": 20, \"wrong\": -10, \"pass\": -10}")
+
+  // Timestamps
+  startedAt     DateTime?
+  endedAt       DateTime?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+
+  // Relations
+  rounds        quiz_rounds[]
+  participants  quiz_participants[]
+
+  @@index([roomCode])
+  @@index([createdById])
+  @@index([status, createdAt])
+}
+
+// Quiz Round (each scoring action)
+model quiz_rounds {
+  id            String              @id @default(cuid())
+  sessionId     String
+  roundNumber   Int
+  answeringTeam QuizTeam
+  outcome       RoundOutcome
+  pointsChange  Int                 // Can be positive or negative
+  note          String?             // Optional note about the round
+  createdAt     DateTime            @default(now())
+
+  session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, roundNumber])
+}
+
+// Quiz Participants (students/viewers joining the session)
+model quiz_participants {
+  id         String              @id @default(cuid())
+  sessionId  String
+  name       String
+  team       QuizTeam?           // null for observers
+  isHost     Boolean             @default(false)
+  deviceId   String?
+  joinedAt   DateTime            @default(now())
+  lastSeenAt DateTime            @default(now())
+
+  session    quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, name])
+  @@index([sessionId])
 }

@@ -15,6 +15,7 @@ import {
   Users,
   ClipboardCheck,
   Timer,
+  Swords,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -100,6 +101,18 @@ const tools = [
     bgColor: 'bg-purple-100',
     iconColor: 'text-purple-600',
     features: ['Instant results', 'Section-wise analysis', 'Incorrect question explanations'],
+    users: 'New',
+  },
+  {
+    title: 'Quiz Competition',
+    description:
+      'Conduct live team-based quizzes in your classroom. Two teams compete with real-time score updates on all devices.',
+    href: '/neet-tools/quiz-competition',
+    icon: Swords,
+    color: 'from-indigo-500 to-purple-600',
+    bgColor: 'bg-indigo-100',
+    iconColor: 'text-indigo-600',
+    features: ['Live scoreboard', 'Multi-device sync', 'Custom scoring rules'],
     users: 'New',
   },
 ]
