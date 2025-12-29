@@ -416,8 +416,8 @@ export default function StudentViewPage() {
     )
   }
 
-  const teamColor = participant.team === 'TEAM_A' ? 'indigo' : 'purple'
-  const teamName = participant.team === 'TEAM_A' ? session.teamAName : session.teamBName
+  const isTeamA = participant.team === 'TEAM_A'
+  const teamName = isTeamA ? session.teamAName : session.teamBName
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-purple-900">
@@ -456,7 +456,9 @@ export default function StudentViewPage() {
               <Clock className="h-4 w-4" />
               R{session.currentRound}
             </span>
-            <span className={`rounded-full bg-${teamColor}-500/30 px-2 py-0.5 text-xs`}>
+            <span
+              className={`rounded-full px-2 py-0.5 text-xs ${isTeamA ? 'bg-indigo-500/30' : 'bg-purple-500/30'}`}
+            >
               {teamName}
             </span>
           </div>
@@ -498,9 +500,11 @@ export default function StudentViewPage() {
             className="flex w-full items-center justify-between p-4"
           >
             <div className="flex items-center gap-2">
-              <MessageCircle className={`h-5 w-5 text-${teamColor}-300`} />
+              <MessageCircle className={`h-5 w-5 ${isTeamA ? 'text-indigo-300' : 'text-purple-300'}`} />
               <span className="font-semibold text-white">Team Chat</span>
-              <span className={`rounded-full bg-${teamColor}-500/30 px-2 py-0.5 text-xs text-${teamColor}-200`}>
+              <span
+                className={`rounded-full px-2 py-0.5 text-xs ${isTeamA ? 'bg-indigo-500/30 text-indigo-200' : 'bg-purple-500/30 text-purple-200'}`}
+              >
                 {teamName}
               </span>
             </div>
@@ -530,8 +534,8 @@ export default function StudentViewPage() {
                         key={msg.id}
                         className={`rounded-lg p-2 ${
                           msg.participantId === participant.id
-                            ? `bg-${teamColor}-500/30 ml-4`
-                            : 'bg-white/5 mr-4'
+                            ? `ml-4 ${isTeamA ? 'bg-indigo-500/30' : 'bg-purple-500/30'}`
+                            : 'mr-4 bg-white/5'
                         }`}
                       >
                         <p className="text-xs font-medium text-indigo-200">
@@ -560,7 +564,7 @@ export default function StudentViewPage() {
                 <button
                   onClick={sendMessage}
                   disabled={sendingMessage || !newMessage.trim()}
-                  className={`rounded-lg bg-${teamColor}-600 px-4 py-2 text-white transition-colors hover:bg-${teamColor}-700 disabled:opacity-50`}
+                  className={`rounded-lg px-4 py-2 text-white transition-colors disabled:opacity-50 ${isTeamA ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-purple-600 hover:bg-purple-700'}`}
                 >
                   {sendingMessage ? (
                     <Loader2 className="h-5 w-5 animate-spin" />
