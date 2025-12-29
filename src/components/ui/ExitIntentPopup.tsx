@@ -166,26 +166,14 @@ export function ExitIntentPopup({
               <>
                 {/* Discount Variant Header - compact on mobile */}
                 <div className="bg-indigo-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
-                  <motion.div
-                    className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  />
-                  <motion.div
-                    className="absolute -bottom-5 -left-5 w-20 h-20 bg-white/10 rounded-full"
-                    animate={{ scale: [1, 1.3, 1] }}
-                    transition={{ duration: 2.5, repeat: Infinity }}
-                  />
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full animate-[pulse-scale_3s_ease-in-out_infinite]" />
+                  <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-white/10 rounded-full animate-[pulse-scale_2.5s_ease-in-out_infinite]" />
 
                   <div className="relative z-10">
-                    <motion.div
-                      className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm mb-3"
-                      animate={{ scale: [1, 1.05, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
+                    <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm mb-3 animate-[pulse-badge_1.5s_ease-in-out_infinite]">
                       <Sparkles className="w-4 h-4 mr-1" />
                       <span>Exclusive Offer</span>
-                    </motion.div>
+                    </div>
 
                     <h2
                       id="exit-intent-popup-title"
@@ -482,8 +470,6 @@ export function useExitIntent() {
   const [hasTriggered, setHasTriggered] = useState(false)
 
   useEffect(() => {
-    // Check if user has already seen OR dismissed the popup in this session
-    // Respect their decision - don't be pushy!
     const hasSeenPopup = sessionStorage.getItem('exitIntentShown')
     const hasDismissed = sessionStorage.getItem('exitIntentDismissed')
 
@@ -492,15 +478,17 @@ export function useExitIntent() {
       return
     }
 
-    // Delay before enabling exit intent (don't trigger immediately on page load)
     let isEnabled = false
+    let lastScrollY = window.scrollY
+    let scrollUpCount = 0
+    let rafId: number | null = null
+    let lastScrollTime = 0
+
     const enableTimer = setTimeout(() => {
       isEnabled = true
-    }, 8000) // Wait 8 seconds before enabling (increased from 5)
+    }, 8000)
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if cursor moves to top of screen (exit intent)
-      // and user has been on page for a while
       if (e.clientY <= 0 && !hasTriggered && isEnabled) {
         setShowExitIntent(true)
         setHasTriggered(true)
@@ -508,47 +496,44 @@ export function useExitIntent() {
       }
     }
 
-    // Mobile: trigger on back button or significant scroll-up at very top
-    // Made much less sensitive to prevent accidental triggers
-    let lastScrollY = window.scrollY
-    let scrollUpCount = 0
     const handleScroll = () => {
-      const currentY = window.scrollY
+      const now = Date.now()
+      if (now - lastScrollTime < 100) return
+      lastScrollTime = now
 
-      // Reset counter if scrolling down or not at very top
-      if (currentY > lastScrollY || currentY > 50) {
-        scrollUpCount = 0
-      } else if (currentY < lastScrollY && currentY < 30 && isEnabled) {
-        // User is scrolling up near the very top
-        scrollUpCount++
+      if (rafId) return
+      rafId = requestAnimationFrame(() => {
+        const currentY = window.scrollY
 
-        // Only trigger after multiple consecutive scroll-up events at top
-        // This prevents accidental triggers from bounce scrolling
-        if (scrollUpCount >= 5 && !hasTriggered) {
-          setShowExitIntent(true)
-          setHasTriggered(true)
-          sessionStorage.setItem('exitIntentShown', 'true')
+        if (currentY > lastScrollY || currentY > 50) {
+          scrollUpCount = 0
+        } else if (currentY < lastScrollY && currentY < 30 && isEnabled) {
+          scrollUpCount++
+          if (scrollUpCount >= 5 && !hasTriggered) {
+            setShowExitIntent(true)
+            setHasTriggered(true)
+            sessionStorage.setItem('exitIntentShown', 'true')
+          }
         }
-      }
 
-      lastScrollY = currentY
+        lastScrollY = currentY
+        rafId = null
+      })
     }
 
-    // Add event listeners
     document.addEventListener('mouseleave', handleMouseLeave)
     window.addEventListener('scroll', handleScroll, { passive: true })
 
-    // Cleanup
     return () => {
       clearTimeout(enableTimer)
       document.removeEventListener('mouseleave', handleMouseLeave)
       window.removeEventListener('scroll', handleScroll)
+      if (rafId) cancelAnimationFrame(rafId)
     }
   }, [hasTriggered])
 
   const hideExitIntent = () => {
     setShowExitIntent(false)
-    // Mark as dismissed so it won't reappear
     sessionStorage.setItem('exitIntentDismissed', 'true')
   }
 

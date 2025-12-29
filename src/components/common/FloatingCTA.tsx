@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, memo } from 'react'
+import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
@@ -12,30 +12,48 @@ export const FloatingCTA = memo(function FloatingCTA() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showFloatingButton, setShowFloatingButton] = useState(true)
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const rafRef = useRef<number | null>(null)
+  const lastScrollRef = useRef(0)
+
+  const handleScroll = useCallback(() => {
+    if (rafRef.current) return
+
+    rafRef.current = requestAnimationFrame(() => {
       const scrollTop = window.scrollY
+
+      if (Math.abs(scrollTop - lastScrollRef.current) < 10) {
+        rafRef.current = null
+        return
+      }
+      lastScrollRef.current = scrollTop
+
       const windowHeight = window.innerHeight
       const docHeight = document.documentElement.scrollHeight
 
-      setIsVisible(scrollTop > windowHeight * 0.5)
-
+      const newIsVisible = scrollTop > windowHeight * 0.5
       const progress = scrollTop / (docHeight - windowHeight)
-      setScrollProgress(Math.min(progress * 100, 100))
-
-      // Hide floating button near bottom of page to reduce clutter
-      // Show it only in the middle portion of the page
+      const newScrollProgress = Math.min(progress * 100, 100)
       const nearBottom = scrollTop > docHeight - windowHeight * 1.5
-      setShowFloatingButton(!nearBottom && scrollTop > windowHeight * 0.3)
-    }
+      const newShowFloatingButton = !nearBottom && scrollTop > windowHeight * 0.3
 
+      setIsVisible(newIsVisible)
+      setScrollProgress(newScrollProgress)
+      setShowFloatingButton(newShowFloatingButton)
+
+      rafRef.current = null
+    })
+  }, [])
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
 
-    // Proper cleanup: ensure the exact same handler instance is removed
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current)
+      }
     }
-  }, [])
+  }, [handleScroll])
 
   useEffect(() => {
     if (isExpanded) {

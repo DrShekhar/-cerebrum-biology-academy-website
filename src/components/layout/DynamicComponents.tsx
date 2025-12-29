@@ -1,14 +1,14 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
-// Dynamically import non-critical components to reduce initial bundle
-export const FloatingCTA = dynamic(
+const FloatingCTAComponent = dynamic(
   () => import('@/components/common/FloatingCTA').then((mod) => mod.FloatingCTA),
   { ssr: false }
 )
 
-export const GlobalExitIntent = dynamic(
+const GlobalExitIntentComponent = dynamic(
   () => import('@/components/conversion/GlobalExitIntent').then((mod) => mod.GlobalExitIntent),
   { ssr: false }
 )
@@ -17,6 +17,35 @@ export const ChatbotWrapper = dynamic(
   () => import('@/components/chat/ChatbotWrapper').then((mod) => mod.ChatbotWrapper),
   { ssr: false }
 )
+
+export function FloatingCTA() {
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    const timerId = setTimeout(() => setShouldLoad(true), 2000)
+    return () => clearTimeout(timerId)
+  }, [])
+
+  if (!shouldLoad) return null
+  return <FloatingCTAComponent />
+}
+
+export function GlobalExitIntent() {
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 6000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 4000)
+      return () => clearTimeout(timerId)
+    }
+  }, [])
+
+  if (!shouldLoad) return null
+  return <GlobalExitIntentComponent />
+}
 
 // PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)
 export const DynamicMobileNavigation = dynamic(
