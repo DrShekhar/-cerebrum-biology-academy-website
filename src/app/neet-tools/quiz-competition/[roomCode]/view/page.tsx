@@ -152,29 +152,29 @@ export default function StudentViewPage() {
 
     return (
       <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-purple-900 p-4">
-        <div className="mx-auto max-w-lg pt-12 text-center">
-          <Trophy className="mx-auto h-20 w-20 text-yellow-400" />
-          <h1 className="mt-6 text-3xl font-bold text-white">Quiz Complete!</h1>
+        <div className="mx-auto max-w-lg pt-8 text-center sm:pt-12">
+          <Trophy className="mx-auto h-16 w-16 text-yellow-400 sm:h-20 sm:w-20" />
+          <h1 className="mt-4 text-2xl font-bold text-white sm:mt-6 sm:text-3xl">Quiz Complete!</h1>
 
-          <div className="mt-8 grid grid-cols-2 gap-4">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4">
             <div
-              className={`rounded-2xl p-6 ${session.teamAScore >= session.teamBScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
+              className={`rounded-2xl p-4 sm:p-6 ${session.teamAScore >= session.teamBScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
             >
-              <p className="text-lg font-medium text-indigo-200">{session.teamAName}</p>
-              <p className="mt-2 text-5xl font-bold text-white">{session.teamAScore}</p>
+              <p className="truncate text-sm font-medium text-indigo-200 sm:text-lg">{session.teamAName}</p>
+              <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamAScore}</p>
               {session.teamAScore > session.teamBScore && (
-                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-3 py-1 text-sm font-bold text-yellow-900">
+                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-bold text-yellow-900 sm:px-3 sm:py-1 sm:text-sm">
                   WINNER
                 </span>
               )}
             </div>
             <div
-              className={`rounded-2xl p-6 ${session.teamBScore >= session.teamAScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
+              className={`rounded-2xl p-4 sm:p-6 ${session.teamBScore >= session.teamAScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
             >
-              <p className="text-lg font-medium text-indigo-200">{session.teamBName}</p>
-              <p className="mt-2 text-5xl font-bold text-white">{session.teamBScore}</p>
+              <p className="truncate text-sm font-medium text-indigo-200 sm:text-lg">{session.teamBName}</p>
+              <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamBScore}</p>
               {session.teamBScore > session.teamAScore && (
-                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-3 py-1 text-sm font-bold text-yellow-900">
+                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-bold text-yellow-900 sm:px-3 sm:py-1 sm:text-sm">
                   WINNER
                 </span>
               )}
@@ -182,16 +182,16 @@ export default function StudentViewPage() {
           </div>
 
           {!winner && (
-            <p className="mt-6 text-xl font-semibold text-yellow-300">It&apos;s a tie!</p>
+            <p className="mt-4 text-lg font-semibold text-yellow-300 sm:mt-6 sm:text-xl">It&apos;s a tie!</p>
           )}
 
-          <p className="mt-6 text-indigo-300">
+          <p className="mt-4 text-sm text-indigo-300 sm:mt-6 sm:text-base">
             Total Rounds: {session.currentRound}
           </p>
 
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-indigo-600 hover:bg-indigo-50"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 font-semibold text-indigo-600 hover:bg-indigo-50 sm:mt-8 sm:px-6 sm:py-3"
           >
             Back to Dashboard
           </Link>
@@ -248,17 +248,17 @@ export default function StudentViewPage() {
           <div className="grid grid-cols-2 gap-1">
             {/* Team A */}
             <div
-              className={`rounded-xl p-6 text-center transition-all ${
+              className={`rounded-xl p-4 text-center transition-all sm:p-6 ${
                 session.teamAScore > session.teamBScore
                   ? 'bg-gradient-to-br from-indigo-500 to-indigo-600'
                   : 'bg-white/10'
               }`}
             >
-              <h3 className="text-lg font-semibold text-white/90">{session.teamAName}</h3>
-              <p className="my-3 text-6xl font-bold text-white">{session.teamAScore}</p>
+              <h3 className="truncate text-sm font-semibold text-white/90 sm:text-lg">{session.teamAName}</h3>
+              <p className="my-2 text-5xl font-bold text-white sm:my-3 sm:text-6xl">{session.teamAScore}</p>
               {session.teamAScore > session.teamBScore && (
-                <span className="inline-flex items-center gap-1 text-sm text-indigo-200">
-                  <Trophy className="h-4 w-4" />
+                <span className="inline-flex items-center gap-1 text-xs text-indigo-200 sm:text-sm">
+                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4" />
                   Leading
                 </span>
               )}
@@ -266,17 +266,17 @@ export default function StudentViewPage() {
 
             {/* Team B */}
             <div
-              className={`rounded-xl p-6 text-center transition-all ${
+              className={`rounded-xl p-4 text-center transition-all sm:p-6 ${
                 session.teamBScore > session.teamAScore
                   ? 'bg-gradient-to-br from-purple-500 to-purple-600'
                   : 'bg-white/10'
               }`}
             >
-              <h3 className="text-lg font-semibold text-white/90">{session.teamBName}</h3>
-              <p className="my-3 text-6xl font-bold text-white">{session.teamBScore}</p>
+              <h3 className="truncate text-sm font-semibold text-white/90 sm:text-lg">{session.teamBName}</h3>
+              <p className="my-2 text-5xl font-bold text-white sm:my-3 sm:text-6xl">{session.teamBScore}</p>
               {session.teamBScore > session.teamAScore && (
-                <span className="inline-flex items-center gap-1 text-sm text-purple-200">
-                  <Trophy className="h-4 w-4" />
+                <span className="inline-flex items-center gap-1 text-xs text-purple-200 sm:text-sm">
+                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4" />
                   Leading
                 </span>
               )}

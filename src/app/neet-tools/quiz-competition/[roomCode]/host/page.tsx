@@ -309,31 +309,34 @@ export default function HostControlPanel() {
     <main className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white shadow-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/neet-tools/quiz-competition"
-              className="flex items-center gap-2 text-gray-600 hover:text-indigo-600"
-            >
-              <ArrowLeft className="h-5 w-5" />
-              <span className="hidden sm:inline">Exit</span>
-            </Link>
-            <div>
-              <h1 className="font-bold text-gray-900">{session.title}</h1>
-              <p className="text-sm text-gray-500">
-                {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
-              </p>
+        <div className="mx-auto max-w-7xl px-4 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <Link
+                href="/neet-tools/quiz-competition"
+                className="flex items-center gap-1 text-gray-600 hover:text-indigo-600 sm:gap-2"
+              >
+                <ArrowLeft className="h-5 w-5" />
+                <span className="hidden sm:inline">Exit</span>
+              </Link>
+              <div className="min-w-0">
+                <h1 className="truncate font-bold text-gray-900">{session.title}</h1>
+                <p className="hidden text-sm text-gray-500 sm:block">
+                  {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Users className="h-4 w-4" />
-              <span>{participantCount} joined</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Clock className="h-4 w-4" />
-              <span>Round {session.currentRound}</span>
+            <div className="flex items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-1 text-xs text-gray-600 sm:gap-2 sm:text-sm">
+                <Users className="h-4 w-4" />
+                <span className="hidden sm:inline">{participantCount} joined</span>
+                <span className="sm:hidden">{participantCount}</span>
+              </div>
+              <div className="flex items-center gap-1 rounded-full bg-indigo-100 px-2 py-1 text-xs font-medium text-indigo-700 sm:gap-2 sm:text-sm">
+                <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span>R{session.currentRound}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -341,18 +344,19 @@ export default function HostControlPanel() {
 
       <div className="mx-auto max-w-7xl px-4 py-6">
         {/* Room Code Banner */}
-        <div className="mb-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white shadow-lg">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
+        <div className="mb-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-4 text-white shadow-lg sm:p-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="text-center sm:text-left">
               <p className="text-sm font-medium text-indigo-100">Room Code</p>
-              <p className="text-4xl font-bold tracking-widest">{session.roomCode}</p>
-              <p className="mt-1 text-sm text-indigo-100">
-                Students join at: /neet-tools/quiz-competition/{session.roomCode}/view
+              <p className="text-3xl font-bold tracking-widest sm:text-4xl">{session.roomCode}</p>
+              <p className="mt-1 text-xs text-indigo-200 sm:text-sm">
+                <span className="hidden sm:inline">Students join at: </span>
+                <span className="font-mono">/{session.roomCode}/view</span>
               </p>
             </div>
             <button
               onClick={copyRoomCode}
-              className="flex items-center gap-2 rounded-lg bg-white/20 px-4 py-2 font-medium transition-colors hover:bg-white/30"
+              className="flex items-center justify-center gap-2 rounded-lg bg-white/20 px-4 py-2 font-medium transition-colors hover:bg-white/30"
             >
               {copied ? (
                 <>

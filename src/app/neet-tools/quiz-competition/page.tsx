@@ -278,78 +278,131 @@ export default function QuizCompetitionPage() {
               <Loader2 className="h-8 w-8 animate-spin text-indigo-600" />
             </div>
           ) : history && history.sessions.length > 0 ? (
-            <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                      Quiz
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                      Score
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                      Winner
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                      Stats
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                      Date
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {history.sessions.map((session) => (
-                    <tr key={session.id} className="hover:bg-gray-50">
-                      <td className="px-6 py-4">
-                        <div className="font-medium text-gray-900">{session.title}</div>
-                        <div className="text-sm text-gray-500">
+            <>
+              {/* Mobile Card View */}
+              <div className="space-y-4 md:hidden">
+                {history.sessions.map((session) => (
+                  <div key={session.id} className="rounded-xl border border-gray-200 bg-white p-4">
+                    <div className="mb-3 flex items-start justify-between">
+                      <div>
+                        <h3 className="font-semibold text-gray-900">{session.title}</h3>
+                        <p className="text-xs text-gray-500">
                           {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="flex items-center gap-2">
-                          <span className={`font-semibold ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}>
-                            {session.teamAName}: {session.teamAScore}
-                          </span>
-                          <span className="text-gray-400">vs</span>
-                          <span className={`font-semibold ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}>
-                            {session.teamBName}: {session.teamBScore}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        {session.winner ? (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-1 text-sm font-medium text-yellow-800">
-                            <Trophy className="h-3 w-3" />
-                            {session.winner}
-                          </span>
-                        ) : (
-                          <span className="text-gray-500">Tie</span>
-                        )}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1">
-                            <Users className="h-4 w-4" />
-                            {session.participantCount}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {formatDuration(session.duration)}
-                          </span>
-                          <span>{session.totalRounds} rounds</span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
+                        </p>
+                      </div>
+                      <span className="text-xs text-gray-500">
                         {new Date(session.endedAt).toLocaleDateString()}
-                      </td>
+                      </span>
+                    </div>
+
+                    <div className="mb-3 grid grid-cols-2 gap-2 rounded-lg bg-gray-50 p-3">
+                      <div className={`text-center ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}>
+                        <p className="text-xs text-gray-500">{session.teamAName}</p>
+                        <p className="text-2xl font-bold">{session.teamAScore}</p>
+                        {session.teamAScore > session.teamBScore && (
+                          <Trophy className="mx-auto h-4 w-4 text-yellow-500" />
+                        )}
+                      </div>
+                      <div className={`text-center ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}>
+                        <p className="text-xs text-gray-500">{session.teamBName}</p>
+                        <p className="text-2xl font-bold">{session.teamBScore}</p>
+                        {session.teamBScore > session.teamAScore && (
+                          <Trophy className="mx-auto h-4 w-4 text-yellow-500" />
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <div className="flex items-center gap-3">
+                        <span className="flex items-center gap-1">
+                          <Users className="h-3 w-3" />
+                          {session.participantCount}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {formatDuration(session.duration)}
+                        </span>
+                      </div>
+                      <span>{session.totalRounds} rounds</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Desktop Table View */}
+              <div className="hidden overflow-hidden rounded-xl border border-gray-200 bg-white md:block">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                        Quiz
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                        Score
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                        Winner
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                        Stats
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                        Date
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {history.sessions.map((session) => (
+                      <tr key={session.id} className="hover:bg-gray-50">
+                        <td className="px-6 py-4">
+                          <div className="font-medium text-gray-900">{session.title}</div>
+                          <div className="text-sm text-gray-500">
+                            {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-2">
+                            <span className={`font-semibold ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}>
+                              {session.teamAName}: {session.teamAScore}
+                            </span>
+                            <span className="text-gray-400">vs</span>
+                            <span className={`font-semibold ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}>
+                              {session.teamBName}: {session.teamBScore}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          {session.winner ? (
+                            <span className="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-1 text-sm font-medium text-yellow-800">
+                              <Trophy className="h-3 w-3" />
+                              {session.winner}
+                            </span>
+                          ) : (
+                            <span className="text-gray-500">Tie</span>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-500">
+                          <div className="flex items-center gap-4">
+                            <span className="flex items-center gap-1">
+                              <Users className="h-4 w-4" />
+                              {session.participantCount}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="h-4 w-4" />
+                              {formatDuration(session.duration)}
+                            </span>
+                            <span>{session.totalRounds} rounds</span>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-500">
+                          {new Date(session.endedAt).toLocaleDateString()}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
           ) : (
             <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 py-12 text-center">
               <History className="mx-auto mb-4 h-12 w-12 text-gray-400" />
