@@ -3804,6 +3804,7 @@ model quiz_sessions {
   // Relations
   rounds        quiz_rounds[]
   participants  quiz_participants[]
+  messages      quiz_messages[]
 
   @@index([roomCode])
   @@index([createdById])
@@ -3838,9 +3839,27 @@ model quiz_participants {
   lastSeenAt DateTime            @default(now())
 
   session    quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  messages   quiz_messages[]
 
   @@unique([sessionId, name])
   @@index([sessionId])
+}
+
+// Quiz Chat Messages (private team communication)
+model quiz_messages {
+  id            String              @id @default(cuid())
+  sessionId     String
+  team          QuizTeam            // Which team this message belongs to
+  participantId String
+  senderName    String              // Denormalized for quick display
+  message       String
+  createdAt     DateTime            @default(now())
+
+  session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participant   quiz_participants   @relation(fields: [participantId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, team, createdAt])
+  @@index([participantId])
 }
 
 // =====================================================

@@ -9,7 +9,6 @@ import {
   Users,
   Trophy,
   Play,
-  Pause,
   RotateCcw,
   Check,
   X,
@@ -20,6 +19,9 @@ import {
   CheckCircle2,
   StopCircle,
   Zap,
+  MessageSquare,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react'
 
 interface Round {
@@ -45,6 +47,15 @@ interface ScoringRules {
   wrong: number
   pass: number
   partial?: Record<string, number>
+}
+
+interface ChatMessage {
+  id: string
+  team: 'TEAM_A' | 'TEAM_B'
+  participantId: string
+  senderName: string
+  message: string
+  createdAt: string
 }
 
 interface QuizSession {
@@ -81,6 +92,9 @@ export default function HostControlPanel() {
   const [showEndConfirm, setShowEndConfirm] = useState(false)
   const [showPartialInput, setShowPartialInput] = useState(false)
   const [customPoints, setCustomPoints] = useState('')
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
+  const [chatExpanded, setChatExpanded] = useState(true)
+  const [lastMessageId, setLastMessageId] = useState<string | null>(null)
 
   const fetchSession = useCallback(async () => {
     try {
@@ -104,11 +118,44 @@ export default function HostControlPanel() {
     }
   }, [roomCode])
 
+  const fetchMessages = useCallback(async () => {
+    try {
+      const url = new URL(`/api/quiz/${roomCode}/chat`, window.location.origin)
+      url.searchParams.set('isHost', 'true')
+      if (lastMessageId) {
+        url.searchParams.set('after', lastMessageId)
+      }
+      url.searchParams.set('t', Date.now().toString())
+
+      const res = await fetch(url.toString(), {
+        cache: 'no-store',
+        headers: { 'Cache-Control': 'no-cache' },
+      })
+      const data = await res.json()
+      if (data.success && data.data.length > 0) {
+        setChatMessages((prev) => {
+          const existingIds = new Set(prev.map((m) => m.id))
+          const newMessages = data.data.filter((m: ChatMessage) => !existingIds.has(m.id))
+          return [...prev, ...newMessages]
+        })
+        setLastMessageId(data.data[data.data.length - 1].id)
+      }
+    } catch (err) {
+      console.error('Error fetching chat messages:', err)
+    }
+  }, [roomCode, lastMessageId])
+
   useEffect(() => {
     fetchSession()
     const interval = setInterval(fetchSession, 3000)
     return () => clearInterval(interval)
   }, [fetchSession])
+
+  useEffect(() => {
+    fetchMessages()
+    const chatInterval = setInterval(fetchMessages, 2000)
+    return () => clearInterval(chatInterval)
+  }, [fetchMessages])
 
   const copyRoomCode = async () => {
     await navigator.clipboard.writeText(roomCode)
@@ -585,6 +632,77 @@ export default function HostControlPanel() {
                     </span>
                   </div>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* Team Chat Monitor */}
+          <div className="rounded-xl bg-white p-6 shadow-lg">
+            <button
+              onClick={() => setChatExpanded(!chatExpanded)}
+              className="flex w-full items-center justify-between"
+            >
+              <h3 className="flex items-center gap-2 font-semibold text-gray-900">
+                <MessageSquare className="h-5 w-5 text-gray-500" />
+                Team Chats
+                {chatMessages.length > 0 && (
+                  <span className="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-700">
+                    {chatMessages.length}
+                  </span>
+                )}
+              </h3>
+              {chatExpanded ? (
+                <ChevronUp className="h-5 w-5 text-gray-400" />
+              ) : (
+                <ChevronDown className="h-5 w-5 text-gray-400" />
+              )}
+            </button>
+
+            {chatExpanded && (
+              <div className="mt-4 space-y-4">
+                {/* Team A Messages */}
+                <div>
+                  <h4 className="mb-2 flex items-center gap-2 text-sm font-medium text-indigo-600">
+                    <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                    {session.teamAName}
+                  </h4>
+                  <div className="max-h-32 space-y-1 overflow-y-auto rounded-lg bg-indigo-50 p-2">
+                    {chatMessages.filter((m) => m.team === 'TEAM_A').length === 0 ? (
+                      <p className="py-2 text-center text-xs text-gray-400">No messages yet</p>
+                    ) : (
+                      chatMessages
+                        .filter((m) => m.team === 'TEAM_A')
+                        .map((msg) => (
+                          <div key={msg.id} className="rounded bg-white p-2 text-xs shadow-sm">
+                            <span className="font-semibold text-indigo-700">{msg.senderName}:</span>{' '}
+                            <span className="text-gray-700">{msg.message}</span>
+                          </div>
+                        ))
+                    )}
+                  </div>
+                </div>
+
+                {/* Team B Messages */}
+                <div>
+                  <h4 className="mb-2 flex items-center gap-2 text-sm font-medium text-purple-600">
+                    <span className="h-2 w-2 rounded-full bg-purple-500" />
+                    {session.teamBName}
+                  </h4>
+                  <div className="max-h-32 space-y-1 overflow-y-auto rounded-lg bg-purple-50 p-2">
+                    {chatMessages.filter((m) => m.team === 'TEAM_B').length === 0 ? (
+                      <p className="py-2 text-center text-xs text-gray-400">No messages yet</p>
+                    ) : (
+                      chatMessages
+                        .filter((m) => m.team === 'TEAM_B')
+                        .map((msg) => (
+                          <div key={msg.id} className="rounded bg-white p-2 text-xs shadow-sm">
+                            <span className="font-semibold text-purple-700">{msg.senderName}:</span>{' '}
+                            <span className="text-gray-700">{msg.message}</span>
+                          </div>
+                        ))
+                    )}
+                  </div>
+                </div>
               </div>
             )}
           </div>
