@@ -145,6 +145,14 @@ export const navigationConfig: NavigationSection[] = [
         keywords: ['quiz', 'competition', 'classroom', 'team quiz', 'scoreboard', 'live'],
         isNew: true,
       },
+      {
+        id: 'test-series-schedule',
+        title: 'Test Series Schedule',
+        href: '/test-series-schedule',
+        description: 'NEET 2026 Premium Test Series - 31 tests schedule',
+        keywords: ['test series', 'schedule', 'neet test', 'mock test', 'test dates', 'premium'],
+        isNew: true,
+      },
     ],
   },
   {
