@@ -989,4 +989,200 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       priceCurrency: 'INR',
     },
   },
+
+  'neet-crash-course': {
+    slug: 'neet-crash-course',
+    classLevel: 'universal',
+    title: 'NEET Crash Course 2026 | Intensive Last-Minute Preparation',
+    metaDescription:
+      'Enroll in NEET Crash Course 2026 for intensive last-minute preparation. Complete syllabus in 45-90 days with expert AIIMS faculty. Limited batch size, proven results.',
+    keywords: [
+      'neet crash course',
+      'neet crash course 2026',
+      'neet intensive course',
+      'neet last minute preparation',
+      'neet quick revision course',
+      'neet 45 day course',
+      'neet 90 day course',
+    ],
+    hero: {
+      headline: 'NEET Crash Course 2026',
+      subheadline:
+        'Intensive preparation program designed for students who need to cover maximum syllabus in minimum time. Expert faculty, proven strategies, guaranteed improvement.',
+      highlightedText: 'Limited Seats Available',
+      ctaText: 'Join Crash Course Now',
+      ctaLink: '/courses/crash-course',
+    },
+    painPoints: {
+      title: 'Is This Your Situation?',
+      points: [
+        {
+          icon: '⏰',
+          question: 'Only a few months left for NEET?',
+          solution: 'Our crash course covers complete syllabus in 45-90 days with strategic prioritization',
+        },
+        {
+          icon: '📊',
+          question: 'Mock test scores not improving?',
+          solution: 'Intensive practice with daily tests and personalized feedback to identify weak areas',
+        },
+        {
+          icon: '🎯',
+          question: 'Need structured last-minute revision?',
+          solution: 'Scientifically designed schedule focusing on high-weightage chapters first',
+        },
+        {
+          icon: '📚',
+          question: 'Overwhelmed by the syllabus?',
+          solution: 'Chapter-wise prioritization based on NEET weightage and your current preparation level',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Why Our Crash Course Works',
+      subtitle: 'Proven methodology for rapid score improvement',
+      items: [
+        {
+          icon: '⚡',
+          title: 'Intensive Daily Sessions',
+          description: '5-6 hours of focused live classes every day covering high-yield topics',
+        },
+        {
+          icon: '📋',
+          title: 'Strategic Syllabus Coverage',
+          description: 'Priority-based teaching focusing on chapters with maximum NEET weightage',
+        },
+        {
+          icon: '📝',
+          title: 'Daily Practice Tests',
+          description: 'Chapter-wise and full-length mock tests with detailed analysis',
+        },
+        {
+          icon: '🎯',
+          title: '10 Years PYQ Analysis',
+          description: 'Complete previous year question practice with pattern recognition',
+        },
+        {
+          icon: '👨‍🏫',
+          title: 'Expert AIIMS Faculty',
+          description: 'Learn from doctors who have cracked NEET and understand exam psychology',
+        },
+        {
+          icon: '💬',
+          title: '24/7 Doubt Support',
+          description: 'Instant doubt resolution through WhatsApp and dedicated doubt sessions',
+        },
+      ],
+    },
+    stats: [
+      { value: '45-90', label: 'Days Duration', icon: '📅' },
+      { value: '500+', label: 'Hours Teaching', icon: '⏰' },
+      { value: '5000+', label: 'MCQs Covered', icon: '📝' },
+      { value: '12', label: 'Students/Batch', icon: '👥' },
+    ],
+    testimonials: [
+      {
+        name: 'Aditya Sharma',
+        achievement: 'NEET 2024 - 678/720',
+        quote:
+          'Joined the 90-day crash course with just 520 in my mocks. The intensive schedule and focused approach helped me score 678. Best decision I made!',
+        score: '678/720 (158 marks improvement)',
+      },
+      {
+        name: 'Priya Reddy',
+        achievement: 'NEET 2024 - 645/720',
+        quote:
+          'Was struggling with Biology despite studying for 2 years. The crash course strategy for high-weightage chapters made all the difference.',
+        score: '645/720',
+      },
+      {
+        name: 'Harsh Gupta',
+        achievement: 'NEET 2024 - 612/720',
+        quote:
+          'Last 60 days before NEET, I was panicking. Dr. Shekhar\'s crash course calmed me down and gave me a clear roadmap. Got into my dream college!',
+        score: '612/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How long is the NEET crash course?',
+        answer:
+          'We offer flexible crash course options: 45-day intensive for students who have completed syllabus once, 60-day comprehensive for moderate preparation level, and 90-day complete for students who need thorough revision. Choose based on your current preparation status.',
+      },
+      {
+        question: 'Can I join the crash course if my basics are weak?',
+        answer:
+          'Yes, but we recommend the 90-day program. It includes concept-building sessions for fundamental topics before moving to advanced practice. For very weak basics, consider our regular 6-month program instead.',
+      },
+      {
+        question: 'What is the daily schedule in crash course?',
+        answer:
+          'Typical day includes: 3-4 hours of live concept classes, 1-2 hours of doubt-solving, 2 hours of supervised practice, and daily chapter tests. Total 7-8 hours of structured preparation daily.',
+      },
+      {
+        question: 'How much improvement can I expect?',
+        answer:
+          'Average improvement in our crash course is 80-120 marks. Students who follow the schedule diligently and complete all assignments typically see 100+ marks improvement. Some have improved by 150+ marks.',
+      },
+      {
+        question: 'Is the crash course available online?',
+        answer:
+          'Yes, our crash course is fully online with live interactive sessions. You get recorded lectures for revision, digital study materials, online test series, and 24/7 WhatsApp doubt support.',
+      },
+      {
+        question: 'What is the fee for NEET crash course?',
+        answer:
+          '45-day crash course: ₹19,999, 60-day crash course: ₹24,999, 90-day crash course: ₹34,999. All include complete study materials, test series, and doubt support. EMI options available.',
+      },
+    ],
+    courseSummary: {
+      title: 'NEET Crash Course 2026',
+      duration: '45-90 days (flexible)',
+      batchSize: '10-12 students',
+      features: [
+        '500+ hours of intensive teaching',
+        'Complete NCERT coverage',
+        'Daily tests with analysis',
+        '5000+ MCQs practice',
+        'Previous year questions focus',
+        'Personal doubt-solving',
+        'Printed study materials',
+        '24/7 WhatsApp support',
+      ],
+      price: {
+        original: 40000,
+        discounted: 34999,
+        emi: '₹11,666/month',
+      },
+    },
+    cta: {
+      title: 'Start Your Crash Course Today',
+      subtitle: 'Limited seats available. Transform your NEET preparation in the final stretch.',
+      primaryButton: {
+        text: 'Enroll Now',
+        link: '/courses/crash-course',
+      },
+      secondaryButton: {
+        text: 'Book Free Strategy Session',
+        link: '/book-demo?type=crash-course',
+      },
+    },
+    toolsCTA: crashCourseToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Dropper Course', link: '/neet-repeaters-2026' },
+      { title: 'NEET Biology Notes', link: '/neet-biology-notes-pdf' },
+      { title: '6-Month NEET Course', link: '/neet-biology-6-month-course' },
+      { title: 'Free NEET MCQ Practice', link: '/tools/neet-mcq' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Crash Course 2026',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Intensive NEET crash course for last-minute preparation with complete syllabus coverage',
+      duration: '45-90 days',
+      price: 34999,
+      priceCurrency: 'INR',
+    },
+  },
 }

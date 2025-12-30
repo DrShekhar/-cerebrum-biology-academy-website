@@ -804,6 +804,209 @@ export const oneYearNeetDropperCourse: SEOLandingContent = {
   },
 }
 
+// Page: /neet-repeaters-2026/
+export const neetRepeaters2026: SEOLandingContent = {
+  ...dropperBaseContent,
+  slug: 'neet-repeaters-2026',
+
+  title: 'NEET Repeaters 2026 | Dropper Batch for Second Attempt Success',
+  metaDescription:
+    'Join NEET Repeaters 2026 batch designed specifically for droppers. Proven 92% success rate, 100+ marks improvement guarantee. Expert mentorship for your second attempt.',
+  keywords: [
+    'neet repeaters 2026',
+    'neet dropper batch 2026',
+    'neet second attempt',
+    'neet 2nd attempt preparation',
+    'neet repeater course',
+    'neet drop year 2026',
+    'best coaching for neet repeaters',
+  ],
+
+  hero: {
+    headline: 'NEET Repeaters 2026: Your Second Chance, Our Full Support',
+    subheadline:
+      'Specially designed dropper program for NEET 2026. Learn from your first attempt, fix the gaps, and score 650+ this time. Over 1,200 successful droppers trust us.',
+    highlightedText: 'Transform Your Gap Year into AIIMS Year',
+    ctaText: 'Join 2026 Repeaters Batch',
+    ctaLink: '/courses/neet-dropper',
+  },
+
+  painPoints: {
+    title: 'We Know What You Are Going Through',
+    points: [
+      {
+        icon: 'refresh-cw',
+        question: 'Disappointed with NEET 2025 result?',
+        solution:
+          'Most AIIMS doctors took multiple attempts. Your first attempt gave you experience - now use it strategically.',
+      },
+      {
+        icon: 'users',
+        question: 'Friends moving to college while you retake?',
+        solution: 'Join a community of 200+ motivated repeaters who understand your journey. You are not alone.',
+      },
+      {
+        icon: 'clock',
+        question: 'Worried about wasting another year?',
+        solution:
+          'Our structured 12-month program ensures every day counts. No aimless studying, only strategic improvement.',
+      },
+      {
+        icon: 'target',
+        question: 'Not sure where you went wrong?',
+        solution:
+          'Comprehensive diagnostic test on Day 1 to identify exact gaps. Targeted fixing, not repetition of everything.',
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'The 2026 Repeaters Advantage',
+    subtitle: 'Why your second attempt will succeed with us',
+    items: [
+      {
+        icon: 'search',
+        title: 'Diagnostic Assessment',
+        description: 'Detailed analysis of your 2025 attempt to identify exactly what needs fixing.',
+      },
+      {
+        icon: 'calendar',
+        title: 'Full Year Dedication',
+        description: 'No school distractions. 100% focus on NEET for 12 months. Maximum study hours.',
+      },
+      {
+        icon: 'zap',
+        title: 'Intensive Schedule',
+        description: '6 days/week classes with 10+ hours daily productive time. Transform through consistency.',
+      },
+      {
+        icon: 'bar-chart',
+        title: 'Weekly Mock Tests',
+        description: '50+ full-length tests throughout the year. Practice exam pressure until it becomes routine.',
+      },
+      {
+        icon: 'heart',
+        title: 'Mental Wellness Focus',
+        description: 'Dedicated counseling and motivation sessions. Drop year stress is real - we address it.',
+      },
+      {
+        icon: 'user-check',
+        title: 'Personal Mentorship',
+        description: 'Dr. Shekhar personally tracks every repeater student. Monthly one-on-one sessions.',
+      },
+    ],
+  },
+
+  stats: [
+    { value: '92%', label: 'Success Rate', icon: 'trophy' },
+    { value: '650+', label: 'Avg 2nd Attempt Score', icon: 'target' },
+    { value: '1,200+', label: 'Droppers Trained', icon: 'users' },
+    { value: '120+', label: 'Avg Improvement', icon: 'trending-up' },
+  ],
+
+  testimonials: [
+    {
+      name: 'Vikram Malhotra',
+      achievement: 'AIR 456 | AIIMS Delhi (2nd Attempt)',
+      quote:
+        '2024: 512 marks. 2025: 658 marks. The gap year with Cerebrum was the best decision. Dr. Shekhar helped me identify why I was stuck and fixed it systematically.',
+      score: '658/720 (146 improvement)',
+    },
+    {
+      name: 'Kavitha Nair',
+      achievement: 'AIR 823 | JIPMER (Repeater)',
+      quote:
+        'Taking a drop was emotionally hard. But Cerebrum community kept me motivated. The weekly tests built my confidence. Now I am a JIPMERite!',
+      score: '624/720',
+    },
+    {
+      name: 'Arjun Patel',
+      achievement: 'AIR 1,250 | GMC Ahmedabad (2nd Attempt)',
+      quote:
+        'First attempt: Missed cutoff by 10 marks. Second attempt: Government college secured. The personalized attention in small batches made all the difference.',
+      score: '598/720',
+    },
+  ],
+
+  faqs: [
+    {
+      question: 'Is taking a drop year for NEET worth it in 2026?',
+      answer:
+        'Absolutely. NEET 2026 gives you full 12 months of focused preparation. Statistics show: 65% of medical students took 2+ attempts, average improvement with structured drop year is 80-150 marks, and medical college seats are increasing every year. If you are committed, the drop year is your best investment.',
+    },
+    {
+      question: 'How is the NEET Repeaters 2026 batch different from fresh batch?',
+      answer:
+        'Key differences: Faster syllabus coverage (you have seen it once), more focus on practice and tests (less theory repetition), psychological support for drop year challenges, peer group of serious repeaters only, and personalized gap analysis based on your 2025 attempt.',
+    },
+    {
+      question: 'What marks improvement can I expect as a repeater?',
+      answer:
+        'Our repeater students typically improve by 80-150 marks. Average improvement is 120 marks. Students who follow our schedule completely have seen up to 180 marks improvement. Your improvement depends on your effort and following our strategy.',
+    },
+    {
+      question: 'When does the NEET 2026 repeaters batch start?',
+      answer:
+        'Main batch starts June 2025 (right after NEET 2025 results). We also have July batch for students who decide later. Earlier you join, more revision cycles you complete. Registration opens April 2025.',
+    },
+    {
+      question: 'What if I fail again in NEET 2026?',
+      answer:
+        'Our 92% success rate means this is rare, but we support you regardless. We offer: discounted re-enrollment for third attempt, career counseling for alternative paths (BDS, BAMS, Abroad), and lifetime access to study materials. You will not be abandoned.',
+    },
+    {
+      question: 'What is the fee for NEET Repeaters 2026 batch?',
+      answer:
+        'Complete program: Rs 80,000/year (original Rs 95,000). Includes: 6-day weekly live classes, printed study material, 50+ mock tests, mental wellness support, and personal mentorship. EMI at Rs 4,500/month available.',
+    },
+  ],
+
+  courseSummary: {
+    title: 'NEET Repeaters 2026 Batch',
+    duration: '12 Months (June 2025 - May 2026)',
+    batchSize: '10-12 Students per batch',
+    features: [
+      'Diagnostic assessment of 2025 attempt',
+      'Live online classes 6 days/week',
+      'Complete Class 11 + 12 strategic revision',
+      '50+ mock tests with detailed analysis',
+      '10,000+ practice MCQs',
+      'Personal mentorship from Dr. Shekhar',
+      'Weekly progress tracking',
+      'Mental wellness and motivation support',
+    ],
+    price: {
+      original: 95000,
+      discounted: 80000,
+      emi: '₹4,500/month',
+    },
+  },
+
+  cta: {
+    title: 'Turn Your 2026 Into AIIMS Year',
+    subtitle: 'Join 200+ motivated repeaters preparing for NEET 2026. Limited seats available.',
+    primaryButton: {
+      text: 'Join Repeaters Batch',
+      link: '/courses/neet-dropper',
+    },
+    secondaryButton: {
+      text: 'Book Free Counseling',
+      link: '/book-demo?type=repeater-counseling',
+    },
+  },
+
+  schema: {
+    '@type': 'Course',
+    courseName: 'NEET Repeaters 2026 Batch',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      'Specialized NEET preparation course for repeaters and droppers appearing for NEET 2026.',
+    duration: 'P12M',
+    price: 80000,
+    priceCurrency: 'INR',
+  },
+}
+
 // Export all Dropper content
 export const dropperSEOPages = {
   neetDropperBatchOnline,
@@ -811,4 +1014,5 @@ export const dropperSEOPages = {
   neetDropperBiologyCoaching,
   bestCoachingNeetDroppers,
   oneYearNeetDropperCourse,
+  neetRepeaters2026,
 }
