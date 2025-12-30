@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { useSession, signOut } from 'next-auth/react'
-import { useSafeClerk } from '@/hooks/useSafeClerk'
+import { useClerk, useUser } from '@clerk/nextjs'
+import { useClerkRole } from '@/hooks/useClerkRole'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -49,20 +49,13 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { signOut: clerkSignOut } = useSafeClerk()
+  const { signOut: clerkSignOut } = useClerk()
+  const { user } = useUser()
+  const { isLoaded, isSignedIn, isAdmin } = useClerkRole()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
-  const { data: session, status } = useSession({
-    required: false,
-    onUnauthenticated() {
-      // Only redirect if not owner via Clerk
-      if (!isOwner) {
-        router.push('/admin/login')
-      }
-    },
-  })
 
-  // Show loading state while session is loading or checking owner status
-  if (status === 'loading' || isCheckingOwner) {
+  // Show loading state while checking auth
+  if (!isLoaded || isCheckingOwner) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -76,35 +69,32 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     )
   }
 
-  // Allow access if owner via Clerk OR admin via NextAuth session
-  const hasAdminAccess = isOwner || (session?.user && session.user.role === 'admin')
+  // Allow access if owner OR admin role via Clerk
+  const hasAdminAccess = isOwner || isAdmin
 
   // Redirect to login if not authenticated
-  if (!hasAdminAccess) {
+  if (!isSignedIn) {
     router.push('/admin/login')
+    return null
+  }
+
+  // Redirect if no admin access
+  if (!hasAdminAccess) {
+    router.push('/dashboard?error=admin_required')
     return null
   }
 
   const handleLogout = async () => {
     try {
-      if (isOwner) {
-        // Sign out from Clerk
-        await clerkSignOut({ redirectUrl: '/select-role' })
-      } else {
-        // Sign out from NextAuth
-        await signOut({
-          callbackUrl: '/admin/login',
-          redirect: true,
-        })
-      }
+      await clerkSignOut({ redirectUrl: '/select-role' })
     } catch (error) {
       console.error('Logout error:', error)
     }
   }
 
-  // Get display name - from session or default to Owner for Clerk users
-  const displayName = session?.user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
-  const displayEmail = session?.user?.email || (isOwner ? 'Owner Access' : '')
+  // Get display name from Clerk user
+  const displayName = user?.fullName || user?.firstName || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
+  const displayEmail = user?.emailAddresses?.[0]?.emailAddress || (isOwner ? 'Owner Access' : '')
 
   const navigation: NavItem[] = [
     {

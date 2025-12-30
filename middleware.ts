@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
-import { NextRequest, NextResponse } from 'next/server'
-import { validateUserSession, addSecurityHeaders, UserSession } from '@/lib/auth/config'
+import { NextResponse } from 'next/server'
+import { addSecurityHeaders } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
 
@@ -19,6 +19,7 @@ const isPublicRoute = createRouteMatcher([
   '/admissions(.*)',
   '/faq(.*)',
   '/testimonials(.*)',
+  '/timetable(.*)',
   '/sign-in(.*)',
   '/sign-up(.*)',
   '/auth/(.*)',
@@ -40,9 +41,13 @@ const isProtectedRoute = createRouteMatcher([
   '/select-role(.*)',
 ])
 
-// Type guard to check if session has role property
-function hasRole(session: UserSession): session is UserSession & { role: string } {
-  return session.valid && typeof session.role === 'string'
+// Helper to get user role from Clerk session claims
+// NOTE: Requires setting up custom session claims in Clerk Dashboard:
+// { "metadata": "{{user.public_metadata}}" }
+type ClerkSessionClaims = {
+  metadata?: {
+    role?: string
+  }
 }
 
 export default clerkMiddleware(async (auth, req) => {
@@ -59,107 +64,77 @@ export default clerkMiddleware(async (auth, req) => {
   }
 
   // Get Clerk auth state
-  const { userId: clerkUserId } = await auth()
+  const { userId, sessionClaims } = await auth()
+  const userRole = (sessionClaims as ClerkSessionClaims)?.metadata?.role?.toUpperCase()
 
-  // For protected routes, require Clerk authentication
-  if (!isPublicRoute(req)) {
-    if (!clerkUserId) {
-      // Redirect to Clerk sign-in
-      const signInUrl = new URL('/sign-in', req.url)
-      signInUrl.searchParams.set('redirect_url', pathname)
-      return NextResponse.redirect(signInUrl)
-    }
+  // For non-public routes, require Clerk authentication
+  if (!isPublicRoute(req) && !userId) {
+    const signInUrl = new URL('/sign-in', req.url)
+    signInUrl.searchParams.set('redirect_url', pathname)
+    return NextResponse.redirect(signInUrl)
   }
 
-  // Legacy session validation for backward compatibility
-  // This allows existing sessions to work alongside Clerk
-  const session = await validateUserSession(req).catch(() => ({ valid: false }) as UserSession)
-
-  // Combined auth check: either Clerk OR legacy session
-  const isAuthenticated = clerkUserId || session.valid
-
-  // Public auth routes (legacy)
-  if (pathname.startsWith('/auth/')) {
-    if (isAuthenticated) {
-      return NextResponse.redirect(new URL('/dashboard', req.url))
-    }
-    return addSecurityHeaders(NextResponse.next())
+  // Legacy auth routes redirect to Clerk
+  if (pathname.startsWith('/auth/') && userId) {
+    return NextResponse.redirect(new URL('/dashboard', req.url))
   }
 
-  // Public admin routes (login page)
+  // Admin login page - redirect to dashboard if already admin
   if (pathname === '/admin/login') {
-    if (hasRole(session) && session.role === 'ADMIN') {
+    if (userId && userRole === 'ADMIN') {
       return NextResponse.redirect(new URL('/admin', req.url))
     }
+    if (userId) {
+      // User is signed in but not admin - redirect to sign-in to show Clerk
+      return addSecurityHeaders(NextResponse.next())
+    }
     return addSecurityHeaders(NextResponse.next())
   }
 
-  // Protected student/parent routes
-  if (isProtectedRoute(req)) {
-    if (!isAuthenticated) {
-      const loginUrl = new URL('/sign-in', req.url)
-      loginUrl.searchParams.set('redirect_url', pathname)
-      return NextResponse.redirect(loginUrl)
-    }
-  }
-
-  // Protected teacher routes - allow Clerk authenticated users (page components handle role check)
-  if (pathname.startsWith('/teacher/')) {
-    if (!clerkUserId && (!hasRole(session) || (session.role !== 'TEACHER' && session.role !== 'ADMIN'))) {
-      return NextResponse.redirect(new URL('/sign-in', req.url))
-    }
-  }
-
-  // Protected counselor routes - allow Clerk authenticated users (page components handle role check)
-  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
-    if (!clerkUserId && (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN'))) {
-      const loginUrl = new URL('/sign-in', req.url)
-      loginUrl.searchParams.set('redirect_url', pathname)
-      return NextResponse.redirect(loginUrl)
-    }
-  }
-
-  // Protected admin routes - allow Clerk authenticated users (AdminLayout handles role check)
+  // Protected admin routes - require admin role
+  // Note: Role checking happens in AdminLayout component for better UX
+  // Middleware just ensures user is authenticated
   if (isAdminRoute(req) && pathname !== '/admin/login') {
-    if (!clerkUserId && (!hasRole(session) || session.role !== 'ADMIN')) {
+    if (!userId) {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
       return NextResponse.redirect(loginUrl)
     }
 
-    // Log successful admin access
-    if (session.email) {
-      const clientIP =
-        req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
-      console.log(
-        `Admin access: ${session.email} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`
-      )
+    // Log admin access
+    if (process.env.NODE_ENV === 'production') {
+      const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
+      console.log(`Admin access: userId=${userId} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`)
     }
   }
 
-  // API route protection
-  if (
-    pathname.startsWith('/api/auth/') &&
-    !pathname.includes('signin') &&
-    !pathname.includes('signup') &&
-    !pathname.includes('csrf-token')
-  ) {
-    if (!isAuthenticated) {
-      return addSecurityHeaders(
-        NextResponse.json(
-          {
-            error: 'Authentication required',
-            message: 'Please sign in to access this resource',
-          },
-          { status: 401 }
-        )
-      )
-    }
+  // Protected teacher routes
+  if (pathname.startsWith('/teacher/') && !userId) {
+    return NextResponse.redirect(new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url))
   }
 
-  // Admin API protection
+  // Protected counselor routes
+  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc' && !userId) {
+    const loginUrl = new URL('/sign-in', req.url)
+    loginUrl.searchParams.set('redirect_url', pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  // Protected general routes
+  if (isProtectedRoute(req) && !userId) {
+    const loginUrl = new URL('/sign-in', req.url)
+    loginUrl.searchParams.set('redirect_url', pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  // API route protection - admin APIs
   if (pathname.startsWith('/api/admin/')) {
-    if (!hasRole(session) || session.role !== 'ADMIN') {
+    if (!userId) {
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+      )
+    }
+    if (userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -172,9 +147,14 @@ export default clerkMiddleware(async (auth, req) => {
     }
   }
 
-  // Teacher API protection
+  // API route protection - teacher APIs
   if (pathname.startsWith('/api/teacher/')) {
-    if (!session.valid || (session.role !== 'TEACHER' && session.role !== 'ADMIN')) {
+    if (!userId) {
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+      )
+    }
+    if (userRole !== 'TEACHER' && userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -187,9 +167,14 @@ export default clerkMiddleware(async (auth, req) => {
     }
   }
 
-  // Counselor API protection
+  // API route protection - counselor APIs
   if (pathname.startsWith('/api/counselor/')) {
-    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
+    if (!userId) {
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+      )
+    }
+    if (userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -222,7 +207,8 @@ export default clerkMiddleware(async (auth, req) => {
     pathname.startsWith('/contact') ||
     pathname.startsWith('/blog') ||
     pathname.startsWith('/gallery') ||
-    pathname.startsWith('/pricing')
+    pathname.startsWith('/pricing') ||
+    pathname.startsWith('/timetable')
 
   const isProtectedPath =
     pathname.startsWith('/admin') ||
@@ -249,20 +235,14 @@ export default clerkMiddleware(async (auth, req) => {
 
   // Production headers
   if (process.env.NODE_ENV === 'production') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=63072000; includeSubDomains; preload'
-    )
+    response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
   }
 
-  // Session information header (for debugging)
-  if (process.env.NODE_ENV === 'development') {
-    if (clerkUserId) {
-      response.headers.set('X-Clerk-User-ID', clerkUserId)
-    }
-    if (session.valid) {
-      response.headers.set('X-User-Role', session.role || 'unknown')
-      response.headers.set('X-User-ID', session.userId || 'unknown')
+  // Debug headers in development
+  if (process.env.NODE_ENV === 'development' && userId) {
+    response.headers.set('X-Clerk-User-ID', userId)
+    if (userRole) {
+      response.headers.set('X-User-Role', userRole)
     }
   }
 
@@ -272,18 +252,13 @@ export default clerkMiddleware(async (auth, req) => {
     'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()'
   )
 
+  // Cache control
   if (isProtectedPath) {
-    response.headers.set(
-      'Cache-Control',
-      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
-    )
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
     response.headers.set('Pragma', 'no-cache')
     response.headers.set('Expires', '0')
   } else if (isStaticPage) {
-    response.headers.set(
-      'Cache-Control',
-      'public, max-age=60, s-maxage=300, stale-while-revalidate=86400'
-    )
+    response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=86400')
   } else {
     response.headers.set('Cache-Control', 'public, max-age=30, stale-while-revalidate=60')
   }
@@ -291,11 +266,6 @@ export default clerkMiddleware(async (auth, req) => {
   // Admin route logging
   if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
     response.headers.set('X-Admin-Route', 'true')
-    if (process.env.NODE_ENV === 'production') {
-      console.log(
-        `Admin route accessed: ${pathname} from IP: ${req.headers.get('x-forwarded-for') || 'unknown'} at ${new Date().toISOString()}`
-      )
-    }
   }
 
   // Apply compression to API responses

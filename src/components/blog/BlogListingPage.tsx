@@ -221,7 +221,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -549,9 +549,10 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
             </div>
           ) : (
             <>
-              <div className="grid lg:grid-cols-3 gap-8">
-                {/* Featured Post */}
-                {currentPage === 1 && paginatedPosts.length > 0 && (
+              {/* Featured Section: Featured Post + 2 Side Posts (Page 1 only) */}
+              {currentPage === 1 && paginatedPosts.length > 0 && (
+                <div className="grid lg:grid-cols-3 gap-8 mb-8">
+                  {/* Featured Post - 2 columns */}
                   <div className="lg:col-span-2 animate-fade-in-up">
                     <article className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full group">
                       <div className="aspect-video relative overflow-hidden">
@@ -559,6 +560,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                           slug={paginatedPosts[0].slug}
                           title={paginatedPosts[0].title}
                           size="lg"
+                          category={paginatedPosts[0].category}
                           className="absolute inset-0 w-full h-full rounded-none group-hover:scale-105 transition-transform duration-500"
                         />
                         {/* Badges */}
@@ -665,14 +667,10 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                       </div>
                     </article>
                   </div>
-                )}
 
-                {/* Regular Posts */}
-                <div className={`space-y-6 ${currentPage === 1 ? '' : 'lg:col-span-3'}`}>
-                  <div
-                    className={`grid ${currentPage === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-6`}
-                  >
-                    {(currentPage === 1 ? paginatedPosts.slice(1) : paginatedPosts).map((post) => (
+                  {/* Side Posts - Only 2 posts beside featured */}
+                  <div className="space-y-6">
+                    {paginatedPosts.slice(1, 3).map((post) => (
                       <article
                         key={post.slug}
                         className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group animate-fade-in"
@@ -683,6 +681,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                               slug={post.slug}
                               title={post.title}
                               size="sm"
+                              category={post.category}
                               className="rounded-none group-hover:scale-105 transition-transform duration-500"
                             />
                           </Link>
@@ -758,6 +757,96 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                     ))}
                   </div>
                 </div>
+              )}
+
+              {/* Regular Posts Grid - 3 columns */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* On page 1: show posts from index 3 onwards. On other pages: show all posts */}
+                {(currentPage === 1 ? paginatedPosts.slice(3) : paginatedPosts).map((post) => (
+                  <article
+                    key={post.slug}
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group animate-fade-in"
+                  >
+                    <div className="relative">
+                      <Link href={`/blog/${post.slug}`}>
+                        <BlogThumbnail
+                          slug={post.slug}
+                          title={post.title}
+                          size="sm"
+                          category={post.category}
+                          className="rounded-none group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </Link>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault()
+                          toggleBookmark(post.slug)
+                        }}
+                        className="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white transition-colors shadow"
+                      >
+                        <Bookmark
+                          className={`w-4 h-4 ${
+                            bookmarkedPosts.includes(post.slug)
+                              ? 'text-blue-600 fill-current'
+                              : 'text-gray-600'
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    <div className="p-5">
+                      <div
+                        className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${getCategoryInfo(post.category).color}`}
+                      >
+                        {getCategoryInfo(post.category).name}
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {post.difficulty && (
+                          <DifficultyBadge difficulty={post.difficulty} size="sm" />
+                        )}
+                        {post.neetChapter && (
+                          <NEETTopicBadge
+                            chapter={post.neetChapter}
+                            weightage={post.neetWeightage}
+                            size="sm"
+                          />
+                        )}
+                      </div>
+
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                      </h3>
+
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <div className="flex items-center space-x-3">
+                          <div className="flex items-center">
+                            <Clock className="w-3 h-3 mr-1" />
+                            {post.readTime}m
+                          </div>
+                          <div className="flex items-center text-orange-600">
+                            <Eye className="w-3 h-3 mr-1" />
+                            {(post.views || 0).toLocaleString()}
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault()
+                            setSelectedAuthor(post.author.name)
+                            handleFilterChange()
+                          }}
+                          className="flex items-center hover:text-blue-600 transition-colors"
+                        >
+                          <User className="w-3 h-3 mr-1" />
+                          {post.author.name}
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
 
               <BlogPagination

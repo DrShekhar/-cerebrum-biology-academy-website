@@ -1,17 +1,18 @@
 'use client'
 
-import { useSession } from 'next-auth/react'
 import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { SessionProvider } from '@/components/providers/SessionProvider'
 import { Toaster } from 'react-hot-toast'
 import { KeyboardShortcutsModal } from '@/components/counselor/KeyboardShortcutsModal'
 import { Keyboard } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
+import { useClerkRole } from '@/hooks/useClerkRole'
+import { useUser } from '@clerk/nextjs'
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession()
+  const { isLoaded, isSignedIn, isCounselor, isAdmin } = useClerkRole()
+  const { user } = useUser()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)
@@ -20,8 +21,8 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   // DEV MODE: Skip authentication check if bypass is enabled
   const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
 
-  // Allow access if owner OR counselor role
-  const hasCounselorAccess = isOwner || (session?.user && session.user.role === 'counselor')
+  // Allow access if owner OR counselor/admin role
+  const hasCounselorAccess = isOwner || isCounselor || isAdmin
 
   useEffect(() => {
     if (isBypassEnabled) {
@@ -29,13 +30,18 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       return
     }
 
-    if (status === 'loading' || isCheckingOwner) return
+    if (!isLoaded || isCheckingOwner) return
 
-    if (!hasCounselorAccess) {
-      router.push(`/auth/counselor-login?callbackUrl=${pathname}`)
+    if (!isSignedIn) {
+      router.push(`/sign-in?redirect_url=${encodeURIComponent(pathname)}`)
       return
     }
-  }, [status, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
+
+    if (!hasCounselorAccess) {
+      router.push('/dashboard?error=counselor_required')
+      return
+    }
+  }, [isLoaded, isSignedIn, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
 
   // Global keyboard shortcuts
   useEffect(() => {
@@ -82,7 +88,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [router])
 
-  if (!isBypassEnabled && (status === 'loading' || isCheckingOwner)) {
+  if (!isBypassEnabled && (!isLoaded || isCheckingOwner)) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
@@ -98,7 +104,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isBypassEnabled && !hasCounselorAccess) {
+  if (!isBypassEnabled && (!isSignedIn || !hasCounselorAccess)) {
     return null
   }
 
@@ -182,7 +188,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
               <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  {isBypassEnabled ? 'D' : session?.user?.email?.charAt(0).toUpperCase() || 'C'}
+                  {isBypassEnabled ? 'D' : user?.emailAddresses?.[0]?.emailAddress?.charAt(0).toUpperCase() || user?.firstName?.charAt(0).toUpperCase() || 'C'}
                 </div>
               </button>
             </div>
@@ -199,9 +205,5 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 }
 
 export default function CounselorLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <SessionProvider>
-      <CounselorAuthWrapper>{children}</CounselorAuthWrapper>
-    </SessionProvider>
-  )
+  return <CounselorAuthWrapper>{children}</CounselorAuthWrapper>
 }

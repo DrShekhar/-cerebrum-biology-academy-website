@@ -127,6 +127,17 @@ interface BlogThumbnailProps {
   title: string
   className?: string
   size?: 'sm' | 'md' | 'lg'
+  category?: string
+}
+
+// Category-based fallback colors for visual variety
+const categoryColors: Record<string, string> = {
+  'neet-preparation': 'bg-slate-700',
+  'biology-concepts': 'bg-green-600',
+  'study-tips': 'bg-blue-600',
+  'chapter-guides': 'bg-indigo-600',
+  'exam-updates': 'bg-orange-500',
+  'success-stories': 'bg-purple-600',
 }
 
 const sizeClasses = {
@@ -154,6 +165,7 @@ export const BlogThumbnail = memo(function BlogThumbnail({
   title,
   className = '',
   size = 'md',
+  category,
 }: BlogThumbnailProps) {
   const [Illustration, setIllustration] = useState<IllustrationComponent | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -197,10 +209,12 @@ export const BlogThumbnail = memo(function BlogThumbnail({
     )
   }
 
-  // Fallback with nice gradient and icon
+  // Fallback with category-based color and icon
+  const fallbackColor = category ? categoryColors[category] || 'bg-slate-600' : 'bg-slate-600'
+
   return (
     <div
-      className={`relative w-full ${sizeClasses[size]} bg-blue-500 rounded-xl overflow-hidden ${className}`}
+      className={`relative w-full ${sizeClasses[size]} ${fallbackColor} rounded-xl overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80">
         <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-2">

@@ -81,6 +81,42 @@ All text elements throughout the hierarchical selection and test interface now u
 - Ensure proper alignment and visual balance
 - Test on multiple screen sizes (320px to 1920px)
 
+## Brand Colors
+
+### Primary Brand Color - Forest Green
+
+| Name | Hex | Tailwind | Usage |
+|------|-----|----------|-------|
+| **Cerebrum Green** | `#4a5d4a` | `bg-[#4a5d4a]` | Primary brand color, headers, CTAs |
+
+This muted forest green represents:
+- **Trust & Reliability** - Associated with growth and learning
+- **Calm & Focus** - Ideal for educational environments
+- **Nature & Biology** - Aligns with biology-focused brand identity
+
+### Usage Examples
+
+```tsx
+// Hero sections and primary headers
+<section className="bg-[#4a5d4a] text-white">
+
+// Primary CTA buttons
+<button className="bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white">
+
+// Accent borders
+<div className="border-[#4a5d4a]">
+```
+
+### Color Variations
+
+| Variant | Hex | Usage |
+|---------|-----|-------|
+| Default | `#4a5d4a` | Primary backgrounds |
+| Hover/Dark | `#3d4d3d` | Button hover states |
+| Light | `#5a6d5a` | Secondary elements |
+| Very Light | `#e8ede8` | Light backgrounds |
+
 ## Last Updated
 
 December 2024 - Text visibility fixes applied across all components
+December 2024 - Added brand color (Forest Green #4a5d4a)

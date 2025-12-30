@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { MessageSquare, Send, ThumbsUp, Users } from 'lucide-react'
 
 interface BlogCommentsProps {
@@ -8,49 +8,9 @@ interface BlogCommentsProps {
   title: string
 }
 
-// Giscus configuration from environment variables
-const GISCUS_REPO = process.env.NEXT_PUBLIC_GISCUS_REPO
-const GISCUS_REPO_ID = process.env.NEXT_PUBLIC_GISCUS_REPO_ID
-const GISCUS_CATEGORY = process.env.NEXT_PUBLIC_GISCUS_CATEGORY || 'Blog Comments'
-const GISCUS_CATEGORY_ID = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID
-
-const isGiscusConfigured = GISCUS_REPO && GISCUS_REPO_ID && GISCUS_CATEGORY_ID
-
 export function BlogComments({ slug, title }: BlogCommentsProps) {
-  const commentsRef = useRef<HTMLDivElement>(null)
   const [question, setQuestion] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-
-  useEffect(() => {
-    if (!commentsRef.current || !isGiscusConfigured) return
-
-    commentsRef.current.innerHTML = ''
-
-    const script = document.createElement('script')
-    script.src = 'https://giscus.app/client.js'
-    script.setAttribute('data-repo', GISCUS_REPO!)
-    script.setAttribute('data-repo-id', GISCUS_REPO_ID!)
-    script.setAttribute('data-category', GISCUS_CATEGORY)
-    script.setAttribute('data-category-id', GISCUS_CATEGORY_ID!)
-    script.setAttribute('data-mapping', 'pathname')
-    script.setAttribute('data-strict', '0')
-    script.setAttribute('data-reactions-enabled', '1')
-    script.setAttribute('data-emit-metadata', '0')
-    script.setAttribute('data-input-position', 'top')
-    script.setAttribute('data-theme', 'light')
-    script.setAttribute('data-lang', 'en')
-    script.setAttribute('data-loading', 'lazy')
-    script.crossOrigin = 'anonymous'
-    script.async = true
-
-    commentsRef.current.appendChild(script)
-
-    return () => {
-      if (commentsRef.current) {
-        commentsRef.current.innerHTML = ''
-      }
-    }
-  }, [slug])
 
   const handleQuestionSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -81,13 +41,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
           </div>
         </div>
 
-        {isGiscusConfigured ? (
-          <div
-            ref={commentsRef}
-            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 min-h-[200px]"
-          />
-        ) : (
-          <div className="space-y-6 animate-fade-in-up">
+        <div className="space-y-6 animate-fade-in-up">
             {/* Stats bar */}
             <div className="flex items-center justify-center gap-6 py-4 bg-blue-50 rounded-xl">
               <div className="flex items-center gap-2 text-blue-700">
@@ -167,7 +121,6 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
               </div>
             </div>
           </div>
-        )}
 
         <noscript>
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center">

@@ -1,28 +1,28 @@
 'use client'
 
-import type { Metadata } from 'next'
-import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import { SessionProvider } from '@/components/providers/SessionProvider'
-
-// Note: metadata can't be used in client components, will be handled by individual pages
+import { useClerkRole } from '@/hooks/useClerkRole'
 
 function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession()
+  const { isLoaded, isSignedIn, isAdmin } = useClerkRole()
   const router = useRouter()
 
   useEffect(() => {
-    if (status === 'loading') return // Still loading
+    if (!isLoaded) return
 
-    if (status === 'unauthenticated' || !session?.user || session.user.role !== 'admin') {
+    if (!isSignedIn) {
       router.push('/admin/login')
       return
     }
-  }, [status, session, router])
 
-  // Show loading while checking authentication
-  if (status === 'loading') {
+    if (!isAdmin) {
+      router.push('/dashboard?error=admin_required')
+      return
+    }
+  }, [isLoaded, isSignedIn, isAdmin, router])
+
+  if (!isLoaded) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -36,8 +36,7 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  // Don't render children if not authenticated
-  if (status === 'unauthenticated' || !session?.user || session.user.role !== 'admin') {
+  if (!isSignedIn || !isAdmin) {
     return null
   }
 
@@ -45,9 +44,5 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
 }
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <SessionProvider>
-      <AdminAuthWrapper>{children}</AdminAuthWrapper>
-    </SessionProvider>
-  )
+  return <AdminAuthWrapper>{children}</AdminAuthWrapper>
 }

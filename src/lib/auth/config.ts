@@ -1,4 +1,29 @@
-// Auth configuration for the application
+/**
+ * Auth configuration for the application
+ *
+ * ⚠️ DEPRECATION NOTICE (2024-12)
+ * ================================
+ * This file contains LEGACY authentication code from the NextAuth era.
+ * The application has migrated to Clerk for authentication.
+ *
+ * DEPRECATED (use Clerk instead):
+ * - TokenUtils - Use Clerk session tokens
+ * - SessionManager - Use Clerk session management
+ * - CookieManager - Use Clerk cookie handling
+ * - validateUserSession - Use auth() from @clerk/nextjs/server
+ * - requireAuth/optionalAuth - Use Clerk middleware
+ * - AuthRateLimit - Use Clerk's built-in rate limiting
+ * - authOptions - NextAuth config, not used with Clerk
+ *
+ * STILL ACTIVE:
+ * - PasswordUtils - Used for admin password validation
+ * - ROLE_PERMISSIONS - Role-based access control
+ * - addSecurityHeaders - Security headers utility
+ * - ALLOWED_ORIGINS - CORS configuration
+ *
+ * TODO: Migrate remaining routes to Clerk and remove deprecated code
+ * See: /api/auth/*, /api/test/*, /api/questions/*, /api/progress/*
+ */
 import { NextRequest, NextResponse } from 'next/server'
 import { validateAdminSession, AdminSession } from './admin-auth'
 import jwt from 'jsonwebtoken'
@@ -107,6 +132,7 @@ export class PasswordUtils {
 
 /**
  * JWT token utilities
+ * @deprecated Use Clerk session tokens instead. This class will be removed in a future version.
  */
 export class TokenUtils {
   static generateAccessToken(payload: Omit<JWTPayload, 'iat' | 'exp'>): string {
@@ -205,6 +231,7 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
 
 /**
  * Validate user session from request
+ * @deprecated Use auth() from @clerk/nextjs/server instead. This function will be removed in a future version.
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
@@ -323,6 +350,7 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
 
 /**
  * Require authentication for protected routes
+ * @deprecated Use Clerk middleware with clerkMiddleware() instead. This function will be removed in a future version.
  */
 export function requireAuth(
   handler: (request: NextRequest, session: UserSession) => Promise<Response>
@@ -349,6 +377,7 @@ export function requireAuth(
 
 /**
  * Optional auth - allows both authenticated and unauthenticated users
+ * @deprecated Use Clerk middleware instead. This function will be removed in a future version.
  */
 export function optionalAuth(
   handler: (request: NextRequest, session?: UserSession) => Promise<Response>
@@ -361,6 +390,7 @@ export function optionalAuth(
 
 /**
  * Session management utilities
+ * @deprecated Use Clerk session management instead. This class will be removed in a future version.
  */
 export class SessionManager {
   static async createSession(user: {
@@ -458,6 +488,7 @@ export class SessionManager {
 
 /**
  * Rate limiting for authentication attempts
+ * @deprecated Use Clerk's built-in rate limiting or Upstash Redis. This class will be removed in a future version.
  */
 export class AuthRateLimit {
   private static attempts = new Map<string, { count: number; lastAttempt: number }>()
@@ -516,6 +547,7 @@ export class AuthRateLimit {
 
 /**
  * Cookie management utilities
+ * @deprecated Use Clerk cookie management instead. This class will be removed in a future version.
  */
 export class CookieManager {
   static setAuthCookies(response: NextResponse, accessToken: string, refreshToken: string) {
@@ -548,12 +580,16 @@ export class CookieManager {
 
 /**
  * Create demo session token for testing
+ * @deprecated Demo tokens are not used with Clerk. This function will be removed in a future version.
  */
 export function createDemoToken(): string {
   return `demo_${Date.now()}_${Math.random().toString(36).substring(7)}`
 }
 
-// NextAuth configuration options
+/**
+ * NextAuth configuration options
+ * @deprecated NextAuth has been replaced by Clerk. This config will be removed in a future version.
+ */
 export const authOptions = {
   providers: [
     // For development, we'll use a credentials provider
