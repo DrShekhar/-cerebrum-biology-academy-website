@@ -56,135 +56,114 @@ interface ColorFixCategory {
   fixes: ColorFix[]
 }
 
+// ===== APPROVED REPLACEMENT COLORS ONLY =====
+// Cerebrum Green (#4a5d4a), Blue 600 (#2563eb), Google Red (#ea4335)
+// Orange 600 (#ea580c), Orange 500 (#f97316)
+// Yellow 800 (#854d0e), Yellow 600 (#ca8a04), Yellow 500 (#eab308)
+// Gray 700 (#374151), Gray 600 (#4b5563)
+// Indigo 500 (#6366f1), Purple 700 (#7c3aed)
+// Green 500 (#22c55e), Teal 600 (#0d9488)
+
 const colorFixCategories: ColorFixCategory[] = [
   {
-    name: 'Amber → Yellow/Orange',
-    description: 'Replace amber colors with approved yellow or orange alternatives',
+    name: 'Amber → Orange/Yellow',
+    description: 'Replace amber with Orange 500/600 or Yellow 500/600/800',
     fixes: [
       {
-        unapproved: { name: 'Amber 50', hex: '#fffbeb', tailwind: 'bg-amber-50' },
-        approved: { name: 'Yellow 50', hex: '#fefce8', tailwind: 'bg-yellow-50' },
-        affectedElements: ['Badge backgrounds', 'Card backgrounds', 'Experience badges'],
-        fileCount: 5,
+        unapproved: { name: 'Amber 50-300', hex: '#fcd34d', tailwind: 'bg-amber-50/100/200/300' },
+        approved: { name: 'Yellow 500', hex: '#eab308', tailwind: 'bg-yellow-500' },
+        affectedElements: ['Badge backgrounds', 'Card backgrounds', 'Hero subtitles'],
+        fileCount: 18,
       },
       {
-        unapproved: { name: 'Amber 100', hex: '#fef3c7', tailwind: 'bg-amber-100' },
-        approved: { name: 'Yellow 100', hex: '#fef9c3', tailwind: 'bg-yellow-100' },
-        affectedElements: ['Warning backgrounds', 'Highlight sections'],
-        fileCount: 3,
-      },
-      {
-        unapproved: { name: 'Amber 200', hex: '#fde68a', tailwind: 'text-amber-200' },
-        approved: { name: 'Yellow 200', hex: '#fef08a', tailwind: 'text-yellow-200' },
-        affectedElements: ['Badge text', 'Announcement text', 'Hero subtitles'],
-        fileCount: 4,
-      },
-      {
-        unapproved: { name: 'Amber 300', hex: '#fcd34d', tailwind: 'text-amber-300' },
-        approved: { name: 'Yellow 300', hex: '#fde047', tailwind: 'text-yellow-300' },
-        affectedElements: ['Hero headings', 'Stats icons', 'Card headings'],
-        fileCount: 6,
-      },
-      {
-        unapproved: { name: 'Amber 400', hex: '#fbbf24', tailwind: 'text-amber-400' },
-        approved: { name: 'Yellow 400', hex: '#facc15', tailwind: 'text-yellow-400' },
-        affectedElements: ['Heading highlights', 'Flame icons', 'Calculator text'],
-        fileCount: 8,
-      },
-      {
-        unapproved: { name: 'Amber 500', hex: '#f59e0b', tailwind: 'bg-amber-500' },
+        unapproved: { name: 'Amber 400-500', hex: '#f59e0b', tailwind: 'bg-amber-400/500' },
         approved: { name: 'Orange 500', hex: '#f97316', tailwind: 'bg-orange-500' },
         affectedElements: ['CTA buttons', 'Stat card icons', 'Tier badges'],
-        fileCount: 12,
+        fileCount: 20,
       },
       {
         unapproved: { name: 'Amber 600', hex: '#d97706', tailwind: 'text-amber-600' },
-        approved: { name: 'Yellow 600', hex: '#ca8a04', tailwind: 'text-yellow-600' },
+        approved: { name: 'Orange 600', hex: '#ea580c', tailwind: 'text-orange-600' },
         affectedElements: ['Icon colors', 'Experience badge icons'],
         fileCount: 3,
       },
       {
-        unapproved: { name: 'Amber 700', hex: '#b45309', tailwind: 'from-amber-700' },
-        approved: { name: 'Yellow 700', hex: '#a16207', tailwind: 'from-yellow-700' },
-        affectedElements: ['Feature card gradients', 'Icon backgrounds'],
-        fileCount: 2,
-      },
-      {
-        unapproved: { name: 'Amber 800', hex: '#92400e', tailwind: 'text-amber-800' },
-        approved: { name: 'Yellow 800', hex: '#854d0e', tailwind: 'text-yellow-800' },
-        affectedElements: ['Badge text', 'Experience badge text'],
-        fileCount: 2,
-      },
-      {
-        unapproved: { name: 'Amber 900', hex: '#78350f', tailwind: 'bg-amber-900' },
-        approved: { name: 'Yellow 900', hex: '#713f12', tailwind: 'bg-yellow-900' },
-        affectedElements: ['Header badge backgrounds', 'Card backgrounds'],
-        fileCount: 3,
+        unapproved: { name: 'Amber 700-900', hex: '#92400e', tailwind: 'bg-amber-700/800/900' },
+        approved: { name: 'Yellow 800', hex: '#854d0e', tailwind: 'bg-yellow-800' },
+        affectedElements: ['Badge text', 'Dark backgrounds'],
+        fileCount: 7,
       },
     ],
   },
   {
-    name: 'Cyan → Blue/Teal',
-    description: 'Replace cyan colors with approved blue or teal alternatives',
+    name: 'Cyan → Blue 600 / Teal 600',
+    description: 'Replace ALL cyan shades with Blue 600 or Teal 600',
     fixes: [
       {
-        unapproved: { name: 'Cyan 50', hex: '#ecfeff', tailwind: 'to-cyan-50' },
-        approved: { name: 'Blue 50', hex: '#eff6ff', tailwind: 'to-blue-50' },
-        affectedElements: ['Calendar action backgrounds', 'Gradient endpoints'],
-        fileCount: 2,
+        unapproved: { name: 'Cyan (any shade)', hex: '#06b6d4', tailwind: 'bg-cyan-*' },
+        approved: { name: 'Blue 600', hex: '#2563eb', tailwind: 'bg-blue-600' },
+        affectedElements: ['Buttons', 'Links', 'Icons', 'Gradients'],
+        fileCount: 15,
       },
       {
-        unapproved: { name: 'Cyan 300', hex: '#67e8f9', tailwind: 'text-cyan-300' },
-        approved: { name: 'Blue 300', hex: '#93c5fd', tailwind: 'text-blue-300' },
-        affectedElements: ['Course subtitles', 'Course type labels'],
-        fileCount: 3,
-      },
-      {
-        unapproved: { name: 'Cyan 400', hex: '#22d3ee', tailwind: 'text-cyan-400' },
-        approved: { name: 'Blue 400', hex: '#60a5fa', tailwind: 'text-blue-400' },
-        affectedElements: ['Sparkle icons', 'Phone highlights', 'Price text', 'Focus rings'],
+        unapproved: { name: 'Cyan (bio-themed)', hex: '#06b6d4', tailwind: 'bg-cyan-*' },
+        approved: { name: 'Teal 600', hex: '#0d9488', tailwind: 'bg-teal-600' },
+        affectedElements: ['Biology sections', 'Science features'],
         fileCount: 6,
       },
+    ],
+  },
+  {
+    name: 'Pink → Purple 700 / Indigo 500',
+    description: 'Replace ALL pink shades with Purple 700 or Indigo 500',
+    fixes: [
       {
-        unapproved: { name: 'Cyan 500', hex: '#06b6d4', tailwind: 'to-cyan-500' },
-        approved: { name: 'Teal 600', hex: '#0d9488', tailwind: 'to-teal-600' },
-        affectedElements: ['Trust signal gradients', 'Faculty icon gradients'],
-        fileCount: 2,
+        unapproved: { name: 'Pink (any shade)', hex: '#ec4899', tailwind: 'bg-pink-*' },
+        approved: { name: 'Purple 700', hex: '#7c3aed', tailwind: 'bg-purple-700' },
+        affectedElements: ['Premium badges', 'CTA sections', 'Highlights'],
+        fileCount: 25,
       },
       {
-        unapproved: { name: 'Cyan 600', hex: '#0891b2', tailwind: 'to-cyan-600' },
-        approved: { name: 'Blue 600', hex: '#2563eb', tailwind: 'to-blue-600' },
-        affectedElements: ['CTA button gradients', 'Course selector', 'Activity feed'],
-        fileCount: 8,
+        unapproved: { name: 'Pink (lighter use)', hex: '#fdf2f8', tailwind: 'bg-pink-50/100' },
+        approved: { name: 'Indigo 500', hex: '#6366f1', tailwind: 'bg-indigo-500' },
+        affectedElements: ['Card backgrounds', 'Gradient endpoints'],
+        fileCount: 18,
       },
     ],
   },
   {
-    name: 'Pink → Purple/Indigo',
-    description: 'Replace pink colors with approved purple or indigo alternatives',
+    name: 'Violet/Fuchsia → Purple 700',
+    description: 'Replace violet and fuchsia with Purple 700',
     fixes: [
       {
-        unapproved: { name: 'Pink 50', hex: '#fdf2f8', tailwind: 'to-pink-50' },
-        approved: { name: 'Indigo 50', hex: '#eef2ff', tailwind: 'to-indigo-50' },
-        affectedElements: ['Referral box backgrounds', 'Premium demo card backgrounds'],
-        fileCount: 5,
+        unapproved: { name: 'Violet (any shade)', hex: '#8b5cf6', tailwind: 'bg-violet-*' },
+        approved: { name: 'Purple 700', hex: '#7c3aed', tailwind: 'bg-purple-700' },
+        affectedElements: ['Feature cards', 'Badges', 'Icons'],
+        fileCount: 20,
       },
       {
-        unapproved: { name: 'Pink 500', hex: '#ec4899', tailwind: 'to-pink-500' },
-        approved: { name: 'Indigo 500', hex: '#6366f1', tailwind: 'to-indigo-500' },
-        affectedElements: ['Trust signal gradients', 'Activity feed colors'],
-        fileCount: 3,
+        unapproved: { name: 'Fuchsia (any shade)', hex: '#d946ef', tailwind: 'bg-fuchsia-*' },
+        approved: { name: 'Purple 700', hex: '#7c3aed', tailwind: 'bg-purple-700' },
+        affectedElements: ['AI sections', 'Premium features'],
+        fileCount: 2,
+      },
+    ],
+  },
+  {
+    name: 'Emerald → Green 500 / Teal 600',
+    description: 'Replace emerald with Green 500 or Teal 600',
+    fixes: [
+      {
+        unapproved: { name: 'Emerald (any shade)', hex: '#10b981', tailwind: 'bg-emerald-*' },
+        approved: { name: 'Green 500', hex: '#22c55e', tailwind: 'bg-green-500' },
+        affectedElements: ['Success states', 'Bio features'],
+        fileCount: 1,
       },
       {
-        unapproved: { name: 'Pink 600', hex: '#db2777', tailwind: 'to-pink-600' },
-        approved: { name: 'Indigo 600', hex: '#4f46e5', tailwind: 'to-indigo-600' },
-        affectedElements: [
-          'Pinnacle tier gradients',
-          'Premium badges',
-          'CTA sections',
-          'Journey sections',
-        ],
-        fileCount: 8,
+        unapproved: { name: 'Emerald (darker use)', hex: '#059669', tailwind: 'bg-emerald-600' },
+        approved: { name: 'Teal 600', hex: '#0d9488', tailwind: 'bg-teal-600' },
+        affectedElements: ['Biology themed sections'],
+        fileCount: 1,
       },
     ],
   },
@@ -1302,101 +1281,156 @@ const otherColors: ColorSwatch[] = [
 // ===== GRADIENTS =====
 
 const gradients: GradientSwatch[] = [
-  // Blue-Purple gradients (most common)
+  // ===== AI / MODERN TECH GRADIENTS =====
+  {
+    name: 'AI Purple-Blue',
+    classes: 'bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400',
+    usage: 'AI features, modern tech sections',
+  },
+  {
+    name: 'AI Pink-Purple',
+    classes: 'bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500',
+    usage: 'AI highlights, premium features',
+  },
+  {
+    name: 'AI Cyan-Blue',
+    classes: 'bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600',
+    usage: 'Tech/AI sections, futuristic look',
+  },
+  {
+    name: 'AI Violet-Fuchsia',
+    classes: 'bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500',
+    usage: 'AI badges, modern accents',
+  },
+  {
+    name: 'AI Blue-Teal',
+    classes: 'bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-400',
+    usage: 'Data/analytics sections',
+  },
+  {
+    name: 'AI Indigo-Cyan',
+    classes: 'bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-400',
+    usage: 'Modern CTAs, AI features',
+  },
+
+  // ===== BLUE-PURPLE GRADIENTS (Primary) =====
   {
     name: 'Blue to Purple',
-    classes: 'bg-indigo-500',
-    usage: 'Primary CTA buttons, hero text, badges (132+ uses)',
+    classes: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    usage: 'Primary CTA buttons, hero text, badges',
   },
   {
     name: 'Blue to Indigo',
-    classes: 'bg-blue-600',
-    usage: 'Secondary buttons, icons (40+ uses)',
+    classes: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+    usage: 'Secondary buttons, icons',
   },
   {
     name: 'Blue via Indigo to Purple',
-    classes: 'bg-indigo-600',
-    usage: 'Premium hero sections (33+ uses)',
+    classes: 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600',
+    usage: 'Premium hero sections',
   },
   {
     name: 'Purple to Pink',
     classes: 'bg-gradient-to-r from-purple-600 to-pink-600',
-    usage: 'Premium badges, highlights (27+ uses)',
+    usage: 'Premium badges, highlights',
+  },
+  {
+    name: 'Indigo to Purple',
+    classes: 'bg-gradient-to-r from-indigo-500 to-purple-500',
+    usage: 'Feature highlights',
   },
 
-  // Green gradients
+  // ===== GREEN / BIOLOGY GRADIENTS =====
   {
     name: 'Green to Teal',
-    classes: 'bg-green-600',
-    usage: 'Success states, biology-themed sections (47+ uses)',
+    classes: 'bg-gradient-to-r from-green-500 to-teal-600',
+    usage: 'Success states, biology-themed sections',
   },
   {
     name: 'Green to Emerald',
-    classes: 'bg-green-600',
-    usage: 'Nature/bio themed elements (35+ uses)',
+    classes: 'bg-gradient-to-r from-green-500 to-emerald-600',
+    usage: 'Nature/bio themed elements',
   },
   {
     name: 'Emerald to Teal',
-    classes: 'bg-green-600',
-    usage: 'Biology topic cards (30+ uses)',
-  },
-
-  // Teal gradients
-  {
-    name: 'Teal to Blue',
-    classes: 'bg-gradient-to-r from-green-600 to-blue-600',
-    usage: 'Teal-themed sections (37+ uses)',
+    classes: 'bg-gradient-to-r from-emerald-500 to-teal-600',
+    usage: 'Biology topic cards',
   },
   {
-    name: 'Teal 600 to 700',
-    classes: 'bg-gradient-to-r from-green-600 to-green-700',
-    usage: 'Monochromatic teal buttons (28+ uses)',
+    name: 'Teal to Cyan',
+    classes: 'bg-gradient-to-r from-teal-500 to-cyan-500',
+    usage: 'Science/data sections',
   },
 
-  // Orange gradients
+  // ===== WARM GRADIENTS =====
   {
     name: 'Orange to Red',
     classes: 'bg-gradient-to-r from-orange-500 to-red-500',
-    usage: 'Urgent CTAs, limited offers (34+ uses)',
+    usage: 'Urgent CTAs, limited offers',
   },
   {
     name: 'Orange to Yellow',
     classes: 'bg-gradient-to-r from-orange-500 to-yellow-500',
-    usage: 'Highlight sections (20+ uses)',
+    usage: 'Highlight sections, energy',
+  },
+  {
+    name: 'Red to Pink',
+    classes: 'bg-gradient-to-r from-red-500 to-pink-500',
+    usage: 'Attention-grabbing elements',
+  },
+  {
+    name: 'Yellow to Orange',
+    classes: 'bg-gradient-to-r from-yellow-400 to-orange-500',
+    usage: 'Bright highlights, warnings',
   },
 
-  // Light background gradients
+  // ===== LIGHT BACKGROUND GRADIENTS =====
   {
     name: 'Blue 50 to Purple 50',
-    classes: 'bg-gray-50',
-    usage: 'Card backgrounds, sections (129+ uses)',
+    classes: 'bg-gradient-to-br from-blue-50 to-purple-50',
+    usage: 'Card backgrounds, sections',
   },
   {
     name: 'Green 50 to Teal 50',
-    classes: 'bg-green-50',
-    usage: 'Bio-themed section backgrounds (46+ uses)',
+    classes: 'bg-gradient-to-br from-green-50 to-teal-50',
+    usage: 'Bio-themed section backgrounds',
   },
   {
     name: 'Purple 50 to Pink 50',
     classes: 'bg-gradient-to-br from-purple-50 to-pink-50',
-    usage: 'Premium section backgrounds (42+ uses)',
+    usage: 'Premium section backgrounds',
   },
   {
     name: 'Gray 50 to White',
     classes: 'bg-gradient-to-b from-gray-50 to-white',
-    usage: 'Page sections (20+ uses)',
+    usage: 'Page sections',
+  },
+  {
+    name: 'Cyan 50 to Blue 50',
+    classes: 'bg-gradient-to-br from-cyan-50 to-blue-50',
+    usage: 'Tech/AI backgrounds',
   },
 
-  // Dark gradients
+  // ===== DARK GRADIENTS =====
   {
     name: 'Slate 900 to 800',
     classes: 'bg-gradient-to-br from-slate-900 to-slate-800',
-    usage: 'About page hero, dark sections',
+    usage: 'Dark hero sections',
+  },
+  {
+    name: 'Gray 900 to Slate 800',
+    classes: 'bg-gradient-to-br from-gray-900 to-slate-800',
+    usage: 'Footer, dark sections',
+  },
+  {
+    name: 'Purple 900 to Indigo 900',
+    classes: 'bg-gradient-to-br from-purple-900 to-indigo-900',
+    usage: 'Premium dark sections',
   },
   {
     name: 'Blue 900 to Purple 900',
-    classes: 'bg-gradient-to-br bg-indigo-900',
-    usage: 'Legacy hero sections (being replaced)',
+    classes: 'bg-gradient-to-br from-blue-900 to-purple-900',
+    usage: 'Dark hero sections',
   },
 ]
 
@@ -1486,7 +1520,14 @@ const colorCategories = [
 export default function ColorPalettePage() {
   const [copiedColor, setCopiedColor] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<
-    'favorites' | 'brand' | 'colors' | 'gradients' | 'combinations' | 'replacements' | 'colorfixes'
+    | 'favorites'
+    | 'brand'
+    | 'colors'
+    | 'gradients'
+    | 'combinations'
+    | 'replacements'
+    | 'colorfixes'
+    | 'audit'
   >('favorites')
 
   const copyToClipboard = (text: string, name: string) => {
@@ -1580,6 +1621,16 @@ export default function ColorPalettePage() {
             }`}
           >
             Color Fixes ({colorFixCategories.reduce((acc, cat) => acc + cat.fixes.length, 0)})
+          </button>
+          <button
+            onClick={() => setActiveTab('audit')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              activeTab === 'audit'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Audit Results (91)
           </button>
         </div>
 
@@ -2021,7 +2072,9 @@ export default function ColorPalettePage() {
                               <p className="text-sm font-bold text-gray-900">
                                 {fix.unapproved.name}
                               </p>
-                              <p className="text-xs text-gray-500 font-mono">{fix.unapproved.hex}</p>
+                              <p className="text-xs text-gray-500 font-mono">
+                                {fix.unapproved.hex}
+                              </p>
                               <p className="text-xs text-gray-500 font-mono">
                                 {fix.unapproved.tailwind}
                               </p>
@@ -2092,6 +2145,846 @@ export default function ColorPalettePage() {
                   • <strong>Pink colors:</strong> Replace with Indigo (same shade number) or Purple
                 </li>
               </ul>
+            </div>
+          </div>
+        )}
+
+        {/* Audit Tab */}
+        {activeTab === 'audit' && (
+          <div className="space-y-8">
+            {/* Header */}
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+              <h2 className="text-lg font-bold text-yellow-800 mb-2">
+                Detailed Color Audit - Find Exactly Where Colors Are Used
+              </h2>
+              <p className="text-yellow-700">
+                Each entry shows the file, line number, and exact Tailwind class. Click any swatch
+                to see what it looks like vs. the replacement.
+              </p>
+            </div>
+
+            {/* ===== CYAN SECTION ===== */}
+            <div className="bg-white rounded-xl shadow-lg border-2 border-cyan-300 overflow-hidden">
+              <div className="bg-cyan-500 text-white px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-cyan-300 rounded"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">CYAN Colors</h3>
+                    <p className="text-cyan-100 text-sm">15 files with cyan usage</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-cyan-100">Replace with:</span>
+                  <div
+                    className="w-6 h-6 bg-blue-600 rounded border-2 border-white"
+                    title="Blue 600"
+                  ></div>
+                  <div
+                    className="w-6 h-6 bg-teal-600 rounded border-2 border-white"
+                    title="Teal 600"
+                  ></div>
+                </div>
+              </div>
+              <div className="p-4 space-y-3 max-h-96 overflow-y-auto">
+                {/* File entries - ALL cyan → Blue 600 or Teal 600 */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-blue-800 mb-2">Approved Replacements:</p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-blue-600 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-blue-600</code>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-teal-600 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-teal-600</code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-900 rounded flex-shrink-0"
+                      title="cyan-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-tutor-class-9-icse/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 172</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        from-cyan-900
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        from-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-100 rounded flex-shrink-0"
+                      title="cyan-100"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        zoology-teacher-near-me/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 325</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        bg-cyan-*, text-cyan-*, hover:bg-cyan-*
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        bg-blue-600, text-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-700 rounded flex-shrink-0"
+                      title="cyan-700"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-major-courses/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 228</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-cyan-700
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-teal-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-900 rounded flex-shrink-0"
+                      title="cyan-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-biology-coaching/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 162</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-cyan-900
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-700 rounded flex-shrink-0"
+                      title="cyan-700"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-preparation/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 210</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-cyan-700
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-teal-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-200 rounded flex-shrink-0"
+                      title="cyan-200"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        igcse-biology-tutor/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 231, 233, 242, 246, 250, 257</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        text-cyan-*
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        text-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-100 rounded flex-shrink-0"
+                      title="cyan-100"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        botany-classes/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 111, 232, 373</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        text-cyan-*, bg-cyan-*
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        text-blue-600, bg-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-cyan-900 rounded flex-shrink-0"
+                      title="cyan-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-coaching-gurugram/page.tsx + ntse-online-classes/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Various lines</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-cyan-900
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-blue-600
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ===== PINK SECTION ===== */}
+            <div className="bg-white rounded-xl shadow-lg border-2 border-pink-300 overflow-hidden">
+              <div className="bg-pink-500 text-white px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-pink-300 rounded"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">PINK Colors</h3>
+                    <p className="text-pink-100 text-sm">20+ files with pink usage</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-pink-100">Replace with:</span>
+                  <div
+                    className="w-6 h-6 bg-purple-700 rounded border-2 border-white"
+                    title="Purple 700"
+                  ></div>
+                  <div
+                    className="w-6 h-6 bg-indigo-500 rounded border-2 border-white"
+                    title="Indigo 500"
+                  ></div>
+                </div>
+              </div>
+              <div className="p-4 space-y-3 max-h-96 overflow-y-auto">
+                {/* Approved Replacements Info Box */}
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-purple-800 mb-2">
+                    Approved Replacements:
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-purple-700 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-purple-700</code>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-indigo-500 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-indigo-500</code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-800 rounded flex-shrink-0"
+                      title="pink-800"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        pre-neet-coaching/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 155</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-pink-800
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-50 rounded border flex-shrink-0"
+                      title="pink-50"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        pre-neet-coaching/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 259</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-pink-50
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-50
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-800 rounded flex-shrink-0"
+                      title="pink-800"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-tutor-class-12-icse/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 159</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-pink-800
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-700 rounded flex-shrink-0"
+                      title="pink-700"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-major-courses/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        Lines 214, 344, 362, 377, 404, 485, 586, 683, 764, 788
+                      </p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-pink-700, text-pink-100, hover:bg-pink-50, to-pink-50
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700, text-purple-200, hover:bg-purple-50
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-50 rounded border flex-shrink-0"
+                      title="pink-50"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        test-platform/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 157</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-pink-50
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-50
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-300 rounded flex-shrink-0"
+                      title="pink-300"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-foundation-class-10/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        Lines 180, 190, 195, 212, 233-248, 283, 440
+                      </p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-pink-800, text-pink-300, bg-pink-400, to-pink-50
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-purple-700, text-purple-200, bg-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-50 rounded border flex-shrink-0"
+                      title="pink-50"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        results/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 115, 320</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        bg-pink-50, from-pink-50, to-pink-100, border-pink-200
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        bg-purple-50, from-purple-50, to-purple-100
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-900 rounded flex-shrink-0"
+                      title="pink-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-coaching-south-india/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 164</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-pink-900
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-50 rounded border flex-shrink-0"
+                      title="pink-50"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        resources/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 257</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-pink-50
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-50
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-pink-100 rounded flex-shrink-0"
+                      title="pink-100"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        admin/students/leads/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 224</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        bg-pink-100, text-pink-800
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        bg-purple-100, text-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ===== VIOLET SECTION ===== */}
+            <div className="bg-white rounded-xl shadow-lg border-2 border-violet-300 overflow-hidden">
+              <div className="bg-violet-500 text-white px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-violet-300 rounded"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">VIOLET Colors</h3>
+                    <p className="text-violet-100 text-sm">12 files with violet usage</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-violet-100">Replace with:</span>
+                  <div
+                    className="w-6 h-6 bg-purple-700 rounded border-2 border-white"
+                    title="Purple 700"
+                  ></div>
+                  <div
+                    className="w-6 h-6 bg-indigo-500 rounded border-2 border-white"
+                    title="Indigo 500"
+                  ></div>
+                </div>
+              </div>
+              <div className="p-4 space-y-3 max-h-96 overflow-y-auto">
+                {/* Approved Replacements Info Box */}
+                <div className="bg-violet-50 border border-violet-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-violet-800 mb-2">
+                    Approved Replacements:
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-purple-700 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-purple-700</code>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-indigo-500 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-indigo-500</code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-700 rounded flex-shrink-0"
+                      title="violet-700"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-major-courses/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 235</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-violet-700
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-900 rounded flex-shrink-0"
+                      title="violet-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-classes-near-me/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 135, 442</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-violet-900, to-violet-600
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700, to-indigo-500
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-300 rounded flex-shrink-0"
+                      title="violet-300"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        olympiad-preparation/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 190, 195, 213, 234-249, 444</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        text-violet-300, bg-violet-400, hover:bg-violet-300
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        text-purple-200, bg-purple-700, hover:bg-indigo-500
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-800 rounded flex-shrink-0"
+                      title="violet-800"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        home-tuition-for-biology/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 166, 405</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-violet-800, via-violet-600
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-purple-700, via-indigo-500
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-600 rounded flex-shrink-0"
+                      title="violet-600"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        ncert-biology-class-12/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 139-540 (multiple)</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        via-violet-600, bg-violet-400, text-violet-300, bg-violet-50,
+                        text-violet-700
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        via-indigo-500, bg-purple-700, text-purple-200
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-600 rounded flex-shrink-0"
+                      title="violet-600"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        a-level-biology-tutor/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 271-762 (multiple)</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-violet-800, to-violet-50, border-violet-600, bg-violet-100,
+                        text-violet-600
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700, to-purple-50, border-indigo-500
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-violet-500 rounded flex-shrink-0"
+                      title="violet-500"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        biology-teacher-near-me/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Line 54</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        from-violet-500
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        from-indigo-500
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ===== FUCHSIA SECTION ===== */}
+            <div className="bg-white rounded-xl shadow-lg border-2 border-fuchsia-300 overflow-hidden">
+              <div className="bg-fuchsia-500 text-white px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-fuchsia-300 rounded"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">FUCHSIA Colors</h3>
+                    <p className="text-fuchsia-100 text-sm">2 files with fuchsia usage</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-fuchsia-100">Replace with:</span>
+                  <div
+                    className="w-6 h-6 bg-purple-700 rounded border-2 border-white"
+                    title="Purple 700"
+                  ></div>
+                </div>
+              </div>
+              <div className="p-4 space-y-3">
+                {/* Approved Replacements Info Box */}
+                <div className="bg-fuchsia-50 border border-fuchsia-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-fuchsia-800 mb-2">
+                    Approved Replacement:
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-purple-700 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-purple-700</code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-fuchsia-900 rounded flex-shrink-0"
+                      title="fuchsia-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-foundation-class-10/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 180, 223, 283-331, 374-451</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        from-fuchsia-900, hover:text-fuchsia-900, from-fuchsia-50, text-fuchsia-600,
+                        bg-fuchsia-100, bg-fuchsia-600
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        from-purple-700, hover:text-purple-700, from-purple-50, text-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-3 hover:bg-gray-50">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 bg-fuchsia-900 rounded flex-shrink-0"
+                      title="fuchsia-900"
+                    ></div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-semibold text-gray-900 truncate">
+                        neet-foundation-class-9/page.tsx
+                      </p>
+                      <p className="text-xs text-gray-500">Lines 188, 429</p>
+                      <code className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded mt-1 inline-block">
+                        to-fuchsia-900, to-fuchsia-600
+                      </code>
+                      <span className="text-xs text-gray-400 mx-2">→</span>
+                      <code className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded">
+                        to-purple-700, to-purple-700
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ===== EMERALD SECTION ===== */}
+            <div className="bg-white rounded-xl shadow-lg border-2 border-emerald-300 overflow-hidden">
+              <div className="bg-emerald-500 text-white px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-emerald-300 rounded"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">EMERALD Colors</h3>
+                    <p className="text-emerald-100 text-sm">
+                      Only in color-palette (approved gradients)
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-emerald-100">Replace with:</span>
+                  <div
+                    className="w-6 h-6 bg-green-500 rounded border-2 border-white"
+                    title="Green 500"
+                  ></div>
+                  <div
+                    className="w-6 h-6 bg-teal-600 rounded border-2 border-white"
+                    title="Teal 600"
+                  ></div>
+                </div>
+              </div>
+              <div className="p-4 space-y-3">
+                {/* Approved Replacements Info Box */}
+                <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-emerald-800 mb-2">
+                    Approved Replacements:
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-green-500 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-green-500</code>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-teal-600 rounded"></div>
+                      <code className="text-xs bg-white px-2 py-1 rounded">bg-teal-600</code>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                  <p className="text-green-700 font-medium">
+                    Emerald is only used in approved gradient definitions in color-palette
+                  </p>
+                  <p className="text-green-600 text-sm mt-1">No action needed - already covered</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Decision Panel */}
+            <div className="bg-gray-900 text-white rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4">Quick Fix Commands</h3>
+              <p className="text-gray-300 mb-4">Tell me what to fix:</p>
+              <div className="grid md:grid-cols-2 gap-3">
+                <div className="bg-gray-800 rounded-lg p-3 border border-gray-700">
+                  <code className="text-cyan-400">&quot;Fix all cyan&quot;</code>
+                  <p className="text-gray-400 text-xs mt-1">Replace cyan → blue/teal in 15 files</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg p-3 border border-gray-700">
+                  <code className="text-pink-400">&quot;Fix all pink&quot;</code>
+                  <p className="text-gray-400 text-xs mt-1">Replace pink → purple in 20+ files</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg p-3 border border-gray-700">
+                  <code className="text-violet-400">&quot;Fix all violet&quot;</code>
+                  <p className="text-gray-400 text-xs mt-1">
+                    Replace violet → purple/indigo in 12 files
+                  </p>
+                </div>
+                <div className="bg-gray-800 rounded-lg p-3 border border-gray-700">
+                  <code className="text-fuchsia-400">&quot;Fix all fuchsia&quot;</code>
+                  <p className="text-gray-400 text-xs mt-1">Replace fuchsia → purple in 2 files</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg p-3 border border-gray-700 md:col-span-2">
+                  <code className="text-yellow-400">&quot;Fix everything&quot;</code>
+                  <p className="text-gray-400 text-xs mt-1">
+                    Fix all unapproved colors across all files
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         )}
