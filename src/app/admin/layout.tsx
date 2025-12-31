@@ -1,5 +1,8 @@
 'use client'
 
+// Force dynamic rendering to prevent Clerk auth issues during static build
+export const dynamic = 'force-dynamic'
+
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import { useClerkRole } from '@/hooks/useClerkRole'
