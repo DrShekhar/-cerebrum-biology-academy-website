@@ -62,6 +62,7 @@ export const Footer = memo(function Footer() {
 
   const courseLinks = [
     { name: 'NEET 2026 Preparation', href: '/neet-2026-preparation' },
+    { name: 'Intensive Biology Program', href: '/courses/intensive-neet-biology' },
     { name: 'Class 11th Biology', href: '/courses/class-11' },
     { name: 'Class 12th Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
