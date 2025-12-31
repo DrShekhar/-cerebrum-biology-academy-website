@@ -3,14 +3,14 @@
 // Force dynamic rendering to prevent Clerk auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import dynamic from 'next/dynamic'
+import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
-const PersonalizedLearningPath = dynamic(
+const PersonalizedLearningPath = dynamicImport(
   () =>
     import('@/components/learning/PersonalizedLearningPath').then((mod) => ({
       default: mod.PersonalizedLearningPath,

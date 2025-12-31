@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent Clerk auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import dynamic from 'next/dynamic'
+import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { useRouter } from 'next/navigation'
@@ -18,7 +18,7 @@ import { useSafeUser } from '@/hooks/useSafeClerk'
 // Owner phone number - only this number gets multi-role access
 const OWNER_PHONE = '+919999744334'
 
-const PersonalizedStudentDashboard = dynamic(
+const PersonalizedStudentDashboard = dynamicImport(
   () =>
     import('@/components/dashboard/PersonalizedStudentDashboard').then((mod) => ({
       default: mod.PersonalizedStudentDashboard,

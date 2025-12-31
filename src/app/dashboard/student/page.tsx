@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect, lazy, Suspense } from 'react'
-import dynamic from 'next/dynamic'
+import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
@@ -31,7 +31,7 @@ import type {
 } from '@/lib/types/analytics'
 
 // Lazy load heavy chart components to reduce initial bundle size
-const PerformanceChart = dynamic(
+const PerformanceChart = dynamicImport(
   () =>
     import('@/components/analytics/PerformanceChart').then((mod) => ({
       default: mod.PerformanceChart,
@@ -46,7 +46,7 @@ const PerformanceChart = dynamic(
   }
 )
 
-const TopicAnalysisChart = dynamic(
+const TopicAnalysisChart = dynamicImport(
   () =>
     import('@/components/analytics/TopicAnalysisChart').then((mod) => ({
       default: mod.TopicAnalysisChart,
@@ -61,7 +61,7 @@ const TopicAnalysisChart = dynamic(
   }
 )
 
-const ProgressTrendChart = dynamic(
+const ProgressTrendChart = dynamicImport(
   () =>
     import('@/components/analytics/ProgressTrendChart').then((mod) => ({
       default: mod.ProgressTrendChart,
@@ -76,7 +76,7 @@ const ProgressTrendChart = dynamic(
   }
 )
 
-const LeaderboardWidget = dynamic(
+const LeaderboardWidget = dynamicImport(
   () =>
     import('@/components/analytics/LeaderboardWidget').then((mod) => ({
       default: mod.LeaderboardWidget,
@@ -93,7 +93,7 @@ const LeaderboardWidget = dynamic(
   }
 )
 
-const AchievementsBadge = dynamic(
+const AchievementsBadge = dynamicImport(
   () =>
     import('@/components/analytics/AchievementsBadge').then((mod) => ({
       default: mod.AchievementsBadge,
