@@ -1,5 +1,8 @@
 'use client'
 
+// Force dynamic rendering to prevent Clerk auth issues during static build
+export const dynamic = 'force-dynamic'
+
 import { useState, useEffect } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 
