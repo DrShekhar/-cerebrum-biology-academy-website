@@ -34,7 +34,7 @@ const curriculumCards = [
     description: 'Cambridge & Edexcel biology tuition for GCSE/IGCSE students',
     stats: '500+ students • 95% A*/A',
     features: ['Cambridge certified', 'Past paper focus', 'Exam board specific'],
-    color: 'from-blue-600 to-cyan-600',
+    color: 'from-blue-600 to-blue-600',
   },
   {
     title: 'A-Level Biology',
@@ -52,7 +52,7 @@ const curriculumCards = [
     description: 'IB Diploma Biology HL & SL tuition with IA support',
     stats: '350+ students • 6-7 average',
     features: ['IA guidance', 'TOK integration', 'EE support'],
-    color: 'from-purple-600 to-pink-600',
+    color: 'from-purple-600 to-indigo-600',
   },
   {
     title: 'AP Biology',
@@ -61,7 +61,7 @@ const curriculumCards = [
     description: 'Advanced Placement Biology for US college credit',
     stats: '300+ students • 85% score 5',
     features: ['College credit', 'FRQ mastery', 'Lab report help'],
-    color: 'from-pink-600 to-rose-600',
+    color: 'from-indigo-600 to-rose-600',
   },
 ]
 
@@ -328,7 +328,7 @@ export default function InternationalBiologyTutorPage() {
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 International Biology Tutor
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300 mt-2">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-300 mt-2">
                   IGCSE, A-Level, IB & AP Expert
                 </span>
               </h1>
@@ -374,7 +374,7 @@ export default function InternationalBiologyTutorPage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
                 >
-                  <Users className="w-10 h-10 mx-auto mb-3 text-cyan-300" />
+                  <Users className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">1,500+</div>
                   <div className="text-sm opacity-80 mt-1">International Students</div>
                 </motion.div>
@@ -385,7 +385,7 @@ export default function InternationalBiologyTutorPage() {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
                 >
-                  <MapPin className="w-10 h-10 mx-auto mb-3 text-cyan-300" />
+                  <MapPin className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">15+</div>
                   <div className="text-sm opacity-80 mt-1">Countries Worldwide</div>
                 </motion.div>
@@ -396,7 +396,7 @@ export default function InternationalBiologyTutorPage() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
                 >
-                  <Clock className="w-10 h-10 mx-auto mb-3 text-cyan-300" />
+                  <Clock className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">All Zones</div>
                   <div className="text-sm opacity-80 mt-1">EST, GMT, GST, SGT, AEST</div>
                 </motion.div>

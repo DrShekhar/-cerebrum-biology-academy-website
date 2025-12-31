@@ -389,7 +389,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Proven Results</h4>

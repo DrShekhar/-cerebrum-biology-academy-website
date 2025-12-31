@@ -196,7 +196,7 @@ export default function AIDebugConsole({
                           )}
 
                           {log.context?.subject && (
-                            <div className="text-cyan-400">
+                            <div className="text-blue-400">
                               🎓 {log.context.subject} - {log.context.studentLevel}
                             </div>
                           )}
@@ -239,7 +239,7 @@ export default function AIDebugConsole({
                         </div>
                         <div className="bg-gray-800 p-2 rounded text-xs">
                           <div className="text-gray-400 mb-1">Total Tokens</div>
-                          <div className="text-lg font-bold text-cyan-400">
+                          <div className="text-lg font-bold text-blue-400">
                             {stats.totalTokens?.toLocaleString() || 0}
                           </div>
                         </div>

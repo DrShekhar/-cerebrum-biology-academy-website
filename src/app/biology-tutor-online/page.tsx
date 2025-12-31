@@ -208,7 +208,7 @@ export default function BiologyTutorOnlinePage() {
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 py-20 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-600 py-20 text-white">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -451,7 +451,7 @@ export default function BiologyTutorOnlinePage() {
         </section>
 
         {/* NRI Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16 text-white">
+        <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <motion.div
@@ -480,7 +480,7 @@ export default function BiologyTutorOnlinePage() {
                   ].map((item) => (
                     <li key={item} className="flex items-center">
                       <svg
-                        className="mr-3 h-5 w-5 text-cyan-300"
+                        className="mr-3 h-5 w-5 text-blue-300"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -631,7 +631,7 @@ export default function BiologyTutorOnlinePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16">
+        <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

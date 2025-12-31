@@ -10,7 +10,7 @@ interface PaymentOptionsDisplayProps {
 export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDisplayProps) {
   const getTierColor = (tier: string) => {
     switch (tier) {
-      case 'pinnacle': return 'from-purple-600 to-pink-600'
+      case 'pinnacle': return 'from-purple-600 to-indigo-600'
       case 'ascent': return 'bg-blue-600'
       case 'pursuit': return 'bg-green-600'
       default: return 'from-indigo-500 to-indigo-600'

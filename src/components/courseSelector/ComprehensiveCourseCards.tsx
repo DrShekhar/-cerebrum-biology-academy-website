@@ -714,7 +714,7 @@ export default function ComprehensiveCourseCards() {
       </div>
 
       {/* Biology Premium Note */}
-      <div className="mt-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 text-center">
+      <div className="mt-12 bg-orange-50 rounded-2xl p-8 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Why Biology Gets Premium Attention?
         </h3>

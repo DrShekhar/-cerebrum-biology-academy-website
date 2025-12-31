@@ -193,10 +193,10 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
   ]
 
   const colorSchemes = [
-    { id: 'purple', label: 'Purple', color: 'from-purple-500 to-pink-500' },
-    { id: 'blue', label: 'Blue', color: 'from-blue-500 to-cyan-500' },
+    { id: 'purple', label: 'Purple', color: 'from-purple-500 to-indigo-500' },
+    { id: 'blue', label: 'Blue', color: 'from-blue-500 to-blue-500' },
     { id: 'green', label: 'Green', color: 'bg-green-600' },
-    { id: 'orange', label: 'Orange', color: 'from-orange-500 to-red-500' },
+    { id: 'orange', label: 'Orange', color: 'bg-orange-600' },
   ]
 
   return (
@@ -219,7 +219,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
             className="fixed right-0 top-0 h-full w-full md:w-[600px] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 shadow-2xl z-50 overflow-hidden"
           >
             <div className="h-full flex flex-col">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+              <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-2xl font-bold">Settings</h2>
                   <button
@@ -529,7 +529,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                             Profile Avatar
                           </label>
                           <div className="flex items-center space-x-4">
-                            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
+                            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center overflow-hidden">
                               {avatarPreview ? (
                                 <img
                                   src={avatarPreview}
@@ -707,7 +707,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
 
               <div className="bg-white border-t border-gray-200 p-4">
                 {hasChanges && (
-                  <div className="mb-3 flex items-center space-x-2 text-sm text-amber-600 bg-amber-50 px-3 py-2 rounded-lg">
+                  <div className="mb-3 flex items-center space-x-2 text-sm text-yellow-600 bg-amber-50 px-3 py-2 rounded-lg">
                     <AlertCircle className="w-4 h-4" />
                     <span>You have unsaved changes</span>
                   </div>
@@ -724,7 +724,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                     disabled={!hasChanges}
                     className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center space-x-2 ${
                       hasChanges
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg'
+                        ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-lg'
                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     }`}
                   >

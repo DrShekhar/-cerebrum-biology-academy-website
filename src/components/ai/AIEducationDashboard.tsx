@@ -600,8 +600,8 @@ export function AIEducationDashboard() {
   }
 
   const tabColors = {
-    overview: 'from-purple-500 to-pink-500',
-    tutor: 'from-blue-500 to-cyan-500',
+    overview: 'from-purple-500 to-indigo-500',
+    tutor: 'from-blue-500 to-blue-500',
   }
 
   // Helper function to get time since last update
@@ -656,11 +656,11 @@ export function AIEducationDashboard() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                     Cerebrum Biology Academy AI
                   </h1>
                   <p className="text-sm text-gray-500">Your Personal Biology Tutor</p>
@@ -983,7 +983,7 @@ export function AIEducationDashboard() {
                       href="/demo-booking"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
                       aria-label="Book Free Demo"
                     >
                       <Calendar className="w-4 h-4" />

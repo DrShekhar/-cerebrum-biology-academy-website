@@ -31,7 +31,7 @@ const activities: Activity[] = [
     location: 'Online',
     time: '5 minutes ago',
     icon: Play,
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-500 to-blue-600',
   },
   {
     id: '3',
@@ -49,7 +49,7 @@ const activities: Activity[] = [
     location: 'South Delhi',
     time: '18 minutes ago',
     icon: BookOpen,
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-500 to-indigo-500',
   },
   {
     id: '5',
@@ -67,7 +67,7 @@ const activities: Activity[] = [
     location: 'Online',
     time: '22 minutes ago',
     icon: Play,
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-500 to-blue-600',
   },
   {
     id: '7',

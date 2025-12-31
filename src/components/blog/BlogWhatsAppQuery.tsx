@@ -97,7 +97,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
           {/* Modal */}
           <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+            <div className="bg-[#4a5d4a] text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">

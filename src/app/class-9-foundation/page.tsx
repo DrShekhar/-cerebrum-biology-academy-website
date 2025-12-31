@@ -153,7 +153,7 @@ export default function Class9FoundationPage() {
       title: 'Early Start Advantage',
       description: '4-year preparation timeline reduces pressure and builds strong fundamentals',
       icon: Rocket,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'Age-Appropriate Teaching',
@@ -171,7 +171,7 @@ export default function Class9FoundationPage() {
       title: 'Interactive Learning',
       description: 'Fun activities, models, and visual aids to make biology interesting',
       icon: Lightbulb,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 

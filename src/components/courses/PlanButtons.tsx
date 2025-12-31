@@ -51,7 +51,7 @@ export function PlanButtons({
         accentColor: 'navy',
       },
       ascent: {
-        gradient: 'from-green-600 to-green-700',
+        gradient: 'bg-[#4a5d4a]',
         cardGradient: 'from-green-50 to-green-100',
         accentColor: 'teal',
       },

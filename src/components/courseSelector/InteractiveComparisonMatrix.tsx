@@ -170,7 +170,7 @@ function getSeriesTheme(seriesId: string) {
       icon: Crown,
     },
     ascent: {
-      gradient: 'from-blue-500 to-cyan-600',
+      gradient: 'from-blue-500 to-blue-600',
       bg: 'bg-blue-50',
       border: 'border-blue-200',
       text: 'text-blue-900',

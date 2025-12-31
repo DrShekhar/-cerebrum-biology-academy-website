@@ -48,7 +48,7 @@ const olympiads = [
     eligibility: 'Class 11-12, 1st year UG',
     benefits: 'Rs 5,000-7,000/month stipend',
     link: '/nso-coaching',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-500 to-indigo-500',
   },
   {
     name: 'NTSE',
@@ -57,7 +57,7 @@ const olympiads = [
     eligibility: 'Class 10',
     benefits: 'Rs 1.25 lakh/year till PhD',
     link: '/ntse-coaching',
-    color: 'from-orange-500 to-red-500',
+    color: 'bg-orange-600',
   },
   {
     name: 'IJSO',
@@ -66,7 +66,7 @@ const olympiads = [
     eligibility: 'Below 16 years',
     benefits: 'International medals, recognition',
     link: '/biology-olympiad-coaching',
-    color: 'from-cyan-500 to-blue-500',
+    color: 'from-blue-500 to-blue-500',
   },
 ]
 

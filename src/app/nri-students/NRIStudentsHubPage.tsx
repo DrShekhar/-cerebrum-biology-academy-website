@@ -70,7 +70,7 @@ const regions = [
     countries: nriRegions['Africa'],
     studentCount: '50+',
     highlight: 'Lagos NEET Center',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-500 to-indigo-500',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
   },
@@ -788,7 +788,7 @@ export function NRIStudentsHubPage() {
                     </p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
+                <div className="bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
                   NEET Score: {testimonial.score}
                 </div>
                 <p className="text-gray-700 italic">"{testimonial.quote}"</p>
@@ -970,7 +970,7 @@ export function NRIStudentsHubPage() {
       </section>
 
       {/* NEET Centers Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
+      <section className="py-16 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"

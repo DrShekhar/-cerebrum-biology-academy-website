@@ -852,7 +852,7 @@ export default function NEETBiologyMCQPage() {
                             <span className="text-base">🏆</span>
                             <span className="font-medium">Earn XP</span>
                           </div>
-                          <div className="flex items-center gap-1.5 text-amber-700">
+                          <div className="flex items-center gap-1.5 text-yellow-700">
                             <span className="text-base">🔥</span>
                             <span className="font-medium">Build Streaks</span>
                           </div>
@@ -1082,7 +1082,7 @@ export default function NEETBiologyMCQPage() {
                           </button>
                           <button
                             onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-all"
+                            className="flex items-center gap-1.5 bg-white/90 border border-stone-200/50 px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-stone-700 hover:bg-amber-50 hover:text-yellow-700 transition-all"
                           >
                             <span>🎯</span>
                             Daily Challenge

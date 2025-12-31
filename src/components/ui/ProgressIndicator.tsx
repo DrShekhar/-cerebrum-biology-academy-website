@@ -67,7 +67,7 @@ export function ProgressIndicator({
     },
     amber: {
       bg: 'bg-amber-500',
-      text: 'text-amber-600',
+      text: 'text-yellow-600',
       ring: 'ring-amber-500/20',
       border: 'border-amber-500',
     },

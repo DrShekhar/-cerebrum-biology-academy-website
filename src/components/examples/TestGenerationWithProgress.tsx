@@ -238,8 +238,8 @@ export default function TestGenerationWithProgress() {
                     <p className="text-xs text-green-700 font-medium">Progress</p>
                   </div>
                   <div className="bg-amber-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-amber-600">{estimatedTimeRemaining}s</p>
-                    <p className="text-xs text-amber-800 font-medium">Remaining</p>
+                    <p className="text-2xl font-bold text-yellow-600">{estimatedTimeRemaining}s</p>
+                    <p className="text-xs text-yellow-800 font-medium">Remaining</p>
                   </div>
                 </div>
               </div>

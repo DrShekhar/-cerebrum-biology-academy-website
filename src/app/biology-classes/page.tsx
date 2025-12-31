@@ -246,7 +246,7 @@ export default function BiologyClassesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-green-50 to-cyan-50 rounded-xl p-6 border border-green-100"
+                className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border border-green-100"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{batch.class}</h3>
@@ -352,7 +352,7 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-green-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

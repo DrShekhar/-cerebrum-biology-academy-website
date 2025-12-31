@@ -81,7 +81,7 @@ export function VideoTestimonial({
             </div>
 
             {/* Success Badge */}
-            <div className="absolute top-4 left-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="absolute top-4 left-4 bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-semibold">
               ✓ Success Story
             </div>
 

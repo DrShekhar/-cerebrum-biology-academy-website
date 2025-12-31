@@ -131,8 +131,8 @@ const MOCK_COURSE_DATA: CourseData[] = [
       tagline: 'For the Top 1%',
       theme: {
         primary: 'purple-600',
-        secondary: 'pink-500',
-        gradient: 'from-purple-600 via-pink-500 to-purple-700',
+        secondary: 'indigo-500',
+        gradient: 'from-purple-600 via-indigo-500 to-purple-700',
         cardGradient: 'from-purple-50 via-pink-50 to-purple-100',
         borderGradient: 'from-purple-400 to-pink-400',
         textColor: 'text-purple-700',

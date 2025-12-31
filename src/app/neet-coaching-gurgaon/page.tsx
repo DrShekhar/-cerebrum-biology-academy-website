@@ -142,7 +142,7 @@ export default function NEETCoachingGurgaonPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
+        <section className="relative py-20 bg-[#4a5d4a] text-white overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -429,7 +429,7 @@ export default function NEETCoachingGurgaonPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
+        <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

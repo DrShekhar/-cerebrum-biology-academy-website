@@ -110,7 +110,7 @@ const uniqueFeatures = [
     title: 'Second Chance Specialists',
     description: 'We ONLY teach failed students. Our entire curriculum is designed for repeaters.',
     icon: Trophy,
-    color: 'from-amber-600 to-amber-700',
+    color: 'from-yellow-600 to-yellow-700',
     stats: '3000+ failed students converted',
     benefit: 'Specialized failure analysis & recovery',
   },
@@ -137,7 +137,7 @@ const uniqueFeatures = [
     title: 'Transparent Results',
     description: 'Third-party audited success rates. Published mark improvements with proof.',
     icon: ShieldCheck,
-    color: 'from-green-600 to-green-700',
+    color: 'bg-[#4a5d4a]',
     stats: 'KPMG audited results',
     benefit: 'No false claims, pure transparency',
   },
@@ -146,7 +146,7 @@ const uniqueFeatures = [
     title: 'Pay After Results',
     description: '40% upfront, 60% after NEET. Performance-linked fee structure available.',
     icon: IndianRupee,
-    color: 'from-amber-700 to-amber-800',
+    color: 'from-yellow-700 to-yellow-800',
     stats: '60% fees after results',
     benefit: 'Success-aligned payment model',
   },
@@ -213,7 +213,7 @@ export function DifferentiationSection({
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 bg-amber-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
+          <div className="inline-flex items-center gap-2 bg-yellow-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
             <Flame className="w-5 h-5 text-amber-400" />
             <span className="text-amber-300 font-medium">The Brutal Truth</span>
           </div>

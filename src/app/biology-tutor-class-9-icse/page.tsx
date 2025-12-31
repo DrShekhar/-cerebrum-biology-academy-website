@@ -179,12 +179,12 @@ export default function BiologyTutorClass9ICSEPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
-              <BookOpen className="w-5 h-5 mr-2 text-cyan-300" />
+              <BookOpen className="w-5 h-5 mr-2 text-blue-300" />
               Class 9 ICSE Biology
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-cyan-300">Class 9 ICSE</span> Biology Tutor
+              <span className="text-blue-300">Class 9 ICSE</span> Biology Tutor
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -202,7 +202,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-cyan-400 text-black hover:bg-cyan-300"
+                  className="bg-blue-400 text-black hover:bg-blue-300"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
@@ -223,22 +223,22 @@ export default function BiologyTutorClass9ICSEPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Trophy className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                <Trophy className="w-8 h-8 mx-auto mb-2 text-blue-300" />
                 <div className="text-2xl font-bold">100%</div>
                 <div className="text-sm opacity-80">Board Results</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Users className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                <Users className="w-8 h-8 mx-auto mb-2 text-blue-300" />
                 <div className="text-2xl font-bold">10-15</div>
                 <div className="text-sm opacity-80">Students/Batch</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <BookOpen className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                <BookOpen className="w-8 h-8 mx-auto mb-2 text-blue-300" />
                 <div className="text-2xl font-bold">ICSE+NCERT</div>
                 <div className="text-sm opacity-80">Dual Coverage</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Star className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                <Star className="w-8 h-8 mx-auto mb-2 text-blue-300" />
                 <div className="text-2xl font-bold">5 Units</div>
                 <div className="text-sm opacity-80">Complete Syllabus</div>
               </div>
@@ -277,14 +277,14 @@ export default function BiologyTutorClass9ICSEPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                    <unit.icon className="w-6 h-6 text-cyan-600" />
+                    <unit.icon className="w-6 h-6 text-blue-600" />
                   </div>
-                  <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {unit.weightage} ICSE
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{unit.unit}</h3>
-                <p className="text-cyan-600 font-medium mb-3">{unit.title}</p>
+                <p className="text-blue-600 font-medium mb-3">{unit.title}</p>
                 <ul className="space-y-1">
                   {unit.chapters.map((chapter) => (
                     <li key={chapter} className="text-sm text-gray-600 flex items-start">
@@ -324,7 +324,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-cyan-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -359,7 +359,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-cyan-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -370,7 +370,7 @@ export default function BiologyTutorClass9ICSEPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 via-green-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -390,7 +390,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="bg-cyan-400 text-black hover:bg-cyan-300"
+                  className="bg-blue-400 text-black hover:bg-blue-300"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo
@@ -401,7 +401,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-cyan-600"
+                  className="border-white text-white hover:bg-white hover:text-blue-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

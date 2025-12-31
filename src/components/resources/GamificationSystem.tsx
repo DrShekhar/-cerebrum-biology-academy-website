@@ -282,7 +282,7 @@ const GamificationSystem = ({ className, userId }: GamificationSystemProps) => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-4">
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
                 <Flame className="h-5 w-5 text-orange-600" />
                 <span className="font-medium text-orange-800">Streak Bonus</span>

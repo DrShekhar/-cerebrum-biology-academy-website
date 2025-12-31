@@ -1008,7 +1008,7 @@ export const ncertBiologySolutions: SEOLandingContent = {
     highlightedText: 'NCERT Nichod - Extract Every Mark',
     ctaText: 'Access All Solutions',
     ctaLink: '/courses',
-    backgroundGradient: 'from-amber-900 via-orange-900 to-red-900',
+    backgroundGradient: 'from-yellow-900 via-orange-900 to-red-900',
   },
 
   painPoints: {

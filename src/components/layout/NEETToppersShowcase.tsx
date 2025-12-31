@@ -251,7 +251,7 @@ export function NEETToppersShowcase({
                       </div>
 
                       {/* Achievement Badge */}
-                      <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <div className="absolute -bottom-2 -right-2 bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                         Rank {currentTopperData.rank}
                       </div>
                     </div>

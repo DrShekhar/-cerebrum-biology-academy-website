@@ -153,7 +153,7 @@ export default function NCERTBiologyClass11Page() {
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl"
+            className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
             animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.6, 0.4] }}
             transition={{ duration: 10, repeat: Infinity }}
           />
@@ -173,7 +173,7 @@ export default function NCERTBiologyClass11Page() {
 
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 NCERT Biology
-                <span className="block text-cyan-300">Class 11</span>
+                <span className="block text-blue-300">Class 11</span>
               </h1>
 
               <p className="text-lg text-white/90 mb-8 max-w-lg">
@@ -260,7 +260,7 @@ export default function NCERTBiologyClass11Page() {
                         <div className="font-semibold text-green-700">Edition</div>
                         <div className="text-sm text-gray-600">2024-25</div>
                       </div>
-                      <div className="text-center p-3 bg-cyan-50 rounded-lg">
+                      <div className="text-center p-3 bg-blue-50 rounded-lg">
                         <div className="font-semibold text-cyan-700">Language</div>
                         <div className="text-sm text-gray-600">English</div>
                       </div>

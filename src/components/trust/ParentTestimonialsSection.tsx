@@ -740,7 +740,7 @@ export default function ParentTestimonialsSection({
       className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden ${className}`}
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8">
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold mb-2">💕 Parent Testimonials</h2>
           <p className="text-purple-100 text-lg">

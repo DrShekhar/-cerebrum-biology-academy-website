@@ -18,7 +18,7 @@ export function Toast({ toast, onClose }: ToastProps) {
       <div
         className={`flex items-center gap-3 rounded-full px-6 py-3 shadow-lg ${
           toast.count > 0
-            ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
+            ? 'bg-[#4a5d4a] text-white'
             : 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white'
         }`}
       >

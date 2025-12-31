@@ -465,7 +465,7 @@ export default function AnalyticsPage() {
                   { stage: 'Lead Captured', count: 2500, color: 'bg-indigo-500' },
                   { stage: 'Demo Booked', count: 850, color: 'bg-purple-500' },
                   { stage: 'Demo Confirmed', count: 680, color: 'bg-violet-500' },
-                  { stage: 'Demo Attended', count: 510, color: 'bg-pink-500' },
+                  { stage: 'Demo Attended', count: 510, color: 'bg-indigo-500' },
                   { stage: 'Enrolled', count: 280, color: 'bg-rose-500' },
                   { stage: 'Paid', count: 245, color: 'bg-green-600' },
                 ].map((item, index, arr) => {
@@ -545,7 +545,7 @@ export default function AnalyticsPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-pink-500 to-pink-600 p-6 rounded-xl text-white"
+                className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl text-white"
               >
                 <div className="text-sm opacity-90">Demo Attendance</div>
                 <div className="text-3xl font-bold mt-2">75.0%</div>
@@ -571,11 +571,11 @@ export default function AnalyticsPage() {
               transition={{ delay: 0.4 }}
               className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl"
             >
-              <h4 className="font-semibold text-amber-800 mb-4 flex items-center">
+              <h4 className="font-semibold text-yellow-800 mb-4 flex items-center">
                 <Target className="w-5 h-5 mr-2" />
                 Funnel Optimization Insights
               </h4>
-              <ul className="space-y-3 text-sm text-amber-900">
+              <ul className="space-y-3 text-sm text-yellow-900">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                   <span>

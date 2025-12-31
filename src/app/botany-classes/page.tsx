@@ -71,7 +71,7 @@ const faqs = [
 
 export default function BotanyClassesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -92,7 +92,7 @@ export default function BotanyClassesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -115,7 +115,7 @@ export default function BotanyClassesPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-cyan-600 shadow-lg transition hover:bg-cyan-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
                 Book Free Demo
               </Link>
@@ -151,7 +151,7 @@ export default function BotanyClassesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <h3 className="mb-2 text-2xl font-bold text-cyan-600">{batch.name}</h3>
+                <h3 className="mb-2 text-2xl font-bold text-blue-600">{batch.name}</h3>
                 <div className="mb-4 text-gray-600">
                   <p>
                     <Clock className="mr-2 inline h-4 w-4" />
@@ -165,7 +165,7 @@ export default function BotanyClassesPage() {
                 <ul className="space-y-2">
                   {batch.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-cyan-500" />
+                      <CheckCircle className="h-4 w-4 text-blue-500" />
                       {feature}
                     </li>
                   ))}
@@ -193,7 +193,7 @@ export default function BotanyClassesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-10 w-10 text-cyan-600" />
+                <stat.icon className="mx-auto mb-3 h-10 w-10 text-blue-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -293,7 +293,7 @@ export default function BotanyClassesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <feature.icon className="mb-4 h-10 w-10 text-cyan-600" />
+                <feature.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
               </motion.div>
@@ -366,7 +366,7 @@ export default function BotanyClassesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-cyan-600 to-green-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Enroll in Botany Classes Today</h2>
@@ -376,7 +376,7 @@ export default function BotanyClassesPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-cyan-600 shadow-lg transition hover:bg-cyan-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
                 Book Free Demo Class
               </Link>

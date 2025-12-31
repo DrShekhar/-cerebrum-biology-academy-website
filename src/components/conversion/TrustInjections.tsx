@@ -271,7 +271,7 @@ function ExitIntentOffer() {
                 })
                 setIsVisible(false)
               }}
-              className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg"
+              className="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-lg"
             >
               Claim 50% OFF Now
             </button>

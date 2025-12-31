@@ -71,7 +71,7 @@ export function StepIndicator({
       pending: 'bg-slate-100 text-slate-400 border-slate-300',
       error: 'bg-red-500 text-white border-red-500',
       connector: 'bg-amber-500',
-      text: 'text-amber-600',
+      text: 'text-yellow-600',
     },
   }
 

@@ -658,7 +658,7 @@ const neetCounsellingGuide: SEOLandingContent = {
     highlightedText: 'Successfully',
     ctaText: 'Get Counselling Support',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-orange-900 via-amber-900 to-yellow-900',
+    backgroundGradient: 'from-orange-900 via-yellow-900 to-yellow-900',
   },
 
   painPoints: {

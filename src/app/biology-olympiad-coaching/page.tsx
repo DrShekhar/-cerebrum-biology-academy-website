@@ -285,7 +285,7 @@ export default function BiologyOlympiadCoachingPage() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-green-50 to-cyan-50 rounded-xl p-6 border border-green-100 h-full">
+                <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100 h-full">
                   <stage.icon className="w-12 h-12 text-green-600 mb-4" />
                   <div className="text-sm text-green-600 font-semibold mb-1">{stage.stage}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{stage.name}</h3>
@@ -425,7 +425,7 @@ export default function BiologyOlympiadCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-green-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

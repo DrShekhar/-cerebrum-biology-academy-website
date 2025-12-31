@@ -170,7 +170,7 @@ const CEREBRUM_COURSES: CourseCard[] = [
       primary: '#F59E0B',
       secondary: '#D97706',
       gradient: 'linear-gradient(135deg, #F59E0B 0%, #EF4444 50%, #DC2626 100%)',
-      textColor: 'text-amber-900',
+      textColor: 'text-yellow-900',
       bgColor: 'bg-amber-50',
     },
     icon: <Trophy className="h-10 w-10" />,
@@ -195,7 +195,7 @@ const CEREBRUM_COURSES: CourseCard[] = [
     badge: {
       text: 'VALUE',
       color: 'text-white',
-      bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-600',
+      bgColor: 'bg-gradient-to-r from-blue-500 to-blue-600',
     },
     features: [
       'Classroom Teaching',
@@ -361,7 +361,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <Sparkles className="w-6 h-6 text-cyan-400" />
+              <Sparkles className="w-6 h-6 text-blue-400" />
             </motion.div>
 
             {/* Hero Headline */}
@@ -441,7 +441,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   number: '15+',
                   label: 'Expert Faculty',
                   icon: Award,
-                  color: 'from-green-500 to-green-600',
+                  color: 'bg-[#4a5d4a]',
                 },
               ].map((stat, idx) => (
                 <motion.div
@@ -532,7 +532,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 {/* Course Content */}
                 <div className="relative z-10">
                   <h3 className="text-3xl font-black text-white mb-3">{course.title}</h3>
-                  <p className="text-cyan-300 font-bold mb-2 text-lg">{course.subtitle}</p>
+                  <p className="text-blue-300 font-bold mb-2 text-lg">{course.subtitle}</p>
                   <p className="text-white/70 text-sm mb-2">{course.targetClass}</p>
                   <p className="text-white/80 leading-relaxed mb-8">{course.description}</p>
 
@@ -663,7 +663,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   </div>
                   <span className="text-lg">
                     Biology accounts for{' '}
-                    <span className="font-bold text-cyan-400">50% of marks (360/720)</span> in NEET
+                    <span className="font-bold text-blue-400">50% of marks (360/720)</span> in NEET
                     UG
                   </span>
                 </div>
@@ -805,13 +805,13 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             <div className="p-6 space-y-4">
               <p className="text-white/90 mb-6 text-center">
                 Call our expert counselors at{' '}
-                <span className="font-bold text-cyan-400">9188264443</span> for personalized course
+                <span className="font-bold text-blue-400">9188264443</span> for personalized course
                 guidance!
               </p>
 
               <a
                 href="https://wa.me/918826444334"
-                className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+                className="w-full bg-[#4a5d4a] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp Chat
@@ -819,7 +819,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
 
               <a
                 href="tel:+918826444334"
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="h-5 w-5" />
                 Call Now

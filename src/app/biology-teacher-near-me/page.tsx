@@ -345,7 +345,7 @@ export default function BiologyTeacherNearMePage() {
                 >
                   {center.highlight && (
                     <div className="absolute -top-3 left-6">
-                      <span className="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
+                      <span className="inline-flex items-center bg-[#4a5d4a] text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
                         <Sparkles className="w-3 h-3 mr-1" />
                         Flagship Center
                       </span>

@@ -287,7 +287,7 @@ export function LiveEnrollmentNotifications({
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        className="bg-gradient-to-r from-green-600 to-green-700 text-white p-3 rounded-lg shadow-lg"
+        className="bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg"
       >
         <div className="flex items-center mb-2">
           <TrendingUp className="w-4 h-4 mr-2" />

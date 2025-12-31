@@ -40,7 +40,7 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
     ascent: {
       name: 'Ascent Pro',
       tagline: 'Popular',
-      gradient: 'from-green-600 to-green-700',
+      gradient: 'bg-[#4a5d4a]',
       bgColor: 'bg-green-50/50',
       borderColor: 'border-green-200/60',
       badge: { bg: 'bg-green-100', text: 'text-green-700', label: 'POPULAR' },

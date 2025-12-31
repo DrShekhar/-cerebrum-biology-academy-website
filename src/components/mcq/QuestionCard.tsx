@@ -162,7 +162,7 @@ export function QuestionCard({
                 ? 'bg-green-100 text-green-700'
                 : question.difficulty === 'HARD'
                   ? 'bg-coral-100 text-coral-700'
-                  : 'bg-amber-100 text-amber-700'
+                  : 'bg-amber-100 text-yellow-700'
             }`}
           >
             <span
@@ -221,7 +221,7 @@ export function QuestionCard({
           </span>
         )}
         {question.isNeetImportant && (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-yellow-700 text-xs font-medium">
             <span className="text-amber-500">★</span>
             NEET Important
           </span>
@@ -399,10 +399,10 @@ export function QuestionCard({
                 <div className="mt-3 flex items-center gap-2 p-2 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border border-amber-200 animate-fade-in-up">
                   <span className="text-2xl animate-streak-glow-botanical">🔥</span>
                   <div>
-                    <span className="font-bold text-amber-700 text-sm">
+                    <span className="font-bold text-yellow-700 text-sm">
                       {result.newStreak} Day Streak!
                     </span>
-                    <p className="text-amber-600 text-xs">Keep it going!</p>
+                    <p className="text-yellow-600 text-xs">Keep it going!</p>
                   </div>
                 </div>
               )}
@@ -418,10 +418,10 @@ export function QuestionCard({
                     >
                       <span className="text-2xl animate-confetti-burst">{badge.icon}</span>
                       <div className="flex-1 min-w-0">
-                        <p className="font-bold text-amber-800 text-sm">🏆 Badge Unlocked!</p>
-                        <p className="text-amber-700 text-xs">{badge.name}</p>
+                        <p className="font-bold text-yellow-800 text-sm">🏆 Badge Unlocked!</p>
+                        <p className="text-yellow-700 text-xs">{badge.name}</p>
                       </div>
-                      <span className="px-2 py-1 bg-amber-200 text-amber-800 font-bold text-xs font-mono rounded-full">
+                      <span className="px-2 py-1 bg-amber-200 text-yellow-800 font-bold text-xs font-mono rounded-full">
                         +{badge.xpReward} XP
                       </span>
                     </div>

@@ -176,7 +176,7 @@ export default function NeetClassesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-orange-600 via-red-600 to-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -317,7 +317,7 @@ export default function NeetClassesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100"
+                className="bg-orange-50 rounded-xl p-6 border border-orange-100"
               >
                 <Clock className="w-10 h-10 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{batch.name}</h3>
@@ -401,7 +401,7 @@ export default function NeetClassesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -298,7 +298,7 @@ export function HeroWithTrust() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <button
-            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             onClick={() => console.log('Start free trial')}
           >
             Start Free Trial

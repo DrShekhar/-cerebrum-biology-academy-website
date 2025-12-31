@@ -53,7 +53,7 @@ export function CalendarActions({ bookingData }: CalendarActionsProps) {
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
+    <div className="bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl p-6 border border-blue-100">
       <div className="flex items-center gap-2 mb-4">
         <Calendar className="w-5 h-5 text-blue-600" />
         <h3 className="font-semibold text-gray-900">Add to Calendar</h3>

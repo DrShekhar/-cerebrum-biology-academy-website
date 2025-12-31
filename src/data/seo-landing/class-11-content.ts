@@ -547,7 +547,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
     highlightedText: 'Your Teacher Decides Your Rank',
     ctaText: 'Meet Dr. Shekhar',
     ctaLink: '/faculty',
-    backgroundGradient: 'from-amber-900 via-orange-900 to-red-900',
+    backgroundGradient: 'from-yellow-900 via-orange-900 to-red-900',
   },
 
   painPoints: {

@@ -330,7 +330,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         <div className="flex justify-between items-start mb-6">
           <div>
             <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg">
                 <Database className="w-6 h-6 text-white" />
               </div>
               Batch Operations & Bulk Generation
@@ -343,7 +343,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowBulkGenerate(true)}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all flex items-center gap-2"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
               Bulk Generate
@@ -875,7 +875,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                   <button
                     onClick={handleBulkGenerate}
                     disabled={isGenerating || bulkGenerate.topicsToGenerate.length === 0}
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     {isGenerating ? (
                       <>

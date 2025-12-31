@@ -114,7 +114,7 @@ const programsData: Record<string, ProgramData> = {
           'Yes, all live sessions are recorded and available for 6 months from your joining date.',
       },
     ],
-    gradient: 'from-orange-500 to-red-500',
+    gradient: 'bg-orange-600',
     icon: '🚀',
   },
   'neet-repeater': {
@@ -308,7 +308,7 @@ const programsData: Record<string, ProgramData> = {
         answer: 'Approximately 60% of NEET Biology questions come from Class 12 syllabus.',
       },
     ],
-    gradient: 'from-blue-500 to-cyan-600',
+    gradient: 'from-blue-500 to-blue-600',
     icon: '📚',
   },
   'dropper-batch': {
@@ -431,7 +431,7 @@ const programsData: Record<string, ProgramData> = {
           'You can ask doubts in real-time during class or through our dedicated doubt resolution channels.',
       },
     ],
-    gradient: 'from-cyan-500 to-blue-600',
+    gradient: 'from-blue-500 to-blue-600',
     icon: '💻',
   },
   hybrid: {
@@ -625,7 +625,7 @@ const programsData: Record<string, ProgramData> = {
           'You can book sessions through our app or WhatsApp. Slots available throughout the week.',
       },
     ],
-    gradient: 'from-green-600 to-cyan-600',
+    gradient: 'from-green-600 to-blue-600',
     icon: '❓',
   },
 }

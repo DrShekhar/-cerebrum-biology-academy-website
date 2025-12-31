@@ -441,7 +441,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
             >
               <Crown className="w-8 h-8 text-yellow-400" />
               <span className="text-xl">Complete Course Catalog</span>
-              <Sparkles className="w-6 h-6 text-cyan-400" />
+              <Sparkles className="w-6 h-6 text-blue-400" />
             </motion.div>
 
             <h1 className="text-7xl md:text-8xl font-black text-white mb-8 leading-none tracking-tight">
@@ -471,7 +471,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                   placeholder="Search courses..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/30 rounded-2xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/30 rounded-2xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
 
@@ -479,7 +479,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
               <select
                 value={selectedSeries}
                 onChange={(e) => setSelectedSeries(e.target.value)}
-                className="bg-white/10 border border-white/30 rounded-2xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="bg-white/10 border border-white/30 rounded-2xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
                 <option value="all">All Series</option>
                 <option value="pinnacle">Pinnacle</option>
@@ -541,7 +541,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                         {/* Course Header */}
                         <div className="mb-6">
                           <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>
-                          <p className="text-cyan-300 text-sm mb-2">{course.type}</p>
+                          <p className="text-blue-300 text-sm mb-2">{course.type}</p>
                           <p className="text-white/70 text-sm">{course.duration}</p>
                           {course.teachingHours && (
                             <p className="text-white/60 text-xs mt-1">{course.teachingHours}</p>
@@ -631,7 +631,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                                 </div>
                               ))}
                               {course.features.length > 5 && (
-                                <div className="text-xs text-cyan-400">
+                                <div className="text-xs text-blue-400">
                                   +{course.features.length - 5} more features
                                 </div>
                               )}
@@ -663,7 +663,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
             animate={catalogInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mt-20"
           >
-            <div className="bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-orange-600/20 backdrop-blur-2xl rounded-3xl p-10 border border-white/30">
+            <div className="bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-orange-600/20 backdrop-blur-2xl rounded-3xl p-10 border border-white/30">
               <h3 className="text-4xl font-black text-white mb-6">Need Help Choosing?</h3>
               <p className="text-xl text-white/80 mb-8">
                 Contact our expert counselors for personalized course recommendations
@@ -673,7 +673,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 <motion.a
                   href="https://wa.me/918826444334"
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+                  className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
                 >
                   <MessageCircle className="h-6 w-6" />
                   WhatsApp: 9188264443
@@ -682,7 +682,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 <motion.a
                   href="tel:+918826444334"
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
                 >
                   <Phone className="h-6 w-6" />
                   Call Now

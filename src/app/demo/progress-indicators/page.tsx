@@ -398,7 +398,7 @@ function BulkOperationsDemo() {
     <Card className="p-6 space-y-6">
       <div className="flex items-center gap-3">
         <div className="p-2 bg-amber-100 rounded-lg">
-          <CheckCircle className="w-6 h-6 text-amber-600" />
+          <CheckCircle className="w-6 h-6 text-yellow-600" />
         </div>
         <div>
           <h2 className="text-xl font-bold text-slate-900">Bulk Operations</h2>

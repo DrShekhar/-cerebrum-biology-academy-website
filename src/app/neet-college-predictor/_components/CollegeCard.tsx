@@ -85,7 +85,7 @@ export function CollegeCard({
                 Tier {college.tier}
               </span>
               {college.nirfRank && (
-                <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">
+                <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-yellow-800">
                   <Star className="h-3 w-3" />
                   NIRF #{college.nirfRank}
                 </span>

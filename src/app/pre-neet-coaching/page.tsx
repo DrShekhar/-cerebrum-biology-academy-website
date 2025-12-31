@@ -381,7 +381,7 @@ export default function PreNEETCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-rose-600 via-pink-600 to-red-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-rose-600 via-indigo-600 to-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

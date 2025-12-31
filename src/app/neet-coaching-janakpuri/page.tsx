@@ -144,7 +144,7 @@ export default function NEETCoachingJanakpuri() {
 
       <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
+        <section className="relative py-20 px-4 bg-[#4a5d4a] text-white overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 right-10 w-60 h-60 bg-yellow-300 rounded-full blur-3xl" />
@@ -260,7 +260,7 @@ export default function NEETCoachingJanakpuri() {
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-pink-50 rounded-lg">
-                    <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                       M
                     </div>
                     <div>
@@ -401,7 +401,7 @@ export default function NEETCoachingJanakpuri() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
+        <section className="py-16 px-4 bg-[#4a5d4a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

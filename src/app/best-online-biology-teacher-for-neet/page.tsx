@@ -43,14 +43,14 @@ const topicWeightage = [
     class: '12',
     color: 'bg-green-600',
   },
-  { topic: 'Reproduction', marks: 43, percentage: '12%', class: '12', color: 'bg-pink-500' },
+  { topic: 'Reproduction', marks: 43, percentage: '12%', class: '12', color: 'bg-indigo-500' },
   { topic: 'Cell Biology', marks: 36, percentage: '10%', class: '11', color: 'bg-orange-500' },
   {
     topic: 'Diversity in Living World',
     marks: 29,
     percentage: '8%',
     class: '11',
-    color: 'bg-cyan-500',
+    color: 'bg-blue-500',
   },
   { topic: 'Biotechnology', marks: 29, percentage: '8%', class: '12', color: 'bg-indigo-500' },
 ]

@@ -77,7 +77,7 @@ const faqs = [
 
 export default function NeetOnlinePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -98,7 +98,7 @@ export default function NeetOnlinePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -119,7 +119,7 @@ export default function NeetOnlinePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-cyan-600 shadow-lg transition hover:bg-cyan-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
                 Start Free Trial
               </Link>
@@ -151,7 +151,7 @@ export default function NeetOnlinePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-10 w-10 text-cyan-600" />
+                <stat.icon className="mx-auto mb-3 h-10 w-10 text-blue-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -181,7 +181,7 @@ export default function NeetOnlinePage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <benefit.icon className="mb-4 h-10 w-10 text-cyan-600" />
+                <benefit.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.desc}</p>
               </motion.div>
@@ -211,7 +211,7 @@ export default function NeetOnlinePage() {
                   transition={{ delay: index * 0.05 }}
                   className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-lg"
                 >
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-cyan-600" />
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600" />
                   <div>
                     <h4 className="font-semibold text-gray-900">{item.title}</h4>
                     <p className="text-sm text-gray-600">{item.desc}</p>
@@ -251,7 +251,7 @@ export default function NeetOnlinePage() {
                   transition={{ delay: index * 0.1 }}
                   className="rounded-xl bg-white p-6 text-center shadow-lg"
                 >
-                  <device.icon className="mx-auto mb-4 h-12 w-12 text-cyan-600" />
+                  <device.icon className="mx-auto mb-4 h-12 w-12 text-blue-600" />
                   <h3 className="mb-1 text-lg font-semibold text-gray-900">{device.name}</h3>
                   <p className="text-gray-600">{device.desc}</p>
                 </motion.div>
@@ -325,7 +325,7 @@ export default function NeetOnlinePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-cyan-600 to-green-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Start Your NEET Online Journey</h2>
@@ -335,7 +335,7 @@ export default function NeetOnlinePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-cyan-600 shadow-lg transition hover:bg-cyan-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
                 Book Free Demo
               </Link>

@@ -96,7 +96,7 @@ export function CounselorPreference({ wantsCounselor, onSelect }: CounselorPrefe
 
       {wantsCounselor === true && (
         <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-          <p className="text-sm text-amber-800">
+          <p className="text-sm text-yellow-800">
             <strong>Note:</strong> After submitting, your application will be saved and a counselor
             will contact you. You can complete the payment after your consultation.
           </p>

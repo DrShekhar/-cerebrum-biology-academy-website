@@ -60,7 +60,7 @@ export default function PYQ2024Page() {
                 NEET Biology MCQ
               </Link>
               <ChevronRight className="w-4 h-4 text-stone-400" />
-              <span className="text-amber-600 font-medium">NEET 2024 PYQ</span>
+              <span className="text-yellow-600 font-medium">NEET 2024 PYQ</span>
             </div>
           </div>
         </nav>
@@ -68,7 +68,7 @@ export default function PYQ2024Page() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <header className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <FileText className="w-4 h-4" />
               Previous Year Questions
             </div>
@@ -84,7 +84,7 @@ export default function PYQ2024Page() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
-              <div className="text-2xl font-bold text-amber-600">90</div>
+              <div className="text-2xl font-bold text-yellow-600">90</div>
               <div className="text-sm text-stone-600">Questions</div>
             </div>
             <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
@@ -108,7 +108,7 @@ export default function PYQ2024Page() {
           <div className="text-center mb-10">
             <Link
               href="/neet-biology-mcq?isPYQOnly=true&pyqYear=2024"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/25 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/25 hover:scale-[1.02] transition-all"
             >
               <Target className="w-5 h-5" />
               Start NEET 2024 PYQ Practice
@@ -119,7 +119,7 @@ export default function PYQ2024Page() {
           {/* Topic-wise Distribution */}
           <section className="bg-white rounded-xl p-6 shadow-sm border border-stone-200/50 mb-8">
             <h2 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
-              <Award className="w-5 h-5 text-amber-600" />
+              <Award className="w-5 h-5 text-yellow-600" />
               NEET 2024 Biology Topic-wise Distribution
             </h2>
             <div className="space-y-3">
@@ -192,7 +192,7 @@ export default function PYQ2024Page() {
                 <Link
                   key={year}
                   href={`/neet-biology-mcq?isPYQOnly=true&pyqYear=${year}`}
-                  className="px-4 py-2 bg-white rounded-lg text-amber-700 hover:bg-amber-100 transition-colors text-sm font-medium"
+                  className="px-4 py-2 bg-white rounded-lg text-yellow-700 hover:bg-amber-100 transition-colors text-sm font-medium"
                 >
                   NEET {year}
                 </Link>
@@ -204,7 +204,7 @@ export default function PYQ2024Page() {
           <div className="text-center">
             <Link
               href="/neet-biology-mcq?isPYQOnly=true&pyqYear=2024"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
             >
               Start Free PYQ Practice Now
               <ChevronRight className="w-4 h-4" />

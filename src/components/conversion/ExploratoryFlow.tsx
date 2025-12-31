@@ -723,7 +723,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
               variant="medical"
               size="lg"
               onClick={() => handleStepNavigation('counseling')}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-pink-700 text-white"
             >
               Book Free Counseling
               <ChevronRight className="h-5 w-5" />
@@ -737,7 +737,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
   if (currentStep === 'counseling') {
     return (
       <div
-        className={`min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50 py-12 ${className}`}
+        className={`min-h-screen bg-orange-50 py-12 ${className}`}
       >
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
@@ -816,7 +816,7 @@ Please help me choose the right course and enrollment process.`
                     const encodedMessage = encodeURIComponent(message)
                     window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
                   }}
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white"
+                  className="w-full bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white"
                 >
                   Chat on WhatsApp
                 </PremiumButton>

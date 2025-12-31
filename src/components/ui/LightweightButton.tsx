@@ -28,7 +28,7 @@ export function LightweightButton({
     secondary:
       'bg-gradient-to-r from-gray-600 to-gray-800 text-white shadow-lg hover:from-gray-700 hover:to-gray-900',
     medical:
-      'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg hover:from-green-600 hover:to-green-700',
+      'bg-[#4a5d4a] text-white shadow-lg hover:from-green-600 hover:to-green-700',
     outline:
       'bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50',
   }

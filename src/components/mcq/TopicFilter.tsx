@@ -262,7 +262,7 @@ export function TopicFilter({
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                             !selectedPYQYear
                               ? 'bg-amber-500 text-white'
-                              : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                              : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
                           }`}
                         >
                           All Years
@@ -274,7 +274,7 @@ export function TopicFilter({
                             className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                               selectedPYQYear === year
                                 ? 'bg-amber-500 text-white'
-                                : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                                : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
                             }`}
                           >
                             {year}
@@ -363,7 +363,7 @@ export function TopicFilter({
             </span>
           )}
           {isPYQOnly && (
-            <span className="px-2 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+            <span className="px-2 py-1 rounded-full bg-amber-100 text-yellow-700 text-xs font-medium">
               PYQ {selectedPYQYear || 'All Years'}
             </span>
           )}

@@ -80,8 +80,8 @@ export function StatsPanel({
         {/* Streak */}
         <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-2.5 text-center border border-amber-200/50">
           <div className="text-xl mb-0.5">🔥</div>
-          <p className="text-lg font-bold font-mono text-amber-600">{currentStreak}</p>
-          <p className="text-[10px] text-amber-700 font-medium">Day Streak</p>
+          <p className="text-lg font-bold font-mono text-yellow-600">{currentStreak}</p>
+          <p className="text-[10px] text-yellow-700 font-medium">Day Streak</p>
         </div>
 
         {/* Accuracy */}
@@ -142,7 +142,7 @@ export function StatsPanel({
         </button>
         <button
           onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-          className="w-full py-2 px-3 bg-white border-2 border-amber-400 text-amber-700 rounded-lg font-medium hover:bg-amber-50 hover:border-amber-500 transition-colors text-xs flex items-center justify-center gap-2"
+          className="w-full py-2 px-3 bg-white border-2 border-amber-400 text-yellow-700 rounded-lg font-medium hover:bg-amber-50 hover:border-amber-500 transition-colors text-xs flex items-center justify-center gap-2"
         >
           <span>🎯</span> Daily Challenge
         </button>
@@ -177,7 +177,7 @@ export function StatsPanelCompact({
       {/* Streak */}
       <div className="flex items-center gap-1">
         <span className="text-lg">🔥</span>
-        <span className="font-bold font-mono text-amber-600">{currentStreak}</span>
+        <span className="font-bold font-mono text-yellow-600">{currentStreak}</span>
       </div>
 
       {/* Session */}

@@ -78,7 +78,7 @@ export function LeaderboardWidget({ leaderboard, currentUser }: LeaderboardWidge
                     : entry.rank === 2
                     ? 'bg-gray-400 text-white'
                     : entry.rank === 3
-                    ? 'bg-amber-600 text-white'
+                    ? 'bg-yellow-600 text-white'
                     : isCurrentUser
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 text-gray-700'
@@ -91,7 +91,7 @@ export function LeaderboardWidget({ leaderboard, currentUser }: LeaderboardWidge
                   <div className="ml-1">
                     {entry.rank === 1 && <Trophy className="w-5 h-5 text-yellow-500" />}
                     {entry.rank === 2 && <Medal className="w-5 h-5 text-gray-400" />}
-                    {entry.rank === 3 && <Award className="w-5 h-5 text-amber-600" />}
+                    {entry.rank === 3 && <Award className="w-5 h-5 text-yellow-600" />}
                   </div>
                 )}
 

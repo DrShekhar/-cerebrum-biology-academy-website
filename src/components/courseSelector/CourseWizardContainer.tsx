@@ -444,7 +444,7 @@ const CourseWizardContainer: React.FC = () => {
 
               <div className="flex items-center gap-4">
                 {!isStepValid(currentStep) && (
-                  <div className="flex items-center gap-2 text-amber-600">
+                  <div className="flex items-center gap-2 text-yellow-600">
                     <AlertCircle className="w-4 h-4" />
                     <span className="text-sm">Please complete required fields</span>
                   </div>

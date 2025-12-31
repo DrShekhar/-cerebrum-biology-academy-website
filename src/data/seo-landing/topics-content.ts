@@ -580,7 +580,7 @@ export const evolutionClass12: SEOLandingContent = {
     highlightedText: '4-5 Questions from Evolution Every Year',
     ctaText: 'Master Evolution',
     ctaLink: '/courses?class=class-12',
-    backgroundGradient: 'from-amber-900 via-orange-900 to-red-900',
+    backgroundGradient: 'from-yellow-900 via-orange-900 to-red-900',
   },
 
   painPoints: {
@@ -2055,7 +2055,7 @@ export const biomoleculesClass11: SEOLandingContent = {
     highlightedText: 'Foundation for Molecular Biology',
     ctaText: 'Master Biomolecules',
     ctaLink: '/courses?class=class-11',
-    backgroundGradient: 'from-yellow-900 via-amber-900 to-orange-900',
+    backgroundGradient: 'from-yellow-900 via-yellow-900 to-orange-900',
   },
   painPoints: {
     title: 'Biomolecules Confusing?',

@@ -28,7 +28,7 @@ export function AnswersTab({
     >
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-          <Key className="w-5 h-5 text-amber-600" />
+          <Key className="w-5 h-5 text-yellow-600" />
           Answer Key Configuration
         </h3>
 
@@ -93,7 +93,7 @@ export function AnswersTab({
                     includeExplanations: e.target.checked,
                   }))
                 }
-                className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                className="rounded border-gray-300 text-yellow-600 focus:ring-amber-500"
               />
               <span className="ml-2 text-sm text-gray-700">Include explanations</span>
             </label>
@@ -108,7 +108,7 @@ export function AnswersTab({
                     includeReferences: e.target.checked,
                   }))
                 }
-                className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                className="rounded border-gray-300 text-yellow-600 focus:ring-amber-500"
               />
               <span className="ml-2 text-sm text-gray-700">Include references</span>
             </label>
@@ -123,7 +123,7 @@ export function AnswersTab({
                     includeMarkingScheme: e.target.checked,
                   }))
                 }
-                className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                className="rounded border-gray-300 text-yellow-600 focus:ring-amber-500"
               />
               <span className="ml-2 text-sm text-gray-700">Include marking scheme</span>
             </label>
@@ -138,7 +138,7 @@ export function AnswersTab({
                     generateQRCode: e.target.checked,
                   }))
                 }
-                className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                className="rounded border-gray-300 text-yellow-600 focus:ring-amber-500"
               />
               <span className="ml-2 text-sm text-gray-700">Generate QR code</span>
             </label>
@@ -153,7 +153,7 @@ export function AnswersTab({
                     includeStatistics: e.target.checked,
                   }))
                 }
-                className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                className="rounded border-gray-300 text-yellow-600 focus:ring-amber-500"
               />
               <span className="ml-2 text-sm text-gray-700">Include statistics</span>
             </label>
@@ -162,7 +162,7 @@ export function AnswersTab({
           <button
             onClick={generateAnswerKey}
             disabled={loading}
-            className="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+            className="w-full bg-yellow-600 text-white py-3 rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
           >
             {loading ? (
               <>
@@ -253,8 +253,8 @@ export function AnswersTab({
           </div>
 
           <div className="bg-amber-50 p-4 rounded-lg">
-            <h4 className="font-medium text-amber-800 mb-2">Security Features</h4>
-            <ul className="text-sm text-amber-700 space-y-1">
+            <h4 className="font-medium text-yellow-800 mb-2">Security Features</h4>
+            <ul className="text-sm text-yellow-700 space-y-1">
               <li>• Watermark protection</li>
               <li>• Access level restrictions</li>
               <li>• QR code verification</li>

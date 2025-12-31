@@ -139,7 +139,7 @@ export default function Class9ScienceTuitionPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-900 via-amber-800 to-yellow-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-orange-900 via-yellow-800 to-yellow-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -247,14 +247,14 @@ export default function Class9ScienceTuitionPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-                    <subject.icon className="w-6 h-6 text-amber-600" />
+                    <subject.icon className="w-6 h-6 text-yellow-600" />
                   </div>
-                  <span className="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {subject.weightage}
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{subject.unit}</h3>
-                <p className="text-amber-600 font-medium mb-3">{subject.title}</p>
+                <p className="text-yellow-600 font-medium mb-3">{subject.title}</p>
                 <ul className="space-y-1">
                   {subject.chapters.map((chapter) => (
                     <li key={chapter} className="text-sm text-gray-600 flex items-start">
@@ -294,7 +294,7 @@ export default function Class9ScienceTuitionPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-amber-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-yellow-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -329,7 +329,7 @@ export default function Class9ScienceTuitionPage() {
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-amber-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -340,7 +340,7 @@ export default function Class9ScienceTuitionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 via-yellow-600 to-yellow-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -140,7 +140,7 @@ const MultipleCorrectQuestion: React.FC<MultipleCorrectQuestionProps> = ({
             {question.maxSelections && ` / ${question.maxSelections}`}
           </span>
           {question.maxSelections && selectedOptions.length >= question.maxSelections && (
-            <span className="text-xs text-amber-600 bg-amber-100 px-2 py-1 rounded">
+            <span className="text-xs text-yellow-600 bg-amber-100 px-2 py-1 rounded">
               Maximum selections reached
             </span>
           )}

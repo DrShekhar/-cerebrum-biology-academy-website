@@ -601,7 +601,7 @@ export default function EastDelhiAreaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-cyan-600">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

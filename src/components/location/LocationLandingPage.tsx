@@ -58,7 +58,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
   const getTierColor = (tier: string) => {
     switch (tier) {
       case 'tier1':
-        return 'from-purple-600 to-pink-600'
+        return 'from-purple-600 to-indigo-600'
       case 'tier2':
         return 'bg-blue-600'
       case 'tier3':

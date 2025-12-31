@@ -68,7 +68,7 @@ export default function ZoologyTeacherNearMePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -146,7 +146,7 @@ export default function ZoologyTeacherNearMePage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white md:p-12"
+              className="rounded-2xl bg-gradient-to-r from-blue-600 to-blue-600 p-8 text-white md:p-12"
             >
               <div className="flex flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1">
@@ -165,7 +165,7 @@ export default function ZoologyTeacherNearMePage() {
                       'Pan-India access',
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <CheckCircle className="h-5 w-5 text-cyan-300" />
+                        <CheckCircle className="h-5 w-5 text-blue-300" />
                         {item}
                       </li>
                     ))}
@@ -337,7 +337,7 @@ export default function ZoologyTeacherNearMePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Find Zoology Coaching Near You</h2>

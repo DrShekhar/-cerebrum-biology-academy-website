@@ -247,7 +247,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
         personalizedMessage: "Welcome to Cerebrum! Here's a special discount to get you started.",
         icon: <Gift className="w-6 h-6" />,
         color: {
-          primary: 'text-pink-600',
+          primary: 'text-indigo-600',
           secondary: 'text-pink-800',
           background: 'bg-pink-50',
           border: 'border-pink-200',

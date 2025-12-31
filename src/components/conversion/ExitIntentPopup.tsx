@@ -218,7 +218,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
       ],
       visual: {
         icon: <Target className="w-8 h-8" />,
-        gradient: 'from-orange-500 to-red-500',
+        gradient: 'bg-orange-600',
         accentColor: 'orange',
       },
       socialProof: {

@@ -130,11 +130,11 @@ export default function OfflinePage() {
 
         {/* Network Tips */}
         <div className="mt-8 text-left bg-amber-50 rounded-xl p-4">
-          <h4 className="font-semibold text-amber-800 mb-2 flex items-center">
+          <h4 className="font-semibold text-yellow-800 mb-2 flex items-center">
             <span className="mr-2">💡</span>
             नेटवर्क टिप्स • Network Tips
           </h4>
-          <ul className="text-sm text-amber-700 space-y-1">
+          <ul className="text-sm text-yellow-700 space-y-1">
             <li>• WiFi को बंद करके मोबाइल डेटा आजमाएं</li>
             <li>• Try mobile data if WiFi isn't working</li>
             <li>• हवाई जहाज मोड को चालू करके बंद करें</li>

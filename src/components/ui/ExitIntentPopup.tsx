@@ -320,7 +320,7 @@ export function ExitIntentPopup({
                       </motion.div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">Discount Claimed!</h3>
                       {discountCode && (
-                        <div className="bg-gradient-to-r from-orange-100 to-red-100 border-2 border-dashed border-orange-400 rounded-xl p-4 mb-4">
+                        <div className="bg-orange-100 border-2 border-dashed border-orange-400 rounded-xl p-4 mb-4">
                           <p className="text-sm text-gray-600 mb-1">Your 20% Discount Code:</p>
                           <p className="text-2xl font-mono font-bold text-orange-600 tracking-wider">
                             {discountCode}

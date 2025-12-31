@@ -137,7 +137,7 @@ export function EnhancedChatInterface({
   if (!isOpen) {
     return (
       <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <Brain className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-2xl font-bold text-gray-800 mb-2">AI Biology Tutor</h2>
@@ -160,7 +160,7 @@ export function EnhancedChatInterface({
         </div>
         <button
           onClick={() => onSendMessage('start')}
-          className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer"
+          className="bg-gradient-to-r from-blue-500 to-blue-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer"
         >
           Start Conversation
         </button>
@@ -173,7 +173,7 @@ export function EnhancedChatInterface({
       {/* Chat Header */}
       <div className="flex items-center justify-between pb-4 border-b border-gray-200">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full flex items-center justify-center">
             <Brain className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -199,7 +199,7 @@ export function EnhancedChatInterface({
             <div
               className={`max-w-[80%] p-3 rounded-2xl ${
                 message.sender === 'user'
-                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-blue-500 to-blue-500 text-white'
                   : message.type === 'recommendation'
                     ? 'bg-gradient-to-r from-green-100 to-green-100 text-green-800 border border-green-200'
                     : 'bg-gray-100 text-gray-800'
@@ -352,7 +352,7 @@ export function EnhancedChatInterface({
           <button
             onClick={handleSend}
             disabled={!input.trim() || isLoading || isRecording}
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-2 rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-gradient-to-r from-blue-500 to-blue-500 text-white p-2 rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send className="w-5 h-5" />
           </button>

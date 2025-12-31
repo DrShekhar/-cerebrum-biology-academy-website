@@ -118,7 +118,7 @@ export default function AboutPage() {
       title: 'Innovation in Learning',
       description:
         'Evidence-based teaching methods combining AIIMS-proven strategies with modern educational technology.',
-      color: 'from-amber-600 to-orange-500',
+      color: 'from-yellow-600 to-orange-500',
       pillGradient: 'from-orange-700 to-orange-600',
       metric: '9+ Years',
       metricLabel: 'Proven Methods',

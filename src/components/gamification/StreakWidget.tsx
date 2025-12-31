@@ -22,7 +22,7 @@ export function StreakWidget({
 
   return (
     <div
-      className={`bg-gradient-to-br from-orange-500 to-red-600 rounded-xl shadow-lg p-6 text-white ${className}`}
+      className={`bg-orange-600 rounded-xl shadow-lg p-6 text-white ${className}`}
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-4">

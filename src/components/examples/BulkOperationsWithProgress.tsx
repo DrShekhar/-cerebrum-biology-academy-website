@@ -349,7 +349,7 @@ export default function BulkOperationsWithProgress() {
                         {errorCount > 0 && ` with ${errorCount} error${errorCount > 1 ? 's' : ''}`}
                       </p>
                       {errorCount > 0 && (
-                        <div className="flex items-center gap-2 text-sm text-amber-700 bg-amber-50 p-3 rounded-lg">
+                        <div className="flex items-center gap-2 text-sm text-yellow-700 bg-amber-50 p-3 rounded-lg">
                           <AlertCircle className="w-4 h-4 flex-shrink-0" />
                           <span>
                             Some items failed to process. Check the error log for details.

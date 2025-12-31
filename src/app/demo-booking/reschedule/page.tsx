@@ -114,7 +114,7 @@ function RescheduleContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-50">
         <div className="text-center">
           <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading booking details...</p>
@@ -176,14 +176,14 @@ function RescheduleContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 px-4">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-2xl shadow-xl overflow-hidden"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-600 p-8 text-white">
             <h1 className="text-3xl font-bold mb-2">Reschedule Demo Class</h1>
             <p className="text-blue-100">Choose a new date and time for your demo session</p>
           </div>
@@ -276,7 +276,7 @@ function RescheduleContent() {
                 <button
                   type="submit"
                   disabled={submitting || !newDate || !newTime}
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-4 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white font-semibold py-4 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {submitting ? (
                     <>

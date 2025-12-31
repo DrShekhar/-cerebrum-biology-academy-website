@@ -363,7 +363,7 @@ export default function BestBiologyTeacherClass11ICSEPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-green-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

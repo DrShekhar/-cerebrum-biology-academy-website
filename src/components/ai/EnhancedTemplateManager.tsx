@@ -385,7 +385,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       name: 'Chapter Tests',
       description: 'Focused tests for individual chapters',
       icon: <BookOpen className="w-5 h-5" />,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
       count: templates.filter((t) => t.category === 'chapter').length,
     },
     {
@@ -409,7 +409,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       name: 'Revision Tests',
       description: 'Quick revision and recall tests',
       icon: <RefreshCw className="w-5 h-5" />,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-indigo-500',
       count: templates.filter((t) => t.category === 'revision').length,
     },
     {

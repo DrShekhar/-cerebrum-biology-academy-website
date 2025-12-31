@@ -56,7 +56,7 @@ export function MaintenancePopup() {
         className={cn(
           'absolute -top-2 -right-2',
           'w-5 h-5 rounded-full',
-          'bg-amber-500 hover:bg-amber-600',
+          'bg-amber-500 hover:bg-yellow-600',
           'flex items-center justify-center',
           'text-white shadow-md',
           'transition-colors duration-200',
@@ -70,12 +70,12 @@ export function MaintenancePopup() {
       {/* Icon */}
       <div className="flex justify-center mb-1">
         <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center animate-pulse">
-          <Wrench className="w-3.5 h-3.5 text-amber-600" />
+          <Wrench className="w-3.5 h-3.5 text-yellow-600" />
         </div>
       </div>
 
       {/* Message */}
-      <p className="text-[8px] leading-tight text-amber-800 text-center font-medium">
+      <p className="text-[8px] leading-tight text-yellow-800 text-center font-medium">
         Site under maintenance. Some features may not work.
       </p>
 

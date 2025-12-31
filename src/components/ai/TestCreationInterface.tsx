@@ -2038,7 +2038,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                   </div>
 
                   {/* Options Summary */}
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-6">
+                  <div className="bg-orange-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
                       <Zap className="w-5 h-5 mr-2 text-orange-600" />
                       Additional Options
@@ -2115,7 +2115,7 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                 <button
                   onClick={handleCreateTest}
                   disabled={!canProceedToNextStep()}
-                  className="px-6 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center"
+                  className="px-6 py-2 bg-[#4a5d4a] text-white rounded-lg hover:from-green-700 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   Create Test

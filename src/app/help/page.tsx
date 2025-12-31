@@ -72,8 +72,8 @@ const colorMap: Record<string, { bg: string; text: string; border: string; hover
     hover: 'hover:bg-indigo-100',
   },
   cyan: {
-    bg: 'bg-cyan-50',
-    text: 'text-cyan-600',
+    bg: 'bg-blue-50',
+    text: 'text-blue-600',
     border: 'border-cyan-200',
     hover: 'hover:bg-cyan-100',
   },
@@ -91,7 +91,7 @@ const colorMap: Record<string, { bg: string; text: string; border: string; hover
   },
   pink: {
     bg: 'bg-pink-50',
-    text: 'text-pink-600',
+    text: 'text-indigo-600',
     border: 'border-pink-200',
     hover: 'hover:bg-pink-100',
   },

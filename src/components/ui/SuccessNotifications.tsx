@@ -159,7 +159,7 @@ export function SuccessNotifications({
       case 'admission':
         return 'bg-gradient-to-r from-green-50 to-green-50 border-green-200'
       default:
-        return 'bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200'
+        return 'bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200'
     }
   }
 
@@ -382,7 +382,7 @@ export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
-        className="bg-gradient-to-r from-green-600 to-green-700 text-white p-2.5 rounded-lg shadow-lg"
+        className="bg-[#4a5d4a] text-white p-2.5 rounded-lg shadow-lg"
       >
         <div className="flex items-center">
           <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />

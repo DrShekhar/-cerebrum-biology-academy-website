@@ -29,7 +29,7 @@ const colorMap = {
   rank: 'from-purple-500 to-purple-600',
   college: 'bg-green-600',
   notes: 'from-orange-500 to-orange-600',
-  quiz: 'from-pink-500 to-pink-600',
+  quiz: 'from-indigo-500 to-indigo-600',
 }
 
 const bgColorMap = {

@@ -195,7 +195,7 @@ const AdaptiveTestingPage: React.FC = () => {
                   'Information Functions',
                   'Standard Error Calculation',
                 ],
-                color: 'from-blue-500 to-cyan-500',
+                color: 'from-blue-500 to-blue-500',
               },
               {
                 icon: Zap,
@@ -208,7 +208,7 @@ const AdaptiveTestingPage: React.FC = () => {
                   'Exposure Control',
                   'Time Management',
                 ],
-                color: 'from-purple-500 to-pink-500',
+                color: 'from-purple-500 to-indigo-500',
               },
               {
                 icon: BarChart3,
@@ -234,7 +234,7 @@ const AdaptiveTestingPage: React.FC = () => {
                   'Learning Objectives',
                   'Mastery Detection',
                 ],
-                color: 'from-orange-500 to-red-500',
+                color: 'bg-orange-600',
               },
               {
                 icon: Lightbulb,

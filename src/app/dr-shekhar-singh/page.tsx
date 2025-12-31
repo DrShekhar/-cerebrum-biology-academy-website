@@ -672,7 +672,7 @@ export default function DrShekharSinghPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -694,7 +694,7 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
                 <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -1148,7 +1148,7 @@ export default function DrShekharSinghPage() {
           >
             <Link
               href="/demo-booking"
-              className="flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 group"
+              className="flex items-center gap-3 bg-[#4a5d4a] text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 group"
               aria-label="Book a demo class"
             >
               <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />

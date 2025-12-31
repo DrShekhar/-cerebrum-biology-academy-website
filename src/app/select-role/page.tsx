@@ -170,7 +170,7 @@ export default function SelectRolePage() {
           </div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Welcome, Dr. Shekhar</h1>
           <p className="text-slate-600">Select which dashboard you want to access</p>
-          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-amber-100 text-yellow-800 rounded-full text-sm font-medium">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"

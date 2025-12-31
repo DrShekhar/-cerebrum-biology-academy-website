@@ -377,8 +377,8 @@ export const getSeriesInfo = (series: string) => {
     Pinnacle: {
       name: 'Pinnacle Series',
       description: 'Premium education with maximum personalization',
-      color: 'bg-amber-100 text-amber-800',
-      textColor: 'text-amber-600',
+      color: 'bg-amber-100 text-yellow-800',
+      textColor: 'text-yellow-600',
       icon: '👑',
       priority: 2,
     },

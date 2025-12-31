@@ -61,7 +61,7 @@ export function TopicLandingPage({
 
   const difficultyColors = {
     Easy: 'bg-green-100 text-green-700',
-    Medium: 'bg-amber-100 text-amber-700',
+    Medium: 'bg-amber-100 text-yellow-700',
     Hard: 'bg-red-100 text-red-700',
   }
 
@@ -125,7 +125,7 @@ export function TopicLandingPage({
             <div className="text-sm text-stone-600">Questions</div>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
-            <div className="text-2xl font-bold text-amber-600">{neetWeightage}</div>
+            <div className="text-2xl font-bold text-yellow-600">{neetWeightage}</div>
             <div className="text-sm text-stone-600">NEET Weightage</div>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
@@ -174,14 +174,14 @@ export function TopicLandingPage({
         {/* Important Subtopics */}
         <section className="bg-white rounded-xl p-6 shadow-sm border border-stone-200/50 mb-8">
           <h2 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
-            <Target className="w-5 h-5 text-amber-600" />
+            <Target className="w-5 h-5 text-yellow-600" />
             Important Topics for NEET
           </h2>
           <div className="flex flex-wrap gap-2">
             {importantSubtopics.map((subtopic, index) => (
               <span
                 key={index}
-                className="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-full text-sm font-medium"
+                className="px-3 py-1.5 bg-amber-50 text-yellow-700 rounded-full text-sm font-medium"
               >
                 {subtopic}
               </span>
@@ -264,7 +264,7 @@ export function TopicLandingPage({
             )}
             <Link
               href="/neet-biology-mcq/pyq-2024"
-              className="px-4 py-2 bg-white rounded-lg text-amber-700 hover:bg-amber-50 transition-colors text-sm font-medium"
+              className="px-4 py-2 bg-white rounded-lg text-yellow-700 hover:bg-amber-50 transition-colors text-sm font-medium"
             >
               NEET 2024 PYQs
             </Link>

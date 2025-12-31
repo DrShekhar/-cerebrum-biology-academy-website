@@ -483,7 +483,7 @@ function OverviewTab({
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${
                     index === 0 ? 'from-yellow-400 to-orange-500' :
                     index === 1 ? 'from-gray-400 to-gray-600' :
-                    index === 2 ? 'from-amber-600 to-amber-800' :
+                    index === 2 ? 'from-yellow-600 to-yellow-800' :
                     'from-blue-400 to-blue-600'
                   } flex items-center justify-center text-white text-sm font-bold`}>
                     {index + 1}

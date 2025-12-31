@@ -34,7 +34,7 @@ const tierConfigs = {
     color: 'from-amber-500 to-orange-500',
     bgColor: 'bg-gradient-to-br from-amber-50 to-orange-50',
     borderColor: 'border-amber-200',
-    textColor: 'text-amber-700',
+    textColor: 'text-yellow-700',
     icon: Crown,
     badge: 'PREMIUM',
     badgeColor: 'bg-amber-500 text-white',

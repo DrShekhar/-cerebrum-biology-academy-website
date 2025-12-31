@@ -84,14 +84,14 @@ export function NotificationCenter({
         message: '9 free demo classes booked in the last hour',
         location: 'All Centers',
         icon: <Calendar className="w-4 h-4" />,
-        color: 'from-orange-500 to-amber-600',
+        color: 'from-orange-500 to-yellow-600',
       },
       {
         title: "Today's Enrollments",
         message: '28 new students joined NEET Biology courses today',
         location: 'Multiple Cities',
         icon: <BookOpen className="w-4 h-4" />,
-        color: 'from-green-600 to-cyan-600',
+        color: 'from-green-600 to-blue-600',
       },
     ]
 

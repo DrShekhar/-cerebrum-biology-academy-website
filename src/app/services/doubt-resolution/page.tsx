@@ -662,7 +662,7 @@ export default function DoubtResolutionPage() {
                 {story.hasVideo && (
                   <div className="relative bg-gradient-to-br bg-red-100 h-40 sm:h-48 flex items-center justify-center group cursor-pointer">
                     {/* Placeholder gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-pink-600/20" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-indigo-600/20" />
 
                     {/* Play Button */}
                     <div className="relative z-10">

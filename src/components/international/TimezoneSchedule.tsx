@@ -88,7 +88,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
     return {
       status: 'unavailable',
       message: `Next available: ${timezoneInfo.nextBusinessHour}`,
-      color: 'text-amber-600',
+      color: 'text-yellow-600',
       bgColor: 'bg-amber-50',
       borderColor: 'border-amber-200',
     }
@@ -305,7 +305,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
                   <div className="flex items-center justify-between">
                     <span
                       className={`text-sm font-medium ${
-                        schedule.enrolled < schedule.capacity ? 'text-green-600' : 'text-amber-600'
+                        schedule.enrolled < schedule.capacity ? 'text-green-600' : 'text-yellow-600'
                       }`}
                     >
                       {schedule.enrolled < schedule.capacity

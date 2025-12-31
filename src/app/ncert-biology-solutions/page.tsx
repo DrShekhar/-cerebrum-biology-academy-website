@@ -381,7 +381,7 @@ export default function NCERTBiologySolutionsPage() {
                   key={unitIndex}
                   className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
                 >
-                  <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
+                  <div className="bg-[#4a5d4a] px-6 py-4">
                     <h3 className="text-lg font-semibold text-white">{unit.unit}</h3>
                   </div>
                   <div className="divide-y divide-gray-100">
@@ -439,7 +439,7 @@ export default function NCERTBiologySolutionsPage() {
                   key={unitIndex}
                   className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
                 >
-                  <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
+                  <div className="bg-[#4a5d4a] px-6 py-4">
                     <h3 className="text-lg font-semibold text-white">{unit.unit}</h3>
                   </div>
                   <div className="divide-y divide-gray-100">

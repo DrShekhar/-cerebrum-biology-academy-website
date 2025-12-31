@@ -86,7 +86,7 @@ export const SERIES_CONFIGURATIONS: Record<string, Partial<CourseSeriesCard>> = 
     },
     gradientBackground: {
       from: 'purple-600',
-      via: 'pink-500',
+      via: 'indigo-500',
       to: 'purple-700',
     },
     iconSet: {
@@ -112,7 +112,7 @@ export const SERIES_CONFIGURATIONS: Record<string, Partial<CourseSeriesCard>> = 
     },
     gradientBackground: {
       from: 'blue-600',
-      via: 'cyan-500',
+      via: 'blue-500',
       to: 'blue-700',
     },
     iconSet: {
@@ -123,7 +123,7 @@ export const SERIES_CONFIGURATIONS: Record<string, Partial<CourseSeriesCard>> = 
     animationStyle: {
       entrance: { delay: 0.1, duration: 0.7, easing: 'cubic-bezier(0.16, 1, 0.3, 1)' },
       hover: { lift: 8, scale: 1.02, glow: true },
-      selection: { borderGradient: 'from-blue-400 to-cyan-400', shimmer: true },
+      selection: { borderGradient: 'from-blue-400 to-blue-400', shimmer: true },
     },
   },
 

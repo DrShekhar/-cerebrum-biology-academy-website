@@ -38,7 +38,7 @@ const difficulties: {
     label: 'Medium',
     color: 'border-amber-300 hover:border-amber-400 hover:bg-amber-50',
     dotColor: 'bg-amber-500',
-    activeColor: 'bg-amber-100 border-amber-500 text-amber-800',
+    activeColor: 'bg-amber-100 border-amber-500 text-yellow-800',
   },
   {
     value: 'HARD',

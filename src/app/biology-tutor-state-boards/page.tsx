@@ -146,7 +146,7 @@ export default function BiologyTutorStateBoardsPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-900 via-orange-800 to-red-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-yellow-900 via-orange-800 to-red-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -190,7 +190,7 @@ export default function BiologyTutorStateBoardsPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-amber-900"
+                  className="border-white text-white hover:bg-white hover:text-yellow-900"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Courses
@@ -263,7 +263,7 @@ export default function BiologyTutorStateBoardsPage() {
 
           <p className="text-center text-gray-600 mt-8">
             Don&apos;t see your board?{' '}
-            <Link href="/contact" className="text-amber-600 hover:underline">
+            <Link href="/contact" className="text-yellow-600 hover:underline">
               Contact us
             </Link>{' '}
             - we support all NCERT-aligned English medium boards.
@@ -294,10 +294,10 @@ export default function BiologyTutorStateBoardsPage() {
                 viewport={{ once: true }}
                 className="bg-amber-50 rounded-xl p-6 text-center"
               >
-                <item.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
+                <item.icon className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.class}</h3>
                 <p className="text-gray-600 mb-3">{item.description}</p>
-                <span className="inline-block bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="inline-block bg-amber-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
                   {item.focus}
                 </span>
               </motion.div>
@@ -329,7 +329,7 @@ export default function BiologyTutorStateBoardsPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
-                <feature.icon className="w-12 h-12 text-amber-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-yellow-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -362,7 +362,7 @@ export default function BiologyTutorStateBoardsPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-amber-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -373,7 +373,7 @@ export default function BiologyTutorStateBoardsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ export default function BiologyTutorStateBoardsPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-amber-600"
+                  className="border-white text-white hover:bg-white hover:text-yellow-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

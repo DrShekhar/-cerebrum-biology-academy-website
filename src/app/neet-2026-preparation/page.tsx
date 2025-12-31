@@ -44,7 +44,7 @@ export default function NEET2026PreparationPage() {
       title: 'Updated Syllabus Coverage',
       description: 'Complete NEET 2026 syllabus with latest NTA patterns and NCERT-based approach',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'AI-Powered Learning',
@@ -82,7 +82,7 @@ export default function NEET2026PreparationPage() {
       duration: '2 Years',
       features: ['Board + NEET integrated', 'Strong foundation building', 'Early bird advantage'],
       price: '₹48,000-₹98,000/year',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       name: 'Class 12 Intensive (2025-26)',
@@ -99,7 +99,7 @@ export default function NEET2026PreparationPage() {
       duration: '10 Months',
       features: ['Focused preparation', 'Weakness analysis', 'Mental conditioning'],
       price: '₹55,000/year',
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
     {
       name: 'Early Bird Batch',
@@ -158,7 +158,7 @@ export default function NEET2026PreparationPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Urgency Banner */}
-        <div className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-3">
+        <div className="relative bg-[#4a5d4a] text-white py-3">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center flex-wrap gap-2">
               <Clock className="w-5 h-5" />

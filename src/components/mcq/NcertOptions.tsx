@@ -16,7 +16,7 @@ const weightages = [
     label: 'High',
     stars: '★★★',
     color: 'border-amber-400 hover:border-amber-500 hover:bg-amber-50',
-    activeColor: 'bg-amber-100 border-amber-500 text-amber-800',
+    activeColor: 'bg-amber-100 border-amber-500 text-yellow-800',
     starColor: 'text-amber-500',
   },
   {
@@ -114,7 +114,7 @@ export function NcertOptions({
                 <span className="font-semibold text-stone-800 text-sm">
                   Diagram-Based Questions
                 </span>
-                <span className="px-2 py-0.5 rounded-full bg-amber-200/70 text-amber-800 text-xs font-mono font-medium">
+                <span className="px-2 py-0.5 rounded-full bg-amber-200/70 text-yellow-800 text-xs font-mono font-medium">
                   {diagramCount}
                 </span>
               </div>

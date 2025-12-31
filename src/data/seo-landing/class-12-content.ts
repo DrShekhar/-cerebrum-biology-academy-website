@@ -534,7 +534,7 @@ export const bestBiologyTutorClass12: SEOLandingContent = {
     highlightedText: 'Your Tutor is Your Biggest Advantage',
     ctaText: 'Meet Dr. Shekhar',
     ctaLink: '/faculty',
-    backgroundGradient: 'from-amber-900 via-orange-900 to-red-900',
+    backgroundGradient: 'from-yellow-900 via-orange-900 to-red-900',
   },
 
   painPoints: {

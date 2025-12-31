@@ -502,10 +502,10 @@ const UICustomization: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl">
+          <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <Palette className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             UI Customization
           </h1>
         </motion.div>
@@ -523,19 +523,19 @@ const UICustomization: React.FC = () => {
               <div className="flex bg-gray-100 rounded-lg p-1">
                 <button
                   onClick={() => setPreviewMode('desktop')}
-                  className={`p-2 rounded ${previewMode === 'desktop' ? 'bg-white shadow text-pink-600' : 'text-gray-600'}`}
+                  className={`p-2 rounded ${previewMode === 'desktop' ? 'bg-white shadow text-indigo-600' : 'text-gray-600'}`}
                 >
                   <Monitor className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setPreviewMode('tablet')}
-                  className={`p-2 rounded ${previewMode === 'tablet' ? 'bg-white shadow text-pink-600' : 'text-gray-600'}`}
+                  className={`p-2 rounded ${previewMode === 'tablet' ? 'bg-white shadow text-indigo-600' : 'text-gray-600'}`}
                 >
                   <Tablet className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setPreviewMode('mobile')}
-                  className={`p-2 rounded ${previewMode === 'mobile' ? 'bg-white shadow text-pink-600' : 'text-gray-600'}`}
+                  className={`p-2 rounded ${previewMode === 'mobile' ? 'bg-white shadow text-indigo-600' : 'text-gray-600'}`}
                 >
                   <Smartphone className="w-4 h-4" />
                 </button>
@@ -546,7 +546,7 @@ const UICustomization: React.FC = () => {
                 type="checkbox"
                 checked={showPreview}
                 onChange={(e) => setShowPreview(e.target.checked)}
-                className="rounded border-gray-300 text-pink-600 focus:ring-pink-500"
+                className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
               />
               <span className="ml-2 text-sm text-gray-700">Show Live Preview</span>
             </label>
@@ -555,7 +555,7 @@ const UICustomization: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={exportCustomization}
-              className="px-4 py-2 border border-pink-600 text-pink-600 rounded-lg hover:bg-pink-50 transition-colors flex items-center gap-2"
+              className="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-pink-50 transition-colors flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               Export
@@ -563,7 +563,7 @@ const UICustomization: React.FC = () => {
             <button
               onClick={saveCustomization}
               disabled={saving}
-              className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors disabled:opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-pink-700 transition-colors disabled:opacity-50 flex items-center gap-2"
             >
               {saving ? (
                 <>
@@ -598,7 +598,7 @@ const UICustomization: React.FC = () => {
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all whitespace-nowrap ${
                 activeTab === id
-                  ? 'bg-white text-pink-600 shadow-md'
+                  ? 'bg-white text-indigo-600 shadow-md'
                   : 'text-gray-600 hover:text-gray-800'
               }`}
             >
@@ -624,7 +624,7 @@ const UICustomization: React.FC = () => {
                 className="bg-white rounded-xl p-6 border"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Palette className="w-5 h-5 text-pink-600" />
+                  <Palette className="w-5 h-5 text-indigo-600" />
                   Theme Selection
                 </h3>
 
@@ -635,14 +635,14 @@ const UICustomization: React.FC = () => {
                       onClick={() => updateTheme(theme.id)}
                       className={`p-4 border-2 rounded-lg cursor-pointer transition-all ${
                         customizationData.selectedTheme === theme.id
-                          ? 'border-pink-500 bg-pink-50'
+                          ? 'border-indigo-500 bg-pink-50'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="font-medium">{theme.name}</h4>
                         {customizationData.selectedTheme === theme.id && (
-                          <Check className="w-5 h-5 text-pink-600" />
+                          <Check className="w-5 h-5 text-indigo-600" />
                         )}
                       </div>
 
@@ -1517,9 +1517,9 @@ const UICustomization: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">Live Preview</h3>
                 <div className="flex items-center gap-2">
-                  <Monitor className={`w-4 h-4 ${previewMode === 'desktop' ? 'text-pink-600' : 'text-gray-400'}`} />
-                  <Tablet className={`w-4 h-4 ${previewMode === 'tablet' ? 'text-pink-600' : 'text-gray-400'}`} />
-                  <Smartphone className={`w-4 h-4 ${previewMode === 'mobile' ? 'text-pink-600' : 'text-gray-400'}`} />
+                  <Monitor className={`w-4 h-4 ${previewMode === 'desktop' ? 'text-indigo-600' : 'text-gray-400'}`} />
+                  <Tablet className={`w-4 h-4 ${previewMode === 'tablet' ? 'text-indigo-600' : 'text-gray-400'}`} />
+                  <Smartphone className={`w-4 h-4 ${previewMode === 'mobile' ? 'text-indigo-600' : 'text-gray-400'}`} />
                 </div>
               </div>
 

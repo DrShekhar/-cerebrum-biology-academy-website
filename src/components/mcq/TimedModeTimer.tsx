@@ -85,7 +85,7 @@ export function TimedModeTimer({
     if (isWarning) {
       return {
         bg: 'bg-amber-100',
-        text: 'text-amber-700',
+        text: 'text-yellow-700',
         progress: 'bg-amber-500',
         ring: 'ring-amber-500',
       }
@@ -239,7 +239,7 @@ export function TimedModeTimerCircular({
             isCritical
               ? 'text-red-600 animate-pulse'
               : isWarning
-                ? 'text-amber-600'
+                ? 'text-yellow-600'
                 : 'text-gray-700'
           }`}
         >

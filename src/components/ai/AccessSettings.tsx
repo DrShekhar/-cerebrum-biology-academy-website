@@ -1519,10 +1519,10 @@ const AccessSettings: React.FC = () => {
 
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <AlertCircle className="w-4 h-4 text-amber-600" />
-                      <h5 className="text-sm font-medium text-amber-800">Important Notes</h5>
+                      <AlertCircle className="w-4 h-4 text-yellow-600" />
+                      <h5 className="text-sm font-medium text-yellow-800">Important Notes</h5>
                     </div>
-                    <ul className="text-xs text-amber-700 space-y-1">
+                    <ul className="text-xs text-yellow-700 space-y-1">
                       <li>• Attempt counting starts when student begins the test</li>
                       <li>• Technical failures may not count as attempts (configurable)</li>
                       <li>• Administrators can reset individual student attempts</li>

@@ -107,7 +107,7 @@ export function MobileAppPromoSection({
       title: 'Community Support',
       description: 'Connect with batch mates, study groups, and daily motivational content.',
       icon: Users,
-      gradient: 'from-cyan-500 to-blue-500',
+      gradient: 'from-blue-500 to-blue-500',
       stats: '25K+ active community',
     },
   ]
@@ -263,7 +263,7 @@ export function MobileAppPromoSection({
               transition={{ delay: 0.5 }}
               className="text-center"
             >
-              <div className="text-3xl font-bold text-cyan-400">{appStats.activeUsers}%</div>
+              <div className="text-3xl font-bold text-blue-400">{appStats.activeUsers}%</div>
               <div className="text-blue-200 text-sm">Daily Active Users</div>
             </motion.div>
           </div>
@@ -305,7 +305,7 @@ export function MobileAppPromoSection({
                         <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
                         <p className="text-blue-200 text-sm mb-2">{feature.description}</p>
                         {feature.stats && (
-                          <div className="text-xs text-cyan-400 font-medium">{feature.stats}</div>
+                          <div className="text-xs text-blue-400 font-medium">{feature.stats}</div>
                         )}
                       </div>
                     </div>
@@ -503,7 +503,7 @@ export function MobileAppPromoSection({
 
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-blue-500/20 rounded-full blur-3xl" />
     </section>
   )
 }

@@ -102,7 +102,7 @@ export function RealStudentTestimonials({
                       </div>
                     )}
 
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <div className="absolute top-4 right-4 bg-[#4a5d4a] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                       {testimonial.year}
                     </div>
                   </div>

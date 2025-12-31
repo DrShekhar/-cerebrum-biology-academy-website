@@ -74,7 +74,7 @@ export function PremiumDemoCard({
             : 'border-purple-200 bg-white hover:border-purple-400'
         }`}
       >
-        <div className="absolute top-0 right-0 bg-gradient-to-br from-purple-600 to-pink-600 text-white px-4 py-1 rounded-bl-xl text-xs font-bold flex items-center gap-1">
+        <div className="absolute top-0 right-0 bg-gradient-to-br from-purple-600 to-indigo-600 text-white px-4 py-1 rounded-bl-xl text-xs font-bold flex items-center gap-1">
           <Sparkles className="w-3 h-3" />
           PREMIUM
         </div>

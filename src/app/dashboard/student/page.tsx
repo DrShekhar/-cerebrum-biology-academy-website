@@ -499,7 +499,7 @@ export default function StudentDashboard() {
                                       : idx === 1
                                         ? 'bg-gray-400 text-white'
                                         : idx === 2
-                                          ? 'bg-amber-600 text-white'
+                                          ? 'bg-yellow-600 text-white'
                                           : 'bg-gray-200 text-gray-700'
                                   }`}
                                 >

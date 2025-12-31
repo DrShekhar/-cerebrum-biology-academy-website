@@ -21,7 +21,7 @@ const botanyTopics = [
   { name: 'Ecology & Environment', questions: '10-12', percentage: '12%', color: 'bg-green-600' },
   { name: 'Plant Kingdom', questions: '5-6', percentage: '6%', color: 'bg-green-600' },
   { name: 'Cell Biology', questions: '8-10', percentage: '10%', color: 'bg-lime-500' },
-  { name: 'Molecular Biology', questions: '5-6', percentage: '6%', color: 'bg-cyan-500' },
+  { name: 'Molecular Biology', questions: '5-6', percentage: '6%', color: 'bg-blue-500' },
   { name: 'Plant Morphology', questions: '2-3', percentage: '3%', color: 'bg-blue-500' },
 ]
 

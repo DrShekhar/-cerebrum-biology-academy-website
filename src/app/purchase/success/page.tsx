@@ -338,7 +338,7 @@ function PurchaseSuccessContent() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
           <h2 className="text-2xl font-bold mb-6">What's Next?</h2>
           <div className="space-y-4">
             <div className="flex gap-4">

@@ -364,8 +364,8 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
         exit={{ opacity: 0 }}
         className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg"
       >
-        <Calendar className="w-4 h-4 text-amber-600" />
-        <div className="text-sm text-amber-800">
+        <Calendar className="w-4 h-4 text-yellow-600" />
+        <div className="text-sm text-yellow-800">
           <span className="font-medium">Batch starts in {daysUntilStart} days</span>
           <span className="text-xs block opacity-75">
             {urgencyData.batchStartDate.toLocaleDateString('en-IN', {

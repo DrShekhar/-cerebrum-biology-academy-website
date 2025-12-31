@@ -247,7 +247,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
         >
           <div className="flex items-center gap-2 mb-4">
             {currentQuestion.isPYQ && (
-              <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">
+              <span className="px-2 py-1 bg-amber-100 text-yellow-700 text-xs rounded-full">
                 PYQ {currentQuestion.pyqYear}
               </span>
             )}

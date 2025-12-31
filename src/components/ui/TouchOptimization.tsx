@@ -191,7 +191,7 @@ export function MobileActionBar({
 
         <TouchTarget
           variant="heavy"
-          className="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
+          className="flex-1 bg-orange-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
           onClick={onEnrollClick}
         >
           <BookOpen className="w-5 h-5" />

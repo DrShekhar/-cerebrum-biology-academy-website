@@ -388,14 +388,14 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
     {
       name: 'Cell Biology',
       icon: Beaker,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
       questions: 45,
       topics: ['Cell Structure', 'Cell Division', 'Cell Organelles'],
     },
     {
       name: 'Genetics',
       icon: Dna,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-indigo-500',
       questions: 52,
       topics: ['Mendelian Genetics', 'DNA Replication', 'Gene Expression'],
     },
@@ -685,7 +685,7 @@ function FreeTrialCounter() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-6 text-white text-center"
+      className="bg-orange-600 rounded-3xl p-6 text-white text-center"
     >
       <div className="flex items-center justify-center mb-2">
         <Sparkles className="w-6 h-6 mr-2" />
@@ -1037,14 +1037,14 @@ export default function CeriAIShowcase() {
       title: '24/7 AI Biology Tutor',
       description:
         'Get instant, accurate answers to any Biology doubt anytime. Ceri AI never sleeps and is always ready to help you learn.',
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-purple-500 to-indigo-500',
     },
     {
       icon: Mic,
       title: 'Voice Interaction',
       description:
         'Ask questions using your voice and receive spoken explanations. Perfect for hands-free learning while studying.',
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-blue-500 to-blue-500',
     },
     {
       icon: Camera,

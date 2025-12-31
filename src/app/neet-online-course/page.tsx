@@ -103,7 +103,7 @@ export default function NeetOnlineCoursePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <motion.div
@@ -340,7 +340,7 @@ export default function NeetOnlineCoursePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Enroll in NEET Online Course</h2>

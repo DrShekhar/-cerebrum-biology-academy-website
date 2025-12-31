@@ -60,7 +60,7 @@ export default function PlanDetailsPage() {
       case 'ascent':
         return 'from-blue-600 to-blue-700'
       case 'pursuit':
-        return 'from-green-600 to-green-700'
+        return 'bg-[#4a5d4a]'
       default:
         return 'from-gray-600 to-gray-700'
     }

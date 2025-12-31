@@ -127,7 +127,7 @@ export default function IBBiologyTutorPage() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-700 pt-20 pb-32">
+        <section className="relative overflow-hidden bg-[#4a5d4a] pt-20 pb-32">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-green-800/20 to-transparent"></div>
 
@@ -294,7 +294,7 @@ export default function IBBiologyTutorPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={scaleIn}
-                className="bg-gradient-to-br from-green-600 to-green-700 rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden"
+                className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden"
               >
                 <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
                   RECOMMENDED
@@ -411,7 +411,7 @@ export default function IBBiologyTutorPage() {
                   icon: Leaf,
                   title: 'Ecology',
                   description: 'Species, communities, ecosystems, energy flow, and carbon cycling',
-                  color: 'from-green-600 to-green-700',
+                  color: 'bg-[#4a5d4a]',
                 },
                 {
                   icon: Target,
@@ -532,7 +532,7 @@ export default function IBBiologyTutorPage() {
                   className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-green-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="bg-[#4a5d4a] w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                       <topic.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -621,7 +621,7 @@ export default function IBBiologyTutorPage() {
                   variants={scaleIn}
                   className="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-br from-green-600 to-green-700 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-[#4a5d4a] w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                     <paper.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{paper.title}</h3>
@@ -643,7 +643,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* IA Support Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
@@ -782,7 +782,7 @@ export default function IBBiologyTutorPage() {
                   variants={fadeInUp}
                   className="bg-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                 >
-                  <div className="bg-gradient-to-br from-green-600 to-green-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-[#4a5d4a] w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -874,7 +874,7 @@ export default function IBBiologyTutorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial="hidden"

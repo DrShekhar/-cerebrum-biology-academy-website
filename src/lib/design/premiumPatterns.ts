@@ -54,7 +54,7 @@ export const premiumGradients = {
   academicBlue: 'bg-indigo-600',
   scholarlyPurple: 'bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600',
   researchGreen: 'bg-gradient-to-r from-green-600 via-green-600 to-green-600',
-  innovationOrange: 'bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600',
+  innovationOrange: 'bg-gradient-to-r from-orange-600 via-yellow-600 to-yellow-600',
 
   // Subtle academic backgrounds
   softAcademic: 'bg-gray-50',

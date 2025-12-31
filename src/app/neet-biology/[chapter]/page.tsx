@@ -429,7 +429,7 @@ export default function ChapterPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
-        <section className="relative py-16 bg-gradient-to-r from-green-600 to-green-700 text-white overflow-hidden">
+        <section className="relative py-16 bg-[#4a5d4a] text-white overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <Link
               href="/neet-biology"
@@ -589,7 +589,7 @@ export default function ChapterPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white"
+                  className="bg-[#4a5d4a] rounded-xl p-6 text-white"
                 >
                   <h3 className="font-bold text-lg mb-3">Master {chapter.name}</h3>
                   <p className="text-green-100 text-sm mb-4">

@@ -73,21 +73,21 @@ export default function IGCSEBiologyTutorPage() {
         'Theory Papers',
         'Alternative to Practical',
       ],
-      gradient: 'from-cyan-500 to-green-600',
+      gradient: 'from-blue-500 to-green-600',
     },
     {
       name: 'Edexcel IGCSE',
       code: '4BI1',
       icon: '📘',
       features: ['Paper 1B & 2B', 'International Focus', 'Controlled Assessment', 'Science Award'],
-      gradient: 'from-green-600 to-cyan-600',
+      gradient: 'from-green-600 to-blue-600',
     },
     {
       name: 'AQA GCSE',
       code: '8461',
       icon: '🧬',
       features: ['Foundation & Higher', 'Combined Science', 'Required Practicals', 'Trilogy'],
-      gradient: 'from-cyan-600 to-green-700',
+      gradient: 'from-blue-600 to-green-700',
     },
     {
       name: 'OCR GCSE',
@@ -153,7 +153,7 @@ export default function IGCSEBiologyTutorPage() {
     {
       grade: 'B',
       percentage: '70-79%',
-      color: 'from-blue-400 to-cyan-500',
+      color: 'from-blue-400 to-blue-500',
       tips: 'Solid understanding, consistent practice',
     },
     {
@@ -203,9 +203,9 @@ export default function IGCSEBiologyTutorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-700 py-20 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-700 py-20 text-white">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -254,7 +254,7 @@ export default function IGCSEBiologyTutorPage() {
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
                   href="/demo"
-                  className="rounded-xl bg-white px-8 py-4 text-center font-semibold text-cyan-700 shadow-xl transition hover:bg-cyan-50 hover:shadow-2xl"
+                  className="rounded-xl bg-white px-8 py-4 text-center font-semibold text-cyan-700 shadow-xl transition hover:bg-blue-50 hover:shadow-2xl"
                 >
                   Book Free Demo Class
                 </Link>
@@ -316,7 +316,7 @@ export default function IGCSEBiologyTutorPage() {
         </section>
 
         {/* Syllabus Topics Section */}
-        <section className="bg-gradient-to-b from-cyan-50 to-white py-16">
+        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -347,7 +347,7 @@ export default function IGCSEBiologyTutorPage() {
                   <ul className="space-y-2">
                     {topic.topics.map((item) => (
                       <li key={item} className="flex items-start text-gray-600">
-                        <span className="mr-2 text-cyan-600">•</span>
+                        <span className="mr-2 text-blue-600">•</span>
                         <span className="text-sm">{item}</span>
                       </li>
                     ))}
@@ -420,7 +420,7 @@ export default function IGCSEBiologyTutorPage() {
                 ].map((tip) => (
                   <div key={tip} className="flex items-start">
                     <svg
-                      className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-cyan-600"
+                      className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -439,7 +439,7 @@ export default function IGCSEBiologyTutorPage() {
         </section>
 
         {/* Features Section */}
-        <section className="bg-gradient-to-b from-cyan-50 to-white py-16">
+        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -507,7 +507,7 @@ export default function IGCSEBiologyTutorPage() {
                   >
                     <h3 className="text-lg font-bold text-gray-900">{faq.name}</h3>
                     <svg
-                      className={`h-6 w-6 flex-shrink-0 text-cyan-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                      className={`h-6 w-6 flex-shrink-0 text-blue-600 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -532,7 +532,7 @@ export default function IGCSEBiologyTutorPage() {
         </section>
 
         {/* Internal Links Section */}
-        <section className="bg-gradient-to-b from-cyan-50 to-white py-16">
+        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -572,7 +572,7 @@ export default function IGCSEBiologyTutorPage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group rounded-2xl border border-cyan-100 bg-white p-6 shadow-md transition hover:border-cyan-300 hover:shadow-xl"
+                  className="group rounded-2xl border border-cyan-100 bg-white p-6 shadow-md transition hover:border-blue-300 hover:shadow-xl"
                 >
                   <div className="mb-3 text-4xl">{link.icon}</div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900 group-hover:text-cyan-700">
@@ -586,7 +586,7 @@ export default function IGCSEBiologyTutorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-green-700 py-20 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-700 py-20 text-white">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -613,7 +613,7 @@ export default function IGCSEBiologyTutorPage() {
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
                   href="/demo"
-                  className="rounded-xl bg-white px-8 py-4 font-semibold text-cyan-700 shadow-xl transition hover:bg-cyan-50"
+                  className="rounded-xl bg-white px-8 py-4 font-semibold text-cyan-700 shadow-xl transition hover:bg-blue-50"
                 >
                   Book Free Demo Class
                 </Link>

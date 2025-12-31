@@ -101,7 +101,7 @@ export default function DropperPage() {
       duration: '2 months',
       focus: 'Complete revision of Class 11 & 12 concepts with clarity',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       phase: 'Phase 2: Advanced Practice',
@@ -122,7 +122,7 @@ export default function DropperPage() {
       duration: '1 month',
       focus: 'Last-minute revision, confidence building, and mental preparation',
       icon: Zap,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 
@@ -480,7 +480,7 @@ export default function DropperPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-8">
+            <div className="bg-orange-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 🎯 Average Score Improvement: 156+ marks in dropper year
               </h3>
@@ -492,7 +492,7 @@ export default function DropperPage() {
                 variant="primary"
                 size="xl"
                 onClick={handleDemoBooking}
-                className="bg-gradient-to-r from-orange-600 to-red-600"
+                className="bg-orange-600"
               >
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Start Your Transformation

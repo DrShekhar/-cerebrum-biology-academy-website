@@ -36,7 +36,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
     ascent: {
       name: 'Ascent',
       gradient: 'from-slate-900 to-slate-700',
-      accentColor: 'from-green-600 to-green-700',
+      accentColor: 'bg-[#4a5d4a]',
       bgColor: 'bg-green-50/50',
       borderColor: 'border-green-200/60',
     },

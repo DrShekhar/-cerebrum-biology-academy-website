@@ -277,7 +277,7 @@ export function NcertFilter({
                   <span className="font-medium text-gray-800">Diagram-Based Questions</span>
                   <p className="text-xs text-gray-500">Practice with visual diagrams</p>
                 </div>
-                <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+                <span className="px-2 py-0.5 rounded-full bg-amber-100 text-yellow-700 text-xs font-medium">
                   {diagramCount} questions
                 </span>
               </div>

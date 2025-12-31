@@ -90,7 +90,7 @@ const aiFeatures: AIFeature[] = [
       { label: 'Languages', value: '7' },
       { label: 'Sessions', value: '5,000+' },
     ],
-    color: 'from-purple-500 to-pink-600',
+    color: 'from-purple-500 to-indigo-600',
     bgGradient: 'from-purple-50 to-pink-50',
   },
   {
@@ -131,8 +131,8 @@ const aiFeatures: AIFeature[] = [
       { label: 'Avg Response', value: '1.8s' },
       { label: 'Daily Users', value: '2,500+' },
     ],
-    color: 'from-orange-500 to-red-600',
-    bgGradient: 'from-orange-50 to-red-50',
+    color: 'bg-orange-600',
+    bgGradient: 'bg-orange-50',
   },
 ]
 

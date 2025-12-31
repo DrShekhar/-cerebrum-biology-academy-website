@@ -18,7 +18,7 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
 
   const tierDetails = course.tiers[activeTier]
   const tierColors = {
-    pinnacle: 'from-purple-600 to-pink-600',
+    pinnacle: 'from-purple-600 to-indigo-600',
     ascent: 'bg-blue-600',
     pursuit: 'bg-green-600',
   }

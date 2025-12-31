@@ -268,7 +268,7 @@ const FreeResourcesHub = () => {
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-xl p-6">
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
             <Clock className="h-8 w-8 text-orange-600 mb-4" />
             <h3 className="text-lg font-bold mb-2">Study Planner</h3>
             <p className="text-gray-600 mb-4">

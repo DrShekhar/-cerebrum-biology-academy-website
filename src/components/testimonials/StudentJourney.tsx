@@ -365,7 +365,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
       </div>
 
       {/* Student's Advice */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl text-white p-8">
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl text-white p-8">
         <h3 className="text-2xl font-bold mb-6">
           {student.name}&apos;s Advice for Future NEET Aspirants
         </h3>

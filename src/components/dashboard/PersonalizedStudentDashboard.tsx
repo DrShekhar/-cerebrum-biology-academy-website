@@ -429,7 +429,7 @@ export function PersonalizedStudentDashboard() {
         <div className="bg-white shadow-lg border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0 animate-pulse">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center flex-shrink-0 animate-pulse">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
@@ -466,7 +466,7 @@ export function PersonalizedStudentDashboard() {
         <div className="bg-white shadow-lg border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
@@ -557,7 +557,7 @@ export function PersonalizedStudentDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-0 sm:flex-nowrap">
             <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">

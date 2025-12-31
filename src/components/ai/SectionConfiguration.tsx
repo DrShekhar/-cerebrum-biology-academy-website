@@ -362,7 +362,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             label: 'Total Sections',
             value: sections.length,
             icon: FileText,
-            color: 'from-blue-500 to-cyan-500',
+            color: 'from-blue-500 to-blue-500',
           },
           {
             label: 'Total Questions',
@@ -374,13 +374,13 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             label: 'Total Marks',
             value: totals.totalMarks,
             icon: Award,
-            color: 'from-purple-500 to-pink-500',
+            color: 'from-purple-500 to-indigo-500',
           },
           {
             label: 'Total Time',
             value: `${totals.totalTime} min`,
             icon: Clock,
-            color: 'from-orange-500 to-red-500',
+            color: 'bg-orange-600',
           },
         ].map((item, index) => (
           <motion.div

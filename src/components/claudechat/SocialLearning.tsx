@@ -247,7 +247,7 @@ export function SocialLearning({
   const getRankColor = (rank: number) => {
     if (rank === 1) return 'text-yellow-600'
     if (rank === 2) return 'text-gray-600'
-    if (rank === 3) return 'text-amber-600'
+    if (rank === 3) return 'text-yellow-600'
     return 'text-gray-700'
   }
 

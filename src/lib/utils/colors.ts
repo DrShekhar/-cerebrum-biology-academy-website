@@ -52,10 +52,10 @@ export const colorMapping = {
 
   // Gold (Achievement) - Maps to Tailwind amber
   gold: {
-    900: 'amber-900', // var(--cerebrum-gold-900) → bg-amber-900
-    800: 'amber-800', // var(--cerebrum-gold-800) → bg-amber-800
-    700: 'amber-700', // var(--cerebrum-gold-700) → bg-amber-700
-    600: 'amber-600', // var(--cerebrum-gold-600) → bg-amber-600
+    900: 'yellow-900', // var(--cerebrum-gold-900) → bg-yellow-900
+    800: 'yellow-800', // var(--cerebrum-gold-800) → bg-yellow-800
+    700: 'yellow-700', // var(--cerebrum-gold-700) → bg-yellow-700
+    600: 'yellow-600', // var(--cerebrum-gold-600) → bg-yellow-600
     500: 'amber-500', // var(--cerebrum-gold-500) → bg-amber-500
     400: 'amber-400', // var(--cerebrum-gold-400) → bg-amber-400
     300: 'amber-300', // var(--cerebrum-gold-300) → bg-amber-300
@@ -97,7 +97,7 @@ export const colorCombinations = {
   success: 'bg-green-50 border-green-200 text-green-800',
 
   // Warning states
-  warning: 'bg-amber-50 border-amber-200 text-amber-900',
+  warning: 'bg-amber-50 border-amber-200 text-yellow-900',
 
   // Error states
   error: 'bg-red-50 border-red-200 text-red-900',

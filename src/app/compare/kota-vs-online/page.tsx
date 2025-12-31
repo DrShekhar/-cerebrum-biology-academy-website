@@ -333,7 +333,7 @@ export default function KotaVsOnlinePage() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
+                  <tr className="bg-orange-600 text-white">
                     <th className="px-6 py-4 text-left font-bold">Factor</th>
                     <th className="px-6 py-4 text-center font-bold">Kota Coaching</th>
                     <th className="px-6 py-4 text-center font-bold">Cerebrum Online</th>
@@ -482,7 +482,7 @@ export default function KotaVsOnlinePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-4 sm:p-6 md:p-8">
+            <div className="bg-[#4a5d4a] text-white rounded-xl p-4 sm:p-6 md:p-8">
               <DollarSign className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4" />
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">₹2,57,000</div>
               <div className="text-xl sm:text-2xl mb-4">Total Annual Savings</div>
@@ -667,7 +667,7 @@ export default function KotaVsOnlinePage() {
 
       <ParentTestimonialsSection />
 
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

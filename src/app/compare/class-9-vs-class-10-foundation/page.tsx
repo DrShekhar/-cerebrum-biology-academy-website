@@ -151,7 +151,7 @@ export default function Class9VsClass10Page() {
       focus: 'NCERT Class 10 + Intermediate NEET topics',
       hours: '3-4 hrs/day',
       stress: 'Low',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       year: 'Year 3 (Class 11)',
@@ -167,7 +167,7 @@ export default function Class9VsClass10Page() {
       focus: 'Class 12 + Full NEET prep + Mock tests',
       hours: '5-6 hrs/day',
       stress: 'Moderate',
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 
@@ -186,7 +186,7 @@ export default function Class9VsClass10Page() {
       focus: 'Complete Class 11 syllabus (compressed)',
       hours: '5-6 hrs/day',
       stress: 'High',
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
     {
       year: 'Year 3 (Class 12)',

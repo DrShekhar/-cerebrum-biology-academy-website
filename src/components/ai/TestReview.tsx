@@ -1198,8 +1198,8 @@ const TestReview: React.FC = () => {
                   </div>
 
                   <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-                    <h5 className="font-medium text-amber-800 mb-2">Time Allocation Recommendations</h5>
-                    <ul className="text-sm text-amber-700 space-y-1">
+                    <h5 className="font-medium text-yellow-800 mb-2">Time Allocation Recommendations</h5>
+                    <ul className="text-sm text-yellow-700 space-y-1">
                       <li>• Easy questions: 1-2 minutes each</li>
                       <li>• Medium questions: 2-3 minutes each</li>
                       <li>• Hard questions: 3-5 minutes each</li>

@@ -119,7 +119,7 @@ export default function TestLearningPage() {
         </div>
 
         {/* Study Timer */}
-        <div className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-4">Focus Study Session</h2>
           <div className="text-6xl font-mono font-bold mb-6">00:00:00</div>
           <div className="flex items-center justify-center space-x-4">

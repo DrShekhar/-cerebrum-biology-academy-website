@@ -123,7 +123,7 @@ export default function BiologyClass910Page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-600 via-orange-600 to-yellow-600 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-yellow-600 via-orange-600 to-yellow-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 

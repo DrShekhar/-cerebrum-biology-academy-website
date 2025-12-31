@@ -69,7 +69,7 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
         }
       case 'urgent':
         return {
-          bgGradient: 'from-orange-600 to-red-600',
+          bgGradient: 'bg-orange-600',
           icon: Clock,
           iconColor: 'text-orange-100',
           title: `Only ${trialStatus.daysRemaining} Days Left!`,

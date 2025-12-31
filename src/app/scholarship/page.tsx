@@ -242,7 +242,7 @@ export default function ScholarshipPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-[#4a5d4a] text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-6 sm:mb-8 flex justify-center">
             <div className="bg-white/20 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-flex items-center gap-2 sm:gap-3 border border-white/30">
@@ -595,7 +595,7 @@ export default function ScholarshipPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
+      <section className="py-8 sm:py-12 md:py-16 bg-[#4a5d4a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Award className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 text-yellow-300" />
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">

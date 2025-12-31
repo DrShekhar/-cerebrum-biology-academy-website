@@ -340,7 +340,7 @@ export default function NeetCoachingFaridabadPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-4 border border-orange-100 text-center"
+                className="bg-orange-50 rounded-xl p-4 border border-orange-100 text-center"
               >
                 <div className="font-bold text-gray-900">Sector {item.sector}</div>
                 <div className="text-orange-600 font-semibold text-sm mt-1">{item.students}</div>

@@ -243,7 +243,7 @@ export default function BestNeetCoachingIndiaPage() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-green-600 to-green-700 text-white">
+                  <tr className="bg-[#4a5d4a] text-white">
                     <th className="px-6 py-4 text-left font-bold">Institute</th>
                     <th className="px-6 py-4 text-center font-bold">Success Rate</th>
                     <th className="px-6 py-4 text-center font-bold">Batch Size</th>

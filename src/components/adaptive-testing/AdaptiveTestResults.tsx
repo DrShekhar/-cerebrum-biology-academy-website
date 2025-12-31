@@ -125,9 +125,9 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
   const getMasteryColor = (level: string): string => {
     switch (level.toLowerCase()) {
       case 'advanced': return 'bg-green-600'
-      case 'proficient': return 'from-blue-500 to-cyan-500'
+      case 'proficient': return 'from-blue-500 to-blue-500'
       case 'developing': return 'from-yellow-500 to-orange-500'
-      case 'beginning': return 'from-orange-500 to-red-500'
+      case 'beginning': return 'bg-orange-600'
       default: return 'from-gray-500 to-gray-600'
     }
   }

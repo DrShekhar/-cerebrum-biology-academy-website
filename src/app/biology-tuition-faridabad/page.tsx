@@ -265,7 +265,7 @@ export default function BiologyTuitionFaridabadPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-4">
+                <div className="bg-orange-600 text-white p-4">
                   <div className="text-sm font-medium opacity-90">{program.class}</div>
                   <div className="text-xl font-bold">{program.title}</div>
                 </div>
@@ -328,7 +328,7 @@ export default function BiologyTuitionFaridabadPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-4 text-center border border-orange-100"
+                className="bg-orange-50 rounded-xl p-4 text-center border border-orange-100"
               >
                 <MapPin className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>

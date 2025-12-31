@@ -313,7 +313,7 @@ export default function OnlineClassesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-600 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
@@ -502,7 +502,7 @@ export default function OnlineClassesPage() {
                 className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
                     {story.name.charAt(0)}
                   </div>
                   <div className="ml-3 sm:ml-4">
@@ -693,7 +693,7 @@ export default function OnlineClassesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
             Ready to Start Your Online NEET Journey?

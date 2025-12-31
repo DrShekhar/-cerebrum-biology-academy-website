@@ -463,7 +463,7 @@ function CollegeSearchForm({
                   {selectedCollege.type}
                 </span>
                 {selectedCollege.nirfRank && (
-                  <span className="flex items-center gap-1 text-amber-600">
+                  <span className="flex items-center gap-1 text-yellow-600">
                     <Award className="h-4 w-4" />
                     NIRF #{selectedCollege.nirfRank}
                   </span>
@@ -505,7 +505,7 @@ function CollegeSearchForm({
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {[
               { key: 'general', label: 'General', color: 'bg-blue-100 text-blue-800' },
-              { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-amber-800' },
+              { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-yellow-800' },
               { key: 'obc', label: 'OBC', color: 'bg-green-100 text-green-800' },
               { key: 'sc', label: 'SC', color: 'bg-purple-100 text-purple-800' },
               { key: 'st', label: 'ST', color: 'bg-orange-100 text-orange-800' },
@@ -538,7 +538,7 @@ function CollegeSearchForm({
               <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {[
                   { key: 'general', label: 'General', color: 'bg-blue-100 text-blue-800' },
-                  { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-amber-800' },
+                  { key: 'ews', label: 'EWS', color: 'bg-amber-100 text-yellow-800' },
                   { key: 'obc', label: 'OBC', color: 'bg-green-100 text-green-800' },
                   { key: 'sc', label: 'SC', color: 'bg-purple-100 text-purple-800' },
                   { key: 'st', label: 'ST', color: 'bg-orange-100 text-orange-800' },
@@ -797,7 +797,7 @@ function RankSearchForm({
           ))}
         </div>
         {quotaPreference === 'state' && !domicileState && (
-          <p className="mt-2 text-sm text-amber-700">
+          <p className="mt-2 text-sm text-yellow-700">
             Please select your domicile state above to see State Quota options
           </p>
         )}

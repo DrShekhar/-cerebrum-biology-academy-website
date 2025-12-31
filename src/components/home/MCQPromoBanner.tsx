@@ -188,7 +188,7 @@ export const MCQPromoBanner = memo(function MCQPromoBanner() {
             label="Questions"
             icon={Atom}
             delay={0.3}
-            gradient="bg-gradient-to-br from-amber-500 to-amber-600"
+            gradient="bg-gradient-to-br from-amber-500 to-yellow-600"
           />
           <StatCard
             value="10+"

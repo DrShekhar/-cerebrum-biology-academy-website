@@ -272,7 +272,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
     const styles = {
       gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
       blue: 'bg-green-600 text-white',
-      green: 'bg-gradient-to-r from-green-600 to-green-700 text-white',
+      green: 'bg-[#4a5d4a] text-white',
     }
     return styles[color as keyof typeof styles] || styles.blue
   }
@@ -282,7 +282,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
       premium: 'border-2 border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50',
       standard: 'border-2 border-green-500 bg-navy-50',
       foundation: 'border border-gray-300 bg-gradient-to-br from-gray-50 to-slate-50',
-      crash: 'border border-orange-300 bg-gradient-to-br from-orange-50 to-red-50',
+      crash: 'border border-orange-300 bg-orange-50',
     }
     return styles[category as keyof typeof styles] || styles.foundation
   }
@@ -882,7 +882,7 @@ function getBadgeStyles(color: string) {
   const styles = {
     gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
     blue: 'bg-green-600 text-white',
-    green: 'bg-gradient-to-r from-green-600 to-green-700 text-white',
+    green: 'bg-[#4a5d4a] text-white',
   }
   return styles[color as keyof typeof styles] || styles.blue
 }

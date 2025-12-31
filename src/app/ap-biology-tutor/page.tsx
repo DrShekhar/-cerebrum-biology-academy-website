@@ -117,7 +117,7 @@ const scoreDistribution = [
     score: 4,
     percentage: '~25%',
     description: 'Well Qualified',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-500 to-blue-600',
   },
   {
     score: 3,
@@ -129,7 +129,7 @@ const scoreDistribution = [
     score: 2,
     percentage: '~20%',
     description: 'Possibly Qualified',
-    color: 'from-orange-400 to-red-400',
+    color: 'bg-orange-500',
   },
   {
     score: 1,
@@ -516,7 +516,7 @@ export default function APBiologyTutorPage() {
           </div>
 
           <motion.div
-            className="mt-12 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 max-w-4xl mx-auto"
+            className="mt-12 bg-[#4a5d4a] text-white rounded-xl p-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}

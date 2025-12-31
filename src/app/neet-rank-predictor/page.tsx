@@ -224,7 +224,7 @@ export default function NEETRankPredictorPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-600 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-orange-600 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -303,7 +303,7 @@ export default function NEETRankPredictorPage() {
 
                     <button
                       onClick={handlePredict}
-                      className="w-full rounded-lg bg-gradient-to-r from-orange-600 to-red-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:from-orange-700 hover:to-red-700"
+                      className="w-full rounded-lg bg-orange-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-orange-700"
                     >
                       Predict My Rank
                     </button>
@@ -319,7 +319,7 @@ export default function NEETRankPredictorPage() {
                 ) : (
                   result && (
                     <div className="space-y-6">
-                      <div className="rounded-xl bg-gradient-to-r from-orange-500 to-red-500 p-6 text-center text-white">
+                      <div className="rounded-xl bg-orange-600 p-6 text-center text-white">
                         <p className="mb-2 text-orange-100">Your Predicted NEET Rank</p>
                         <p className="text-5xl font-bold">{result.rank.toLocaleString('en-IN')}</p>
                         <p className="mt-2 text-orange-100">Percentile: {result.percentile}%</p>
@@ -533,7 +533,7 @@ export default function NEETRankPredictorPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-orange-600 to-red-600">
+            <div className="overflow-hidden rounded-2xl bg-orange-600">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">

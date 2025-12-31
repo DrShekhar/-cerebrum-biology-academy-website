@@ -291,7 +291,7 @@ export default function LowFeesMedicalCollegesPage() {
                               {college.name}
                             </Link>
                             {college.nirfRank && (
-                              <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                              <span className="ml-2 text-xs bg-amber-100 text-yellow-700 px-2 py-0.5 rounded-full">
                                 NIRF #{college.nirfRank}
                               </span>
                             )}

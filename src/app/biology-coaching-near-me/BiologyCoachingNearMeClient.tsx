@@ -219,7 +219,7 @@ export function BiologyCoachingNearMeClient() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+                <div className="bg-[#4a5d4a] text-white p-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold">{center.name}</h3>
                     <div className="flex items-center">

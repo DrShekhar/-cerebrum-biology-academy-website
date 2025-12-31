@@ -46,7 +46,7 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
       case 'PERFECTIONIST':
         return 'bg-green-600'
       case 'COMMUNITY_HELPER':
-        return 'bg-pink-500'
+        return 'bg-indigo-500'
       case 'BOOKWORM':
         return 'bg-indigo-500'
       default:

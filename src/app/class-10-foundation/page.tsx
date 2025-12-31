@@ -168,7 +168,7 @@ export default function Class10FoundationPage() {
       title: 'Board + NEET Focus',
       description: 'Dual preparation strategy for Class 10 boards and NEET foundation building',
       icon: Target,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'Perfect Timing',
@@ -186,7 +186,7 @@ export default function Class10FoundationPage() {
       title: 'Early Bird Advantage',
       description: 'Start before the competition and build unbeatable competitive edge',
       icon: Rocket,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 
@@ -597,7 +597,7 @@ export default function Class10FoundationPage() {
       <PhotoGallerySection showFeaturedOnly={true} maxPhotos={6} />
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-cyan-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

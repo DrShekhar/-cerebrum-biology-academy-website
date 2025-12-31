@@ -427,19 +427,19 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 label: 'Branching Rules',
                 value: configuration.branchingRules.filter((r) => r.isActive).length,
                 icon: GitBranch,
-                color: 'from-blue-500 to-cyan-500',
+                color: 'from-blue-500 to-blue-500',
               },
               {
                 label: 'Difficulty Rules',
                 value: configuration.difficultyAdjustments.filter((r) => r.isEnabled).length,
                 icon: TrendingUp,
-                color: 'from-purple-500 to-pink-500',
+                color: 'from-purple-500 to-indigo-500',
               },
               {
                 label: 'Skip Rules',
                 value: configuration.skipLogicRules.filter((r) => r.isActive).length,
                 icon: SkipForward,
-                color: 'from-orange-500 to-red-500',
+                color: 'bg-orange-600',
               },
               {
                 label: 'Time Extensions',

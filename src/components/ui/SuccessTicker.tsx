@@ -215,7 +215,7 @@ export function CompactSuccessTicker() {
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 50, opacity: 0 }}
-      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-gradient-to-r from-green-600 to-green-700 text-white p-3 rounded-lg shadow-lg"
+      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg"
     >
       <div className="flex items-start gap-2">
         <div className="flex-shrink-0 mt-0.5">

@@ -525,7 +525,7 @@ export const class10BoardNeetCoaching: SEOLandingContent = {
     highlightedText: '95%+ in Boards, NEET Ready for Class 11',
     ctaText: 'See Our Dual Approach',
     ctaLink: '/courses/class-10-foundation',
-    backgroundGradient: 'from-orange-900 via-amber-900 to-yellow-900',
+    backgroundGradient: 'from-orange-900 via-yellow-900 to-yellow-900',
   },
 
   painPoints: {

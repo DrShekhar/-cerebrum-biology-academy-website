@@ -189,7 +189,7 @@ export function CourseSeriesContainer({
                           animate={{ scale: 1 }}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="flex-1 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                          className="flex-1 bg-[#4a5d4a] text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                         >
                           Enroll Now
                         </motion.button>

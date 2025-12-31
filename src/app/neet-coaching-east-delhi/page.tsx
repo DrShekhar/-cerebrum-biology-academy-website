@@ -233,7 +233,7 @@ export default function NEETCoachingEastDelhiPage() {
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Best NEET Coaching in{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-400">
                 East Delhi
               </span>
             </h1>
@@ -543,7 +543,7 @@ export default function NEETCoachingEastDelhiPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-cyan-600">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

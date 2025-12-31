@@ -328,7 +328,7 @@ export function PersonalizedLearningPath() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8"
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-8"
           >
             <div className="text-center">
               <h2 className="text-2xl font-bold mb-4">

@@ -24,10 +24,10 @@ export default function DisclaimerPage() {
           </p>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
-            <h2 className="text-base sm:text-lg font-semibold text-amber-900 mb-2">
+            <h2 className="text-base sm:text-lg font-semibold text-yellow-900 mb-2">
               Important Notice
             </h2>
-            <p className="text-amber-800 text-sm sm:text-base">
+            <p className="text-yellow-800 text-sm sm:text-base">
               This disclaimer governs the use of our website and services. By using our website or
               services, you accept this disclaimer in full. Please read it carefully before
               proceeding.

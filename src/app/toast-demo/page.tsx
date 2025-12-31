@@ -130,7 +130,7 @@ export default function ToastDemoPage() {
                 `This is toast number ${Math.random().toFixed(3)}`
               )
             }}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-opacity"
+            className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
             Create Multiple Toasts
           </button>

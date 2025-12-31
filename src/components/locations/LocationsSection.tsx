@@ -2,64 +2,101 @@
 
 import { locations } from '@/data/locations'
 import { MapPin, Phone, Clock } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
+
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 export function LocationsSection() {
+  const headerAnim = useScrollAnimation()
+  const gridAnim = useScrollAnimation()
+
   return (
     <section className="py-12 xs:py-16 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
-        <div className="text-center mb-10 xs:mb-12 sm:mb-16">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+        <div
+          ref={headerAnim.ref}
+          className={`text-center mb-8 xs:mb-10 sm:mb-12 transition-all duration-600 ${
+            headerAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
+        >
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-2 xs:mb-3">
             Visit Our Centers
           </h2>
-          <p className="text-base xs:text-lg sm:text-xl text-gray-600">
-            Three convenient locations across Delhi-NCR
+          <p className="text-base xs:text-lg text-gray-600">
+            4 convenient locations across Delhi-NCR
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-6 sm:gap-8">
+        <div
+          ref={gridAnim.ref}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 transition-all duration-600 ${
+            gridAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
+        >
           {locations.map((location, index) => (
-            <motion.div
+            <div
               key={location.id}
-              className="bg-white rounded-xl xs:rounded-2xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="h-40 xs:h-44 sm:h-48 bg-indigo-500 flex items-center justify-center">
-                <MapPin className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 text-white" />
+              {/* Header with Icon */}
+              <div className="bg-[#3d4d3d] px-4 py-6 xs:py-8 flex items-center justify-center">
+                <div className="w-10 h-10 xs:w-12 xs:h-12 rounded-full border-2 border-white/30 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 xs:w-6 xs:h-6 text-white" />
+                </div>
               </div>
 
-              <div className="p-4 xs:p-5 sm:p-6">
-                <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-3 xs:mb-4">
+              {/* Content */}
+              <div className="p-4 xs:p-5">
+                <h3 className="text-base xs:text-lg font-bold text-gray-900 mb-3">
                   {location.name}
                 </h3>
 
-                <div className="space-y-2.5 xs:space-y-3 mb-4 xs:mb-5 sm:mb-6">
-                  <div className="flex items-start">
-                    <MapPin className="w-4 xs:w-5 h-4 xs:h-5 text-blue-600 mr-2.5 xs:mr-3 mt-0.5 xs:mt-1 flex-shrink-0" />
+                <div className="space-y-2.5 mb-4">
+                  <div className="flex items-start text-sm text-gray-600">
+                    <MapPin className="w-4 h-4 text-[#3d4d3d] mr-2 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-sm xs:text-base text-gray-700">{location.address}</p>
-                      <p className="text-sm xs:text-base text-gray-600">
-                        {location.city}, {location.pincode}
-                      </p>
+                      <span className="line-clamp-2">{location.address}</span>
+                      <span className="block text-gray-500">{location.city}, {location.pincode}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center">
-                    <Phone className="w-4 xs:w-5 h-4 xs:h-5 text-blue-600 mr-2.5 xs:mr-3 flex-shrink-0" />
+                  <div className="flex items-center text-sm">
+                    <Phone className="w-4 h-4 text-[#3d4d3d] mr-2 flex-shrink-0" />
                     <a
                       href={`tel:${location.phone[0]}`}
-                      className="text-sm xs:text-base text-blue-600 hover:underline"
+                      className="text-[#3d4d3d] hover:underline font-medium"
                     >
                       {location.phone[0]}
                     </a>
                   </div>
 
-                  <div className="flex items-center">
-                    <Clock className="w-4 xs:w-5 h-4 xs:h-5 text-blue-600 mr-2.5 xs:mr-3 flex-shrink-0" />
-                    <p className="text-sm xs:text-base text-gray-700">{location.timing}</p>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Clock className="w-4 h-4 text-[#3d4d3d] mr-2 flex-shrink-0" />
+                    <span>Mon-Sat: 8:00 AM - 8:00 PM</span>
                   </div>
                 </div>
 
@@ -67,12 +104,12 @@ export function LocationsSection() {
                   href={location.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-blue-600 text-white text-center py-2.5 xs:py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm xs:text-base font-medium"
+                  className="flex items-center justify-center w-full bg-[#3d4d3d] text-white py-2.5 rounded-lg font-medium text-sm hover:bg-[#4a5d4a] transition-colors"
                 >
                   Get Directions
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

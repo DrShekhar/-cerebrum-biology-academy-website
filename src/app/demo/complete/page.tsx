@@ -84,9 +84,9 @@ export default function DemoCompletePage() {
           transition={{ delay: 0.5 }}
           className="rounded-xl bg-gradient-to-r from-amber-100 to-orange-100 p-6"
         >
-          <p className="mb-2 text-sm font-medium text-amber-800">🎁 DEMO ATTENDEE SPECIAL</p>
-          <p className="text-xl font-bold text-amber-900">Get 15% OFF on Course Enrollment</p>
-          <p className="mt-1 text-sm text-amber-700">Valid for 48 hours • Use code: DEMO15</p>
+          <p className="mb-2 text-sm font-medium text-yellow-800">🎁 DEMO ATTENDEE SPECIAL</p>
+          <p className="text-xl font-bold text-yellow-900">Get 15% OFF on Course Enrollment</p>
+          <p className="mt-1 text-sm text-yellow-700">Valid for 48 hours • Use code: DEMO15</p>
         </motion.div>
 
         {/* Footer */}

@@ -535,7 +535,7 @@ export default function AdmissionsPage() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white overflow-hidden"
+            className="bg-gradient-to-r from-orange-500 via-red-500 to-indigo-500 text-white overflow-hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 relative">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">

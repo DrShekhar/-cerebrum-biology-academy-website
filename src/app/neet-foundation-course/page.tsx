@@ -148,7 +148,7 @@ export default function NeetFoundationCoursePage() {
       description:
         'Complete coverage of Class 9-10 NCERT Biology with NEET perspective and concept building',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'Age-Appropriate Teaching',
@@ -169,14 +169,14 @@ export default function NeetFoundationCoursePage() {
       description:
         'Long preparation timeline eliminates pressure, allows holistic development alongside studies',
       icon: Heart,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
     {
       title: 'Expert Faculty',
       description:
         'Experienced teachers who understand young learners and make complex concepts simple',
       icon: Award,
-      color: 'from-pink-500 to-rose-500',
+      color: 'from-indigo-500 to-rose-500',
     },
     {
       title: 'Regular Assessment',

@@ -115,7 +115,7 @@ export default function Class12Page() {
       title: 'Regular Mock Tests',
       description: 'Full-length NEET mock tests and chapter-wise assessments for readiness',
       icon: Zap,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 

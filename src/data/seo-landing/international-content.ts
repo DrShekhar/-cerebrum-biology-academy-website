@@ -1881,7 +1881,7 @@ const internationalBiologyTutor: SEOLandingContent = {
     highlightedText: 'Every',
     ctaText: 'Find Your Tutor',
     ctaLink: '/book-demo',
-    backgroundGradient: 'from-amber-900 via-orange-900 to-red-900',
+    backgroundGradient: 'from-yellow-900 via-orange-900 to-red-900',
   },
 
   painPoints: {

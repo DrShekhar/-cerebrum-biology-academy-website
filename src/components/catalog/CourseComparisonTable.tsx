@@ -305,7 +305,7 @@ export function CourseComparisonTable({
                         {design.badge}
                       </span>
                       {recommendationLevel === 'most-popular' && (
-                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                        <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                           <Crown className="h-3 w-3" />
                           Most Popular
                         </span>
@@ -489,7 +489,7 @@ export function CourseComparisonTable({
 
                       {/* Recommendation Badge */}
                       {recommendationLevel === 'most-popular' && (
-                        <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold inline-flex items-center gap-1">
+                        <div className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold inline-flex items-center gap-1">
                           <Crown className="h-3 w-3" />
                           Most Popular
                         </div>

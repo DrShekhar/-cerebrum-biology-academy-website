@@ -430,7 +430,7 @@ export default function PurchasePage() {
               className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                 !selectedPlan || loading
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-green-600 to-green-700 text-white hover:shadow-xl hover:scale-105'
+                  : 'bg-[#4a5d4a] text-white hover:shadow-xl hover:scale-105'
               }`}
             >
               {loading

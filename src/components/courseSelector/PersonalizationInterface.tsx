@@ -679,7 +679,7 @@ function RecommendationDisplay({ recommendation }: { recommendation: CourseRecom
             theme.color === 'purple'
               ? 'from-purple-600 to-indigo-600'
               : theme.color === 'blue'
-                ? 'from-blue-600 to-cyan-600'
+                ? 'from-blue-600 to-blue-600'
                 : 'bg-green-600'
           } text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-opacity`}
         >

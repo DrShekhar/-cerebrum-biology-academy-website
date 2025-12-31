@@ -18,7 +18,7 @@ export function PaymentOptionsDisplay({
   const getTierColor = (tier: TierLevel) => {
     switch (tier) {
       case 'pinnacle':
-        return 'from-purple-600 to-pink-600'
+        return 'from-purple-600 to-indigo-600'
       case 'ascent':
         return 'bg-blue-600'
       case 'pursuit':

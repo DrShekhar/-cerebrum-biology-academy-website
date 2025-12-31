@@ -107,11 +107,11 @@ export function SessionSummary({
 
         {/* XP Earned */}
         <div className="bg-amber-50 rounded-xl p-4 text-center">
-          <div className="flex items-center justify-center gap-1.5 text-amber-600 mb-1">
+          <div className="flex items-center justify-center gap-1.5 text-yellow-600 mb-1">
             <Zap className="w-4 h-4" />
             <span className="text-xs font-medium">XP Earned</span>
           </div>
-          <p className="text-2xl font-bold text-amber-700">+{xpEarned}</p>
+          <p className="text-2xl font-bold text-yellow-700">+{xpEarned}</p>
         </div>
       </div>
 
@@ -169,7 +169,7 @@ export function SessionSummary({
       {wrongCount > 0 && wrongAnswers.length > 0 && (
         <button
           onClick={() => setShowWrongAnswersReview(true)}
-          className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 mb-4"
+          className="w-full bg-orange-600 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 mb-4"
         >
           <BookX className="w-5 h-5" />
           Review {wrongCount} Wrong Answer{wrongCount > 1 ? 's' : ''}
@@ -180,7 +180,7 @@ export function SessionSummary({
       <div className="space-y-3">
         <button
           onClick={onContinue}
-          className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+          className="w-full bg-[#4a5d4a] text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
         >
           Continue Practicing
           <ArrowRight className="w-4 h-4" />

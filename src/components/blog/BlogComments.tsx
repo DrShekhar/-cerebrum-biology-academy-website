@@ -74,7 +74,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting || !question.trim()}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#4a5d4a] text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-4 h-4" />
                     Ask on WhatsApp

@@ -417,7 +417,7 @@ export default function NEETFoundationClass10Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-fuchsia-600 via-pink-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

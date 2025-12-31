@@ -21,7 +21,7 @@ export default function UnauthorizedPage() {
           </div>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-sm text-amber-800">
+            <p className="text-sm text-yellow-800">
               <strong>Error 403:</strong> Your current role does not have the required permissions
               to view this resource.
             </p>

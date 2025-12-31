@@ -851,7 +851,7 @@ export default function NEETExamCountdownPage() {
                     <p className="mb-3 text-sm text-gray-500">Did you study today?</p>
                     <button
                       onClick={markStudied}
-                      className="w-full rounded-xl bg-amber-500 px-4 py-3 font-semibold text-white hover:bg-amber-600 transition-colors"
+                      className="w-full rounded-xl bg-amber-500 px-4 py-3 font-semibold text-white hover:bg-yellow-600 transition-colors"
                     >
                       <span className="flex items-center justify-center gap-2">
                         <Flame className="h-4 w-4" />

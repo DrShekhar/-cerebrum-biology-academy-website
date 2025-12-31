@@ -134,7 +134,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
               {!imageLoaded && !imageError && (
                 <div className="flex items-center justify-center h-64 bg-gray-100 rounded-lg border border-gray-300">
                   <div className="text-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-600 mx-auto mb-2"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
                     <p className="text-gray-500 text-sm">Loading diagram...</p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                         className={cn(
                           'w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-200',
                           annotation.isVisible
-                            ? 'bg-cyan-500 scale-125'
+                            ? 'bg-blue-500 scale-125'
                             : 'bg-red-500 hover:scale-110'
                         )}
                         aria-label={`Annotation point: ${annotation.label}`}
@@ -227,19 +227,19 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                 onMouseLeave={() => setHoveredOption(null)}
                 disabled={showExplanation || isReviewMode}
                 className={cn(
-                  'w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500',
+                  'w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500',
                   'hover:shadow-md',
                   isSelected
                     ? showExplanation
                       ? isCorrect
                         ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                         : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
-                      : 'border-cyan-500 bg-cyan-50 text-cyan-900 shadow-lg'
+                      : 'border-blue-500 bg-blue-50 text-cyan-900 shadow-lg'
                     : showExplanation && isCorrect
                       ? 'border-green-600 bg-green-50 text-green-900 shadow-lg'
                       : isHovered
-                        ? 'border-cyan-300 bg-cyan-25 shadow-md'
-                        : 'border-gray-200 hover:border-cyan-300 hover:bg-gray-50',
+                        ? 'border-blue-300 bg-cyan-25 shadow-md'
+                        : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50',
                   (showExplanation || isReviewMode) && 'cursor-not-allowed'
                 )}
                 aria-label={`Option ${optionLabel}: ${option}`}
@@ -255,7 +255,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                           ? isCorrect
                             ? 'bg-green-600 text-white'
                             : 'bg-red-500 text-white'
-                          : 'bg-cyan-500 text-white'
+                          : 'bg-blue-500 text-white'
                         : showExplanation && isCorrect
                           ? 'bg-green-600 text-white'
                           : isHovered
@@ -281,9 +281,9 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
 
       {/* Explanation */}
       {showExplanation && (
-        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-cyan-500">
+        <div className="mt-6 p-5 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-blue-500">
           <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-white text-sm">
+            <span className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm">
               ℹ
             </span>
             Explanation
@@ -297,7 +297,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
               <div className="grid md:grid-cols-2 gap-2">
                 {question.labelledParts.map((part, index) => (
                   <div key={part.id} className="text-sm text-gray-600 flex items-center gap-2">
-                    <span className="w-3 h-3 bg-cyan-500 rounded-full"></span>
+                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
                     {part.name}
                   </div>
                 ))}
@@ -314,7 +314,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
           )}
 
           {question.timeManagementTip && (
-            <div className="mt-3 p-3 bg-cyan-50 rounded border border-cyan-200">
+            <div className="mt-3 p-3 bg-blue-50 rounded border border-cyan-200">
               <p className="text-sm text-cyan-700">
                 <strong>💡 Time Management Tip:</strong> {question.timeManagementTip}
               </p>

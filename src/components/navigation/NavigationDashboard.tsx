@@ -208,7 +208,7 @@ const NavigationDashboard: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-xl cursor-pointer"
+          className="bg-[#4a5d4a] text-white p-6 rounded-xl cursor-pointer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => openUrl('/voice-training')}
@@ -218,7 +218,7 @@ const NavigationDashboard: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-br from-purple-500 to-pink-600 text-white p-6 rounded-xl cursor-pointer"
+          className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-6 rounded-xl cursor-pointer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => openUrl('/claudechat')}

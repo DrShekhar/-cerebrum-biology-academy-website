@@ -146,13 +146,13 @@ export default function BiologyMajorCoursesPage() {
     {
       name: 'General Biology I & II',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
       topics: ['Cell Theory', 'Biomolecules', 'Genetics Basics', 'Evolution'],
     },
     {
       name: 'Cell Biology',
       icon: Microscope,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-indigo-500',
       topics: ['Cell Structure', 'Organelles', 'Cell Cycle', 'Signaling'],
     },
     {
@@ -164,7 +164,7 @@ export default function BiologyMajorCoursesPage() {
     {
       name: 'Genetics',
       icon: Atom,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
       topics: ['Mendelian Genetics', 'Chromosomes', 'Population Genetics', 'Genomics'],
     },
     {
@@ -182,7 +182,7 @@ export default function BiologyMajorCoursesPage() {
     {
       name: 'Anatomy & Physiology',
       icon: Heart,
-      color: 'from-rose-500 to-pink-600',
+      color: 'from-rose-500 to-indigo-600',
       topics: ['Organ Systems', 'Homeostasis', 'Nervous System', 'Circulation'],
     },
     {
@@ -239,7 +239,7 @@ export default function BiologyMajorCoursesPage() {
       title: 'Research Aspirants',
       description: 'Research methodology, experimental design, and academic writing support',
       icon: Search,
-      color: 'from-green-600 to-green-700',
+      color: 'bg-[#4a5d4a]',
       benefits: ['Research Design', 'Data Analysis', 'Scientific Writing'],
     },
   ]
@@ -341,7 +341,7 @@ export default function BiologyMajorCoursesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-rose-600 via-pink-600 to-pink-700 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-rose-600 via-indigo-600 to-pink-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
 
@@ -443,7 +443,7 @@ export default function BiologyMajorCoursesPage() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-12 h-12 bg-[#4a5d4a] rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -611,7 +611,7 @@ export default function BiologyMajorCoursesPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
                   <uni.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{uni.region}</h3>
@@ -658,7 +658,7 @@ export default function BiologyMajorCoursesPage() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
 
@@ -708,7 +708,7 @@ export default function BiologyMajorCoursesPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -748,7 +748,7 @@ export default function BiologyMajorCoursesPage() {
                 className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-6 border border-gray-100"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start">
-                  <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                  <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                     <span className="text-white font-bold text-sm">Q</span>
                   </div>
                   {faq.name}
@@ -761,7 +761,7 @@ export default function BiologyMajorCoursesPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-rose-600 via-pink-600 to-pink-700 text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-rose-600 via-indigo-600 to-pink-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
 

@@ -24,6 +24,849 @@ interface CombinationSwatch {
   usage: string
 }
 
+interface GradientReplacement {
+  gradientName: string
+  gradientClasses: string
+  solidName: string
+  solidClass: string
+  solidHex: string
+  usage: string
+}
+
+// ===== COLOR FIXES (Unapproved → Approved) =====
+
+interface ColorFix {
+  unapproved: {
+    name: string
+    hex: string
+    tailwind: string
+  }
+  approved: {
+    name: string
+    hex: string
+    tailwind: string
+  }
+  affectedElements: string[]
+  fileCount: number
+}
+
+interface ColorFixCategory {
+  name: string
+  description: string
+  fixes: ColorFix[]
+}
+
+const colorFixCategories: ColorFixCategory[] = [
+  {
+    name: 'Amber → Yellow/Orange',
+    description: 'Replace amber colors with approved yellow or orange alternatives',
+    fixes: [
+      {
+        unapproved: { name: 'Amber 50', hex: '#fffbeb', tailwind: 'bg-amber-50' },
+        approved: { name: 'Yellow 50', hex: '#fefce8', tailwind: 'bg-yellow-50' },
+        affectedElements: ['Badge backgrounds', 'Card backgrounds', 'Experience badges'],
+        fileCount: 5,
+      },
+      {
+        unapproved: { name: 'Amber 100', hex: '#fef3c7', tailwind: 'bg-amber-100' },
+        approved: { name: 'Yellow 100', hex: '#fef9c3', tailwind: 'bg-yellow-100' },
+        affectedElements: ['Warning backgrounds', 'Highlight sections'],
+        fileCount: 3,
+      },
+      {
+        unapproved: { name: 'Amber 200', hex: '#fde68a', tailwind: 'text-amber-200' },
+        approved: { name: 'Yellow 200', hex: '#fef08a', tailwind: 'text-yellow-200' },
+        affectedElements: ['Badge text', 'Announcement text', 'Hero subtitles'],
+        fileCount: 4,
+      },
+      {
+        unapproved: { name: 'Amber 300', hex: '#fcd34d', tailwind: 'text-amber-300' },
+        approved: { name: 'Yellow 300', hex: '#fde047', tailwind: 'text-yellow-300' },
+        affectedElements: ['Hero headings', 'Stats icons', 'Card headings'],
+        fileCount: 6,
+      },
+      {
+        unapproved: { name: 'Amber 400', hex: '#fbbf24', tailwind: 'text-amber-400' },
+        approved: { name: 'Yellow 400', hex: '#facc15', tailwind: 'text-yellow-400' },
+        affectedElements: ['Heading highlights', 'Flame icons', 'Calculator text'],
+        fileCount: 8,
+      },
+      {
+        unapproved: { name: 'Amber 500', hex: '#f59e0b', tailwind: 'bg-amber-500' },
+        approved: { name: 'Orange 500', hex: '#f97316', tailwind: 'bg-orange-500' },
+        affectedElements: ['CTA buttons', 'Stat card icons', 'Tier badges'],
+        fileCount: 12,
+      },
+      {
+        unapproved: { name: 'Amber 600', hex: '#d97706', tailwind: 'text-amber-600' },
+        approved: { name: 'Yellow 600', hex: '#ca8a04', tailwind: 'text-yellow-600' },
+        affectedElements: ['Icon colors', 'Experience badge icons'],
+        fileCount: 3,
+      },
+      {
+        unapproved: { name: 'Amber 700', hex: '#b45309', tailwind: 'from-amber-700' },
+        approved: { name: 'Yellow 700', hex: '#a16207', tailwind: 'from-yellow-700' },
+        affectedElements: ['Feature card gradients', 'Icon backgrounds'],
+        fileCount: 2,
+      },
+      {
+        unapproved: { name: 'Amber 800', hex: '#92400e', tailwind: 'text-amber-800' },
+        approved: { name: 'Yellow 800', hex: '#854d0e', tailwind: 'text-yellow-800' },
+        affectedElements: ['Badge text', 'Experience badge text'],
+        fileCount: 2,
+      },
+      {
+        unapproved: { name: 'Amber 900', hex: '#78350f', tailwind: 'bg-amber-900' },
+        approved: { name: 'Yellow 900', hex: '#713f12', tailwind: 'bg-yellow-900' },
+        affectedElements: ['Header badge backgrounds', 'Card backgrounds'],
+        fileCount: 3,
+      },
+    ],
+  },
+  {
+    name: 'Cyan → Blue/Teal',
+    description: 'Replace cyan colors with approved blue or teal alternatives',
+    fixes: [
+      {
+        unapproved: { name: 'Cyan 50', hex: '#ecfeff', tailwind: 'to-cyan-50' },
+        approved: { name: 'Blue 50', hex: '#eff6ff', tailwind: 'to-blue-50' },
+        affectedElements: ['Calendar action backgrounds', 'Gradient endpoints'],
+        fileCount: 2,
+      },
+      {
+        unapproved: { name: 'Cyan 300', hex: '#67e8f9', tailwind: 'text-cyan-300' },
+        approved: { name: 'Blue 300', hex: '#93c5fd', tailwind: 'text-blue-300' },
+        affectedElements: ['Course subtitles', 'Course type labels'],
+        fileCount: 3,
+      },
+      {
+        unapproved: { name: 'Cyan 400', hex: '#22d3ee', tailwind: 'text-cyan-400' },
+        approved: { name: 'Blue 400', hex: '#60a5fa', tailwind: 'text-blue-400' },
+        affectedElements: ['Sparkle icons', 'Phone highlights', 'Price text', 'Focus rings'],
+        fileCount: 6,
+      },
+      {
+        unapproved: { name: 'Cyan 500', hex: '#06b6d4', tailwind: 'to-cyan-500' },
+        approved: { name: 'Teal 600', hex: '#0d9488', tailwind: 'to-teal-600' },
+        affectedElements: ['Trust signal gradients', 'Faculty icon gradients'],
+        fileCount: 2,
+      },
+      {
+        unapproved: { name: 'Cyan 600', hex: '#0891b2', tailwind: 'to-cyan-600' },
+        approved: { name: 'Blue 600', hex: '#2563eb', tailwind: 'to-blue-600' },
+        affectedElements: ['CTA button gradients', 'Course selector', 'Activity feed'],
+        fileCount: 8,
+      },
+    ],
+  },
+  {
+    name: 'Pink → Purple/Indigo',
+    description: 'Replace pink colors with approved purple or indigo alternatives',
+    fixes: [
+      {
+        unapproved: { name: 'Pink 50', hex: '#fdf2f8', tailwind: 'to-pink-50' },
+        approved: { name: 'Indigo 50', hex: '#eef2ff', tailwind: 'to-indigo-50' },
+        affectedElements: ['Referral box backgrounds', 'Premium demo card backgrounds'],
+        fileCount: 5,
+      },
+      {
+        unapproved: { name: 'Pink 500', hex: '#ec4899', tailwind: 'to-pink-500' },
+        approved: { name: 'Indigo 500', hex: '#6366f1', tailwind: 'to-indigo-500' },
+        affectedElements: ['Trust signal gradients', 'Activity feed colors'],
+        fileCount: 3,
+      },
+      {
+        unapproved: { name: 'Pink 600', hex: '#db2777', tailwind: 'to-pink-600' },
+        approved: { name: 'Indigo 600', hex: '#4f46e5', tailwind: 'to-indigo-600' },
+        affectedElements: [
+          'Pinnacle tier gradients',
+          'Premium badges',
+          'CTA sections',
+          'Journey sections',
+        ],
+        fileCount: 8,
+      },
+    ],
+  },
+]
+
+// ===== FAVORITE COLORS (From Screenshots) =====
+
+interface FavoriteColor {
+  name: string
+  hex: string
+  tailwind: string
+  usage: string
+  family: string
+}
+
+// Color family definitions for grouping
+const colorFamilies = [
+  { id: 'brand', label: 'Brand Colors' },
+  { id: 'gray', label: 'Gray Scale' },
+  { id: 'slate', label: 'Slate Scale' },
+  { id: 'blue', label: 'Blue Scale' },
+  { id: 'indigo', label: 'Indigo Scale' },
+  { id: 'purple', label: 'Purple Scale' },
+  { id: 'green', label: 'Green Scale' },
+  { id: 'teal', label: 'Teal / Emerald' },
+  { id: 'red', label: 'Red Scale' },
+  { id: 'orange', label: 'Orange Scale' },
+  { id: 'yellow', label: 'Yellow Scale' },
+  { id: 'gradient', label: 'Allowed Gradients' },
+]
+
+const favoriteColors: FavoriteColor[] = [
+  // ===== CEREBRUM BRAND COLORS =====
+  {
+    name: 'Cerebrum Green',
+    hex: '#4a5d4a',
+    tailwind: 'bg-[#4a5d4a]',
+    usage: 'Primary brand',
+    family: 'brand',
+  },
+  {
+    name: 'Cerebrum Dark',
+    hex: '#3d4d3d',
+    tailwind: 'bg-[#3d4d3d]',
+    usage: 'Hover states',
+    family: 'brand',
+  },
+  {
+    name: 'Cerebrum Light',
+    hex: '#5a6d5a',
+    tailwind: 'bg-[#5a6d5a]',
+    usage: 'Secondary',
+    family: 'brand',
+  },
+  {
+    name: 'Cerebrum V.Light',
+    hex: '#e8ede8',
+    tailwind: 'bg-[#e8ede8]',
+    usage: 'Backgrounds',
+    family: 'brand',
+  },
+
+  // ===== GRAY SCALE =====
+  { name: 'Gray 900', hex: '#111827', tailwind: 'bg-gray-900', usage: 'Headings', family: 'gray' },
+  { name: 'Gray 800', hex: '#1f2937', tailwind: 'bg-gray-800', usage: 'Dark text', family: 'gray' },
+  {
+    name: 'Gray 700',
+    hex: '#374151',
+    tailwind: 'bg-gray-700',
+    usage: 'Subheadings',
+    family: 'gray',
+  },
+  { name: 'Gray 600', hex: '#4b5563', tailwind: 'bg-gray-600', usage: 'Body text', family: 'gray' },
+  {
+    name: 'Gray 500',
+    hex: '#6b7280',
+    tailwind: 'bg-gray-500',
+    usage: 'Muted text',
+    family: 'gray',
+  },
+  {
+    name: 'Gray 400',
+    hex: '#9ca3af',
+    tailwind: 'bg-gray-400',
+    usage: 'Light text',
+    family: 'gray',
+  },
+  { name: 'Gray 300', hex: '#d1d5db', tailwind: 'bg-gray-300', usage: 'Borders', family: 'gray' },
+  {
+    name: 'Gray 200',
+    hex: '#e5e7eb',
+    tailwind: 'bg-gray-200',
+    usage: 'Light borders',
+    family: 'gray',
+  },
+  {
+    name: 'Gray 100',
+    hex: '#f3f4f6',
+    tailwind: 'bg-gray-100',
+    usage: 'Backgrounds',
+    family: 'gray',
+  },
+  { name: 'Gray 50', hex: '#f9fafb', tailwind: 'bg-gray-50', usage: 'Cards', family: 'gray' },
+  { name: 'Black', hex: '#000000', tailwind: 'bg-black', usage: 'Max contrast', family: 'gray' },
+  { name: 'White', hex: '#ffffff', tailwind: 'bg-white', usage: 'Text on dark', family: 'gray' },
+
+  // ===== SLATE SCALE =====
+  {
+    name: 'Slate 900',
+    hex: '#0f172a',
+    tailwind: 'bg-slate-900',
+    usage: 'Dark hero',
+    family: 'slate',
+  },
+  {
+    name: 'Slate 800',
+    hex: '#1e293b',
+    tailwind: 'bg-slate-800',
+    usage: 'Icon containers',
+    family: 'slate',
+  },
+  {
+    name: 'Slate 700',
+    hex: '#334155',
+    tailwind: 'bg-slate-700',
+    usage: 'Dark borders',
+    family: 'slate',
+  },
+
+  // ===== BLUE SCALE =====
+  {
+    name: 'Blue 800',
+    hex: '#1e40af',
+    tailwind: 'bg-blue-800',
+    usage: 'Card text',
+    family: 'blue',
+  },
+  {
+    name: 'Blue 600',
+    hex: '#2563eb',
+    tailwind: 'bg-blue-600',
+    usage: 'Links, buttons',
+    family: 'blue',
+  },
+  {
+    name: 'Blue 500',
+    hex: '#3b82f6',
+    tailwind: 'bg-blue-500',
+    usage: 'Demo icons',
+    family: 'blue',
+  },
+  {
+    name: 'Google Blue',
+    hex: '#4285f4',
+    tailwind: 'bg-[#4285f4]',
+    usage: 'Shield icons',
+    family: 'blue',
+  },
+  { name: 'Blue 200', hex: '#bfdbfe', tailwind: 'bg-blue-200', usage: 'Light BG', family: 'blue' },
+  { name: 'Blue 50', hex: '#eff6ff', tailwind: 'bg-blue-50', usage: 'Subtle BG', family: 'blue' },
+
+  // ===== INDIGO SCALE =====
+  {
+    name: 'Indigo 600',
+    hex: '#4f46e5',
+    tailwind: 'bg-indigo-600',
+    usage: 'CTAs',
+    family: 'indigo',
+  },
+  {
+    name: 'Indigo 500',
+    hex: '#6366f1',
+    tailwind: 'bg-indigo-500',
+    usage: 'Buttons',
+    family: 'indigo',
+  },
+  {
+    name: 'Indigo 50',
+    hex: '#eef2ff',
+    tailwind: 'bg-indigo-50',
+    usage: 'Backgrounds',
+    family: 'indigo',
+  },
+
+  // ===== PURPLE SCALE =====
+  {
+    name: 'Purple 800',
+    hex: '#6b21a8',
+    tailwind: 'bg-purple-800',
+    usage: 'Dark accents',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 700',
+    hex: '#7c3aed',
+    tailwind: 'bg-purple-700',
+    usage: 'Text emphasis',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 600',
+    hex: '#9333ea',
+    tailwind: 'bg-purple-600',
+    usage: 'Badges',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 500',
+    hex: '#a855f7',
+    tailwind: 'bg-purple-500',
+    usage: 'Buttons',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 200',
+    hex: '#e9d5ff',
+    tailwind: 'bg-purple-200',
+    usage: 'Light BG',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 100',
+    hex: '#f3e8ff',
+    tailwind: 'bg-purple-100',
+    usage: 'Card BG',
+    family: 'purple',
+  },
+  {
+    name: 'Purple 50',
+    hex: '#faf5ff',
+    tailwind: 'bg-purple-50',
+    usage: 'Subtle BG',
+    family: 'purple',
+  },
+
+  // ===== GREEN SCALE =====
+  {
+    name: 'Green 800',
+    hex: '#166534',
+    tailwind: 'bg-green-800',
+    usage: 'Dark accents',
+    family: 'green',
+  },
+  {
+    name: 'Green 600',
+    hex: '#16a34a',
+    tailwind: 'bg-green-600',
+    usage: 'Success',
+    family: 'green',
+  },
+  {
+    name: 'Green 500',
+    hex: '#22c55e',
+    tailwind: 'bg-green-500',
+    usage: 'NEET strategy',
+    family: 'green',
+  },
+  {
+    name: 'Google Green',
+    hex: '#34a853',
+    tailwind: 'bg-[#34a853]',
+    usage: 'People icons',
+    family: 'green',
+  },
+  {
+    name: 'Green 200',
+    hex: '#bbf7d0',
+    tailwind: 'bg-green-200',
+    usage: 'Light BG',
+    family: 'green',
+  },
+  {
+    name: 'Green 50',
+    hex: '#f0fdf4',
+    tailwind: 'bg-green-50',
+    usage: 'Subtle BG',
+    family: 'green',
+  },
+
+  // ===== TEAL / EMERALD =====
+  {
+    name: 'Teal 700',
+    hex: '#0f766e',
+    tailwind: 'bg-teal-700',
+    usage: 'Hover states',
+    family: 'teal',
+  },
+  { name: 'Teal 600', hex: '#0d9488', tailwind: 'bg-teal-600', usage: 'Buttons', family: 'teal' },
+
+  // ===== RED SCALE =====
+  { name: 'Red 800', hex: '#991b1b', tailwind: 'bg-red-800', usage: 'Error dark', family: 'red' },
+  {
+    name: 'Red 700',
+    hex: '#b91c1c',
+    tailwind: 'bg-red-700',
+    usage: 'Error emphasis',
+    family: 'red',
+  },
+  { name: 'Red 600', hex: '#dc2626', tailwind: 'bg-red-600', usage: 'Alerts', family: 'red' },
+  { name: 'Red 500', hex: '#ef4444', tailwind: 'bg-red-500', usage: 'Icons', family: 'red' },
+  {
+    name: 'Google Red',
+    hex: '#ea4335',
+    tailwind: 'bg-[#ea4335]',
+    usage: 'Heart icons',
+    family: 'red',
+  },
+  { name: 'Red 200', hex: '#fecaca', tailwind: 'bg-red-200', usage: 'Light BG', family: 'red' },
+  { name: 'Red 100', hex: '#fee2e2', tailwind: 'bg-red-100', usage: 'Error BG', family: 'red' },
+  { name: 'Red 50', hex: '#fef2f2', tailwind: 'bg-red-50', usage: 'Subtle BG', family: 'red' },
+
+  // ===== ORANGE SCALE =====
+  {
+    name: 'Orange 600',
+    hex: '#ea580c',
+    tailwind: 'bg-orange-600',
+    usage: 'CTAs',
+    family: 'orange',
+  },
+  {
+    name: 'Orange 500',
+    hex: '#f97316',
+    tailwind: 'bg-orange-500',
+    usage: 'Medal icon',
+    family: 'orange',
+  },
+  {
+    name: 'Orange 100',
+    hex: '#ffedd5',
+    tailwind: 'bg-orange-100',
+    usage: 'Backgrounds',
+    family: 'orange',
+  },
+  {
+    name: 'Orange 50',
+    hex: '#fff7ed',
+    tailwind: 'bg-orange-50',
+    usage: 'Light BG',
+    family: 'orange',
+  },
+
+  // ===== YELLOW SCALE =====
+  {
+    name: 'Yellow 800',
+    hex: '#854d0e',
+    tailwind: 'bg-yellow-800',
+    usage: 'Warning text',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 600',
+    hex: '#ca8a04',
+    tailwind: 'bg-yellow-600',
+    usage: 'Gold text',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 500',
+    hex: '#eab308',
+    tailwind: 'bg-yellow-500',
+    usage: 'Stars',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 400',
+    hex: '#facc15',
+    tailwind: 'bg-yellow-400',
+    usage: 'Highlights',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 300',
+    hex: '#fde047',
+    tailwind: 'bg-yellow-300',
+    usage: 'Icons',
+    family: 'yellow',
+  },
+  {
+    name: 'Google Yellow',
+    hex: '#fbbc04',
+    tailwind: 'bg-[#fbbc04]',
+    usage: 'Lightbulb',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 200',
+    hex: '#fef08a',
+    tailwind: 'bg-yellow-200',
+    usage: 'Light BG',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 100',
+    hex: '#fef9c3',
+    tailwind: 'bg-yellow-100',
+    usage: 'Warning BG',
+    family: 'yellow',
+  },
+  {
+    name: 'Yellow 50',
+    hex: '#fefce8',
+    tailwind: 'bg-yellow-50',
+    usage: 'Subtle BG',
+    family: 'yellow',
+  },
+
+  // ===== ALLOWED GRADIENTS =====
+  {
+    name: 'Orange to Red',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-r from-orange-500 to-red-500',
+    usage: 'Urgent CTAs',
+    family: 'gradient',
+  },
+  {
+    name: 'Orange to Yellow',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-r from-orange-500 to-yellow-500',
+    usage: 'Highlights',
+    family: 'gradient',
+  },
+  {
+    name: 'Blue 50 to Purple 50',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-br from-blue-50 to-purple-50',
+    usage: 'Card BG',
+    family: 'gradient',
+  },
+  {
+    name: 'Green 50 to Teal 50',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-br from-green-50 to-teal-50',
+    usage: 'Bio sections',
+    family: 'gradient',
+  },
+  {
+    name: 'Purple 50 to Pink 50',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-br from-purple-50 to-pink-50',
+    usage: 'Premium BG',
+    family: 'gradient',
+  },
+  {
+    name: 'Gray 50 to White',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-b from-gray-50 to-white',
+    usage: 'Page sections',
+    family: 'gradient',
+  },
+  {
+    name: 'Slate 900 to 800',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-br from-slate-900 to-slate-800',
+    usage: 'Dark hero',
+    family: 'gradient',
+  },
+  {
+    name: 'Blue to Purple',
+    hex: 'gradient',
+    tailwind: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    usage: 'CTAs, badges',
+    family: 'gradient',
+  },
+]
+
+// ===== BRAND COLORS =====
+
+const brandColors: ColorSwatch[] = [
+  {
+    name: 'Cerebrum Green',
+    tailwind: 'bg-[#4a5d4a]',
+    hex: '#4a5d4a',
+    usage: 'Primary brand color - headers, CTAs, hero sections',
+  },
+  {
+    name: 'Cerebrum Green Dark',
+    tailwind: 'bg-[#3d4d3d]',
+    hex: '#3d4d3d',
+    usage: 'Hover states, button hover',
+  },
+  {
+    name: 'Cerebrum Green Light',
+    tailwind: 'bg-[#5a6d5a]',
+    hex: '#5a6d5a',
+    usage: 'Secondary elements, lighter accents',
+  },
+  {
+    name: 'Cerebrum Green Very Light',
+    tailwind: 'bg-[#e8ede8]',
+    hex: '#e8ede8',
+    usage: 'Light backgrounds, subtle sections',
+  },
+]
+
+// ===== GRADIENT REPLACEMENTS (Solid alternatives) =====
+
+const gradientReplacements: GradientReplacement[] = [
+  // Blue-Purple gradients → Solid alternatives
+  {
+    gradientName: 'Blue to Purple',
+    gradientClasses: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    solidName: 'Indigo 600',
+    solidClass: 'bg-indigo-600',
+    solidHex: '#4f46e5',
+    usage: 'Primary CTA buttons, hero text, badges',
+  },
+  {
+    gradientName: 'Blue to Indigo',
+    gradientClasses: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+    solidName: 'Blue 600',
+    solidClass: 'bg-blue-600',
+    solidHex: '#2563eb',
+    usage: 'Secondary buttons, icons',
+  },
+  {
+    gradientName: 'Blue via Indigo to Purple',
+    gradientClasses: 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600',
+    solidName: 'Indigo 700',
+    solidClass: 'bg-indigo-700',
+    solidHex: '#4338ca',
+    usage: 'Premium hero sections',
+  },
+  {
+    gradientName: 'Purple to Pink',
+    gradientClasses: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    solidName: 'Purple 600',
+    solidClass: 'bg-purple-600',
+    solidHex: '#9333ea',
+    usage: 'Premium badges, highlights',
+  },
+
+  // Green gradients → Solid alternatives
+  {
+    gradientName: 'Green to Teal',
+    gradientClasses: 'bg-gradient-to-r from-green-500 to-teal-600',
+    solidName: 'Cerebrum Green',
+    solidClass: 'bg-[#4a5d4a]',
+    solidHex: '#4a5d4a',
+    usage: 'Success states, biology-themed sections (BRAND COLOR)',
+  },
+  {
+    gradientName: 'Green to Emerald',
+    gradientClasses: 'bg-gradient-to-r from-green-500 to-emerald-600',
+    solidName: 'Green 600',
+    solidClass: 'bg-green-600',
+    solidHex: '#16a34a',
+    usage: 'Nature/bio themed elements',
+  },
+  {
+    gradientName: 'Emerald to Teal',
+    gradientClasses: 'bg-gradient-to-r from-emerald-500 to-teal-600',
+    solidName: 'Green 700',
+    solidClass: 'bg-green-700',
+    solidHex: '#15803d',
+    usage: 'Biology topic cards',
+  },
+
+  // Teal gradients → Solid alternatives
+  {
+    gradientName: 'Teal to Blue',
+    gradientClasses: 'bg-gradient-to-r from-teal-500 to-blue-600',
+    solidName: 'Blue 700',
+    solidClass: 'bg-blue-700',
+    solidHex: '#1d4ed8',
+    usage: 'Teal-themed sections',
+  },
+  {
+    gradientName: 'Teal 600 to 700',
+    gradientClasses: 'bg-gradient-to-r from-teal-600 to-teal-700',
+    solidName: 'Green 600',
+    solidClass: 'bg-green-600',
+    solidHex: '#16a34a',
+    usage: 'Monochromatic buttons',
+  },
+
+  // Orange gradients → Solid alternatives
+  {
+    gradientName: 'Orange to Red',
+    gradientClasses: 'bg-gradient-to-r from-orange-500 to-red-500',
+    solidName: 'Orange 600',
+    solidClass: 'bg-orange-600',
+    solidHex: '#ea580c',
+    usage: 'Urgent CTAs, limited offers',
+  },
+  {
+    gradientName: 'Orange to Yellow',
+    gradientClasses: 'bg-gradient-to-r from-orange-500 to-yellow-500',
+    solidName: 'Orange 500',
+    solidClass: 'bg-orange-500',
+    solidHex: '#f97316',
+    usage: 'Highlight sections',
+  },
+
+  // Light background gradients → Solid alternatives
+  {
+    gradientName: 'Blue 50 to Purple 50',
+    gradientClasses: 'bg-gradient-to-br from-blue-50 to-purple-50',
+    solidName: 'Gray 50',
+    solidClass: 'bg-gray-50',
+    solidHex: '#f9fafb',
+    usage: 'Card backgrounds, sections',
+  },
+  {
+    gradientName: 'Green 50 to Teal 50',
+    gradientClasses: 'bg-gradient-to-br from-green-50 to-teal-50',
+    solidName: 'Cerebrum Green Very Light',
+    solidClass: 'bg-[#e8ede8]',
+    solidHex: '#e8ede8',
+    usage: 'Bio-themed section backgrounds (BRAND COLOR)',
+  },
+  {
+    gradientName: 'Purple 50 to Pink 50',
+    gradientClasses: 'bg-gradient-to-br from-purple-50 to-pink-50',
+    solidName: 'Purple 50',
+    solidClass: 'bg-purple-50',
+    solidHex: '#faf5ff',
+    usage: 'Premium section backgrounds',
+  },
+  {
+    gradientName: 'Gray 50 to White',
+    gradientClasses: 'bg-gradient-to-b from-gray-50 to-white',
+    solidName: 'Gray 50',
+    solidClass: 'bg-gray-50',
+    solidHex: '#f9fafb',
+    usage: 'Page sections',
+  },
+
+  // Dark gradients → Solid alternatives
+  {
+    gradientName: 'Slate 900 to 800',
+    gradientClasses: 'bg-gradient-to-br from-slate-900 to-slate-800',
+    solidName: 'Slate 900',
+    solidClass: 'bg-slate-900',
+    solidHex: '#0f172a',
+    usage: 'Dark hero sections, footers',
+  },
+  {
+    gradientName: 'Blue 900 to Purple 900',
+    gradientClasses: 'bg-gradient-to-br from-blue-900 to-purple-900',
+    solidName: 'Indigo 900',
+    solidClass: 'bg-indigo-900',
+    solidHex: '#312e81',
+    usage: 'Legacy hero sections',
+  },
+]
+
+// ===== COLOR POLICY =====
+
+const colorPolicy = {
+  approved: [
+    { name: 'Cerebrum Green', hex: '#4a5d4a', usage: 'Primary brand, headers, CTAs' },
+    { name: 'Blue 600', hex: '#2563eb', usage: 'Links, secondary buttons, info' },
+    { name: 'Green 600', hex: '#16a34a', usage: 'Success states, confirmations' },
+    { name: 'Gray 900', hex: '#111827', usage: 'Primary text, headings' },
+    { name: 'Gray 600', hex: '#4b5563', usage: 'Body text, descriptions' },
+    { name: 'Gray 50', hex: '#f9fafb', usage: 'Light backgrounds, cards' },
+    { name: 'White', hex: '#ffffff', usage: 'Card backgrounds, text on dark' },
+    { name: 'Indigo 600', hex: '#4f46e5', usage: 'Premium features, special CTAs' },
+    { name: 'Orange 600', hex: '#ea580c', usage: 'Urgent actions, warnings' },
+    { name: 'Red 600', hex: '#dc2626', usage: 'Errors, destructive actions' },
+  ],
+  avoid: [
+    { name: 'Yellow 500', hex: '#eab308', reason: 'Low contrast on white' },
+    { name: 'Cyan 600', hex: '#0891b2', reason: 'Use Blue instead' },
+    { name: 'Pink 500/600', hex: '#ec4899', reason: 'Use Purple instead' },
+    { name: 'Teal 400-600', hex: '#14b8a6', reason: 'Use Green instead' },
+    { name: 'Emerald 500/600', hex: '#10b981', reason: 'Use Green instead' },
+    { name: 'All Gradients', hex: 'N/A', reason: 'Use solid colors only' },
+  ],
+  rules: [
+    'Use Cerebrum Green (#4a5d4a) as the primary brand color for headers and main CTAs',
+    'NO gradients - use solid colors only for cleaner, more professional look',
+    'Use Gray scale for text hierarchy (900 for headings, 600 for body, 400 for muted)',
+    'Use Blue 600 for links and interactive elements',
+    'Use Green 600 for success states and confirmations',
+    'Use Orange 600 for warnings and urgent actions',
+    'Use Red 600 for errors and destructive actions only',
+    'Maintain WCAG AA contrast ratios (4.5:1 for text, 3:1 for large text)',
+    'Use light variants (50, 100) for backgrounds, dark variants (600, 700, 800) for text/buttons',
+  ],
+}
+
 // ===== INDIVIDUAL COLORS (most commonly used) =====
 
 const grayColors: ColorSwatch[] = [
@@ -642,7 +1485,9 @@ const colorCategories = [
 
 export default function ColorPalettePage() {
   const [copiedColor, setCopiedColor] = useState<string | null>(null)
-  const [activeTab, setActiveTab] = useState<'colors' | 'gradients' | 'combinations'>('colors')
+  const [activeTab, setActiveTab] = useState<
+    'favorites' | 'brand' | 'colors' | 'gradients' | 'combinations' | 'replacements' | 'colorfixes'
+  >('favorites')
 
   const copyToClipboard = (text: string, name: string) => {
     navigator.clipboard.writeText(text)
@@ -665,7 +1510,37 @@ export default function ColorPalettePage() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <button
+            onClick={() => setActiveTab('favorites')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              activeTab === 'favorites'
+                ? 'bg-purple-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Your Picks ({favoriteColors.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('brand')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              activeTab === 'brand'
+                ? 'bg-[#4a5d4a] text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Brand & Policy
+          </button>
+          <button
+            onClick={() => setActiveTab('replacements')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              activeTab === 'replacements'
+                ? 'bg-orange-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Gradient → Solid ({gradientReplacements.length})
+          </button>
           <button
             onClick={() => setActiveTab('colors')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -674,7 +1549,7 @@ export default function ColorPalettePage() {
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            Individual Colors ({colorCategories.reduce((acc, cat) => acc + cat.colors.length, 0)})
+            All Colors ({colorCategories.reduce((acc, cat) => acc + cat.colors.length, 0)})
           </button>
           <button
             onClick={() => setActiveTab('gradients')}
@@ -690,13 +1565,299 @@ export default function ColorPalettePage() {
             onClick={() => setActiveTab('combinations')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
               activeTab === 'combinations'
-                ? 'bg-green-600 text-white'
+                ? 'bg-purple-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             Combinations ({combinations.length})
           </button>
+          <button
+            onClick={() => setActiveTab('colorfixes')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              activeTab === 'colorfixes'
+                ? 'bg-red-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Color Fixes ({colorFixCategories.reduce((acc, cat) => acc + cat.fixes.length, 0)})
+          </button>
         </div>
+
+        {/* Favorites Tab */}
+        {activeTab === 'favorites' && (
+          <div className="space-y-8">
+            {/* Header */}
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
+              <h2 className="text-lg font-bold text-purple-800 mb-2">Your Favorite Colors</h2>
+              <p className="text-purple-700">
+                Curated color palette organized by color family. Click any color to copy its hex
+                code.
+              </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-purple-700">{favoriteColors.length}</p>
+                <p className="text-sm text-purple-600">Total Colors</p>
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-gray-700">{colorFamilies.length}</p>
+                <p className="text-sm text-gray-600">Color Families</p>
+              </div>
+            </div>
+
+            {/* Colors by Family */}
+            <div className="space-y-8">
+              {colorFamilies.map((family) => {
+                const familyColors = favoriteColors.filter((c) => c.family === family.id)
+                if (familyColors.length === 0) return null
+
+                return (
+                  <div key={family.id}>
+                    <h3 className="text-lg font-bold text-gray-800 mb-4">{family.label}</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {familyColors.map((color) => {
+                        const isGradient = color.hex === 'gradient'
+
+                        // Determine text color based on background brightness
+                        const isLight =
+                          !isGradient &&
+                          (color.hex === '#ffffff' ||
+                            color.hex === '#f9fafb' ||
+                            color.hex === '#f3f4f6' ||
+                            color.hex === '#e5e7eb' ||
+                            color.hex === '#e8ede8' ||
+                            color.hex.toLowerCase().includes('f') ||
+                            parseInt(color.hex.slice(1), 16) > 0xaaaaaa)
+
+                        // For gradients, check if it's a light gradient
+                        const isLightGradient =
+                          isGradient &&
+                          (color.tailwind.includes('-50') ||
+                            color.tailwind.includes('to-white') ||
+                            color.tailwind.includes('to-teal-50') ||
+                            color.tailwind.includes('to-pink-50') ||
+                            color.tailwind.includes('to-purple-50'))
+
+                        return (
+                          <button
+                            key={color.name}
+                            onClick={() =>
+                              copyToClipboard(isGradient ? color.tailwind : color.hex, color.name)
+                            }
+                            className={`px-5 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all hover:scale-105 ${
+                              isGradient ? color.tailwind : ''
+                            } ${
+                              isLight || isLightGradient
+                                ? 'text-gray-800 border border-gray-300'
+                                : 'text-white border border-transparent'
+                            }`}
+                            style={isGradient ? {} : { backgroundColor: color.hex }}
+                            title={`${color.tailwind} - ${color.usage}`}
+                          >
+                            {copiedColor === color.name ? 'Copied!' : color.name}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Brand & Policy Tab */}
+        {activeTab === 'brand' && (
+          <div className="space-y-12">
+            {/* Brand Colors Section */}
+            <div>
+              <h2 className="text-2xl font-bold text-black mb-6 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg" style={{ backgroundColor: '#4a5d4a' }}></span>
+                Cerebrum Brand Colors
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {brandColors.map((color) => (
+                  <div
+                    key={color.name}
+                    className="flex flex-col items-center group cursor-pointer p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:shadow-lg transition-all"
+                    onClick={() => copyToClipboard(color.hex, color.name)}
+                  >
+                    <div
+                      className="w-20 h-20 rounded-xl shadow-md mb-3 transition-transform group-hover:scale-105"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                    <p className="text-sm font-bold text-black text-center">{color.name}</p>
+                    <p className="text-xs text-gray-500 font-mono">
+                      {copiedColor === color.name ? 'Copied!' : color.hex}
+                    </p>
+                    <p className="text-xs text-gray-600 text-center mt-2">{color.usage}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Approved Colors Section */}
+            <div>
+              <h2 className="text-xl font-bold text-black mb-4 border-b-2 border-green-500 pb-2">
+                Approved Colors (USE THESE)
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                {colorPolicy.approved.map((color) => (
+                  <div
+                    key={color.name}
+                    className="flex flex-col items-center group cursor-pointer p-3 rounded-lg bg-green-50 border border-green-200 hover:bg-green-100 transition-all"
+                    onClick={() => copyToClipboard(color.hex, color.name)}
+                  >
+                    <div
+                      className="w-12 h-12 rounded-lg shadow mb-2"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                    <p className="text-xs font-bold text-black text-center">{color.name}</p>
+                    <p className="text-[10px] text-gray-500 font-mono">
+                      {copiedColor === color.name ? 'Copied!' : color.hex}
+                    </p>
+                    <p className="text-[10px] text-gray-600 text-center mt-1">{color.usage}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Avoid Colors Section */}
+            <div>
+              <h2 className="text-xl font-bold text-black mb-4 border-b-2 border-red-500 pb-2">
+                Colors to Avoid (DO NOT USE)
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                {colorPolicy.avoid.map((color) => (
+                  <div
+                    key={color.name}
+                    className="flex flex-col items-center p-3 rounded-lg bg-red-50 border border-red-200"
+                  >
+                    <div
+                      className="w-12 h-12 rounded-lg shadow mb-2 relative"
+                      style={{ backgroundColor: color.hex === 'N/A' ? '#e5e7eb' : color.hex }}
+                    >
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-red-600 text-3xl font-bold">✕</span>
+                      </div>
+                    </div>
+                    <p className="text-xs font-bold text-red-800 text-center">{color.name}</p>
+                    <p className="text-[10px] text-red-600 text-center mt-1">{color.reason}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Color Policy Rules */}
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h2 className="text-xl font-bold text-black mb-6">Color Usage Policy</h2>
+              <ul className="space-y-3">
+                {colorPolicy.rules.map((rule, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#4a5d4a] text-white text-sm flex items-center justify-center font-semibold">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700">{rule}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick Reference Card */}
+            <div className="bg-[#e8ede8] rounded-2xl p-8 border border-[#4a5d4a]/20">
+              <h2 className="text-xl font-bold text-[#4a5d4a] mb-4">Quick Reference</h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-semibold text-black mb-2">For Headers & CTAs</h3>
+                  <code className="text-sm bg-white px-3 py-2 rounded border block">
+                    bg-[#4a5d4a] text-white
+                  </code>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-black mb-2">For Hover States</h3>
+                  <code className="text-sm bg-white px-3 py-2 rounded border block">
+                    hover:bg-[#3d4d3d]
+                  </code>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-black mb-2">For Light Backgrounds</h3>
+                  <code className="text-sm bg-white px-3 py-2 rounded border block">
+                    bg-[#e8ede8]
+                  </code>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-black mb-2">For Secondary Elements</h3>
+                  <code className="text-sm bg-white px-3 py-2 rounded border block">
+                    bg-[#5a6d5a]
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Gradient Replacements Tab */}
+        {activeTab === 'replacements' && (
+          <div className="space-y-8">
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+              <h2 className="text-lg font-bold text-orange-800 mb-2">
+                Gradient → Solid Color Replacements
+              </h2>
+              <p className="text-orange-700">
+                Use these solid colors instead of gradients for a cleaner, more professional look.
+                Click any solid color to copy its value.
+              </p>
+            </div>
+
+            <div className="grid gap-6">
+              {gradientReplacements.map((item) => (
+                <div
+                  key={item.gradientName}
+                  className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden"
+                >
+                  <div className="grid sm:grid-cols-2">
+                    {/* Gradient (Before) */}
+                    <div className="p-4 border-b sm:border-b-0 sm:border-r border-gray-200">
+                      <p className="text-xs text-red-600 font-semibold mb-2 uppercase tracking-wide">
+                        ✕ Gradient (Avoid)
+                      </p>
+                      <div className={`h-16 rounded-lg ${item.gradientClasses}`}></div>
+                      <p className="text-sm font-bold text-gray-900 mt-2">{item.gradientName}</p>
+                      <p className="text-xs text-gray-500 font-mono mt-1">{item.gradientClasses}</p>
+                    </div>
+
+                    {/* Solid (After) */}
+                    <div
+                      className="p-4 cursor-pointer hover:bg-green-50 transition-colors"
+                      onClick={() => copyToClipboard(item.solidHex, item.solidName)}
+                    >
+                      <p className="text-xs text-green-600 font-semibold mb-2 uppercase tracking-wide">
+                        ✓ Solid (Use This)
+                      </p>
+                      <div
+                        className="h-16 rounded-lg"
+                        style={{ backgroundColor: item.solidHex }}
+                      ></div>
+                      <p className="text-sm font-bold text-gray-900 mt-2">{item.solidName}</p>
+                      <p className="text-xs text-gray-500 font-mono mt-1">
+                        {copiedColor === item.solidName
+                          ? 'Copied!'
+                          : `${item.solidClass} | ${item.solidHex}`}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="px-4 py-2 bg-gray-50 border-t border-gray-200">
+                    <p className="text-xs text-gray-600">
+                      <span className="font-semibold">Usage:</span> {item.usage}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Individual Colors Tab */}
         {activeTab === 'colors' && (
@@ -795,33 +1956,175 @@ export default function ColorPalettePage() {
           </div>
         )}
 
+        {/* Color Fixes Tab */}
+        {activeTab === 'colorfixes' && (
+          <div className="space-y-8">
+            {/* Header */}
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+              <h2 className="text-lg font-bold text-red-800 mb-2">
+                Unapproved → Approved Color Fixes
+              </h2>
+              <p className="text-red-700">
+                Visual guide showing which unapproved colors (Amber, Cyan, Pink) should be replaced
+                with approved alternatives. Click any approved color to copy its hex code.
+              </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-orange-700">
+                  {colorFixCategories[0]?.fixes.length || 0}
+                </p>
+                <p className="text-sm text-orange-600">Amber → Yellow/Orange</p>
+              </div>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-blue-700">
+                  {colorFixCategories[1]?.fixes.length || 0}
+                </p>
+                <p className="text-sm text-blue-600">Cyan → Blue/Teal</p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-purple-700">
+                  {colorFixCategories[2]?.fixes.length || 0}
+                </p>
+                <p className="text-sm text-purple-600">Pink → Purple/Indigo</p>
+              </div>
+            </div>
+
+            {/* Color Fix Categories */}
+            {colorFixCategories.map((category) => (
+              <div key={category.name} className="space-y-4">
+                <div className="border-b-2 border-gray-200 pb-2">
+                  <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
+                  <p className="text-sm text-gray-600">{category.description}</p>
+                </div>
+
+                <div className="grid gap-4">
+                  {category.fixes.map((fix, index) => (
+                    <div
+                      key={`${fix.unapproved.name}-${index}`}
+                      className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden"
+                    >
+                      <div className="grid sm:grid-cols-2">
+                        {/* Unapproved (Before) */}
+                        <div className="p-4 border-b sm:border-b-0 sm:border-r border-gray-200 bg-red-50/30">
+                          <p className="text-xs text-red-600 font-semibold mb-2 uppercase tracking-wide flex items-center gap-1">
+                            <span className="text-lg">✕</span> Unapproved (Remove)
+                          </p>
+                          <div className="flex items-center gap-4">
+                            <div
+                              className="w-16 h-16 rounded-xl shadow-md border border-gray-300 flex-shrink-0"
+                              style={{ backgroundColor: fix.unapproved.hex }}
+                            />
+                            <div>
+                              <p className="text-sm font-bold text-gray-900">
+                                {fix.unapproved.name}
+                              </p>
+                              <p className="text-xs text-gray-500 font-mono">{fix.unapproved.hex}</p>
+                              <p className="text-xs text-gray-500 font-mono">
+                                {fix.unapproved.tailwind}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Approved (After) */}
+                        <div
+                          className="p-4 cursor-pointer hover:bg-green-50 transition-colors bg-green-50/30"
+                          onClick={() => copyToClipboard(fix.approved.hex, fix.approved.name)}
+                        >
+                          <p className="text-xs text-green-600 font-semibold mb-2 uppercase tracking-wide flex items-center gap-1">
+                            <span className="text-lg">✓</span> Approved (Use This)
+                          </p>
+                          <div className="flex items-center gap-4">
+                            <div
+                              className="w-16 h-16 rounded-xl shadow-md border border-gray-300 flex-shrink-0"
+                              style={{ backgroundColor: fix.approved.hex }}
+                            />
+                            <div>
+                              <p className="text-sm font-bold text-gray-900">{fix.approved.name}</p>
+                              <p className="text-xs text-gray-500 font-mono">
+                                {copiedColor === fix.approved.name ? 'Copied!' : fix.approved.hex}
+                              </p>
+                              <p className="text-xs text-gray-500 font-mono">
+                                {fix.approved.tailwind}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Affected Elements Footer */}
+                      <div className="px-4 py-3 bg-gray-50 border-t border-gray-200">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-xs font-semibold text-gray-700">
+                            Affected ({fix.fileCount} files):
+                          </span>
+                          {fix.affectedElements.map((element, i) => (
+                            <span
+                              key={i}
+                              className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full"
+                            >
+                              {element}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {/* Summary */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mt-8">
+              <h3 className="text-lg font-bold text-green-800 mb-3">Quick Fix Summary</h3>
+              <ul className="space-y-2 text-green-700">
+                <li>
+                  • <strong>Amber colors:</strong> Replace with Yellow (same shade number) or Orange
+                  500
+                </li>
+                <li>
+                  • <strong>Cyan colors:</strong> Replace with Blue (same shade number) or Teal 600
+                </li>
+                <li>
+                  • <strong>Pink colors:</strong> Replace with Indigo (same shade number) or Purple
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+
         {/* Live Examples Section */}
         <div className="mt-16 border-t-2 border-gray-200 pt-12">
-          <h2 className="text-2xl font-bold text-black mb-8">Live Button Examples</h2>
+          <h2 className="text-2xl font-bold text-black mb-8">
+            Live Button Examples (Solid Colors Only)
+          </h2>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold">
-              Blue-Purple Gradient
+            <button className="bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white px-6 py-3 rounded-lg font-semibold">
+              Cerebrum Green (Brand)
             </button>
-            <button className="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-lg font-semibold">
-              Green-Teal Gradient
+            <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold">
+              Orange 600
             </button>
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold">
-              Orange-Red Gradient
+            <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold">
+              Indigo 600
             </button>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
-              Solid Blue 600
+              Blue 600
             </button>
             <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
-              Solid Teal 600
+              Green 600
             </button>
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
-              Solid Green 600
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold">
+              Purple 600
             </button>
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold">
-              Solid Yellow 500
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold">
+              Red 600
             </button>
             <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold">
-              Solid Gray 900
+              Gray 900
             </button>
           </div>
         </div>

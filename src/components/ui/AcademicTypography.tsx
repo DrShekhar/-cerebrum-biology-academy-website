@@ -305,7 +305,7 @@ export const AcademicEmphasis: React.FC<AcademicEmphasisProps> = ({
       'bg-blue-600': color === 'blue' && variant === 'achievement',
       'bg-green-600 text-white': color === 'green' && variant === 'achievement',
       'from-purple-600 to-violet-600': color === 'purple' && variant === 'achievement',
-      'from-orange-600 to-amber-600': color === 'orange' && variant === 'achievement',
+      'from-orange-600 to-yellow-600': color === 'orange' && variant === 'achievement',
     },
     className
   )

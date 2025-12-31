@@ -272,7 +272,7 @@ export default function ClaudeChatDemo() {
                       phase.status === 'In Development'
                         ? 'bg-blue-100 text-blue-700'
                         : phase.status === 'Planning'
-                          ? 'bg-amber-100 text-amber-700'
+                          ? 'bg-amber-100 text-yellow-700'
                           : 'bg-gray-100 text-gray-700'
                     }`}
                   >

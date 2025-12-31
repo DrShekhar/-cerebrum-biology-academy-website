@@ -162,7 +162,7 @@ export default function NeetCoachingWestIndiaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-900 via-orange-800 to-yellow-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-yellow-900 via-orange-800 to-yellow-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
@@ -206,7 +206,7 @@ export default function NeetCoachingWestIndiaPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-amber-900"
+                  className="border-white text-white hover:bg-white hover:text-yellow-900"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View Course Details
@@ -268,9 +268,9 @@ export default function NeetCoachingWestIndiaPage() {
                 >
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-lg font-bold text-gray-900">{state.name}</h3>
-                    <MapPin className="w-5 h-5 text-amber-600" />
+                    <MapPin className="w-5 h-5 text-yellow-600" />
                   </div>
-                  <div className="text-2xl font-bold text-amber-600 mb-2">{state.students}</div>
+                  <div className="text-2xl font-bold text-yellow-600 mb-2">{state.students}</div>
                   <div className="text-sm text-gray-500 mb-3">Students enrolled</div>
                   <div className="flex flex-wrap gap-1">
                     {state.cities.slice(0, 5).map((city) => (
@@ -282,13 +282,13 @@ export default function NeetCoachingWestIndiaPage() {
                       </span>
                     ))}
                     {state.cities.length > 5 && (
-                      <span className="text-xs bg-amber-100 text-amber-600 px-2 py-1 rounded">
+                      <span className="text-xs bg-amber-100 text-yellow-600 px-2 py-1 rounded">
                         +{state.cities.length - 5} more
                       </span>
                     )}
                   </div>
                   {state.priority === 'high' && (
-                    <div className="mt-3 inline-flex items-center text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">
+                    <div className="mt-3 inline-flex items-center text-xs bg-amber-100 text-yellow-700 px-2 py-1 rounded-full">
                       <Star className="w-3 h-3 mr-1" />
                       High Student Count
                     </div>
@@ -331,7 +331,7 @@ export default function NeetCoachingWestIndiaPage() {
                   href={city.href}
                   className="flex items-center justify-center p-4 bg-amber-50 hover:bg-amber-100 rounded-lg border border-amber-200 transition-all hover:shadow-md"
                 >
-                  <MapPin className="w-4 h-4 mr-2 text-amber-600" />
+                  <MapPin className="w-4 h-4 mr-2 text-yellow-600" />
                   <span className="font-medium text-gray-800">{city.name}</span>
                 </Link>
               </motion.div>
@@ -365,7 +365,7 @@ export default function NeetCoachingWestIndiaPage() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-100"
               >
-                <item.icon className="w-12 h-12 text-amber-600 mb-4" />
+                <item.icon className="w-12 h-12 text-yellow-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </motion.div>
@@ -399,7 +399,7 @@ export default function NeetCoachingWestIndiaPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
-                <feature.icon className="w-12 h-12 text-amber-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-yellow-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -434,7 +434,7 @@ export default function NeetCoachingWestIndiaPage() {
                 className="bg-gray-50 rounded-xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-amber-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -445,7 +445,7 @@ export default function NeetCoachingWestIndiaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-yellow-600 via-orange-600 to-yellow-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -467,7 +467,7 @@ export default function NeetCoachingWestIndiaPage() {
                   variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
-                  className="bg-white text-amber-700 hover:bg-gray-100"
+                  className="bg-white text-yellow-700 hover:bg-gray-100"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
@@ -478,7 +478,7 @@ export default function NeetCoachingWestIndiaPage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-amber-600"
+                  className="border-white text-white hover:bg-white hover:text-yellow-600"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Enroll Now

@@ -112,7 +112,7 @@ const TOP_COLLEGES = [
   { name: 'MAMC Delhi', students: 54, color: 'text-green-600', bgColor: 'bg-green-50' },
   { name: 'JIPMER Puducherry', students: 37, color: 'text-orange-600', bgColor: 'bg-orange-50' },
   { name: 'KGMC Lucknow', students: 45, color: 'text-green-600', bgColor: 'bg-green-50' },
-  { name: 'GMC Nagpur', students: 52, color: 'text-pink-600', bgColor: 'bg-pink-50' },
+  { name: 'GMC Nagpur', students: 52, color: 'text-indigo-600', bgColor: 'bg-pink-50' },
   { name: 'BHU Varanasi', students: 41, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
   { name: 'VMMC Delhi', students: 38, color: 'text-red-600', bgColor: 'bg-red-50' },
 ]
@@ -318,7 +318,7 @@ export default function ResultsPage() {
           </Card>
 
           <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-pink-600 mx-auto mb-3 sm:mb-4" />
+            <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-indigo-600 mx-auto mb-3 sm:mb-4" />
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.scholarships}
             </div>

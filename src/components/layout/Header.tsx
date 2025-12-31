@@ -201,7 +201,7 @@ const Header = () => {
                     <span>{t(item.labelKey)}</span>
                     {item.badge && (
                       <span
-                        className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
+                        className="bg-[#4a5d4a] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
                         aria-label={`${item.badge} success rate`}
                       >
                         {item.badge}
@@ -236,7 +236,7 @@ const Header = () => {
                           ? '/teacher/assignments'
                           : '/student/dashboard'
                   }
-                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
                 >
                   <BarChart3 className="w-4 h-4" />
                   <span>
@@ -263,7 +263,7 @@ const Header = () => {
                   {/* Primary CTA - Enroll Now (Enhanced) */}
                   <Link
                     href={primaryCTA.href}
-                    className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
+                    className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
                   >
                     <span>{t(primaryCTA.labelKey)}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -315,7 +315,7 @@ const Header = () => {
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{t(item.labelKey)}</span>
                       {item.badge && (
-                        <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                        <span className="bg-[#4a5d4a] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                           {item.badge}
                         </span>
                       )}
@@ -338,7 +338,7 @@ const Header = () => {
                             ? '/teacher/assignments'
                             : '/student/dashboard'
                     }
-                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                    className="flex items-center justify-center gap-2 bg-[#4a5d4a] text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                   >
                     <BarChart3 className="w-5 h-5" />
                     <span>
@@ -365,7 +365,7 @@ const Header = () => {
                     {/* Primary CTA - Enroll Now */}
                     <Link
                       href={primaryCTA.href}
-                      className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                      className="flex items-center justify-center gap-2 bg-[#4a5d4a] text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                     >
                       <span>{t(primaryCTA.labelKey)}</span>
                       <ArrowRight className="w-5 h-5" />

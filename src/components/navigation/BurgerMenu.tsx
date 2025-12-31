@@ -224,7 +224,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 <Link
                   href="/courses"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-center gap-2 p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 transition-all shadow-md hover:shadow-lg text-base font-semibold"
+                  className="flex items-center justify-center gap-2 p-4 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all shadow-md hover:shadow-lg text-base font-semibold"
                 >
                   <GraduationCap className="w-5 h-5" />
                   View All Courses

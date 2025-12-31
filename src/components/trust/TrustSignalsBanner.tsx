@@ -30,7 +30,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Years',
     sublabel: 'Excellence in NEET Coaching',
     icon: Calendar,
-    color: 'from-blue-500 to-blue-600',
+    color: 'bg-[#4285f4]',
     verified: true,
   },
   {
@@ -39,7 +39,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Success Rate',
     sublabel: 'NEET Qualification 2023-24',
     icon: Trophy,
-    color: 'bg-green-600',
+    color: 'bg-[#34a853]',
     verified: true,
   },
   {
@@ -48,7 +48,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Top Score',
     sublabel: 'Sadhna Sirin NEET 2023',
     icon: Star,
-    color: 'from-yellow-500 to-orange-500',
+    color: 'bg-[#fbbc04]',
     verified: true,
   },
   {
@@ -57,7 +57,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Students',
     sublabel: 'Medical College Admits',
     icon: Users,
-    color: 'from-purple-500 to-pink-500',
+    color: 'bg-[#3d4d3d]',
     verified: true,
   },
   {
@@ -66,7 +66,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Faculty',
     sublabel: 'Dr. Shekhar (AIIMS Delhi)',
     icon: GraduationCap,
-    color: 'from-green-600 to-cyan-500',
+    color: 'bg-teal-700',
     verified: true,
   },
   {
@@ -75,7 +75,7 @@ const trustSignals: TrustSignal[] = [
     label: 'Google Rating',
     sublabel: '500+ Reviews',
     icon: Star,
-    color: 'from-amber-500 to-yellow-500',
+    color: 'bg-orange-600',
     verified: false,
   },
 ]
@@ -105,7 +105,7 @@ export function TrustSignalsBanner({
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div
-                  className={`w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 bg-gradient-to-br ${signal.color} rounded-full flex items-center justify-center shadow-md`}
+                  className={`w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 ${signal.color} rounded-full flex items-center justify-center shadow-md`}
                 >
                   <signal.icon className="w-4 xs:w-5 h-4 xs:h-5 text-white" />
                 </div>
@@ -167,7 +167,7 @@ export function TrustSignalsBanner({
 
               {/* Icon */}
               <div
-                className={`w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-gradient-to-br ${signal.color} rounded-xl xs:rounded-2xl flex items-center justify-center mb-3 xs:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                className={`w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 ${signal.color} rounded-xl xs:rounded-2xl flex items-center justify-center mb-3 xs:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
               >
                 <signal.icon className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-white" />
               </div>
@@ -190,7 +190,7 @@ export function TrustSignalsBanner({
               {/* Hover Gradient Border Effect */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <div
-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${signal.color} opacity-10`}
+                  className={`absolute inset-0 rounded-2xl ${signal.color} opacity-10`}
                 />
               </div>
             </div>
@@ -236,7 +236,7 @@ export function TrustSignalsMini() {
       {trustSignals.slice(0, 4).map((signal) => (
         <div key={signal.id} className="flex items-center space-x-2">
           <div
-            className={`w-8 h-8 bg-gradient-to-br ${signal.color} rounded-full flex items-center justify-center`}
+            className={`w-8 h-8 ${signal.color} rounded-full flex items-center justify-center`}
           >
             <signal.icon className="w-4 h-4 text-white" />
           </div>

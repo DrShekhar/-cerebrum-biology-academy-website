@@ -81,7 +81,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
     highlightedText: 'Drop Year Done Right = AIIMS Possible',
     ctaText: 'Join 2026 Dropper Batch',
     ctaLink: '/courses/neet-dropper',
-    backgroundGradient: 'from-red-900 via-orange-900 to-amber-900',
+    backgroundGradient: 'from-red-900 via-orange-900 to-yellow-900',
   },
 
   painPoints: {
@@ -528,7 +528,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
     highlightedText: 'Proven Results. Proven Methodology.',
     ctaText: 'Join The Best',
     ctaLink: '/courses/neet-dropper',
-    backgroundGradient: 'from-yellow-900 via-amber-900 to-orange-900',
+    backgroundGradient: 'from-yellow-900 via-yellow-900 to-orange-900',
   },
 
   painPoints: {

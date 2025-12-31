@@ -275,7 +275,7 @@ export default function BiologyClass12Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-cyan-50 rounded-xl p-6 text-center border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 text-center border border-green-100"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -320,7 +320,7 @@ export default function BiologyClass12Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

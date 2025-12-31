@@ -441,7 +441,7 @@ export function EmotionalHeroSection({
             <PremiumCard
               variant="premium"
               size="md"
-              className="bg-amber-900/30 backdrop-blur-sm border-amber-300/30"
+              className="bg-yellow-900/30 backdrop-blur-sm border-amber-300/30"
             >
               <div className="text-center space-y-4">
                 <div className="flex items-center justify-center gap-2 text-amber-300">

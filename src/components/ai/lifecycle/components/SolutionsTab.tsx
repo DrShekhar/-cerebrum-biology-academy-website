@@ -233,10 +233,10 @@ export function SolutionsTab({
             <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
               <div className="w-3 h-3 bg-amber-500 rounded-full" />
               <div className="flex-1">
-                <div className="font-medium text-amber-800">Solutions Release</div>
-                <div className="text-sm text-amber-600">January 19, 2024 at 9:00 AM</div>
+                <div className="font-medium text-yellow-800">Solutions Release</div>
+                <div className="text-sm text-yellow-600">January 19, 2024 at 9:00 AM</div>
               </div>
-              <Timer className="w-5 h-5 text-amber-600" />
+              <Timer className="w-5 h-5 text-yellow-600" />
             </div>
 
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">

@@ -246,7 +246,7 @@ export default function StudyPlanGeneratorPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-green-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+        <section className="relative overflow-hidden bg-[#4a5d4a] pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
@@ -618,7 +618,7 @@ export default function StudyPlanGeneratorPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-green-700">
+            <div className="overflow-hidden rounded-2xl bg-[#4a5d4a]">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">

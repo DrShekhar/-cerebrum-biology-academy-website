@@ -71,7 +71,7 @@ export function HeaderServer() {
               className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
             >
               <span>Results</span>
-              <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+              <span className="bg-[#4a5d4a] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                 98%
               </span>
             </Link>
@@ -104,7 +104,7 @@ export function HeaderServer() {
               </Link>
               <Link
                 href="/admissions"
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Enroll Now
               </Link>

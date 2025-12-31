@@ -154,7 +154,7 @@ export default function EarlyNeetPreparationPage() {
       description:
         'Spreading preparation over 3-4 years eliminates last-minute stress and allows balanced learning alongside school.',
       icon: Heart,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-indigo-500',
       stat: 'Zero Stress',
     },
     {
@@ -162,7 +162,7 @@ export default function EarlyNeetPreparationPage() {
       description:
         'While others rush in Class 11-12, early starters are already ahead with solid preparation and confidence.',
       icon: Rocket,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
       stat: '2x Advantage',
     },
   ]
@@ -496,7 +496,7 @@ export default function EarlyNeetPreparationPage() {
                 variant="primary"
                 size="lg"
                 onClick={handleDemoBooking}
-                className="bg-gradient-to-r from-purple-600 to-pink-600"
+                className="bg-gradient-to-r from-purple-600 to-indigo-600"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Free Counseling Session

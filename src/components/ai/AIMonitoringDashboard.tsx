@@ -509,14 +509,14 @@ export default function AIMonitoringDashboard() {
               <div className="flex space-x-2">
                 <button
                   onClick={() => handleExport('json')}
-                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-lg transition-all text-sm"
+                  className="flex items-center space-x-2 px-4 py-2 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all text-sm"
                 >
                   <Download className="w-4 h-4" />
                   <span>JSON</span>
                 </button>
                 <button
                   onClick={() => handleExport('csv')}
-                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg transition-all text-sm"
+                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-lg hover:shadow-lg transition-all text-sm"
                 >
                   <Download className="w-4 h-4" />
                   <span>CSV</span>
@@ -543,7 +543,7 @@ export default function AIMonitoringDashboard() {
                 title="Running"
                 value={String(agentStats?.running || 0)}
                 icon={Play}
-                color="from-blue-500 to-cyan-500"
+                color="from-blue-500 to-blue-500"
                 trend={agentStats?.running ? 'up' : 'neutral'}
                 change="Active now"
               />
@@ -743,7 +743,7 @@ export default function AIMonitoringDashboard() {
                 title="Total Requests"
                 value={stats.requests.toLocaleString()}
                 icon={Activity}
-                color="from-blue-500 to-cyan-500"
+                color="from-blue-500 to-blue-500"
                 trend={metrics ? (stats.requests > 0 ? 'up' : 'neutral') : 'neutral'}
                 change={
                   metrics
@@ -767,7 +767,7 @@ export default function AIMonitoringDashboard() {
                 title="Cache Hit Rate"
                 value={`${metrics?.cacheHitRate.toFixed(1)}%`}
                 icon={Database}
-                color="from-purple-500 to-pink-500"
+                color="from-purple-500 to-indigo-500"
                 trend={metrics && metrics.cacheHitRate > 50 ? 'up' : 'down'}
                 change={`${stats.cached} cached`}
               />
@@ -777,7 +777,7 @@ export default function AIMonitoringDashboard() {
                 title="Avg Response Time"
                 value={`${metrics?.avgResponseTime.toFixed(0)}ms`}
                 icon={Clock}
-                color="from-orange-500 to-red-500"
+                color="bg-orange-600"
                 trend={metrics && metrics.avgResponseTime < 1000 ? 'up' : 'down'}
                 change={`P95: ${metrics?.responseTimes.p95.toFixed(0)}ms`}
               />
@@ -1121,9 +1121,9 @@ function getAgentIcon(type: string) {
     NURTURE: <MessageSquare className="w-4 h-4 text-green-600" />,
     CALL_PREP: <Phone className="w-4 h-4 text-purple-500" />,
     CONTENT_GENERATOR: <FileText className="w-4 h-4 text-orange-500" />,
-    CALL_TRANSCRIPTION: <FileText className="w-4 h-4 text-cyan-500" />,
+    CALL_TRANSCRIPTION: <FileText className="w-4 h-4 text-blue-500" />,
     CALL_SUMMARY: <FileText className="w-4 h-4 text-indigo-500" />,
-    ACTION_EXTRACTOR: <CheckCircle className="w-4 h-4 text-pink-500" />,
+    ACTION_EXTRACTOR: <CheckCircle className="w-4 h-4 text-indigo-500" />,
     PRODUCT_AGENT: <ShoppingCart className="w-4 h-4 text-green-600" />,
   }
   return iconMap[type] || <Bot className="w-4 h-4 text-gray-500" />

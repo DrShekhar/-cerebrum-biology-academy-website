@@ -327,8 +327,8 @@ export function ExperienceBadge({ className = '' }: { className?: string }) {
     <div
       className={`inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg ${className}`}
     >
-      <Clock className="w-4 h-4 text-amber-600" />
-      <span className="text-sm font-medium text-amber-800">10+ Years of NEET Excellence</span>
+      <Clock className="w-4 h-4 text-yellow-600" />
+      <span className="text-sm font-medium text-yellow-800">10+ Years of NEET Excellence</span>
     </div>
   )
 }

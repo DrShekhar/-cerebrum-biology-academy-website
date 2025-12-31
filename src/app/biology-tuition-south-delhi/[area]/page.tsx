@@ -421,7 +421,7 @@ export default function BiologyTuitionAreaPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+                <div className="bg-[#4a5d4a] text-white p-4">
                   <h3 className="text-xl font-bold">{option.class}</h3>
                   <p className="text-sm opacity-90">{option.duration}</p>
                 </div>

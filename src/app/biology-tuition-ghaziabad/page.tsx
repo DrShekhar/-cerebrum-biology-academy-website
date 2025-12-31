@@ -265,7 +265,7 @@ export default function BiologyTuitionGhaziabadPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+                <div className="bg-[#4a5d4a] text-white p-4">
                   <div className="text-sm font-medium opacity-90">{program.class}</div>
                   <div className="text-xl font-bold">{program.title}</div>
                 </div>

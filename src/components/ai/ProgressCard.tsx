@@ -35,16 +35,16 @@ interface ProgressCardProps {
 
 const cardVariants = {
   syllabus: {
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-purple-500 to-indigo-500',
     icon: BookOpen,
     color: 'purple',
     bgGradient: 'from-purple-50 to-pink-50',
   },
   'study-hours': {
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-blue-500 to-blue-500',
     icon: Clock,
     color: 'blue',
-    bgGradient: 'from-blue-50 to-cyan-50',
+    bgGradient: 'from-blue-50 to-blue-50',
   },
   'test-score': {
     gradient: 'bg-green-600',
@@ -53,10 +53,10 @@ const cardVariants = {
     bgGradient: 'from-green-50 to-green-50',
   },
   streak: {
-    gradient: 'from-orange-500 to-red-500',
+    gradient: 'bg-orange-600',
     icon: Flame,
     color: 'orange',
-    bgGradient: 'from-orange-50 to-red-50',
+    bgGradient: 'bg-orange-50',
   },
 }
 
@@ -86,10 +86,10 @@ export function ProgressCard({
 
   const getGradientColors = (gradientClass: string): [string, string] => {
     const gradientMap: Record<string, [string, string]> = {
-      'from-purple-500 to-pink-500': ['#a855f7', '#ec4899'],
-      'from-blue-500 to-cyan-500': ['#3b82f6', '#06b6d4'],
+      'from-purple-500 to-indigo-500': ['#a855f7', '#ec4899'],
+      'from-blue-500 to-blue-500': ['#3b82f6', '#06b6d4'],
       'bg-green-600': ['#22c55e', '#16a34a'],
-      'from-orange-500 to-red-500': ['#f97316', '#ef4444'],
+      'bg-orange-600': ['#ea580c', '#ea580c'],
     }
     return gradientMap[gradientClass] || ['#a855f7', '#ec4899']
   }

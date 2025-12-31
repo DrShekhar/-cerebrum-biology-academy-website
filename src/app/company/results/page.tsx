@@ -345,7 +345,7 @@ export default function ResultsPage() {
                   </div>
                   <div className="bg-pink-50 rounded-lg p-4 text-center">
                     <div className="text-lg font-bold text-pink-700">{year.private}</div>
-                    <div className="text-sm text-pink-600">Private Colleges</div>
+                    <div className="text-sm text-indigo-600">Private Colleges</div>
                   </div>
                 </div>
               </div>

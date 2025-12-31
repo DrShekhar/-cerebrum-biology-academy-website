@@ -376,7 +376,7 @@ export default function NeetCoachingNoidaPage() {
               </div>
             </div>
 
-            <div className="bg-cyan-50 rounded-xl p-6">
+            <div className="bg-blue-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-cyan-900 mb-4 flex items-center">
                 <Train className="w-6 h-6 mr-2" />
                 Aqua Line Stations

@@ -628,7 +628,7 @@ export function PerformanceDashboard({
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6">
+              <div className="bg-orange-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
                   <Activity className="w-8 h-8 text-orange-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Consistency Analysis</h3>

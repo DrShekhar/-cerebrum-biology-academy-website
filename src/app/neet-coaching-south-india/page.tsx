@@ -350,7 +350,7 @@ export default function NeetCoachingSouthIndiaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 border border-orange-100"
+                className="bg-orange-50 rounded-xl p-8 border border-orange-100"
               >
                 <item.icon className="w-12 h-12 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -432,7 +432,7 @@ export default function NeetCoachingSouthIndiaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -562,8 +562,8 @@ const SecurityFeatures: React.FC = () => {
                   </div>
 
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <h4 className="font-medium text-amber-800 mb-2">User Experience</h4>
-                    <ul className="text-sm text-amber-700 space-y-1">
+                    <h4 className="font-medium text-yellow-800 mb-2">User Experience</h4>
+                    <ul className="text-sm text-yellow-700 space-y-1">
                       <li>• May require user permission for full screen</li>
                       <li>• Some features may affect accessibility</li>
                       <li>• Consider providing instructions to students</li>
@@ -1023,8 +1023,8 @@ const SecurityFeatures: React.FC = () => {
                   </div>
 
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <h4 className="font-medium text-amber-800 mb-2">Important Notes</h4>
-                    <ul className="text-sm text-amber-700 space-y-1">
+                    <h4 className="font-medium text-yellow-800 mb-2">Important Notes</h4>
+                    <ul className="text-sm text-yellow-700 space-y-1">
                       <li>• System notifications may trigger false positives</li>
                       <li>• Network interruptions are automatically excluded</li>
                       <li>• Emergency contacts can override restrictions</li>
@@ -1181,8 +1181,8 @@ const SecurityFeatures: React.FC = () => {
                   </div>
 
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <h4 className="font-medium text-amber-800 mb-2">Student Guidelines</h4>
-                    <ul className="text-sm text-amber-700 space-y-1">
+                    <h4 className="font-medium text-yellow-800 mb-2">Student Guidelines</h4>
+                    <ul className="text-sm text-yellow-700 space-y-1">
                       <li>• Face must be clearly visible throughout test</li>
                       <li>• No other persons in the room</li>
                       <li>• Good lighting and stable positioning</li>
@@ -1221,7 +1221,7 @@ const SecurityFeatures: React.FC = () => {
             {/* Screen Recording Settings */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Video className="w-5 h-5 text-pink-600" />
+                <Video className="w-5 h-5 text-indigo-600" />
                 Screen Recording
               </h3>
 
@@ -1237,7 +1237,7 @@ const SecurityFeatures: React.FC = () => {
                       screenRecording: { ...prev.screenRecording, enabled: !prev.screenRecording.enabled }
                     }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.screenRecording.enabled ? 'bg-pink-600' : 'bg-gray-200'
+                      configuration.screenRecording.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                     }`}
                   >
                     <span
@@ -1268,7 +1268,7 @@ const SecurityFeatures: React.FC = () => {
                               screenRecording: { ...prev.screenRecording, [key]: !prev.screenRecording[key as keyof ScreenRecordingSettings] }
                             }))}
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.screenRecording[key as keyof ScreenRecordingSettings] ? 'bg-pink-600' : 'bg-gray-200'
+                              configuration.screenRecording[key as keyof ScreenRecordingSettings] ? 'bg-indigo-600' : 'bg-gray-200'
                             }`}
                           >
                             <span
@@ -1292,7 +1292,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             screenRecording: { ...prev.screenRecording, compressionLevel: e.target.value as 'low' | 'medium' | 'high' }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="low">Low (Better Quality)</option>
                           <option value="medium">Medium (Balanced)</option>
@@ -1310,7 +1310,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             screenRecording: { ...prev.screenRecording, resolution: e.target.value as '720p' | '1080p' | '4K' }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="720p">720p (Standard)</option>
                           <option value="1080p">1080p (HD)</option>
@@ -1330,7 +1330,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             screenRecording: { ...prev.screenRecording, frameRate: parseInt(e.target.value) as 15 | 30 | 60 }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="15">15 FPS (Low)</option>
                           <option value="30">30 FPS (Standard)</option>
@@ -1351,7 +1351,7 @@ const SecurityFeatures: React.FC = () => {
                             ...prev,
                             screenRecording: { ...prev.screenRecording, storageLimit: parseInt(e.target.value) || 1000 }
                           }))}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -1618,8 +1618,8 @@ const SecurityFeatures: React.FC = () => {
                   </div>
 
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <h4 className="font-medium text-amber-800 mb-2">AI Detection</h4>
-                    <div className="text-sm text-amber-700 space-y-1">
+                    <h4 className="font-medium text-yellow-800 mb-2">AI Detection</h4>
+                    <div className="text-sm text-yellow-700 space-y-1">
                       <div>• GPT-style writing pattern detection</div>
                       <div>• Unusual vocabulary consistency analysis</div>
                       <div>• Sentence structure pattern recognition</div>
@@ -1644,7 +1644,7 @@ const SecurityFeatures: React.FC = () => {
             {/* Time Tracking Settings */}
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Timer className="w-5 h-5 text-cyan-600" />
+                <Timer className="w-5 h-5 text-blue-600" />
                 Time Tracking
               </h3>
 
@@ -1660,7 +1660,7 @@ const SecurityFeatures: React.FC = () => {
                       timeTracking: { ...prev.timeTracking, enabled: !prev.timeTracking.enabled }
                     }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.timeTracking.enabled ? 'bg-cyan-600' : 'bg-gray-200'
+                      configuration.timeTracking.enabled ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                   >
                     <span
@@ -1694,7 +1694,7 @@ const SecurityFeatures: React.FC = () => {
                             timeTracking: { ...prev.timeTracking, [key]: !prev.timeTracking[key as keyof TimeTrackingSettings] }
                           }))}
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.timeTracking[key as keyof TimeTrackingSettings] ? 'bg-cyan-600' : 'bg-gray-200'
+                            configuration.timeTracking[key as keyof TimeTrackingSettings] ? 'bg-blue-600' : 'bg-gray-200'
                           }`}
                         >
                           <span
@@ -1719,11 +1719,11 @@ const SecurityFeatures: React.FC = () => {
                 </h3>
 
                 <div className="space-y-4">
-                  <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-4">
+                  <div className="bg-blue-50 border border-cyan-200 rounded-lg p-4">
                     <h4 className="font-medium text-cyan-800 mb-3">Tracking Metrics</h4>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="bg-white rounded p-3 border">
-                        <div className="text-2xl font-bold text-cyan-600">0s</div>
+                        <div className="text-2xl font-bold text-blue-600">0s</div>
                         <div className="text-gray-600">Avg per Question</div>
                       </div>
                       <div className="bg-white rounded p-3 border">

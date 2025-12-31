@@ -104,7 +104,7 @@ export default function Class11Page() {
       title: 'Foundation Building',
       description: 'Strong conceptual foundation for Class 12 and NEET preparation',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'Board + NEET Focus',
@@ -122,7 +122,7 @@ export default function Class11Page() {
       title: 'Regular Assessment',
       description: 'Weekly tests and monthly evaluations to track progress',
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500',
+      color: 'bg-orange-600',
     },
   ]
 
@@ -445,7 +445,7 @@ export default function Class11Page() {
                 description:
                   'Reinforce learning through structured practice questions, diagrams, and application-based problems.',
                 icon: Target,
-                color: 'from-blue-400 to-cyan-500',
+                color: 'from-blue-400 to-blue-500',
               },
               {
                 step: '03',
@@ -453,7 +453,7 @@ export default function Class11Page() {
                 description:
                   'Regular testing and feedback to identify weak areas and ensure steady improvement throughout the year.',
                 icon: TrendingUp,
-                color: 'from-green-500 to-green-600',
+                color: 'bg-[#4a5d4a]',
               },
             ].map((method, index) => (
               <motion.div

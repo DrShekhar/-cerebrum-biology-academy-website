@@ -395,8 +395,8 @@ export function TopicAnalytics({ freeUserId, onTopicSelect }: TopicAnalyticsProp
               <p className="text-xs text-purple-600">Total Scheduled</p>
             </div>
             <div className="text-center p-3 bg-amber-50 rounded-lg">
-              <p className="text-2xl font-bold text-amber-700">{reviewStats.dueToday}</p>
-              <p className="text-xs text-amber-600">Due Today</p>
+              <p className="text-2xl font-bold text-yellow-700">{reviewStats.dueToday}</p>
+              <p className="text-xs text-yellow-600">Due Today</p>
             </div>
             <div className="text-center p-3 bg-green-50 rounded-lg">
               <p className="text-2xl font-bold text-green-700">{reviewStats.masteredCount}</p>

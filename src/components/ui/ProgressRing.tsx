@@ -45,8 +45,8 @@ export const ProgressRing = memo(function ProgressRing({
     blue: { stroke: 'stroke-blue-500', text: 'text-blue-600' },
     green: { stroke: 'stroke-green-500', text: 'text-green-600' },
     orange: { stroke: 'stroke-orange-500', text: 'text-orange-600' },
-    pink: { stroke: 'stroke-pink-500', text: 'text-pink-600' },
-    cyan: { stroke: 'stroke-cyan-500', text: 'text-cyan-600' },
+    pink: { stroke: 'stroke-indigo-500', text: 'text-indigo-600' },
+    cyan: { stroke: 'stroke-blue-500', text: 'text-blue-600' },
   }
 
   const selectedColor = colorClasses[color] || colorClasses.purple

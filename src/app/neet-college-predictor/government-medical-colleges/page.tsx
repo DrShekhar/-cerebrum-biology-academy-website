@@ -131,7 +131,7 @@ export default function GovernmentMedicalCollegesPage() {
         </Link>
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-8">
-          <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-8 text-white">
+          <div className="bg-[#4a5d4a] px-6 py-8 text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
               Government Medical Colleges NEET Cutoff 2024
             </h1>
@@ -220,7 +220,7 @@ export default function GovernmentMedicalCollegesPage() {
                           {college.name}
                         </Link>
                         {college.nirfRank && (
-                          <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                          <span className="ml-2 text-xs bg-amber-100 text-yellow-700 px-2 py-0.5 rounded-full">
                             NIRF #{college.nirfRank}
                           </span>
                         )}

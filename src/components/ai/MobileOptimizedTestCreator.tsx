@@ -139,7 +139,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
       id: 'basic',
       name: 'Basic Setup',
       icon: <Settings className="w-4 h-4" />,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-blue-500',
       isExpanded: true,
       tabs: [
         {
@@ -166,7 +166,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
       id: 'advanced',
       name: 'Advanced Options',
       icon: <Brain className="w-4 h-4" />,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-indigo-500',
       isExpanded: false,
       tabs: [
         {

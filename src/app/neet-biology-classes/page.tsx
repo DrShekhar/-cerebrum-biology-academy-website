@@ -349,7 +349,7 @@ export default function NeetBiologyClassesPage() {
       </section>
 
       {/* Syllabus Coverage */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
+      <section className="py-20 bg-[#4a5d4a] text-white">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             className="text-center mb-12"

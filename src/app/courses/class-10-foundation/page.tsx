@@ -153,7 +153,7 @@ export default function Class10FoundationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="bg-[#4a5d4a] text-white py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>

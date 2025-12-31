@@ -198,11 +198,11 @@ export function GlobalContactSupport({
             ></div>
             <div className="flex-1">
               <div
-                className={`font-medium ${isBusinessHours ? 'text-green-800' : 'text-amber-800'}`}
+                className={`font-medium ${isBusinessHours ? 'text-green-800' : 'text-yellow-800'}`}
               >
                 {isBusinessHours ? "🟢 We're Online Now!" : '🟡 Currently Offline'}
               </div>
-              <div className={`text-sm ${isBusinessHours ? 'text-green-700' : 'text-amber-700'}`}>
+              <div className={`text-sm ${isBusinessHours ? 'text-green-700' : 'text-yellow-700'}`}>
                 {isBusinessHours
                   ? 'Our team is available to help you'
                   : `Next available: ${nextAvailable}`}

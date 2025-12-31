@@ -231,8 +231,8 @@ export function CloneTab({
           </div>
 
           <div className="bg-amber-50 p-4 rounded-lg">
-            <h4 className="font-medium text-amber-800 mb-2">Clone Types</h4>
-            <div className="text-sm text-amber-700 space-y-1">
+            <h4 className="font-medium text-yellow-800 mb-2">Clone Types</h4>
+            <div className="text-sm text-yellow-700 space-y-1">
               <div>
                 <strong>Exact:</strong> Perfect copy with no changes
               </div>

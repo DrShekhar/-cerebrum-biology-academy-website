@@ -254,11 +254,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       href: '/contact',
       label: 'Help Center',
       icon: HelpCircle,
-      gradient: 'from-pink-500 to-pink-600',
+      gradient: 'from-indigo-500 to-indigo-600',
       bgGradient: 'from-pink-50 to-pink-100',
       hoverBg: 'hover:from-pink-100 hover:to-pink-200',
       textColor: 'text-pink-700',
-      iconBg: 'bg-pink-600',
+      iconBg: 'bg-indigo-600',
     },
   ]
 

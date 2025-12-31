@@ -673,10 +673,10 @@ const DataManagement: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center gap-3"
         >
-          <div className="p-3 bg-gradient-to-r from-green-600 to-cyan-600 rounded-xl">
+          <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Database className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             Data Management
           </h1>
         </motion.div>
@@ -973,8 +973,8 @@ const DataManagement: React.FC = () => {
                   </div>
 
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                    <h5 className="font-medium text-amber-800 mb-2">Required Fields</h5>
-                    <ul className="text-sm text-amber-700 space-y-1">
+                    <h5 className="font-medium text-yellow-800 mb-2">Required Fields</h5>
+                    <ul className="text-sm text-yellow-700 space-y-1">
                       <li>• Question text</li>
                       <li>• Question type (MCQ, True/False, etc.)</li>
                       <li>• Correct answer</li>

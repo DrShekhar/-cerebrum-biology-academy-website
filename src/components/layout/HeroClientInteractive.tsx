@@ -160,7 +160,7 @@ export function HeroClientInteractive() {
         </div>
         <a
           href="/neet-2026-preparation"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
         >
           <GraduationCap className="w-4 h-4" />
           NEET 2026

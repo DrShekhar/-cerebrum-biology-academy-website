@@ -121,7 +121,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             >
               <Trophy className="w-5 h-5" />
               <span>Results</span>
-              <span className="bg-gradient-to-r from-green-600 to-green-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+              <span className="bg-[#4a5d4a] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                 98%
               </span>
             </Link>
@@ -188,7 +188,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               </Link>
               <Link
                 href="/admissions"
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group"
+                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group"
               >
                 <span>Enroll Now</span>
                 <svg

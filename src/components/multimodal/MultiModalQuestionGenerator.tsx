@@ -373,10 +373,10 @@ const MultiModalQuestionGenerator: React.FC = () => {
         className="text-center space-y-4"
       >
         <div className="flex items-center justify-center gap-3">
-          <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl">
+          <div className="p-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl">
             <Layers className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Multi-Modal Question Generator
           </h1>
         </div>
@@ -516,7 +516,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <button
                     onClick={generateQuestions}
                     disabled={isGenerating}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                   >
                     {isGenerating ? (
                       <>
@@ -539,7 +539,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <motion.div
-                          className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full"
+                          className="bg-gradient-to-r from-purple-600 to-indigo-600 h-2 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: `${generationProgress}%` }}
                           transition={{ duration: 0.3 }}

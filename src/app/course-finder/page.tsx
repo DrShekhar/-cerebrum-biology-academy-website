@@ -93,7 +93,7 @@ export default function CourseFinderPage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-green-500">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#4a5d4a] flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                 <svg
                   className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                   fill="none"

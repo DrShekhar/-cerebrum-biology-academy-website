@@ -58,7 +58,7 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
   const getColor = (type: Activity['type']) => {
     const colors = {
       enrollment: 'bg-green-600',
-      demo: 'from-blue-500 to-cyan-600',
+      demo: 'from-blue-500 to-blue-600',
       success: 'from-yellow-500 to-orange-500',
       online: 'bg-green-600',
     }

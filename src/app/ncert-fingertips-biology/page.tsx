@@ -247,7 +247,7 @@ export default function NCERTFingertipsBiologyPage() {
                         <div className="text-sm text-gray-600">MTG</div>
                       </div>
                       <div className="text-center p-3 bg-amber-50 rounded-lg">
-                        <div className="font-semibold text-amber-700">Edition</div>
+                        <div className="font-semibold text-yellow-700">Edition</div>
                         <div className="text-sm text-gray-600">2024-25</div>
                       </div>
                       <div className="text-center p-3 bg-yellow-50 rounded-lg">
@@ -265,7 +265,7 @@ export default function NCERTFingertipsBiologyPage() {
                       href="https://www.amazon.in/Objective-NCERT-Fingertips-Biology-NEET/dp/9355556837"
                       target="_blank"
                     >
-                      <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+                      <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-3 rounded-xl flex items-center gap-2">
                         <ShoppingCart className="w-5 h-5" />
                         Buy from Amazon India
                         <ExternalLink className="w-4 h-4" />

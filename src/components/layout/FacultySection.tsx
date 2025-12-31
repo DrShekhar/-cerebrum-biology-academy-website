@@ -243,7 +243,7 @@ export function FacultySection() {
         {/* Call to Action */}
         <div
           ref={ctaAnim.ref}
-          className={`text-center bg-blue-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white transition-all duration-600 ${
+          className={`text-center bg-indigo-500 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white transition-all duration-600 ${
             ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
         >
