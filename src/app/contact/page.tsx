@@ -445,14 +445,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-gray-100 h-64 sm:h-80 md:h-96 lg:h-full flex items-center justify-center p-4">
-                <div className="text-center">
-                  <MapPin className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 text-gray-400 mx-auto mb-3 sm:mb-4" />
-                  <p className="text-gray-600 text-sm sm:text-base">Interactive Map Coming Soon</p>
-                  <p className="text-xs sm:text-sm text-gray-500 mt-2">
-                    Block D, South Extension 2, New Delhi 110049
-                  </p>
-                </div>
+              <div className="h-64 sm:h-80 md:h-96 lg:h-full w-full">
+                <iframe
+                  src="https://maps.google.com/maps?q=McDonald's,+South+Extension+Part+2,+New+Delhi,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cerebrum Biology Academy Location - South Extension 2, New Delhi"
+                  className="rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
+                ></iframe>
               </div>
             </div>
           </div>
