@@ -21,7 +21,6 @@ import {
   Building,
   Navigation,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function ContactPage() {
@@ -136,29 +135,20 @@ export default function ContactPage() {
       <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up">
               Get In Touch With Us
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            </h1>
+            <p
+              className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-in-up"
+              style={{ animationDelay: '0.2s' }}
             >
               Ready to start your NEET journey? Contact us for admission guidance, course
               information, or any queries about our biology coaching programs.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+              style={{ animationDelay: '0.4s' }}
             >
               <Link href="/demo-booking">
                 <Button
@@ -180,7 +170,7 @@ export default function ContactPage() {
                   Call Now
                 </Button>
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,12 +189,10 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16">
             {contactInfo.map((info, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
                   className={`w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6`}
@@ -221,7 +209,7 @@ export default function ContactPage() {
                     </p>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -233,18 +221,16 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
-                  <motion.div
-                    className="flex items-center p-4 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  <div
+                    className="flex items-center p-4 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer animate-fade-in-left"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <link.icon className="w-6 h-6 text-blue-600 mr-3" />
                     <span className="font-medium text-gray-900 group-hover:text-blue-600">
                       {link.title}
                     </span>
                     <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover:text-blue-600" />
-                  </motion.div>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -264,19 +250,9 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <motion.div
-            className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8 animate-fade-in-up">
             {submitted ? (
-              <motion.div
-                className="text-center py-12"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="text-center py-12 animate-scale-in">
                 <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Message Sent Successfully!
@@ -284,7 +260,7 @@ export default function ContactPage() {
                 <p className="text-gray-600">
                   Thank you for contacting us. We'll respond within 24 hours.
                 </p>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -390,7 +366,7 @@ export default function ContactPage() {
                 </div>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </section>
 

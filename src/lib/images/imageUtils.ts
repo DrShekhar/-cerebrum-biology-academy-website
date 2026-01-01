@@ -71,10 +71,11 @@ export function getPlaceholderAvatar(
   name: string,
   size: number = 100,
   background: string = '0D8ABC',
-  color: string = 'fff'
+  color: string = 'fff',
+  fontSize: number = 0.5
 ): string {
   const encodedName = encodeURIComponent(name)
-  return `https://ui-avatars.com/api/?name=${encodedName}&size=${size}&background=${background}&color=${color}&bold=true`
+  return `https://ui-avatars.com/api/?name=${encodedName}&size=${size}&background=${background}&color=${color}&bold=true&font-size=${fontSize}`
 }
 
 /**

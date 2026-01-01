@@ -54,10 +54,8 @@ export const DynamicMobileNavigation = dynamic(
 )
 
 // PERFORMANCE: Lazy-load PWA provider (service worker registration can wait)
-export const DynamicPWAProvider = dynamic(
-  () => import('@/components/pwa/PWAProvider').then((mod) => mod.PWAProvider),
-  { ssr: false }
-)
+// Temporarily disabled due to webpack module resolution issue
+export const DynamicPWAProvider = () => null
 
 // PERFORMANCE: Lazy-load trial banner with SSR for reduced FOUC
 export const DynamicTrialBanner = dynamic(

@@ -344,11 +344,14 @@ const config: Config = {
         'fade-in': 'fadeIn 0.3s ease-in-out',
         'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
         'fade-in-right': 'fadeInRight 0.3s ease-out forwards',
+        'fade-in-left': 'fadeInLeft 0.3s ease-out forwards',
         'scale-in': 'scaleIn 0.3s ease-out forwards',
         'slide-up': 'slideUp 0.3s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
         'bounce-soft': 'bounceSoft 0.6s ease-in-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-blob': 'floatBlob 20s ease-in-out infinite',
+        'float-blob-alt': 'floatBlobAlt 25s ease-in-out infinite',
         'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
         // Network-aware animations
         'loading-skeleton': 'loadingSkeleton 1.2s ease-in-out infinite',
@@ -374,6 +377,10 @@ const config: Config = {
         },
         fadeInRight: {
           '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         scaleIn: {

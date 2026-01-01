@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import {
   GraduationCap,
   BookOpen,
@@ -298,12 +299,12 @@ export default function DrShekharSinghPage() {
         </nav>
 
         <section
-          className="relative bg-indigo-700 text-white py-12 md:py-16 lg:py-20 overflow-hidden"
+          className="relative pt-28 pb-16 px-6 bg-[#e8ede8] overflow-hidden"
           role="region"
           aria-label="Dr. Shekhar Singh profile overview"
         >
-          <div className="absolute inset-0 opacity-10" aria-hidden="true">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-500 animate-pulse" />
+          <div className="absolute inset-0 opacity-5" aria-hidden="true">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] to-[#4a5d4a]" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,20 +316,18 @@ export default function DrShekharSinghPage() {
             >
               <div className="space-y-6">
                 <div className="relative w-64 h-64 mx-auto md:mx-0">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-full blur-2xl opacity-50"
-                    aria-hidden="true"
-                  />
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                     {drShekhar.image ? (
-                      <img
+                      <Image
                         src={drShekhar.image}
                         alt="Dr. Shekhar C Singh, Director of Cerebrum Biology Academy, AIIMS New Delhi Alumnus with 15+ years of NEET teaching experience"
-                        className="w-full h-full object-cover"
-                        loading="eager"
+                        fill
+                        sizes="(max-width: 768px) 256px, 320px"
+                        className="object-cover object-top"
+                        priority
                       />
                     ) : (
-                      <div className="w-full h-full bg-blue-500 flex items-center justify-center">
+                      <div className="w-full h-full bg-[#3d4d3d] flex items-center justify-center">
                         <GraduationCap
                           className="w-24 h-24 text-white"
                           aria-hidden="true"
@@ -346,77 +345,77 @@ export default function DrShekharSinghPage() {
                   aria-label="Key statistics"
                 >
                   <div
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20"
+                    className="bg-white rounded-xl p-4 text-center border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10"
                     role="listitem"
                   >
-                    <div className="text-3xl font-bold text-green-400" aria-label="14 plus years">
+                    <div className="text-3xl font-bold text-[#3d4d3d]" aria-label="14 plus years">
                       14+
                     </div>
-                    <div className="text-xs text-white/80">Years Exp.</div>
+                    <div className="text-xs text-gray-600">Years Exp.</div>
                   </div>
                   <div
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20"
+                    className="bg-white rounded-xl p-4 text-center border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10"
                     role="listitem"
                   >
-                    <div className="text-3xl font-bold text-yellow-300" aria-label="98 percent">
+                    <div className="text-3xl font-bold text-[#4a5d4a]" aria-label="98 percent">
                       98%
                     </div>
-                    <div className="text-xs text-white/80">Success</div>
+                    <div className="text-xs text-gray-600">Success</div>
                   </div>
                   <div
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20"
+                    className="bg-white rounded-xl p-4 text-center border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10"
                     role="listitem"
                   >
                     <div
-                      className="text-3xl font-bold text-green-300"
+                      className="text-3xl font-bold text-[#3d4d3d]"
                       aria-label="2500 plus students"
                     >
                       2,500+
                     </div>
-                    <div className="text-xs text-white/80">Students</div>
+                    <div className="text-xs text-gray-600">Students</div>
                   </div>
                 </div>
               </div>
 
               <div>
                 <motion.div
-                  className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-400/30 px-4 py-2 rounded-full mb-4"
+                  className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full mb-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                   role="status"
                   aria-label="Position: Director and Chief Educator"
                 >
-                  <Sparkles className="w-4 h-4 mr-2 text-green-400" aria-hidden="true" />
-                  <span className="text-green-100 text-sm font-medium">
+                  <Sparkles className="w-4 h-4 mr-2 text-white" aria-hidden="true" />
+                  <span className="text-white text-sm font-semibold">
                     Director & Chief Educator
                   </span>
                 </motion.div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-gray-900">
                   Dr. Shekhar C Singh
                 </h1>
 
                 <div className="flex items-center space-x-2 mb-6">
                   <School
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-[#4a5d4a]"
                     aria-hidden="true"
                     role="img"
                     aria-label="Education icon"
                   />
-                  <p className="text-base sm:text-lg md:text-xl text-blue-100 font-medium">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-700 font-medium">
                     {drShekhar.qualification}
                   </p>
                 </div>
 
-                <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
                   {drShekhar.bio}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6" role="group">
                   <Link
                     href="/demo-booking"
-                    className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-blue-900"
+                    className="inline-flex items-center justify-center bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-[#3d4d3d]/20 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
                     aria-label="Book a demo class with Dr. Shekhar Singh"
                   >
                     <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -424,7 +423,7 @@ export default function DrShekharSinghPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/30 backdrop-blur-sm transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"
+                    className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#3d4d3d] font-semibold px-8 py-4 rounded-xl border border-[#3d4d3d]/30 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
                     aria-label="Contact Dr. Shekhar Singh"
                   >
                     <Phone className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -433,6 +432,30 @@ export default function DrShekharSinghPage() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Trust Banner */}
+        <section className="py-6 bg-[#3d4d3d]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {trustBadges.map((badge, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center gap-3 justify-center"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <badge.icon className="w-6 h-6 text-white/80" aria-hidden="true" />
+                  <div>
+                    <div className="text-white font-semibold text-sm">{badge.label}</div>
+                    <div className="text-white/60 text-xs">{badge.description}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -447,10 +470,10 @@ export default function DrShekharSinghPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-3xl p-8 md:p-12 border-2 border-blue-100"
+              className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10"
             >
               <div className="flex items-start space-x-4 mb-6">
-                <Quote className="w-12 h-12 text-blue-600 flex-shrink-0" aria-hidden="true" />
+                <Quote className="w-12 h-12 text-[#3d4d3d] flex-shrink-0" aria-hidden="true" />
                 <div>
                   <h2
                     id="teaching-philosophy-heading"
@@ -466,12 +489,14 @@ export default function DrShekharSinghPage() {
 
               <div className="mt-8 grid md:grid-cols-3 gap-6" role="list">
                 <div className="flex items-start space-x-3" role="listitem">
-                  <Heart
-                    className="w-6 h-6 text-red-500 flex-shrink-0 mt-1"
-                    aria-hidden="true"
-                    role="img"
-                    aria-label="Heart icon"
-                  />
+                  <div className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Heart
+                      className="w-5 h-5 text-white"
+                      aria-hidden="true"
+                      role="img"
+                      aria-label="Heart icon"
+                    />
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Student-Centric</h3>
                     <p className="text-sm text-gray-600">
@@ -480,12 +505,14 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3" role="listitem">
-                  <Target
-                    className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1"
-                    aria-hidden="true"
-                    role="img"
-                    aria-label="Target icon"
-                  />
+                  <div className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Target
+                      className="w-5 h-5 text-white"
+                      aria-hidden="true"
+                      role="img"
+                      aria-label="Target icon"
+                    />
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Result-Oriented</h3>
                     <p className="text-sm text-gray-600">
@@ -494,12 +521,14 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3" role="listitem">
-                  <Sparkles
-                    className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1"
-                    aria-hidden="true"
-                    role="img"
-                    aria-label="Sparkles icon"
-                  />
+                  <div className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Sparkles
+                      className="w-5 h-5 text-white"
+                      aria-hidden="true"
+                      role="img"
+                      aria-label="Sparkles icon"
+                    />
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Beyond Textbooks</h3>
                     <p className="text-sm text-gray-600">
@@ -513,7 +542,7 @@ export default function DrShekharSinghPage() {
         </section>
 
         <section
-          className="py-12 md:py-16 lg:py-20 bg-gray-50"
+          className="py-12 md:py-16 lg:py-20 bg-[#e8ede8]"
           role="region"
           aria-labelledby="achievements-heading"
         >
@@ -525,7 +554,7 @@ export default function DrShekharSinghPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Trophy className="w-4 h-4 mr-2" aria-hidden="true" />
                 Remarkable Achievements
               </div>
@@ -544,7 +573,7 @@ export default function DrShekharSinghPage() {
               {drShekhar.achievements.map((achievement, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-2xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -553,7 +582,7 @@ export default function DrShekharSinghPage() {
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0"
                       aria-hidden="true"
                     >
                       <CheckCircle className="w-5 h-5 text-white" />
@@ -565,7 +594,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <motion.div
-              className="mt-12 bg-green-600 rounded-3xl p-8 text-white text-center"
+              className="mt-12 bg-[#3d4d3d] rounded-3xl p-8 text-white text-center"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -581,7 +610,7 @@ export default function DrShekharSinghPage() {
                   {drShekhar.successRate}%
                 </div>
                 <p className="text-xl sm:text-2xl font-semibold mb-2">NEET Success Rate</p>
-                <p className="text-green-100 text-lg">
+                <p className="text-white/80 text-lg">
                   Consistently outperforming national average by 4x
                 </p>
               </div>
@@ -598,7 +627,7 @@ export default function DrShekharSinghPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4 mr-2" aria-hidden="true" />
                 Credentials & Recognition
               </div>
@@ -615,27 +644,29 @@ export default function DrShekharSinghPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-                className="bg-gray-50 rounded-2xl p-8 border-2 border-blue-200 text-center"
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-[#3d4d3d] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">AIIMS Alumni</h3>
-                <p className="text-gray-600">Graduated from India's premier medical institution</p>
+                <p className="text-gray-600">
+                  Graduated from India&apos;s premier medical institution
+                </p>
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border-2 border-yellow-200 text-center"
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-[#4a5d4a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Academic Leadership</h3>
@@ -643,13 +674,13 @@ export default function DrShekharSinghPage() {
               </motion.div>
 
               <motion.div
-                className="bg-green-50 rounded-2xl p-8 border-2 border-green-200 text-center"
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-[#5a6d5a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Top Rank Producer</h3>
@@ -658,7 +689,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <motion.div
-              className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200"
+              className="bg-[#e8ede8] rounded-2xl p-8 border border-[#3d4d3d]/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -671,8 +702,8 @@ export default function DrShekharSinghPage() {
                 <p className="text-gray-600">Pioneering excellence in NEET Biology education</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-[#e8ede8]">
+                  <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -682,8 +713,8 @@ export default function DrShekharSinghPage() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-[#e8ede8]">
+                  <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -693,8 +724,8 @@ export default function DrShekharSinghPage() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-[#e8ede8]">
+                  <div className="w-12 h-12 bg-[#5a6d5a] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -702,8 +733,8 @@ export default function DrShekharSinghPage() {
                     <p className="text-sm text-gray-600">To top medical colleges across India</p>
                   </div>
                 </div>
-                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-[#e8ede8]">
+                  <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -719,7 +750,7 @@ export default function DrShekharSinghPage() {
         </section>
 
         <section
-          className="py-16 bg-indigo-50"
+          className="py-16 bg-[#e8ede8]"
           role="region"
           aria-labelledby="student-results-heading"
         >
@@ -731,7 +762,7 @@ export default function DrShekharSinghPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <CheckCircle2 className="w-4 h-4 mr-2" aria-hidden="true" />
                 Recent Success Stories
               </div>
@@ -751,7 +782,7 @@ export default function DrShekharSinghPage() {
               {recentResults.map((result, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-all hover:scale-105"
+                  className="bg-white rounded-xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-2xl transition-all hover:scale-105"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -762,12 +793,12 @@ export default function DrShekharSinghPage() {
                       <h3 className="font-bold text-lg text-gray-900">{result.name}</h3>
                       <p className="text-sm text-gray-600">NEET {result.year}</p>
                     </div>
-                    <CheckCircle2 className="w-8 h-8 text-green-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-8 h-8 text-[#3d4d3d] flex-shrink-0" />
                   </div>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm">NEET Score:</span>
-                      <span className="font-bold text-green-600 text-lg">{result.score}/720</span>
+                      <span className="font-bold text-[#3d4d3d] text-lg">{result.score}/720</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm">AIR:</span>
@@ -775,11 +806,11 @@ export default function DrShekharSinghPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm">Biology:</span>
-                      <span className="font-bold text-blue-600">{result.biologyScore}</span>
+                      <span className="font-bold text-[#4a5d4a]">{result.biologyScore}</span>
                     </div>
-                    <div className="pt-3 border-t border-gray-200">
+                    <div className="pt-3 border-t border-[#e8ede8]">
                       <div className="flex items-start">
-                        <School className="w-4 h-4 text-purple-600 mr-2 mt-1 flex-shrink-0" />
+                        <School className="w-4 h-4 text-[#3d4d3d] mr-2 mt-1 flex-shrink-0" />
                         <p className="text-sm text-gray-700 font-medium">{result.college}</p>
                       </div>
                     </div>
@@ -789,7 +820,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <motion.div
-              className="mt-12 bg-gradient-to-r from-green-50 to-green-50 rounded-2xl p-8 border-2 border-green-200"
+              className="mt-12 bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -799,7 +830,7 @@ export default function DrShekharSinghPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {trustBadges.map((badge, index) => (
                     <div key={index} className="flex flex-col items-center">
-                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center mb-3">
+                      <div className="w-14 h-14 bg-[#3d4d3d] rounded-xl flex items-center justify-center mb-3">
                         <badge.icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="font-bold text-gray-900 text-lg">{badge.label}</div>
@@ -821,7 +852,7 @@ export default function DrShekharSinghPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Quote className="w-4 h-4 mr-2" aria-hidden="true" />
                 Student Testimonials
               </div>
@@ -845,7 +876,7 @@ export default function DrShekharSinghPage() {
                 >
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="w-full flex-shrink-0 px-4">
-                      <div className="bg-indigo-50 rounded-3xl p-8 md:p-12 border-2 border-purple-200">
+                      <div className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10">
                         <div className="flex items-center justify-center mb-6">
                           <div className="flex space-x-1">
                             {[...Array(testimonial.rating)].map((_, i) => (
@@ -859,7 +890,7 @@ export default function DrShekharSinghPage() {
                         </div>
 
                         <Quote
-                          className="w-12 h-12 text-purple-400 mx-auto mb-4"
+                          className="w-12 h-12 text-[#3d4d3d] mx-auto mb-4"
                           aria-hidden="true"
                         />
 
@@ -888,7 +919,7 @@ export default function DrShekharSinghPage() {
 
               <button
                 onClick={prevTestimonial}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -896,7 +927,7 @@ export default function DrShekharSinghPage() {
 
               <button
                 onClick={nextTestimonial}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]"
                 aria-label="Next testimonial"
               >
                 <ChevronRightIcon className="w-6 h-6 text-gray-700" />
@@ -909,7 +940,7 @@ export default function DrShekharSinghPage() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all ${
                       index === currentTestimonial
-                        ? 'bg-purple-600 w-8'
+                        ? 'bg-[#3d4d3d] w-8'
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
@@ -920,7 +951,7 @@ export default function DrShekharSinghPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50" role="region" aria-labelledby="journey-heading">
+        <section className="py-16 bg-[#e8ede8]" role="region" aria-labelledby="journey-heading">
           <div className="max-w-5xl mx-auto px-4">
             <motion.div
               className="text-center mb-12"
@@ -929,7 +960,7 @@ export default function DrShekharSinghPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <TrendingUp className="w-4 h-4 mr-2" aria-hidden="true" />
                 Professional Journey
               </div>
@@ -949,7 +980,7 @@ export default function DrShekharSinghPage() {
                   description:
                     "Completed medical education from one of India's most prestigious institutions",
                   icon: GraduationCap,
-                  color: 'from-indigo-500 to-indigo-600',
+                  color: 'bg-[#3d4d3d]',
                 },
                 {
                   year: '2011-2015',
@@ -957,7 +988,7 @@ export default function DrShekharSinghPage() {
                   description:
                     'Pioneered innovative teaching methodologies for NEET Biology preparation',
                   icon: Sparkles,
-                  color: 'bg-green-600',
+                  color: 'bg-[#4a5d4a]',
                 },
                 {
                   year: '2015-2020',
@@ -965,14 +996,14 @@ export default function DrShekharSinghPage() {
                   description:
                     'Led academic programs and mentored faculty across multiple campuses',
                   icon: School,
-                  color: 'from-yellow-500 to-orange-500',
+                  color: 'bg-[#5a6d5a]',
                 },
                 {
                   year: '2020-Present',
                   title: 'Founded Cerebrum Biology Academy',
                   description: 'Established premier NEET Biology coaching with 98% success rate',
                   icon: Trophy,
-                  color: 'bg-red-600',
+                  color: 'bg-[#3d4d3d]',
                 },
               ].map((milestone, index) => (
                 <motion.div
@@ -985,12 +1016,12 @@ export default function DrShekharSinghPage() {
                   role="listitem"
                 >
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${milestone.color} rounded-full flex items-center justify-center flex-shrink-0 shadow-lg`}
+                    className={`w-16 h-16 ${milestone.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#3d4d3d]/20`}
                     aria-hidden="true"
                   >
                     <milestone.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8]">
                     <div className="flex items-center space-x-2 mb-2">
                       <Calendar className="w-4 h-4 text-gray-400" aria-hidden="true" />
                       <time className="text-sm font-semibold text-gray-500">{milestone.year}</time>
@@ -1005,7 +1036,7 @@ export default function DrShekharSinghPage() {
         </section>
 
         <section
-          className="py-16 bg-indigo-900 text-white"
+          className="py-16 bg-[#3d4d3d] text-white"
           role="region"
           aria-labelledby="contact-heading"
         >
@@ -1020,13 +1051,13 @@ export default function DrShekharSinghPage() {
                 <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Start Your NEET Journey?
                 </h2>
-                <p className="text-xl text-blue-100 mb-4">
+                <p className="text-xl text-white/80 mb-4">
                   Book a personal consultation with Dr. Shekhar and experience the teaching that has
                   transformed 2,500+ students
                 </p>
-                <div className="inline-flex items-center bg-green-600/20 border border-green-400/30 px-4 py-2 rounded-full">
-                  <Clock className="w-4 h-4 mr-2 text-green-300" />
-                  <span className="text-green-100 text-sm font-medium">
+                <div className="inline-flex items-center bg-white/10 border border-white/20 px-4 py-2 rounded-full">
+                  <Clock className="w-4 h-4 mr-2 text-white/80" />
+                  <span className="text-white/90 text-sm font-medium">
                     Response Time: Within 24 hours
                   </span>
                 </div>
@@ -1041,21 +1072,21 @@ export default function DrShekharSinghPage() {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Book 1-on-1 Session</h3>
-                      <p className="text-sm text-blue-200">Personal mentoring available</p>
+                      <p className="text-sm text-white/60">Personal mentoring available</p>
                     </div>
                   </div>
-                  <p className="text-blue-100 mb-4">
+                  <p className="text-white/80 mb-4">
                     Get personalized guidance and mentorship directly from Dr. Shekhar. Limited
                     slots available.
                   </p>
                   <Link
                     href="/demo-booking"
-                    className="inline-flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Session
@@ -1070,15 +1101,15 @@ export default function DrShekharSinghPage() {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
                       <MessageCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">WhatsApp Quick Connect</h3>
-                      <p className="text-sm text-blue-200">Instant response guaranteed</p>
+                      <p className="text-sm text-white/60">Instant response guaranteed</p>
                     </div>
                   </div>
-                  <p className="text-blue-100 mb-4">
+                  <p className="text-white/80 mb-4">
                     Have questions? Connect with us on WhatsApp for instant answers and course
                     details.
                   </p>
@@ -1086,7 +1117,7 @@ export default function DrShekharSinghPage() {
                     href="https://wa.me/918826444334?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20NEET%20Biology%20coaching%20with%20Dr.%20Shekhar%20Singh"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-400"
+                    className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Chat on WhatsApp
@@ -1097,7 +1128,7 @@ export default function DrShekharSinghPage() {
               <div className="text-center mb-8">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-base sm:text-lg w-full sm:w-auto"
+                  className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 text-base sm:text-lg w-full sm:w-auto"
                 >
                   <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
                   <span className="whitespace-nowrap">Book Free Demo</span>
@@ -1105,7 +1136,7 @@ export default function DrShekharSinghPage() {
               </div>
 
               <div
-                className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-blue-100"
+                className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-gray-300"
                 role="list"
                 aria-label="Contact information"
               >
@@ -1154,7 +1185,7 @@ export default function DrShekharSinghPage() {
               <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               <div className="flex flex-col">
                 <span className="font-bold text-sm">Book Demo Class</span>
-                <span className="text-xs text-green-100">Limited Slots Available</span>
+                <span className="text-xs text-green-50">Limited Slots Available</span>
               </div>
             </Link>
           </motion.div>

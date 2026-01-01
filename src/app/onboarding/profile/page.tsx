@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent Clerk auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Target, BookOpen, Brain, GraduationCap, ChevronRight, CheckCircle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -44,6 +44,12 @@ export default function OnboardingProfilePage() {
   const router = useRouter()
   const { user, isLoading } = useAuth()
   const [step, setStep] = useState(1)
+  const [mounted, setMounted] = useState(false)
+
+  // Prevent SSR issues with framer-motion and browser-only APIs
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Step 1: Track Selection
   const [selectedTrack, setSelectedTrack] = useState<UserTrack | null>(null)
@@ -120,8 +126,8 @@ export default function OnboardingProfilePage() {
     }
   }
 
-  // Loading state
-  if (isLoading) {
+  // SSR guard - prevent rendering until client-side
+  if (!mounted || isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">

@@ -185,20 +185,21 @@ const nextConfig = {
   // Build was 4.6GB, should be <200MB
   productionBrowserSourceMaps: false,
 
+  // FIX: Server external packages - moved to top level for Next.js 15 compatibility
+  serverExternalPackages: [
+    '@modelcontextprotocol/sdk',
+    'bullmq',
+    'ioredis',
+    '@prisma/client',
+    'prisma',
+  ],
+
   // Experimental features for better performance
   // Note: optimizeCss DISABLED - causes CSS MIME type errors and breaks MCQ page on desktop
   // swcMinify removed - enabled by default in Next.js 15
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
-    // FIX: Server external packages to prevent worker thread bundling issues
-    serverExternalPackages: [
-      '@modelcontextprotocol/sdk',
-      'bullmq',
-      'ioredis',
-      '@prisma/client',
-      'prisma',
-    ],
     // Optimize package imports for smaller bundles
     optimizePackageImports: [
       'lucide-react',

@@ -107,14 +107,14 @@ const VIDEO_TESTIMONIALS = [
 ]
 
 const TOP_COLLEGES = [
-  { name: 'AIIMS Delhi', students: 89, color: 'text-blue-600', bgColor: 'bg-blue-50' },
-  { name: 'AIIMS Rishikesh', students: 67, color: 'text-purple-600', bgColor: 'bg-purple-50' },
-  { name: 'MAMC Delhi', students: 54, color: 'text-green-600', bgColor: 'bg-green-50' },
-  { name: 'JIPMER Puducherry', students: 37, color: 'text-orange-600', bgColor: 'bg-orange-50' },
-  { name: 'KGMC Lucknow', students: 45, color: 'text-green-600', bgColor: 'bg-green-50' },
-  { name: 'GMC Nagpur', students: 52, color: 'text-indigo-600', bgColor: 'bg-pink-50' },
-  { name: 'BHU Varanasi', students: 41, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
-  { name: 'VMMC Delhi', students: 38, color: 'text-red-600', bgColor: 'bg-red-50' },
+  { name: 'AIIMS Delhi', students: 89, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'AIIMS Rishikesh', students: 67, color: 'text-[#4a5d4a]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'MAMC Delhi', students: 54, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'JIPMER Puducherry', students: 37, color: 'text-[#5a6d5a]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'KGMC Lucknow', students: 45, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'GMC Nagpur', students: 52, color: 'text-[#4a5d4a]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'BHU Varanasi', students: 41, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'VMMC Delhi', students: 38, color: 'text-[#5a6d5a]', bgColor: 'bg-[#e8ede8]' },
 ]
 
 const METHODOLOGY = [
@@ -123,46 +123,46 @@ const METHODOLOGY = [
     title: 'Conceptual Mastery',
     description:
       'Deep understanding over rote learning. Our faculty ensures every concept is crystal clear.',
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-50',
+    color: 'text-[#3d4d3d]',
+    bgColor: 'bg-[#e8ede8]',
   },
   {
     icon: Target,
     title: 'Targeted Practice',
     description:
       '10,000+ NEET-specific questions with detailed solutions and performance analytics.',
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-50',
+    color: 'text-[#4a5d4a]',
+    bgColor: 'bg-[#e8ede8]',
   },
   {
     icon: BarChart3,
     title: 'Personalized Analytics',
     description: 'AI-powered insights identify weak areas and create customized improvement plans.',
-    color: 'text-green-600',
-    bgColor: 'bg-green-50',
+    color: 'text-[#3d4d3d]',
+    bgColor: 'bg-[#e8ede8]',
   },
   {
     icon: Users,
     title: 'Expert Mentorship',
     description:
       'One-on-one guidance from NEET toppers and experienced faculty throughout your journey.',
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
+    color: 'text-[#5a6d5a]',
+    bgColor: 'bg-[#e8ede8]',
   },
   {
     icon: Zap,
     title: 'Regular Testing',
     description: 'Weekly mock tests simulating real NEET environment to build speed and accuracy.',
-    color: 'text-green-600',
-    bgColor: 'bg-green-50',
+    color: 'text-[#3d4d3d]',
+    bgColor: 'bg-[#e8ede8]',
   },
   {
     icon: Heart,
     title: 'Emotional Support',
     description:
       'Stress management, motivation sessions, and counseling to keep you mentally strong.',
-    color: 'text-red-600',
-    bgColor: 'bg-red-50',
+    color: 'text-[#4a5d4a]',
+    bgColor: 'bg-[#e8ede8]',
   },
 ]
 
@@ -199,13 +199,13 @@ export default function ResultsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm">
+          <div className="inline-flex items-center gap-2 bg-[#3d4d3d] text-white px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm">
             <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="font-semibold">NEET 2024 Results Announced</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
-            Our Students&apos; <span className="text-green-600">Success Stories</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3d4d3d] mb-4 sm:mb-6 px-4">
+            Our Students&apos; <span className="text-[#4a5d4a]">Success Stories</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
@@ -217,7 +217,7 @@ export default function ResultsPage() {
             <Button
               size="lg"
               variant="primary"
-              className="shadow-lg hover:shadow-xl transition-all w-full sm:w-auto min-h-11"
+              className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white shadow-lg hover:shadow-xl transition-all w-full sm:w-auto min-h-11"
               onClick={() =>
                 document
                   .getElementById('book-demo')
@@ -232,7 +232,7 @@ export default function ResultsPage() {
               size="lg"
               variant="outline"
               onClick={() => setShowShareMenu(!showShareMenu)}
-              className="relative w-full sm:w-auto min-h-11"
+              className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white relative w-full sm:w-auto min-h-11"
             >
               <Share2 className="h-5 w-5 mr-2" />
               Share Results
@@ -277,58 +277,70 @@ export default function ResultsPage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 mb-10 sm:mb-12 md:mb-16">
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Trophy className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-yellow-500 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#3d4d3d] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Trophy className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               {NEET_2024_RESULTS.aiims}
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">AIIMS Selections</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">AIIMS Selections</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Target className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#4a5d4a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Target className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               {NEET_2024_RESULTS.successRate}%
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">Success Rate</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">Success Rate</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Medal className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#5a6d5a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Medal className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               {NEET_2024_RESULTS.topRanks}
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">Top 500 Ranks</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">Top 500 Ranks</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 shadow-lg hover:shadow-xl transition-shadow">
-            <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-orange-600 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#3d4d3d] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <TrendingUp className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               +{NEET_2024_RESULTS.averageImprovement}
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">Avg. Improvement</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">Avg. Improvement</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
-            <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#4a5d4a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <GraduationCap className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               {NEET_2024_RESULTS.totalStudents}
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">Total Students</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">Total Students</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-indigo-600 mx-auto mb-3 sm:mb-4" />
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#5a6d5a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Award className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
               {NEET_2024_RESULTS.scholarships}
             </div>
-            <div className="text-xs sm:text-sm font-medium text-gray-700">Scholarships Won</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-600">Scholarships Won</div>
           </Card>
         </div>
 
         <section className="mb-10 sm:mb-12 md:mb-16">
           <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-3 sm:mb-4">
               Watch Our Students Share Their Journey
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -345,7 +357,7 @@ export default function ResultsPage() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">Want to see more success stories?</p>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white">
               <Play className="h-5 w-5 mr-2" />
               View All Video Testimonials
             </Button>
@@ -354,7 +366,7 @@ export default function ResultsPage() {
 
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4">
               Where Our Students Got Admitted
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -366,17 +378,17 @@ export default function ResultsPage() {
             {TOP_COLLEGES.map((college, index) => (
               <Card
                 key={index}
-                className={`p-6 hover:shadow-xl transition-all ${college.bgColor} border-0`}
+                className="p-6 hover:shadow-xl transition-all bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`${college.color}`}>
-                    <GraduationCap className="h-8 w-8" />
+                  <div className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center">
+                    <GraduationCap className="h-5 w-5 text-white" />
                   </div>
-                  <Badge className={`${college.color} ${college.bgColor} border-0 font-bold`}>
+                  <Badge className="bg-[#e8ede8] text-[#3d4d3d] border-0 font-bold">
                     {college.students} students
                   </Badge>
                 </div>
-                <h3 className={`font-bold text-lg ${college.color}`}>{college.name}</h3>
+                <h3 className="font-bold text-lg text-[#3d4d3d]">{college.name}</h3>
               </Card>
             ))}
           </div>
@@ -384,7 +396,7 @@ export default function ResultsPage() {
 
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4">
               Score Transformation
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -392,53 +404,53 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          <Card className="p-4 sm:p-6 md:p-8 bg-white shadow-xl">
+          <Card className="p-4 sm:p-6 md:p-8 bg-white shadow-xl border border-[#3d4d3d]/10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-500 mb-2">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-400 mb-2">
                   420
                 </div>
                 <div className="text-sm text-gray-600 mb-4">Average Starting Score</div>
-                <div className="h-2 bg-red-200 rounded-full"></div>
+                <div className="h-2 bg-gray-200 rounded-full"></div>
               </div>
 
               <div className="flex flex-col items-center justify-center">
-                <ArrowUp className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mb-2 animate-bounce" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-600 mb-2">
+                <ArrowUp className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-[#3d4d3d] mb-2 animate-bounce" />
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-2">
                   +{NEET_2024_RESULTS.averageImprovement}
                 </div>
                 <div className="text-sm text-gray-600">Points Improvement</div>
               </div>
 
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-600 mb-2">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#3d4d3d] mb-2">
                   {420 + NEET_2024_RESULTS.averageImprovement}
                 </div>
                 <div className="text-sm text-gray-600 mb-4">Average Final Score</div>
-                <div className="h-2 bg-green-600 rounded-full"></div>
+                <div className="h-2 bg-[#3d4d3d] rounded-full"></div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+            <div className="mt-8 p-6 bg-[#e8ede8] rounded-lg">
               <div className="flex items-center gap-3 mb-4">
-                <CheckCircle className="h-6 w-6 text-green-600" />
-                <h3 className="font-bold text-lg text-gray-900">Score Improvement Breakdown</h3>
+                <CheckCircle className="h-6 w-6 text-[#3d4d3d]" />
+                <h3 className="font-bold text-lg text-[#3d4d3d]">Score Improvement Breakdown</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-600 rounded-full flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-[#3d4d3d] rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>65%</strong> improved by 250+ marks
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-[#4a5d4a] rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>25%</strong> improved by 200-250 marks
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-[#5a6d5a] rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>10%</strong> improved by 150-200 marks
                   </span>
@@ -450,7 +462,7 @@ export default function ResultsPage() {
 
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4">
               How We Achieve These Results
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -462,15 +474,15 @@ export default function ResultsPage() {
             {METHODOLOGY.map((method, index) => (
               <Card
                 key={index}
-                className={`p-6 hover:shadow-xl transition-all ${method.bgColor} border-0`}
+                className="p-6 hover:shadow-xl transition-all bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`${method.bgColor} p-3 rounded-lg`}>
-                    <method.icon className={`h-8 w-8 ${method.color}`} />
+                  <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <method.icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className={`font-bold text-lg mb-2 ${method.color}`}>{method.title}</h3>
-                    <p className="text-gray-700 text-sm leading-relaxed">{method.description}</p>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4d3d]">{method.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{method.description}</p>
                   </div>
                 </div>
               </Card>
@@ -479,18 +491,18 @@ export default function ResultsPage() {
         </section>
 
         <section id="book-demo" className="mb-8">
-          <Card className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 md:p-12 shadow-2xl">
+          <Card className="bg-[#e8ede8] p-8 md:p-12 shadow-2xl border border-[#3d4d3d]/10">
             <div className="text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-[#3d4d3d] text-white px-4 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5" />
                 <span className="font-semibold">Limited Seats Available</span>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#3d4d3d]">
                 Ready to Write Your Success Story?
               </h2>
 
-              <p className="text-lg text-blue-100 mb-8">
+              <p className="text-lg text-[#4a5d4a] mb-8">
                 Join 500+ successful students who achieved their NEET dreams with our proven
                 methodology and expert guidance. Book your free demo class today and experience the
                 Cerebrum difference.
@@ -500,7 +512,7 @@ export default function ResultsPage() {
                 <Button
                   size="xl"
                   variant="secondary"
-                  className="bg-white text-green-600 hover:bg-blue-50 shadow-lg hover:shadow-xl"
+                  className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] shadow-lg hover:shadow-xl"
                 >
                   Book Your Free Demo Class
                   <ChevronRight className="h-6 w-6 ml-2" />
@@ -509,13 +521,13 @@ export default function ResultsPage() {
                 <Button
                   size="xl"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-green-600"
+                  className="border-2 border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
                 >
                   Talk to Our Success Coach
                 </Button>
               </div>
 
-              <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
+              <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-[#3d4d3d]">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5" />
                   <span>No Payment Required</span>
