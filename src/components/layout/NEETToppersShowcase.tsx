@@ -444,7 +444,7 @@ export function NEETToppersShowcase({
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 rounded-3xl p-12 text-white"
+          className="text-center bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d] rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -460,7 +460,7 @@ export function NEETToppersShowcase({
             <Button
               variant="secondary"
               size="xl"
-              className="bg-white text-orange-600 hover:bg-gray-100"
+              className="bg-yellow-500 text-black hover:bg-yellow-400"
               onClick={handleDemoBooking}
             >
               <Target className="w-5 h-5 mr-2" />
@@ -470,7 +470,7 @@ export function NEETToppersShowcase({
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-orange-600"
+              className="border-white text-white hover:bg-white hover:text-[#3d4d3d]"
             >
               <Play className="w-5 h-5 mr-2" />
               Watch All Success Videos
@@ -484,11 +484,11 @@ export function NEETToppersShowcase({
               <span>695+ Highest Score</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-[#e8ede8] rounded-full mr-2"></div>
               <span>247+ Best Rank</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-red-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
               <span>267+ NEET Selections</span>
             </div>
           </div>
