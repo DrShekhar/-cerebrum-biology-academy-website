@@ -438,7 +438,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-6 sm:mt-7 md:mt-8">
-                  <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12">
+                  <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12 bg-[#3d4d3d] hover:bg-[#4a5d4a]">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Campus Visit
                   </Button>

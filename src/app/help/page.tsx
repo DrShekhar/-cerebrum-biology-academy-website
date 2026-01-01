@@ -188,7 +188,7 @@ export default function HelpCenterPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-blue-600 text-white py-16">
+      <div className="bg-[#3d4d3d] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
@@ -198,7 +198,7 @@ export default function HelpCenterPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
               Help Center
             </h1>
-            <p className="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-[#e8ede8] max-w-3xl mx-auto">
               Find answers to your questions about NEET preparation, enrollment, courses, and more
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function HelpCenterPage() {
                     setViewMode('all')
                   }
                 }}
-                className="w-full pl-16 pr-14 py-6 rounded-2xl border-2 border-transparent bg-white text-gray-900 placeholder-gray-500 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-400/30 text-lg shadow-2xl transition-all"
+                className="w-full pl-16 pr-14 py-6 rounded-2xl border-2 border-transparent bg-white text-gray-900 placeholder-gray-500 focus:border-[#4a5d4a] focus:outline-none focus:ring-4 focus:ring-[#4a5d4a]/30 text-lg shadow-2xl transition-all"
               />
               {searchQuery && (
                 <button
@@ -248,7 +248,7 @@ export default function HelpCenterPage() {
             }}
             className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'categories'
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-[#3d4d3d] text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -261,7 +261,7 @@ export default function HelpCenterPage() {
             }}
             className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'popular'
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-[#3d4d3d] text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -275,7 +275,7 @@ export default function HelpCenterPage() {
             }}
             className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'all'
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-[#3d4d3d] text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -308,7 +308,7 @@ export default function HelpCenterPage() {
                       <div className={`${colors.text} mb-3 sm:mb-4`}>
                         {Icon && <Icon className="w-10 h-10 sm:w-12 sm:h-12" />}
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-[#3d4d3d] transition-colors">
                         {category.name}
                       </h3>
                       <p className="text-gray-600 text-xs sm:text-sm mb-3 leading-relaxed">
@@ -318,7 +318,7 @@ export default function HelpCenterPage() {
                         <span className={`text-xs font-semibold ${colors.text}`}>
                           {faqCount} articles
                         </span>
-                        <span className="text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity text-sm">
+                        <span className="text-[#3d4d3d] opacity-0 group-hover:opacity-100 transition-opacity text-sm">
                           View →
                         </span>
                       </div>
@@ -352,7 +352,7 @@ export default function HelpCenterPage() {
                 <div className="flex items-center gap-4 mb-6">
                   <button
                     onClick={() => setSelectedCategory('all')}
-                    className="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2"
+                    className="text-[#3d4d3d] hover:text-[#4a5d4a] font-semibold flex items-center gap-2"
                   >
                     ← Back to all categories
                   </button>
@@ -384,7 +384,7 @@ export default function HelpCenterPage() {
                 </p>
                 <button
                   onClick={clearSearch}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                  className="px-6 py-3 bg-[#3d4d3d] text-white rounded-xl font-semibold hover:bg-[#4a5d4a] transition-colors"
                 >
                   Clear Search
                 </button>
@@ -393,7 +393,7 @@ export default function HelpCenterPage() {
           </div>
         )}
 
-        <div className="mt-12 sm:mt-14 md:mt-16 bg-indigo-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
+        <div className="mt-12 sm:mt-14 md:mt-16 bg-[#3d4d3d] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
           <div className="text-center mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4">
               <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -402,7 +402,7 @@ export default function HelpCenterPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Contact Our Support Team
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-[#e8ede8] max-w-2xl mx-auto">
               Our friendly support team is here to help you with any questions
             </p>
           </div>
@@ -411,7 +411,7 @@ export default function HelpCenterPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all">
               <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+              <p className="text-[#e8ede8] mb-2 sm:mb-3 text-sm sm:text-base">
                 Mon-Sun, 9 AM - 9 PM
               </p>
               <a
@@ -425,7 +425,7 @@ export default function HelpCenterPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
               <Mail className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+              <p className="text-[#e8ede8] mb-2 sm:mb-3 text-sm sm:text-base">
                 Response within 4-6 hours
               </p>
               <a
@@ -439,7 +439,7 @@ export default function HelpCenterPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
               <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-bold mb-2">Live Chat</h3>
-              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+              <p className="text-[#e8ede8] mb-2 sm:mb-3 text-sm sm:text-base">
                 Instant support available
               </p>
               <button className="text-white font-bold hover:text-yellow-300 transition-colors text-sm sm:text-base">
@@ -449,11 +449,11 @@ export default function HelpCenterPage() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-blue-100 mb-4">Or visit our other support pages</p>
+            <p className="text-[#e8ede8] mb-4">Or visit our other support pages</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo-booking"
-                className="px-6 py-3 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all"
+                className="px-6 py-3 bg-white text-[#3d4d3d] rounded-xl font-semibold hover:bg-[#e8ede8] transition-all"
               >
                 Book Free Demo Class
               </Link>
@@ -488,7 +488,7 @@ export default function HelpCenterPage() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="mailto:support@cerebrumacademy.in?subject=Help Center Inquiry"
-                  className="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2 bg-[#3d4d3d] text-white rounded-lg font-semibold hover:bg-[#4a5d4a] transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                   Email Your Question
