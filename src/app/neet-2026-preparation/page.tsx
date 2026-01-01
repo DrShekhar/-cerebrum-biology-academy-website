@@ -80,25 +80,25 @@ export default function NEET2026PreparationPage() {
       title: 'Updated Syllabus Coverage',
       description: 'Complete NEET 2026 syllabus with latest NTA patterns and NCERT-based approach',
       icon: BookOpen,
-      color: 'bg-[#3d4d3d]',
+      color: 'bg-red-500',
     },
     {
       title: 'AI-Powered Learning',
       description: 'Personalized study plans and adaptive mock tests for targeted preparation',
       icon: Brain,
-      color: 'bg-[#4a5d4a]',
+      color: 'bg-blue-500',
     },
     {
       title: '500+ NEET Selections',
       description: '98% success rate with 500+ students in top medical colleges yearly',
       icon: Trophy,
-      color: 'bg-gradient-to-r from-orange-500 to-yellow-500',
+      color: 'bg-amber-500',
     },
     {
       title: 'AIIMS Faculty',
       description: 'Learn from ex-AIIMS doctors and NEET biology experts with 15+ years experience',
       icon: Award,
-      color: 'bg-green-600',
+      color: 'bg-green-500',
     },
   ]
 
