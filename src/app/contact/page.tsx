@@ -95,7 +95,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Our Campus',
-      details: ['A-2/45, Sector 16, Noida, UP 201301', 'Near City Centre Metro Station'],
+      details: ['Block D, South Extension 2', 'New Delhi 110049'],
       color: 'bg-[#3d4d3d]',
     },
     {
@@ -107,7 +107,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@cerebrumbiologyacademy.com', 'admissions@cerebrumbiologyacademy.com'],
+      details: ['info@cerebrum.academy', 'admissions@cerebrum.academy'],
       color: 'bg-[#5a6d5a]',
     },
     {
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-2">
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-600">
+                    <p key={idx} className="text-gray-600 text-sm sm:text-base break-words">
                       {detail}
                     </p>
                   ))}
@@ -403,7 +403,7 @@ export default function ContactPage() {
                         Main Campus
                       </h4>
                       <p className="text-gray-600 text-sm sm:text-base">
-                        A-2/45, Sector 16, Noida, UP 201301
+                        Block D, South Extension 2, New Delhi 110049
                       </p>
                     </div>
                   </div>
@@ -417,7 +417,7 @@ export default function ContactPage() {
                         Nearest Metro
                       </h4>
                       <p className="text-gray-600 text-sm sm:text-base">
-                        City Centre Metro Station (500m walk)
+                        South Extension Metro Station (5 min walk)
                       </p>
                     </div>
                   </div>
@@ -450,7 +450,7 @@ export default function ContactPage() {
                   <MapPin className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 text-gray-400 mx-auto mb-3 sm:mb-4" />
                   <p className="text-gray-600 text-sm sm:text-base">Interactive Map Coming Soon</p>
                   <p className="text-xs sm:text-sm text-gray-500 mt-2">
-                    A-2/45, Sector 16, Noida, UP 201301
+                    Block D, South Extension 2, New Delhi 110049
                   </p>
                 </div>
               </div>
