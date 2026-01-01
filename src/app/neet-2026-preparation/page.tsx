@@ -113,37 +113,61 @@ export default function NEET2026PreparationPage() {
 
   const neet2026Batches = [
     {
-      name: 'Class 11 Foundation (2025-26)',
-      target: 'NEET 2027',
-      duration: '2 Years',
-      features: ['Board + NEET integrated', 'Strong foundation building', 'Early bird advantage'],
-      price: '₹48,000-₹98,000/year',
-      color: 'bg-[#3d4d3d]',
+      name: 'Crash Course',
+      target: 'NEET 2026',
+      duration: '3-4 Months',
+      features: [
+        'Rapid syllabus revision',
+        'High-yield topic focus',
+        'Intensive mock tests',
+      ],
+      price: '₹45,000',
+      color: 'bg-red-500',
+      description:
+        'Fast-track intensive program for last-minute NEET preparation. Covers complete syllabus with focus on most important topics and exam strategies.',
     },
     {
-      name: 'Class 12 Intensive (2025-26)',
+      name: 'Test Series Course',
       target: 'NEET 2026',
-      duration: '1 Year',
-      features: ['Complete syllabus coverage', '100+ mock tests', 'Daily doubt sessions'],
-      price: '₹70,000-₹156,000/year',
-      color: 'bg-[#4a5d4a]',
+      duration: '6 Months',
+      features: [
+        '100+ chapter-wise tests',
+        'Full-length mock exams',
+        'Detailed performance analysis',
+      ],
+      price: '₹12,000',
+      color: 'bg-blue-500',
+      description:
+        'Comprehensive test practice program with NTA-pattern mock tests, detailed solutions, and AI-powered performance analytics to identify strengths and weaknesses.',
+    },
+    {
+      name: 'Dropper Course',
+      target: 'NEET 2026',
+      duration: '10-12 Months',
+      features: [
+        'Complete syllabus from scratch',
+        'Personalized weakness analysis',
+        'One-on-one mentoring',
+      ],
+      price: '₹70,000-₹1,56,000',
+      color: 'bg-amber-500',
       popular: true,
+      description:
+        'Comprehensive year-long program designed for repeaters. Rebuild concepts from foundation with expert guidance, intensive practice, and dedicated mentor support.',
     },
     {
-      name: 'Dropper Batch (2025-26)',
+      name: 'Test & Discussion Course',
       target: 'NEET 2026',
-      duration: '10 Months',
-      features: ['Focused preparation', 'Weakness analysis', 'Mental conditioning'],
-      price: '₹55,000/year',
-      color: 'bg-orange-500',
-    },
-    {
-      name: 'Early Bird Batch',
-      target: 'NEET 2026',
-      duration: '18 Months',
-      features: ['Extra time for preparation', 'Thorough concept building', 'Multiple revisions'],
-      price: '₹75,000',
-      color: 'bg-green-600',
+      duration: '6-8 Months',
+      features: [
+        'Weekly tests with live discussion',
+        'Doubt clearing sessions',
+        'Expert faculty guidance',
+      ],
+      price: '₹26,000',
+      color: 'bg-green-500',
+      description:
+        'Perfect blend of practice and learning. Regular tests followed by detailed discussion sessions with faculty to clear doubts and strengthen concepts.',
     },
   ]
 
@@ -530,6 +554,12 @@ export default function NEET2026PreparationPage() {
                     {batch.duration}
                   </span>
                 </div>
+
+                {'description' in batch && (
+                  <p className="text-gray-600 text-xs sm:text-sm mb-3 leading-relaxed">
+                    {batch.description}
+                  </p>
+                )}
 
                 <ul className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
                   {batch.features.map((feature) => (
