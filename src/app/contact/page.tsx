@@ -96,25 +96,25 @@ export default function ContactPage() {
       icon: MapPin,
       title: 'Visit Our Campus',
       details: ['A-2/45, Sector 16, Noida, UP 201301', 'Near City Centre Metro Station'],
-      color: 'bg-blue-500',
+      color: 'bg-[#3d4d3d]',
     },
     {
       icon: Phone,
       title: 'Call Us',
       details: ['+91 93119 46297', '+91 88264 44334 (Admissions)'],
-      color: 'bg-green-600',
+      color: 'bg-[#4a5d4a]',
     },
     {
       icon: Mail,
       title: 'Email Us',
       details: ['info@cerebrumbiologyacademy.com', 'admissions@cerebrumbiologyacademy.com'],
-      color: 'bg-purple-500',
+      color: 'bg-[#5a6d5a]',
     },
     {
       icon: Clock,
       title: 'Office Hours',
       details: ['Monday - Saturday: 8:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 6:00 PM'],
-      color: 'bg-orange-500',
+      color: 'bg-[#3d4d3d]',
     },
   ]
 
@@ -132,14 +132,18 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-[#3d4d3d] text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <MessageSquare className="h-5 w-5" />
+              <span className="font-semibold">We&apos;re Here to Help</span>
+            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up">
               Get In Touch With Us
             </h1>
             <p
-              className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-in-up"
+              className="text-base sm:text-lg md:text-xl text-[#e8ede8] max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-in-up"
               style={{ animationDelay: '0.2s' }}
             >
               Ready to start your NEET journey? Contact us for admission guidance, course
@@ -154,7 +158,7 @@ export default function ContactPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                  className="border-white text-white hover:bg-white hover:text-[#3d4d3d]"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule Campus Visit
@@ -164,7 +168,7 @@ export default function ContactPage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100"
+                  className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8]"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -222,14 +226,14 @@ export default function ContactPage() {
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
                   <div
-                    className="flex items-center p-4 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer animate-fade-in-left"
+                    className="flex items-center p-4 bg-gray-50 rounded-2xl hover:bg-[#e8ede8] transition-colors group cursor-pointer animate-fade-in-left"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <link.icon className="w-6 h-6 text-blue-600 mr-3" />
-                    <span className="font-medium text-gray-900 group-hover:text-blue-600">
+                    <link.icon className="w-6 h-6 text-[#3d4d3d] mr-3" />
+                    <span className="font-medium text-gray-900 group-hover:text-[#3d4d3d]">
                       {link.title}
                     </span>
-                    <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover:text-blue-600" />
+                    <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover:text-[#3d4d3d]" />
                   </div>
                 </Link>
               ))}
@@ -274,7 +278,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -288,7 +292,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -305,7 +309,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -317,7 +321,7 @@ export default function ContactPage() {
                       name="enquiryType"
                       value={formData.enquiryType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="admission">Admission Information</option>
@@ -338,7 +342,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent resize-none"
                     placeholder="Tell us about your requirements, questions, or how we can help you..."
                   />
                 </div>
@@ -391,7 +395,9 @@ export default function ContactPage() {
 
                 <div className="space-y-4 sm:space-y-5 md:space-y-6">
                   <div className="flex items-start">
-                    <Building className="w-5 sm:w-6 h-5 sm:h-6 text-blue-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
+                    <div className="w-10 h-10 bg-[#e8ede8] rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                      <Building className="w-5 h-5 text-[#3d4d3d]" />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Main Campus
@@ -403,7 +409,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <Navigation className="w-5 sm:w-6 h-5 sm:h-6 text-green-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
+                    <div className="w-10 h-10 bg-[#e8ede8] rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                      <Navigation className="w-5 h-5 text-[#4a5d4a]" />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Nearest Metro
@@ -415,7 +423,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <Clock className="w-5 sm:w-6 h-5 sm:h-6 text-purple-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
+                    <div className="w-10 h-10 bg-[#e8ede8] rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#5a6d5a]" />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Campus Hours
@@ -450,12 +460,16 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <Star className="h-5 w-5" />
+            <span className="font-semibold">Start Your Journey Today</span>
+          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 md:mb-6">
             Ready to Start Your NEET Journey?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-7 md:mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-[#e8ede8] mb-6 sm:mb-7 md:mb-8">
             Join thousands of successful students and achieve your medical dreams with expert
             guidance.
           </p>
@@ -465,7 +479,7 @@ export default function ContactPage() {
               <Button
                 variant="outline"
                 size="xl"
-                className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto min-h-11 sm:min-h-12"
+                className="border-white text-white hover:bg-white hover:text-[#3d4d3d] w-full sm:w-auto min-h-11 sm:min-h-12"
               >
                 Explore Courses
               </Button>
@@ -473,7 +487,7 @@ export default function ContactPage() {
             <Button
               variant="primary"
               size="xl"
-              className="bg-white text-green-600 hover:bg-gray-100 w-full sm:w-auto min-h-11 sm:min-h-12"
+              className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8] w-full sm:w-auto min-h-11 sm:min-h-12"
               onClick={() => (window.location.href = 'tel:+918826444334')}
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -482,17 +496,17 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
-            <div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">Free</div>
-              <div className="text-green-100 text-xs sm:text-sm md:text-base">Consultation</div>
+              <div className="text-[#e8ede8] text-xs sm:text-sm md:text-base">Consultation</div>
             </div>
-            <div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">24/7</div>
-              <div className="text-green-100 text-xs sm:text-sm md:text-base">Support</div>
+              <div className="text-[#e8ede8] text-xs sm:text-sm md:text-base">Support</div>
             </div>
-            <div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">94%</div>
-              <div className="text-green-100 text-xs sm:text-sm md:text-base">Success Rate</div>
+              <div className="text-[#e8ede8] text-xs sm:text-sm md:text-base">Success Rate</div>
             </div>
           </div>
         </div>
