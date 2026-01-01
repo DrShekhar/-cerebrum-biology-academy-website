@@ -5,6 +5,9 @@
 
 'use client'
 
+// Force dynamic rendering to prevent Clerk auth issues during static build
+export const dynamic = 'force-dynamic'
+
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
