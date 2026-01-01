@@ -211,18 +211,6 @@ export default function NEET2026PreparationPage() {
       <section className="relative bg-[#3d4d3d] text-white py-8 sm:py-12 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d]" />
 
-        {/* Urgency Banner */}
-        <div className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white py-2 sm:py-3">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 text-center">
-            <div className="flex items-center justify-center flex-wrap gap-1 sm:gap-2 text-xs sm:text-sm md:text-base">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" />
-              <span className="font-bold">Limited Offer: FREE Material + Demo!</span>
-              <span className="hidden md:inline">|</span>
-              <span className="hidden sm:inline">Only 50 seats left!</span>
-            </div>
-          </div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
             <motion.div
