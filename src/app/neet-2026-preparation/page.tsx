@@ -122,7 +122,7 @@ export default function NEET2026PreparationPage() {
         'Intensive mock tests',
       ],
       price: '₹45,000',
-      color: 'bg-red-500',
+      color: 'bg-[#3d4d3d]',
       description:
         'Fast-track intensive program for last-minute NEET preparation. Covers complete syllabus with focus on most important topics and exam strategies.',
     },
@@ -136,7 +136,7 @@ export default function NEET2026PreparationPage() {
         'Detailed performance analysis',
       ],
       price: '₹12,000',
-      color: 'bg-blue-500',
+      color: 'bg-[#4a5d4a]',
       description:
         'Comprehensive test practice program with NTA-pattern mock tests, detailed solutions, and AI-powered performance analytics to identify strengths and weaknesses.',
     },
@@ -150,7 +150,7 @@ export default function NEET2026PreparationPage() {
         'One-on-one mentoring',
       ],
       price: '₹70,000-₹1,56,000',
-      color: 'bg-amber-500',
+      color: 'bg-[#5a6d5a]',
       popular: true,
       description:
         'Comprehensive year-long program designed for repeaters. Rebuild concepts from foundation with expert guidance, intensive practice, and dedicated mentor support.',
@@ -165,7 +165,7 @@ export default function NEET2026PreparationPage() {
         'Expert faculty guidance',
       ],
       price: '₹26,000',
-      color: 'bg-green-500',
+      color: 'bg-[#3d4d3d]',
       description:
         'Perfect blend of practice and learning. Regular tests followed by detailed discussion sessions with faculty to clear doubts and strengthen concepts.',
     },
