@@ -55,6 +55,7 @@ export interface CourseTier {
   name: string
   description: string
   batchSize: number
+  batchSizeDisplay?: string
   priceRange: {
     min: number
     max: number

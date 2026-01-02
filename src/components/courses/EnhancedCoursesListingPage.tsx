@@ -97,12 +97,12 @@ export function EnhancedCoursesListingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-indigo-500 text-white py-12 sm:py-16 md:py-20">
+      <section className="bg-[#4a5d4a] text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             NEET Biology Courses
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-6 sm:mb-8">
             Choose from our comprehensive range of NEET Biology courses designed for every class
             level. Expert faculty, proven curriculum, and guaranteed results.
           </p>
@@ -111,19 +111,19 @@ export function EnhancedCoursesListingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">{coursePrograms.length}</div>
-              <div className="text-blue-100 text-xs sm:text-sm md:text-base">Course Programs</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Course Programs</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">{courseTiers.length}</div>
-              <div className="text-blue-100 text-xs sm:text-sm md:text-base">Learning Tiers</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Learning Tiers</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">5%</div>
-              <div className="text-blue-100 text-xs sm:text-sm md:text-base">One-time Discount</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">One-time Discount</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">{getTotalStudents()}</div>
-              <div className="text-blue-100 text-xs sm:text-sm md:text-base">Total Capacity</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Total Capacity</div>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export function EnhancedCoursesListingPage() {
                     {tier.priceRange.max.toLocaleString()}
                   </div>
                   <div className="text-sm text-gray-500 mb-4">
-                    Batch Size: {tier.batchSize} students
+                    Batch Size: {tier.batchSizeDisplay || tier.batchSize} students
                   </div>
                   <div className="text-left space-y-2">
                     {tier.highlights.slice(0, 3).map((highlight, index) => (
@@ -267,11 +267,11 @@ export function EnhancedCoursesListingPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-12 sm:mt-16 text-center bg-indigo-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
+          <div className="mt-12 sm:mt-16 text-center bg-[#4a5d4a] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
             <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Ready to Start Your NEET Journey?
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               Join thousands of successful students who have achieved their medical dreams with our
               expert guidance
             </p>
@@ -286,12 +286,12 @@ export function EnhancedCoursesListingPage() {
                     handleBookDemo(demoCourse)
                   }
                 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-[#4a5d4a] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
                 disabled={filteredCourses.length === 0}
               >
                 Book Free Demo Class
               </button>
-              <button className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-400 transition-colors">
+              <button className="bg-[#3d4d3d] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#5a6d5a] transition-colors">
                 Talk to Counselor
               </button>
             </div>

@@ -16,7 +16,8 @@ export const courseTiers: CourseTier[] = [
     name: 'Pinnacle Series',
     description: 'Premium tier with maximum personalization and comprehensive support',
     batchSize: 12,
-    priceRange: { min: 65000, max: 180000 },
+    batchSizeDisplay: '10-12',
+    priceRange: { min: 60000, max: 180000 },
     features: {
       liveClasses: true,
       recordedVideos: true,
@@ -38,7 +39,7 @@ export const courseTiers: CourseTier[] = [
       revisionSessions: true,
     },
     highlights: [
-      'Ultra-small batch size (12 students)',
+      'Ultra-small batch size (10-12 students)',
       'Dedicated personal mentor',
       'Weekly one-on-one sessions',
       'Customized study plans',
@@ -52,7 +53,8 @@ export const courseTiers: CourseTier[] = [
     series: 'ascent',
     name: 'Ascent Series',
     description: 'Standard tier with balanced features and regular mentoring',
-    batchSize: 20,
+    batchSize: 18,
+    batchSizeDisplay: '16-18',
     priceRange: { min: 60000, max: 140000 },
     features: {
       liveClasses: true,
@@ -75,7 +77,7 @@ export const courseTiers: CourseTier[] = [
       revisionSessions: true,
     },
     highlights: [
-      'Optimal batch size (20 students)',
+      'Optimal batch size (16-18 students)',
       'Regular doubt clearing sessions',
       'Comprehensive test series',
       'Digital learning resources',
@@ -90,6 +92,7 @@ export const courseTiers: CourseTier[] = [
     name: 'Pursuit Series',
     description: 'Value tier with essential features and self-paced learning support',
     batchSize: 30,
+    batchSizeDisplay: '30-40',
     priceRange: { min: 45000, max: 85000 },
     features: {
       liveClasses: true,
@@ -507,10 +510,10 @@ export const coursePrograms: CourseProgram[] = [
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 156000,
+        price: 98000,
         batchSize: 12,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(156000),
+        payment: calculatePaymentOptions(98000),
         additionalBenefits: [
           'Board + NEET dual preparation',
           'Time management coaching',
