@@ -785,7 +785,7 @@ export default function PricingPage() {
                 color: 'purple',
                 badge: '👑 Premium',
                 batchSize: '10-12',
-                hours: '5-6 hrs',
+                hours: '10-12 hrs',
                 attention: 'Maximum',
                 mentorship: true,
                 oneOnOne: true,
@@ -796,7 +796,7 @@ export default function PricingPage() {
                 color: 'blue',
                 badge: '🔥 Popular',
                 batchSize: '16-25',
-                hours: '4-5 hrs',
+                hours: '8 hrs',
                 attention: 'High',
                 mentorship: true,
                 oneOnOne: true,
@@ -807,7 +807,7 @@ export default function PricingPage() {
                 color: 'green',
                 badge: '💰 Value',
                 batchSize: '30-40',
-                hours: '3-4 hrs',
+                hours: '6 hrs',
                 attention: 'Good',
                 mentorship: false,
                 oneOnOne: false,
@@ -927,9 +927,9 @@ export default function PricingPage() {
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Weekly Hours</td>
-                  <td className="py-4 text-center">5-6 hrs</td>
-                  <td className="py-4 text-center">4-5 hrs</td>
-                  <td className="py-4 text-center">3-4 hrs</td>
+                  <td className="py-4 text-center">10-12 hrs</td>
+                  <td className="py-4 text-center">8 hrs</td>
+                  <td className="py-4 text-center">6 hrs</td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Personal Attention</td>
