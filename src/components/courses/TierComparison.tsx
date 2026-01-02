@@ -114,9 +114,9 @@ export function TierComparison({
 
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
         {/* Tier Headers */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
           {/* Features Column Header */}
-          <div className="hidden lg:block p-6 bg-gray-50 border-b border-gray-200">
+          <div className="hidden lg:block p-4 sm:p-6 bg-gray-50 border-b border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Features & Benefits</h3>
             <p className="text-sm text-gray-600">Compare what's included in each tier</p>
           </div>
@@ -218,13 +218,13 @@ export function TierComparison({
             {featureMatrix.map((featureItem, idx) => (
               <motion.div
                 key={featureItem.feature}
-                className={`grid grid-cols-1 lg:grid-cols-4 gap-0 ${idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
+                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 ${idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: idx * 0.05 }}
               >
                 {/* Feature Name */}
-                <div className="p-4 lg:p-6 border-b border-gray-100">
+                <div className="p-3 sm:p-4 lg:p-6 border-b border-gray-100">
                   <h4 className="font-semibold text-gray-900 mb-1">{featureItem.feature}</h4>
                   <p className="text-sm text-gray-600">{featureItem.description}</p>
                 </div>
@@ -237,7 +237,7 @@ export function TierComparison({
                   return (
                     <div
                       key={`${featureItem.feature}-${tier}`}
-                      className="p-4 lg:p-6 border-b border-gray-100 flex items-center justify-center"
+                      className="p-3 sm:p-4 lg:p-6 border-b border-gray-100 flex items-center justify-center"
                     >
                       {hasFeature ? (
                         <div className="flex items-center">

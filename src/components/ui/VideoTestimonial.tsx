@@ -72,11 +72,11 @@ export function VideoTestimonial({
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
-                className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 group-hover:bg-white/30 transition-all"
+                className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 group-hover:bg-white/30 transition-all"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Play className="w-6 h-6 text-white ml-1" fill="white" />
+                <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white ml-1" fill="white" />
               </motion.div>
             </div>
 

@@ -179,7 +179,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
         className={`text-center p-8 bg-green-50 rounded-2xl border border-green-200 ${className}`}
       >
         <Video className="w-20 h-20 text-green-600 mx-auto mb-6" />
-        <h3 className="text-3xl font-bold text-green-800 mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-green-800 mb-4">
           Demo Class Booked Successfully! 🎉
         </h3>
         <div className="bg-white p-6 rounded-xl border border-green-200 mb-6">
@@ -222,13 +222,19 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
   const getMinDate = () => {
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
-    return tomorrow.toISOString().split('T')[0]
+    const year = tomorrow.getFullYear()
+    const month = String(tomorrow.getMonth() + 1).padStart(2, '0')
+    const day = String(tomorrow.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
   }
 
   const getMaxDate = () => {
     const maxDate = new Date()
     maxDate.setDate(maxDate.getDate() + 30)
-    return maxDate.toISOString().split('T')[0]
+    const year = maxDate.getFullYear()
+    const month = String(maxDate.getMonth() + 1).padStart(2, '0')
+    const day = String(maxDate.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
   }
 
   return (
@@ -327,7 +333,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
                   <BookOpen className="w-4 h-4 inline mr-2" />
                   Course Interest *
                 </label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
                   {courseOptions.map((course) => (
                     <label
                       key={course.value}
@@ -369,7 +375,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
               <p className="text-gray-600">Pick your preferred date and time</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   <Calendar className="w-4 h-4 inline mr-2" />

@@ -101,7 +101,7 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
 
       {/* Tier Selection */}
       <div className="p-5 sm:p-6">
-        <div className="flex mb-6">
+        <div className="flex gap-1 mb-6">
           {(Object.keys(course.tiers) as CourseSeries[]).map((tier) => (
             <button
               key={tier}

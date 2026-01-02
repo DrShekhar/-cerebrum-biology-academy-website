@@ -299,7 +299,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
               {/* Programs Mega Dropdown */}
               <div ref={dropdownRef} className="relative">
                 <button
@@ -527,7 +527,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                  className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
                 >
                   {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
@@ -546,7 +546,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 z-40 md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -556,7 +556,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
             >
               <div className="p-6">
                 {/* Mobile Header */}
