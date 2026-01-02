@@ -4,6 +4,50 @@
 
 Full-stack educational platform for NEET Biology preparation built with Next.js 15, Supabase, Prisma, and Vercel.
 
+---
+
+## 🎨 CEREBRUM DESIGN STYLE (SPECIAL MENTION)
+
+### Brand Identity
+**Premium, Modern, Achievement-Focused** - A sophisticated SaaS-style design targeting aspirational NEET students. High contrast between dark gradients and bright accent colors creates visual hierarchy emphasizing exclusivity and success.
+
+### ⭐ FAVORITE ACCENT COLORS (Primary Palette)
+
+These 6 colors are the **preferred accent colors** for CTAs, badges, highlights, and visual emphasis:
+
+| Color | Tailwind | Hex | Usage |
+|-------|----------|-----|-------|
+| **Green 500** | `bg-green-500` | `#22c55e` | Success, NEET strategy, positive actions |
+| **Google Red** | `bg-[#ea4335]` | `#ea4335` | Hearts, alerts, urgent notifications |
+| **Teal 600** | `bg-teal-600` | `#0d9488` | Biology-themed buttons, medical feel |
+| **Blue 600** | `bg-blue-600` | `#2563eb` | Links, info buttons, trust signals |
+| **Purple 700** | `bg-purple-700` | `#7c3aed` | Premium features, VIP badges |
+| **Yellow 800** | `bg-yellow-800` | `#854d0e` | Warning text, attention grabbers |
+
+### Typography Style
+- **Font**: Geist Sans with system fallbacks
+- **Hierarchy**: Large display text (2xl-6xl) for heroes, semibold/bold for emphasis
+- **Line Height**: 1.5 for body text, tighter for headings
+
+### Visual Effects
+- **Cards**: Rounded corners (0.5rem), white backgrounds, shadow-xl
+- **Buttons**: Rounded-lg, hover scale (1.02x), shadow-lg on primary
+- **Animations**: Fade-in-up transitions (0.4s ease-out)
+- **Shadows**: shadow-lg for prominent elements, shadow-xl for cards
+- **Gradients**: Dark blue-900 heroes, light pastel backgrounds for sections
+
+### Component Style Patterns
+- **Hero Sections**: Dark gradient (slate-900 to slate-800) with yellow/white text
+- **Cards**: White bg, rounded-xl, shadow-xl, border-slate-200
+- **Primary CTAs**: Yellow (#facc15) with hover (#fde047) - high visibility
+- **Badges/Pills**: Rounded-full with colored backgrounds and 20% opacity overlays
+- **Headers**: Sticky with backdrop blur (8px), semi-transparent
+
+### Reference Page
+**Live Example**: https://cerebrumbiologyacademy.com/courses/intensive-neet-biology
+
+---
+
 ## Tech Stack
 
 - **Framework**: Next.js 15 (App Router) + TypeScript
