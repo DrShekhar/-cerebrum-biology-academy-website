@@ -1,0 +1,19 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Refer & Earn | Cerebrum Biology Academy',
+  description:
+    'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral. Share your unique code and help your friends succeed in NEET.',
+  openGraph: {
+    title: 'Refer & Earn | Cerebrum Biology Academy',
+    description:
+      'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral.',
+    type: 'website',
+    url: 'https://cerebrumbiologyacademy.com/referral',
+    siteName: 'Cerebrum Biology Academy',
+  },
+}
+
+export default function ReferralLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}

@@ -20,7 +20,6 @@ function CounselorLoginRedirect() {
     const callbackUrl = searchParams.get('callbackUrl') || '/counselor/leads'
 
     if (isBypassEnabled) {
-      console.log('[DEV MODE] Bypassing counselor authentication, redirecting to', callbackUrl)
       router.replace(callbackUrl)
       return
     }
