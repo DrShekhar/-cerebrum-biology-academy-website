@@ -21,6 +21,14 @@ import {
   ClipboardList,
   ExternalLink,
   Sparkles,
+  Zap,
+  Shield,
+  Award,
+  HeartPulse,
+  Stethoscope,
+  Brain,
+  TrendingUp,
+  School,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/city-hub-data'
 
@@ -28,26 +36,62 @@ interface CityHubPageProps {
   data: CityHubData
 }
 
+// Actual courses with real prices
 const courses = [
   {
-    name: 'Class 9-10 Foundation',
-    description: 'Build strong biology foundation',
-    features: ['NCERT Mastery', 'Concept Building', 'Basic Lab Skills'],
+    name: 'Class 9th Foundation Biology',
+    description: 'Build strong foundation for NEET from early',
+    price: 57000,
+    originalPrice: 60000,
+    duration: '1 Year',
+    features: ['NCERT Mastery', 'Concept Building', 'Weekly Tests'],
+    href: '/courses/class-9-foundation-biology',
+    enrollHref: '/enrollments?course=class-9-foundation-biology&tier=ascent',
+    tag: 'Early Bird',
   },
   {
-    name: 'Class 11 NEET Foundation',
-    description: '60% of NEET syllabus covered',
-    features: ['Complete NCERT', 'NEET Pattern', 'Weekly Tests'],
+    name: 'Class 10th Foundation Biology',
+    description: 'Advanced foundation preparing for NEET journey',
+    price: 57000,
+    originalPrice: 60000,
+    duration: '1 Year',
+    features: ['Bridge to NEET', 'PYQ Pattern', 'Mock Tests'],
+    href: '/courses/class-10-foundation-biology',
+    enrollHref: '/enrollments?course=class-10-foundation-biology&tier=ascent',
+    tag: null,
   },
   {
-    name: 'Class 12 NEET + Boards',
+    name: 'Class 11th NEET Comprehensive',
+    description: '60% of NEET syllabus covered with deep concepts',
+    price: 72200,
+    originalPrice: 76000,
+    duration: '1 Year',
+    features: ['Complete NCERT', 'NEET Pattern', 'Test Series'],
+    href: '/courses/class-11-neet-comprehensive',
+    enrollHref: '/enrollments?course=class-11-neet-comprehensive&tier=ascent',
+    tag: 'Most Popular',
+  },
+  {
+    name: 'Class 12th NEET Intensive',
     description: 'Dual preparation for boards and NEET',
-    features: ['Board + NEET Focus', 'PYQ Analysis', 'Mock Tests'],
+    price: 72200,
+    originalPrice: 76000,
+    duration: '1 Year',
+    features: ['Board + NEET', 'PYQ Analysis', '100+ Mocks'],
+    href: '/courses/class-12-neet-intensive',
+    enrollHref: '/enrollments?course=class-12-neet-intensive&tier=ascent',
+    tag: null,
   },
   {
-    name: 'NEET Dropper Batch',
-    description: 'Intensive 1-year program',
-    features: ['Complete Revision', 'Daily Practice', '100+ Mocks'],
+    name: 'NEET Dropper/Repeater Batch',
+    description: 'Intensive 1-year crash course for rank improvement',
+    price: 85500,
+    originalPrice: 90000,
+    duration: '1 Year',
+    features: ['Complete Revision', 'Daily Practice', 'Score Guarantee'],
+    href: '/courses/neet-dropper-intensive',
+    enrollHref: '/enrollments?course=neet-dropper-intensive&tier=ascent',
+    tag: 'High Demand',
   },
 ]
 
@@ -55,7 +99,8 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS-Trained Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS New Delhi Alumnus with 15+ years experience',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS New Delhi Alumnus with 15+ years experience',
   },
   {
     icon: Users,
@@ -108,27 +153,77 @@ const freeResources = [
   },
 ]
 
+// Enhanced NEET Tools - Free for all students
 const neetTools = [
   {
-    icon: Calculator,
+    icon: School,
+    title: 'NEET College Predictor',
+    description: 'Find which medical colleges you can get based on your NEET score',
+    href: '/neet-college-predictor',
+    color: 'from-green-500 to-teal-600',
+    bgColor: 'bg-green-50',
+    textColor: 'text-green-700',
+    cta: 'Predict Colleges',
+  },
+  {
+    icon: TrendingUp,
     title: 'NEET Rank Predictor',
-    description: 'Predict your rank based on expected score',
+    description: 'Predict your All India Rank based on expected score',
     href: '/neet-rank-predictor',
-    color: 'bg-purple-100 text-purple-600',
+    color: 'from-purple-500 to-indigo-600',
+    bgColor: 'bg-purple-50',
+    textColor: 'text-purple-700',
+    cta: 'Predict Rank',
+  },
+  {
+    icon: Brain,
+    title: 'Biology MCQ Practice',
+    description: 'Practice 10,000+ NEET Biology MCQs with explanations',
+    href: '/neet-biology-mcq-test',
+    color: 'from-blue-500 to-cyan-600',
+    bgColor: 'bg-blue-50',
+    textColor: 'text-blue-700',
+    cta: 'Start Practice',
+  },
+  {
+    icon: FileText,
+    title: 'NEET PYQ Papers',
+    description: 'Access last 10 years previous year questions with solutions',
+    href: '/neet-previous-year-papers',
+    color: 'from-orange-500 to-red-500',
+    bgColor: 'bg-orange-50',
+    textColor: 'text-orange-700',
+    cta: 'Solve PYQs',
+  },
+]
+
+// How Cerebrum helps students reach medical colleges
+const howWeHelp = [
+  {
+    icon: GraduationCap,
+    title: 'AIIMS-Trained Faculty',
+    stat: '15+ Years',
+    description:
+      'Learn Biology from Dr. Shekhar C Singh, AIIMS Delhi Alumnus who understands exactly what NEET demands',
+  },
+  {
+    icon: Target,
+    title: 'Focused NEET Strategy',
+    stat: '98% Success',
+    description:
+      'Our proven teaching methodology focuses on high-yield topics that appear repeatedly in NEET',
+  },
+  {
+    icon: Users,
+    title: 'Small Batch Attention',
+    stat: '15-20 Students',
+    description: 'Personal attention ensures no student falls behind. Every doubt gets answered.',
   },
   {
     icon: ClipboardList,
-    title: 'OMR Sheet Checker',
-    description: 'Practice filling OMR sheets accurately',
-    href: '/neet-tools/omr-checker',
-    color: 'bg-blue-100 text-blue-600',
-  },
-  {
-    icon: Calculator,
-    title: 'NEET Calculators',
-    description: 'Score, percentile & college prediction tools',
-    href: '/calculator',
-    color: 'bg-green-100 text-green-600',
+    title: 'Rigorous Testing',
+    stat: '100+ Mock Tests',
+    description: 'Weekly tests simulate NEET environment so you perform best on exam day',
   },
 ]
 
@@ -219,16 +314,28 @@ export function CityHubPage({ data }: CityHubPageProps) {
       />
 
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 py-20 text-white">
-          <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
+        {/* Hero Section - Cerebrum Brand Colors */}
+        <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white lg:py-24">
+          {/* Decorative Background */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute left-10 top-20 h-64 w-64 rounded-full bg-[#4a5d4a] opacity-10 blur-3xl" />
+            <div className="absolute bottom-20 right-10 h-80 w-80 rounded-full bg-yellow-500 opacity-10 blur-3xl" />
+          </div>
           <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-4xl text-center">
+              {/* Urgency Banner */}
+              <div className="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-6 py-2 text-sm font-semibold">
+                <Zap className="mr-2 h-4 w-4" />
+                Limited Seats! NEET 2026 Batch Starting Soon
+              </div>
+
+              {/* Location Badge */}
               <div className="mb-6 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-sm font-medium backdrop-blur-sm">
+                <MapPin className="mr-2 h-4 w-4 text-[#4a5d4a]" />
                 {data.hasOfflineCenter ? (
                   <>
                     <Building className="mr-2 h-4 w-4 text-green-400" />
-                    Offline Center Available
+                    Offline Center Available near {data.cityName}
                   </>
                 ) : (
                   <>
@@ -238,46 +345,87 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 )}
               </div>
 
-              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">{data.heroTitle}</h1>
+              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                {data.heroTitle.split(' ').map((word, i) =>
+                  word.toLowerCase() === data.cityName.toLowerCase() ||
+                  data.heroTitle.toLowerCase().includes(word.toLowerCase()) ? (
+                    <span key={i} className="text-yellow-400">
+                      {word}{' '}
+                    </span>
+                  ) : (
+                    word + ' '
+                  )
+                )}
+              </h1>
 
-              <p className="mb-8 text-xl text-blue-100 md:text-2xl">{data.heroSubtitle}</p>
+              <p className="mb-8 text-xl text-slate-300 md:text-2xl">{data.heroSubtitle}</p>
 
+              {/* Trust Badges */}
+              <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
+                <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                  <Award className="mr-2 h-5 w-5 text-yellow-400" />
+                  <span className="text-sm font-medium">AIIMS Faculty</span>
+                </div>
+                <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                  <Star className="mr-2 h-5 w-5 text-yellow-400" />
+                  <span className="text-sm font-medium">4.9/5 Rating</span>
+                </div>
+                <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                  <Shield className="mr-2 h-5 w-5 text-green-400" />
+                  <span className="text-sm font-medium">98% Success Rate</span>
+                </div>
+              </div>
+
+              {/* Primary CTAs */}
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
-                  href="/demo"
-                  className="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-yellow-400"
+                  href="/demo-booking"
+                  className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400"
                 >
-                  Book Free Demo Class
+                  Book FREE Demo Class
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching%20for%20my%20area"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call: 88264-44334
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Us
+                </a>
+              </div>
+
+              {/* Quick Contact */}
+              <div className="mt-6 text-slate-400">
+                <a href="tel:+918826444334" className="inline-flex items-center hover:text-white">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call: +91 88264-44334
                 </a>
               </div>
             </div>
 
             {/* Stats */}
-            <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
                 <Users className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
                 <div className="text-xl font-bold sm:text-2xl">{data.stats.studentsFromCity}</div>
-                <div className="text-xs text-blue-200 sm:text-sm">
-                  Students from {data.cityName}
-                </div>
+                <div className="text-xs text-slate-400 sm:text-sm">{data.cityName} Students</div>
               </div>
               <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
                 <Trophy className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
                 <div className="text-xl font-bold sm:text-2xl">{data.stats.successRate}</div>
-                <div className="text-xs text-blue-200 sm:text-sm">Success Rate</div>
+                <div className="text-xs text-slate-400 sm:text-sm">Success Rate</div>
               </div>
               <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
                 <Star className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
                 <div className="text-xl font-bold sm:text-2xl">{data.stats.rating}/5</div>
-                <div className="text-xs text-blue-200 sm:text-sm">Student Rating</div>
+                <div className="text-xs text-slate-400 sm:text-sm">Google Rating</div>
+              </div>
+              <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
+                <GraduationCap className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
+                <div className="text-xl font-bold sm:text-2xl">1.5L+</div>
+                <div className="text-xs text-slate-400 sm:text-sm">Total Students</div>
               </div>
             </div>
           </div>
@@ -371,6 +519,49 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
+        {/* How Cerebrum Helps You Get Into Medical College */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full bg-yellow-500/20 px-6 py-2 text-sm font-semibold text-yellow-400">
+                <Stethoscope className="mr-2 h-4 w-4" />
+                Your Path to Medical College
+              </div>
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+                How Cerebrum Helps You Get Into Medical College
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-slate-300">
+                Our proven methodology has helped thousands of students crack NEET and secure MBBS
+                seats
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {howWeHelp.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10"
+                >
+                  <item.icon className="mb-4 h-10 w-10 text-yellow-400" />
+                  <div className="mb-2 text-2xl font-bold text-green-400">{item.stat}</div>
+                  <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+                  <p className="text-sm text-slate-400">{item.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Link
+                href="/demo-booking"
+                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg transition hover:bg-yellow-400"
+              >
+                Start Your Medical Journey Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
@@ -386,7 +577,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {whyChooseUs.map((item) => (
                 <div key={item.title} className="rounded-xl bg-white p-6 shadow-md">
-                  <item.icon className="mb-4 h-10 w-10 text-blue-600" />
+                  <item.icon className="mb-4 h-10 w-10 text-[#4a5d4a]" />
                   <h3 className="mb-2 text-xl font-semibold text-gray-900">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
@@ -395,43 +586,98 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* Courses */}
+        {/* Courses with Actual Prices */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-sm font-semibold text-green-700">
+                <Sparkles className="mr-2 h-4 w-4" />
+                Special Discounts for Early Enrollment
+              </div>
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Biology Courses for {data.cityName} Students
+                NEET Biology Courses for {data.cityName} Students
               </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                Choose the right course for your NEET preparation journey
+              </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {courses.map((course) => (
                 <div
                   key={course.name}
-                  className="rounded-xl border border-gray-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-lg"
+                  className="relative rounded-xl border-2 border-gray-200 bg-white p-6 transition hover:border-[#4a5d4a] hover:shadow-xl"
                 >
+                  {course.tag && (
+                    <div className="absolute -top-3 right-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-4 py-1 text-xs font-bold text-white">
+                      {course.tag}
+                    </div>
+                  )}
                   <h3 className="mb-2 text-lg font-bold text-gray-900">{course.name}</h3>
                   <p className="mb-4 text-sm text-gray-600">{course.description}</p>
-                  <ul className="space-y-2">
+
+                  {/* Pricing */}
+                  <div className="mb-4 rounded-lg bg-gray-50 p-4">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-[#4a5d4a]">
+                        ₹{course.price.toLocaleString()}
+                      </span>
+                      <span className="text-lg text-gray-400 line-through">
+                        ₹{course.originalPrice.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="mt-1 flex items-center gap-2">
+                      <span className="text-sm font-medium text-green-600">
+                        Save ₹{(course.originalPrice - course.price).toLocaleString()}
+                      </span>
+                      <span className="text-sm text-gray-500">• {course.duration}</span>
+                    </div>
+                  </div>
+
+                  <ul className="mb-4 space-y-2">
                     {course.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-600" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+
+                  <div className="flex gap-2">
+                    <Link
+                      href={course.enrollHref}
+                      className="flex-1 rounded-lg bg-[#4a5d4a] py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#3d4d3d]"
+                    >
+                      Enroll Now
+                    </Link>
+                    <Link
+                      href={course.href}
+                      className="rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                    >
+                      Details
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 text-center">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/courses"
-                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
+                className="inline-flex items-center justify-center rounded-lg bg-[#4a5d4a] px-8 py-4 text-lg font-semibold text-white transition hover:bg-[#3d4d3d]"
               >
                 View All Courses & Fees
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
+              <a
+                href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-8 py-4 text-lg font-semibold text-green-600 transition hover:bg-green-50"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Ask About Courses
+              </a>
             </div>
           </div>
         </section>
@@ -472,44 +718,61 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* NEET Tools Section */}
-        <section className="py-16">
+        {/* NEET Tools Section - Enhanced Cards */}
+        <section className="bg-white py-16">
           <div className="container mx-auto px-4">
             <div className="mb-10 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full bg-purple-100 px-6 py-2 text-sm font-semibold text-purple-700">
+                <Zap className="mr-2 h-4 w-4" />
+                100% Free for All Students
+              </div>
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Free NEET Tools for {data.cityName} Students
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Use our free tools to track your preparation and predict your performance
+                Use our powerful free tools to track your preparation and predict your performance
               </p>
             </div>
 
-            <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {neetTools.map((tool) => (
                 <Link
                   key={tool.title}
                   href={tool.href}
-                  className="group flex flex-col items-center rounded-xl bg-gray-50 p-6 text-center transition hover:bg-gray-100 hover:shadow-md"
+                  className="group relative overflow-hidden rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-md transition hover:border-transparent hover:shadow-xl"
                 >
-                  <div className={`mb-4 rounded-full p-4 ${tool.color}`}>
-                    <tool.icon className="h-8 w-8" />
+                  {/* Gradient background on hover */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 transition-opacity group-hover:opacity-10`}
+                  />
+
+                  <div className={`mb-4 inline-flex rounded-xl ${tool.bgColor} p-3`}>
+                    <tool.icon className={`h-7 w-7 ${tool.textColor}`} />
                   </div>
-                  <h3 className="mb-2 text-lg font-semibold text-gray-900">{tool.title}</h3>
-                  <p className="mb-3 text-sm text-gray-600">{tool.description}</p>
-                  <span className="mt-auto inline-flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700">
-                    Try Now Free
-                    <ExternalLink className="ml-1 h-4 w-4" />
+
+                  <h3 className="mb-2 text-lg font-bold text-gray-900">{tool.title}</h3>
+                  <p className="mb-4 text-sm text-gray-600">{tool.description}</p>
+
+                  <span
+                    className={`inline-flex items-center text-sm font-semibold ${tool.textColor} group-hover:underline`}
+                  >
+                    {tool.cta}
+                    <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
                   </span>
                 </Link>
               ))}
             </div>
 
-            <div className="mt-8 text-center">
+            <div className="mt-10 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 p-8 text-center text-white">
+              <h3 className="mb-2 text-xl font-bold">Not sure where you stand?</h3>
+              <p className="mb-4 text-purple-100">
+                Take our free NEET Readiness Quiz to assess your preparation level
+              </p>
               <Link
-                href="/neet-tools"
-                className="inline-flex items-center text-lg font-medium text-blue-600 hover:text-blue-700"
+                href="/neet-readiness-quiz"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-purple-700 transition hover:bg-purple-50"
               >
-                View All NEET Tools
+                Take Free Quiz
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
@@ -518,17 +781,17 @@ export function CityHubPage({ data }: CityHubPageProps) {
 
         {/* Localities */}
         {data.localities.length > 0 && (
-          <section className="bg-blue-50 py-16">
+          <section className="bg-[#e8ede8] py-16">
             <div className="container mx-auto px-4">
               <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
-                Biology Classes in {data.cityName} Areas
+                NEET Biology Classes in {data.cityName} Areas
               </h2>
               <div className="flex flex-wrap justify-center gap-3">
                 {data.localities.map((locality) => (
                   <Link
                     key={locality.name}
                     href={locality.url}
-                    className="rounded-lg bg-white px-5 py-3 text-gray-700 shadow-sm transition hover:bg-blue-600 hover:text-white"
+                    className="rounded-lg bg-white px-5 py-3 text-gray-700 shadow-sm transition hover:bg-[#4a5d4a] hover:text-white"
                   >
                     Biology Classes in {locality.name}
                   </Link>
@@ -561,21 +824,21 @@ export function CityHubPage({ data }: CityHubPageProps) {
         <section className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
             <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
-              Biology Classes in Nearby Cities
+              NEET Biology Classes in Nearby Cities
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               {data.relatedCities.map((city) => (
                 <Link
                   key={city.name}
                   href={city.url}
-                  className="rounded-lg bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition hover:bg-blue-600 hover:text-white"
+                  className="rounded-lg bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition hover:bg-[#4a5d4a] hover:text-white"
                 >
                   Biology Classes in {city.name}
                 </Link>
               ))}
               <Link
                 href="/online-biology-classes"
-                className="rounded-lg bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition hover:bg-blue-600 hover:text-white"
+                className="rounded-lg bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition hover:bg-[#4a5d4a] hover:text-white"
               >
                 Online Biology Classes
               </Link>
@@ -583,30 +846,69 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-blue-600 py-20 text-white">
+        {/* Final CTA - Cerebrum Colors with WhatsApp */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white">
           <div className="container mx-auto px-4 text-center">
+            {/* Urgency Badge */}
+            <div className="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-6 py-2 text-sm font-bold">
+              <Zap className="mr-2 h-4 w-4" />
+              Limited Seats for NEET 2026 Batch!
+            </div>
+
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Start Your NEET Journey from {data.cityName}!
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Join {data.stats.studentsFromCity} students from {data.cityName}. Book a free demo
-              class today!
+            <p className="mx-auto mb-6 max-w-2xl text-xl text-slate-300">
+              Join {data.stats.studentsFromCity} students from {data.cityName} who are already
+              preparing with Cerebrum Biology Academy
             </p>
+
+            {/* Benefits */}
+            <div className="mx-auto mb-8 flex max-w-2xl flex-wrap justify-center gap-4">
+              <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                <CheckCircle className="mr-2 h-5 w-5 text-green-400" />
+                <span className="text-sm">Free Demo Class</span>
+              </div>
+              <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                <CheckCircle className="mr-2 h-5 w-5 text-green-400" />
+                <span className="text-sm">AIIMS Faculty</span>
+              </div>
+              <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
+                <CheckCircle className="mr-2 h-5 w-5 text-green-400" />
+                <span className="text-sm">98% Success Rate</span>
+              </div>
+            </div>
+
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="/demo"
-                className="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-yellow-400"
+                href="/demo-booking"
+                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400"
               >
-                Book Free Demo - {data.cityName}
+                Book Free Demo Class
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
+                href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Rohini%20and%20interested%20in%20NEET%20Biology%20coaching"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp Us Now
+              </a>
+              <a
                 href="tel:+918826444334"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call: 88264-44334
               </a>
+            </div>
+
+            {/* Operating Hours */}
+            <div className="mt-8 flex items-center justify-center text-slate-400">
+              <Clock className="mr-2 h-4 w-4" />
+              <span className="text-sm">Available Mon-Sat, 8 AM - 8 PM</span>
             </div>
           </div>
         </section>
