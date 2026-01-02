@@ -164,8 +164,8 @@ export function ExitIntentPopup({
 
             {variant === 'discount' ? (
               <>
-                {/* Discount Variant Header - compact on mobile */}
-                <div className="bg-indigo-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
+                {/* Discount Variant Header - Cerebrum Green Theme */}
+                <div className="bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full animate-[pulse-scale_3s_ease-in-out_infinite]" />
                   <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-white/10 rounded-full animate-[pulse-scale_2.5s_ease-in-out_infinite]" />
 
@@ -181,20 +181,20 @@ export function ExitIntentPopup({
                     >
                       Wait! Don't Leave Yet...
                     </h2>
-                    <p className="text-orange-100 text-base sm:text-lg">
+                    <p className="text-[#e8ede8] text-base sm:text-lg">
                       Get 20% OFF + FREE Demo Class!
                     </p>
 
                     {/* Countdown Timer - responsive */}
                     <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2">
-                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
-                      <span className="text-yellow-100 text-sm sm:text-base">Expires in:</span>
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#e8ede8]" />
+                      <span className="text-[#e8ede8] text-sm sm:text-base">Expires in:</span>
                       <div className="flex gap-1 font-mono font-bold text-base sm:text-lg">
-                        <span className="bg-white/20 px-2 py-1 rounded">
+                        <span className="bg-[#3d4d3d] px-2 py-1 rounded">
                           {String(discountTimer.minutes).padStart(2, '0')}
                         </span>
                         <span>:</span>
-                        <span className="bg-white/20 px-2 py-1 rounded">
+                        <span className="bg-[#3d4d3d] px-2 py-1 rounded">
                           {String(discountTimer.seconds).padStart(2, '0')}
                         </span>
                       </div>
@@ -211,13 +211,13 @@ export function ExitIntentPopup({
                         {discountBenefits.map((benefit, index) => (
                           <motion.div
                             key={index}
-                            className="flex items-center bg-green-50 rounded-lg p-2.5 sm:p-3"
+                            className="flex items-center bg-[#e8ede8] rounded-lg p-2.5 sm:p-3"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 flex-shrink-0" />
-                            <span className="text-xs sm:text-sm text-gray-700 font-medium">
+                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#4a5d4a] mr-2 flex-shrink-0" />
+                            <span className="text-xs sm:text-sm text-[#3d4d3d] font-medium">
                               {benefit}
                             </span>
                           </motion.div>
@@ -231,7 +231,7 @@ export function ExitIntentPopup({
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all text-base"
                             placeholder="Your Name"
                             style={{ fontSize: '16px' }}
                           />
@@ -242,7 +242,7 @@ export function ExitIntentPopup({
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all text-base"
                             placeholder="Phone Number *"
                             style={{ fontSize: '16px' }}
                           />
@@ -251,7 +251,7 @@ export function ExitIntentPopup({
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-base"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all text-base"
                             placeholder="Email Address *"
                             style={{ fontSize: '16px' }}
                           />
@@ -260,7 +260,7 @@ export function ExitIntentPopup({
                         <motion.button
                           type="submit"
                           disabled={isSubmitting || !email || !phone}
-                          className="w-full py-3.5 sm:py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:bg-indigo-200 disabled:text-indigo-400 disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
+                          className="w-full py-3.5 sm:py-4 bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:bg-[#c5d1c5] disabled:text-[#8a9a8a] disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
@@ -295,14 +295,14 @@ export function ExitIntentPopup({
                       </form>
 
                       {/* Trust Indicators */}
-                      <div className="mt-4 pt-4 border-t border-gray-100">
-                        <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
+                      <div className="mt-4 pt-4 border-t border-[#e8ede8]">
+                        <div className="flex items-center justify-center gap-4 text-xs text-[#5a6d5a]">
                           <div className="flex items-center">
-                            <Trophy className="w-4 h-4 mr-1 text-yellow-500" />
+                            <Trophy className="w-4 h-4 mr-1 text-[#4a5d4a]" />
                             98% Success Rate
                           </div>
                           <div className="flex items-center">
-                            <Users className="w-4 h-4 mr-1 text-blue-500" />
+                            <Users className="w-4 h-4 mr-1 text-[#4a5d4a]" />
                             2,500+ Students
                           </div>
                         </div>
@@ -311,34 +311,34 @@ export function ExitIntentPopup({
                   ) : (
                     <div className="text-center py-6">
                       <motion.div
-                        className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                        className="bg-[#e8ede8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ type: 'spring' }}
                       >
-                        <CheckCircle className="w-8 h-8 text-green-600" />
+                        <CheckCircle className="w-8 h-8 text-[#4a5d4a]" />
                       </motion.div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Discount Claimed!</h3>
+                      <h3 className="text-2xl font-bold text-[#3d4d3d] mb-2">Discount Claimed!</h3>
                       {discountCode && (
-                        <div className="bg-orange-100 border-2 border-dashed border-orange-400 rounded-xl p-4 mb-4">
-                          <p className="text-sm text-gray-600 mb-1">Your 20% Discount Code:</p>
-                          <p className="text-2xl font-mono font-bold text-orange-600 tracking-wider">
+                        <div className="bg-[#e8ede8] border-2 border-dashed border-[#4a5d4a] rounded-xl p-4 mb-4">
+                          <p className="text-sm text-[#5a6d5a] mb-1">Your 20% Discount Code:</p>
+                          <p className="text-2xl font-mono font-bold text-[#3d4d3d] tracking-wider">
                             {discountCode}
                           </p>
                           <button
                             onClick={() => {
                               navigator.clipboard.writeText(discountCode)
                             }}
-                            className="mt-2 text-sm text-orange-600 hover:text-orange-700 underline"
+                            className="mt-2 text-sm text-[#4a5d4a] hover:text-[#3d4d3d] underline"
                           >
                             Click to copy
                           </button>
                         </div>
                       )}
-                      <p className="text-gray-600 mb-2">
+                      <p className="text-[#5a6d5a] mb-2">
                         Use this code during enrollment to get 20% off!
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-[#5a6d5a]">
                         Our counselor will call you shortly to schedule your FREE demo class.
                       </p>
                     </div>
