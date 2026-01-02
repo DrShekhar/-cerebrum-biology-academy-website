@@ -250,17 +250,46 @@ export default function RootLayout({
             }}
           />
 
-          {/* WORKAROUND: Remove duplicate CSS script tags (Next.js 15 + React 19 bug)
+          {/* FOUC Prevention + CSS Script Bug Workaround
             Issue: https://github.com/vercel/next.js/issues/75656
-            Next.js generates both <link rel="stylesheet"> AND <script> for same CSS file
-            This causes "Refused to execute script... MIME type ('text/css')" errors */}
+            Next.js 15 + React 19 incorrectly loads CSS as scripts, causing MIME errors
+            This workaround: 1) Hides body until CSS loads 2) Removes bad script tags */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                body.css-loading { opacity: 0 !important; }
+                body.css-ready { opacity: 1; transition: opacity 0.1s ease-in; }
+              `,
+            }}
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
               (function(){
+                // Remove CSS-loaded-as-script tags immediately
                 var r=function(){document.querySelectorAll('script[src*=".css"]').forEach(function(s){s.remove()})};
                 r();
+                // Watch for new bad script tags
                 new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n.tagName==='SCRIPT'&&n.src&&n.src.includes('.css'))n.remove()})})}).observe(document.documentElement,{childList:true,subtree:true});
+                // FOUC prevention: hide body until CSS loads
+                document.addEventListener('DOMContentLoaded',function(){
+                  document.body.classList.add('css-loading');
+                  var checkCSS=function(){
+                    var sheets=document.styleSheets;
+                    for(var i=0;i<sheets.length;i++){
+                      try{if(sheets[i].cssRules&&sheets[i].cssRules.length>0){
+                        document.body.classList.remove('css-loading');
+                        document.body.classList.add('css-ready');
+                        return true;
+                      }}catch(e){}
+                    }
+                    return false;
+                  };
+                  if(!checkCSS()){
+                    var interval=setInterval(function(){if(checkCSS())clearInterval(interval);},10);
+                    setTimeout(function(){clearInterval(interval);document.body.classList.remove('css-loading');document.body.classList.add('css-ready');},500);
+                  }
+                });
               })();
             `,
             }}
