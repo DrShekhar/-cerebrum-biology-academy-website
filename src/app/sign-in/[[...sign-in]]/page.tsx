@@ -3,12 +3,12 @@
 import { useState } from 'react'
 import { SignIn } from '@clerk/nextjs'
 import { PhoneSignIn } from '@/components/auth/PhoneSignIn'
-import { MessageCircle, Mail } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 
 type AuthMethod = 'phone' | 'email'
 
 export default function SignInPage() {
-  const [authMethod, setAuthMethod] = useState<AuthMethod>('phone')
+  const [authMethod, setAuthMethod] = useState<AuthMethod>('email')
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12">
@@ -25,19 +25,19 @@ export default function SignInPage() {
             onClick={() => setAuthMethod('phone')}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all ${
               authMethod === 'phone'
-                ? 'bg-green-600 text-white shadow-lg'
+                ? 'bg-[#4a5d4a] text-white shadow-lg'
                 : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
             }`}
           >
-            <MessageCircle className="w-5 h-5" />
-            <span>WhatsApp</span>
+            <Phone className="w-5 h-5" />
+            <span>Phone</span>
           </button>
           <button
             type="button"
             onClick={() => setAuthMethod('email')}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all ${
               authMethod === 'email'
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-[#4a5d4a] text-white shadow-lg'
                 : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
             }`}
           >
@@ -58,10 +58,10 @@ export default function SignInPage() {
                   card: 'shadow-none border-0 p-0',
                   headerTitle: 'text-slate-900 text-xl',
                   headerSubtitle: 'text-slate-600',
-                  formButtonPrimary: 'bg-blue-600 hover:bg-blue-700 text-white font-medium',
-                  footerActionLink: 'text-blue-600 hover:text-blue-700',
-                  formFieldInput: 'border-slate-300 focus:border-blue-500 focus:ring-blue-500',
-                  identityPreviewEditButton: 'text-blue-600 hover:text-blue-700',
+                  formButtonPrimary: 'bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-medium',
+                  footerActionLink: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
+                  formFieldInput: 'border-slate-300 focus:border-[#4a5d4a] focus:ring-[#4a5d4a]',
+                  identityPreviewEditButton: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
                   socialButtonsBlockButton: 'border-slate-300 hover:bg-slate-50',
                   dividerLine: 'bg-slate-200',
                   dividerText: 'text-slate-500',
@@ -73,16 +73,6 @@ export default function SignInPage() {
               forceRedirectUrl="/dashboard"
             />
           )}
-        </div>
-
-        {/* Footer */}
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>
-            Don&apos;t have an account?{' '}
-            <a href="/sign-up" className="text-blue-600 hover:underline font-medium">
-              Sign up
-            </a>
-          </p>
         </div>
       </div>
     </div>

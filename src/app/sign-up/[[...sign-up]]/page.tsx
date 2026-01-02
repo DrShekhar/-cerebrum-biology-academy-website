@@ -15,10 +15,13 @@ export default function SignUpPage() {
               card: 'shadow-xl border border-slate-200 rounded-xl',
               headerTitle: 'text-slate-900',
               headerSubtitle: 'text-slate-600',
-              formButtonPrimary: 'bg-blue-600 hover:bg-blue-700 text-white font-medium',
-              footerActionLink: 'text-blue-600 hover:text-blue-700',
-              formFieldInput: 'border-slate-300 focus:border-blue-500 focus:ring-blue-500',
-              identityPreviewEditButton: 'text-blue-600 hover:text-blue-700',
+              formButtonPrimary: 'bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-medium',
+              footerActionLink: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
+              formFieldInput: 'border-slate-300 focus:border-[#4a5d4a] focus:ring-[#4a5d4a]',
+              identityPreviewEditButton: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
+              socialButtonsBlockButton: 'border-slate-300 hover:bg-slate-50',
+              dividerLine: 'bg-slate-200',
+              dividerText: 'text-slate-500',
             },
           }}
           routing="path"
