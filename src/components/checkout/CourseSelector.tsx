@@ -44,6 +44,11 @@ const courseTypeLabels: Record<
     icon: Beaker,
     description: 'Dual preparation',
   },
+  flagship: {
+    label: 'Flagship (11th+12th)',
+    icon: Target,
+    description: '1-Year intensive NEET ZA',
+  },
 }
 
 export function CourseSelector({

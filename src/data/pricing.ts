@@ -11,7 +11,7 @@ export type ClassLevel =
 
 export type TierLevel = 'pinnacle' | 'ascent' | 'pursuit'
 
-export type CourseType = 'academic' | 'neet' | 'board-only' | 'board-neet'
+export type CourseType = 'academic' | 'neet' | 'board-only' | 'board-neet' | 'flagship'
 
 export interface PricingTier {
   tier: TierLevel
@@ -490,7 +490,7 @@ const class12: ClassPricing = {
   displayName: 'Class XII',
   duration: '1 Year',
   description: 'Final year NEET preparation',
-  availableCourseTypes: ['board-only', 'neet', 'board-neet'],
+  availableCourseTypes: ['board-only', 'neet', 'board-neet', 'flagship'],
   tiers: {
     'board-only': [
       {
@@ -520,7 +520,7 @@ const class12: ClassPricing = {
         tier: 'pinnacle',
         batchSize: '10-12',
         hours: '10-12 hrs/week',
-        prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
+        prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class12PinnacleFeatures,
       },
       {
@@ -559,6 +559,42 @@ const class12: ClassPricing = {
         hours: '6 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: class12PursuitFeatures,
+      },
+    ],
+    flagship: [
+      {
+        tier: 'pinnacle',
+        batchSize: '10-12',
+        hours: '10-12 hrs/week',
+        prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
+        features: [
+          ...class12PinnacleFeatures,
+          'Complete 11th + 12th syllabus coverage in 1 year',
+          'Flagship NEET ZA Program',
+          'Intensive crash course for serious aspirants',
+        ],
+      },
+      {
+        tier: 'ascent',
+        batchSize: '16-18',
+        hours: '8 hrs/week',
+        prices: { lumpSum: 90000, twoInstallments: 92000, threeInstallments: 94000 },
+        features: [
+          ...class12AscentFeatures,
+          'Complete 11th + 12th syllabus coverage in 1 year',
+          'Flagship NEET ZA Program',
+        ],
+      },
+      {
+        tier: 'pursuit',
+        batchSize: '30-40',
+        hours: '6 hrs/week',
+        prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
+        features: [
+          ...class12PursuitFeatures,
+          'Complete 11th + 12th syllabus coverage in 1 year',
+          'Flagship NEET ZA Program',
+        ],
       },
     ],
   },

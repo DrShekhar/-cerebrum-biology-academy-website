@@ -566,12 +566,21 @@ export default function PricingPage() {
                         { type: 'board-neet', label: 'NEET + Academic' },
                       ]
                     }
-                    // Class 10 & 12: Boards terminology
-                    if (selectedClass === 'foundation-10' || selectedClass === 'class-12') {
+                    // Class 10: Boards terminology
+                    if (selectedClass === 'foundation-10') {
                       return [
                         { type: 'board-only', label: 'Boards' },
                         { type: 'neet', label: 'NEET' },
                         { type: 'board-neet', label: 'NEET + Boards' },
+                      ]
+                    }
+                    // Class 12: Boards + Flagship
+                    if (selectedClass === 'class-12') {
+                      return [
+                        { type: 'board-only', label: 'Boards' },
+                        { type: 'neet', label: 'NEET' },
+                        { type: 'board-neet', label: 'NEET + Boards' },
+                        { type: 'flagship', label: 'Flagship (11th+12th)' },
                       ]
                     }
                     // All Classes: Show combined options
