@@ -424,9 +424,9 @@ export default function BiologyTutorOnlinePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="overflow-x-auto"
+              className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0"
             >
-              <table className="w-full min-w-[600px] rounded-xl bg-white shadow-lg">
+              <table className="w-full min-w-[500px] md:min-w-[600px] rounded-xl bg-white shadow-lg text-sm md:text-base">
                 <thead>
                   <tr className="bg-blue-600 text-white">
                     <th className="rounded-tl-xl p-4 text-left">Feature</th>

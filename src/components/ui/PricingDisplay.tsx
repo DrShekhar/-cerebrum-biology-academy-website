@@ -50,10 +50,10 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
         <p className="text-gray-600 mb-4">{tierInfo.description}</p>
 
         <div className="mb-4">
-          <div className="text-4xl font-bold text-primary-600 mb-2">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-2">
             {tierPricing.formattedPrice}
           </div>
-          <div className="text-sm text-gray-500">{formatCurrency(tierPricing.price)} per year</div>
+          <div className="text-xs sm:text-sm text-gray-500">{formatCurrency(tierPricing.price)} per year</div>
         </div>
 
         <div className="flex items-center justify-center space-x-4 text-sm text-gray-600 mb-6">

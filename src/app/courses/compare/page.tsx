@@ -332,8 +332,8 @@ export default function CourseComparePage() {
           )}
 
           {/* Comparison Cards */}
-          <div className="overflow-x-auto">
-            <div className="min-w-[800px]">
+          <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+            <div className="min-w-[600px] md:min-w-[800px]">
               {/* Course Headers */}
               <div
                 className="mb-6 grid gap-4"

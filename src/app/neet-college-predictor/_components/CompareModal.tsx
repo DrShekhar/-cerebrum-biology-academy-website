@@ -46,8 +46,8 @@ export function CompareModal({
               them.
             </p>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[600px] border-collapse">
+            <div className="overflow-x-auto -mx-2 px-2 md:mx-0 md:px-0">
+              <table className="w-full min-w-[480px] md:min-w-[600px] border-collapse text-sm md:text-base">
                 <thead>
                   <tr className="border-b">
                     <th className="p-3 text-left text-sm font-semibold text-gray-600">Feature</th>

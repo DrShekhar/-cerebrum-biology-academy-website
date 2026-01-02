@@ -191,7 +191,7 @@ export const Footer = memo(function Footer() {
     <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-4 md:gap-6 lg:gap-8">
           {/* Company Info - Spans 2 columns on larger screens */}
           <motion.div
             className="lg:col-span-2"

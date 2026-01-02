@@ -100,24 +100,24 @@ export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDi
         <p className="text-sm opacity-90 mb-4">
           Convert to easy EMIs through your credit card or personal loan
         </p>
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
           <div>
-            <div className="font-bold text-lg">
+            <div className="font-bold text-sm sm:text-lg">
               {formatCurrency(Math.round(paymentOptions.oneTime.discountedAmount / 6))}
             </div>
-            <div className="text-xs opacity-75">6 months</div>
+            <div className="text-[10px] sm:text-xs opacity-75">6 months</div>
           </div>
           <div>
-            <div className="font-bold text-lg">
+            <div className="font-bold text-sm sm:text-lg">
               {formatCurrency(Math.round(paymentOptions.oneTime.discountedAmount / 12))}
             </div>
-            <div className="text-xs opacity-75">12 months</div>
+            <div className="text-[10px] sm:text-xs opacity-75">12 months</div>
           </div>
           <div>
-            <div className="font-bold text-lg">
+            <div className="font-bold text-sm sm:text-lg">
               {formatCurrency(Math.round(paymentOptions.oneTime.discountedAmount / 24))}
             </div>
-            <div className="text-xs opacity-75">24 months</div>
+            <div className="text-[10px] sm:text-xs opacity-75">24 months</div>
           </div>
         </div>
         <div className="text-xs opacity-75 mt-2 text-center">

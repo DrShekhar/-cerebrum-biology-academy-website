@@ -387,7 +387,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
               className="space-y-8"
             >
               {/* Mobile: Swipeable Cards */}
-              <div className="lg:hidden">
+              <div className="md:hidden">
                 <div className="relative">
                   <PremiumCard
                     variant="luxury"
@@ -436,8 +436,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
                 </div>
               </div>
 
-              {/* Desktop: Grid Layout */}
-              <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              {/* Tablet & Desktop: Grid Layout */}
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
                 {coursePackages.map((pkg, index) => (
                   <motion.div
                     key={pkg.id}
