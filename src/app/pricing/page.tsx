@@ -401,11 +401,11 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
       {/* Hero Section with enhanced gradient */}
-      <div className="relative bg-indigo-600 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
+      <div className="relative bg-[#4a5d4a] text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#3d4d3d]/40 rounded-full blur-3xl" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 to-transparent rounded-full" />
         </div>
 
@@ -427,7 +427,7 @@ export default function PricingPage() {
                 With India&apos;s Best Faculty
               </span>
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-blue-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-green-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
               Small batches, personalized attention, and proven results.
             </p>
           </div>
@@ -450,7 +450,7 @@ export default function PricingPage() {
                 <div className="text-xl sm:text-2xl font-bold mb-0.5 tabular-nums">
                   {stat.isStatic ? `${stat.value}${stat.suffix}` : `${stat.value}${stat.suffix}`}
                 </div>
-                <div className="text-blue-100/80 text-[10px] sm:text-xs font-medium">
+                <div className="text-green-100/80 text-[10px] sm:text-xs font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -1038,11 +1038,11 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="relative bg-indigo-600 rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
+        <div className="relative bg-[#4a5d4a] rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#3d4d3d]/40 rounded-full blur-3xl" />
           </div>
 
           <div className="relative">
@@ -1081,7 +1081,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2">{item.title}</h3>
-                    <p className="text-blue-100/80 text-sm md:text-base leading-relaxed">
+                    <p className="text-green-100/80 text-sm md:text-base leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
