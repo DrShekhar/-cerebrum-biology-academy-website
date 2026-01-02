@@ -8198,6 +8198,70 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.0838',
     },
   },
+
+  'west-delhi': {
+    slug: 'west-delhi',
+    cityName: 'West Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Tutor in West Delhi | NEET Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best Biology tutor for West Delhi students. NEET & Board preparation for Janakpuri, Dwarka, Rajouri Garden. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Biology Tutor in West Delhi',
+    heroSubtitle:
+      'Expert NEET & Board Biology coaching for Janakpuri, Dwarka, Rajouri Garden, and all West Delhi areas. Live online classes from AIIMS faculty.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Greater Noida Center',
+      address: 'Omaxe NRI City, Greater Noida, UP 201310',
+      distance: 'Online classes recommended',
+    },
+    localities: [
+      { name: 'Janakpuri', url: '/biology-tutor-janakpuri' },
+      { name: 'Dwarka', url: '/biology-tutor-dwarka' },
+      { name: 'Rajouri Garden', url: '/biology-tutor-rajouri-garden' },
+      { name: 'Paschim Vihar', url: '/biology-tutor-paschim-vihar' },
+      { name: 'Tilak Nagar', url: '/biology-tutor-tilak-nagar' },
+      { name: 'Vikaspuri', url: '/biology-tutor-vikaspuri' },
+      { name: 'Uttam Nagar', url: '/biology-tutor-uttam-nagar' },
+      { name: 'Subhash Nagar', url: '/biology-tutor-subhash-nagar' },
+    ],
+    relatedCities: [
+      { name: 'Delhi NCR', url: '/best-neet-biology-tutor-delhi-ncr' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'South Delhi', url: '/biology-tutor-south-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Do you have a center in West Delhi?',
+        answer:
+          'Our main center is in Greater Noida. For West Delhi students, we highly recommend our live online classes which provide the same quality teaching without the long commute. Online classes save 3-4 hours of daily travel time.',
+      },
+      {
+        question: 'Are online classes suitable for NEET preparation?',
+        answer:
+          'Absolutely! Our online program is comprehensive with live interactive classes, recorded lectures for revision, daily practice problems, and regular mock tests. Many NEET toppers from West Delhi studied with us online.',
+      },
+      {
+        question: 'What are the batch timings for West Delhi students?',
+        answer:
+          'We offer multiple batches - Morning (6-9 AM), Afternoon (2-5 PM), and Evening (6-9 PM). Weekend intensive batches are also available. Choose timing that suits your school schedule.',
+      },
+      {
+        question: 'Can Dwarka students attend offline classes?',
+        answer:
+          'Yes, Dwarka students can attend our Greater Noida center. Metro connectivity via Blue Line makes it accessible. However, for daily classes, online mode is more practical and equally effective.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '100+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6517',
+      lng: '77.1027',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
