@@ -45,7 +45,7 @@ const courseTypeLabels: Record<
     description: 'Dual preparation',
   },
   flagship: {
-    label: 'Flagship (11th+12th)',
+    label: 'Flagship (12th+11th)',
     icon: Target,
     description: '1-Year intensive NEET ZA',
   },

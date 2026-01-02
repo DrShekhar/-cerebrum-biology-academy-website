@@ -580,7 +580,7 @@ export default function PricingPage() {
                         { type: 'board-only', label: 'Boards' },
                         { type: 'neet', label: 'NEET' },
                         { type: 'board-neet', label: 'NEET + Boards' },
-                        { type: 'flagship', label: 'Flagship (11th+12th)' },
+                        { type: 'flagship', label: 'Flagship (12th+11th)' },
                       ]
                     }
                     // All Classes: Show combined options
