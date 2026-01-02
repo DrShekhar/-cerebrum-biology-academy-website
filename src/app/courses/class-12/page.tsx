@@ -11,20 +11,64 @@ import {
   Star,
   ArrowRight,
   Trophy,
+  GraduationCap,
+  Microscope,
+  Brain,
+  Phone,
+  MessageCircle,
+  Shield,
+  Sparkles,
+  Calculator,
+  FileText,
+  TrendingUp,
+  School,
+  Play,
+  Calendar,
+  BadgeCheck,
 } from 'lucide-react'
-import { PricingDisplay } from '@/components/ui/PricingDisplay'
-import { getCoursePricing } from '@/lib/utils/pricing'
 
 export default function Class12BiologyPage() {
   const courseFeatures = [
-    'Complete Class 12 NCERT Biology syllabus',
-    'Intensive NEET preparation with previous years',
-    'Board exam excellence (90+ marks guaranteed)',
-    'Daily practice sessions and mock tests',
-    'One-on-one doubt clearing sessions',
-    'Comprehensive study materials and notes',
-    'Regular assessment and progress tracking',
-    'Dedicated counseling and guidance',
+    {
+      icon: BookOpen,
+      title: 'Complete NCERT Mastery',
+      description: 'Full Class 12 NCERT syllabus with NEET-level depth',
+    },
+    {
+      icon: Target,
+      title: 'Board + NEET Focus',
+      description: '90+ board marks guaranteed alongside NEET prep',
+    },
+    {
+      icon: Brain,
+      title: 'Daily Practice Sessions',
+      description: 'MCQs, PYQs, and topic-wise tests every day',
+    },
+    {
+      icon: Users,
+      title: 'Small Batch (Max 20)',
+      description: 'Personal attention for every student',
+    },
+    {
+      icon: MessageCircle,
+      title: 'Doubt Resolution 24/7',
+      description: 'WhatsApp support + dedicated doubt sessions',
+    },
+    {
+      icon: Award,
+      title: 'Weekly Mock Tests',
+      description: 'NEET pattern tests with detailed analysis',
+    },
+    {
+      icon: GraduationCap,
+      title: 'AIIMS Faculty',
+      description: 'Learn from Dr. Shekhar Singh, AIIMS alumnus',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Progress Tracking',
+      description: 'Regular assessments with parent updates',
+    },
   ]
 
   const curriculum = [
@@ -32,103 +76,282 @@ export default function Class12BiologyPage() {
       title: 'Unit 1: Reproduction',
       topics: ['Sexual Reproduction in Plants', 'Human Reproduction', 'Reproductive Health'],
       duration: '6 weeks',
-      neetWeight: 'High (12-15 questions)',
+      neetWeight: 'High (12-15 Qs)',
+      color: 'border-green-600',
     },
     {
       title: 'Unit 2: Genetics & Evolution',
       topics: ['Heredity', 'Molecular Basis of Inheritance', 'Evolution'],
       duration: '8 weeks',
-      neetWeight: 'Very High (15-18 questions)',
+      neetWeight: 'Very High (15-18 Qs)',
+      color: 'border-[#3d4d3d]',
     },
     {
       title: 'Unit 3: Biology & Human Welfare',
       topics: ['Health & Disease', 'Microbes', 'Biotechnology Applications'],
       duration: '6 weeks',
-      neetWeight: 'Medium (8-12 questions)',
+      neetWeight: 'Medium (8-12 Qs)',
+      color: 'border-teal-600',
     },
     {
       title: 'Unit 4: Biotechnology & Ecology',
       topics: ['Biotechnology Principles', 'Ecosystem', 'Environmental Issues'],
       duration: '8 weeks',
-      neetWeight: 'High (12-15 questions)',
+      neetWeight: 'High (12-15 Qs)',
+      color: 'border-[#4a5d4a]',
     },
   ]
 
   const successStats = [
-    { number: '96%', label: 'Board Exam Success', description: 'Students scoring 90+ marks' },
-    { number: '92%', label: 'NEET Qualification', description: 'Students clearing NEET' },
-    { number: '340+', label: 'Avg Biology Score', description: 'NEET Biology marks' },
-    { number: '3000+', label: 'Students Coached', description: 'Class 12 Biology' },
+    { number: '96%', label: 'Board Success', description: 'Score 90+ marks' },
+    { number: '92%', label: 'NEET Qualified', description: 'Clear NEET cutoff' },
+    { number: '340+', label: 'Avg Biology', description: 'NEET Biology score' },
+    { number: '3000+', label: 'Students', description: 'Coached in Class 12' },
   ]
 
-  const neetPreparation = [
-    { feature: 'Previous 15 years NEET questions', icon: Trophy },
-    { feature: 'Weekly full-length mock tests', icon: Target },
-    { feature: 'Topic-wise test series', icon: BookOpen },
-    { feature: 'Rank prediction analysis', icon: Award },
+  const neetTools = [
+    {
+      icon: School,
+      title: 'NEET College Predictor',
+      description: 'Check which medical colleges you can get based on your expected score',
+      href: '/neet-college-predictor',
+      color: 'from-green-500 to-teal-600',
+      cta: 'Predict Colleges',
+    },
+    {
+      icon: Calculator,
+      title: 'NEET Rank Predictor',
+      description: 'Estimate your All India Rank from your NEET score',
+      href: '/neet-rank-predictor',
+      color: 'from-blue-500 to-indigo-600',
+      cta: 'Predict Rank',
+    },
+    {
+      icon: FileText,
+      title: 'Free MCQ Practice',
+      description: 'Practice 10,000+ Biology MCQs chapter-wise',
+      href: '/mcq-practice',
+      color: 'from-purple-500 to-pink-600',
+      cta: 'Start Practice',
+    },
+    {
+      icon: BookOpen,
+      title: 'NEET PYQ Papers',
+      description: 'Solve previous 15 years NEET Biology questions',
+      href: '/pyq-biology',
+      color: 'from-orange-500 to-red-500',
+      cta: 'Solve PYQs',
+    },
   ]
+
+  const howWeHelp = [
+    {
+      icon: GraduationCap,
+      title: 'AIIMS-Trained Faculty',
+      stat: '15+ Years',
+      description: 'Dr. Shekhar Singh brings AIIMS expertise to every class',
+    },
+    {
+      icon: Target,
+      title: 'Focused NEET Strategy',
+      stat: '340+ Avg',
+      description: 'Chapter-wise weightage-based preparation for maximum Biology score',
+    },
+    {
+      icon: Users,
+      title: 'Small Batch Size',
+      stat: 'Max 20',
+      description: 'Personal attention ensures no student is left behind',
+    },
+    {
+      icon: Microscope,
+      title: 'Rigorous Testing',
+      stat: '100+ Tests',
+      description: 'Weekly tests simulate NEET environment for exam readiness',
+    },
+  ]
+
+  const faqs = [
+    {
+      question: 'How is this different from Class 11th course?',
+      answer:
+        'Class 12th course is more intensive with direct NEET focus. We cover board syllabus alongside intensive NEET preparation with daily practice, mock tests, and previous year questions analysis.',
+    },
+    {
+      question: 'What is the expected Biology score improvement?',
+      answer:
+        'Our students typically achieve 330+ marks in NEET Biology (out of 360). We focus on high-weightage topics and provide extensive practice to ensure maximum scoring.',
+    },
+    {
+      question: 'Are board exam and NEET preparation covered simultaneously?',
+      answer:
+        'Yes, our unique curriculum covers both. Board exam preparation is integrated with NEET-level depth, ensuring students excel in both without any compromise.',
+    },
+    {
+      question: 'What support is provided for doubt resolution?',
+      answer:
+        'We provide daily doubt sessions, one-on-one mentoring, WhatsApp support, and weekend doubt clearing classes. No student question goes unanswered.',
+    },
+    {
+      question: 'What is the fee for Class 12th Biology course?',
+      answer:
+        'The course fee is ₹72,200 for the complete 12-month program. EMI options and early bird discounts are available. Book a free demo to know more.',
+    },
+  ]
+
+  const whatsappLink =
+    'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2012th%20Biology%20course.%20Please%20share%20details.'
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'Class 12th Biology Course for NEET',
+            description:
+              'Intensive Class 12 Biology course for NEET and Board exam preparation by AIIMS faculty',
+            provider: {
+              '@type': 'Organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            offers: {
+              '@type': 'Offer',
+              price: '72200',
+              priceCurrency: 'INR',
+              availability: 'https://schema.org/InStock',
+            },
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
+
       {/* Hero Section */}
-      <section className="bg-indigo-500 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-[#3d4d3d] text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="max-w-full">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 break-words">
-                Class 12th Biology Course
+              {/* Urgency Badge */}
+              <div className="inline-flex items-center bg-yellow-500/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-yellow-500/30">
+                <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
+                <span className="text-yellow-300">NEET 2026 Batch Open</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+                Class 12th Biology
+                <span className="text-yellow-400 block">NEET Course</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-6 sm:mb-8 break-words">
-                Master Class 12th Biology with intensive NEET preparation. The most crucial year for
-                medical entrance success with expert AIIMS faculty guidance.
+
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
+                The most crucial year for your medical dream. Master Class 12 Biology with intensive
+                NEET preparation from <strong className="text-white">AIIMS faculty</strong>.
               </p>
+
+              {/* CTAs */}
               <div className="flex flex-col gap-3 sm:gap-4">
-                {/* Primary CTA - Book Free Demo */}
                 <Link
                   href="/demo-booking"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
+                  className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
                 >
-                  <span>Book Free Demo</span>
+                  <Play className="w-5 h-5 mr-2" />
+                  <span>Book Free Demo Class</span>
                   <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                {/* Secondary CTAs */}
                 <div className="flex flex-col xs:flex-row gap-3">
-                  <Link
-                    href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2012th%20Biology%20course"
+                  <a
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
                   >
-                    WhatsApp Counselor
-                  </Link>
-                  <Link
-                    href="/purchase/class-12"
-                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    WhatsApp Us
+                  </a>
+                  <a
+                    href="tel:+918826444334"
+                    className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
                   >
-                    Enroll Now
-                  </Link>
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+
+            {/* Course Highlights Card */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h3>
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-4">
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">1 Year Intensive Program</span>
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-4">
+                    <Clock className="w-5 h-5 text-yellow-400" />
+                  </div>
+                  <div>
+                    <span className="font-semibold">12 Months Intensive</span>
+                    <p className="text-sm text-gray-300">Complete NEET preparation</p>
+                  </div>
                 </div>
                 <div className="flex items-center">
-                  <Users className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">Premium Batch (Max 20 students)</span>
+                  <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mr-4">
+                    <Users className="w-5 h-5 text-green-400" />
+                  </div>
+                  <div>
+                    <span className="font-semibold">Premium Batch (Max 20)</span>
+                    <p className="text-sm text-gray-300">Personal attention guaranteed</p>
+                  </div>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">Board + NEET Excellence</span>
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
+                    <Trophy className="w-5 h-5 text-purple-400" />
+                  </div>
+                  <div>
+                    <span className="font-semibold">Board + NEET Excellence</span>
+                    <p className="text-sm text-gray-300">90+ board & 340+ NEET target</p>
+                  </div>
                 </div>
                 <div className="flex items-center">
-                  <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">340+ NEET Biology Target</span>
+                  <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
+                    <GraduationCap className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <div>
+                    <span className="font-semibold">AIIMS Faculty</span>
+                    <p className="text-sm text-gray-300">Dr. Shekhar Singh, 15+ years exp</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Price Badge */}
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-gray-300">Course Fee</p>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-bold text-yellow-400">₹72,200</span>
+                      <span className="text-sm text-gray-400 line-through">₹80,000</span>
+                    </div>
+                  </div>
+                  <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                    Save ₹7,800
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,14 +359,38 @@ export default function Class12BiologyPage() {
         </div>
       </section>
 
-      {/* Success Statistics */}
-      <section className="py-8 sm:py-12 md:py-16">
+      {/* Trust Banner */}
+      <section className="py-4 bg-[#3d4d3d]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-white text-sm sm:text-base">
+            <div className="flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-white/80" />
+              <span className="font-medium">AIIMS Faculty</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Trophy className="h-5 w-5 text-white/80" />
+              <span className="font-medium">500+ NEET Selections</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="h-5 w-5 text-white/80" />
+              <span className="font-medium">4.9 Rating</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-white/80" />
+              <span className="font-medium">15+ Years Trust</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Statistics */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Class 12th Success Record
             </h2>
-            <p className="text-sm sm:text-base text-gray-600">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Outstanding results in both board exams and NEET
             </p>
           </div>
@@ -151,9 +398,9 @@ export default function Class12BiologyPage() {
             {successStats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gradient-to-br from-[#e8ede8] to-white rounded-xl p-5 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow border border-[#e8ede8]"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
                   {stat.number}
                 </div>
                 <div className="text-sm sm:text-lg font-semibold text-gray-900 mb-1">
@@ -166,16 +413,47 @@ export default function Class12BiologyPage() {
         </div>
       </section>
 
-      {/* Course Features */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+      {/* How Cerebrum Helps */}
+      <section className="py-12 sm:py-16 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Why Choose Our Class 12th Biology Course?
+          <div className="text-center mb-10 sm:mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Sparkles className="h-4 w-4" />
+              Why Cerebrum
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              How Cerebrum Helps You{' '}
+              <span className="text-[#4a5d4a]">Get Into Medical College</span>
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
-              The most critical year for NEET aspirants with dual focus on board excellence and
-              entrance exam success
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {howWeHelp.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#e8ede8] group hover:-translate-y-1"
+              >
+                <div className="w-14 h-14 bg-[#3d4d3d] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-7 h-7 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-[#4a5d4a] mb-1">{item.stat}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Course Features */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              What's Included in the Course
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Everything you need to excel in both board exams and NEET
             </p>
           </div>
 
@@ -183,53 +461,67 @@ export default function Class12BiologyPage() {
             {courseFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gray-50 rounded-xl p-5 sm:p-6 hover:shadow-lg transition-shadow border border-gray-100 hover:border-[#4a5d4a]/30"
               >
-                <CheckCircle className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600 mb-3 sm:mb-4" />
-                <p className="text-sm sm:text-base text-gray-700 font-medium">{feature}</p>
+                <div className="w-12 h-12 bg-[#e8ede8] rounded-xl flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-[#3d4d3d]" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* NEET Preparation Focus */}
-      <section className="py-8 sm:py-12 md:py-16">
+      {/* Free NEET Tools */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-900 to-[#3d4d3d] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Intensive NEET Preparation
+          <div className="text-center mb-10 sm:mb-12">
+            <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-yellow-500/30">
+              <Sparkles className="h-4 w-4" />
+              100% Free Tools
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+              Free NEET Tools for Class 12 Students
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 px-4">
-              Comprehensive NEET-focused approach for maximum Biology score
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Use these free tools to boost your NEET preparation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {neetPreparation.map((item, index) => {
-              const Icon = item.icon
-              return (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {neetTools.map((tool, index) => (
+              <Link
+                key={index}
+                href={tool.href}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1"
+              >
                 <div
-                  key={index}
-                  className="bg-indigo-50 rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-shadow"
+                  className={`w-14 h-14 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}
                 >
-                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
-                  <p className="text-sm sm:text-base text-gray-700 font-medium">{item.feature}</p>
+                  <tool.icon className="w-7 h-7 text-white" />
                 </div>
-              )
-            })}
+                <h3 className="text-lg font-bold text-white mb-2">{tool.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
+                <span className="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                  {tool.cta}
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Curriculum */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Complete Curriculum with NEET Weightage
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 px-4">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Strategic coverage based on NEET exam pattern and board requirements
             </p>
           </div>
@@ -238,12 +530,12 @@ export default function Class12BiologyPage() {
             {curriculum.map((unit, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-600"
+                className={`bg-white rounded-xl p-6 shadow-lg border-l-4 ${unit.color} hover:shadow-xl transition-shadow`}
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{unit.title}</h3>
                   <div className="text-right">
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium block mb-1">
+                    <span className="bg-[#e8ede8] text-[#3d4d3d] px-3 py-1 rounded-full text-sm font-medium block mb-1">
                       {unit.duration}
                     </span>
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
@@ -254,7 +546,7 @@ export default function Class12BiologyPage() {
                 <div className="space-y-2">
                   {unit.topics.map((topic, topicIndex) => (
                     <div key={topicIndex} className="flex items-center">
-                      <BookOpen className="w-4 h-4 text-purple-600 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-[#4a5d4a] mr-2 flex-shrink-0" />
                       <span className="text-gray-700">{topic}</span>
                     </div>
                   ))}
@@ -266,49 +558,75 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* Pricing & Enrollment */}
-      <section className="py-16 bg-purple-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Secure Your Medical Seat Today</h2>
+      <section className="py-12 sm:py-16 bg-[#e8ede8]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Secure Your Medical Seat Today
+          </h2>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8 border border-[#d8ddd8]">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
+              <div className="text-left">
+                <div className="inline-flex items-center gap-2 bg-[#3d4d3d] text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  <BadgeCheck className="h-4 w-4" />
+                  Most Popular
+                </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Class 12th Biology Intensive Course
                 </h3>
-                <div className="text-left space-y-3">
+                <div className="space-y-3">
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                    <CheckCircle className="w-5 h-5 text-[#4a5d4a] mr-3" />
                     <span>12 months intensive program</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                    <CheckCircle className="w-5 h-5 text-[#4a5d4a] mr-3" />
                     <span>Board + NEET dual preparation</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                    <CheckCircle className="w-5 h-5 text-[#4a5d4a] mr-3" />
                     <span>Daily practice + weekly tests</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                    <CheckCircle className="w-5 h-5 text-[#4a5d4a] mr-3" />
                     <span>Personal mentorship included</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-[#4a5d4a] mr-3" />
+                    <span>AIIMS faculty guidance</span>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <PricingDisplay
-                  courseId="class-12-neet-intensive"
-                  showCompetitiveAdvantage={true}
-                  onEnrollClick={() => (window.location.href = '/admissions')}
-                />
+              <div className="bg-[#e8ede8] rounded-xl p-6">
+                <div className="mb-4">
+                  <span className="text-gray-500 line-through text-lg">₹80,000</span>
+                  <div className="text-4xl font-bold text-[#3d4d3d]">₹72,200</div>
+                  <p className="text-sm text-gray-600 mt-1">per year (EMI available)</p>
+                </div>
+                <div className="space-y-3">
+                  <Link
+                    href="/purchase/class-12"
+                    className="w-full bg-[#3d4d3d] text-white py-3 rounded-xl font-bold hover:bg-[#4a5d4a] transition-all inline-flex items-center justify-center"
+                  >
+                    Enroll Now
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    href="/demo-booking"
+                    className="w-full bg-yellow-500 text-slate-900 py-3 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    Book Free Demo First
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-yellow-100 border border-yellow-300 rounded-xl p-6">
+          <div className="bg-yellow-100 border border-yellow-300 rounded-xl p-4 sm:p-6">
             <p className="text-yellow-800 font-semibold mb-2">🎯 NEET 2026 Special Offer</p>
-            <p className="text-yellow-700">
+            <p className="text-yellow-700 text-sm sm:text-base">
               Enroll before 31st January and get FREE NEET crash course (worth ₹15,000) + Previous
               15 years question bank!
             </p>
@@ -317,54 +635,92 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10 sm:mb-12">
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                How is this different from Class 11th course?
-              </h3>
-              <p className="text-gray-600">
-                Class 12th course is more intensive with direct NEET focus. We cover board syllabus
-                alongside intensive NEET preparation with daily practice, mock tests, and previous
-                year questions analysis.
-              </p>
-            </div>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-start">
+                  <MessageCircle className="w-5 h-5 mr-3 text-[#4a5d4a] flex-shrink-0 mt-1" />
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600 ml-8">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What is the expected Biology score improvement?
-              </h3>
-              <p className="text-gray-600">
-                Our students typically achieve 330+ marks in NEET Biology (out of 360). We focus on
-                high-weightage topics and provide extensive practice to ensure maximum scoring.
-              </p>
-            </div>
+      {/* Final CTA */}
+      <section className="py-12 sm:py-16 bg-[#3d4d3d] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          {/* Urgency Badge */}
+          <div className="inline-flex items-center bg-yellow-500/20 border border-yellow-500/30 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Calendar className="w-4 h-4 mr-2 text-yellow-400" />
+            <span className="text-yellow-300">Limited Seats for NEET 2026 Batch</span>
+          </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Are board exam and NEET preparation covered simultaneously?
-              </h3>
-              <p className="text-gray-600">
-                Yes, our unique curriculum covers both. Board exam preparation is integrated with
-                NEET-level depth, ensuring students excel in both without any compromise.
-              </p>
-            </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            Start Your NEET Journey <span className="text-yellow-400">Today</span>
+          </h2>
+          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+            Join 3000+ successful students who cracked NEET with Cerebrum's Class 12 Biology course
+          </p>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What support is provided for doubt resolution?
-              </h3>
-              <p className="text-gray-600">
-                We provide daily doubt sessions, one-on-one mentoring, WhatsApp support, and weekend
-                doubt clearing classes. No student question goes unanswered.
-              </p>
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
+              <BadgeCheck className="w-4 h-4 text-green-400" />
+              <span>500+ NEET Selections</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
+              <Star className="w-4 h-4 text-yellow-400" />
+              <span>4.9/5 Rating</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
+              <Shield className="w-4 h-4 text-blue-400" />
+              <span>15+ Years Trust</span>
             </div>
           </div>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/demo-booking"
+              className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center shadow-lg"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Book Free Demo
+            </Link>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all inline-flex items-center justify-center shadow-lg"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp: 88264-44334
+            </a>
+            <a
+              href="tel:+918826444334"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now
+            </a>
+          </div>
+
+          {/* Operating Hours */}
+          <p className="text-white/60 text-sm">
+            📞 Counseling hours: Mon-Sat, 9 AM - 8 PM | Sunday: 10 AM - 6 PM
+          </p>
         </div>
       </section>
     </div>
