@@ -497,7 +497,7 @@ const class12: ClassPricing = {
         tier: 'pinnacle',
         batchSize: '10-12',
         hours: '10-12 hrs/week',
-        prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
+        prices: { lumpSum: 68000, twoInstallments: 70000, threeInstallments: 71000 },
         features: class12PinnacleFeatures.filter((f) => !f.includes('NEET')),
       },
       {
