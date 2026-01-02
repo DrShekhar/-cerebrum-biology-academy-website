@@ -1145,18 +1145,18 @@ export default function PricingPage() {
         </div>
 
         <div className="mt-12 sm:mt-16 pb-24 md:pb-8">
-          <div className="relative bg-gradient-to-br from-amber-400 via-orange-400 to-orange-500 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-[#5a6d5a] via-[#4a5d4a] to-[#3d4d3d] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/30 rounded-full blur-3xl hidden sm:block" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl hidden sm:block" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#e8ede8]/30 rounded-full blur-3xl hidden sm:block" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#3d4d3d]/40 rounded-full blur-3xl hidden sm:block" />
             </div>
 
             <div className="relative text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
                 Ready to Start Your NEET Journey?
               </h2>
-              <p className="text-base sm:text-lg text-gray-800/90 mb-8 max-w-xl mx-auto">
+              <p className="text-base sm:text-lg text-white/90 mb-8 max-w-xl mx-auto">
                 Join 5,000+ successful students. Limited seats available for the upcoming batch!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
@@ -1171,7 +1171,7 @@ export default function PricingPage() {
                   </button>
                 </Link>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-sm text-gray-700">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-sm text-white/80">
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4" />
                   Secure payment via Razorpay
