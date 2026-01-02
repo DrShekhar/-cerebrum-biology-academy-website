@@ -22,7 +22,15 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 | **Teal 600** | `bg-teal-600` | `#0d9488` | Biology-themed buttons, medical feel |
 | **Blue 600** | `bg-blue-600` | `#2563eb` | Links, info buttons, trust signals |
 | **Purple 700** | `bg-purple-700` | `#7c3aed` | Premium features, VIP badges |
-| **Yellow 800** | `bg-yellow-800` | `#854d0e` | Warning text, attention grabbers |
+| **Yellow 800** | `bg-yellow-800` | `#854d0e` | **Prominent buttons**, earthy CTAs, gold accents |
+
+### Warning & Alert Colors
+
+| Color | Tailwind | Hex | Usage |
+|-------|----------|-----|-------|
+| **Red 100** | `bg-red-100` | `#fee2e2` | Warning message backgrounds |
+| **Red 200** | `bg-red-200` | `#fecaca` | Warning borders, light alerts |
+| **Red 500** | `bg-red-500` | `#ef4444` | Warning text on light backgrounds |
 
 ### Typography Style
 - **Font**: Geist Sans with system fallbacks
