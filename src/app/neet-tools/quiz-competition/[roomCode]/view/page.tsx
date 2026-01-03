@@ -560,22 +560,27 @@ export default function StudentViewPage() {
           <div className="rounded-2xl border border-slate-700/50 bg-slate-800/80 p-6 shadow-xl backdrop-blur-sm">
             <div className="space-y-5">
               <div>
-                <label className="mb-2 block text-sm font-semibold text-slate-300">Your Name</label>
+                <label htmlFor="participant-name" className="mb-2 block text-sm font-semibold text-slate-300">Your Name</label>
                 <input
+                  id="participant-name"
                   type="text"
                   value={joinName}
                   onChange={(e) => setJoinName(e.target.value)}
                   placeholder="Enter your name"
                   className="w-full rounded-xl border-2 border-slate-600 bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 transition-all focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
                   maxLength={30}
+                  aria-required="true"
+                  autoComplete="name"
                 />
               </div>
 
-              <div>
-                <label className="mb-3 block text-sm font-semibold text-slate-300">Select Your Team</label>
+              <div role="group" aria-labelledby="team-selection-label">
+                <span id="team-selection-label" className="mb-3 block text-sm font-semibold text-slate-300">Select Your Team</span>
                 <div className="grid grid-cols-2 gap-3">
                   <button
+                    type="button"
                     onClick={() => setSelectedTeam('TEAM_A')}
+                    aria-pressed={selectedTeam === 'TEAM_A'}
                     className={`group relative overflow-hidden rounded-xl border-2 p-4 text-center transition-all ${
                       selectedTeam === 'TEAM_A'
                         ? 'border-blue-500 bg-blue-500/20 ring-2 ring-blue-400/30'
@@ -590,7 +595,9 @@ export default function StudentViewPage() {
                     <p className="mt-1 text-2xl font-bold text-blue-400">{session.teamAScore}</p>
                   </button>
                   <button
+                    type="button"
                     onClick={() => setSelectedTeam('TEAM_B')}
+                    aria-pressed={selectedTeam === 'TEAM_B'}
                     className={`group relative overflow-hidden rounded-xl border-2 p-4 text-center transition-all ${
                       selectedTeam === 'TEAM_B'
                         ? 'border-purple-500 bg-purple-500/20 ring-2 ring-purple-400/30'
@@ -1063,7 +1070,9 @@ export default function StudentViewPage() {
 
               {/* Input */}
               <div className="flex gap-2 border-t border-slate-700/50 bg-slate-800/30 p-3">
+                <label htmlFor="chat-message-input" className="sr-only">Chat message</label>
                 <input
+                  id="chat-message-input"
                   ref={inputRef}
                   type="text"
                   value={newMessage}
@@ -1075,20 +1084,23 @@ export default function StudentViewPage() {
                     }
                   }}
                   placeholder="Type a message..."
+                  aria-label="Chat message"
                   className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
                   maxLength={500}
                   disabled={sendingMessage}
                   autoComplete="off"
                 />
                 <button
+                  type="button"
                   onClick={sendMessage}
                   disabled={sendingMessage || !newMessage.trim()}
+                  aria-label={sendingMessage ? 'Sending message' : 'Send message'}
                   className={`rounded-xl px-4 py-2 text-white shadow-lg transition-all disabled:opacity-50 ${isTeamA ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500' : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-400 hover:to-purple-500'}`}
                 >
                   {sendingMessage ? (
-                    <Loader2 className="h-5 w-5 animate-spin" />
+                    <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
                   ) : (
-                    <Send className="h-5 w-5" />
+                    <Send className="h-5 w-5" aria-hidden="true" />
                   )}
                 </button>
               </div>
