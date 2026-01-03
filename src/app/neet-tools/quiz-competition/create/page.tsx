@@ -90,6 +90,10 @@ export default function CreateQuizPage() {
       const data = await res.json()
 
       if (data.success) {
+        // Store host token for authentication
+        if (data.data.hostToken) {
+          localStorage.setItem(`quiz_host_token_${data.data.roomCode}`, data.data.hostToken)
+        }
         router.push(`/neet-tools/quiz-competition/${data.data.roomCode}/host`)
       } else {
         setError(data.error || 'Failed to create quiz')

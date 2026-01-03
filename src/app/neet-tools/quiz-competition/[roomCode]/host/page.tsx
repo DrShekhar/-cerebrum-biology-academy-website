@@ -106,46 +106,82 @@ export default function HostControlPanel() {
   const [chatExpanded, setChatExpanded] = useState(true)
   const [lastMessageTimestamp, setLastMessageTimestamp] = useState<string | null>(null)
 
+  // Host token for authentication
+  const [hostToken, setHostToken] = useState<string | null>(null)
+
+  // Connection status and exponential backoff
+  const [failCount, setFailCount] = useState(0)
+  const [backoffMs, setBackoffMs] = useState(3000)
+  const isConnected = failCount < 3
+
   // Timer state
   const [timerSeconds, setTimerSeconds] = useState<number>(0)
   const [showTimerSettings, setShowTimerSettings] = useState(false)
   const [questionTimerInput, setQuestionTimerInput] = useState('60')
   const [answerTimerInput, setAnswerTimerInput] = useState('60')
 
+  // Load host token from localStorage on mount
+  useEffect(() => {
+    if (roomCode) {
+      const token = localStorage.getItem(`quiz_host_token_${roomCode}`)
+      setHostToken(token)
+    }
+  }, [roomCode])
+
   const fetchSession = useCallback(async () => {
     try {
-      // Add cache-busting timestamp to prevent stale data
+      const headers: Record<string, string> = {
+        'Cache-Control': 'no-cache',
+      }
+      if (hostToken) {
+        headers['x-host-token'] = hostToken
+      }
+
       const res = await fetch(`/api/quiz/${roomCode}?t=${Date.now()}`, {
         cache: 'no-store',
-        headers: {
-          'Cache-Control': 'no-cache',
-        },
+        headers,
       })
       const data = await res.json()
       if (data.success) {
         setSession(data.data)
+        setFailCount(0)
+        setBackoffMs(3000)
       } else {
-        setError(data.error || 'Failed to load quiz')
+        setFailCount((prev) => prev + 1)
+        setBackoffMs((prev) => Math.min(prev * 2, 10000))
+        if (!session) {
+          setError(data.error || 'Failed to load quiz')
+        }
       }
     } catch {
-      setError('Failed to load quiz session')
+      setFailCount((prev) => prev + 1)
+      setBackoffMs((prev) => Math.min(prev * 2, 10000))
+      if (!session) {
+        setError('Failed to load quiz session')
+      }
     } finally {
       setLoading(false)
     }
-  }, [roomCode])
+  }, [roomCode, hostToken, session])
 
   const fetchMessages = useCallback(async () => {
     try {
       const url = new URL(`/api/quiz/${roomCode}/chat`, window.location.origin)
-      url.searchParams.set('isHost', 'true')
       if (lastMessageTimestamp) {
         url.searchParams.set('after', lastMessageTimestamp)
       }
       url.searchParams.set('t', Date.now().toString())
 
+      const headers: Record<string, string> = {
+        'Cache-Control': 'no-cache',
+      }
+      if (hostToken) {
+        headers['x-host-token'] = hostToken
+      }
+
       const res = await fetch(url.toString(), {
         cache: 'no-store',
-        headers: { 'Cache-Control': 'no-cache' },
+        headers,
       })
       const data = await res.json()
       if (data.success && data.data.length > 0) {
@@ -154,7 +190,6 @@ export default function HostControlPanel() {
           const newMessages = data.data.filter((m: ChatMessage) => !existingIds.has(m.id))
           return [...prev, ...newMessages]
         })
-        // Use timestamp cursor from API response
         if (data.nextCursor) {
           setLastMessageTimestamp(data.nextCursor)
         }
@@ -162,19 +197,24 @@ export default function HostControlPanel() {
     } catch (err) {
       console.error('Error fetching chat messages:', err)
     }
-  }, [roomCode, lastMessageTimestamp])
+  }, [roomCode, lastMessageTimestamp, hostToken])
 
+  // Polling with exponential backoff
   useEffect(() => {
     fetchSession()
-    const interval = setInterval(fetchSession, 3000)
-    return () => clearInterval(interval)
   }, [fetchSession])
 
   useEffect(() => {
+    const interval = setInterval(fetchSession, backoffMs)
+    return () => clearInterval(interval)
+  }, [fetchSession, backoffMs])
+
+  useEffect(() => {
+    if (!hostToken) return
     fetchMessages()
-    const chatInterval = setInterval(fetchMessages, 2000)
+    const chatInterval = setInterval(fetchMessages, Math.max(2000, backoffMs))
     return () => clearInterval(chatInterval)
-  }, [fetchMessages])
+  }, [fetchMessages, hostToken, backoffMs])
 
   // Timer countdown effect
   useEffect(() => {
@@ -189,9 +229,7 @@ export default function HostControlPanel() {
         : session.answerTimerSeconds
 
     const updateTimer = () => {
-      const elapsed = Math.floor(
-        (Date.now() - new Date(session.timerStartedAt!).getTime()) / 1000
-      )
+      const elapsed = Math.floor((Date.now() - new Date(session.timerStartedAt!).getTime()) / 1000)
       const remaining = Math.max(0, totalSeconds - elapsed)
       setTimerSeconds(remaining)
     }
@@ -199,7 +237,12 @@ export default function HostControlPanel() {
     updateTimer()
     const interval = setInterval(updateTimer, 1000)
     return () => clearInterval(interval)
-  }, [session?.activeTimerType, session?.timerStartedAt, session?.questionTimerSeconds, session?.answerTimerSeconds])
+  }, [
+    session?.activeTimerType,
+    session?.timerStartedAt,
+    session?.questionTimerSeconds,
+    session?.answerTimerSeconds,
+  ])
 
   // Initialize timer inputs when session loads
   useEffect(() => {
@@ -211,9 +254,12 @@ export default function HostControlPanel() {
 
   const startTimer = async (timerType: 'question' | 'answer') => {
     try {
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/timer`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ action: 'start', timerType }),
       })
       const data = await res.json()
@@ -236,9 +282,12 @@ export default function HostControlPanel() {
 
   const stopTimer = async () => {
     try {
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/timer`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ action: 'stop', timerType: session?.activeTimerType || 'question' }),
       })
       const data = await res.json()
@@ -262,9 +311,12 @@ export default function HostControlPanel() {
 
   const saveTimerSettings = async () => {
     try {
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/timer`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           questionTimerSeconds: parseInt(questionTimerInput) || 60,
           answerTimerSeconds: parseInt(answerTimerInput) || 60,
@@ -290,16 +342,17 @@ export default function HostControlPanel() {
 
   const setDiscussing = async (team: 'TEAM_A' | 'TEAM_B' | null) => {
     try {
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/timer`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ teamDiscussing: team }),
       })
       const data = await res.json()
       if (data.success) {
-        setSession((prev) =>
-          prev ? { ...prev, teamDiscussing: data.data.teamDiscussing } : prev
-        )
+        setSession((prev) => (prev ? { ...prev, teamDiscussing: data.data.teamDiscussing } : prev))
       }
     } catch (err) {
       console.error('Failed to set discussion:', err)
@@ -332,9 +385,12 @@ export default function HostControlPanel() {
         body.customPoints = points
       }
 
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/score`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify(body),
       })
 
@@ -367,8 +423,12 @@ export default function HostControlPanel() {
     setActionLoading(true)
 
     try {
+      const headers: Record<string, string> = {}
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/score`, {
         method: 'DELETE',
+        headers,
       })
 
       const data = await res.json()
@@ -397,8 +457,12 @@ export default function HostControlPanel() {
     setActionLoading(true)
 
     try {
+      const headers: Record<string, string> = {}
+      if (hostToken) headers['x-host-token'] = hostToken
+
       const res = await fetch(`/api/quiz/${roomCode}/end`, {
         method: 'POST',
+        headers,
       })
 
       const data = await res.json()
@@ -537,6 +601,20 @@ export default function HostControlPanel() {
             </div>
 
             <div className="flex items-center gap-2 sm:gap-4">
+              {/* Connection status indicator */}
+              <div
+                className={`flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium ${
+                  isConnected
+                    ? 'bg-green-50 text-green-700'
+                    : 'animate-pulse bg-orange-100 text-orange-700'
+                }`}
+                title={isConnected ? 'Connected' : 'Reconnecting...'}
+              >
+                <div
+                  className={`h-2 w-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-orange-500'}`}
+                />
+                <span className="hidden sm:inline">{isConnected ? 'Live' : 'Reconnecting'}</span>
+              </div>
               <div className="flex items-center gap-1.5 rounded-lg bg-gray-50 px-3 py-1.5 text-xs text-gray-700 sm:gap-2 sm:text-sm">
                 <Users className="h-4 w-4 text-teal-600" />
                 <span className="hidden font-medium sm:inline">{participantCount} joined</span>
@@ -557,10 +635,14 @@ export default function HostControlPanel() {
           <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <div className="text-center sm:text-left">
               <p className="text-sm font-medium text-blue-100">Room Code</p>
-              <p className="text-3xl font-bold tracking-[0.2em] text-white sm:text-4xl">{session.roomCode}</p>
+              <p className="text-3xl font-bold tracking-[0.2em] text-white sm:text-4xl">
+                {session.roomCode}
+              </p>
               <p className="mt-1.5 text-xs text-blue-200 sm:text-sm">
                 <span className="hidden sm:inline">Students join at: </span>
-                <span className="rounded bg-white/10 px-2 py-0.5 font-mono">/{session.roomCode}/view</span>
+                <span className="rounded bg-white/10 px-2 py-0.5 font-mono">
+                  /{session.roomCode}/view
+                </span>
               </p>
             </div>
             <button
@@ -651,7 +733,9 @@ export default function HostControlPanel() {
               </div>
               <div className="flex items-center gap-1.5">
                 <button
-                  onClick={() => setDiscussing(session.teamDiscussing === 'TEAM_A' ? null : 'TEAM_A')}
+                  onClick={() =>
+                    setDiscussing(session.teamDiscussing === 'TEAM_A' ? null : 'TEAM_A')
+                  }
                   className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all ${
                     session.teamDiscussing === 'TEAM_A'
                       ? 'bg-blue-500 text-white ring-2 ring-blue-300'
@@ -661,7 +745,9 @@ export default function HostControlPanel() {
                   {session.teamAName}
                 </button>
                 <button
-                  onClick={() => setDiscussing(session.teamDiscussing === 'TEAM_B' ? null : 'TEAM_B')}
+                  onClick={() =>
+                    setDiscussing(session.teamDiscussing === 'TEAM_B' ? null : 'TEAM_B')
+                  }
                   className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all ${
                     session.teamDiscussing === 'TEAM_B'
                       ? 'bg-purple-500 text-white ring-2 ring-purple-300'
@@ -737,8 +823,12 @@ export default function HostControlPanel() {
                     </div>
                   )}
                   <div className="mt-2">
-                    <h3 className="mb-2 text-base font-semibold text-gray-700 sm:text-lg">{session.teamAName}</h3>
-                    <p className="text-4xl font-bold text-blue-600 sm:text-5xl">{session.teamAScore}</p>
+                    <h3 className="mb-2 text-base font-semibold text-gray-700 sm:text-lg">
+                      {session.teamAName}
+                    </h3>
+                    <p className="text-4xl font-bold text-blue-600 sm:text-5xl">
+                      {session.teamAScore}
+                    </p>
                     <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
                       <Users className="h-3 w-3" />
                       {teamACount} players
@@ -761,8 +851,12 @@ export default function HostControlPanel() {
                     </div>
                   )}
                   <div className="mt-2">
-                    <h3 className="mb-2 text-base font-semibold text-gray-700 sm:text-lg">{session.teamBName}</h3>
-                    <p className="text-4xl font-bold text-purple-600 sm:text-5xl">{session.teamBScore}</p>
+                    <h3 className="mb-2 text-base font-semibold text-gray-700 sm:text-lg">
+                      {session.teamBName}
+                    </h3>
+                    <p className="text-4xl font-bold text-purple-600 sm:text-5xl">
+                      {session.teamBScore}
+                    </p>
                     <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700">
                       <Users className="h-3 w-3" />
                       {teamBCount} players
@@ -776,7 +870,9 @@ export default function HostControlPanel() {
                 <div className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3">
                   <h4 className="font-semibold text-gray-800">
                     Score for{' '}
-                    <span className={selectedTeam === 'TEAM_A' ? 'text-blue-600' : 'text-purple-600'}>
+                    <span
+                      className={selectedTeam === 'TEAM_A' ? 'text-blue-600' : 'text-purple-600'}
+                    >
                       {selectedTeam === 'TEAM_A' ? session.teamAName : session.teamBName}
                     </span>
                   </h4>
@@ -797,7 +893,9 @@ export default function HostControlPanel() {
                   >
                     <Check className="h-7 w-7" />
                     <span>Correct</span>
-                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">+{session.scoringRules.correct}</span>
+                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">
+                      +{session.scoringRules.correct}
+                    </span>
                   </button>
 
                   <button
@@ -807,7 +905,9 @@ export default function HostControlPanel() {
                   >
                     <X className="h-7 w-7" />
                     <span>Wrong</span>
-                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">{session.scoringRules.wrong}</span>
+                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">
+                      {session.scoringRules.wrong}
+                    </span>
                   </button>
 
                   {session.format === 'MODERATOR' && (
@@ -818,7 +918,9 @@ export default function HostControlPanel() {
                     >
                       <ArrowRightLeft className="h-7 w-7" />
                       <span>Pass</span>
-                      <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">{session.scoringRules.pass}</span>
+                      <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">
+                        {session.scoringRules.pass}
+                      </span>
                     </button>
                   )}
 
@@ -922,7 +1024,9 @@ export default function HostControlPanel() {
                         {round.roundNumber}
                       </span>
                       <div>
-                        <p className={`text-sm font-medium ${round.answeringTeam === 'TEAM_A' ? 'text-blue-700' : 'text-purple-700'}`}>
+                        <p
+                          className={`text-sm font-medium ${round.answeringTeam === 'TEAM_A' ? 'text-blue-700' : 'text-purple-700'}`}
+                        >
                           {round.answeringTeam === 'TEAM_A' ? session.teamAName : session.teamBName}
                         </p>
                         <span
@@ -975,7 +1079,9 @@ export default function HostControlPanel() {
                 {/* Team A Messages */}
                 <div className="rounded-xl border border-blue-100 bg-gradient-to-b from-blue-50/50 to-white p-3">
                   <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-blue-700">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-[10px] font-bold text-white">A</span>
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-[10px] font-bold text-white">
+                      A
+                    </span>
                     {session.teamAName}
                     <span className="ml-auto rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-600">
                       {chatMessages.filter((m) => m.team === 'TEAM_A').length}
@@ -988,7 +1094,10 @@ export default function HostControlPanel() {
                       chatMessages
                         .filter((m) => m.team === 'TEAM_A')
                         .map((msg) => (
-                          <div key={msg.id} className="rounded-lg border border-blue-100 bg-white p-2.5 text-xs shadow-sm">
+                          <div
+                            key={msg.id}
+                            className="rounded-lg border border-blue-100 bg-white p-2.5 text-xs shadow-sm"
+                          >
                             <span className="font-semibold text-blue-700">{msg.senderName}:</span>{' '}
                             <span className="text-gray-700">{msg.message}</span>
                           </div>
@@ -1000,7 +1109,9 @@ export default function HostControlPanel() {
                 {/* Team B Messages */}
                 <div className="rounded-xl border border-purple-100 bg-gradient-to-b from-purple-50/50 to-white p-3">
                   <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-purple-700">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-[10px] font-bold text-white">B</span>
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-[10px] font-bold text-white">
+                      B
+                    </span>
                     {session.teamBName}
                     <span className="ml-auto rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-600">
                       {chatMessages.filter((m) => m.team === 'TEAM_B').length}
@@ -1013,7 +1124,10 @@ export default function HostControlPanel() {
                       chatMessages
                         .filter((m) => m.team === 'TEAM_B')
                         .map((msg) => (
-                          <div key={msg.id} className="rounded-lg border border-purple-100 bg-white p-2.5 text-xs shadow-sm">
+                          <div
+                            key={msg.id}
+                            className="rounded-lg border border-purple-100 bg-white p-2.5 text-xs shadow-sm"
+                          >
                             <span className="font-semibold text-purple-700">{msg.senderName}:</span>{' '}
                             <span className="text-gray-700">{msg.message}</span>
                           </div>
@@ -1041,14 +1155,18 @@ export default function HostControlPanel() {
               <div className="mb-5 space-y-3 rounded-xl bg-gray-50 p-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">A</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">
+                      A
+                    </span>
                     <span className="font-medium text-gray-700">{session.teamAName}</span>
                   </div>
                   <span className="text-lg font-bold text-blue-600">{session.teamAScore}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">B</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                      B
+                    </span>
                     <span className="font-medium text-gray-700">{session.teamBName}</span>
                   </div>
                   <span className="text-lg font-bold text-purple-600">{session.teamBScore}</span>
