@@ -1,14 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizFormat, QuizQuestionMode } from '@/generated/prisma'
+import { randomBytes } from 'crypto'
 
 export const dynamic = 'force-dynamic'
 
 function generateRoomCode(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+  const bytes = randomBytes(6)
   let code = ''
   for (let i = 0; i < 6; i++) {
-    code += chars.charAt(Math.floor(Math.random() * chars.length))
+    code += chars.charAt(bytes[i] % chars.length)
   }
   return code
 }

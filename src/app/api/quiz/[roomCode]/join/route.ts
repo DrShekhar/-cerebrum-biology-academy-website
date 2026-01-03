@@ -51,46 +51,40 @@ export async function POST(
       )
     }
 
-    const existingParticipant = await prisma.quiz_participants.findUnique({
+    // Require team selection for non-host participants
+    if (!body.isHost && (!body.team || !['TEAM_A', 'TEAM_B'].includes(body.team))) {
+      return NextResponse.json(
+        { success: false, error: 'Team selection is required' },
+        { status: 400 }
+      )
+    }
+
+    const trimmedName = body.name.trim()
+
+    // Use upsert to prevent race condition between check and create
+    const participant = await prisma.quiz_participants.upsert({
       where: {
         sessionId_name: {
           sessionId: session.id,
-          name: body.name.trim(),
+          name: trimmedName,
         },
       },
-    })
-
-    if (existingParticipant) {
-      const updated = await prisma.quiz_participants.update({
-        where: { id: existingParticipant.id },
-        data: {
-          lastSeenAt: new Date(),
-          team: body.team ? (body.team as QuizTeam) : existingParticipant.team,
-          deviceId: body.deviceId || existingParticipant.deviceId,
-        },
-      })
-
-      return NextResponse.json({
-        success: true,
-        data: {
-          participantId: updated.id,
-          name: updated.name,
-          team: updated.team,
-          isHost: updated.isHost,
-          isRejoining: true,
-        },
-      })
-    }
-
-    const participant = await prisma.quiz_participants.create({
-      data: {
+      update: {
+        lastSeenAt: new Date(),
+        team: body.team ? (body.team as QuizTeam) : undefined,
+        deviceId: body.deviceId || undefined,
+      },
+      create: {
         sessionId: session.id,
-        name: body.name.trim(),
+        name: trimmedName,
         team: body.team ? (body.team as QuizTeam) : null,
         isHost: body.isHost || false,
         deviceId: body.deviceId || null,
       },
     })
+
+    // Determine if this was a rejoin by checking if joinedAt is older than a few seconds
+    const isRejoining = participant.joinedAt < new Date(Date.now() - 5000)
 
     return NextResponse.json({
       success: true,
@@ -99,7 +93,7 @@ export async function POST(
         name: participant.name,
         team: participant.team,
         isHost: participant.isHost,
-        isRejoining: false,
+        isRejoining,
         session: {
           title: session.title,
           format: session.format,
@@ -113,14 +107,6 @@ export async function POST(
     })
   } catch (error) {
     console.error('Error joining quiz session:', error)
-
-    if (error instanceof Error && error.message.includes('Unique constraint')) {
-      return NextResponse.json(
-        { success: false, error: 'This name is already taken in this session' },
-        { status: 400 }
-      )
-    }
-
     return NextResponse.json(
       { success: false, error: 'Failed to join quiz session' },
       { status: 500 }

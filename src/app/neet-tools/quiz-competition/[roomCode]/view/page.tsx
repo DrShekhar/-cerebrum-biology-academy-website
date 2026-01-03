@@ -20,6 +20,8 @@ import {
   Send,
   ChevronDown,
   ChevronUp,
+  Volume2,
+  VolumeX,
 } from 'lucide-react'
 
 interface Round {
@@ -63,6 +65,77 @@ interface ParticipantInfo {
   team: 'TEAM_A' | 'TEAM_B'
 }
 
+// Sound utilities using Web Audio API
+const createAudioContext = () => {
+  if (typeof window !== 'undefined') {
+    return new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
+  }
+  return null
+}
+
+type SoundType = 'quizStart' | 'teamScore' | 'chatMessage' | 'attention'
+
+const playSound = (audioContext: AudioContext | null, type: SoundType) => {
+  if (!audioContext) return
+
+  const oscillator = audioContext.createOscillator()
+  const gainNode = audioContext.createGain()
+  oscillator.connect(gainNode)
+  gainNode.connect(audioContext.destination)
+
+  const now = audioContext.currentTime
+
+  switch (type) {
+    case 'quizStart':
+      // Fanfare - ascending tones
+      oscillator.type = 'sine'
+      oscillator.frequency.setValueAtTime(523, now) // C5
+      oscillator.frequency.setValueAtTime(659, now + 0.15) // E5
+      oscillator.frequency.setValueAtTime(784, now + 0.3) // G5
+      gainNode.gain.setValueAtTime(0.3, now)
+      exponentialDecayTo(gainNode, 0.01, now + 0.5)
+      oscillator.start(now)
+      oscillator.stop(now + 0.5)
+      break
+    case 'teamScore':
+      // Celebration - quick ascending ding
+      oscillator.type = 'sine'
+      oscillator.frequency.setValueAtTime(880, now) // A5
+      oscillator.frequency.setValueAtTime(1047, now + 0.1) // C6
+      gainNode.gain.setValueAtTime(0.25, now)
+      exponentialDecayTo(gainNode, 0.01, now + 0.3)
+      oscillator.start(now)
+      oscillator.stop(now + 0.3)
+      break
+    case 'chatMessage':
+      // Soft notification blip
+      oscillator.type = 'sine'
+      oscillator.frequency.setValueAtTime(587, now) // D5
+      gainNode.gain.setValueAtTime(0.15, now)
+      exponentialDecayTo(gainNode, 0.01, now + 0.15)
+      oscillator.start(now)
+      oscillator.stop(now + 0.15)
+      break
+    case 'attention':
+      // Double beep for attention
+      oscillator.type = 'triangle'
+      oscillator.frequency.setValueAtTime(698, now) // F5
+      oscillator.frequency.setValueAtTime(698, now + 0.2)
+      gainNode.gain.setValueAtTime(0.2, now)
+      gainNode.gain.setValueAtTime(0.01, now + 0.1)
+      gainNode.gain.setValueAtTime(0.2, now + 0.15)
+      exponentialDecayTo(gainNode, 0.01, now + 0.25)
+      oscillator.start(now)
+      oscillator.stop(now + 0.3)
+      break
+  }
+}
+
+// Helper for exponential decay
+const exponentialDecayTo = (gainNode: GainNode, value: number, endTime: number) => {
+  gainNode.gain.exponentialRampToValueAtTime(Math.max(value, 0.0001), endTime)
+}
+
 export default function StudentViewPage() {
   const params = useParams()
   const roomCode = params.roomCode as string
@@ -72,6 +145,45 @@ export default function StudentViewPage() {
   const [error, setError] = useState<string | null>(null)
   const [isConnected, setIsConnected] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
+  const [failCount, setFailCount] = useState(0)
+  const [backoffMs, setBackoffMs] = useState(3000) // Start at 3 seconds
+  const prevMessagesLengthRef = useRef(0)
+  const [showConnectionStatus, setShowConnectionStatus] = useState(true)
+
+  // Sound state
+  const [soundEnabled, setSoundEnabled] = useState(false)
+  const audioContextRef = useRef<AudioContext | null>(null)
+  const prevStatusRef = useRef<string | null>(null)
+  const prevTeamScoreRef = useRef<number | null>(null)
+  const prevMessagesCountRef = useRef(0)
+
+  // Initialize sound from localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('quizSoundEnabled')
+      setSoundEnabled(stored === 'true')
+    }
+  }, [])
+
+  // Toggle sound and persist to localStorage
+  const toggleSound = useCallback(() => {
+    setSoundEnabled((prev) => {
+      const newValue = !prev
+      localStorage.setItem('quizSoundEnabled', String(newValue))
+      // Initialize audio context on first enable (requires user interaction)
+      if (newValue && !audioContextRef.current) {
+        audioContextRef.current = createAudioContext()
+      }
+      return newValue
+    })
+  }, [])
+
+  // Play sound helper
+  const playSoundIfEnabled = useCallback((type: SoundType) => {
+    if (soundEnabled && audioContextRef.current) {
+      playSound(audioContextRef.current, type)
+    }
+  }, [soundEnabled])
 
   // Join state
   const [participant, setParticipant] = useState<ParticipantInfo | null>(null)
@@ -86,7 +198,42 @@ export default function StudentViewPage() {
   const [sendingMessage, setSendingMessage] = useState(false)
   const [chatExpanded, setChatExpanded] = useState(true)
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const lastMessageIdRef = useRef<string | null>(null)
+  const lastMessageTimestampRef = useRef<string | null>(null)
+
+  // Sound trigger: Quiz starts (status changes to IN_PROGRESS)
+  useEffect(() => {
+    if (session && prevStatusRef.current !== null) {
+      if (prevStatusRef.current !== 'IN_PROGRESS' && session.status === 'IN_PROGRESS') {
+        playSoundIfEnabled('quizStart')
+      }
+    }
+    if (session) {
+      prevStatusRef.current = session.status
+    }
+  }, [session?.status, playSoundIfEnabled, session])
+
+  // Sound trigger: Your team scores (only when your team's score increases)
+  useEffect(() => {
+    if (session && participant) {
+      const currentTeamScore = participant.team === 'TEAM_A' ? session.teamAScore : session.teamBScore
+      if (prevTeamScoreRef.current !== null && currentTeamScore > prevTeamScoreRef.current) {
+        playSoundIfEnabled('teamScore')
+      }
+      prevTeamScoreRef.current = currentTeamScore
+    }
+  }, [session?.teamAScore, session?.teamBScore, participant, playSoundIfEnabled, session])
+
+  // Sound trigger: New chat message from teammate (not your own messages)
+  useEffect(() => {
+    if (messages.length > prevMessagesCountRef.current && participant) {
+      const newMessages = messages.slice(prevMessagesCountRef.current)
+      const hasTeammateMessage = newMessages.some((msg) => msg.participantId !== participant.id)
+      if (hasTeammateMessage) {
+        playSoundIfEnabled('chatMessage')
+      }
+    }
+    prevMessagesCountRef.current = messages.length
+  }, [messages, participant, playSoundIfEnabled])
 
   const fetchSession = useCallback(async () => {
     try {
@@ -101,10 +248,16 @@ export default function StudentViewPage() {
         setSession(data.data)
         setIsConnected(true)
         setLastUpdate(new Date())
+        // Reset on success
+        setFailCount(0)
+        setBackoffMs(3000)
       } else {
         setError(data.error || 'Failed to load quiz')
       }
     } catch {
+      // Increment failure count and apply exponential backoff
+      setFailCount((prev) => prev + 1)
+      setBackoffMs((prev) => Math.min(prev * 2, 10000)) // Max 10 seconds
       setIsConnected(false)
     } finally {
       setLoading(false)
@@ -115,7 +268,10 @@ export default function StudentViewPage() {
     if (!participant) return
 
     try {
-      const url = `/api/quiz/${roomCode}/chat?team=${participant.team}&t=${Date.now()}${lastMessageIdRef.current ? `&after=${lastMessageIdRef.current}` : ''}`
+      const afterParam = lastMessageTimestampRef.current
+        ? `&after=${encodeURIComponent(lastMessageTimestampRef.current)}`
+        : ''
+      const url = `/api/quiz/${roomCode}/chat?team=${participant.team}&t=${Date.now()}${afterParam}`
       const res = await fetch(url, {
         cache: 'no-store',
         headers: { 'Cache-Control': 'no-cache' },
@@ -126,7 +282,10 @@ export default function StudentViewPage() {
           const existingIds = new Set(prev.map((m) => m.id))
           const newMsgs = data.data.filter((m: ChatMessage) => !existingIds.has(m.id))
           if (newMsgs.length > 0) {
-            lastMessageIdRef.current = newMsgs[newMsgs.length - 1].id
+            // Use timestamp cursor from API response
+            if (data.nextCursor) {
+              lastMessageTimestampRef.current = data.nextCursor
+            }
             return [...prev, ...newMsgs]
           }
           return prev
@@ -139,20 +298,26 @@ export default function StudentViewPage() {
 
   useEffect(() => {
     fetchSession()
-    const interval = setInterval(fetchSession, 1000)
+    // Use dynamic interval based on backoff (3s default, up to 10s on errors)
+    const interval = setInterval(fetchSession, backoffMs)
     return () => clearInterval(interval)
-  }, [fetchSession])
+  }, [fetchSession, backoffMs])
 
   useEffect(() => {
     if (!participant) return
     fetchMessages()
-    const interval = setInterval(fetchMessages, 1000)
+    // Chat polling at 2s interval (reduced from 1s)
+    const interval = setInterval(fetchMessages, 2000)
     return () => clearInterval(interval)
   }, [fetchMessages, participant])
 
+  // Only scroll to bottom when new messages are added
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages])
+    if (messages.length > prevMessagesLengthRef.current) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+    prevMessagesLengthRef.current = messages.length
+  }, [messages.length])
 
   const handleJoin = async () => {
     if (!joinName.trim() || !selectedTeam) return
@@ -205,7 +370,10 @@ export default function StudentViewPage() {
       if (data.success) {
         setMessages((prev) => [...prev, data.data])
         setNewMessage('')
-        lastMessageIdRef.current = data.data.id
+        // Update cursor to latest message timestamp
+        if (data.data.createdAt) {
+          lastMessageTimestampRef.current = data.data.createdAt
+        }
       }
     } catch (err) {
       console.error('Failed to send message:', err)
@@ -281,78 +449,99 @@ export default function StudentViewPage() {
   // Join screen - show if not joined yet
   if (!participant) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-indigo-900 to-purple-900 p-4">
-        <div className="w-full max-w-md rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
-          <h1 className="mb-2 text-center text-2xl font-bold text-white">{session.title}</h1>
-          <p className="mb-6 text-center text-indigo-200">Join to participate in team chat</p>
-
-          <div className="space-y-4">
-            <div>
-              <label className="mb-1 block text-sm font-medium text-indigo-200">Your Name</label>
-              <input
-                type="text"
-                value={joinName}
-                onChange={(e) => setJoinName(e.target.value)}
-                placeholder="Enter your name"
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-indigo-300 focus:border-white/40 focus:outline-none"
-                maxLength={30}
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium text-indigo-200">Select Your Team</label>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => setSelectedTeam('TEAM_A')}
-                  className={`rounded-xl border-2 p-4 text-center transition-all ${
-                    selectedTeam === 'TEAM_A'
-                      ? 'border-indigo-400 bg-indigo-500/30'
-                      : 'border-white/20 hover:border-white/40'
-                  }`}
-                >
-                  <p className="font-semibold text-white">{session.teamAName}</p>
-                  <p className="mt-1 text-2xl font-bold text-indigo-300">{session.teamAScore}</p>
-                </button>
-                <button
-                  onClick={() => setSelectedTeam('TEAM_B')}
-                  className={`rounded-xl border-2 p-4 text-center transition-all ${
-                    selectedTeam === 'TEAM_B'
-                      ? 'border-purple-400 bg-purple-500/30'
-                      : 'border-white/20 hover:border-white/40'
-                  }`}
-                >
-                  <p className="font-semibold text-white">{session.teamBName}</p>
-                  <p className="mt-1 text-2xl font-bold text-purple-300">{session.teamBScore}</p>
-                </button>
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
+        <div className="w-full max-w-md">
+          {/* Header Card */}
+          <div className="mb-4 overflow-hidden rounded-2xl bg-gradient-to-r from-teal-600 to-blue-600 p-6 shadow-2xl">
+            <div className="text-center">
+              <div className="mb-3 inline-flex items-center justify-center rounded-full bg-white/20 px-4 py-1.5">
+                <span className="font-mono text-sm font-bold tracking-widest text-white">{session.roomCode}</span>
               </div>
+              <h1 className="text-2xl font-bold text-white">{session.title}</h1>
+              <p className="mt-1.5 text-sm text-teal-100">Join to participate in team chat</p>
             </div>
-
-            {joinError && (
-              <p className="rounded-lg bg-red-500/20 p-3 text-center text-sm text-red-300">{joinError}</p>
-            )}
-
-            <button
-              onClick={handleJoin}
-              disabled={joining || !joinName.trim() || !selectedTeam}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 font-semibold text-indigo-600 transition-colors hover:bg-indigo-50 disabled:opacity-50"
-            >
-              {joining ? (
-                <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  Joining...
-                </>
-              ) : (
-                <>
-                  <Users className="h-5 w-5" />
-                  Join Quiz
-                </>
-              )}
-            </button>
-
-            <p className="text-center text-xs text-indigo-300">
-              Room Code: <span className="font-mono font-bold">{session.roomCode}</span>
-            </p>
           </div>
+
+          {/* Join Form Card */}
+          <div className="rounded-2xl border border-slate-700/50 bg-slate-800/80 p-6 shadow-xl backdrop-blur-sm">
+            <div className="space-y-5">
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-slate-300">Your Name</label>
+                <input
+                  type="text"
+                  value={joinName}
+                  onChange={(e) => setJoinName(e.target.value)}
+                  placeholder="Enter your name"
+                  className="w-full rounded-xl border-2 border-slate-600 bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 transition-all focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+                  maxLength={30}
+                />
+              </div>
+
+              <div>
+                <label className="mb-3 block text-sm font-semibold text-slate-300">Select Your Team</label>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => setSelectedTeam('TEAM_A')}
+                    className={`group relative overflow-hidden rounded-xl border-2 p-4 text-center transition-all ${
+                      selectedTeam === 'TEAM_A'
+                        ? 'border-blue-500 bg-blue-500/20 ring-2 ring-blue-400/30'
+                        : 'border-slate-600 bg-slate-700/30 hover:border-blue-400/50 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    {selectedTeam === 'TEAM_A' && (
+                      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600" />
+                    )}
+                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">A</div>
+                    <p className="font-semibold text-white">{session.teamAName}</p>
+                    <p className="mt-1 text-2xl font-bold text-blue-400">{session.teamAScore}</p>
+                  </button>
+                  <button
+                    onClick={() => setSelectedTeam('TEAM_B')}
+                    className={`group relative overflow-hidden rounded-xl border-2 p-4 text-center transition-all ${
+                      selectedTeam === 'TEAM_B'
+                        ? 'border-purple-500 bg-purple-500/20 ring-2 ring-purple-400/30'
+                        : 'border-slate-600 bg-slate-700/30 hover:border-purple-400/50 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    {selectedTeam === 'TEAM_B' && (
+                      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-400 to-purple-600" />
+                    )}
+                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">B</div>
+                    <p className="font-semibold text-white">{session.teamBName}</p>
+                    <p className="mt-1 text-2xl font-bold text-purple-400">{session.teamBScore}</p>
+                  </button>
+                </div>
+              </div>
+
+              {joinError && (
+                <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-center">
+                  <p className="text-sm font-medium text-red-400">{joinError}</p>
+                </div>
+              )}
+
+              <button
+                onClick={handleJoin}
+                disabled={joining || !joinName.trim() || !selectedTeam}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-3.5 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl disabled:opacity-50"
+              >
+                {joining ? (
+                  <>
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Joining...
+                  </>
+                ) : (
+                  <>
+                    <Users className="h-5 w-5" />
+                    Join Quiz
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          <p className="mt-4 text-center text-xs text-slate-500">
+            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+          </p>
         </div>
       </main>
     )
@@ -421,24 +610,61 @@ export default function StudentViewPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-purple-900">
-      {/* Connection Status */}
-      <div
-        className={`fixed right-4 top-4 z-10 flex items-center gap-2 rounded-full px-3 py-1.5 text-sm ${
-          isConnected ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'
-        }`}
+      {/* Sound Toggle Button - always visible */}
+      <button
+        onClick={toggleSound}
+        className="fixed left-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition-colors"
+        title={soundEnabled ? 'Mute sounds' : 'Enable sounds'}
       >
-        {isConnected ? (
+        {soundEnabled ? (
           <>
-            <Wifi className="h-4 w-4" />
-            <span>Live</span>
+            <Volume2 className="h-4 w-4" />
+            <span className="hidden sm:inline">Sound On</span>
           </>
         ) : (
           <>
-            <WifiOff className="h-4 w-4" />
-            <span>Reconnecting...</span>
+            <VolumeX className="h-4 w-4" />
+            <span className="hidden sm:inline">Sound Off</span>
           </>
         )}
-      </div>
+      </button>
+
+      {/* Connection Status */}
+      {showConnectionStatus && (
+        <div
+          className={`fixed right-4 top-4 z-10 flex items-center gap-2 rounded-full px-3 py-1.5 text-sm ${
+            failCount === 0
+              ? 'bg-green-500/20 text-green-300'
+              : failCount < 3
+                ? 'bg-yellow-500/20 text-yellow-300'
+                : 'bg-red-500/20 text-red-300'
+          }`}
+        >
+          {failCount === 0 ? (
+            <>
+              <Wifi className="h-4 w-4" />
+              <span>Live</span>
+            </>
+          ) : failCount < 3 ? (
+            <>
+              <Wifi className="h-4 w-4 animate-pulse" />
+              <span>Slow connection</span>
+            </>
+          ) : (
+            <>
+              <WifiOff className="h-4 w-4" />
+              <span>Reconnecting...</span>
+            </>
+          )}
+          <button
+            onClick={() => setShowConnectionStatus(false)}
+            className="ml-1 rounded-full p-0.5 hover:bg-white/20 transition-colors"
+            title="Hide connection status"
+          >
+            <X className="h-3 w-3" />
+          </button>
+        </div>
+      )}
 
       <div className="mx-auto max-w-lg px-4 py-6">
         {/* Header */}

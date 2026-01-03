@@ -1388,6 +1388,7 @@ model users {
   video_progress                  video_progress[]
   whatsapp_conversations          whatsapp_conversations[]      @relation("AssignedCounselor")
   whatsapp_messages_sent          whatsapp_messages[]           @relation("SentByUser")
+  contact_inquiries               contact_inquiries[]           @relation("ContactInquiryAssignee")
 
   @@index([role, createdAt])
   @@index([lastActiveAt])
@@ -3764,6 +3765,12 @@ enum QuizTeam {
   TEAM_B
 }
 
+enum QuizWinner {
+  TEAM_A
+  TEAM_B
+  TIE
+}
+
 enum RoundOutcome {
   CORRECT                // Full points awarded
   INCORRECT              // Points deducted
@@ -3787,6 +3794,7 @@ model quiz_sessions {
   teamBName     String              @default("Team B")
   teamAScore    Int                 @default(0)
   teamBScore    Int                 @default(0)
+  winner        QuizWinner?         // Set when quiz ends
 
   // Quiz progress
   currentRound  Int                 @default(0)
@@ -3931,4 +3939,54 @@ model test_schedules {
   updatedAt       DateTime        @updatedAt
 
   @@unique([classType])
+}
+
+// Contact Inquiries - Store all website contact form submissions
+model contact_inquiries {
+  id            String              @id @default(cuid())
+  name          String
+  email         String
+  phone         String
+  center        String?
+  supportType   String
+  message       String
+  source        String              @default("Website")
+  status        InquiryStatus       @default(NEW)
+  priority      InquiryPriority     @default(NORMAL)
+  department    String?
+  assignedToId  String?
+  respondedAt   DateTime?
+  resolvedAt    DateTime?
+  responseNotes String?
+  ipAddress     String?
+  userAgent     String?
+  utmSource     String?
+  utmMedium     String?
+  utmCampaign   String?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  assignedTo    users?              @relation("ContactInquiryAssignee", fields: [assignedToId], references: [id])
+
+  @@index([status, createdAt])
+  @@index([supportType, createdAt])
+  @@index([assignedToId])
+  @@index([email])
+  @@index([phone])
+}
+
+enum InquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESPONDED
+  RESOLVED
+  CLOSED
+  SPAM
+}
+
+enum InquiryPriority {
+  LOW
+  NORMAL
+  MEDIUM
+  HIGH
+  URGENT
 }

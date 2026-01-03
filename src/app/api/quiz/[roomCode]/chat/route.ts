@@ -19,7 +19,10 @@ export async function GET(
     const { searchParams } = new URL(request.url)
     const team = searchParams.get('team') as QuizTeam | null
     const isHost = searchParams.get('isHost') === 'true'
-    const lastMessageId = searchParams.get('after')
+    // Use timestamp-based cursor instead of ID for proper ordering
+    const afterTimestamp = searchParams.get('after')
+    const limitParam = searchParams.get('limit')
+    const limit = Math.min(Math.max(parseInt(limitParam || '50', 10) || 50, 1), 100)
 
     if (!roomCode || roomCode.length !== 6) {
       return NextResponse.json(
@@ -49,21 +52,32 @@ export async function GET(
       whereClause.team = team
     }
 
-    // If we have a lastMessageId, only fetch newer messages
-    if (lastMessageId) {
-      whereClause.id = { gt: lastMessageId }
+    // Use timestamp-based cursor for proper chronological ordering
+    if (afterTimestamp) {
+      const afterDate = new Date(afterTimestamp)
+      if (!isNaN(afterDate.getTime())) {
+        whereClause.createdAt = { gt: afterDate }
+      }
     }
 
     const messages = await prisma.quiz_messages.findMany({
       where: whereClause,
       orderBy: { createdAt: 'asc' },
-      take: 100, // Limit to last 100 messages
+      take: limit + 1, // Fetch one extra to check if there are more
     })
+
+    // Check if there are more messages
+    const hasMore = messages.length > limit
+    const returnMessages = hasMore ? messages.slice(0, limit) : messages
+
+    // Get the last timestamp for next cursor
+    const lastMessage = returnMessages[returnMessages.length - 1]
+    const nextCursor = lastMessage ? lastMessage.createdAt.toISOString() : null
 
     return NextResponse.json(
       {
         success: true,
-        data: messages.map((m) => ({
+        data: returnMessages.map((m) => ({
           id: m.id,
           team: m.team,
           participantId: m.participantId,
@@ -71,6 +85,8 @@ export async function GET(
           message: m.message,
           createdAt: m.createdAt,
         })),
+        hasMore,
+        nextCursor,
       },
       {
         headers: {

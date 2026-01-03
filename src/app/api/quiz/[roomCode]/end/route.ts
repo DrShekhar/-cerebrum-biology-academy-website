@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { QuizWinner } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
 
@@ -41,20 +42,22 @@ export async function POST(
       )
     }
 
-    const updated = await prisma.quiz_sessions.update({
-      where: { id: session.id },
-      data: {
-        status: 'COMPLETED',
-        endedAt: new Date(),
-      },
-    })
-
-    let winner: 'TEAM_A' | 'TEAM_B' | 'TIE' = 'TIE'
+    // Calculate winner before update
+    let winner: QuizWinner = 'TIE'
     if (session.teamAScore > session.teamBScore) {
       winner = 'TEAM_A'
     } else if (session.teamBScore > session.teamAScore) {
       winner = 'TEAM_B'
     }
+
+    const updated = await prisma.quiz_sessions.update({
+      where: { id: session.id },
+      data: {
+        status: 'COMPLETED',
+        endedAt: new Date(),
+        winner,
+      },
+    })
 
     const teamACorrect = session.rounds.filter(
       (r) => r.answeringTeam === 'TEAM_A' && r.outcome === 'CORRECT'

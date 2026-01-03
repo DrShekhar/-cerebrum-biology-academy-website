@@ -80,6 +80,17 @@ export async function POST(
       )
     }
 
+    // Validate custom points bounds to prevent extreme scores
+    if (body.customPoints !== undefined) {
+      const points = Number(body.customPoints)
+      if (isNaN(points) || points < -1000 || points > 1000) {
+        return NextResponse.json(
+          { success: false, error: 'Custom points must be between -1000 and 1000' },
+          { status: 400 }
+        )
+      }
+    }
+
     const session = await prisma.quiz_sessions.findUnique({
       where: { roomCode: roomCode.toUpperCase() },
     })
