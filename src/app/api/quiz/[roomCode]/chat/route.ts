@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizTeam } from '@/generated/prisma'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,10 +16,22 @@ export async function GET(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 200,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:chat:get',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const { searchParams } = new URL(request.url)
     const team = searchParams.get('team') as QuizTeam | null
-    const isHost = searchParams.get('isHost') === 'true'
     // Use timestamp-based cursor instead of ID for proper ordering
     const afterTimestamp = searchParams.get('after')
     const limitParam = searchParams.get('limit')
@@ -41,6 +54,10 @@ export async function GET(
         { status: 404 }
       )
     }
+
+    // Verify host token to determine if this is the host viewing
+    const hostToken = request.headers.get('x-host-token')
+    const isHost = hostToken === session.hostToken
 
     // Build query based on whether it's host or team member
     const whereClause: Record<string, unknown> = {
@@ -109,6 +126,19 @@ export async function POST(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 30,
+      window: 5 * 60 * 1000,
+      endpoint: 'quiz:chat:post',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many messages. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const body: SendMessageRequest = await request.json()
 

@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { QuizFormat, QuizQuestionMode } from '@/generated/prisma'
 import { randomBytes } from 'crypto'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
+import { generateHostToken } from '@/lib/quiz/auth'
 
 export const dynamic = 'force-dynamic'
 
@@ -95,9 +96,12 @@ export async function POST(request: NextRequest) {
       pass: -10,
     }
 
+    const hostToken = generateHostToken()
+
     const session = await prisma.quiz_sessions.create({
       data: {
         roomCode,
+        hostToken,
         title: body.title.trim(),
         format: body.format as QuizFormat,
         questionMode: body.questionMode as QuizQuestionMode,
@@ -114,6 +118,7 @@ export async function POST(request: NextRequest) {
       data: {
         sessionId: session.id,
         roomCode: session.roomCode,
+        hostToken: session.hostToken,
         title: session.title,
         format: session.format,
         questionMode: session.questionMode,

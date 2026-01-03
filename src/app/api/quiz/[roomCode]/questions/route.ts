@@ -6,6 +6,8 @@ import {
   class12Questions,
 } from '@/data/questions'
 import { AuthenticQuestion } from '@/data/questions/types'
+import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -32,6 +34,19 @@ export async function GET(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 100,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:questions:get',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const { searchParams } = new URL(request.url)
     const questionIndex = parseInt(searchParams.get('index') || '0')
@@ -133,20 +148,29 @@ export async function POST(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 50,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:questions:post',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const body = await request.json()
     const { questionIndex, revealAnswer } = body
 
-    const session = await prisma.quiz_sessions.findUnique({
-      where: { roomCode: roomCode.toUpperCase() },
-    })
-
-    if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+    // Host authorization required to reveal answers
+    const authResult = await verifyHostToken(request, roomCode)
+    if (!authResult.valid || !authResult.session) {
+      return unauthorizedResponse(authResult.error)
     }
+    const session = authResult.session
 
     const settings = session.scoringRules as QuizSettings
     const chapters = settings?.chapters || []

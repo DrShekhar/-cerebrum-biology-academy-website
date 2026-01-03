@@ -8,7 +8,6 @@ export const dynamic = 'force-dynamic'
 interface JoinRequest {
   name: string
   team?: 'TEAM_A' | 'TEAM_B'
-  isHost?: boolean
   deviceId?: string
 }
 
@@ -65,8 +64,12 @@ export async function POST(
       )
     }
 
+    // Verify host token if present to determine if this is the host joining
+    const hostToken = request.headers.get('x-host-token')
+    const isHost = hostToken === session.hostToken
+
     // Require team selection for non-host participants
-    if (!body.isHost && (!body.team || !['TEAM_A', 'TEAM_B'].includes(body.team))) {
+    if (!isHost && (!body.team || !['TEAM_A', 'TEAM_B'].includes(body.team))) {
       return NextResponse.json(
         { success: false, error: 'Team selection is required' },
         { status: 400 }
@@ -87,12 +90,13 @@ export async function POST(
         lastSeenAt: new Date(),
         team: body.team ? (body.team as QuizTeam) : undefined,
         deviceId: body.deviceId || undefined,
+        isHost, // Update isHost based on valid token
       },
       create: {
         sessionId: session.id,
         name: trimmedName,
         team: body.team ? (body.team as QuizTeam) : null,
-        isHost: body.isHost || false,
+        isHost, // Only true if valid host token was provided
         deviceId: body.deviceId || null,
       },
     })

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizWinner } from '@/generated/prisma'
+import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -9,6 +11,19 @@ export async function POST(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 20,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:end',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
 
     if (!roomCode || roomCode.length !== 6) {
@@ -18,8 +33,14 @@ export async function POST(
       )
     }
 
+    const authResult = await verifyHostToken(request, roomCode)
+    if (!authResult.valid || !authResult.session) {
+      return unauthorizedResponse(authResult.error)
+    }
+
+    // Re-fetch with all rounds and participants for stats
     const session = await prisma.quiz_sessions.findUnique({
-      where: { roomCode: roomCode.toUpperCase() },
+      where: { id: authResult.session.id },
       include: {
         rounds: {
           orderBy: { roundNumber: 'asc' },

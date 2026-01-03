@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizTeam, RoundOutcome, QuizSessionStatus } from '@/generated/prisma'
+import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -53,6 +55,19 @@ export async function POST(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 100,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:score',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const body: ScoreRequest = await request.json()
 
@@ -62,6 +77,12 @@ export async function POST(
         { status: 400 }
       )
     }
+
+    const authResult = await verifyHostToken(request, roomCode)
+    if (!authResult.valid || !authResult.session) {
+      return unauthorizedResponse(authResult.error)
+    }
+    const session = authResult.session
 
     if (!body.team || !['TEAM_A', 'TEAM_B'].includes(body.team)) {
       return NextResponse.json(
@@ -80,7 +101,6 @@ export async function POST(
       )
     }
 
-    // Validate custom points bounds to prevent extreme scores
     if (body.customPoints !== undefined) {
       const points = Number(body.customPoints)
       if (isNaN(points) || points < -1000 || points > 1000) {
@@ -89,17 +109,6 @@ export async function POST(
           { status: 400 }
         )
       }
-    }
-
-    const session = await prisma.quiz_sessions.findUnique({
-      where: { roomCode: roomCode.toUpperCase() },
-    })
-
-    if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
     }
 
     if (session.status === 'COMPLETED') {
@@ -194,6 +203,19 @@ export async function DELETE(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 50,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:undo',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please slow down.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
 
     if (!roomCode || roomCode.length !== 6) {
@@ -203,8 +225,14 @@ export async function DELETE(
       )
     }
 
+    const authResult = await verifyHostToken(request, roomCode)
+    if (!authResult.valid || !authResult.session) {
+      return unauthorizedResponse(authResult.error)
+    }
+
+    // Re-fetch with just the last round for undo operation
     const session = await prisma.quiz_sessions.findUnique({
-      where: { roomCode: roomCode.toUpperCase() },
+      where: { id: authResult.session.id },
       include: {
         rounds: {
           orderBy: { roundNumber: 'desc' },

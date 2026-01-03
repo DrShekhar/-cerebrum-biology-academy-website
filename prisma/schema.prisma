@@ -3783,6 +3783,7 @@ enum RoundOutcome {
 model quiz_sessions {
   id            String              @id @default(cuid())
   roomCode      String              @unique @db.VarChar(6)
+  hostToken     String              @db.VarChar(64) // Secure token for host authorization
   title         String
   format        QuizFormat
   questionMode  QuizQuestionMode

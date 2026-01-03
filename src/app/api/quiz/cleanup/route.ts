@@ -3,10 +3,20 @@ import { prisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 
-const CLEANUP_SECRET = process.env.QUIZ_CLEANUP_SECRET || 'default-cleanup-secret'
+// Require explicit secret - no default fallback for security
+const CLEANUP_SECRET = process.env.QUIZ_CLEANUP_SECRET
 
 export async function POST(request: NextRequest) {
   try {
+    // Require secret to be configured
+    if (!CLEANUP_SECRET) {
+      console.error('QUIZ_CLEANUP_SECRET environment variable not set')
+      return NextResponse.json(
+        { success: false, error: 'Cleanup not configured' },
+        { status: 503 }
+      )
+    }
+
     const authHeader = request.headers.get('authorization')
     if (!authHeader || authHeader !== `Bearer ${CLEANUP_SECRET}`) {
       return NextResponse.json(
@@ -74,6 +84,15 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Require secret to be configured
+    if (!CLEANUP_SECRET) {
+      console.error('QUIZ_CLEANUP_SECRET environment variable not set')
+      return NextResponse.json(
+        { success: false, error: 'Cleanup not configured' },
+        { status: 503 }
+      )
+    }
+
     const authHeader = request.headers.get('authorization')
     if (!authHeader || authHeader !== `Bearer ${CLEANUP_SECRET}`) {
       return NextResponse.json(
