@@ -22,6 +22,7 @@ import {
   ChevronUp,
   Volume2,
   VolumeX,
+  Timer,
 } from 'lucide-react'
 
 interface Round {
@@ -48,6 +49,12 @@ interface QuizSession {
   rounds: Round[]
   startedAt: string | null
   endedAt: string | null
+  questionTimerSeconds: number
+  answerTimerSeconds: number
+  activeTimerType: string | null
+  timerStartedAt: string | null
+  timerPausedAt: string | null
+  teamDiscussing: 'TEAM_A' | 'TEAM_B' | null
 }
 
 interface ChatMessage {
@@ -157,6 +164,10 @@ export default function StudentViewPage() {
   const prevTeamScoreRef = useRef<number | null>(null)
   const prevMessagesCountRef = useRef(0)
 
+  // Timer state
+  const [timerSeconds, setTimerSeconds] = useState<number>(0)
+  const prevTimerRef = useRef<number>(0)
+
   // Initialize sound from localStorage
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -198,7 +209,10 @@ export default function StudentViewPage() {
   const [sendingMessage, setSendingMessage] = useState(false)
   const [chatExpanded, setChatExpanded] = useState(true)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const chatContainerRef = useRef<HTMLDivElement>(null)
   const lastMessageTimestampRef = useRef<string | null>(null)
+  const isNearBottomRef = useRef(true)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // Sound trigger: Quiz starts (status changes to IN_PROGRESS)
   useEffect(() => {
@@ -234,6 +248,43 @@ export default function StudentViewPage() {
     }
     prevMessagesCountRef.current = messages.length
   }, [messages, participant, playSoundIfEnabled])
+
+  // Timer countdown effect
+  useEffect(() => {
+    if (!session?.activeTimerType || !session?.timerStartedAt) {
+      setTimerSeconds(0)
+      return
+    }
+
+    const timerDuration =
+      session.activeTimerType === 'question'
+        ? session.questionTimerSeconds
+        : session.answerTimerSeconds
+
+    const updateTimer = () => {
+      const startTime = new Date(session.timerStartedAt!).getTime()
+      const elapsed = Math.floor((Date.now() - startTime) / 1000)
+      const remaining = Math.max(0, timerDuration - elapsed)
+      setTimerSeconds(remaining)
+
+      // Play attention sound when timer is about to end (10 seconds left)
+      if (remaining === 10 && prevTimerRef.current > 10) {
+        playSoundIfEnabled('attention')
+      }
+      prevTimerRef.current = remaining
+    }
+
+    updateTimer()
+    const interval = setInterval(updateTimer, 1000)
+    return () => clearInterval(interval)
+  }, [session?.activeTimerType, session?.timerStartedAt, session?.questionTimerSeconds, session?.answerTimerSeconds, playSoundIfEnabled])
+
+  // Format timer for display
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins}:${secs.toString().padStart(2, '0')}`
+  }
 
   const fetchSession = useCallback(async () => {
     try {
@@ -311,10 +362,24 @@ export default function StudentViewPage() {
     return () => clearInterval(interval)
   }, [fetchMessages, participant])
 
-  // Only scroll to bottom when new messages are added
+  // Handle chat scroll position tracking
+  const handleChatScroll = useCallback(() => {
+    const container = chatContainerRef.current
+    if (!container) return
+
+    const threshold = 60 // pixels from bottom
+    const isNearBottom =
+      container.scrollHeight - container.scrollTop - container.clientHeight < threshold
+    isNearBottomRef.current = isNearBottom
+  }, [])
+
+  // Only scroll to bottom when new messages are added AND user is near bottom
   useEffect(() => {
-    if (messages.length > prevMessagesLengthRef.current) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (messages.length > prevMessagesLengthRef.current && isNearBottomRef.current) {
+      // Use requestAnimationFrame to prevent layout thrashing
+      requestAnimationFrame(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+      })
     }
     prevMessagesLengthRef.current = messages.length
   }, [messages.length])
@@ -749,10 +814,71 @@ export default function StudentViewPage() {
           </div>
         </div>
 
+        {/* Timer Display */}
+        {session.activeTimerType && timerSeconds > 0 && (
+          <div
+            className={`mb-4 overflow-hidden rounded-2xl border shadow-xl ${
+              timerSeconds <= 10
+                ? 'border-red-500/50 bg-gradient-to-r from-red-500/20 to-red-600/20'
+                : timerSeconds <= 30
+                  ? 'border-orange-500/50 bg-gradient-to-r from-orange-500/20 to-orange-600/20'
+                  : 'border-teal-500/50 bg-gradient-to-r from-teal-500/20 to-teal-600/20'
+            }`}
+          >
+            <div className="p-4 text-center">
+              <div className="flex items-center justify-center gap-3">
+                <Timer
+                  className={`h-6 w-6 ${timerSeconds <= 10 ? 'text-red-400 animate-pulse' : timerSeconds <= 30 ? 'text-orange-400' : 'text-teal-400'}`}
+                />
+                <div>
+                  <p className="text-xs font-medium text-slate-400 uppercase tracking-wider">
+                    {session.activeTimerType === 'question' ? 'Question Time' : 'Answer Time'}
+                  </p>
+                  <p
+                    className={`text-4xl font-bold ${timerSeconds <= 10 ? 'text-red-400' : timerSeconds <= 30 ? 'text-orange-400' : 'text-teal-300'}`}
+                  >
+                    {formatTime(timerSeconds)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Discussion Indicator */}
+        {session.teamDiscussing && (
+          <div
+            className={`mb-4 overflow-hidden rounded-2xl border shadow-xl ${
+              session.teamDiscussing === 'TEAM_A'
+                ? 'border-blue-500/50 bg-gradient-to-r from-blue-500/20 to-blue-600/20'
+                : 'border-purple-500/50 bg-gradient-to-r from-purple-500/20 to-purple-600/20'
+            }`}
+          >
+            <div className="p-3 text-center">
+              <div className="flex items-center justify-center gap-2">
+                <div className="relative">
+                  <MessageCircle
+                    className={`h-5 w-5 ${session.teamDiscussing === 'TEAM_A' ? 'text-blue-400' : 'text-purple-400'}`}
+                  />
+                  <span className="absolute -right-1 -top-1 h-2 w-2 animate-pulse rounded-full bg-green-400" />
+                </div>
+                <p className="font-semibold text-white">
+                  {session.teamDiscussing === 'TEAM_A' ? session.teamAName : session.teamBName} is discussing
+                </p>
+              </div>
+              {session.teamDiscussing === participant.team && (
+                <p className="mt-1 text-xs text-slate-400">
+                  Your team is discussing - use the chat below!
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Status Banner */}
         {session.status === 'WAITING' && (
           <div className="mb-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-center">
-            <p className="text-sm font-medium text-yellow-300">⏳ Waiting for quiz to start...</p>
+            <p className="text-sm font-medium text-yellow-300">Waiting for quiz to start...</p>
           </div>
         )}
 
@@ -784,7 +910,11 @@ export default function StudentViewPage() {
           {chatExpanded && (
             <>
               {/* Messages */}
-              <div className="h-48 overflow-y-auto border-t border-slate-700/50 p-3">
+              <div
+                ref={chatContainerRef}
+                onScroll={handleChatScroll}
+                className="h-48 overflow-y-scroll border-t border-slate-700/50 p-3 scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent"
+              >
                 {messages.length === 0 ? (
                   <div className="flex h-full items-center justify-center text-center text-slate-400">
                     <div>
@@ -820,14 +950,21 @@ export default function StudentViewPage() {
               {/* Input */}
               <div className="flex gap-2 border-t border-slate-700/50 bg-slate-800/30 p-3">
                 <input
+                  ref={inputRef}
                   type="text"
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && sendMessage()}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      sendMessage()
+                    }
+                  }}
                   placeholder="Type a message..."
-                  className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+                  className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
                   maxLength={500}
                   disabled={sendingMessage}
+                  autoComplete="off"
                 />
                 <button
                   onClick={sendMessage}

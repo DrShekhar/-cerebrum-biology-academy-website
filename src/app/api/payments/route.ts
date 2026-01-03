@@ -4,9 +4,31 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+import { auth } from '@/lib/auth/config'
+import { rateLimit } from '@/lib/rateLimit'
 import { AdvancedPaymentEngine } from '@/lib/payments/AdvancedPaymentEngine'
 import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
+
+// Zod schema for payment API requests
+const paymentActionSchema = z.object({
+  action: z.enum([
+    'create_subscription',
+    'upgrade_subscription',
+    'cancel_subscription',
+    'process_usage_billing',
+    'apply_promotional_code',
+    'process_referral',
+    'create_affiliate_account',
+    'calculate_pricing',
+    'setup_payment_method',
+    'process_one_time_payment',
+    'get_billing_history',
+    'demo_payment_system',
+  ]),
+  data: z.record(z.string(), z.unknown()).optional().default({}),
+})
 
 // Type definitions for payment API requests
 interface CreateSubscriptionData {
@@ -85,46 +107,86 @@ const paymentEngine = new AdvancedPaymentEngine()
 
 export async function POST(request: NextRequest) {
   try {
-    const { action, data } = await request.json()
+    // Rate limiting - strict for payment operations
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 20,
+      windowMs: 60 * 60 * 1000, // 20 requests per hour
+    })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    // Validate request body with Zod
+    const rawBody = await request.json()
+    const validationResult = paymentActionSchema.safeParse(rawBody)
+    if (!validationResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid request format' },
+        { status: 400 }
+      )
+    }
+
+    const { action, data } = validationResult.data
+
+    // Auth check - required for all payment operations except demo
+    if (action !== 'demo_payment_system') {
+      const session = await auth()
+      if (!session?.user) {
+        return NextResponse.json(
+          { success: false, error: 'Authentication required' },
+          { status: 401 }
+        )
+      }
+    }
 
     console.log(`💰 Payment API: ${action}`)
 
     switch (action) {
       case 'create_subscription':
-        return await createSubscription(data)
+        return await createSubscription(data as unknown as CreateSubscriptionData)
 
       case 'upgrade_subscription':
-        return await upgradeSubscription(data)
+        return await upgradeSubscription(data as unknown as UpgradeSubscriptionData)
 
       case 'cancel_subscription':
-        return await cancelSubscription(data)
+        return await cancelSubscription(data as unknown as CancelSubscriptionData)
 
       case 'process_usage_billing':
-        return await processUsageBilling(data)
+        return await processUsageBilling(data as unknown as UsageBillingData)
 
       case 'apply_promotional_code':
-        return await applyPromotionalCode(data)
+        return await applyPromotionalCode(data as unknown as PromotionalCodeData)
 
       case 'process_referral':
-        return await processReferral(data)
+        return await processReferral(data as unknown as ReferralData)
 
       case 'create_affiliate_account':
-        return await createAffiliateAccount(data)
+        return await createAffiliateAccount(data as unknown as AffiliateAccountData)
 
       case 'calculate_pricing':
-        return await calculatePricing(data)
+        return await calculatePricing(data as unknown as PricingData)
 
       case 'setup_payment_method':
-        return await setupPaymentMethod(data)
+        return await setupPaymentMethod(data as unknown as PaymentMethodData)
 
       case 'process_one_time_payment':
-        return await processOneTimePayment(data)
+        return await processOneTimePayment(data as unknown as OneTimePaymentData)
 
       case 'get_billing_history':
-        return await getBillingHistory(data)
+        return await getBillingHistory(data as unknown as BillingHistoryData)
 
       case 'demo_payment_system':
-        return await demonstratePaymentSystem(data)
+        return await demonstratePaymentSystem(data as unknown as DemoData)
 
       default:
         return NextResponse.json(
@@ -151,10 +213,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Payment API error:', error)
     return NextResponse.json(
-      {
-        error: 'Internal server error',
-        details: error instanceof Error ? error.message : 'Unknown error',
-      },
+      { success: false, error: 'An unexpected error occurred. Please try again.' },
       { status: 500 }
     )
   }

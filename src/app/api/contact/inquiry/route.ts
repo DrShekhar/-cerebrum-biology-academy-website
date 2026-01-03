@@ -1,16 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { rateLimit } from '@/lib/rateLimit'
+import { prisma } from '@/lib/prisma'
+import { logger } from '@/lib/utils/logger'
 
-interface ContactInquiry {
-  name: string
-  phone: string
-  email: string
-  center: string
-  supportType: string
-  message: string
-  timestamp: string
-  source: string
-}
+const contactInquirySchema = z.object({
+  name: z.string().min(2).max(100),
+  phone: z.string().regex(/^[6-9]\d{9}$/, 'Invalid Indian phone number'),
+  email: z.string().email(),
+  center: z.string().max(50).optional(),
+  supportType: z.enum(['academic', 'admission', 'technical', 'counseling', 'general']),
+  message: z.string().min(10).max(2000),
+  timestamp: z.string().optional(),
+  source: z.string().max(100).optional(),
+  utmSource: z.string().max(100).optional(),
+  utmMedium: z.string().max(100).optional(),
+  utmCampaign: z.string().max(100).optional(),
+})
+
+type ContactInquiryInput = z.infer<typeof contactInquirySchema>
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,27 +40,23 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const data: ContactInquiry = await request.json()
+    const rawBody = await request.json()
 
-    // Validate required fields
-    if (!data.name || !data.phone || !data.email || !data.message) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    // Normalize phone number (remove +91 prefix, spaces, etc.)
+    if (rawBody.phone) {
+      rawBody.phone = rawBody.phone.replace(/[^\d]/g, '').slice(-10)
     }
 
-    // Validate phone number (Indian format)
-    const phoneRegex = /^[6-9]\d{9}$/
-    if (!phoneRegex.test(data.phone.replace(/[^\d]/g, '').slice(-10))) {
-      return NextResponse.json({ error: 'Invalid phone number format' }, { status: 400 })
+    // Validate with Zod
+    const validationResult = contactInquirySchema.safeParse(rawBody)
+    if (!validationResult.success) {
+      return NextResponse.json(
+        { error: 'Invalid input data', details: validationResult.error.issues },
+        { status: 400 }
+      )
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(data.email)) {
-      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 })
-    }
-
-    // Generate inquiry ID
-    const inquiryId = `INQ_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    const data = validationResult.data
 
     // Map center IDs to names
     const centerNames = {
@@ -69,48 +73,63 @@ export async function POST(request: NextRequest) {
       counseling: 'Counseling Department',
     }
 
-    // Prepare inquiry data for storage
-    const inquiryData = {
-      id: inquiryId,
-      ...data,
-      centerName: centerNames[data.center as keyof typeof centerNames] || data.center,
-      department:
-        supportDepartments[data.supportType as keyof typeof supportDepartments] ||
-        'General Support',
-      createdAt: new Date().toISOString(),
-      status: 'new',
-      priority:
-        data.supportType === 'technical'
-          ? 'high'
-          : data.supportType === 'counseling'
-            ? 'medium'
-            : 'normal',
+    // Determine priority based on support type
+    const priorityMap: Record<string, 'LOW' | 'NORMAL' | 'MEDIUM' | 'HIGH' | 'URGENT'> = {
+      technical: 'HIGH',
+      counseling: 'MEDIUM',
+      admission: 'HIGH',
+      academic: 'NORMAL',
+      general: 'NORMAL',
     }
 
-    console.log('New contact inquiry:', inquiryData)
+    // Get client IP for audit trail
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : 'unknown'
+    const userAgent = request.headers.get('user-agent') || undefined
 
-    // In a real application, you would:
-    // 1. Save to database (Prisma/MongoDB/etc.)
-    // 2. Send to CRM (Salesforce/HubSpot/etc.)
-    // 3. Trigger email notifications to relevant department
-    // 4. Send confirmation email to user
-    // 5. Create WhatsApp notification for urgent inquiries
+    // Save to database using Prisma
+    const inquiry = await prisma.contact_inquiries.create({
+      data: {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        center: data.center || null,
+        supportType: data.supportType,
+        message: data.message,
+        source: data.source || 'Website',
+        status: 'NEW',
+        priority: priorityMap[data.supportType] || 'NORMAL',
+        department:
+          supportDepartments[data.supportType as keyof typeof supportDepartments] ||
+          'General Support',
+        ipAddress,
+        userAgent,
+        utmSource: data.utmSource,
+        utmMedium: data.utmMedium,
+        utmCampaign: data.utmCampaign,
+      },
+    })
 
-    // Simulate database save
-    // await prisma.contactInquiry.create({ data: inquiryData })
+    logger.businessEvent('contact_inquiry_created', {
+      inquiryId: inquiry.id,
+      name: data.name,
+      email: data.email,
+      supportType: data.supportType,
+      priority: inquiry.priority,
+    })
 
     // Send immediate response based on support type
     await sendInquiryResponse(data)
 
     // Notify relevant department
-    await notifyDepartment(inquiryData)
+    await notifyDepartment(data, inquiry.id)
 
     // Send confirmation email to user
-    await sendUserConfirmation(data)
+    await sendUserConfirmation(data, inquiry.id)
 
     return NextResponse.json({
       success: true,
-      inquiryId,
+      inquiryId: inquiry.id,
       message:
         'Your inquiry has been submitted successfully. We will respond within our committed timeframe.',
       responseTime: getResponseTime(data.supportType),
@@ -122,7 +141,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Simulate inquiry response based on support type
-async function sendInquiryResponse(data: ContactInquiry) {
+async function sendInquiryResponse(data: ContactInquiryInput) {
   const responses = {
     academic: `Hi ${data.name}! Thank you for your academic inquiry. Our Biology experts will review your questions and respond within 2 hours with detailed guidance.`,
     admission: `Hi ${data.name}! Thank you for your interest in Cerebrum Biology Academy. Our admission counselor will call you within 1 hour to discuss course options, fees, and available batches.`,
@@ -141,43 +160,44 @@ async function sendInquiryResponse(data: ContactInquiry) {
 }
 
 // Simulate department notification
-async function notifyDepartment(inquiryData: any) {
+async function notifyDepartment(data: ContactInquiryInput, inquiryId: string) {
   const notifications = {
     academic: {
       email: 'academic@cerebrumbiologyacademy.com',
-      subject: `New Academic Inquiry - ${inquiryData.name}`,
+      subject: `New Academic Inquiry - ${data.name}`,
       priority: 'normal',
     },
     admission: {
       email: 'admissions@cerebrumbiologyacademy.com',
-      subject: `New Admission Inquiry - ${inquiryData.name}`,
+      subject: `New Admission Inquiry - ${data.name}`,
       priority: 'high',
     },
     technical: {
       email: 'tech@cerebrumbiologyacademy.com',
-      subject: `Urgent: Technical Issue - ${inquiryData.name}`,
+      subject: `Urgent: Technical Issue - ${data.name}`,
       priority: 'urgent',
     },
     counseling: {
       email: 'counseling@cerebrumbiologyacademy.com',
-      subject: `Counseling Request - ${inquiryData.name}`,
+      subject: `Counseling Request - ${data.name}`,
       priority: 'medium',
     },
   }
 
-  const notification = notifications[inquiryData.supportType as keyof typeof notifications]
+  const notification = notifications[data.supportType as keyof typeof notifications]
 
   console.log('Department notification:', {
     to: notification?.email,
     subject: notification?.subject,
-    data: inquiryData,
+    inquiryId,
+    data,
   })
 
   return true
 }
 
 // Simulate user confirmation email
-async function sendUserConfirmation(data: ContactInquiry) {
+async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string) {
   const emailContent = {
     to: data.email,
     subject: 'Inquiry Received - Cerebrum Biology Academy',
@@ -188,9 +208,9 @@ async function sendUserConfirmation(data: ContactInquiry) {
       <h3>Your Inquiry Details:</h3>
       <ul>
         <li><strong>Support Type:</strong> ${data.supportType}</li>
-        <li><strong>Preferred Center:</strong> ${data.center}</li>
+        <li><strong>Preferred Center:</strong> ${data.center || 'Not specified'}</li>
         <li><strong>Contact Number:</strong> ${data.phone}</li>
-        <li><strong>Inquiry ID:</strong> ${Date.now()}</li>
+        <li><strong>Inquiry ID:</strong> ${inquiryId}</li>
       </ul>
 
       <h3>Expected Response Time:</h3>

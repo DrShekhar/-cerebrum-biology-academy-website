@@ -87,7 +87,7 @@ const SCHOLARSHIP_PROGRAMS: ScholarshipEligibility[] = [
     discount: 25,
     eligibility: ['Class 12 > 85%', 'Previous NEET attempt > 400'],
     requirements: ['Academic certificates', 'NEET scorecard'],
-    deadline: new Date('2024-12-31'),
+    deadline: new Date('2025-12-31'),
     maxBeneficiaries: 100,
   },
   {
@@ -96,7 +96,7 @@ const SCHOLARSHIP_PROGRAMS: ScholarshipEligibility[] = [
     discount: 30,
     eligibility: ['Family income < ₹3L/year', 'Single parent/guardian'],
     requirements: ['Income certificate', 'Bank statements', 'Family details'],
-    deadline: new Date('2024-11-30'),
+    deadline: new Date('2025-11-30'),
     maxBeneficiaries: 50,
   },
   {

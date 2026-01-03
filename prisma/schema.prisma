@@ -3800,6 +3800,18 @@ model quiz_sessions {
   currentRound  Int                 @default(0)
   totalRounds   Int?
 
+  // Timer configuration (in seconds)
+  questionTimerSeconds  Int         @default(60)
+  answerTimerSeconds    Int         @default(60)
+
+  // Active timer state
+  activeTimerType       String?     // 'question' or 'answer' or null
+  timerStartedAt        DateTime?   // When the current timer started
+  timerPausedAt         DateTime?   // When timer was paused (for pause/resume)
+
+  // Discussion indicator
+  teamDiscussing        String?     // 'TEAM_A' or 'TEAM_B' or null
+
   // Scoring rules: { correct: 20, wrong: -10, pass: -10, partial: { half: 10 } }
   scoringRules  Json                @default("{\"correct\": 20, \"wrong\": -10, \"pass\": -10}")
 

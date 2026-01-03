@@ -11,13 +11,23 @@ class AnalyticsTracker {
   private activityQueue: UserActivity[] = []
   private flushInterval?: NodeJS.Timeout
 
+  // Store bound handlers for cleanup
+  private boundHandlers: {
+    visibilityChange?: () => void
+    beforeUnload?: () => void
+    click?: (event: MouseEvent) => void
+    scroll?: () => void
+  } = {}
+
   constructor() {
     this.sessionId = this.generateSessionId()
-    this.init()
+    // Don't auto-init in constructor - let components call init()
   }
 
-  private init() {
+  // Public init method for controlled initialization
+  init() {
     if (typeof window === 'undefined') return
+    if (this.isInitialized) return // Prevent duplicate initialization
 
     // Initialize session tracking
     this.sessionStartTime = new Date()
@@ -29,19 +39,24 @@ class AnalyticsTracker {
       this.flushActivities()
     }, 30000) // Flush every 30 seconds
 
-    // Track page visibility changes
-    document.addEventListener('visibilitychange', () => {
+    // Create bound handlers for cleanup
+    this.boundHandlers.visibilityChange = () => {
       if (document.visibilityState === 'visible') {
         this.updateActivity()
       } else {
         this.flushActivities()
       }
-    })
+    }
+
+    this.boundHandlers.beforeUnload = () => {
+      this.endSession()
+    }
+
+    // Track page visibility changes
+    document.addEventListener('visibilitychange', this.boundHandlers.visibilityChange)
 
     // Track beforeunload to capture session end
-    window.addEventListener('beforeunload', () => {
-      this.endSession()
-    })
+    window.addEventListener('beforeunload', this.boundHandlers.beforeUnload)
 
     // Track initial page view
     this.trackPageView()
@@ -61,8 +76,8 @@ class AnalyticsTracker {
   private setupInteractionTracking() {
     if (typeof window === 'undefined') return
 
-    // Track clicks
-    document.addEventListener('click', (event) => {
+    // Track clicks - store handler for cleanup
+    this.boundHandlers.click = (event: MouseEvent) => {
       const target = event.target as HTMLElement
       if (target.tagName === 'A' || target.closest('a')) {
         const link = target.closest('a')
@@ -74,14 +89,15 @@ class AnalyticsTracker {
           })
         }
       }
-    })
+    }
+    document.addEventListener('click', this.boundHandlers.click)
 
-    // Track scroll depth
+    // Track scroll depth - store handler for cleanup
     let maxScrollDepth = 0
-    window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round(
-        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-      )
+    this.boundHandlers.scroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight
+      if (scrollHeight <= 0) return // Prevent division by zero
+      const scrollDepth = Math.round((window.scrollY / scrollHeight) * 100)
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth
         if (scrollDepth >= 25 && scrollDepth < 50) {
@@ -94,7 +110,8 @@ class AnalyticsTracker {
           this.trackEvent('scroll_90', { depth: scrollDepth })
         }
       }
-    })
+    }
+    window.addEventListener('scroll', this.boundHandlers.scroll, { passive: true })
   }
 
   setUserId(userId: string) {
@@ -349,12 +366,40 @@ class AnalyticsTracker {
     }
   }
 
-  // Clean up
+  // Clean up - properly remove all event listeners to prevent memory leaks
   destroy() {
+    if (!this.isInitialized) return
+
+    // Clear the flush interval
     if (this.flushInterval) {
       clearInterval(this.flushInterval)
+      this.flushInterval = undefined
     }
+
+    // Remove all event listeners
+    if (typeof window !== 'undefined') {
+      if (this.boundHandlers.visibilityChange) {
+        document.removeEventListener('visibilitychange', this.boundHandlers.visibilityChange)
+      }
+      if (this.boundHandlers.beforeUnload) {
+        window.removeEventListener('beforeunload', this.boundHandlers.beforeUnload)
+      }
+      if (this.boundHandlers.click) {
+        document.removeEventListener('click', this.boundHandlers.click)
+      }
+      if (this.boundHandlers.scroll) {
+        window.removeEventListener('scroll', this.boundHandlers.scroll)
+      }
+    }
+
+    // Clear handler references
+    this.boundHandlers = {}
+
+    // Flush remaining activities
     this.flushActivities()
+
+    // Reset initialization flag to allow re-init if needed
+    this.isInitialized = false
   }
 }
 

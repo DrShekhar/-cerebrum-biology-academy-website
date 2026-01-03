@@ -70,7 +70,7 @@ Email: ${enrollment.user.email}
 (Password has been sent to your email)
 
 📞 Need Help?
-Contact our support team at +91-XXXXXXXXXX
+Contact our support team at +91-88264-44334
 
 Happy Learning! 🚀
 

@@ -74,6 +74,12 @@ export async function GET(
           startedAt: session.startedAt,
           endedAt: session.endedAt,
           createdAt: session.createdAt,
+          questionTimerSeconds: session.questionTimerSeconds,
+          answerTimerSeconds: session.answerTimerSeconds,
+          activeTimerType: session.activeTimerType,
+          timerStartedAt: session.timerStartedAt,
+          timerPausedAt: session.timerPausedAt,
+          teamDiscussing: session.teamDiscussing,
         },
       },
       {

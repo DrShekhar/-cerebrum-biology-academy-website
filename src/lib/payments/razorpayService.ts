@@ -4,6 +4,7 @@
  */
 
 import crypto from 'crypto'
+import { prisma } from '@/lib/prisma'
 
 interface RazorpayOrder {
   id: string
@@ -390,11 +391,21 @@ export class RazorpayService {
     monthlyAmount: number
     duration: number // in months
   }) {
-    // First create customer
+    // Fetch student data from database
+    const student = await prisma.users.findUnique({
+      where: { id: subscriptionData.studentId },
+      select: { name: true, email: true, phone: true },
+    })
+
+    if (!student) {
+      throw new Error(`Student not found: ${subscriptionData.studentId}`)
+    }
+
+    // First create customer with actual student data
     const customer = await this.createCustomer({
-      name: `Student_${subscriptionData.studentId}`,
-      email: `student${subscriptionData.studentId}@cerebrumbiologyacademy.com`,
-      contact: '9999999999', // This should come from student data
+      name: student.name,
+      email: student.email,
+      contact: student.phone || '',
       notes: {
         student_id: subscriptionData.studentId,
         course_id: subscriptionData.courseId,

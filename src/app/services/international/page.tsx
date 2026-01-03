@@ -666,10 +666,8 @@ export default function InternationalProgramsPage() {
                 Global Helpline
               </h3>
               <div className="text-xs sm:text-sm text-gray-600 space-y-1">
-                <div>🇺🇸 +1-XXX-XXX-XXXX</div>
-                <div>🇬🇧 +44-XXX-XXX-XXXX</div>
-                <div>🇦🇺 +61-XXX-XXX-XXXX</div>
-                <div>🇮🇳 +91-XXX-XXX-XXXX</div>
+                <div>🇮🇳 +91-88264-44334</div>
+                <div className="text-xs text-gray-500">(WhatsApp available 24/7)</div>
               </div>
             </div>
 

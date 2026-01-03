@@ -151,7 +151,7 @@ export async function addDemoBookingCommunication(
   })
 }
 
-// Get demo booking statistics
+// Get demo booking statistics - optimized to reduce N+1 queries
 export async function getDemoBookingStats(options?: { dateFrom?: Date; dateTo?: Date }) {
   const where: any = {}
   if (options?.dateFrom && options?.dateTo) {
@@ -161,37 +161,49 @@ export async function getDemoBookingStats(options?: { dateFrom?: Date; dateTo?: 
     }
   }
 
-  const [total, pending, confirmed, completed, cancelled] = await Promise.all([
-    prisma.demoBooking.count({ where }),
-    prisma.demoBooking.count({ where: { ...where, status: 'PENDING' } }),
-    prisma.demoBooking.count({ where: { ...where, status: 'CONFIRMED' } }),
-    prisma.demoBooking.count({ where: { ...where, status: 'COMPLETED' } }),
-    prisma.demoBooking.count({ where: { ...where, status: 'CANCELLED' } }),
+  // Use parallel queries with groupBy to minimize database round trips
+  // This replaces 6 separate count queries with 3 grouped queries
+  const [statusCounts, converted, sourceBreakdown, classDistribution] = await Promise.all([
+    // Single query for all status counts
+    prisma.demoBooking.groupBy({
+      by: ['status'],
+      where,
+      _count: { status: true },
+    }),
+    // Single query for converted count
+    prisma.demoBooking.count({
+      where: { ...where, convertedToEnrollment: true },
+    }),
+    // Source breakdown
+    prisma.demoBooking.groupBy({
+      by: ['source'],
+      where,
+      _count: { source: true },
+    }),
+    // Class distribution
+    prisma.demoBooking.groupBy({
+      by: ['studentClass'],
+      where,
+      _count: { studentClass: true },
+    }),
   ])
 
-  const converted = await prisma.demoBooking.count({
-    where: { ...where, convertedToEnrollment: true },
-  })
+  // Extract counts from grouped results
+  const statusMap = statusCounts.reduce(
+    (acc, item) => {
+      acc[item.status] = item._count.status
+      return acc
+    },
+    {} as Record<string, number>
+  )
+
+  const total = Object.values(statusMap).reduce((sum: number, count: number) => sum + count, 0)
+  const pending = statusMap['PENDING'] || 0
+  const confirmed = statusMap['CONFIRMED'] || 0
+  const completed = statusMap['COMPLETED'] || 0
+  const cancelled = statusMap['CANCELLED'] || 0
 
   const conversionRate = completed > 0 ? (converted / completed) * 100 : 0
-
-  // Source breakdown
-  const sourceBreakdown = await prisma.demoBooking.groupBy({
-    by: ['source'],
-    where,
-    _count: {
-      source: true,
-    },
-  })
-
-  // Class distribution
-  const classDistribution = await prisma.demoBooking.groupBy({
-    by: ['studentClass'],
-    where,
-    _count: {
-      studentClass: true,
-    },
-  })
 
   return {
     total,

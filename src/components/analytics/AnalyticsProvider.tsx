@@ -26,6 +26,15 @@ interface AnalyticsProviderProps {
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const pathname = usePathname()
 
+  // Initialize analytics on mount, cleanup on unmount
+  useEffect(() => {
+    analytics.init()
+
+    return () => {
+      analytics.destroy()
+    }
+  }, [])
+
   useEffect(() => {
     // Track page view on route change
     analytics.trackPageView(pathname)

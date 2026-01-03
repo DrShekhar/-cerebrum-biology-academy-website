@@ -80,7 +80,7 @@ export function UrgencySection() {
   ]
 
   const batchInfo = {
-    nextBatchDate: 'November 1st, 2024',
+    nextBatchDate: 'March 2026 (11th & 12th) | May 10th, 2026 (Droppers)',
     totalSeats: 25,
     filledSeats: 18,
     remainingSeats: 7,

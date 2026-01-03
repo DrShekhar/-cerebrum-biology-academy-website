@@ -71,7 +71,7 @@ export const locationDatabase: LocationData[] = [
         'Join 2500+ Kota students who chose Cerebrum Biology Academy for guaranteed NEET success',
       valueProposition:
         'Unlike crowded Kota classrooms, get personalized attention with our proven teaching methodology',
-      urgencyMessage: 'Only 150 seats left for 2024 batch in Kota region',
+      urgencyMessage: 'Only 150 seats left for 2026 batch in Kota region',
       testimonialFocus: 'Kota students achieving 650+ NEET scores',
       ctaText: 'Secure Your Kota Batch Seat',
     },

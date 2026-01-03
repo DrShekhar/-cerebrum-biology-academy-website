@@ -22,6 +22,10 @@ import {
   MessageSquare,
   ChevronDown,
   ChevronUp,
+  Timer,
+  Pause,
+  Settings,
+  MessageCircle,
 } from 'lucide-react'
 
 interface Round {
@@ -76,6 +80,12 @@ interface QuizSession {
   participants: Participant[]
   startedAt: string | null
   endedAt: string | null
+  questionTimerSeconds: number
+  answerTimerSeconds: number
+  activeTimerType: 'question' | 'answer' | null
+  timerStartedAt: string | null
+  timerPausedAt: string | null
+  teamDiscussing: 'TEAM_A' | 'TEAM_B' | null
 }
 
 export default function HostControlPanel() {
@@ -95,6 +105,12 @@ export default function HostControlPanel() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
   const [chatExpanded, setChatExpanded] = useState(true)
   const [lastMessageTimestamp, setLastMessageTimestamp] = useState<string | null>(null)
+
+  // Timer state
+  const [timerSeconds, setTimerSeconds] = useState<number>(0)
+  const [showTimerSettings, setShowTimerSettings] = useState(false)
+  const [questionTimerInput, setQuestionTimerInput] = useState('60')
+  const [answerTimerInput, setAnswerTimerInput] = useState('60')
 
   const fetchSession = useCallback(async () => {
     try {
@@ -159,6 +175,142 @@ export default function HostControlPanel() {
     const chatInterval = setInterval(fetchMessages, 2000)
     return () => clearInterval(chatInterval)
   }, [fetchMessages])
+
+  // Timer countdown effect
+  useEffect(() => {
+    if (!session?.activeTimerType || !session?.timerStartedAt) {
+      setTimerSeconds(0)
+      return
+    }
+
+    const totalSeconds =
+      session.activeTimerType === 'question'
+        ? session.questionTimerSeconds
+        : session.answerTimerSeconds
+
+    const updateTimer = () => {
+      const elapsed = Math.floor(
+        (Date.now() - new Date(session.timerStartedAt!).getTime()) / 1000
+      )
+      const remaining = Math.max(0, totalSeconds - elapsed)
+      setTimerSeconds(remaining)
+    }
+
+    updateTimer()
+    const interval = setInterval(updateTimer, 1000)
+    return () => clearInterval(interval)
+  }, [session?.activeTimerType, session?.timerStartedAt, session?.questionTimerSeconds, session?.answerTimerSeconds])
+
+  // Initialize timer inputs when session loads
+  useEffect(() => {
+    if (session) {
+      setQuestionTimerInput(String(session.questionTimerSeconds))
+      setAnswerTimerInput(String(session.answerTimerSeconds))
+    }
+  }, [session?.questionTimerSeconds, session?.answerTimerSeconds])
+
+  const startTimer = async (timerType: 'question' | 'answer') => {
+    try {
+      const res = await fetch(`/api/quiz/${roomCode}/timer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'start', timerType }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                activeTimerType: data.data.activeTimerType,
+                timerStartedAt: data.data.timerStartedAt,
+                timerPausedAt: data.data.timerPausedAt,
+              }
+            : prev
+        )
+      }
+    } catch (err) {
+      console.error('Failed to start timer:', err)
+    }
+  }
+
+  const stopTimer = async () => {
+    try {
+      const res = await fetch(`/api/quiz/${roomCode}/timer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'stop', timerType: session?.activeTimerType || 'question' }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                activeTimerType: null,
+                timerStartedAt: null,
+                timerPausedAt: null,
+              }
+            : prev
+        )
+        setTimerSeconds(0)
+      }
+    } catch (err) {
+      console.error('Failed to stop timer:', err)
+    }
+  }
+
+  const saveTimerSettings = async () => {
+    try {
+      const res = await fetch(`/api/quiz/${roomCode}/timer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          questionTimerSeconds: parseInt(questionTimerInput) || 60,
+          answerTimerSeconds: parseInt(answerTimerInput) || 60,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                questionTimerSeconds: data.data.questionTimerSeconds,
+                answerTimerSeconds: data.data.answerTimerSeconds,
+              }
+            : prev
+        )
+        setShowTimerSettings(false)
+      }
+    } catch (err) {
+      console.error('Failed to save timer settings:', err)
+    }
+  }
+
+  const setDiscussing = async (team: 'TEAM_A' | 'TEAM_B' | null) => {
+    try {
+      const res = await fetch(`/api/quiz/${roomCode}/timer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ teamDiscussing: team }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSession((prev) =>
+          prev ? { ...prev, teamDiscussing: data.data.teamDiscussing } : prev
+        )
+      }
+    } catch (err) {
+      console.error('Failed to set discussion:', err)
+    }
+  }
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins}:${secs.toString().padStart(2, '0')}`
+  }
 
   const copyRoomCode = async () => {
     const fullLink = `${window.location.origin}/neet-tools/quiz-competition/${roomCode}/view`
@@ -428,6 +580,141 @@ export default function HostControlPanel() {
               )}
             </button>
           </div>
+        </div>
+
+        {/* Timer & Discussion Control Panel */}
+        <div className="mb-6 rounded-2xl bg-white p-4 shadow-xl sm:p-5">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            {/* Timer Section */}
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2">
+                <Timer className="h-5 w-5 text-teal-600" />
+                <span className="font-semibold text-gray-700">Timer</span>
+              </div>
+
+              {session.activeTimerType ? (
+                <>
+                  <div
+                    className={`flex items-center gap-2 rounded-xl px-4 py-2 font-mono text-2xl font-bold ${
+                      timerSeconds <= 10
+                        ? 'animate-pulse bg-red-100 text-red-600'
+                        : timerSeconds <= 30
+                          ? 'bg-orange-100 text-orange-600'
+                          : 'bg-green-100 text-green-600'
+                    }`}
+                  >
+                    <Clock className="h-5 w-5" />
+                    {formatTime(timerSeconds)}
+                  </div>
+                  <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700">
+                    {session.activeTimerType === 'question' ? 'Asking' : 'Answering'}
+                  </span>
+                  <button
+                    onClick={stopTimer}
+                    className="flex items-center gap-1.5 rounded-lg bg-red-100 px-3 py-2 text-sm font-medium text-red-700 transition-colors hover:bg-red-200"
+                  >
+                    <StopCircle className="h-4 w-4" />
+                    Stop
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    onClick={() => startTimer('question')}
+                    className="flex items-center gap-1.5 rounded-lg bg-blue-100 px-3 py-2 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-200"
+                  >
+                    <Play className="h-4 w-4" />
+                    Question ({session.questionTimerSeconds}s)
+                  </button>
+                  <button
+                    onClick={() => startTimer('answer')}
+                    className="flex items-center gap-1.5 rounded-lg bg-purple-100 px-3 py-2 text-sm font-medium text-purple-700 transition-colors hover:bg-purple-200"
+                  >
+                    <Play className="h-4 w-4" />
+                    Answer ({session.answerTimerSeconds}s)
+                  </button>
+                  <button
+                    onClick={() => setShowTimerSettings(!showTimerSettings)}
+                    className="flex items-center gap-1.5 rounded-lg bg-gray-100 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
+                  >
+                    <Settings className="h-4 w-4" />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Discussion Indicator */}
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <MessageCircle className="h-5 w-5 text-purple-600" />
+                <span className="text-sm font-medium text-gray-600">Discussing:</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => setDiscussing(session.teamDiscussing === 'TEAM_A' ? null : 'TEAM_A')}
+                  className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all ${
+                    session.teamDiscussing === 'TEAM_A'
+                      ? 'bg-blue-500 text-white ring-2 ring-blue-300'
+                      : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                  }`}
+                >
+                  {session.teamAName}
+                </button>
+                <button
+                  onClick={() => setDiscussing(session.teamDiscussing === 'TEAM_B' ? null : 'TEAM_B')}
+                  className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-all ${
+                    session.teamDiscussing === 'TEAM_B'
+                      ? 'bg-purple-500 text-white ring-2 ring-purple-300'
+                      : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                  }`}
+                >
+                  {session.teamBName}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Timer Settings Panel */}
+          {showTimerSettings && (
+            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
+              <div className="flex items-center gap-2">
+                <label className="text-sm font-medium text-gray-600">Question Timer:</label>
+                <input
+                  type="number"
+                  value={questionTimerInput}
+                  onChange={(e) => setQuestionTimerInput(e.target.value)}
+                  min="10"
+                  max="300"
+                  className="w-20 rounded-lg border border-gray-300 px-3 py-1.5 text-center text-sm font-semibold focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                />
+                <span className="text-sm text-gray-500">sec</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <label className="text-sm font-medium text-gray-600">Answer Timer:</label>
+                <input
+                  type="number"
+                  value={answerTimerInput}
+                  onChange={(e) => setAnswerTimerInput(e.target.value)}
+                  min="10"
+                  max="300"
+                  className="w-20 rounded-lg border border-gray-300 px-3 py-1.5 text-center text-sm font-semibold focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                />
+                <span className="text-sm text-gray-500">sec</span>
+              </div>
+              <button
+                onClick={saveTimerSettings}
+                className="rounded-lg bg-teal-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-teal-700 hover:shadow-md"
+              >
+                Save Settings
+              </button>
+              <button
+                onClick={() => setShowTimerSettings(false)}
+                className="text-sm font-medium text-gray-500 hover:text-gray-700"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">

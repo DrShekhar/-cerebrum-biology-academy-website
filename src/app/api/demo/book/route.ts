@@ -88,7 +88,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate date (must be future date)
-    const selectedDate = new Date(body.preferredDate)
+    // Append T00:00:00 to parse as local time, not UTC
+    const selectedDate = new Date(body.preferredDate + 'T00:00:00')
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 

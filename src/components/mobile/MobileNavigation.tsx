@@ -290,8 +290,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
               <div className="text-center text-sm text-gray-600">
                 <p className="mb-2">
                   {language === 'hi'
-                    ? '© 2024 सेरेब्रम बायोलॉजी अकादमी'
-                    : '© 2024 Cerebrum Biology Academy'}
+                    ? '© 2025 सेरेब्रम बायोलॉजी अकादमी'
+                    : '© 2025 Cerebrum Biology Academy'}
                 </p>
                 <p>{language === 'hi' ? 'सभी अधिकार सुरक्षित हैं' : 'All rights reserved'}</p>
               </div>

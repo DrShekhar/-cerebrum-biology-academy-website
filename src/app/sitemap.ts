@@ -6,9 +6,9 @@ import { getAllAreaSlugs } from '@/data/localAreas'
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
   const baseUrl = 'https://cerebrumbiologyacademy.com'
-  // Use a static date representing when site content was last updated
-  // This is better for SEO than dynamic dates that change on every build
-  const lastUpdated = new Date('2025-12-25T00:00:00.000Z')
+  // Use build timestamp for static pages - reflects when site was last deployed
+  // This is better for SEO than a hard-coded date that doesn't reflect reality
+  const lastUpdated = new Date()
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
