@@ -418,10 +418,13 @@ export default function StudentViewPage() {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-indigo-900 to-purple-900">
-        <div className="text-center text-white">
-          <Loader2 className="mx-auto h-12 w-12 animate-spin" />
-          <p className="mt-4">Connecting to quiz...</p>
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-600 shadow-xl shadow-teal-500/20">
+            <Loader2 className="h-8 w-8 animate-spin text-white" />
+          </div>
+          <p className="mt-4 text-lg font-medium text-white">Connecting to quiz...</p>
+          <p className="mt-1 text-sm text-slate-400">Please wait</p>
         </div>
       </main>
     )
@@ -429,18 +432,23 @@ export default function StudentViewPage() {
 
   if (error || !session) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-indigo-900 to-purple-900 p-4">
-        <div className="text-center text-white">
-          <X className="mx-auto h-16 w-16 text-red-400" />
-          <h1 className="mt-4 text-2xl font-bold">Quiz Not Found</h1>
-          <p className="mt-2 text-indigo-200">{error || 'This room code is invalid.'}</p>
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
+        <div className="text-center">
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-500/10 border border-red-500/30">
+            <X className="h-10 w-10 text-red-400" />
+          </div>
+          <h1 className="mt-4 text-2xl font-bold text-white">Quiz Not Found</h1>
+          <p className="mt-2 text-slate-400">{error || 'This room code is invalid.'}</p>
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-indigo-600 hover:bg-indigo-50"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl"
           >
             <ArrowLeft className="h-5 w-5" />
             Back to Quiz Competition
           </Link>
+          <p className="mt-6 text-xs text-slate-500">
+            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+          </p>
         </div>
       </main>
     )
@@ -556,50 +564,68 @@ export default function StudentViewPage() {
           : null
 
     return (
-      <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-purple-900 p-4">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div className="mx-auto max-w-lg pt-8 text-center sm:pt-12">
-          <Trophy className="mx-auto h-16 w-16 text-yellow-400 sm:h-20 sm:w-20" />
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-xl shadow-yellow-500/30 sm:h-24 sm:w-24">
+            <Trophy className="h-10 w-10 text-white sm:h-12 sm:w-12" />
+          </div>
           <h1 className="mt-4 text-2xl font-bold text-white sm:mt-6 sm:text-3xl">Quiz Complete!</h1>
+          <p className="mt-1 text-sm text-slate-400">Final Results</p>
 
           <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4">
             <div
-              className={`rounded-2xl p-4 sm:p-6 ${session.teamAScore >= session.teamBScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
+              className={`relative overflow-hidden rounded-2xl border p-4 sm:p-6 ${session.teamAScore >= session.teamBScore ? 'border-yellow-500/50 bg-gradient-to-br from-yellow-500/20 to-blue-500/10 ring-2 ring-yellow-400' : 'border-slate-700/50 bg-slate-800/50'}`}
             >
-              <p className="truncate text-sm font-medium text-indigo-200 sm:text-lg">{session.teamAName}</p>
+              {session.teamAScore > session.teamBScore && (
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600" />
+              )}
+              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">A</div>
+              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">{session.teamAName}</p>
               <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamAScore}</p>
               {session.teamAScore > session.teamBScore && (
-                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-bold text-yellow-900 sm:px-3 sm:py-1 sm:text-sm">
-                  WINNER
+                <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-3 py-1 text-xs font-bold text-yellow-900 shadow-lg sm:text-sm">
+                  <Trophy className="h-3 w-3" /> WINNER
                 </span>
               )}
             </div>
             <div
-              className={`rounded-2xl p-4 sm:p-6 ${session.teamBScore >= session.teamAScore ? 'bg-yellow-400/20 ring-4 ring-yellow-400' : 'bg-white/10'}`}
+              className={`relative overflow-hidden rounded-2xl border p-4 sm:p-6 ${session.teamBScore >= session.teamAScore ? 'border-yellow-500/50 bg-gradient-to-br from-yellow-500/20 to-purple-500/10 ring-2 ring-yellow-400' : 'border-slate-700/50 bg-slate-800/50'}`}
             >
-              <p className="truncate text-sm font-medium text-indigo-200 sm:text-lg">{session.teamBName}</p>
+              {session.teamBScore > session.teamAScore && (
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600" />
+              )}
+              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">B</div>
+              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">{session.teamBName}</p>
               <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamBScore}</p>
               {session.teamBScore > session.teamAScore && (
-                <span className="mt-2 inline-block rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-bold text-yellow-900 sm:px-3 sm:py-1 sm:text-sm">
-                  WINNER
+                <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-3 py-1 text-xs font-bold text-yellow-900 shadow-lg sm:text-sm">
+                  <Trophy className="h-3 w-3" /> WINNER
                 </span>
               )}
             </div>
           </div>
 
           {!winner && (
-            <p className="mt-4 text-lg font-semibold text-yellow-300 sm:mt-6 sm:text-xl">It&apos;s a tie!</p>
+            <div className="mt-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10 p-3 sm:mt-6">
+              <p className="text-lg font-semibold text-yellow-300 sm:text-xl">It&apos;s a tie!</p>
+            </div>
           )}
 
-          <p className="mt-4 text-sm text-indigo-300 sm:mt-6 sm:text-base">
-            Total Rounds: {session.currentRound}
-          </p>
+          <div className="mt-4 rounded-xl border border-slate-700/50 bg-slate-800/50 p-3 sm:mt-6">
+            <p className="text-sm text-slate-400">Total Rounds: <span className="font-semibold text-white">{session.currentRound}</span></p>
+          </div>
 
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 font-semibold text-indigo-600 hover:bg-indigo-50 sm:mt-8 sm:px-6 sm:py-3"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl sm:mt-8"
           >
+            <ArrowLeft className="h-5 w-5" />
             Back to Dashboard
           </Link>
+
+          <p className="mt-6 text-center text-xs text-slate-500">
+            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+          </p>
         </div>
       </main>
     )
@@ -609,16 +635,16 @@ export default function StudentViewPage() {
   const teamName = isTeamA ? session.teamAName : session.teamBName
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-purple-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Sound Toggle Button - always visible */}
       <button
         onClick={toggleSound}
-        className="fixed left-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition-colors"
+        className="fixed left-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-slate-700/50 bg-slate-800/80 px-3 py-1.5 text-sm text-slate-300 shadow-lg backdrop-blur-sm hover:bg-slate-700/80 hover:text-white transition-all"
         title={soundEnabled ? 'Mute sounds' : 'Enable sounds'}
       >
         {soundEnabled ? (
           <>
-            <Volume2 className="h-4 w-4" />
+            <Volume2 className="h-4 w-4 text-teal-400" />
             <span className="hidden sm:inline">Sound On</span>
           </>
         ) : (
@@ -632,12 +658,12 @@ export default function StudentViewPage() {
       {/* Connection Status */}
       {showConnectionStatus && (
         <div
-          className={`fixed right-4 top-4 z-10 flex items-center gap-2 rounded-full px-3 py-1.5 text-sm ${
+          className={`fixed right-4 top-4 z-10 flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm shadow-lg backdrop-blur-sm ${
             failCount === 0
-              ? 'bg-green-500/20 text-green-300'
+              ? 'border-green-500/30 bg-green-500/10 text-green-400'
               : failCount < 3
-                ? 'bg-yellow-500/20 text-yellow-300'
-                : 'bg-red-500/20 text-red-300'
+                ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400'
+                : 'border-red-500/30 bg-red-500/10 text-red-400'
           }`}
         >
           {failCount === 0 ? (
@@ -671,42 +697,53 @@ export default function StudentViewPage() {
         <div className="mb-4 text-center">
           <Link
             href="/neet-tools/quiz-competition"
-            className="mb-2 inline-flex items-center gap-2 text-sm text-indigo-300 hover:text-white"
+            className="mb-2 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-teal-400 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Exit Quiz
           </Link>
           <h1 className="text-xl font-bold text-white">{session.title}</h1>
-          <div className="mt-1 flex items-center justify-center gap-3 text-sm text-indigo-300">
-            <span className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              R{session.currentRound}
+          <div className="mt-2 flex items-center justify-center gap-3 text-sm">
+            <span className="flex items-center gap-1.5 rounded-full border border-slate-700/50 bg-slate-800/50 px-3 py-1 text-slate-300">
+              <Clock className="h-4 w-4 text-teal-400" />
+              Round {session.currentRound}
             </span>
             <span
-              className={`rounded-full px-2 py-0.5 text-xs ${isTeamA ? 'bg-indigo-500/30' : 'bg-purple-500/30'}`}
+              className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${isTeamA ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}
             >
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${isTeamA ? 'bg-blue-500/30' : 'bg-purple-500/30'}`}>
+                {isTeamA ? 'A' : 'B'}
+              </span>
               {teamName}
             </span>
           </div>
         </div>
 
         {/* Compact Scoreboard */}
-        <div className="mb-4 rounded-xl bg-white/10 p-1">
-          <div className="grid grid-cols-2 gap-1">
+        <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 p-1.5 shadow-xl">
+          <div className="grid grid-cols-2 gap-1.5">
             <div
-              className={`rounded-lg p-3 text-center ${
-                session.teamAScore > session.teamBScore ? 'bg-indigo-500/50' : 'bg-white/5'
-              } ${participant.team === 'TEAM_A' ? 'ring-2 ring-indigo-400' : ''}`}
+              className={`relative overflow-hidden rounded-xl p-3 text-center transition-all ${
+                session.teamAScore > session.teamBScore ? 'bg-gradient-to-br from-blue-500/30 to-blue-600/20' : 'bg-slate-700/30'
+              } ${participant.team === 'TEAM_A' ? 'ring-2 ring-blue-400' : ''}`}
             >
-              <p className="truncate text-xs font-medium text-white/80">{session.teamAName}</p>
+              {session.teamAScore > session.teamBScore && (
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600" />
+              )}
+              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-[10px] font-bold text-blue-300">A</div>
+              <p className="truncate text-xs font-medium text-slate-300">{session.teamAName}</p>
               <p className="text-3xl font-bold text-white">{session.teamAScore}</p>
             </div>
             <div
-              className={`rounded-lg p-3 text-center ${
-                session.teamBScore > session.teamAScore ? 'bg-purple-500/50' : 'bg-white/5'
+              className={`relative overflow-hidden rounded-xl p-3 text-center transition-all ${
+                session.teamBScore > session.teamAScore ? 'bg-gradient-to-br from-purple-500/30 to-purple-600/20' : 'bg-slate-700/30'
               } ${participant.team === 'TEAM_B' ? 'ring-2 ring-purple-400' : ''}`}
             >
-              <p className="truncate text-xs font-medium text-white/80">{session.teamBName}</p>
+              {session.teamBScore > session.teamAScore && (
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600" />
+              )}
+              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-[10px] font-bold text-purple-300">B</div>
+              <p className="truncate text-xs font-medium text-slate-300">{session.teamBName}</p>
               <p className="text-3xl font-bold text-white">{session.teamBScore}</p>
             </div>
           </div>
@@ -714,43 +751,48 @@ export default function StudentViewPage() {
 
         {/* Status Banner */}
         {session.status === 'WAITING' && (
-          <div className="mb-4 rounded-lg bg-yellow-500/20 p-3 text-center">
-            <p className="text-sm font-medium text-yellow-300">Waiting for quiz to start...</p>
+          <div className="mb-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-center">
+            <p className="text-sm font-medium text-yellow-300">⏳ Waiting for quiz to start...</p>
           </div>
         )}
 
         {/* Team Chat */}
-        <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-sm">
+        <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 shadow-xl backdrop-blur-sm">
           <button
             onClick={() => setChatExpanded(!chatExpanded)}
-            className="flex w-full items-center justify-between p-4"
+            className="flex w-full items-center justify-between p-4 transition-colors hover:bg-slate-700/30"
           >
             <div className="flex items-center gap-2">
-              <MessageCircle className={`h-5 w-5 ${isTeamA ? 'text-indigo-300' : 'text-purple-300'}`} />
+              <MessageCircle className={`h-5 w-5 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`} />
               <span className="font-semibold text-white">Team Chat</span>
               <span
-                className={`rounded-full px-2 py-0.5 text-xs ${isTeamA ? 'bg-indigo-500/30 text-indigo-200' : 'bg-purple-500/30 text-purple-200'}`}
+                className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${isTeamA ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}
               >
+                <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold ${isTeamA ? 'bg-blue-500/40' : 'bg-purple-500/40'}`}>
+                  {isTeamA ? 'A' : 'B'}
+                </span>
                 {teamName}
               </span>
             </div>
             {chatExpanded ? (
-              <ChevronUp className="h-5 w-5 text-indigo-300" />
+              <ChevronUp className="h-5 w-5 text-slate-400" />
             ) : (
-              <ChevronDown className="h-5 w-5 text-indigo-300" />
+              <ChevronDown className="h-5 w-5 text-slate-400" />
             )}
           </button>
 
           {chatExpanded && (
             <>
               {/* Messages */}
-              <div className="h-48 overflow-y-auto border-t border-white/10 p-3">
+              <div className="h-48 overflow-y-auto border-t border-slate-700/50 p-3">
                 {messages.length === 0 ? (
-                  <div className="flex h-full items-center justify-center text-center text-indigo-300">
+                  <div className="flex h-full items-center justify-center text-center text-slate-400">
                     <div>
-                      <MessageCircle className="mx-auto mb-2 h-8 w-8 opacity-50" />
-                      <p className="text-sm">No messages yet</p>
-                      <p className="text-xs opacity-75">Start chatting with your team!</p>
+                      <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full ${isTeamA ? 'bg-blue-500/10' : 'bg-purple-500/10'}`}>
+                        <MessageCircle className={`h-6 w-6 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`} />
+                      </div>
+                      <p className="text-sm font-medium">No messages yet</p>
+                      <p className="text-xs text-slate-500">Start chatting with your team!</p>
                     </div>
                   </div>
                 ) : (
@@ -758,13 +800,13 @@ export default function StudentViewPage() {
                     {messages.map((msg) => (
                       <div
                         key={msg.id}
-                        className={`rounded-lg p-2 ${
+                        className={`rounded-xl p-2.5 ${
                           msg.participantId === participant.id
-                            ? `ml-4 ${isTeamA ? 'bg-indigo-500/30' : 'bg-purple-500/30'}`
-                            : 'mr-4 bg-white/5'
+                            ? `ml-4 ${isTeamA ? 'bg-blue-500/20 border border-blue-500/20' : 'bg-purple-500/20 border border-purple-500/20'}`
+                            : 'mr-4 bg-slate-700/30 border border-slate-700/30'
                         }`}
                       >
-                        <p className="text-xs font-medium text-indigo-200">
+                        <p className={`text-xs font-semibold ${msg.participantId === participant.id ? (isTeamA ? 'text-blue-300' : 'text-purple-300') : 'text-slate-400'}`}>
                           {msg.participantId === participant.id ? 'You' : msg.senderName}
                         </p>
                         <p className="text-sm text-white">{msg.message}</p>
@@ -776,21 +818,21 @@ export default function StudentViewPage() {
               </div>
 
               {/* Input */}
-              <div className="flex gap-2 border-t border-white/10 p-3">
+              <div className="flex gap-2 border-t border-slate-700/50 bg-slate-800/30 p-3">
                 <input
                   type="text"
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && sendMessage()}
                   placeholder="Type a message..."
-                  className="flex-1 rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder-indigo-300 focus:border-white/40 focus:outline-none"
+                  className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
                   maxLength={500}
                   disabled={sendingMessage}
                 />
                 <button
                   onClick={sendMessage}
                   disabled={sendingMessage || !newMessage.trim()}
-                  className={`rounded-lg px-4 py-2 text-white transition-colors disabled:opacity-50 ${isTeamA ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-purple-600 hover:bg-purple-700'}`}
+                  className={`rounded-xl px-4 py-2 text-white shadow-lg transition-all disabled:opacity-50 ${isTeamA ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500' : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-400 hover:to-purple-500'}`}
                 >
                   {sendingMessage ? (
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -804,57 +846,72 @@ export default function StudentViewPage() {
         </div>
 
         {/* Recent Activity */}
-        <div className="rounded-xl bg-white/10 p-4 backdrop-blur-sm">
-          <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
-            <Clock className="h-4 w-4 text-indigo-300" />
-            Recent Activity
-          </h3>
+        <div className="overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 shadow-xl backdrop-blur-sm">
+          <div className="border-b border-slate-700/50 bg-slate-800/30 p-4">
+            <h3 className="flex items-center gap-2 text-sm font-semibold text-white">
+              <Clock className="h-4 w-4 text-teal-400" />
+              Recent Activity
+            </h3>
+          </div>
 
-          {session.rounds.length === 0 ? (
-            <div className="py-4 text-center text-indigo-300">
-              <Users className="mx-auto mb-1 h-6 w-6 opacity-50" />
-              <p className="text-sm">No rounds yet</p>
-            </div>
-          ) : (
-            <div className="space-y-2">
-              {session.rounds.slice(0, 5).map((round, index) => (
-                <div
-                  key={round.id}
-                  className={`flex items-center justify-between rounded-lg p-2 ${
-                    index === 0 ? 'bg-white/20' : 'bg-white/5'
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white">
-                      {round.roundNumber}
-                    </span>
-                    <div>
-                      <p className="text-xs font-medium text-white">
-                        {round.answeringTeam === 'TEAM_A' ? session.teamAName : session.teamBName}
-                      </p>
-                      <div className="flex items-center gap-1 text-xs text-indigo-300">
-                        {getOutcomeIcon(round.outcome)}
-                        <span>{getOutcomeLabel(round.outcome)}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    className={`text-sm font-bold ${
-                      round.pointsChange >= 0 ? 'text-green-400' : 'text-red-400'
-                    }`}
-                  >
-                    {round.pointsChange >= 0 ? '+' : ''}
-                    {round.pointsChange}
-                  </span>
+          <div className="p-3">
+            {session.rounds.length === 0 ? (
+              <div className="py-6 text-center text-slate-400">
+                <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-slate-700/30">
+                  <Users className="h-6 w-6 text-slate-500" />
                 </div>
-              ))}
-            </div>
-          )}
+                <p className="text-sm font-medium">No rounds yet</p>
+                <p className="text-xs text-slate-500">Activity will appear here</p>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                {session.rounds.slice(0, 5).map((round, index) => {
+                  const isTeamARound = round.answeringTeam === 'TEAM_A'
+                  return (
+                    <div
+                      key={round.id}
+                      className={`flex items-center justify-between rounded-xl p-2.5 transition-colors ${
+                        index === 0 ? (isTeamARound ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-purple-500/10 border border-purple-500/20') : 'bg-slate-700/20 border border-slate-700/30'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${isTeamARound ? 'bg-blue-500/30 text-blue-300' : 'bg-purple-500/30 text-purple-300'}`}>
+                          {round.roundNumber}
+                        </span>
+                        <div>
+                          <p className="text-xs font-semibold text-white">
+                            {isTeamARound ? session.teamAName : session.teamBName}
+                          </p>
+                          <div className="flex items-center gap-1 text-xs text-slate-400">
+                            {getOutcomeIcon(round.outcome)}
+                            <span>{getOutcomeLabel(round.outcome)}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        className={`rounded-lg px-2 py-1 text-sm font-bold ${
+                          round.pointsChange >= 0 ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                        }`}
+                      >
+                        {round.pointsChange >= 0 ? '+' : ''}
+                        {round.pointsChange}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
         </div>
 
-        <p className="mt-3 text-center text-xs text-indigo-400">
-          Last updated: {lastUpdate.toLocaleTimeString()}
-        </p>
+        <div className="mt-4 text-center">
+          <p className="text-xs text-slate-500">
+            Last updated: {lastUpdate.toLocaleTimeString()}
+          </p>
+          <p className="mt-2 text-xs text-slate-600">
+            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+          </p>
+        </div>
       </div>
     </main>
   )
