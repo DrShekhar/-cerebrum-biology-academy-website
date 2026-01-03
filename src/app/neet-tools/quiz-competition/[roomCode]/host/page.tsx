@@ -26,6 +26,7 @@ import {
   Pause,
   Settings,
   MessageCircle,
+  UserMinus,
 } from 'lucide-react'
 
 interface Round {
@@ -105,6 +106,10 @@ export default function HostControlPanel() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
   const [chatExpanded, setChatExpanded] = useState(true)
   const [lastMessageTimestamp, setLastMessageTimestamp] = useState<string | null>(null)
+
+  // Participant management state
+  const [showParticipantsManager, setShowParticipantsManager] = useState(false)
+  const [removingParticipantId, setRemovingParticipantId] = useState<string | null>(null)
 
   // Host token for authentication
   const [hostToken, setHostToken] = useState<string | null>(null)
@@ -477,6 +482,40 @@ export default function HostControlPanel() {
     }
   }
 
+  const removeParticipant = async (participantId: string, participantName: string) => {
+    if (!confirm(`Remove ${participantName} from the quiz?`)) return
+
+    setRemovingParticipantId(participantId)
+    try {
+      const headers: Record<string, string> = {}
+      if (hostToken) headers['x-host-token'] = hostToken
+
+      const res = await fetch(`/api/quiz/${roomCode}/participants?participantId=${participantId}`, {
+        method: 'DELETE',
+        headers,
+      })
+
+      const data = await res.json()
+      if (data.success) {
+        // Update local state to remove the participant
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                participants: prev.participants.filter((p) => p.id !== participantId),
+              }
+            : prev
+        )
+      } else {
+        alert(data.error || 'Failed to remove participant')
+      }
+    } catch {
+      alert('Failed to remove participant')
+    } finally {
+      setRemovingParticipantId(null)
+    }
+  }
+
   const getOutcomeLabel = (outcome: string) => {
     switch (outcome) {
       case 'CORRECT':
@@ -615,11 +654,15 @@ export default function HostControlPanel() {
                 />
                 <span className="hidden sm:inline">{isConnected ? 'Live' : 'Reconnecting'}</span>
               </div>
-              <div className="flex items-center gap-1.5 rounded-lg bg-gray-50 px-3 py-1.5 text-xs text-gray-700 sm:gap-2 sm:text-sm">
+              <button
+                onClick={() => setShowParticipantsManager(true)}
+                className="flex items-center gap-1.5 rounded-lg bg-gray-50 px-3 py-1.5 text-xs text-gray-700 transition-colors hover:bg-gray-100 sm:gap-2 sm:text-sm"
+                title="Manage participants"
+              >
                 <Users className="h-4 w-4 text-teal-600" />
                 <span className="hidden font-medium sm:inline">{participantCount} joined</span>
                 <span className="font-medium sm:hidden">{participantCount}</span>
-              </div>
+              </button>
               <div className="flex items-center gap-1.5 rounded-lg bg-purple-100 px-3 py-1.5 text-xs font-semibold text-purple-700 sm:gap-2 sm:text-sm">
                 <Clock className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 <span>Round {session.currentRound}</span>
@@ -1187,6 +1230,137 @@ export default function HostControlPanel() {
                   {actionLoading ? 'Ending...' : 'End Quiz'}
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Participants Manager Modal */}
+      {showParticipantsManager && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+          <div className="w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl">
+            <div className="bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-4">
+              <h3 className="text-xl font-bold text-white">Manage Participants</h3>
+              <p className="mt-1 text-sm text-teal-100">
+                {participantCount} participant{participantCount !== 1 ? 's' : ''} in the quiz
+              </p>
+            </div>
+            <div className="max-h-[60vh] overflow-y-auto p-4">
+              {/* Team A Participants */}
+              <div className="mb-4">
+                <h4 className="mb-2 flex items-center gap-2 font-semibold text-blue-700">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">
+                    A
+                  </span>
+                  {session.teamAName} ({teamACount})
+                </h4>
+                <div className="space-y-2">
+                  {session.participants
+                    .filter((p) => p.team === 'TEAM_A' && !p.isHost)
+                    .map((participant) => (
+                      <div
+                        key={participant.id}
+                        className="flex items-center justify-between rounded-lg border border-blue-100 bg-blue-50/50 px-3 py-2"
+                      >
+                        <span className="font-medium text-gray-700">{participant.name}</span>
+                        <button
+                          onClick={() => removeParticipant(participant.id, participant.name)}
+                          disabled={removingParticipantId === participant.id}
+                          className="flex items-center gap-1 rounded-lg bg-red-100 px-2 py-1 text-xs font-medium text-red-700 transition-colors hover:bg-red-200 disabled:opacity-50"
+                        >
+                          {removingParticipantId === participant.id ? (
+                            <Loader2 className="h-3 w-3 animate-spin" />
+                          ) : (
+                            <UserMinus className="h-3 w-3" />
+                          )}
+                          Remove
+                        </button>
+                      </div>
+                    ))}
+                  {session.participants.filter((p) => p.team === 'TEAM_A' && !p.isHost).length ===
+                    0 && <p className="py-2 text-center text-sm text-gray-400">No participants</p>}
+                </div>
+              </div>
+
+              {/* Team B Participants */}
+              <div className="mb-4">
+                <h4 className="mb-2 flex items-center gap-2 font-semibold text-purple-700">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                    B
+                  </span>
+                  {session.teamBName} ({teamBCount})
+                </h4>
+                <div className="space-y-2">
+                  {session.participants
+                    .filter((p) => p.team === 'TEAM_B' && !p.isHost)
+                    .map((participant) => (
+                      <div
+                        key={participant.id}
+                        className="flex items-center justify-between rounded-lg border border-purple-100 bg-purple-50/50 px-3 py-2"
+                      >
+                        <span className="font-medium text-gray-700">{participant.name}</span>
+                        <button
+                          onClick={() => removeParticipant(participant.id, participant.name)}
+                          disabled={removingParticipantId === participant.id}
+                          className="flex items-center gap-1 rounded-lg bg-red-100 px-2 py-1 text-xs font-medium text-red-700 transition-colors hover:bg-red-200 disabled:opacity-50"
+                        >
+                          {removingParticipantId === participant.id ? (
+                            <Loader2 className="h-3 w-3 animate-spin" />
+                          ) : (
+                            <UserMinus className="h-3 w-3" />
+                          )}
+                          Remove
+                        </button>
+                      </div>
+                    ))}
+                  {session.participants.filter((p) => p.team === 'TEAM_B' && !p.isHost).length ===
+                    0 && <p className="py-2 text-center text-sm text-gray-400">No participants</p>}
+                </div>
+              </div>
+
+              {/* Unassigned Participants */}
+              {session.participants.filter((p) => !p.team && !p.isHost).length > 0 && (
+                <div>
+                  <h4 className="mb-2 flex items-center gap-2 font-semibold text-gray-600">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-400 text-xs font-bold text-white">
+                      ?
+                    </span>
+                    Unassigned ({session.participants.filter((p) => !p.team && !p.isHost).length})
+                  </h4>
+                  <div className="space-y-2">
+                    {session.participants
+                      .filter((p) => !p.team && !p.isHost)
+                      .map((participant) => (
+                        <div
+                          key={participant.id}
+                          className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2"
+                        >
+                          <span className="font-medium text-gray-700">{participant.name}</span>
+                          <button
+                            onClick={() => removeParticipant(participant.id, participant.name)}
+                            disabled={removingParticipantId === participant.id}
+                            className="flex items-center gap-1 rounded-lg bg-red-100 px-2 py-1 text-xs font-medium text-red-700 transition-colors hover:bg-red-200 disabled:opacity-50"
+                          >
+                            {removingParticipantId === participant.id ? (
+                              <Loader2 className="h-3 w-3 animate-spin" />
+                            ) : (
+                              <UserMinus className="h-3 w-3" />
+                            )}
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="border-t border-gray-100 p-4">
+              <button
+                onClick={() => setShowParticipantsManager(false)}
+                className="w-full rounded-xl bg-gray-100 px-4 py-2.5 font-semibold text-gray-700 transition-all hover:bg-gray-200"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

@@ -77,6 +77,8 @@ interface ChatMessage {
 
 interface ParticipantInfo {
   id: string
+  token: string // Required for authenticated actions like chat
+  sessionId: string
   name: string
   team: 'TEAM_A' | 'TEAM_B'
 }
@@ -334,10 +336,14 @@ export default function StudentViewPage() {
       const afterParam = lastMessageTimestampRef.current
         ? `&after=${encodeURIComponent(lastMessageTimestampRef.current)}`
         : ''
-      const url = `/api/quiz/${roomCode}/chat?team=${participant.team}&t=${Date.now()}${afterParam}`
+      const url = `/api/quiz/${roomCode}/chat?t=${Date.now()}${afterParam}`
       const res = await fetch(url, {
         cache: 'no-store',
-        headers: { 'Cache-Control': 'no-cache' },
+        headers: {
+          'Cache-Control': 'no-cache',
+          'x-participant-id': participant.id,
+          'x-participant-token': participant.token,
+        },
       })
       const data = await res.json()
       if (data.success && data.data.length > 0) {
@@ -416,6 +422,8 @@ export default function StudentViewPage() {
       if (data.success) {
         setParticipant({
           id: data.data.participantId,
+          token: data.data.participantToken,
+          sessionId: data.data.session.id,
           name: data.data.name,
           team: data.data.team,
         })
@@ -439,6 +447,7 @@ export default function StudentViewPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           participantId: participant.id,
+          participantToken: participant.token,
           message: newMessage.trim(),
         }),
       })

@@ -111,6 +111,13 @@ export async function POST(
       }
     }
 
+    if (body.note && body.note.length > 200) {
+      return NextResponse.json(
+        { success: false, error: 'Note must be 200 characters or less' },
+        { status: 400 }
+      )
+    }
+
     if (session.status === 'COMPLETED') {
       return NextResponse.json(
         { success: false, error: 'This quiz has already ended' },

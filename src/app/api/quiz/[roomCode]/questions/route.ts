@@ -8,6 +8,7 @@ import {
 import { AuthenticQuestion } from '@/data/questions/types'
 import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
+import { createHash } from 'crypto'
 
 export const dynamic = 'force-dynamic'
 
@@ -18,6 +19,19 @@ interface QuizSettings {
   chapters?: string[]
   classId?: string
   questionCount?: number
+}
+
+// Cryptographically secure seeded PRNG using SHA-256
+// This creates deterministic but unpredictable random values for question shuffling
+function createSeededRandom(seed: string): (index: number) => number {
+  return (index: number): number => {
+    const hash = createHash('sha256')
+      .update(`${seed}-${index}`)
+      .digest()
+    // Use first 4 bytes to create a number between 0 and 1
+    const num = hash.readUInt32BE(0)
+    return num / 0xffffffff
+  }
 }
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -95,11 +109,8 @@ export async function GET(
       )
     }
 
-    const seed = session.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
-    const seededRandom = (i: number) => {
-      const x = Math.sin(seed + i) * 10000
-      return x - Math.floor(x)
-    }
+    // Use cryptographically secure seeded random for deterministic but unpredictable shuffling
+    const seededRandom = createSeededRandom(session.id)
 
     const shuffledQuestions = [...questions].sort((a, b) => {
       const aVal = seededRandom(questions.indexOf(a))
@@ -184,11 +195,8 @@ export async function POST(
       questions = allQuestions.filter((q) => chapters.some((ch) => q.chapterId.includes(ch)))
     }
 
-    const seed = session.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
-    const seededRandom = (i: number) => {
-      const x = Math.sin(seed + i) * 10000
-      return x - Math.floor(x)
-    }
+    // Use cryptographically secure seeded random for deterministic but unpredictable shuffling
+    const seededRandom = createSeededRandom(session.id)
 
     const shuffledQuestions = [...questions].sort((a, b) => {
       const aVal = seededRandom(questions.indexOf(a))

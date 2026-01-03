@@ -2,11 +2,13 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizTeam } from '@/generated/prisma'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
+import { verifyParticipantToken } from '@/lib/quiz/auth'
 
 export const dynamic = 'force-dynamic'
 
 interface SendMessageRequest {
   participantId: string
+  participantToken: string // Required to prevent impersonation
   message: string
 }
 
@@ -59,14 +61,50 @@ export async function GET(
     const hostToken = request.headers.get('x-host-token')
     const isHost = hostToken === session.hostToken
 
+    // For non-host access, verify participant credentials
+    let participantTeam: QuizTeam | null = null
+    if (!isHost) {
+      const participantId = request.headers.get('x-participant-id')
+      const participantToken = request.headers.get('x-participant-token')
+
+      if (!participantId || !participantToken) {
+        return NextResponse.json(
+          { success: false, error: 'Participant authentication required' },
+          { status: 401 }
+        )
+      }
+
+      if (!verifyParticipantToken(participantToken, participantId, session.id)) {
+        return NextResponse.json(
+          { success: false, error: 'Invalid participant credentials' },
+          { status: 401 }
+        )
+      }
+
+      // Look up the participant's team
+      const participant = await prisma.quiz_participants.findUnique({
+        where: { id: participantId },
+        select: { team: true, sessionId: true },
+      })
+
+      if (!participant || participant.sessionId !== session.id) {
+        return NextResponse.json(
+          { success: false, error: 'Participant not found in this session' },
+          { status: 403 }
+        )
+      }
+
+      participantTeam = participant.team
+    }
+
     // Build query based on whether it's host or team member
     const whereClause: Record<string, unknown> = {
       sessionId: session.id,
     }
 
-    // If not host, only fetch messages for their team
-    if (!isHost && team) {
-      whereClause.team = team
+    // If not host, only fetch messages for the participant's verified team
+    if (!isHost && participantTeam) {
+      whereClause.team = participantTeam
     }
 
     // Use timestamp-based cursor for proper chronological ordering
@@ -149,9 +187,9 @@ export async function POST(
       )
     }
 
-    if (!body.participantId || !body.message?.trim()) {
+    if (!body.participantId || !body.participantToken || !body.message?.trim()) {
       return NextResponse.json(
-        { success: false, error: 'Participant ID and message are required' },
+        { success: false, error: 'Participant ID, token, and message are required' },
         { status: 400 }
       )
     }
@@ -179,6 +217,14 @@ export async function POST(
       return NextResponse.json(
         { success: false, error: 'Quiz has ended' },
         { status: 400 }
+      )
+    }
+
+    // Verify participant token to prevent impersonation attacks
+    if (!verifyParticipantToken(body.participantToken, body.participantId, session.id)) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid participant credentials' },
+        { status: 401 }
       )
     }
 

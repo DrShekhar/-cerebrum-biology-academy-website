@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizTeam } from '@/generated/prisma'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
+import { generateParticipantToken } from '@/lib/quiz/auth'
 
 export const dynamic = 'force-dynamic'
 
@@ -46,6 +47,24 @@ export async function POST(
       )
     }
 
+    const trimmedName = body.name.trim()
+
+    if (trimmedName.length < 2 || trimmedName.length > 50) {
+      return NextResponse.json(
+        { success: false, error: 'Name must be between 2 and 50 characters' },
+        { status: 400 }
+      )
+    }
+
+    // Only allow alphanumeric, spaces, and common punctuation
+    const nameRegex = /^[\p{L}\p{N}\s\-'.]+$/u
+    if (!nameRegex.test(trimmedName)) {
+      return NextResponse.json(
+        { success: false, error: 'Name contains invalid characters' },
+        { status: 400 }
+      )
+    }
+
     const session = await prisma.quiz_sessions.findUnique({
       where: { roomCode: roomCode.toUpperCase() },
     })
@@ -76,8 +95,6 @@ export async function POST(
       )
     }
 
-    const trimmedName = body.name.trim()
-
     // Use upsert to prevent race condition between check and create
     const participant = await prisma.quiz_participants.upsert({
       where: {
@@ -104,15 +121,20 @@ export async function POST(
     // Determine if this was a rejoin by checking if joinedAt is older than a few seconds
     const isRejoining = participant.joinedAt < new Date(Date.now() - 5000)
 
+    // Generate participant token for authenticated actions (chat, etc.)
+    const participantToken = generateParticipantToken(participant.id, session.id)
+
     return NextResponse.json({
       success: true,
       data: {
         participantId: participant.id,
+        participantToken, // Token for authenticated participant actions
         name: participant.name,
         team: participant.team,
         isHost: participant.isHost,
         isRejoining,
         session: {
+          id: session.id, // Include session ID for token verification
           title: session.title,
           format: session.format,
           status: session.status,

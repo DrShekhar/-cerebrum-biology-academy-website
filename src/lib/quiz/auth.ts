@@ -1,9 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { randomBytes } from 'crypto'
+import { randomBytes, createHash, timingSafeEqual } from 'crypto'
 
 export function generateHostToken(): string {
   return randomBytes(32).toString('hex')
+}
+
+// Generate a participant token based on their ID and session
+// This is a deterministic token that can be regenerated for validation
+export function generateParticipantToken(participantId: string, sessionId: string): string {
+  const secret = process.env.QUIZ_PARTICIPANT_SECRET || 'default-participant-secret'
+  return createHash('sha256')
+    .update(`${participantId}:${sessionId}:${secret}`)
+    .digest('hex')
+    .slice(0, 32)
+}
+
+// Verify a participant token
+export function verifyParticipantToken(
+  providedToken: string,
+  participantId: string,
+  sessionId: string
+): boolean {
+  const expectedToken = generateParticipantToken(participantId, sessionId)
+  if (providedToken.length !== expectedToken.length) {
+    return false
+  }
+  try {
+    return timingSafeEqual(Buffer.from(providedToken), Buffer.from(expectedToken))
+  } catch {
+    return false
+  }
 }
 
 export async function verifyHostToken(
