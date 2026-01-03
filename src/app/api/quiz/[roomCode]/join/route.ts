@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizTeam } from '@/generated/prisma'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -16,6 +17,19 @@ export async function POST(
   { params }: { params: Promise<{ roomCode: string }> }
 ) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 30,
+      window: 5 * 60 * 1000,
+      endpoint: 'quiz:join',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many join attempts. Please wait before trying again.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const { roomCode } = await params
     const body: JoinRequest = await request.json()
 

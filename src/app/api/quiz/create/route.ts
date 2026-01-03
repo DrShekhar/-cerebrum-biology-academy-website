@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { QuizFormat, QuizQuestionMode } from '@/generated/prisma'
 import { randomBytes } from 'crypto'
+import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
@@ -32,6 +33,19 @@ interface CreateQuizRequest {
 
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await ipRateLimit(request, {
+      limit: 10,
+      window: 15 * 60 * 1000,
+      endpoint: 'quiz:create',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many quiz creations. Please wait before creating another.' },
+        { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
+      )
+    }
+
     const body: CreateQuizRequest = await request.json()
 
     if (!body.title || body.title.trim().length === 0) {

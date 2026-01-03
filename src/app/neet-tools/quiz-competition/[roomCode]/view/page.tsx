@@ -35,6 +35,14 @@ interface Round {
   createdAt: string
 }
 
+interface Participant {
+  id: string
+  name: string
+  team: 'TEAM_A' | 'TEAM_B'
+  isHost: boolean
+  joinedAt: string
+}
+
 interface QuizSession {
   id: string
   roomCode: string
@@ -47,6 +55,7 @@ interface QuizSession {
   teamBScore: number
   currentRound: number
   rounds: Round[]
+  participants: Participant[]
   startedAt: string | null
   endedAt: string | null
   questionTimerSeconds: number
@@ -202,6 +211,9 @@ export default function StudentViewPage() {
   const [selectedTeam, setSelectedTeam] = useState<'TEAM_A' | 'TEAM_B' | null>(null)
   const [joining, setJoining] = useState(false)
   const [joinError, setJoinError] = useState<string | null>(null)
+
+  // Team members display
+  const [showTeamMembers, setShowTeamMembers] = useState(false)
 
   // Chat state
   const [messages, setMessages] = useState<ChatMessage[]>([])
@@ -812,7 +824,100 @@ export default function StudentViewPage() {
               <p className="text-3xl font-bold text-white">{session.teamBScore}</p>
             </div>
           </div>
+          {/* Team Members Toggle */}
+          <button
+            onClick={() => setShowTeamMembers(!showTeamMembers)}
+            className="mt-1.5 w-full flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-xs font-medium text-slate-400 hover:text-slate-300 hover:bg-slate-700/30 transition-colors"
+          >
+            <Users className="h-3.5 w-3.5" />
+            <span>
+              {session.participants?.length || 0} participants
+            </span>
+            {showTeamMembers ? (
+              <ChevronUp className="h-3.5 w-3.5" />
+            ) : (
+              <ChevronDown className="h-3.5 w-3.5" />
+            )}
+          </button>
         </div>
+
+        {/* Team Members Display */}
+        {showTeamMembers && session.participants && (
+          <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 shadow-xl">
+            <div className="grid grid-cols-2 gap-px bg-slate-700/30">
+              {/* Team A Members */}
+              <div className="bg-slate-800/80 p-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/30 text-[9px] font-bold text-blue-300">A</div>
+                  <span className="text-xs font-semibold text-blue-300">{session.teamAName}</span>
+                  <span className="ml-auto text-[10px] text-slate-500">
+                    {session.participants.filter((p) => p.team === 'TEAM_A').length}
+                  </span>
+                </div>
+                <div className="space-y-1 max-h-24 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
+                  {session.participants
+                    .filter((p) => p.team === 'TEAM_A')
+                    .map((p) => (
+                      <div
+                        key={p.id}
+                        className={`flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs ${
+                          p.id === participant.id
+                            ? 'bg-blue-500/20 text-blue-200 font-medium'
+                            : 'text-slate-400'
+                        }`}
+                      >
+                        <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-500/20 text-[8px] text-blue-300">
+                          {p.name.charAt(0).toUpperCase()}
+                        </span>
+                        <span className="truncate">{p.name}</span>
+                        {p.id === participant.id && (
+                          <span className="ml-auto text-[9px] text-blue-400">(you)</span>
+                        )}
+                      </div>
+                    ))}
+                  {session.participants.filter((p) => p.team === 'TEAM_A').length === 0 && (
+                    <p className="text-[10px] text-slate-500 italic px-2">No members yet</p>
+                  )}
+                </div>
+              </div>
+              {/* Team B Members */}
+              <div className="bg-slate-800/80 p-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/30 text-[9px] font-bold text-purple-300">B</div>
+                  <span className="text-xs font-semibold text-purple-300">{session.teamBName}</span>
+                  <span className="ml-auto text-[10px] text-slate-500">
+                    {session.participants.filter((p) => p.team === 'TEAM_B').length}
+                  </span>
+                </div>
+                <div className="space-y-1 max-h-24 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
+                  {session.participants
+                    .filter((p) => p.team === 'TEAM_B')
+                    .map((p) => (
+                      <div
+                        key={p.id}
+                        className={`flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs ${
+                          p.id === participant.id
+                            ? 'bg-purple-500/20 text-purple-200 font-medium'
+                            : 'text-slate-400'
+                        }`}
+                      >
+                        <span className="flex h-4 w-4 items-center justify-center rounded-full bg-purple-500/20 text-[8px] text-purple-300">
+                          {p.name.charAt(0).toUpperCase()}
+                        </span>
+                        <span className="truncate">{p.name}</span>
+                        {p.id === participant.id && (
+                          <span className="ml-auto text-[9px] text-purple-400">(you)</span>
+                        )}
+                      </div>
+                    ))}
+                  {session.participants.filter((p) => p.team === 'TEAM_B').length === 0 && (
+                    <p className="text-[10px] text-slate-500 italic px-2">No members yet</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Timer Display */}
         {session.activeTimerType && timerSeconds > 0 && (

@@ -10,19 +10,28 @@ import {
   Swords,
   Settings,
   Check,
+  BookOpen,
+  Zap,
 } from 'lucide-react'
+import { quizChapters, getChaptersByClass } from '@/data/quiz-chapters'
 
 interface ScoringRules {
   correct: number
   wrong: number
   pass: number
   partial?: Record<string, number>
+  chapters?: string[]
+  classId?: string
+  questionCount?: number
 }
 
 export default function CreateQuizPage() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12'>('class-11')
+  const [selectedChapters, setSelectedChapters] = useState<string[]>([])
+  const [questionCount, setQuestionCount] = useState(20)
 
   const [formData, setFormData] = useState({
     title: '',
@@ -37,10 +46,35 @@ export default function CreateQuizPage() {
     } as ScoringRules,
   })
 
+  const availableChapters = getChaptersByClass(selectedClass)
+
+  const toggleChapter = (chapterId: string) => {
+    setSelectedChapters((prev) =>
+      prev.includes(chapterId)
+        ? prev.filter((id) => id !== chapterId)
+        : [...prev, chapterId]
+    )
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError(null)
+
+    if (formData.questionMode === 'PRELOADED' && selectedChapters.length === 0) {
+      setError('Please select at least one chapter for Auto Mode')
+      setLoading(false)
+      return
+    }
+
+    const scoringRulesWithChapters = {
+      ...formData.scoringRules,
+      ...(formData.questionMode === 'PRELOADED' && {
+        chapters: selectedChapters,
+        classId: selectedClass,
+        questionCount: questionCount,
+      }),
+    }
 
     try {
       const res = await fetch('/api/quiz/create', {
@@ -48,6 +82,7 @@ export default function CreateQuizPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
+          scoringRules: scoringRulesWithChapters,
           createdById: 'anonymous',
         }),
       })
@@ -162,6 +197,165 @@ export default function CreateQuizPage() {
               </button>
             </div>
           </div>
+
+          {/* Question Mode */}
+          <div className="rounded-xl border border-gray-200 bg-white p-6">
+            <label className="mb-4 block text-sm font-medium text-gray-700">
+              Question Mode
+            </label>
+            <div className="grid gap-4 md:grid-cols-2">
+              <button
+                type="button"
+                onClick={() => setFormData({ ...formData, questionMode: 'SIMPLE_SCOREBOARD' })}
+                className={`rounded-xl border-2 p-4 text-left transition-all ${
+                  formData.questionMode === 'SIMPLE_SCOREBOARD'
+                    ? 'border-green-600 bg-green-50 ring-2 ring-green-200'
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className="mb-2 flex items-center gap-2">
+                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                    formData.questionMode === 'SIMPLE_SCOREBOARD' ? 'bg-green-100' : 'bg-gray-100'
+                  }`}>
+                    <Settings className={`h-5 w-5 ${
+                      formData.questionMode === 'SIMPLE_SCOREBOARD' ? 'text-green-600' : 'text-gray-500'
+                    }`} />
+                  </div>
+                  {formData.questionMode === 'SIMPLE_SCOREBOARD' && (
+                    <Check className="ml-auto h-5 w-5 text-green-600" />
+                  )}
+                </div>
+                <h3 className="font-semibold text-gray-900">Manual Mode</h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  Read questions aloud. Score manually with +/- buttons.
+                </p>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setFormData({ ...formData, questionMode: 'PRELOADED' })}
+                className={`rounded-xl border-2 p-4 text-left transition-all ${
+                  formData.questionMode === 'PRELOADED'
+                    ? 'border-teal-600 bg-teal-50 ring-2 ring-teal-200'
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className="mb-2 flex items-center gap-2">
+                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                    formData.questionMode === 'PRELOADED' ? 'bg-teal-100' : 'bg-gray-100'
+                  }`}>
+                    <Zap className={`h-5 w-5 ${
+                      formData.questionMode === 'PRELOADED' ? 'text-teal-600' : 'text-gray-500'
+                    }`} />
+                  </div>
+                  {formData.questionMode === 'PRELOADED' && (
+                    <Check className="ml-auto h-5 w-5 text-teal-600" />
+                  )}
+                </div>
+                <h3 className="font-semibold text-gray-900">Auto Mode</h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  Questions from NCERT chapters. Displayed on screen.
+                </p>
+              </button>
+            </div>
+          </div>
+
+          {/* Chapter Selection (only for PRELOADED mode) */}
+          {formData.questionMode === 'PRELOADED' && (
+            <div className="rounded-xl border border-teal-200 bg-teal-50/50 p-6">
+              <div className="mb-4 flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-teal-600" />
+                <label className="text-sm font-medium text-gray-700">
+                  Select Chapters
+                </label>
+              </div>
+
+              {/* Class Selection */}
+              <div className="mb-4 flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedClass('class-11')
+                    setSelectedChapters([])
+                  }}
+                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+                    selectedClass === 'class-11'
+                      ? 'bg-teal-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  Class 11
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedClass('class-12')
+                    setSelectedChapters([])
+                  }}
+                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+                    selectedClass === 'class-12'
+                      ? 'bg-teal-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  Class 12
+                </button>
+              </div>
+
+              {/* Chapter Grid */}
+              <div className="mb-4 grid gap-2 sm:grid-cols-2">
+                {availableChapters.map((chapter) => (
+                  <button
+                    key={chapter.id}
+                    type="button"
+                    onClick={() => toggleChapter(chapter.id)}
+                    className={`rounded-lg border p-3 text-left text-sm transition-all ${
+                      selectedChapters.includes(chapter.id)
+                        ? 'border-teal-500 bg-teal-100 text-teal-800'
+                        : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div
+                        className={`flex h-5 w-5 items-center justify-center rounded ${
+                          selectedChapters.includes(chapter.id)
+                            ? 'bg-teal-600 text-white'
+                            : 'border border-gray-300 bg-white'
+                        }`}
+                      >
+                        {selectedChapters.includes(chapter.id) && (
+                          <Check className="h-3 w-3" />
+                        )}
+                      </div>
+                      <span className="truncate">{chapter.name}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Question Count */}
+              <div className="flex items-center gap-4">
+                <label className="text-sm text-gray-600">Questions per quiz:</label>
+                <select
+                  value={questionCount}
+                  onChange={(e) => setQuestionCount(parseInt(e.target.value))}
+                  className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+                >
+                  <option value={10}>10 questions</option>
+                  <option value={15}>15 questions</option>
+                  <option value={20}>20 questions</option>
+                  <option value={25}>25 questions</option>
+                  <option value={30}>30 questions</option>
+                </select>
+              </div>
+
+              {selectedChapters.length > 0 && (
+                <p className="mt-3 text-xs text-teal-700">
+                  {selectedChapters.length} chapter{selectedChapters.length > 1 ? 's' : ''} selected
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Team Names */}
           <div className="rounded-xl border border-gray-200 bg-white p-6">
