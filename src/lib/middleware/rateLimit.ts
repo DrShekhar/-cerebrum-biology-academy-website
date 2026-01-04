@@ -1,5 +1,26 @@
 import { NextRequest } from 'next/server'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 import { logger } from '@/lib/utils/logger'
+
+// Create Upstash Redis client for distributed rate limiting
+// Falls back to in-memory if not configured
+const upstashRedis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+    : null
+
+// Log Redis status once at startup (only in development)
+if (process.env.NODE_ENV === 'development') {
+  if (upstashRedis) {
+    console.info('Rate Limiting: Using Upstash Redis (distributed)')
+  } else {
+    console.info('Rate Limiting: Using in-memory storage (local only)')
+  }
+}
 
 interface RateLimitConfig {
   identifier: string
@@ -52,8 +73,44 @@ export async function withRateLimit(
 ): Promise<RateLimitResult> {
   try {
     const { identifier, limit, window, keyPrefix = 'rl' } = config
-    const now = Date.now()
     const key = `${keyPrefix}:${identifier}`
+
+    // Try Upstash Redis rate limiting first (distributed, persistent)
+    if (upstashRedis) {
+      try {
+        const ratelimit = new Ratelimit({
+          redis: upstashRedis,
+          limiter: Ratelimit.slidingWindow(limit, `${window}ms`),
+          prefix: keyPrefix,
+          analytics: true,
+        })
+
+        const result = await ratelimit.limit(key)
+
+        if (!result.success) {
+          logger.warn('Rate limit exceeded (Upstash):', {
+            identifier,
+            limit,
+            remaining: result.remaining,
+            resetTime: result.reset,
+          })
+        }
+
+        return {
+          success: result.success,
+          limit,
+          remaining: result.remaining,
+          resetTime: result.reset,
+          error: result.success ? undefined : 'Rate limit exceeded',
+        }
+      } catch (upstashError) {
+        logger.error('Upstash rate limiting error, falling back to in-memory:', upstashError)
+        // Fall through to in-memory rate limiting
+      }
+    }
+
+    // Fallback: In-memory rate limiting (for local dev or if Upstash unavailable)
+    const now = Date.now()
 
     // Get current rate limit state
     const current = rateLimitStorage.get(key)
@@ -62,24 +119,24 @@ export async function withRateLimit(
       // Create new window
       rateLimitStorage.set(key, {
         count: 1,
-        resetTime: now + window
+        resetTime: now + window,
       })
 
       return {
         success: true,
         limit,
         remaining: limit - 1,
-        resetTime: now + window
+        resetTime: now + window,
       }
     }
 
     // Check if limit exceeded
     if (current.count >= limit) {
-      logger.warn('Rate limit exceeded:', {
+      logger.warn('Rate limit exceeded (in-memory):', {
         identifier,
         limit,
         count: current.count,
-        resetTime: current.resetTime
+        resetTime: current.resetTime,
       })
 
       return {
@@ -87,7 +144,7 @@ export async function withRateLimit(
         limit,
         remaining: 0,
         resetTime: current.resetTime,
-        error: 'Rate limit exceeded'
+        error: 'Rate limit exceeded',
       }
     }
 
@@ -98,9 +155,8 @@ export async function withRateLimit(
       success: true,
       limit,
       remaining: limit - current.count,
-      resetTime: current.resetTime
+      resetTime: current.resetTime,
     }
-
   } catch (error) {
     logger.error('Rate limiting error:', error)
 
@@ -109,7 +165,7 @@ export async function withRateLimit(
       success: true,
       limit: config.limit,
       remaining: config.limit,
-      resetTime: Date.now() + config.window
+      resetTime: Date.now() + config.window,
     }
   }
 }
