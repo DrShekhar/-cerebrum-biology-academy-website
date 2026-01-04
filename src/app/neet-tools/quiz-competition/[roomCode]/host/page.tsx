@@ -582,7 +582,7 @@ export default function HostControlPanel() {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-50">
         <div className="text-center">
-          <Loader2 className="mx-auto h-12 w-12 animate-spin text-indigo-600" />
+          <Loader2 className="mx-auto h-12 w-12 animate-spin text-[#4a5d4a]" />
           <p className="mt-4 text-gray-600">Loading quiz...</p>
         </div>
       </main>
@@ -598,7 +598,7 @@ export default function HostControlPanel() {
           <p className="mt-2 text-gray-600">{error || 'This quiz session does not exist.'}</p>
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#4a5d4a] px-4 py-2 text-white hover:bg-[#5a6d5a]"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Quiz Competition
@@ -617,7 +617,7 @@ export default function HostControlPanel() {
           <div className="mt-6 flex justify-center gap-8">
             <div className="text-center">
               <p className="text-lg font-medium text-gray-600">{session.teamAName}</p>
-              <p className="text-4xl font-bold text-indigo-600">{session.teamAScore}</p>
+              <p className="text-4xl font-bold text-blue-600">{session.teamAScore}</p>
             </div>
             <div className="text-center">
               <p className="text-lg font-medium text-gray-600">{session.teamBName}</p>
@@ -634,7 +634,7 @@ export default function HostControlPanel() {
           </p>
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#4a5d4a] px-6 py-3 font-semibold text-white hover:bg-[#5a6d5a]"
           >
             Back to Dashboard
           </Link>
