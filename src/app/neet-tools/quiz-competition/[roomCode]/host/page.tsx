@@ -733,23 +733,23 @@ export default function HostControlPanel() {
 
       <div className="mx-auto max-w-7xl px-4 py-6">
         {/* Room Code Banner */}
-        <div className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 shadow-xl">
+        <div className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] shadow-xl">
           <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <div className="text-center sm:text-left">
-              <p className="text-sm font-medium text-blue-100">Room Code</p>
+              <p className="text-sm font-medium text-green-100">Room Code</p>
               <p className="text-3xl font-bold tracking-[0.2em] text-white sm:text-4xl">
                 {session.roomCode}
               </p>
-              <p className="mt-1.5 text-xs text-blue-200 sm:text-sm">
+              <p className="mt-1.5 text-xs text-green-200 sm:text-sm">
                 <span className="hidden sm:inline">Students join at: </span>
-                <span className="rounded bg-white/10 px-2 py-0.5 font-mono">
+                <span className="rounded bg-white/15 px-2 py-0.5 font-mono">
                   /{session.roomCode}/view
                 </span>
               </p>
             </div>
             <button
               onClick={copyRoomCode}
-              className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-2.5 font-semibold text-purple-700 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+              className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-2.5 font-semibold text-[#3d4d3d] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
             >
               {copied ? (
                 <>
