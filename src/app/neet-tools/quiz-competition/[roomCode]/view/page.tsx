@@ -591,7 +591,7 @@ export default function StudentViewPage() {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-600 shadow-xl shadow-teal-500/20">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#3d4d3d] to-[#4a5d4a] shadow-xl shadow-green-500/20">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
           <p className="mt-4 text-lg font-medium text-white">Connecting to quiz...</p>
@@ -612,13 +612,13 @@ export default function StudentViewPage() {
           <p className="mt-2 text-slate-400">{error || 'This room code is invalid.'}</p>
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-[#4a5d4a] hover:to-[#5a6d5a] hover:shadow-xl"
           >
             <ArrowLeft className="h-5 w-5" />
             Back to Quiz Competition
           </Link>
           <p className="mt-6 text-xs text-slate-500">
-            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -631,7 +631,7 @@ export default function StudentViewPage() {
       <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div className="w-full max-w-md">
           {/* Header Card */}
-          <div className="mb-4 overflow-hidden rounded-2xl bg-gradient-to-r from-teal-600 to-blue-600 p-6 shadow-2xl">
+          <div className="mb-4 overflow-hidden rounded-2xl bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] p-6 shadow-2xl">
             <div className="text-center">
               <div className="mb-3 inline-flex items-center justify-center rounded-full bg-white/20 px-4 py-1.5">
                 <span className="font-mono text-sm font-bold tracking-widest text-white">
@@ -639,7 +639,7 @@ export default function StudentViewPage() {
                 </span>
               </div>
               <h1 className="text-2xl font-bold text-white">{session.title}</h1>
-              <p className="mt-1.5 text-sm text-teal-100">Join to participate in team chat</p>
+              <p className="mt-1.5 text-sm text-green-100">Join to participate in team chat</p>
             </div>
           </div>
 
@@ -659,7 +659,7 @@ export default function StudentViewPage() {
                   value={joinName}
                   onChange={(e) => setJoinName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border-2 border-slate-600 bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 transition-all focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+                  className="w-full rounded-xl border-2 border-slate-600 bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 transition-all focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20"
                   maxLength={30}
                   aria-required="true"
                   autoComplete="name"
@@ -724,7 +724,7 @@ export default function StudentViewPage() {
               <button
                 onClick={handleJoin}
                 disabled={joining || !joinName.trim() || !selectedTeam}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-3.5 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl disabled:opacity-50"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] px-4 py-3.5 font-semibold text-white shadow-lg transition-all hover:from-[#4a5d4a] hover:to-[#5a6d5a] hover:shadow-xl disabled:opacity-50"
               >
                 {joining ? (
                   <>
@@ -742,7 +742,7 @@ export default function StudentViewPage() {
           </div>
 
           <p className="mt-4 text-center text-xs text-slate-500">
-            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -821,14 +821,14 @@ export default function StudentViewPage() {
 
           <Link
             href="/neet-tools/quiz-competition"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-teal-400 hover:to-blue-500 hover:shadow-xl sm:mt-8"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] px-6 py-3 font-semibold text-white shadow-lg transition-all hover:from-[#4a5d4a] hover:to-[#5a6d5a] hover:shadow-xl sm:mt-8"
           >
             <ArrowLeft className="h-5 w-5" />
             Back to Dashboard
           </Link>
 
           <p className="mt-6 text-center text-xs text-slate-500">
-            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -848,7 +848,7 @@ export default function StudentViewPage() {
       >
         {soundEnabled ? (
           <>
-            <Volume2 className="h-4 w-4 text-teal-400" />
+            <Volume2 className="h-4 w-4 text-[#4a5d4a]" />
             <span className="hidden sm:inline">Sound On</span>
           </>
         ) : (
@@ -889,7 +889,7 @@ export default function StudentViewPage() {
               <span>Offline</span>
               <button
                 onClick={handleManualRetry}
-                className="ml-1 flex items-center gap-1 rounded-full bg-teal-600 px-2 py-0.5 text-xs font-medium text-white hover:bg-teal-500 transition-colors"
+                className="ml-1 flex items-center gap-1 rounded-full bg-[#4a5d4a] px-2 py-0.5 text-xs font-medium text-white hover:bg-[#5a6d5a] transition-colors"
                 title="Retry connection"
               >
                 <RefreshCw className="h-3 w-3" />
@@ -912,7 +912,7 @@ export default function StudentViewPage() {
         <div className="mb-4 text-center">
           <Link
             href="/neet-tools/quiz-competition"
-            className="mb-2 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-teal-400 transition-colors"
+            className="mb-2 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-[#4a5d4a] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Exit Quiz
@@ -920,7 +920,7 @@ export default function StudentViewPage() {
           <h1 className="text-xl font-bold text-white">{session.title}</h1>
           <div className="mt-2 flex items-center justify-center gap-3 text-sm">
             <span className="flex items-center gap-1.5 rounded-full border border-slate-700/50 bg-slate-800/50 px-3 py-1 text-slate-300">
-              <Clock className="h-4 w-4 text-teal-400" />
+              <Clock className="h-4 w-4 text-[#4a5d4a]" />
               Round {session.currentRound}
             </span>
             <span
@@ -1081,20 +1081,20 @@ export default function StudentViewPage() {
                 ? 'border-red-500/50 bg-gradient-to-r from-red-500/20 to-red-600/20'
                 : timerSeconds <= 30
                   ? 'border-orange-500/50 bg-gradient-to-r from-orange-500/20 to-orange-600/20'
-                  : 'border-teal-500/50 bg-gradient-to-r from-teal-500/20 to-teal-600/20'
+                  : 'border-green-500/50 bg-gradient-to-r from-green-500/20 to-green-600/20'
             }`}
           >
             <div className="p-4 text-center">
               <div className="flex items-center justify-center gap-3">
                 <Timer
-                  className={`h-6 w-6 ${timerSeconds <= 10 ? 'text-red-400 animate-pulse' : timerSeconds <= 30 ? 'text-orange-400' : 'text-teal-400'}`}
+                  className={`h-6 w-6 ${timerSeconds <= 10 ? 'text-red-400 animate-pulse' : timerSeconds <= 30 ? 'text-orange-400' : 'text-green-400'}`}
                 />
                 <div>
                   <p className="text-xs font-medium text-slate-400 uppercase tracking-wider">
                     {session.activeTimerType === 'question' ? 'Question Time' : 'Answer Time'}
                   </p>
                   <p
-                    className={`text-4xl font-bold ${timerSeconds <= 10 ? 'text-red-400' : timerSeconds <= 30 ? 'text-orange-400' : 'text-teal-300'}`}
+                    className={`text-4xl font-bold ${timerSeconds <= 10 ? 'text-red-400' : timerSeconds <= 30 ? 'text-orange-400' : 'text-green-300'}`}
                   >
                     {formatTime(timerSeconds)}
                   </p>
@@ -1302,7 +1302,7 @@ export default function StudentViewPage() {
                   }}
                   placeholder="Type a message..."
                   aria-label="Chat message"
-                  className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+                  className="flex-1 rounded-xl border border-slate-600 bg-slate-700/50 px-4 py-2.5 text-sm text-white placeholder-slate-400 transition-colors focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20"
                   maxLength={500}
                   disabled={sendingMessage}
                   autoComplete="off"
@@ -1329,7 +1329,7 @@ export default function StudentViewPage() {
         <div className="overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 shadow-xl backdrop-blur-sm">
           <div className="border-b border-slate-700/50 bg-slate-800/30 p-4">
             <h3 className="flex items-center gap-2 text-sm font-semibold text-white">
-              <Clock className="h-4 w-4 text-teal-400" />
+              <Clock className="h-4 w-4 text-[#4a5d4a]" />
               Recent Activity
             </h3>
           </div>
@@ -1395,7 +1395,7 @@ export default function StudentViewPage() {
         <div className="mt-4 text-center">
           <p className="text-xs text-slate-500">Last updated: {lastUpdate.toLocaleTimeString()}</p>
           <p className="mt-2 text-xs text-slate-600">
-            Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
+            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </div>
