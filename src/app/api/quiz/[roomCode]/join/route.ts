@@ -18,8 +18,8 @@ export async function POST(
 ) {
   try {
     const rateLimitResult = await ipRateLimit(request, {
-      limit: 30,
-      window: 5 * 60 * 1000,
+      limit: 200,
+      window: 15 * 60 * 1000,
       endpoint: 'quiz:join',
     })
 
@@ -173,8 +173,25 @@ export async function POST(
     })
   } catch (error) {
     console.error('Error joining quiz session:', error)
+
+    // Check for specific error types
+    if (error instanceof Error) {
+      if (error.message.includes('QUIZ_PARTICIPANT_SECRET')) {
+        return NextResponse.json(
+          { success: false, error: 'Server configuration error. Please contact the administrator.' },
+          { status: 500 }
+        )
+      }
+      if (error.message.includes('Unique constraint')) {
+        return NextResponse.json(
+          { success: false, error: 'Please try again in a moment.' },
+          { status: 409 }
+        )
+      }
+    }
+
     return NextResponse.json(
-      { success: false, error: 'Failed to join quiz session' },
+      { success: false, error: 'Failed to join quiz session. Please try again.' },
       { status: 500 }
     )
   }
