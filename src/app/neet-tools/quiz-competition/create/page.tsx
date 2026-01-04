@@ -474,8 +474,24 @@ export default function CreateQuizPage() {
 
           {/* Error Message */}
           {error && (
-            <div className="rounded-lg bg-red-50 p-4 text-red-600">
-              {error}
+            <div className={`rounded-lg p-4 ${
+              error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')
+                ? 'border-2 border-orange-300 bg-orange-50 text-orange-700'
+                : 'bg-red-50 text-red-600'
+            }`}>
+              <div className="flex items-start gap-3">
+                {(error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')) && (
+                  <span className="text-2xl">⏳</span>
+                )}
+                <div>
+                  <p className="font-medium">{error}</p>
+                  {(error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')) && (
+                    <p className="mt-1 text-sm text-orange-600">
+                      You've created too many quizzes recently. Please wait a few minutes and try again.
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
           )}
 

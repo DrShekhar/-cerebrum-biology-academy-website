@@ -27,7 +27,9 @@ import {
   Settings,
   MessageCircle,
   UserMinus,
+  RefreshCw,
 } from 'lucide-react'
+import { formatRelativeTime } from '@/lib/utils/time'
 
 interface Round {
   id: string
@@ -168,6 +170,12 @@ export default function HostControlPanel() {
       setLoading(false)
     }
   }, [roomCode, hostToken, session])
+
+  const handleManualRetry = useCallback(() => {
+    setFailCount(0)
+    setBackoffMs(3000)
+    fetchSession()
+  }, [fetchSession])
 
   const fetchMessages = useCallback(async () => {
     try {
@@ -315,6 +323,19 @@ export default function HostControlPanel() {
   }
 
   const saveTimerSettings = async () => {
+    // Validate timer inputs (10-600 seconds)
+    const questionSeconds = parseInt(questionTimerInput) || 60
+    const answerSeconds = parseInt(answerTimerInput) || 60
+
+    if (questionSeconds < 10 || questionSeconds > 600) {
+      alert('Question timer must be between 10 and 600 seconds')
+      return
+    }
+    if (answerSeconds < 10 || answerSeconds > 600) {
+      alert('Answer timer must be between 10 and 600 seconds')
+      return
+    }
+
     try {
       const headers: Record<string, string> = { 'Content-Type': 'application/json' }
       if (hostToken) headers['x-host-token'] = hostToken
@@ -323,8 +344,8 @@ export default function HostControlPanel() {
         method: 'POST',
         headers,
         body: JSON.stringify({
-          questionTimerSeconds: parseInt(questionTimerInput) || 60,
-          answerTimerSeconds: parseInt(answerTimerInput) || 60,
+          questionTimerSeconds: questionSeconds,
+          answerTimerSeconds: answerSeconds,
         }),
       })
       const data = await res.json()
@@ -379,6 +400,15 @@ export default function HostControlPanel() {
 
   const submitScore = async (outcome: string, points?: number) => {
     if (!session) return
+
+    // Validate custom points if provided
+    if (points !== undefined) {
+      if (isNaN(points) || points < -1000 || points > 1000) {
+        alert('Custom points must be between -1000 and 1000')
+        return
+      }
+    }
+
     setActionLoading(true)
 
     try {
@@ -642,17 +672,46 @@ export default function HostControlPanel() {
             <div className="flex items-center gap-2 sm:gap-4">
               {/* Connection status indicator */}
               <div
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
                 className={`flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium ${
-                  isConnected
+                  failCount === 0
                     ? 'bg-green-50 text-green-700'
-                    : 'animate-pulse bg-orange-100 text-orange-700'
+                    : failCount < 3
+                      ? 'animate-pulse bg-orange-100 text-orange-700'
+                      : 'bg-red-100 text-red-700'
                 }`}
-                title={isConnected ? 'Connected' : 'Reconnecting...'}
+                title={
+                  failCount === 0 ? 'Connected' : failCount < 3 ? 'Slow connection' : 'Offline'
+                }
               >
                 <div
-                  className={`h-2 w-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-orange-500'}`}
+                  className={`h-2 w-2 rounded-full ${
+                    failCount === 0
+                      ? 'bg-green-500'
+                      : failCount < 3
+                        ? 'bg-orange-500'
+                        : 'bg-red-500'
+                  }`}
                 />
-                <span className="hidden sm:inline">{isConnected ? 'Live' : 'Reconnecting'}</span>
+                {failCount === 0 ? (
+                  <span className="hidden sm:inline">Live</span>
+                ) : failCount < 3 ? (
+                  <span className="hidden sm:inline">Slow</span>
+                ) : (
+                  <>
+                    <span className="hidden sm:inline">Offline</span>
+                    <button
+                      onClick={handleManualRetry}
+                      className="ml-1 flex items-center gap-1 rounded bg-teal-600 px-1.5 py-0.5 text-xs font-medium text-white hover:bg-teal-500 transition-colors"
+                      title="Retry connection"
+                    >
+                      <RefreshCw className="h-3 w-3" />
+                      Retry
+                    </button>
+                  </>
+                )}
               </div>
               <button
                 onClick={() => setShowParticipantsManager(true)}
@@ -720,6 +779,10 @@ export default function HostControlPanel() {
               {session.activeTimerType ? (
                 <>
                   <div
+                    role="timer"
+                    aria-live={timerSeconds <= 10 ? 'assertive' : 'polite'}
+                    aria-atomic="true"
+                    aria-label={`${session.activeTimerType === 'question' ? 'Question' : 'Answer'} timer: ${formatTime(timerSeconds)} remaining`}
                     className={`flex items-center gap-2 rounded-xl px-4 py-2 font-mono text-2xl font-bold ${
                       timerSeconds <= 10
                         ? 'animate-pulse bg-red-100 text-red-600'
@@ -1141,8 +1204,13 @@ export default function HostControlPanel() {
                             key={msg.id}
                             className="rounded-lg border border-blue-100 bg-white p-2.5 text-xs shadow-sm"
                           >
-                            <span className="font-semibold text-blue-700">{msg.senderName}:</span>{' '}
-                            <span className="text-gray-700">{msg.message}</span>
+                            <div className="flex items-center gap-1.5">
+                              <span className="font-semibold text-blue-700">{msg.senderName}</span>
+                              <span className="text-[10px] text-gray-400">
+                                {formatRelativeTime(msg.createdAt)}
+                              </span>
+                            </div>
+                            <p className="mt-0.5 text-gray-700">{msg.message}</p>
                           </div>
                         ))
                     )}
@@ -1171,8 +1239,15 @@ export default function HostControlPanel() {
                             key={msg.id}
                             className="rounded-lg border border-purple-100 bg-white p-2.5 text-xs shadow-sm"
                           >
-                            <span className="font-semibold text-purple-700">{msg.senderName}:</span>{' '}
-                            <span className="text-gray-700">{msg.message}</span>
+                            <div className="flex items-center gap-1.5">
+                              <span className="font-semibold text-purple-700">
+                                {msg.senderName}
+                              </span>
+                              <span className="text-[10px] text-gray-400">
+                                {formatRelativeTime(msg.createdAt)}
+                              </span>
+                            </div>
+                            <p className="mt-0.5 text-gray-700">{msg.message}</p>
                           </div>
                         ))
                     )}

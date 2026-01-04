@@ -35,14 +35,21 @@ interface CreateQuizRequest {
 export async function POST(request: NextRequest) {
   try {
     const rateLimitResult = await ipRateLimit(request, {
-      limit: 10,
+      limit: 30,
       window: 15 * 60 * 1000,
       endpoint: 'quiz:create',
     })
 
     if (!rateLimitResult.success) {
+      const waitMinutes = Math.ceil((rateLimitResult.resetTime - Date.now()) / 60000)
+      const displayMinutes = waitMinutes > 0 ? waitMinutes : 1
       return NextResponse.json(
-        { success: false, error: 'Too many quiz creations. Please wait before creating another.' },
+        {
+          success: false,
+          error: `Rate limit exceeded. Please wait ${displayMinutes} minute${displayMinutes !== 1 ? 's' : ''} before creating another quiz.`,
+          rateLimited: true,
+          resetInMinutes: displayMinutes,
+        },
         { status: 429, headers: getRateLimitHeaders(rateLimitResult) }
       )
     }

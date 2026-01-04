@@ -9,11 +9,13 @@ export function generateHostToken(): string {
 // Generate a participant token based on their ID and session
 // This is a deterministic token that can be regenerated for validation
 export function generateParticipantToken(participantId: string, sessionId: string): string {
-  const secret = process.env.QUIZ_PARTICIPANT_SECRET || 'default-participant-secret'
+  const secret = process.env.QUIZ_PARTICIPANT_SECRET
+  if (!secret || secret.length < 32) {
+    throw new Error('QUIZ_PARTICIPANT_SECRET must be set and at least 32 characters')
+  }
   return createHash('sha256')
     .update(`${participantId}:${sessionId}:${secret}`)
     .digest('hex')
-    .slice(0, 32)
 }
 
 // Verify a participant token
@@ -58,7 +60,14 @@ export async function verifyHostToken(
     return { valid: false, error: 'Quiz session not found' }
   }
 
-  if (session.hostToken !== authHeader) {
+  // Use timing-safe comparison to prevent timing attacks
+  try {
+    const hostTokenBuffer = Buffer.from(session.hostToken)
+    const authBuffer = Buffer.from(authHeader)
+    if (hostTokenBuffer.length !== authBuffer.length || !timingSafeEqual(hostTokenBuffer, authBuffer)) {
+      return { valid: false, error: 'Invalid host token' }
+    }
+  } catch {
     return { valid: false, error: 'Invalid host token' }
   }
 

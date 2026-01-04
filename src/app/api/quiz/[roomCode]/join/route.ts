@@ -33,9 +33,11 @@ export async function POST(
     const { roomCode } = await params
     const body: JoinRequest = await request.json()
 
-    if (!roomCode || roomCode.length !== 6) {
+    // Validate room code: exactly 6 alphanumeric characters
+    const roomCodeRegex = /^[A-Z0-9]{6}$/
+    if (!roomCode || !roomCodeRegex.test(roomCode.toUpperCase())) {
       return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
+        { success: false, error: 'Invalid room code format' },
         { status: 400 }
       )
     }
@@ -79,6 +81,30 @@ export async function POST(
     if (session.status === 'COMPLETED') {
       return NextResponse.json(
         { success: false, error: 'This quiz has already ended' },
+        { status: 400 }
+      )
+    }
+
+    // Check if participant already exists (for team switch prevention)
+    const existingParticipant = await prisma.quiz_participants.findUnique({
+      where: {
+        sessionId_name: {
+          sessionId: session.id,
+          name: trimmedName,
+        },
+      },
+    })
+
+    // Prevent team switching during an active quiz
+    if (
+      existingParticipant &&
+      session.status === 'IN_PROGRESS' &&
+      body.team &&
+      existingParticipant.team &&
+      existingParticipant.team !== body.team
+    ) {
+      return NextResponse.json(
+        { success: false, error: 'Cannot switch teams while quiz is in progress' },
         { status: 400 }
       )
     }

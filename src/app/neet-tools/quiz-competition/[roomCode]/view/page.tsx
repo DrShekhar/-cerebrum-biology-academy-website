@@ -23,7 +23,9 @@ import {
   Volume2,
   VolumeX,
   Timer,
+  RefreshCw,
 } from 'lucide-react'
+import { formatRelativeTime } from '@/lib/utils/time'
 
 interface Round {
   id: string
@@ -66,6 +68,11 @@ interface QuizSession {
   teamDiscussing: 'TEAM_A' | 'TEAM_B' | null
 }
 
+interface ReactionData {
+  count: number
+  participantIds: string[]
+}
+
 interface ChatMessage {
   id: string
   team: 'TEAM_A' | 'TEAM_B'
@@ -73,7 +80,10 @@ interface ChatMessage {
   senderName: string
   message: string
   createdAt: string
+  reactions?: Record<string, ReactionData>
 }
+
+const REACTION_EMOJIS = ['👍', '❤️', '😂', '❓', '🔥'] as const
 
 interface ParticipantInfo {
   id: string
@@ -86,7 +96,8 @@ interface ParticipantInfo {
 // Sound utilities using Web Audio API
 const createAudioContext = () => {
   if (typeof window !== 'undefined') {
-    return new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
+    return new (window.AudioContext ||
+      (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
   }
   return null
 }
@@ -201,11 +212,14 @@ export default function StudentViewPage() {
   }, [])
 
   // Play sound helper
-  const playSoundIfEnabled = useCallback((type: SoundType) => {
-    if (soundEnabled && audioContextRef.current) {
-      playSound(audioContextRef.current, type)
-    }
-  }, [soundEnabled])
+  const playSoundIfEnabled = useCallback(
+    (type: SoundType) => {
+      if (soundEnabled && audioContextRef.current) {
+        playSound(audioContextRef.current, type)
+      }
+    },
+    [soundEnabled]
+  )
 
   // Join state
   const [participant, setParticipant] = useState<ParticipantInfo | null>(null)
@@ -222,6 +236,7 @@ export default function StudentViewPage() {
   const [newMessage, setNewMessage] = useState('')
   const [sendingMessage, setSendingMessage] = useState(false)
   const [chatExpanded, setChatExpanded] = useState(true)
+  const [activeReactionPicker, setActiveReactionPicker] = useState<string | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const chatContainerRef = useRef<HTMLDivElement>(null)
   const lastMessageTimestampRef = useRef<string | null>(null)
@@ -243,7 +258,8 @@ export default function StudentViewPage() {
   // Sound trigger: Your team scores (only when your team's score increases)
   useEffect(() => {
     if (session && participant) {
-      const currentTeamScore = participant.team === 'TEAM_A' ? session.teamAScore : session.teamBScore
+      const currentTeamScore =
+        participant.team === 'TEAM_A' ? session.teamAScore : session.teamBScore
       if (prevTeamScoreRef.current !== null && currentTeamScore > prevTeamScoreRef.current) {
         playSoundIfEnabled('teamScore')
       }
@@ -291,7 +307,13 @@ export default function StudentViewPage() {
     updateTimer()
     const interval = setInterval(updateTimer, 1000)
     return () => clearInterval(interval)
-  }, [session?.activeTimerType, session?.timerStartedAt, session?.questionTimerSeconds, session?.answerTimerSeconds, playSoundIfEnabled])
+  }, [
+    session?.activeTimerType,
+    session?.timerStartedAt,
+    session?.questionTimerSeconds,
+    session?.answerTimerSeconds,
+    playSoundIfEnabled,
+  ])
 
   // Format timer for display
   const formatTime = (seconds: number) => {
@@ -328,6 +350,12 @@ export default function StudentViewPage() {
       setLoading(false)
     }
   }, [roomCode])
+
+  const handleManualRetry = useCallback(() => {
+    setFailCount(0)
+    setBackoffMs(3000)
+    fetchSession()
+  }, [fetchSession])
 
   const fetchMessages = useCallback(async () => {
     if (!participant) return
@@ -468,6 +496,63 @@ export default function StudentViewPage() {
     }
   }
 
+  const toggleReaction = async (messageId: string, emoji: string) => {
+    if (!participant) return
+
+    try {
+      const res = await fetch(`/api/quiz/${roomCode}/chat/react`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          participantId: participant.id,
+          participantToken: participant.token,
+          messageId,
+          emoji,
+        }),
+      })
+
+      const data = await res.json()
+      if (data.success) {
+        // Update local state optimistically
+        setMessages((prev) =>
+          prev.map((msg) => {
+            if (msg.id !== messageId) return msg
+
+            const reactions = { ...(msg.reactions || {}) }
+
+            if (data.action === 'added') {
+              if (!reactions[emoji]) {
+                reactions[emoji] = { count: 0, participantIds: [] }
+              }
+              reactions[emoji] = {
+                count: reactions[emoji].count + 1,
+                participantIds: [...reactions[emoji].participantIds, participant.id],
+              }
+            } else if (data.action === 'removed') {
+              if (reactions[emoji]) {
+                reactions[emoji] = {
+                  count: Math.max(0, reactions[emoji].count - 1),
+                  participantIds: reactions[emoji].participantIds.filter(
+                    (id) => id !== participant.id
+                  ),
+                }
+                if (reactions[emoji].count === 0) {
+                  delete reactions[emoji]
+                }
+              }
+            }
+
+            return { ...msg, reactions }
+          })
+        )
+      }
+    } catch (err) {
+      console.error('Failed to toggle reaction:', err)
+    } finally {
+      setActiveReactionPicker(null)
+    }
+  }
+
   const getOutcomeIcon = (outcome: string) => {
     switch (outcome) {
       case 'CORRECT':
@@ -549,7 +634,9 @@ export default function StudentViewPage() {
           <div className="mb-4 overflow-hidden rounded-2xl bg-gradient-to-r from-teal-600 to-blue-600 p-6 shadow-2xl">
             <div className="text-center">
               <div className="mb-3 inline-flex items-center justify-center rounded-full bg-white/20 px-4 py-1.5">
-                <span className="font-mono text-sm font-bold tracking-widest text-white">{session.roomCode}</span>
+                <span className="font-mono text-sm font-bold tracking-widest text-white">
+                  {session.roomCode}
+                </span>
               </div>
               <h1 className="text-2xl font-bold text-white">{session.title}</h1>
               <p className="mt-1.5 text-sm text-teal-100">Join to participate in team chat</p>
@@ -560,7 +647,12 @@ export default function StudentViewPage() {
           <div className="rounded-2xl border border-slate-700/50 bg-slate-800/80 p-6 shadow-xl backdrop-blur-sm">
             <div className="space-y-5">
               <div>
-                <label htmlFor="participant-name" className="mb-2 block text-sm font-semibold text-slate-300">Your Name</label>
+                <label
+                  htmlFor="participant-name"
+                  className="mb-2 block text-sm font-semibold text-slate-300"
+                >
+                  Your Name
+                </label>
                 <input
                   id="participant-name"
                   type="text"
@@ -575,7 +667,12 @@ export default function StudentViewPage() {
               </div>
 
               <div role="group" aria-labelledby="team-selection-label">
-                <span id="team-selection-label" className="mb-3 block text-sm font-semibold text-slate-300">Select Your Team</span>
+                <span
+                  id="team-selection-label"
+                  className="mb-3 block text-sm font-semibold text-slate-300"
+                >
+                  Select Your Team
+                </span>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
@@ -590,7 +687,9 @@ export default function StudentViewPage() {
                     {selectedTeam === 'TEAM_A' && (
                       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600" />
                     )}
-                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">A</div>
+                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">
+                      A
+                    </div>
                     <p className="font-semibold text-white">{session.teamAName}</p>
                     <p className="mt-1 text-2xl font-bold text-blue-400">{session.teamAScore}</p>
                   </button>
@@ -607,7 +706,9 @@ export default function StudentViewPage() {
                     {selectedTeam === 'TEAM_B' && (
                       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-400 to-purple-600" />
                     )}
-                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">B</div>
+                    <div className="flex h-8 w-8 mx-auto mb-2 items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">
+                      B
+                    </div>
                     <p className="font-semibold text-white">{session.teamBName}</p>
                     <p className="mt-1 text-2xl font-bold text-purple-400">{session.teamBScore}</p>
                   </button>
@@ -672,8 +773,12 @@ export default function StudentViewPage() {
               {session.teamAScore > session.teamBScore && (
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600" />
               )}
-              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">A</div>
-              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">{session.teamAName}</p>
+              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-xs font-bold text-blue-300">
+                A
+              </div>
+              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">
+                {session.teamAName}
+              </p>
               <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamAScore}</p>
               {session.teamAScore > session.teamBScore && (
                 <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-3 py-1 text-xs font-bold text-yellow-900 shadow-lg sm:text-sm">
@@ -687,8 +792,12 @@ export default function StudentViewPage() {
               {session.teamBScore > session.teamAScore && (
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600" />
               )}
-              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">B</div>
-              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">{session.teamBName}</p>
+              <div className="mb-2 flex h-8 w-8 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-xs font-bold text-purple-300">
+                B
+              </div>
+              <p className="truncate text-sm font-medium text-slate-300 sm:text-lg">
+                {session.teamBName}
+              </p>
               <p className="mt-2 text-4xl font-bold text-white sm:text-5xl">{session.teamBScore}</p>
               {session.teamBScore > session.teamAScore && (
                 <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-3 py-1 text-xs font-bold text-yellow-900 shadow-lg sm:text-sm">
@@ -705,7 +814,9 @@ export default function StudentViewPage() {
           )}
 
           <div className="mt-4 rounded-xl border border-slate-700/50 bg-slate-800/50 p-3 sm:mt-6">
-            <p className="text-sm text-slate-400">Total Rounds: <span className="font-semibold text-white">{session.currentRound}</span></p>
+            <p className="text-sm text-slate-400">
+              Total Rounds: <span className="font-semibold text-white">{session.currentRound}</span>
+            </p>
           </div>
 
           <Link
@@ -751,6 +862,9 @@ export default function StudentViewPage() {
       {/* Connection Status */}
       {showConnectionStatus && (
         <div
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
           className={`fixed right-4 top-4 z-10 flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm shadow-lg backdrop-blur-sm ${
             failCount === 0
               ? 'border-green-500/30 bg-green-500/10 text-green-400'
@@ -772,7 +886,15 @@ export default function StudentViewPage() {
           ) : (
             <>
               <WifiOff className="h-4 w-4" />
-              <span>Reconnecting...</span>
+              <span>Offline</span>
+              <button
+                onClick={handleManualRetry}
+                className="ml-1 flex items-center gap-1 rounded-full bg-teal-600 px-2 py-0.5 text-xs font-medium text-white hover:bg-teal-500 transition-colors"
+                title="Retry connection"
+              >
+                <RefreshCw className="h-3 w-3" />
+                Retry
+              </button>
             </>
           )}
           <button
@@ -804,7 +926,9 @@ export default function StudentViewPage() {
             <span
               className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${isTeamA ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}
             >
-              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${isTeamA ? 'bg-blue-500/30' : 'bg-purple-500/30'}`}>
+              <span
+                className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${isTeamA ? 'bg-blue-500/30' : 'bg-purple-500/30'}`}
+              >
                 {isTeamA ? 'A' : 'B'}
               </span>
               {teamName}
@@ -817,25 +941,33 @@ export default function StudentViewPage() {
           <div className="grid grid-cols-2 gap-1.5">
             <div
               className={`relative overflow-hidden rounded-xl p-3 text-center transition-all ${
-                session.teamAScore > session.teamBScore ? 'bg-gradient-to-br from-blue-500/30 to-blue-600/20' : 'bg-slate-700/30'
+                session.teamAScore > session.teamBScore
+                  ? 'bg-gradient-to-br from-blue-500/30 to-blue-600/20'
+                  : 'bg-slate-700/30'
               } ${participant.team === 'TEAM_A' ? 'ring-2 ring-blue-400' : ''}`}
             >
               {session.teamAScore > session.teamBScore && (
                 <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600" />
               )}
-              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-[10px] font-bold text-blue-300">A</div>
+              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-blue-500/30 text-[10px] font-bold text-blue-300">
+                A
+              </div>
               <p className="truncate text-xs font-medium text-slate-300">{session.teamAName}</p>
               <p className="text-3xl font-bold text-white">{session.teamAScore}</p>
             </div>
             <div
               className={`relative overflow-hidden rounded-xl p-3 text-center transition-all ${
-                session.teamBScore > session.teamAScore ? 'bg-gradient-to-br from-purple-500/30 to-purple-600/20' : 'bg-slate-700/30'
+                session.teamBScore > session.teamAScore
+                  ? 'bg-gradient-to-br from-purple-500/30 to-purple-600/20'
+                  : 'bg-slate-700/30'
               } ${participant.team === 'TEAM_B' ? 'ring-2 ring-purple-400' : ''}`}
             >
               {session.teamBScore > session.teamAScore && (
                 <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600" />
               )}
-              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-[10px] font-bold text-purple-300">B</div>
+              <div className="mb-1 flex h-6 w-6 mx-auto items-center justify-center rounded-full bg-purple-500/30 text-[10px] font-bold text-purple-300">
+                B
+              </div>
               <p className="truncate text-xs font-medium text-slate-300">{session.teamBName}</p>
               <p className="text-3xl font-bold text-white">{session.teamBScore}</p>
             </div>
@@ -846,9 +978,7 @@ export default function StudentViewPage() {
             className="mt-1.5 w-full flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-xs font-medium text-slate-400 hover:text-slate-300 hover:bg-slate-700/30 transition-colors"
           >
             <Users className="h-3.5 w-3.5" />
-            <span>
-              {session.participants?.length || 0} participants
-            </span>
+            <span>{session.participants?.length || 0} participants</span>
             {showTeamMembers ? (
               <ChevronUp className="h-3.5 w-3.5" />
             ) : (
@@ -864,7 +994,9 @@ export default function StudentViewPage() {
               {/* Team A Members */}
               <div className="bg-slate-800/80 p-3">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/30 text-[9px] font-bold text-blue-300">A</div>
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/30 text-[9px] font-bold text-blue-300">
+                    A
+                  </div>
                   <span className="text-xs font-semibold text-blue-300">{session.teamAName}</span>
                   <span className="ml-auto text-[10px] text-slate-500">
                     {session.participants.filter((p) => p.team === 'TEAM_A').length}
@@ -899,7 +1031,9 @@ export default function StudentViewPage() {
               {/* Team B Members */}
               <div className="bg-slate-800/80 p-3">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/30 text-[9px] font-bold text-purple-300">B</div>
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/30 text-[9px] font-bold text-purple-300">
+                    B
+                  </div>
                   <span className="text-xs font-semibold text-purple-300">{session.teamBName}</span>
                   <span className="ml-auto text-[10px] text-slate-500">
                     {session.participants.filter((p) => p.team === 'TEAM_B').length}
@@ -938,6 +1072,10 @@ export default function StudentViewPage() {
         {/* Timer Display */}
         {session.activeTimerType && timerSeconds > 0 && (
           <div
+            role="timer"
+            aria-live={timerSeconds <= 10 ? 'assertive' : 'polite'}
+            aria-atomic="true"
+            aria-label={`${session.activeTimerType === 'question' ? 'Question' : 'Answer'} timer: ${formatTime(timerSeconds)} remaining`}
             className={`mb-4 overflow-hidden rounded-2xl border shadow-xl ${
               timerSeconds <= 10
                 ? 'border-red-500/50 bg-gradient-to-r from-red-500/20 to-red-600/20'
@@ -969,6 +1107,9 @@ export default function StudentViewPage() {
         {/* Discussion Indicator */}
         {session.teamDiscussing && (
           <div
+            role="alert"
+            aria-live="polite"
+            aria-atomic="true"
             className={`mb-4 overflow-hidden rounded-2xl border shadow-xl ${
               session.teamDiscussing === 'TEAM_A'
                 ? 'border-blue-500/50 bg-gradient-to-r from-blue-500/20 to-blue-600/20'
@@ -984,7 +1125,8 @@ export default function StudentViewPage() {
                   <span className="absolute -right-1 -top-1 h-2 w-2 animate-pulse rounded-full bg-green-400" />
                 </div>
                 <p className="font-semibold text-white">
-                  {session.teamDiscussing === 'TEAM_A' ? session.teamAName : session.teamBName} is discussing
+                  {session.teamDiscussing === 'TEAM_A' ? session.teamAName : session.teamBName} is
+                  discussing
                 </p>
               </div>
               {session.teamDiscussing === participant.team && (
@@ -998,7 +1140,11 @@ export default function StudentViewPage() {
 
         {/* Status Banner */}
         {session.status === 'WAITING' && (
-          <div className="mb-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-center">
+          <div
+            role="status"
+            aria-live="polite"
+            className="mb-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-center"
+          >
             <p className="text-sm font-medium text-yellow-300">Waiting for quiz to start...</p>
           </div>
         )}
@@ -1010,12 +1156,16 @@ export default function StudentViewPage() {
             className="flex w-full items-center justify-between p-4 transition-colors hover:bg-slate-700/30"
           >
             <div className="flex items-center gap-2">
-              <MessageCircle className={`h-5 w-5 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`} />
+              <MessageCircle
+                className={`h-5 w-5 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`}
+              />
               <span className="font-semibold text-white">Team Chat</span>
               <span
                 className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${isTeamA ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}
               >
-                <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold ${isTeamA ? 'bg-blue-500/40' : 'bg-purple-500/40'}`}>
+                <span
+                  className={`flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold ${isTeamA ? 'bg-blue-500/40' : 'bg-purple-500/40'}`}
+                >
                   {isTeamA ? 'A' : 'B'}
                 </span>
                 {teamName}
@@ -1034,13 +1184,20 @@ export default function StudentViewPage() {
               <div
                 ref={chatContainerRef}
                 onScroll={handleChatScroll}
-                className="h-48 overflow-y-scroll border-t border-slate-700/50 p-3 scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent"
+                role="log"
+                aria-live="polite"
+                aria-label="Team chat messages"
+                className="h-[200px] sm:h-[280px] md:h-48 overflow-y-scroll border-t border-slate-700/50 p-3 scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent"
               >
                 {messages.length === 0 ? (
                   <div className="flex h-full items-center justify-center text-center text-slate-400">
                     <div>
-                      <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full ${isTeamA ? 'bg-blue-500/10' : 'bg-purple-500/10'}`}>
-                        <MessageCircle className={`h-6 w-6 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`} />
+                      <div
+                        className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full ${isTeamA ? 'bg-blue-500/10' : 'bg-purple-500/10'}`}
+                      >
+                        <MessageCircle
+                          className={`h-6 w-6 ${isTeamA ? 'text-blue-400' : 'text-purple-400'}`}
+                        />
                       </div>
                       <p className="text-sm font-medium">No messages yet</p>
                       <p className="text-xs text-slate-500">Start chatting with your team!</p>
@@ -1051,16 +1208,74 @@ export default function StudentViewPage() {
                     {messages.map((msg) => (
                       <div
                         key={msg.id}
-                        className={`rounded-xl p-2.5 ${
+                        className={`group relative rounded-xl p-2.5 ${
                           msg.participantId === participant.id
                             ? `ml-4 ${isTeamA ? 'bg-blue-500/20 border border-blue-500/20' : 'bg-purple-500/20 border border-purple-500/20'}`
                             : 'mr-4 bg-slate-700/30 border border-slate-700/30'
                         }`}
                       >
-                        <p className={`text-xs font-semibold ${msg.participantId === participant.id ? (isTeamA ? 'text-blue-300' : 'text-purple-300') : 'text-slate-400'}`}>
-                          {msg.participantId === participant.id ? 'You' : msg.senderName}
-                        </p>
+                        <div className="flex items-center gap-2">
+                          <p
+                            className={`text-xs font-semibold ${msg.participantId === participant.id ? (isTeamA ? 'text-blue-300' : 'text-purple-300') : 'text-slate-400'}`}
+                          >
+                            {msg.participantId === participant.id ? 'You' : msg.senderName}
+                          </p>
+                          <span className="text-[10px] text-slate-500">
+                            {formatRelativeTime(msg.createdAt)}
+                          </span>
+                        </div>
                         <p className="text-sm text-white">{msg.message}</p>
+
+                        {/* Reaction counts display */}
+                        {msg.reactions && Object.keys(msg.reactions).length > 0 && (
+                          <div className="mt-1.5 flex flex-wrap gap-1">
+                            {Object.entries(msg.reactions).map(([emoji, data]) => (
+                              <button
+                                key={emoji}
+                                onClick={() => toggleReaction(msg.id, emoji)}
+                                className={`inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-xs transition-colors ${
+                                  data.participantIds.includes(participant.id)
+                                    ? isTeamA
+                                      ? 'bg-blue-500/30 text-blue-200'
+                                      : 'bg-purple-500/30 text-purple-200'
+                                    : 'bg-slate-600/50 text-slate-300 hover:bg-slate-600'
+                                }`}
+                              >
+                                <span>{emoji}</span>
+                                <span className="font-medium">{data.count}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Reaction picker toggle button */}
+                        <button
+                          onClick={() =>
+                            setActiveReactionPicker(activeReactionPicker === msg.id ? null : msg.id)
+                          }
+                          className={`absolute -right-1 -top-1 rounded-full p-1 text-xs opacity-0 transition-opacity group-hover:opacity-100 ${
+                            activeReactionPicker === msg.id ? 'opacity-100' : ''
+                          } ${isTeamA ? 'bg-blue-500/50 hover:bg-blue-500/70' : 'bg-purple-500/50 hover:bg-purple-500/70'}`}
+                          aria-label="Add reaction"
+                        >
+                          😊
+                        </button>
+
+                        {/* Reaction picker */}
+                        {activeReactionPicker === msg.id && (
+                          <div className="absolute -top-8 right-0 z-10 flex gap-0.5 rounded-lg bg-slate-800 p-1 shadow-xl border border-slate-600">
+                            {REACTION_EMOJIS.map((emoji) => (
+                              <button
+                                key={emoji}
+                                onClick={() => toggleReaction(msg.id, emoji)}
+                                className="rounded p-1 text-base transition-transform hover:scale-125 hover:bg-slate-700"
+                                aria-label={`React with ${emoji}`}
+                              >
+                                {emoji}
+                              </button>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
                     <div ref={messagesEndRef} />
@@ -1070,7 +1285,9 @@ export default function StudentViewPage() {
 
               {/* Input */}
               <div className="flex gap-2 border-t border-slate-700/50 bg-slate-800/30 p-3">
-                <label htmlFor="chat-message-input" className="sr-only">Chat message</label>
+                <label htmlFor="chat-message-input" className="sr-only">
+                  Chat message
+                </label>
                 <input
                   id="chat-message-input"
                   ref={inputRef}
@@ -1134,11 +1351,17 @@ export default function StudentViewPage() {
                     <div
                       key={round.id}
                       className={`flex items-center justify-between rounded-xl p-2.5 transition-colors ${
-                        index === 0 ? (isTeamARound ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-purple-500/10 border border-purple-500/20') : 'bg-slate-700/20 border border-slate-700/30'
+                        index === 0
+                          ? isTeamARound
+                            ? 'bg-blue-500/10 border border-blue-500/20'
+                            : 'bg-purple-500/10 border border-purple-500/20'
+                          : 'bg-slate-700/20 border border-slate-700/30'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
-                        <span className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${isTeamARound ? 'bg-blue-500/30 text-blue-300' : 'bg-purple-500/30 text-purple-300'}`}>
+                        <span
+                          className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${isTeamARound ? 'bg-blue-500/30 text-blue-300' : 'bg-purple-500/30 text-purple-300'}`}
+                        >
                           {round.roundNumber}
                         </span>
                         <div>
@@ -1153,7 +1376,9 @@ export default function StudentViewPage() {
                       </div>
                       <span
                         className={`rounded-lg px-2 py-1 text-sm font-bold ${
-                          round.pointsChange >= 0 ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          round.pointsChange >= 0
+                            ? 'bg-green-500/20 text-green-400'
+                            : 'bg-red-500/20 text-red-400'
                         }`}
                       >
                         {round.pointsChange >= 0 ? '+' : ''}
@@ -1168,9 +1393,7 @@ export default function StudentViewPage() {
         </div>
 
         <div className="mt-4 text-center">
-          <p className="text-xs text-slate-500">
-            Last updated: {lastUpdate.toLocaleTimeString()}
-          </p>
+          <p className="text-xs text-slate-500">Last updated: {lastUpdate.toLocaleTimeString()}</p>
           <p className="mt-2 text-xs text-slate-600">
             Powered by <span className="font-semibold text-teal-500">Cerebrum Biology Academy</span>
           </p>

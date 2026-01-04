@@ -71,9 +71,11 @@ export async function POST(
     const { roomCode } = await params
     const body: ScoreRequest = await request.json()
 
-    if (!roomCode || roomCode.length !== 6) {
+    // Validate room code: exactly 6 alphanumeric characters
+    const roomCodeRegex = /^[A-Z0-9]{6}$/
+    if (!roomCode || !roomCodeRegex.test(roomCode.toUpperCase())) {
       return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
+        { success: false, error: 'Invalid room code format' },
         { status: 400 }
       )
     }
@@ -156,10 +158,16 @@ export async function POST(
         scoreUpdate.startedAt = new Date()
       }
 
+      // Calculate new scores with overflow protection
+      const MAX_SCORE = 1000000
+      const MIN_SCORE = -1000000
+
       if (body.team === 'TEAM_A') {
-        scoreUpdate.teamAScore = session.teamAScore + pointsChange
+        const newScore = session.teamAScore + pointsChange
+        scoreUpdate.teamAScore = Math.max(MIN_SCORE, Math.min(MAX_SCORE, newScore))
       } else {
-        scoreUpdate.teamBScore = session.teamBScore + pointsChange
+        const newScore = session.teamBScore + pointsChange
+        scoreUpdate.teamBScore = Math.max(MIN_SCORE, Math.min(MAX_SCORE, newScore))
       }
 
       const updatedSession = await tx.quiz_sessions.update({
@@ -225,9 +233,11 @@ export async function DELETE(
 
     const { roomCode } = await params
 
-    if (!roomCode || roomCode.length !== 6) {
+    // Validate room code: exactly 6 alphanumeric characters
+    const roomCodeRegex = /^[A-Z0-9]{6}$/
+    if (!roomCode || !roomCodeRegex.test(roomCode.toUpperCase())) {
       return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
+        { success: false, error: 'Invalid room code format' },
         { status: 400 }
       )
     }
@@ -255,6 +265,14 @@ export async function DELETE(
       )
     }
 
+    // Prevent undo on completed quizzes
+    if (session.status === 'COMPLETED') {
+      return NextResponse.json(
+        { success: false, error: 'Cannot undo rounds on a completed quiz' },
+        { status: 400 }
+      )
+    }
+
     if (session.rounds.length === 0) {
       return NextResponse.json(
         { success: false, error: 'No rounds to undo' },
@@ -263,6 +281,14 @@ export async function DELETE(
     }
 
     const lastRound = session.rounds[0]
+
+    // Verify round number matches to prevent race conditions
+    if (lastRound.roundNumber !== session.currentRound) {
+      return NextResponse.json(
+        { success: false, error: 'Round mismatch - please refresh and try again' },
+        { status: 409 }
+      )
+    }
 
     const result = await prisma.$transaction(async (tx) => {
       await tx.quiz_rounds.delete({
@@ -273,10 +299,16 @@ export async function DELETE(
         currentRound: Math.max(0, session.currentRound - 1),
       }
 
+      // Calculate new scores with overflow protection
+      const MAX_SCORE = 1000000
+      const MIN_SCORE = -1000000
+
       if (lastRound.answeringTeam === 'TEAM_A') {
-        scoreUpdate.teamAScore = session.teamAScore - lastRound.pointsChange
+        const newScore = session.teamAScore - lastRound.pointsChange
+        scoreUpdate.teamAScore = Math.max(MIN_SCORE, Math.min(MAX_SCORE, newScore))
       } else {
-        scoreUpdate.teamBScore = session.teamBScore - lastRound.pointsChange
+        const newScore = session.teamBScore - lastRound.pointsChange
+        scoreUpdate.teamBScore = Math.max(MIN_SCORE, Math.min(MAX_SCORE, newScore))
       }
 
       const updatedSession = await tx.quiz_sessions.update({

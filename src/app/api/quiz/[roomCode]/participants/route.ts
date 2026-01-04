@@ -64,14 +64,17 @@ export async function DELETE(
       return NextResponse.json({ success: false, error: 'Cannot remove the host' }, { status: 400 })
     }
 
-    // Delete the participant's messages first
-    await prisma.quiz_messages.deleteMany({
-      where: { participantId },
-    })
+    // Use transaction to ensure atomic deletion
+    await prisma.$transaction(async (tx) => {
+      // Delete the participant's messages first
+      await tx.quiz_messages.deleteMany({
+        where: { participantId },
+      })
 
-    // Delete the participant
-    await prisma.quiz_participants.delete({
-      where: { id: participantId },
+      // Delete the participant
+      await tx.quiz_participants.delete({
+        where: { id: participantId },
+      })
     })
 
     return NextResponse.json({

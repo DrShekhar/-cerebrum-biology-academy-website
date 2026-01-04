@@ -39,11 +39,24 @@ export async function GET(
     const limitParam = searchParams.get('limit')
     const limit = Math.min(Math.max(parseInt(limitParam || '50', 10) || 50, 1), 100)
 
-    if (!roomCode || roomCode.length !== 6) {
+    // Validate room code: exactly 6 alphanumeric characters
+    const roomCodeRegex = /^[A-Z0-9]{6}$/
+    if (!roomCode || !roomCodeRegex.test(roomCode.toUpperCase())) {
       return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
+        { success: false, error: 'Invalid room code format' },
         { status: 400 }
       )
+    }
+
+    // Validate timestamp cursor if provided
+    if (afterTimestamp) {
+      const afterDate = new Date(afterTimestamp)
+      if (isNaN(afterDate.getTime()) || afterDate > new Date()) {
+        return NextResponse.json(
+          { success: false, error: 'Invalid timestamp cursor' },
+          { status: 400 }
+        )
+      }
     }
 
     const session = await prisma.quiz_sessions.findUnique({
@@ -51,10 +64,7 @@ export async function GET(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     // Verify host token to determine if this is the host viewing
@@ -107,18 +117,23 @@ export async function GET(
       whereClause.team = participantTeam
     }
 
-    // Use timestamp-based cursor for proper chronological ordering
+    // Use timestamp-based cursor for proper chronological ordering (already validated above)
     if (afterTimestamp) {
-      const afterDate = new Date(afterTimestamp)
-      if (!isNaN(afterDate.getTime())) {
-        whereClause.createdAt = { gt: afterDate }
-      }
+      whereClause.createdAt = { gt: new Date(afterTimestamp) }
     }
 
     const messages = await prisma.quiz_messages.findMany({
       where: whereClause,
       orderBy: { createdAt: 'asc' },
       take: limit + 1, // Fetch one extra to check if there are more
+      include: {
+        reactions: {
+          select: {
+            emoji: true,
+            participantId: true,
+          },
+        },
+      },
     })
 
     // Check if there are more messages
@@ -132,14 +147,27 @@ export async function GET(
     return NextResponse.json(
       {
         success: true,
-        data: returnMessages.map((m) => ({
-          id: m.id,
-          team: m.team,
-          participantId: m.participantId,
-          senderName: m.senderName,
-          message: m.message,
-          createdAt: m.createdAt,
-        })),
+        data: returnMessages.map((m) => {
+          // Aggregate reactions by emoji
+          const reactionCounts: Record<string, { count: number; participantIds: string[] }> = {}
+          for (const r of m.reactions) {
+            if (!reactionCounts[r.emoji]) {
+              reactionCounts[r.emoji] = { count: 0, participantIds: [] }
+            }
+            reactionCounts[r.emoji].count++
+            reactionCounts[r.emoji].participantIds.push(r.participantId)
+          }
+
+          return {
+            id: m.id,
+            team: m.team,
+            participantId: m.participantId,
+            senderName: m.senderName,
+            message: m.message,
+            createdAt: m.createdAt,
+            reactions: reactionCounts,
+          }
+        }),
         hasMore,
         nextCursor,
       },
@@ -151,10 +179,7 @@ export async function GET(
     )
   } catch (error) {
     console.error('Error fetching messages:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch messages' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch messages' }, { status: 500 })
   }
 }
 
@@ -180,9 +205,11 @@ export async function POST(
     const { roomCode } = await params
     const body: SendMessageRequest = await request.json()
 
-    if (!roomCode || roomCode.length !== 6) {
+    // Validate room code: exactly 6 alphanumeric characters
+    const roomCodeRegex = /^[A-Z0-9]{6}$/
+    if (!roomCode || !roomCodeRegex.test(roomCode.toUpperCase())) {
       return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
+        { success: false, error: 'Invalid room code format' },
         { status: 400 }
       )
     }
@@ -207,17 +234,11 @@ export async function POST(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     if (session.status === 'COMPLETED') {
-      return NextResponse.json(
-        { success: false, error: 'Quiz has ended' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz has ended' }, { status: 400 })
     }
 
     // Verify participant token to prevent impersonation attacks
@@ -234,10 +255,7 @@ export async function POST(
     })
 
     if (!participant) {
-      return NextResponse.json(
-        { success: false, error: 'Participant not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Participant not found' }, { status: 404 })
     }
 
     if (!participant.team) {
@@ -278,9 +296,6 @@ export async function POST(
     )
   } catch (error) {
     console.error('Error sending message:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to send message' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to send message' }, { status: 500 })
   }
 }

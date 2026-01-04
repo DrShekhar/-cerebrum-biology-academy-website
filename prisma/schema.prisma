@@ -3845,7 +3845,8 @@ model quiz_rounds {
 
   session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 
-  @@index([sessionId, roundNumber])
+  @@unique([sessionId, roundNumber])
+  @@index([sessionId])
 }
 
 // Quiz Participants (students/viewers joining the session)
@@ -3878,9 +3879,24 @@ model quiz_messages {
 
   session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
   participant   quiz_participants   @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  reactions     quiz_message_reactions[]
 
   @@index([sessionId, team, createdAt])
   @@index([participantId])
+}
+
+// Quiz Message Reactions (emoji reactions on chat messages)
+model quiz_message_reactions {
+  id            String              @id @default(cuid())
+  messageId     String
+  participantId String
+  emoji         String              // The emoji character: 👍, ❤️, 😂, ❓, 🔥
+  createdAt     DateTime            @default(now())
+
+  message       quiz_messages       @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  @@unique([messageId, participantId, emoji]) // One reaction per emoji per user per message
+  @@index([messageId])
 }
 
 // =====================================================
