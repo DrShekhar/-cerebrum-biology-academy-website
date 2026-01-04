@@ -12,7 +12,7 @@ export async function GET(
 ) {
   try {
     const rateLimitResult = await ipRateLimit(request, {
-      limit: 200,
+      limit: 2000,
       window: 15 * 60 * 1000,
       endpoint: 'quiz:session:get',
     })
