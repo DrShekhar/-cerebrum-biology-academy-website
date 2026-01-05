@@ -454,60 +454,66 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Blog NEET topic complete guides - redirect to blog
+      // Blog NEET topic complete guides - redirect to relevant existing posts
       {
         source: '/blog/molecular-biology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/biomolecules-neet-biology-complete-guide',
         permanent: true,
       },
       {
         source: '/blog/ecology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
         permanent: true,
       },
       {
         source: '/blog/genetics-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/genetics-heredity-variation-neet',
         permanent: true,
       },
       {
         source: '/blog/plant-physiology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/photosynthesis-neet-biology-notes',
         permanent: true,
       },
       {
         source: '/blog/biotechnology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
         permanent: true,
       },
       {
         source: '/blog/cell-biology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/cell-structure-function-neet-notes',
         permanent: true,
       },
       {
         source: '/blog/human-physiology-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/human-physiology-neet-complete-notes',
         permanent: true,
       },
       {
         source: '/blog/evolution-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
         permanent: true,
       },
       {
         source: '/blog/animal-kingdom-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
         permanent: true,
       },
       {
         source: '/blog/human-reproduction-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
         permanent: true,
       },
       {
         source: '/blog/plant-kingdom-neet-complete-guide',
-        destination: '/blog',
+        destination: '/blog/plant-kingdom-classification-neet',
+        permanent: true,
+      },
+      // Additional blog 404s
+      {
+        source: '/blog/plant-kingdom-guide',
+        destination: '/blog/plant-kingdom-classification-neet',
         permanent: true,
       },
       {
