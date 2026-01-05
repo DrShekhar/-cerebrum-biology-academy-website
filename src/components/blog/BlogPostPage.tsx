@@ -487,11 +487,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         <table className="min-w-full divide-y divide-gray-200">{children}</table>
                       </div>
                     ),
-                    thead: ({ children }) => (
-                      <thead className="bg-gray-50">
-                        {children}
-                      </thead>
-                    ),
+                    thead: ({ children }) => <thead className="bg-gray-50">{children}</thead>,
                     th: ({ children }) => (
                       <th className="px-5 py-4 text-left text-sm font-bold text-gray-900 whitespace-nowrap">
                         {children}
@@ -569,34 +565,64 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 </div>
               </div>
 
-              {/* CTA Section */}
-              <div className="mt-16 p-8 bg-blue-600 rounded-3xl text-white text-center animate-fade-in-up">
-                <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
-                <p className="text-lg mb-8 opacity-90">
-                  Get personalized guidance from AIIMS experts and achieve your medical college
-                  dreams
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/demo-booking">
-                    <Button
-                      variant="secondary"
-                      size="lg"
-                      className="bg-white text-blue-600 hover:bg-gray-100"
-                    >
-                      Book Free Demo Class
-                    </Button>
-                  </Link>
-                  <Link href="/resources">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-white text-white hover:bg-white hover:text-blue-600"
-                    >
-                      Download Study Notes
-                    </Button>
-                  </Link>
+              {/* CTA Section - Context Aware */}
+              {meta.category === 'olympiad' ? (
+                <div className="mt-16 p-8 bg-[#3d4d3d] rounded-3xl text-white text-center animate-fade-in-up">
+                  <h3 className="text-2xl font-bold mb-4">Ready to Excel at Biology Olympiad?</h3>
+                  <p className="text-lg mb-8 opacity-90">
+                    Get expert coaching from Olympiad medalists and compete at the international
+                    level
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="/demo-booking">
+                      <Button
+                        variant="secondary"
+                        size="lg"
+                        className="bg-white text-[#3d4d3d] hover:bg-gray-100"
+                      >
+                        Book Free Demo Class
+                      </Button>
+                    </Link>
+                    <Link href="/olympiad">
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-white text-white hover:bg-white hover:text-[#3d4d3d]"
+                      >
+                        Explore Olympiad Program
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="mt-16 p-8 bg-indigo-600 rounded-3xl text-white text-center animate-fade-in-up">
+                  <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
+                  <p className="text-lg mb-8 opacity-90">
+                    Get personalized guidance from AIIMS experts and achieve your medical college
+                    dreams
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="/demo-booking">
+                      <Button
+                        variant="secondary"
+                        size="lg"
+                        className="bg-white text-indigo-600 hover:bg-gray-100"
+                      >
+                        Book Free Demo Class
+                      </Button>
+                    </Link>
+                    <Link href="/resources">
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-white text-white hover:bg-white hover:text-indigo-600"
+                      >
+                        Download Study Notes
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              )}
             </article>
 
             {/* Sidebar with TOC */}
@@ -616,7 +642,11 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
         {/* Bottom Lead Capture Form - College Admission CTA */}
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <BlogLeadCapture articleSlug={meta.slug} articleTitle={meta.title} />
+          <BlogLeadCapture
+            articleSlug={meta.slug}
+            articleTitle={meta.title}
+            category={meta.category}
+          />
         </div>
 
         {/* Related Articles */}

@@ -7,9 +7,43 @@ interface BlogLeadCaptureProps {
   articleSlug: string
   articleTitle: string
   chapterName?: string
+  category?: string
 }
 
-export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCaptureProps) {
+// Content configuration based on category
+const getContentConfig = (category?: string) => {
+  const isOlympiad = category === 'olympiad'
+
+  if (isOlympiad) {
+    return {
+      badge: '500+ Olympiad Achievers',
+      heading: 'Excel at Biology Olympiad',
+      subheading: 'Expert coaching from',
+      highlight: 'National & International Olympiad medalists',
+      benefits: ['USABO/IBO Prep', 'Research Guidance', 'University Applications'],
+      buttonText: 'Get Olympiad Guidance',
+      bgColor: 'bg-[#3d4d3d]',
+      accentColor: 'bg-green-400/20',
+      thankYouMessage: 'Our Olympiad specialist will contact you within 24 hours.',
+    }
+  }
+
+  return {
+    badge: '2,500+ Students Placed',
+    heading: 'Get Into Your Dream Medical College',
+    subheading: 'Expert guidance from',
+    highlight: 'AIIMS alumni',
+    benefits: ['College Selection', 'Counselling Strategy', 'NRI/Management Quota'],
+    buttonText: 'Get Free Counselling',
+    bgColor: 'bg-indigo-600',
+    accentColor: 'bg-purple-400/20',
+    thankYouMessage:
+      'Our counselor will contact you within 24 hours to discuss your college admission strategy.',
+  }
+}
+
+export function BlogLeadCapture({ articleSlug, articleTitle, category }: BlogLeadCaptureProps) {
+  const config = getContentConfig(category)
   const [phone, setPhone] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -66,24 +100,25 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
           </div>
           <div>
             <p className="font-bold text-lg">Thank you for your interest!</p>
-            <p className="text-green-600">
-              Our counselor will contact you within 24 hours to discuss your college admission
-              strategy.
-            </p>
+            <p className="text-green-600">{config.thankYouMessage}</p>
           </div>
         </div>
       </div>
     )
   }
 
+  const isOlympiad = category === 'olympiad'
+
   return (
     <div className="my-10 relative overflow-hidden rounded-2xl shadow-xl">
       {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-indigo-600" />
+      <div className={`absolute inset-0 ${isOlympiad ? 'bg-[#3d4d3d]' : 'bg-indigo-600'}`} />
 
       {/* Animated decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-400/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl animate-pulse" />
+      <div
+        className={`absolute bottom-0 left-0 w-48 h-48 ${isOlympiad ? 'bg-green-400/20' : 'bg-purple-400/20'} rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl animate-pulse`}
+      />
       <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-400/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-xl" />
 
       {/* Content */}
@@ -92,7 +127,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
         <div className="flex items-center gap-2 mb-4">
           <div className="flex items-center gap-1.5 px-3 py-1 bg-yellow-400/90 text-yellow-900 rounded-full text-xs font-bold">
             <Star className="w-3 h-3 fill-yellow-900" />
-            2,500+ Students Placed
+            {config.badge}
           </div>
         </div>
 
@@ -103,29 +138,26 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
           </div>
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
-              Get Into Your Dream Medical College
+              {config.heading}
             </h3>
-            <p className="text-blue-100 text-sm mt-1">
-              Expert guidance from{' '}
-              <span className="text-yellow-300 font-semibold">AIIMS alumni</span>
+            <p className={`text-sm mt-1 ${isOlympiad ? 'text-green-100' : 'text-blue-100'}`}>
+              {config.subheading}{' '}
+              <span className="text-yellow-300 font-semibold">{config.highlight}</span>
             </p>
           </div>
         </div>
 
         {/* Benefits */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-lg px-3 py-2">
-            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-            <span className="text-white text-sm">College Selection</span>
-          </div>
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-lg px-3 py-2">
-            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-            <span className="text-white text-sm">Counselling Strategy</span>
-          </div>
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-lg px-3 py-2">
-            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-            <span className="text-white text-sm">NRI/Management Quota</span>
-          </div>
+          {config.benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-lg px-3 py-2"
+            >
+              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+              <span className="text-white text-sm">{benefit}</span>
+            </div>
+          ))}
         </div>
 
         {/* Form */}
@@ -170,7 +202,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle }: BlogLeadCapturePr
             ) : (
               <>
                 <Sparkles className="w-5 h-5" />
-                Get Free Counselling
+                {config.buttonText}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </>
             )}
