@@ -1,7 +1,6 @@
 'use client'
 
 import { BlogPostMeta, BlogCategory, TableOfContentsItem } from '@/types/blog'
-import { Button } from '@/components/ui/Button'
 import {
   Clock,
   Eye,
@@ -12,6 +11,10 @@ import {
   Linkedin,
   Copy,
   Share2,
+  Phone,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -26,7 +29,6 @@ import { RelatedResources } from './RelatedResources'
 import { BlogComments } from './BlogComments'
 import { BackToTop } from './BackToTop'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
-import { BlogLeadCapture } from './BlogLeadCapture'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import ReactMarkdown from 'react-markdown'
@@ -93,6 +95,10 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
   const [copied, setCopied] = useState(false)
   const [showShareMenu, setShowShareMenu] = useState(false)
   const [headerCollapsed, setHeaderCollapsed] = useState(false)
+  const [leadPhone, setLeadPhone] = useState('')
+  const [leadSubmitting, setLeadSubmitting] = useState(false)
+  const [leadSubmitted, setLeadSubmitted] = useState(false)
+  const [leadError, setLeadError] = useState('')
   const lastScrollY = useRef(0)
   const scrollThreshold = 100 // Increased threshold to prevent jitter
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
@@ -138,6 +144,49 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
   const extractedFaqs = extractFAQsFromContent(content)
   const topicFaqs = generateTopicFAQs(meta.title, meta.category, meta.tags)
   const allFaqs = [...extractedFaqs, ...topicFaqs].slice(0, 10)
+
+  // Lead capture form validation and submission
+  const validatePhone = (value: string): boolean => {
+    const phoneRegex = /^[6-9]\d{9}$/
+    return phoneRegex.test(value)
+  }
+
+  const handleLeadSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLeadError('')
+
+    if (!validatePhone(leadPhone)) {
+      setLeadError('Please enter a valid 10-digit mobile number')
+      return
+    }
+
+    setLeadSubmitting(true)
+
+    try {
+      const response = await fetch('/api/blog/capture-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phone: leadPhone,
+          source: 'blog_inline',
+          articleSlug: meta.slug,
+          articleTitle: meta.title,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setLeadSubmitted(true)
+      } else {
+        setLeadError(data.message || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setLeadError('Network error. Please try again.')
+    } finally {
+      setLeadSubmitting(false)
+    }
+  }
 
   const copyToClipboard = async () => {
     try {
@@ -346,7 +395,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Compact Header - Shows when main header is collapsed */}
               <div
-                className={`sticky top-16 z-40 -mx-4 px-4 py-3 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-all duration-300 ${
+                className={`sticky top-0 z-40 -mx-4 px-4 py-3 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-all duration-300 ${
                   headerCollapsed
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-full pointer-events-none'
@@ -385,7 +434,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               {/* Key Takeaways */}
               {meta.keyTakeaways && meta.keyTakeaways.length > 0 && (
                 <div className="animate-fade-in-up">
-                  <KeyTakeaways takeaways={meta.keyTakeaways} />
+                  <KeyTakeaways takeaways={meta.keyTakeaways} category={meta.category} />
                 </div>
               )}
 
@@ -569,58 +618,124 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               {meta.category === 'olympiad' ? (
                 <div className="mt-16 p-8 bg-[#3d4d3d] rounded-3xl text-white text-center animate-fade-in-up">
                   <h3 className="text-2xl font-bold mb-4">Ready to Excel at Biology Olympiad?</h3>
-                  <p className="text-lg mb-8 opacity-90">
+                  <p className="text-lg mb-6 opacity-90">
                     Get expert coaching from Olympiad medalists and compete at the international
                     level
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="/demo-booking">
-                      <Button
-                        variant="secondary"
-                        size="lg"
-                        className="bg-white text-[#3d4d3d] hover:bg-gray-100"
+
+                  {/* Lead Capture Form */}
+                  {leadSubmitted ? (
+                    <div className="p-4 bg-green-500/20 rounded-xl">
+                      <div className="flex items-center justify-center gap-3 text-green-100">
+                        <CheckCircle className="w-6 h-6" />
+                        <div>
+                          <p className="font-bold">Thank you for your interest!</p>
+                          <p className="text-sm opacity-90">Our Olympiad specialist will contact you within 24 hours.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+                      <div className="relative flex-1">
+                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="tel"
+                          value={leadPhone}
+                          onChange={(e) => setLeadPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          placeholder="Mobile number"
+                          required
+                          className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-green-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
+                          style={{ fontSize: '16px' }}
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        disabled={leadSubmitting || !leadPhone}
+                        className="px-6 py-3.5 font-bold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] bg-white hover:bg-gray-100 text-[#3d4d3d]"
                       >
-                        Book Free Demo Class
-                      </Button>
-                    </Link>
-                    <Link href="/olympiad">
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="border-white text-white hover:bg-white hover:text-[#3d4d3d]"
-                      >
-                        Explore Olympiad Program
-                      </Button>
-                    </Link>
-                  </div>
+                        {leadSubmitting ? (
+                          <span className="flex items-center gap-2">
+                            <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                            </svg>
+                            Processing...
+                          </span>
+                        ) : (
+                          <>
+                            <Sparkles className="w-5 h-5" />
+                            Get Olympiad Guidance
+                            <ArrowRight className="w-5 h-5" />
+                          </>
+                        )}
+                      </button>
+                    </form>
+                  )}
+
+                  {leadError && (
+                    <p className="mt-3 text-red-300 text-sm bg-red-500/20 px-4 py-2 rounded-lg max-w-lg mx-auto">{leadError}</p>
+                  )}
                 </div>
               ) : (
                 <div className="mt-16 p-8 bg-indigo-600 rounded-3xl text-white text-center animate-fade-in-up">
                   <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
-                  <p className="text-lg mb-8 opacity-90">
+                  <p className="text-lg mb-6 opacity-90">
                     Get personalized guidance from AIIMS experts and achieve your medical college
                     dreams
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="/demo-booking">
-                      <Button
-                        variant="secondary"
-                        size="lg"
-                        className="bg-white text-indigo-600 hover:bg-gray-100"
+
+                  {/* Lead Capture Form */}
+                  {leadSubmitted ? (
+                    <div className="p-4 bg-purple-500/20 rounded-xl">
+                      <div className="flex items-center justify-center gap-3 text-purple-100">
+                        <CheckCircle className="w-6 h-6" />
+                        <div>
+                          <p className="font-bold">Thank you for your interest!</p>
+                          <p className="text-sm opacity-90">Our counselor will contact you within 24 hours.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+                      <div className="relative flex-1">
+                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="tel"
+                          value={leadPhone}
+                          onChange={(e) => setLeadPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          placeholder="Mobile number"
+                          required
+                          className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-yellow-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
+                          style={{ fontSize: '16px' }}
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        disabled={leadSubmitting || !leadPhone}
+                        className="px-6 py-3.5 font-bold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900"
                       >
-                        Book Free Demo Class
-                      </Button>
-                    </Link>
-                    <Link href="/resources">
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="border-white text-white hover:bg-white hover:text-indigo-600"
-                      >
-                        Download Study Notes
-                      </Button>
-                    </Link>
-                  </div>
+                        {leadSubmitting ? (
+                          <span className="flex items-center gap-2">
+                            <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                            </svg>
+                            Processing...
+                          </span>
+                        ) : (
+                          <>
+                            <Sparkles className="w-5 h-5" />
+                            Get Free Counselling
+                            <ArrowRight className="w-5 h-5" />
+                          </>
+                        )}
+                      </button>
+                    </form>
+                  )}
+
+                  {leadError && (
+                    <p className="mt-3 text-red-300 text-sm bg-red-500/20 px-4 py-2 rounded-lg max-w-lg mx-auto">{leadError}</p>
+                  )}
                 </div>
               )}
             </article>
@@ -638,15 +753,6 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         {/* Mobile TOC */}
         <div className="lg:hidden">
           <TableOfContents items={toc} />
-        </div>
-
-        {/* Bottom Lead Capture Form - College Admission CTA */}
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <BlogLeadCapture
-            articleSlug={meta.slug}
-            articleTitle={meta.title}
-            category={meta.category}
-          />
         </div>
 
         {/* Related Articles */}

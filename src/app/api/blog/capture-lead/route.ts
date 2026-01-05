@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
         email: email || null,
         name: name || null,
         source,
-        topicSlug: articleSlug || null,
+        topicSlug: null,
         interestedIn: articleTitle || 'NEET Biology',
         landingPage: `/blog/${articleSlug || ''}`,
         deviceType: isMobile ? 'mobile' : 'desktop',

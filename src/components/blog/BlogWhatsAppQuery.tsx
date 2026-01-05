@@ -77,7 +77,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
       {/* Floating WhatsApp Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
+        className="fixed bottom-24 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="font-medium hidden sm:inline">Ask a Doubt</span>
@@ -95,7 +95,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
           />
 
           {/* Modal */}
-          <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
+          <div className="fixed bottom-32 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
             {/* Header */}
             <div className="bg-[#4a5d4a] text-white p-4">
               <div className="flex items-center justify-between">

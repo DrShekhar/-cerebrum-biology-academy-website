@@ -5,10 +5,16 @@ import { Lightbulb, CheckCircle2 } from 'lucide-react'
 interface KeyTakeawaysProps {
   takeaways: string[]
   title?: string
+  category?: string
 }
 
-export function KeyTakeaways({ takeaways, title = 'Key Takeaways' }: KeyTakeawaysProps) {
+export function KeyTakeaways({ takeaways, title = 'Key Takeaways', category }: KeyTakeawaysProps) {
   if (!takeaways || takeaways.length === 0) return null
+
+  const isOlympiad = category === 'olympiad'
+  const reminderText = isOlympiad
+    ? 'Remember these points for your Olympiad preparation'
+    : 'Remember these points for your NEET preparation'
 
   return (
     <div className="relative overflow-hidden rounded-2xl bg-gray-50 border border-blue-200 p-6 mb-8 animate-fade-in-up">
@@ -36,7 +42,7 @@ export function KeyTakeaways({ takeaways, title = 'Key Takeaways' }: KeyTakeaway
         <div className="mt-5 pt-4 border-t border-blue-200/50">
           <p className="text-xs text-gray-500 flex items-center gap-1">
             <CheckCircle2 className="w-4 h-4 text-green-600" />
-            <span>Remember these points for your NEET preparation</span>
+            <span>{reminderText}</span>
           </p>
         </div>
       </div>
