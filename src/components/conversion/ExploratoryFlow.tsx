@@ -20,6 +20,7 @@ import {
   Heart,
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface ExploratoryFlowProps {
   onCounselingBook?: () => void
@@ -804,7 +805,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                 <PremiumButton
                   variant="medical"
                   size="lg"
-                  onClick={() => {
+                  onClick={async () => {
                     const message = `Hi! I've explored your courses and read success stories. I'd like to book a counseling session to discuss my NEET preparation plan.
 
 Journey Summary:
@@ -813,8 +814,11 @@ Journey Summary:
 - Pages visited: ${progressTracking.pagesViewed.join(', ')}
 
 Please help me choose the right course and enrollment process.`
-                    const encodedMessage = encodeURIComponent(message)
-                    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+                    await trackAndOpenWhatsApp({
+                      source: 'exploratory-flow-counseling',
+                      message,
+                      campaign: 'exploratory-flow',
+                    })
                   }}
                   className="w-full bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white"
                 >

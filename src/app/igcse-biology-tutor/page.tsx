@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function IGCSEBiologyTutorPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -258,14 +259,18 @@ export default function IGCSEBiologyTutorPage() {
                 >
                   Book Free Demo Class
                 </Link>
-                <a
-                  href="https://wa.me/918826444334?text=Hi,%20I%20want%20IGCSE%20Biology%20tutoring"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl border-2 border-white bg-white/10 px-8 py-4 text-center font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'igcse-biology-hero',
+                      message: 'Hi, I want IGCSE Biology tutoring',
+                      campaign: 'igcse-biology-tutor',
+                    })
+                  }}
+                  className="rounded-xl border-2 border-white bg-white/10 px-8 py-4 text-center font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 cursor-pointer"
                 >
                   WhatsApp: +91 88264 44334
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>
@@ -617,14 +622,18 @@ export default function IGCSEBiologyTutorPage() {
                 >
                   Book Free Demo Class
                 </Link>
-                <a
-                  href="https://wa.me/918826444334?text=Hi,%20I%20want%20IGCSE%20Biology%20tutoring"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl border-2 border-white bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'igcse-biology-cta',
+                      message: 'Hi, I want IGCSE Biology tutoring',
+                      campaign: 'igcse-biology-tutor',
+                    })
+                  }}
+                  className="rounded-xl border-2 border-white bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 cursor-pointer"
                 >
                   WhatsApp: +91 88264 44334
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>

@@ -100,7 +100,9 @@ export function getTrackingRedirectUrl(source: string, message?: string, page?: 
 export const WHATSAPP_MESSAGES = {
   default: 'Hi! I am interested in NEET Biology coaching.',
   demo: 'Hi! I want to book a free demo class for NEET Biology.',
+  demoBooked: 'Hi! I just booked a demo class and have some questions.',
   course: (courseName: string) => `Hi! I am interested in the ${courseName} course.`,
+  courseEnquiry: 'Hi! I am interested in enrolling. Please share the course details.',
   enquiry: 'Hi! I have some questions about your NEET Biology courses.',
   admission: 'Hi! I want to know about the admission process.',
   discount: (code: string) => `Hi! I saw the discount offer (${code}). I want to claim it!`,

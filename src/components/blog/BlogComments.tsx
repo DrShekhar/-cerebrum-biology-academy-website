@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { MessageSquare, Send, ThumbsUp, Users } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface BlogCommentsProps {
   slug: string
@@ -12,16 +13,20 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
   const [question, setQuestion] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleQuestionSubmit = (e: React.FormEvent) => {
+  const handleQuestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!question.trim()) return
 
     setIsSubmitting(true)
 
     const whatsappMessage = `Hi! I have a question about the blog post "${title}":\n\n${question}`
-    const whatsappUrl = `https://wa.me/918826444334?text=${encodeURIComponent(whatsappMessage)}`
 
-    window.open(whatsappUrl, '_blank')
+    await trackAndOpenWhatsApp({
+      source: `blog-comment-${slug}`,
+      message: whatsappMessage,
+      campaign: 'blog-question',
+    })
+
     setQuestion('')
     setIsSubmitting(false)
   }
@@ -133,14 +138,18 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-500">
             Need personalized guidance?{' '}
-            <a
-              href={`https://wa.me/918826444334?text=Hi! I need help with: ${encodeURIComponent(title)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-700 font-medium underline"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: `blog-help-${slug}`,
+                  message: `Hi! I need help with: ${title}`,
+                  campaign: 'blog-help',
+                })
+              }}
+              className="text-green-600 hover:text-green-700 font-medium underline cursor-pointer"
             >
               Chat with our expert faculty
-            </a>
+            </button>
           </p>
         </div>
       </div>

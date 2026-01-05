@@ -32,6 +32,7 @@ import 'react-day-picker/dist/style.css'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { useFormValidation } from '@/hooks/useFormValidation'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { TestimonialCarousel } from './TestimonialCarousel'
 import { BenefitsGrid } from './BenefitsGrid'
 import { FAQAccordion } from './FAQAccordion'
@@ -998,17 +999,19 @@ export function DemoBookingSystem() {
                         <ArrowRight className="w-4 h-4" />
                       </button>
 
-                      <a
-                        href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                          `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate!, 'MMMM d, yyyy')}\nPreferred Time: ${selectedTime}${bookingData.studentName ? `\nName: ${bookingData.studentName}` : ''}${bookingData.phone ? `\nPhone: ${bookingData.phone}` : ''}`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
+                      <button
+                        onClick={async () => {
+                          await trackAndOpenWhatsApp({
+                            source: 'demo-booking-system',
+                            message: `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate!, 'MMMM d, yyyy')}\nPreferred Time: ${selectedTime}${bookingData.studentName ? `\nName: ${bookingData.studentName}` : ''}${bookingData.phone ? `\nPhone: ${bookingData.phone}` : ''}`,
+                            campaign: 'demo-booking',
+                          })
+                        }}
+                        className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30 cursor-pointer"
                       >
                         <MessageSquare className="w-5 h-5" />
                         <span>Or Book via WhatsApp</span>
-                      </a>
+                      </button>
                     </div>
                   </motion.div>
                 )}

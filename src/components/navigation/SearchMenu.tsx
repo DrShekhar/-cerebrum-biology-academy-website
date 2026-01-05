@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { useRouter } from 'next/navigation'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
@@ -220,7 +221,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       iconBg: 'bg-green-600',
     },
     {
-      href: 'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20your%20courses',
+      href: '#',
       label: 'WhatsApp',
       icon: MessageSquare,
       gradient: 'bg-green-600',
@@ -228,7 +229,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       hoverBg: 'hover:from-green-100 hover:to-green-200',
       textColor: 'text-green-700',
       iconBg: 'bg-green-600',
-      external: true,
+      isWhatsApp: true,
     },
     {
       href: '/course-finder',
@@ -681,15 +682,40 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                       {(isMobile ? quickActions.slice(0, 6) : quickActions).map((action, index) => {
                         const ActionIcon = action.icon
-                        const LinkComponent = action.external ? 'a' : Link
-                        const linkProps = action.external
-                          ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
-                          : { href: action.href }
+
+                        if (action.isWhatsApp) {
+                          return (
+                            <button
+                              key={index}
+                              onClick={async () => {
+                                onClose()
+                                triggerHaptic()
+                                await trackAndOpenWhatsApp({
+                                  source: 'search-menu-quick-action',
+                                  message: "Hi, I'm interested in your courses",
+                                  campaign: 'search-menu',
+                                })
+                              }}
+                              className={`group flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[88px] sm:min-h-[100px] touch-manipulation cursor-pointer`}
+                            >
+                              <div
+                                className={`w-11 h-11 sm:w-12 sm:h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
+                              >
+                                <ActionIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                              </div>
+                              <span
+                                className={`font-semibold ${action.textColor} text-xs sm:text-sm text-center leading-tight`}
+                              >
+                                {action.label}
+                              </span>
+                            </button>
+                          )
+                        }
 
                         return (
-                          <LinkComponent
+                          <Link
                             key={index}
-                            {...linkProps}
+                            href={action.href}
                             onClick={() => {
                               onClose()
                               triggerHaptic()
@@ -706,7 +732,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             >
                               {action.label}
                             </span>
-                          </LinkComponent>
+                          </Link>
                         )
                       })}
                     </div>

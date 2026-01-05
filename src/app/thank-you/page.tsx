@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 function ThankYouContent() {
   const searchParams = useSearchParams()
@@ -100,11 +101,13 @@ function ThankYouContent() {
 
   const content = getContent()
 
-  const handleWhatsAppContact = () => {
+  const handleWhatsAppContact = async () => {
     ConversionTracker.trackWhatsAppClick()
-    const message = 'Hi! I just submitted a form on your website and wanted to follow up.'
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+    await trackAndOpenWhatsApp({
+      source: 'thank-you-page',
+      message: 'Hi! I just submitted a form on your website and wanted to follow up.',
+      campaign: 'post-submission',
+    })
   }
 
   const handleCallNow = () => {

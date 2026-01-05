@@ -22,6 +22,7 @@ import {
 import { useTranslations } from '@/lib/i18n/translations'
 import { QuickLanguageToggle } from './LanguageSwitcher'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface MobileNavigationProps {
   isOpen: boolean
@@ -96,7 +97,13 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     {
       icon: MessageCircle,
       label: language === 'hi' ? 'व्हाट्सएप' : 'WhatsApp',
-      action: () => window.open('https://wa.me/918826444334'),
+      action: async () => {
+        await trackAndOpenWhatsApp({
+          source: 'mobile-navigation',
+          message: WHATSAPP_MESSAGES.default,
+          campaign: 'mobile-nav',
+        })
+      },
       color: 'text-green-600',
       bgColor: 'bg-green-50',
     },

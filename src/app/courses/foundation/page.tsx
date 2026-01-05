@@ -30,6 +30,7 @@ import {
 } from 'lucide-react'
 import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function FoundationCoursePage() {
   const [formData, setFormData] = useState({
@@ -265,17 +266,21 @@ export default function FoundationCoursePage() {
         >
           <Phone className="w-6 h-6" />
         </motion.a>
-        <motion.a
-          href="https://wa.me/918826444334?text=Hi!%20I%27m%20interested%20in%20the%20Foundation%20Course%20for%20Class%209-10.%20Please%20share%20details."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BD5A] transition-colors"
+        <motion.button
+          onClick={async () => {
+            await trackAndOpenWhatsApp({
+              source: 'foundation-floating',
+              message: WHATSAPP_MESSAGES.courseEnquiry,
+              campaign: 'foundation-course',
+            })
+          }}
+          className="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BD5A] transition-colors cursor-pointer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           title="WhatsApp"
         >
           <MessageCircle className="w-6 h-6" />
-        </motion.a>
+        </motion.button>
       </div>
 
       {/* Hero Section with Lead Form */}
@@ -360,14 +365,19 @@ export default function FoundationCoursePage() {
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo
                 </Link>
-                <Link
-                  href="https://wa.me/918826444334"
-                  target="_blank"
-                  className="inline-flex items-center border-2 border-[#4a5d4a] text-[#4a5d4a] px-5 py-3 rounded-lg font-semibold hover:bg-[#4a5d4a] hover:text-white transition-colors"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'foundation-hero',
+                      message: WHATSAPP_MESSAGES.courseEnquiry,
+                      campaign: 'foundation-course',
+                    })
+                  }}
+                  className="inline-flex items-center border-2 border-[#4a5d4a] text-[#4a5d4a] px-5 py-3 rounded-lg font-semibold hover:bg-[#4a5d4a] hover:text-white transition-colors cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Us
-                </Link>
+                </button>
               </div>
             </motion.div>
 
@@ -872,14 +882,19 @@ export default function FoundationCoursePage() {
             <p className="text-[#5a6d5a] mb-4">
               Looking for offline Biology coaching near you in Delhi NCR or Gurugram?
             </p>
-            <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%27m%20looking%20for%20offline%20Biology%20classes%20in%20Delhi%20NCR%2FGurugram."
-              target="_blank"
-              className="inline-flex items-center bg-[#4a5d4a] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3d4d3d] transition-colors"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'foundation-offline-enquiry',
+                  message: 'Hi! I\'m looking for offline Biology classes in Delhi NCR/Gurugram.',
+                  campaign: 'foundation-offline',
+                })
+              }}
+              className="inline-flex items-center bg-[#4a5d4a] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3d4d3d] transition-colors cursor-pointer"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Enquire About Offline Classes
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -978,14 +993,19 @@ export default function FoundationCoursePage() {
 
           <div className="mt-8 text-center">
             <p className="text-[#5a6d5a] mb-4">Still have questions?</p>
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              className="inline-flex items-center text-[#4a5d4a] font-semibold hover:underline"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'foundation-faq',
+                  message: WHATSAPP_MESSAGES.enquiry,
+                  campaign: 'foundation-course',
+                })
+              }}
+              className="inline-flex items-center text-[#4a5d4a] font-semibold hover:underline cursor-pointer"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Chat with us on WhatsApp
-            </Link>
+            </button>
           </div>
         </div>
       </section>

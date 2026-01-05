@@ -38,6 +38,7 @@ import {
   Filter,
   Search,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 // Complete Course Catalog from Screenshots
 const COMPLETE_COURSE_CATALOG = {
@@ -670,14 +671,20 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <motion.a
-                  href="https://wa.me/918826444334"
+                <motion.button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'course-catalog-help',
+                      message: 'Hi! I need help choosing the right course from your catalog.',
+                      campaign: 'course-catalog',
+                    })
+                  }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+                  className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 cursor-pointer"
                 >
                   <MessageCircle className="h-6 w-6" />
                   WhatsApp: 9188264443
-                </motion.a>
+                </motion.button>
 
                 <motion.a
                   href="tel:+918826444334"

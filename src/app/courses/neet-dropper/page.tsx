@@ -28,6 +28,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function NEETDropperPage() {
   const [formData, setFormData] = useState({
@@ -214,14 +215,18 @@ export default function NEETDropperPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
-        <a
-          href="https://wa.me/918826444334?text=Hi, I'm interested in NEET Dropper Course 2026"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110"
+        <button
+          onClick={async () => {
+            await trackAndOpenWhatsApp({
+              source: 'dropper-floating',
+              message: WHATSAPP_MESSAGES.courseEnquiry,
+              campaign: 'neet-dropper-course',
+            })
+          }}
+          className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110 cursor-pointer"
         >
           <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-        </a>
+        </button>
         <a
           href="tel:+918826444334"
           className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110"

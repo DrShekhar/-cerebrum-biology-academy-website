@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 function JoinDemoContent() {
   const searchParams = useSearchParams()
@@ -121,12 +122,18 @@ function JoinDemoContent() {
             to your WhatsApp/Email to join the demo class.
           </p>
           <div className="space-y-3">
-            <a
-              href="https://wa.me/918826444334"
-              className="flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'demo-join-fallback',
+                  message: WHATSAPP_MESSAGES.demo,
+                  campaign: 'demo-join',
+                })
+              }}
+              className="flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700 cursor-pointer"
             >
               <span>📱</span> Contact on WhatsApp
-            </a>
+            </button>
             <button
               onClick={() => router.push('/demo')}
               className="w-full rounded-lg border-2 border-gray-200 px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50"
@@ -244,12 +251,18 @@ function JoinDemoContent() {
         {/* Help Section */}
         <div className="mt-6 border-t border-gray-200 pt-6 text-center">
           <p className="text-sm text-gray-500">Need help joining?</p>
-          <a
-            href="https://wa.me/918826444334"
-            className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: 'demo-join-help',
+                message: WHATSAPP_MESSAGES.demo,
+                campaign: 'demo-join',
+              })
+            }}
+            className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-green-600 hover:text-green-700 cursor-pointer"
           >
             <span>📱</span> WhatsApp: +91 88264 44334
-          </a>
+          </button>
         </div>
       </motion.div>
 

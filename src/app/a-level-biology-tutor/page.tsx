@@ -28,6 +28,7 @@ import {
   Atom,
   Phone,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -316,16 +317,21 @@ export default function ALevelBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334">
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-white text-white hover:bg-white hover:text-purple-700"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  WhatsApp: +91 88264 44334
-                </Button>
-              </Link>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: 'a-level-biology-hero',
+                    message: WHATSAPP_MESSAGES.courseEnquiry,
+                    campaign: 'a-level-biology',
+                  })
+                }}
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                WhatsApp: +91 88264 44334
+              </Button>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -724,16 +730,21 @@ export default function ALevelBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334">
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-white text-white hover:bg-white hover:text-purple-700"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  WhatsApp Now
-                </Button>
-              </Link>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: 'a-level-biology-cta',
+                    message: WHATSAPP_MESSAGES.courseEnquiry,
+                    campaign: 'a-level-biology',
+                  })
+                }}
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                WhatsApp Now
+              </Button>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">

@@ -26,6 +26,7 @@ import {
   Calendar,
   BadgeCheck,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function Class12BiologyPage() {
   const courseFeatures = [
@@ -199,9 +200,6 @@ export default function Class12BiologyPage() {
     },
   ]
 
-  const whatsappLink =
-    'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2012th%20Biology%20course.%20Please%20share%20details.'
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Schema.org structured data */}
@@ -277,15 +275,19 @@ export default function Class12BiologyPage() {
                 </Link>
 
                 <div className="flex flex-col xs:flex-row gap-3">
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                  <button
+                    onClick={async () => {
+                      await trackAndOpenWhatsApp({
+                        source: 'class-12-hero',
+                        message: WHATSAPP_MESSAGES.courseEnquiry,
+                        campaign: 'class-12-course',
+                      })
+                    }}
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1 cursor-pointer"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Us
-                  </a>
+                  </button>
                   <a
                     href="tel:+918826444334"
                     className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
@@ -699,15 +701,19 @@ export default function Class12BiologyPage() {
               <Play className="w-5 h-5 mr-2" />
               Book Free Demo
             </Link>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all inline-flex items-center justify-center shadow-lg"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'class-12-final-cta',
+                  message: WHATSAPP_MESSAGES.courseEnquiry,
+                  campaign: 'class-12-course',
+                })
+              }}
+              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all inline-flex items-center justify-center shadow-lg cursor-pointer"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp: 88264-44334
-            </a>
+            </button>
             <a
               href="tel:+918826444334"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center"

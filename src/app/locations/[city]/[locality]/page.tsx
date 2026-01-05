@@ -7,6 +7,7 @@ import { generateAllSchemas } from '@/lib/seo/localitySchema'
 import LocalityHero from '@/components/localities/LocalityHero'
 import LocalityFAQ from '@/components/localities/LocalityFAQ'
 import { GoogleMapEmbed } from '@/components/maps/GoogleMapEmbed'
+import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 import {
   MapPin,
   Train,
@@ -439,14 +440,16 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
             >
               Enroll Now
             </Link>
-            <a
-              href={`https://wa.me/918826444334?text=Hi, I'm from ${locality.displayName} and interested in NEET Biology coaching`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg"
-            >
-              WhatsApp Us
-            </a>
+            <TrackedWhatsAppButton
+              source={`locality-page-${locality.slug}`}
+              message={`Hi, I'm from ${locality.displayName} and interested in NEET Biology coaching`}
+              campaign="location-page"
+              buttonText="WhatsApp Us"
+              variant="outline"
+              size="xl"
+              showIcon={false}
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
+            />
           </div>
 
           <p className="mt-6 text-sm text-gray-500">

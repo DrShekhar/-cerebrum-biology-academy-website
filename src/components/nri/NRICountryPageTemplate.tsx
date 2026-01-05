@@ -33,6 +33,7 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { nriCountriesData } from '@/data/nriCountries'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export interface NRICountryData {
   country: string
@@ -101,19 +102,12 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
-  const whatsappMessage = encodeURIComponent(
-    `Hi, I'm an NRI student from ${data.country} interested in NEET Biology coaching. Please share details about online classes and fee structure.`
-  )
-  const whatsappLink = `https://wa.me/918826444334?text=${whatsappMessage}`
-
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: `nri_${data.countryCode}_page`,
-        value: 1,
-      })
-    }
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: `nri-country-${data.countryCode}`,
+      message: `Hi, I'm an NRI student from ${data.country} interested in NEET Biology coaching. Please share details about online classes and fee structure.`,
+      campaign: 'nri-country-page',
+    })
   }
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -204,21 +198,15 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="bg-green-600 text-white hover:bg-green-600 cursor-pointer"
                   onClick={handleWhatsAppClick}
                 >
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    className="bg-green-600 text-white hover:bg-green-600"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp Us
-                  </Button>
-                </a>
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp Us
+                </Button>
                 <Link href="/demo-booking">
                   <Button
                     variant="outline"
@@ -321,12 +309,14 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   </div>
                   <h3 className="text-lg font-bold text-black mb-2">Thank You!</h3>
                   <p className="text-gray-600 mb-4">Our counselor will call you within 1 hour.</p>
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" className="bg-green-600 text-white">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Chat on WhatsApp Now
-                    </Button>
-                  </a>
+                  <Button
+                    variant="secondary"
+                    className="bg-green-600 text-white cursor-pointer"
+                    onClick={handleWhatsAppClick}
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Chat on WhatsApp Now
+                  </Button>
                 </div>
               )}
 
@@ -544,18 +534,14 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    variant="primary"
+                    className="w-full cursor-pointer"
                     onClick={handleWhatsAppClick}
-                    className="block"
                   >
-                    <Button variant="primary" className="w-full">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Enquire on WhatsApp
-                    </Button>
-                  </a>
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Enquire on WhatsApp
+                  </Button>
                 </div>
               </motion.div>
             ))}
@@ -780,15 +766,13 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             viewport={{ once: true }}
           >
             <p className="text-gray-600 mb-4">Still have questions?</p>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors"
+            <button
+              onClick={handleWhatsAppClick}
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full transition-colors cursor-pointer"
             >
               <MessageCircle className="w-5 h-5" />
               Chat with us on WhatsApp
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>
@@ -828,22 +812,15 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                variant="secondary"
+                size="lg"
+                className="bg-green-600 text-white hover:bg-green-600 w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-4 sm:px-6 cursor-pointer"
                 onClick={handleWhatsAppClick}
-                className="w-full sm:w-auto"
               >
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="bg-green-600 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="truncate">WhatsApp Us</span>
-                </Button>
-              </a>
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                <span className="truncate">WhatsApp Us</span>
+              </Button>
               <Link href="/demo-booking" className="w-full sm:w-auto">
                 <Button
                   variant="outline"

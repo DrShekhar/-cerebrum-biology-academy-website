@@ -2,6 +2,7 @@
 
 import { StreamlinedEnrollmentPage } from '@/components/enrollment/StreamlinedEnrollmentPage'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function EnrollmentPage() {
   const handleEnrollmentComplete = (data: any) => {
@@ -15,11 +16,12 @@ export default function EnrollmentPage() {
     // await submitEnrollment(data)
   }
 
-  const handleWhatsAppContact = () => {
-    ConversionTracker.trackWhatsAppClick()
-    const message = 'Hi! I need help with the enrollment process. Can you assist me?'
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+  const handleWhatsAppContact = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'enrollment-page',
+      message: 'Hi! I need help with the enrollment process. Can you assist me?',
+      campaign: 'enrollment',
+    })
   }
 
   const handleCallNow = () => {

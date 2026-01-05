@@ -36,6 +36,7 @@ import {
   Microscope,
   FlaskConical,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface CourseCard {
   id: string
@@ -809,13 +810,19 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 guidance!
               </p>
 
-              <a
-                href="https://wa.me/918826444334"
-                className="w-full bg-[#4a5d4a] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+              <button
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: 'premium-course-help-panel',
+                    message: 'Hi! I have questions about the premium course.',
+                    campaign: 'premium-course',
+                  })
+                }}
+                className="w-full bg-[#4a5d4a] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp Chat
-              </a>
+              </button>
 
               <a
                 href="tel:+918826444334"

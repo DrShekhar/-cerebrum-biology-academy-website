@@ -15,6 +15,7 @@ import {
   Building,
   GraduationCap,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -448,14 +449,18 @@ export default function NEETCoachingKaluSarai() {
                 >
                   Book FREE Demo Class
                 </Link>
-                <a
-                  href="https://wa.me/918826444334?text=Hi!%20I%20am%20interested%20in%20NEET%20coaching%20in%20Kalu%20Sarai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'neet-coaching-kalu-sarai',
+                      message: 'Hi! I am interested in NEET coaching in Kalu Sarai',
+                      campaign: 'neet-coaching-page',
+                    })
+                  }}
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors cursor-pointer"
                 >
                   WhatsApp Us
-                </a>
+                </button>
               </div>
 
               <div className="mt-8 flex items-center justify-center gap-6 text-green-100">

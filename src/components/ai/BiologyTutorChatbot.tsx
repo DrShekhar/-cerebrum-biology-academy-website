@@ -60,6 +60,7 @@ interface BiologyResponse {
   confidence: number
 }
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface ChatMessage {
   id: string
@@ -529,8 +530,17 @@ What would you like to explore today?`,
           handleHumanTutorConnection(action.data)
           break
         case 'link':
-          // Open external link (e.g., WhatsApp)
-          window.open(action.data, '_blank', 'noopener,noreferrer')
+          // Open WhatsApp with tracking
+          if (action.data?.source) {
+            await trackAndOpenWhatsApp({
+              source: action.data.source,
+              message: action.data.message,
+              campaign: 'biology-tutor-chatbot',
+            })
+          } else {
+            // Fallback for legacy links
+            window.open(action.data, '_blank', 'noopener,noreferrer')
+          }
           setChatState((prev) => ({ ...prev, isTyping: false }))
           break
       }
@@ -717,9 +727,7 @@ What would you like to explore today?`,
   }
 
   const handleHumanTutorConnection = (data: string) => {
-    const whatsappMessage = encodeURIComponent(
-      `Hi! I need help with Biology${data ? ` - ${data}` : ''}. Can I connect with a tutor?`
-    )
+    const whatsappMessage = `Hi! I need help with Biology${data ? ` - ${data}` : ''}. Can I connect with a tutor?`
     const tutorMessage: ChatMessage = {
       id: Date.now().toString(),
       type: 'bot',
@@ -729,7 +737,7 @@ What would you like to explore today?`,
         {
           type: 'link',
           label: '💬 Chat on WhatsApp',
-          data: `https://wa.me/918826444334?text=${whatsappMessage}`,
+          data: { message: whatsappMessage, source: 'biology-tutor-chatbot' },
         },
         {
           type: 'practice',

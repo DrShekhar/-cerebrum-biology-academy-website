@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Locality } from '@/data/localities'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface LocalityFAQProps {
   locality: Locality
@@ -54,14 +55,18 @@ export default function LocalityFAQ({ locality }: LocalityFAQProps) {
           <p className="text-gray-600 mb-4">
             Still have questions about our {locality.displayName} coaching?
           </p>
-          <a
-            href={`https://wa.me/918826444334?text=Hi, I have a question about NEET Biology coaching in ${locality.displayName}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: `locality-faq-${locality.slug}`,
+                message: `Hi, I have a question about NEET Biology coaching in ${locality.displayName}`,
+                campaign: 'locality-faq',
+              })
+            }}
+            className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors cursor-pointer"
           >
             Chat with us on WhatsApp
-          </a>
+          </button>
         </div>
       </div>
     </section>

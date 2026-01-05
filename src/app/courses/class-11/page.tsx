@@ -31,6 +31,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function Class11BiologyPage() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -331,14 +332,19 @@ export default function Class11BiologyPage() {
                   Book Free Demo Class
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
-                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
-                  target="_blank"
-                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all duration-300 inline-flex items-center justify-center"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'class-11-hero',
+                      message: WHATSAPP_MESSAGES.courseEnquiry,
+                      campaign: 'class-11-course',
+                    })
+                  }}
+                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all duration-300 inline-flex items-center justify-center cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat on WhatsApp
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -799,27 +805,37 @@ export default function Class11BiologyPage() {
       {/* Floating WhatsApp Button */}
       {showFloatingCTA && (
         <div className="fixed bottom-6 right-6 z-50">
-          <Link
-            href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
-            target="_blank"
-            className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: 'class-11-floating',
+                message: WHATSAPP_MESSAGES.courseEnquiry,
+                campaign: 'class-11-course',
+              })
+            }}
+            className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse cursor-pointer"
           >
             <MessageCircle className="w-7 h-7" />
-          </Link>
+          </button>
         </div>
       )}
 
       {/* Bottom CTA Bar - Mobile */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-40">
         <div className="flex gap-3">
-          <Link
-            href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
-            target="_blank"
-            className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: 'class-11-mobile-cta',
+                message: WHATSAPP_MESSAGES.courseEnquiry,
+                campaign: 'class-11-course',
+              })
+            }}
+            className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center cursor-pointer"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
             WhatsApp
-          </Link>
+          </button>
           <Link
             href="/demo-booking"
             className="flex-1 bg-[#3d4d3d] text-white py-3 rounded-xl font-semibold flex items-center justify-center"

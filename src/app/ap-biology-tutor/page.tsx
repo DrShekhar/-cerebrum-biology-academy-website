@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   Trophy,
   Users,
@@ -284,21 +285,21 @@ export default function APBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <a
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex"
+              <Button
+                variant="outline"
+                size="xl"
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: 'ap-biology-tutor-hero',
+                    message: 'Hi! I am interested in AP Biology tutoring',
+                    campaign: 'ap-biology-page',
+                  })
+                }}
+                className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm font-bold cursor-pointer"
               >
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm font-bold"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  WhatsApp: +91 88264 44334
-                </Button>
-              </a>
+                <Phone className="w-5 h-5 mr-2" />
+                WhatsApp: +91 88264 44334
+              </Button>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">

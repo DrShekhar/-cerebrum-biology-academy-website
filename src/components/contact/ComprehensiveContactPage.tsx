@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface ComprehensiveContactPageProps {
   onCallCenter?: (centerPhone: string) => void
@@ -224,10 +225,13 @@ export function ComprehensiveContactPage({
     window.open(`tel:${centerPhone}`, '_self')
   }
 
-  const handleWhatsApp = (message: string) => {
+  const handleWhatsApp = async (message: string) => {
     onWhatsAppContact?.(message)
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+    await trackAndOpenWhatsApp({
+      source: 'contact-page',
+      message,
+      campaign: 'contact',
+    })
   }
 
   const handleInquirySubmit = (e: React.FormEvent) => {

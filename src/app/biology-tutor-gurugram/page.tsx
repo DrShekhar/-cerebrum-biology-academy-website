@@ -25,38 +25,70 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 
-function useScrollAnimation(threshold = 0.1) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
+// WhatsApp contact constants
+const WHATSAPP_PHONE = '918826444334'
+const WHATSAPP_MSG = encodeURIComponent(
+  "Hi, I'm from Gurugram and interested in NEET Biology coaching"
+)
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_MSG}`
+const WHATSAPP_URL_SIMPLE = `https://wa.me/${WHATSAPP_PHONE}`
+
+// Single hook to manage multiple scroll animations with one IntersectionObserver
+function useScrollAnimations<T extends string>(keys: T[], threshold = 0.1) {
+  const refs = useRef<Map<T, HTMLDivElement | null>>(new Map())
+  const [visibility, setVisibility] = useState<Record<T, boolean>>(
+    () => Object.fromEntries(keys.map((k) => [k, false])) as Record<T, boolean>
+  )
 
   useEffect(() => {
-    const element = ref.current
-    if (!element) return
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.unobserve(element)
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const key = Array.from(refs.current.entries()).find(
+              ([, el]) => el === entry.target
+            )?.[0]
+            if (key) {
+              setVisibility((prev) => ({ ...prev, [key]: true }))
+              observer.unobserve(entry.target)
+            }
+          }
+        })
       },
       { threshold }
     )
 
-    observer.observe(element)
+    refs.current.forEach((element) => {
+      if (element) observer.observe(element)
+    })
+
     return () => observer.disconnect()
   }, [threshold])
 
-  return { ref, isVisible }
+  const setRef = (key: T) => (el: HTMLDivElement | null) => {
+    refs.current.set(key, el)
+  }
+
+  return { setRef, isVisible: (key: T) => visibility[key] }
 }
 
 const gurugramAreas = [
   { name: 'DLF Phase 1-5', distance: '35 km', metro: 'Rapid Metro', landmark: 'Cyber Hub' },
-  { name: 'Golf Course Road', distance: '38 km', metro: 'HUDA City Centre', landmark: 'DLF Golf Course' },
+  {
+    name: 'Golf Course Road',
+    distance: '38 km',
+    metro: 'HUDA City Centre',
+    landmark: 'DLF Golf Course',
+  },
   { name: 'Sohna Road', distance: '30 km', metro: 'HUDA City Centre', landmark: 'Subhash Chowk' },
   { name: 'MG Road', distance: '40 km', metro: 'MG Road Metro', landmark: 'Sahara Mall' },
   { name: 'Sector 14', distance: '42 km', metro: 'HUDA City Centre', landmark: 'Old Gurgaon' },
-  { name: 'Sector 56-57', distance: '35 km', metro: 'HUDA City Centre', landmark: 'Golf Course Ext' },
+  {
+    name: 'Sector 56-57',
+    distance: '35 km',
+    metro: 'HUDA City Centre',
+    landmark: 'Golf Course Ext',
+  },
   { name: 'Sector 82-84', distance: '28 km', metro: 'Dwarka Expressway', landmark: 'New Gurugram' },
   { name: 'Manesar', distance: '25 km', metro: 'NH-48', landmark: 'Industrial Hub' },
 ]
@@ -132,13 +164,15 @@ const faqs = [
 ]
 
 export default function BiologyTutorGurugramPage() {
-  const heroAnim = useScrollAnimation()
-  const areasHeaderAnim = useScrollAnimation()
-  const whyHeaderAnim = useScrollAnimation()
-  const toolsAnim = useScrollAnimation()
-  const faqsHeaderAnim = useScrollAnimation()
-  const ctaAnim = useScrollAnimation()
-  const contactAnim = useScrollAnimation()
+  const { setRef, isVisible } = useScrollAnimations([
+    'hero',
+    'areas',
+    'why',
+    'tools',
+    'faqs',
+    'cta',
+    'contact',
+  ] as const)
 
   const [formData, setFormData] = useState({
     name: '',
@@ -149,56 +183,53 @@ export default function BiologyTutorGurugramPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSuccess, setFormSuccess] = useState(false)
+  const [formError, setFormError] = useState('')
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setFormError('')
 
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setFormSuccess(true)
-    setFormData({ name: '', phone: '', email: '', area: '', message: '' })
-    setIsSubmitting(false)
+    // Validate phone number (10-digit Indian mobile)
+    const cleanPhone = formData.phone.replace(/\D/g, '')
+    if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+      setFormError('Please enter a valid 10-digit mobile number')
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      const response = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: cleanPhone,
+          email: formData.email || undefined,
+          area: formData.area || undefined,
+          message: formData.message || undefined,
+          source: 'biology-tutor-gurugram',
+          pageUrl: window.location.href,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok && result.success) {
+        setFormSuccess(true)
+        setFormData({ name: '', phone: '', email: '', area: '', message: '' })
+      } else {
+        setFormError(result.error || 'Failed to submit. Please try again.')
+      }
+    } catch {
+      setFormError('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
     <div className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - Gurugram',
-            description: 'Best Biology Tutor for Gurugram students - NEET & Board exam preparation with online classes',
-            url: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',
-            telephone: '+91-88264-44334',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
-              addressCountry: 'IN',
-            },
-            areaServed: ['Gurugram', 'Gurgaon', 'DLF', 'Golf Course Road', 'Sohna Road', 'MG Road'],
-            priceRange: '$$',
-          }),
-        }}
-      />
-
       {/* Sticky CTA Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-700 p-3 z-50 md:hidden">
         <div className="flex gap-2 max-w-lg mx-auto">
@@ -208,14 +239,15 @@ export default function BiologyTutorGurugramPage() {
               Call Now
             </Button>
           </a>
-          <a
-            href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Gurugram%20and%20interested%20in%20NEET%20Biology%20coaching"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1"
-          >
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
             <Button className="w-full bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold">
-              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={18} height={18} className="mr-2" />
+              <Image
+                src="/icons/whatsapp.svg"
+                alt="WhatsApp"
+                width={18}
+                height={18}
+                className="mr-2"
+              />
               WhatsApp
             </Button>
           </a>
@@ -227,9 +259,9 @@ export default function BiologyTutorGurugramPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div
-            ref={heroAnim.ref}
+            ref={setRef('hero')}
             className={`text-center max-w-4xl mx-auto transition-all duration-700 ${
-              heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('hero') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <div className="inline-flex items-center bg-teal-600/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-teal-500/30">
@@ -238,8 +270,7 @@ export default function BiologyTutorGurugramPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Best Biology Tutor in{' '}
-              <span className="text-yellow-400">Gurugram</span>
+              Best Biology Tutor in <span className="text-yellow-400">Gurugram</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl text-gray-300 mb-4">
@@ -247,8 +278,8 @@ export default function BiologyTutorGurugramPage() {
             </h2>
 
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Gurugram students via online classes.
-              Learn from <strong className="text-white">Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for Gurugram students via online classes. Learn from{' '}
+              <strong className="text-white">Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             {/* Primary CTAs - Call & WhatsApp */}
@@ -263,16 +294,18 @@ export default function BiologyTutorGurugramPage() {
                 </Button>
               </a>
 
-              <a
-                href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Gurugram%20and%20interested%20in%20NEET%20Biology%20coaching"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
                   className="bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold shadow-lg shadow-green-500/20 w-full sm:w-auto"
                 >
-                  <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                  <Image
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
                   WhatsApp Us
                 </Button>
               </a>
@@ -339,17 +372,26 @@ export default function BiologyTutorGurugramPage() {
             </div>
             <div className="hidden md:block w-px h-6 bg-white/30" />
             <div className="flex items-center gap-4">
-              <a href="tel:+918826444334" className="flex items-center hover:text-yellow-300 transition">
+              <a
+                href="tel:+918826444334"
+                className="flex items-center hover:text-yellow-300 transition"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 <span className="font-bold">+91-88264-44334</span>
               </a>
               <a
-                href="https://wa.me/918826444334"
+                href={WHATSAPP_URL_SIMPLE}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-yellow-300 transition"
               >
-                <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                <Image
+                  src="/icons/whatsapp.svg"
+                  alt="WhatsApp"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
                 <span className="font-bold">WhatsApp</span>
               </a>
             </div>
@@ -361,9 +403,9 @@ export default function BiologyTutorGurugramPage() {
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           <div
-            ref={toolsAnim.ref}
+            ref={setRef('tools')}
             className={`text-center mb-12 transition-all duration-600 ${
-              toolsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('tools') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
@@ -386,7 +428,9 @@ export default function BiologyTutorGurugramPage() {
                 className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-14 h-14 ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-14 h-14 ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                >
                   <tool.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
@@ -408,9 +452,9 @@ export default function BiologyTutorGurugramPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div
-              ref={contactAnim.ref}
+              ref={setRef('contact')}
               className={`transition-all duration-600 ${
-                contactAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+                isVisible('contact') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
               }`}
             >
               <div className="inline-flex items-center bg-teal-100 px-4 py-2 rounded-full text-teal-700 text-sm font-medium mb-4">
@@ -421,8 +465,8 @@ export default function BiologyTutorGurugramPage() {
                 Send Us Your Enquiry
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Fill the form and our counselor will call you back within 30 minutes to discuss
-                the best options for your NEET preparation.
+                Fill the form and our counselor will call you back within 30 minutes to discuss the
+                best options for your NEET preparation.
               </p>
 
               <div className="space-y-4">
@@ -430,21 +474,27 @@ export default function BiologyTutorGurugramPage() {
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Free Counseling Session</p>
-                    <p className="text-gray-600 text-sm">Get personalized guidance for your NEET preparation</p>
+                    <p className="text-gray-600 text-sm">
+                      Get personalized guidance for your NEET preparation
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Demo Class Access</p>
-                    <p className="text-gray-600 text-sm">Experience our teaching methodology before enrolling</p>
+                    <p className="text-gray-600 text-sm">
+                      Experience our teaching methodology before enrolling
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Study Material Sample</p>
-                    <p className="text-gray-600 text-sm">Get free sample notes and practice questions</p>
+                    <p className="text-gray-600 text-sm">
+                      Get free sample notes and practice questions
+                    </p>
                   </div>
                 </div>
               </div>
@@ -458,13 +508,15 @@ export default function BiologyTutorGurugramPage() {
                       Call Now
                     </Button>
                   </a>
-                  <a
-                    href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Gurugram%20and%20interested%20in%20NEET%20Biology%20coaching"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     <Button className="bg-[#25D366] hover:bg-[#20BA5C] text-white">
-                      <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="mr-2" />
+                      <Image
+                        src="/icons/whatsapp.svg"
+                        alt="WhatsApp"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
                       WhatsApp
                     </Button>
                   </a>
@@ -554,7 +606,10 @@ export default function BiologyTutorGurugramPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Message (Optional)
                     </label>
                     <textarea
@@ -566,6 +621,12 @@ export default function BiologyTutorGurugramPage() {
                       placeholder="Any specific questions or requirements..."
                     />
                   </div>
+
+                  {formError && (
+                    <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
+                      {formError}
+                    </div>
+                  )}
 
                   <Button
                     type="submit"
@@ -596,9 +657,9 @@ export default function BiologyTutorGurugramPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div
-            ref={areasHeaderAnim.ref}
+            ref={setRef('areas')}
             className={`text-center mb-12 transition-all duration-600 ${
-              areasHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('areas') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -635,7 +696,8 @@ export default function BiologyTutorGurugramPage() {
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto mb-6">
               Save 2-3 hours of daily commute. Our online platform offers live interactive sessions,
-              recorded lectures, doubt-clearing sessions, and the same quality teaching from AIIMS faculty.
+              recorded lectures, doubt-clearing sessions, and the same quality teaching from AIIMS
+              faculty.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+918826444334">
@@ -644,13 +706,15 @@ export default function BiologyTutorGurugramPage() {
                   Call to Know More
                 </Button>
               </a>
-              <a
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={WHATSAPP_URL_SIMPLE} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#25D366] hover:bg-[#20BA5C] text-white">
-                  <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="mr-2" />
+                  <Image
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    width={16}
+                    height={16}
+                    className="mr-2"
+                  />
                   WhatsApp
                 </Button>
               </a>
@@ -663,9 +727,9 @@ export default function BiologyTutorGurugramPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div
-            ref={whyHeaderAnim.ref}
+            ref={setRef('why')}
             className={`text-center mb-12 transition-all duration-600 ${
-              whyHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('why') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -695,9 +759,9 @@ export default function BiologyTutorGurugramPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <div
-            ref={faqsHeaderAnim.ref}
+            ref={setRef('faqs')}
             className={`text-center mb-12 transition-all duration-600 ${
-              faqsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('faqs') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -727,9 +791,9 @@ export default function BiologyTutorGurugramPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div
-            ref={ctaAnim.ref}
+            ref={setRef('cta')}
             className={`transition-all duration-600 ${
-              ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              isVisible('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -750,16 +814,18 @@ export default function BiologyTutorGurugramPage() {
                 </Button>
               </a>
 
-              <a
-                href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Gurugram%20and%20interested%20in%20NEET%20Biology%20coaching"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
                   className="bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold shadow-lg w-full sm:w-auto"
                 >
-                  <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                  <Image
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
                   WhatsApp Now
                 </Button>
               </a>

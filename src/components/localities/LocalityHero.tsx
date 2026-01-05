@@ -3,13 +3,20 @@
 import Link from 'next/link'
 import { Locality } from '@/data/localities'
 import { MapPin, Phone, CheckCircle, ArrowRight } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface LocalityHeroProps {
   locality: Locality
 }
 
 export default function LocalityHero({ locality }: LocalityHeroProps) {
-  const whatsappLink = `https://wa.me/918826444334?text=Hi, I'm interested in NEET Biology coaching in ${locality.displayName}`
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: `locality-hero-${locality.slug}`,
+      message: `Hi, I'm interested in NEET Biology coaching in ${locality.displayName}`,
+      campaign: 'locality-page',
+    })
+  }
 
   return (
     <section className="bg-indigo-500 text-white py-16 md:py-20">
@@ -66,15 +73,13 @@ export default function LocalityHero({ locality }: LocalityHeroProps) {
                 Enroll Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              <button
+                onClick={handleWhatsAppClick}
+                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors cursor-pointer"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 WhatsApp Us
-              </a>
+              </button>
             </div>
           </div>
 

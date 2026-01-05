@@ -14,6 +14,7 @@ import {
   Mail,
   Heart,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -140,10 +141,13 @@ export function InstantEnrollment({
     }
   }
 
-  const handleWhatsAppSupport = () => {
+  const handleWhatsAppSupport = async () => {
     const message = `Hi! I'm interested in enrolling for ${quizResult.recommendedCourse}. Can you help me with the process?`
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+    await trackAndOpenWhatsApp({
+      source: 'instant-enrollment-support',
+      message,
+      campaign: 'enrollment-support',
+    })
   }
 
   if (currentStep === 'form') {

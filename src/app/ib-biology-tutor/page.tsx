@@ -27,6 +27,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -194,15 +195,19 @@ export default function IBBiologyTutorPage() {
                   Book Free Demo Class
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a
-                  href="https://wa.me/918826444334"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'ib-biology-hero',
+                      message: WHATSAPP_MESSAGES.courseEnquiry,
+                      campaign: 'ib-biology-tutor',
+                    })
+                  }}
+                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20 cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
-                </a>
+                </button>
               </motion.div>
             </motion.div>
           </div>
@@ -903,15 +908,19 @@ export default function IBBiologyTutorPage() {
                   Book Free Demo Class
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a
-                  href="https://wa.me/918826444334"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'ib-biology-cta',
+                      message: WHATSAPP_MESSAGES.courseEnquiry,
+                      campaign: 'ib-biology-tutor',
+                    })
+                  }}
+                  className="group bg-green-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700/70 transition-all duration-300 flex items-center gap-2 border border-white/20 cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
-                </a>
+                </button>
               </motion.div>
 
               <motion.div

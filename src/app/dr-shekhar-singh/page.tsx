@@ -33,6 +33,7 @@ import {
 import Link from 'next/link'
 import { facultyMembers } from '@/data/faculty'
 import { useState, useEffect } from 'react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function DrShekharSinghPage() {
   const drShekhar = facultyMembers[0]
@@ -1113,15 +1114,19 @@ export default function DrShekharSinghPage() {
                     Have questions? Connect with us on WhatsApp for instant answers and course
                     details.
                   </p>
-                  <a
-                    href="https://wa.me/918826444334?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20NEET%20Biology%20coaching%20with%20Dr.%20Shekhar%20Singh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
+                  <button
+                    onClick={async () => {
+                      await trackAndOpenWhatsApp({
+                        source: 'dr-shekhar-singh-cta',
+                        message: 'Hi, I would like to know more about NEET Biology coaching with Dr. Shekhar Singh',
+                        campaign: 'faculty-page',
+                      })
+                    }}
+                    className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50 cursor-pointer"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Chat on WhatsApp
-                  </a>
+                  </button>
                 </motion.div>
               </div>
 

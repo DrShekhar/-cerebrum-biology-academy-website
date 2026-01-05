@@ -24,6 +24,7 @@ import {
   Timer,
   Shield,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface ExitIntentOffer {
   id: string
@@ -397,7 +398,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
     }
   }, [scrollDirection, handleScrollUp])
 
-  const handlePrimaryAction = () => {
+  const handlePrimaryAction = async () => {
     if (!selectedOffer) return
 
     // Track conversion
@@ -418,10 +419,11 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
         break
       case 'consultation':
         // Open WhatsApp or booking form
-        const whatsappMessage = encodeURIComponent(
-          'Hi! I saw your exit intent offer and would like to book a free consultation.'
-        )
-        window.open(`https://wa.me/918826444334?text=${whatsappMessage}`, '_blank')
+        await trackAndOpenWhatsApp({
+          source: 'exit-intent-popup',
+          message: 'Hi! I saw your exit intent offer and would like to book a free consultation.',
+          campaign: 'exit-intent',
+        })
         break
       case 'trial':
         // Redirect to trial signup

@@ -3,6 +3,7 @@
 import { SecondChanceNEETLanding } from '@/components/landing/SecondChanceNEETLanding'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { useEffect } from 'react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function SecondChanceNEETPage() {
   useEffect(() => {
@@ -93,7 +94,7 @@ export default function SecondChanceNEETPage() {
     }
   }
 
-  const handleWhatsAppContact = () => {
+  const handleWhatsAppContact = async () => {
     ConversionTracker.trackWhatsAppClick()
 
     // Google Ads conversion tracking for WhatsApp clicks
@@ -103,10 +104,11 @@ export default function SecondChanceNEETPage() {
       })
     }
 
-    const message =
-      'Hi! I saw your Second Chance NEET program. I failed NEET 2024 and need guidance for my second attempt.'
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+    await trackAndOpenWhatsApp({
+      source: 'second-chance-neet',
+      message: 'Hi! I saw your Second Chance NEET program. I failed NEET 2024 and need guidance for my second attempt.',
+      campaign: 'second-chance-neet',
+    })
   }
 
   const handleCallNow = () => {

@@ -17,6 +17,7 @@ import {
   Phone,
 } from 'lucide-react'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface OrderDetails {
   orderId: string
@@ -381,15 +382,19 @@ function PurchaseSuccessContent() {
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">Need help? Our support team is here for you!</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'purchase-success-support',
+                  message: 'Hi! I just completed a purchase and have questions.',
+                  campaign: 'purchase-success',
+                })
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors cursor-pointer"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Support
-            </a>
+            </button>
             <a
               href="tel:+918826444334"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-green-600 hover:text-green-600 transition-colors"

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getAllLocalities, Locality } from '@/data/localities'
 import { generateCityMetadata } from '@/lib/seo/localityMetadata'
 import { MapPin, Users, Award, TrendingUp, ChevronRight, School, Train } from 'lucide-react'
+import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 
 interface CityPageProps {
   params: Promise<{
@@ -305,14 +306,16 @@ export default async function CityPage({ params }: CityPageProps) {
             >
               Enroll Now
             </Link>
-            <a
-              href={`https://wa.me/918826444334?text=Hi, I want to know about NEET Biology coaching in ${cityName}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
-            >
-              WhatsApp Us
-            </a>
+            <TrackedWhatsAppButton
+              source={`city-page-${resolvedParams.city}`}
+              message={`Hi, I want to know about NEET Biology coaching in ${cityName}`}
+              campaign="location-page"
+              buttonText="WhatsApp Us"
+              variant="outline"
+              size="xl"
+              showIcon={false}
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600"
+            />
           </div>
 
           <p className="mt-6 text-sm text-blue-200">

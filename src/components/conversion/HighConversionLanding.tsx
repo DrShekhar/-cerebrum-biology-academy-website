@@ -16,6 +16,7 @@ import {
   MessageSquare,
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -71,11 +72,12 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
     window.open('tel:+918826444334', '_self')
   }
 
-  const handleWhatsAppChat = () => {
-    const message =
-      "Hi! I'm interested in your NEET Biology courses. Can you help me choose the right program?"
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
+  const handleWhatsAppChat = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'high-conversion-landing-hero',
+      message: "Hi! I'm interested in your NEET Biology courses. Can you help me choose the right program?",
+      campaign: 'high-conversion-landing',
+    })
   }
 
   const testimonials = [

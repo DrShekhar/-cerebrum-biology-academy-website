@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
@@ -170,12 +171,18 @@ export function FAQAccordion() {
       <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
         <p className="text-sm text-blue-900">
           <strong>Still have questions?</strong> Contact us on WhatsApp at{' '}
-          <a
-            href="https://wa.me/918826444334"
-            className="font-semibold underline hover:text-blue-700"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: 'faq-accordion-support',
+                message: WHATSAPP_MESSAGES.enquiry,
+                campaign: 'faq-support',
+              })
+            }}
+            className="font-semibold underline hover:text-blue-700 cursor-pointer"
           >
             +91 88264 44334
-          </a>{' '}
+          </button>{' '}
           or email{' '}
           <a
             href="mailto:support@cerebrumbiologyacademy.com"

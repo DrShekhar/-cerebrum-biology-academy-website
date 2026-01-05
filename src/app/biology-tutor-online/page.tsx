@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function BiologyTutorOnlinePage() {
   const faqSchema = {
@@ -261,14 +262,18 @@ export default function BiologyTutorOnlinePage() {
                   >
                     Book Free Demo Class
                   </Link>
-                  <a
-                    href="https://wa.me/918826444334?text=Hi,%20I%20want%20online%20biology%20tuition"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-lg border-2 border-white px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10"
+                  <button
+                    onClick={async () => {
+                      await trackAndOpenWhatsApp({
+                        source: 'biology-tutor-online-hero',
+                        message: 'Hi, I want online biology tuition',
+                        campaign: 'biology-tutor-online',
+                      })
+                    }}
+                    className="rounded-lg border-2 border-white px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10 cursor-pointer"
                   >
                     WhatsApp Us
-                  </a>
+                  </button>
                 </div>
               </motion.div>
 

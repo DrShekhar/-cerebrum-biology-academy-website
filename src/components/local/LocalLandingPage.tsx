@@ -4,6 +4,7 @@ import { LocalArea } from '@/data/localAreas'
 import { LeadMagnet, getLeadMagnetsByArea } from '@/data/leadMagnets'
 import { getTestimonialsByArea } from '@/data/localTestimonials'
 import { Button } from '@/components/ui/Button'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { DemoBookingModal } from '@/components/booking/DemoBookingModal'
 import { LeadMagnetModal } from '@/components/local/LeadMagnetModal'
 import Link from 'next/link'
@@ -163,15 +164,19 @@ function FAQSection({ areaName }: { areaName: string }) {
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
-            <a
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors"
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: `local-landing-faq-${areaName.toLowerCase().replace(/\s+/g, '-')}`,
+                  message: WHATSAPP_MESSAGES.enquiry,
+                  campaign: 'local-landing',
+                })
+              }}
+              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors cursor-pointer"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp Us
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>

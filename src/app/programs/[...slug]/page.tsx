@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, use } from 'react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -717,15 +718,19 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
                   Book Free Demo
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <a
-                  href="https://wa.me/918826444334"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'programs-page-cta',
+                      message: `Hi! I am interested in the ${program.name} program`,
+                      campaign: 'programs-page',
+                    })
+                  }}
+                  className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp
-                </a>
+                </button>
               </div>
             </div>
 

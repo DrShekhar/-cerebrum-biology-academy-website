@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import {
   MapPin,
   Users,
@@ -385,15 +388,19 @@ export function CityHubPage({ data }: CityHubPageProps) {
                   Book FREE Demo Class
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <a
-                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching%20for%20my%20area"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20"
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: `city-hub-hero-${data.slug}`,
+                      message: `Hi! I'm interested in NEET Biology coaching in ${data.cityName}`,
+                      campaign: 'city-hub',
+                    })
+                  }}
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer"
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp Us
-                </a>
+                </button>
               </div>
 
               {/* Quick Contact */}
@@ -669,15 +676,19 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 View All Courses & Fees
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-8 py-4 text-lg font-semibold text-green-600 transition hover:bg-green-50"
+              <button
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: `city-hub-courses-${data.slug}`,
+                    message: WHATSAPP_MESSAGES.courseEnquiry,
+                    campaign: 'city-hub-courses',
+                  })
+                }}
+                className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-8 py-4 text-lg font-semibold text-green-600 transition hover:bg-green-50 cursor-pointer"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Ask About Courses
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -887,15 +898,19 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 Book Free Demo Class
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Rohini%20and%20interested%20in%20NEET%20Biology%20coaching"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20"
+              <button
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: `city-hub-cta-${data.slug}`,
+                    message: `Hi! I'm from ${data.cityName} and interested in NEET Biology coaching`,
+                    campaign: 'city-hub-cta',
+                  })
+                }}
+                className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 WhatsApp Us Now
-              </a>
+              </button>
               <a
                 href="tel:+918826444334"
                 className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 text-lg font-semibold transition hover:bg-white/10"

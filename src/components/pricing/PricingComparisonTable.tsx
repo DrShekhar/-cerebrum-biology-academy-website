@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check, X, Crown, Star, Sparkles, Users, Clock, MessageSquare } from 'lucide-react'
 import { allClassPricing, getTierDetails, type TierLevel, type ClassLevel } from '@/data/pricing'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface PricingComparisonTableProps {
   showWhatsAppCTA?: boolean
@@ -294,15 +295,19 @@ export function PricingComparisonTable({
       {showWhatsAppCTA && (
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-3">Need help choosing the right plan?</p>
-          <a
-            href="https://wa.me/918826444334?text=Hi!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20NEET%20preparation."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation"
+          <button
+            onClick={async () => {
+              await trackAndOpenWhatsApp({
+                source: 'pricing-table-help',
+                message: 'Hi! I need help choosing the right plan for NEET preparation.',
+                campaign: 'pricing-page',
+              })
+            }}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation cursor-pointer"
           >
             <MessageSquare className="w-5 h-5" />
             Chat with us on WhatsApp
-          </a>
+          </button>
         </div>
       )}
     </div>

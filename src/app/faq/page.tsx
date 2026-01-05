@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface FAQ {
   question: string
@@ -461,15 +462,19 @@ export default function FAQPage() {
               queries about NEET preparation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg"
+              <button
+                onClick={async () => {
+                  await trackAndOpenWhatsApp({
+                    source: 'faq-contact-cta',
+                    message: WHATSAPP_MESSAGES.enquiry,
+                    campaign: 'faq-page',
+                  })
+                }}
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Us
-              </a>
+              </button>
               <a
                 href="tel:+918826444334"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg"
