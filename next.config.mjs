@@ -27,9 +27,18 @@ const nextConfig = {
   // Webpack configuration for polyfills and bundle optimization
   webpack: (config, { isServer }) => {
     // FIX: Externalize worker-thread packages on server to prevent Turbopack bundling issues
+    // pino uses thread-stream which spawns worker threads - must be external
     if (isServer) {
       config.externals = config.externals || []
-      config.externals.push('@modelcontextprotocol/sdk', 'bullmq', 'ioredis', 'worker_threads')
+      config.externals.push(
+        '@modelcontextprotocol/sdk',
+        'bullmq',
+        'ioredis',
+        'worker_threads',
+        'pino',
+        'pino-pretty',
+        'thread-stream'
+      )
     }
 
     if (!isServer) {
@@ -186,12 +195,16 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
 
   // FIX: Server external packages - moved to top level for Next.js 15 compatibility
+  // pino and thread-stream use worker threads that can't be bundled by Next.js
   serverExternalPackages: [
     '@modelcontextprotocol/sdk',
     'bullmq',
     'ioredis',
     '@prisma/client',
     'prisma',
+    'pino',
+    'pino-pretty',
+    'thread-stream',
   ],
 
   // Experimental features for better performance

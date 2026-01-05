@@ -56,3 +56,6 @@ Sentry.init({
     return event
   },
 })
+
+// Required for Sentry to instrument Next.js App Router navigations
+export const onRouterTransitionStart = Sentry.captureRouterTransitionStart
