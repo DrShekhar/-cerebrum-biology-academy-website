@@ -63,28 +63,29 @@ export const FloatingCTA = memo(function FloatingCTA() {
     }
   }, [isExpanded])
 
+  // WhatsApp first - highest converting channel
   const actions = [
     {
-      icon: Calendar,
-      label: 'Book Demo',
-      href: '/demo-booking',
-      color: 'bg-blue-500 hover:bg-blue-600',
-      action: 'book-demo',
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
+      color: 'bg-[#25D366] hover:bg-[#20BD5A]',
+      action: 'whatsapp',
+      external: true,
     },
     {
       icon: Phone,
       label: 'Call Now',
       href: 'tel:+918826444334',
-      color: 'bg-green-600 hover:bg-green-600',
+      color: 'bg-blue-600 hover:bg-blue-700',
       action: 'call',
     },
     {
-      icon: MessageCircle,
-      label: 'WhatsApp',
-      href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
-      color: 'bg-green-600 hover:bg-green-600',
-      action: 'whatsapp',
-      external: true,
+      icon: Calendar,
+      label: 'Book Demo',
+      href: '/demo-booking',
+      color: 'bg-indigo-500 hover:bg-indigo-600',
+      action: 'book-demo',
     },
   ]
 
@@ -156,37 +157,37 @@ export const FloatingCTA = memo(function FloatingCTA() {
             </div>
           )}
 
-          {/* Main Floating Button - smaller and less intrusive */}
+          {/* Main Floating Button - WhatsApp branded for highest conversion */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="relative w-12 h-12 bg-indigo-500 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation"
+            className="relative w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-pulse hover:animate-none"
           >
-            {/* Progress Ring - smaller */}
-            <svg className="absolute inset-0 w-12 h-12 transform -rotate-90">
+            {/* Progress Ring */}
+            <svg className="absolute inset-0 w-14 h-14 transform -rotate-90">
               <circle
-                cx="24"
-                cy="24"
-                r="20"
+                cx="28"
+                cy="28"
+                r="24"
                 stroke="rgba(255,255,255,0.3)"
                 strokeWidth="2"
                 fill="transparent"
               />
               <circle
-                cx="24"
-                cy="24"
-                r="20"
+                cx="28"
+                cy="28"
+                r="24"
                 stroke="white"
                 strokeWidth="2"
                 fill="transparent"
-                strokeDasharray={`${2 * Math.PI * 20}`}
-                strokeDashoffset={`${2 * Math.PI * 20 * (1 - scrollProgress / 100)}`}
+                strokeDasharray={`${2 * Math.PI * 24}`}
+                strokeDashoffset={`${2 * Math.PI * 24 * (1 - scrollProgress / 100)}`}
                 className="transition-all duration-300"
               />
             </svg>
 
-            {/* Icon */}
+            {/* Icon - WhatsApp when closed, X when expanded */}
             <span className="transition-transform duration-200">
-              {isExpanded ? <X className="w-5 h-5" /> : <Calendar className="w-5 h-5" />}
+              {isExpanded ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
             </span>
           </button>
         </div>

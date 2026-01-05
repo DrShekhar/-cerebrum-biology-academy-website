@@ -7,8 +7,10 @@ import {
   Clock,
   Sparkles,
   GraduationCap,
+  MessageCircle,
 } from 'lucide-react'
 import { useI18n } from '@/contexts/I18nContext'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 const AnimatedCounter = memo(({ value, suffix = '' }: { value: string; suffix?: string }) => {
   const [displayValue, setDisplayValue] = useState(value)
@@ -87,7 +89,7 @@ export function HeroClientInteractive() {
     <>
       {/* CTAs - Using <a> tags (work before JS loads), animated after LCP */}
       <div
-        className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12 animate-fade-in-up"
+        className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-4 animate-fade-in-up"
         style={{ animationDelay: '0.3s' }}
       >
         <a
@@ -98,6 +100,18 @@ export function HeroClientInteractive() {
           {t('bookDemo')}
         </a>
 
+        <button
+          onClick={() => trackAndOpenWhatsApp({
+            source: 'hero-cta',
+            message: WHATSAPP_MESSAGES.enquiry,
+            campaign: 'homepage-hero',
+          })}
+          className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
+        >
+          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
+          Chat on WhatsApp
+        </button>
+
         <a
           href="/success-stories"
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg hover:scale-[1.02] active:scale-[0.98] group"
@@ -105,6 +119,22 @@ export function HeroClientInteractive() {
           <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
           {t('seeSuccessStories')}
         </a>
+      </div>
+
+      {/* Micro Social Proof - below CTAs */}
+      <div
+        className="flex items-center gap-2 mb-8 xs:mb-12 animate-fade-in-up"
+        style={{ animationDelay: '0.35s' }}
+      >
+        <div className="flex -space-x-2">
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">S</div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">R</div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">A</div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">+</div>
+        </div>
+        <span className="text-blue-100 text-xs xs:text-sm">
+          <span className="text-green-300 font-semibold">127+ students</span> booked demos this week
+        </span>
       </div>
 
       {/* Stats Grid with Animated Counters - delayed animation */}
@@ -135,15 +165,40 @@ export function HeroClientInteractive() {
         </div>
       </div>
 
-      {/* Urgency Banner - delayed animation */}
+      {/* Urgency Banner with Live Countdown - delayed animation */}
       <div
-        className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
+        className="inline-flex flex-col sm:flex-row items-center gap-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up animate-pulse-slow"
         style={{ animationDelay: '0.5s' }}
       >
-        <Clock className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
-        <span className="text-red-100 text-xs xs:text-sm sm:text-base">
-          {t('nextBatchStarting')}: <span className="font-bold">January 15, 2026</span> •{' '}
-          {t('onlySeatsLeft')}
+        <div className="flex items-center">
+          <Clock className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
+          <span className="text-red-100 text-xs xs:text-sm sm:text-base">
+            {t('nextBatchStarting')}:
+          </span>
+        </div>
+        <div className="flex items-center gap-1 xs:gap-2 font-mono">
+          <div className="bg-white/20 px-2 py-1 rounded text-center">
+            <span className="text-white font-bold text-sm xs:text-base">{timeLeft.days}</span>
+            <span className="text-red-200 text-xs ml-0.5">d</span>
+          </div>
+          <span className="text-red-200">:</span>
+          <div className="bg-white/20 px-2 py-1 rounded text-center">
+            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.hours).padStart(2, '0')}</span>
+            <span className="text-red-200 text-xs ml-0.5">h</span>
+          </div>
+          <span className="text-red-200">:</span>
+          <div className="bg-white/20 px-2 py-1 rounded text-center">
+            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.minutes).padStart(2, '0')}</span>
+            <span className="text-red-200 text-xs ml-0.5">m</span>
+          </div>
+          <span className="text-red-200">:</span>
+          <div className="bg-white/20 px-2 py-1 rounded text-center min-w-[40px]">
+            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.seconds).padStart(2, '0')}</span>
+            <span className="text-red-200 text-xs ml-0.5">s</span>
+          </div>
+        </div>
+        <span className="text-yellow-300 font-bold text-xs xs:text-sm animate-pulse">
+          • Only 12 seats left!
         </span>
       </div>
 

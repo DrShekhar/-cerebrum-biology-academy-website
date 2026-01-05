@@ -19,6 +19,7 @@ import {
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useI18n } from '@/contexts/I18nContext'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 // Lightweight scroll animation hook (replaces framer-motion)
 function useScrollAnimation(threshold = 0.1) {
@@ -79,6 +80,14 @@ export function CoursesSection() {
   const handleBrochureDownload = () => {
     // Trigger brochure download
     window.open('/brochure.pdf', '_blank')
+  }
+
+  const handleWhatsAppEnquiry = (courseTitle: string) => {
+    trackAndOpenWhatsApp({
+      source: 'course-card',
+      message: `Hi! I'm interested in the "${courseTitle}" course. Can you share more details about the curriculum, fees, and admission process?`,
+      campaign: 'courses-section',
+    })
   }
 
   return (
@@ -209,23 +218,32 @@ export function CoursesSection() {
                 </ul>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    className="flex-1"
-                    onClick={() => handleEnrollClick(course.id)}
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="flex-1"
+                      onClick={() => handleEnrollClick(course.id)}
+                    >
+                      {t('enrollNow')}
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="flex-1"
+                      onClick={() => handleViewDetails(course.id)}
+                    >
+                      {t('learnMore')}
+                    </Button>
+                  </div>
+                  <button
+                    onClick={() => handleWhatsAppEnquiry(course.title)}
+                    className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
                   >
-                    {t('enrollNow')}
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="flex-1"
-                    onClick={() => handleViewDetails(course.id)}
-                  >
-                    {t('learnMore')}
-                  </Button>
+                    <MessageCircle className="w-5 h-5" />
+                    Ask on WhatsApp
+                  </button>
                 </div>
               </div>
             </div>
