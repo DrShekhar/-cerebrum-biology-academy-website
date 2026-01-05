@@ -18,6 +18,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
@@ -181,8 +182,9 @@ export const Footer = memo(function Footer() {
     { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching',
+      href: '#',
       icon: MessageCircle,
+      isWhatsApp: true,
     },
     { name: 'Telegram', href: 'https://t.me/biologyforneetug', icon: Send },
   ]
@@ -530,18 +532,32 @@ export const Footer = memo(function Footer() {
             {/* Social Links */}
             <nav aria-label="Social media links">
               <div className="flex items-center space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 min-w-[44px] min-h-[44px] bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors touch-manipulation"
-                    aria-label={`Visit our ${social.name} page`}
-                  >
-                    <social.icon className="w-5 h-5" aria-hidden="true" />
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const handleClick = (social as { isWhatsApp?: boolean }).isWhatsApp
+                    ? async (e: React.MouseEvent) => {
+                        e.preventDefault()
+                        await trackAndOpenWhatsApp({
+                          source: 'footer-social',
+                          message: WHATSAPP_MESSAGES.enquiry,
+                          campaign: 'footer',
+                        })
+                      }
+                    : undefined
+
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      onClick={handleClick}
+                      target={(social as { isWhatsApp?: boolean }).isWhatsApp ? undefined : '_blank'}
+                      rel={(social as { isWhatsApp?: boolean }).isWhatsApp ? undefined : 'noopener noreferrer'}
+                      className="w-11 h-11 min-w-[44px] min-h-[44px] bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors touch-manipulation cursor-pointer"
+                      aria-label={`Visit our ${social.name} page`}
+                    >
+                      <social.icon className="w-5 h-5" aria-hidden="true" />
+                    </a>
+                  )
+                })}
               </div>
             </nav>
 

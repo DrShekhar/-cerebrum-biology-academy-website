@@ -26,6 +26,7 @@ import {
   FileText,
   Heart,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface NavigationItem {
   label: string
@@ -493,15 +494,21 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
                 {/* WhatsApp */}
-                <motion.a
-                  href="https://wa.me/918826444334"
+                <motion.button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'sticky-header-desktop',
+                      message: WHATSAPP_MESSAGES.default,
+                      campaign: 'header-cta',
+                    })
+                  }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
-                </motion.a>
+                </motion.button>
 
                 {/* Call */}
                 <motion.a
@@ -644,13 +651,20 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Mobile Action Buttons */}
                 <div className="mt-8 space-y-3">
-                  <a
-                    href="https://wa.me/918826444334"
-                    className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-xl font-medium"
+                  <button
+                    onClick={async () => {
+                      await trackAndOpenWhatsApp({
+                        source: 'sticky-header-mobile',
+                        message: WHATSAPP_MESSAGES.default,
+                        campaign: 'header-cta',
+                      })
+                      setIsMobileMenuOpen(false)
+                    }}
+                    className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-xl font-medium cursor-pointer"
                   >
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp Us
-                  </a>
+                  </button>
                   <a
                     href="tel:+918826444334"
                     className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"

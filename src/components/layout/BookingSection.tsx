@@ -5,6 +5,7 @@ import { ContactForm } from '@/types'
 import { Phone, Calendar, MessageSquare, MapPin, Clock, Shield, Award, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useI18n } from '@/contexts/I18nContext'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export function BookingSection() {
   const { t } = useI18n()
@@ -50,9 +51,10 @@ export function BookingSection() {
       icon: MessageSquare,
       title: 'WhatsApp',
       description: 'Quick questions and instant support',
-      action: 'https://wa.me/918826444334',
+      action: 'whatsapp',
       actionText: 'Chat on WhatsApp',
       available: '24/7 Support',
+      isWhatsApp: true,
     },
     {
       icon: MapPin,
@@ -136,35 +138,49 @@ export function BookingSection() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('otherWaysToReach')}</h3>
 
               <div className="space-y-4">
-                {contactMethods.map((method, index) => (
-                  <motion.a
-                    key={method.title}
-                    href={method.action}
-                    className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                        <method.icon className="w-6 h-6 text-blue-600" />
+                {contactMethods.map((method, index) => {
+                  const handleClick = method.isWhatsApp
+                    ? async (e: React.MouseEvent) => {
+                        e.preventDefault()
+                        await trackAndOpenWhatsApp({
+                          source: 'booking-section',
+                          message: WHATSAPP_MESSAGES.enquiry,
+                          campaign: 'homepage-booking',
+                        })
+                      }
+                    : undefined
+
+                  return (
+                    <motion.a
+                      key={method.title}
+                      href={method.isWhatsApp ? '#' : method.action}
+                      onClick={handleClick}
+                      className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group cursor-pointer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                          <method.icon className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                            {method.title}
+                          </h4>
+                          <p className="text-gray-600 text-sm">{method.description}</p>
+                          <p className="text-gray-500 text-xs">{method.available}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {method.title}
-                        </h4>
-                        <p className="text-gray-600 text-sm">{method.description}</p>
-                        <p className="text-gray-500 text-xs">{method.available}</p>
+                      <div className="text-right">
+                        <p className="text-blue-600 font-medium text-sm group-hover:underline">
+                          {method.actionText}
+                        </p>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-blue-600 font-medium text-sm group-hover:underline">
-                        {method.actionText}
-                      </p>
-                    </div>
-                  </motion.a>
-                ))}
+                    </motion.a>
+                  )
+                })}
               </div>
             </motion.div>
 
