@@ -177,7 +177,11 @@ export function BlogLeadCapture({ articleSlug, articleTitle, category }: BlogLea
           <button
             type="submit"
             disabled={isSubmitting || !phone}
-            className="px-6 py-3.5 bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900 font-bold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] group"
+            className={`px-6 py-3.5 font-bold rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] group ${
+              isOlympiad
+                ? 'bg-green-500 hover:bg-green-600 text-white'
+                : 'bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900'
+            }`}
           >
             {isSubmitting ? (
               <span className="flex items-center gap-2">
