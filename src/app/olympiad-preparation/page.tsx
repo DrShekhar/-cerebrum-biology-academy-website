@@ -42,6 +42,15 @@ const olympiads = [
     color: 'bg-green-600',
   },
   {
+    name: 'USABO',
+    fullName: 'USA Biology Olympiad',
+    description: 'Premier Biology Olympiad for US high school students',
+    eligibility: 'Grades 9-12 (USA)',
+    benefits: 'Team USA, IBO pathway',
+    link: '/usabo-coaching',
+    color: 'from-green-600 to-cyan-600',
+  },
+  {
     name: 'KVPY',
     fullName: 'Kishore Vaigyanik Protsahan Yojana',
     description: 'Prestigious fellowship for science students',
@@ -469,6 +478,12 @@ export default function OlympiadPreparationPage() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
+              href="/usabo-coaching"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+            >
+              USABO Coaching (USA)
+            </Link>
+            <Link
               href="/nso-coaching"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
@@ -478,7 +493,7 @@ export default function OlympiadPreparationPage() {
               href="/biology-olympiad-coaching"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
-              Biology Olympiad
+              Biology Olympiad (India)
             </Link>
             <Link
               href="/ntse-coaching"

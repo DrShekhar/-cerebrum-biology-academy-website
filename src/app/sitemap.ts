@@ -1849,6 +1849,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    {
+      url: `${baseUrl}/usabo-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
     // NCERT Biology Books SEO Pages - High Traffic Keywords
     {
       url: `${baseUrl}/ncert-biology-class-11`,
