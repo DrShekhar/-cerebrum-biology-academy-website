@@ -101,6 +101,13 @@ export const blogCategories: Record<string, BlogCategory> = {
     description: 'Memory tricks and shortcuts for quick revision',
     color: 'bg-pink-100 text-pink-800',
   },
+  olympiad: {
+    id: '9',
+    name: 'Biology Olympiad',
+    slug: 'olympiad',
+    description: 'USABO, IBO, and Biology Olympiad preparation guides',
+    color: 'bg-teal-100 text-teal-800',
+  },
 }
 
 export function getAllPostSlugs(): string[] {
