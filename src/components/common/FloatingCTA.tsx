@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
@@ -87,11 +88,22 @@ export const FloatingCTA = memo(function FloatingCTA() {
     },
   ]
 
-  const handleActionClick = (action: string) => {
+  const handleActionClick = async (action: string, e?: React.MouseEvent) => {
+    // Track with gtag
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'floating_cta_click', {
         event_category: 'engagement',
         event_label: action,
+      })
+    }
+
+    // Special handling for WhatsApp - use tracked system
+    if (action === 'whatsapp' && e) {
+      e.preventDefault()
+      await trackAndOpenWhatsApp({
+        source: 'floating-cta',
+        message: WHATSAPP_MESSAGES.default,
+        campaign: 'floating-cta',
       })
     }
   }
@@ -129,8 +141,8 @@ export const FloatingCTA = memo(function FloatingCTA() {
                   >
                     <Component
                       {...linkProps}
-                      onClick={() => {
-                        handleActionClick(action.action)
+                      onClick={(e: React.MouseEvent) => {
+                        handleActionClick(action.action, e)
                         setIsExpanded(false)
                       }}
                       className={`flex items-center space-x-3 px-4 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
