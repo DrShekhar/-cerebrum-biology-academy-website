@@ -23,7 +23,6 @@ import {
   Layers,
   DollarSign,
 } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
@@ -384,8 +383,8 @@ export default function USABOCoachingPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-green-800 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative bg-[#3d4d3d] text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#3d4d3d]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -414,19 +413,15 @@ export default function USABOCoachingPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className="bg-green-500 text-black hover:bg-green-400"
-                >
-                  <Play className="w-5 h-5 mr-2" />
+                <button className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300">
+                  <Play className="w-5 h-5" />
                   Book Free Consultation
-                </Button>
+                </button>
               </Link>
 
               <button
                 onClick={handleWhatsAppEnquiry}
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 px-8 rounded-xl shadow-xl transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Enquiry
@@ -487,16 +482,16 @@ export default function USABOCoachingPage() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100 h-full">
-                  <stage.icon className="w-12 h-12 text-green-600 mb-4" />
-                  <div className="text-sm text-green-600 font-semibold mb-1">{stage.stage}</div>
+                <div className="bg-[#e8ede8] rounded-xl p-6 border border-[#4a5d4a]/20 h-full">
+                  <stage.icon className="w-12 h-12 text-[#3d4d3d] mb-4" />
+                  <div className="text-sm text-[#4a5d4a] font-semibold mb-1">{stage.stage}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{stage.name}</h3>
                   <p className="text-gray-600 mb-2">{stage.description}</p>
                   <span className="text-sm text-gray-500">{stage.date}</span>
                 </div>
                 {index < usaboPathway.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-green-500" />
+                    <ArrowRight className="w-6 h-6 text-[#4a5d4a]" />
                   </div>
                 )}
               </motion.div>
@@ -534,10 +529,10 @@ export default function USABOCoachingPage() {
                 className="bg-white rounded-xl p-6 shadow-lg"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <unit.icon className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-[#e8ede8] rounded-full flex items-center justify-center">
+                    <unit.icon className="w-6 h-6 text-[#3d4d3d]" />
                   </div>
-                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {unit.weightage}
                   </span>
                 </div>
@@ -545,7 +540,7 @@ export default function USABOCoachingPage() {
                 <ul className="space-y-1">
                   {unit.topics.map((topic) => (
                     <li key={topic} className="text-sm text-gray-600 flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-[#4a5d4a] mr-2 flex-shrink-0 mt-0.5" />
                       {topic}
                     </li>
                   ))}
@@ -579,9 +574,9 @@ export default function USABOCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-[#e8ede8] rounded-xl p-8"
               >
-                <feature.icon className="w-12 h-12 text-green-600 mb-4" />
+                <feature.icon className="w-12 h-12 text-[#3d4d3d] mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
@@ -817,10 +812,10 @@ export default function USABOCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 shadow-lg"
+                className="bg-[#e8ede8] rounded-xl p-8 shadow-lg border border-[#4a5d4a]/10"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                  <MessageCircle className="w-6 h-6 mr-3 text-[#3d4d3d] flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
@@ -831,7 +826,7 @@ export default function USABOCoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-green-700 text-white">
+      <section className="py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -848,19 +843,15 @@ export default function USABOCoachingPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/demo-booking">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className="bg-green-500 text-black hover:bg-green-400"
-                >
-                  <Play className="w-5 h-5 mr-2" />
+                <button className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300">
+                  <Play className="w-5 h-5" />
                   Book Free Consultation
-                </Button>
+                </button>
               </Link>
 
               <button
                 onClick={handleWhatsAppEnquiry}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#3d4d3d] font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 Chat on WhatsApp
@@ -871,25 +862,25 @@ export default function USABOCoachingPage() {
       </section>
 
       {/* Related Pages */}
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/biology-olympiad-coaching"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
               Indian Biology Olympiad (NSEB/IBO)
             </Link>
             <Link
               href="/olympiad-preparation"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
               All Olympiad Programs
             </Link>
             <Link
               href="/courses"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
               NEET Courses
             </Link>
