@@ -1,5 +1,8 @@
-import { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle,
   Clock,
@@ -12,464 +15,876 @@ import {
   Trophy,
   Globe,
   Lightbulb,
+  Phone,
+  MessageCircle,
+  Play,
+  ChevronDown,
+  ChevronUp,
+  GraduationCap,
+  FileText,
+  Microscope,
+  Beaker,
+  Shield,
+  Zap,
+  Calendar,
+  Video,
+  HeadphonesIcon,
+  BadgeCheck,
+  Sparkles,
 } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'IB Biology Coaching | International Baccalaureate | HL & SL | Cerebrum Biology Academy',
-  description:
-    'Expert IB Biology coaching for Higher Level and Standard Level. Research-based learning, critical thinking, and top university preparation.',
-  keywords:
-    'IB Biology coaching, International Baccalaureate Biology, IB HL Biology, IB SL Biology, university preparation',
+// Floating WhatsApp Button Component
+const FloatingWhatsAppButton = () => {
+  const whatsappNumber = '918826444334'
+  const message = encodeURIComponent(
+    "Hi! I'm interested in IB Biology coaching at Cerebrum Biology Academy. Please share more details about the program."
+  )
+
+  return (
+    <motion.a
+      href={`https://wa.me/${whatsappNumber}?text=${message}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 group"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ delay: 1, type: 'spring', stiffness: 200 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <motion.div
+        animate={{ rotate: [0, 15, -15, 0] }}
+        transition={{ repeat: Infinity, duration: 2, repeatDelay: 3 }}
+      >
+        <MessageCircle className="w-6 h-6" fill="currentColor" />
+      </motion.div>
+      <span className="font-semibold hidden sm:inline">Chat on WhatsApp</span>
+      <motion.div
+        className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+      />
+    </motion.a>
+  )
 }
 
+// FAQ Accordion Component
+const FAQItem = ({
+  question,
+  answer,
+  isOpen,
+  onClick,
+}: {
+  question: string
+  answer: string
+  isOpen: boolean
+  onClick: () => void
+}) => (
+  <motion.div
+    className="border border-gray-200 rounded-xl overflow-hidden bg-white"
+    initial={false}
+  >
+    <button
+      onClick={onClick}
+      className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+    >
+      <span className="font-semibold text-gray-900 pr-4">{question}</span>
+      {isOpen ? (
+        <ChevronUp className="w-5 h-5 text-green-600 flex-shrink-0" />
+      ) : (
+        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+      )}
+    </button>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4">{answer}</div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </motion.div>
+)
+
 export default function IBBiologyPage() {
-  const ibProgram = {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0)
+
+  const stats = [
+    { value: '89%', label: 'Score 6-7', sublabel: 'Top IB grades' },
+    { value: '6.3', label: 'Avg Score', sublabel: 'Out of 7 points' },
+    { value: '500+', label: 'IB Students', sublabel: 'Globally coached' },
+    { value: '94%', label: 'University', sublabel: 'Top admissions' },
+  ]
+
+  const trustBadges = [
+    { icon: BadgeCheck, text: 'IB Certified Faculty' },
+    { icon: Shield, text: 'Score Guarantee' },
+    { icon: HeadphonesIcon, text: '24/7 Support' },
+    { icon: Award, text: 'Premium Quality' },
+  ]
+
+  const whyChooseUs = [
+    {
+      icon: GraduationCap,
+      title: 'IB Examiner Faculty',
+      description:
+        'Learn from actual IB Biology examiners who understand exactly what scores 7s. Our faculty has corrected 10,000+ IB papers.',
+    },
+    {
+      icon: Target,
+      title: '2-Point Score Guarantee',
+      description:
+        'We guarantee a minimum 2-point improvement in your IB Biology score or get extended support free until you achieve it.',
+    },
+    {
+      icon: FileText,
+      title: 'IA Mastery Program',
+      description:
+        'Dedicated Internal Assessment guidance from topic selection to final submission. 92% of our students score 20+ in IA.',
+    },
+    {
+      icon: Video,
+      title: 'Interactive Live Classes',
+      description:
+        'Small batch sizes (max 8 students) with HD video, digital whiteboard, instant doubt clearing, and recorded sessions.',
+    },
+    {
+      icon: HeadphonesIcon,
+      title: '24/7 WhatsApp Support',
+      description:
+        'Direct access to your tutor anytime via WhatsApp. Get doubts cleared within hours, not days. Especially during exam season.',
+    },
+    {
+      icon: Beaker,
+      title: 'Lab & Practical Focus',
+      description:
+        'Virtual lab simulations, practical skills training, and Group 4 project guidance. Complete preparation for all assessment components.',
+    },
+  ]
+
+  const pricingPlans = [
+    {
+      name: '1:1 Elite Tutoring',
+      price: '$75',
+      unit: '/hour',
+      description: 'Premium personalized coaching',
+      features: [
+        'One-on-one with IB examiner',
+        'Fully customized curriculum',
+        'Flexible scheduling (all timezones)',
+        'IA & EE dedicated support',
+        'WhatsApp access to tutor',
+        'Session recordings',
+        'Progress reports',
+      ],
+      highlight: false,
+      cta: 'Book Trial Session',
+      packages: [
+        { hours: 20, price: '$1,400', savings: '$100 off' },
+        { hours: 40, price: '$2,600', savings: '$400 off' },
+        { hours: 60, price: '$3,600', savings: '$900 off' },
+      ],
+    },
+    {
+      name: 'Complete IB Program',
+      price: '$6,000',
+      unit: '/year',
+      description: 'Best value for full preparation',
+      features: [
+        'HL & SL complete coverage',
+        '150+ hours of instruction',
+        'Small batch (4-8 students)',
+        'IA guidance included',
+        'All study materials',
+        'Past paper bank access',
+        'University guidance bonus',
+        'Research workshop bonus',
+      ],
+      highlight: true,
+      cta: 'Enroll Now',
+      bonus: 'FREE: University guidance + Research workshop ($500 value)',
+    },
+    {
+      name: 'Group Batch',
+      price: '$40',
+      unit: '/hour',
+      description: 'Learn with peers globally',
+      features: [
+        '4-8 students per batch',
+        'Fixed weekly schedule',
+        'Interactive discussions',
+        'IA guidance sessions',
+        'Study materials included',
+        'Recorded sessions',
+        'Peer learning benefits',
+      ],
+      highlight: false,
+      cta: 'Join Batch',
+      packages: [
+        { name: 'SL Track', duration: '6 months', price: '$1,800' },
+        { name: 'HL Track', duration: '8 months', price: '$2,400' },
+      ],
+    },
+  ]
+
+  const syllabus = {
     hl: {
       name: 'Higher Level (HL)',
-      duration: '240 teaching hours',
-      assessment: '7 points scale',
+      hours: '240 hours',
       topics: [
-        'Cell Biology (15 hours)',
-        'Molecular Biology (21 hours)',
-        'Genetics (15 hours)',
-        'Ecology (12 hours)',
-        'Evolution and Biodiversity (12 hours)',
-        'Human Physiology (20 hours)',
-        'Nucleic Acids (9 hours)',
-        'Metabolism, Cell Respiration and Photosynthesis (14 hours)',
-        'Plant Biology (13 hours)',
-        'Genetics and Evolution (8 hours)',
-        'Animal Physiology (16 hours)',
-        'Option Topic (15 hours)',
+        { name: 'Cell Biology', hours: '15h', icon: Microscope },
+        { name: 'Molecular Biology', hours: '21h', icon: Beaker },
+        { name: 'Genetics', hours: '15h', icon: Sparkles },
+        { name: 'Ecology', hours: '12h', icon: Globe },
+        { name: 'Evolution & Biodiversity', hours: '12h', icon: Lightbulb },
+        { name: 'Human Physiology', hours: '20h', icon: Users },
+        { name: 'Nucleic Acids (AHL)', hours: '9h', icon: Beaker },
+        { name: 'Metabolism (AHL)', hours: '14h', icon: Zap },
+        { name: 'Plant Biology (AHL)', hours: '13h', icon: Target },
+        { name: 'Genetics & Evolution (AHL)', hours: '8h', icon: Sparkles },
+        { name: 'Animal Physiology (AHL)', hours: '16h', icon: Users },
+        { name: 'Option Topic', hours: '15h', icon: BookOpen },
       ],
     },
     sl: {
       name: 'Standard Level (SL)',
-      duration: '150 teaching hours',
-      assessment: '7 points scale',
+      hours: '150 hours',
       topics: [
-        'Cell Biology (15 hours)',
-        'Molecular Biology (21 hours)',
-        'Genetics (15 hours)',
-        'Ecology (12 hours)',
-        'Evolution and Biodiversity (12 hours)',
-        'Human Physiology (20 hours)',
-        'Option Topic (15 hours)',
+        { name: 'Cell Biology', hours: '15h', icon: Microscope },
+        { name: 'Molecular Biology', hours: '21h', icon: Beaker },
+        { name: 'Genetics', hours: '15h', icon: Sparkles },
+        { name: 'Ecology', hours: '12h', icon: Globe },
+        { name: 'Evolution & Biodiversity', hours: '12h', icon: Lightbulb },
+        { name: 'Human Physiology', hours: '20h', icon: Users },
+        { name: 'Option Topic', hours: '15h', icon: BookOpen },
       ],
     },
   }
 
-  const assessmentStructure = [
+  const testimonials = [
     {
-      component: 'External Assessment',
-      weight: '80%',
-      papers: [
-        {
-          name: 'Paper 1',
-          type: 'Multiple Choice',
-          duration: 'HL: 60min, SL: 45min',
-          weight: '20%',
-        },
-        {
-          name: 'Paper 2',
-          type: 'Data Analysis & Short Answers',
-          duration: 'HL: 135min, SL: 90min',
-          weight: '40%',
-        },
-        {
-          name: 'Paper 3',
-          type: 'Short Answers on Option',
-          duration: 'HL: 75min, SL: 60min',
-          weight: '20%',
-        },
-      ],
+      name: 'Arjun M.',
+      school: 'Singapore American School',
+      score: '7/7 HL',
+      image: '/testimonials/student1.jpg',
+      quote:
+        "The IA guidance was exceptional. My tutor helped me design an investigation that was both manageable and impressive. Scored 23/24 on my IA!",
     },
     {
-      component: 'Internal Assessment',
-      weight: '20%',
-      papers: [
-        {
-          name: 'Individual Investigation',
-          type: 'Independent Research',
-          duration: '10 hours',
-          weight: '20%',
-        },
-      ],
+      name: 'Sophie L.',
+      school: 'British School of Brussels',
+      score: '7/7 SL',
+      image: '/testimonials/student2.jpg',
+      quote:
+        'Coming from a 4 to a 7 seemed impossible. The examiner insights and past paper strategies made all the difference. Best investment for IB.',
+    },
+    {
+      name: 'Rohan K.',
+      school: 'Dhirubhai Ambani School, Mumbai',
+      score: '6/7 HL',
+      image: '/testimonials/student3.jpg',
+      quote:
+        'The 24/7 WhatsApp support saved me during exam week. Got my doubts cleared at midnight before Paper 2!',
     },
   ]
 
-  const ibSkills = [
+  const faqs = [
     {
-      skill: 'Scientific Inquiry',
-      description: 'Design experiments, analyze data, and draw evidence-based conclusions',
+      question: 'What makes Cerebrum different from other IB Biology tutoring services?',
+      answer:
+        "Unlike generic tutoring platforms, we specialize exclusively in IB Biology with actual IB examiners on our faculty. Our 89% success rate for 6-7 scores and 2-point improvement guarantee demonstrate our commitment to results. We also offer 24/7 WhatsApp support - something most competitors charge extra for or don't offer at all.",
     },
     {
-      skill: 'Critical Thinking',
-      description: 'Evaluate scientific claims and assess reliability of sources',
+      question: 'How does the 2-point score guarantee work?',
+      answer:
+        "If you complete our full program (minimum 40 hours of instruction) and don't improve by at least 2 points from your baseline assessment, we provide free additional tutoring until you achieve that improvement. This applies to students who attend 90%+ sessions and complete all assigned work.",
     },
     {
-      skill: 'Research Skills',
-      description: 'Conduct independent investigations and literature reviews',
+      question: 'Do you help with Internal Assessment (IA)?',
+      answer:
+        'Absolutely! IA support is central to our program. We guide you through topic selection, experimental design, data collection methodology, analysis techniques, and scientific writing. Our structured approach has helped 92% of students score 20+ out of 24 on their IA.',
     },
     {
-      skill: 'Communication',
-      description: 'Present scientific findings clearly and accurately',
-    },
-  ]
-
-  const features = [
-    'Complete IB Biology curriculum for HL and SL',
-    'Research-based learning and scientific inquiry',
-    'Individual Investigation (IA) guidance and support',
-    'Critical thinking and analysis skill development',
-    'Option topics: Ecology, Physiology, Genetics, Neurobiology',
-    'University-level preparation and academic writing',
-    'Past paper practice and exam technique training',
-    'Global perspective integration in Biology learning',
-  ]
-
-  const successStats = [
-    { number: '89%', label: 'Score 6-7 Points', description: 'Students achieving top grades' },
-    { number: '200+', label: 'IB Students', description: 'Successfully coached' },
-    { number: '94%', label: 'University Admissions', description: 'To world-class universities' },
-    { number: '6.3', label: 'Average Score', description: 'IB Biology points' },
-  ]
-
-  const universityPrep = [
-    {
-      icon: Globe,
-      title: 'Global Universities',
-      description:
-        'Preparation for top universities worldwide including Ivy League, Oxbridge, and more',
+      question: 'What timezones do you support for live classes?',
+      answer:
+        "We have faculty across multiple timezones (IST, GMT, EST, PST, SGT) and offer flexible scheduling. Whether you're in Singapore, Dubai, London, or New York, we can accommodate your schedule. 1:1 sessions offer maximum flexibility.",
     },
     {
-      icon: Lightbulb,
-      title: 'Research Skills',
-      description: 'Advanced research methodology and independent investigation capabilities',
+      question: 'Is $6,000/year for the Complete Program really all-inclusive?',
+      answer:
+        'Yes! The Complete IB Program includes 150+ hours of instruction (worth $6,000 at $40/hr), all study materials, past paper banks, IA guidance, and bonus university application support worth $500. No hidden costs. This makes us one of the most affordable premium IB Biology programs globally.',
     },
     {
-      icon: Trophy,
-      title: 'Academic Excellence',
-      description: 'Development of university-level academic skills and scientific thinking',
-    },
-    {
-      icon: Target,
-      title: 'Career Preparation',
-      description: 'Strong foundation for medical, research, and biotechnology careers',
+      question: 'Can I switch between 1:1 and batch sessions?',
+      answer:
+        'Yes, we offer flexibility. Many students start with our batch program and add 1:1 sessions for IA support or exam-intensive revision. We can create a hybrid plan that fits your needs and budget.',
     },
   ]
 
-  const gradingScale = [
-    { grade: '7', description: 'Excellent', percentage: '20-22%' },
-    { grade: '6', description: 'Very Good', percentage: '23-28%' },
-    { grade: '5', description: 'Good', percentage: '31-38%' },
-    { grade: '4', description: 'Satisfactory', percentage: '25-30%' },
-    { grade: '3', description: 'Mediocre', percentage: '15-20%' },
-    { grade: '2', description: 'Poor', percentage: '8-10%' },
-    { grade: '1', description: 'Very Poor', percentage: '3-5%' },
+  const comparisonData = [
+    { feature: 'IB Examiner Faculty', us: true, others: 'Rare' },
+    { feature: 'Score Guarantee', us: '2-point', others: 'None' },
+    { feature: '24/7 WhatsApp Support', us: true, others: 'Extra $$$' },
+    { feature: 'IA Dedicated Support', us: 'Included', others: 'Extra $$$' },
+    { feature: 'Session Recordings', us: true, others: 'Sometimes' },
+    { feature: 'Average Price (1:1)', us: '$75/hr', others: '$100-150/hr' },
+    { feature: 'Complete Program', us: '$6,000/yr', others: '$8-12K+/yr' },
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-red-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold mb-6">IB Biology Excellence</h1>
-              <p className="text-xl text-red-100 mb-8">
-                Master International Baccalaureate Biology with our expert coaching. Research-based
-                learning, critical thinking development, and preparation for world's top
-                universities.
+    <div className="min-h-screen bg-white">
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsAppButton />
+
+      {/* Hero Section - Premium Dark */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+          {/* Trust Badges Row */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {trustBadges.map((badge, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm"
+              >
+                <badge.icon className="w-4 h-4 text-green-400" />
+                <span>{badge.text}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4" />
+                India's Premier IB Biology Institute
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Master IB Biology
+                <span className="block text-green-400">Score 6-7 Guaranteed</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                Premium IB Biology coaching with <strong>actual IB examiners</strong>. Comprehensive
+                HL & SL preparation, dedicated IA support, and 24/7 WhatsApp access. Join 500+
+                students achieving top scores worldwide.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Link
-                  href="/admissions"
-                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <motion.a
+                  href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I'm interested in IB Biology coaching. Please share program details.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-green-500/25"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Enroll for IB Biology
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp Us Now
+                </motion.a>
                 <Link
-                  href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                  href="#pricing"
+                  className="flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all"
                 >
-                  Book Demo Class
+                  View Pricing
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">IB Program Features</h3>
-              <div className="space-y-3 sm:space-y-4">
-                <div className="flex items-center">
-                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-red-300" />
-                  <span className="text-sm sm:text-base">Higher Level & Standard Level</span>
+
+              <div className="flex items-center gap-4 text-sm text-gray-400">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-blue-500 border-2 border-slate-900"
+                    />
+                  ))}
                 </div>
-                <div className="flex items-center">
-                  <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-red-300" />
-                  <span className="text-sm sm:text-base">Research-Based Learning</span>
-                </div>
-                <div className="flex items-center">
-                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-red-300" />
-                  <span className="text-sm sm:text-base">6-7 Points Target</span>
-                </div>
-                <div className="flex items-center">
-                  <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-red-300" />
-                  <span className="text-sm sm:text-base">University Preparation</span>
-                </div>
+                <span>
+                  <strong className="text-white">500+</strong> students enrolled globally
+                </span>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Stats Card */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Our Track Record</h3>
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                {stats.map((stat, i) => (
+                  <motion.div
+                    key={i}
+                    className="text-center p-4 bg-white/5 rounded-xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + i * 0.1 }}
+                  >
+                    <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="font-semibold text-white">{stat.label}</div>
+                    <div className="text-xs sm:text-sm text-gray-400">{stat.sublabel}</div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex items-center justify-center gap-2 text-yellow-400">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-5 h-5" fill="currentColor" />
+                  ))}
+                  <span className="text-white ml-2">4.9/5 Rating</span>
+                </div>
+                <p className="text-center text-gray-400 text-sm mt-2">Based on 200+ student reviews</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Success Statistics */}
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              IB Biology Success Record
+      {/* Why Choose Cerebrum */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Top IB Students Choose Cerebrum
             </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Outstanding results with world-class university admissions
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We're not just another tutoring service. We're IB Biology specialists with examiner
+              insights, proven results, and unmatched support.
             </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            {successStats.map((stat, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {whyChooseUs.map((item, i) => (
+              <motion.div
+                key={i}
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                <div className="text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-red-600 mb-2">
-                  {stat.number}
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                  <item.icon className="w-7 h-7 text-green-600" />
                 </div>
-                <div className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-sm sm:text-base text-gray-600">{stat.description}</div>
-              </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Program Structure */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              IB Biology Program Structure
+      {/* Comparison Table */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              How We Compare
             </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Comprehensive curriculum for Higher Level and Standard Level students
-            </p>
-          </div>
+            <p className="text-lg text-gray-600">See why students switch to Cerebrum</p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {Object.entries(ibProgram).map(([level, program]) => (
-              <div key={level} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.name}</h3>
-                  <div className="flex justify-center space-x-4 text-sm text-sm sm:text-base text-gray-600">
-                    <span className="text-sm sm:text-base">{program.duration}</span>
-                    <span className="text-sm sm:text-base">•</span>
-                    <span className="text-sm sm:text-base">{program.assessment}</span>
+          <motion.div
+            className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-green-100"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b-2 border-green-200">
+                    <th className="text-left py-4 px-4 font-bold text-gray-900">Feature</th>
+                    <th className="text-center py-4 px-4 font-bold text-green-600">
+                      <div className="flex items-center justify-center gap-2">
+                        <Award className="w-5 h-5" />
+                        Cerebrum
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-500">Others</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="border-b border-green-100">
+                      <td className="py-4 px-4 text-gray-700">{row.feature}</td>
+                      <td className="py-4 px-4 text-center">
+                        {row.us === true ? (
+                          <CheckCircle className="w-6 h-6 text-green-500 mx-auto" />
+                        ) : (
+                          <span className="font-semibold text-green-600">{row.us}</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-4 text-center text-gray-500">{row.others}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Syllabus Section */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Complete IB Biology Syllabus Coverage
+            </h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive preparation for both Higher Level and Standard Level
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+            {Object.entries(syllabus).map(([level, data]) => (
+              <motion.div
+                key={level}
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{data.name}</h3>
+                    <p className="text-green-600 font-medium">{data.hours}</p>
+                  </div>
+                  <div
+                    className={`px-4 py-2 rounded-full font-semibold ${level === 'hl' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'}`}
+                  >
+                    {level.toUpperCase()}
                   </div>
                 </div>
 
-                <div className="space-y-2 sm:space-y-3">
-                  {program.topics.map((topic, index) => (
-                    <div key={index} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-red-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{topic}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Assessment Structure */}
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              IB Assessment Structure
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Comprehensive evaluation through external and internal assessments
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {assessmentStructure.map((component, index) => (
-              <div key={index} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">{component.component}</h3>
-                  <span className="bg-red-100 text-red-800 px-4 py-2 rounded-full font-medium">
-                    {component.weight}
-                  </span>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {component.papers.map((paper, paperIndex) => (
-                    <div key={paperIndex} className="border border-gray-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">{paper.name}</h4>
-                      <div className="text-sm text-gray-600 space-y-1">
-                        <div>
-                          <strong>Type:</strong> {paper.type}
-                        </div>
-                        <div>
-                          <strong>Duration:</strong> {paper.duration}
-                        </div>
-                        <div>
-                          <strong>Weight:</strong> {paper.weight}
-                        </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {data.topics.map((topic, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-green-50 transition-colors"
+                    >
+                      <topic.icon className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <span className="text-sm font-medium text-gray-900 block truncate">
+                          {topic.name}
+                        </span>
+                        <span className="text-xs text-gray-500">{topic.hours}</span>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-
-          {/* Grading Scale */}
-          <div className="mt-12 bg-red-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">IB Grading Scale</h3>
-            <div className="grid md:grid-cols-7 gap-3">
-              {gradingScale.map((grade, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-red-600 mb-2">{grade.grade}</div>
-                  <div className="text-sm font-medium text-gray-900 mb-1">{grade.description}</div>
-                  <div className="text-xs text-sm sm:text-base text-gray-600">
-                    {grade.percentage}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* University Preparation */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              University Preparation Excellence
+      {/* Pricing Section */}
+      <section id="pricing" className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Transparent Pricing, Premium Value
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              IB Biology provides exceptional preparation for world's top universities and careers
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your learning style. All plans include our 2-point score
+              guarantee.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            {universityPrep.map((prep, index) => {
-              const Icon = prep.icon
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-red-600 mx-auto mb-4" />
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
-                    {prep.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{prep.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Course Features */}
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              IB Biology Course Features
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
+            {pricingPlans.map((plan, i) => (
+              <motion.div
+                key={i}
+                className={`relative rounded-2xl p-6 sm:p-8 ${
+                  plan.highlight
+                    ? 'bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-2xl scale-105 border-2 border-green-500'
+                    : 'bg-white border border-gray-200 shadow-lg'
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
               >
-                <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-red-600 mb-4" />
-                <p className="text-gray-700 font-medium">{feature}</p>
-              </div>
+                {plan.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </div>
+                )}
+
+                <h3
+                  className={`text-xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-gray-900'}`}
+                >
+                  {plan.name}
+                </h3>
+                <p className={`text-sm mb-4 ${plan.highlight ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {plan.description}
+                </p>
+
+                <div className="mb-6">
+                  <span
+                    className={`text-4xl font-bold ${plan.highlight ? 'text-green-400' : 'text-green-600'}`}
+                  >
+                    {plan.price}
+                  </span>
+                  <span className={plan.highlight ? 'text-gray-300' : 'text-gray-500'}>
+                    {plan.unit}
+                  </span>
+                </div>
+
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <CheckCircle
+                        className={`w-5 h-5 flex-shrink-0 ${plan.highlight ? 'text-green-400' : 'text-green-500'}`}
+                      />
+                      <span className={plan.highlight ? 'text-gray-200' : 'text-gray-700'}>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {plan.bonus && (
+                  <div
+                    className={`p-3 rounded-lg mb-6 text-sm ${plan.highlight ? 'bg-green-500/20 text-green-300' : 'bg-green-50 text-green-700'}`}
+                  >
+                    <Sparkles className="w-4 h-4 inline mr-2" />
+                    {plan.bonus}
+                  </div>
+                )}
+
+                {plan.packages && (
+                  <div className="space-y-2 mb-6">
+                    <p
+                      className={`text-sm font-medium ${plan.highlight ? 'text-gray-300' : 'text-gray-600'}`}
+                    >
+                      Package Options:
+                    </p>
+                    {plan.packages.map((pkg, k) => (
+                      <div
+                        key={k}
+                        className={`flex justify-between text-sm p-2 rounded ${plan.highlight ? 'bg-white/5' : 'bg-gray-50'}`}
+                      >
+                        <span>{'hours' in pkg ? `${pkg.hours} hours` : pkg.name}</span>
+                        <span className="font-semibold">
+                          {pkg.price}
+                          {'savings' in pkg && (
+                            <span className="text-green-500 ml-1 text-xs">({pkg.savings})</span>
+                          )}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <motion.a
+                  href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm interested in the ${plan.name} for IB Biology coaching.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all ${
+                    plan.highlight
+                      ? 'bg-green-500 hover:bg-green-600 text-white'
+                      : 'bg-slate-900 hover:bg-slate-800 text-white'
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  {plan.cta}
+                </motion.a>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing & Enrollment */}
-      <section className="py-16 bg-red-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
-            Excel in IB Biology Today
-          </h2>
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Success Stories from IB Students
+            </h2>
+            <p className="text-lg text-gray-600">Real results from students worldwide</p>
+          </motion.div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  IB Biology Complete Program
-                </h3>
-                <div className="text-left space-y-2 sm:space-y-3">
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
-                    <span className="text-sm sm:text-base">
-                      Higher Level & Standard Level options
-                    </span>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            {testimonials.map((testimonial, i) => (
+              <motion.div
+                key={i}
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((j) => (
+                    <Star key={j} className="w-5 h-5 text-yellow-400" fill="currentColor" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-white font-bold">
+                    {testimonial.name.charAt(0)}
                   </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
-                    <span className="text-sm sm:text-base">Individual Investigation guidance</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
-                    <span className="text-sm sm:text-base">6-7 points achievement focus</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
-                    <span className="text-sm sm:text-base">University application support</span>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.school}</p>
+                    <p className="text-sm font-medium text-green-600">{testimonial.score}</p>
                   </div>
                 </div>
-              </div>
-
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold text-red-600 mb-4">₹49,999</div>
-                <p className="text-gray-600 mb-6">Complete 2-year IB program</p>
-                <div className="space-y-2 sm:space-y-3">
-                  <Link
-                    href="/admissions"
-                    className="block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-                  >
-                    Enroll for IB Biology
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
-                  >
-                    Book Free Demo
-                  </Link>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="bg-indigo-100 border border-indigo-300 rounded-xl p-6">
-            <p className="text-indigo-800 font-semibold mb-2">🎯 IB Special Package</p>
-            <p className="text-indigo-700">
-              Enroll now and get FREE university application guidance + research methodology
-              workshop worth ₹8,000!
+      {/* FAQ Section */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <FAQItem
+                key={i}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openFAQ === i}
+                onClick={() => setOpenFAQ(openFAQ === i ? null : i)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-green-600 via-teal-600 to-green-700 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Excel in IB Biology?</h2>
+            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+              Join 500+ IB students worldwide who chose Cerebrum for their Biology success. Start
+              with a free consultation today.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <motion.a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I want to book a free consultation for IB Biology coaching.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <MessageCircle className="w-6 h-6" />
+                Book Free Consultation
+              </motion.a>
+              <Link
+                href="tel:+918826444334"
+                className="flex items-center justify-center gap-3 border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all"
+              >
+                <Phone className="w-5 h-5" />
+                Call +91 88264 44334
+              </Link>
+            </div>
+
+            <p className="text-green-200 text-sm">
+              No commitment required. Get expert guidance on your IB Biology journey.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Related Pages */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+            Explore More Programs
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { name: 'IGCSE Biology', href: '/boards/igcse' },
+              { name: 'A-Level Biology', href: '/a-level-biology-tuition' },
+              { name: 'CBSE Biology', href: '/boards/cbse' },
+              { name: 'NEET Preparation', href: '/courses/neet' },
+              { name: 'Biology Olympiad', href: '/biology-olympiad-coaching' },
+            ].map((link, i) => (
+              <Link
+                key={i}
+                href={link.href}
+                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 hover:border-green-500 hover:text-green-600 transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
