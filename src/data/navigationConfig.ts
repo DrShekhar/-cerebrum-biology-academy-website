@@ -327,6 +327,36 @@ export const navigationConfig: NavigationSection[] = [
     ],
   },
   {
+    id: 'olympiad-coaching',
+    title: 'Olympiad Coaching',
+    icon: 'GraduationCap',
+    items: [
+      {
+        id: 'usabo-coaching',
+        title: 'USABO Coaching (USA)',
+        href: '/usabo-coaching',
+        description: 'USA Biology Olympiad preparation - 1:1 & batch options',
+        keywords: ['usabo', 'usa biology olympiad', 'olympiad usa', 'usabo prep'],
+        isNew: true,
+      },
+      {
+        id: 'biology-olympiad-coaching',
+        title: 'Indian Biology Olympiad (NSEB/INBO)',
+        href: '/biology-olympiad-coaching',
+        description: 'NSEB, INBO & IBO preparation for Indian students',
+        keywords: ['nseb', 'inbo', 'ibo', 'indian biology olympiad', 'olympiad india'],
+        isPopular: true,
+      },
+      {
+        id: 'olympiad-preparation',
+        title: 'Olympiad Preparation Overview',
+        href: '/olympiad-preparation',
+        description: 'Complete guide to Biology Olympiad competitions worldwide',
+        keywords: ['olympiad prep', 'biology olympiad', 'competition preparation'],
+      },
+    ],
+  },
+  {
     id: 'support',
     title: 'Support',
     icon: 'HelpCircle',
@@ -400,6 +430,11 @@ export const footerNavigationConfig = {
     { title: 'Download Brochure', href: '/support/brochure' },
     { title: 'Mock Tests', href: '/mock-tests' },
     { title: 'Study Materials', href: '/study-materials' },
+  ],
+  olympiadCoaching: [
+    { title: 'USABO Coaching (USA)', href: '/usabo-coaching' },
+    { title: 'Indian Biology Olympiad', href: '/biology-olympiad-coaching' },
+    { title: 'Olympiad Preparation', href: '/olympiad-preparation' },
   ],
 }
 
@@ -555,6 +590,41 @@ export const searchableContent = [
       'rohini',
     ],
     isNew: true,
+  },
+  {
+    id: 'usabo-coaching',
+    title: 'USABO Coaching (USA)',
+    href: '/usabo-coaching',
+    description: 'USA Biology Olympiad preparation with 1:1 tutoring and small batch options',
+    category: 'Olympiad Coaching',
+    keywords: [
+      'usabo',
+      'usa biology olympiad',
+      'usabo coaching',
+      'usabo tutoring',
+      'biology olympiad usa',
+      'open exam',
+      'semifinals',
+      'national finals',
+    ],
+    isNew: true,
+  },
+  {
+    id: 'biology-olympiad-coaching',
+    title: 'Biology Olympiad Coaching (India)',
+    href: '/biology-olympiad-coaching',
+    description: 'NSEB, INBO & IBO preparation for Indian Biology Olympiad aspirants',
+    category: 'Olympiad Coaching',
+    keywords: [
+      'nseb',
+      'inbo',
+      'ibo',
+      'biology olympiad',
+      'indian biology olympiad',
+      'olympiad coaching',
+      'olympiad preparation',
+    ],
+    isPopular: true,
   },
 ]
 

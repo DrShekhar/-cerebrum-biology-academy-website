@@ -428,26 +428,26 @@ export default function USABOCoachingPage() {
               </button>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Trophy className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                <div className="text-2xl font-bold">Open→IBO</div>
-                <div className="text-sm opacity-80">Full Pathway</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <Trophy className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-green-400" />
+                <div className="text-xl md:text-2xl font-bold">Open→IBO</div>
+                <div className="text-xs md:text-sm opacity-80">Full Pathway</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Users className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                <div className="text-2xl font-bold">1:1 & Batch</div>
-                <div className="text-sm opacity-80">Flexible Options</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <Users className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-green-400" />
+                <div className="text-xl md:text-2xl font-bold">1:1 & Batch</div>
+                <div className="text-xs md:text-sm opacity-80">Flexible Options</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <BookOpen className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                <div className="text-2xl font-bold">Campbell</div>
-                <div className="text-sm opacity-80">Biology Depth</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <BookOpen className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-green-400" />
+                <div className="text-xl md:text-2xl font-bold">Campbell</div>
+                <div className="text-xs md:text-sm opacity-80">Biology Depth</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Star className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                <div className="text-2xl font-bold">4.9/5</div>
-                <div className="text-sm opacity-80">Student Rating</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <Star className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-green-400" />
+                <div className="text-xl md:text-2xl font-bold">4.9/5</div>
+                <div className="text-xs md:text-sm opacity-80">Student Rating</div>
               </div>
             </div>
           </motion.div>
@@ -455,24 +455,24 @@ export default function USABOCoachingPage() {
       </section>
 
       {/* USABO Pathway Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               USABO Competition Pathway
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               From Open Exam to representing Team USA at International Biology Olympiad
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {usaboPathway.map((stage, index) => (
               <motion.div
                 key={stage.stage}
@@ -482,16 +482,16 @@ export default function USABOCoachingPage() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-[#e8ede8] rounded-xl p-6 border border-[#4a5d4a]/20 h-full">
-                  <stage.icon className="w-12 h-12 text-[#3d4d3d] mb-4" />
-                  <div className="text-sm text-[#4a5d4a] font-semibold mb-1">{stage.stage}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{stage.name}</h3>
-                  <p className="text-gray-600 mb-2">{stage.description}</p>
-                  <span className="text-sm text-gray-500">{stage.date}</span>
+                <div className="bg-[#e8ede8] rounded-lg p-4 border border-[#4a5d4a]/20 h-full">
+                  <stage.icon className="w-8 h-8 text-[#3d4d3d] mb-3" />
+                  <div className="text-xs text-[#4a5d4a] font-semibold mb-1">{stage.stage}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{stage.name}</h3>
+                  <p className="text-sm text-gray-600 mb-1">{stage.description}</p>
+                  <span className="text-xs text-gray-500">{stage.date}</span>
                 </div>
                 {index < usaboPathway.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-[#4a5d4a]" />
+                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2">
+                    <ArrowRight className="w-5 h-5 text-[#4a5d4a]" />
                   </div>
                 )}
               </motion.div>
@@ -574,11 +574,11 @@ export default function USABOCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#e8ede8] rounded-xl p-8"
+                className="bg-[#e8ede8] rounded-xl p-6 md:p-8"
               >
-                <feature.icon className="w-12 h-12 text-[#3d4d3d] mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <feature.icon className="w-10 h-10 md:w-12 md:h-12 text-[#3d4d3d] mb-3 md:mb-4" />
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm md:text-base text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -625,7 +625,7 @@ export default function USABOCoachingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 shadow-lg relative border border-purple-200 ${pkg.popular ? 'ring-2 ring-purple-500' : ''}`}
+                  className={`bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-4 md:p-6 shadow-lg relative border border-purple-200 ${pkg.popular ? 'ring-2 ring-purple-500' : ''}`}
                 >
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -686,7 +686,7 @@ export default function USABOCoachingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-white rounded-xl p-6 shadow-lg relative ${pkg.popular ? 'ring-2 ring-green-500' : ''}`}
+                  className={`bg-white rounded-xl p-4 md:p-6 shadow-lg relative ${pkg.popular ? 'ring-2 ring-green-500' : ''}`}
                 >
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -745,7 +745,7 @@ export default function USABOCoachingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-gradient-to-br from-teal-50 to-green-50 rounded-xl p-6 shadow-lg relative border border-teal-200 ${pkg.popular ? 'ring-2 ring-teal-500' : ''}`}
+                  className={`bg-gradient-to-br from-teal-50 to-green-50 rounded-xl p-4 md:p-6 shadow-lg relative border border-teal-200 ${pkg.popular ? 'ring-2 ring-teal-500' : ''}`}
                 >
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -812,13 +812,15 @@ export default function USABOCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#e8ede8] rounded-xl p-8 shadow-lg border border-[#4a5d4a]/10"
+                className="bg-[#e8ede8] rounded-xl p-4 md:p-8 shadow-lg border border-[#4a5d4a]/10"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
-                  <MessageCircle className="w-6 h-6 mr-3 text-[#3d4d3d] flex-shrink-0 mt-1" />
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 flex items-start">
+                  <MessageCircle className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
                   {faq.question}
                 </h3>
-                <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">
+                  {faq.answer}
+                </p>
               </motion.div>
             ))}
           </div>
