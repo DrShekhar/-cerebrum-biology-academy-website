@@ -136,21 +136,70 @@ const features = [
   },
 ]
 
-const oneOnOnePricing = [
+// Senior Faculty: 15+ years experience, IBO-trained mentors
+const seniorFacultyPricing = [
+  {
+    name: 'Discovery',
+    hours: 12,
+    price: 1800,
+    perHour: 150,
+    features: ['12 hours with Senior Faculty', 'IBO-level mentorship', 'Personalized study plan'],
+  },
+  {
+    name: 'Accelerator',
+    hours: 24,
+    price: 3360,
+    perHour: 140,
+    features: [
+      '24 hours with Senior Faculty',
+      'Mock tests + detailed review',
+      'Priority scheduling',
+      'Direct mentor access',
+    ],
+    popular: true,
+  },
+  {
+    name: 'Elite Track',
+    hours: 32,
+    price: 4160,
+    perHour: 130,
+    features: [
+      '32 hours with Senior Faculty',
+      'Complete USABO + IBO prep',
+      'Practical lab coaching',
+      '24/7 doubt support',
+    ],
+  },
+  {
+    name: 'IBO Champion',
+    hours: 40,
+    price: 4800,
+    perHour: 120,
+    features: [
+      '40 hours of mentorship',
+      'Full Finals preparation',
+      'IBO theory + practicals',
+      'Team USA pathway guidance',
+    ],
+  },
+]
+
+// Junior Faculty: Experienced tutors, competitive rates
+const juniorFacultyPricing = [
   {
     name: 'Starter',
-    hours: 10,
-    price: 750,
+    hours: 12,
+    price: 900,
     perHour: 75,
-    features: ['10 hours of 1:1 tutoring', 'Personalized study plan', 'Practice materials'],
+    features: ['12 hours of 1:1 tutoring', 'Personalized study plan', 'Practice materials'],
   },
   {
     name: 'Foundation',
-    hours: 20,
-    price: 1400,
+    hours: 24,
+    price: 1680,
     perHour: 70,
     features: [
-      '20 hours of 1:1 tutoring',
+      '24 hours of 1:1 tutoring',
       'Mock tests included',
       'Progress tracking',
       'Email support',
@@ -159,26 +208,26 @@ const oneOnOnePricing = [
   },
   {
     name: 'Intensive',
-    hours: 40,
-    price: 2600,
+    hours: 32,
+    price: 2080,
     perHour: 65,
     features: [
-      '40 hours of 1:1 tutoring',
+      '32 hours of 1:1 tutoring',
       'Complete USABO prep',
       'All mock tests',
       'Priority scheduling',
     ],
   },
   {
-    name: 'Elite',
-    hours: 60,
-    price: 3600,
+    name: 'Comprehensive',
+    hours: 40,
+    price: 2400,
     perHour: 60,
     features: [
-      '60+ hours of tutoring',
+      '40 hours of tutoring',
       'Full program access',
-      'Practical lab guidance',
-      'IBO prep included',
+      'Open + Semifinal prep',
+      'Regular assessments',
     ],
   },
 ]
@@ -186,26 +235,56 @@ const oneOnOnePricing = [
 const batchPricing = [
   {
     name: 'Open Exam Prep',
-    duration: '8 weeks',
-    price: 800,
+    duration: '6 weeks',
+    hours: 12,
+    price: 480,
+    perHour: 40,
     students: '4-8',
-    features: ['16 live sessions', 'Open Exam focus', 'Weekly assignments', 'Group discussions'],
+    features: [
+      '12 hours (6 sessions)',
+      'Open Exam focus',
+      'Weekly assignments',
+      'Group discussions',
+    ],
   },
   {
-    name: 'Semifinal Intensive',
-    duration: '12 weeks',
-    price: 1500,
+    name: 'Semifinal Prep',
+    duration: '10 weeks',
+    hours: 24,
+    price: 960,
+    perHour: 40,
     students: '4-6',
-    features: ['24 live sessions', 'Advanced topics', 'Mock semifinals', 'Individual feedback'],
+    features: [
+      '24 hours (12 sessions)',
+      'Advanced topics',
+      'Mock semifinals',
+      'Individual feedback',
+    ],
     popular: true,
   },
   {
-    name: 'Full USABO Track',
-    duration: '6 months',
-    price: 2500,
+    name: 'Open + Semi Combo',
+    duration: '14 weeks',
+    hours: 32,
+    price: 1280,
+    perHour: 40,
     students: '4-6',
     features: [
-      'Complete preparation',
+      '32 hours (16 sessions)',
+      'Open to Semifinal prep',
+      'Complete mock tests',
+      'Progress tracking',
+    ],
+  },
+  {
+    name: 'Full USABO Track',
+    duration: '18 weeks',
+    hours: 40,
+    price: 1600,
+    perHour: 40,
+    students: '4-6',
+    features: [
+      '40 hours (20 sessions)',
       'All stages covered',
       'Practical training',
       'Finals prep included',
@@ -293,9 +372,11 @@ export default function USABOCoachingPage() {
               url: 'https://cerebrumbiologyacademy.com',
             },
             offers: {
-              '@type': 'Offer',
-              price: '75',
+              '@type': 'AggregateOffer',
+              lowPrice: '60',
+              highPrice: '150',
               priceCurrency: 'USD',
+              offerCount: '8',
             },
             educationalLevel: 'High School',
           }),
@@ -527,13 +608,83 @@ export default function USABOCoachingPage() {
             </p>
           </motion.div>
 
-          {/* 1:1 Tutoring Packages */}
+          {/* Senior Faculty Pricing */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              1:1 Personalized Tutoring
-            </h3>
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full mb-4">
+                <Award className="w-5 h-5 text-purple-600 mr-2" />
+                <span className="text-purple-700 font-semibold">Premium Tier</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Senior Faculty (15+ Years Experience)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                IBO-trained mentors • Former Olympiad coaches • $120-150/hr
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {oneOnOnePricing.map((pkg, index) => (
+              {seniorFacultyPricing.map((pkg, index) => (
+                <motion.div
+                  key={pkg.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 shadow-lg relative border border-purple-200 ${pkg.popular ? 'ring-2 ring-purple-500' : ''}`}
+                >
+                  {pkg.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h4>
+                  <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
+                  <div className="flex items-baseline mb-1">
+                    <DollarSign className="w-5 h-5 text-purple-600" />
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="text-sm text-purple-600 font-medium mb-4">
+                    ${pkg.perHour}/hour
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    {pkg.features.map((feature) => (
+                      <li key={feature} className="text-sm text-gray-600 flex items-start">
+                        <CheckCircle className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={handleWhatsAppEnquiry}
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                  >
+                    Get Started
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Junior Faculty Pricing */}
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-full mb-4">
+                <Users className="w-5 h-5 text-green-600 mr-2" />
+                <span className="text-green-700 font-semibold">Value Tier</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Junior Faculty (Experienced Tutors)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Biology graduates • USABO semifinalists • $60-75/hr
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {juniorFacultyPricing.map((pkg, index) => (
                 <motion.div
                   key={pkg.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -545,7 +696,7 @@ export default function USABOCoachingPage() {
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Best Value
                       </span>
                     </div>
                   )}
@@ -553,7 +704,9 @@ export default function USABOCoachingPage() {
                   <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
                   <div className="flex items-baseline mb-1">
                     <DollarSign className="w-5 h-5 text-green-600" />
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-green-600 font-medium mb-4">${pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
@@ -577,10 +730,19 @@ export default function USABOCoachingPage() {
 
           {/* Small Batch Programs */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              Small Batch Programs (4-8 Students)
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-teal-100 px-4 py-2 rounded-full mb-4">
+                <Users className="w-5 h-5 text-teal-600 mr-2" />
+                <span className="text-teal-700 font-semibold">Group Learning</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Small Batch Programs (4-8 Students)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Collaborative learning • Peer discussions • $40/hr per student
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {batchPricing.map((pkg, index) => (
                 <motion.div
                   key={pkg.name}
@@ -588,35 +750,40 @@ export default function USABOCoachingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-white rounded-xl p-6 shadow-lg relative ${pkg.popular ? 'ring-2 ring-green-500' : ''}`}
+                  className={`bg-gradient-to-br from-teal-50 to-green-50 rounded-xl p-6 shadow-lg relative border border-teal-200 ${pkg.popular ? 'ring-2 ring-teal-500' : ''}`}
                 >
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-teal-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Recommended
                       </span>
                     </div>
                   )}
                   <h4 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h4>
-                  <div className="text-sm text-gray-500 mb-1">{pkg.duration}</div>
+                  <div className="text-sm text-gray-500 mb-1">
+                    {pkg.duration} • {pkg.hours} hours
+                  </div>
                   <div className="text-sm text-gray-500 mb-4">
                     {pkg.students} students per batch
                   </div>
-                  <div className="flex items-baseline mb-4">
-                    <DollarSign className="w-5 h-5 text-green-600" />
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price}</span>
+                  <div className="flex items-baseline mb-1">
+                    <DollarSign className="w-5 h-5 text-teal-600" />
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
+                  <div className="text-sm text-teal-600 font-medium mb-4">${pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature) => (
                       <li key={feature} className="text-sm text-gray-600 flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-teal-600 mr-2 flex-shrink-0 mt-0.5" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <button
                     onClick={handleWhatsAppEnquiry}
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                    className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
                   >
                     Join Batch
                   </button>
