@@ -174,6 +174,24 @@ export const navigationRoutes: NavigationItem[] = [
     category: 'learning',
     status: 'active',
   },
+
+  // Olympiad Coaching
+  {
+    title: 'USABO Coaching',
+    description: 'USA Biology Olympiad preparation - 1:1 & batch options',
+    href: '/usabo-coaching',
+    icon: '🏆',
+    category: 'learning',
+    status: 'active',
+  },
+  {
+    title: 'Biology Olympiad Coaching',
+    description: 'NSEB, INBO & IBO preparation for Indian students',
+    href: '/biology-olympiad-coaching',
+    icon: '🥇',
+    category: 'learning',
+    status: 'active',
+  },
 ]
 
 export const getRoutesByCategory = (category: NavigationItem['category']) => {
