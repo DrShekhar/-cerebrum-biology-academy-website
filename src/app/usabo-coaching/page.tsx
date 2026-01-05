@@ -863,11 +863,53 @@ export default function USABOCoachingPage() {
         </div>
       </section>
 
+      {/* Parent Guide Callout */}
+      <section className="py-12 bg-gradient-to-br from-teal-50 to-green-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-200"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-8 h-8 text-teal-600" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+                  Complete Parent&apos;s Guide to USABO & IBO
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Grade-wise preparation roadmap from 9th grade to college. Learn about timelines,
+                  syllabus, college admission benefits, and how to support your child&apos;s olympiad
+                  journey.
+                </p>
+                <Link
+                  href="/blog/usabo-ibo-complete-parent-guide-grade-wise-preparation"
+                  className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Read the Complete Guide
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Related Pages */}
       <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/blog/usabo-ibo-complete-parent-guide-grade-wise-preparation"
+              className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
+            >
+              USABO Parent&apos;s Guide (Blog)
+            </Link>
             <Link
               href="/biology-olympiad-coaching"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"

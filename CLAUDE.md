@@ -362,6 +362,33 @@ Required in `.env.local`:
 2. Run linter: `npm run lint`
 3. Run tests: `npm test`
 4. Format code: `npm run format`
+5. **ALWAYS check responsiveness** on 3 screen sizes:
+   - **Mobile**: 375px (iPhone SE/small phones)
+   - **iPad/Tablet**: 768px (iPad portrait)
+   - **Desktop**: 1280px+ (standard desktop)
+
+### Responsive Design Checklist
+
+Before committing any UI changes, verify:
+- [ ] Mobile (375px): Content readable, no horizontal scroll, touch-friendly buttons
+- [ ] iPad (768px): Grid layouts appropriate (not too cramped or sparse)
+- [ ] Desktop (1280px+): Full layout displays correctly
+
+**Common Responsive Patterns:**
+```tsx
+// Grids: Mobile → Tablet → Desktop
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3     // 1 → 2 → 3 columns
+grid grid-cols-2 md:grid-cols-4                     // 2 → 4 columns (stats)
+
+// Padding: Smaller on mobile
+p-4 md:p-6 lg:p-8                                   // Progressive padding
+
+// Text: Scale up on larger screens
+text-lg md:text-xl lg:text-2xl                      // Progressive text size
+
+// Flex direction: Stack on mobile
+flex flex-col md:flex-row                           // Vertical → Horizontal
+```
 
 ### Deployment
 
