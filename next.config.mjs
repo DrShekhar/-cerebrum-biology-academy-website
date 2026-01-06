@@ -207,6 +207,13 @@ const nextConfig = {
     'thread-stream',
   ],
 
+  // FIX: Set expireTime to 14 days (in seconds) to avoid potential future issues
+  // Next.js 15 defaults to 1 year which exceeds 32-bit integer max when converted to ms
+  // Max 32-bit signed int: 2,147,483,647 ms = ~24.8 days
+  // Using 14 days provides safe margin for ISR stale-while-revalidate behavior
+  // See: https://nextjs.org/docs/app/api-reference/config/next-config-js/expireTime
+  expireTime: 1209600, // 14 days in seconds - conservative safe value
+
   // Experimental features for better performance
   // Note: optimizeCss DISABLED - causes CSS MIME type errors and breaks MCQ page on desktop
   // swcMinify removed - enabled by default in Next.js 15

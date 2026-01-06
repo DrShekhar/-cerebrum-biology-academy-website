@@ -585,23 +585,22 @@ export class CreditManagementSystem {
 
   private startMonthlyResetTask(): void {
     // Reset monthly usage on the 1st of each month
-    const now = new Date()
-    const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1)
-    const msUntilNextMonth = nextMonth.getTime() - now.getTime()
+    // FIX: Use daily interval check instead of long timeout to avoid 32-bit overflow
+    // setTimeout with values > 24.8 days exceeds MAX_INT32 and triggers Node.js warning
 
-    setTimeout(() => {
-      this.resetMonthlyUsage()
-      // Set interval for monthly resets (check daily, reset when month changes)
-      setInterval(
-        () => {
-          const today = new Date()
-          if (today.getDate() === 1) {
-            this.resetMonthlyUsage()
-          }
-        },
-        24 * 60 * 60 * 1000
-      )
-    }, msUntilNextMonth)
+    // Check daily if it's the 1st of the month
+    const checkAndResetMonthly = () => {
+      const today = new Date()
+      if (today.getDate() === 1 && today.getHours() === 0) {
+        this.resetMonthlyUsage()
+      }
+    }
+
+    // Run check immediately in case it's already the 1st
+    checkAndResetMonthly()
+
+    // Set interval for daily checks (safe 24h interval)
+    setInterval(checkAndResetMonthly, 24 * 60 * 60 * 1000)
   }
 
   private async resetDailyUsage(): Promise<void> {
