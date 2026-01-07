@@ -799,28 +799,46 @@ export default function BBOPreparationPage() {
       {/* Related Pages */}
       <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More Olympiad Programs</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More Programs</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/usabo-coaching"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
-            >
-              USABO Coaching (USA)
-            </Link>
-            <Link
-              href="/inbo-coaching"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
-            >
-              INBO Coaching (India)
-            </Link>
-            <Link
-              href="/ibo-preparation"
+              href="/campbell-biology/"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
+            >
+              Campbell Biology (56 Chapters)
+            </Link>
+            <Link
+              href="/usabo-coaching/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              USABO (USA)
+            </Link>
+            <Link
+              href="/inbo-coaching/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              INBO (India)
+            </Link>
+            <Link
+              href="/ibo-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
               IBO Preparation
             </Link>
             <Link
-              href="/biology-olympiad-preparation"
+              href="/mcat-biology-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              MCAT Biology
+            </Link>
+            <Link
+              href="/ap-biology-online-tutor/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              AP Biology
+            </Link>
+            <Link
+              href="/biology-olympiad-preparation/"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
               All Olympiad Programs

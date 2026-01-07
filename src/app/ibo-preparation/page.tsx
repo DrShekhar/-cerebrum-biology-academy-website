@@ -646,6 +646,59 @@ export default function IBOPreparationPage() {
         </div>
       </section>
 
+      {/* Related Programs */}
+      <section className="py-12 bg-[#e8ede8]">
+        <div className="max-w-7xl mx-auto px-4">
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+            Explore More Programs
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/campbell-biology/"
+              className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
+            >
+              Campbell Biology (56 Chapters)
+            </Link>
+            <Link
+              href="/usabo-coaching/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              USABO (USA)
+            </Link>
+            <Link
+              href="/bbo-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              BBO (UK)
+            </Link>
+            <Link
+              href="/inbo-coaching/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              INBO (India)
+            </Link>
+            <Link
+              href="/mcat-biology-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              MCAT Biology
+            </Link>
+            <Link
+              href="/ap-biology-online-tutor/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              AP Biology
+            </Link>
+            <Link
+              href="/biology-olympiad-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              All Olympiad Programs
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-400 to-yellow-500">
         <div className="max-w-4xl mx-auto px-4 text-center">

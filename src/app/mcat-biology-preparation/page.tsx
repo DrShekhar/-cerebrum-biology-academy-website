@@ -678,7 +678,7 @@ export default function MCATBiologyPage() {
               <div className="text-xs text-slate-500">56 Chapters</div>
             </Link>
             <Link
-              href="/ap-biology-tutor/"
+              href="/ap-biology-online-tutor/"
               className="bg-white rounded-xl p-4 text-center border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group"
             >
               <GraduationCap className="w-8 h-8 text-green-500 mx-auto mb-2" />
