@@ -19,10 +19,22 @@ import {
   FlaskConical,
   Microscope,
   MapPin,
+  Wifi,
+  Navigation,
+  Phone,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
+
+const PAGE_KEYWORD = 'PCB Tuition Near Me'
 
 const pcbSubjects = [
   {
@@ -131,35 +143,50 @@ const faqs = [
   },
 ]
 
+const centerStyles = [
+  { bgColor: 'bg-orange-50', borderColor: 'border-orange-200', iconColor: 'text-orange-600' },
+  { bgColor: 'bg-yellow-50', borderColor: 'border-yellow-200', iconColor: 'text-yellow-600' },
+  { bgColor: 'bg-amber-50', borderColor: 'border-amber-200', iconColor: 'text-amber-600' },
+  { bgColor: 'bg-red-50', borderColor: 'border-red-200', iconColor: 'text-red-600' },
+]
+
 export default function PcbTuitionNearMePage() {
   const [userLocation, setUserLocation] = useState<string>('')
+  const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
+
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
 
   useEffect(() => {
     const saved = localStorage.getItem('userLocation')
     if (saved) {
-      setUserLocation(saved)
+      try {
+        const location = JSON.parse(saved)
+        setUserLocation(location.city || saved)
+        const delhiNCRCities = ['Delhi', 'New Delhi', 'Gurugram', 'Gurgaon', 'Faridabad', 'Noida', 'Greater Noida', 'Ghaziabad']
+        setIsInDelhiNCR(delhiNCRCities.includes(location.city))
+      } catch {
+        setUserLocation(saved)
+      }
     }
   }, [])
 
   return (
     <div className="min-h-screen">
+      {/* LocalBusiness Schemas for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Hero Section */}
@@ -426,6 +453,82 @@ export default function PcbTuitionNearMePage() {
           </div>
         </div>
       </section>
+
+      {/* Online Classes Section - For non Delhi NCR users */}
+      {isInDelhiNCR === false && (
+        <section className="py-16 bg-gradient-to-br from-orange-50 to-yellow-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Wifi className="w-4 h-4 mr-2" />
+                Online PCB Classes Available
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Not in Delhi NCR? Join Us Online!
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Get the same expert PCB coaching from anywhere in India through our interactive online platform.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-orange-100"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center">
+                      <Wifi className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-bold text-gray-900">{region.name}</h3>
+                      <p className="text-sm text-gray-500">{region.studentCount}+ students enrolled</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {(region.states || region.countries || []).slice(0, 4).map((area) => (
+                      <span key={area} className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded">
+                        {area}
+                      </span>
+                    ))}
+                    {(region.states || region.countries || []).length > 4 && (
+                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                        +{(region.states || region.countries || []).length - 4} more
+                      </span>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-10"
+            >
+              <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
+                <Button size="xl" className="bg-orange-600 hover:bg-orange-700 text-white">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Enquire About Online PCB Classes
+                </Button>
+              </a>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-yellow-600 to-yellow-600 text-white">

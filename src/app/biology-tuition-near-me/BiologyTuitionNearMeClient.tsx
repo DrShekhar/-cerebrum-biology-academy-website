@@ -1,10 +1,10 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
-  CheckCircle,
   Phone,
   ArrowRight,
   Play,
@@ -17,8 +17,19 @@ import {
   Navigation,
   Building2,
   Train,
+  Wifi,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
+
+const PAGE_KEYWORD = 'Biology Tuition Near Me'
 
 const locations = [
   {
@@ -148,8 +159,32 @@ const faqs = [
 ]
 
 export function BiologyTuitionNearMeClient() {
+  const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
+
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
+
+  useEffect(() => {
+    const savedLocation = localStorage.getItem('userLocation')
+    if (savedLocation) {
+      const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+      setIsInDelhiNCR(delhiNCRLocations.some((loc) => savedLocation.includes(loc)))
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
+      {/* LocalBusiness Schema for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-800 via-blue-800 to-purple-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -362,6 +397,62 @@ export function BiologyTuitionNearMeClient() {
         </div>
       </section>
 
+      {/* Online Regions Section - for non-Delhi users */}
+      {isInDelhiNCR === false && (
+        <section className="py-16 md:py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Online Biology Tuition for Your Region
+              </h2>
+              <p className="text-xl text-gray-600">
+                We serve students across India with our live online classes
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100"
+                >
+                  <div className="flex items-center mb-4">
+                    <Wifi className="w-8 h-8 text-green-600 mr-3" />
+                    <h3 className="text-xl font-bold text-gray-900">{region.name}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{region.description}</p>
+                  <Link href={`/${region.slug}`}>
+                    <Button variant="outline" size="sm">
+                      Explore Program
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}>
+                <Button variant="default" size="xl" className="bg-green-600 hover:bg-green-700">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Enquire on WhatsApp
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -433,22 +524,11 @@ export function BiologyTuitionNearMeClient() {
           }),
         }}
       />
+
+      {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </div>
   )

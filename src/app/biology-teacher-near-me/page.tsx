@@ -6,12 +6,9 @@ import {
   MapPin,
   Users,
   CheckCircle2,
-  Award,
-  BookOpen,
   Video,
   MessageCircle,
   Play,
-  ArrowRight,
   Building,
   Globe,
   Phone,
@@ -29,59 +26,49 @@ import {
   LocationIllustration,
   OnlineClassIllustration,
 } from '@/components/illustrations/SEOIllustrations'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getCityLocalityPath,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
 
-const offlineCenters = [
+const PAGE_KEYWORD = 'Biology Teacher Near Me'
+
+const centerStyles = [
   {
-    name: 'Rohini Center',
-    address: 'Sector 7, Rohini, Delhi - 110085',
-    landmark: 'Near Rohini West Metro Station',
-    timing: 'Mon-Sat: 8 AM - 8 PM',
-    phone: '+91 88264 44334',
-    highlight: true,
     color: 'bg-green-600',
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
     iconBg: 'bg-green-100',
     iconColor: 'text-green-600',
+    highlight: true,
   },
   {
-    name: 'Gurugram Center',
-    address: 'Sector 14, Gurugram, Haryana',
-    landmark: 'Near HUDA City Centre',
-    timing: 'Mon-Sat: 8 AM - 8 PM',
-    phone: '+91 88264 44334',
-    highlight: false,
     color: 'from-violet-500 to-purple-500',
     bgColor: 'bg-violet-50',
     borderColor: 'border-violet-200',
     iconBg: 'bg-violet-100',
     iconColor: 'text-violet-600',
+    highlight: false,
   },
   {
-    name: 'South Extension Center',
-    address: 'South Extension Part 2, Delhi',
-    landmark: 'Near South Ex Metro',
-    timing: 'Mon-Sat: 9 AM - 7 PM',
-    phone: '+91 88264 44334',
-    highlight: false,
     color: 'from-orange-500 to-amber-500',
     bgColor: 'bg-orange-50',
     borderColor: 'border-orange-200',
     iconBg: 'bg-orange-100',
     iconColor: 'text-orange-600',
+    highlight: false,
   },
   {
-    name: 'Faridabad Center',
-    address: 'Sector 15, Faridabad, Haryana',
-    landmark: 'Near Badkhal Chowk',
-    timing: 'Mon-Sat: 8 AM - 8 PM',
-    phone: '+91 88264 44334',
-    highlight: false,
     color: 'blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
     iconBg: 'bg-blue-100',
     iconColor: 'text-blue-600',
+    highlight: false,
   },
 ]
 
@@ -143,6 +130,11 @@ export default function BiologyTeacherNearMePage() {
   const [showLocationModal, setShowLocationModal] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
 
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
+
   useEffect(() => {
     const savedLocation = localStorage.getItem('userInDelhiNCR')
     if (savedLocation !== null) {
@@ -160,23 +152,19 @@ export default function BiologyTeacherNearMePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* LocalBusiness Schema for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Location Modal - Premium Design */}
@@ -334,71 +322,95 @@ export default function BiologyTeacherNearMePage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {offlineCenters.map((center, index) => (
-                <motion.div
-                  key={center.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative rounded-3xl p-8 ${center.bgColor} border ${center.borderColor} hover:shadow-xl transition-all duration-300 group`}
-                >
-                  {center.highlight && (
-                    <div className="absolute -top-3 left-6">
-                      <span className="inline-flex items-center bg-[#4a5d4a] text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
-                        <Sparkles className="w-3 h-3 mr-1" />
-                        Flagship Center
-                      </span>
-                    </div>
-                  )}
+              {offlineCenters.map((center, index) => {
+                const style = centerStyles[index] || centerStyles[0]
+                return (
+                  <motion.div
+                    key={center.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className={`relative rounded-3xl p-8 ${style.bgColor} border ${style.borderColor} hover:shadow-xl transition-all duration-300 group`}
+                  >
+                    {style.highlight && (
+                      <div className="absolute -top-3 left-6">
+                        <span className="inline-flex items-center bg-[#4a5d4a] text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-lg">
+                          <Sparkles className="w-3 h-3 mr-1" />
+                          Flagship Center
+                        </span>
+                      </div>
+                    )}
 
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className={`p-3 rounded-2xl ${center.iconBg}`}>
-                      <Building className={`w-6 h-6 ${center.iconColor}`} />
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className={`p-3 rounded-2xl ${style.iconBg}`}>
+                        <Building className={`w-6 h-6 ${style.iconColor}`} />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900">{center.name}</h3>
+                        <p className="text-gray-600">{center.city}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{center.name}</h3>
-                      <p className="text-gray-600">{center.landmark}</p>
-                    </div>
-                  </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <MapPin className={`w-5 h-5 ${center.iconColor}`} />
-                      <span>{center.address}</span>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-center gap-3 text-gray-700">
+                        <MapPin className={`w-5 h-5 ${style.iconColor}`} />
+                        <span>{center.address}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-700">
+                        <Clock className={`w-5 h-5 ${style.iconColor}`} />
+                        <span>{center.timing}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-700">
+                        <Phone className={`w-5 h-5 ${style.iconColor}`} />
+                        <a
+                          href={`tel:${center.phone.replace(/\s/g, '')}`}
+                          className="hover:underline"
+                        >
+                          {center.phone}
+                        </a>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Clock className={`w-5 h-5 ${center.iconColor}`} />
-                      <span>{center.timing}</span>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {center.features.slice(0, 3).map((feature) => (
+                        <span
+                          key={feature}
+                          className="bg-white/80 px-3 py-1 rounded-full text-sm text-gray-700"
+                        >
+                          {feature}
+                        </span>
+                      ))}
                     </div>
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Phone className={`w-5 h-5 ${center.iconColor}`} />
-                      <a
-                        href={`tel:${center.phone.replace(/\s/g, '')}`}
-                        className="hover:underline"
+
+                    <div className="flex gap-3">
+                      <Link href="/demo-booking" className="flex-1">
+                        <Button
+                          className={`w-full bg-gradient-to-r ${style.color} text-white hover:shadow-lg`}
+                        >
+                          Book Visit
+                        </Button>
+                      </Link>
+                      <Link
+                        href={getCityLocalityPath(center.city)}
+                        className={`p-3 rounded-xl ${style.iconBg} hover:scale-105 transition-transform`}
+                        title="View localities"
                       >
-                        {center.phone}
+                        <Navigation className={`w-5 h-5 ${style.iconColor}`} />
+                      </Link>
+                      <a
+                        href={center.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-3 rounded-xl ${style.iconBg} hover:scale-105 transition-transform`}
+                        title="Get directions"
+                      >
+                        <MapPin className={`w-5 h-5 ${style.iconColor}`} />
                       </a>
                     </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <Link href="/demo-booking" className="flex-1">
-                      <Button
-                        className={`w-full bg-gradient-to-r ${center.color} text-white hover:shadow-lg`}
-                      >
-                        Book Visit
-                      </Button>
-                    </Link>
-                    <a
-                      href={`tel:${center.phone.replace(/\s/g, '')}`}
-                      className={`p-3 rounded-xl ${center.iconBg} hover:scale-105 transition-transform`}
-                    >
-                      <Phone className={`w-5 h-5 ${center.iconColor}`} />
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -548,6 +560,64 @@ export default function BiologyTeacherNearMePage() {
           </div>
         </div>
       </section>
+
+      {/* Online Regions Section - For Non-Delhi Users */}
+      {isInDelhiNCR === false && (
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Join Online from Your Region
+              </h2>
+              <p className="text-xl text-gray-600">
+                We serve students across India and internationally with region-specific timings.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-indigo-50 rounded-2xl p-6 hover:shadow-lg transition-all"
+                >
+                  <Globe className="w-10 h-10 text-indigo-600 mb-4" />
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{region.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{region.description}</p>
+                  <Link
+                    href={`/${region.slug}`}
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
+                  >
+                    Explore Program
+                    <Navigation className="w-4 h-4 ml-1" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <a
+                href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-green-500 hover:bg-green-600">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Enquire on WhatsApp
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQs Section - Accordion Style */}
       <section className="py-20 bg-gray-50">

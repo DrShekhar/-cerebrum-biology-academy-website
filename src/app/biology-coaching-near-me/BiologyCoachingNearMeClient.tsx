@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
@@ -17,8 +18,18 @@ import {
   Target,
   TrendingUp,
   Shield,
+  Wifi,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
+
+const PAGE_KEYWORD = 'Biology Coaching Near Me'
 
 const centers = [
   {
@@ -113,8 +124,33 @@ const testimonials = [
 ]
 
 export function BiologyCoachingNearMeClient() {
+  const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
+
+  const offlineCentersData = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCentersData)
+
+  useEffect(() => {
+    const savedLocation = localStorage.getItem('userLocation')
+    if (savedLocation) {
+      const location = JSON.parse(savedLocation)
+      const delhiNCRCities = ['Delhi', 'New Delhi', 'Gurugram', 'Gurgaon', 'Faridabad', 'Noida', 'Greater Noida', 'Ghaziabad']
+      setIsInDelhiNCR(delhiNCRCities.includes(location.city))
+    } else {
+      setIsInDelhiNCR(null)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
+      {/* LocalBusiness Schemas for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -393,6 +429,82 @@ export function BiologyCoachingNearMeClient() {
           </div>
         </div>
       </section>
+
+      {/* Online Classes Section - For non Delhi NCR users */}
+      {isInDelhiNCR === false && (
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Wifi className="w-4 h-4 mr-2" />
+                Online Classes Available
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Not in Delhi NCR? Join Us Online!
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Get the same expert biology coaching from anywhere in India through our interactive online platform.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-blue-100"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                      <Wifi className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-bold text-gray-900">{region.name}</h3>
+                      <p className="text-sm text-gray-500">{region.studentCount}+ students enrolled</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {(region.states || region.countries || []).slice(0, 4).map((area) => (
+                      <span key={area} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                        {area}
+                      </span>
+                    ))}
+                    {(region.states || region.countries || []).length > 4 && (
+                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                        +{(region.states || region.countries || []).length - 4} more
+                      </span>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-10"
+            >
+              <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
+                <Button size="xl" className="bg-green-600 hover:bg-green-700 text-white">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Enquire About Online Classes
+                </Button>
+              </a>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">

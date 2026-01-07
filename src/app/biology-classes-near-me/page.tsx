@@ -5,46 +5,37 @@ import { useState, useEffect } from 'react'
 import {
   MapPin,
   Users,
-  Star,
   CheckCircle,
   BookOpen,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
-  GraduationCap,
   Navigation,
   Building,
   Wifi,
+  Phone,
+  Clock,
+  ExternalLink,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getCityLocalityPath,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
 
-const offlineCenters = [
-  {
-    name: 'Rohini Center',
-    address: 'DC Chauk Sector 9, Rohini, Delhi 110085',
-    areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town'],
-    status: 'Open',
-  },
-  {
-    name: 'Gurugram Center',
-    address: 'Unit 17, M2K Corporate Park, Sector 51 (Mayfield Garden), Gurugram 122018',
-    areas: ['DLF', 'Sushant Lok', 'Golf Course Road', 'Sector 56'],
-    status: 'Open',
-  },
-  {
-    name: 'South Delhi Center',
-    address: 'Block D, Near McD, South Extension Part 2, Delhi 110049',
-    areas: ['GK', 'Hauz Khas', 'Vasant Vihar', 'Defence Colony'],
-    status: 'Open',
-  },
-  {
-    name: 'Faridabad Center',
-    address: 'Sector 21, Faridabad 121001',
-    areas: ['NIT', 'Greater Faridabad', 'Ballabgarh', 'Neharpar'],
-    status: 'Coming Soon',
-  },
+const PAGE_KEYWORD = 'Biology Classes Near Me'
+
+const centerStyles = [
+  { bgColor: 'bg-blue-50', borderColor: 'border-blue-200', iconColor: 'text-blue-600' },
+  { bgColor: 'bg-green-50', borderColor: 'border-green-200', iconColor: 'text-green-600' },
+  { bgColor: 'bg-purple-50', borderColor: 'border-purple-200', iconColor: 'text-purple-600' },
+  { bgColor: 'bg-orange-50', borderColor: 'border-orange-200', iconColor: 'text-orange-600' },
 ]
 
 const classFeatures = [
@@ -96,39 +87,45 @@ const faqs = [
 export default function BiologyClassesNearMePage() {
   const [userLocation, setUserLocation] = useState<string | null>(null)
   const [showLocationModal, setShowLocationModal] = useState(false)
+  const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
+
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
 
   useEffect(() => {
     const savedLocation = localStorage.getItem('userLocation')
     if (savedLocation) {
       setUserLocation(savedLocation)
+      const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+      setIsInDelhiNCR(delhiNCRLocations.some((loc) => savedLocation.includes(loc)))
     }
   }, [])
 
   const handleLocationSelect = (location: string) => {
     setUserLocation(location)
     localStorage.setItem('userLocation', location)
+    const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+    setIsInDelhiNCR(delhiNCRLocations.some((loc) => location.includes(loc)))
     setShowLocationModal(false)
   }
 
   return (
     <div className="min-h-screen">
+      {/* LocalBusiness Schema for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Hero Section */}
@@ -283,37 +280,80 @@ export default function BiologyClassesNearMePage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {offlineCenters.map((center, index) => (
-              <motion.div
-                key={center.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-gray-900">{center.name}</h3>
-                  <span
-                    className={`text-xs px-3 py-1 rounded-full ${center.status === 'Open' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}
-                  >
-                    {center.status}
-                  </span>
-                </div>
-                <div className="flex items-start text-gray-600 mb-4">
-                  <MapPin className="w-5 h-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                  {center.address}
-                </div>
-                <div className="text-sm text-gray-500">
-                  <strong>Nearby Areas:</strong> {center.areas.join(', ')}
-                </div>
-                <Link href="/demo-booking" className="mt-4 inline-block">
-                  <Button variant="outline" size="sm">
-                    Book Visit
-                  </Button>
-                </Link>
-              </motion.div>
-            ))}
+            {offlineCenters.map((center, index) => {
+              const style = centerStyles[index] || centerStyles[0]
+              return (
+                <motion.div
+                  key={center.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`${style.bgColor} border ${style.borderColor} rounded-xl p-8 shadow-lg`}
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{center.name}</h3>
+                    <span className="text-xs px-3 py-1 rounded-full bg-green-100 text-green-700">
+                      Open
+                    </span>
+                  </div>
+
+                  <div className="flex items-start text-gray-600 mb-3">
+                    <MapPin className={`w-5 h-5 mr-2 ${style.iconColor} flex-shrink-0 mt-0.5`} />
+                    {center.address}
+                  </div>
+
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Phone className={`w-5 h-5 mr-2 ${style.iconColor} flex-shrink-0`} />
+                    <a href={`tel:${center.phone}`} className="hover:underline">
+                      {center.phone}
+                    </a>
+                  </div>
+
+                  <div className="flex items-center text-gray-600 mb-4">
+                    <Clock className={`w-5 h-5 mr-2 ${style.iconColor} flex-shrink-0`} />
+                    {center.timing}
+                  </div>
+
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {center.features.slice(0, 3).map((feature) => (
+                      <span
+                        key={feature}
+                        className="text-xs bg-white/80 px-2 py-1 rounded-full text-gray-700"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Links */}
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <Link href="/demo-booking">
+                      <Button variant="outline" size="sm">
+                        Book Visit
+                      </Button>
+                    </Link>
+                    <a
+                      href={center.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm text-blue-600 hover:underline"
+                    >
+                      <Navigation className="w-4 h-4 mr-1" />
+                      Get Directions
+                    </a>
+                    <Link
+                      href={getCityLocalityPath(center.city)}
+                      className="inline-flex items-center text-sm text-gray-600 hover:underline"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Explore {center.city}
+                    </Link>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -379,6 +419,62 @@ export default function BiologyClassesNearMePage() {
           </div>
         </div>
       </section>
+
+      {/* Online Regions Section - for non-Delhi users */}
+      {isInDelhiNCR === false && (
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Online Biology Classes for Your Region
+              </h2>
+              <p className="text-xl text-gray-600">
+                We serve students across India with our live online classes
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100"
+                >
+                  <div className="flex items-center mb-4">
+                    <Wifi className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-bold text-gray-900">{region.name}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{region.description}</p>
+                  <Link href={`/${region.slug}`}>
+                    <Button variant="outline" size="sm">
+                      Explore Program
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}>
+                <Button variant="default" size="xl" className="bg-green-600 hover:bg-green-700">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Enquire on WhatsApp
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features */}
       <section className="py-20 bg-white">

@@ -19,6 +19,7 @@ export interface OnlineRegion {
   description: string
   states?: string[]
   countries?: string[]
+  studentCount?: number
 }
 
 export const offlineLocations: Location[] = [
@@ -97,6 +98,7 @@ export const onlineRegions: OnlineRegion[] = [
       'HP',
       'J&K',
     ],
+    studentCount: 850,
   },
   {
     id: 'south-india',
@@ -104,6 +106,7 @@ export const onlineRegions: OnlineRegion[] = [
     slug: 'neet-coaching-south-india',
     description: 'Karnataka, Tamil Nadu, Kerala, AP, Telangana',
     states: ['Karnataka', 'Tamil Nadu', 'Kerala', 'Andhra Pradesh', 'Telangana'],
+    studentCount: 620,
   },
   {
     id: 'east-india',
@@ -111,6 +114,7 @@ export const onlineRegions: OnlineRegion[] = [
     slug: 'neet-coaching-east-india',
     description: 'West Bengal, Bihar, Jharkhand, Odisha, Northeast',
     states: ['West Bengal', 'Bihar', 'Jharkhand', 'Odisha', 'Assam', 'Northeast'],
+    studentCount: 480,
   },
   {
     id: 'west-india',
@@ -118,6 +122,7 @@ export const onlineRegions: OnlineRegion[] = [
     slug: 'neet-coaching-west-india',
     description: 'Maharashtra, Gujarat, MP, Goa, Chhattisgarh',
     states: ['Maharashtra', 'Gujarat', 'Madhya Pradesh', 'Goa', 'Chhattisgarh'],
+    studentCount: 540,
   },
   {
     id: 'overseas',
@@ -125,6 +130,7 @@ export const onlineRegions: OnlineRegion[] = [
     slug: 'neet-coaching-overseas',
     description: 'NRI students in UAE, USA, UK, Singapore & more',
     countries: ['UAE', 'USA', 'UK', 'Singapore', 'Australia', 'Canada'],
+    studentCount: 180,
   },
 ]
 

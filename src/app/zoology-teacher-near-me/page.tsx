@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
@@ -13,13 +14,29 @@ import {
   Phone,
   Globe,
   Building2,
+  Wifi,
+  MessageCircle,
+  ArrowRight,
+  Navigation,
+  ExternalLink,
 } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getCityLocalityPath,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
 
-const offlineCenters = [
-  { name: 'Rohini Center', area: 'Sector 7, Rohini', city: 'Delhi' },
-  { name: 'Gurugram Center', area: 'Sector 14', city: 'Haryana' },
-  { name: 'South Extension', area: 'Part 2', city: 'Delhi' },
-  { name: 'Faridabad Center', area: 'Sector 15', city: 'Haryana' },
+const PAGE_KEYWORD = 'Zoology Teacher Near Me'
+
+const centerStyles = [
+  { bgColor: 'bg-blue-50', borderColor: 'border-blue-200', iconColor: 'text-blue-600' },
+  { bgColor: 'bg-emerald-50', borderColor: 'border-emerald-200', iconColor: 'text-emerald-600' },
+  { bgColor: 'bg-purple-50', borderColor: 'border-purple-200', iconColor: 'text-purple-600' },
+  { bgColor: 'bg-amber-50', borderColor: 'border-amber-200', iconColor: 'text-amber-600' },
 ]
 
 const faqs = [
@@ -46,25 +63,39 @@ const faqs = [
 ]
 
 export default function ZoologyTeacherNearMePage() {
+  const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
+
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
+
+  useEffect(() => {
+    const savedLocation = localStorage.getItem('userLocation')
+    if (savedLocation) {
+      const location = JSON.parse(savedLocation)
+      const delhiNCRCities = ['Delhi', 'New Delhi', 'Gurugram', 'Gurgaon', 'Faridabad', 'Noida', 'Greater Noida', 'Ghaziabad']
+      setIsInDelhiNCR(delhiNCRCities.includes(location.city))
+    } else {
+      setIsInDelhiNCR(null)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* LocalBusiness Schemas for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Hero Section */}
@@ -121,20 +152,41 @@ export default function ZoologyTeacherNearMePage() {
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {offlineCenters.map((center, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
-              >
-                <Building2 className="mb-4 h-10 w-10 text-blue-600" />
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">{center.name}</h3>
-                <p className="text-gray-600">{center.area}</p>
-                <p className="text-sm text-gray-500">{center.city}</p>
-              </motion.div>
-            ))}
+            {offlineCenters.map((center, index) => {
+              const style = centerStyles[index % centerStyles.length]
+              return (
+                <motion.div
+                  key={center.locationId}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`rounded-xl border ${style.borderColor} ${style.bgColor} p-6 shadow-lg`}
+                >
+                  <Building2 className={`mb-4 h-10 w-10 ${style.iconColor}`} />
+                  <h3 className="mb-2 text-xl font-semibold text-gray-900">{center.name}</h3>
+                  <p className="mb-2 text-sm text-gray-600">{center.address}</p>
+                  <p className="mb-3 text-xs text-gray-500">{center.timing}</p>
+                  <div className="flex gap-2">
+                    <a
+                      href={center.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                    >
+                      <Navigation className="h-4 w-4" />
+                      Directions
+                    </a>
+                    <a
+                      href={`tel:${center.phone}`}
+                      className="flex items-center gap-1 text-sm text-green-600 hover:underline"
+                    >
+                      <Phone className="h-4 w-4" />
+                      Call
+                    </a>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -184,6 +236,54 @@ export default function ZoologyTeacherNearMePage() {
           </div>
         </div>
       </section>
+
+      {/* Online Regions - Show for users outside Delhi NCR */}
+      {isInDelhiNCR === false && (
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="mb-8 text-center"
+            >
+              <h2 className="mb-3 text-2xl font-bold text-gray-900">
+                Zoology Classes Available in Your Region
+              </h2>
+              <p className="text-gray-600">
+                Join students from across India in our online zoology coaching program
+              </p>
+            </motion.div>
+
+            <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-5">
+              {onlineRegions.map((region, index) => (
+                <motion.div
+                  key={region.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-center"
+                >
+                  <Wifi className="mx-auto mb-2 h-6 w-6 text-blue-600" />
+                  <h3 className="font-semibold text-gray-900">{region.name}</h3>
+                  <p className="text-xs text-gray-500">{region.states.slice(0, 3).join(', ')}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <a
+                href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Stats */}
       <section className="py-16">
