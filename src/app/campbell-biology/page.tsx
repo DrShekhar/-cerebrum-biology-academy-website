@@ -331,7 +331,7 @@ export default function CampbellBiologyHubPage() {
             campaign="campbell-hub-cta"
             size="xl"
           >
-            Book Free Demo Class
+            Book Free Demo
           </CampbellWhatsAppCTA>
 
           <p className="mt-4 text-sm text-slate-400">
