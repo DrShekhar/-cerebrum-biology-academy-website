@@ -1,0 +1,1113 @@
+/**
+ * International Course Configuration
+ * Course catalog data for all 10 supported countries
+ */
+
+import { CountryCode } from './countries'
+
+export interface CourseFeature {
+  icon: 'check' | 'book' | 'video' | 'users' | 'clock' | 'target' | 'star'
+  text: string
+}
+
+export interface Course {
+  id: string
+  slug: string
+  name: string
+  examSystem: string
+  description: string
+  duration: string
+  level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels'
+  targetAudience: string
+  features: CourseFeature[]
+  topics: string[]
+  priceUSD: {
+    smallGroup: number
+    oneOnOne: number
+  }
+  popular?: boolean
+  badge?: string
+}
+
+export interface CourseCategory {
+  id: string
+  name: string
+  description: string
+  courses: Course[]
+}
+
+// Helper to generate course ID
+const courseId = (country: string, slug: string) => `${country}-${slug}`
+
+// US Courses
+const US_COURSES: Course[] = [
+  {
+    id: courseId('us', 'ap-biology-mastery'),
+    slug: 'ap-biology-mastery',
+    name: 'AP Biology Mastery',
+    examSystem: 'AP Biology',
+    description: 'Comprehensive preparation for AP Biology exam with focus on achieving 4 or 5 score.',
+    duration: '6 months',
+    level: 'Advanced',
+    targetAudience: 'High school juniors & seniors taking AP Biology',
+    features: [
+      { icon: 'target', text: 'Aligned with College Board AP Curriculum' },
+      { icon: 'book', text: '8 AP Units covered in depth' },
+      { icon: 'video', text: 'Live interactive sessions' },
+      { icon: 'check', text: 'FRQ practice & grading' },
+      { icon: 'star', text: 'Full-length mock exams' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('us', 'sat-biology-prep'),
+    slug: 'sat-biology-prep',
+    name: 'SAT Biology Subject Test Prep',
+    examSystem: 'SAT Biology',
+    description: 'Targeted preparation for SAT Biology E/M with score improvement guarantee.',
+    duration: '3 months',
+    level: 'Intermediate',
+    targetAudience: 'Students targeting top universities requiring SAT Subject Tests',
+    features: [
+      { icon: 'target', text: 'E/M specialization available' },
+      { icon: 'book', text: 'Comprehensive content review' },
+      { icon: 'check', text: 'Practice tests with analysis' },
+      { icon: 'video', text: 'Weekly live sessions' },
+      { icon: 'star', text: 'Score improvement tracking' },
+    ],
+    topics: ['Cellular Biology', 'Molecular Biology', 'Ecology', 'Genetics', 'Evolution', 'Physiology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+  },
+  {
+    id: courseId('us', 'mcat-biology'),
+    slug: 'mcat-biology',
+    name: 'MCAT Biology & Biochemistry',
+    examSystem: 'MCAT Biology',
+    description: 'Intensive MCAT preparation covering Biological Sciences section.',
+    duration: '4 months',
+    level: 'Advanced',
+    targetAudience: 'Pre-med students preparing for MCAT',
+    features: [
+      { icon: 'target', text: 'AAMC content outline aligned' },
+      { icon: 'book', text: 'Bio/Biochem section mastery' },
+      { icon: 'check', text: 'Passage-based practice' },
+      { icon: 'video', text: 'Expert instructor sessions' },
+      { icon: 'star', text: 'Full-length MCAT practice' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Molecular Biology', 'Microbiology', 'Anatomy', 'Physiology'],
+    priceUSD: { smallGroup: 55, oneOnOne: 100 },
+    badge: 'Pre-Med',
+  },
+  {
+    id: courseId('us', 'biology-olympiad'),
+    slug: 'biology-olympiad',
+    name: 'USABO Olympiad Training',
+    examSystem: 'Biology Olympiad (USABO)',
+    description: 'Elite preparation for USA Biology Olympiad competition.',
+    duration: '8 months',
+    level: 'Advanced',
+    targetAudience: 'Gifted students aiming for USABO semifinals/finals',
+    features: [
+      { icon: 'target', text: 'Campbell Biology deep dive' },
+      { icon: 'book', text: 'University-level content' },
+      { icon: 'check', text: 'Past USABO problem solving' },
+      { icon: 'users', text: 'Small batch (max 3 students)' },
+      { icon: 'star', text: 'Mentored by USABO medalists' },
+    ],
+    topics: ['Molecular Biology', 'Genetics', 'Cell Biology', 'Anatomy', 'Ecology', 'Evolutionary Biology'],
+    priceUSD: { smallGroup: 60, oneOnOne: 120 },
+  },
+  {
+    id: courseId('us', 'ib-biology-hl'),
+    slug: 'ib-biology-hl',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'Complete IB Biology preparation for Higher and Standard Level students.',
+    duration: '2 years (ongoing support)',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students taking Biology HL or SL',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned (2025)' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'Paper 1, 2, 3 preparation' },
+      { icon: 'video', text: 'Flexible scheduling' },
+      { icon: 'star', text: 'Extended Essay guidance' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// UK Courses
+const UK_COURSES: Course[] = [
+  {
+    id: courseId('uk', 'gcse-biology'),
+    slug: 'gcse-biology',
+    name: 'GCSE Biology Excellence',
+    examSystem: 'GCSE Biology',
+    description: 'Comprehensive GCSE Biology preparation for grades 7-9.',
+    duration: '1 year',
+    level: 'Intermediate',
+    targetAudience: 'Year 10-11 students taking GCSE Biology',
+    features: [
+      { icon: 'target', text: 'AQA, OCR, Edexcel aligned' },
+      { icon: 'book', text: 'All required practicals covered' },
+      { icon: 'check', text: 'Past paper practice' },
+      { icon: 'video', text: 'Weekly live lessons' },
+      { icon: 'star', text: 'Grade 9 strategies' },
+    ],
+    topics: ['Cell Biology', 'Organisation', 'Infection', 'Bioenergetics', 'Homeostasis', 'Inheritance', 'Ecology'],
+    priceUSD: { smallGroup: 35, oneOnOne: 65 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('uk', 'a-level-biology'),
+    slug: 'a-level-biology',
+    name: 'A-Level Biology Mastery',
+    examSystem: 'A-Level Biology',
+    description: 'In-depth A-Level Biology for top university admissions.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'Year 12-13 students studying A-Level Biology',
+    features: [
+      { icon: 'target', text: 'AQA, OCR A, Edexcel aligned' },
+      { icon: 'book', text: 'All 8 topics covered' },
+      { icon: 'check', text: 'Practical endorsement support' },
+      { icon: 'video', text: 'Live interactive sessions' },
+      { icon: 'star', text: 'A* grade strategies' },
+    ],
+    topics: ['Biological Molecules', 'Cells', 'Exchange', 'Genetics', 'Energy', 'Response', 'Genetics', 'Ecology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+  },
+  {
+    id: courseId('uk', 'bmat-biology'),
+    slug: 'bmat-biology',
+    name: 'BMAT Biology Section',
+    examSystem: 'BMAT',
+    description: 'Targeted BMAT Section 2 Biology preparation for medical school.',
+    duration: '3 months',
+    level: 'Advanced',
+    targetAudience: 'Students applying to Oxford, Cambridge, UCL, Imperial medicine',
+    features: [
+      { icon: 'target', text: 'Section 2 focused' },
+      { icon: 'book', text: 'GCSE+ content mastery' },
+      { icon: 'check', text: 'Timed problem solving' },
+      { icon: 'clock', text: 'Speed & accuracy training' },
+      { icon: 'star', text: 'Past BMAT analysis' },
+    ],
+    topics: ['Cell Biology', 'Genetics', 'Physiology', 'Ecology', 'Applied Biology'],
+    priceUSD: { smallGroup: 50, oneOnOne: 95 },
+    badge: 'Medicine',
+  },
+  {
+    id: courseId('uk', 'ucat-biology'),
+    slug: 'ucat-biology',
+    name: 'UCAT Preparation',
+    examSystem: 'UCAT',
+    description: 'Complete UCAT preparation including biology reasoning components.',
+    duration: '2 months',
+    level: 'Advanced',
+    targetAudience: 'Students applying to UK medical schools requiring UCAT',
+    features: [
+      { icon: 'target', text: 'All 5 subtests covered' },
+      { icon: 'book', text: 'Strategy-focused approach' },
+      { icon: 'check', text: '3000+ practice questions' },
+      { icon: 'clock', text: 'Time management mastery' },
+      { icon: 'star', text: 'Score tracking & analytics' },
+    ],
+    topics: ['Verbal Reasoning', 'Decision Making', 'Quantitative Reasoning', 'Abstract Reasoning', 'Situational Judgement'],
+    priceUSD: { smallGroup: 50, oneOnOne: 90 },
+    badge: 'Medicine',
+  },
+  {
+    id: courseId('uk', 'ib-biology-uk'),
+    slug: 'ib-biology-uk',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'Complete IB Biology preparation tailored for UK university applications.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in UK international schools',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'Paper 1, 2, 3 preparation' },
+      { icon: 'video', text: 'Flexible scheduling' },
+      { icon: 'star', text: 'UCAS support' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 80 },
+  },
+  {
+    id: courseId('uk', 'biology-olympiad-bbo'),
+    slug: 'biology-olympiad-bbo',
+    name: 'British Biology Olympiad',
+    examSystem: 'Biology Olympiad (BBO)',
+    description: 'Elite preparation for British Biology Olympiad.',
+    duration: '6 months',
+    level: 'Advanced',
+    targetAudience: 'Gifted A-Level students aiming for BBO medals',
+    features: [
+      { icon: 'target', text: 'Beyond A-Level content' },
+      { icon: 'book', text: 'University-level biology' },
+      { icon: 'check', text: 'Past BBO papers' },
+      { icon: 'users', text: 'Small batch learning' },
+      { icon: 'star', text: 'Mentored by BBO medallists' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Genetics', 'Physiology', 'Ecology', 'Evolution'],
+    priceUSD: { smallGroup: 55, oneOnOne: 100 },
+  },
+]
+
+// Canada Courses
+const CA_COURSES: Course[] = [
+  {
+    id: courseId('ca', 'ontario-biology'),
+    slug: 'ontario-biology',
+    name: 'Ontario Biology (SBI3U/SBI4U)',
+    examSystem: 'Ontario Biology (SBI3U/SBI4U)',
+    description: 'Complete Ontario curriculum biology for Grades 11 & 12.',
+    duration: '1 year',
+    level: 'All Levels',
+    targetAudience: 'Ontario high school students',
+    features: [
+      { icon: 'target', text: 'Ontario curriculum aligned' },
+      { icon: 'book', text: 'SBI3U & SBI4U covered' },
+      { icon: 'check', text: 'Lab report support' },
+      { icon: 'video', text: 'Live tutoring sessions' },
+      { icon: 'star', text: 'University prep focus' },
+    ],
+    topics: ['Diversity of Living Things', 'Evolution', 'Genetic Processes', 'Homeostasis', 'Population Dynamics'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('ca', 'bc-biology'),
+    slug: 'bc-biology',
+    name: 'BC Biology 11/12',
+    examSystem: 'BC Biology',
+    description: 'British Columbia curriculum biology preparation.',
+    duration: '1 year',
+    level: 'All Levels',
+    targetAudience: 'BC high school students',
+    features: [
+      { icon: 'target', text: 'BC curriculum aligned' },
+      { icon: 'book', text: 'Biology 11 & 12 covered' },
+      { icon: 'check', text: 'Provincial exam prep' },
+      { icon: 'video', text: 'Weekly live sessions' },
+      { icon: 'star', text: 'UBC admission focus' },
+    ],
+    topics: ['Microbiology', 'Cell Biology', 'Genetics', 'Evolution', 'Ecology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+  },
+  {
+    id: courseId('ca', 'mcat-biology-ca'),
+    slug: 'mcat-biology-ca',
+    name: 'MCAT Biology for Canadians',
+    examSystem: 'MCAT Biology',
+    description: 'MCAT preparation tailored for Canadian medical school admissions.',
+    duration: '4 months',
+    level: 'Advanced',
+    targetAudience: 'Pre-med students applying to Canadian medical schools',
+    features: [
+      { icon: 'target', text: 'AAMC aligned content' },
+      { icon: 'book', text: 'Bio/Biochem section focus' },
+      { icon: 'check', text: 'CASPer prep included' },
+      { icon: 'video', text: 'Expert instruction' },
+      { icon: 'star', text: 'Canadian med school strategies' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Molecular Biology', 'Microbiology', 'Anatomy', 'Physiology'],
+    priceUSD: { smallGroup: 55, oneOnOne: 100 },
+    badge: 'Pre-Med',
+  },
+  {
+    id: courseId('ca', 'ib-biology-ca'),
+    slug: 'ib-biology-ca',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for Canadian international school students.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in Canada',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'Flexible EST/PST times' },
+      { icon: 'star', text: 'University application support' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('ca', 'ap-biology-ca'),
+    slug: 'ap-biology-ca',
+    name: 'AP Biology',
+    examSystem: 'AP Biology',
+    description: 'AP Biology preparation for Canadian students.',
+    duration: '6 months',
+    level: 'Advanced',
+    targetAudience: 'Canadian students taking AP courses',
+    features: [
+      { icon: 'target', text: 'College Board aligned' },
+      { icon: 'book', text: 'All 8 units covered' },
+      { icon: 'check', text: 'FRQ practice' },
+      { icon: 'video', text: 'Live sessions' },
+      { icon: 'star', text: 'Score 4 or 5 guarantee' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// Australia Courses
+const AU_COURSES: Course[] = [
+  {
+    id: courseId('au', 'hsc-biology'),
+    slug: 'hsc-biology',
+    name: 'HSC Biology (NSW)',
+    examSystem: 'HSC Biology (NSW)',
+    description: 'Complete HSC Biology preparation for Band 6 results.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Year 11-12 NSW students',
+    features: [
+      { icon: 'target', text: 'NESA syllabus aligned' },
+      { icon: 'book', text: 'All modules covered' },
+      { icon: 'check', text: 'Depth study support' },
+      { icon: 'video', text: 'AEST timezone classes' },
+      { icon: 'star', text: 'Band 6 strategies' },
+    ],
+    topics: ['Heredity', 'Genetic Change', 'Infectious Disease', 'Non-infectious Disease'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('au', 'vce-biology'),
+    slug: 'vce-biology',
+    name: 'VCE Biology (VIC)',
+    examSystem: 'VCE Biology (VIC)',
+    description: 'VCE Biology preparation for study score 40+.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Year 11-12 Victorian students',
+    features: [
+      { icon: 'target', text: 'VCAA study design aligned' },
+      { icon: 'book', text: 'Units 1-4 covered' },
+      { icon: 'check', text: 'SAC preparation' },
+      { icon: 'video', text: 'AEST timezone classes' },
+      { icon: 'star', text: '40+ study score focus' },
+    ],
+    topics: ['Cells', 'Genetics', 'Disease', 'Evolution', 'Biological Knowledge'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+  },
+  {
+    id: courseId('au', 'qce-biology'),
+    slug: 'qce-biology',
+    name: 'QCE Biology (QLD)',
+    examSystem: 'QCE Biology (QLD)',
+    description: 'Queensland Certificate of Education Biology preparation.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Year 11-12 Queensland students',
+    features: [
+      { icon: 'target', text: 'QCAA syllabus aligned' },
+      { icon: 'book', text: 'All units covered' },
+      { icon: 'check', text: 'IA support' },
+      { icon: 'video', text: 'AEST timezone classes' },
+      { icon: 'star', text: 'ATAR optimization' },
+    ],
+    topics: ['Cells', 'Multicellular Organisms', 'Biodiversity', 'Heredity'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('au', 'atar-biology'),
+    slug: 'atar-biology',
+    name: 'ATAR Biology Intensive',
+    examSystem: 'ATAR Preparation',
+    description: 'Cross-state ATAR biology preparation for top scores.',
+    duration: '6 months',
+    level: 'Advanced',
+    targetAudience: 'Year 12 students targeting 90+ ATAR',
+    features: [
+      { icon: 'target', text: 'Multi-state alignment' },
+      { icon: 'book', text: 'Comprehensive revision' },
+      { icon: 'check', text: 'Exam technique focus' },
+      { icon: 'clock', text: 'Intensive sessions' },
+      { icon: 'star', text: '90+ ATAR strategies' },
+    ],
+    topics: ['Core Biology Concepts', 'Exam Strategies', 'Past Paper Analysis'],
+    priceUSD: { smallGroup: 50, oneOnOne: 95 },
+    badge: 'ATAR Boost',
+  },
+  {
+    id: courseId('au', 'ib-biology-au'),
+    slug: 'ib-biology-au',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for Australian international school students.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in Australia',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'AEST friendly times' },
+      { icon: 'star', text: '7 in Biology strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// Singapore Courses
+const SG_COURSES: Course[] = [
+  {
+    id: courseId('sg', 'o-level-biology'),
+    slug: 'o-level-biology',
+    name: 'GCE O-Level Biology',
+    examSystem: 'GCE O-Level Biology',
+    description: 'Complete O-Level Biology preparation for A1/A2 grades.',
+    duration: '1 year',
+    level: 'Intermediate',
+    targetAudience: 'Secondary 3-4 students',
+    features: [
+      { icon: 'target', text: 'SEAB syllabus aligned' },
+      { icon: 'book', text: 'All topics covered' },
+      { icon: 'check', text: 'Practical skills' },
+      { icon: 'video', text: 'SGT timezone classes' },
+      { icon: 'star', text: 'A1 grade strategies' },
+    ],
+    topics: ['Cells', 'Molecules of Life', 'Genetics', 'Transport', 'Nutrition', 'Respiration'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('sg', 'a-level-h2-biology'),
+    slug: 'a-level-h2-biology',
+    name: 'A-Level H2 Biology',
+    examSystem: 'GCE A-Level Biology (H1/H2)',
+    description: 'H2 Biology mastery for top JC students.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'JC1-JC2 students taking H2 Biology',
+    features: [
+      { icon: 'target', text: 'SEAB H2 syllabus aligned' },
+      { icon: 'book', text: 'All core topics covered' },
+      { icon: 'check', text: 'Practical assessment prep' },
+      { icon: 'video', text: 'Live interactive sessions' },
+      { icon: 'star', text: 'A grade strategies' },
+    ],
+    topics: ['Core Ideas', 'Extension Topics', 'Practical Skills'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+  },
+  {
+    id: courseId('sg', 'ip-biology'),
+    slug: 'ip-biology',
+    name: 'IP Biology Programme',
+    examSystem: 'IP Biology',
+    description: 'Integrated Programme Biology for top IP schools.',
+    duration: '4 years',
+    level: 'All Levels',
+    targetAudience: 'IP track students Years 1-4',
+    features: [
+      { icon: 'target', text: 'IP curriculum aligned' },
+      { icon: 'book', text: 'Enriched content' },
+      { icon: 'check', text: 'Research skills' },
+      { icon: 'video', text: 'Flexible scheduling' },
+      { icon: 'star', text: 'Olympiad pathways' },
+    ],
+    topics: ['Advanced Cell Biology', 'Genetics', 'Molecular Biology', 'Ecology', 'Research Methods'],
+    priceUSD: { smallGroup: 50, oneOnOne: 95 },
+    badge: 'IP Track',
+  },
+  {
+    id: courseId('sg', 'sbo-olympiad'),
+    slug: 'sbo-olympiad',
+    name: 'Singapore Biology Olympiad',
+    examSystem: 'Singapore Biology Olympiad (SBO)',
+    description: 'Elite preparation for SBO and IBO selection.',
+    duration: '8 months',
+    level: 'Advanced',
+    targetAudience: 'Gifted students aiming for SBO medals',
+    features: [
+      { icon: 'target', text: 'Beyond syllabus content' },
+      { icon: 'book', text: 'University-level biology' },
+      { icon: 'check', text: 'Past SBO papers' },
+      { icon: 'users', text: 'Small batch (max 3)' },
+      { icon: 'star', text: 'IBO selection prep' },
+    ],
+    topics: ['Biochemistry', 'Molecular Biology', 'Genetics', 'Physiology', 'Ecology'],
+    priceUSD: { smallGroup: 60, oneOnOne: 110 },
+  },
+  {
+    id: courseId('sg', 'ib-biology-sg'),
+    slug: 'ib-biology-sg',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for Singapore international school students.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in Singapore',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'SGT timezone classes' },
+      { icon: 'star', text: 'Score 7 strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// UAE Courses
+const AE_COURSES: Course[] = [
+  {
+    id: courseId('ae', 'igcse-biology'),
+    slug: 'igcse-biology',
+    name: 'IGCSE Biology',
+    examSystem: 'IGCSE Biology',
+    description: 'Cambridge IGCSE Biology preparation for A* grades.',
+    duration: '2 years',
+    level: 'Intermediate',
+    targetAudience: 'Year 10-11 students in UAE international schools',
+    features: [
+      { icon: 'target', text: 'Cambridge/Edexcel aligned' },
+      { icon: 'book', text: 'All topics covered' },
+      { icon: 'check', text: 'Practical assessment prep' },
+      { icon: 'video', text: 'GST timezone classes' },
+      { icon: 'star', text: 'A* grade strategies' },
+    ],
+    topics: ['Cells', 'Biological Molecules', 'Enzymes', 'Nutrition', 'Transport', 'Respiration', 'Excretion', 'Coordination', 'Reproduction', 'Inheritance', 'Ecology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('ae', 'a-level-biology-ae'),
+    slug: 'a-level-biology-ae',
+    name: 'A-Level Biology',
+    examSystem: 'A-Level Biology',
+    description: 'Cambridge/Edexcel A-Level Biology for UAE students.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'Year 12-13 students in UAE',
+    features: [
+      { icon: 'target', text: 'Cambridge/Edexcel aligned' },
+      { icon: 'book', text: 'AS & A2 covered' },
+      { icon: 'check', text: 'Practical endorsement' },
+      { icon: 'video', text: 'GST timezone classes' },
+      { icon: 'star', text: 'A* grade focus' },
+    ],
+    topics: ['Biological Molecules', 'Cells', 'Genetics', 'Exchange', 'Energy', 'Control', 'Ecology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+  },
+  {
+    id: courseId('ae', 'ib-biology-ae'),
+    slug: 'ib-biology-ae',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for UAE international school students.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in UAE',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'GST timezone classes' },
+      { icon: 'star', text: 'Score 7 strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('ae', 'ap-biology-ae'),
+    slug: 'ap-biology-ae',
+    name: 'AP Biology',
+    examSystem: 'American Curriculum Biology',
+    description: 'AP Biology for American curriculum schools in UAE.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Students in American schools in UAE',
+    features: [
+      { icon: 'target', text: 'College Board aligned' },
+      { icon: 'book', text: 'All 8 units covered' },
+      { icon: 'check', text: 'FRQ practice' },
+      { icon: 'video', text: 'Flexible scheduling' },
+      { icon: 'star', text: 'Score 5 strategies' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('ae', 'cbse-biology'),
+    slug: 'cbse-biology',
+    name: 'CBSE Biology (Class 11-12)',
+    examSystem: 'CBSE Biology',
+    description: 'CBSE Biology for Indian curriculum schools in UAE.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'Class 11-12 students in CBSE schools',
+    features: [
+      { icon: 'target', text: 'CBSE syllabus aligned' },
+      { icon: 'book', text: 'NCERT-based teaching' },
+      { icon: 'check', text: 'Board exam preparation' },
+      { icon: 'video', text: 'GST timezone classes' },
+      { icon: 'star', text: '95%+ strategies' },
+    ],
+    topics: ['Diversity in Living World', 'Structural Organisation', 'Cell', 'Plant Physiology', 'Human Physiology', 'Reproduction', 'Genetics', 'Biology in Human Welfare', 'Biotechnology', 'Ecology'],
+    priceUSD: { smallGroup: 35, oneOnOne: 65 },
+  },
+  {
+    id: courseId('ae', 'mcat-biology-ae'),
+    slug: 'mcat-biology-ae',
+    name: 'MCAT Biology',
+    examSystem: 'MCAT Biology',
+    description: 'MCAT preparation for UAE students applying to US medical schools.',
+    duration: '4 months',
+    level: 'Advanced',
+    targetAudience: 'Pre-med students in UAE',
+    features: [
+      { icon: 'target', text: 'AAMC aligned' },
+      { icon: 'book', text: 'Bio/Biochem mastery' },
+      { icon: 'check', text: 'Passage practice' },
+      { icon: 'video', text: 'Expert instruction' },
+      { icon: 'star', text: '515+ strategies' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Molecular Biology', 'Microbiology', 'Anatomy', 'Physiology'],
+    priceUSD: { smallGroup: 55, oneOnOne: 100 },
+    badge: 'Pre-Med',
+  },
+]
+
+// Ireland Courses
+const IE_COURSES: Course[] = [
+  {
+    id: courseId('ie', 'leaving-cert-biology'),
+    slug: 'leaving-cert-biology',
+    name: 'Leaving Certificate Biology',
+    examSystem: 'Leaving Certificate Biology',
+    description: 'Complete Leaving Cert Biology grinds for H1 results.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: '5th & 6th year students',
+    features: [
+      { icon: 'target', text: 'SEC syllabus aligned' },
+      { icon: 'book', text: 'All 3 units covered' },
+      { icon: 'check', text: 'Practical booklet prep' },
+      { icon: 'video', text: 'IST timezone grinds' },
+      { icon: 'star', text: 'H1 grade strategies' },
+    ],
+    topics: ['Cell Biology', 'Genetics', 'Ecology', 'Human Biology', 'Microbiology', 'Botany'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('ie', 'junior-cycle-science'),
+    slug: 'junior-cycle-science',
+    name: 'Junior Cycle Science',
+    examSystem: 'Junior Cycle Science',
+    description: 'Junior Cycle Science grinds with biology focus.',
+    duration: '1 year',
+    level: 'Beginner',
+    targetAudience: '1st-3rd year students',
+    features: [
+      { icon: 'target', text: 'NCCA syllabus aligned' },
+      { icon: 'book', text: 'All strands covered' },
+      { icon: 'check', text: 'CBA support' },
+      { icon: 'video', text: 'Weekly live grinds' },
+      { icon: 'star', text: 'Distinction strategies' },
+    ],
+    topics: ['Biological World', 'Physical World', 'Chemical World', 'Earth and Space'],
+    priceUSD: { smallGroup: 35, oneOnOne: 65 },
+  },
+  {
+    id: courseId('ie', 'hpat-biology'),
+    slug: 'hpat-biology',
+    name: 'HPAT Preparation',
+    examSystem: 'HPAT Preparation',
+    description: 'HPAT preparation for Irish medical school entry.',
+    duration: '6 months',
+    level: 'Advanced',
+    targetAudience: '6th year students applying to medicine',
+    features: [
+      { icon: 'target', text: 'All 3 sections covered' },
+      { icon: 'book', text: 'Reasoning skills' },
+      { icon: 'check', text: 'Timed practice' },
+      { icon: 'clock', text: 'Speed strategies' },
+      { icon: 'star', text: 'Top percentile focus' },
+    ],
+    topics: ['Logical Reasoning', 'Interpersonal Understanding', 'Non-verbal Reasoning'],
+    priceUSD: { smallGroup: 50, oneOnOne: 95 },
+    badge: 'Medicine',
+  },
+  {
+    id: courseId('ie', 'ib-biology-ie'),
+    slug: 'ib-biology-ie',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for Irish international school students.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in Ireland',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'IST timezone classes' },
+      { icon: 'star', text: 'CAO points optimization' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// Hong Kong Courses
+const HK_COURSES: Course[] = [
+  {
+    id: courseId('hk', 'hkdse-biology'),
+    slug: 'hkdse-biology',
+    name: 'HKDSE Biology',
+    examSystem: 'HKDSE Biology',
+    description: 'Complete HKDSE Biology preparation for Level 5** results.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'Form 5-6 students',
+    features: [
+      { icon: 'target', text: 'HKEAA syllabus aligned' },
+      { icon: 'book', text: 'All compulsory & elective topics' },
+      { icon: 'check', text: 'SBA support' },
+      { icon: 'video', text: 'HKT timezone lessons' },
+      { icon: 'star', text: 'Level 5** strategies' },
+    ],
+    topics: ['Cells', 'Genetics', 'Molecular Biology', 'Biotechnology', 'Physiology', 'Ecology', 'Evolution'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('hk', 'igcse-biology-hk'),
+    slug: 'igcse-biology-hk',
+    name: 'IGCSE Biology',
+    examSystem: 'IGCSE Biology',
+    description: 'Cambridge IGCSE Biology for Hong Kong international schools.',
+    duration: '2 years',
+    level: 'Intermediate',
+    targetAudience: 'Year 10-11 international school students',
+    features: [
+      { icon: 'target', text: 'Cambridge aligned' },
+      { icon: 'book', text: 'All topics covered' },
+      { icon: 'check', text: 'Practical skills' },
+      { icon: 'video', text: 'HKT timezone lessons' },
+      { icon: 'star', text: 'A* strategies' },
+    ],
+    topics: ['Cells', 'Biological Molecules', 'Enzymes', 'Nutrition', 'Transport', 'Respiration', 'Excretion', 'Coordination', 'Reproduction', 'Inheritance', 'Ecology'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+  },
+  {
+    id: courseId('hk', 'a-level-biology-hk'),
+    slug: 'a-level-biology-hk',
+    name: 'GCE A-Level Biology',
+    examSystem: 'GCE A-Level Biology',
+    description: 'A-Level Biology for Hong Kong international schools.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'Year 12-13 international school students',
+    features: [
+      { icon: 'target', text: 'Cambridge/Edexcel aligned' },
+      { icon: 'book', text: 'AS & A2 covered' },
+      { icon: 'check', text: 'Practical endorsement' },
+      { icon: 'video', text: 'HKT timezone lessons' },
+      { icon: 'star', text: 'A* strategies' },
+    ],
+    topics: ['Biological Molecules', 'Cells', 'Genetics', 'Exchange', 'Energy', 'Control', 'Ecology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('hk', 'ib-biology-hk'),
+    slug: 'ib-biology-hk',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for Hong Kong IB World Schools.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in Hong Kong',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'HKT timezone classes' },
+      { icon: 'star', text: 'Score 7 strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('hk', 'ap-biology-hk'),
+    slug: 'ap-biology-hk',
+    name: 'AP Biology',
+    examSystem: 'AP Biology',
+    description: 'AP Biology for American curriculum schools in Hong Kong.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Students in American schools',
+    features: [
+      { icon: 'target', text: 'College Board aligned' },
+      { icon: 'book', text: 'All 8 units covered' },
+      { icon: 'check', text: 'FRQ practice' },
+      { icon: 'video', text: 'HKT timezone classes' },
+      { icon: 'star', text: 'Score 5 strategies' },
+    ],
+    topics: ['Biochemistry', 'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// New Zealand Courses
+const NZ_COURSES: Course[] = [
+  {
+    id: courseId('nz', 'ncea-level-3-biology'),
+    slug: 'ncea-level-3-biology',
+    name: 'NCEA Level 3 Biology',
+    examSystem: 'NCEA Level 3 Biology',
+    description: 'NCEA Level 3 Biology for Excellence endorsement.',
+    duration: '1 year',
+    level: 'Advanced',
+    targetAudience: 'Year 13 students',
+    features: [
+      { icon: 'target', text: 'NZQA aligned' },
+      { icon: 'book', text: 'All achievement standards' },
+      { icon: 'check', text: 'Internal & external prep' },
+      { icon: 'video', text: 'NZST timezone classes' },
+      { icon: 'star', text: 'Excellence strategies' },
+    ],
+    topics: ['Gene Expression', 'Evolution', 'Animal Behaviour', 'Homeostasis', 'Speciation'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('nz', 'ncea-level-2-biology'),
+    slug: 'ncea-level-2-biology',
+    name: 'NCEA Level 2 Biology',
+    examSystem: 'NCEA Level 2 Biology',
+    description: 'NCEA Level 2 Biology preparation.',
+    duration: '1 year',
+    level: 'Intermediate',
+    targetAudience: 'Year 12 students',
+    features: [
+      { icon: 'target', text: 'NZQA aligned' },
+      { icon: 'book', text: 'All achievement standards' },
+      { icon: 'check', text: 'Internal & external prep' },
+      { icon: 'video', text: 'NZST timezone classes' },
+      { icon: 'star', text: 'Excellence strategies' },
+    ],
+    topics: ['Cell Division', 'Gene Expression', 'Ecology', 'Adaptation'],
+    priceUSD: { smallGroup: 35, oneOnOne: 70 },
+  },
+  {
+    id: courseId('nz', 'ncea-level-1-biology'),
+    slug: 'ncea-level-1-biology',
+    name: 'NCEA Level 1 Biology',
+    examSystem: 'NCEA Level 1 Biology',
+    description: 'NCEA Level 1 Biology foundation.',
+    duration: '1 year',
+    level: 'Beginner',
+    targetAudience: 'Year 11 students',
+    features: [
+      { icon: 'target', text: 'NZQA aligned' },
+      { icon: 'book', text: 'All achievement standards' },
+      { icon: 'check', text: 'Internal & external prep' },
+      { icon: 'video', text: 'NZST timezone classes' },
+      { icon: 'star', text: 'Merit/Excellence focus' },
+    ],
+    topics: ['Life Processes', 'Ecology', 'Genetics', 'Human Biology'],
+    priceUSD: { smallGroup: 35, oneOnOne: 65 },
+  },
+  {
+    id: courseId('nz', 'ib-biology-nz'),
+    slug: 'ib-biology-nz',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for New Zealand IB schools.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma students in New Zealand',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'NZST timezone classes' },
+      { icon: 'star', text: 'Score 7 strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('nz', 'cambridge-biology-nz'),
+    slug: 'cambridge-biology-nz',
+    name: 'Cambridge AS/A-Level Biology',
+    examSystem: 'Cambridge Biology',
+    description: 'Cambridge Biology for NZ international schools.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'Students in Cambridge schools',
+    features: [
+      { icon: 'target', text: 'CAIE aligned' },
+      { icon: 'book', text: 'AS & A2 covered' },
+      { icon: 'check', text: 'Practical skills' },
+      { icon: 'video', text: 'NZST timezone classes' },
+      { icon: 'star', text: 'A* strategies' },
+    ],
+    topics: ['Cell Structure', 'Biological Molecules', 'Transport', 'Genetics', 'Ecology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// South Africa Courses
+const ZA_COURSES: Course[] = [
+  {
+    id: courseId('za', 'nsc-life-sciences'),
+    slug: 'nsc-life-sciences',
+    name: 'NSC/Matric Life Sciences',
+    examSystem: 'NSC/Matric Life Sciences',
+    description: 'Matric Life Sciences preparation for distinction.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'Grade 11-12 learners',
+    features: [
+      { icon: 'target', text: 'CAPS aligned' },
+      { icon: 'book', text: 'All topics covered' },
+      { icon: 'check', text: 'Past paper practice' },
+      { icon: 'video', text: 'SAST timezone lessons' },
+      { icon: 'star', text: 'Distinction strategies' },
+    ],
+    topics: ['Molecules of Life', 'Cells', 'Tissues', 'Reproduction', 'Genetics', 'Evolution', 'Human Impact'],
+    priceUSD: { smallGroup: 35, oneOnOne: 65 },
+    popular: true,
+    badge: 'Most Popular',
+  },
+  {
+    id: courseId('za', 'ieb-life-sciences'),
+    slug: 'ieb-life-sciences',
+    name: 'IEB Life Sciences',
+    examSystem: 'IEB Life Sciences',
+    description: 'IEB Life Sciences for independent school learners.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'Grade 11-12 IEB learners',
+    features: [
+      { icon: 'target', text: 'IEB syllabus aligned' },
+      { icon: 'book', text: 'All topics covered' },
+      { icon: 'check', text: 'Paper 1 & 2 prep' },
+      { icon: 'video', text: 'SAST timezone lessons' },
+      { icon: 'star', text: 'Level 7 strategies' },
+    ],
+    topics: ['Life at Molecular Level', 'Life Processes', 'Environmental Studies', 'Diversity', 'Evolution'],
+    priceUSD: { smallGroup: 40, oneOnOne: 75 },
+  },
+  {
+    id: courseId('za', 'cambridge-biology-za'),
+    slug: 'cambridge-biology-za',
+    name: 'Cambridge AS/A-Level Biology',
+    examSystem: 'Cambridge AS/A-Level Biology',
+    description: 'Cambridge Biology for SA international schools.',
+    duration: '2 years',
+    level: 'Advanced',
+    targetAudience: 'Cambridge stream learners',
+    features: [
+      { icon: 'target', text: 'CAIE aligned' },
+      { icon: 'book', text: 'AS & A2 covered' },
+      { icon: 'check', text: 'Practical endorsement' },
+      { icon: 'video', text: 'SAST timezone lessons' },
+      { icon: 'star', text: 'A* strategies' },
+    ],
+    topics: ['Cell Structure', 'Biological Molecules', 'Transport', 'Genetics', 'Ecology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+  {
+    id: courseId('za', 'ib-biology-za'),
+    slug: 'ib-biology-za',
+    name: 'IB Biology HL/SL',
+    examSystem: 'IB Biology',
+    description: 'IB Biology for South African IB World Schools.',
+    duration: '2 years',
+    level: 'All Levels',
+    targetAudience: 'IB Diploma learners in South Africa',
+    features: [
+      { icon: 'target', text: 'IB syllabus aligned' },
+      { icon: 'book', text: 'IA support included' },
+      { icon: 'check', text: 'All papers covered' },
+      { icon: 'video', text: 'SAST timezone lessons' },
+      { icon: 'star', text: 'Score 7 strategies' },
+    ],
+    topics: ['Cell Biology', 'Molecular Biology', 'Genetics', 'Ecology', 'Evolution', 'Human Physiology'],
+    priceUSD: { smallGroup: 45, oneOnOne: 85 },
+  },
+]
+
+// Master course catalog by country
+export const COUNTRY_COURSES: Record<CountryCode, Course[]> = {
+  us: US_COURSES,
+  uk: UK_COURSES,
+  ca: CA_COURSES,
+  au: AU_COURSES,
+  sg: SG_COURSES,
+  ae: AE_COURSES,
+  ie: IE_COURSES,
+  hk: HK_COURSES,
+  nz: NZ_COURSES,
+  za: ZA_COURSES,
+}
+
+/**
+ * Get courses for a specific country
+ */
+export function getCoursesForCountry(countryCode: CountryCode): Course[] {
+  return COUNTRY_COURSES[countryCode] || []
+}
+
+/**
+ * Get a specific course by country and slug
+ */
+export function getCourseBySlug(countryCode: CountryCode, slug: string): Course | null {
+  const courses = COUNTRY_COURSES[countryCode]
+  return courses?.find((c) => c.slug === slug) || null
+}
+
+/**
+ * Get popular courses for a country
+ */
+export function getPopularCourses(countryCode: CountryCode): Course[] {
+  return getCoursesForCountry(countryCode).filter((c) => c.popular)
+}
+
+/**
+ * Get courses by exam system
+ */
+export function getCoursesByExamSystem(countryCode: CountryCode, examSystem: string): Course[] {
+  return getCoursesForCountry(countryCode).filter((c) => c.examSystem === examSystem)
+}
+
+/**
+ * Get unique exam systems for a country
+ */
+export function getExamSystemsFromCourses(countryCode: CountryCode): string[] {
+  const courses = getCoursesForCountry(countryCode)
+  return [...new Set(courses.map((c) => c.examSystem))]
+}
