@@ -800,6 +800,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/neet-biology-preparation-strategy-score-180-plus',
+        destination: '/blog/neet-biology-preparation-strategy-score-340-plus',
+        permanent: true,
+      },
+      {
         source: '/blog/how-to-crack-neet-in-6-months',
         destination: '/blog/neet-preparation-guide-best-strategies',
         permanent: true,
