@@ -668,6 +668,162 @@ const nextConfig = {
         destination: '/blog/career-options-after-12th-pcb-complete-guide',
         permanent: true,
       },
+
+      // ============================================
+      // GSC 404 Fixes - January 2026
+      // ============================================
+
+      // Biology tutor location pages
+      {
+        source: '/biology-tutor-gurugram',
+        destination: '/neet-coaching-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-ballabhgarh',
+        destination: '/neet-coaching-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-noida-sector-18',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/online-biology-tutor-class-11',
+        destination: '/online-biology-tuition',
+        permanent: true,
+      },
+
+      // Faculty and About pages
+      {
+        source: '/dr-shekhar-singh',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/about/faculty',
+        destination: '/about',
+        permanent: true,
+      },
+
+      // Course and purchase pages
+      {
+        source: '/courses/dropper',
+        destination: '/courses/neet-dropper',
+        permanent: true,
+      },
+      {
+        source: '/purchase/neet-dropper',
+        destination: '/courses/neet-dropper',
+        permanent: true,
+      },
+      {
+        source: '/neet-foundation-course',
+        destination: '/courses/foundation',
+        permanent: true,
+      },
+      {
+        source: '/neet-2026-preparation',
+        destination: '/neet-coaching-institute',
+        permanent: true,
+      },
+
+      // Subject-specific tuition pages
+      {
+        source: '/cell-biology-tuition',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/molecular-biology-tuition',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/ecology-biology-tuition',
+        destination: '/courses',
+        permanent: true,
+      },
+
+      // Notes and PDF pages
+      {
+        source: '/biological-classification-notes-neet',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/genetics-notes-neet',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/ncert-biology-notes-class-12',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/cell-biology-notes-neet',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/ncert-exemplar-biology',
+        destination: '/neet-biology-mcq',
+        permanent: true,
+      },
+      {
+        source: '/neet-biology-notes-pdf',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/biodiversity-conservation-class-12',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+
+      // Blog post redirects
+      {
+        source: '/blog/neet-exam-centres-state-wise-2026',
+        destination: '/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-2026-syllabus-complete-guide-deleted-topics',
+        destination: '/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-2025-biology-paper-analysis',
+        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-crack-neet-in-6-months',
+        destination: '/blog/neet-preparation-guide-best-strategies',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-biology-pyq-chapter-wise-pdf-download',
+        destination: '/neet-biology-mcq',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-vs-jee-which-is-tougher',
+        destination: '/blog/career-options-after-12th-pcb-complete-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-cutoff-2026-category-wise',
+        destination: '/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-score-700-plus-in-neet',
+        destination: '/blog/neet-preparation-guide-best-strategies',
+        permanent: true,
+      },
     ]
   },
 

@@ -710,7 +710,7 @@ export default function APBiologyPage() {
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Related Programs</h2>
           </motion.div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             <Link
               href="/campbell-biology/"
               className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-green-300 hover:shadow-lg"
@@ -720,16 +720,16 @@ export default function APBiologyPage() {
               <p className="mt-1 text-sm text-gray-600">56 chapter guides</p>
             </Link>
             <Link
-              href="/usabo-coaching/"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-green-300 hover:shadow-lg"
+              href="/biology-olympiad-preparation/"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-yellow-300 hover:shadow-lg"
             >
-              <Award className="mx-auto mb-2 h-6 w-6 text-blue-600" />
-              <span className="font-semibold text-gray-900">USABO Coaching</span>
-              <p className="mt-1 text-sm text-gray-600">Biology Olympiad prep</p>
+              <Award className="mx-auto mb-2 h-6 w-6 text-yellow-600" />
+              <span className="font-semibold text-gray-900">Biology Olympiad</span>
+              <p className="mt-1 text-sm text-gray-600">IBO, USABO, BBO prep</p>
             </Link>
             <Link
               href="/ib-biology-online-classes/"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-green-300 hover:shadow-lg"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-purple-300 hover:shadow-lg"
             >
               <GraduationCap className="mx-auto mb-2 h-6 w-6 text-purple-600" />
               <span className="font-semibold text-gray-900">IB Biology</span>
@@ -737,11 +737,19 @@ export default function APBiologyPage() {
             </Link>
             <Link
               href="/mcat-biology-preparation/"
-              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-green-300 hover:shadow-lg"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-teal-300 hover:shadow-lg"
             >
               <Users className="mx-auto mb-2 h-6 w-6 text-teal-600" />
               <span className="font-semibold text-gray-900">MCAT Biology</span>
               <p className="mt-1 text-sm text-gray-600">Pre-med preparation</p>
+            </Link>
+            <Link
+              href="/courses/"
+              className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-blue-300 hover:shadow-lg"
+            >
+              <TrendingUp className="mx-auto mb-2 h-6 w-6 text-blue-600" />
+              <span className="font-semibold text-gray-900">All Courses</span>
+              <p className="mt-1 text-sm text-gray-600">View all programs</p>
             </Link>
           </div>
         </div>
