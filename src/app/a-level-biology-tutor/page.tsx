@@ -773,38 +773,44 @@ export default function ALevelBiologyTutorPage() {
       <section className="py-12 bg-gradient-to-br from-purple-50 to-violet-50">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-            Explore International Biology Programs
+            Explore More Programs
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/boards/igcse"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200"
+              href="/campbell-biology/"
+              className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
             >
-              IGCSE Biology
+              Campbell Biology (56 Chapters)
             </Link>
             <Link
-              href="/boards/ib"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200"
+              href="/ib-biology-online-classes/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200 hover:border-purple-400"
             >
               IB Biology
             </Link>
             <Link
-              href="/services/international"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200"
+              href="/ap-biology-online-tutor/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200 hover:border-purple-400"
             >
-              International Programs
+              AP Biology
             </Link>
             <Link
-              href="/biology-tutor"
-              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200"
+              href="/mcat-biology-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200 hover:border-purple-400"
             >
-              General Biology Tutor
+              MCAT Biology
             </Link>
             <Link
-              href="/demo-booking"
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+              href="/biology-olympiad-preparation/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200 hover:border-purple-400"
             >
-              Book Demo Class
+              Biology Olympiad
+            </Link>
+            <Link
+              href="/usabo-coaching/"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-purple-200 hover:border-purple-400"
+            >
+              USABO Coaching
             </Link>
           </div>
         </div>

@@ -47,7 +47,7 @@ const curriculumCards = [
   },
   {
     title: 'IB Biology',
-    href: '/ib-biology-tutor',
+    href: '/ib-biology-online-classes',
     icon: Globe,
     description: 'IB Diploma Biology HL & SL tuition with IA support',
     stats: '350+ students • 6-7 average',

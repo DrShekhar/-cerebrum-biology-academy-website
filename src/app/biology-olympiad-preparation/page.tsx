@@ -515,6 +515,49 @@ export default function BiologyOlympiadHubPage() {
         </div>
       </section>
 
+      {/* Related Programs */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-slate-900 mb-8">
+            Also Explore Our Other Biology Programs
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link
+              href="/ibo-preparation/"
+              className="bg-white rounded-xl p-4 shadow-lg border border-slate-200 text-center hover:shadow-xl hover:border-yellow-400 transition-all"
+            >
+              <Trophy className="w-8 h-8 text-yellow-600 mx-auto mb-2" />
+              <h3 className="font-bold text-slate-900 text-sm">IBO Preparation</h3>
+              <p className="text-xs text-slate-600 mt-1">International finals</p>
+            </Link>
+            <Link
+              href="/mcat-biology-preparation/"
+              className="bg-white rounded-xl p-4 shadow-lg border border-slate-200 text-center hover:shadow-xl hover:border-teal-400 transition-all"
+            >
+              <GraduationCap className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+              <h3 className="font-bold text-slate-900 text-sm">MCAT Biology</h3>
+              <p className="text-xs text-slate-600 mt-1">Pre-med prep</p>
+            </Link>
+            <Link
+              href="/ap-biology-online-tutor/"
+              className="bg-white rounded-xl p-4 shadow-lg border border-slate-200 text-center hover:shadow-xl hover:border-purple-400 transition-all"
+            >
+              <Star className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+              <h3 className="font-bold text-slate-900 text-sm">AP Biology</h3>
+              <p className="text-xs text-slate-600 mt-1">College Board</p>
+            </Link>
+            <Link
+              href="/ib-biology-online-classes/"
+              className="bg-white rounded-xl p-4 shadow-lg border border-slate-200 text-center hover:shadow-xl hover:border-green-400 transition-all"
+            >
+              <Book className="w-8 h-8 text-green-600 mx-auto mb-2" />
+              <h3 className="font-bold text-slate-900 text-sm">IB Biology</h3>
+              <p className="text-xs text-slate-600 mt-1">HL & SL</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 text-center">

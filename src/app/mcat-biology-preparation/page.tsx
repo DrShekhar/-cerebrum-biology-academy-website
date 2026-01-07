@@ -698,7 +698,7 @@ export default function MCATBiologyPage() {
               <div className="text-xs text-slate-500">USABO, BBO, IBO</div>
             </Link>
             <Link
-              href="/ib-biology-tutor/"
+              href="/ib-biology-online-classes/"
               className="bg-white rounded-xl p-4 text-center border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group"
             >
               <Award className="w-8 h-8 text-purple-500 mx-auto mb-2" />

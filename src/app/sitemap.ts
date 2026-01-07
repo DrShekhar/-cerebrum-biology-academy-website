@@ -1906,7 +1906,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.94,
     },
     {
-      url: `${baseUrl}/ib-biology-tutor`,
+      url: `${baseUrl}/ib-biology-online-classes`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.94,
