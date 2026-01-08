@@ -109,6 +109,8 @@ export const WHATSAPP_MESSAGES = {
   callback: 'Hi! Please call me back to discuss NEET Biology coaching.',
   exitIntent: (code: string) =>
     `Hi! I saw the 20% discount offer on the website. My code is ${code}. I would like to claim it!`,
+  seminarFAQ: 'Hi, I have a question about the NEET Parent Seminar.',
+  seminarSupport: 'Hi! I just registered for the NEET Guidance Seminar and need help.',
 } as const
 
 export type WhatsAppMessageType = keyof typeof WHATSAPP_MESSAGES

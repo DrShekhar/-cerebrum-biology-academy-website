@@ -95,7 +95,16 @@
     "mcp:biology": "tsx src/lib/mcp/servers/biology-content.ts",
     "mcp:test": "echo 'Testing MCP server (will run for 3 seconds)...' && (timeout 3 tsx src/lib/mcp/servers/biology-content.ts 2>&1 || gtimeout 3 tsx src/lib/mcp/servers/biology-content.ts 2>&1 || (tsx src/lib/mcp/servers/biology-content.ts & sleep 3 && kill $! 2>/dev/null)) | head -20",
     "visual:check": "tsx scripts/visual-check.ts",
-    "visual:check:prod": "BASE_URL=https://cerebrumbiologyacademy.com tsx scripts/visual-check.ts"
+    "visual:check:prod": "BASE_URL=https://cerebrumbiologyacademy.com tsx scripts/visual-check.ts",
+    "seo:blog": "tsx scripts/seo-machine/generate.ts",
+    "seo:news": "tsx scripts/seo-machine/generate.ts --news",
+    "seo:landing": "tsx scripts/seo-machine/generate.ts --landing",
+    "seo:review": "tsx scripts/seo-machine/publish.ts --review",
+    "seo:publish": "tsx scripts/seo-machine/publish.ts",
+    "seo:approve": "tsx scripts/seo-machine/publish.ts --approve",
+    "seo:reject": "tsx scripts/seo-machine/publish.ts --reject",
+    "seo:social": "tsx scripts/seo-machine/generators/social.ts",
+    "seo:lead-magnet": "tsx scripts/seo-machine/generators/lead-magnet.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",

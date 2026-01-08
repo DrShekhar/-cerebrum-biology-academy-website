@@ -119,7 +119,9 @@ export function EnhancedCoursesListingPage() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">5%</div>
-              <div className="text-green-100 text-xs sm:text-sm md:text-base">One-time Discount</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">
+                One-time Discount
+              </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">{getTotalStudents()}</div>

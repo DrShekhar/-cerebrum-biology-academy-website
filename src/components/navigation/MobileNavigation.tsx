@@ -202,16 +202,14 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
         aria-hidden="true"
       />
 
-      {/* Slide-out menu - CSS transition instead of framer-motion */}
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-label="Main menu"
-        aria-hidden={!isMenuOpen}
-        className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl z-50 md:hidden overflow-y-auto transition-transform duration-300 ease-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
+      {/* Slide-out menu - conditionally rendered to prevent horizontal scroll */}
+      {isMenuOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Main menu"
+          className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl overflow-y-auto z-50 md:hidden animate-slide-in-right"
+        >
         <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between z-10">
           <h2 className="text-lg font-bold text-gray-900">Menu</h2>
           <button
@@ -305,6 +303,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           </div>
         </div>
       </div>
+      )}
     </>
   )
 }

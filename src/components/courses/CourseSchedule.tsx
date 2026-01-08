@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
+import {
   Calendar,
   Clock,
   Users,
@@ -17,7 +17,7 @@ import {
   Download,
   Phone,
   CalendarPlus,
-  RefreshCw
+  RefreshCw,
 } from 'lucide-react'
 
 interface CourseScheduleProps {
@@ -37,7 +37,7 @@ const mockBatches = {
       startDate: '2024-01-15',
       faculty: 'Dr. Priya Sharma',
       mode: 'Offline',
-      location: 'Main Campus'
+      location: 'Main Campus',
     },
     {
       id: 'pinnacle-evening',
@@ -49,8 +49,8 @@ const mockBatches = {
       startDate: '2024-01-22',
       faculty: 'Dr. Meena Patel',
       mode: 'Hybrid',
-      location: 'Main Campus + Online'
-    }
+      location: 'Main Campus + Online',
+    },
   ],
   ascent: [
     {
@@ -63,7 +63,7 @@ const mockBatches = {
       startDate: '2024-01-15',
       faculty: 'Dr. Rajesh Kumar',
       mode: 'Offline',
-      location: 'Main Campus'
+      location: 'Main Campus',
     },
     {
       id: 'ascent-afternoon',
@@ -75,7 +75,7 @@ const mockBatches = {
       startDate: '2024-01-20',
       faculty: 'Dr. Anil Singh',
       mode: 'Online',
-      location: 'Online Platform'
+      location: 'Online Platform',
     },
     {
       id: 'ascent-evening',
@@ -87,8 +87,8 @@ const mockBatches = {
       startDate: '2024-01-25',
       faculty: 'Dr. Priya Sharma',
       mode: 'Hybrid',
-      location: 'Main Campus + Online'
-    }
+      location: 'Main Campus + Online',
+    },
   ],
   pursuit: [
     {
@@ -101,7 +101,7 @@ const mockBatches = {
       startDate: '2024-01-15',
       faculty: 'Dr. Rajesh Kumar',
       mode: 'Offline',
-      location: 'Main Campus'
+      location: 'Main Campus',
     },
     {
       id: 'pursuit-weekend',
@@ -113,9 +113,9 @@ const mockBatches = {
       startDate: '2024-01-20',
       faculty: 'Dr. Anil Singh',
       mode: 'Online',
-      location: 'Online Platform'
-    }
-  ]
+      location: 'Online Platform',
+    },
+  ],
 }
 
 const mockHolidays = [
@@ -123,7 +123,7 @@ const mockHolidays = [
   { date: '2024-03-08', name: 'Holi' },
   { date: '2024-08-15', name: 'Independence Day' },
   { date: '2024-10-02', name: 'Gandhi Jayanti' },
-  { date: '2024-11-01', name: 'Diwali Break' }
+  { date: '2024-11-01', name: 'Diwali Break' },
 ]
 
 export function CourseSchedule({ course }: CourseScheduleProps) {
@@ -131,7 +131,8 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
 
   const BatchCard = ({ batch, tier }: { batch: any; tier: CourseSeries }) => {
     const occupancyRate = ((batch.totalSeats - batch.availableSeats) / batch.totalSeats) * 100
-    const urgencyLevel = batch.availableSeats <= 3 ? 'high' : batch.availableSeats <= 7 ? 'medium' : 'low'
+    const urgencyLevel =
+      batch.availableSeats <= 3 ? 'high' : batch.availableSeats <= 7 ? 'medium' : 'low'
 
     return (
       <Card className="p-6 hover:shadow-lg transition-shadow">
@@ -144,8 +145,14 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             </div>
           </div>
           <div className="text-right">
-            <Badge 
-              variant={urgencyLevel === 'high' ? 'destructive' : urgencyLevel === 'medium' ? 'secondary' : 'default'}
+            <Badge
+              variant={
+                urgencyLevel === 'high'
+                  ? 'destructive'
+                  : urgencyLevel === 'medium'
+                    ? 'secondary'
+                    : 'default'
+              }
               className="mb-2"
             >
               {batch.availableSeats} seats left
@@ -183,10 +190,13 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             <span>{Math.round(occupancyRate)}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
+            <div
               className={`h-2 rounded-full transition-all ${
-                occupancyRate >= 80 ? 'bg-red-500' : 
-                occupancyRate >= 60 ? 'bg-yellow-500' : 'bg-green-600'
+                occupancyRate >= 80
+                  ? 'bg-red-500'
+                  : occupancyRate >= 60
+                    ? 'bg-yellow-500'
+                    : 'bg-green-600'
               }`}
               style={{ width: `${occupancyRate}%` }}
             ></div>
@@ -223,17 +233,27 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             Flexible Schedule Options
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Choose from multiple batch timings and learning modes to fit your schedule and learning preferences
+            Choose from multiple batch timings and learning modes to fit your schedule and learning
+            preferences
           </p>
         </div>
 
         {/* Tier Selection */}
         <div className="mb-8">
-          <Tabs value={selectedTier} onValueChange={(value) => setSelectedTier(value as CourseSeries)}>
+          <Tabs
+            value={selectedTier}
+            onValueChange={(value) => setSelectedTier(value as CourseSeries)}
+          >
             <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto">
-              <TabsTrigger value="pursuit" className="text-sm">Pursuit Series</TabsTrigger>
-              <TabsTrigger value="ascent" className="text-sm">Ascent Series</TabsTrigger>
-              <TabsTrigger value="pinnacle" className="text-sm">Pinnacle Series</TabsTrigger>
+              <TabsTrigger value="pursuit" className="text-sm">
+                Pursuit Series
+              </TabsTrigger>
+              <TabsTrigger value="ascent" className="text-sm">
+                Ascent Series
+              </TabsTrigger>
+              <TabsTrigger value="pinnacle" className="text-sm">
+                Pinnacle Series
+              </TabsTrigger>
             </TabsList>
 
             {/* Batch Cards for each tier */}
@@ -325,9 +345,9 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             {mockHolidays.map((holiday, index) => (
               <div key={index} className="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
                 <div className="text-purple-600 font-semibold text-sm">
-                  {new Date(holiday.date).toLocaleDateString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric' 
+                  {new Date(holiday.date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
                   })}
                 </div>
                 <div className="text-sm text-gray-700">{holiday.name}</div>
@@ -335,7 +355,8 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             ))}
           </div>
           <div className="mt-4 text-xs text-gray-500">
-            * Classes will be compensated with special revision sessions or extended hours before exams
+            * Classes will be compensated with special revision sessions or extended hours before
+            exams
           </div>
         </Card>
 
@@ -355,12 +376,14 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
               Call for Custom Schedule
             </Button>
           </div>
-          
+
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-2xl mx-auto">
             <div className="flex items-start gap-3">
               <AlertCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
               <div className="text-sm text-blue-800">
-                <span className="font-medium">Need a custom schedule?</span> Our counselors can work with you to find the perfect timing that fits your school/college schedule and other commitments.
+                <span className="font-medium">Need a custom schedule?</span> Our counselors can work
+                with you to find the perfect timing that fits your school/college schedule and other
+                commitments.
               </div>
             </div>
           </div>

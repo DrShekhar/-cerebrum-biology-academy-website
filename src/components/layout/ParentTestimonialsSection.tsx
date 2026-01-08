@@ -86,7 +86,7 @@ export function ParentTestimonialsSection({
   const currentTestimonialData = featuredTestimonials[currentTestimonial]
 
   return (
-    <section className="py-20 bg-navy-50">
+    <section className="py-20 bg-navy-50 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -160,7 +160,7 @@ export function ParentTestimonialsSection({
 
         {/* Main Testimonial Showcase */}
         <motion.div
-          className="mb-16"
+          className="mb-16 overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -174,9 +174,9 @@ export function ParentTestimonialsSection({
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="p-8 md:p-12"
+                className="p-4 sm:p-6 md:p-12"
               >
-                <div className="grid md:grid-cols-3 gap-8 items-center">
+                <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-center">
                   {/* Parent Info */}
                   <div className="text-center md:text-left">
                     <div className="relative inline-block mb-6">
@@ -373,16 +373,16 @@ export function ParentTestimonialsSection({
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-4 sm:p-8 md:p-12 text-white overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             Join the Cerebrum Family of Successful Parents
           </h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">
             Over 847 parents have trusted Cerebrum with their children's medical dreams. Let us
             guide your child to success too.
           </p>
@@ -409,22 +409,22 @@ export function ParentTestimonialsSection({
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex items-center justify-center space-x-8 text-sm opacity-90">
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-              <span>98.7% Parent Satisfaction</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8 text-xs sm:text-sm opacity-90">
+            <div className="flex items-center min-w-0">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+              <span className="whitespace-nowrap">98.7% Satisfaction</span>
             </div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-              <span>847+ Success Stories</span>
+            <div className="flex items-center min-w-0">
+              <div className="w-2 h-2 bg-blue-400 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+              <span className="whitespace-nowrap">847+ Stories</span>
             </div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-              <span>4.9/5 Rating</span>
+            <div className="hidden sm:flex items-center min-w-0">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+              <span className="whitespace-nowrap">4.9/5 Rating</span>
             </div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-              <span>96.2% Recommend</span>
+            <div className="hidden sm:flex items-center min-w-0">
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+              <span className="whitespace-nowrap">96.2% Recommend</span>
             </div>
           </div>
         </motion.div>

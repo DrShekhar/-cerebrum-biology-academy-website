@@ -11,6 +11,7 @@ import { parseWebhookPayload, sendWhatsAppMessage, trackUser, trackEvent } from 
 import { logger } from '@/lib/utils/logger'
 import { prisma } from '@/lib/prisma'
 import crypto from 'crypto'
+import { isFromOwner, processApprovalResponse } from '@/lib/seo-marketing/approvalService'
 
 const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
 
@@ -222,6 +223,20 @@ async function processTextMessage(
   originalPayload: InteraktWebhookPayload
 ) {
   const lowerText = text.toLowerCase().trim()
+
+  // Check if message is from owner - process SEO content approval first
+  if (isFromOwner(phone)) {
+    const approvalResult = await processApprovalResponse(phone, text)
+    if (approvalResult.processed) {
+      logger.info('SEO content approval processed', {
+        service: 'interakt-webhook',
+        phone,
+        result: approvalResult.message,
+      })
+      return
+    }
+    // If not an approval response, continue with normal processing
+  }
 
   if (lowerText === 'demo' || lowerText.includes('book demo') || lowerText.includes('free class')) {
     await handleDemoRequest(phone, originalPayload)

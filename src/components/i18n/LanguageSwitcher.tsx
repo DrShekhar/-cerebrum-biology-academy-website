@@ -67,7 +67,7 @@ export function LanguageSwitcher({ variant = 'default', onLanguageChange }: Lang
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 px-2 py-1 text-sm text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
+          className="flex items-center gap-1 px-3 py-2 min-h-[40px] text-sm text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
           aria-label="Change language"
         >
           <Globe className="w-4 h-4" />
@@ -104,7 +104,7 @@ export function LanguageSwitcher({ variant = 'default', onLanguageChange }: Lang
           <button
             key={lang.code}
             onClick={() => handleLanguageSelect(lang.code)}
-            className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
+            className={`px-4 py-2 min-h-[40px] text-sm rounded-full transition-colors ${
               currentLanguage === lang.code
                 ? 'bg-white text-blue-600'
                 : 'bg-white/10 text-white hover:bg-white/20'
@@ -121,7 +121,7 @@ export function LanguageSwitcher({ variant = 'default', onLanguageChange }: Lang
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-white border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
+        className="flex items-center gap-2 px-3 py-2.5 min-h-[40px] bg-white border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
         aria-label="Change language"
         aria-expanded={isOpen}
       >

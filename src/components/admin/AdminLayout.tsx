@@ -26,6 +26,8 @@ import {
   FolderOpen,
   ClipboardCheck,
   Key,
+  PenTool,
+  Send,
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -196,6 +198,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           href: '/admin/marketing/abandoned-carts',
           badge: 8,
         },
+      ],
+    },
+    {
+      id: 'content',
+      name: 'Content',
+      icon: PenTool,
+      href: '/admin/content',
+      children: [
+        { id: 'content-drafts', name: 'Drafts Queue', icon: FileText, href: '/admin/content/drafts' },
+        { id: 'content-published', name: 'Published', icon: Send, href: '/admin/content/published' },
       ],
     },
     {

@@ -847,6 +847,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* Prevent horizontal scroll from off-screen mobile navigation drawers */
+  overflow-x: hidden;
 }
 
 /* Mobile Experience Optimizations - Phase 1.5 */
@@ -1237,6 +1239,19 @@ body {
     transform: translateY(100%);
     opacity: 0;
   }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.3s ease-out forwards;
 }
 
 /* Utility classes for animations */

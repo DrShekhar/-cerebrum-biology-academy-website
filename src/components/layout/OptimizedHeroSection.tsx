@@ -267,7 +267,7 @@ export function OptimizedHeroSection({
             </div>
             <a
               href="/neet-2026-preparation"
-              className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
             >
               <GraduationCap className="w-4 h-4" />
               NEET 2026

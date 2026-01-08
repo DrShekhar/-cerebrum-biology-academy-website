@@ -447,9 +447,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
 
             <h1 className="text-7xl md:text-8xl font-black text-white mb-8 leading-none tracking-tight">
               <span className="block">Cerebrum Biology</span>
-              <span className="block text-blue-400">
-                Course Catalog
-              </span>
+              <span className="block text-blue-400">Course Catalog</span>
             </h1>
 
             <p className="text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12 font-light">

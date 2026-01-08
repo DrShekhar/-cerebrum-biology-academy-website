@@ -59,32 +59,29 @@ declare global {
 
   // Razorpay types
   interface RazorpayOptions {
-    key: string
+    key: string | undefined
     amount: number
     currency: string
     name: string
     description: string
-    image: string
+    image?: string
     order_id: string
     handler: (response: {
       razorpay_payment_id: string
       razorpay_order_id: string
       razorpay_signature: string
-    }) => void
+    }) => void | Promise<void>
     prefill: {
       name: string
       email: string
       contact: string
     }
-    notes: {
-      course: string
-      student_name: string
-    }
+    notes?: Record<string, string | number | undefined>
     theme: {
       color: string
     }
-    modal: {
-      ondismiss: () => void
+    modal?: {
+      ondismiss?: () => void
     }
   }
 

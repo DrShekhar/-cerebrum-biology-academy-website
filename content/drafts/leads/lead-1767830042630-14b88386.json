@@ -1,0 +1,68 @@
+{
+  "id": "lead-1767830042630-14b88386",
+  "type": "LEAD_MAGNET",
+  "status": "draft",
+  "priority": "normal",
+  "createdAt": "2026-01-07T23:54:02.630Z",
+  "updatedAt": "2026-01-07T23:54:02.630Z",
+  "generatedBy": "claude",
+  "magnetType": "cheat-sheet",
+  "title": "Cell Division - Quick Revision Cheat Sheet",
+  "description": "One-page summary with all key formulas, facts, and diagrams",
+  "targetKeywords": [
+    "Cell Division",
+    "Cell Division notes",
+    "Cell Division PDF",
+    "NEET Cell Division",
+    "cheat sheet Cell Division"
+  ],
+  "content": {
+    "title": "Cell Division - Quick Revision Cheat Sheet",
+    "subtitle": "NEET 2026 Biology | Cell Division",
+    "sections": [
+      {
+        "heading": "Key Definitions",
+        "content": "[CLAUDE: Write detailed content for Key Definitions about Cell Division]",
+        "type": "text"
+      },
+      {
+        "heading": "Important Formulas",
+        "content": "[CLAUDE: Generate relevant formulas for Cell Division]",
+        "type": "formula"
+      },
+      {
+        "heading": "Diagram Summary",
+        "content": "[CLAUDE: Describe diagram for Cell Division]",
+        "type": "diagram"
+      },
+      {
+        "heading": "Quick Facts",
+        "content": "[CLAUDE: Generate list for Quick Facts about Cell Division]",
+        "type": "list"
+      },
+      {
+        "heading": "Common Mistakes",
+        "content": "[CLAUDE: Write detailed content for Common Mistakes about Cell Division]",
+        "type": "text"
+      },
+      {
+        "heading": "NEET Tips",
+        "content": "[CLAUDE: Write detailed content for NEET Tips about Cell Division]",
+        "type": "text"
+      }
+    ],
+    "footer": "© 2026 Cerebrum Biology Academy | WhatsApp: +917980078875"
+  },
+  "estimatedPages": 2,
+  "downloadGate": {
+    "requiredFields": [
+      "name",
+      "phone",
+      "class"
+    ],
+    "whatsappOptIn": true,
+    "emailOptIn": false,
+    "thankYouMessage": "🎉 Your cheat sheet is ready! Check your WhatsApp for the download link and exclusive study tips.",
+    "redirectUrl": "/resources/thank-you"
+  }
+}

@@ -383,7 +383,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400"
+                  className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
                 >
                   Book FREE Demo Class
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -396,7 +396,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
                       campaign: 'city-hub',
                     })
                   }}
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp Us
@@ -560,7 +560,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
             <div className="mt-10 text-center">
               <Link
                 href="/demo-booking"
-                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg transition hover:bg-yellow-400"
+                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
               >
                 Start Your Medical Journey Today
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -668,10 +668,10 @@ export function CityHubPage({ data }: CityHubPageProps) {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/courses"
-                className="inline-flex items-center justify-center rounded-lg bg-[#4a5d4a] px-8 py-4 text-lg font-semibold text-white transition hover:bg-[#3d4d3d]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#4a5d4a] px-4 py-3 text-base font-semibold text-white transition hover:bg-[#3d4d3d] sm:px-8 sm:py-4 sm:text-lg"
               >
                 View All Courses & Fees
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -684,7 +684,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
                     campaign: 'city-hub-courses',
                   })
                 }}
-                className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-8 py-4 text-lg font-semibold text-green-600 transition hover:bg-green-50 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-4 py-3 text-base font-semibold text-green-600 transition hover:bg-green-50 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Ask About Courses
@@ -890,10 +890,10 @@ export function CityHubPage({ data }: CityHubPageProps) {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/demo-booking"
-                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400"
+                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
               >
                 Book Free Demo Class
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -906,14 +906,14 @@ export function CityHubPage({ data }: CityHubPageProps) {
                     campaign: 'city-hub-cta',
                   })
                 }}
-                className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 WhatsApp Us Now
               </button>
               <a
                 href="tel:+918826444334"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-4 py-3 text-base font-semibold transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call: 88264-44334

@@ -6,55 +6,29 @@ import {
   MapPin,
   Trophy,
   Users,
-  Star,
   CheckCircle,
   Award,
-  BookOpen,
   Video,
   MessageCircle,
   Play,
-  ArrowRight,
   Building,
   Globe,
   Phone,
   Navigation,
   Plane,
-  Home,
-  Medal,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import {
+  getOfflineCenters,
+  getOnlineRegions,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  getCityLocalityPath,
+  getWhatsAppEnquiryUrl,
+} from '@/lib/nearMe/nearMeData'
 
-const offlineCenters = [
-  {
-    name: 'Rohini Center',
-    address: 'Sector 7, Rohini, Delhi - 110085',
-    phone: '+91 88264 44334',
-    mapLink: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Rohini',
-    areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town'],
-  },
-  {
-    name: 'Gurugram Center',
-    address: 'Sector 14, Gurugram, Haryana - 122001',
-    phone: '+91 88264 44334',
-    mapLink: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Gurugram',
-    areas: ['Gurugram', 'DLF', 'Sohna Road', 'Golf Course Road'],
-  },
-  {
-    name: 'South Extension Center',
-    address: 'South Extension Part 2, Delhi - 110049',
-    phone: '+91 88264 44334',
-    mapLink: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+South+Extension',
-    areas: ['South Delhi', 'Greater Kailash', 'Lajpat Nagar', 'Defence Colony'],
-  },
-  {
-    name: 'Faridabad Center',
-    address: 'Sector 15, Faridabad, Haryana - 121007',
-    phone: '+91 88264 44334',
-    mapLink: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Faridabad',
-    areas: ['Faridabad', 'Ballabgarh', 'Palwal', 'NIT'],
-  },
-]
+const PAGE_KEYWORD = 'Biology Tutors Near Me'
 
 const relocationBenefits = [
   {
@@ -128,8 +102,10 @@ export default function BiologyTutorsNearMePage() {
   const [userLocation, setUserLocation] = useState<'delhi_ncr' | 'outside' | 'unknown'>('unknown')
   const [showLocationPrompt, setShowLocationPrompt] = useState(true)
 
+  const offlineCenters = getOfflineCenters()
+  const onlineRegions = getOnlineRegions()
+
   useEffect(() => {
-    // Check if user has previously set location preference
     const savedLocation = localStorage.getItem('userLocationPref')
     if (savedLocation) {
       setUserLocation(savedLocation as 'delhi_ncr' | 'outside')
@@ -143,25 +119,24 @@ export default function BiologyTutorsNearMePage() {
     localStorage.setItem('userLocationPref', location)
   }
 
+  const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
+  const faqSchema = generateFAQSchema(faqs)
+
   return (
     <div className="min-h-screen">
+      {/* LocalBusiness Schema for each center */}
+      {localBusinessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Location Prompt Modal */}
@@ -306,27 +281,36 @@ export default function BiologyTutorsNearMePage() {
                           </a>
                         </div>
                         <div className="mb-4">
-                          <p className="text-sm text-gray-500 mb-2">Serving areas:</p>
+                          <p className="text-sm text-gray-500 mb-2">Key features:</p>
                           <div className="flex flex-wrap gap-2">
-                            {center.areas.map((area) => (
+                            {center.features.map((feature) => (
                               <span
-                                key={area}
+                                key={feature}
                                 className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700"
                               >
-                                {area}
+                                {feature}
                               </span>
                             ))}
                           </div>
                         </div>
-                        <a
-                          href={center.mapLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                        >
-                          <MapPin className="w-4 h-4 mr-1" />
-                          Get Directions
-                        </a>
+                        <div className="flex flex-wrap gap-3">
+                          <a
+                            href={center.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                          >
+                            <MapPin className="w-4 h-4 mr-1" />
+                            Get Directions
+                          </a>
+                          <Link
+                            href={getCityLocalityPath(center.city)}
+                            className="inline-flex items-center text-teal-600 hover:text-teal-800 font-medium"
+                          >
+                            <Navigation className="w-4 h-4 mr-1" />
+                            View Localities
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -428,19 +412,15 @@ export default function BiologyTutorsNearMePage() {
                   </Button>
                 </Link>
                 <p className="text-gray-600">
-                  Or{' '}
-                  <Link href="/neet-coaching-north-india" className="text-blue-600 hover:underline">
-                    explore online classes
-                  </Link>{' '}
-                  if relocation is not possible
+                  Or explore online classes if relocation is not possible
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Online Option */}
+          {/* Online Regions for Non-Delhi Users */}
           <section className="py-20 bg-white">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-6xl mx-auto px-4">
               <motion.div
                 className="text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
@@ -449,13 +429,37 @@ export default function BiologyTutorsNearMePage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Can&apos;t Relocate? Join Online
+                  Can&apos;t Relocate? Join Online from Your Region
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Our online program has also produced excellent results, though we strongly
-                  recommend offline for serious aspirants.
+                  Our online program serves students across India and overseas with region-specific
+                  timings.
                 </p>
               </motion.div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {onlineRegions.map((region, index) => (
+                  <motion.div
+                    key={region.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition"
+                  >
+                    <Globe className="w-10 h-10 text-blue-600 mb-4" />
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{region.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{region.description}</p>
+                    <Link
+                      href={`/${region.slug}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      Explore Program
+                      <Navigation className="w-4 h-4 ml-1" />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
 
               <div className="bg-blue-50 rounded-2xl p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -483,12 +487,12 @@ export default function BiologyTutorsNearMePage() {
                     </ul>
                   </div>
                   <div className="text-center">
-                    <Link href="/services/online-classes">
-                      <Button size="xl" variant="outline" className="border-blue-600 text-blue-600">
-                        <Video className="w-5 h-5 mr-2" />
-                        Explore Online Program
+                    <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)} target="_blank" rel="noopener noreferrer">
+                      <Button size="xl" className="bg-green-500 hover:bg-green-600">
+                        <MessageCircle className="w-5 h-5 mr-2" />
+                        Enquire on WhatsApp
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -596,16 +600,16 @@ export default function BiologyTutorsNearMePage() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/biology-tutor"
+              href="/biology-teacher-near-me"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
-              Biology Tutor
+              Biology Teacher Near Me
             </Link>
             <Link
-              href="/biology-home-tutor"
+              href="/biology-classes-near-me"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
-              Biology Home Tutor
+              Biology Classes Near Me
             </Link>
             <Link
               href="/locations"

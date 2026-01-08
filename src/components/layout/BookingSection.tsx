@@ -155,26 +155,26 @@ export function BookingSection() {
                       key={method.title}
                       href={method.isWhatsApp ? '#' : method.action}
                       onClick={handleClick}
-                      className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group cursor-pointer"
+                      className="flex items-center justify-between gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group cursor-pointer overflow-hidden"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                          <method.icon className="w-6 h-6 text-blue-600" />
+                      <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors flex-shrink-0">
+                          <method.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        <div className="min-w-0">
+                          <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                             {method.title}
                           </h4>
-                          <p className="text-gray-600 text-sm">{method.description}</p>
+                          <p className="text-gray-600 text-sm truncate">{method.description}</p>
                           <p className="text-gray-500 text-xs">{method.available}</p>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <p className="text-blue-600 font-medium text-sm group-hover:underline">
+                      <div className="text-right flex-shrink-0">
+                        <p className="text-blue-600 font-medium text-xs sm:text-sm group-hover:underline whitespace-nowrap">
                           {method.actionText}
                         </p>
                       </div>
