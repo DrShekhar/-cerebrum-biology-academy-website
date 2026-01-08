@@ -663,6 +663,10 @@ export async function sendSEOContentApproval(params: {
   iterationCount?: number
   referenceId: string
 }): Promise<InteraktResponse> {
+  // Sanitize text for Interakt (no tabs, newlines, or multiple spaces)
+  const sanitize = (text: string) =>
+    text.replace(/[\t\n\r]/g, ' ').replace(/\s{2,}/g, ' ').trim()
+
   // Build stats string
   let stats = ''
   if (params.wordCount && params.wordCount > 0) {
@@ -672,20 +676,20 @@ export async function sendSEOContentApproval(params: {
     stats += ` | Rev ${params.iterationCount}`
   }
 
-  // Instructions for approval
-  const instructions = `${stats}\n\nReply YES to publish, NO to reject`
+  // Instructions for approval (no newlines - Interakt limitation)
+  const instructions = stats ? `${stats} - Reply YES/NO` : 'Reply YES to publish, NO to reject'
 
   // Use existing approved template 'new_lead_alert' as workaround
   return sendTemplateMessage({
     phone: params.phone,
     templateName: UTILITY_TEMPLATES.COUNSELOR_NOTIFICATION.name, // 'new_lead_alert'
     bodyValues: [
-      `📝 ${params.contentType}`,
-      params.title.slice(0, 100),
-      params.preview.slice(0, 200),
-      instructions,
+      sanitize(`📝 ${params.contentType}`),
+      sanitize(params.title.slice(0, 100)),
+      sanitize(params.preview.slice(0, 200)),
+      sanitize(instructions),
       'SEO Approval',
-      `Ref: ${params.referenceId.slice(0, 8)}`,
+      sanitize(`Ref: ${params.referenceId.slice(0, 8)}`),
     ],
   })
 }
