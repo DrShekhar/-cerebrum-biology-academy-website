@@ -4019,3 +4019,200 @@ enum InquiryPriority {
   HIGH
   URGENT
 }
+
+// NEET Parents Guidance Seminar Registrations
+model seminar_registrations {
+  id                String                      @id @default(cuid())
+  parentName        String
+  email             String
+  whatsappNumber    String
+  city              String
+  studentClass      String?
+  referralCode      String?
+
+  // Payment
+  razorpayOrderId   String                      @unique
+  razorpayPaymentId String?                     @unique
+  paymentStatus     SeminarPaymentStatus        @default(PENDING)
+  amount            Int                         @default(19900)
+  pricingTier       SeminarPricingTier          @default(STANDARD)
+
+  // Seminar Details
+  seminarDate       DateTime
+  seminarSlot       String
+  attended          Boolean                     @default(false)
+  joinedAt          DateTime?
+
+  // Nurturing
+  whatsappOptIn     Boolean                     @default(true)
+  emailOptIn        Boolean                     @default(true)
+  dripStage         Int                         @default(0)
+  lastDripSentAt    DateTime?
+
+  // Conversion Tracking
+  demoClassBooked   Boolean                     @default(false)
+  demoBookedAt      DateTime?
+  courseEnrolled    Boolean                     @default(false)
+  enrolledAt        DateTime?
+  courseId          String?
+
+  // Tracking
+  utmSource         String?
+  utmMedium         String?
+  utmCampaign       String?
+  ipAddress         String?
+  userAgent         String?
+
+  // Timestamps
+  createdAt         DateTime                    @default(now())
+  updatedAt         DateTime                    @updatedAt
+
+  @@index([paymentStatus, createdAt])
+  @@index([seminarDate])
+  @@index([email])
+  @@index([whatsappNumber])
+  @@index([dripStage, lastDripSentAt])
+  @@index([referralCode])
+}
+
+enum SeminarPaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum SeminarPricingTier {
+  EARLY_BIRD
+  STANDARD
+  PREMIUM
+}
+
+// ============================================
+// SEO CONTENT GENERATION MACHINE
+// ============================================
+
+// Content generation queue for automated SEO content
+model content_generation_queue {
+  id                String                    @id @default(cuid())
+  type              ContentGenerationType
+  triggerSource     ContentTriggerSource
+  priority          ContentPriority           @default(NORMAL)
+  status            ContentGenerationStatus   @default(PENDING)
+
+  // Input
+  topic             String
+  keywords          String[]
+  sourceUrl         String?
+  additionalContext String?                   @db.Text
+
+  // Generated content
+  generatedTitle    String?
+  generatedSlug     String?
+  generatedContent  String?                   @db.Text
+  generatedMeta     Json?
+  generatedExcerpt  String?                   @db.Text
+
+  // Approval workflow
+  whatsappMessageId String?
+  approvalSentAt    DateTime?
+  approvalResponse  String?
+  iterationCount    Int                       @default(0)
+  iterationFeedback String?                   @db.Text
+
+  // Publishing
+  publishedUrl      String?
+  publishedAt       DateTime?
+
+  // Tracking
+  tokensUsed        Int?
+  costUsd           Float?
+  errorMessage      String?                   @db.Text
+
+  createdAt         DateTime                  @default(now())
+  updatedAt         DateTime                  @updatedAt
+
+  @@index([status, createdAt])
+  @@index([type, status])
+  @@index([priority, status])
+  @@index([triggerSource])
+}
+
+// Monthly limits for content generation (cost control)
+model content_generation_limits {
+  id                String   @id @default(cuid())
+  month             String   @unique // YYYY-MM format
+  blogsGenerated    Int      @default(0)
+  newsGenerated     Int      @default(0)
+  landingPages      Int      @default(0)
+  tokensUsed        Int      @default(0)
+  costUsd           Float    @default(0)
+
+  // Configurable monthly limits
+  maxMonthlyBlogs   Int      @default(15)
+  maxMonthlyNews    Int      @default(30)
+  maxMonthlyPages   Int      @default(10)
+  maxMonthlyCostUsd Float    @default(5.0) // $5 USD per month cap
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// Track trending topics and news sources
+model seo_content_sources {
+  id              String   @id @default(cuid())
+  sourceType      String
+  sourceName      String
+  sourceUrl       String?
+  lastCheckedAt   DateTime?
+  lastContentAt   DateTime?
+  isActive        Boolean  @default(true)
+
+  // RSS/Feed specific
+  feedUrl         String?
+  feedFormat      String?
+
+  // Trend tracking
+  trendKeywords   String[]
+  trendScore      Float?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([sourceType, isActive])
+  @@index([lastCheckedAt])
+}
+
+enum ContentGenerationType {
+  BLOG_POST
+  NEWS_ARTICLE
+  SEO_LANDING_PAGE
+  SOCIAL_POST
+  LEAD_MAGNET
+}
+
+enum ContentTriggerSource {
+  SCHEDULED
+  NEWS_FEED
+  TREND_DETECTED
+  KEYWORD_FORECAST
+  MANUAL
+}
+
+enum ContentPriority {
+  URGENT
+  HIGH
+  NORMAL
+  LOW
+}
+
+enum ContentGenerationStatus {
+  PENDING
+  GENERATING
+  REVIEW
+  APPROVED
+  REJECTED
+  ITERATING
+  PUBLISHED
+  FAILED
+}

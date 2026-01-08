@@ -636,6 +636,89 @@ export async function notifyCounselorOfNewLead(params: {
 }
 
 // ============================================
+// SEO CONTENT MACHINE MESSAGES
+// ============================================
+
+/**
+ * Send SEO content for approval (uses template for 24hr rule)
+ */
+export async function sendSEOContentApproval(params: {
+  phone: string
+  contentType: string
+  title: string
+  preview: string
+  wordCount?: number
+  readTime?: number
+  iterationCount?: number
+  referenceId: string
+}): Promise<InteraktResponse> {
+  // Build stats string
+  let stats = ''
+  if (params.wordCount && params.wordCount > 0) {
+    stats = `${params.wordCount} words | ${params.readTime || Math.ceil(params.wordCount / 200)} min read`
+  }
+  if (params.iterationCount && params.iterationCount > 0) {
+    stats += ` | Revision ${params.iterationCount}`
+  }
+
+  return sendTemplateMessage({
+    phone: params.phone,
+    templateName: UTILITY_TEMPLATES.SEO_CONTENT_APPROVAL.name,
+    bodyValues: [
+      params.contentType,
+      params.title.slice(0, 100),
+      params.preview.slice(0, 300),
+      stats,
+      params.referenceId.slice(0, 8),
+    ],
+  })
+}
+
+/**
+ * Send notification when SEO content is published
+ */
+export async function sendSEOPublishedNotification(params: {
+  phone: string
+  contentType: string
+  title: string
+  publishedUrl: string
+}): Promise<InteraktResponse> {
+  return sendTemplateMessage({
+    phone: params.phone,
+    templateName: UTILITY_TEMPLATES.SEO_CONTENT_PUBLISHED.name,
+    bodyValues: [
+      params.contentType,
+      params.title.slice(0, 100),
+      params.publishedUrl,
+    ],
+  })
+}
+
+/**
+ * Send daily SEO summary
+ */
+export async function sendSEODailySummary(params: {
+  phone: string
+  pendingCount: number
+  reviewCount: number
+  publishedCount: number
+  budgetUsed: string
+  budgetRemaining: string
+}): Promise<InteraktResponse> {
+  return sendTemplateMessage({
+    phone: params.phone,
+    templateName: UTILITY_TEMPLATES.SEO_DAILY_SUMMARY.name,
+    bodyValues: [
+      String(params.pendingCount),
+      String(params.reviewCount),
+      String(params.publishedCount),
+      params.budgetUsed,
+      params.budgetRemaining,
+    ],
+  })
+}
+
+// ============================================
 // USER TRACKING
 // ============================================
 

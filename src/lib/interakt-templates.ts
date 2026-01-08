@@ -527,6 +527,79 @@ Please respond within 5 minutes!`,
       'timestamp',
     ],
   },
+
+  SEO_CONTENT_APPROVAL: {
+    name: 'seo_content_approval',
+    languageCode: 'en',
+    category: 'UTILITY' as const,
+    description: 'Send SEO content for owner approval',
+    bodyText: `New {{1}} Ready for Review
+
+Title: {{2}}
+
+Preview:
+{{3}}
+
+{{4}}
+
+Reply:
+YES - Approve & Publish
+NO - Reject
+
+Ref: {{5}}`,
+    variables: [
+      'content_type',
+      'title',
+      'preview',
+      'stats',
+      'reference_id',
+    ],
+  },
+
+  SEO_CONTENT_PUBLISHED: {
+    name: 'seo_content_published',
+    languageCode: 'en',
+    category: 'UTILITY' as const,
+    description: 'Notify when SEO content is published',
+    bodyText: `{{1}} Published!
+
+Title: {{2}}
+
+View: {{3}}
+
+Content is now live on the website.`,
+    variables: [
+      'content_type',
+      'title',
+      'published_url',
+    ],
+  },
+
+  SEO_DAILY_SUMMARY: {
+    name: 'seo_daily_summary',
+    languageCode: 'en',
+    category: 'UTILITY' as const,
+    description: 'Daily SEO content machine summary',
+    bodyText: `SEO Machine Summary
+
+Queue:
+Pending: {{1}}
+In Review: {{2}}
+Published: {{3}}
+
+Budget:
+Used: {{4}}
+Remaining: {{5}}
+
+Reply STATUS for details`,
+    variables: [
+      'pending_count',
+      'review_count',
+      'published_count',
+      'budget_used',
+      'budget_remaining',
+    ],
+  },
 }
 
 // ============================================
