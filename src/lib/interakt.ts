@@ -641,6 +641,17 @@ export async function notifyCounselorOfNewLead(params: {
 
 /**
  * Send SEO content for approval (uses template for 24hr rule)
+ *
+ * TEMPORARY WORKAROUND: Using 'new_lead_alert' template since
+ * 'seo_content_approval' is not yet approved on Interakt Dashboard.
+ *
+ * Template mapping:
+ * 1. lead_name → contentType
+ * 2. lead_phone → title
+ * 3. course_interest → preview
+ * 4. initial_message → stats + instructions
+ * 5. lead_source → "SEO Approval"
+ * 6. timestamp → referenceId
  */
 export async function sendSEOContentApproval(params: {
   phone: string
@@ -658,18 +669,23 @@ export async function sendSEOContentApproval(params: {
     stats = `${params.wordCount} words | ${params.readTime || Math.ceil(params.wordCount / 200)} min read`
   }
   if (params.iterationCount && params.iterationCount > 0) {
-    stats += ` | Revision ${params.iterationCount}`
+    stats += ` | Rev ${params.iterationCount}`
   }
 
+  // Instructions for approval
+  const instructions = `${stats}\n\nReply YES to publish, NO to reject`
+
+  // Use existing approved template 'new_lead_alert' as workaround
   return sendTemplateMessage({
     phone: params.phone,
-    templateName: UTILITY_TEMPLATES.SEO_CONTENT_APPROVAL.name,
+    templateName: UTILITY_TEMPLATES.COUNSELOR_NOTIFICATION.name, // 'new_lead_alert'
     bodyValues: [
-      params.contentType,
+      `📝 ${params.contentType}`,
       params.title.slice(0, 100),
-      params.preview.slice(0, 300),
-      stats,
-      params.referenceId.slice(0, 8),
+      params.preview.slice(0, 200),
+      instructions,
+      'SEO Approval',
+      `Ref: ${params.referenceId.slice(0, 8)}`,
     ],
   })
 }
