@@ -679,17 +679,15 @@ export async function sendSEOContentApproval(params: {
   // Instructions for approval (no newlines - Interakt limitation)
   const instructions = stats ? `${stats} - Reply YES/NO` : 'Reply YES to publish, NO to reject'
 
-  // Use existing approved template 'new_lead_alert' as workaround
+  // Use 'welcome_message' template which only has 1 variable (student_name)
+  // Map the title to the name slot and include all info in that field
+  const fullMessage = `SEO ${params.contentType}: ${params.title.slice(0, 60)}... ${instructions}`
+
   return sendTemplateMessage({
     phone: params.phone,
-    templateName: UTILITY_TEMPLATES.COUNSELOR_NOTIFICATION.name, // 'new_lead_alert'
+    templateName: MARKETING_TEMPLATES.WELCOME_MESSAGE.name, // 'welcome_message'
     bodyValues: [
-      sanitize(`📝 ${params.contentType}`),
-      sanitize(params.title.slice(0, 100)),
-      sanitize(params.preview.slice(0, 200)),
-      sanitize(instructions),
-      'SEO Approval',
-      sanitize(`Ref: ${params.referenceId.slice(0, 8)}`),
+      sanitize(fullMessage.slice(0, 100)),
     ],
   })
 }
