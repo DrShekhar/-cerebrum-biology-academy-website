@@ -1,5 +1,6 @@
 // Unified AI Chat API - With streaming support for faster perceived response
 import { NextRequest, NextResponse } from 'next/server'
+import { auth } from '@/lib/auth/config'
 
 export const runtime = 'nodejs'
 
@@ -97,6 +98,11 @@ function getResponse(message: string, language: string = 'english'): string {
 // Streaming POST endpoint
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body = (await request.json()) as ChatRequest
     const { message, stream = false, context } = body
 

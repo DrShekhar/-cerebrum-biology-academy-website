@@ -6,6 +6,7 @@
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@/generated/prisma/index.js'
+import { auth } from '@/lib/auth/config'
 
 const prisma = new PrismaClient()
 
@@ -196,6 +197,11 @@ export async function GET(
   { params }: { params: Promise<{ testId: string }> }
 ) {
   try {
+    const authSession = await auth()
+    if (!authSession) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const { testId } = await params
 
     if (!testId) {
@@ -203,7 +209,7 @@ export async function GET(
     }
 
     // Fetch test session with all details
-    const session = await prisma.test_sessions.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: { id: testId },
       include: {
         test_templates: true,
@@ -215,20 +221,20 @@ export async function GET(
       },
     })
 
-    if (!session) {
+    if (!testSession) {
       return NextResponse.json({ error: 'Test not found' }, { status: 404 })
     }
 
-    if (session.status !== 'COMPLETED') {
+    if (testSession.status !== 'COMPLETED') {
       return NextResponse.json({ error: 'Test not yet completed' }, { status: 400 })
     }
 
-    const studentId = session.userId || session.freeUserId || ''
+    const studentId = testSession.userId || testSession.freeUserId || ''
 
     // Calculate performance metrics
-    const totalQuestions = session.user_question_responses.length
-    const correctAnswers = session.user_question_responses.filter((r) => r.isCorrect).length
-    const incorrectAnswers = session.user_question_responses.filter(
+    const totalQuestions = testSession.user_question_responses.length
+    const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length
+    const incorrectAnswers = testSession.user_question_responses.filter(
       (r) => r.isCorrect === false
     ).length
     const unattempted = totalQuestions - (correctAnswers + incorrectAnswers)
@@ -244,7 +250,7 @@ export async function GET(
       }
     >()
 
-    session.user_question_responses.forEach((response) => {
+    testSession.user_question_responses.forEach((response) => {
       const topic = response.questions.topic
       if (!topicMap.has(topic)) {
         topicMap.set(topic, {
@@ -273,7 +279,7 @@ export async function GET(
 
     // Difficulty-wise analysis
     const difficultyMap = new Map<string, { attempted: number; correct: number }>()
-    session.user_question_responses.forEach((response) => {
+    testSession.user_question_responses.forEach((response) => {
       const difficulty = response.questions.difficulty
       if (!difficultyMap.has(difficulty)) {
         difficultyMap.set(difficulty, { attempted: 0, correct: 0 })
@@ -301,7 +307,7 @@ export async function GET(
     }
 
     // Question details
-    const questionDetails = session.user_question_responses.map((response) => ({
+    const questionDetails = testSession.user_question_responses.map((response) => ({
       questionId: response.questions.id,
       question: response.questions.question,
       topic: response.questions.topic,
@@ -334,12 +340,12 @@ export async function GET(
     const aiInsights = await generateDetailedAIInsights(
       studentId,
       {
-        totalScore: session.totalScore || 0,
-        totalMarks: session.test_templates?.totalMarks || 0,
-        percentage: session.percentage || 0,
+        totalScore: testSession.totalScore || 0,
+        totalMarks: testSession.test_templates?.totalMarks || 0,
+        percentage: testSession.percentage || 0,
         correctAnswers,
         incorrectAnswers,
-        timeSpent: session.timeSpent,
+        timeSpent: testSession.timeSpent,
       },
       topicWiseAnalysis,
       previousTests
@@ -349,7 +355,7 @@ export async function GET(
     const averageScore = 60 // Placeholder - calculate from all test takers
     const performanceTrend =
       previousTests.length > 0
-        ? previousTests[0].percentage! > session.percentage!
+        ? previousTests[0].percentage! > testSession.percentage!
           ? 'declining'
           : 'improving'
         : 'first-test'
@@ -357,20 +363,20 @@ export async function GET(
     const results: DetailedResults = {
       testId,
       testInfo: {
-        title: session.test_templates?.title || 'Practice Test',
-        completedAt: session.submittedAt?.toISOString() || '',
-        duration: session.test_templates?.timeLimit || 60,
+        title: testSession.test_templates?.title || 'Practice Test',
+        completedAt: testSession.submittedAt?.toISOString() || '',
+        duration: testSession.test_templates?.timeLimit || 60,
         totalQuestions,
       },
       performance: {
-        totalScore: session.totalScore || 0,
-        totalMarks: session.test_templates?.totalMarks || 0,
-        percentage: session.percentage || 0,
+        totalScore: testSession.totalScore || 0,
+        totalMarks: testSession.test_templates?.totalMarks || 0,
+        percentage: testSession.percentage || 0,
         correctAnswers,
         incorrectAnswers,
         unattempted,
-        timeSpent: session.timeSpent,
-        averageTimePerQuestion: totalQuestions > 0 ? session.timeSpent / totalQuestions : 0,
+        timeSpent: testSession.timeSpent,
+        averageTimePerQuestion: totalQuestions > 0 ? testSession.timeSpent / totalQuestions : 0,
       },
       topicWiseAnalysis,
       difficultyAnalysis,
@@ -378,7 +384,7 @@ export async function GET(
       aiInsights,
       comparativeAnalysis: {
         averageScore,
-        yourScore: session.totalScore || 0,
+        yourScore: testSession.totalScore || 0,
         performanceTrend,
       },
     }

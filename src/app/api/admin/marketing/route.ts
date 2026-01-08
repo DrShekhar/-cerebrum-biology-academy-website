@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { adminDb as db } from '@/lib/db-admin'
 import type { MarketingCampaign } from '@/lib/admin-schema'
+import { requireAdminAuth } from '@/lib/auth'
 
 // Type definitions for marketing data
 // Note: CampaignRecord is a standalone interface to avoid status type conflicts with MarketingCampaign
@@ -91,6 +92,8 @@ type WhereConditions = Record<string, any>
 // GET /api/admin/marketing - Get marketing campaigns and automation data
 export async function GET(request: NextRequest) {
   try {
+    await requireAdminAuth()
+
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type') // 'campaigns', 'abandoned-carts', 'automation'
     const status = searchParams.get('status')
@@ -119,6 +122,8 @@ export async function GET(request: NextRequest) {
 // POST /api/admin/marketing - Create new marketing campaign
 export async function POST(request: NextRequest) {
   try {
+    await requireAdminAuth()
+
     const body = await request.json()
     const { name, type, objective, targetAudience, content, scheduledAt, frequency, endDate } = body
 

@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
+import { auth } from '@/lib/auth/config'
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const formData = await request.formData()
     const image = formData.get('image') as File
     const question =

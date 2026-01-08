@@ -1,8 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { validateAdminSession } from '@/lib/auth/admin-auth'
 
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: Require admin authentication - exposes student PII
+    const session = await validateAdminSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized - Admin access required' },
+        { status: 401 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const paperId = searchParams.get('paperId')
     const studentClass = searchParams.get('studentClass')

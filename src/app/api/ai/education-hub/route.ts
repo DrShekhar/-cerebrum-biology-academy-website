@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { aiClient } from '@/lib/ai/aiClient'
+import { auth } from '@/lib/auth/config'
 
 // Force Node.js runtime for AI API access
 export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body = await request.json()
     const { action, data } = body
 

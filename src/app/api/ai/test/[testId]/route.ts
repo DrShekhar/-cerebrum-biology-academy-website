@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@/generated/prisma/index.js'
+import { auth } from '@/lib/auth/config'
 
 const prisma = new PrismaClient()
 
@@ -13,6 +14,11 @@ export async function GET(
   { params }: { params: Promise<{ testId: string }> }
 ) {
   try {
+    const authSession = await auth()
+    if (!authSession) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const { testId } = await params
 
     if (!testId) {
@@ -20,7 +26,7 @@ export async function GET(
     }
 
     // Fetch test session
-    const session = await prisma.test_sessions.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: { id: testId },
       include: {
         test_templates: {
@@ -52,23 +58,23 @@ export async function GET(
       },
     })
 
-    if (!session) {
+    if (!testSession) {
       return NextResponse.json({ error: 'Test not found' }, { status: 404 })
     }
 
     // Format response
     const testDetails = {
-      testId: session.id,
-      sessionToken: session.sessionToken,
-      status: session.status,
-      startedAt: session.startedAt,
-      submittedAt: session.submittedAt,
-      timeSpent: session.timeSpent,
-      remainingTime: session.remainingTime,
-      currentQuestionIndex: session.currentQuestionIndex,
-      questionsAnswered: session.questionsAnswered,
-      template: session.test_templates,
-      questions: session.user_question_responses.map((r) => ({
+      testId: testSession.id,
+      sessionToken: testSession.sessionToken,
+      status: testSession.status,
+      startedAt: testSession.startedAt,
+      submittedAt: testSession.submittedAt,
+      timeSpent: testSession.timeSpent,
+      remainingTime: testSession.remainingTime,
+      currentQuestionIndex: testSession.currentQuestionIndex,
+      questionsAnswered: testSession.questionsAnswered,
+      template: testSession.test_templates,
+      questions: testSession.user_question_responses.map((r) => ({
         id: r.questions.id,
         question: r.questions.question,
         options: Array.isArray(r.questions.options)
@@ -98,6 +104,11 @@ export async function PATCH(
   { params }: { params: Promise<{ testId: string }> }
 ) {
   try {
+    const authSession = await auth()
+    if (!authSession) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const { testId } = await params
     const body = await request.json()
 
@@ -110,7 +121,7 @@ export async function PATCH(
       fullscreenExits,
     } = body
 
-    const session = await prisma.test_sessions.update({
+    const updatedSession = await prisma.test_sessions.update({
       where: { id: testId },
       data: {
         currentQuestionIndex,
@@ -125,8 +136,8 @@ export async function PATCH(
 
     return NextResponse.json({
       success: true,
-      testId: session.id,
-      updatedAt: session.updatedAt,
+      testId: updatedSession.id,
+      updatedAt: updatedSession.updatedAt,
     })
   } catch (error) {
     console.error('Error updating test progress:', error)

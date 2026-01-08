@@ -6,6 +6,7 @@
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@/generated/prisma/index.js'
+import { auth } from '@/lib/auth/config'
 
 const prisma = new PrismaClient()
 
@@ -278,6 +279,11 @@ async function updateStudentProgress(
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: SubmitTestRequest = await request.json()
     const { testId, studentId, answers, timeSpent } = body
 

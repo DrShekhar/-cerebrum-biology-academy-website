@@ -13,6 +13,7 @@
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@/generated/prisma/index.js'
+import { auth } from '@/lib/auth/config'
 
 const prisma = new PrismaClient()
 
@@ -378,6 +379,11 @@ function getBalancedTopics(preferredTopics: string[] = [], weakAreas: any[] = []
 // Main API Handler
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: TestGenerationRequest = await request.json()
     const { studentId, testType, config = {} } = body
 

@@ -5,6 +5,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { auth } from '@/lib/auth/config'
 
 // Initialize Anthropic client
 const anthropic = new Anthropic({
@@ -32,6 +33,11 @@ interface TutorResponse {
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: TutorRequest = await request.json()
 
     if (!body.question || !body.studentId) {

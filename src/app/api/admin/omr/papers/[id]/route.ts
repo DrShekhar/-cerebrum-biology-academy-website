@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { OMRSubjectType, OMRPaperStatus } from '@/generated/prisma'
 import { SUBJECT_TYPE_CONFIG } from '@/lib/omr/constants'
+import { requireAdminAuth } from '@/lib/auth'
 
 const updatePaperSchema = z.object({
   title: z.string().min(1).max(200).optional(),
@@ -18,6 +19,8 @@ const updatePaperSchema = z.object({
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    await requireAdminAuth()
+
     const { id } = await params
 
     const paper = await prisma.omr_papers.findUnique({
@@ -45,6 +48,8 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
 export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    await requireAdminAuth()
+
     const { id } = await params
     const body = await request.json()
     const validation = updatePaperSchema.safeParse(body)
@@ -102,6 +107,8 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    await requireAdminAuth()
+
     const { id } = await params
 
     const existingPaper = await prisma.omr_papers.findUnique({

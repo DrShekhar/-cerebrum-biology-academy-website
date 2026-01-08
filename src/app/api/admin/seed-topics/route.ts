@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
+import { requireAdminAuth } from '@/lib/auth'
 
 // Force Node.js runtime for database operations
 export const runtime = 'nodejs'
@@ -1022,6 +1023,8 @@ Mendel's laws form the foundation of classical genetics. Understanding these pri
 
 export async function POST() {
   try {
+    await requireAdminAuth()
+
     const results = {
       success: [] as string[],
       failed: [] as string[],

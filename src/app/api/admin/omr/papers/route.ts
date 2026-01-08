@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { OMRSubjectType, OMRPaperStatus } from '@/generated/prisma'
 import { SUBJECT_TYPE_CONFIG } from '@/lib/omr/constants'
+import { validateAdminSession } from '@/lib/auth/admin-auth'
 
 const createPaperSchema = z.object({
   paperCode: z.string().min(1).max(50),
@@ -18,6 +19,15 @@ const createPaperSchema = z.object({
 
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: Require admin authentication
+    const session = await validateAdminSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized - Admin access required' },
+        { status: 401 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status') as OMRPaperStatus | null
     const subjectType = searchParams.get('subjectType') as OMRSubjectType | null
@@ -48,6 +58,15 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Require admin authentication
+    const session = await validateAdminSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized - Admin access required' },
+        { status: 401 }
+      )
+    }
+
     const body = await request.json()
     const validation = createPaperSchema.safeParse(body)
 

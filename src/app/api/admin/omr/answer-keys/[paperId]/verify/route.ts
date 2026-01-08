@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { OMRAnswerKeyStatus } from '@/generated/prisma'
+import { requireAdminAuth } from '@/lib/auth'
 
 const verifySchema = z.object({
   questionNos: z.array(z.number().int().min(1)).optional(),
@@ -15,6 +16,8 @@ export async function POST(
   { params }: { params: Promise<{ paperId: string }> }
 ) {
   try {
+    await requireAdminAuth()
+
     const { paperId } = await params
     const body = await request.json()
     const validation = verifySchema.safeParse(body)

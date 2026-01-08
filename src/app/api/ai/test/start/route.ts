@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@/generated/prisma/index.js'
+import { auth } from '@/lib/auth/config'
 
 const prisma = new PrismaClient()
 
@@ -15,6 +16,11 @@ interface StartTestRequest {
 
 export async function POST(request: NextRequest) {
   try {
+    const authSession = await auth()
+    if (!authSession) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: StartTestRequest = await request.json()
     const { testId, studentId } = body
 
@@ -26,7 +32,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Update test session to started
-    const session = await prisma.test_sessions.update({
+    const testSession = await prisma.test_sessions.update({
       where: { id: testId },
       data: {
         status: 'IN_PROGRESS',
@@ -42,10 +48,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      testId: session.id,
-      sessionToken: session.sessionToken,
-      startedAt: session.startedAt,
-      status: session.status,
+      testId: testSession.id,
+      sessionToken: testSession.sessionToken,
+      startedAt: testSession.startedAt,
+      status: testSession.status,
     })
   } catch (error) {
     console.error('Error starting test session:', error)

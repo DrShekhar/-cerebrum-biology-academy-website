@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { OMRAnswerKeyStatus } from '@/generated/prisma'
+import { requireAdminAuth } from '@/lib/auth'
 
 const answerKeySchema = z.object({
   questionNo: z.number().int().min(1),
@@ -24,6 +25,8 @@ export async function GET(
   { params }: { params: Promise<{ paperId: string }> }
 ) {
   try {
+    await requireAdminAuth()
+
     const { paperId } = await params
     const { searchParams } = new URL(request.url)
     const keyStatus = searchParams.get('keyStatus') as OMRAnswerKeyStatus | null
@@ -72,6 +75,8 @@ export async function POST(
   { params }: { params: Promise<{ paperId: string }> }
 ) {
   try {
+    await requireAdminAuth()
+
     const { paperId } = await params
     const body = await request.json()
     const validation = bulkUploadSchema.safeParse(body)
