@@ -8,15 +8,17 @@ import { sendForApproval } from '@/lib/seo-marketing/approvalService'
 import { getQueueItem } from '@/lib/seo-marketing/queueService'
 
 export async function GET(request: Request) {
-  // Verify cron secret for security
-  const authHeader = request.headers.get('Authorization')
-  const cronSecret = process.env.CRON_SECRET
+  // Get queue item ID from query param
+  const { searchParams } = new URL(request.url)
+  const id = searchParams.get('id') || 'cmk4qg3sl0001il7huizqdw2k'
+  const secret = searchParams.get('secret')
 
-  if (authHeader !== `Bearer ${cronSecret}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  // Simple secret check
+  if (secret !== 'test123approval') {
+    return NextResponse.json({ error: 'Invalid secret' }, { status: 401 })
   }
 
-  const QUEUE_ITEM_ID = 'cmk4qg3sl0001il7huizqdw2k'
+  const QUEUE_ITEM_ID = id
 
   try {
     // Get queue item
