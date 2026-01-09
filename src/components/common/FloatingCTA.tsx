@@ -69,7 +69,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
       icon: MessageCircle,
       label: 'WhatsApp',
       href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
-      color: 'bg-[#25D366] hover:bg-[#20BD5A]',
+      color: 'bg-[#166534] hover:bg-[#14532d]',
       action: 'whatsapp',
       external: true,
     },
@@ -146,10 +146,10 @@ export const FloatingCTA = memo(function FloatingCTA() {
                         handleActionClick(action.action, e)
                         setIsExpanded(false)
                       }}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
+                      className={`flex items-center justify-center gap-2 w-[140px] py-3 rounded-xl text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
                     >
-                      <Icon className="w-5 h-5" />
-                      <span className="whitespace-nowrap text-xs sm:text-sm">{action.label}</span>
+                      <Icon className="w-5 h-5 flex-shrink-0" />
+                      <span className="whitespace-nowrap text-sm">{action.label}</span>
                     </Component>
                   </div>
                 )
@@ -160,7 +160,9 @@ export const FloatingCTA = memo(function FloatingCTA() {
           {/* Main Floating Button - WhatsApp branded for highest conversion */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="relative w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-pulse hover:animate-none"
+            aria-label={isExpanded ? 'Close contact options' : 'Open contact options'}
+            aria-expanded={isExpanded}
+            className="relative w-14 h-14 bg-[#166534] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-pulse hover:animate-none"
           >
             {/* Progress Ring */}
             <svg className="absolute inset-0 w-14 h-14 transform -rotate-90">

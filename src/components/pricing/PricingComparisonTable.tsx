@@ -303,7 +303,7 @@ export function PricingComparisonTable({
                 campaign: 'pricing-page',
               })
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#166534] hover:bg-[#14532d] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation cursor-pointer"
           >
             <MessageSquare className="w-5 h-5" />
             Chat with us on WhatsApp

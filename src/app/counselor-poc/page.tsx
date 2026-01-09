@@ -24,7 +24,7 @@ export default function CounselorPocPage() {
               <button
                 className="
                   hidden sm:flex items-center gap-2 px-4 py-2
-                  bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-lg
+                  bg-[#166534] hover:bg-[#14532d] text-white rounded-lg
                   font-medium text-sm transition-colors duration-150
                   shadow-sm hover:shadow
                 "
@@ -59,7 +59,7 @@ export default function CounselorPocPage() {
         className="
           fixed bottom-6 right-6 z-50
           flex items-center justify-center w-16 h-16
-          bg-[#25D366] hover:bg-[#20BA5A]
+          bg-[#166534] hover:bg-[#14532d]
           text-white rounded-full shadow-lg hover:shadow-xl
           transition-all duration-200 hover:scale-110
           cursor-pointer sm:hidden

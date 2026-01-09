@@ -346,7 +346,7 @@ export function WhatsAppMessageModal({
               <button
                 onClick={handleSend}
                 disabled={sending || (mode === 'custom' && !customMessage.trim())}
-                className="px-6 py-2 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-2 bg-[#166534] hover:bg-[#14532d] text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {sending ? (
                   <>

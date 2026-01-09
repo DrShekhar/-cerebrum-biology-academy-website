@@ -94,10 +94,10 @@ export function HeroClientInteractive() {
       >
         <a
           href="/demo-booking"
-          className="inline-flex items-center justify-center gap-2 bg-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
+          className="inline-flex items-center justify-center gap-2 bg-[#ea4335] hover:bg-[#d33426] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-red-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-red-400/30 hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
-          {t('bookDemo')}
+          <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
+          BOOK DEMO
         </a>
 
         <button
@@ -106,18 +106,18 @@ export function HeroClientInteractive() {
             message: WHATSAPP_MESSAGES.enquiry,
             campaign: 'homepage-hero',
           })}
-          className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
+          className="inline-flex items-center justify-center gap-2 bg-[#166534] hover:bg-[#14532d] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
-          Chat on WhatsApp
+          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
+          WhatsApp
         </button>
 
         <a
           href="/success-stories"
-          className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg hover:scale-[1.02] active:scale-[0.98] group"
+          className="inline-flex items-center justify-center gap-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-600/30 hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
-          {t('seeSuccessStories')}
+          <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors flex-shrink-0" />
+          Success Stories
         </a>
       </div>
 
@@ -215,7 +215,7 @@ export function HeroClientInteractive() {
         </div>
         <a
           href="/neet-2026-preparation"
-          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+          className="inline-flex items-center gap-2 bg-orange-700 hover:bg-orange-800 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg hover:shadow-orange-600/30 transition-all duration-300"
         >
           <GraduationCap className="w-4 h-4" />
           NEET 2026

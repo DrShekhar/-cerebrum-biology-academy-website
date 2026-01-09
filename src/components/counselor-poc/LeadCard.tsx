@@ -110,7 +110,7 @@ export function LeadCard({ lead }: LeadCardProps) {
             }}
             className="
               flex-1 flex items-center justify-center gap-2 px-3 py-2.5
-              bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-md
+              bg-[#166534] hover:bg-[#14532d] text-white rounded-md
               font-medium text-sm transition-colors duration-150
               shadow-sm hover:shadow
             "

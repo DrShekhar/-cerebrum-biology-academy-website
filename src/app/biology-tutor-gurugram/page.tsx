@@ -240,7 +240,7 @@ export default function BiologyTutorGurugramPage() {
             </Button>
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
-            <Button className="w-full bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold">
+            <Button className="w-full bg-[#166534] hover:bg-[#14532d] text-white font-bold">
               <Image
                 src="/icons/whatsapp.svg"
                 alt="WhatsApp"
@@ -297,7 +297,7 @@ export default function BiologyTutorGurugramPage() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
-                  className="bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold shadow-lg shadow-green-500/20 w-full sm:w-auto"
+                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg shadow-green-500/20 w-full sm:w-auto"
                 >
                   <Image
                     src="/icons/whatsapp.svg"
@@ -509,7 +509,7 @@ export default function BiologyTutorGurugramPage() {
                     </Button>
                   </a>
                   <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-[#25D366] hover:bg-[#20BA5C] text-white">
+                    <Button className="bg-[#166534] hover:bg-[#14532d] text-white">
                       <Image
                         src="/icons/whatsapp.svg"
                         alt="WhatsApp"
@@ -707,7 +707,7 @@ export default function BiologyTutorGurugramPage() {
                 </Button>
               </a>
               <a href={WHATSAPP_URL_SIMPLE} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-[#25D366] hover:bg-[#20BA5C] text-white">
+                <Button className="bg-[#166534] hover:bg-[#14532d] text-white">
                   <Image
                     src="/icons/whatsapp.svg"
                     alt="WhatsApp"
@@ -817,7 +817,7 @@ export default function BiologyTutorGurugramPage() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
-                  className="bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold shadow-lg w-full sm:w-auto"
+                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg w-full sm:w-auto"
                 >
                   <Image
                     src="/icons/whatsapp.svg"

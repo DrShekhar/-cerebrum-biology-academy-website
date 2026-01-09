@@ -127,13 +127,15 @@ export function CoursesSection() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
+                aria-label={`${category.name}: ${category.description}`}
+                aria-pressed={selectedCategory === category.id}
                 className={`flex items-center space-x-2 xs:space-x-3 px-4 xs:px-5 sm:px-6 py-3 xs:py-4 rounded-xl transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
-                <IconComponent className="w-5 h-5" />
+                <IconComponent className="w-5 h-5" aria-hidden="true" />
                 <div className="text-left">
                   <div className="font-semibold">{category.name}</div>
                   <div className="text-sm text-current/90">{category.description}</div>
@@ -157,10 +159,10 @@ export function CoursesSection() {
                   <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
                       course.targetClass === '11th'
-                        ? 'bg-green-100 text-green-600'
+                        ? 'bg-green-100 text-green-800'
                         : course.targetClass === '12th'
-                          ? 'bg-blue-100 text-blue-600'
-                          : 'bg-purple-100 text-purple-600'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-purple-100 text-purple-800'
                     }`}
                   >
                     {course.targetClass === 'Dropper'
@@ -239,7 +241,7 @@ export function CoursesSection() {
                   </div>
                   <button
                     onClick={() => handleWhatsAppEnquiry(course.title)}
-                    className="w-full flex items-center justify-center gap-2 bg-[#1a9850] hover:bg-[#158040] text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+                    className="w-full flex items-center justify-center gap-2 bg-[#166534] hover:bg-[#14532d] text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
                   >
                     <MessageCircle className="w-5 h-5" />
                     Ask on WhatsApp

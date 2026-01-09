@@ -274,7 +274,7 @@ export default function FoundationCoursePage() {
               campaign: 'foundation-course',
             })
           }}
-          className="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BD5A] transition-colors cursor-pointer"
+          className="bg-[#166534] text-white p-4 rounded-full shadow-lg hover:bg-[#14532d] transition-colors cursor-pointer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           title="WhatsApp"
