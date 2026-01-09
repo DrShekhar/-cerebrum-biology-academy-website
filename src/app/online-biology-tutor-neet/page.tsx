@@ -180,11 +180,11 @@ export default function OnlineBiologyTutorNeetPage() {
               Online <span className="text-yellow-400">NEET Biology Tutor</span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl opacity-90 mb-4">
+            <h2 className="text-xl md:text-2xl text-blue-100 mb-4">
               Live Classes | AIIMS Faculty | 98% Success Rate
             </h2>
 
-            <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Master NEET Biology online with{' '}
               <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
               Live interactive classes with NCERT-focused teaching that has produced 500+ medical
@@ -219,22 +219,22 @@ export default function OnlineBiologyTutorNeetPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm opacity-80">Medical Selections</div>
+                <div className="text-sm text-blue-100">Medical Selections</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">360/360</div>
-                <div className="text-sm opacity-80">Perfect Scores</div>
+                <div className="text-sm text-blue-100">Perfect Scores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Globe className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">Pan-India</div>
-                <div className="text-sm opacity-80">Online Access</div>
+                <div className="text-sm text-blue-100">Online Access</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">98%</div>
-                <div className="text-sm opacity-80">Success Rate</div>
+                <div className="text-sm text-blue-100">Success Rate</div>
               </div>
             </div>
           </div>
@@ -349,7 +349,7 @@ export default function OnlineBiologyTutorNeetPage() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Crack NEET Biology?</h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-xl md:text-2xl mb-8 text-green-100">
               Join 500+ successful students. Book your free online demo today!
             </p>
 

@@ -382,7 +382,7 @@ export function ParentTestimonialsSection({
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             Join the Cerebrum Family of Successful Parents
           </h3>
-          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-blue-100">
             Over 847 parents have trusted Cerebrum with their children's medical dreams. Let us
             guide your child to success too.
           </p>
@@ -409,7 +409,7 @@ export function ParentTestimonialsSection({
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8 text-xs sm:text-sm opacity-90">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8 text-xs sm:text-sm text-blue-100">
             <div className="flex items-center min-w-0">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
               <span className="whitespace-nowrap">98.7% Satisfaction</span>

@@ -629,7 +629,7 @@ export function SuccessStoriesSection({
           className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h3>
-          <p className="text-xl mb-6 opacity-90">
+          <p className="text-xl mb-6 text-blue-100">
             Join these successful students and transform your NEET failure into medical college
             success
           </p>

@@ -410,7 +410,7 @@ export function VideoLectureShowcase() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Access Complete Video Library?</h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-indigo-100">
             Join 2,847+ successful students and get unlimited access to all Cerebrum video lectures
           </p>
 
@@ -442,7 +442,7 @@ export function VideoLectureShowcase() {
           </div>
 
           {/* Trust Signals */}
-          <div className="flex items-center justify-center space-x-8 text-sm opacity-90">
+          <div className="flex items-center justify-center space-x-8 text-sm text-indigo-100">
             <div className="flex items-center">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
               <span>AIIMS Faculty</span>

@@ -177,7 +177,7 @@ export function TrustBadgesSection() {
             >
               <badge.icon className="w-12 h-12 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">{badge.title}</h3>
-              <p className="text-sm opacity-80 mb-1">{badge.organization}</p>
+              <p className="text-sm text-current/90 mb-1">{badge.organization}</p>
               <p className="text-xs font-medium">{badge.year}</p>
             </motion.div>
           ))}

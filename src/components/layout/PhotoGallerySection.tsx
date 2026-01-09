@@ -291,7 +291,7 @@ export function PhotoGallerySection({
                     >
                       <div className="text-center p-4">
                         <Camera className="w-12 h-12 mx-auto mb-3 opacity-60" />
-                        <p className="text-sm font-medium opacity-90">{photo.title}</p>
+                        <p className="text-sm font-medium text-white/90">{photo.title}</p>
                         <p className="text-xs opacity-70 mt-1">{photo.date}</p>
                       </div>
                     </div>
@@ -404,7 +404,7 @@ export function PhotoGallerySection({
                   <div className="text-center text-white p-8">
                     <Camera className="w-20 h-20 mx-auto mb-4 opacity-60" />
                     <h3 className="text-2xl font-bold mb-2">{lightboxPhoto.title}</h3>
-                    <p className="text-lg opacity-90">{lightboxPhoto.description}</p>
+                    <p className="text-lg text-white/90">{lightboxPhoto.description}</p>
                   </div>
                 </div>
 
@@ -468,7 +468,7 @@ export function PhotoGallerySection({
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-4">Be Part of the Next Success Story</h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-blue-100">
             Join Dr. Shekhar's classes and create your own success memories at Cerebrum Biology
             Academy. Your NEET journey starts here!
           </p>
@@ -495,7 +495,7 @@ export function PhotoGallerySection({
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex items-center justify-center space-x-8 mt-8 text-sm opacity-90">
+          <div className="flex items-center justify-center space-x-8 mt-8 text-sm text-blue-100">
             <div className="flex items-center">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
               <span>5+ Years Documented</span>

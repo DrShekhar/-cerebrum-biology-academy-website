@@ -136,7 +136,7 @@ export function CoursesSection() {
                 <IconComponent className="w-5 h-5" />
                 <div className="text-left">
                   <div className="font-semibold">{category.name}</div>
-                  <div className="text-sm opacity-80">{category.description}</div>
+                  <div className="text-sm text-current/90">{category.description}</div>
                 </div>
               </button>
             )
@@ -239,7 +239,7 @@ export function CoursesSection() {
                   </div>
                   <button
                     onClick={() => handleWhatsAppEnquiry(course.title)}
-                    className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+                    className="w-full flex items-center justify-center gap-2 bg-[#1a9850] hover:bg-[#158040] text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
                   >
                     <MessageCircle className="w-5 h-5" />
                     Ask on WhatsApp
@@ -260,27 +260,28 @@ export function CoursesSection() {
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 xs:mb-4">
             Not Sure Which Course is Right for You?
           </h3>
-          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90 px-2">
+          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 text-green-100 px-2">
             Get personalized guidance from our expert counselors to choose the perfect program
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto px-2">
             <Button
               variant="secondary"
-              size="xl"
-              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100"
+              size="lg"
+              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base px-4 sm:px-6"
               onClick={handleCounselingClick}
             >
-              <MessageCircle className="w-4 xs:w-5 h-4 xs:h-5 mr-2" />
-              Free Counseling Session
+              <MessageCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="hidden sm:inline">Free Counseling</span>
+              <span className="sm:hidden">Counseling</span>
             </Button>
             <Button
               variant="outline"
-              size="xl"
-              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-600"
+              size="lg"
+              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-600 text-sm sm:text-base px-4 sm:px-6"
               onClick={handleBrochureDownload}
             >
-              <Download className="w-4 xs:w-5 h-4 xs:h-5 mr-2" />
-              Download Brochure
+              <Download className="w-4 h-4 mr-2 flex-shrink-0" />
+              Brochure
             </Button>
           </div>
         </div>

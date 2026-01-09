@@ -137,7 +137,7 @@ export default function NeetBiologyCoachingIndiaPage() {
               360/360 Toppers • AIIMS Trained Faculty • Zoology & Botany Experts
             </h2>
 
-            <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Biology is 50% of NEET! Our specialized Biology coaching has produced 50+ perfect
               scorers. Expert teaching in Human Physiology, Genetics, Botany, Zoology from AIIMS
               trained faculty.
@@ -177,7 +177,7 @@ export default function NeetBiologyCoachingIndiaPage() {
               >
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">360/360</div>
-                <div className="text-sm opacity-80">Perfect Biology Score</div>
+                <div className="text-sm text-blue-100">Perfect Biology Score</div>
               </motion.div>
 
               <motion.div
@@ -188,7 +188,7 @@ export default function NeetBiologyCoachingIndiaPage() {
               >
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">50+</div>
-                <div className="text-sm opacity-80">360 Scorers</div>
+                <div className="text-sm text-blue-100">360 Scorers</div>
               </motion.div>
 
               <motion.div
@@ -199,7 +199,7 @@ export default function NeetBiologyCoachingIndiaPage() {
               >
                 <Award className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">340+</div>
-                <div className="text-sm opacity-80">Average Biology Score</div>
+                <div className="text-sm text-blue-100">Average Biology Score</div>
               </motion.div>
 
               <motion.div
@@ -210,7 +210,7 @@ export default function NeetBiologyCoachingIndiaPage() {
               >
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">2,500+</div>
-                <div className="text-sm opacity-80">Biology Students</div>
+                <div className="text-sm text-blue-100">Biology Students</div>
               </motion.div>
             </div>
           </motion.div>

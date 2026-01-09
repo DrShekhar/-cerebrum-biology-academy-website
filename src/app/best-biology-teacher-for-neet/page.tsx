@@ -168,7 +168,7 @@ export default function BestBiologyTeacherForNeetPage() {
               AIIMS-Trained Faculty | 360/360 Achievers | 98% Success Rate
             </h2>
 
-            <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Master NEET Biology with India&apos;s most experienced faculty. Our AIIMS-trained
               teachers have helped 2500+ students crack NEET with their proven methodology focused
               on NCERT and conceptual clarity.
@@ -202,22 +202,22 @@ export default function BestBiologyTeacherForNeetPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">2500+</div>
-                <div className="text-sm opacity-80">NEET Selections</div>
+                <div className="text-sm text-blue-100">NEET Selections</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">360/360</div>
-                <div className="text-sm opacity-80">Perfect Scores</div>
+                <div className="text-sm text-blue-100">Perfect Scores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Award className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">AIR 189</div>
-                <div className="text-sm opacity-80">Best Rank</div>
+                <div className="text-sm text-blue-100">Best Rank</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">98%</div>
-                <div className="text-sm opacity-80">Success Rate</div>
+                <div className="text-sm text-blue-100">Success Rate</div>
               </div>
             </div>
           </div>

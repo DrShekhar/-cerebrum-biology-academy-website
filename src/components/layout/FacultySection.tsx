@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { facultyMembers, facultyStats, facultyHighlights } from '@/data/faculty'
 import {
@@ -128,10 +129,14 @@ export function FacultySection() {
               {/* Faculty Image */}
               <div className="w-20 xs:w-22 sm:w-24 h-20 xs:h-22 sm:h-24 mx-auto mb-4 xs:mb-5 sm:mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
                 {faculty.image ? (
-                  <img
+                  <Image
                     src={faculty.image}
                     alt={faculty.name}
+                    width={96}
+                    height={96}
+                    quality={80}
                     className="w-full h-full object-cover"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 ) : (
                   <div className="w-full h-full bg-blue-500 flex items-center justify-center">
@@ -250,7 +255,7 @@ export function FacultySection() {
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 xs:mb-4">
             Ready to Learn from the Best?
           </h3>
-          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90">
+          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 text-green-100">
             Join thousands of students who achieved NEET success under expert guidance
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

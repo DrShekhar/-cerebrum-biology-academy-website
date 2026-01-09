@@ -380,7 +380,7 @@ export function EmotionalHeroSection({
                     </div>
                   </div>
                   <p className="text-lg font-semibold">Your Transformation Journey</p>
-                  <p className="text-sm opacity-80">Play Success Story Video</p>
+                  <p className="text-sm text-blue-100">Play Success Story Video</p>
                 </div>
               </div>
             </PremiumCard>

@@ -451,7 +451,7 @@ export function NEETToppersShowcase({
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-4">Your Success Story Starts Here</h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-green-100">
             Join the ranks of NEET toppers! Transform your medical dreams into reality with Dr.
             Shekhar's proven teaching methodology at Cerebrum Biology Academy.
           </p>
@@ -478,7 +478,7 @@ export function NEETToppersShowcase({
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex items-center justify-center space-x-8 mt-8 text-sm opacity-90">
+          <div className="flex items-center justify-center space-x-8 mt-8 text-sm text-green-100">
             <div className="flex items-center">
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
               <span>695+ Highest Score</span>

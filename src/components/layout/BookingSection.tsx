@@ -196,19 +196,19 @@ export function BookingSection() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">2000+</div>
-                  <div className="text-sm opacity-90">{t('studentsEnrolled')}</div>
+                  <div className="text-sm text-green-100">{t('studentsEnrolled')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">98%</div>
-                  <div className="text-sm opacity-90">{t('successRate')}</div>
+                  <div className="text-sm text-green-100">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">500+</div>
-                  <div className="text-sm opacity-90">{t('expertFaculty')}</div>
+                  <div className="text-sm text-green-100">{t('expertFaculty')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">5+</div>
-                  <div className="text-sm opacity-90">{t('yearsExperience')}</div>
+                  <div className="text-sm text-green-100">{t('yearsExperience')}</div>
                 </div>
               </div>
             </motion.div>

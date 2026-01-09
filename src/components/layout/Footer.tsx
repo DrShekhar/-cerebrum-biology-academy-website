@@ -13,7 +13,6 @@ import {
   MessageCircle,
   Send,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
@@ -82,8 +81,8 @@ export const Footer = memo(function Footer() {
   ]
 
   const servicesLinks = [
-    { name: 'Online Live Classes', href: '/services/online-classes' },
-    { name: 'Classroom Programs', href: '/services/classroom' },
+    { name: 'Online Live Classes', href: '/courses' },
+    { name: 'Book a Demo Class', href: '/demo-booking' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
     { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
     { name: 'Study Materials (LMS)', href: '/tests' },
@@ -195,14 +194,7 @@ export const Footer = memo(function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-4 md:gap-6 lg:gap-8">
           {/* Company Info - Spans 2 columns on larger screens */}
-          <motion.div
-            className="lg:col-span-2"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="lg:col-span-2 animate-fade-in-up">
             {/* Logo */}
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2">
@@ -221,9 +213,9 @@ export const Footer = memo(function Footer() {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). Premier NEET Biology coaching
-              institute with 15+ years of excellence. 98% success rate, 1,50,000+ students mentored to
-              medical colleges.
+              Founded by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). Premier NEET Biology
+              coaching institute with 15+ years of excellence. 98% success rate, 1,50,000+ students
+              mentored to medical colleges.
             </p>
 
             {/* Contact Info */}
@@ -238,7 +230,7 @@ export const Footer = memo(function Footer() {
                   >
                     +91 8826444334
                   </a>
-                  <span className="text-gray-500 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
+                  <span className="text-gray-400 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
                 </div>
               </div>
 
@@ -268,16 +260,10 @@ export const Footer = memo(function Footer() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Courses */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('courses')}</h4>
             <ul className="space-y-2">
               {courseLinks.map((link) => (
@@ -291,16 +277,10 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Board Preparation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('boardPreparation')}</h4>
             <ul className="space-y-2">
               {boardLinks.map((link) => (
@@ -314,16 +294,10 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Centers */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">Offline Centers</h4>
             <ul className="space-y-2">
               {offlineCenters.map((link) => (
@@ -351,16 +325,10 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Biology Classes by City */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">Biology Classes</h4>
             <ul className="space-y-2">
               {biologyClassesByCity.slice(0, 7).map((link) => (
@@ -388,16 +356,10 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Services & Programs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('services')}</h4>
             <ul className="space-y-2">
               {servicesLinks.slice(0, 6).map((link) => (
@@ -425,16 +387,10 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Company & Support */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            style={{ opacity: 1 }}
-          >
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('company')}</h4>
             <ul className="space-y-2 mb-6">
               {companyLinks.slice(0, 5).map((link) => (
@@ -462,17 +418,13 @@ export const Footer = memo(function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Newsletter Section */}
-        <motion.div
-          className="mt-12 pt-8 border-t border-gray-800"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          style={{ opacity: 1 }}
+        <div
+          className="mt-12 pt-8 border-t border-gray-800 animate-fade-in-up"
+          style={{ animationDelay: '0.5s' }}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -516,7 +468,7 @@ export const Footer = memo(function Footer() {
               </p>
             )}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Bottom Bar */}
@@ -549,8 +501,14 @@ export const Footer = memo(function Footer() {
                       key={social.name}
                       href={social.href}
                       onClick={handleClick}
-                      target={(social as { isWhatsApp?: boolean }).isWhatsApp ? undefined : '_blank'}
-                      rel={(social as { isWhatsApp?: boolean }).isWhatsApp ? undefined : 'noopener noreferrer'}
+                      target={
+                        (social as { isWhatsApp?: boolean }).isWhatsApp ? undefined : '_blank'
+                      }
+                      rel={
+                        (social as { isWhatsApp?: boolean }).isWhatsApp
+                          ? undefined
+                          : 'noopener noreferrer'
+                      }
                       className="w-11 h-11 min-w-[44px] min-h-[44px] bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors touch-manipulation cursor-pointer"
                       aria-label={`Visit our ${social.name} page`}
                     >
