@@ -103,7 +103,7 @@ describe('/api/auth/register', () => {
   const validUserData = {
     name: 'John Doe',
     email: 'john@example.com',
-    phone: '+919876543210',
+    phone: '+918826444334',
     password: 'Password123',
     role: 'STUDENT',
   }
@@ -260,7 +260,7 @@ describe('/api/auth/register', () => {
     const mockUser = {
       id: 'user-123',
       ...dataWithFormattedPhone,
-      phone: '+919876543210',
+      phone: '+918826444334',
       passwordHash: hashedPassword,
     }
 
@@ -279,7 +279,7 @@ describe('/api/auth/register', () => {
     expect(response.status).toBe(201)
     expect(prisma.user.create).toHaveBeenCalledWith({
       data: expect.objectContaining({
-        phone: '+919876543210', // Should be cleaned
+        phone: '+919876543210', // Should be cleaned (spaces/dashes removed)
       }),
     })
   })

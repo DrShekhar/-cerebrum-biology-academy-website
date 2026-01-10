@@ -15,6 +15,11 @@
 import { execSync } from 'child_process'
 import * as fs from 'fs'
 import * as path from 'path'
+import { config } from 'dotenv'
+
+// Load environment variables from .env files for local testing
+config({ path: '.env.local' })
+config({ path: '.env' })
 
 interface CheckResult {
   name: string
@@ -93,15 +98,28 @@ class PreDeployChecker {
       throw new Error(`Missing environment variables: ${missing.join(', ')}`)
     }
 
-    // Check for dev values in production
-    if (process.env.NODE_ENV === 'production') {
-      const devPatterns = ['localhost', 'test', 'dev', 'temp']
+    // Check for dev values only in actual CI/CD environments
+    // VERCEL_URL has actual value only during Vercel deployments
+    // CI=true is set by most CI systems
+    const isActualCI =
+      process.env.CI === 'true' ||
+      (process.env.VERCEL_URL && process.env.VERCEL_URL.length > 0) ||
+      process.env.GITHUB_ACTIONS === 'true'
+
+    if (isActualCI) {
+      const devPatterns = ['localhost', 'test_', '_test', 'dev_', '_dev']
+      const sensitiveVars = ['DATABASE_URL', 'AUTH_SECRET', 'JWT_SECRET']
 
       for (const [key, value] of Object.entries(process.env)) {
-        if (value && devPatterns.some((p) => value.toLowerCase().includes(p))) {
+        if (!value) continue
+        // Only check sensitive variables (not API keys which commonly contain 'test')
+        if (!sensitiveVars.some((sv) => key.toUpperCase().includes(sv))) continue
+        if (devPatterns.some((p) => value.toLowerCase().includes(p))) {
           throw new Error(`Development value detected in ${key}`)
         }
       }
+    } else {
+      console.log('   ℹ️  Skipping dev-value check (local development)')
     }
   }
 

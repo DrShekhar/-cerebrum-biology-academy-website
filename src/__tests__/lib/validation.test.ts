@@ -12,7 +12,7 @@ describe('Validation Schemas', () => {
     it('should validate Indian phone numbers correctly', () => {
       const validNumbers = [
         '+91 9876543210',
-        '+919876543210',
+        '+918826444334',
         '9876543210',
         '8765432109',
         '7654321098',
@@ -82,7 +82,7 @@ describe('Validation Schemas', () => {
 
       expect(result.success).toBe(true)
       if (result.success) {
-        expect(result.data.phone).toBe('+919876543210')
+        expect(result.data.phone).toBe('+919876543210') // Spaces and dashes removed
       }
     })
 
@@ -143,11 +143,16 @@ describe('Validation Schemas', () => {
   })
 
   describe('Demo Booking Schema', () => {
+    // Use a date far in the future to avoid test failures
+    const futureDate = new Date()
+    futureDate.setFullYear(futureDate.getFullYear() + 1)
+    const futureDateStr = futureDate.toISOString().split('T')[0]
+
     const validBookingData = {
       studentName: 'John Doe',
       email: 'john@example.com',
       phone: '+91 9876543210',
-      preferredDate: '2025-12-31',
+      preferredDate: futureDateStr,
       preferredTime: '10:00 AM',
       message: 'Looking forward to the demo',
       studentClass: 'CLASS_12' as const,
@@ -207,7 +212,7 @@ describe('Validation Schemas', () => {
 
       expect(result.success).toBe(true)
       if (result.success) {
-        expect(result.data.phone).toBe('+919876543210')
+        expect(result.data.phone).toBe('+919876543210') // Spaces and dashes removed
       }
     })
 
