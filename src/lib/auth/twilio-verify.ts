@@ -285,15 +285,13 @@ export async function checkOTPRateLimit(
   // Try Upstash Redis first (works across serverless instances)
   if (preferUpstash() && upstashCache.isEnabled()) {
     try {
-      const current = await upstashCache.incr(key)
+      // Use atomic incrWithExpire to prevent race conditions where incr succeeds
+      // but expire fails, which could permanently block users
+      const current = await upstashCache.incrWithExpire(key, windowSeconds)
 
-      // Set expiration on first request
-      if (current === 1) {
-        await upstashCache.expire(key, windowSeconds)
-      }
-
+      // Get TTL for remaining time calculation (this is now a sliding window)
       const ttl = await upstashCache.ttl(key)
-      const resetTime = Date.now() + ttl * 1000
+      const resetTime = Date.now() + (ttl > 0 ? ttl : windowSeconds) * 1000
 
       if (current > maxAttempts) {
         return {

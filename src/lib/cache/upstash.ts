@@ -83,6 +83,32 @@ export class UpstashCacheAdapter {
     }
   }
 
+  /**
+   * Atomically increment a key and set expiration in a single operation.
+   * This prevents race conditions where incr succeeds but expire fails,
+   * which could lead to keys never expiring and permanently blocking users.
+   */
+  async incrWithExpire(key: string, expirationSeconds: number): Promise<number> {
+    if (!this.redis) {
+      throw new Error('Redis not initialized')
+    }
+
+    try {
+      // Use pipeline to execute both commands atomically in a single round-trip
+      const pipeline = this.redis.pipeline()
+      pipeline.incr(key)
+      pipeline.expire(key, expirationSeconds)
+
+      const results = await pipeline.exec()
+      // First result is the incr value
+      const incrResult = results[0] as number
+      return incrResult
+    } catch (error) {
+      logger.error('Upstash incrWithExpire error', { key, error })
+      throw error
+    }
+  }
+
   async expire(key: string, seconds: number): Promise<void> {
     if (!this.redis) return
 

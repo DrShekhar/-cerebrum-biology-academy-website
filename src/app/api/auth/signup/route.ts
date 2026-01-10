@@ -63,8 +63,11 @@ export async function POST(request: NextRequest) {
       subscribeNewsletter,
     } = result.data
 
-    const clientIP =
-      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+    // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIP = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
 
     // Check rate limiting for signup attempts
     const rateLimitCheck = AuthRateLimit.checkRateLimit(`signup:${clientIP}`)
@@ -96,6 +99,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user already exists
+    // SECURITY: Use generic error message to prevent email/phone enumeration attacks
     const existingUser = await prisma.users.findFirst({
       where: {
         OR: [{ email: email.toLowerCase() }, ...(phone ? [{ phone }] : [])],
@@ -103,28 +107,16 @@ export async function POST(request: NextRequest) {
     })
 
     if (existingUser) {
-      if (existingUser.email === email.toLowerCase()) {
-        return addSecurityHeaders(
-          NextResponse.json(
-            {
-              error: 'Email already registered',
-              message: 'An account with this email already exists. Please sign in instead.',
-            },
-            { status: 409 }
-          )
+      // Return generic message - don't reveal which field already exists
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Registration failed',
+            message: 'Unable to create account. If you already have an account, please sign in instead.',
+          },
+          { status: 409 }
         )
-      }
-      if (phone && existingUser.phone === phone) {
-        return addSecurityHeaders(
-          NextResponse.json(
-            {
-              error: 'Phone number already registered',
-              message: 'An account with this phone number already exists.',
-            },
-            { status: 409 }
-          )
-        )
-      }
+      )
     }
 
     // Hash password

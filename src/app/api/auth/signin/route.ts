@@ -39,8 +39,11 @@ export async function POST(request: NextRequest) {
     }
 
     const { email, password, rememberMe } = result.data
-    const clientIP =
-      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+    // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIP = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
 
     // Check rate limiting
     const rateLimitCheck = AuthRateLimit.checkRateLimit(`signin:${clientIP}:${email}`)

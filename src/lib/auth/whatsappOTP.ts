@@ -18,6 +18,7 @@ import {
   trackEvent,
 } from '../interakt'
 import { RateLimitService } from '@/lib/cache/redis'
+import { randomBytes, timingSafeEqual } from 'crypto'
 
 // In-memory OTP store (use Redis in production)
 const otpStore = new Map<
@@ -239,8 +240,15 @@ export async function verifyOTP(phone: string, otp: string): Promise<VerifyOTPRe
       }
     }
 
-    // Verify OTP
-    if (storedOTP.otp !== otp) {
+    // Verify OTP using timing-safe comparison to prevent timing attacks
+    const storedOTPBuffer = Buffer.from(storedOTP.otp, 'utf8')
+    const providedOTPBuffer = Buffer.from(otp, 'utf8')
+    // Ensure same length comparison (timing-safe even if lengths differ)
+    const isValidOTP =
+      storedOTPBuffer.length === providedOTPBuffer.length &&
+      timingSafeEqual(storedOTPBuffer, providedOTPBuffer)
+
+    if (!isValidOTP) {
       storedOTP.attempts++
       const attemptsRemaining = MAX_VERIFY_ATTEMPTS - storedOTP.attempts
 
@@ -265,8 +273,9 @@ export async function verifyOTP(phone: string, otp: string): Promise<VerifyOTPRe
     // Mark as verified
     storedOTP.verified = true
 
-    // Generate session token (in production, use JWT)
-    const token = `auth_${normalizedPhone}_${Date.now()}_${Math.random().toString(36).slice(2)}`
+    // Generate cryptographically secure session token
+    const randomPart = randomBytes(32).toString('hex')
+    const token = `auth_${normalizedPhone}_${Date.now()}_${randomPart}`
 
     // Track successful verification
     await trackEvent({

@@ -45,8 +45,11 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     }
 
     const { currentPassword, newPassword, logoutOtherDevices } = result.data
-    const clientIP =
-      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+    // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIP = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
 
     // Rate limiting for password change attempts
     const rateLimitCheck = AuthRateLimit.checkRateLimit(

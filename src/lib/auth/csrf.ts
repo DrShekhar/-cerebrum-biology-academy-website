@@ -322,9 +322,11 @@ export function addCSPHeaders(response: NextResponse): NextResponse {
 const csrfTokenLimits = new Map<string, { count: number; resetTime: number }>()
 
 export function rateLimitCSRFTokens(request: NextRequest): boolean {
-  const identifier = request.headers.get('x-forwarded-for') ||
-                    request.headers.get('x-real-ip') ||
-                    'unknown'
+  // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+  const forwardedFor = request.headers.get('x-forwarded-for')
+  const identifier = forwardedFor
+    ? forwardedFor.split(',')[0].trim()
+    : request.headers.get('x-real-ip') || 'unknown'
 
   const now = Date.now()
   const windowMs = 60 * 1000 // 1 minute
