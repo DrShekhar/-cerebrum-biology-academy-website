@@ -120,7 +120,7 @@ export default function FacultyPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white w-full"
+                  className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white w-full sm:w-auto"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Faculty Interaction
@@ -130,7 +130,7 @@ export default function FacultyPage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] w-full"
+                  className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] w-full sm:w-auto"
                 >
                   Join Our Academy
                   <ArrowRight className="w-5 h-5 ml-2" />

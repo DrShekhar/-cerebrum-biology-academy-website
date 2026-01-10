@@ -258,7 +258,7 @@ export function ValuePropositionSection() {
             <p className="text-blue-100 mb-6 text-lg">{t('joinThousands')}</p>
             <Link
               href="/demo-booking"
-              className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              className="inline-block bg-green-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-sm sm:text-base"
             >
               {t('bookFreeStrategy')}
             </Link>
