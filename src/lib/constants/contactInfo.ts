@@ -11,15 +11,24 @@ export const CONTACT_INFO = {
   phone: {
     primary: '+918826444334',
     secondary: '+919311946297',
+    owner: '+919999744334',
     // Formatted versions for display
     display: {
       primary: '+91 88264 44334',
       secondary: '+91 93119 46297',
+      owner: '+91 99997 44334',
+      // Hyphenated versions (backward-compatible nested structure)
+      hyphenated: {
+        primary: '+91-88264-44334',
+        secondary: '+91-93119-46297',
+        owner: '+91-99997-44334',
+      },
     },
     // With dashes for some layouts
     formatted: {
       primary: '+91-88264-44334',
       secondary: '+91-93119-46297',
+      owner: '+91-99997-44334',
     },
   },
 
@@ -29,6 +38,8 @@ export const CONTACT_INFO = {
     link: 'https://wa.me/918826444334',
     linkWithMessage: (message: string) =>
       `https://wa.me/918826444334?text=${encodeURIComponent(message)}`,
+    // Backward-compatible alias (used by some components)
+    primary: '918826444334',
   },
 
   // Email addresses
@@ -57,16 +68,16 @@ export const CONTACT_INFO = {
 } as const
 
 // Helper functions for common use cases
-export const getPhoneLink = (phone: 'primary' | 'secondary' = 'primary') =>
+export const getPhoneLink = (phone: 'primary' | 'secondary' | 'owner' = 'primary') =>
   `tel:${CONTACT_INFO.phone[phone]}`
 
 export const getWhatsAppLink = (message?: string) =>
   message ? CONTACT_INFO.whatsapp.linkWithMessage(message) : CONTACT_INFO.whatsapp.link
 
-export const getDisplayPhone = (phone: 'primary' | 'secondary' = 'primary') =>
+export const getDisplayPhone = (phone: 'primary' | 'secondary' | 'owner' = 'primary') =>
   CONTACT_INFO.phone.display[phone]
 
-export const getFormattedPhone = (phone: 'primary' | 'secondary' = 'primary') =>
+export const getFormattedPhone = (phone: 'primary' | 'secondary' | 'owner' = 'primary') =>
   CONTACT_INFO.phone.formatted[phone]
 
 // Default export for convenience

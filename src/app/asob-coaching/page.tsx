@@ -235,9 +235,10 @@ const pricing = [
 export default function ASOBCoachingPage() {
   const handleWhatsAppClick = (source: string) => {
     const message = `Hi! I'm from Australia and interested in ASOB coaching. I'd like to know more about your program. [Source: ${source}]`
-    trackAndOpenWhatsApp(message, source, {
+    trackAndOpenWhatsApp({
+      message,
+      source,
       page: 'asob-coaching',
-      country: 'Australia',
     })
   }
 

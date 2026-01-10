@@ -40,9 +40,10 @@ export default function JBOCoachingPage() {
 
   const handleWhatsAppClick = (source: string) => {
     const message = `Hi! I'm from Japan and interested in JBO (Japan Biology Olympiad) coaching. I want to prepare for the Biology Olympiad and potentially qualify for IBO. Can you tell me about your coaching program, schedule, and fees?`
-    trackAndOpenWhatsApp(message, source, {
+    trackAndOpenWhatsApp({
+      message,
+      source,
       page: 'jbo-coaching',
-      country: 'Japan',
     })
   }
 

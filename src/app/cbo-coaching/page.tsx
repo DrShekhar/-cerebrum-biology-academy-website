@@ -236,9 +236,10 @@ const pricing = [
 export default function CBOCoachingPage() {
   const handleWhatsAppClick = (source: string) => {
     const message = `Hi! I'm from Canada and interested in CBO coaching. I'd like to know more about your program. [Source: ${source}]`
-    trackAndOpenWhatsApp(message, source, {
+    trackAndOpenWhatsApp({
+      message,
+      source,
       page: 'cbo-coaching',
-      country: 'Canada',
     })
   }
 

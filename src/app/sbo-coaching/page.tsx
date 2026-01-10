@@ -230,9 +230,10 @@ const pricing = [
 export default function SBOCoachingPage() {
   const handleWhatsAppClick = (source: string) => {
     const message = `Hi! I'm from Singapore and interested in SBO coaching. I'd like to know more about your program. [Source: ${source}]`
-    trackAndOpenWhatsApp(message, source, {
+    trackAndOpenWhatsApp({
+      message,
+      source,
       page: 'sbo-coaching',
-      country: 'Singapore',
     })
   }
 
