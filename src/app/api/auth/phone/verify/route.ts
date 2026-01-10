@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Clear rate limit on successful verification
-    clearOTPRateLimit(`phone:${formattedPhone}`)
+    await clearOTPRateLimit(`phone:${formattedPhone}`)
 
     // Check if user exists in Clerk by phone number
     const client = await clerkClient()

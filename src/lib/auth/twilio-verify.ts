@@ -8,7 +8,8 @@
 
 import crypto from 'crypto'
 import type { Twilio } from 'twilio'
-import { RateLimitService } from '@/lib/cache/redis'
+import { upstashCache, preferUpstash } from '@/lib/cache/upstash'
+import { logger } from '@/lib/utils/logger'
 
 // Lazy environment access - read at runtime, not build time
 // This prevents build failures when env vars are missing during static analysis
@@ -268,7 +269,8 @@ export async function sendOTPMultiChannel(
 }
 
 /**
- * Rate limit check using Redis with in-memory fallback
+ * Rate limit check using Upstash Redis (serverless-compatible)
+ * Falls back to in-memory only when Redis is unavailable
  */
 const rateLimitStore = new Map<string, { count: number; resetAt: number }>()
 
@@ -278,44 +280,76 @@ export async function checkOTPRateLimit(
   windowMs: number = 60 * 60 * 1000 // 1 hour
 ): Promise<{ allowed: boolean; remainingAttempts: number; resetAt?: Date }> {
   const windowSeconds = Math.ceil(windowMs / 1000)
+  const key = `otp_rate_limit:${identifier}`
 
-  try {
-    const result = await RateLimitService.checkIPRateLimit(
-      `otp:${identifier}`,
-      maxAttempts,
-      windowSeconds
-    )
-    return {
-      allowed: result.allowed,
-      remainingAttempts: result.remaining,
-      resetAt: result.allowed ? undefined : new Date(result.resetTime),
-    }
-  } catch (error) {
-    // Fallback to in-memory
-    const now = Date.now()
-    const record = rateLimitStore.get(identifier)
+  // Try Upstash Redis first (works across serverless instances)
+  if (preferUpstash() && upstashCache.isEnabled()) {
+    try {
+      const current = await upstashCache.incr(key)
 
-    if (!record || now > record.resetAt) {
-      rateLimitStore.set(identifier, { count: 1, resetAt: now + windowMs })
-      return { allowed: true, remainingAttempts: maxAttempts - 1 }
-    }
-
-    if (record.count >= maxAttempts) {
-      return {
-        allowed: false,
-        remainingAttempts: 0,
-        resetAt: new Date(record.resetAt),
+      // Set expiration on first request
+      if (current === 1) {
+        await upstashCache.expire(key, windowSeconds)
       }
-    }
 
-    record.count++
-    return { allowed: true, remainingAttempts: maxAttempts - record.count }
+      const ttl = await upstashCache.ttl(key)
+      const resetTime = Date.now() + ttl * 1000
+
+      if (current > maxAttempts) {
+        return {
+          allowed: false,
+          remainingAttempts: 0,
+          resetAt: new Date(resetTime),
+        }
+      }
+
+      return {
+        allowed: true,
+        remainingAttempts: Math.max(0, maxAttempts - current),
+        resetAt: undefined,
+      }
+    } catch (error) {
+      logger.error('Upstash rate limit error, falling back to in-memory', { error, identifier })
+      // Fall through to in-memory fallback
+    }
   }
+
+  // In-memory fallback (only for development or when Redis unavailable)
+  const now = Date.now()
+  const record = rateLimitStore.get(identifier)
+
+  if (!record || now > record.resetAt) {
+    rateLimitStore.set(identifier, { count: 1, resetAt: now + windowMs })
+    return { allowed: true, remainingAttempts: maxAttempts - 1 }
+  }
+
+  if (record.count >= maxAttempts) {
+    return {
+      allowed: false,
+      remainingAttempts: 0,
+      resetAt: new Date(record.resetAt),
+    }
+  }
+
+  record.count++
+  return { allowed: true, remainingAttempts: maxAttempts - record.count }
 }
 
 /**
- * Clear rate limit (after successful verification)
+ * Clear rate limit from Redis (after successful verification)
  */
-export function clearOTPRateLimit(identifier: string): void {
+export async function clearOTPRateLimit(identifier: string): Promise<void> {
+  const key = `otp_rate_limit:${identifier}`
+
+  // Clear from Redis
+  if (preferUpstash() && upstashCache.isEnabled()) {
+    try {
+      await upstashCache.del(key)
+    } catch (error) {
+      logger.error('Failed to clear rate limit from Redis', { error, identifier })
+    }
+  }
+
+  // Also clear from in-memory (for development)
   rateLimitStore.delete(identifier)
 }

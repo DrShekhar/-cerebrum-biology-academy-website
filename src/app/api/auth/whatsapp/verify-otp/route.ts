@@ -1,9 +1,14 @@
+/**
+ * WhatsApp OTP Verify Endpoint
+ * Verifies OTP from Interakt and integrates with Clerk for session management
+ */
+
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { logger } from '@/lib/utils/logger'
-import { SessionManager, CookieManager, addSecurityHeaders } from '@/lib/auth/config'
-import type { UserRole } from '@/generated/prisma'
+import { clerkClient } from '@clerk/nextjs/server'
+import { hashOTP, clearOTPRateLimit } from '@/lib/auth/twilio-verify'
 
 const verifyOTPSchema = z.object({
   phoneNumber: z.string().min(10, 'Phone number must be at least 10 digits'),
@@ -74,8 +79,9 @@ export async function POST(request: NextRequest) {
       data: { attempts: otpRecord.attempts + 1 },
     })
 
-    // Verify the OTP
-    if (otpRecord.otp !== code) {
+    // Verify the OTP by comparing hashes (timing-safe comparison)
+    const inputHash = hashOTP(code)
+    if (otpRecord.otp !== inputHash) {
       const remainingAttempts = MAX_OTP_ATTEMPTS - (otpRecord.attempts + 1)
       return NextResponse.json(
         {
@@ -92,88 +98,74 @@ export async function POST(request: NextRequest) {
       data: { verified: true },
     })
 
-    // Find existing user
-    let user = await prisma.users.findFirst({
-      where: { phone: formattedPhone },
-    })
-
-    const isNewUser = !user
-
-    if (!user) {
-      // Create minimal user record - they'll complete signup after
-      user = await prisma.users.create({
-        data: {
-          phone: formattedPhone,
-          name: `User ${formattedPhone.slice(-4)}`, // Temporary name - to be updated
-          email: `${formattedPhone.replace(/\+/g, '')}@temp.cerebrumbiologyacademy.com`, // Temporary
-          role: 'STUDENT',
-          phoneVerified: new Date(),
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-      })
-
-      logger.info('New user created via WhatsApp authentication', {
-        userId: user.id,
-        phone: formattedPhone,
-        needsSignupCompletion: true,
-      })
-    } else {
-      // Update existing user's phone verification status
-      user = await prisma.users.update({
-        where: { id: user.id },
-        data: {
-          phoneVerified: new Date(),
-          updatedAt: new Date(),
-        },
-      })
-
-      logger.info('Existing user verified via WhatsApp', {
-        userId: user.id,
-        phone: formattedPhone,
-      })
-    }
-
     // Delete the used OTP (cleanup)
     await prisma.whatsapp_otp.delete({
       where: { id: otpRecord.id },
     })
 
-    // Create session and get tokens
-    const { accessToken, refreshToken } = await SessionManager.createSession({
-      id: user.id,
-      email: user.email,
-      role: user.role as UserRole,
-      name: user.name,
+    // Clear rate limit on successful verification
+    await clearOTPRateLimit(`whatsapp:${formattedPhone}`)
+
+    // Check if user exists in Clerk by phone number
+    const client = await clerkClient()
+    const existingUsers = await client.users.getUserList({
+      phoneNumber: [formattedPhone],
     })
 
-    logger.authentication(user.id, 'whatsapp_login', true, {
+    if (existingUsers.data.length > 0) {
+      // User exists in Clerk - create sign-in token
+      const clerkUser = existingUsers.data[0]
+
+      try {
+        const signInToken = await client.signInTokens.createSignInToken({
+          userId: clerkUser.id,
+          expiresInSeconds: 300, // 5 minutes
+        })
+
+        logger.authentication(clerkUser.id, 'whatsapp_login', true, {
+          phone: formattedPhone,
+          method: 'whatsapp_otp_clerk',
+        })
+
+        return NextResponse.json({
+          success: true,
+          verified: true,
+          userExists: true,
+          signInToken: signInToken.token,
+          user: {
+            id: clerkUser.id,
+            firstName: clerkUser.firstName,
+            lastName: clerkUser.lastName,
+            imageUrl: clerkUser.imageUrl,
+            role: clerkUser.publicMetadata?.role || 'student',
+          },
+          message: 'Login successful! Welcome back.',
+        })
+      } catch (tokenError) {
+        console.error('Failed to create sign-in token:', tokenError)
+        // User exists but token creation failed
+        return NextResponse.json({
+          success: true,
+          verified: true,
+          userExists: true,
+          signInToken: null,
+          message: 'Phone verified. Please complete sign-in.',
+        })
+      }
+    }
+
+    // User doesn't exist in Clerk - they need to sign up
+    logger.info('New user verified via WhatsApp, needs registration', {
       phone: formattedPhone,
-      isNewUser,
-      method: 'whatsapp_otp',
     })
 
-    // Create response with user data
-    const response = NextResponse.json({
+    return NextResponse.json({
       success: true,
-      isNewUser, // Flag to show signup form
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        role: user.role,
-        phoneVerified: user.phoneVerified,
-      },
-      message: isNewUser
-        ? 'Phone verified! Please complete your registration.'
-        : 'Login successful! Welcome back to Cerebrum Biology Academy.',
+      verified: true,
+      userExists: false,
+      phone: formattedPhone,
+      message: 'Phone verified. Please complete registration.',
     })
-
-    // Set HTTP-only auth cookies
-    CookieManager.setAuthCookies(response, accessToken, refreshToken)
-
-    return addSecurityHeaders(response)
   } catch (error: any) {
     logger.error('Error verifying WhatsApp OTP', { error })
 

@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { generateOTP, sendWhatsAppOTP } from '@/lib/interakt'
+import { sendWhatsAppOTP } from '@/lib/interakt'
 import { z } from 'zod'
 import { logger } from '@/lib/utils/logger'
+import { generateSecureOTP, hashOTP, checkOTPRateLimit } from '@/lib/auth/twilio-verify'
 
 const sendOTPSchema = z.object({
   phoneNumber: z.string().min(10, 'Phone number must be at least 10 digits'),
@@ -25,33 +26,30 @@ export async function POST(request: NextRequest) {
         : `+91${formattedPhone}`
     }
 
-    // Check rate limiting: max 3 OTPs per phone per 15 minutes
-    const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000)
-    const recentOTPs = await prisma.whatsapp_otp.count({
-      where: {
-        phone: formattedPhone,
-        createdAt: {
-          gte: fifteenMinutesAgo,
-        },
-      },
-    })
+    // Rate limit check using Redis (works across serverless instances)
+    const rateLimitKey = `whatsapp:${formattedPhone}`
+    const rateLimit = await checkOTPRateLimit(rateLimitKey, 3, 15 * 60 * 1000) // 3 attempts per 15 minutes
 
-    if (recentOTPs >= 3) {
+    if (!rateLimit.allowed) {
       return NextResponse.json(
-        { error: 'Too many OTP requests. Please try again after 15 minutes.' },
+        {
+          error: 'Too many OTP requests. Please try again later.',
+          retryAfter: rateLimit.resetAt,
+        },
         { status: 429 }
       )
     }
 
-    // Generate new OTP
-    const otp = generateOTP()
+    // Generate cryptographically secure OTP
+    const otp = generateSecureOTP()
+    const otpHash = hashOTP(otp)
     const expiresAt = new Date(Date.now() + 10 * 60 * 1000) // 10 minutes
 
-    // Save OTP to database
+    // Save hashed OTP to database (plaintext OTP is never stored)
     await prisma.whatsapp_otp.create({
       data: {
         phone: formattedPhone,
-        otp,
+        otp: otpHash,
         expiresAt,
       },
     })

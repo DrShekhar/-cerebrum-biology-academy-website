@@ -71,13 +71,15 @@ export class UpstashCacheAdapter {
   }
 
   async incr(key: string): Promise<number> {
-    if (!this.redis) return 0
+    if (!this.redis) {
+      throw new Error('Redis not initialized')
+    }
 
     try {
       return await this.redis.incr(key)
     } catch (error) {
       logger.error('Upstash incr error', { key, error })
-      return 0
+      throw error // Re-throw so callers can handle with fallback
     }
   }
 
