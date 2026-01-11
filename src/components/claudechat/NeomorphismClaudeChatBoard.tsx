@@ -1,6 +1,9 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Send,
@@ -77,7 +80,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
       timestamp: new Date(),
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     setInputMessage('')
     setIsThinking(true)
 
@@ -92,7 +95,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
         language: aiResponse.language,
       }
 
-      setMessages((prev) => [...prev, aiMessage])
+      setMessages((prev) => [...prev, aiMessage].slice(-MAX_MESSAGES))
       setIsThinking(false)
 
       if (isVoiceAvailable) {

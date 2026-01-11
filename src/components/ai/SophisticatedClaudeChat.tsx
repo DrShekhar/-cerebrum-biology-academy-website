@@ -1,6 +1,9 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import {
@@ -108,7 +111,7 @@ export function SophisticatedClaudeChat({
       timestamp: new Date(),
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     setInputValue('')
     setIsTyping(true)
 
@@ -120,7 +123,7 @@ export function SophisticatedClaudeChat({
         content: generateAIResponse(inputValue),
         timestamp: new Date(),
       }
-      setMessages((prev) => [...prev, aiResponse])
+      setMessages((prev) => [...prev, aiResponse].slice(-MAX_MESSAGES))
       setIsTyping(false)
     }, 1500)
   }

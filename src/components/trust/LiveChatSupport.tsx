@@ -1,6 +1,9 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,
@@ -138,7 +141,7 @@ const LiveChatSupport: React.FC = () => {
       timestamp: new Date(),
     }
 
-    setMessages((prev) => [...prev, newMessage])
+    setMessages((prev) => [...prev, newMessage].slice(-MAX_MESSAGES))
     setCurrentMessage('')
 
     if (chatStage === 'initial') {
@@ -164,7 +167,7 @@ const LiveChatSupport: React.FC = () => {
         timestamp: new Date(),
         agentName: availableAgent.name,
       }
-      setMessages((prev) => [...prev, welcomeMessage])
+      setMessages((prev) => [...prev, welcomeMessage].slice(-MAX_MESSAGES))
     }, 1500)
   }
 
@@ -205,7 +208,7 @@ const LiveChatSupport: React.FC = () => {
           quickReplies,
         }
 
-        setMessages((prev) => [...prev, agentMessage])
+        setMessages((prev) => [...prev, agentMessage].slice(-MAX_MESSAGES))
         setIsTyping(false)
       },
       1500 + Math.random() * 1500

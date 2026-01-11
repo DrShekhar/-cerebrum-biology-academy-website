@@ -1,6 +1,9 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Mic, Image as ImageIcon, X, Loader2 } from 'lucide-react'
 import { useSwipeable } from 'react-swipeable'
@@ -53,10 +56,7 @@ export function MobileChatInterface({
   })
 
   const handleSend = async () => {
-    console.log('🚀 handleSend called', { input, isLoading })
-
     if (!input.trim() || isLoading) {
-      console.log('❌ handleSend blocked:', { inputEmpty: !input.trim(), isLoading })
       return
     }
 
@@ -67,14 +67,12 @@ export function MobileChatInterface({
       timestamp: new Date(),
     }
 
-    console.log('📤 Sending message:', userMessage)
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     setInput('')
     setIsLoading(true)
 
     try {
       // Call streaming API
-      console.log('🌐 Calling API:', '/api/ceri-ai/stream')
       const response = await fetch('/api/ceri-ai/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -88,8 +86,6 @@ export function MobileChatInterface({
           ],
         }),
       })
-
-      console.log('✅ API Response:', response.status, response.ok)
 
       if (!response.ok) throw new Error('Failed to get response')
 
@@ -105,7 +101,7 @@ export function MobileChatInterface({
         isStreaming: true,
       }
 
-      setMessages((prev) => [...prev, assistantMessage])
+      setMessages((prev) => [...prev, assistantMessage].slice(-MAX_MESSAGES))
 
       if (reader) {
         while (true) {
@@ -152,11 +148,11 @@ export function MobileChatInterface({
         ...prev,
         {
           id: (Date.now() + 1).toString(),
-          role: 'assistant',
+          role: 'assistant' as const,
           content: 'Sorry, I encountered an error. Please try again.',
           timestamp: new Date(),
         },
-      ])
+      ].slice(-MAX_MESSAGES))
     } finally {
       setIsLoading(false)
     }

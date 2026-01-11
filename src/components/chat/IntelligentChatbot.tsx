@@ -23,6 +23,7 @@ import {
   type ConversationContext,
   type LeadQualificationScore,
 } from '@/lib/chat/leadQualification'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone, getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 interface ChatMessage {
   id: string
@@ -102,6 +103,15 @@ export function IntelligentChatbot() {
       initializeChat()
     }
   }, [chatState.isOpen])
+
+  // Cleanup: abort any streaming requests on unmount
+  useEffect(() => {
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort()
+      }
+    }
+  }, [])
 
   const initializeChat = () => {
     const greeting = getPersonalizedGreeting()
@@ -841,8 +851,8 @@ export function IntelligentChatbot() {
       console.error('Lead submission error:', error)
       addBotMessage(
         `Thanks ${leadData.name}! I've noted your details. For immediate assistance, you can:\n\n` +
-          '📞 Call: +91 88264 44334\n' +
-          '💬 WhatsApp: wa.me/918826444334\n\n' +
+          `📞 Call: ${getDisplayPhone()}\n` +
+          `💬 WhatsApp: ${getWhatsAppLink().replace('https://', '')}\n\n` +
           'Our team will reach out to you shortly!',
         ['Call now', 'WhatsApp now'],
         [{ type: 'call_request', label: '📞 Call Now' }]
@@ -887,7 +897,7 @@ export function IntelligentChatbot() {
         window.location.href = '/support/demo'
         break
       case 'call_request':
-        window.location.href = 'tel:+918826444334'
+        window.location.href = getPhoneLink()
         break
       case 'download_brochure':
         window.open('/brochure.pdf', '_blank')
@@ -910,8 +920,8 @@ export function IntelligentChatbot() {
         <div className="fixed bottom-4 right-4 bg-red-100 border border-red-300 rounded-lg p-4 max-w-sm">
           <p className="text-red-800 text-sm">
             ⚠️ Chat temporarily unavailable. Please contact us at{' '}
-            <a href="tel:+918826444334" className="underline">
-              +91 88264 44334
+            <a href={getPhoneLink()} className="underline">
+              {getDisplayPhone()}
             </a>
           </p>
         </div>

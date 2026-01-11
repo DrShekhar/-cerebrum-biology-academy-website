@@ -6,6 +6,9 @@
 'use client'
 
 import React, { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import {
   Mic,
   MicOff,
@@ -104,6 +107,17 @@ export function VoiceChat({
 
       recognitionRef.current = recognition
     }
+
+    // Cleanup: stop recognition on unmount
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop()
+        } catch (e) {
+          // Ignore errors when stopping already stopped recognition
+        }
+      }
+    }
   }, [currentLanguage])
 
   // Get speech recognition language code
@@ -181,7 +195,7 @@ export function VoiceChat({
       confidence,
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     onMessage?.(userMessage)
 
     try {
@@ -208,7 +222,7 @@ export function VoiceChat({
         timestamp: new Date(),
       }
 
-      setMessages((prev) => [...prev, assistantMessage])
+      setMessages((prev) => [...prev, assistantMessage].slice(-MAX_MESSAGES))
       onMessage?.(assistantMessage)
 
       // Auto-play response if enabled
@@ -226,7 +240,7 @@ export function VoiceChat({
         timestamp: new Date(),
       }
 
-      setMessages((prev) => [...prev, errorMessage])
+      setMessages((prev) => [...prev, errorMessage].slice(-MAX_MESSAGES))
     } finally {
       setIsProcessing(false)
     }

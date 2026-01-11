@@ -140,7 +140,7 @@ async function integrateToCRM(leadData: any) {
   // - Zoho CRM
   // - Freshworks
 
-  console.log('CRM integration data:', leadData)
+  // CRM integration ready
   return true
 }
 
