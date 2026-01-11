@@ -1916,3 +1916,97 @@ body {
     padding-bottom: 10pt;
   }
 }
+
+/* ========================================
+   AUTH PAGE STYLES
+   Hide navigation and footer on auth pages
+   ======================================== */
+
+body.auth-page [data-section='navigation'],
+body.auth-page [data-lazy='footer'],
+body.auth-page [data-lazy='trial-banner'],
+body.auth-page .skip-to-content,
+body.auth-page [data-bottom-nav],
+body.auth-page header,
+body.auth-page footer,
+body.auth-page > div > header,
+body.auth-page > div > footer {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+body.auth-page main#main-content {
+  min-height: 100vh !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.auth-page {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a) !important;
+}
+
+/* ========================================
+   CLERK AUTH BRANDING OVERRIDES
+   Hide development mode banners and branding
+   ======================================== */
+
+/* Hide Clerk development mode banner */
+.cl-internal-b3fm6y,
+.cl-internal-1dauvpw,
+[class*='cl-internal-'][class*='dev'],
+.cl-devMode,
+.cl-developmentMode,
+div[class*='development-mode'],
+div[data-clerk-development] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide "Secured by Clerk" branding */
+.cl-footerAction__signIn,
+.cl-footerAction__signUp,
+.cl-footer,
+.cl-footerPages,
+.cl-footerPagesLink,
+.cl-internal-footer,
+[class*='cl-footer'],
+a[href*='clerk.com'],
+div[class*='poweredBy'],
+.cl-poweredBy,
+.cl-badge,
+.cl-internal-badge,
+[class*='secured-by'] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Clean up Clerk card backgrounds */
+.cl-card,
+.cl-cardBox {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Style Clerk form inputs to match our theme */
+.cl-formFieldInput {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 0.75rem !important;
+}
+
+.cl-formFieldInput:focus {
+  border-color: #4a5d4a !important;
+  box-shadow: 0 0 0 2px rgba(74, 93, 74, 0.2) !important;
+}
+
+/* Hide any striped/hatched development mode indicators */
+[style*='repeating-linear-gradient'],
+[style*='diagonal-stripe'] {
+  background: transparent !important;
+  background-image: none !important;
+}
