@@ -7,6 +7,7 @@ import { courses } from '@/data/courseData'
 import { COURSE_SERIES } from '@/data/seriesData'
 import { detailedCourses } from '@/data/detailedCourses'
 import { EnhancedCourseData, Student, Course } from './integrationSchemas'
+import { generateUUID } from '@/lib/utils'
 
 // Existing backend service adapters
 interface BackendServices {
@@ -251,7 +252,7 @@ export class PaymentAdapter {
   async createPaymentLink(courseId: string, planId: string, userId: string): Promise<string> {
     try {
       // Generate payment link using existing service
-      const paymentId = crypto.randomUUID()
+      const paymentId = generateUUID()
       return `/payment/checkout?id=${paymentId}&course=${courseId}&plan=${planId}&user=${userId}`
     } catch (error) {
       console.error('Failed to create payment link:', error)
@@ -523,7 +524,7 @@ export async function trackCourseInteractionWithBackend(
   try {
     const interaction = {
       userId: userId || 'anonymous',
-      sessionId: crypto.randomUUID(),
+      sessionId: generateUUID(),
       type: action,
       element: courseId,
       data: metadata,

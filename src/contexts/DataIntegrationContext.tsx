@@ -13,6 +13,7 @@ import {
 } from '@/lib/data/integrationSchemas'
 import { useEnhancedCourseData } from '@/hooks/useEnhancedCourseData'
 import { useRealtimeAnimationState, useRealtimePerformanceMonitor } from '@/lib/data/realtimeSync'
+import { generateUUID } from '@/lib/utils'
 
 // State interface
 interface DataIntegrationState {
@@ -64,27 +65,30 @@ type DataIntegrationAction =
   | { type: 'UPDATE_CONFIG'; payload: Partial<DataIntegrationConfig> }
   | { type: 'RESET_SESSION' }
 
-// Initial state
-const initialState: DataIntegrationState = {
-  selectedClass: 'all',
-  selectedSeries: null,
-  selectedPlan: null,
-  hoveredCard: null,
-  userId: null,
-  sessionId: crypto.randomUUID(),
-  preferences: {
-    animationSpeed: 'normal',
-    reducedMotion: false,
-    theme: 'auto',
-  },
-  interactions: [],
-  performanceMetrics: {
-    loadTime: 0,
-    renderTime: 0,
-    errorCount: 0,
-    cacheHitRate: 0,
-  },
-  config: DEFAULT_INTEGRATION_CONFIG,
+// Initial state factory to avoid calling generateUUID at module load time
+// This ensures compatibility with older iOS browsers
+function createInitialState(): DataIntegrationState {
+  return {
+    selectedClass: 'all',
+    selectedSeries: null,
+    selectedPlan: null,
+    hoveredCard: null,
+    userId: null,
+    sessionId: generateUUID(),
+    preferences: {
+      animationSpeed: 'normal',
+      reducedMotion: false,
+      theme: 'auto',
+    },
+    interactions: [],
+    performanceMetrics: {
+      loadTime: 0,
+      renderTime: 0,
+      errorCount: 0,
+      cacheHitRate: 0,
+    },
+    config: DEFAULT_INTEGRATION_CONFIG,
+  }
 }
 
 // Reducer
@@ -164,10 +168,10 @@ function dataIntegrationReducer(
 
     case 'RESET_SESSION':
       return {
-        ...initialState,
+        ...createInitialState(),
         userId: state.userId,
         config: state.config,
-        sessionId: crypto.randomUUID(),
+        sessionId: generateUUID(),
       }
 
     default:
@@ -230,11 +234,11 @@ export function DataIntegrationProvider({
   initialUserId,
   onStateChange,
 }: DataIntegrationProviderProps) {
-  const [state, dispatch] = useReducer(dataIntegrationReducer, {
-    ...initialState,
+  const [state, dispatch] = useReducer(dataIntegrationReducer, undefined, () => ({
+    ...createInitialState(),
     userId: initialUserId || null,
     config: { ...DEFAULT_INTEGRATION_CONFIG, ...config },
-  })
+  }))
 
   // Performance monitoring
   const performanceMonitor = useRealtimePerformanceMonitor()

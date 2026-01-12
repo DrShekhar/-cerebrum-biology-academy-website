@@ -5,6 +5,7 @@
 
 import { useEffect, useRef, useCallback, useState } from 'react'
 import { RealtimeEvent, AnimationState, EnhancedCourseData } from './integrationSchemas'
+import { generateUUID } from '@/lib/utils'
 
 // Event types for real-time updates
 export type RealtimeEventType =
@@ -281,7 +282,7 @@ export function useRealtimeAnimationState(sessionId: string) {
   const channelId = `animation-${sessionId}`
 
   const initialState: AnimationState = {
-    id: crypto.randomUUID(),
+    id: generateUUID(),
     userId: '',
     sessionId,
     currentClass: 'all',
@@ -317,7 +318,7 @@ export function trackCourseInteraction(
   metadata: Record<string, any> = {}
 ) {
   const event: RealtimeEvent = {
-    id: crypto.randomUUID(),
+    id: generateUUID(),
     type: 'user_joined',
     data: {
       courseId,

@@ -4,6 +4,7 @@
  */
 
 import { z } from 'zod'
+import { generateUUID } from '@/lib/utils'
 
 // Enhanced schemas with Zod validation
 export const UserPersonalitySchema = z.object({
@@ -388,10 +389,10 @@ export function createInteraction(
   target: string,
   metadata: Record<string, unknown> = {},
   userId = 'anonymous',
-  sessionId = crypto.randomUUID()
+  sessionId = generateUUID()
 ): UserInteraction {
   return {
-    id: crypto.randomUUID(),
+    id: generateUUID(),
     userId,
     sessionId,
     type,

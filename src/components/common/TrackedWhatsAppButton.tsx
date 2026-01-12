@@ -169,17 +169,18 @@ export function TrackedWhatsAppLink({
   )
 
   return (
-    <a
-      href="#"
+    <button
+      type="button"
       onClick={handleClick}
+      disabled={isLoading}
       className={cn(
-        'cursor-pointer',
+        'cursor-pointer inline bg-transparent border-none p-0 font-inherit text-inherit',
         isLoading && 'opacity-50 cursor-wait',
         className
       )}
     >
       {children}
-    </a>
+    </button>
   )
 }
 

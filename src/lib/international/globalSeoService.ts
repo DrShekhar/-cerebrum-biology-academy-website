@@ -126,7 +126,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+1-555-123-4567',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English'],
         },
@@ -165,7 +165,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+44-20-7946-0958',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English'],
         },
@@ -205,7 +205,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+61-2-8123-4567',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English'],
         },
@@ -245,7 +245,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+1-416-123-4567',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English'],
         },
@@ -286,7 +286,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+971-4-123-4567',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English', 'Hindi', 'Arabic'],
         },
@@ -326,7 +326,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+65-6123-4567',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['English', 'Mandarin'],
         },
@@ -480,7 +480,7 @@ class GlobalSEOService {
         courses:
           'MCAT Biology courses tailored for US medical schools. Section-wise preparation, practice tests, and personalized coaching to excel in MCAT Biology section.',
         contact:
-          'Contact Cerebrum Biology Academy USA for MCAT Biology coaching. Call +1-555-123-4567 or email usa@cerebrumbiologyacademy.com for course information.',
+          `Contact Cerebrum Biology Academy USA for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email usa@cerebrumbiologyacademy.com for course information.`,
         about:
           'Cerebrum Biology Academy USA provides world-class Biology coaching for American medical school aspirants with 5 years of proven success in MCAT preparation.',
       },
@@ -489,7 +489,7 @@ class GlobalSEOService {
         courses:
           'Medical Biology courses for UK universities. BMAT Biology, UCAT preparation, and A-level Biology coaching designed for UK medical school admissions.',
         contact:
-          'Contact Cerebrum Biology Academy UK for medical school Biology coaching. Call +44-20-7946-0958 or email uk@cerebrumbiologyacademy.com.',
+          `Contact Cerebrum Biology Academy UK for medical school Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email uk@cerebrumbiologyacademy.com.`,
         about:
           'Cerebrum Biology Academy UK specializes in medical school Biology coaching with 4 years of success helping students secure admission to top UK medical universities.',
       },
@@ -498,7 +498,7 @@ class GlobalSEOService {
         courses:
           'GAMSAT Biology courses for Australian medical schools. Section 3 preparation, practice tests, and comprehensive Biology coaching for GAMSAT success.',
         contact:
-          'Contact Cerebrum Biology Academy Australia for GAMSAT Biology coaching. Call +61-2-8123-4567 or email australia@cerebrumbiologyacademy.com.',
+          `Contact Cerebrum Biology Academy Australia for GAMSAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email australia@cerebrumbiologyacademy.com.`,
         about:
           'Cerebrum Biology Academy Australia provides expert GAMSAT Biology coaching with 3 years of proven success in Australian medical school admissions.',
       },
@@ -507,7 +507,7 @@ class GlobalSEOService {
         courses:
           'MCAT Biology courses for Canadian medical schools. Section-wise preparation, practice tests, and expert coaching for MCAT Biology success.',
         contact:
-          'Contact Cerebrum Biology Academy Canada for MCAT Biology coaching. Call +1-416-123-4567 or email canada@cerebrumbiologyacademy.com.',
+          `Contact Cerebrum Biology Academy Canada for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email canada@cerebrumbiologyacademy.com.`,
         about:
           'Cerebrum Biology Academy Canada specializes in MCAT Biology preparation with 3 years of success helping students enter top Canadian medical schools.',
       },
@@ -516,7 +516,7 @@ class GlobalSEOService {
         courses:
           'NEET Biology courses in UAE with hybrid online-offline model. Weekend classes in Dubai, expert coaching, and comprehensive study materials.',
         contact:
-          'Contact Cerebrum Biology Academy UAE for NEET Biology coaching. Call +971-4-123-4567 or visit our Dubai & Abu Dhabi centers.',
+          `Contact Cerebrum Biology Academy UAE for NEET Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or visit our Dubai & Abu Dhabi centers.`,
         about:
           'Cerebrum Biology Academy UAE provides excellent NEET Biology coaching with 4 years of success and physical centers in Dubai and Abu Dhabi.',
       },
@@ -525,7 +525,7 @@ class GlobalSEOService {
         courses:
           'NEET Biology courses in Singapore with flexible timings. Expert coaching, comprehensive curriculum, and personalized attention for success.',
         contact:
-          'Contact Cerebrum Biology Academy Singapore for NEET Biology coaching. Call +65-6123-4567 or email singapore@cerebrumbiologyacademy.com.',
+          `Contact Cerebrum Biology Academy Singapore for NEET Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email singapore@cerebrumbiologyacademy.com.`,
         about:
           'Cerebrum Biology Academy Singapore offers premium NEET Biology coaching with 3 years of excellence and 92% success rate.',
       },
