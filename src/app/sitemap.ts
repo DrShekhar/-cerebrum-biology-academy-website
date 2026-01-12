@@ -99,6 +99,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/school-career-seminar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/testimonials`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,

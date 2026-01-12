@@ -88,6 +88,7 @@ export const Footer = memo(function Footer() {
     { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
     { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Free Resources', href: '/free-resources' },
+    { name: 'NEET Seminar for Schools', href: '/school-career-seminar' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
     { name: 'AI Features', href: '/ai-features' },
     { name: 'Mobile App', href: '/mobile-app' },
