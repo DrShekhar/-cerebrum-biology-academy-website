@@ -2,7 +2,7 @@
  * Study With Me - TypeScript Interfaces
  */
 
-export type DisplayMode = 'web' | 'obs'
+export type DisplayMode = 'web' | 'obs' | 'focus'
 export type ClockFormat = '12h' | '24h'
 export type AmbientSound = 'lofi' | 'nature' | 'silence'
 export type PomodoroPhase = 'study' | 'break' | 'longBreak' | 'idle'

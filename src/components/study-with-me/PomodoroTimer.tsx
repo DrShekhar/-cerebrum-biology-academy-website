@@ -221,7 +221,7 @@ export function PomodoroTimer({
     }
   }, [])
 
-  // OBS mode - simplified circular display
+  // OBS mode - simplified circular display (no controls for streaming)
   if (mode === 'obs') {
     return (
       <div className={`flex flex-col items-center ${className}`}>
@@ -249,6 +249,63 @@ export function PomodoroTimer({
           </div>
         </div>
         <div className="text-gray-400 text-sm mt-4">Cycle {cycleCount} / 4</div>
+      </div>
+    )
+  }
+
+  // Focus mode - circular display WITH interactive controls
+  if (mode === 'focus') {
+    return (
+      <div className={`flex flex-col items-center ${className}`}>
+        <div className="relative w-40 h-40 md:w-48 md:h-48">
+          {/* Background circle */}
+          <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" strokeWidth="6" />
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke={phaseColors.primary}
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeDasharray={`${progress * 2.827} 282.7`}
+              className="transition-all duration-500"
+            />
+          </svg>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-3xl md:text-4xl font-mono font-bold text-white">
+              {formatTime(timeRemaining)}
+            </span>
+            <span className="text-xs md:text-sm text-gray-400 mt-1">{getPhaseLabel(phase)}</span>
+          </div>
+        </div>
+        <div className="text-gray-400 text-sm mt-3">Cycle {cycleCount} / 4</div>
+        {/* Controls */}
+        <div className="flex items-center justify-center space-x-4 mt-4">
+          <button
+            onClick={handleReset}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+            aria-label="Reset"
+          >
+            <RotateCcw className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+          <button
+            onClick={isRunning ? handlePause : handleStart}
+            className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 text-white ${phaseColors.bg}`}
+            aria-label={isRunning ? 'Pause' : 'Start'}
+          >
+            {isRunning ? <Pause className="w-5 h-5 md:w-6 md:h-6" /> : <Play className="w-5 h-5 md:w-6 md:h-6 ml-0.5" />}
+          </button>
+          <button
+            onClick={handleSkip}
+            disabled={phase === 'idle'}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            aria-label="Skip phase"
+          >
+            <SkipForward className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+        </div>
       </div>
     )
   }

@@ -71,8 +71,8 @@ export function MotivationalQuotes({
     }
   }
 
-  // OBS mode - clean quote display
-  if (mode === 'obs') {
+  // OBS and Focus mode - clean quote display (dark theme)
+  if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`text-center max-w-2xl mx-auto ${className}`}>
         <AnimatePresence mode="wait">

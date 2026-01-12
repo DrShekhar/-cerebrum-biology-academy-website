@@ -93,8 +93,8 @@ export function LiveStudentCount({
     return () => clearTimeout(timer)
   }, [count, displayCount])
 
-  // OBS mode - minimal display
-  if (mode === 'obs') {
+  // OBS and Focus mode - minimal display (dark theme)
+  if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`flex items-center space-x-3 ${className}`}>
         <motion.div

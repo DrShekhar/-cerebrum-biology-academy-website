@@ -96,13 +96,55 @@ export function StudyStopwatch({
 
   const { hours, minutes, seconds } = formatTime(elapsed)
 
-  // OBS mode - minimal large display
+  // OBS mode - minimal large display (no controls for streaming)
   if (mode === 'obs') {
     return (
       <div className={`text-center ${className}`}>
         <div className="text-sm uppercase tracking-wider text-gray-400 mb-2">Study Time</div>
         <div className="text-7xl font-mono font-bold text-green-500 tracking-wider">
           {hours}:{minutes}:{seconds}
+        </div>
+      </div>
+    )
+  }
+
+  // Focus mode - large display WITH interactive controls
+  if (mode === 'focus') {
+    return (
+      <div className={`text-center ${className}`}>
+        <div className="text-sm uppercase tracking-wider text-gray-400 mb-2">Study Time</div>
+        <div className="text-5xl md:text-7xl font-mono font-bold text-green-500 tracking-wider mb-6">
+          {hours}:{minutes}:{seconds}
+        </div>
+        {/* Controls */}
+        <div className="flex items-center justify-center space-x-4">
+          <button
+            onClick={handleReset}
+            disabled={elapsed === 0 && !isRunning}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            aria-label="Reset"
+          >
+            <RotateCcw className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+          <button
+            onClick={isRunning ? handlePause : handleStart}
+            className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 ${
+              isRunning
+                ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                : 'bg-green-500 hover:bg-green-600 text-white'
+            }`}
+            aria-label={isRunning ? 'Pause' : 'Start'}
+          >
+            {isRunning ? <Pause className="w-6 h-6 md:w-7 md:h-7" /> : <Play className="w-6 h-6 md:w-7 md:h-7 ml-1" />}
+          </button>
+          <button
+            onClick={handleLap}
+            disabled={!isRunning || elapsed === 0}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            aria-label="Lap"
+          >
+            <Flag className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
         </div>
       </div>
     )

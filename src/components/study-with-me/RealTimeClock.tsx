@@ -17,7 +17,8 @@ export function RealTimeClock({
   mode = 'web',
   className = '',
 }: RealTimeClockProps) {
-  const [time, setTime] = useState(new Date())
+  // Initialize with null to avoid hydration mismatch (server time != client time)
+  const [time, setTime] = useState<Date | null>(null)
   const [isTabVisible, setIsTabVisible] = useState(true)
 
   // Handle tab visibility for performance optimization
@@ -36,6 +37,9 @@ export function RealTimeClock({
   useEffect(() => {
     if (!isTabVisible) return
 
+    // Start updating immediately when tab is visible (or on mount)
+    setTime(new Date())
+
     const interval = setInterval(() => {
       setTime(new Date())
     }, 1000)
@@ -43,14 +47,10 @@ export function RealTimeClock({
     return () => clearInterval(interval)
   }, [isTabVisible])
 
-  // Sync time immediately when tab becomes visible again
-  useEffect(() => {
-    if (isTabVisible) {
-      setTime(new Date())
-    }
-  }, [isTabVisible])
-
   const formatTime = useCallback(() => {
+    if (!time) {
+      return { hours: '--', minutes: '--', seconds: '--', period: '' }
+    }
     const hours = time.getHours()
     const minutes = time.getMinutes()
     const seconds = time.getSeconds()
@@ -76,6 +76,7 @@ export function RealTimeClock({
   }, [time, format])
 
   const formatDate = useCallback(() => {
+    if (!time) return 'Loading...'
     return time.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
@@ -86,8 +87,8 @@ export function RealTimeClock({
 
   const { hours, minutes, seconds, period } = formatTime()
 
-  // OBS mode uses larger fonts and simpler layout
-  if (mode === 'obs') {
+  // OBS and Focus mode use larger fonts and simpler layout (dark theme)
+  if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`text-center ${className}`}>
         <div className="text-6xl font-mono font-bold text-white tracking-wider">

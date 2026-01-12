@@ -2010,3 +2010,40 @@ div[class*='poweredBy'],
   background: transparent !important;
   background-image: none !important;
 }
+
+/* ========================================
+   OBS STREAMING OVERLAY MODE
+   Hides all site UI for clean streaming overlay
+   Activated by StudyWithMePage when mode="obs"
+   ======================================== */
+
+body.obs-overlay-mode [data-section='navigation'],
+body.obs-overlay-mode [data-lazy='footer'],
+body.obs-overlay-mode [data-lazy='trial-banner'],
+body.obs-overlay-mode .skip-to-content,
+body.obs-overlay-mode [data-bottom-nav],
+body.obs-overlay-mode header,
+body.obs-overlay-mode footer,
+body.obs-overlay-mode > div > header,
+body.obs-overlay-mode > div > footer,
+body.obs-overlay-mode nav,
+body.obs-overlay-mode [role='banner'],
+body.obs-overlay-mode [role='contentinfo'],
+body.obs-overlay-mode [role='navigation'] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+body.obs-overlay-mode main {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 100vh !important;
+}
+
+body.obs-overlay-mode {
+  overflow: hidden !important;
+  background: transparent !important;
+}
