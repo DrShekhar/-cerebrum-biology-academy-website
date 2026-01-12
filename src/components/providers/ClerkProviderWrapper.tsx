@@ -1,18 +1,27 @@
 'use client'
 
 import { ReactNode } from 'react'
+import { ClerkProvider } from '@clerk/nextjs'
 
 /**
  * Auth Provider Wrapper
  *
- * Previously wrapped children in ClerkProvider, but we've migrated to Firebase Auth.
- * This component now just passes through children.
+ * Wraps children in ClerkProvider when Clerk is configured.
+ * This is needed because some components (ClerkAuthButtons) still use
+ * Clerk components like SignedIn/SignedOut which require ClerkProvider.
  *
- * Keeping this wrapper in place to avoid updating all import paths.
- * The actual auth is handled by Firebase Phone Auth + JWT sessions.
+ * The primary auth is handled by Firebase Phone Auth + JWT sessions,
+ * but Clerk is still used for the header auth buttons on desktop.
  */
 export function ClerkProviderWrapper({ children }: { children: ReactNode }) {
-  // Firebase Auth is now used instead of Clerk
-  // This wrapper is kept for backward compatibility with import paths
-  return <>{children}</>
+  // Check if Clerk is configured
+  const isClerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
+
+  // If Clerk is not configured, just pass through children
+  if (!isClerkConfigured) {
+    return <>{children}</>
+  }
+
+  // Wrap with ClerkProvider when configured
+  return <ClerkProvider>{children}</ClerkProvider>
 }
