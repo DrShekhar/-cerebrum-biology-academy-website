@@ -31,8 +31,15 @@ export function PerformanceProvider({ children }: PerformanceProviderProps) {
   const { loadedSections } = LoadingSystem.useLazyLoading()
   const [isLowEndDevice, setIsLowEndDevice] = useState(false)
   const [connectionSpeed, setConnectionSpeed] = useState<'slow' | 'fast' | 'unknown'>('unknown')
+  const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
+    setIsHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isHydrated) return
+
     // Detect device capabilities
     const detectDeviceCapabilities = () => {
       // Check for low-end device indicators
@@ -184,7 +191,7 @@ export function PerformanceProvider({ children }: PerformanceProviderProps) {
     }
 
     optimizeForIndianNetworks()
-  }, [])
+  }, [isHydrated])
 
   const contextValue: PerformanceContextType = {
     criticalLoaded,

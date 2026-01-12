@@ -311,7 +311,7 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
       {/* Footer */}
       <footer className="bg-gray-100 border-t border-gray-200 py-4 px-4 md:px-8 mt-auto">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Cerebrum Biology Academy</p>
+          <p>© 2025 Cerebrum Biology Academy</p>
           <p className="mt-2 md:mt-0">Focus. Study. Succeed.</p>
         </div>
       </footer>

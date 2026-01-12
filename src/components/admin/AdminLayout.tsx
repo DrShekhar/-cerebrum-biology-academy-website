@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { useClerk, useUser } from '@clerk/nextjs'
+import { useSafeClerk, useSafeUser } from '@/hooks/useSafeClerk'
 import { useClerkRole } from '@/hooks/useClerkRole'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -51,8 +51,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { signOut: clerkSignOut } = useClerk()
-  const { user } = useUser()
+  const { signOut: clerkSignOut } = useSafeClerk()
+  const { user } = useSafeUser()
   const { isLoaded, isSignedIn, isAdmin } = useClerkRole()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
 

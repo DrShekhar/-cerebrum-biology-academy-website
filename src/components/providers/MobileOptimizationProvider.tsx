@@ -39,9 +39,16 @@ export function MobileOptimizationProvider({ children }: MobileOptimizationProvi
   const [deviceRAM, setDeviceRAM] = useState(4)
   const [language, setLanguage] = useState<'en' | 'hi' | 'ta' | 'bn'>('en')
   const [dataMode, setDataMode] = useState<'normal' | 'lite' | 'offline'>('normal')
+  const [isHydrated, setIsHydrated] = useState(false)
+
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
 
   // Initialize mobile optimizations
   useEffect(() => {
+    if (!isHydrated) return
+
     const updateNetworkInfo = () => {
       const networkInfo = indianMobileOptimizer.getNetworkInfo()
       const deviceInfo = indianMobileOptimizer.getDeviceInfo()
@@ -80,10 +87,12 @@ export function MobileOptimizationProvider({ children }: MobileOptimizationProvi
         connection.removeEventListener('change', updateNetworkInfo)
       }
     }
-  }, [])
+  }, [isHydrated])
 
   // Detect language from browser/device settings
   useEffect(() => {
+    if (!isHydrated) return
+
     const detectLanguage = () => {
       const savedLang = localStorage.getItem('preferred-language') as 'en' | 'hi' | 'ta' | 'bn'
       if (savedLang) {
@@ -99,7 +108,7 @@ export function MobileOptimizationProvider({ children }: MobileOptimizationProvi
     }
 
     detectLanguage()
-  }, [])
+  }, [isHydrated])
 
   // Save language preference
   const handleLanguageChange = (newLanguage: 'en' | 'hi' | 'ta' | 'bn') => {

@@ -116,7 +116,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = useCallback(
     (key: TranslationKey, params?: Record<string, string | number>): string => {
-      let text = translations[language]?.[key] || translations.en[key] || key
+      const currentLang = isHydrated ? language : 'en'
+      let text = translations[currentLang]?.[key] || translations.en[key] || key
       if (params) {
         Object.entries(params).forEach(([paramKey, value]) => {
           text = text.replace(`{${paramKey}}`, String(value))
@@ -124,18 +125,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       }
       return text
     },
-    [language]
+    [language, isHydrated]
   )
 
   const value: I18nContextType = {
-    language,
+    language: isHydrated ? language : 'en',
     setLanguage,
     t,
     availableLanguages,
-  }
-
-  if (!isHydrated) {
-    return <>{children}</>
   }
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>

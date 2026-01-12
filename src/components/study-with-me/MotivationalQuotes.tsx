@@ -22,9 +22,11 @@ export function MotivationalQuotes({
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [isTabVisible, setIsTabVisible] = useState(true)
+  const [isHydrated, setIsHydrated] = useState(false)
 
-  // Randomize starting quote
+  // Mark as hydrated and randomize starting quote after mount
   useEffect(() => {
+    setIsHydrated(true)
     setCurrentIndex(Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length))
   }, [])
 

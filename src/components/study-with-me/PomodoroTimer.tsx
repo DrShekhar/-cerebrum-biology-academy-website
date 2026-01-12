@@ -7,8 +7,13 @@ import type { DisplayMode, PomodoroPhase, PomodoroState } from '@/lib/study-with
 import { POMODORO_DEFAULTS, PHASE_COLORS, STORAGE_KEYS } from '@/lib/study-with-me/constants'
 
 function playNotificationSound() {
+  if (typeof window === 'undefined') return
   try {
-    const audioContext = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
+    const AudioContextClass =
+      window.AudioContext ||
+      (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext
+    if (!AudioContextClass) return
+    const audioContext = new AudioContextClass()
 
     const frequencies = [523.25, 659.25, 783.99]
     const duration = 0.15
@@ -295,7 +300,11 @@ export function PomodoroTimer({
             className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 text-white ${phaseColors.bg}`}
             aria-label={isRunning ? 'Pause' : 'Start'}
           >
-            {isRunning ? <Pause className="w-5 h-5 md:w-6 md:h-6" /> : <Play className="w-5 h-5 md:w-6 md:h-6 ml-0.5" />}
+            {isRunning ? (
+              <Pause className="w-5 h-5 md:w-6 md:h-6" />
+            ) : (
+              <Play className="w-5 h-5 md:w-6 md:h-6 ml-0.5" />
+            )}
           </button>
           <button
             onClick={handleSkip}

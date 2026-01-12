@@ -8,11 +8,11 @@ import { Keyboard } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { useClerkRole } from '@/hooks/useClerkRole'
-import { useUser } from '@clerk/nextjs'
+import { useSafeUser } from '@/hooks/useSafeClerk'
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   const { isLoaded, isSignedIn, isCounselor, isAdmin } = useClerkRole()
-  const { user } = useUser()
+  const { user } = useSafeUser()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)

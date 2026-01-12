@@ -8,17 +8,26 @@ interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
+  errorId: string | null
 }
 
 interface ErrorBoundaryProps {
   children: ReactNode
-  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  fallback?: React.ComponentType<{ error?: Error; resetError: () => void; errorId?: string | null }>
+  onError?: (error: Error, errorInfo: ErrorInfo, errorId: string) => void
   resetKeys?: any[]
   name?: string
 }
 
-const DefaultErrorFallback = ({ error, resetError }: { error?: Error; resetError: () => void }) => {
+const DefaultErrorFallback = ({
+  error,
+  resetError,
+  errorId,
+}: {
+  error?: Error
+  resetError: () => void
+  errorId?: string | null
+}) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
 
   return (
@@ -40,10 +49,14 @@ const DefaultErrorFallback = ({ error, resetError }: { error?: Error; resetError
           </svg>
         </div>
         <h2 className="text-xl font-semibold text-gray-900 mb-2">Something went wrong</h2>
-        <p className="text-gray-600 mb-6 max-w-md">
-          {error?.message ||
-            'An unexpected error occurred while loading this section. Please try again.'}
+        <p className="text-gray-600 mb-4 max-w-md">
+          An unexpected error occurred while loading this section. Please try again.
         </p>
+        {errorId && (
+          <p className="text-xs text-gray-400 mb-4">
+            Reference: <code className="font-mono">{errorId}</code>
+          </p>
+        )}
       </div>
       <div className="flex gap-3">
         <Button onClick={resetError} variant="primary">
@@ -71,6 +84,12 @@ const DefaultErrorFallback = ({ error, resetError }: { error?: Error; resetError
   )
 }
 
+function generateBoundaryErrorId(): string {
+  const timestamp = Date.now().toString(36)
+  const random = Math.random().toString(36).substring(2, 8)
+  return `ERR-${timestamp}-${random}`.toUpperCase()
+}
+
 export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props)
@@ -78,22 +97,27 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       hasError: false,
       error: null,
       errorInfo: null,
+      errorId: null,
     }
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error }
+    const errorId = generateBoundaryErrorId()
+    return { hasError: true, error, errorId }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to monitoring service
+    const errorId = this.state.errorId || generateBoundaryErrorId()
+
     logger.error(`Error Boundary: ${this.props.name || 'Unknown'}`, {
+      errorId,
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
     })
 
-    // Send to Sentry if available
     if (typeof window !== 'undefined') {
       import('@sentry/nextjs')
         .then((Sentry) => {
@@ -105,22 +129,41 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             },
             tags: {
               errorBoundary: this.props.name || 'unknown',
+              errorId,
             },
           })
         })
         .catch(() => {
           // Sentry not available, continue
         })
+
+      try {
+        fetch('/api/errors', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            errorId,
+            message: error.message,
+            stack: error.stack,
+            componentStack: errorInfo.componentStack,
+            boundary: this.props.name || 'unknown',
+            url: window.location.href,
+            userAgent: window.navigator.userAgent,
+            timestamp: new Date().toISOString(),
+          }),
+        }).catch(() => {})
+      } catch {
+        // Silent fail for error reporting
+      }
     }
 
-    // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)
+      this.props.onError(error, errorInfo, errorId)
     }
 
-    // Update state with error details
     this.setState({
       errorInfo,
+      errorId,
     })
   }
 
@@ -142,6 +185,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       hasError: false,
       error: null,
       errorInfo: null,
+      errorId: null,
     })
   }
 
@@ -149,7 +193,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback
       return (
-        <FallbackComponent error={this.state.error || undefined} resetError={this.resetError} />
+        <FallbackComponent
+          error={this.state.error || undefined}
+          resetError={this.resetError}
+          errorId={this.state.errorId}
+        />
       )
     }
 
@@ -165,41 +213,86 @@ export function PageErrorBoundary({ children }: { children: ReactNode }) {
   return (
     <ErrorBoundary
       name="PageErrorBoundary"
-      fallback={({ error, resetError }) => (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-          <div className="max-w-md w-full text-center">
-            <div className="mb-6">
-              <div className="w-20 h-20 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-10 h-10 text-red-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
-                  />
-                </svg>
+      fallback={({ error, resetError, errorId }) => {
+        const isDevelopment = process.env.NODE_ENV === 'development'
+
+        return (
+          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8">
+            <div className="max-w-lg w-full text-center">
+              <div className="mb-6">
+                <div className="w-20 h-20 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-10 h-10 text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
+                    />
+                  </svg>
+                </div>
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">Something Went Wrong</h1>
+                <p className="text-gray-600 mb-4">
+                  We encountered an unexpected error while loading this page. This has been
+                  automatically reported to our team.
+                </p>
+                <div className="bg-gray-100 rounded-lg px-4 py-2 inline-block mb-6">
+                  <p className="text-sm text-gray-500">
+                    Reference ID: <code className="font-mono text-gray-700">{errorId}</code>
+                  </p>
+                </div>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">Page Error</h1>
-              <p className="text-gray-600 mb-6">
-                Failed to load this page. Please try refreshing your browser.
-              </p>
-            </div>
-            <div className="flex gap-3 justify-center">
-              <Button onClick={() => window.location.reload()} variant="primary">
-                Reload Page
-              </Button>
-              <Button onClick={() => (window.location.href = '/')} variant="secondary">
-                Go Home
-              </Button>
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+                <Button onClick={resetError} variant="primary">
+                  Try Again
+                </Button>
+                <Button onClick={() => window.location.reload()} variant="secondary">
+                  Reload Page
+                </Button>
+                <Button onClick={() => (window.location.href = '/')} variant="secondary">
+                  Go Home
+                </Button>
+              </div>
+
+              <div className="border-t border-gray-200 pt-6">
+                <p className="text-sm text-gray-500 mb-2">
+                  Still having trouble? Contact us at{' '}
+                  <a
+                    href="mailto:support@cerebrumbiologyacademy.com"
+                    className="text-blue-600 hover:underline"
+                  >
+                    support@cerebrumbiologyacademy.com
+                  </a>
+                </p>
+                <p className="text-xs text-gray-400">
+                  Please include the Reference ID above when contacting support.
+                </p>
+              </div>
+
+              {isDevelopment && error && (
+                <details className="mt-6 text-left bg-red-50 rounded-lg p-4">
+                  <summary className="cursor-pointer text-sm font-medium text-red-800 mb-2">
+                    Error Details (Development Only)
+                  </summary>
+                  <div className="text-xs bg-white p-3 rounded border border-red-200 overflow-x-auto">
+                    <p className="font-mono text-red-600 mb-2 break-words">{error.toString()}</p>
+                    {error.stack && (
+                      <pre className="font-mono text-gray-700 whitespace-pre-wrap text-xs">
+                        {error.stack}
+                      </pre>
+                    )}
+                  </div>
+                </details>
+              )}
             </div>
           </div>
-        </div>
-      )}
+        )
+      }}
     >
       {children}
     </ErrorBoundary>

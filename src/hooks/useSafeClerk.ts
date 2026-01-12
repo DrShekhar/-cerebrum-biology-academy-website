@@ -5,18 +5,58 @@
  *
  * Provides fallback values when Clerk is not configured (e.g., during CI builds).
  * This prevents build failures when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is not set.
+ *
+ * ARCHITECTURE: These wrappers use conditional imports based on a build-time constant.
+ * When Clerk is not configured, the hooks return safe defaults without importing Clerk.
+ * When Clerk IS configured, the actual Clerk hooks are imported and used normally.
  */
 
-import {
-  useUser as useClerkUser,
-  useAuth as useClerkAuth,
-  useClerk as useClerkInstance,
-} from '@clerk/nextjs'
-import type { UserResource, ClerkOptions } from '@clerk/types'
+import type { UserResource } from '@clerk/types'
 
-// Check if Clerk is configured at runtime
-function isClerkConfigured(): boolean {
-  return Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
+// Check if Clerk is configured - this is evaluated at build time
+const CLERK_CONFIGURED = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
+
+// Safe defaults for when Clerk is not configured
+const SAFE_USER_DEFAULTS = {
+  user: null as UserResource | null | undefined,
+  isLoaded: true,
+  isSignedIn: false as boolean | undefined,
+}
+
+const SAFE_AUTH_DEFAULTS = {
+  isLoaded: true,
+  isSignedIn: false as boolean | undefined,
+  userId: null as string | null | undefined,
+  sessionId: null as string | null | undefined,
+}
+
+const SAFE_CLERK_DEFAULTS = {
+  loaded: true,
+  signOut: async () => {},
+  openSignIn: () => {},
+  openSignUp: () => {},
+  openUserProfile: () => {},
+  session: null,
+  user: null,
+  client: null,
+}
+
+// Conditionally import Clerk hooks only when configured
+// This prevents import errors when Clerk env vars are not set
+let useClerkUser: any = () => SAFE_USER_DEFAULTS
+let useClerkAuth: any = () => SAFE_AUTH_DEFAULTS
+let useClerkInstance: any = () => SAFE_CLERK_DEFAULTS
+
+if (CLERK_CONFIGURED) {
+  try {
+    const clerk = require('@clerk/nextjs')
+    useClerkUser = clerk.useUser
+    useClerkAuth = clerk.useAuth
+    useClerkInstance = clerk.useClerk
+  } catch {
+    // Clerk import failed, keep defaults
+    console.warn('[useSafeClerk] Failed to import @clerk/nextjs, using fallback values')
+  }
 }
 
 /**
@@ -28,26 +68,19 @@ export function useSafeUser(): {
   isLoaded: boolean
   isSignedIn: boolean | undefined
 } {
-  // If Clerk is not configured, return safe defaults
-  if (!isClerkConfigured()) {
-    return {
-      user: null,
-      isLoaded: true,
-      isSignedIn: false,
-    }
+  if (!CLERK_CONFIGURED) {
+    return SAFE_USER_DEFAULTS
   }
 
-  // Use actual Clerk hook when configured
   try {
-    const { user, isLoaded, isSignedIn } = useClerkUser()
-    return { user, isLoaded, isSignedIn }
-  } catch {
-    // Fallback if hook fails (e.g., not wrapped in ClerkProvider)
+    const result = useClerkUser()
     return {
-      user: null,
-      isLoaded: true,
-      isSignedIn: false,
+      user: result.user,
+      isLoaded: result.isLoaded,
+      isSignedIn: result.isSignedIn,
     }
+  } catch {
+    return SAFE_USER_DEFAULTS
   }
 }
 
@@ -61,28 +94,20 @@ export function useSafeAuth(): {
   userId: string | null | undefined
   sessionId: string | null | undefined
 } {
-  // If Clerk is not configured, return safe defaults
-  if (!isClerkConfigured()) {
-    return {
-      isLoaded: true,
-      isSignedIn: false,
-      userId: null,
-      sessionId: null,
-    }
+  if (!CLERK_CONFIGURED) {
+    return SAFE_AUTH_DEFAULTS
   }
 
-  // Use actual Clerk hook when configured
   try {
-    const { isLoaded, isSignedIn, userId, sessionId } = useClerkAuth()
-    return { isLoaded, isSignedIn, userId, sessionId }
-  } catch {
-    // Fallback if hook fails
+    const result = useClerkAuth()
     return {
-      isLoaded: true,
-      isSignedIn: false,
-      userId: null,
-      sessionId: null,
+      isLoaded: result.isLoaded,
+      isSignedIn: result.isSignedIn,
+      userId: result.userId,
+      sessionId: result.sessionId,
     }
+  } catch {
+    return SAFE_AUTH_DEFAULTS
   }
 }
 
@@ -91,41 +116,21 @@ export function useSafeAuth(): {
  * Returns null/noop functions when Clerk is not configured
  */
 export function useSafeClerk() {
-  // If Clerk is not configured, return safe defaults with noop functions
-  if (!isClerkConfigured()) {
-    return {
-      loaded: true,
-      signOut: async () => {},
-      openSignIn: () => {},
-      openSignUp: () => {},
-      openUserProfile: () => {},
-      session: null,
-      user: null,
-      client: null,
-    }
+  if (!CLERK_CONFIGURED) {
+    return SAFE_CLERK_DEFAULTS
   }
 
-  // Use actual Clerk hook when configured
   try {
     return useClerkInstance()
   } catch {
-    // Fallback if hook fails
-    return {
-      loaded: true,
-      signOut: async () => {},
-      openSignIn: () => {},
-      openSignUp: () => {},
-      openUserProfile: () => {},
-      session: null,
-      user: null,
-      client: null,
-    }
+    return SAFE_CLERK_DEFAULTS
   }
 }
 
 /**
  * Check if Clerk is available for rendering Clerk components
+ * This is a simple function, not a hook
  */
 export function useClerkAvailable(): boolean {
-  return isClerkConfigured()
+  return CLERK_CONFIGURED
 }
