@@ -119,7 +119,9 @@ function loadSourceContent(sourceId: string): BlogDraft | NewsDraft | null {
 }
 
 // Load published blog by slug
-function loadPublishedBlog(slug: string): { title: string; content: string; excerpt: string } | null {
+function loadPublishedBlog(
+  slug: string
+): { title: string; content: string; excerpt: string } | null {
   const blogDir = path.join(process.cwd(), 'content', 'blog')
   const mdxPath = path.join(blogDir, `${slug}.mdx`)
 
@@ -153,11 +155,14 @@ function generateTwitterThread(
   tags: string[]
 ): string[] {
   const thread: string[] = []
-  const hashtags = tags.slice(0, 3).map((t) => `#${t.replace(/\s+/g, '')}`).join(' ')
+  const hashtags = tags
+    .slice(0, 3)
+    .map((t) => `#${t.replace(/\s+/g, '')}`)
+    .join(' ')
 
   // Tweet 1: Hook
   thread.push(
-`🧬 THREAD: ${title}
+    `🧬 THREAD: ${title}
 
 A comprehensive breakdown for NEET 2026 aspirants 👇
 
@@ -166,19 +171,17 @@ ${hashtags} #NEET2026`
 
   // Tweet 2-N: Key takeaways
   keyTakeaways.forEach((takeaway, i) => {
-    thread.push(
-`${i + 2}/ ${takeaway}`
-    )
+    thread.push(`${i + 2}/ ${takeaway}`)
   })
 
   // Final tweet: CTA
   thread.push(
-`📚 Want detailed notes and expert guidance?
+    `📚 Want detailed notes and expert guidance?
 
 Join Cerebrum Biology Academy - taught by AIIMS faculty.
 
 ✅ Free demo class available
-📱 WhatsApp: wa.me/917980078875
+📱 WhatsApp: wa.me/918826444334
 
 #NEETBiology #BiologyCoaching`
   )
@@ -192,7 +195,10 @@ function generateLinkedInPost(
   keyTakeaways: string[],
   tags: string[]
 ): string {
-  const hashtags = tags.slice(0, 5).map((t) => `#${t.replace(/\s+/g, '')}`).join(' ')
+  const hashtags = tags
+    .slice(0, 5)
+    .map((t) => `#${t.replace(/\s+/g, '')}`)
+    .join(' ')
 
   return `📖 ${title}
 
@@ -230,7 +236,10 @@ ${excerpt}
 Save this post for quick revision! 💾
 
 🔬 Key Points:
-${keyTakeaways.slice(0, 5).map((t) => `• ${t}`).join('\n')}
+${keyTakeaways
+  .slice(0, 5)
+  .map((t) => `• ${t}`)
+  .join('\n')}
 
 ---
 Ready to ace NEET Biology?
@@ -253,17 +262,16 @@ DM us or click the link in bio!
   return { caption, hashtags }
 }
 
-function generateWhatsAppBroadcast(
-  title: string,
-  excerpt: string,
-  keyTakeaways: string[]
-): string {
+function generateWhatsAppBroadcast(title: string, excerpt: string, keyTakeaways: string[]): string {
   return `🧬 *${title}*
 
 ${excerpt}
 
 *Quick Revision Points:*
-${keyTakeaways.slice(0, 5).map((t, i) => `${i + 1}. ${t}`).join('\n')}
+${keyTakeaways
+  .slice(0, 5)
+  .map((t, i) => `${i + 1}. ${t}`)
+  .join('\n')}
 
 📖 *Read full article:* cerebrumbiologyacademy.com/blog
 
@@ -276,9 +284,7 @@ Reply YES or call us! 📞`
 // MAIN GENERATOR
 // ============================================
 
-async function generateSocialPosts(
-  input: SocialGenerationInput
-): Promise<SocialPostDraft[]> {
+async function generateSocialPosts(input: SocialGenerationInput): Promise<SocialPostDraft[]> {
   const drafts: SocialPostDraft[] = []
 
   // Extract content from source
@@ -325,7 +331,10 @@ async function generateSocialPosts(
     title = 'NEET Biology Tips'
     excerpt = input.sourceSummary
     content = input.sourceSummary
-    keyTakeaways = input.sourceSummary.split('.').filter((s) => s.trim()).slice(0, 5)
+    keyTakeaways = input.sourceSummary
+      .split('.')
+      .filter((s) => s.trim())
+      .slice(0, 5)
     tags = ['NEET', 'Biology']
   }
 

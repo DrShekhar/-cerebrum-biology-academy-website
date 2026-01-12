@@ -156,7 +156,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+1 (555) 123-4567',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'usa@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Available Nationwide - Online Classes',
@@ -222,7 +222,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+44 20 7946 0958',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'uk@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'London Office + Online Classes',
@@ -282,7 +282,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+61 2 8123 4567',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'australia@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Sydney Office + Online Classes',
@@ -348,7 +348,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+1 (416) 123-4567',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'canada@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Toronto Office + Online Classes',
@@ -414,7 +414,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+971 4 123 4567',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'uae@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Dubai Office: Business Bay, Abu Dhabi Center: Al Maryah Island',
@@ -479,7 +479,7 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+65 6123 4567',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'singapore@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Singapore Office: Raffles Place + Online Classes',
