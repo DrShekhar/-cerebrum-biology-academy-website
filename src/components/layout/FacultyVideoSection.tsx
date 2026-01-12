@@ -5,6 +5,7 @@ import { VideoShowcase } from '@/components/ui/VideoShowcase'
 import { BookOpen, Award, Users, Star, Play, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useState } from 'react'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 // Video data structure - easily configurable
 interface FacultyVideo {
@@ -257,10 +258,10 @@ export function FacultyVideoSection() {
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
-                onClick={() => window.open('tel:+918826444334', '_self')}
+                onClick={() => window.open(getPhoneLink(), '_self')}
               >
                 <Zap className="w-5 h-5 mr-2" />
-                Call Now: +91 88264 44334
+                Call Now: {getDisplayPhone()}
               </Button>
             </div>
 

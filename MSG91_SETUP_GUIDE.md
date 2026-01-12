@@ -288,7 +288,7 @@ vercel env add MSG91_WHATSAPP_TEMPLATE_ID production
 vercel env add MSG91_WHATSAPP_NUMBER production
 
 # When prompted, paste your WhatsApp integrated number
-# Example: +919876543210
+# Example: +918826444334
 
 # Add Sender ID (optional)
 vercel env add MSG91_SENDER_ID production

@@ -1,9 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useSignIn, useClerk } from '@clerk/nextjs'
-import { MessageCircle, Phone, Loader2, Check, Clock, AlertCircle } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/navigation'
+import { Phone, Loader2, Check, Clock, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import {
+  sendOTP,
+  verifyOTP,
+  cleanupRecaptcha,
+  formatPhoneNumber,
+} from '@/lib/firebase/phone-auth'
 
 interface PhoneSignInProps {
   onSuccess?: () => void
@@ -11,27 +17,68 @@ interface PhoneSignInProps {
 }
 
 type Step = 'phone' | 'otp' | 'signup' | 'success'
-type Channel = 'whatsapp' | 'sms'
 
-export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSignInProps) {
-  const { signIn, setActive } = useSignIn()
-  const clerk = useClerk()
+// Check if Firebase is configured
+const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
+// Fallback component when Firebase is not configured
+function PhoneSignInFallback() {
+  return (
+    <div className="text-center py-8">
+      <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <AlertCircle className="w-8 h-8 text-yellow-600" />
+      </div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Phone Authentication Setup Required
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Phone authentication requires Firebase configuration. Please contact the administrator.
+      </p>
+      <div className="bg-gray-50 rounded-lg p-4 text-left text-sm text-gray-600">
+        <p className="font-medium mb-2">For administrators:</p>
+        <p>
+          Set the Firebase environment variables (NEXT_PUBLIC_FIREBASE_*) to enable phone authentication.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+// Main Firebase Phone Auth component
+function PhoneSignInWithFirebase({
+  onSuccess,
+  redirectUrl = '/dashboard',
+}: PhoneSignInProps) {
+  const router = useRouter()
   const [step, setStep] = useState<Step>('phone')
   const [phone, setPhone] = useState('')
   const [otp, setOtp] = useState('')
-  const [channel, setChannel] = useState<Channel>('whatsapp')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [resendCountdown, setResendCountdown] = useState(0)
-  const [remainingAttempts, setRemainingAttempts] = useState<number | null>(null)
 
-  // Signup form state
+  // Signup form state (for new users)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [role, setRole] = useState<'student' | 'parent'>('student')
 
-  // Countdown timer
+  // Store Firebase user after verification
+  const [firebaseUser, setFirebaseUser] = useState<{
+    uid: string
+    phoneNumber: string | null
+  } | null>(null)
+
+  // Ref for reCAPTCHA button
+  const sendOtpButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Cleanup reCAPTCHA on unmount
+  useEffect(() => {
+    return () => {
+      cleanupRecaptcha()
+    }
+  }, [])
+
+  // Countdown timer for resend
   useEffect(() => {
     if (resendCountdown > 0) {
       const timer = setTimeout(() => setResendCountdown((c) => c - 1), 1000)
@@ -51,28 +98,18 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
     setLoading(true)
 
     try {
-      const response = await fetch('/api/auth/phone/send-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, channel, fallbackToSms: true }),
-      })
+      // Send OTP using Firebase
+      const result = await sendOTP(phone, 'send-otp-button')
 
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to send OTP')
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to send OTP')
       }
 
-      // Update channel if fallback occurred
-      if (data.channel && data.channel !== channel) {
-        setChannel(data.channel)
-      }
-
-      setRemainingAttempts(data.remainingAttempts)
       setResendCountdown(60)
       setStep('otp')
-    } catch (err: any) {
-      setError(err.message || 'Failed to send OTP')
+    } catch (err: unknown) {
+      const error = err as Error
+      setError(error.message || 'Failed to send OTP')
     } finally {
       setLoading(false)
     }
@@ -83,33 +120,41 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
     setLoading(true)
 
     try {
-      const response = await fetch('/api/auth/phone/verify', {
+      // Verify OTP using Firebase
+      const result = await verifyOTP(otp)
+
+      if (!result.success) {
+        throw new Error(result.error || 'Invalid OTP')
+      }
+
+      // Store Firebase user data
+      setFirebaseUser(result.user || null)
+
+      // Check if user exists in our database
+      const formattedPhone = formatPhoneNumber(phone)
+      const checkResponse = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, code: otp, channel }),
+        credentials: 'include',
+        body: JSON.stringify({
+          uid: result.user?.uid,
+          phoneNumber: formattedPhone,
+          action: 'check',
+        }),
       })
 
-      const data = await response.json()
+      const checkData = await checkResponse.json()
 
-      if (!response.ok) {
-        if (data.remainingAttempts !== undefined) {
-          setRemainingAttempts(data.remainingAttempts)
-        }
-        throw new Error(data.error || 'Invalid OTP')
-      }
-
-      if (data.userExists && data.signInToken) {
-        // Existing user - sign in with Clerk token
-        await handleClerkSignIn(data.signInToken)
-      } else if (!data.userExists) {
+      if (checkData.userExists) {
+        // Existing user - create session and redirect
+        await createSessionAndRedirect(result.user!)
+      } else {
         // New user - show signup form
         setStep('signup')
-      } else {
-        // Fallback - redirect to sign-in
-        window.location.href = '/sign-in'
       }
-    } catch (err: any) {
-      setError(err.message || 'Verification failed')
+    } catch (err: unknown) {
+      const error = err as Error
+      setError(error.message || 'Verification failed')
     } finally {
       setLoading(false)
     }
@@ -121,14 +166,29 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
       return
     }
 
+    if (!firebaseUser) {
+      setError('Session expired. Please verify your phone again.')
+      setStep('phone')
+      return
+    }
+
     setError('')
     setLoading(true)
 
     try {
-      const response = await fetch('/api/auth/phone/complete-signup', {
+      // Create user and session
+      const response = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, firstName, lastName, role }),
+        credentials: 'include',
+        body: JSON.stringify({
+          uid: firebaseUser.uid,
+          phoneNumber: formatPhoneNumber(phone),
+          firstName,
+          lastName,
+          role,
+          action: 'signup',
+        }),
       })
 
       const data = await response.json()
@@ -137,47 +197,64 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
         throw new Error(data.error || 'Failed to create account')
       }
 
-      if (data.signInToken) {
-        await handleClerkSignIn(data.signInToken)
-      } else {
-        // Token creation failed - redirect to sign-in
-        window.location.href = '/sign-in'
-      }
-    } catch (err: any) {
-      setError(err.message || 'Signup failed')
+      await createSessionAndRedirect(firebaseUser)
+    } catch (err: unknown) {
+      const error = err as Error
+      setError(error.message || 'Signup failed')
     } finally {
       setLoading(false)
     }
   }
 
-  const handleClerkSignIn = async (token: string) => {
+  const createSessionAndRedirect = async (user: {
+    uid: string
+    phoneNumber: string | null
+  }) => {
     try {
-      if (!signIn) {
-        throw new Error('Sign-in not available')
-      }
-
-      const result = await signIn.create({
-        strategy: 'ticket',
-        ticket: token,
+      // Create NextAuth session
+      const response = await fetch('/api/auth/firebase-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          uid: user.uid,
+          phoneNumber: user.phoneNumber,
+          action: 'login',
+        }),
       })
 
-      if (result.status === 'complete' && result.createdSessionId) {
-        await setActive({ session: result.createdSessionId })
-        setStep('success')
+      const data = await response.json()
 
-        setTimeout(() => {
-          if (onSuccess) {
-            onSuccess()
-          } else {
-            window.location.href = redirectUrl
-          }
-        }, 1000)
-      } else {
-        throw new Error('Sign-in incomplete')
+      console.log('[PhoneSignIn] Login response:', {
+        ok: response.ok,
+        status: response.status,
+        data,
+        headers: Object.fromEntries(response.headers.entries()),
+      })
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create session')
       }
-    } catch (err: any) {
-      console.error('Clerk sign-in error:', err)
-      setError('Sign-in failed. Please try again.')
+
+      // Check if cookie was set (won't show httpOnly cookies but shows the request worked)
+      console.log('[PhoneSignIn] Cookies after login:', document.cookie || 'no visible cookies')
+
+      setStep('success')
+
+      // Use hard redirect to ensure cookies are properly picked up
+      // router.push() is a soft navigation that may not refresh cookie state
+      console.log('[PhoneSignIn] Redirecting to:', redirectUrl)
+      setTimeout(() => {
+        if (onSuccess) {
+          onSuccess()
+        } else {
+          // Hard redirect to ensure cookies are included
+          window.location.href = redirectUrl
+        }
+      }, 1500) // Increased delay to ensure cookie is stored
+    } catch (err: unknown) {
+      const error = err as Error
+      setError(error.message || 'Failed to complete sign-in')
       setStep('phone')
     }
   }
@@ -219,7 +296,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               placeholder="Enter your first name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               disabled={loading}
             />
           </div>
@@ -233,7 +310,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               placeholder="Enter your last name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               disabled={loading}
             />
           </div>
@@ -246,7 +323,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
                 onClick={() => setRole('student')}
                 className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors ${
                   role === 'student'
-                    ? 'border-blue-500 bg-blue-50 text-blue-700'
+                    ? 'border-green-500 bg-green-50 text-green-700'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
                 disabled={loading}
@@ -258,7 +335,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
                 onClick={() => setRole('parent')}
                 className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors ${
                   role === 'parent'
-                    ? 'border-blue-500 bg-blue-50 text-blue-700'
+                    ? 'border-green-500 bg-green-50 text-green-700'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
                 disabled={loading}
@@ -272,7 +349,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
             onClick={handleSignup}
             disabled={loading || !firstName.trim()}
             variant="primary"
-            className="w-full"
+            className="w-full bg-green-600 hover:bg-green-700"
           >
             {loading ? (
               <>
@@ -292,24 +369,21 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
     <div className="space-y-6">
       <div className="text-center">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <MessageCircle className="w-8 h-8 text-green-600" />
+          <Phone className="w-8 h-8 text-green-600" />
         </div>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
           {step === 'phone' ? 'Sign In with Phone' : 'Enter Verification Code'}
         </h2>
         <p className="text-gray-600">
           {step === 'phone'
-            ? 'Get OTP on WhatsApp for quick login'
-            : `Enter the 6-digit code sent to your ${channel === 'whatsapp' ? 'WhatsApp' : 'phone'}`}
+            ? 'Get OTP on your phone for quick login'
+            : 'Enter the 6-digit code sent to your phone'}
         </p>
       </div>
 
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
           <p>{error}</p>
-          {remainingAttempts !== null && remainingAttempts <= 2 && (
-            <p className="text-sm mt-1">Remaining attempts: {remainingAttempts}</p>
-          )}
         </div>
       )}
 
@@ -334,37 +408,9 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
             <p className="mt-1 text-xs text-gray-500">Enter your 10-digit mobile number</p>
           </div>
 
-          {/* Channel selector */}
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => setChannel('whatsapp')}
-              className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border-2 font-medium text-sm transition-colors ${
-                channel === 'whatsapp'
-                  ? 'border-green-500 bg-green-50 text-green-700'
-                  : 'border-gray-200 text-gray-600 hover:border-gray-300'
-              }`}
-              disabled={loading}
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
-            </button>
-            <button
-              type="button"
-              onClick={() => setChannel('sms')}
-              className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border-2 font-medium text-sm transition-colors ${
-                channel === 'sms'
-                  ? 'border-blue-500 bg-blue-50 text-blue-700'
-                  : 'border-gray-200 text-gray-600 hover:border-gray-300'
-              }`}
-              disabled={loading}
-            >
-              <Phone className="w-4 h-4" />
-              SMS
-            </button>
-          </div>
-
           <Button
+            id="send-otp-button"
+            ref={sendOtpButtonRef}
             onClick={handleSendOTP}
             disabled={loading || phone.length !== 10}
             variant="primary"
@@ -377,11 +423,15 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
               </>
             ) : (
               <>
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Send OTP via {channel === 'whatsapp' ? 'WhatsApp' : 'SMS'}
+                <Phone className="w-4 h-4 mr-2" />
+                Send OTP
               </>
             )}
           </Button>
+
+          <p className="text-xs text-center text-gray-500">
+            Free OTP - no charges for verification
+          </p>
         </div>
       ) : (
         <div className="space-y-4">
@@ -424,6 +474,7 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
                 setStep('phone')
                 setOtp('')
                 setError('')
+                cleanupRecaptcha()
               }}
               className="flex-1 text-sm text-gray-600 hover:text-gray-900 py-2"
               disabled={loading}
@@ -452,14 +503,23 @@ export function PhoneSignIn({ onSuccess, redirectUrl = '/dashboard' }: PhoneSign
 
       <div className="text-xs text-center text-gray-500">
         By continuing, you agree to our{' '}
-        <a href="/terms" className="text-blue-600 hover:underline">
+        <a href="/terms" className="text-green-600 hover:underline">
           Terms of Service
         </a>{' '}
         and{' '}
-        <a href="/privacy" className="text-blue-600 hover:underline">
+        <a href="/privacy" className="text-green-600 hover:underline">
           Privacy Policy
         </a>
       </div>
     </div>
   )
+}
+
+// Exported component that conditionally renders based on Firebase configuration
+export function PhoneSignIn(props: PhoneSignInProps) {
+  if (!isFirebaseConfigured) {
+    return <PhoneSignInFallback />
+  }
+
+  return <PhoneSignInWithFirebase {...props} />
 }

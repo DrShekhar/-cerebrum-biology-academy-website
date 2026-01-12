@@ -12,6 +12,8 @@
  * - Language code must match template creation language
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 // ============================================
 // TEMPLATE DEFINITIONS
 // ============================================
@@ -143,11 +145,11 @@ Let's make your MBBS dream a reality!`,
 - Fee: Rs 15,000
 
 Book a FREE demo: Reply DEMO
-Talk to counselor: +91-88264-44334`,
+Talk to counselor: ${CONTACT_INFO.phone.display.hyphenated.primary}`,
     variables: [],
     buttons: [
       { type: 'QUICK_REPLY' as const, text: 'DEMO' },
-      { type: 'PHONE_NUMBER' as const, text: 'Call Us', phoneNumber: '+918826444334' },
+      { type: 'PHONE_NUMBER' as const, text: 'Call Us', phoneNumber: CONTACT_INFO.phone.primary },
     ],
   },
 
@@ -246,7 +248,7 @@ What to prepare:
 - Basic biology doubts
 - Stable internet connection
 
-For support: +91-88264-44334
+For support: ${CONTACT_INFO.phone.display.hyphenated.primary}
 
 See you in class!`,
     variables: ['student_name', 'demo_date', 'demo_time'],
@@ -300,7 +302,7 @@ What's Next:
 2. Join your first class
 3. Meet your mentor
 
-Student Support: +91-88264-44334
+Student Support: ${CONTACT_INFO.phone.display.hyphenated.primary}
 
 Let's crack NEET together!`,
     variables: [
@@ -331,7 +333,7 @@ Course: {{5}}
 
 Receipt: {{6}}
 
-If you have any questions about your payment, contact us at +91-88264-44334.
+If you have any questions about your payment, contact us at ${CONTACT_INFO.phone.display.hyphenated.primary}.
 
 Thank you for choosing Cerebrum Biology Academy!`,
     variables: [
@@ -363,7 +365,7 @@ Pay Now: {{5}}
 
 If you've already paid, please ignore this message.
 
-Need help? Call: +91-88264-44334
+Need help? Call: ${CONTACT_INFO.phone.display.hyphenated.primary}
 
 Don't let anything stop your NEET preparation!`,
     variables: ['student_name', 'amount_due', 'due_date', 'course_name', 'payment_link'],

@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface WhatsAppMessage {
   phone: string
   message: string
@@ -60,7 +62,7 @@ export class WhatsAppService {
 • Basic biology questions
 • NEET preparation doubts
 
-For support: +91-88264-44334
+For support: ${CONTACT_INFO.phone.display.hyphenated.primary}
 Website: cerebrumbiologyacademy.com
 
 See you in class! 🌟`
@@ -81,7 +83,7 @@ See you in class! 🌟`
 • Study materials: Available now
 • Personal mentor assigned
 
-💬 Student Support: +91-88264-44334
+💬 Student Support: ${CONTACT_INFO.phone.display.hyphenated.primary}
 📱 Download our app: [link]
 
 Ready to crack NEET? Let's go! 🏆`
@@ -99,7 +101,7 @@ Hi ${studentName}! Your installment is due soon:
 🎯 Course: Continue your NEET preparation
 
 💳 Pay now: [payment_link]
-📞 Need help? Call: +91-88264-44334
+📞 Need help? Call: ${CONTACT_INFO.phone.display.hyphenated.primary}
 
 Don't let anything stop your medical college dream! 🩺✨`
 
@@ -198,7 +200,7 @@ Keep going, future doctor! 🩺🌟`
   private async getAllStudentPhones(): Promise<string[]> {
     // This would integrate with your database
     // For MVP, return demo data
-    return ['+918826444334', '+919876543211', '+919876543212']
+    return [CONTACT_INFO.phone.primary, CONTACT_INFO.phone.secondary]
   }
 
   async getMediaUrl(mediaId: string): Promise<string> {

@@ -6,6 +6,9 @@
 'use client'
 
 import React, { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
@@ -329,7 +332,7 @@ export function EnhancedVoiceChat({
       emotionalTone,
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     onMessage?.(userMessage)
 
     try {
@@ -359,7 +362,7 @@ export function EnhancedVoiceChat({
         timestamp: new Date(),
       }
 
-      setMessages((prev) => [...prev, assistantMessage])
+      setMessages((prev) => [...prev, assistantMessage].slice(-MAX_MESSAGES))
       onMessage?.(assistantMessage)
 
       // Auto-play Shekhar Sir's response
@@ -377,7 +380,7 @@ export function EnhancedVoiceChat({
         timestamp: new Date(),
       }
 
-      setMessages((prev) => [...prev, errorMessage])
+      setMessages((prev) => [...prev, errorMessage].slice(-MAX_MESSAGES))
     } finally {
       setIsProcessing(false)
     }

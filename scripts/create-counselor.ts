@@ -24,7 +24,7 @@ async function main() {
   // Gather counselor details
   const name = await question('Enter counselor full name: ')
   const email = await question('Enter counselor email: ')
-  const phone = await question('Enter counselor phone (with country code, e.g., +919876543210): ')
+  const phone = await question('Enter counselor phone (with country code, e.g., +918826444334): ')
   const password = await question('Enter password (will be securely hashed): ')
 
   console.log()

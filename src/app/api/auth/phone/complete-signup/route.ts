@@ -17,6 +17,7 @@ const signupSchema = z.object({
   lastName: z.string().max(50).optional(),
   email: z.string().email().optional(),
   role: z.enum(['student', 'parent']).default('student'),
+  channel: z.enum(['whatsapp', 'sms']).default('sms'),
 })
 
 export async function POST(request: NextRequest) {
@@ -35,7 +36,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { phone, firstName, lastName, email, role } = validation.data
+    const { phone, firstName, lastName, email, role, channel } = validation.data
 
     // Format phone for India
     const formattedPhone = phone.startsWith('91') ? `+${phone}` : `+91${phone}`
@@ -67,7 +68,8 @@ export async function POST(request: NextRequest) {
       skipPasswordRequirement: true, // Phone-only auth
       publicMetadata: {
         role,
-        registrationMethod: 'phone_otp',
+        registrationMethod: channel === 'whatsapp' ? 'whatsapp_otp' : 'phone_otp',
+        registrationChannel: channel,
         registeredAt: new Date().toISOString(),
       },
     })

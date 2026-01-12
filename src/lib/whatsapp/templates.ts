@@ -11,6 +11,8 @@
  * - Enrollment status messages
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 export class WhatsAppTemplates {
   /**
    * Welcome/Help Message
@@ -80,7 +82,7 @@ Need help with specific topics? Just ask! 💪`
 Our expert team is here to help you!
 
 *Contact Information:*
-📱 Phone: +91 88264 44334
+📱 Phone: ${CONTACT_INFO.phone.display.primary}
 📧 Email: info@cerebrumbiologyacademy.com
 🌐 Website: cerebrumbiologyacademy.com
 
@@ -135,7 +137,7 @@ You're not enrolled in any course currently, but I can still help!
 *Next Steps:*
 📱 Book FREE Demo: Send *DEMO*
 🌐 Explore Courses: ${siteUrl}/courses
-📞 Call Us: +91 88264 44334
+📞 Call Us: ${CONTACT_INFO.phone.display.primary}
 
 Ready to crack NEET? Let's start! 🚀`
   }
@@ -161,7 +163,7 @@ To ensure quality responses for all students, please wait a minute before sendin
 
 Your limit will reset in 60 seconds! ⏰
 
-For urgent help, call: +91 88264 44334`
+For urgent help, call: ${CONTACT_INFO.phone.display.primary}`
   }
 
   /**
@@ -178,7 +180,7 @@ I encountered an error while processing your request.
 3️⃣ Check your internet connection
 
 *Still not working?*
-📞 Call us: +91 88264 44334
+📞 Call us: ${CONTACT_INFO.phone.display.primary}
 📧 Email: info@cerebrumbiologyacademy.com
 
 Our team has been notified and will fix this soon!
@@ -377,7 +379,7 @@ Your course installment is due soon.
 
 *Pay Now:*
 🔗 [Payment Link]
-📞 Call: +91 88264 44334
+📞 Call: ${CONTACT_INFO.phone.display.primary}
 
 *Why Pay On Time?*
 ✓ Uninterrupted access

@@ -4,10 +4,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { PrismaClient } from '@/generated/prisma/index.js'
+import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth/config'
-
-const prisma = new PrismaClient()
 
 export async function GET(
   request: NextRequest,

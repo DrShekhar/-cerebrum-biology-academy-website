@@ -20,9 +20,10 @@ import {
 } from './queueService'
 import { regenerateWithFeedback } from './contentGenerator'
 import type { ContentGenerationStatus } from '@/generated/prisma'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-// Owner's WhatsApp number for approval messages
-const OWNER_PHONE = process.env.OWNER_WHATSAPP_NUMBER || '919999744334'
+// Owner's WhatsApp number for approval messages (without + prefix for wa.me links)
+const OWNER_PHONE = process.env.OWNER_WHATSAPP_NUMBER || CONTACT_INFO.phone.owner.replace('+', '')
 
 // Maximum preview length for WhatsApp message
 const MAX_PREVIEW_LENGTH = 500

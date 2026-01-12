@@ -4,6 +4,7 @@
  */
 
 import { CountryCode, COUNTRIES } from './countries'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export type MessageType = 'default' | 'booking' | 'courseEnquiry' | 'exam'
 
@@ -131,7 +132,7 @@ export function getCountryWhatsAppMessage(
 export function buildCountryWhatsAppUrl(
   countryCode: string,
   messageType: MessageType = 'default',
-  phoneNumber: string = '918826444334' // Default Cerebrum WhatsApp number
+  phoneNumber: string = CONTACT_INFO.whatsapp.number // Default Cerebrum WhatsApp number
 ): string {
   const message = getCountryWhatsAppMessage(countryCode, messageType)
   const encodedMessage = encodeURIComponent(message)

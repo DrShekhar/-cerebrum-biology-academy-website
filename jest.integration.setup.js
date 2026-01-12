@@ -63,7 +63,7 @@ global.createTestUser = () => ({
   id: 'test_user_123',
   name: 'Test Student',
   email: 'test@cerebrumbiologyacademy.com',
-  phone: '+919876543210',
+  phone: '+918826444334',
   class: 'class-11',
   enrolledCourses: []
 })
@@ -166,7 +166,7 @@ global.TestDataFactory = {
     id: 'test_user_' + Math.random().toString(36).substr(2, 9),
     name: 'Test Student',
     email: 'test+' + Math.random().toString(36).substr(2, 5) + '@cerebrumbiologyacademy.com',
-    phone: '+919876543210',
+    phone: '+918826444334',
     class: 'class-11',
     ...overrides
   }),

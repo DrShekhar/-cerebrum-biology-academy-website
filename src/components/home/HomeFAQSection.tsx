@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Lightweight scroll animation hook (replaces framer-motion)
 function useScrollAnimation(threshold = 0.1) {
@@ -60,7 +61,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'Is there a free demo class available?',
     answer:
-      'Yes! We offer a FREE 45-minute demo class with our AIIMS expert faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call +91-88264-44334.',
+      `Yes! We offer a FREE 45-minute demo class with our AIIMS expert faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call ${CONTACT_INFO.phone.display.primary}.`,
   },
   {
     question: 'What study materials are provided?',

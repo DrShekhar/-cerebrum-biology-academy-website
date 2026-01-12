@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Globe,
   MapPin,
@@ -217,7 +218,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                     Book Demo
                   </Button>
                 </Link>
-                <a href="tel:+918826444334">
+                <a href={getPhoneLink()}>
                   <Button
                     variant="outline"
                     size="lg"
@@ -831,7 +832,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <span className="truncate">Book Demo</span>
                 </Button>
               </Link>
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
+              <a href={getPhoneLink()} className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
@@ -846,7 +847,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             <div className="text-sm opacity-80">
               <p>
                 <Phone className="w-4 h-4 inline mr-1" />
-                +91 8826444334 | Available 8 AM - 10 PM IST
+                {getDisplayPhone()} | Available 8 AM - 10 PM IST
               </p>
             </div>
           </motion.div>

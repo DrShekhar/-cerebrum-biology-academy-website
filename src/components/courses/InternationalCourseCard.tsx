@@ -6,6 +6,7 @@ import type { Course } from '@/lib/international/courses'
 import type { CountryConfig } from '@/lib/international/countries'
 import { formatPrice } from '@/lib/international/countries'
 import { cn } from '@/lib/utils'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface InternationalCourseCardProps {
   course: Course
@@ -151,7 +152,7 @@ export function InternationalCourseCard({
             Details
           </Link>
           <a
-            href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+            href={`https://wa.me/${CONTACT_INFO.whatsapp.primary}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-white bg-green-500 hover:bg-green-600 rounded-lg transition-colors"

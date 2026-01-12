@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Phone,
   ArrowRight,
@@ -81,7 +82,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
     name: 'Cerebrum Biology Academy',
     description: data.metaDescription,
     url: `${baseUrl}/${data.slug}`,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     founder: {
@@ -160,11 +161,11 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:+918826444334"
+                  href={getPhoneLink()}
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  {data.secondaryCTA || 'Call: 88264-44334'}
+                  {data.secondaryCTA || `Call: ${getDisplayPhone()}`}
                 </a>
               </div>
             </div>
@@ -342,7 +343,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
                 Book Free Demo Class
               </Link>
               <a
-                href="tel:+918826444334"
+                href={getPhoneLink()}
                 className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
               >
                 <Phone className="mr-2 h-5 w-5" />

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import { razorpayService } from '@/lib/payments/razorpay'
 import { useAnalytics } from '@/hooks/useAnalytics'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface Course {
   id: string
@@ -180,7 +181,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
         },
         body: JSON.stringify({
           phone,
-          message: `🎉 Welcome to Cerebrum Biology Academy! Your enrollment for ${courseName} is confirmed. You'll receive login details shortly. For support: +91-88264-44334`,
+          message: `🎉 Welcome to Cerebrum Biology Academy! Your enrollment for ${courseName} is confirmed. You'll receive login details shortly. For support: ${CONTACT_INFO.phone.display.primary}`,
         }),
       })
     } catch (error) {

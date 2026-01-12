@@ -9,6 +9,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { processScheduledNurturing, cleanupFollowupQueue } from '@/lib/automation/leadNurturing'
+import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 
 // Verify the request is from Vercel Cron
 function verifyCronRequest(request: NextRequest): boolean {
@@ -42,6 +43,12 @@ export async function GET(request: NextRequest) {
     // Process scheduled follow-ups
     const stats = await processScheduledNurturing()
 
+    // Process WhatsApp drip sequences
+    const dripStats = await whatsappDripService.processScheduledDrips()
+
+    // Process demo reminders (24h, 1h, 15m before)
+    const reminderStats = await whatsappDripService.processDemoReminders()
+
     // Run cleanup once a day (check if it's midnight hour)
     const currentHour = new Date().getHours()
     let cleanupCount = 0
@@ -55,6 +62,8 @@ export async function GET(request: NextRequest) {
       success: true,
       message: 'Cron job completed',
       stats,
+      dripStats,
+      reminderStats,
       cleanupCount,
       duration: `${duration}ms`,
       timestamp: new Date().toISOString(),

@@ -350,7 +350,7 @@ const template = {
 const lead = {
   studentName: 'John Doe',
   email: 'john@example.com',
-  phone: '+919876543210',
+  phone: '+918826444334',
   stage: 'NEW_LEAD',
   priority: 'HOT',
 }

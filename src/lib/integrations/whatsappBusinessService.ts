@@ -3,6 +3,8 @@
  * Handles messaging, templates, and automation for student engagement
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface WhatsAppMessage {
   to: string
   type: 'text' | 'template' | 'interactive' | 'document' | 'image'
@@ -466,14 +468,14 @@ export class WhatsAppBusinessService {
     if (lowerMessage.includes('fee') || lowerMessage.includes('payment')) {
       return this.sendTextMessage(
         from,
-        'For fee-related queries, please contact our admission team at +91-88264-44334 or visit our office.'
+        `For fee-related queries, please contact our admission team at ${CONTACT_INFO.phone.display.hyphenated.primary} or visit our office.`
       )
     }
 
     // Default response
     return this.sendTextMessage(
       from,
-      'Thank you for contacting Cerebrum Biology Academy! Our team will get back to you shortly. For immediate assistance, call +91-88264-44334.'
+      `Thank you for contacting Cerebrum Biology Academy! Our team will get back to you shortly. For immediate assistance, call ${CONTACT_INFO.phone.display.hyphenated.primary}.`
     )
   }
 
@@ -501,7 +503,7 @@ export class WhatsAppBusinessService {
       case 'physics_doubt':
         return this.sendTextMessage(
           from,
-          '👨‍🏫 Our expert teachers are available for doubt clearing!\n\n🕐 Timings: 10 AM - 8 PM\n📱 WhatsApp: +91-88264-44334\n💻 Live Sessions: Daily 7-8 PM\n\nSend your doubt with the chapter name for quick resolution.'
+          `👨‍🏫 Our expert teachers are available for doubt clearing!\n\n🕐 Timings: 10 AM - 8 PM\n📱 WhatsApp: ${CONTACT_INFO.phone.display.hyphenated.primary}\n💻 Live Sessions: Daily 7-8 PM\n\nSend your doubt with the chapter name for quick resolution.`
         )
 
       default:

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { MessageCircle, X, Send, Sparkles } from 'lucide-react'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface BlogWhatsAppQueryProps {
   blogTitle: string
@@ -13,7 +14,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
   const [isOpen, setIsOpen] = useState(false)
   const [customQuery, setCustomQuery] = useState('')
 
-  const whatsappNumber = '918826444334'
+  const whatsappNumber = CONTACT_INFO.whatsapp.primary
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cerebrumbiologyacademy.com'
 
   const quickQueries = [

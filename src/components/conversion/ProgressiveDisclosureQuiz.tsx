@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ChevronRight, Sparkles, GraduationCap } from 'lucide-react'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface ProgressiveDisclosureQuizProps {
   onComplete?: (result: QuizResult) => void
@@ -204,7 +205,7 @@ export function ProgressiveDisclosureQuiz({
 
             <div className="flex gap-2">
               <button
-                onClick={() => window.open('tel:+918826444334', '_self')}
+                onClick={() => window.open(getPhoneLink(), '_self')}
                 className="flex-1 py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm"
               >
                 📞 Call Expert

@@ -49,7 +49,7 @@ import { downloadCalendarEvent, addToGoogleCalendar } from '@/lib/calendar/calen
 downloadCalendarEvent({
   studentName: 'John Doe',
   email: 'john@example.com',
-  phone: '+919876543210',
+  phone: '+918826444334',
   preferredDate: '2025-02-01',
   preferredTime: '10:00 AM - 11:00 AM',
   zoomJoinUrl: 'https://zoom.us/j/123456789',
@@ -97,7 +97,7 @@ const response = await fetch('/api/notifications/sms', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    phone: '+919876543210',
+    phone: '+918826444334',
     name: 'John Doe',
     date: '2025-02-01',
     time: '10:00 AM - 11:00 AM',
@@ -120,7 +120,7 @@ Send SMS notification.
 
 ```json
 {
-  "phone": "+919876543210",
+  "phone": "+918826444334",
   "name": "John Doe",
   "date": "2025-02-01",
   "time": "10:00 AM - 11:00 AM",
@@ -649,7 +649,7 @@ enum DemoBookingStatus {
 curl -X POST http://localhost:3000/api/notifications/sms \
   -H "Content-Type: application/json" \
   -d '{
-    "phone": "+919876543210",
+    "phone": "+918826444334",
     "name": "Test User",
     "date": "2025-02-01",
     "time": "10:00 AM - 11:00 AM",

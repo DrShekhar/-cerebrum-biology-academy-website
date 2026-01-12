@@ -1,11 +1,22 @@
 'use client'
 
-import { useState, useEffect, memo } from 'react'
-import { BookOpen } from 'lucide-react'
+import { useState, useEffect, memo, Suspense } from 'react'
+import { BookOpen, GraduationCap, Brain, Dna, Heart, Microscope } from 'lucide-react'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
 
-// Dynamic loaders for all blog illustrations - loaded on demand
+// Category-based icons for immediate LCP render
+const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  'exam-tips': GraduationCap,
+  'study-strategy': Brain,
+  'chapter-notes': Dna,
+  'human-physiology': Heart,
+  'botany': Microscope,
+  'zoology': Microscope,
+  default: BookOpen,
+}
+
+// Dynamic loaders for all blog illustrations - loaded on demand AFTER initial render
 const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationComponent }>> = {
   'kota-vs-online-neet-coaching-2025': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
@@ -124,17 +135,23 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
 interface BlogIllustrationLoaderProps {
   slug: string
   neetChapter?: string
+  category?: string
   className?: string
 }
 
-// Skeleton loader matching the featured image dimensions
-function IllustrationSkeleton() {
+// Static fallback - renders IMMEDIATELY for fast LCP
+// This is the LCP element - it renders during SSR/initial hydration
+function StaticFallback({ neetChapter, category }: { neetChapter?: string; category?: string }) {
+  const IconComponent = categoryIcons[category || 'default'] || categoryIcons.default
   return (
-    <div className="flex flex-col items-center justify-center text-slate-400 animate-pulse">
-      <div className="w-20 h-20 rounded-2xl bg-white/60 shadow-lg flex items-center justify-center mb-4">
-        <div className="w-10 h-10 bg-slate-200 rounded-lg" />
+    <div className="flex flex-col items-center justify-center text-slate-500 w-full h-full min-h-[200px]">
+      <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/90 shadow-xl flex items-center justify-center mb-4 backdrop-blur-sm border border-white/50">
+        <IconComponent className="w-12 h-12 md:w-16 md:h-16 text-blue-600" />
       </div>
-      <div className="w-24 h-4 bg-slate-200 rounded" />
+      <span className="text-base md:text-lg font-semibold text-slate-600 text-center px-4">
+        {neetChapter || 'NEET Biology'}
+      </span>
+      <span className="text-sm text-slate-400 mt-1">Cerebrum Academy</span>
     </div>
   )
 }
@@ -142,42 +159,51 @@ function IllustrationSkeleton() {
 export const BlogIllustrationLoader = memo(function BlogIllustrationLoader({
   slug,
   neetChapter,
+  category,
   className = 'w-full h-full max-w-4xl drop-shadow-sm',
 }: BlogIllustrationLoaderProps) {
   const [Illustration, setIllustration] = useState<IllustrationComponent | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [hasLoaded, setHasLoaded] = useState(false)
 
+  // Load illustration AFTER initial render (non-blocking for LCP)
   useEffect(() => {
+    // Skip if no loader exists for this slug
     const loader = illustrationLoaders[slug]
-    if (loader) {
+    if (!loader) {
+      setHasLoaded(true)
+      return
+    }
+
+    // Use requestIdleCallback to load after main thread is free
+    const loadIllustration = () => {
       loader()
         .then((module) => {
           setIllustration(() => module.default)
-          setIsLoading(false)
+          setHasLoaded(true)
         })
         .catch(() => {
-          setIsLoading(false)
+          setHasLoaded(true)
         })
+    }
+
+    // Defer loading to not block LCP
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadIllustration, { timeout: 2000 })
     } else {
-      setIsLoading(false)
+      setTimeout(loadIllustration, 100)
     }
   }, [slug])
 
-  if (isLoading) {
-    return <IllustrationSkeleton />
-  }
-
-  if (Illustration) {
-    return <Illustration className={className} animate={true} />
-  }
-
-  // Fallback
-  return (
-    <div className="flex flex-col items-center justify-center text-slate-400">
-      <div className="w-20 h-20 rounded-2xl bg-white/80 shadow-lg flex items-center justify-center mb-4">
-        <BookOpen className="w-10 h-10 text-blue-500" />
+  // If illustration loaded, show it with fade-in
+  if (Illustration && hasLoaded) {
+    return (
+      <div className="animate-fade-in">
+        <Illustration className={className} animate={true} />
       </div>
-      <span className="text-sm font-medium text-slate-500">{neetChapter || 'NEET Biology'}</span>
-    </div>
-  )
+    )
+  }
+
+  // CRITICAL: Render static fallback IMMEDIATELY (this is the LCP element)
+  // No loading state, no skeleton - just render content right away
+  return <StaticFallback neetChapter={neetChapter} category={category} />
 })

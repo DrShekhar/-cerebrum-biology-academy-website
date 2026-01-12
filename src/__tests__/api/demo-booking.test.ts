@@ -33,7 +33,7 @@ describe('/api/demo-booking', () => {
   const validBookingData = {
     name: 'John Doe',
     email: 'john@example.com',
-    phone: '+919876543210',
+    phone: '+918826444334',
     preferredDate: futureDateStr,
     preferredTime: '10:00 AM - 11:00 AM',
     courseInterest: ['NEET Biology'],
@@ -60,7 +60,7 @@ describe('/api/demo-booking', () => {
       data: expect.objectContaining({
         name: 'John Doe',
         email: 'john@example.com',
-        phone: '+919876543210',
+        phone: '+918826444334',
       }),
     })
   })

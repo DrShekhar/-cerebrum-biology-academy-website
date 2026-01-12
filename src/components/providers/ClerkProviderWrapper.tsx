@@ -1,28 +1,18 @@
 'use client'
 
-import { ClerkProvider } from '@clerk/nextjs'
 import { ReactNode } from 'react'
 
 /**
- * Conditional Clerk Provider Wrapper
+ * Auth Provider Wrapper
  *
- * Wraps children in ClerkProvider only when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is available.
- * This prevents build failures in CI environments where Clerk keys aren't set.
+ * Previously wrapped children in ClerkProvider, but we've migrated to Firebase Auth.
+ * This component now just passes through children.
  *
- * In production, Clerk is fully functional.
- * In CI/build environments without keys, auth features are disabled but the app still builds.
+ * Keeping this wrapper in place to avoid updating all import paths.
+ * The actual auth is handled by Firebase Phone Auth + JWT sessions.
  */
 export function ClerkProviderWrapper({ children }: { children: ReactNode }) {
-  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-
-  // If Clerk key is not configured, render children without Clerk
-  // This allows builds to succeed in CI environments
-  if (!clerkPublishableKey) {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('[ClerkProviderWrapper] NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY not set - auth disabled')
-    }
-    return <>{children}</>
-  }
-
-  return <ClerkProvider>{children}</ClerkProvider>
+  // Firebase Auth is now used instead of Clerk
+  // This wrapper is kept for backward compatibility with import paths
+  return <>{children}</>
 }

@@ -115,7 +115,7 @@ class WhatsAppBotTester {
                 }
               }],
               messages: [{
-                from: '919876543210',
+                from: '918826444334',
                 id: 'test_msg_' + Date.now(),
                 timestamp: Date.now().toString(),
                 type: 'text',
@@ -178,7 +178,7 @@ class WhatsAppBotTester {
               metadata: { phone_number_id: '123456789' },
               contacts: [{ profile: { name: 'Test Student' } }],
               messages: [{
-                from: '919876543210',
+                from: '918826444334',
                 id: 'test_cmd_' + Date.now() + '_' + command,
                 timestamp: Date.now().toString(),
                 type: 'text',
@@ -226,7 +226,7 @@ class WhatsAppBotTester {
               metadata: { phone_number_id: '123456789' },
               contacts: [{ profile: { name: 'Test Student' } }],
               messages: [{
-                from: '919876543211', // Different number to avoid rate limit
+                from: '918826444335', // Different number to avoid rate limit
                 id: 'test_ai_' + Date.now(),
                 timestamp: Date.now().toString(),
                 type: 'text',
@@ -266,7 +266,7 @@ class WhatsAppBotTester {
     try {
       console.log(`\n📝 Testing: ${testName}`)
 
-      const phoneNumber = '919876543212' // Unique number for rate limit test
+      const phoneNumber = '918826444336' // Unique number for rate limit test
       let successCount = 0
       let rateLimitedCount = 0
 
@@ -331,7 +331,7 @@ class WhatsAppBotTester {
     try {
       console.log(`\n📝 Testing: ${testName}`)
 
-      const phoneNumber = '919876543213'
+      const phoneNumber = '918826444337'
 
       // Step 1: Initiate demo booking
       await this.sendMessage(phoneNumber, 'DEMO')

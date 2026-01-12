@@ -4,9 +4,10 @@ import { useSafeUser } from '@/hooks/useSafeClerk'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Owner phone number - only this number gets multi-role access
-const OWNER_PHONE = '+919999744334'
+const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 interface RoleOption {
   id: string

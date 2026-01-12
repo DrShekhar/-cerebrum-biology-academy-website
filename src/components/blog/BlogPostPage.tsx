@@ -426,6 +426,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   <BlogIllustrationLoader
                     slug={meta.slug}
                     neetChapter={meta.neetChapter}
+                    category={category?.slug}
                     className="w-full h-full max-w-4xl drop-shadow-sm"
                   />
                 </div>

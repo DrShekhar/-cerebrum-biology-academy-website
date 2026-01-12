@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   GraduationCap,
   Clock,
@@ -786,10 +787,10 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                 <PremiumButton
                   variant="medical"
                   size="lg"
-                  onClick={() => window.open('tel:+918826444334', '_self')}
+                  onClick={() => window.open(getPhoneLink(), '_self')}
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
                 >
-                  Call Now: +91 88264 44334
+                  Call Now: {getDisplayPhone()}
                 </PremiumButton>
               </div>
             </PremiumCard>

@@ -11,7 +11,7 @@
 class WhatsAppAutomationTester {
   constructor() {
     this.baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-    this.testPhone = process.env.WHATSAPP_TEST_PHONE || '+919876543210'
+    this.testPhone = process.env.WHATSAPP_TEST_PHONE || '+918826444334'
     this.testResults = []
   }
 

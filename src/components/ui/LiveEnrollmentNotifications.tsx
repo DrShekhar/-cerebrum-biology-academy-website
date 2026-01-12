@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users,
@@ -109,6 +109,7 @@ export function LiveEnrollmentNotifications({
   const [notifications, setNotifications] = useState<EnrollmentNotification[]>([])
   const [isActive, setIsActive] = useState(false)
   const [coordinationActive, setCoordinationActive] = useState(false)
+  const [isTabVisible, setIsTabVisible] = useState(true)
   const popupCoordinator = usePopupCoordinator()
   const [enrollmentStats, setEnrollmentStats] = useState({
     todayEnrollments: 23,
@@ -116,61 +117,66 @@ export function LiveEnrollmentNotifications({
     lastHourBookings: 8,
   })
 
-  // Coordination effect
+  // Refs for cleanup timeouts
+  const notificationTimeoutsRef = useRef<Set<NodeJS.Timeout>>(new Set())
+
+  // Track tab visibility to pause intervals when hidden (saves CPU)
   useEffect(() => {
-    if (!useCoordination) {
-      setCoordinationActive(true)
-      return
+    const handleVisibilityChange = () => {
+      setIsTabVisible(document.visibilityState === 'visible')
     }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [])
 
-    // Check coordination after other popups have had chance to show
-    const coordinationTimer = setTimeout(() => {
-      if (popupCoordinator.canShowPopup('live_enrollment')) {
-        if (popupCoordinator.showPopup('live_enrollment')) {
-          setCoordinationActive(true)
-        }
-      }
-    }, 5000) // 5 second delay to avoid conflicts
-
-    return () => clearTimeout(coordinationTimer)
-  }, [useCoordination, popupCoordinator])
-
+  // Cleanup all notification timeouts on unmount
   useEffect(() => {
-    if (!coordinationActive) return
-
-    // Start notifications after 3 seconds
-    const startTimer = setTimeout(() => {
-      setIsActive(true)
-      generateInitialNotification()
-    }, 3000)
-
-    // Stop after specified duration
-    const stopTimer = setTimeout(
-      () => {
-        setIsActive(false)
-        setNotifications([])
-      },
-      showDuration * 60 * 1000
-    )
-
     return () => {
-      clearTimeout(startTimer)
-      clearTimeout(stopTimer)
+      notificationTimeoutsRef.current.forEach(clearTimeout)
+      notificationTimeoutsRef.current.clear()
     }
-  }, [showDuration])
+  }, [])
 
-  useEffect(() => {
-    if (!isActive) return
+  // Memoized style getter
+  const getNotificationStyle = useCallback((urgency: string) => {
+    switch (urgency) {
+      case 'high':
+        return 'bg-gradient-to-r bg-red-50 border-l-red-500 shadow-red-100'
+      case 'medium':
+        return 'bg-gradient-to-r from-yellow-50 to-amber-50 border-l-yellow-500 shadow-yellow-100'
+      default:
+        return 'bg-gray-50 border-l-blue-500 shadow-blue-100'
+    }
+  }, [])
 
-    const interval = setInterval(() => {
-      generateNotification()
-      updateStats()
-    }, notificationInterval * 1000)
+  // Memoized icon getter
+  const getNotificationIcon = useCallback((type: string) => {
+    switch (type) {
+      case 'enrollment':
+        return <UserPlus className="w-4 h-4 text-green-600" />
+      case 'demo_booking':
+        return <BookOpen className="w-4 h-4 text-blue-600" />
+      case 'course_start':
+        return <Clock className="w-4 h-4 text-orange-600" />
+      case 'batch_filling':
+      case 'limited_seats':
+        return <Zap className="w-4 h-4 text-red-600" />
+      default:
+        return <Users className="w-4 h-4 text-gray-600" />
+    }
+  }, [])
 
-    return () => clearInterval(interval)
-  }, [isActive, notificationInterval])
+  // Memoized stats updater
+  const updateStats = useCallback(() => {
+    setEnrollmentStats((prev) => ({
+      todayEnrollments: prev.todayEnrollments + Math.floor(Math.random() * 2),
+      activeViewers: Math.max(30, prev.activeViewers + Math.floor(Math.random() * 10) - 5),
+      lastHourBookings: prev.lastHourBookings + (Math.random() > 0.7 ? 1 : 0),
+    }))
+  }, [])
 
-  const generateNotification = () => {
+  // Memoized notification generator
+  const generateNotification = useCallback(() => {
     const types: Array<
       'enrollment' | 'demo_booking' | 'course_start' | 'batch_filling' | 'limited_seats'
     > = ['enrollment', 'demo_booking', 'course_start', 'batch_filling', 'limited_seats']
@@ -183,7 +189,6 @@ export function LiveEnrollmentNotifications({
     let urgency: 'low' | 'medium' | 'high' = 'low'
     const seatsLeft = course.capacity - course.enrolled
 
-    // Adjust for realistic urgency
     if (seatsLeft < 10) urgency = 'high'
     else if (seatsLeft < 25) urgency = 'medium'
 
@@ -228,56 +233,67 @@ export function LiveEnrollmentNotifications({
       batchCapacity: course.capacity,
     }
 
-    setNotifications((prev) => {
-      const updated = [notification, ...prev].slice(0, maxVisible)
-      return updated
-    })
+    setNotifications((prev) => [notification, ...prev].slice(0, maxVisible))
 
-    // Auto-remove after 15 seconds
-    setTimeout(() => {
+    // Auto-remove after 15 seconds with tracked timeout
+    const timeoutId = setTimeout(() => {
       setNotifications((prev) => prev.filter((n) => n.id !== notification.id))
+      notificationTimeoutsRef.current.delete(timeoutId)
     }, 15000)
-  }
+    notificationTimeoutsRef.current.add(timeoutId)
+  }, [maxVisible])
 
-  const generateInitialNotification = () => {
-    // Generate first notification immediately
-    generateNotification()
-  }
-
-  const updateStats = () => {
-    setEnrollmentStats((prev) => ({
-      todayEnrollments: prev.todayEnrollments + Math.floor(Math.random() * 2),
-      activeViewers: Math.max(30, prev.activeViewers + Math.floor(Math.random() * 10) - 5),
-      lastHourBookings: prev.lastHourBookings + (Math.random() > 0.7 ? 1 : 0),
-    }))
-  }
-
-  const getNotificationStyle = (urgency: string) => {
-    switch (urgency) {
-      case 'high':
-        return 'bg-gradient-to-r bg-red-50 border-l-red-500 shadow-red-100'
-      case 'medium':
-        return 'bg-gradient-to-r from-yellow-50 to-amber-50 border-l-yellow-500 shadow-yellow-100'
-      default:
-        return 'bg-gray-50 border-l-blue-500 shadow-blue-100'
+  // Coordination effect
+  useEffect(() => {
+    if (!useCoordination) {
+      setCoordinationActive(true)
+      return
     }
-  }
 
-  const getNotificationIcon = (type: string) => {
-    switch (type) {
-      case 'enrollment':
-        return <UserPlus className="w-4 h-4 text-green-600" />
-      case 'demo_booking':
-        return <BookOpen className="w-4 h-4 text-blue-600" />
-      case 'course_start':
-        return <Clock className="w-4 h-4 text-orange-600" />
-      case 'batch_filling':
-      case 'limited_seats':
-        return <Zap className="w-4 h-4 text-red-600" />
-      default:
-        return <Users className="w-4 h-4 text-gray-600" />
+    const coordinationTimer = setTimeout(() => {
+      if (popupCoordinator.canShowPopup('live_enrollment')) {
+        if (popupCoordinator.showPopup('live_enrollment')) {
+          setCoordinationActive(true)
+        }
+      }
+    }, 5000)
+
+    return () => clearTimeout(coordinationTimer)
+  }, [useCoordination, popupCoordinator])
+
+  useEffect(() => {
+    if (!coordinationActive) return
+
+    const startTimer = setTimeout(() => {
+      setIsActive(true)
+      generateNotification()
+    }, 3000)
+
+    const stopTimer = setTimeout(
+      () => {
+        setIsActive(false)
+        setNotifications([])
+      },
+      showDuration * 60 * 1000
+    )
+
+    return () => {
+      clearTimeout(startTimer)
+      clearTimeout(stopTimer)
     }
-  }
+  }, [coordinationActive, showDuration, generateNotification])
+
+  // Main interval - pauses when tab is hidden
+  useEffect(() => {
+    if (!isActive || !isTabVisible) return
+
+    const interval = setInterval(() => {
+      generateNotification()
+      updateStats()
+    }, notificationInterval * 1000)
+
+    return () => clearInterval(interval)
+  }, [isActive, isTabVisible, notificationInterval, generateNotification, updateStats])
 
   if (!isActive) return null
 

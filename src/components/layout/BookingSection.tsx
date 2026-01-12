@@ -6,6 +6,7 @@ import { Phone, Calendar, MessageSquare, MapPin, Clock, Shield, Award, Users } f
 import { motion } from 'framer-motion'
 import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export function BookingSection() {
   const { t } = useI18n()
@@ -43,8 +44,8 @@ export function BookingSection() {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak directly with our counselors',
-      action: 'tel:+918826444334',
-      actionText: '+91 88264 44334',
+      action: getPhoneLink(),
+      actionText: getDisplayPhone(),
       available: 'Mon-Sat: 9 AM - 8 PM',
     },
     {
@@ -231,8 +232,8 @@ export function BookingSection() {
             We typically respond to inquiries within{' '}
             <span className="font-semibold text-blue-600">2 hours</span> during business hours. For
             immediate assistance, please call us directly at{' '}
-            <a href="tel:+918826444334" className="text-blue-600 hover:underline font-semibold">
-              +91 88264 44334
+            <a href={getPhoneLink()} className="text-blue-600 hover:underline font-semibold">
+              {getDisplayPhone()}
             </a>
           </p>
         </motion.div>

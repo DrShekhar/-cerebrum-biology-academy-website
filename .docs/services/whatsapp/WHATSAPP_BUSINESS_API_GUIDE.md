@@ -55,7 +55,7 @@ WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
 WHATSAPP_ACCESS_TOKEN=your_access_token
 WHATSAPP_VERIFY_TOKEN=your_custom_verify_token
 WHATSAPP_WEBHOOK_SECRET=your_webhook_secret_key
-WHATSAPP_TEST_PHONE=+919876543210  # Your test phone number
+WHATSAPP_TEST_PHONE=+918826444334  # Your test phone number
 ```
 
 ### **Step 3: Run Setup Script**
@@ -89,14 +89,14 @@ POST /api/whatsapp/send
 
 // Text Message
 {
-  "phone": "+919876543210",
+  "phone": "+918826444334",
   "message": "Your class starts in 30 minutes!",
   "type": "text"
 }
 
 // Template Message
 {
-  "phone": "+919876543210",
+  "phone": "+918826444334",
   "message": "Welcome template",
   "type": "template",
   "templateName": "student_welcome",
@@ -114,7 +114,7 @@ POST /api/whatsapp/automation
   "action": "trigger_welcome",
   "userData": {
     "userId": "user_123",
-    "phone": "+919876543210",
+    "phone": "+918826444334",
     "name": "John Doe",
     "source": "website_form"
   }
@@ -125,7 +125,7 @@ POST /api/whatsapp/automation
   "action": "trigger_abandoned_cart",
   "userData": {
     "userId": "user_123",
-    "phone": "+919876543210",
+    "phone": "+918826444334",
     "name": "John Doe",
     "courseName": "NEET Dropper Course",
     "amount": 75000,
@@ -143,7 +143,7 @@ POST /api/whatsapp/automation
   "action": "quick_action",
   "userData": {
     "userId": "user_123",
-    "phone": "+919876543210",
+    "phone": "+918826444334",
     "action": "book_counseling" // or other quick actions
   }
 }

@@ -1,5 +1,7 @@
 'use client'
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface LocalBusinessSchemaProps {
   locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'
 }
@@ -14,7 +16,7 @@ const locationData = {
     addressRegion: 'Delhi',
     postalCode: '110085',
     geo: { lat: '28.7143', lng: '77.1117' },
-    phone: '+91-88264-44334',
+    phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-north-delhi',
     image: 'https://cerebrumbiologyacademy.com/locations/rohini-center.jpg',
     priceRange: '₹₹',
@@ -49,7 +51,7 @@ const locationData = {
     addressRegion: 'Haryana',
     postalCode: '122018',
     geo: { lat: '28.4153', lng: '77.0499' },
-    phone: '+91-88264-44334',
+    phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
     image: 'https://cerebrumbiologyacademy.com/locations/gurugram-center.jpg',
     priceRange: '₹₹',
@@ -84,7 +86,7 @@ const locationData = {
     addressRegion: 'Delhi',
     postalCode: '110049',
     geo: { lat: '28.5725', lng: '77.2217' },
-    phone: '+91-88264-44334',
+    phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
     image: 'https://cerebrumbiologyacademy.com/locations/south-extension-center.jpg',
     priceRange: '₹₹',
@@ -119,7 +121,7 @@ const locationData = {
     addressRegion: 'Delhi',
     postalCode: '110016',
     geo: { lat: '28.5597', lng: '77.2089' },
-    phone: '+91-88264-44334',
+    phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
     image: 'https://cerebrumbiologyacademy.com/locations/green-park-center.jpg',
     priceRange: '₹₹',
@@ -154,7 +156,7 @@ const locationData = {
     addressRegion: 'Haryana',
     postalCode: '121007',
     geo: { lat: '28.3870', lng: '77.3070' },
-    phone: '+91-88264-44334',
+    phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
     image: 'https://cerebrumbiologyacademy.com/locations/faridabad-center.jpg',
     priceRange: '₹₹',
@@ -423,7 +425,7 @@ export function AllLocationsSchema() {
       'Best NEET Biology Coaching in Delhi NCR with 4 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     foundingDate: '2018',
     founder: {

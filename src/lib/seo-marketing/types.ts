@@ -433,6 +433,6 @@ export const DEFAULT_CONFIG: SEOMarketingConfig = {
   autoGenerateSlugs: true,
   maxDraftsInQueue: 100,
   urgentExpiryHours: 24,
-  whatsappNumber: '+917980078875',
+  whatsappNumber: '+918826444334',
   whatsappMessage: 'Hi! I found you through your website and would like to know more about your NEET Biology coaching.'
 }

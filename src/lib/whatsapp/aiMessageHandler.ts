@@ -14,6 +14,7 @@ import { SessionManager } from './sessionManager'
 import { DemoBookingService } from './demoBooking'
 import { WhatsAppTemplates } from './templates'
 import { prisma } from '@/lib/prisma'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface MessageData {
   from: string
@@ -224,8 +225,7 @@ export class AIMessageHandler {
 
       // Return fallback response
       return {
-        answer:
-          "I'm having trouble connecting to my knowledge base right now. Please try again in a moment, or call our support team at +91 88264 44334 for immediate help!",
+        answer: `I'm having trouble connecting to my knowledge base right now. Please try again in a moment, or call our support team at ${CONTACT_INFO.phone.display.primary} for immediate help!`,
         relatedTopics: [],
         suggestedQuestions: [],
         ncertReferences: [],

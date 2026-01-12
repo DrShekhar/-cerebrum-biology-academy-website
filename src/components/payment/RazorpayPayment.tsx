@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Shield, CreditCard, Loader2 } from 'lucide-react'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface RazorpayPaymentProps {
   amount: number
@@ -238,7 +239,7 @@ export function RazorpayPayment({
       <div className="text-xs text-gray-600 text-center space-y-1">
         <p>By proceeding with payment, you agree to our Terms of Service and Privacy Policy.</p>
         <p>All payments are processed securely through Razorpay.</p>
-        <p>For payment issues, contact support: +91-88264-44334</p>
+        <p>For payment issues, contact support: {CONTACT_INFO.phone.display.primary}</p>
       </div>
     </div>
   )

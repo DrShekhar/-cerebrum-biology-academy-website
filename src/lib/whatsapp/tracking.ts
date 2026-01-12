@@ -1,4 +1,6 @@
-const WHATSAPP_NUMBER = '918826444334'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
+const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.number
 const API_ENDPOINT = '/api/analytics/whatsapp-click'
 
 export interface WhatsAppTrackingParams {

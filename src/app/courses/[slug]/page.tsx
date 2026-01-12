@@ -35,6 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: newCourse.description,
       keywords: `NEET biology course, ${newCourse.targetClass} class preparation, biology coaching, medical entrance, ${newCourse.name}`,
       authors: [{ name: 'Cerebrum Biology Academy' }],
+      alternates: {
+        canonical: `https://cerebrumbiologyacademy.com/courses/${slug}`,
+      },
       openGraph: {
         title: `${newCourse.name} | Cerebrum Biology Academy`,
         description: newCourse.description,
@@ -58,6 +61,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: oldCourse.seoDescription || oldCourse.description,
       keywords: `NEET biology course, ${oldCourse.targetClass} class preparation, biology coaching, medical entrance`,
       authors: [{ name: 'Cerebrum Biology Academy' }],
+      alternates: {
+        canonical: `https://cerebrumbiologyacademy.com/courses/${slug}`,
+      },
       openGraph: {
         title: oldCourse.seoTitle || oldCourse.title,
         description: oldCourse.seoDescription || oldCourse.description,

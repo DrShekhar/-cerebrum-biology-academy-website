@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Phone,
   MapPin,
@@ -95,7 +96,7 @@ export function ComprehensiveContactPage({
       name: 'South Delhi Center',
       address: 'A-47, First Floor, Lajpat Nagar-II, New Delhi - 110024',
       landmark: 'Near Central Market, Lajpat Nagar',
-      phone: '+91 88264 44334',
+      phone: getDisplayPhone(),
       email: 'southdelhi@cerebrumbiologyacademy.com',
       timings: '7:00 AM - 9:00 PM (Mon-Sun)',
       centerHead: 'Dr. Priya Sharma',

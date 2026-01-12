@@ -39,6 +39,7 @@ import {
   Search,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 // Complete Course Catalog from Screenshots
 const COMPLETE_COURSE_CATALOG = {
@@ -681,11 +682,11 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                   className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 cursor-pointer"
                 >
                   <MessageCircle className="h-6 w-6" />
-                  WhatsApp: 9188264443
+                  WhatsApp: {CONTACT_INFO.whatsapp.primary}
                 </motion.button>
 
                 <motion.a
-                  href="tel:+918826444334"
+                  href={getPhoneLink()}
                   whileHover={{ scale: 1.05 }}
                   className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
                 >

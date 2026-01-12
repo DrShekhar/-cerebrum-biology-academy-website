@@ -15,6 +15,7 @@ import {
   Heart,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -297,7 +298,7 @@ export function InstantEnrollment({
                       value={formData.phone}
                       onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="+91 88264 44334"
+                      placeholder={CONTACT_INFO.phone.display.primary}
                       required
                     />
                   </div>

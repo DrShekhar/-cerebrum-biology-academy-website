@@ -25,6 +25,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { DemoBookingModal } from '@/components/booking/DemoBookingModal'
 import { EnrollmentModal } from '@/components/enrollment/EnrollmentModal'
+import { getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface CourseDetailPageProps {
   course: Course
@@ -473,7 +474,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />
                   <div>
                     <div className="font-medium text-gray-900">Call Us</div>
-                    <div className="text-blue-600">+91 88264 44334</div>
+                    <div className="text-blue-600">{getDisplayPhone()}</div>
                   </div>
                 </div>
                 <div className="flex items-center p-4 bg-green-50 rounded-2xl">

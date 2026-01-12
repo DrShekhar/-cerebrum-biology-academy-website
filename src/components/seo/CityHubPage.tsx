@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   MapPin,
   Users,
@@ -240,7 +241,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     name: `Cerebrum Biology Academy - ${data.cityName}`,
     description: data.metaDescription,
     url: `${baseUrl}/biology-classes-${data.slug}`,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     priceRange: '₹₹',
@@ -405,9 +406,9 @@ export function CityHubPage({ data }: CityHubPageProps) {
 
               {/* Quick Contact */}
               <div className="mt-6 text-slate-400">
-                <a href="tel:+918826444334" className="inline-flex items-center hover:text-white">
+                <a href={getPhoneLink()} className="inline-flex items-center hover:text-white">
                   <Phone className="mr-2 h-4 w-4" />
-                  Call: +91 88264-44334
+                  Call: {getDisplayPhone()}
                 </a>
               </div>
             </div>
@@ -912,11 +913,11 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 WhatsApp Us Now
               </button>
               <a
-                href="tel:+918826444334"
+                href={getPhoneLink()}
                 className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-4 py-3 text-base font-semibold transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call: 88264-44334
+                Call: {getDisplayPhone()}
               </a>
             </div>
 

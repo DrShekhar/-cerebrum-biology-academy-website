@@ -59,7 +59,7 @@ TWILIO_VERIFY_SERVICE_SID="VAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
    http://localhost:3000/auth/whatsapp
    ```
 
-3. Enter your WhatsApp number (e.g., +919876543210)
+3. Enter your WhatsApp number (e.g., +918826444334)
 4. Click **"Send OTP via WhatsApp"**
 5. Check your WhatsApp - you should receive an OTP
 6. Enter the OTP and click **"Verify & Login"**
@@ -71,8 +71,8 @@ TWILIO_VERIFY_SERVICE_SID="VAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 The system auto-formats phone numbers, but you can enter:
 
 - `9876543210` (10 digits - adds +91 automatically)
-- `+919876543210` (with country code)
-- `919876543210` (with country code, no +)
+- `+918826444334` (with country code)
+- `918826444334` (with country code, no +)
 
 ### Testing with Trial Account
 

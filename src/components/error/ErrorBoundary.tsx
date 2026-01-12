@@ -4,6 +4,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { Button } from '@/components/ui/Button'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
 import { logError } from '@/lib/errors'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface Props {
   children: ReactNode
@@ -280,8 +281,8 @@ function ErrorFallback({
               support@cerebrumbiologyacademy.com
             </a>{' '}
             or call{' '}
-            <a href="tel:+918826444334" className="text-blue-600 hover:underline">
-              +91 88264 44334
+            <a href={getPhoneLink()} className="text-blue-600 hover:underline">
+              {getDisplayPhone()}
             </a>
           </p>
         </div>

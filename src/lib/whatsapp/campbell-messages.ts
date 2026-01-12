@@ -3,6 +3,8 @@
  * Pre-filled messages for chapter pages, olympiad preparation, and general inquiries
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 // Message types for Campbell Biology pages
 export type CampbellMessageType =
   | 'chapter'
@@ -124,9 +126,9 @@ export function getCampbellWhatsAppMessage(
   }
 }
 
-// Default phone number
-export const WHATSAPP_PHONE = '+918826444334'
-export const WHATSAPP_PHONE_DISPLAY = '+91 88264 44334'
+// Default phone number - now uses centralized config
+export const WHATSAPP_PHONE = CONTACT_INFO.phone.primary
+export const WHATSAPP_PHONE_DISPLAY = CONTACT_INFO.phone.display.primary
 
 // Build WhatsApp URL
 export function buildCampbellWhatsAppUrl(message: string): string {

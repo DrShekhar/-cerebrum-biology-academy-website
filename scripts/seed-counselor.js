@@ -81,7 +81,7 @@ async function main() {
         id: `lead_${timestamp}_${i}`,
         studentName,
         email: `${studentName.toLowerCase().replace(' ', '.')}@example.com`,
-        phone: `+919876543${String(i).padStart(3, '0')}`,
+        phone: `+918826444${String(335 + i).padStart(3, '0')}`,
         courseInterest: `Class ${11 + (i % 2)}th Biology - NEET Preparation`,
         stage,
         priority,

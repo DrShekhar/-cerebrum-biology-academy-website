@@ -4,6 +4,7 @@
  */
 
 import { WhatsAppBusinessService } from './whatsappBusinessService'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface AutomationTrigger {
   type: 'welcome' | 'abandoned_cart' | 'engagement' | 'reminder' | 'follow_up'
@@ -212,7 +213,7 @@ export class WhatsAppAutomationService {
       phone: cartData.phone,
       delay: 3 * 24 * 60 * 60 * 1000, // 3 days
       messageType: 'text',
-      content: `🗣️ Hi ${cartData.name}! Want to hear directly from students who cleared NEET with us?\n\n💬 Join our student interaction session today at 7 PM:\nhttps://cerebrumbiologyacademy.com/student-interaction\n\nOr connect one-on-one: +91-88264-44334\n\n"Success stories inspire success!" 🌟`,
+      content: `🗣️ Hi ${cartData.name}! Want to hear directly from students who cleared NEET with us?\n\n💬 Join our student interaction session today at 7 PM:\nhttps://cerebrumbiologyacademy.com/student-interaction\n\nOr connect one-on-one: ${CONTACT_INFO.phone.display.hyphenated.primary}\n\n"Success stories inspire success!" 🌟`,
     })
 
     // 7 days: Last chance offer
@@ -475,7 +476,7 @@ export class WhatsAppAutomationService {
       phone: studentData.phone,
       delay: 0,
       messageType: 'text',
-      content: `📈 Monthly Progress Update for ${studentData.name}\n\nDear Parents,\n\nYour child is making steady progress in their NEET preparation. Detailed report will be shared soon.\n\nFor queries, contact: +91-88264-44334`,
+      content: `📈 Monthly Progress Update for ${studentData.name}\n\nDear Parents,\n\nYour child is making steady progress in their NEET preparation. Detailed report will be shared soon.\n\nFor queries, contact: ${CONTACT_INFO.phone.display.hyphenated.primary}`,
     })
   }
 
@@ -514,7 +515,7 @@ export class WhatsAppAutomationService {
   private static async handleCounselorRequest(actionData: any) {
     return WhatsAppBusinessService.sendTextMessage(
       actionData.phone,
-      '👨‍🏫 Connect with our expert counselor immediately!\n\n📞 Call: +91-88264-44334\n📱 WhatsApp: +91-88264-44334\n\n🕐 Available: 9 AM - 8 PM (Mon-Sat)\n\nOur counselors will help you choose the right course and create a personalized study plan! 🎯'
+      '👨‍🏫 Connect with our expert counselor immediately!\n\n📞 Call: ${CONTACT_INFO.phone.display.hyphenated.primary}\n📱 WhatsApp: ${CONTACT_INFO.phone.display.hyphenated.primary}\n\n🕐 Available: 9 AM - 8 PM (Mon-Sat)\n\nOur counselors will help you choose the right course and create a personalized study plan! 🎯'
     )
   }
 
@@ -607,7 +608,7 @@ export class WhatsAppAutomationService {
   private static async handleDefaultAction(actionData: any) {
     return WhatsAppBusinessService.sendTextMessage(
       actionData.phone,
-      'Thank you for reaching out! Our team will assist you shortly. For immediate help, call +91-88264-44334.'
+      'Thank you for reaching out! Our team will assist you shortly. For immediate help, call ${CONTACT_INFO.phone.display.hyphenated.primary}.'
     )
   }
 
@@ -692,7 +693,7 @@ export class WhatsAppAutomationService {
       // Default helpful response
       await WhatsAppBusinessService.sendTextMessage(
         phone,
-        'Thank you for your message! How can I help you today?\n\n🎓 Book counseling\n💰 Get fee structure\n📚 Download materials\n⏰ Check batch timings\n📞 Call: +91-88264-44334'
+        'Thank you for your message! How can I help you today?\n\n🎓 Book counseling\n💰 Get fee structure\n📚 Download materials\n⏰ Check batch timings\n📞 Call: ${CONTACT_INFO.phone.display.hyphenated.primary}'
       )
     }
   }

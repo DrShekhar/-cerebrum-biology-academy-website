@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
 import { SEOLandingContent } from '@/data/seo-landing/types'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface SEOFAQSectionProps {
   faqs: SEOLandingContent['faqs']
@@ -88,10 +89,10 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
           <p className="text-lg text-white/90">Still have questions?</p>
           <p className="mt-2 text-2xl font-bold text-white">Talk to our academic counselor</p>
           <a
-            href="tel:+919876543210"
+            href={getPhoneLink()}
             className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-gray-100 hover:shadow-lg"
           >
-            Call Now: +91 98765 43210
+            Call Now: {getDisplayPhone()}
           </a>
         </motion.div>
       </div>

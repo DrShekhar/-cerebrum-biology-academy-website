@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface Props {
   facultyId: string
@@ -229,7 +230,7 @@ export function FacultyProfile({ facultyId }: Props) {
             <div className="flex flex-wrap gap-4 justify-center mb-8">
               <Button variant="primary" size="lg">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +91 88264 44334
+                Call Now: {getDisplayPhone()}
               </Button>
               <Button variant="outline" size="lg">
                 <Mail className="w-5 h-5 mr-2" />

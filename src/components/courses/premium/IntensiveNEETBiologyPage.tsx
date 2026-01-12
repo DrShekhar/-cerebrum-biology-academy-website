@@ -26,6 +26,7 @@ import {
   ArrowRight,
   Calendar,
 } from 'lucide-react'
+import { getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export function IntensiveNEETBiologyPage() {
   const [isApplicationFormOpen, setIsApplicationFormOpen] = useState(false)
@@ -726,7 +727,7 @@ export function IntensiveNEETBiologyPage() {
             <div className="flex flex-wrap justify-center gap-8 text-white/70 text-sm pt-4">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+91 88264 44334</span>
+                <span>{getDisplayPhone()}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />

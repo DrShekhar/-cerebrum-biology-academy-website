@@ -18,6 +18,7 @@ import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
@@ -224,11 +225,11 @@ export const Footer = memo(function Footer() {
                 <Phone className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
                 <div>
                   <a
-                    href="tel:+918826444334"
+                    href={getPhoneLink()}
                     className="hover:text-white transition-colors"
-                    aria-label="Call us at +91 8826444334"
+                    aria-label={`Call us at ${getDisplayPhone()}`}
                   >
-                    +91 8826444334
+                    {getDisplayPhone()}
                   </a>
                   <span className="text-gray-400 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
                 </div>

@@ -63,7 +63,7 @@ node scripts/create-twilio-verify-service.js
 # Or use the API endpoint
 curl -X POST http://localhost:3000/api/test/twilio \
   -H "Content-Type: application/json" \
-  -d '{"phone": "+919876543210"}'
+  -d '{"phone": "+918826444334"}'
 ```
 
 ## Step 6: Enable WhatsApp Channel (Optional)

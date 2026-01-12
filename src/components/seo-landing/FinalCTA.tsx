@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Phone, Calendar, BookOpen, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { SEOLandingContent } from '@/data/seo-landing/types'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface FinalCTAProps {
   cta: SEOLandingContent['cta']
@@ -15,7 +16,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
     ? `https://wa.me/${contactButtons.whatsapp.number.replace(/\D/g, '')}?text=${encodeURIComponent(contactButtons.whatsapp.message)}`
     : null
 
-  const phoneNumber = contactButtons?.phone || '+919876543210'
+  const phoneNumber = contactButtons?.phone || CONTACT_INFO.phone.primary
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 lg:py-28">
@@ -85,11 +86,11 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
           >
             <a
-              href={`tel:${phoneNumber}`}
+              href={contactButtons?.phone ? `tel:${phoneNumber}` : getPhoneLink()}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20"
             >
               <Phone className="h-4 w-4" />
-              Call: {phoneNumber.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3')}
+              Call: {contactButtons?.phone ? phoneNumber.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') : getDisplayPhone()}
             </a>
 
             {whatsappLink && (

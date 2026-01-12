@@ -37,6 +37,7 @@ import {
   FlaskConical,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface CourseCard {
   id: string
@@ -414,7 +415,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 className="group bg-white/10 backdrop-blur-2xl border-2 border-white/40 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center"
               >
                 <Phone className="h-7 w-7 group-hover:rotate-12 transition-transform" />
-                <span>Call: 9188264443</span>
+                <span>Call: {getDisplayPhone()}</span>
               </motion.button>
             </motion.div>
 
@@ -806,7 +807,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             <div className="p-6 space-y-4">
               <p className="text-white/90 mb-6 text-center">
                 Call our expert counselors at{' '}
-                <span className="font-bold text-blue-400">9188264443</span> for personalized course
+                <span className="font-bold text-blue-400">{getDisplayPhone()}</span> for personalized course
                 guidance!
               </p>
 
@@ -825,7 +826,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               </button>
 
               <a
-                href="tel:+918826444334"
+                href={getPhoneLink()}
                 className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="h-5 w-5" />

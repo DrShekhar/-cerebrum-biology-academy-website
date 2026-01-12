@@ -12,6 +12,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage as PrismaLeadStage, FollowupAction, QueueStatus } from '../../generated/prisma'
 import {
   sendWhatsAppMessage,
@@ -242,7 +243,7 @@ As a demo attendee, you get EXCLUSIVE benefits:
 
 Limited seats available for ${lead.courseInterest}!
 
-Reply "JOIN" or call +91 88264 44334`,
+Reply "JOIN" or call ${CONTACT_INFO.phone.display.primary}`,
 
   last_chance_offer: (lead) => `⏰ Last chance, ${lead.name}!
 
@@ -267,7 +268,7 @@ Reply with your preferred:
 - Date
 - Time (morning/evening)
 
-Or call us: +91 88264 44334`,
+Or call us: ${CONTACT_INFO.phone.display.primary}`,
 
   reschedule_demo: (lead) => `${lead.name}, your spot is still reserved!
 
@@ -311,7 +312,7 @@ Students who joined last month are already seeing results:
 
 Don't wait - secure your seat now!
 
-Reply "BOOK" or call +91 88264 44334`,
+Reply "BOOK" or call ${CONTACT_INFO.phone.display.primary}`,
 
   payment_urgent: (lead) => `${lead.name}, your enrollment is pending!
 
@@ -322,7 +323,7 @@ Complete your payment to secure:
 
 Payment link: cerebrumbiologyacademy.com/pay
 
-Need help? Reply or call +91 88264 44334`,
+Need help? Reply or call ${CONTACT_INFO.phone.display.primary}`,
 
   reactivation: (lead) => `Hi ${lead.name}! Long time no see 👋
 

@@ -716,7 +716,7 @@ Value: +91YOUR_PHONE_NUMBER
 Environment: ☑ Production  ☑ Preview
 ```
 
-**Format:** Include country code (e.g., `+919876543210`)
+**Format:** Include country code (e.g., `+918826444334`)
 
 ---
 
@@ -1631,7 +1631,7 @@ git push origin test-payment
 3. Fill out form:
    - Name: Test User
    - Email: test@example.com
-   - Phone: +919876543210
+   - Phone: +918826444334
 
 4. Click "Proceed to Payment"
 
@@ -2546,7 +2546,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/email/test \
 
 2. **Verify phone number:**
    - Must be verified in Meta Business Manager
-   - Format: +[country code][number] (e.g., +919876543210)
+   - Format: +[country code][number] (e.g., +918826444334)
    - No spaces or dashes
 
 3. **Message templates (for India):**
@@ -2562,7 +2562,7 @@ curl -X POST "https://graph.facebook.com/v21.0/YOUR_PHONE_NUMBER_ID/messages" \
   -H "Content-Type: application/json" \
   -d '{
     "messaging_product": "whatsapp",
-    "to": "919876543210",
+    "to": "918826444334",
     "type": "text",
     "text": { "body": "Test message" }
   }'

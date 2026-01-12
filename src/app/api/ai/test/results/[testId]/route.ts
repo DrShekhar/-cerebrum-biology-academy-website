@@ -5,10 +5,8 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
-import { PrismaClient } from '@/generated/prisma/index.js'
+import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth/config'
-
-const prisma = new PrismaClient()
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY || '',

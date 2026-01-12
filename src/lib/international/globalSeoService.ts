@@ -1,5 +1,7 @@
 'use client'
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 export interface HrefLangTag {
   hreflang: string
   href: string
@@ -79,7 +81,7 @@ class GlobalSEOService {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+91-88264-44334',
+          telephone: CONTACT_INFO.phone.display.hyphenated.primary,
           contactType: 'customer service',
           availableLanguage: ['Hindi', 'English'],
         },
@@ -469,7 +471,7 @@ class GlobalSEOService {
         courses:
           'Comprehensive NEET Biology courses for Class 11, 12 & Droppers. Live classes, recorded sessions, study materials & mock tests. Choose from foundation, intensive & crash courses.',
         contact:
-          'Get in touch with Cerebrum Biology Academy for NEET Biology coaching admission. Call +91-88264-44334 or visit our centers across India for course details.',
+          'Get in touch with Cerebrum Biology Academy for NEET Biology coaching admission. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or visit our centers across India for course details.',
         about:
           "Cerebrum Biology Academy is India's most trusted NEET Biology institute with 8 years of excellence, expert faculty, and 94.2% success rate in medical entrance exams.",
       },

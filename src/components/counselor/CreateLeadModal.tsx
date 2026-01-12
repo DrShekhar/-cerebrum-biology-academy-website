@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface CreateLeadModalProps {
   isOpen: boolean
@@ -157,7 +158,7 @@ export function CreateLeadModal({ isOpen, onClose, onSuccess }: CreateLeadModalP
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="e.g., +919876543210"
+                placeholder={`e.g., ${CONTACT_INFO.phone.primary}`}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 disabled={creating}
               />

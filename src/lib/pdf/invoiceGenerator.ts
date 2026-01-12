@@ -4,6 +4,7 @@
  */
 
 import { InvoiceData } from '@/types/payment'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 /**
  * Generate invoice HTML content
@@ -374,7 +375,7 @@ export function generateInvoiceNumber(paymentId: string, date: Date): string {
 export const ACADEMY_DETAILS = {
   name: 'Cerebrum Biology Academy',
   address: 'India',
-  phone: '+91-88264-44334',
+  phone: CONTACT_INFO.phone.display.hyphenated.primary,
   email: 'help@cerebrumbiologyacademy.com',
   gst: '',
   logo: '',

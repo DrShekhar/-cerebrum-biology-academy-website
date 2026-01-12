@@ -141,7 +141,7 @@ const identifier = getIdentifier(request, userId)
 
 // Custom identifier
 const limiter = getRateLimiter('whatsappSend')
-await checkRateLimit(limiter, 'phone:+919876543210')
+await checkRateLimit(limiter, 'phone:+918826444334')
 ```
 
 ## Response Headers
@@ -298,7 +298,7 @@ REDIS_TOKEN=your-token-here
 for i in {1..6}; do
   curl -X POST http://localhost:3000/api/auth/send-otp \
     -H "Content-Type: application/json" \
-    -d '{"phoneNumber": "+919876543210"}' \
+    -d '{"phoneNumber": "+918826444334"}' \
     -i
 done
 

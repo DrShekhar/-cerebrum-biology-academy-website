@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -69,7 +70,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
   }
 
   const handleCallNow = () => {
-    window.open('tel:+918826444334', '_self')
+    window.open(getPhoneLink(), '_self')
   }
 
   const handleWhatsAppChat = async () => {

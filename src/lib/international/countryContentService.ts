@@ -1,5 +1,7 @@
 'use client'
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 export interface CountryContent {
   code: string
   name: string
@@ -94,9 +96,9 @@ class CountryContentService {
         },
       ],
       contactInfo: {
-        phone: '+91 88264 44334',
+        phone: CONTACT_INFO.phone.display.primary,
         email: 'admissions@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Delhi NCR Headquarters + 12 coaching hubs across India',
         hours: 'Mon-Sat: 9 AM - 8 PM IST',
         preferredContact: 'WhatsApp or Phone Call',
@@ -156,7 +158,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+1 (555) 123-4567',
         email: 'usa@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Available Nationwide - Online Classes',
         hours: '24/7 Support Available (EST/PST friendly)',
         preferredContact: 'Email or WhatsApp',
@@ -222,7 +224,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+44 20 7946 0958',
         email: 'uk@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'London Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM GMT',
         preferredContact: 'Email or WhatsApp',
@@ -282,7 +284,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+61 2 8123 4567',
         email: 'australia@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Sydney Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM AEDT',
         preferredContact: 'Email or WhatsApp',
@@ -348,7 +350,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+1 (416) 123-4567',
         email: 'canada@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Toronto Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM EST/PST',
         preferredContact: 'Email or WhatsApp',
@@ -414,7 +416,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+971 4 123 4567',
         email: 'uae@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Dubai Office: Business Bay, Abu Dhabi Center: Al Maryah Island',
         hours: 'Sun-Thu: 9 AM - 6 PM GST, Fri-Sat: Weekend Classes',
         preferredContact: 'WhatsApp preferred',
@@ -479,7 +481,7 @@ class CountryContentService {
       contactInfo: {
         phone: '+65 6123 4567',
         email: 'singapore@cerebrumbiologyacademy.com',
-        whatsapp: '+91 88264 44334',
+        whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Singapore Office: Raffles Place + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM SGT, Weekend sessions available',
         preferredContact: 'Email or WhatsApp',

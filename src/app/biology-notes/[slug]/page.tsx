@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { PrismaClient } from '@/generated/prisma'
+import { prisma } from '@/lib/prisma'
 
 import { BookOpen, Clock, GraduationCap, Download, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
-
-const prisma = new PrismaClient()
 
 interface PageProps {
   params: Promise<{

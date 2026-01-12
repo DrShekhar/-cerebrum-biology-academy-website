@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import dynamicImport from 'next/dynamic'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
@@ -13,10 +13,10 @@ import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
-import { useSafeUser } from '@/hooks/useSafeClerk'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Owner phone number - only this number gets multi-role access
-const OWNER_PHONE = '+919999744334'
+const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 const PersonalizedStudentDashboard = dynamicImport(
   () =>
@@ -87,15 +87,27 @@ function AuthRequiredMessage() {
 }
 
 export default function DashboardPage() {
-  const { user, isLoading, isAuthenticated } = useAuth()
+  const { user, isLoading, isAuthenticated, error } = useFirebaseSession()
   const { isDevMode } = useUserFlow()
   const router = useRouter()
-  const { user: clerkUser, isLoaded: clerkLoaded } = useSafeUser()
+
+  // Debug logging for authentication state
+  useEffect(() => {
+    console.log('[Dashboard] Auth state:', {
+      isLoading,
+      isAuthenticated,
+      hasUser: !!user,
+      userId: user?.id,
+      userName: user?.name,
+      error: error?.message,
+      cookies: document.cookie ? 'present' : 'empty',
+    })
+  }, [isLoading, isAuthenticated, user, error])
 
   useEffect(() => {
     // Check if user is the owner by phone number - redirect to role selection
-    if (clerkLoaded && clerkUser) {
-      const userPhone = clerkUser.primaryPhoneNumber?.phoneNumber || ''
+    if (!isLoading && user) {
+      const userPhone = user.phone || ''
       const normalizedPhone = userPhone.replace(/[\s\-\(\)]/g, '')
 
       if (
@@ -107,10 +119,10 @@ export default function DashboardPage() {
         return
       }
     }
-  }, [clerkLoaded, clerkUser, router])
+  }, [isLoading, user, router])
 
-  // Show loading while checking authentication or Clerk is loading
-  if (isLoading || !clerkLoaded) {
+  // Show loading while checking authentication
+  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">

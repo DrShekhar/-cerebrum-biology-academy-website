@@ -15,6 +15,7 @@ import {
   Calendar,
 } from 'lucide-react'
 import { trackChatWidget, trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface FAQ {
   id: string
@@ -27,7 +28,7 @@ interface LiveChatWidgetProps {
   whatsappNumber?: string
 }
 
-export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWidgetProps) {
+export function LiveChatWidget({ whatsappNumber = CONTACT_INFO.phone.primary }: LiveChatWidgetProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedFAQ, setSelectedFAQ] = useState<FAQ | null>(null)
 

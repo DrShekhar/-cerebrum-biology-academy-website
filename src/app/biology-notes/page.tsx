@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { PrismaClient } from '@/generated/prisma'
+import { prisma } from '@/lib/prisma'
 
 import { BookOpen, Search, Filter, TrendingUp, Clock } from 'lucide-react'
 import Link from 'next/link'
-
-const prisma = new PrismaClient()
 
 export const metadata: Metadata = {
   title: 'Free NEET Biology Notes | Comprehensive Study Material | Cerebrum Academy',

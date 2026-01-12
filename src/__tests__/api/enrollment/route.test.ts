@@ -28,7 +28,7 @@ describe('POST /api/enrollment', () => {
         id: 'user_123',
         name: 'John Doe',
         email: 'john@example.com',
-        phone: '+919876543210',
+        phone: '+918826444334',
         role: 'STUDENT',
       })
       ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
@@ -47,7 +47,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -78,7 +78,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'Existing User',
           email: 'existing@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -102,7 +102,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'Test User',
           email: 'test@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
           userId: 'provided_user_123',
@@ -122,7 +122,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'invalid-email',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -160,7 +160,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'A',
           email: 'test@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -203,7 +203,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'valid_course_123',
           amount: 42000,
         }),
@@ -222,7 +222,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: '',
           amount: 42000,
         }),
@@ -248,7 +248,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 50000,
         }),
@@ -265,7 +265,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: -100,
         }),
@@ -282,7 +282,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 0,
         }),
@@ -308,7 +308,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -336,7 +336,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
           installmentPlan: 'QUARTERLY',
@@ -365,7 +365,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
           installmentPlan: 'MONTHLY',
@@ -393,7 +393,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -437,7 +437,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john.doe@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -454,7 +454,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'johnexample.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -481,7 +481,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_456',
           amount: 50000,
         }),
@@ -506,7 +506,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -534,7 +534,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),
@@ -556,7 +556,7 @@ describe('POST /api/enrollment', () => {
         body: JSON.stringify({
           studentName: 'John Doe',
           email: 'john@example.com',
-          phone: '+919876543210',
+          phone: '+918826444334',
           courseId: 'course_123',
           amount: 42000,
         }),

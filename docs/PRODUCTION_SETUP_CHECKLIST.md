@@ -199,7 +199,7 @@ WHATSAPP_VERIFY_TOKEN=cba_whatsapp_verify_2025
    ```bash
    curl https://cerebrumbiologyacademy.com/api/whatsapp/send \
      -H "Content-Type: application/json" \
-     -d '{"phone": "+919876543210", "template": "demo_booking_confirmation"}'
+     -d '{"phone": "+918826444334", "template": "demo_booking_confirmation"}'
    ```
 2. Verify message received on test phone
 3. Check webhook logs in Meta dashboard

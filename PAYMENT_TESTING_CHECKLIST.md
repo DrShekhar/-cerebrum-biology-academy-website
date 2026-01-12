@@ -42,7 +42,7 @@ npm run dev
 - [ ] Fill enrollment form with:
   - Name: Test Student
   - Email: test@example.com
-  - Phone: +919876543210
+  - Phone: +918826444334
   - Course: NEET Complete Course
 - [ ] Click **Proceed to Payment**
 - [ ] Verify: Payment summary shows correct amount
@@ -497,7 +497,7 @@ Once all tests pass:
 ```
 Name: Test Student
 Email: test.student@example.com
-Phone: +919876543210
+Phone: +918826444334
 Course: NEET Complete Course
 Amount: ₹75,000
 ```

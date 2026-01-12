@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import { Play, Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
+import { getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 const HeroClientInteractive = dynamic(
   () => import('./HeroClientInteractive').then((mod) => mod.HeroClientInteractive),
@@ -28,7 +29,7 @@ function HeroPlaceholder() {
           BOOK DEMO
         </a>
         <a
-          href="https://wa.me/919999999999"
+          href={getWhatsAppLink()}
           className="inline-flex items-center justify-center gap-2 bg-[#166534] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl text-sm xs:text-base md:text-lg border border-green-400/30"
         >
           <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 flex-shrink-0" />

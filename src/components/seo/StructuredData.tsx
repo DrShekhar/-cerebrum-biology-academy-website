@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 export function OrganizationSchema() {
   const organizationData = {
     '@context': 'https://schema.org',
@@ -9,7 +11,7 @@ export function OrganizationSchema() {
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
@@ -313,7 +315,7 @@ export function FAQSchema() {
         name: 'Is there a free demo class available?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, we offer a FREE demo class for all courses. You can book your free demo on our website or by calling +91-88264-44334. Experience our teaching methodology before enrolling.',
+          text: `Yes, we offer a FREE demo class for all courses. You can book your free demo on our website or by calling ${CONTACT_INFO.phone.display.primary}. Experience our teaching methodology before enrolling.`,
         },
       },
       {
@@ -377,7 +379,7 @@ export function LocalBusinessSchema() {
     description:
       'Premier NEET Biology coaching in Delhi NCR with AIIMS Trained Faculties. Serving Laxmi Nagar, Dwarka, Noida, Gurgaon with 98% success rate. Small batches, live classes.',
     url: 'https://cerebrumbiologyacademy.com',
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
     priceRange: '₹₹',
@@ -530,7 +532,7 @@ export function NationalServiceSchema() {
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: 'https://cerebrumbiologyacademy.com',
-      servicePhone: '+91-88264-44334',
+      servicePhone: CONTACT_INFO.phone.primary,
       availableLanguage: ['English', 'Hindi'],
     },
     offers: {
@@ -675,7 +677,7 @@ export function GurugramServiceSchema() {
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
-      servicePhone: '+91-88264-44334',
+      servicePhone: CONTACT_INFO.phone.primary,
       availableLanguage: ['English', 'Hindi'],
     },
     aggregateRating: {

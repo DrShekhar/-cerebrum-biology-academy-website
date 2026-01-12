@@ -452,7 +452,7 @@ ${location ? `Target location: ${location}` : 'Location: Kolkata / Online'}
 
 Brand: Cerebrum Biology Academy
 USP: Expert NEET Biology coaching by Dr. Shekhar Singh
-CTA: WhatsApp contact - +917980078875
+CTA: WhatsApp contact - +918826444334
 
 Return a JSON object with this structure:
 {
@@ -466,7 +466,7 @@ Return a JSON object with this structure:
       "subheadline": "Supporting text",
       "highlightedText": "Text to highlight",
       "ctaText": "CTA button text",
-      "ctaLink": "https://wa.me/917980078875?text=..."
+      "ctaLink": "https://wa.me/918826444334?text=..."
     },
     "painPoints": [
       {"icon": "AlertCircle", "question": "Pain point question?", "solution": "How we solve it"},

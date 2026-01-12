@@ -453,7 +453,7 @@ logger.info('OTP sent', { phone: '+91-XXX-XXX-1234' })
 
 // ❌ Bad
 logger.info('Password changed', { newPassword: 'secret123' })
-logger.info('OTP sent', { otp: '123456', phone: '+919876543210' })
+logger.info('OTP sent', { otp: '123456', phone: '+918826444334' })
 ```
 
 ### 5. Use Timers for Performance

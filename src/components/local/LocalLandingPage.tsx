@@ -1,5 +1,6 @@
 'use client'
 
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { LocalArea } from '@/data/localAreas'
 import { LeadMagnet, getLeadMagnetsByArea } from '@/data/leadMagnets'
 import { getTestimonialsByArea } from '@/data/localTestimonials'
@@ -60,7 +61,7 @@ function FAQSection({ areaName }: { areaName: string }) {
     {
       question: 'How can I book a free demo class?',
       answer:
-        'You can book a free demo class by clicking the "Book FREE Demo Class" button on this page, calling us at +91 88264 44334, or sending a WhatsApp message. Our counselors will schedule a convenient time for you to experience our teaching methodology firsthand.',
+        `You can book a free demo class by clicking the "Book FREE Demo Class" button on this page, calling us at ${CONTACT_INFO.phone.display.primary}, or sending a WhatsApp message. Our counselors will schedule a convenient time for you to experience our teaching methodology firsthand.`,
     },
     {
       question: 'What is the batch size and timing for classes?',
@@ -158,7 +159,7 @@ function FAQSection({ areaName }: { areaName: string }) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+918826444334"
+              href={getPhoneLink()}
               className="inline-flex items-center justify-center px-6 py-3 bg-yellow-500 text-slate-900 rounded-xl font-semibold hover:bg-yellow-400 transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -904,7 +905,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />
                   <div>
                     <div className="font-medium text-gray-900">Call Us</div>
-                    <div className="text-blue-600">+91 88264 44334</div>
+                    <div className="text-blue-600">{getDisplayPhone()}</div>
                   </div>
                 </div>
                 <div className="flex items-center p-4 bg-green-50 rounded-2xl">
@@ -1011,13 +1012,13 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 Book FREE Demo Class
               </Button>
               <Button
-                onClick={() => window.open('tel:+918826444334')}
+                onClick={() => window.open(getPhoneLink())}
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white hover:text-slate-900"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +91 88264 44334
+                Call Now: {getDisplayPhone()}
               </Button>
             </div>
 

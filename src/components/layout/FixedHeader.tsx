@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X } from 'lucide-react'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface FixedHeaderProps {
   className?: string
@@ -21,7 +22,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
   }
 
   const handleCall = () => {
-    window.open('tel:+918826444334', '_self')
+    window.open(getPhoneLink(), '_self')
   }
 
   const navLinks = [

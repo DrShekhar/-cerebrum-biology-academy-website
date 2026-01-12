@@ -29,10 +29,10 @@ const crashCourseToolsCTA = {
 // Common contact buttons
 const defaultContactButtons = {
   whatsapp: {
-    number: '919876543210',
+    number: '918826444334',
     message: 'Hi, I want to know more about NEET Biology crash course at Cerebrum Biology Academy',
   },
-  phone: '+919876543210',
+  phone: '+918826444334',
 }
 
 export const crashCourseSEOPages: Record<string, SEOLandingContent> = {

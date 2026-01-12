@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: Props) {
     title: `${faculty.name} - ${faculty.designation} | Cerebrum Biology Academy`,
     description: `Meet ${faculty.name}, ${faculty.qualification} with ${faculty.experience} experience. Expert in ${faculty.specialization.join(', ')}. ${faculty.bio}`,
     keywords: `${faculty.name}, ${faculty.designation}, biology faculty, NEET teacher, ${faculty.specialization.join(', ')}, medical coaching`,
+    alternates: {
+      canonical: `https://cerebrumbiologyacademy.com/faculty/${facultyId}`,
+    },
   }
 }
 

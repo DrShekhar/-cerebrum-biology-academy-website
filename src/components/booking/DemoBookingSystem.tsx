@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Calendar,
   Clock,
@@ -399,7 +400,7 @@ export function DemoBookingSystem() {
       const errorMessage =
         error instanceof Error
           ? error.message
-          : 'Unable to complete your booking. Please try again or contact us at +91 88264 44334.'
+          : `Unable to complete your booking. Please try again or contact us at ${getDisplayPhone()}.`
 
       setError(errorMessage)
     } finally {
@@ -548,7 +549,7 @@ export function DemoBookingSystem() {
             </div>
 
             <p className="text-xs text-gray-500 mt-4">
-              Need to reschedule? Contact us at +91 88264 44334 or email
+              Need to reschedule? Contact us at {getDisplayPhone()} or email
               support@cerebrumbiologyacademy.com
             </p>
           </div>
@@ -917,7 +918,7 @@ export function DemoBookingSystem() {
                                   ? 'border-red-500 focus:ring-red-500'
                                   : 'border-gray-300 focus:ring-blue-500'
                             }`}
-                            placeholder="+91 93119 46297"
+                            placeholder={CONTACT_INFO.phone.display.secondary}
                             required
                             style={{ fontSize: '16px' }}
                           />

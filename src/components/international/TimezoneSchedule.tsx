@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { TimezoneService, ClassSchedule, TimezoneInfo } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { Clock, Globe, Users, Calendar } from 'lucide-react'
+import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface TimezoneScheduleProps {
   onScheduleSelect?: (schedule: ClassSchedule) => void
@@ -348,7 +349,7 @@ export function TimezoneSchedule({ onScheduleSelect, className = '' }: TimezoneS
           )}
         </div>
         <div className="mt-4 text-sm text-gray-600">
-          24/7 support available via WhatsApp: +91 88264 44334
+          24/7 support available via WhatsApp: {getDisplayPhone()}
         </div>
       </div>
     </div>

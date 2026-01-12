@@ -9,6 +9,8 @@
  * @see https://developers.google.com/search/docs/appearance/structured-data/speakable
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface SpeakableSchemaProps {
   headline: string
   description: string
@@ -175,7 +177,7 @@ export function LocalBusinessSpeakable({
     name: businessName,
     description: description,
     url: url,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -218,7 +220,7 @@ export function LocalBusinessSpeakable({
  * Generate speakable text for voice search optimization
  */
 export function generateSpeakableText(location: string): string {
-  return `Cerebrum Biology Academy offers expert NEET Biology coaching in ${location}. Learn from Dr. Shekhar C Singh, AIIMS Alumnus with over 15 years of experience. We have helped more than 500 students clear NEET. Book your free demo class by calling 8826444334.`
+  return `Cerebrum Biology Academy offers expert NEET Biology coaching in ${location}. Learn from Dr. Shekhar C Singh, AIIMS Alumnus with over 15 years of experience. We have helped more than 500 students clear NEET. Book your free demo class by calling ${CONTACT_INFO.phone.display.primary.replace(/\s/g, '')}.`
 }
 
 /**

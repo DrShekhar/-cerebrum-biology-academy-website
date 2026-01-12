@@ -21,7 +21,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Hello Student!',
       })
 
@@ -42,7 +42,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test message',
       })
 
@@ -53,7 +53,7 @@ describe('WhatsAppService', () => {
       mockFetch.mockRejectedValueOnce(new Error('Network error'))
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test message',
       })
 
@@ -67,13 +67,13 @@ describe('WhatsAppService', () => {
       } as Response)
 
       await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 
       const call = mockFetch.mock.calls[0][1]
       const body = JSON.parse(call?.body as string)
-      expect(body.phone).toBe('+919876543210')
+      expect(body.phone).toBe('+918826444334')
     })
   })
 
@@ -85,7 +85,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Template content',
         type: 'template',
         templateName: 'demo_booking_confirmation',
@@ -105,7 +105,7 @@ describe('WhatsAppService', () => {
 
       const demoTime = new Date('2025-10-25T10:00:00Z')
       const result = await service.sendDemoBookingConfirmation(
-        '+919876543210',
+        '+918826444334',
         'John Doe',
         demoTime
       )
@@ -124,7 +124,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const demoTime = new Date('2025-10-25T10:00:00Z')
-      await service.sendDemoBookingConfirmation('+919876543210', 'Jane Smith', demoTime)
+      await service.sendDemoBookingConfirmation('+918826444334', 'Jane Smith', demoTime)
 
       const call = mockFetch.mock.calls[0][1]
       const body = JSON.parse(call?.body as string)
@@ -142,7 +142,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendEnrollmentConfirmation(
-        '+919876543210',
+        '+918826444334',
         'Alice Johnson',
         'NEET Biology Pinnacle'
       )
@@ -161,7 +161,7 @@ describe('WhatsAppService', () => {
         json: async () => ({ success: true }),
       } as Response)
 
-      await service.sendEnrollmentConfirmation('+919876543210', 'Bob', 'Test Course')
+      await service.sendEnrollmentConfirmation('+918826444334', 'Bob', 'Test Course')
 
       const call = mockFetch.mock.calls[0][1]
       const body = JSON.parse(call?.body as string)
@@ -178,7 +178,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const dueDate = new Date('2025-11-01')
-      const result = await service.sendPaymentReminder('+919876543210', 'Charlie', 42000, dueDate)
+      const result = await service.sendPaymentReminder('+918826444334', 'Charlie', 42000, dueDate)
 
       expect(result).toBe(true)
       const call = mockFetch.mock.calls[0][1]
@@ -194,7 +194,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const dueDate = new Date('2025-11-01')
-      await service.sendPaymentReminder('+919876543210', 'Test', 100000, dueDate)
+      await service.sendPaymentReminder('+918826444334', 'Test', 100000, dueDate)
 
       const call = mockFetch.mock.calls[0][1]
       const body = JSON.parse(call?.body as string)
@@ -210,7 +210,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 
@@ -223,7 +223,7 @@ describe('WhatsAppService', () => {
       mockFetch.mockRejectedValueOnce(new Error('Timeout'))
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 
@@ -253,7 +253,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 
@@ -270,7 +270,7 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 
@@ -286,9 +286,9 @@ describe('WhatsAppService', () => {
       } as Response)
 
       const results = await Promise.all([
-        service.sendMessage({ phone: '+919876543210', message: 'Message 1' }),
-        service.sendMessage({ phone: '+919876543211', message: 'Message 2' }),
-        service.sendMessage({ phone: '+919876543212', message: 'Message 3' }),
+        service.sendMessage({ phone: '+918826444334', message: 'Message 1' }),
+        service.sendMessage({ phone: '+918826444334', message: 'Message 2' }),
+        service.sendMessage({ phone: '+919311946297', message: 'Message 3' }),
       ])
 
       expect(results.every((r) => r === true)).toBe(true)
@@ -309,7 +309,7 @@ describe('WhatsAppService', () => {
         } as Response)
 
       const result = await service.sendMessage({
-        phone: '+919876543210',
+        phone: '+918826444334',
         message: 'Test',
       })
 

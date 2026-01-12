@@ -154,7 +154,7 @@ export async function POST(request: NextRequest) {
           email: 'counselor@cerebrumbiologyacademy.com',
           name: 'Default Counselor',
           role: 'COUNSELOR',
-          phone: '+919876543210',
+          phone: '+918826444334',
         },
       })
     }

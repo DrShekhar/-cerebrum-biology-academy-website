@@ -1328,6 +1328,7 @@ model users {
   name                            String
   role                            UserRole                      @default(STUDENT)
   passwordHash                    String?
+  firebaseUid                     String?                       @unique
   emailVerified                   DateTime?
   phoneVerified                   DateTime?
   profile                         Json?
@@ -1393,6 +1394,7 @@ model users {
   @@index([role, createdAt])
   @@index([lastActiveAt])
   @@index([emailVerified])
+  @@index([firebaseUid])
 }
 
 model whatsapp_otp {

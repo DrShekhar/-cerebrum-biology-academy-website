@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { headers, cookies } from 'next/headers'
 import { ClerkProviderWrapper } from '@/components/providers/ClerkProviderWrapper'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
@@ -27,6 +28,10 @@ import {
   DynamicMaintenancePopup,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
+
+// Auth routes that should not show header/footer
+// Also includes OBS overlay routes that need a clean, minimal layout
+const AUTH_ROUTES = ['/sign-in', '/sign-up', '/sso-callback', '/study-with-me/obs']
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -82,7 +87,6 @@ export const metadata: Metadata = {
     creator: '@cerebrumbiology',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com',
     types: {
       'application/rss+xml': '/blog/feed.xml',
     },
@@ -90,11 +94,20 @@ export const metadata: Metadata = {
   category: 'Education',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Check if current route is an auth route (no header/footer needed)
+  // Use cookies (set by middleware) as primary source - more reliable than headers
+  const cookieStore = await cookies()
+  const headersList = await headers()
+  const pathFromCookie = cookieStore.get('x-pathname')?.value || ''
+  const pathFromHeader = headersList.get('x-invoke-path') || headersList.get('x-pathname') || ''
+  const pathname = pathFromCookie || pathFromHeader
+  const isAuthRoute = AUTH_ROUTES.some((route) => pathname.startsWith(route))
+
   return (
     <ClerkProviderWrapper>
       <html lang="en">
@@ -326,24 +339,30 @@ export default function RootLayout({
                   <PersonalizationProvider>
                     <MotionProvider>
                       <PageErrorBoundary>
-                        <SkipToContent />
-                        <div data-section="navigation" className="priority-immediate" role="banner">
-                          <HeaderHybrid />
-                        </div>
-                        <DynamicTrialBanner />
-                        <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                        {!isAuthRoute && <SkipToContent />}
+                        {!isAuthRoute && (
+                          <div data-section="navigation" className="priority-immediate" role="banner">
+                            <HeaderHybrid />
+                          </div>
+                        )}
+                        {!isAuthRoute && <DynamicTrialBanner />}
+                        <main id="main-content" role="main" className={isAuthRoute ? '' : 'min-h-screen pb-16 md:pb-0'}>
                           {children}
                         </main>
-                        <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                          <DynamicFooter />
-                        </div>
-                        <div data-section="mobile-navigation" className="priority-deferred">
-                          <DynamicMobileNavigation />
-                        </div>
-                        <FloatingCTA />
-                        <GlobalExitIntent />
-                        <ChatbotWrapper />
-                        <DynamicMaintenancePopup />
+                        {!isAuthRoute && (
+                          <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                            <DynamicFooter />
+                          </div>
+                        )}
+                        {!isAuthRoute && (
+                          <div data-section="mobile-navigation" className="priority-deferred">
+                            <DynamicMobileNavigation />
+                          </div>
+                        )}
+                        {!isAuthRoute && <FloatingCTA />}
+                        {!isAuthRoute && <GlobalExitIntent />}
+                        {!isAuthRoute && <ChatbotWrapper />}
+                        {!isAuthRoute && <DynamicMaintenancePopup />}
                       </PageErrorBoundary>
                     </MotionProvider>
                   </PersonalizationProvider>

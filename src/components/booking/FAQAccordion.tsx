@@ -15,6 +15,7 @@ import {
   Users,
   Shield,
 } from 'lucide-react'
+import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface FAQ {
   id: number
@@ -41,8 +42,7 @@ const faqs: FAQ[] = [
   {
     id: 3,
     question: 'Can I reschedule?',
-    answer:
-      'Absolutely! You can reschedule your demo up to 2 hours before the scheduled time. Simply contact us via WhatsApp at +91 88264 44334 or email support@cerebrumbiologyacademy.com with your new preferred time.',
+    answer: `Absolutely! You can reschedule your demo up to 2 hours before the scheduled time. Simply contact us via WhatsApp at ${CONTACT_INFO.phone.display.primary} or email support@cerebrumbiologyacademy.com with your new preferred time.`,
     icon: <Clock className="w-4 h-4" />,
   },
   {
@@ -181,7 +181,7 @@ export function FAQAccordion() {
             }}
             className="font-semibold underline hover:text-blue-700 cursor-pointer"
           >
-            +91 88264 44334
+            {getDisplayPhone()}
           </button>{' '}
           or email{' '}
           <a

@@ -19,6 +19,7 @@ import {
   ArrowRight,
   Layers,
 } from 'lucide-react'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   batches,
   neetClasses,
@@ -487,11 +488,11 @@ export default function TimetablePage() {
               </div>
             </div>
             <a
-              href="tel:9188264434"
+              href={getPhoneLink()}
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
             >
               <Phone className="h-4 w-4" />
-              Contact: 9188264434
+              Contact: {getDisplayPhone()}
             </a>
           </div>
         </div>
@@ -730,11 +731,11 @@ export default function TimetablePage() {
             Contact us to book your batch or for any queries
           </p>
           <a
-            href="tel:9188264434"
+            href={getPhoneLink()}
             className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-2.5 font-medium text-indigo-600 transition-colors hover:bg-indigo-50"
           >
             <Phone className="h-4 w-4" />
-            Call Now: 9188264434
+            Call Now: {getDisplayPhone()}
           </a>
         </div>
       </div>

@@ -3,6 +3,8 @@
  * Professional, mobile-responsive HTML email templates
  */
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface LeadWelcomeData {
   studentName: string
   counselorName: string
@@ -214,7 +216,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
               <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
                 You're receiving this because you expressed interest in our courses via ${data.source}.
               </p>
@@ -287,7 +289,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
             </div>
           </div>
         </body>
@@ -363,7 +365,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
             </div>
           </div>
         </body>
@@ -427,7 +429,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
             </div>
           </div>
         </body>
@@ -504,7 +506,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
             </div>
           </div>
         </body>
@@ -589,7 +591,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
             </div>
           </div>
         </body>
@@ -668,7 +670,7 @@ export const emailTemplates = {
 
             <div class="footer">
               <p>Cerebrum Biology Academy</p>
-              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p>📞 ${CONTACT_INFO.phone.display.primary} | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
               <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
                 This offer expires on ${data.expiryDate}. Terms and conditions apply.
               </p>

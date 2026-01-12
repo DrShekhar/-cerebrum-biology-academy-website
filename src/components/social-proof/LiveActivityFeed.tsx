@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, UserCheck, BookOpen, Trophy, TrendingUp, Users, Play } from 'lucide-react'
 
@@ -107,16 +107,30 @@ export function LiveActivityFeed({
   const [currentActivityIndex, setCurrentActivityIndex] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
   const [isPaused, setIsPaused] = useState(false)
+  const [isTabVisible, setIsTabVisible] = useState(true)
 
+  // Track tab visibility to pause interval when tab is hidden (saves CPU)
   useEffect(() => {
-    if (!autoRotate || isPaused) return
+    const handleVisibilityChange = () => {
+      setIsTabVisible(document.visibilityState === 'visible')
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [])
 
-    const interval = setInterval(() => {
-      setCurrentActivityIndex((prev) => (prev + 1) % activities.length)
-    }, rotationInterval)
+  // Memoized rotation handler
+  const rotateActivity = useCallback(() => {
+    setCurrentActivityIndex((prev) => (prev + 1) % activities.length)
+  }, [])
+
+  // Auto-rotate interval - pauses when tab hidden or user hovering
+  useEffect(() => {
+    if (!autoRotate || isPaused || !isTabVisible) return
+
+    const interval = setInterval(rotateActivity, rotationInterval)
 
     return () => clearInterval(interval)
-  }, [autoRotate, isPaused, rotationInterval])
+  }, [autoRotate, isPaused, isTabVisible, rotationInterval, rotateActivity])
 
   if (!isVisible) return null
 

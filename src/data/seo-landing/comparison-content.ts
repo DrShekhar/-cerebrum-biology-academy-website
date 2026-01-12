@@ -25,9 +25,9 @@ const comparisonToolsCTA = {
 }
 
 const defaultContactButtons = {
-  phone: '+919871018875',
+  phone: '+918826444334',
   whatsapp: {
-    number: '+919871018875',
+    number: '+918826444334',
     message:
       'Hi Dr. Shekhar, I want to compare coaching options for NEET Biology preparation. Please guide me.',
   },

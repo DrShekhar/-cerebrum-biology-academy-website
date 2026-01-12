@@ -5,9 +5,9 @@ import { SEOLandingContent } from './types'
 
 // Common contact buttons for international curriculum pages
 const defaultContactButtons = {
-  phone: '+919871018875',
+  phone: '+918826444334',
   whatsapp: {
-    number: '+919871018875',
+    number: '+918826444334',
     message:
       'Hi Dr. Shekhar, I am interested in Biology tuition for international curriculum. Please guide me.',
   },

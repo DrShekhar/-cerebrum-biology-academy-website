@@ -8,6 +8,7 @@ import { z } from 'zod'
 import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { zoomService } from '@/lib/zoom/zoomService'
+import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -169,10 +170,13 @@ export async function POST(request: NextRequest) {
     // Send immediate notifications
     await sendImmediateNotifications(demoBooking)
 
+    // Find or create lead for this demo booking (used for product agent and drip sequences)
+    let lead: Awaited<ReturnType<typeof prisma.leads.findFirst>> = null
+
     // Queue AI Product Agent for course match analysis (automatic trigger)
     try {
       // First, try to find or create a lead for this demo booking
-      let lead = await prisma.leads.findFirst({
+      lead = await prisma.leads.findFirst({
         where: {
           OR: [{ email: data.email }, { phone: data.phone.replace(/\D/g, '').slice(-10) }],
         },
@@ -231,6 +235,20 @@ export async function POST(request: NextRequest) {
     } catch (zoomError) {
       // Log but don't fail the booking if Zoom creation fails
       console.error('Failed to create Zoom meeting (non-blocking):', zoomError)
+    }
+
+    // Start WhatsApp drip sequence for demo reminders
+    try {
+      if (lead) {
+        // Trigger demo_booked behavioral action which starts DEMO_REMINDER_SEQUENCE
+        await whatsappDripService.handleBehavioralTrigger(lead.id, 'demo_booked', {
+          demoDate: new Date(data.preferredDate + ' ' + data.preferredTime.split(' - ')[0]),
+          courseInterest: data.courseInterest.join(', '),
+        })
+        console.log('✅ Demo reminder drip sequence started for lead:', lead.id)
+      }
+    } catch (dripError) {
+      console.error('Failed to start demo drip sequence (non-blocking):', dripError)
     }
 
     return NextResponse.json({

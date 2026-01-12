@@ -21,7 +21,7 @@ describe('AIMessageHandler', () => {
   let mockTemplates: jest.Mocked<WhatsAppTemplates>
 
   const mockMessageData = {
-    from: '+919876543210',
+    from: '+918826444334',
     text: 'What is photosynthesis?',
     messageId: 'msg_123',
     phoneNumberId: 'phone_123',
@@ -36,7 +36,7 @@ describe('AIMessageHandler', () => {
     mockSessionManager = {
       getOrCreateSession: jest.fn().mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: null,
@@ -72,7 +72,7 @@ describe('AIMessageHandler', () => {
       await handler.processMessage(message)
 
       expect(mockSessionManager.getOrCreateSession).toHaveBeenCalledWith(
-        '+919876543210',
+        '+918826444334',
         'John Doe'
       )
     })
@@ -104,7 +104,7 @@ describe('AIMessageHandler', () => {
     it('should maintain conversation context', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: null,
@@ -130,7 +130,7 @@ describe('AIMessageHandler', () => {
       await handler.processMessage(mockMessageData)
 
       expect(mockSessionManager.getOrCreateSession).toHaveBeenCalledWith(
-        '+919876543210',
+        '+918826444334',
         'John Doe'
       )
     })
@@ -165,7 +165,7 @@ describe('AIMessageHandler', () => {
     it('should handle demo booking flow', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: 'demo_booking',
@@ -182,7 +182,7 @@ describe('AIMessageHandler', () => {
     it('should handle enrollment flow', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: 'enrollment',
@@ -212,7 +212,7 @@ describe('AIMessageHandler', () => {
     it('should collect student name', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         conversationContext: {
           currentFlow: 'demo_booking',
           flowStep: 'name',
@@ -307,7 +307,7 @@ describe('AIMessageHandler', () => {
     it('should handle follow-up questions', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: null,
@@ -332,7 +332,7 @@ describe('AIMessageHandler', () => {
     it('should reference previous context', async () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         conversationContext: {
           currentFlow: null,
           messages: [{ role: 'user', content: 'Explain photosynthesis' }],
@@ -357,7 +357,7 @@ describe('AIMessageHandler', () => {
 
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         name: 'John Doe',
         conversationContext: {
           currentFlow: null,
@@ -377,7 +377,7 @@ describe('AIMessageHandler', () => {
 
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
-        phone: '+919876543210',
+        phone: '+918826444334',
         conversationContext: {
           currentFlow: 'demo_booking',
           flowStep: 'name',

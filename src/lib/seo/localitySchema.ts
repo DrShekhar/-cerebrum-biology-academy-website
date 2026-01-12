@@ -1,4 +1,5 @@
 import { Locality } from '@/data/localities'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface LocalBusinessSchema {
   '@context': string
@@ -125,7 +126,7 @@ export function generateLocalBusinessSchema(
     name: `Cerebrum Biology Academy - ${locality.displayName}`,
     description: locality.seo.description,
     url: pageUrl,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.display.hyphenated.primary,
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
@@ -246,7 +247,7 @@ export function generateCourseSchema(
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91-88264-44334',
+      telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       contactType: 'Admissions',
       availableLanguage: ['English', 'Hindi'],
     },

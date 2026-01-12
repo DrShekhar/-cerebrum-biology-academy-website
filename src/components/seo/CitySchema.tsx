@@ -1,5 +1,7 @@
 'use client'
 
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
 interface CitySchemaProps {
   cityName: string
   citySlug: string
@@ -29,7 +31,7 @@ export function CitySchema({
     name: `Cerebrum Biology Academy - ${cityName}`,
     description: `Best NEET Biology Coaching in ${cityName}, ${state}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
     url: pageUrl,
-    telephone: '+91-8826444334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og-image.png`,
@@ -129,7 +131,7 @@ export function CitySchema({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91-8826444334',
+      telephone: CONTACT_INFO.phone.primary,
       contactType: 'Admissions',
       availableLanguage: ['English', 'Hindi'],
       areaServed: 'IN',

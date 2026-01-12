@@ -111,7 +111,7 @@ notificationService.send({
   recipient: {
     name: 'Student Name',
     email: 'student@example.com',
-    phone: '+919876543210',
+    phone: '+918826444334',
   },
   data: {
     demoDate: '2025-02-15',

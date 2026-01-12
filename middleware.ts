@@ -1,56 +1,120 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { addSecurityHeaders } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
+import { jwtVerify } from 'jose'
+
+// Auth secret for verifying Firebase session tokens (encoded for jose)
+// SECURITY: No fallback in production - secrets are required
+const getAuthSecret = () => {
+  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
+  if (!secret) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('CRITICAL: AUTH_SECRET or NEXTAUTH_SECRET is required in production')
+    }
+    console.warn('[DEV] AUTH_SECRET not set - using development fallback')
+    return 'dev-only-secret-not-for-production-use'
+  }
+  return secret
+}
+const AUTH_SECRET = getAuthSecret()
+const SECRET_KEY = new TextEncoder().encode(AUTH_SECRET)
 
 // Define public routes that don't require authentication
-const isPublicRoute = createRouteMatcher([
+const publicRoutes = [
   '/',
-  '/courses(.*)',
+  '/courses',
   '/about',
   '/contact',
-  '/blog(.*)',
-  '/gallery(.*)',
-  '/pricing(.*)',
-  '/results(.*)',
-  '/faculty(.*)',
-  '/demo-booking(.*)',
-  '/admissions(.*)',
-  '/faq(.*)',
-  '/testimonials(.*)',
-  '/timetable(.*)',
-  '/sign-in(.*)',
-  '/sign-up(.*)',
-  '/auth/(.*)',
-  '/api/public/(.*)',
-  '/api/webhooks/(.*)',
-])
+  '/blog',
+  '/gallery',
+  '/pricing',
+  '/results',
+  '/faculty',
+  '/demo-booking',
+  '/admissions',
+  '/faq',
+  '/testimonials',
+  '/timetable',
+  '/study-with-me', // Public study session page and OBS overlay
+  '/sign-in',
+  '/sign-up',
+  '/auth',
+  '/api/auth',
+  '/api/public',
+  '/api/webhooks',
+]
+
+// Check if path matches public routes
+function isPublicRoute(pathname: string): boolean {
+  return publicRoutes.some(route => {
+    if (route === '/') return pathname === '/'
+    return pathname === route || pathname.startsWith(route + '/')
+  })
+}
 
 // Define admin routes
-const isAdminRoute = createRouteMatcher(['/admin(.*)', '/api/admin/(.*)'])
+function isAdminRoute(pathname: string): boolean {
+  return pathname.startsWith('/admin') || pathname.startsWith('/api/admin')
+}
 
 // Define protected routes
-const isProtectedRoute = createRouteMatcher([
-  '/dashboard(.*)',
-  '/student/(.*)',
-  '/profile(.*)',
-  '/test/(.*)',
-  '/teacher/(.*)',
-  '/counselor(.*)',
-  '/select-role(.*)',
-])
+function isProtectedRoute(pathname: string): boolean {
+  const protectedPrefixes = [
+    '/dashboard',
+    '/student',
+    '/profile',
+    '/test',
+    '/teacher',
+    '/counselor',
+    '/select-role',
+  ]
+  return protectedPrefixes.some(prefix =>
+    pathname === prefix || pathname.startsWith(prefix + '/')
+  )
+}
 
-// Helper to get user role from Clerk session claims
-// NOTE: Requires setting up custom session claims in Clerk Dashboard:
-// { "metadata": "{{user.public_metadata}}" }
-type ClerkSessionClaims = {
-  metadata?: {
-    role?: string
+// JWT payload from our Firebase session API
+interface FirebaseSessionPayload {
+  id: string
+  email: string
+  name?: string
+  role: string
+  phone?: string
+  sub: string
+  iat?: number
+  exp?: number
+}
+
+// Try to get user from our custom JWT token (async for jose)
+async function getUserFromToken(req: NextRequest): Promise<{ userId: string; role: string } | null> {
+  try {
+    // Check for our Firebase auth session token
+    const sessionToken =
+      req.cookies.get('__Secure-authjs.session-token')?.value ||
+      req.cookies.get('authjs.session-token')?.value
+
+    if (!sessionToken) {
+      return null
+    }
+
+    const { payload } = await jwtVerify(sessionToken, SECRET_KEY)
+    const decoded = payload as unknown as FirebaseSessionPayload
+
+    if (decoded && decoded.id) {
+      return {
+        userId: decoded.id,
+        role: (decoded.role || 'student').toUpperCase()
+      }
+    }
+    return null
+  } catch (error) {
+    // Token invalid or expired
+    return null
   }
 }
 
-export default clerkMiddleware(async (auth, req) => {
+export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
   const hostname = req.headers.get('host') || ''
 
@@ -63,18 +127,19 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(newUrl, { status: 301 })
   }
 
-  // Get Clerk auth state
-  const { userId, sessionClaims } = await auth()
-  const userRole = (sessionClaims as ClerkSessionClaims)?.metadata?.role?.toUpperCase()
+  // Get auth state from our custom JWT token
+  const authResult = await getUserFromToken(req)
+  const userId = authResult?.userId || null
+  const userRole = authResult?.role || null
 
-  // For non-public routes, require Clerk authentication
-  if (!isPublicRoute(req) && !userId) {
+  // For non-public routes, require authentication
+  if (!isPublicRoute(pathname) && !userId) {
     const signInUrl = new URL('/sign-in', req.url)
     signInUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(signInUrl)
   }
 
-  // Legacy auth routes redirect to Clerk
+  // Auth routes redirect to dashboard if already logged in
   if (pathname.startsWith('/auth/') && userId) {
     return NextResponse.redirect(new URL('/dashboard', req.url))
   }
@@ -85,7 +150,7 @@ export default clerkMiddleware(async (auth, req) => {
       return NextResponse.redirect(new URL('/admin', req.url))
     }
     if (userId) {
-      // User is signed in but not admin - redirect to sign-in to show Clerk
+      // User is signed in but not admin - show page
       return addSecurityHeaders(NextResponse.next())
     }
     return addSecurityHeaders(NextResponse.next())
@@ -94,7 +159,7 @@ export default clerkMiddleware(async (auth, req) => {
   // Protected admin routes - require admin role
   // Note: Role checking happens in AdminLayout component for better UX
   // Middleware just ensures user is authenticated
-  if (isAdminRoute(req) && pathname !== '/admin/login') {
+  if (isAdminRoute(pathname) && pathname !== '/admin/login') {
     if (!userId) {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
@@ -103,14 +168,19 @@ export default clerkMiddleware(async (auth, req) => {
 
     // Log admin access
     if (process.env.NODE_ENV === 'production') {
-      const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
-      console.log(`Admin access: userId=${userId} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`)
+      const clientIP =
+        req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
+      console.log(
+        `Admin access: userId=${userId} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`
+      )
     }
   }
 
   // Protected teacher routes
   if (pathname.startsWith('/teacher/') && !userId) {
-    return NextResponse.redirect(new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url))
+    return NextResponse.redirect(
+      new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
+    )
   }
 
   // Protected counselor routes
@@ -121,7 +191,7 @@ export default clerkMiddleware(async (auth, req) => {
   }
 
   // Protected general routes
-  if (isProtectedRoute(req) && !userId) {
+  if (isProtectedRoute(pathname) && !userId) {
     const loginUrl = new URL('/sign-in', req.url)
     loginUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(loginUrl)
@@ -187,8 +257,24 @@ export default clerkMiddleware(async (auth, req) => {
     }
   }
 
-  // Create response with enhanced security
-  const response = NextResponse.next()
+  // Create response with enhanced security and pass pathname to server components
+  const requestHeaders = new Headers(req.headers)
+  requestHeaders.set('x-pathname', pathname)
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  })
+
+  // Set pathname cookie for server components to read
+  // This is more reliable than headers for middleware -> layout communication
+  response.cookies.set('x-pathname', pathname, {
+    path: '/',
+    sameSite: 'strict',
+    httpOnly: false, // Allow client-side access if needed
+    maxAge: 60, // Short-lived - just for request/response cycle
+  })
 
   // Preserve 404 and other error status codes
   if (response.status !== 200) {
@@ -229,18 +315,24 @@ export default clerkMiddleware(async (auth, req) => {
   // SEO: Add noindex for pages with query params to prevent duplicate content
   const searchQuery = req.nextUrl.search
   const pagesWithQueryParamDuplicates = ['/blog', '/courses', '/demo-booking', '/enrollments']
-  if (searchQuery && pagesWithQueryParamDuplicates.some((p) => pathname === p || pathname.startsWith(p + '/'))) {
+  if (
+    searchQuery &&
+    pagesWithQueryParamDuplicates.some((p) => pathname === p || pathname.startsWith(p + '/'))
+  ) {
     response.headers.set('X-Robots-Tag', 'noindex, follow')
   }
 
   // Production headers
   if (process.env.NODE_ENV === 'production') {
-    response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
+    response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=63072000; includeSubDomains; preload'
+    )
   }
 
   // Debug headers in development
   if (process.env.NODE_ENV === 'development' && userId) {
-    response.headers.set('X-Clerk-User-ID', userId)
+    response.headers.set('X-User-ID', userId)
     if (userRole) {
       response.headers.set('X-User-Role', userRole)
     }
@@ -254,11 +346,17 @@ export default clerkMiddleware(async (auth, req) => {
 
   // Cache control
   if (isProtectedPath) {
-    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+    response.headers.set(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+    )
     response.headers.set('Pragma', 'no-cache')
     response.headers.set('Expires', '0')
   } else if (isStaticPage) {
-    response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=86400')
+    response.headers.set(
+      'Cache-Control',
+      'public, max-age=60, s-maxage=300, stale-while-revalidate=86400'
+    )
   } else {
     response.headers.set('Cache-Control', 'public, max-age=30, stale-while-revalidate=60')
   }
@@ -274,7 +372,7 @@ export default clerkMiddleware(async (auth, req) => {
   }
 
   return response
-})
+}
 
 export const config = {
   matcher: [

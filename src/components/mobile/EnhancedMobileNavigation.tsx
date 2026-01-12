@@ -26,6 +26,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { motion, AnimatePresence, PanInfo } from 'framer-motion'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface NavigationItem {
   href: string
@@ -71,7 +72,7 @@ const MAIN_NAVIGATION: NavigationItem[] = [
     icon: Trophy,
   },
   {
-    href: 'tel:+918826444334',
+    href: getPhoneLink(),
     label: 'Call',
     labelHi: 'कॉल',
     icon: Phone,

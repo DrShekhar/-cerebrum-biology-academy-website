@@ -27,6 +27,7 @@ import {
   Heart,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface NavigationItem {
   label: string
@@ -512,7 +513,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Call */}
                 <motion.a
-                  href="tel:+918826444334"
+                  href={getPhoneLink()}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
@@ -666,7 +667,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                     WhatsApp Us
                   </button>
                   <a
-                    href="tel:+918826444334"
+                    href={getPhoneLink()}
                     className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"
                   >
                     <Phone className="h-5 w-5" />

@@ -340,7 +340,7 @@ CREATE TABLE user_engagement (
 // When user submits inquiry form
 await WhatsAppAutomationService.initializeUser({
   userId: 'user_123',
-  phone: '919876543210',
+  phone: '918826444334',
   name: 'Priya Sharma',
   email: 'priya@email.com',
   source: 'website_inquiry',
@@ -353,7 +353,7 @@ await WhatsAppAutomationService.initializeUser({
 // When user leaves enrollment incomplete
 await WhatsAppAutomationService.triggerAbandonedCartFlow({
   userId: 'user_123',
-  phone: '919876543210',
+  phone: '918826444334',
   name: 'Priya Sharma',
   courseName: 'NEET Dropper Course',
   amount: 75000,
@@ -367,7 +367,7 @@ await WhatsAppAutomationService.triggerAbandonedCartFlow({
 // Automated daily engagement
 await WhatsAppAutomationService.triggerStudentEngagement({
   userId: 'student_456',
-  phone: '919876543210',
+  phone: '918826444334',
   name: 'Rahul Gupta',
   courseId: 'course_neet_dropper',
   enrollmentDate: new Date('2024-01-15'),

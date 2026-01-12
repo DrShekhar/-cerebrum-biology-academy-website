@@ -23,6 +23,7 @@ import { useTranslations } from '@/lib/i18n/translations'
 import { QuickLanguageToggle } from './LanguageSwitcher'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface MobileNavigationProps {
   isOpen: boolean
@@ -90,7 +91,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     {
       icon: Phone,
       label: language === 'hi' ? 'कॉल करें' : 'Call Now',
-      action: () => window.open('tel:+918826444334'),
+      action: () => window.open(getPhoneLink()),
       color: 'text-green-600',
       bgColor: 'bg-green-50',
     },

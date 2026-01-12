@@ -1,4 +1,5 @@
 import { globalSEOService } from './globalSEO'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface CityData {
   name: string
@@ -228,7 +229,7 @@ export class CitySpecificSEOService {
         bestRating: '5',
       },
       priceRange: '₹₹',
-      telephone: '+91-88264-44334',
+      telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       openingHours: 'Mo-Su 06:00-22:00',
       sameAs: [
         'https://cerebrumbiologyacademy.com',
@@ -287,7 +288,7 @@ export class CitySpecificSEOService {
       '@id': `https://cerebrumbiologyacademy.com/locations/${city.name.toLowerCase()}#business`,
       name: `Cerebrum Biology Academy ${city.name}`,
       image: `https://cerebrumbiologyacademy.com/images/locations/${city.name.toLowerCase()}-branch.jpg`,
-      telephone: '+91-88264-44334',
+      telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       address: {
         '@type': 'PostalAddress',
         streetAddress: `Cerebrum Biology Academy`,

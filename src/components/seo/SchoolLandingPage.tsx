@@ -13,6 +13,7 @@ import {
   Quote,
   Navigation,
 } from 'lucide-react'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export interface SchoolPageData {
   slug: string
@@ -59,7 +60,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     name: 'Cerebrum Biology Academy',
     description: data.metaDescription,
     url: `${baseUrl}/${data.slug}`,
-    telephone: '+91-88264-44334',
+    telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     founder: {
@@ -148,11 +149,11 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:+918826444334"
+                  href={getPhoneLink()}
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call: 88264-44334
+                  Call: {getDisplayPhone()}
                 </a>
               </div>
             </div>
@@ -403,7 +404,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                 Book Free Demo Class
               </Link>
               <a
-                href="tel:+918826444334"
+                href={getPhoneLink()}
                 className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold transition hover:bg-white/10"
               >
                 <Phone className="mr-2 h-5 w-5" />

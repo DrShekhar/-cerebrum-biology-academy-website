@@ -10,6 +10,7 @@ import {
   Play,
   Phone,
 } from 'lucide-react'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface ABTestHeroProps {
   onCtaClick?: () => void
@@ -38,7 +39,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
 
   const handlePhoneClick = () => {
     trackClick('phone_cta')
-    window.open('tel:+918826444334', '_self')
+    window.open(getPhoneLink(), '_self')
   }
 
   const isUrgencyVariant = variant === 'urgency_variant'

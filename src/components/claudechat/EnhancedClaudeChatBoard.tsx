@@ -1,6 +1,9 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
+
+// Prevent memory leaks in long chat sessions
+const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
@@ -268,7 +271,7 @@ What would you like to learn about today? Remember, every question brings you cl
       },
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     setVoiceTranscript('')
     setVoiceConfidence(0)
 
@@ -288,7 +291,7 @@ What would you like to learn about today? Remember, every question brings you cl
       inputType: 'text',
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
     setInputText('')
 
     await generateAIResponse(inputText, 'text')
@@ -309,7 +312,7 @@ What would you like to learn about today? Remember, every question brings you cl
       },
     }
 
-    setMessages((prev) => [...prev, userMessage])
+    setMessages((prev) => [...prev, userMessage].slice(-MAX_MESSAGES))
 
     await generateAIResponse(result.analysisText, 'image', result)
   }
@@ -403,7 +406,7 @@ Want me to explain any specific part in more detail?`
       },
     }
 
-    setMessages((prev) => [...prev, assistantMessage])
+    setMessages((prev) => [...prev, assistantMessage].slice(-MAX_MESSAGES))
     setIsTyping(false)
 
     // Update progress

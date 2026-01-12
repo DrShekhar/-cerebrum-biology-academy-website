@@ -86,9 +86,9 @@ export async function GET() {
     status: 'Twilio configuration check',
     config,
     instructions: {
-      sendOTP: 'POST /api/test/twilio with { phone: "+919876543210", channel: "sms" }',
+      sendOTP: 'POST /api/test/twilio with { phone: "+918826444334", channel: "sms" }',
       verifyOTP:
-        'POST /api/test/twilio?verify=true with { phone: "+919876543210", code: "123456" }',
+        'POST /api/test/twilio?verify=true with { phone: "+918826444334", code: "123456" }',
     },
   })
 }

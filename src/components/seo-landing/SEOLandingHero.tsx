@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Phone, Play } from 'lucide-react'
 import Link from 'next/link'
 import { SEOLandingContent } from '@/data/seo-landing/types'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface SEOLandingHeroProps {
   hero: SEOLandingContent['hero']
@@ -98,8 +99,8 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
           >
             <Phone className="h-4 w-4" />
             <span className="text-sm">Questions? Call Dr. Shekhar:</span>
-            <a href="tel:+919876543210" className="font-semibold text-white hover:underline">
-              +91 98765 43210
+            <a href={getPhoneLink()} className="font-semibold text-white hover:underline">
+              {getDisplayPhone()}
             </a>
           </motion.div>
         </div>

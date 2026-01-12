@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   X,
   Shield,
@@ -426,11 +427,11 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       </p>
                       <div className="space-y-3">
                         <a
-                          href="tel:+918826444334"
+                          href={getPhoneLink()}
                           className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors w-full"
                         >
                           <Phone className="w-5 h-5" />
-                          +91 88264 44334
+                          {getDisplayPhone()}
                         </a>
                         <div className="text-center text-sm text-gray-400">
                           Available: Mon-Sat, 9 AM - 7 PM

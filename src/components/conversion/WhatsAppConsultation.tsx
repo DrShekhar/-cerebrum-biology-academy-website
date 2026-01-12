@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   MessageCircle,
   Phone,
@@ -153,7 +154,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
       message += `\n\nSpecific Query: ${consultationData.specificQuery}`
     }
 
-    const phoneNumber = '+918826444334' // Cerebrum's WhatsApp number
+    const phoneNumber = CONTACT_INFO.whatsapp.primary // Cerebrum's WhatsApp number
     const encodedMessage = encodeURIComponent(message)
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
 
@@ -175,8 +176,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
   }
 
   const handlePhoneCall = () => {
-    const phoneNumber = '+918826444334'
-    window.location.href = `tel:${phoneNumber}`
+    window.location.href = getPhoneLink()
 
     // Track phone call
     if (typeof window !== 'undefined' && window.gtag) {

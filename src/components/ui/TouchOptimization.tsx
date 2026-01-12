@@ -19,6 +19,7 @@ import {
   ChevronDown,
   X,
 } from 'lucide-react'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Touch Target Component - Ensures minimum 48px touch targets
 interface TouchTargetProps {
@@ -591,7 +592,7 @@ interface EnhancedQuickActionButtonProps {
 
 export function EnhancedQuickActionButton({
   action,
-  phoneNumber = '+918826444334',
+  phoneNumber = CONTACT_INFO.phone.primary,
   emailAddress = 'contact@cerebrumbiologyacademy.com',
   courseId,
   customAction,

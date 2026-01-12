@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink, getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
@@ -68,7 +69,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
     {
       icon: MessageCircle,
       label: 'WhatsApp',
-      href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
+      href: `${getWhatsAppLink()}?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.`,
       color: 'bg-[#166534] hover:bg-[#14532d]',
       action: 'whatsapp',
       external: true,
@@ -76,7 +77,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
     {
       icon: Phone,
       label: 'Call Now',
-      href: 'tel:+918826444334',
+      href: getPhoneLink(),
       color: 'bg-blue-600 hover:bg-blue-700',
       action: 'call',
     },

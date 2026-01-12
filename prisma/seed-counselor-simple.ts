@@ -62,7 +62,7 @@ async function main() {
       data: {
         studentName,
         email: `${studentName.toLowerCase().replace(' ', '.')}@example.com`,
-        phone: `+919876543${String(i).padStart(3, '0')}`,
+        phone: `+918826444${String(335 + i).padStart(3, '0')}`,
         grade: grades[i % grades.length],
         city: 'Delhi',
         school: `School ${i + 1}`,
@@ -71,7 +71,7 @@ async function main() {
         source: sources[i % sources.length],
         interestedCourse: `Class ${11 + (i % 2)}th Biology - NEET Preparation`,
         parentName: `Parent of ${studentName}`,
-        parentPhone: `+919876544${String(i).padStart(3, '0')}`,
+        parentPhone: `+918826444${String(345 + i).padStart(3, '0')}`,
         followUpDate: new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000),
         assignedToId: counselor.id,
         createdAt: new Date(Date.now() - (10 - i) * 24 * 60 * 60 * 1000),

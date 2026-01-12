@@ -19,6 +19,7 @@ import {
   BookOpen,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface IndianMarketFeaturesProps {
   onLanguageChange?: (language: string) => void
@@ -258,7 +259,7 @@ export function IndianMarketFeatures({
         <Button
           variant="outline"
           size="sm"
-          onClick={() => window.open('tel:+918826444334', '_self')}
+          onClick={() => window.open(getPhoneLink(), '_self')}
           className="flex flex-col items-center py-3 h-auto text-blue-600 border-blue-200 hover:bg-blue-50"
         >
           <Phone className="w-5 h-5 mb-1" />

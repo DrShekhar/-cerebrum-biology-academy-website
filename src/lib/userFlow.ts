@@ -70,35 +70,13 @@ export function getDefaultDashboard(
       (e) => e.status === 'ACTIVE' || e.status === 'PENDING'
     )
 
-    const userTrack = (user.profile?.track || 'NOT_SET') as UserTrack
-    const isNEETTrack = userTrack === 'NEET' || user.profile?.goal?.includes('NEET')
-
-    // Paid NEET user → NEET Prep Center
-    if (hasActiveEnrollment && isNEETTrack) {
-      return {
-        route: '/dashboard',
-        type: 'NEET_PREP',
-        requiresAuth: true,
-        isPaid: true,
-      }
-    }
-
-    // Paid regular student → Home Dashboard (with full features)
-    if (hasActiveEnrollment && !isNEETTrack) {
-      return {
-        route: '/student/dashboard',
-        type: 'HOME',
-        requiresAuth: true,
-        isPaid: true,
-      }
-    }
-
-    // Free registered user (any track) → Home Dashboard
+    // All authenticated users → NEET Prep Center (main dashboard)
+    // Previously only for paid users, now open to all registered users
     return {
-      route: '/student/dashboard',
-      type: 'HOME',
+      route: '/dashboard',
+      type: 'NEET_PREP',
       requiresAuth: true,
-      isPaid: false,
+      isPaid: hasActiveEnrollment || false,
     }
   }
 
@@ -151,15 +129,9 @@ export function canAccessDashboard(
     (e) => e.status === 'ACTIVE' || e.status === 'PENDING'
   )
 
-  // NEET Prep Center - requires paid enrollment
+  // NEET Prep Center - available to all authenticated users
+  // Previously required paid enrollment, now open to registered users
   if (dashboard === 'NEET_PREP') {
-    if (!hasActiveEnrollment) {
-      return {
-        hasAccess: false,
-        reason: 'Upgrade to access NEET Prep Center',
-        upgradeRequired: true,
-      }
-    }
     return { hasAccess: true }
   }
 
@@ -195,6 +167,7 @@ export function getNavigationItems(
   const hasActiveEnrollment = user?.enrollments?.some(
     (e) => e.status === 'ACTIVE' || e.status === 'PENDING'
   )
+  const isAuthenticated = !!user
 
   return [
     {
@@ -208,8 +181,8 @@ export function getNavigationItems(
       label: 'NEET Prep',
       route: '/dashboard',
       icon: '🎯',
-      locked: !hasActiveEnrollment,
-      badge: hasActiveEnrollment ? undefined : 'PRO',
+      locked: !isAuthenticated,
+      badge: isAuthenticated ? undefined : 'Login Required',
       description: 'Track your path to 600+',
     },
     {

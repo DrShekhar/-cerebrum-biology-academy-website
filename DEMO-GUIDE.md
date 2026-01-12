@@ -96,7 +96,7 @@ Navigate to http://localhost:3000 and fill out the demo booking form with:
 
 - Student Name: "Rajesh Kumar"
 - Email: "rajesh@example.com"
-- Phone: "+919876543210"
+- Phone: "+918826444334"
 - Preferred Date: Tomorrow's date
 - Preferred Time: "10:00 AM - 11:00 AM"
 - Course Interest: "NEET Biology"
@@ -111,7 +111,7 @@ Navigate to http://localhost:3000 and fill out the demo booking form with:
 const sent = await notificationService.sendDemoConfirmation({
   studentName: 'Rajesh Kumar',
   email: 'rajesh@example.com',
-  phone: '+919876543210',
+  phone: '+918826444334',
   demoDate: 'Monday, 12 November, 2025',
   demoTime: '10:00 AM - 11:00 AM',
   meetingLink: 'https://zoom.us/j/123456789',

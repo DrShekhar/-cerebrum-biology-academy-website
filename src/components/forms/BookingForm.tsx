@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/Textarea'
 import { ContactForm } from '@/types'
 import { Calendar, Phone, Mail, User, BookOpen, MessageSquare, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface BookingFormProps {
   type?: 'demo' | 'inquiry' | 'callback'
@@ -372,11 +373,11 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           <p className="text-sm text-gray-500 mb-2">Or contact us directly:</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
             <a
-              href="tel:+918826444334"
+              href={getPhoneLink()}
               className="flex items-center text-blue-600 hover:text-blue-700"
             >
               <Phone className="w-4 h-4 mr-1" />
-              +91 88264 44334
+              {getDisplayPhone()}
             </a>
             <a
               href="mailto:info@cerebrumbiologyacademy.com"

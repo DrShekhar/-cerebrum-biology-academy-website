@@ -28,6 +28,7 @@ import { Button } from '@/components/ui/Button'
 import toast from 'react-hot-toast'
 import { trackFormStep, trackFormSubmission, trackBatchSelection } from '@/lib/analytics'
 import { Input } from '@/components/ui/Input'
+import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { Label } from '@/components/ui/Label'
 import {
   Select,
@@ -420,7 +421,7 @@ export default function ApplicationForm() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="tel:+918826444334"
+                href={getPhoneLink()}
                 className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
               >
                 <Phone className="w-5 h-5" />
@@ -1497,8 +1498,8 @@ export default function ApplicationForm() {
             <div className="mt-6 text-center text-sm text-gray-600">
               <p>
                 Need help? Contact us at{' '}
-                <a href="tel:+918826444334" className="text-blue-600 font-medium hover:underline">
-                  +91 88264 44334
+                <a href={getPhoneLink()} className="text-blue-600 font-medium hover:underline">
+                  {getDisplayPhone()}
                 </a>{' '}
                 or{' '}
                 <a

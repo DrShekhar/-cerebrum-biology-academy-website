@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { globalSEOService } from './globalSEO'
 import { citySpecificSEOService } from './citySpecificSEO'
 
@@ -403,7 +404,7 @@ export class MetadataService {
       url: this.baseUrl,
       logo: `${this.baseUrl}/logo.png`,
       description: "India's premier Biology coaching institute for NEET and medical entrance exams",
-      telephone: '+91-88264-44334',
+      telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       email: 'info@cerebrumbiologyacademy.com',
       address: {
         '@type': 'PostalAddress',

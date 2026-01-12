@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { PrismaClient } from '@/generated/prisma'
+import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-
-const prisma = new PrismaClient()
+import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 
 const leadCaptureSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -94,6 +93,51 @@ export async function POST(request: NextRequest) {
         data: { downloadCount: { increment: 1 } },
       }),
     ])
+
+    // If WhatsApp number is provided, create a lead and trigger drip sequence
+    if (validatedData.whatsappNumber) {
+      try {
+        const cleanPhone = validatedData.whatsappNumber.replace(/\D/g, '').slice(-10)
+
+        // Check if lead already exists
+        let lead = await prisma.leads.findFirst({
+          where: {
+            OR: [
+              { phone: { contains: cleanPhone } },
+              { email: validatedData.email || undefined },
+            ],
+          },
+        })
+
+        if (!lead) {
+          // Create new lead in leads table
+          lead = await prisma.leads.create({
+            data: {
+              id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+              studentName: validatedData.name,
+              email: validatedData.email || null,
+              phone: cleanPhone,
+              courseInterest: validatedData.topicSlug,
+              stage: 'NEW_LEAD',
+              source: validatedData.source as any,
+              assignedToId: 'system',
+              updatedAt: new Date(),
+            },
+          })
+        }
+
+        // Trigger form_submit behavioral action (starts welcome sequence)
+        await whatsappDripService.handleBehavioralTrigger(lead.id, 'form_submit', {
+          source: validatedData.source,
+          topicSlug: validatedData.topicSlug,
+          leadMagnetId: validatedData.leadMagnetId,
+        })
+
+        console.log('✅ WhatsApp drip sequence started for lead:', lead.id)
+      } catch (dripError) {
+        console.error('Failed to start drip sequence (non-blocking):', dripError)
+      }
+    }
 
     const downloadUrl = leadMagnet.fileUrl
       ? leadMagnet.fileUrl

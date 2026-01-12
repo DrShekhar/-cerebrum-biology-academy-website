@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { DemoClassModal } from './DemoClassModal'
 import { Phone, Play, CreditCard, X, Clock, Users } from 'lucide-react'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface FloatingCTABarProps {
   course: CourseProgram
@@ -99,7 +100,7 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
               Demo Class
             </Button>
 
-            <a href="tel:+918826444334">
+            <a href={getPhoneLink()}>
               <Button size="sm" variant="outline" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 <span className="hidden sm:inline">Call Now</span>

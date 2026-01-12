@@ -3,6 +3,7 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { useAuth } from './useAuth'
+import { useFirebaseSession } from './useFirebaseSession'
 import {
   getDefaultDashboard,
   canAccessDashboard,
@@ -18,7 +19,25 @@ import {
  * Hook for managing user flow, dashboard access, and navigation
  */
 export function useUserFlow() {
-  const { user, isAuthenticated, isLoading } = useAuth()
+  const { user: instantUser, isAuthenticated: instantAuth, isLoading: instantLoading } = useAuth()
+  const { user: firebaseUser, isAuthenticated: firebaseAuth, isLoading: firebaseLoading } = useFirebaseSession()
+
+  // Combine auth sources - Firebase takes priority
+  const isLoading = instantLoading || firebaseLoading
+  const isAuthenticated = firebaseAuth || instantAuth
+
+  // Use Firebase user if available, otherwise fall back to InstantDB user
+  const user = firebaseUser ? {
+    id: firebaseUser.id,
+    email: firebaseUser.email,
+    name: firebaseUser.name || firebaseUser.email?.split('@')[0] || 'User',
+    phone: firebaseUser.phone,
+    role: firebaseUser.role,
+    createdAt: Date.now(),
+    grade: undefined,
+    profile: undefined,
+    enrollments: undefined,
+  } : instantUser
   const router = useRouter()
   const pathname = usePathname()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)

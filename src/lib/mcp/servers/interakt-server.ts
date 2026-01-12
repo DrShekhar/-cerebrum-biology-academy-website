@@ -75,7 +75,7 @@ const TOOLS: Tool[] = [
       properties: {
         phone: {
           type: 'string',
-          description: 'Phone number with country code (e.g., +919876543210 or 9876543210)',
+          description: 'Phone number with country code (e.g., +918826444334 or 8826444334)',
         },
         template: {
           type: 'string',

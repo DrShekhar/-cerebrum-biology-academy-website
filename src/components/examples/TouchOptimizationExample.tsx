@@ -19,6 +19,7 @@ import {
   useNativeTouchGestures,
 } from '@/components/ui/TouchOptimization'
 import { Phone, MessageSquare, Play } from 'lucide-react'
+import { CONTACT_INFO, getPhoneLink, getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 /**
  * Example implementations showing how to use touch optimization components
@@ -71,12 +72,12 @@ export function TouchCourseSelectionExample() {
 
   const handleCall = () => {
     HapticFeedback.light()
-    window.location.href = 'tel:+918826444334'
+    window.location.href = getPhoneLink()
   }
 
   const handleWhatsApp = () => {
     HapticFeedback.light()
-    window.open('https://wa.me/918826444334', '_blank')
+    window.open(getWhatsAppLink(), '_blank')
   }
 
   const handleDemo = () => {
@@ -506,7 +507,7 @@ export function NativeTouchGesturesExample() {
       await new Promise((resolve) => setTimeout(resolve, 2000))
       setRefreshing(false)
     },
-    phoneNumber: '+918826444334',
+    phoneNumber: CONTACT_INFO.phone.primary,
     emailAddress: 'contact@cerebrumbiologyacademy.com',
   })
 

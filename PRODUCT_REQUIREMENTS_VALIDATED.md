@@ -608,7 +608,7 @@
 1. Counselor clicks "Send WhatsApp" with template or custom message
 2. System calls Interakt API:
    - POST /v1/public/message/
-   - Body: { phone: "+919876543210", template: "post_demo_followup", variables: {...} }
+   - Body: { phone: "+918826444334", template: "post_demo_followup", variables: {...} }
 3. API response: { messageId: "msg_123", status: "sent" }
 4. System creates Communication record:
    - type: "WHATSAPP"
@@ -651,7 +651,7 @@
 **Flow:**
 
 1. Interakt webhook triggers: POST /api/webhooks/whatsapp
-2. Webhook payload: { from: "+919876543210", message: "Yes, I'm interested", timestamp: "..." }
+2. Webhook payload: { from: "+918826444334", message: "Yes, I'm interested", timestamp: "..." }
 3. System finds Lead by phone number
 4. Creates Communication record:
    - type: "WHATSAPP"

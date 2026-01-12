@@ -243,7 +243,7 @@ class WhatsAppSetupService {
   }
 
   async testMessaging() {
-    const testPhone = process.env.WHATSAPP_TEST_PHONE || '+919876543210'
+    const testPhone = process.env.WHATSAPP_TEST_PHONE || '+918826444334'
 
     console.log('🧪 Testing WhatsApp Messaging')
     console.log(`📱 Test Phone: ${testPhone}`)

@@ -13,6 +13,7 @@
 
 import { SessionManager, WhatsAppSession } from './sessionManager'
 import { prisma } from '@/lib/prisma'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 type BookingStep = 'initial' | 'collect_class' | 'collect_time' | 'confirm' | 'completed'
 
@@ -239,7 +240,7 @@ export class DemoBookingService {
       let confirmMessage = ''
 
       if (timeSlot === 'callback') {
-        confirmMessage = `✅ *Demo Booking Confirmed!*\n\nHi ${studentDetails.name}! 🎉\n\nOur team will call you within 2 hours to schedule your demo class.\n\n📚 *Class:* ${this.formatClassName(studentDetails.class)}\n📞 *We'll call:* ${phoneNumber}\n\n*What to expect:*\n✓ Expert NEET Biology faculty\n✓ Live interactive session\n✓ Doubt clearing\n✓ NEET strategy tips\n\n*Contact Us:*\n📞 +91 88264 44334\n🌐 cerebrumbiologyacademy.com\n\nExcited to meet you! 🌟`
+        confirmMessage = `✅ *Demo Booking Confirmed!*\n\nHi ${studentDetails.name}! 🎉\n\nOur team will call you within 2 hours to schedule your demo class.\n\n📚 *Class:* ${this.formatClassName(studentDetails.class)}\n📞 *We'll call:* ${phoneNumber}\n\n*What to expect:*\n✓ Expert NEET Biology faculty\n✓ Live interactive session\n✓ Doubt clearing\n✓ NEET strategy tips\n\n*Contact Us:*\n📞 ${CONTACT_INFO.phone.display.primary}\n🌐 cerebrumbiologyacademy.com\n\nExcited to meet you! 🌟`
       } else {
         confirmMessage = `✅ *Demo Class Confirmed!*\n\nCongratulations ${studentDetails.name}! 🎉\n\n*Demo Details:*\n📅 ${timeDisplay}\n📚 Class: ${this.formatClassName(studentDetails.class)}\n👨‍🏫 Faculty: Dr. Priya Sharma (AIIMS Graduate)\n\n*Zoom Link:*\nWill be sent 30 minutes before class\n\n*What to Bring:*\n✓ Notebook and pen\n✓ Your NEET doubts\n✓ Curious mind!\n\n*Topics Covered:*\n• Cell Biology basics\n• NEET exam strategy\n• How to score 330+ in Biology\n\n*Contact:*\n📞 +91 88264 44334\n🌐 cerebrumbiologyacademy.com\n\nSee you in class! Can't wait! 🚀`
       }
@@ -263,7 +264,7 @@ export class DemoBookingService {
     } catch (error) {
       console.error('❌ Error creating demo booking:', error)
 
-      const errorMessage = `Sorry, there was an error booking your demo class. Please call us directly at +91 88264 44334 or visit cerebrumbiologyacademy.com\n\nOur team is ready to help! 🙏`
+      const errorMessage = `Sorry, there was an error booking your demo class. Please call us directly at ${CONTACT_INFO.phone.display.primary} or visit cerebrumbiologyacademy.com\n\nOur team is ready to help! 🙏`
       await this.sendMessage(phoneNumber, phoneNumberId, errorMessage)
 
       // Clear flow on error

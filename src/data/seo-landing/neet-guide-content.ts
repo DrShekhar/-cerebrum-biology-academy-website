@@ -5,9 +5,9 @@ import { SEOLandingContent } from './types'
 
 // Common contact buttons for NEET guide pages
 const defaultContactButtons = {
-  phone: '+919871018875',
+  phone: '+918826444334',
   whatsapp: {
-    number: '+919871018875',
+    number: '+918826444334',
     message: 'Hi Dr. Shekhar, I need guidance for NEET preparation. Please help me.',
   },
 }
