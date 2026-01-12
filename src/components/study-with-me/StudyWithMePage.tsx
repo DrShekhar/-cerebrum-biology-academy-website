@@ -7,6 +7,7 @@ import { PomodoroTimer } from './PomodoroTimer'
 import { LiveStudentCount } from './LiveStudentCount'
 import { AmbientMusicPlayer } from './AmbientMusicPlayer'
 import { MotivationalQuotes } from './MotivationalQuotes'
+import { SessionSettings } from './SessionSettings'
 import type { DisplayMode } from '@/lib/study-with-me/types'
 import Image from 'next/image'
 
@@ -21,30 +22,40 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
     setClockFormat,
     setAmbientSound,
     setVolume,
+    setTopicName,
+    setPomodoroDurations,
     setPomodoroState,
     setStopwatchState,
   } = useStudySession(mode)
 
   // OBS Mode - Optimized for streaming overlay (1920x1080)
+  // Uses fixed positioning to cover the entire viewport including any header/footer
   if (mode === 'obs') {
     return (
       <div
-        className={`min-h-screen w-full flex flex-col ${
+        className={`fixed inset-0 z-[9999] w-full h-screen flex flex-col ${
           transparentBg ? 'bg-transparent' : 'bg-slate-900'
         }`}
       >
         {/* Top Bar */}
         <div className="flex items-center justify-between px-8 py-6">
           <RealTimeClock mode="obs" format={preferences.clockFormat} />
-          <div className="flex items-center space-x-3">
-            <Image
-              src="/brain-logo.webp"
-              alt="Cerebrum Biology"
-              width={48}
-              height={48}
-              className="h-12 w-12"
-            />
-            <span className="text-2xl font-bold text-white">Cerebrum Biology</span>
+          <div className="flex flex-col items-end">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/brain-logo.webp"
+                alt="Cerebrum Biology"
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
+              <span className="text-2xl font-bold text-white">Cerebrum Biology</span>
+            </div>
+            {preferences.topicName && (
+              <span className="text-lg text-green-400 mt-1 font-medium">
+                {preferences.topicName}
+              </span>
+            )}
           </div>
         </div>
 
@@ -120,7 +131,7 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
         </div>
 
         {/* Tertiary Section: Music + Quotes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <AmbientMusicPlayer
             mode="web"
             sound={preferences.ambientSound}
@@ -130,6 +141,17 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
           />
           <MotivationalQuotes mode="web" />
         </div>
+
+        {/* Session Settings */}
+        <SessionSettings
+          mode="web"
+          topicName={preferences.topicName}
+          studyDuration={preferences.pomodoroStudyDuration}
+          breakDuration={preferences.pomodoroBreakDuration}
+          longBreakDuration={preferences.pomodoroLongBreakDuration}
+          onTopicChange={setTopicName}
+          onDurationChange={setPomodoroDurations}
+        />
       </main>
 
       {/* Footer */}

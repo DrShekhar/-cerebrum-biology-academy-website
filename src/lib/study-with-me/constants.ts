@@ -30,6 +30,7 @@ export const DEFAULT_PREFERENCES: StudySessionPreferences = {
   pomodoroStudyDuration: POMODORO_DEFAULTS.studyDuration,
   pomodoroBreakDuration: POMODORO_DEFAULTS.breakDuration,
   pomodoroLongBreakDuration: POMODORO_DEFAULTS.longBreakDuration,
+  topicName: 'NEET Biology Focus Session',
 }
 
 // Ambient Sound URLs (placeholder - can be replaced with actual URLs)

@@ -24,6 +24,8 @@ interface UseStudySessionReturn {
   setClockFormat: (format: ClockFormat) => void
   setAmbientSound: (sound: AmbientSound) => void
   setVolume: (volume: number) => void
+  setTopicName: (name: string) => void
+  setPomodoroDurations: (study: number, breakTime: number, longBreak: number) => void
 
   // State tracking (read-only)
   pomodoroState: PomodoroState | null
@@ -94,6 +96,24 @@ export function useStudySession(initialMode: DisplayMode = 'web'): UseStudySessi
     [updatePreferences]
   )
 
+  const setTopicName = useCallback(
+    (topicName: string) => {
+      updatePreferences({ topicName })
+    },
+    [updatePreferences]
+  )
+
+  const setPomodoroDurations = useCallback(
+    (study: number, breakTime: number, longBreak: number) => {
+      updatePreferences({
+        pomodoroStudyDuration: study,
+        pomodoroBreakDuration: breakTime,
+        pomodoroLongBreakDuration: longBreak,
+      })
+    },
+    [updatePreferences]
+  )
+
   return {
     mode,
     setMode,
@@ -102,6 +122,8 @@ export function useStudySession(initialMode: DisplayMode = 'web'): UseStudySessi
     setClockFormat,
     setAmbientSound,
     setVolume,
+    setTopicName,
+    setPomodoroDurations,
     pomodoroState,
     setPomodoroState,
     stopwatchState,

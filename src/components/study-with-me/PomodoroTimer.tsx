@@ -6,6 +6,39 @@ import { Play, Pause, SkipForward, RotateCcw } from 'lucide-react'
 import type { DisplayMode, PomodoroPhase, PomodoroState } from '@/lib/study-with-me/types'
 import { POMODORO_DEFAULTS, PHASE_COLORS, STORAGE_KEYS } from '@/lib/study-with-me/constants'
 
+function playNotificationSound() {
+  try {
+    const audioContext = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
+
+    const frequencies = [523.25, 659.25, 783.99]
+    const duration = 0.15
+    const gap = 0.1
+
+    frequencies.forEach((freq, index) => {
+      const oscillator = audioContext.createOscillator()
+      const gainNode = audioContext.createGain()
+
+      oscillator.connect(gainNode)
+      gainNode.connect(audioContext.destination)
+
+      oscillator.frequency.value = freq
+      oscillator.type = 'sine'
+
+      const startTime = audioContext.currentTime + index * (duration + gap)
+      gainNode.gain.setValueAtTime(0, startTime)
+      gainNode.gain.linearRampToValueAtTime(0.3, startTime + 0.02)
+      gainNode.gain.exponentialRampToValueAtTime(0.01, startTime + duration)
+
+      oscillator.start(startTime)
+      oscillator.stop(startTime + duration)
+    })
+
+    setTimeout(() => audioContext.close(), 1000)
+  } catch {
+    // Audio not supported or blocked
+  }
+}
+
 interface PomodoroTimerProps {
   mode?: DisplayMode
   studyDuration?: number
@@ -28,7 +61,7 @@ export function PomodoroTimer({
   const [isRunning, setIsRunning] = useState(false)
   const [cycleCount, setCycleCount] = useState(0)
   const [totalStudyTime, setTotalStudyTime] = useState(0)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const userInteractedRef = useRef(false)
 
   // Get duration based on phase
   const getPhaseDuration = useCallback(
@@ -60,14 +93,6 @@ export function PomodoroTimer({
       } catch {
         // Ignore invalid data
       }
-    }
-
-    // Create audio element for notifications
-    audioRef.current = new Audio('/sounds/notification.mp3')
-    audioRef.current.volume = 0.5
-
-    return () => {
-      audioRef.current = null
     }
   }, [studyDuration])
 
@@ -103,12 +128,8 @@ export function PomodoroTimer({
   }, [isRunning, phase])
 
   const playNotification = useCallback(() => {
-    try {
-      audioRef.current?.play().catch(() => {
-        // Audio play blocked - user hasn't interacted yet
-      })
-    } catch {
-      // Ignore audio errors
+    if (userInteractedRef.current) {
+      playNotificationSound()
     }
   }, [])
 
@@ -136,6 +157,7 @@ export function PomodoroTimer({
   }, [phase, cycleCount, studyDuration, breakDuration, longBreakDuration, playNotification])
 
   const handleStart = useCallback(() => {
+    userInteractedRef.current = true
     if (phase === 'idle') {
       setPhase('study')
       setTimeRemaining(studyDuration)

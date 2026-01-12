@@ -14,6 +14,7 @@ export interface StudySessionPreferences {
   pomodoroStudyDuration: number
   pomodoroBreakDuration: number
   pomodoroLongBreakDuration: number
+  topicName: string
 }
 
 export interface PomodoroState {
