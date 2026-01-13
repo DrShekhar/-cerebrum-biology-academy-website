@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free Career Guidance Seminar for Schools | NEET Counselling | Cerebrum Biology Academy',
+  title: {
+    absolute: 'Free Career Guidance Seminar for Schools | NEET Counselling | Cerebrum Biology Academy',
+  },
   description:
     'Book FREE NEET career guidance seminars for your school. CBSE & NEP 2020 compliant career counselling by AIIMS faculty Dr. Shekhar Singh. Sessions for students, parents & teachers. 500+ schools partnered across India.',
   keywords: [
