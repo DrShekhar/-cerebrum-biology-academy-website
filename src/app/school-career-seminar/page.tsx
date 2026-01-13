@@ -732,15 +732,10 @@ Submitted via School Seminar Booking Form`
           </div>
         </section>
 
-        {/* Seminar Gallery */}
+        {/* Seminar Gallery - Optimized for LCP */}
         <section className="py-16 md:py-20 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-700 text-sm font-medium mb-4">
                 <Camera className="w-4 h-4 mr-2" />
                 Photo Gallery
@@ -751,20 +746,23 @@ Submitted via School Seminar Booking Form`
               <p className="text-gray-600 max-w-2xl mx-auto">
                 See Dr. Shekhar guiding students at various schools across India
               </p>
-            </motion.div>
+            </div>
           </div>
 
           <div className="relative">
             <div className="flex animate-scroll">
-              {[...seminarGalleryImages, ...seminarGalleryImages].map((image, index) => (
+              {/* Only show first 12 images for performance (duplicated for seamless scroll) */}
+              {[...seminarGalleryImages.slice(0, 12), ...seminarGalleryImages.slice(0, 12)].map((image, index) => (
                 <div key={index} className="flex-shrink-0 w-72 md:w-80 mx-3 group">
                   <div className="relative h-48 md:h-56 rounded-xl overflow-hidden shadow-lg">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
+                      sizes="(max-width: 768px) 288px, 320px"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      unoptimized
+                      loading="lazy"
+                      unoptimized={image.src.startsWith('http')}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -786,7 +784,7 @@ Submitted via School Seminar Booking Form`
               }
             }
             .animate-scroll {
-              animation: scroll 70s linear infinite;
+              animation: scroll 50s linear infinite;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
@@ -848,17 +846,13 @@ Submitted via School Seminar Booking Form`
               <p className="text-gray-600">Feedback from principals and educators</p>
             </motion.div>
 
-            {/* Featured Testimonials */}
+            {/* Featured Testimonials - Optimized */}
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {testimonials
                 .filter((t) => t.featured)
                 .map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                     className="bg-white rounded-xl p-6 shadow-xl border-2 border-green-200 relative"
                   >
                     <div className="absolute -top-3 left-4 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">
@@ -881,21 +875,17 @@ Submitted via School Seminar Booking Form`
                         <p className="text-sm text-green-600 font-medium">{testimonial.role}</p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
 
-            {/* Other Testimonials */}
+            {/* Other Testimonials - Optimized */}
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials
                 .filter((t) => !t.featured)
                 .map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                     className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
                   >
                     <div className="flex mb-4">
@@ -908,35 +898,26 @@ Submitted via School Seminar Booking Form`
                       <p className="font-semibold text-gray-900">{testimonial.author}</p>
                       <p className="text-sm text-gray-500">{testimonial.role}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
           </div>
         </section>
 
-        {/* FAQs */}
+        {/* FAQs - Optimized: Removed per-item animations */}
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Frequently Asked Questions
               </h2>
               <p className="text-gray-600">Everything schools need to know about our seminars</p>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.details
+                <details
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
                   className="group bg-gray-50 rounded-xl border border-gray-100"
                 >
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
@@ -958,7 +939,7 @@ Submitted via School Seminar Booking Form`
                     </span>
                   </summary>
                   <div className="px-5 pb-5 text-gray-600">{faq.answer}</div>
-                </motion.details>
+                </details>
               ))}
             </div>
           </div>
