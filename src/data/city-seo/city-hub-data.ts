@@ -8357,6 +8357,176 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.2189',
     },
   },
+
+  'class-11-biology-south-delhi': {
+    slug: 'class-11-biology-south-delhi',
+    cityName: 'Class 11 Biology South Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'Class 11 Biology Coaching South Delhi | NEET Foundation + CBSE Boards | Cerebrum',
+    metaDescription:
+      'Best Class 11 biology coaching in South Delhi. Expert faculty for NEET foundation, CBSE/ICSE boards. Offline classes at Ring Road, South Extension. Online & hybrid batches. Call 88264-44334!',
+    heroTitle: 'Class 11 Biology Coaching in South Delhi',
+    heroSubtitle:
+      'Build strong NEET foundation while acing your Class 11 boards. Expert guidance at our Ring Road, South Extension 2 center!',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Ring Road Center',
+      address: 'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi 110049',
+      distance: 'South Extension Metro - 5 min walk',
+    },
+    localities: [
+      { name: 'South Extension', url: '/biology-coaching-ring-road-south-extension' },
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+      { name: 'Lajpat Nagar', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Greater Kailash', url: '/best-biology-tuition-greater-kailash' },
+      { name: 'Sarojini Nagar', url: '/biology-classes-sarojini-nagar' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+      { name: 'Malviya Nagar', url: '/biology-classes-malviya-nagar' },
+      { name: 'Kalkaji', url: '/biology-classes-kalkaji' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Class 12 Biology South Delhi', url: '/biology-coaching-class-12-south-delhi' },
+      { name: 'NEET Coaching South Delhi', url: '/neet-coaching-south-extension-delhi' },
+      { name: 'Ring Road Center', url: '/biology-coaching-ring-road-south-extension' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Class 11 biology important for NEET preparation?',
+        answer:
+          'Class 11 biology covers 50% of NEET syllabus including Plant Kingdom, Animal Kingdom, Cell Biology, Biomolecules, and Human Physiology. A strong Class 11 foundation is essential for NEET success. Our integrated approach covers both boards and NEET simultaneously.',
+      },
+      {
+        question: 'What topics are covered in Class 11 biology coaching?',
+        answer:
+          'Complete NCERT syllabus: Living World, Biological Classification, Plant Kingdom, Animal Kingdom, Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organization in Animals, Cell Structure & Function, Biomolecules, Cell Cycle, Photosynthesis, Respiration in Plants, Plant Growth & Development.',
+      },
+      {
+        question: 'Do you prepare for both CBSE boards and NEET in Class 11?',
+        answer:
+          'Yes! Our Class 11 program is designed for dual preparation - CBSE/ICSE board exams AND NEET foundation. We cover NCERT thoroughly (for boards) plus NEET-level MCQs, previous year questions, and competitive exam patterns.',
+      },
+      {
+        question: 'What are the batch timings for Class 11 students?',
+        answer:
+          'Multiple batches to fit school schedules: Morning (6-8 AM before school), Afternoon (2-4 PM after school), Evening (5-7 PM), Weekend (Saturday/Sunday). Online batches available 24/7 with recorded lectures.',
+      },
+      {
+        question: 'What is the fee for Class 11 biology coaching in South Delhi?',
+        answer:
+          'Class 11 NEET+Boards program: ₹45,000-65,000/year depending on batch type. Includes: Complete NCERT coverage, NEET foundation modules, weekly tests, doubt sessions, study material. EMI available. Call 88264-44334.',
+      },
+      {
+        question: 'How do you handle the transition from Class 10 to Class 11 biology?',
+        answer:
+          'Class 11 biology is significantly harder than Class 10. We start with a bridge course covering basic concepts, then gradually increase complexity. Regular tests identify weak areas. Personal attention ensures no student is left behind.',
+      },
+      {
+        question: 'Is offline or online better for Class 11 biology?',
+        answer:
+          'For Class 11, we recommend our hybrid model: Attend offline classes at Ring Road center 2-3 times/week for concepts + use online resources for revision and doubt clearing. This gives you the best of both worlds!',
+      },
+      {
+        question: 'Do you provide study material for Class 11?',
+        answer:
+          'Yes! Complete study package: Printed notes (chapter-wise), NCERT solutions, Previous 10 years NEET questions (chapter-wise), Weekly test series, Diagram booklets for botany & zoology, Quick revision sheets.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '500+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5732',
+      lng: '77.2189',
+    },
+  },
+
+  'class-12-biology-south-delhi': {
+    slug: 'class-12-biology-south-delhi',
+    cityName: 'Class 12 Biology South Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'Class 12 Biology Coaching South Delhi | NEET + Board Exam Expert | Cerebrum',
+    metaDescription:
+      'Best Class 12 biology coaching in South Delhi. Expert NEET + Board preparation at Ring Road, South Extension. Crash courses, revision batches, test series. Online/Offline. Call 88264-44334!',
+    heroTitle: 'Class 12 Biology Coaching in South Delhi',
+    heroSubtitle:
+      'Ace your CBSE boards AND crack NEET! Expert Class 12 biology coaching at Ring Road, South Extension 2 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Ring Road Center',
+      address: 'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi 110049',
+      distance: 'South Extension Metro - 5 min walk',
+    },
+    localities: [
+      { name: 'South Extension', url: '/biology-coaching-ring-road-south-extension' },
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+      { name: 'Lajpat Nagar', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Greater Kailash', url: '/best-biology-tuition-greater-kailash' },
+      { name: 'Sarojini Nagar', url: '/biology-classes-sarojini-nagar' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+      { name: 'Green Park', url: '/biology-classes-green-park' },
+      { name: 'Safdarjung', url: '/biology-classes-safdarjung-enclave' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Class 11 Biology South Delhi', url: '/biology-coaching-class-11-south-delhi' },
+      { name: 'NEET Dropper Batch', url: '/neet-coaching-south-extension-delhi' },
+      { name: 'Ring Road Center', url: '/biology-coaching-ring-road-south-extension' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Class 12 biology crucial for NEET?',
+        answer:
+          'Class 12 biology covers 50% of NEET syllabus including Genetics, Evolution, Ecology, Biotechnology, and Human Reproduction - all high-weightage topics. Our Class 12 program focuses on both board exam success AND NEET preparation simultaneously.',
+      },
+      {
+        question: 'What Class 12 biology topics are covered?',
+        answer:
+          'Complete NCERT: Reproduction in Organisms, Sexual Reproduction in Flowering Plants, Human Reproduction, Reproductive Health, Genetics (Mendelian & Molecular), Evolution, Human Health & Disease, Biotechnology Principles & Applications, Organisms & Populations, Ecosystem, Biodiversity & Conservation.',
+      },
+      {
+        question: 'Do you have crash courses for Class 12 boards?',
+        answer:
+          'Yes! 45-day Board Exam Crash Course: Complete syllabus revision, previous 10 years solved papers, sample paper practice, diagram mastery, high-scoring answer writing techniques. Starts January every year.',
+      },
+      {
+        question: 'How do you balance board preparation and NEET coaching?',
+        answer:
+          'Our integrated approach covers both: NCERT mastery (for boards) + NEET MCQ patterns + Previous year analysis. We allocate 60% time to NEET-heavy chapters (Genetics, Human Physiology) and 40% to board-focused chapters.',
+      },
+      {
+        question: 'What is the fee for Class 12 biology in South Delhi?',
+        answer:
+          'Class 12 NEET+Boards: ₹55,000-75,000/year | Board Crash Course: ₹15,000-25,000 (45 days) | NEET Revision: ₹20,000-35,000 (3 months). Includes: Complete material, tests, doubt sessions. EMI available. Call 88264-44334.',
+      },
+      {
+        question: 'What test series do you offer for Class 12 NEET?',
+        answer:
+          'Comprehensive test series: Weekly chapter tests, Bi-weekly cumulative tests, Monthly NEET pattern full tests, Board pattern practice papers, AIIMS/JIPMER pattern tests. Performance analytics and rank prediction included.',
+      },
+      {
+        question: 'Do you help with practical exams and projects?',
+        answer:
+          'Yes! Complete practical support: Lab manual solutions, Viva questions preparation, Project guidance, Record book completion help. Many students score 28-30/30 in practicals with our guidance.',
+      },
+      {
+        question: 'What makes your Class 12 coaching different?',
+        answer:
+          'Our USP: 1) Experienced NEET faculty (10+ years), 2) Small batches (max 25 students), 3) Daily doubt sessions, 4) WhatsApp support for quick doubts, 5) Parent-teacher meetings, 6) Metro-connected location (5 min from South Extension Metro).',
+      },
+    ],
+    stats: {
+      studentsFromCity: '600+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5732',
+      lng: '77.2189',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
