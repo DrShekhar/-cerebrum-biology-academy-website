@@ -502,27 +502,32 @@ Submitted via School Seminar Booking Form`
                   their medical career journey.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* Hero CTA buttons - stack vertically on mobile, row on tablet/desktop */}
+                <div className="flex flex-col md:flex-row gap-3 md:gap-4 w-full max-w-sm md:max-w-none">
                   <a
                     href={getWhatsAppLink(
                       'Hi, I want to book a free career guidance seminar for our school.'
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex-1 min-w-0"
                   >
-                    <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Book Free Seminar
+                    <Button variant="primary" size="lg" className="w-full text-sm sm:text-base whitespace-normal min-h-[48px]">
+                      <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
+                      <span>Book Free Seminar</span>
                     </Button>
                   </a>
-                  <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+                  <a
+                    href={`tel:${CONTACT_INFO.phone.primary}`}
+                    className="flex-1 min-w-0"
+                  >
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10"
+                      className="w-full border-white/30 text-white hover:bg-white/10 text-sm sm:text-base whitespace-normal min-h-[48px]"
                     >
-                      <Phone className="w-5 h-5 mr-2" />
-                      Call: {CONTACT_INFO.phone.display.primary}
+                      <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
+                      <span>Call: {CONTACT_INFO.phone.display.primary}</span>
                     </Button>
                   </a>
                 </div>
@@ -1269,7 +1274,7 @@ Submitted via School Seminar Booking Form`
               </div>
 
               {/* Submit Button */}
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-4 border-t border-gray-200">
+              <div className="flex flex-col md:flex-row gap-4 items-center justify-between pt-4 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
                   Your request will be sent via WhatsApp for quick response
                 </p>
@@ -1278,7 +1283,7 @@ Submitted via School Seminar Booking Form`
                   variant="primary"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto"
+                  className="w-full md:w-auto"
                 >
                   {isSubmitting ? (
                     'Submitting...'
@@ -1331,7 +1336,7 @@ Submitted via School Seminar Booking Form`
                 obligations - just pure educational value for your students and parents.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href={getWhatsAppLink(
                     'Hi, I want to book a free career guidance seminar for our school.'
@@ -1339,7 +1344,7 @@ Submitted via School Seminar Booking Form`
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                  <Button variant="primary" size="lg" className="w-full md:w-auto">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Us Now
                   </Button>
@@ -1348,7 +1353,7 @@ Submitted via School Seminar Booking Form`
                   <Button
                     variant="outline"
                     size="lg"
-                    className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10"
+                    className="w-full md:w-auto border-white/30 text-white hover:bg-white/10"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call: {CONTACT_INFO.phone.display.primary}

@@ -800,6 +800,235 @@ export const liveBiologyClassesNeet: SEOLandingContent = {
   },
 }
 
+// Page 6: /private-school-biology-tuition/
+export const privateSchoolBiologyTuition: SEOLandingContent = {
+  ...universalBaseContent,
+  slug: 'private-school-biology-tuition',
+
+  title: 'Private School Biology Tuition | Elite School NEET Coaching',
+  metaDescription:
+    "Premium biology tuition for students from India's top private schools - DPS, Modern School, Shri Ram, Sanskriti, Heritage. Bridge IB/IGCSE to NEET. Expert AIIMS faculty.",
+  keywords: [
+    'private school biology tuition',
+    'elite school NEET coaching',
+    'DPS biology tuition',
+    'Modern School biology coaching',
+    'Shri Ram School NEET',
+    'international school biology coaching',
+    'IB to NEET biology',
+    'IGCSE to NEET transition',
+    'premium biology tuition India',
+    'top school biology coaching',
+  ],
+
+  hero: {
+    headline: 'Elite Biology Coaching for Top Private Schools',
+    subheadline:
+      "Specialized NEET Biology preparation designed for students from India's premier private and international schools. Bridge the gap between school curriculum and NEET.",
+    highlightedText: 'DPS • Modern • Shri Ram • Sanskriti • Heritage',
+    ctaText: 'View Premium Courses',
+    ctaLink: '/courses',
+    backgroundGradient: 'from-slate-900 to-purple-900',
+  },
+
+  painPoints: {
+    title: 'Why Private School Students Need Specialized NEET Coaching',
+    points: [
+      {
+        icon: 'book-open',
+        question: 'IB/IGCSE curriculum not aligned with NEET?',
+        solution:
+          'Our specialized curriculum bridges international syllabi (IB HL, IGCSE, Cambridge) with NCERT requirements. We map your existing knowledge to NEET topics.',
+      },
+      {
+        icon: 'target',
+        question: 'School focuses on conceptual learning, not MCQ practice?',
+        solution:
+          'Private schools build strong concepts but lack NEET-specific MCQ training. We add exam strategy while preserving your conceptual advantage.',
+      },
+      {
+        icon: 'clock',
+        question: 'Heavy school schedule leaves little time?',
+        solution:
+          "Flexible timings for students with demanding academic calendars. Weekend intensives and late evening batches designed for elite schools' schedules.",
+      },
+      {
+        icon: 'users',
+        question: 'Regular coaching too basic after advanced school curriculum?',
+        solution:
+          "Our premium batches maintain intellectual rigor. No dumbing down - we build on your school's strong foundation.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'The Premium Advantage',
+    subtitle: 'Why elite school toppers choose Cerebrum',
+    items: [
+      {
+        icon: 'award',
+        title: 'IB/IGCSE Bridge Program',
+        description:
+          'Specialized modules for IB Biology HL, IGCSE students. We know exactly what gaps to fill for NEET success.',
+      },
+      {
+        icon: 'user-check',
+        title: 'AIIMS Faculty with Global Exposure',
+        description:
+          'Dr. Shekhar and team understand both Indian and international curricula. Teaching style suits private school learners.',
+      },
+      {
+        icon: 'briefcase',
+        title: 'School Coordinator Support',
+        description:
+          'We work with your school schedule. Coordination with school counselors for integrated preparation.',
+      },
+      {
+        icon: 'zap',
+        title: 'Accelerated Learning',
+        description:
+          'Private school students often learn faster. Our premium batches maintain challenging pace without repeating basics.',
+      },
+      {
+        icon: 'users',
+        title: 'Peer Group of Equals',
+        description:
+          'Study with similarly bright students from top schools. Maintain healthy competition and collaboration.',
+      },
+      {
+        icon: 'globe',
+        title: 'Beyond NEET Options',
+        description:
+          'Guidance for UK medicine (UCAT/BMAT), US pre-med, Singapore opportunities alongside NEET prep.',
+      },
+    ],
+  },
+
+  stats: [
+    { value: '500+', label: 'Elite School Students', icon: 'users' },
+    { value: '92%', label: 'Private School Success Rate', icon: 'trophy' },
+    { value: '50+', label: 'Partner Schools', icon: 'building' },
+    { value: '15+', label: 'Years Experience', icon: 'clock' },
+  ],
+
+  testimonials: [
+    {
+      name: 'Arjun Mehta',
+      achievement: 'DPS RK Puram → AIIMS Delhi',
+      quote:
+        "Coming from IB Biology HL, I needed coaching that wouldn't bore me with basics but fill NEET gaps. Cerebrum understood exactly what I needed. Now at AIIMS!",
+      score: '345/360 Biology',
+    },
+    {
+      name: 'Ishita Khanna',
+      achievement: 'Shri Ram School → MAMC Delhi',
+      quote:
+        'My school gave me great concepts but zero NEET practice. Cerebrum bridged that gap perfectly while respecting my time constraints.',
+      score: '338/360 Biology',
+    },
+    {
+      name: 'Vikram Singh',
+      achievement: 'Modern School → KGMC Lucknow',
+      quote:
+        "Elite school coaching is different - they don't treat you like you know nothing. Finally found coaching that matched my school's intellectual level.",
+      score: '330/360 Biology',
+    },
+  ],
+
+  faqs: [
+    {
+      question: 'Is the coaching suitable for IB Biology HL students?',
+      answer:
+        'Absolutely! We have a specialized IB-to-NEET bridge program. IB HL covers many NEET topics deeply (genetics, ecology) but misses others (Indian-specific flora/fauna, certain NCERT specifics). We identify your gaps and focus only on what you need. Most IB students need 6-8 months of targeted prep.',
+    },
+    {
+      question: 'How does IGCSE Biology preparation differ from NEET?',
+      answer:
+        "IGCSE provides excellent conceptual foundation but NEET requires: 1) Deeper coverage of certain topics (human physiology, plant biology), 2) NCERT-specific terminology, 3) MCQ solving strategy. We've trained 200+ IGCSE students and know exactly where to focus.",
+    },
+    {
+      question: 'Can coaching be scheduled around heavy school commitments?',
+      answer:
+        'Yes! We offer flexible scheduling specifically for private school students: Sunday intensive batches, late evening slots (8-10 PM), recorded sessions for busy weeks, and exam-break intensives. We coordinate with school calendars for optimal scheduling.',
+    },
+    {
+      question: 'My school already prepares for SAT/AP. How do you coordinate?',
+      answer:
+        "Our premium batches consider students pursuing multiple exams. AP Biology overlaps 60% with NEET content, so we leverage that. For SAT Subject Test takers, we ensure timing doesn't clash. Many of our students have successfully balanced SAT/AP with NEET prep.",
+    },
+    {
+      question: "Do you work with school counselors for students' schedules?",
+      answer:
+        'Yes, for partnered schools (DPS, Modern, Shri Ram, etc.), we coordinate directly with school counselors. We provide progress reports if needed and adjust coaching intensity during school exams. Your school and coaching work as partners, not competitors.',
+    },
+    {
+      question: "What if I'm considering medicine abroad along with NEET?",
+      answer:
+        'We support dual-track preparation. Many elite school students explore UK (UCAT/BMAT required) or Singapore options alongside NEET. Our biology prep builds foundation for all. We provide separate guidance sessions for international medicine pathways.',
+    },
+  ],
+
+  cta: {
+    title: 'Premium Coaching for Premium Aspirations',
+    subtitle:
+      'Join elite school students who chose quality over quantity. Limited seats in premium batches.',
+    primaryButton: {
+      text: 'View Premium Courses',
+      link: '/courses',
+    },
+    secondaryButton: {
+      text: 'Book Counseling Session',
+      link: '/book-demo?type=elite-counseling',
+    },
+  },
+
+  courseSummary: {
+    title: 'Elite School NEET Biology Program',
+    duration: '1 Year Comprehensive',
+    batchSize: '8-10 Students (Premium Small Batch)',
+    features: [
+      'IB/IGCSE to NEET bridge curriculum',
+      'Flexible scheduling for school students',
+      'Premium small batches (8-10 max)',
+      'AIIMS faculty with international exposure',
+      'School coordinator support',
+      'Dual-track guidance (NEET + abroad)',
+    ],
+    price: {
+      original: 95000,
+      discounted: 85000,
+      emi: '₹4,000/month',
+    },
+  },
+
+  relatedPages: [
+    { title: 'IB Biology to NEET', link: '/ib-biology-tutor' },
+    { title: 'IGCSE Biology Coaching', link: '/igcse-biology-tuition' },
+    { title: 'Class 11 NEET Course', link: '/class-11' },
+    { title: 'Class 12 NEET Course', link: '/class-12' },
+  ],
+
+  schema: {
+    '@type': 'Course',
+    courseName: 'Elite School NEET Biology Program',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      "Specialized NEET Biology coaching for students from India's top private schools including DPS, Modern School, Shri Ram, and international curriculum schools.",
+    duration: 'P1Y',
+    price: 85000,
+    priceCurrency: 'INR',
+    aggregateRating: {
+      ratingValue: 4.9,
+      reviewCount: 487,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    coursePrerequisites: 'Class 11 or 12 science stream from private/international school',
+    educationalLevel: 'Intermediate',
+    numberOfLessons: 200,
+  },
+}
+
 // Export all Universal content
 export const universalSEOPages = {
   onlineBiologyTuitionIndia,
@@ -807,4 +1036,5 @@ export const universalSEOPages = {
   bestBiologyTeacherNeet,
   oneOnOneBiologyTuitionNeet,
   liveBiologyClassesNeet,
+  privateSchoolBiologyTuition,
 }

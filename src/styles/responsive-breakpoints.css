@@ -100,15 +100,8 @@
 }
 
 /* Flexbox Utilities */
-.flex {
-  display: flex;
-}
-.flex-col {
-  flex-direction: column;
-}
-.flex-row {
-  flex-direction: row;
-}
+/* Note: .flex, .flex-col, .flex-row removed - use Tailwind's utilities instead
+   which support responsive variants like sm:flex-row, md:flex-col, etc. */
 .flex-wrap {
   flex-wrap: wrap;
 }
