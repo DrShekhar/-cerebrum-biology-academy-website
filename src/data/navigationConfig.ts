@@ -317,6 +317,14 @@ export const navigationConfig: NavigationSection[] = [
         keywords: ['free', 'resources', 'study materials', 'timetables', 'announcements', 'notes'],
         isNew: true,
       },
+      {
+        id: 'school-career-seminar',
+        title: 'Free School Seminars',
+        href: '/school-career-seminar',
+        description: 'Free NEET career guidance seminars for schools - CBSE compliant',
+        keywords: ['school seminar', 'career guidance', 'CBSE', 'NEP 2020', 'free seminar', 'school program'],
+        isNew: true,
+      },
     ],
   },
   {
@@ -438,6 +446,7 @@ export const footerNavigationConfig = {
     { title: 'Classroom Teaching', href: '/services/classroom' },
     { title: 'International Students', href: '/services/international' },
     { title: 'Doubt Resolution', href: '/services/doubt-resolution' },
+    { title: 'Free School Seminars', href: '/school-career-seminar' },
   ],
   resources: [
     { title: 'Free Resources', href: '/free-resources' },
@@ -661,6 +670,25 @@ export const searchableContent = [
       'olympiad preparation',
     ],
     isPopular: true,
+  },
+  {
+    id: 'school-career-seminar',
+    title: 'Free School Seminars',
+    href: '/school-career-seminar',
+    description: 'Free NEET career guidance seminars for schools - CBSE & NEP 2020 compliant',
+    category: 'Services',
+    keywords: [
+      'school seminar',
+      'career guidance',
+      'free seminar',
+      'CBSE',
+      'NEP 2020',
+      'school program',
+      'career counselling',
+      'NEET awareness',
+      'parent orientation',
+    ],
+    isNew: true,
   },
 ]
 

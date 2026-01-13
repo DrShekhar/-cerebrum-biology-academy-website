@@ -767,6 +767,49 @@ export default function Class11BiologyPage() {
         </div>
       </section>
 
+      {/* Parent-Specific CTA Section */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-blue-200">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
+                  👨‍👩‍👧 Are You a Parent?
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  We understand your concerns about your child&apos;s NEET preparation. Chat directly
+                  with our counselors to understand fee structure, batch timings, and how we track
+                  student progress.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <button
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'class-11-parent-cta',
+                        message: WHATSAPP_MESSAGES.parentFees,
+                        campaign: 'parent-engagement',
+                      })
+                    }
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Chat as Parent
+                  </button>
+                  <Link
+                    href="/parent-guide"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300"
+                  >
+                    <Users className="h-5 w-5" />
+                    Parent Guide
+                  </Link>
+                </div>
+              </div>
+              <div className="hidden md:block text-6xl">👨‍👩‍👧‍👦</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

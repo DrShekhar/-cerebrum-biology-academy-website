@@ -50,6 +50,7 @@ interface PomodoroTimerProps {
   breakDuration?: number
   longBreakDuration?: number
   className?: string
+  compact?: boolean
   onStateChange?: (state: PomodoroState) => void
 }
 
@@ -59,6 +60,7 @@ export function PomodoroTimer({
   breakDuration = POMODORO_DEFAULTS.breakDuration,
   longBreakDuration = POMODORO_DEFAULTS.longBreakDuration,
   className = '',
+  compact = false,
   onStateChange,
 }: PomodoroTimerProps) {
   const [phase, setPhase] = useState<PomodoroPhase>('idle')
@@ -319,15 +321,23 @@ export function PomodoroTimer({
     )
   }
 
+  // Compact mode sizing
+  const timerSize = compact ? 'w-40 h-40' : 'w-52 h-52'
+  const timeTextSize = compact ? 'text-3xl' : 'text-4xl'
+  const controlBtnSize = compact ? 'w-8 h-8' : 'w-10 h-10'
+  const playBtnSize = compact ? 'w-11 h-11' : 'w-14 h-14'
+  const iconSize = compact ? 'w-3.5 h-3.5' : 'w-4 h-4'
+  const playIconSize = compact ? 'w-5 h-5' : 'w-6 h-6'
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
-      className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
+      className={`bg-white rounded-xl shadow-xl ${compact ? 'p-4' : 'p-6'} ${className}`}
     >
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
+      <div className={`flex items-center justify-between ${compact ? 'mb-3' : 'mb-4'}`}>
         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">Pomodoro</h3>
         <span className={`text-xs px-2 py-1 rounded-full ${phaseColors.light} ${phaseColors.text}`}>
           Cycle {cycleCount + 1} / 4
@@ -336,7 +346,7 @@ export function PomodoroTimer({
 
       {/* Circular Timer */}
       <div className="flex flex-col items-center">
-        <div className="relative w-52 h-52">
+        <div className={`relative ${timerSize}`}>
           {/* SVG Circle */}
           <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" strokeWidth="8" />
@@ -356,7 +366,7 @@ export function PomodoroTimer({
 
           {/* Center Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-4xl font-mono font-bold text-[#3d4d3d]">
+            <span className={`${timeTextSize} font-mono font-bold text-[#3d4d3d]`}>
               {formatTime(timeRemaining)}
             </span>
             <span className={`text-sm mt-1 ${phaseColors.text} font-medium`}>
@@ -366,39 +376,43 @@ export function PomodoroTimer({
         </div>
 
         {/* Controls */}
-        <div className="flex items-center justify-center space-x-4 mt-6">
+        <div className={`flex items-center justify-center space-x-3 ${compact ? 'mt-4' : 'mt-6'}`}>
           {/* Reset */}
           <button
             onClick={handleReset}
-            className="w-10 h-10 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors"
+            className={`${controlBtnSize} rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors`}
             aria-label="Reset"
           >
-            <RotateCcw className="w-4 h-4" />
+            <RotateCcw className={iconSize} />
           </button>
 
           {/* Play/Pause */}
           <button
             onClick={isRunning ? handlePause : handleStart}
-            className={`w-14 h-14 rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 text-white ${phaseColors.bg}`}
+            className={`${playBtnSize} rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 text-white ${phaseColors.bg}`}
             aria-label={isRunning ? 'Pause' : 'Start'}
           >
-            {isRunning ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
+            {isRunning ? (
+              <Pause className={playIconSize} />
+            ) : (
+              <Play className={`${playIconSize} ml-0.5`} />
+            )}
           </button>
 
           {/* Skip */}
           <button
             onClick={handleSkip}
             disabled={phase === 'idle'}
-            className="w-10 h-10 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className={`${controlBtnSize} rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors disabled:opacity-40 disabled:cursor-not-allowed`}
             aria-label="Skip phase"
           >
-            <SkipForward className="w-4 h-4" />
+            <SkipForward className={iconSize} />
           </button>
         </div>
 
         {/* Total Study Time */}
         {totalStudyTime > 0 && (
-          <p className="text-xs text-gray-400 mt-4">
+          <p className={`text-xs text-gray-400 ${compact ? 'mt-3' : 'mt-4'}`}>
             Total focus time: {Math.floor(totalStudyTime / 60)} min
           </p>
         )}

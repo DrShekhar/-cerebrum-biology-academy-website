@@ -4,15 +4,14 @@ import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO, getPhoneLink, getWhatsAppLink } from '@/lib/constants/contactInfo'
+import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
+import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
-  const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [showFloatingButton, setShowFloatingButton] = useState(true)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   const rafRef = useRef<number | null>(null)
   const lastScrollRef = useRef(0)
@@ -32,15 +31,11 @@ export const FloatingCTA = memo(function FloatingCTA() {
       const windowHeight = window.innerHeight
       const docHeight = document.documentElement.scrollHeight
 
-      const newIsVisible = scrollTop > windowHeight * 0.5
       const progress = scrollTop / (docHeight - windowHeight)
       const newScrollProgress = Math.min(progress * 100, 100)
-      const nearBottom = scrollTop > docHeight - windowHeight * 1.5
-      const newShowFloatingButton = !nearBottom && scrollTop > windowHeight * 0.3
 
-      setIsVisible(newIsVisible)
       setScrollProgress(newScrollProgress)
-      setShowFloatingButton(newShowFloatingButton)
+      setShowScrollTop(scrollTop > windowHeight * 0.3)
 
       rafRef.current = null
     })
@@ -64,16 +59,8 @@ export const FloatingCTA = memo(function FloatingCTA() {
     }
   }, [isExpanded])
 
-  // WhatsApp first - highest converting channel
-  const actions = [
-    {
-      icon: MessageCircle,
-      label: 'WhatsApp',
-      href: `${getWhatsAppLink()}?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.`,
-      color: 'bg-[#166534] hover:bg-[#14532d]',
-      action: 'whatsapp',
-      external: true,
-    },
+  // Secondary actions for expanded menu
+  const secondaryActions = [
     {
       icon: Phone,
       label: 'Call Now',
@@ -90,24 +77,33 @@ export const FloatingCTA = memo(function FloatingCTA() {
     },
   ]
 
-  const handleActionClick = async (action: string, e?: React.MouseEvent) => {
+  const handleWhatsAppClick = async (e: React.MouseEvent, source: string) => {
+    e.preventDefault()
+
     // Track with gtag
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      ;(window as any).gtag('event', 'floating_cta_click', {
+        event_category: 'engagement',
+        event_label: 'whatsapp',
+      })
+    }
+
+    // Use context-aware message based on current page
+    await trackAndOpenWhatsApp({
+      source,
+      message: getContextAwareMessage(pathname || undefined),
+      campaign: 'floating-cta',
+    })
+  }
+
+  const handleSecondaryClick = (action: string) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'floating_cta_click', {
         event_category: 'engagement',
         event_label: action,
       })
     }
-
-    // Special handling for WhatsApp - use tracked system
-    if (action === 'whatsapp' && e) {
-      e.preventDefault()
-      await trackAndOpenWhatsApp({
-        source: 'floating-cta',
-        message: WHATSAPP_MESSAGES.default,
-        campaign: 'floating-cta',
-      })
-    }
+    setIsExpanded(false)
   }
 
   const scrollToTop = () => {
@@ -117,87 +113,144 @@ export const FloatingCTA = memo(function FloatingCTA() {
   // Hide on blog pages - they have their own BlogWhatsAppQuery component
   const isBlogPage = pathname?.startsWith('/blog/')
 
-  if (!isVisible || isBlogPage) return null
+  if (isBlogPage) return null
 
   return (
     <>
-      {/* Mobile Floating CTA - Only show when not near bottom and scrolled past hero */}
-      {/* Positioned at bottom-24 to clear mobile nav (60px) + safe area inset */}
-      {showFloatingButton && (
-        <div className="fixed bottom-24 sm:bottom-28 right-3 sm:right-4 z-[70] lg:hidden">
-          {/* Expanded Actions - positioned higher to avoid bottom bar overlap */}
-          {isExpanded && (
-            <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
-              {actions.map((action, index) => {
-                const Icon = action.icon
-                const Component = action.external ? 'a' : Link
-                const linkProps = action.external
-                  ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
-                  : { href: action.href }
-
-                return (
-                  <div
-                    key={action.action}
-                    className="animate-fadeInRight"
-                    style={{ animationDelay: `${index * 0.1}s` }}
+      {/* ===== MOBILE: Direct WhatsApp Button (Single Tap!) ===== */}
+      {/* Always visible, no scroll requirement, direct WhatsApp access */}
+      <div className="fixed bottom-24 sm:bottom-28 right-3 sm:right-4 z-[70] lg:hidden">
+        {/* Secondary Actions (Call, Book Demo) - only when expanded */}
+        {isExpanded && (
+          <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
+            {secondaryActions.map((action, index) => {
+              const Icon = action.icon
+              return (
+                <div
+                  key={action.action}
+                  className="animate-fadeInRight"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Link
+                    href={action.href}
+                    onClick={() => handleSecondaryClick(action.action)}
+                    className={`flex items-center justify-center gap-2 w-[140px] py-3 rounded-xl text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
                   >
-                    <Component
-                      {...linkProps}
-                      onClick={(e: React.MouseEvent) => {
-                        handleActionClick(action.action, e)
-                        setIsExpanded(false)
-                      }}
-                      className={`flex items-center justify-center gap-2 w-[140px] py-3 rounded-xl text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
-                    >
-                      <Icon className="w-5 h-5 flex-shrink-0" />
-                      <span className="whitespace-nowrap text-sm">{action.label}</span>
-                    </Component>
-                  </div>
-                )
-              })}
-            </div>
+                    <Icon className="w-5 h-5 flex-shrink-0" />
+                    <span className="whitespace-nowrap text-sm">{action.label}</span>
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+        )}
+
+        {/* Main WhatsApp Button - DIRECT LINK (single tap!) */}
+        <div className="flex flex-col items-end gap-2">
+          {/* Expand/Collapse for secondary actions */}
+          {isExpanded && (
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="w-10 h-10 bg-gray-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:bg-gray-700"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
           )}
 
-          {/* Main Floating Button - WhatsApp branded for highest conversion */}
+          {/* Primary WhatsApp Button - Direct Link! */}
           <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            aria-label={isExpanded ? 'Close contact options' : 'Open contact options'}
-            aria-expanded={isExpanded}
-            className="relative w-14 h-14 bg-[#166534] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-pulse hover:animate-none"
+            onClick={(e) => handleWhatsAppClick(e, 'mobile-floating-cta')}
+            aria-label="Chat on WhatsApp"
+            className="relative w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-bounce-subtle"
           >
-            {/* Progress Ring */}
-            <svg className="absolute inset-0 w-14 h-14 transform -rotate-90">
-              <circle
-                cx="28"
-                cy="28"
-                r="24"
-                stroke="rgba(255,255,255,0.3)"
-                strokeWidth="2"
-                fill="transparent"
-              />
-              <circle
-                cx="28"
-                cy="28"
-                r="24"
-                stroke="white"
-                strokeWidth="2"
-                fill="transparent"
-                strokeDasharray={`${2 * Math.PI * 24}`}
-                strokeDashoffset={`${2 * Math.PI * 24 * (1 - scrollProgress / 100)}`}
-                className="transition-all duration-300"
-              />
-            </svg>
+            {/* WhatsApp Icon */}
+            <MessageCircle className="w-7 h-7" />
 
-            {/* Icon - WhatsApp when closed, X when expanded */}
-            <span className="transition-transform duration-200">
-              {isExpanded ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+            {/* Notification dot */}
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+              <span className="text-[10px] font-bold text-white">1</span>
+            </span>
+          </button>
+
+          {/* More Options Toggle */}
+          {!isExpanded && (
+            <button
+              onClick={() => setIsExpanded(true)}
+              className="w-8 h-8 bg-gray-500 rounded-full shadow-md flex items-center justify-center text-white text-xs font-medium transition-all duration-300 hover:bg-gray-600"
+              aria-label="More contact options"
+            >
+              +2
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* ===== DESKTOP: Sticky WhatsApp Button ===== */}
+      {/* Always visible on desktop - bottom right corner */}
+      <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-3">
+        {/* Secondary Actions - shown when expanded */}
+        {isExpanded && (
+          <div className="flex flex-col gap-2 animate-fadeInUp">
+            {secondaryActions.map((action, index) => {
+              const Icon = action.icon
+              return (
+                <Link
+                  key={action.action}
+                  href={action.href}
+                  onClick={() => handleSecondaryClick(action.action)}
+                  className={`flex items-center gap-3 px-5 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${action.color}`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Icon className="w-5 h-5" />
+                  <span>{action.label}</span>
+                </Link>
+              )
+            })}
+          </div>
+        )}
+
+        {/* Main Desktop WhatsApp Button with Label */}
+        <div className="flex items-center gap-3">
+          {/* Expand toggle */}
+          {isExpanded ? (
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="w-12 h-12 bg-gray-600 hover:bg-gray-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setIsExpanded(true)}
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-full shadow-lg text-white text-sm font-medium transition-all duration-300"
+              aria-label="More options"
+            >
+              More
+            </button>
+          )}
+
+          {/* Primary WhatsApp CTA */}
+          <button
+            onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta')}
+            className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            aria-label="Chat on WhatsApp"
+          >
+            <MessageCircle className="w-6 h-6" />
+            <span className="whitespace-nowrap">Chat on WhatsApp</span>
+
+            {/* Notification indicator */}
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
           </button>
         </div>
-      )}
+      </div>
 
-      {/* Desktop Scroll to Top - positioned on LEFT side to avoid CTA clutter */}
-      {scrollProgress > 20 && (
+      {/* Desktop Scroll to Top - positioned on LEFT side */}
+      {showScrollTop && (
         <button
           onClick={scrollToTop}
           className="hidden lg:flex fixed bottom-8 left-8 z-[60] w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full shadow-lg items-center justify-center text-white hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-scaleIn"
@@ -206,12 +259,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
           <ChevronUp className="w-6 h-6" />
         </button>
       )}
-
-      {/*
-        Mobile Bottom CTA Bar REMOVED - EnhancedTouchInterface handles this
-        Consolidating CTAs improves mobile UX by reducing visual clutter
-        The EnhancedTouchInterface provides better touch-optimized CTAs
-      */}
     </>
   )
 })

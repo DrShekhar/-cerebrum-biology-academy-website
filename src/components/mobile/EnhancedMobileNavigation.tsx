@@ -9,7 +9,6 @@ import {
   BookOpen,
   TestTube,
   Trophy,
-  Phone,
   Menu,
   X,
   Search,
@@ -18,7 +17,6 @@ import {
   HelpCircle,
   MessageCircle,
   Download,
-  Star,
   Clock,
   Target,
   ChevronRight,
@@ -26,7 +24,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { motion, AnimatePresence, PanInfo } from 'framer-motion'
-import { getPhoneLink } from '@/lib/constants/contactInfo'
+import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 
 interface NavigationItem {
   href: string
@@ -36,6 +34,7 @@ interface NavigationItem {
   badge?: number
   highlight?: boolean
   requiresAuth?: boolean
+  isWhatsApp?: boolean
 }
 
 interface EnhancedMobileNavigationProps {
@@ -72,10 +71,12 @@ const MAIN_NAVIGATION: NavigationItem[] = [
     icon: Trophy,
   },
   {
-    href: getPhoneLink(),
-    label: 'Call',
-    labelHi: 'कॉल',
-    icon: Phone,
+    href: '#',
+    label: 'WhatsApp',
+    labelHi: 'व्हाट्सऐप',
+    icon: MessageCircle,
+    isWhatsApp: true,
+    highlight: true,
   },
 ]
 
@@ -241,11 +242,13 @@ export function EnhancedMobileNavigation({
 
             const content = (
               <div className={`nav-item flex flex-col items-center justify-center py-2 px-1 min-h-touch-md transition-all duration-200 touch-target ripple-effect ${
-                item.highlight
-                  ? 'text-green-600 bg-green-50'
-                  : active
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-500 hover:text-gray-700'
+                item.isWhatsApp
+                  ? 'text-[#25D366] bg-green-50'
+                  : item.highlight
+                    ? 'text-green-600 bg-green-50'
+                    : active
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-500 hover:text-gray-700'
               }`}>
                 <item.icon className="w-6 h-6 mb-1" />
                 <span className="text-xs font-medium leading-tight">
@@ -258,6 +261,27 @@ export function EnhancedMobileNavigation({
                 )}
               </div>
             )
+
+            // WhatsApp button with tracking and context-aware message
+            if (item.isWhatsApp) {
+              return (
+                <button
+                  key="whatsapp-nav"
+                  onClick={async (e) => {
+                    e.preventDefault()
+                    await trackAndOpenWhatsApp({
+                      source: 'mobile-bottom-nav',
+                      message: getContextAwareMessage(pathname || undefined),
+                      campaign: 'mobile-navigation',
+                    })
+                  }}
+                  className="relative"
+                  aria-label={getLabel(item)}
+                >
+                  {content}
+                </button>
+              )
+            }
 
             if (isExternal) {
               return (

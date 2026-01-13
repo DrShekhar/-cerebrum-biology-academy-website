@@ -93,6 +93,23 @@ export function LiveStudentCount({
     return () => clearTimeout(timer)
   }, [count, displayCount])
 
+  // Badge mode - compact display for header/corner
+  if (mode === 'badge') {
+    return (
+      <div
+        className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 ${className}`}
+      >
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="w-2 h-2 rounded-full bg-green-500"
+        />
+        <Users className="w-3.5 h-3.5 text-green-600" />
+        <span className="text-sm font-semibold text-green-700">{displayCount}</span>
+      </div>
+    )
+  }
+
   // OBS and Focus mode - minimal display (dark theme)
   if (mode === 'obs' || mode === 'focus') {
     return (

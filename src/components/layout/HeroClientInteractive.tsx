@@ -92,6 +92,24 @@ export function HeroClientInteractive() {
         className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-4 animate-fade-in-up"
         style={{ animationDelay: '0.3s' }}
       >
+        {/* PRIMARY CTA: WhatsApp - instant, low-friction contact */}
+        <button
+          onClick={() => trackAndOpenWhatsApp({
+            source: 'hero-cta-primary',
+            message: WHATSAPP_MESSAGES.enquiry,
+            campaign: 'homepage-hero',
+          })}
+          className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group animate-pulse-subtle"
+        >
+          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
+          Chat on WhatsApp
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+        </button>
+
+        {/* SECONDARY CTA: Book Demo */}
         <a
           href="/demo-booking"
           className="inline-flex items-center justify-center gap-2 bg-[#ea4335] hover:bg-[#d33426] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-red-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-red-400/30 hover:scale-[1.02] active:scale-[0.98] group"
@@ -99,18 +117,6 @@ export function HeroClientInteractive() {
           <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
           BOOK DEMO
         </a>
-
-        <button
-          onClick={() => trackAndOpenWhatsApp({
-            source: 'hero-cta',
-            message: WHATSAPP_MESSAGES.enquiry,
-            campaign: 'homepage-hero',
-          })}
-          className="inline-flex items-center justify-center gap-2 bg-[#166534] hover:bg-[#14532d] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
-        >
-          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
-          WhatsApp
-        </button>
 
         <a
           href="/success-stories"

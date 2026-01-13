@@ -24,7 +24,9 @@ import {
   ArrowRight,
   Shield,
   Zap,
+  MessageCircle,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface DetailedPricingSectionProps {
   course: CourseProgram
@@ -517,6 +519,43 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
           </Card>
         </div>
 
+        {/* Parent-Specific CTA */}
+        <Card className="mb-12 bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
+          <div className="p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  👨‍👩‍👧 Are You a Parent?
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  We understand your concerns about your child's NEET preparation. Chat directly with our counselors to understand fee structure, batch timings, and how we track student progress.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <button
+                    onClick={() => trackAndOpenWhatsApp({
+                      source: 'pricing-parent-cta',
+                      message: WHATSAPP_MESSAGES.parentFees,
+                      campaign: 'parent-engagement',
+                    })}
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Chat as Parent
+                  </button>
+                  <a
+                    href="/parent-guide"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300"
+                  >
+                    <Users className="h-5 w-5" />
+                    Parent Guide
+                  </a>
+                </div>
+              </div>
+              <div className="hidden md:block text-6xl">👨‍👩‍👧‍👦</div>
+            </div>
+          </div>
+        </Card>
+
         {/* Final CTA */}
         <div className="text-center">
           <div className="bg-indigo-500 text-white rounded-2xl p-8">
@@ -526,6 +565,17 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
               career.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => trackAndOpenWhatsApp({
+                  source: 'pricing-section-cta',
+                  message: WHATSAPP_MESSAGES.pricing,
+                  campaign: 'pricing-page',
+                })}
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Chat on WhatsApp
+              </button>
               <Button
                 size="lg"
                 variant="secondary"

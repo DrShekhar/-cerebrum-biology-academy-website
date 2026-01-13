@@ -165,34 +165,36 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
   // Focus Mode - Fullscreen distraction-free view with interactive controls
   if (isFocusMode) {
     return (
-      <div className="fixed inset-0 z-[9999] w-full h-screen flex flex-col bg-slate-900">
-        {/* Exit Button */}
+      <div className="fixed inset-0 z-[9999] w-full h-screen flex flex-col bg-slate-900 overflow-hidden">
+        {/* Exit Button - positioned safely away from content */}
         <button
           onClick={exitFocusMode}
-          className="absolute top-4 right-4 z-[10000] p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+          className="absolute top-2 right-2 md:top-4 md:right-4 z-[10000] p-2 md:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           aria-label="Exit Focus Mode"
         >
-          <X className="w-6 h-6" />
+          <X className="w-5 h-5 md:w-6 md:h-6" />
         </button>
 
-        {/* Top Bar */}
-        <div className="flex items-center justify-between px-6 md:px-8 py-4 md:py-6">
-          <div className="flex flex-col">
+        {/* Top Bar - Stacked on mobile, side-by-side on desktop */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 pt-12 md:pt-6 pb-2 md:pb-6">
+          {/* Clock Section */}
+          <div className="flex flex-col items-center md:items-start mb-2 md:mb-0">
             <RealTimeClock mode="focus" format={preferences.clockFormat} />
           </div>
-          <div className="flex flex-col items-end">
+          {/* Branding Section - Hidden on very small screens, compact on mobile */}
+          <div className="hidden sm:flex flex-col items-center md:items-end">
             <div className="flex items-center space-x-2 md:space-x-3">
               <Image
                 src="/brain-logo.webp"
                 alt="Cerebrum Biology"
                 width={40}
                 height={40}
-                className="h-8 w-8 md:h-10 md:w-10"
+                className="h-6 w-6 md:h-10 md:w-10"
               />
-              <span className="text-lg md:text-2xl font-bold text-white">Cerebrum Biology</span>
+              <span className="text-base md:text-2xl font-bold text-white">Cerebrum Biology</span>
             </div>
             {preferences.topicName && (
-              <span className="text-sm md:text-lg text-green-400 mt-1 font-medium">
+              <span className="text-xs md:text-lg text-green-400 mt-1 font-medium text-center md:text-right max-w-[200px] md:max-w-none truncate">
                 {preferences.topicName}
               </span>
             )}
@@ -200,8 +202,8 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
         </div>
 
         {/* Center Content - Stopwatch & Pomodoro with Controls */}
-        <div className="flex-1 flex items-center justify-center px-4 md:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
+        <div className="flex-1 flex items-center justify-center px-2 md:px-8 min-h-0">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16 lg:gap-24 scale-90 md:scale-100">
             <StudyStopwatch mode="focus" onStateChange={setStopwatchState} />
             <PomodoroTimer
               mode="focus"
@@ -213,56 +215,60 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-8 py-4 md:py-6 gap-4 md:gap-0">
+        {/* Bottom Bar - Stacked on mobile */}
+        <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-2 md:py-6 gap-2 md:gap-0">
           <LiveStudentCount mode="focus" />
-          <MotivationalQuotes mode="focus" />
+          <div className="max-w-full md:max-w-md overflow-hidden">
+            <MotivationalQuotes mode="focus" />
+          </div>
         </div>
 
-        {/* Focus Mode Hint */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-white/40 text-xs">
+        {/* Focus Mode Hint - Hidden on mobile to save space */}
+        <div className="hidden md:block absolute bottom-2 left-1/2 -translate-x-1/2 text-white/40 text-xs">
           Press ESC or click ✕ to exit
         </div>
       </div>
     )
   }
 
-  // Web Mode - Responsive layout
+  // Web Mode - Responsive layout (compact version)
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header */}
-      <header className="bg-[#3d4d3d] text-white py-4 px-4 md:px-8 shadow-lg">
+      <header className="bg-[#3d4d3d] text-white py-3 px-4 md:px-6 shadow-lg">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Image
               src="/brain-logo.webp"
               alt="Cerebrum Biology"
-              width={40}
-              height={40}
-              className="h-8 w-8 md:h-10 md:w-10"
+              width={32}
+              height={32}
+              className="h-7 w-7 md:h-8 md:w-8"
             />
-            <span className="text-lg md:text-xl font-bold">Cerebrum Biology</span>
+            <span className="text-base md:text-lg font-bold">Cerebrum Biology</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            {/* Student Count Badge - Top Right */}
+            <LiveStudentCount mode="badge" />
             <button
               onClick={enterFocusMode}
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 rounded-lg font-medium transition-colors text-sm md:text-base"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 md:px-3 md:py-1.5 bg-yellow-500 hover:bg-yellow-400 text-gray-900 rounded-lg font-medium transition-colors text-xs md:text-sm"
             >
-              <Maximize2 className="w-4 h-4" />
+              <Maximize2 className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Focus Mode</span>
             </button>
             <div className="text-right hidden md:block">
-              <h1 className="text-lg md:text-xl font-bold">Study With Me</h1>
-              <p className="text-xs md:text-sm text-green-200">NEET Biology Focus Session</p>
+              <h1 className="text-base md:text-lg font-bold">Study With Me</h1>
+              <p className="text-xs text-green-200">NEET Biology Focus Session</p>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-10">
+      {/* Main Content - Compact layout with reduced padding and gaps */}
+      <main className="max-w-6xl mx-auto px-3 md:px-5 py-3 md:py-5">
         {/* Primary Section: Clock + Stopwatch */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4">
           <RealTimeClock
             format={preferences.clockFormat}
             onFormatChange={setClockFormat}
@@ -271,8 +277,8 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
           <StudyStopwatch mode="web" onStateChange={setStopwatchState} />
         </div>
 
-        {/* Secondary Section: Pomodoro + Student Count */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Secondary Section: Pomodoro (compact) + Quotes (moved here) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 mb-4">
           <PomodoroTimer
             mode="web"
             studyDuration={preferences.pomodoroStudyDuration}
@@ -280,12 +286,13 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
             longBreakDuration={preferences.pomodoroLongBreakDuration}
             onStateChange={setPomodoroState}
             className="lg:col-span-2"
+            compact
           />
-          <LiveStudentCount mode="web" />
+          <MotivationalQuotes mode="web" />
         </div>
 
-        {/* Tertiary Section: Music + Quotes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Tertiary Section: Music + Settings */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4">
           <AmbientMusicPlayer
             mode="web"
             sound={preferences.ambientSound}
@@ -293,19 +300,16 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
             onSoundChange={setAmbientSound}
             onVolumeChange={setVolume}
           />
-          <MotivationalQuotes mode="web" />
+          <SessionSettings
+            mode="web"
+            topicName={preferences.topicName}
+            studyDuration={preferences.pomodoroStudyDuration}
+            breakDuration={preferences.pomodoroBreakDuration}
+            longBreakDuration={preferences.pomodoroLongBreakDuration}
+            onTopicChange={setTopicName}
+            onDurationChange={setPomodoroDurations}
+          />
         </div>
-
-        {/* Session Settings */}
-        <SessionSettings
-          mode="web"
-          topicName={preferences.topicName}
-          studyDuration={preferences.pomodoroStudyDuration}
-          breakDuration={preferences.pomodoroBreakDuration}
-          longBreakDuration={preferences.pomodoroLongBreakDuration}
-          onTopicChange={setTopicName}
-          onDurationChange={setPomodoroDurations}
-        />
       </main>
 
       {/* Footer */}
@@ -315,6 +319,15 @@ export function StudyWithMePage({ mode = 'web', transparentBg = false }: StudyWi
           <p className="mt-2 md:mt-0">Focus. Study. Succeed.</p>
         </div>
       </footer>
+
+      {/* Mobile Floating Action Button for Focus Mode */}
+      <button
+        onClick={enterFocusMode}
+        className="fixed bottom-6 right-6 z-50 md:hidden flex items-center justify-center w-14 h-14 bg-yellow-500 hover:bg-yellow-400 text-gray-900 rounded-full shadow-lg transition-all active:scale-95"
+        aria-label="Enter Focus Mode"
+      >
+        <Maximize2 className="w-6 h-6" />
+      </button>
     </div>
   )
 }
