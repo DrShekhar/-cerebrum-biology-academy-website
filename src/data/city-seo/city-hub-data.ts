@@ -1619,20 +1619,20 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'south-delhi',
     cityName: 'South Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in South Delhi | Best NEET Coaching South Extension | Cerebrum',
+    metaTitle: 'Biology Coaching South Delhi | Class 9-12, NEET, Olympiad | Ring Road Center',
     metaDescription:
-      'Top biology classes in South Delhi with center in South Extension. AIIMS faculty, 98% success rate. Near AIIMS, GK, Lajpat Nagar. Book free demo!',
-    heroTitle: 'Best Biology Classes in South Delhi',
+      'Best biology coaching in South Delhi at Ring Road, South Extension 2. Classes for Class 9, 10, 11, 12, NEET, Boards & Olympiads. Online/Offline/Hybrid. Near South Extension Metro. Book free demo!',
+    heroTitle: 'Best Biology Coaching in South Delhi',
     heroSubtitle:
-      'Premium NEET coaching at our South Extension center. Just 10 minutes from AIIMS Delhi!',
+      'Premier center at Ring Road, South Extension 2. Class 9-12, NEET, Board Exams & Biology Olympiad prep. 5 min from South Extension Metro!',
     hasOfflineCenter: true,
     nearestCenter: {
-      name: 'South Delhi Center',
-      address: 'Block D, South Extension Part 2, New Delhi 110049',
-      distance: 'South Extension',
+      name: 'South Delhi Center (Ring Road)',
+      address: 'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi 110049',
+      distance: 'South Extension Metro - 5 min walk',
     },
     localities: [
-      { name: 'South Extension', url: '/biology-tuition-south-delhi' },
+      { name: 'South Extension 2 (Ring Road)', url: '/neet-coaching-south-extension-delhi' },
       { name: 'Greater Kailash', url: '/biology-classes-south-delhi/gk' },
       { name: 'Lajpat Nagar', url: '/biology-classes-south-delhi/lajpat-nagar' },
       { name: 'Defence Colony', url: '/biology-classes-south-delhi/defence-colony' },
@@ -1640,6 +1640,9 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Saket', url: '/biology-classes-south-delhi/saket' },
       { name: 'Malviya Nagar', url: '/biology-classes-south-delhi/malviya-nagar' },
       { name: 'Vasant Kunj', url: '/biology-classes-south-delhi/vasant-kunj' },
+      { name: 'Vasant Vihar', url: '/best-biology-tuition-vasant-vihar' },
+      { name: 'CR Park', url: '/best-biology-tuition-cr-park' },
+      { name: 'RK Puram', url: '/best-biology-tuition-rk-puram' },
     ],
     relatedCities: [
       { name: 'Delhi', url: '/biology-classes-delhi' },
@@ -1649,34 +1652,39 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'Where is the biology coaching center in South Delhi?',
+        question: 'Where is your biology coaching center in South Delhi?',
         answer:
-          'Our South Delhi center is at Block D, South Extension Part 2, New Delhi 110049. It is walking distance from South Extension market and easily accessible from AIIMS Metro Station (Yellow Line). Students from GK, Lajpat Nagar, Defence Colony, and nearby areas attend here.',
+          'Our South Delhi center is at Ring Road, South Extension Part 2, New Delhi 110049. It is just 5 minutes walk from South Extension Metro Station (Pink Line). Students from GK, Lajpat Nagar, Defence Colony, Sarojini Nagar, and all South Delhi localities attend here.',
       },
       {
-        question: 'Why is South Extension location ideal for NEET aspirants?',
+        question: 'Do you offer biology classes for Class 9 and 10 in South Delhi?',
         answer:
-          'Our South Extension center is just 10 minutes from AIIMS Delhi - the dream destination for our students! This proximity to AIIMS motivates students daily. The area is well-connected by metro and has excellent infrastructure.',
+          'Yes! We have dedicated foundation batches for Class 9 and 10 students covering CBSE/ICSE Biology, NTSE Biology, and foundation for future NEET preparation. These classes build strong fundamentals for competitive exams.',
       },
       {
-        question: 'What are the batch timings at South Delhi center?',
+        question: 'Do you have Biology Olympiad coaching in South Delhi?',
         answer:
-          'We have morning batches (8-10 AM), afternoon batches (2-4 PM), and evening batches (6-8 PM). Weekend batches are available for students who have school on weekdays. Multiple options to suit your schedule.',
+          'Absolutely! We offer specialized coaching for NSEB (National Standard Examination in Biology), INBO, and IBO (International Biology Olympiad). Our students have qualified for national and international olympiads.',
       },
       {
-        question: 'What is the fee at South Delhi center?',
+        question: 'What class modes are available at South Delhi center?',
         answer:
-          'Biology coaching at our South Delhi center is ₹45,000 to ₹75,000 per year depending on the course. This is competitive with South Delhi market rates but with superior AIIMS-trained faculty.',
+          'We offer three modes: Offline (in-person at Ring Road center), Online (live interactive classes), and Hybrid (combine both). Choose what suits your schedule. Weekend and evening batches available.',
+      },
+      {
+        question: 'What is the fee for biology coaching in South Delhi?',
+        answer:
+          'Class 9-10: ₹25,000-40,000/year | Class 11-12: ₹45,000-75,000/year | NEET Dropper: ₹60,000-85,000/year | Olympiad: ₹30,000-50,000/year. EMI options available. Call 88264-44334.',
       },
     ],
     stats: {
-      studentsFromCity: '1,000+',
+      studentsFromCity: '1,500+',
       successRate: '98%',
       rating: '4.9',
     },
     geoCoordinates: {
-      lat: '28.5725',
-      lng: '77.2217',
+      lat: '28.5732',
+      lng: '77.2189',
     },
   },
 
@@ -8260,6 +8268,93 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.6517',
       lng: '77.1027',
+    },
+  },
+
+  'ring-road-south-extension': {
+    slug: 'ring-road-south-extension',
+    cityName: 'Ring Road, South Extension 2',
+    stateName: 'Delhi',
+    metaTitle: 'Biology Coaching Ring Road South Extension 2 | Class 9-12, NEET, Olympiad | Delhi',
+    metaDescription:
+      'Best biology coaching at Ring Road, South Extension 2, Delhi. Classes for Class 9, 10, 11, 12, NEET droppers, Board exams & Biology Olympiad. 5 min from South Extension Metro. Online/Offline/Hybrid. Book free demo!',
+    heroTitle: 'Biology Coaching at Ring Road, South Extension 2',
+    heroSubtitle:
+      'Premier South Delhi location for Class 9-12, NEET, Board Exams & Biology Olympiad preparation. Just 5 minutes from South Extension Metro!',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Ring Road Center',
+      address: 'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi 110049',
+      distance: 'You are here!',
+    },
+    localities: [
+      { name: 'Defence Colony', url: '/biology-classes-defence-colony' },
+      { name: 'Lajpat Nagar', url: '/biology-classes-lajpat-nagar' },
+      { name: 'Greater Kailash', url: '/best-biology-tuition-greater-kailash' },
+      { name: 'Sarojini Nagar', url: '/biology-classes-sarojini-nagar' },
+      { name: 'INA Colony', url: '/biology-classes-ina' },
+      { name: 'Moolchand', url: '/biology-classes-moolchand' },
+      { name: 'Jangpura', url: '/biology-classes-jangpura' },
+      { name: 'Andrews Ganj', url: '/biology-classes-andrews-ganj' },
+      { name: 'Kotla Mubarakpur', url: '/biology-classes-kotla-mubarakpur' },
+      { name: 'Lodhi Colony', url: '/biology-classes-lodhi-colony' },
+    ],
+    relatedCities: [
+      { name: 'South Delhi', url: '/biology-classes-south-delhi' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'Where exactly is the Ring Road biology coaching center?',
+        answer:
+          'Our center is located at Ring Road, South Extension Part 2, New Delhi 110049. It is exactly 5 minutes walking distance from South Extension Metro Station (Pink Line). Landmarks: Near South Extension Market, Ring Road flyover.',
+      },
+      {
+        question: 'Which classes do you offer at Ring Road center?',
+        answer:
+          'We offer biology coaching for: Class 9 (Foundation), Class 10 (Board + NTSE), Class 11 (NEET + Boards), Class 12 (NEET + Boards), NEET Droppers, and Biology Olympiad (NSEB, IBO). All classes available in offline, online & hybrid modes.',
+      },
+      {
+        question: 'How is Ring Road center connected to metro and buses?',
+        answer:
+          'Excellent connectivity! South Extension Metro (Pink Line) - 5 min walk. AIIMS Metro (Yellow Line) - 10 min. INA Metro - 12 min. DTC Ring Road bus stop - 2 min walk. Students from entire South Delhi reach easily.',
+      },
+      {
+        question: 'Do you have Class 9 and Class 10 biology coaching?',
+        answer:
+          'Yes! Our Foundation program for Class 9-10 covers CBSE/ICSE biology curriculum, NTSE biology preparation, and builds strong fundamentals for future NEET. Weekend batches available for school students.',
+      },
+      {
+        question: 'Do you offer Biology Olympiad coaching at Ring Road?',
+        answer:
+          'Yes! We have specialized Olympiad batches for NSEB (National Standard Examination in Biology), INBO, and IBO (International Biology Olympiad). Our students have qualified at national and international levels.',
+      },
+      {
+        question: 'What are the batch timings at Ring Road center?',
+        answer:
+          'Multiple batches: Morning (7-9 AM), School Hours (10 AM-12 PM), Afternoon (2-4 PM), Evening (5-7 PM), Night (7-9 PM). Weekend batches on Saturday & Sunday. Choose what suits you!',
+      },
+      {
+        question: 'What is the fee structure at Ring Road center?',
+        answer:
+          'Class 9-10 Foundation: ₹25,000-40,000/year | Class 11-12 NEET: ₹45,000-75,000/year | NEET Dropper: ₹60,000-85,000/year | Olympiad: ₹30,000-50,000/year. EMI options available. Call 88264-44334.',
+      },
+      {
+        question: 'Can I get a free demo class at Ring Road center?',
+        answer:
+          'Absolutely! Call 88264-44334 or WhatsApp to book a FREE demo class. Experience our teaching methodology, meet the faculty, and see our facilities before enrolling. No obligation!',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5732',
+      lng: '77.2189',
     },
   },
 }
