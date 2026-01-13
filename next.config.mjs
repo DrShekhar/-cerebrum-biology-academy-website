@@ -220,28 +220,29 @@ const nextConfig = {
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
-    // Optimize package imports for smaller bundles
-    optimizePackageImports: [
-      'lucide-react',
-      '@radix-ui/react-icons',
-      'framer-motion',
-      'date-fns',
-      'zod',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-select',
-      '@radix-ui/react-tabs',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-popover',
-      '@radix-ui/react-tooltip',
-      '@radix-ui/react-accordion',
-      'react-hook-form',
-      '@anthropic-ai/sdk',
-      'openai',
-      '@clerk/nextjs',
-      'recharts',
-      'react-day-picker',
-      '@sentry/nextjs',
-    ],
+    // TEMPORARILY DISABLED: Causes webpack module resolution errors in dev mode HMR
+    // Re-enable after fixing dev server stability
+    // optimizePackageImports: [
+    //   'lucide-react',
+    //   '@radix-ui/react-icons',
+    //   'framer-motion',
+    //   'date-fns',
+    //   'zod',
+    //   '@radix-ui/react-dialog',
+    //   '@radix-ui/react-select',
+    //   '@radix-ui/react-tabs',
+    //   '@radix-ui/react-dropdown-menu',
+    //   '@radix-ui/react-popover',
+    //   '@radix-ui/react-tooltip',
+    //   '@radix-ui/react-accordion',
+    //   'react-hook-form',
+    //   '@anthropic-ai/sdk',
+    //   'openai',
+    //   '@clerk/nextjs',
+    //   'recharts',
+    //   'react-day-picker',
+    //   '@sentry/nextjs',
+    // ],
   },
 
   // Redirects for SEO - Fix 404 errors reported in Google Search Console
@@ -827,6 +828,199 @@ const nextConfig = {
       {
         source: '/blog/how-to-score-700-plus-in-neet',
         destination: '/blog/neet-preparation-guide-best-strategies',
+        permanent: true,
+      },
+
+      // ============================================
+      // GSC 404 Fixes - January 13, 2026
+      // ============================================
+
+      // Olympiad preparation → coaching redirects
+      {
+        source: '/cbo-preparation',
+        destination: '/cbo-coaching',
+        permanent: true,
+      },
+      {
+        source: '/jbo-preparation',
+        destination: '/jbo-coaching',
+        permanent: true,
+      },
+      {
+        source: '/sbo-preparation',
+        destination: '/sbo-coaching',
+        permanent: true,
+      },
+      {
+        source: '/kbo-preparation',
+        destination: '/kbo-coaching',
+        permanent: true,
+      },
+      {
+        source: '/cnbo-preparation',
+        destination: '/cnbo-coaching',
+        permanent: true,
+      },
+      {
+        source: '/german-biology-olympiad',
+        destination: '/olympiad-coaching',
+        permanent: true,
+      },
+
+      // Nested biology-classes sub-location redirects
+      {
+        source: '/biology-classes-laxmi-nagar/:area*',
+        destination: '/biology-classes-laxmi-nagar',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-south-delhi/:area*',
+        destination: '/biology-classes-south-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-green-park/:area*',
+        destination: '/best-biology-tuition-greater-kailash',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-noida/:area*',
+        destination: '/biology-classes-noida',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-model-town/:area*',
+        destination: '/biology-classes-model-town',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-preet-vihar/:area*',
+        destination: '/biology-classes-preet-vihar',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-manesar/:area*',
+        destination: '/biology-classes-manesar',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-rohini-sector-:num',
+        destination: '/biology-classes-rohini',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-rohini-west',
+        destination: '/biology-classes-rohini',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-gurgaon-:area',
+        destination: '/biology-classes-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-greater-noida-west',
+        destination: '/biology-classes-greater-noida',
+        permanent: true,
+      },
+
+      // Malformed biology-classes URLs (double prefix)
+      {
+        source: '/biology-classes-biology-home-tuition-gurgaon',
+        destination: '/biology-classes-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-biology-classes-:school-gurgaon',
+        destination: '/biology-classes-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-biology-tutor-gurgaon',
+        destination: '/biology-classes-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-biology-class-:level-gurgaon',
+        destination: '/biology-classes-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-biology-tuition-ryan-international',
+        destination: '/biology-classes-rohini',
+        permanent: true,
+      },
+      {
+        source: '/biology-classes-neet-coaching-:location',
+        destination: '/neet-coaching-gurgaon',
+        permanent: true,
+      },
+
+      // Resources subpages
+      {
+        source: '/resources/biodiversity-notes',
+        destination: '/biodiversity-notes-neet',
+        permanent: true,
+      },
+      {
+        source: '/resources/plant-physiology-notes',
+        destination: '/biology-notes',
+        permanent: true,
+      },
+      {
+        source: '/resources/important-questions',
+        destination: '/neet-biology-mcq',
+        permanent: true,
+      },
+
+      // Missing/renamed pages
+      {
+        source: '/scholarships',
+        destination: '/scholarship',
+        permanent: true,
+      },
+      {
+        source: '/courses/neet-biology',
+        destination: '/courses/intensive-neet-biology',
+        permanent: true,
+      },
+
+      // NEET coaching school-specific pages
+      {
+        source: '/neet-coaching-vasant-valley-students',
+        destination: '/best-biology-tuition-vasant-vihar',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-mount-abu-rohini-students',
+        destination: '/neet-coaching-north-delhi',
+        permanent: true,
+      },
+
+      // Biology tutor location pages
+      {
+        source: '/biology-tutor-pitampura',
+        destination: '/neet-coaching-north-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-laxmi-nagar',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-noida-sector-137',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/neet-biology-tutor-class-11',
+        destination: '/biology-tuition-class-11',
+        permanent: true,
+      },
+      {
+        source: '/neet-biology-tutor-class-12',
+        destination: '/biology-tuition-class-12',
         permanent: true,
       },
     ]
