@@ -66,36 +66,38 @@ export default function SchoolCareerSeminarPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const message = `🏫 *NEW SCHOOL SEMINAR BOOKING REQUEST*
+    const message = `🏫 NEW SCHOOL SEMINAR BOOKING REQUEST
 
-*School Details:*
+📍 School Details:
 • School Name: ${formData.schoolName}
 • City: ${formData.city}
 
-*Contact Person:*
+👤 Contact Person:
 • Name: ${formData.principalName}
 • Designation: ${formData.designation}
 • Email: ${formData.email}
 • Phone: ${formData.phone}
 
-*Seminar Requirements:*
+📅 Seminar Requirements:
 • Expected Students: ${formData.studentCount}
 • Preferred Date: ${formData.preferredDate}
 • Preferred Time: ${formData.preferredTime}
 • Seminar Type: ${formData.seminarType}
 
-*Expectations:*
+🎯 Expectations:
 ${formData.expectations || 'Not specified'}
 
-*Additional Information:*
+📝 Additional Information:
 ${formData.additionalInfo || 'None'}
 
 ---
 Submitted via School Seminar Booking Form`
 
     const whatsappUrl = getWhatsAppLink(message)
-    window.open(whatsappUrl, '_blank')
-    setIsSubmitting(false)
+
+    // Use location.href for reliable navigation (works on all devices including mobile)
+    // This prevents popup blocker issues that occur with window.open()
+    window.location.href = whatsappUrl
   }
 
   const seminarTypes = [
@@ -749,8 +751,8 @@ Submitted via School Seminar Booking Form`
             </div>
           </div>
 
-          <div className="relative">
-            <div className="flex animate-scroll">
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll w-max">
               {/* Only show first 12 images for performance (duplicated for seamless scroll) */}
               {[...seminarGalleryImages.slice(0, 12), ...seminarGalleryImages.slice(0, 12)].map((image, index) => (
                 <div key={index} className="flex-shrink-0 w-72 md:w-80 mx-3 group">
@@ -777,14 +779,15 @@ Submitted via School Seminar Booking Form`
           <style jsx>{`
             @keyframes scroll {
               0% {
-                transform: translateX(0);
+                transform: translate3d(0, 0, 0);
               }
               100% {
-                transform: translateX(-50%);
+                transform: translate3d(-50%, 0, 0);
               }
             }
             .animate-scroll {
-              animation: scroll 50s linear infinite;
+              animation: scroll 60s linear infinite;
+              will-change: transform;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
