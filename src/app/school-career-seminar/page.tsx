@@ -591,7 +591,7 @@ Submitted via School Seminar Booking Form`
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                    <FileText className="w-6 h-6 text-green-600" />
+                    <FileText className="w-6 h-6 text-green-700" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">CBSE Mandate</h3>
@@ -673,7 +673,7 @@ Submitted via School Seminar Booking Form`
                       <seminar.icon
                         className={`w-6 h-6 ${
                           seminar.color === 'green'
-                            ? 'text-green-600'
+                            ? 'text-green-700'
                             : seminar.color === 'purple'
                               ? 'text-purple-600'
                               : seminar.color === 'red'
@@ -733,7 +733,7 @@ Submitted via School Seminar Booking Form`
                   className="bg-white rounded-xl p-6 shadow-md border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-green-600" />
+                    <item.icon className="w-6 h-6 text-green-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
@@ -889,7 +889,7 @@ Submitted via School Seminar Booking Form`
                     </p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                        <School className="w-5 h-5 text-green-600" />
+                        <School className="w-5 h-5 text-green-700" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">{testimonial.author}</p>
@@ -995,7 +995,7 @@ Submitted via School Seminar Booking Form`
               {/* School Information */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <School className="w-5 h-5 mr-2 text-green-600" />
+                  <School className="w-5 h-5 mr-2 text-green-700" />
                   School Information
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -1038,7 +1038,7 @@ Submitted via School Seminar Booking Form`
               {/* Contact Person */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Users className="w-5 h-5 mr-2 text-green-600" />
+                  <Users className="w-5 h-5 mr-2 text-green-700" />
                   Contact Person Details
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -1122,7 +1122,7 @@ Submitted via School Seminar Booking Form`
               {/* Seminar Details */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 text-green-600" />
+                  <Calendar className="w-5 h-5 mr-2 text-green-700" />
                   Seminar Requirements
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -1226,7 +1226,7 @@ Submitted via School Seminar Booking Form`
               {/* Expectations */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Target className="w-5 h-5 mr-2 text-green-600" />
+                  <Target className="w-5 h-5 mr-2 text-green-700" />
                   Your Expectations
                 </h3>
                 <div className="space-y-4">
