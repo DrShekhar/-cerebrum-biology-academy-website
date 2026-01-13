@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useMemo } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 import {
   GraduationCap,
@@ -32,11 +32,20 @@ import { CONTACT_INFO, getWhatsAppLink } from '@/lib/constants/contactInfo'
 import Script from 'next/script'
 
 export default function SchoolCareerSeminarPage() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
-  }
+  const prefersReducedMotion = useReducedMotion()
+
+  // Optimized animation variants for 60fps smoothness
+  const fadeInUp = useMemo(
+    () => ({
+      initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 },
+      animate: { opacity: 1, y: 0 },
+      transition: {
+        duration: prefersReducedMotion ? 0 : 0.4,
+        ease: [0.25, 0.46, 0.45, 0.94] as const, // Custom easing for buttery smooth feel
+      },
+    }),
+    [prefersReducedMotion]
+  )
 
   const [formData, setFormData] = useState({
     schoolName: '',
@@ -679,7 +688,7 @@ Submitted via School Seminar Booking Form`
                   </div>
 
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{seminar.title}</h3>
-                  <p className="text-sm text-green-600 font-medium mb-3">{seminar.audience}</p>
+                  <p className="text-sm text-green-700 font-medium mb-3">{seminar.audience}</p>
                   <p className="text-gray-600 text-sm mb-4">{seminar.description}</p>
 
                   <div className="space-y-2">
@@ -738,7 +747,7 @@ Submitted via School Seminar Booking Form`
         <section className="py-16 md:py-20 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-700 text-sm font-medium mb-4">
+              <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-4">
                 <Camera className="w-4 h-4 mr-2" />
                 Photo Gallery
               </div>
@@ -754,25 +763,27 @@ Submitted via School Seminar Booking Form`
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll w-max">
               {/* Only show first 12 images for performance (duplicated for seamless scroll) */}
-              {[...seminarGalleryImages.slice(0, 12), ...seminarGalleryImages.slice(0, 12)].map((image, index) => (
-                <div key={index} className="flex-shrink-0 w-72 md:w-80 mx-3 group">
-                  <div className="relative h-48 md:h-56 rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes="(max-width: 768px) 288px, 320px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      unoptimized={image.src.startsWith('http')}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white text-sm font-medium">{image.school}</p>
+              {[...seminarGalleryImages.slice(0, 12), ...seminarGalleryImages.slice(0, 12)].map(
+                (image, index) => (
+                  <div key={index} className="flex-shrink-0 w-72 md:w-80 mx-3 group">
+                    <div className="relative h-48 md:h-56 rounded-xl overflow-hidden shadow-lg">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(max-width: 768px) 288px, 320px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                        unoptimized={image.src.startsWith('http')}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <p className="text-white text-sm font-medium">{image.school}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
             </div>
           </div>
 
@@ -786,11 +797,18 @@ Submitted via School Seminar Booking Form`
               }
             }
             .animate-scroll {
-              animation: scroll 60s linear infinite;
+              animation: scroll 80s linear infinite;
               will-change: transform;
+              backface-visibility: hidden;
+              perspective: 1000px;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .animate-scroll {
+                animation: none;
+              }
             }
           `}</style>
         </section>
@@ -821,7 +839,7 @@ Submitted via School Seminar Booking Form`
                     className="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-100"
                   >
                     <div className="w-20 text-center flex-shrink-0">
-                      <span className="text-sm font-semibold text-green-600">{item.time}</span>
+                      <span className="text-sm font-semibold text-green-700">{item.time}</span>
                     </div>
                     <div className="flex-1">
                       <span className="text-gray-900 font-medium">{item.activity}</span>
@@ -858,7 +876,7 @@ Submitted via School Seminar Booking Form`
                     key={index}
                     className="bg-white rounded-xl p-6 shadow-xl border-2 border-green-200 relative"
                   >
-                    <div className="absolute -top-3 left-4 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">
+                    <div className="absolute -top-3 left-4 px-3 py-1 bg-green-700 text-white text-xs font-semibold rounded-full">
                       Partner School
                     </div>
                     <div className="flex mb-4 mt-2">
@@ -875,7 +893,7 @@ Submitted via School Seminar Booking Form`
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                        <p className="text-sm text-green-600 font-medium">{testimonial.role}</p>
+                        <p className="text-sm text-green-700 font-medium">{testimonial.role}</p>
                       </div>
                     </div>
                   </div>
@@ -919,10 +937,7 @@ Submitted via School Seminar Booking Form`
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <details
-                  key={index}
-                  className="group bg-gray-50 rounded-xl border border-gray-100"
-                >
+                <details key={index} className="group bg-gray-50 rounded-xl border border-gray-100">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
                     <span className="flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
@@ -957,7 +972,7 @@ Submitted via School Seminar Booking Form`
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-700 text-sm font-medium mb-4">
+              <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-4">
                 <ClipboardList className="w-4 h-4 mr-2" />
                 For Principals & School Management
               </div>
