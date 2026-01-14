@@ -214,7 +214,7 @@ const Header = () => {
           </nav>
 
           {/* Right Section - Enhanced CTA Layout */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center space-x-4">
             {/* Search Menu */}
             <SearchMenu
               isOpen={isSearchOpen}
@@ -223,7 +223,7 @@ const Header = () => {
             />
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center space-x-6">
               {/* Dashboard Button (for authenticated users - role-based) */}
               {isAuthenticated ? (
                 <Link

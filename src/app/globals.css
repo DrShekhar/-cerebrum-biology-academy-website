@@ -1029,6 +1029,8 @@ body {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
   white-space: nowrap;
   border-width: 0;
 }
@@ -1041,6 +1043,8 @@ body {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
   white-space: nowrap;
   border-width: 0;
 }

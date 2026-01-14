@@ -89,7 +89,7 @@ export function HeroClientInteractive() {
     <>
       {/* CTAs - Using <a> tags (work before JS loads), animated after LCP */}
       <div
-        className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-4 animate-fade-in-up"
+        className="flex flex-col sm:flex-row space-y-3 xs:space-y-4 sm:space-y-0 sm:space-x-4 mb-4 animate-fade-in-up"
         style={{ animationDelay: '0.3s' }}
       >
         {/* PRIMARY CTA: WhatsApp - instant, low-friction contact */}
@@ -129,7 +129,7 @@ export function HeroClientInteractive() {
 
       {/* Micro Social Proof - below CTAs */}
       <div
-        className="flex items-center gap-2 mb-8 xs:mb-12 animate-fade-in-up"
+        className="flex items-center space-x-2 mb-8 xs:mb-12 animate-fade-in-up"
         style={{ animationDelay: '0.35s' }}
       >
         <div className="flex -space-x-2">
@@ -173,7 +173,7 @@ export function HeroClientInteractive() {
 
       {/* Urgency Banner with Live Countdown - delayed animation */}
       <div
-        className="inline-flex flex-col sm:flex-row items-center gap-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up animate-pulse-slow"
+        className="inline-flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up animate-pulse-slow"
         style={{ animationDelay: '0.5s' }}
       >
         <div className="flex items-center">
@@ -182,7 +182,7 @@ export function HeroClientInteractive() {
             {t('nextBatchStarting')}:
           </span>
         </div>
-        <div className="flex items-center gap-1 xs:gap-2 font-mono">
+        <div className="flex items-center space-x-1 xs:space-x-2 font-mono">
           <div className="bg-white/20 px-2 py-1 rounded text-center">
             <span className="text-white font-bold text-sm xs:text-base">{timeLeft.days}</span>
             <span className="text-red-200 text-xs ml-0.5">d</span>
@@ -210,10 +210,10 @@ export function HeroClientInteractive() {
 
       {/* Early Bird - delayed animation */}
       <div
-        className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 animate-fade-in-up"
+        className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 animate-fade-in-up"
         style={{ animationDelay: '0.6s' }}
       >
-        <div className="flex items-center gap-2 text-yellow-200">
+        <div className="flex items-center space-x-2 text-yellow-200">
           <Sparkles className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
           <span className="text-xs xs:text-sm sm:text-base">
             {t('earlyBirdDiscount').replace('{days}', timeLeft.days.toString())}
