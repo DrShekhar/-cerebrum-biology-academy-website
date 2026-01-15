@@ -170,10 +170,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate Prisma Client
+        run: npx prisma generate
+        env:
+          DATABASE_URL: postgresql://placeholder
+
       - name: Build project
         run: npm run build
         env:
           NODE_ENV: production
+          # Provide minimal env vars for build (same as mvp-build.yml)
+          NEXT_PUBLIC_SITE_URL: https://cerebrumbiologyacademy.com
+          DATABASE_URL: postgresql://placeholder
+          ADMIN_EMAIL: admin@cerebrumbiologyacademy.com
+          ADMIN_PASSWORD_HASH: placeholder
+          # AI API Keys (placeholders for build - not used at build time)
+          OPENAI_API_KEY: placeholder-build-only
+          ANTHROPIC_API_KEY: placeholder-build-only
+          GOOGLE_AI_API_KEY: placeholder-build-only
+          # Auth Secrets (placeholders for build - not used at build time)
+          JWT_SECRET: placeholder-build-secret-change-in-production
+          JWT_REFRESH_SECRET: placeholder-build-refresh-secret-change-in-production
+          AUTH_SECRET: placeholder-build-auth-secret
+          NEXTAUTH_SECRET: placeholder-build-nextauth-secret
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
