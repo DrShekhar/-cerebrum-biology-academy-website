@@ -142,6 +142,8 @@ export function VideoShowcase({
                 src={defaultThumbnail}
                 alt={title}
                 className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                loading="lazy"
+                decoding="async"
                 onLoad={() => setImageLoaded(true)}
                 onError={(e) => {
                   e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`

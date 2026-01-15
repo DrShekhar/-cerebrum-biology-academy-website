@@ -73,7 +73,7 @@ export function RealStudentTestimonials({
                   className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 >
                   <div
-                    className="relative aspect-video bg-indigo-500 cursor-pointer group"
+                    className="relative aspect-video bg-indigo-600 cursor-pointer group"
                     onClick={() => openVideoModal(testimonial)}
                   >
                     {testimonial.youtubeId ? (
@@ -82,6 +82,8 @@ export function RealStudentTestimonials({
                           src={testimonial.thumbnail}
                           alt={`${testimonial.studentName} testimonial`}
                           className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                           <motion.div

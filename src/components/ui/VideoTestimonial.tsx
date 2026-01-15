@@ -61,6 +61,8 @@ export function VideoTestimonial({
               src={defaultThumbnail}
               alt={`${studentName}'s success story`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
               }}
@@ -190,6 +192,8 @@ export function CompactVideoTestimonial({
               src={defaultThumbnail}
               alt={`${studentName}'s testimonial`}
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center border border-white/50">

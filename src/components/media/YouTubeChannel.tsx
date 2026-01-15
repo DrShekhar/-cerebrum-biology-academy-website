@@ -174,6 +174,8 @@ export function YouTubeChannel({
                       src={video.thumbnail}
                       alt={video.title}
                       className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                       <motion.div
