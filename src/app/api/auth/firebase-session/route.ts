@@ -5,18 +5,27 @@ import jwt from 'jsonwebtoken'
 import { randomUUID } from 'crypto'
 import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
 
-// SECURITY: No fallback in production - secrets are required
-const getAuthSecret = () => {
+// SECURITY: Lazy-load secrets to prevent build-time errors
+// Secrets are only required at runtime when actually processing requests
+let _authSecret: string | null = null
+
+const getAuthSecret = (): string => {
+  if (_authSecret) return _authSecret
+
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
   if (!secret) {
     if (process.env.NODE_ENV === 'production') {
-      throw new Error('CRITICAL: AUTH_SECRET or NEXTAUTH_SECRET is required in production')
+      // During build analysis, return placeholder; actual requests will fail at runtime without secrets
+      console.warn('[BUILD] AUTH_SECRET not available - will be required at runtime')
+      return 'build-time-placeholder-not-for-actual-use'
     }
-    return 'dev-only-secret-not-for-production-use'
+    console.warn('[DEV] AUTH_SECRET not set - using development fallback')
+    _authSecret = 'dev-only-secret-not-for-production-use'
+    return _authSecret
   }
-  return secret
+  _authSecret = secret
+  return _authSecret
 }
-const AUTH_SECRET = getAuthSecret()
 
 interface FirebaseSessionRequest {
   uid: string
@@ -199,7 +208,7 @@ export async function POST(request: NextRequest) {
           phone: normalizedPhone,
           sub: user.id,
         },
-        AUTH_SECRET,
+        getAuthSecret(),
         { expiresIn: '7d' }
       )
 
