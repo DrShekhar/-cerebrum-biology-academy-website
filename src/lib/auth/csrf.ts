@@ -48,15 +48,24 @@ export class CSRFProtection {
   static async generateToken(): Promise<string> {
     const token = crypto.randomBytes(this.TOKEN_LENGTH).toString('hex')
 
+    let storedInRedis = false
     if (preferUpstash() && upstashCache.isEnabled()) {
-      // Store in Redis with expiration
-      await upstashCache.set(
-        `${this.REDIS_PREFIX}${token}`,
-        JSON.stringify({ used: false, createdAt: Date.now() }),
-        this.TOKEN_EXPIRY_SECONDS
-      )
-    } else {
-      // Fallback to in-memory (dev only)
+      try {
+        // Store in Redis with expiration
+        await upstashCache.set(
+          `${this.REDIS_PREFIX}${token}`,
+          JSON.stringify({ used: false, createdAt: Date.now() }),
+          this.TOKEN_EXPIRY_SECONDS
+        )
+        storedInRedis = true
+      } catch (error) {
+        // Redis failed (quota exceeded, etc.) - will fall back to in-memory
+        console.warn('Redis CSRF token storage failed, using in-memory fallback:', error instanceof Error ? error.message : 'Unknown error')
+      }
+    }
+
+    if (!storedInRedis) {
+      // Fallback to in-memory
       const expires = Date.now() + this.TOKEN_EXPIRY_SECONDS * 1000
       this.inMemoryTokens.set(token, { token, expires, used: false })
       this.cleanupExpiredTokens()
@@ -72,13 +81,26 @@ export class CSRFProtection {
     if (!token) return false
 
     if (preferUpstash() && upstashCache.isEnabled()) {
-      // Check Redis
-      const key = `${this.REDIS_PREFIX}${token}`
-      const stored = await upstashCache.get(key)
-
-      if (!stored) return false
-
       try {
+        // Check Redis
+        const key = `${this.REDIS_PREFIX}${token}`
+        const stored = await upstashCache.get(key)
+
+        if (!stored) {
+          // Token not in Redis, check in-memory fallback
+          const inMemoryData = this.inMemoryTokens.get(token)
+          if (inMemoryData) {
+            if (Date.now() > inMemoryData.expires) {
+              this.inMemoryTokens.delete(token)
+              return false
+            }
+            if (oneTimeUse && inMemoryData.used) return false
+            if (oneTimeUse) inMemoryData.used = true
+            return true
+          }
+          return false
+        }
+
         const tokenData = JSON.parse(stored)
 
         // Check if token was already used (for one-time use)
@@ -96,8 +118,18 @@ export class CSRFProtection {
         }
 
         return true
-      } catch {
-        return false
+      } catch (error) {
+        // Redis failed - fall back to in-memory validation
+        console.warn('Redis CSRF token validation failed, using in-memory fallback:', error instanceof Error ? error.message : 'Unknown error')
+        const inMemoryData = this.inMemoryTokens.get(token)
+        if (!inMemoryData) return false
+        if (Date.now() > inMemoryData.expires) {
+          this.inMemoryTokens.delete(token)
+          return false
+        }
+        if (oneTimeUse && inMemoryData.used) return false
+        if (oneTimeUse) inMemoryData.used = true
+        return true
       }
     } else {
       // Fallback to in-memory
@@ -454,11 +486,16 @@ export async function rateLimitCSRFTokens(request: NextRequest): Promise<boolean
 
   // Use Redis rate limiter if available
   if (csrfRateLimiter) {
-    const result = await csrfRateLimiter.limit(identifier)
-    return result.success
+    try {
+      const result = await csrfRateLimiter.limit(identifier)
+      return result.success
+    } catch (error) {
+      // Fallback to in-memory if Redis fails (quota exceeded, network issues, etc.)
+      console.warn('Redis rate limiter failed, falling back to in-memory:', error instanceof Error ? error.message : 'Unknown error')
+    }
   }
 
-  // Fallback to in-memory rate limiting (dev only)
+  // Fallback to in-memory rate limiting
   const now = Date.now()
   const windowMs = 60 * 1000 // 1 minute
   const maxRequests = 10 // 10 tokens per minute
