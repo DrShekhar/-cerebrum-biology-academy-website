@@ -127,115 +127,19 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 | Orange 500 | `bg-orange-500` | `#f97316` | Urgent CTAs |
 | Yellow 800 | `bg-yellow-800` | `#854d0e` | Warning text |
 
-#### Approved Color Palette (64 colors)
-
-**Brand Colors:**
+#### Brand-Specific Colors (Custom)
 | Name | Tailwind | Hex |
 |------|----------|-----|
 | Cerebrum Green | `bg-[#4a5d4a]` | `#4a5d4a` |
 | Cerebrum Dark | `bg-[#3d4d3d]` | `#3d4d3d` |
 | Cerebrum Light | `bg-[#5a6d5a]` | `#5a6d5a` |
 | Cerebrum V.Light | `bg-[#e8ede8]` | `#e8ede8` |
-
-**Gray Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Gray 900 | `bg-gray-900` | `#111827` |
-| Gray 800 | `bg-gray-800` | `#1f2937` |
-| Gray 700 | `bg-gray-700` | `#374151` |
-| Gray 600 | `bg-gray-600` | `#4b5563` |
-| Gray 500 | `bg-gray-500` | `#6b7280` |
-| Gray 400 | `bg-gray-400` | `#9ca3af` |
-| Gray 300 | `bg-gray-300` | `#d1d5db` |
-| Gray 200 | `bg-gray-200` | `#e5e7eb` |
-| Gray 100 | `bg-gray-100` | `#f3f4f6` |
-| Gray 50 | `bg-gray-50` | `#f9fafb` |
-| Black | `bg-black` | `#000000` |
-| White | `bg-white` | `#ffffff` |
-
-**Slate Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Slate 900 | `bg-slate-900` | `#0f172a` |
-| Slate 800 | `bg-slate-800` | `#1e293b` |
-| Slate 700 | `bg-slate-700` | `#334155` |
-
-**Blue Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Blue 800 | `bg-blue-800` | `#1e40af` |
-| Blue 600 | `bg-blue-600` | `#2563eb` |
-| Blue 500 | `bg-blue-500` | `#3b82f6` |
 | Google Blue | `bg-[#4285f4]` | `#4285f4` |
-| Blue 200 | `bg-blue-200` | `#bfdbfe` |
-| Blue 50 | `bg-blue-50` | `#eff6ff` |
-
-**Indigo Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Indigo 600 | `bg-indigo-600` | `#4f46e5` |
-| Indigo 500 | `bg-indigo-500` | `#6366f1` |
-| Indigo 50 | `bg-indigo-50` | `#eef2ff` |
-
-**Purple Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Purple 800 | `bg-purple-800` | `#6b21a8` |
-| Purple 700 | `bg-purple-700` | `#7c3aed` |
-| Purple 600 | `bg-purple-600` | `#9333ea` |
-| Purple 500 | `bg-purple-500` | `#a855f7` |
-| Purple 200 | `bg-purple-200` | `#e9d5ff` |
-| Purple 100 | `bg-purple-100` | `#f3e8ff` |
-| Purple 50 | `bg-purple-50` | `#faf5ff` |
-
-**Green Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Green 800 | `bg-green-800` | `#166534` |
-| Green 600 | `bg-green-600` | `#16a34a` |
-| Green 500 | `bg-green-500` | `#22c55e` |
 | Google Green | `bg-[#34a853]` | `#34a853` |
-| Green 200 | `bg-green-200` | `#bbf7d0` |
-| Green 50 | `bg-green-50` | `#f0fdf4` |
-
-**Teal Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Teal 700 | `bg-teal-700` | `#0f766e` |
-| Teal 600 | `bg-teal-600` | `#0d9488` |
-
-**Red Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Red 800 | `bg-red-800` | `#991b1b` |
-| Red 700 | `bg-red-700` | `#b91c1c` |
-| Red 600 | `bg-red-600` | `#dc2626` |
-| Red 500 | `bg-red-500` | `#ef4444` |
 | Google Red | `bg-[#ea4335]` | `#ea4335` |
-| Red 200 | `bg-red-200` | `#fecaca` |
-| Red 100 | `bg-red-100` | `#fee2e2` |
-| Red 50 | `bg-red-50` | `#fef2f2` |
-
-**Orange Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Orange 600 | `bg-orange-600` | `#ea580c` |
-| Orange 500 | `bg-orange-500` | `#f97316` |
-| Orange 100 | `bg-orange-100` | `#ffedd5` |
-| Orange 50 | `bg-orange-50` | `#fff7ed` |
-
-**Yellow Scale:**
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Yellow 800 | `bg-yellow-800` | `#854d0e` |
-| Yellow 600 | `bg-yellow-600` | `#ca8a04` |
-| Yellow 500 | `bg-yellow-500` | `#eab308` |
-| Yellow 400 | `bg-yellow-400` | `#facc15` |
-| Yellow 300 | `bg-yellow-300` | `#fde047` |
 | Google Yellow | `bg-[#fbbc04]` | `#fbbc04` |
-| Yellow 200 | `bg-yellow-200` | `#fef08a` |
-| Yellow 100 | `bg-yellow-100` | `#fef9c3` |
-| Yellow 50 | `bg-yellow-50` | `#fefce8` |
+
+> **Full palette reference**: Visit `/color-palette` page for all 64 approved colors with visual swatches.
 
 #### Allowed Gradients (8 gradients)
 
