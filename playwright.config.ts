@@ -60,10 +60,18 @@ export default defineConfig({
   projects: isCI && !isFullBrowserTest
     ? [
         // CI: Only Chromium for speed (covers 95% of issues)
+        // Exclude device-specific tests (.mobile.spec.ts, .tablet.spec.ts, etc.)
         {
           name: 'chromium',
           use: { ...devices['Desktop Chrome'] },
-          testMatch: '**/*.spec.ts'
+          testMatch: '**/*.spec.ts',
+          testIgnore: [
+            '**/*.mobile.spec.ts',
+            '**/*.tablet.spec.ts',
+            '**/*.accessibility.spec.ts',
+            '**/*.performance.spec.ts',
+            '**/*.ai.spec.ts'
+          ]
         }
       ]
     : [
