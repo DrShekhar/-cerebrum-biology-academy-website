@@ -139,12 +139,13 @@ export default defineConfig({
 
   // Web server configuration
   webServer: {
-    // CI: Use production build for faster startup and realistic testing
+    // CI: Just start the server (build is done in workflow step)
     // Local: Use dev server for hot reload
-    command: isCI ? 'npm run build && npm run start' : 'npm run dev',
+    command: isCI ? 'npm run start' : 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !isCI,
-    // CI: shorter timeout since build is separate step
-    timeout: isCI ? 180 * 1000 : 120 * 1000
+    // CI: 60 seconds for server startup (build already done)
+    // Local: 2 minutes for dev server startup
+    timeout: isCI ? 60 * 1000 : 120 * 1000
   }
 })
