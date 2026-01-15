@@ -222,8 +222,8 @@ async function loadTranslations(lang: Language): Promise<Record<string, string>>
 
   try {
     // Dynamic import for code-splitting
-    const module = await import(`@/locales/${lang}`)
-    const translations = module[lang] || module.default
+    const langModule = await import(`@/locales/${lang}`)
+    const translations = langModule[lang] || langModule.default
     translationCache.set(lang, translations)
     return translations
   } catch (error) {
