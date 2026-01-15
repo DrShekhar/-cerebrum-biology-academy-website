@@ -108,25 +108,6 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 - Pink (use Indigo/Purple instead)
 - Emerald (use Green instead)
 
-**PREFERRED COLORS** (use these more often):
-| Color | Tailwind | Hex | Use For |
-|-------|----------|-----|---------|
-| Cerebrum Dark | `bg-[#3d4d3d]` | `#3d4d3d` | Primary brand, headers |
-| Gray 900 | `bg-gray-900` | `#111827` | Headings, dark buttons |
-| Gray 700 | `bg-gray-700` | `#374151` | Subheadings |
-| Gray 600 | `bg-gray-600` | `#4b5563` | Body text |
-| Blue 600 | `bg-blue-600` | `#2563eb` | Links, info buttons |
-| Indigo 500 | `bg-indigo-500` | `#6366f1` | Special CTAs |
-| Purple 700 | `bg-purple-700` | `#7c3aed` | Premium features |
-| Purple 600 | `bg-purple-600` | `#9333ea` | Badges, highlights |
-| Green 600 | `bg-green-600` | `#16a34a` | Success states |
-| Green 500 | `bg-green-500` | `#22c55e` | NEET strategy |
-| Teal 600 | `bg-teal-600` | `#0d9488` | Bio-themed buttons |
-| Google Red | `bg-[#ea4335]` | `#ea4335` | Heart icons, alerts |
-| Red 600 | `bg-red-600` | `#dc2626` | Errors, warnings |
-| Orange 500 | `bg-orange-500` | `#f97316` | Urgent CTAs |
-| Yellow 800 | `bg-yellow-800` | `#854d0e` | Warning text |
-
 #### Brand-Specific Colors (Custom)
 | Name | Tailwind | Hex |
 |------|----------|-----|
@@ -224,28 +205,6 @@ Required in `.env.local`:
 - `OPENAI_API_KEY` - AI features
 - `SENTRY_DSN` - Error tracking
 
-## Agent Selection Guide
-
-| Task                 | Agent                             |
-| -------------------- | --------------------------------- |
-| Backend architecture | backend-architecture-guide        |
-| Security review      | code-security-tester              |
-| DevOps/CI/CD         | devops-pipeline-architect         |
-| Biology content      | neet-biology-content-writer       |
-| Product decisions    | product-strategy-lead             |
-| Frontend/UI          | silicon-valley-frontend-architect |
-| Design system        | ui-design-expert                  |
-
-## Skills Available
-
-- **api-key-security-manager** - Rotate and secure API keys
-- **database-migration-manager** - Safe Prisma migrations
-- **deployment-fixer** - Debug Vercel deployments
-- **pre-deploy-validator** - Pre-deployment checks
-- **production-health-checker** - Health monitoring
-- **security-hardening-edge** - Edge security
-- **session-context-preserver** - Context management
-
 ## Workflow Best Practices
 
 ### Before Making Changes
@@ -303,61 +262,14 @@ flex flex-col md:flex-row                           // Vertical → Horizontal
 
 ## Common Patterns
 
-### API Route Template
-
-```typescript
-import { auth } from '@/lib/auth/config'
-import { prisma } from '@/lib/db'
-import { NextResponse } from 'next/server'
-
-export async function GET() {
-  try {
-    const session = await auth()
-    if (!session) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
-    const data = await prisma.tableName.findMany()
-    return NextResponse.json({ success: true, data })
-  } catch (error) {
-    console.error('API Error:', error)
-    return NextResponse.json({ error: 'Internal error' }, { status: 500 })
-  }
-}
-```
-
-### Component Template
-
-```typescript
-'use client'
-
-import { cn } from '@/lib/utils'
-
-interface Props {
-  className?: string
-}
-
-export function ComponentName({ className }: Props) {
-  return (
-    <div className={cn('base-styles', className)}>
-      {/* content */}
-    </div>
-  )
-}
-```
+- **API Routes**: See `src/app/api/` for examples. Use `auth()`, try/catch, return `{ success, data?, error? }`
+- **Components**: See `src/components/ui/` for patterns. Use `'use client'`, `cn()` for classes
 
 ## Reference Pages
 
 | Page          | URL              | Purpose                                                  |
 | ------------- | ---------------- | -------------------------------------------------------- |
 | Color Palette | `/color-palette` | All colors, gradients, combinations used across the site |
-
-## MCP Servers
-
-- **interakt** - WhatsApp automation (project-specific)
-- **biology-content** - Biology content generation
-- **postgres** - Direct database queries
-- **github** - Repository management
 
 ## Performance Tips
 
