@@ -74,10 +74,28 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Generate Prisma Client
+        run: npx prisma generate
+        env:
+          DATABASE_URL: postgresql://placeholder
+
       - name: Run E2E tests
         run: npm run test:e2e
         env:
           NODE_ENV: test
+          CI: true
+          # Provide env vars for production build (used by Playwright webServer)
+          NEXT_PUBLIC_SITE_URL: https://cerebrumbiologyacademy.com
+          DATABASE_URL: postgresql://placeholder
+          ADMIN_EMAIL: admin@cerebrumbiologyacademy.com
+          ADMIN_PASSWORD_HASH: placeholder
+          OPENAI_API_KEY: placeholder-build-only
+          ANTHROPIC_API_KEY: placeholder-build-only
+          GOOGLE_AI_API_KEY: placeholder-build-only
+          JWT_SECRET: placeholder-build-secret-change-in-production
+          JWT_REFRESH_SECRET: placeholder-build-refresh-secret-change-in-production
+          AUTH_SECRET: placeholder-build-auth-secret
+          NEXTAUTH_SECRET: placeholder-build-nextauth-secret
 
       - name: Upload Playwright Report
         if: always()
