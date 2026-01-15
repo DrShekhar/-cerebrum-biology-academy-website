@@ -90,7 +90,7 @@ const customJestConfig = {
   ],
 
   transformIgnorePatterns: [
-    'node_modules/(?!(next-auth|@auth)/)',
+    'node_modules/(?!(next-auth|@auth|nanoid)/)',
   ],
 
   // Module directories

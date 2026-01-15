@@ -2,6 +2,20 @@ import '@testing-library/jest-dom'
 import { TextEncoder, TextDecoder } from 'util'
 import { ReadableStream } from 'stream/web'
 
+// Mock nanoid (ESM-only module that Jest can't transform)
+jest.mock('nanoid', () => ({
+  nanoid: jest.fn((size = 21) => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let result = ''
+    for (let i = 0; i < size; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
+    }
+    return result
+  }),
+  customAlphabet: jest.fn(() => jest.fn(() => 'test-id')),
+  urlAlphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-',
+}))
+
 // Polyfill for Next.js Web APIs in tests
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
