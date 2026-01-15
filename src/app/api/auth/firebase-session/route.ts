@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { cookies } from 'next/headers'
 import jwt from 'jsonwebtoken'
 import { randomUUID } from 'crypto'
+import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
 
 // SECURITY: No fallback in production - secrets are required
 const getAuthSecret = () => {
@@ -32,9 +33,32 @@ export async function POST(request: NextRequest) {
     const { uid, phoneNumber, firstName, lastName, role, action } = body
 
     if (!uid || !phoneNumber) {
-      return NextResponse.json(
-        { error: 'Firebase UID and phone number are required' },
-        { status: 400 }
+      return addSecurityHeaders(
+        NextResponse.json(
+          { error: 'Firebase UID and phone number are required' },
+          { status: 400 }
+        )
+      )
+    }
+
+    // Rate limiting - prevent brute force attacks
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIP = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
+
+    const rateLimitKey = `firebase-session:${clientIP}:${phoneNumber}`
+    const rateLimitCheck = AuthRateLimit.checkRateLimit(rateLimitKey)
+    if (!rateLimitCheck.allowed) {
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Too many authentication attempts',
+            message: 'Please try again later',
+            lockoutEndsAt: rateLimitCheck.lockoutEndsAt,
+          },
+          { status: 429 }
+        )
       )
     }
 
@@ -52,18 +76,22 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      return NextResponse.json({
-        userExists: !!existingUser,
-        userId: existingUser?.id,
-      })
+      return addSecurityHeaders(
+        NextResponse.json({
+          userExists: !!existingUser,
+          userId: existingUser?.id,
+        })
+      )
     }
 
     // Action: Create new user (signup)
     if (action === 'signup') {
       if (!firstName) {
-        return NextResponse.json(
-          { error: 'First name is required for signup' },
-          { status: 400 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'First name is required for signup' },
+            { status: 400 }
+          )
         )
       }
 
@@ -86,11 +114,13 @@ export async function POST(request: NextRequest) {
           })
         }
 
-        return NextResponse.json({
-          success: true,
-          userId: existingUser.id,
-          message: 'User already exists',
-        })
+        return addSecurityHeaders(
+          NextResponse.json({
+            success: true,
+            userId: existingUser.id,
+            message: 'User already exists',
+          })
+        )
       }
 
       // Create new user
@@ -115,11 +145,13 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      return NextResponse.json({
-        success: true,
-        userId: newUser.id,
-        message: 'User created successfully',
-      })
+      return addSecurityHeaders(
+        NextResponse.json({
+          success: true,
+          userId: newUser.id,
+          message: 'User created successfully',
+        })
+      )
     }
 
     // Action: Create session (login)
@@ -135,9 +167,11 @@ export async function POST(request: NextRequest) {
       })
 
       if (!user) {
-        return NextResponse.json(
-          { error: 'User not found. Please sign up first.' },
-          { status: 404 }
+        return addSecurityHeaders(
+          NextResponse.json(
+            { error: 'User not found. Please sign up first.' },
+            { status: 404 }
+          )
         )
       }
 
@@ -169,47 +203,49 @@ export async function POST(request: NextRequest) {
         { expiresIn: '7d' }
       )
 
-      // Set session cookie using NextResponse headers (more reliable)
+      // Set session cookie using Next.js cookies API (reliable across all environments)
       const isProduction = process.env.NODE_ENV === 'production'
       const maxAge = 7 * 24 * 60 * 60 // 7 days in seconds
 
-      const response = NextResponse.json({
-        success: true,
-        userId: user.id,
-        user: {
-          id: user.id,
-          name: user.name,
-          role: user.role.toLowerCase(),
-          phone: normalizedPhone,
-        },
+      // Use Next.js cookies() API - the recommended way to set cookies in route handlers
+      const cookieStore = await cookies()
+      cookieStore.set('authjs.session-token', sessionToken, {
+        httpOnly: true,
+        secure: isProduction,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: maxAge,
       })
 
-      // Set cookie using response headers
-      const cookieOptions = [
-        `authjs.session-token=${sessionToken}`,
-        'HttpOnly',
-        `Max-Age=${maxAge}`,
-        'Path=/',
-        'SameSite=Lax',
-        isProduction ? 'Secure' : '',
-      ].filter(Boolean).join('; ')
+      console.log('[Firebase Session] Cookie set via Next.js cookies() API')
 
-      response.headers.set('Set-Cookie', cookieOptions)
-
-      console.log('[Firebase Session] Cookie set via response headers')
-
-      return response
+      return addSecurityHeaders(
+        NextResponse.json({
+          success: true,
+          userId: user.id,
+          user: {
+            id: user.id,
+            name: user.name,
+            role: user.role.toLowerCase(),
+            phone: normalizedPhone,
+          },
+        })
+      )
     }
 
-    return NextResponse.json(
-      { error: 'Invalid action' },
-      { status: 400 }
+    return addSecurityHeaders(
+      NextResponse.json(
+        { error: 'Invalid action' },
+        { status: 400 }
+      )
     )
   } catch (error) {
     console.error('Firebase session error:', error)
-    return NextResponse.json(
-      { error: 'Failed to process Firebase session' },
-      { status: 500 }
+    return addSecurityHeaders(
+      NextResponse.json(
+        { error: 'Failed to process Firebase session' },
+        { status: 500 }
+      )
     )
   }
 }

@@ -312,7 +312,7 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
     }
 
     // Verify session exists in database
-    const session = await prisma.session.findFirst({
+    const session = await prisma.sessions.findFirst({
       where: {
         sessionToken: payload.sessionId,
         expires: { gt: new Date() },
@@ -403,7 +403,7 @@ export class SessionManager {
 
     // Create session in database
     const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // 7 days
-    await prisma.session.create({
+    await prisma.sessions.create({
       data: {
         sessionToken: sessionId,
         userId: user.id,
@@ -437,7 +437,7 @@ export class SessionManager {
     }
 
     // Verify session exists and is valid
-    const session = await prisma.session.findFirst({
+    const session = await prisma.sessions.findFirst({
       where: {
         sessionToken: payload.sessionId,
         userId: payload.userId,
@@ -470,7 +470,7 @@ export class SessionManager {
   }
 
   static async terminateSession(sessionId: string): Promise<void> {
-    await prisma.session.deleteMany({
+    await prisma.sessions.deleteMany({
       where: {
         sessionToken: sessionId,
       },
@@ -478,7 +478,7 @@ export class SessionManager {
   }
 
   static async terminateAllUserSessions(userId: string): Promise<void> {
-    await prisma.session.deleteMany({
+    await prisma.sessions.deleteMany({
       where: {
         userId,
       },

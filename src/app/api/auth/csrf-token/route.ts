@@ -10,7 +10,7 @@ import { NextResponse } from 'next/server'
 export async function GET(request: NextRequest) {
   try {
     // Rate limiting for CSRF token generation
-    if (!rateLimitCSRFTokens(request)) {
+    if (!(await rateLimitCSRFTokens(request))) {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -43,7 +43,7 @@ export async function OPTIONS(request: NextRequest) {
   const origin = request.headers.get('origin') || ''
   const allowedOrigins = [
     'https://cerebrumbiologyacademy.com',
-    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
     ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
   ]
   const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
