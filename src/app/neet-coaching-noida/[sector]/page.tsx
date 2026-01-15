@@ -20,8 +20,10 @@ import {
   Award,
   Play,
   Home,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 
 interface SectorData {
   name: string
@@ -548,6 +550,15 @@ export default function SectorPage() {
                 </Button>
               </Link>
 
+              <TrackedWhatsAppButton
+                source={`noida-${sectorSlug}-hero`}
+                message={`Hi! I'm from ${data.name}, Noida. I want to join NEET Biology coaching. What batches are available?`}
+                buttonText="WhatsApp Now"
+                variant="primary"
+                size="lg"
+                className="bg-green-500 hover:bg-green-400 text-white font-bold"
+              />
+
               <a href="tel:+918826444334">
                 <Button
                   variant="outline"
@@ -709,6 +720,40 @@ export default function SectorPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* WhatsApp CTA after testimonials */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center"
+          >
+            <p className="text-white/90 text-lg mb-2">Want to achieve similar results?</p>
+            <p className="text-white text-xl md:text-2xl font-bold mb-4">
+              Talk to our {data.name} counselor now
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <TrackedWhatsAppButton
+                source={`noida-${sectorSlug}-testimonial`}
+                message={`Hi! I saw the success stories from ${data.name}. How can I achieve similar NEET scores?`}
+                buttonText="Chat on WhatsApp"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-green-700 hover:bg-green-50 font-bold"
+              />
+              <Link href="/demo-booking">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -796,44 +841,268 @@ export default function SectorPage() {
                 </Button>
               </Link>
 
-              <Link href="/neet-coaching-noida">
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-white text-white hover:bg-white hover:text-green-700"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  View All Noida Sectors
-                </Button>
-              </Link>
+              <TrackedWhatsAppButton
+                source={`noida-${sectorSlug}-footer-cta`}
+                message={`Hi! I'm from ${data.name}, Noida. I want to enroll for NEET coaching. Please share batch details and fees.`}
+                buttonText="WhatsApp Counselor"
+                variant="primary"
+                size="xl"
+                className="bg-white text-green-700 hover:bg-green-50 font-bold"
+              />
             </div>
+
+            <p className="mt-6 text-white/70 text-sm">
+              <MessageCircle className="w-4 h-4 inline mr-1" />
+              Average response time: 2 minutes
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Local SEO Schema */}
+      {/* Comprehensive Schema Markup for AI/LLM Discovery */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
-            name: `Cerebrum Biology Academy - ${data.fullName}`,
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: `Cerebrum Biology Academy - NEET Coaching ${data.name}`,
+            alternateName: ['Cerebrum Academy', 'Cerebrum NEET Coaching'],
             description: `Best NEET Biology coaching in ${data.fullName}. ${data.description}`,
             url: `https://cerebrumbiologyacademy.com/neet-coaching-noida/${sectorSlug}`,
-            areaServed: {
-              '@type': 'Place',
-              name: data.fullName,
-              containedInPlace: {
-                '@type': 'City',
-                name: 'Noida',
-              },
+            telephone: '+91-9310-387-227',
+            email: 'info@cerebrumbiologyacademy.com',
+            priceRange: '₹₹',
+            areaServed: [
+              { '@type': 'Place', name: data.fullName },
+              { '@type': 'City', name: 'Noida' },
+              { '@type': 'State', name: 'Uttar Pradesh' },
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'NEET Biology Courses',
+              itemListElement: [
+                {
+                  '@type': 'Course',
+                  name: 'NEET Biology Foundation',
+                  description: 'Foundation course for Class 11 students starting NEET preparation',
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                },
+                {
+                  '@type': 'Course',
+                  name: 'NEET Biology Comprehensive',
+                  description: 'Complete NEET Biology preparation for Class 12 and droppers',
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                },
+                {
+                  '@type': 'Course',
+                  name: 'NEET Biology Crash Course',
+                  description: 'Intensive revision course for final NEET preparation',
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                },
+              ],
             },
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '4.9',
               reviewCount: data.studentCount.replace('+', ''),
               bestRating: '5',
+              worstRating: '1',
+            },
+            hasCredential: [
+              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'NEET Biology Specialist' },
+              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'AIIMS/JIPMER Faculty' },
+            ],
+            sameAs: [
+              'https://www.instagram.com/cerebrumbiologyacademy',
+              'https://www.youtube.com/@cerebrumbiologyacademy',
+            ],
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: `What is the best NEET coaching in ${data.name}, Noida?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Cerebrum Biology Academy offers the best NEET coaching in ${data.name}, Noida with expert faculty from AIIMS/JIPMER. We have helped ${data.studentCount} students from ${data.name} achieve top NEET scores with our comprehensive biology-focused program.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `How much does NEET coaching cost in ${data.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `NEET coaching fees at Cerebrum Biology Academy for ${data.name} students range from ₹25,000 to ₹75,000 depending on the course duration. We offer flexible payment options and scholarship programs for deserving students.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Is there online NEET coaching available for ${data.name} students?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Yes! Cerebrum Biology Academy provides both online and hybrid NEET coaching for ${data.name} students. Our online classes offer live interactive sessions, recorded lectures, and personalized doubt-clearing support.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `What are the NEET coaching class timings for ${data.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `We offer flexible batch timings for ${data.name} students: Morning batches (6 AM - 9 AM), Evening batches (5 PM - 8 PM), and Weekend batches for school students. Online classes are available 24/7 through recorded sessions.`,
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* CourseList Schema for AI Discovery */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: `NEET Biology Courses for ${data.name} Students`,
+            description: `Best NEET Biology coaching programs available for students in ${data.fullName}`,
+            numberOfItems: 4,
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Biology Foundation (Class 11)',
+                  description: 'Build strong biology fundamentals for NEET from Class 11',
+                  provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'blended',
+                    courseWorkload: 'PT6H/week',
+                  },
+                },
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Biology Comprehensive (Class 12)',
+                  description: 'Complete NEET Biology syllabus coverage with expert guidance',
+                  provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'blended',
+                    courseWorkload: 'PT10H/week',
+                  },
+                },
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Biology Crash Course',
+                  description: '3-month intensive revision for NEET Biology',
+                  provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'blended',
+                    courseWorkload: 'PT15H/week',
+                  },
+                },
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Biology Dropper Batch',
+                  description: 'Dedicated program for droppers targeting NEET success',
+                  provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+                  hasCourseInstance: {
+                    '@type': 'CourseInstance',
+                    courseMode: 'blended',
+                    courseWorkload: 'PT12H/week',
+                  },
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema for Navigation */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'NEET Coaching Noida',
+                item: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: `NEET Coaching ${data.name}`,
+                item: `https://cerebrumbiologyacademy.com/neet-coaching-noida/${sectorSlug}`,
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* WebPage with Speakable Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            '@id': `https://cerebrumbiologyacademy.com/neet-coaching-noida/${sectorSlug}#webpage`,
+            url: `https://cerebrumbiologyacademy.com/neet-coaching-noida/${sectorSlug}`,
+            name: `Best NEET Coaching in ${data.name}, Noida | Cerebrum Biology Academy`,
+            description: `Top-rated NEET Biology coaching institute in ${data.fullName}. Expert faculty from AIIMS/JIPMER. Join ${data.studentCount} successful students.`,
+            isPartOf: {
+              '@type': 'WebSite',
+              '@id': 'https://cerebrumbiologyacademy.com/#website',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            about: {
+              '@type': 'Thing',
+              name: 'NEET Biology Coaching',
+              description: 'Medical entrance exam preparation for biology',
+            },
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', 'h2', '.hero-description'],
+            },
+            mainContentOfPage: {
+              '@type': 'WebPageElement',
+              cssSelector: 'main',
             },
           }),
         }}

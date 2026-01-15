@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Saket Delhi | Medical Entrance Biology',
@@ -29,5 +30,16 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingSaketPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Saket"
+        slug="neet-coaching-saket-delhi"
+        pageTitle="NEET Coaching in Saket Delhi"
+        pageDescription="Best NEET coaching for Saket, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections."
+        pageType="coaching"
+      />
+      <PageContent />
+    </>
+  )
 }

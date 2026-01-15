@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'Biology Tutor in Malviya Nagar Delhi | NEET & CBSE Coaching',
@@ -31,5 +32,16 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyTutorMalviyaNagarPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Malviya Nagar"
+        slug="biology-tutor-malviya-nagar"
+        pageTitle="Biology Tutor in Malviya Nagar Delhi"
+        pageDescription="Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 500+ selections."
+        pageType="tutor"
+      />
+      <PageContent />
+    </>
+  )
 }

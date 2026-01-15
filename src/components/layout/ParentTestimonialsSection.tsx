@@ -284,30 +284,35 @@ export function ParentTestimonialsSection({
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTestimonial}
-                className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                className="w-12 h-12 min-w-[48px] min-h-[48px] bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                aria-label="Previous parent testimonial"
               >
-                <ChevronLeft className="w-6 h-6 text-gray-600" />
+                <ChevronLeft className="w-6 h-6 text-gray-600" aria-hidden="true" />
               </button>
             </div>
             <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
               <button
                 onClick={nextTestimonial}
-                className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                className="w-12 h-12 min-w-[48px] min-h-[48px] bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                aria-label="Next parent testimonial"
               >
-                <ChevronRight className="w-6 h-6 text-gray-600" />
+                <ChevronRight className="w-6 h-6 text-gray-600" aria-hidden="true" />
               </button>
             </div>
 
             {/* Testimonial Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {featuredTestimonials.map((_, index) => (
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2" role="tablist" aria-label="Parent testimonial navigation">
+              {featuredTestimonials.map((testimonial, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? 'bg-green-600' : 'bg-white/50'
-                  }`}
-                />
+                  className={`min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-colors`}
+                  role="tab"
+                  aria-selected={index === currentTestimonial}
+                  aria-label={`View testimonial from ${testimonial.parentName}`}
+                >
+                  <span className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-green-600' : 'bg-white/50'}`} aria-hidden="true" />
+                </button>
               ))}
             </div>
           </div>

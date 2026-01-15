@@ -35,6 +35,8 @@ import {
   School,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/city-hub-data'
+import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
+import { CredibilityBar } from '@/components/seo/EEATSignals'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -317,6 +319,13 @@ export function CityHubPage({ data }: CityHubPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
+      {/* AI/LLM Optimized Schemas for ChatGPT, Google AI, and voice assistants */}
+      <AIOptimizedSchema
+        locality={data.cityName}
+        slug={data.slug}
+        pageUrl={`${baseUrl}/biology-classes-${data.slug}`}
+      />
+
       <div className="min-h-screen bg-white">
         {/* Hero Section - Cerebrum Brand Colors */}
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white lg:py-24">
@@ -436,6 +445,16 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 <div className="text-xs text-slate-400 sm:text-sm">Total Students</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* AI-Optimized Speakable Content for Voice Search & LLMs */}
+        <AIContentBlock locality={data.cityName} />
+
+        {/* E-E-A-T Credibility Bar - Trust Signals for AI & Users */}
+        <section className="border-b border-gray-100 bg-gray-50 py-4">
+          <div className="container mx-auto px-4">
+            <CredibilityBar className="bg-transparent" />
           </div>
         </section>
 

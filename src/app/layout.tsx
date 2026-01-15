@@ -83,8 +83,31 @@ export const metadata: Metadata = {
     creator: '@cerebrumbiology',
   },
   alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com',
     types: {
       'application/rss+xml': '/blog/feed.xml',
+    },
+    languages: {
+      'en': 'https://cerebrumbiologyacademy.com',
+      'en-IN': 'https://cerebrumbiologyacademy.com',
+      'hi': 'https://cerebrumbiologyacademy.com/hi',
+      'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
+      'bn': 'https://cerebrumbiologyacademy.com/bn',
+      'ta': 'https://cerebrumbiologyacademy.com/ta',
+      'te': 'https://cerebrumbiologyacademy.com/te',
+      'mr': 'https://cerebrumbiologyacademy.com/mr',
+      'kn': 'https://cerebrumbiologyacademy.com/kn',
+      'ml': 'https://cerebrumbiologyacademy.com/ml',
+      'de': 'https://cerebrumbiologyacademy.com/de',
+      'es': 'https://cerebrumbiologyacademy.com/es',
+      'fr': 'https://cerebrumbiologyacademy.com/fr',
+      'it': 'https://cerebrumbiologyacademy.com/it',
+      'ja': 'https://cerebrumbiologyacademy.com/ja',
+      'nl': 'https://cerebrumbiologyacademy.com/nl',
+      'pl': 'https://cerebrumbiologyacademy.com/pl',
+      'pt': 'https://cerebrumbiologyacademy.com/pt',
+      'ru': 'https://cerebrumbiologyacademy.com/ru',
+      'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },
   category: 'Education',
@@ -142,10 +165,26 @@ export default function RootLayout({
           <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
           <meta name="language" content="English,Hindi" />
 
-          {/* hreflang tags for India-specific SEO */}
-          <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
-          <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com" />
+          {/* Comprehensive hreflang tags for 17 languages + x-default */}
           <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
+          <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
+          <link rel="alternate" hrefLang="hi" href="https://cerebrumbiologyacademy.com/hi" />
+          <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com/hi" />
+          <link rel="alternate" hrefLang="bn" href="https://cerebrumbiologyacademy.com/bn" />
+          <link rel="alternate" hrefLang="ta" href="https://cerebrumbiologyacademy.com/ta" />
+          <link rel="alternate" hrefLang="te" href="https://cerebrumbiologyacademy.com/te" />
+          <link rel="alternate" hrefLang="mr" href="https://cerebrumbiologyacademy.com/mr" />
+          <link rel="alternate" hrefLang="kn" href="https://cerebrumbiologyacademy.com/kn" />
+          <link rel="alternate" hrefLang="ml" href="https://cerebrumbiologyacademy.com/ml" />
+          <link rel="alternate" hrefLang="de" href="https://cerebrumbiologyacademy.com/de" />
+          <link rel="alternate" hrefLang="es" href="https://cerebrumbiologyacademy.com/es" />
+          <link rel="alternate" hrefLang="fr" href="https://cerebrumbiologyacademy.com/fr" />
+          <link rel="alternate" hrefLang="it" href="https://cerebrumbiologyacademy.com/it" />
+          <link rel="alternate" hrefLang="ja" href="https://cerebrumbiologyacademy.com/ja" />
+          <link rel="alternate" hrefLang="nl" href="https://cerebrumbiologyacademy.com/nl" />
+          <link rel="alternate" hrefLang="pl" href="https://cerebrumbiologyacademy.com/pl" />
+          <link rel="alternate" hrefLang="pt" href="https://cerebrumbiologyacademy.com/pt" />
+          <link rel="alternate" hrefLang="ru" href="https://cerebrumbiologyacademy.com/ru" />
           <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
           <meta name="theme-color" content="#2563eb" />
           <meta name="mobile-web-app-capable" content="yes" />
@@ -170,7 +209,7 @@ export default function RootLayout({
               /* Critical render path - inline essential styles */
               *,::before,::after{box-sizing:border-box}
               html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif}
-              body{margin:0;line-height:inherit}
+              body{margin:0;line-height:inherit;overflow-x:hidden;max-width:100vw}
               /* Header critical styles */
               header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
               .text-slate-900{color:#0f172a}
@@ -239,77 +278,30 @@ export default function RootLayout({
               .animate-fade-in-up{animation:fade-in-up .4s ease-out forwards}
               @keyframes pulse{50%{opacity:.5}}
               .animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+              /* Visibility utilities - CRITICAL for header responsiveness */
+              .hidden{display:none}
+              .block{display:block}
               /* Responsive */
-              @media(min-width:640px){.sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\\:text-lg{font-size:1.125rem}}
-              @media(min-width:768px){.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
-              @media(min-width:1024px){.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
+              @media(min-width:640px){.sm\\:hidden{display:none}.sm\\:block{display:block}.sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\\:text-lg{font-size:1.125rem}}
+              @media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block}.md\\:flex{display:flex}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
+              @media(min-width:1024px){.lg\\:hidden{display:none}.lg\\:block{display:block}.lg\\:flex{display:flex}.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
               @media(min-width:1280px){.xl\\:text-6xl{font-size:3.75rem;line-height:1}}
             `,
             }}
           />
 
-          {/* FOUC Prevention + CSS Script Bug Error Suppression
-            Issue: https://github.com/vercel/next.js/issues/75656
-            Next.js 15 + React 19 incorrectly loads CSS as scripts, causing MIME errors
-            This suppresses the known error to prevent it from affecting Lighthouse */}
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-                body.css-loading { opacity: 0 !important; }
-                body.css-ready { opacity: 1; transition: opacity 0.1s ease-in; }
-              `,
-            }}
-          />
+          {/* CSS Script Bug Error Suppression (Next.js bug #75656)
+            NOTE: FOUC prevention via opacity:0 was REMOVED because it causes LCP = 0
+            The critical CSS inline styles above + font-display:swap handle visual stability */}
           <script
             dangerouslySetInnerHTML={{
-              __html: `
-              (function(){
-                // Suppress known CSS-as-script MIME error (Next.js bug #75656)
-                // This prevents the error from reaching the console/Lighthouse
-                var origError = window.onerror;
-                window.onerror = function(msg, url, line, col, error) {
-                  if (msg && typeof msg === 'string' && msg.indexOf('MIME type') !== -1 && msg.indexOf('.css') !== -1) {
-                    return true; // Suppress this specific error
-                  }
-                  if (origError) return origError.apply(this, arguments);
-                  return false;
-                };
-                // Also suppress via console.error override for security errors
-                var origConsoleError = console.error;
-                console.error = function() {
-                  var args = Array.prototype.slice.call(arguments);
-                  var msg = args.join(' ');
-                  if (msg.indexOf('MIME type') !== -1 && msg.indexOf('.css') !== -1) {
-                    return; // Suppress CSS MIME errors
-                  }
-                  return origConsoleError.apply(console, args);
-                };
-                // FOUC prevention
-                document.addEventListener('DOMContentLoaded',function(){
-                  document.body.classList.add('css-loading');
-                  var checkCSS=function(){
-                    var sheets=document.styleSheets;
-                    for(var i=0;i<sheets.length;i++){
-                      try{if(sheets[i].cssRules&&sheets[i].cssRules.length>0){
-                        document.body.classList.remove('css-loading');
-                        document.body.classList.add('css-ready');
-                        return true;
-                      }}catch(e){}
-                    }
-                    return false;
-                  };
-                  if(!checkCSS()){
-                    var interval=setInterval(function(){if(checkCSS())clearInterval(interval);},10);
-                    setTimeout(function(){clearInterval(interval);document.body.classList.remove('css-loading');document.body.classList.add('css-ready');},500);
-                  }
-                });
-              })();
-            `,
+              __html: `(function(){var o=window.onerror;window.onerror=function(m,u,l,c,e){if(m&&typeof m==='string'&&m.indexOf('MIME type')!==-1&&m.indexOf('.css')!==-1)return true;return o?o.apply(this,arguments):false};var c=console.error;console.error=function(){var a=Array.prototype.slice.call(arguments);if(a.join(' ').indexOf('MIME type')!==-1&&a.join(' ').indexOf('.css')!==-1)return;return c.apply(console,a)}})();`,
             }}
           />
         </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+          suppressHydrationWarning
         >
           <GoogleAnalytics />
           <WebVitalsReporter />

@@ -283,16 +283,18 @@ export default function Class12BiologyPage() {
                         campaign: 'class-12-course',
                       })
                     }}
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1 cursor-pointer"
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-flex items-center justify-center min-h-[48px] flex-1 cursor-pointer"
+                    aria-label="Contact us on WhatsApp for Class 12 course enquiry"
                   >
-                    <MessageCircle className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
                     WhatsApp Us
                   </button>
                   <a
                     href="tel:+918826444334"
-                    className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                    className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[48px] flex-1"
+                    aria-label="Call us at 8826444334"
                   >
-                    <Phone className="w-5 h-5 mr-2" />
+                    <Phone className="w-5 h-5 mr-2" aria-hidden="true" />
                     Call Now
                   </a>
                 </div>
@@ -659,16 +661,18 @@ export default function Class12BiologyPage() {
                         campaign: 'parent-engagement',
                       })
                     }
-                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02] min-h-[48px]"
+                    aria-label="Chat with counselor as a parent on WhatsApp"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-5 w-5" aria-hidden="true" />
                     Chat as Parent
                   </button>
                   <Link
                     href="/parent-guide"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300 min-h-[48px]"
+                    aria-label="View parent guide for NEET preparation"
                   >
-                    <Users className="h-5 w-5" />
+                    <Users className="h-5 w-5" aria-hidden="true" />
                     Parent Guide
                   </Link>
                 </div>
@@ -739,9 +743,10 @@ export default function Class12BiologyPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/demo-booking"
-              className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center shadow-lg"
+              className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center shadow-lg min-h-[52px]"
+              aria-label="Book a free demo class"
             >
-              <Play className="w-5 h-5 mr-2" />
+              <Play className="w-5 h-5 mr-2" aria-hidden="true" />
               Book Free Demo
             </Link>
             <button
@@ -752,16 +757,18 @@ export default function Class12BiologyPage() {
                   campaign: 'class-12-course',
                 })
               }}
-              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all inline-flex items-center justify-center shadow-lg cursor-pointer"
+              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all inline-flex items-center justify-center shadow-lg cursor-pointer min-h-[52px]"
+              aria-label="Contact us on WhatsApp at 88264-44334"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
               WhatsApp: 88264-44334
             </button>
             <a
               href="tel:+918826444334"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center min-h-[52px]"
+              aria-label="Call us at 8826444334"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2" aria-hidden="true" />
               Call Now
             </a>
           </div>

@@ -223,15 +223,17 @@ export default function NEETDropperPage() {
               campaign: 'neet-dropper-course',
             })
           }}
-          className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110 cursor-pointer"
+          className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110 cursor-pointer min-w-[48px] min-h-[48px]"
+          aria-label="Chat on WhatsApp about NEET Dropper Course"
         >
-          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </button>
         <a
           href="tel:+918826444334"
-          className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110"
+          className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110 min-w-[48px] min-h-[48px] flex items-center justify-center"
+          aria-label="Call us at +91 88264 44334"
         >
-          <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+          <Phone className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </a>
       </div>
 
@@ -345,9 +347,9 @@ export default function NEETDropperPage() {
                     <Gift className="w-3 h-3 sm:w-4 sm:h-4" />
                     FREE Dropper Success Kit Worth ₹4,999
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
                     Get Your Personalized Study Plan
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 text-xs sm:text-sm">
                     Register for free counseling + previous year analysis
                   </p>
@@ -379,27 +381,35 @@ export default function NEETDropperPage() {
                 ) : (
                   <form onSubmit={handleLeadSubmit} className="space-y-3 sm:space-y-4">
                     <div>
+                      <label htmlFor="name" className="sr-only">Your Name (required)</label>
                       <input
+                        id="name"
                         type="text"
                         placeholder="Your Name *"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
+                        aria-required="true"
                       />
                     </div>
                     <div>
+                      <label htmlFor="phone" className="sr-only">Phone Number (required)</label>
                       <input
+                        id="phone"
                         type="tel"
                         placeholder="Phone Number *"
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
+                        aria-required="true"
                       />
                     </div>
                     <div>
+                      <label htmlFor="email" className="sr-only">Email Address (optional)</label>
                       <input
+                        id="email"
                         type="email"
                         placeholder="Email Address"
                         value={formData.email}
@@ -408,10 +418,13 @@ export default function NEETDropperPage() {
                       />
                     </div>
                     <div>
+                      <label htmlFor="previousScore" className="sr-only">Previous NEET Score (optional)</label>
                       <select
+                        id="previousScore"
                         value={formData.previousScore}
                         onChange={(e) => setFormData({ ...formData, previousScore: e.target.value })}
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
+                        aria-label="Previous NEET Score"
                       >
                         <option value="">Previous NEET Score (Optional)</option>
                         <option value="below-300">Below 300</option>
@@ -429,6 +442,7 @@ export default function NEETDropperPage() {
                       size="lg"
                       className="w-full bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white py-3 sm:py-4 text-sm sm:text-base"
                       disabled={isSubmitting}
+                      aria-label={isSubmitting ? "Processing your request" : "Get Free Counseling and Study Kit"}
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center">
@@ -437,6 +451,7 @@ export default function NEETDropperPage() {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
+                            aria-hidden="true"
                           >
                             <circle
                               className="opacity-25"
@@ -456,7 +471,7 @@ export default function NEETDropperPage() {
                         </span>
                       ) : (
                         <>
-                          <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                          <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" aria-hidden="true" />
                           <span className="hidden sm:inline">Get Free Counseling + Study Kit</span>
                           <span className="sm:hidden">Free Counseling</span>
                         </>

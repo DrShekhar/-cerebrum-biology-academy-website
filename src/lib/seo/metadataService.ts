@@ -418,7 +418,7 @@ export class MetadataService {
         'https://twitter.com/cerebrumbiology',
         'https://www.linkedin.com/company/cerebrumbiologyacademy',
       ],
-      foundingDate: '2020',
+      foundingDate: '2014',
       areaServed: [
         'India',
         'United States',

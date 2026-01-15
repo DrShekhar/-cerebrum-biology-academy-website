@@ -398,23 +398,42 @@ export function withDoubleSubmitCSRF(
 
 /**
  * Content Security Policy headers
+ * Comprehensive CSP for production security with all required services
  */
 export function addCSPHeaders(response: NextResponse): NextResponse {
   const isDevelopment = process.env.NODE_ENV === 'development'
 
   const cspDirectives = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "media-src 'self' https:",
-    "connect-src 'self' https://api.cerebrumbiologyacademy.com https://www.google-analytics.com",
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com",
+    // Scripts: Self + analytics + payment + auth + monitoring
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://*.vercel.app https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.clerk.accounts.dev https://*.clerk.dev https://*.sentry.io https://browser.sentry-cdn.com",
+    // Styles: Self + fonts + inline for dynamic styling
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.clerk.accounts.dev",
+    // Fonts: Google Fonts
+    "font-src 'self' https://fonts.gstatic.com data:",
+    // Images: Allow HTTPS images, data URIs, blobs
+    "img-src 'self' data: https: blob: https://*.clerk.com https://*.googleusercontent.com",
+    // Media: Videos and audio
+    "media-src 'self' https: blob:",
+    // Connect: API endpoints, analytics, payments, auth, monitoring
+    "connect-src 'self' https://cerebrumbiologyacademy.com https://api.cerebrumbiologyacademy.com https://www.google-analytics.com https://*.razorpay.com https://api.razorpay.com https://*.clerk.accounts.dev https://*.clerk.dev https://api.clerk.com https://*.sentry.io https://*.ingest.sentry.io https://firebaseinstallations.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://vitals.vercel-insights.com https://*.vercel.app wss://*.clerk.accounts.dev",
+    // Frames: YouTube, Vimeo, Razorpay checkout, Clerk
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://api.razorpay.com https://*.razorpay.com https://*.clerk.accounts.dev https://challenges.cloudflare.com",
+    // Workers: For service workers and web workers
+    "worker-src 'self' blob:",
+    // Child: For iframes and workers
+    "child-src 'self' blob: https://*.clerk.accounts.dev",
+    // Prevent object embeds
     "object-src 'none'",
+    // Base URI restriction
     "base-uri 'self'",
-    "form-action 'self'",
-    "frame-ancestors 'none'",
+    // Form submission targets
+    "form-action 'self' https://*.razorpay.com https://*.clerk.accounts.dev",
+    // Prevent framing by other sites (clickjacking protection)
+    "frame-ancestors 'self'",
+    // Manifest for PWA
+    "manifest-src 'self'",
+    // Upgrade insecure requests in production
     ...(isDevelopment ? [] : ['upgrade-insecure-requests']),
   ]
 

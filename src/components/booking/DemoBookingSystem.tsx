@@ -743,7 +743,7 @@ export function DemoBookingSystem() {
                           className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white appearance-none cursor-pointer"
                           style={{ fontSize: '16px' }}
                         />
-                        <Calendar className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                        <Calendar className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
                       </div>
                       {selectedDate && (
                         <p className="text-center text-blue-600 font-medium">

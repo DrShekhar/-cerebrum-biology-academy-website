@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle, Calendar, User, Phone, BookOpen, Video, Clock } from 'lucide-react'
-import { Metadata } from 'next'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { EventSchema } from '@/components/seo'
 
 export default function DemoBookingPage() {
   const [formData, setFormData] = useState({
@@ -206,8 +206,36 @@ export default function DemoBookingPage() {
     )
   }
 
+  // Generate a future date for the schema (next available slot)
+  const getNextDemoDate = () => {
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    tomorrow.setHours(10, 0, 0, 0) // 10:00 AM IST
+    return tomorrow.toISOString()
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Event Schema for SEO - Free Demo Class */}
+      <EventSchema
+        name="Free NEET Biology Demo Class - Cerebrum Biology Academy"
+        description="Book a free 60-minute live demo class with AIIMS faculty. Experience world-class NEET Biology teaching with personalized attention. No payment required."
+        startDate={getNextDemoDate()}
+        attendanceMode="online"
+        status="scheduled"
+        url="https://cerebrumbiologyacademy.com/demo"
+        performer={{
+          name: 'Dr. Shekhar C Singh',
+          role: 'Founder & Lead NEET Biology Faculty',
+        }}
+        offers={{
+          price: 'Free',
+          availability: 'InStock',
+        }}
+        isAccessibleForFree={true}
+        maximumAttendeeCapacity={50}
+      />
+
       {/* Hero Section */}
       <section className="pt-12 pb-8">
         <div className="max-w-7xl mx-auto px-4">

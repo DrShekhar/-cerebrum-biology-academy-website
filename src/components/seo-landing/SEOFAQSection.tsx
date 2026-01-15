@@ -47,22 +47,30 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="overflow-hidden rounded-xl bg-white shadow-sm"
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50"
-                aria-expanded={openIndex === index}
-              >
-                <span className="pr-4 text-lg font-semibold text-gray-900">{faq.question}</span>
-                <ChevronDown
-                  className={`h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
+              {/* H3 wrapper for voice search and AI crawler optimization */}
+              <h3 className="m-0">
+                <button
+                  id={`faq-question-${index}`}
+                  onClick={() => toggleFAQ(index)}
+                  className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <span className="pr-4 text-lg font-semibold text-gray-900">{faq.question}</span>
+                  <ChevronDown
+                    className={`h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+              </h3>
 
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

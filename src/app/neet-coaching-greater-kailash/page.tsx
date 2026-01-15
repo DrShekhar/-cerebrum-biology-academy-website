@@ -2,30 +2,54 @@ import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/city-hub-data'
 
+const BASE_URL = 'https://cerebrumbiologyacademy.com'
+const locality = 'Greater Kailash'
 const cityData = getCityData('greater-kailash')!
 
+const ogImageParams = new URLSearchParams({
+  title: 'NEET Biology Coaching',
+  subtitle: 'Expert coaching with 98% success rate',
+  locality: locality,
+})
+
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Greater Kailash | Top Biology Classes GK Delhi',
+  title: 'Best NEET Coaching in Greater Kailash | 98% Success Rate | Cerebrum',
   description:
-    'Best NEET coaching in Greater Kailash, Delhi. Expert biology faculty for NEET-UG preparation. Join students from GK-1, GK-2 & nearby areas. Call 88264-44334 for demo class.',
+    'Join #1 NEET coaching in Greater Kailash Delhi. Expert biology faculty for NEET-UG. GK-1, GK-2 & nearby areas. 98% success rate, 695/720 top score. Book free demo!',
   keywords: [
-    'neet coaching in greater kailash',
-    'neet biology classes gk delhi',
-    'best neet coaching gk-1',
-    'neet preparation greater kailash',
-    'neet coaching gk-2 delhi',
-    'neet biology tutor greater kailash',
-    'neet classes near archana complex',
-    'medical entrance coaching gk',
+    'NEET coaching Greater Kailash',
+    'biology coaching GK Delhi',
+    'NEET classes Greater Kailash',
+    'NEET preparation GK',
+    'NEET coaching GK-1',
+    'NEET coaching GK-2',
+    'medical entrance GK Delhi',
   ],
   openGraph: {
-    title: 'NEET Coaching in Greater Kailash | Top Biology Classes GK Delhi',
+    title: 'Best NEET Coaching in Greater Kailash | 98% Success Rate | Cerebrum',
     description:
-      'Best NEET coaching in Greater Kailash, Delhi. Expert biology faculty for NEET-UG preparation. Join students from GK-1, GK-2 & nearby areas.',
-    url: 'https://cerebrumbiologyacademy.com/neet-coaching-greater-kailash',
+      'Join #1 NEET coaching in Greater Kailash Delhi. Expert faculty, 98% success rate. GK-1, GK-2. Book free demo!',
+    url: `${BASE_URL}/neet-coaching-greater-kailash`,
+    siteName: 'Cerebrum Biology Academy',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: `${BASE_URL}/api/og?${ogImageParams.toString()}`,
+        width: 1200,
+        height: 630,
+        alt: `NEET Coaching in ${locality} - Cerebrum Biology Academy`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Greater Kailash | 98% Success Rate',
+    description: 'Join #1 NEET coaching in Greater Kailash Delhi. Book free demo!',
+    images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-greater-kailash',
+    canonical: `${BASE_URL}/neet-coaching-greater-kailash`,
   },
 }
 

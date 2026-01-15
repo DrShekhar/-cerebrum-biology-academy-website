@@ -80,44 +80,69 @@ export default function Home() {
       <HomePageClient />
 
       {/* 1. Hero Section - Server rendered for instant LCP */}
-      <HeroSection />
+      {/* LCP Critical: No content-visibility to ensure immediate rendering */}
+      <section className="lcp-critical">
+        <HeroSection />
+      </section>
 
       {/* 2. Trust Signals Banner - Compact Version */}
-      <TrustSignalsBanner variant="compact" />
+      <section className="content-visibility-auto-sm">
+        <TrustSignalsBanner variant="compact" />
+      </section>
 
-      {/* 3. Courses Section */}
-      <CoursesSection />
+      {/* 3. Courses Section - Below fold, deferred rendering */}
+      <section className="content-visibility-auto">
+        <CoursesSection />
+      </section>
 
       {/* 4. Faculty Section */}
-      <FacultySection />
+      <section className="content-visibility-auto">
+        <FacultySection />
+      </section>
 
       {/* 5. E-E-A-T Signals for AI Recommendations */}
-      <EEATSignals variant="compact" className="bg-gray-50" />
+      <section className="content-visibility-auto-sm">
+        <EEATSignals variant="compact" className="bg-gray-50" />
+      </section>
 
       {/* 6. Trust Signals Full Section */}
-      <TrustSignalsBanner variant="full" showVerificationBadges={true} />
+      <section className="content-visibility-auto">
+        <TrustSignalsBanner variant="full" showVerificationBadges={true} />
+      </section>
 
       {/* 7. Student Testimonials - Unified Section */}
-      <RealStudentTestimonials
-        testimonials={realTestimonials}
-        title="Real Student Success Stories"
-        subtitle="Hear directly from our NEET toppers who achieved their dreams"
-      />
+      <section className="content-visibility-auto-lg">
+        <RealStudentTestimonials
+          testimonials={realTestimonials}
+          title="Real Student Success Stories"
+          subtitle="Hear directly from our NEET toppers who achieved their dreams"
+        />
+      </section>
 
       {/* 7. Google Reviews Widget */}
-      <GoogleReviewsWidget variant="full" maxReviews={4} />
+      <section className="content-visibility-auto">
+        <GoogleReviewsWidget variant="full" maxReviews={4} />
+      </section>
 
       {/* 8. FAQ Section */}
-      <HomeFAQSection />
+      <section className="content-visibility-auto-lg">
+        <HomeFAQSection />
+      </section>
 
       {/* 8.5 MCQ Practice Tool Promotion */}
-      <MCQPromoBanner />
+      <section className="content-visibility-auto-sm">
+        <MCQPromoBanner />
+      </section>
 
       {/* 9. Locations Section */}
-      <LocationsSection />
+      <section className="content-visibility-auto-sm">
+        <LocationsSection />
+      </section>
 
       {/* 10. Booking Section */}
-      <BookingSection />
+      <section className="content-visibility-auto">
+        <BookingSection />
+      </section>
 
       {/* Footer is rendered in layout.tsx - no need to duplicate here */}
     </div>

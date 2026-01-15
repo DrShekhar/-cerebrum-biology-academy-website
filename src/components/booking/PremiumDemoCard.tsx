@@ -89,7 +89,7 @@ export function PremiumDemoCard({
           <h3 className="text-xl font-bold text-gray-900 mb-1">Premium Demo</h3>
           <div className="flex items-baseline gap-2">
             {referralDiscount > 0 && !isPremiumFree && (
-              <span className="text-xl text-gray-400 line-through">₹99</span>
+              <span className="text-xl text-gray-500 line-through">₹99</span>
             )}
             <p className="text-3xl font-bold text-purple-600">
               {isPremiumFree ? 'FREE' : `₹${premiumPrice}`}

@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { BreadcrumbSchema } from '@/components/seo'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -70,7 +71,8 @@ const neetExpertise = [
   {
     icon: Microscope,
     title: 'PYQ Analysis',
-    description: '15+ years of previous year questions analyzed and integrated into online teaching.',
+    description:
+      '15+ years of previous year questions analyzed and integrated into online teaching.',
   },
   {
     icon: TrendingUp,
@@ -81,7 +83,8 @@ const neetExpertise = [
   {
     icon: Zap,
     title: 'Quick Revision',
-    description: 'Recorded lectures + revision sessions for last-minute preparation anytime, anywhere.',
+    description:
+      'Recorded lectures + revision sessions for last-minute preparation anytime, anywhere.',
   },
 ]
 
@@ -123,6 +126,14 @@ export default function OnlineBiologyTutorNeetPage() {
 
   return (
     <div className="min-h-screen">
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4 bg-gradient-to-r from-slate-900 to-slate-800">
+        <BreadcrumbSchema
+          items={[{ label: 'Online Biology Tutor for NEET', isCurrentPage: true }]}
+          className="text-slate-300 [&_a]:text-slate-300 [&_a:hover]:text-white [&_.font-medium]:text-white"
+        />
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -247,7 +258,9 @@ export default function OnlineBiologyTutorNeetPage() {
           <div
             ref={expertiseHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              expertiseHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              expertiseHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -283,9 +296,7 @@ export default function OnlineBiologyTutorNeetPage() {
               resultsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our NEET Results
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our NEET Results</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">

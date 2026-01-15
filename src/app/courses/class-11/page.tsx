@@ -856,9 +856,10 @@ export default function Class11BiologyPage() {
                 campaign: 'class-11-course',
               })
             }}
-            className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse cursor-pointer"
+            className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse cursor-pointer min-w-[48px] min-h-[48px]"
+            aria-label="Chat with us on WhatsApp"
           >
-            <MessageCircle className="w-7 h-7" />
+            <MessageCircle className="w-7 h-7" aria-hidden="true" />
           </button>
         </div>
       )}
@@ -874,14 +875,16 @@ export default function Class11BiologyPage() {
                 campaign: 'class-11-course',
               })
             }}
-            className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center cursor-pointer"
+            className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center cursor-pointer min-h-[48px]"
+            aria-label="Contact us on WhatsApp for Class 11 course enquiry"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
+            <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
             WhatsApp
           </button>
           <Link
             href="/demo-booking"
-            className="flex-1 bg-[#3d4d3d] text-white py-3 rounded-xl font-semibold flex items-center justify-center"
+            className="flex-1 bg-[#3d4d3d] text-white py-3 rounded-xl font-semibold flex items-center justify-center min-h-[48px]"
+            aria-label="Book a free demo class for Class 11 Biology course"
           >
             Book Demo
           </Link>

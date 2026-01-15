@@ -19,8 +19,10 @@ import {
   BookOpen,
   Award,
   Play,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 
 interface AreaData {
   name: string
@@ -356,6 +358,15 @@ export default function FaridabadAreaPage() {
                   Call Now
                 </Button>
               </a>
+
+              <TrackedWhatsAppButton
+                source={`faridabad-${areaSlug}-hero`}
+                message={`Hi! I'm from ${area.name}, Faridabad. I want to join NEET Biology coaching. What batches are available?`}
+                buttonText="WhatsApp Now"
+                variant="primary"
+                size="lg"
+                className="bg-green-500 hover:bg-green-400 text-white font-bold"
+              />
             </div>
           </motion.div>
         </div>
@@ -531,6 +542,43 @@ export default function FaridabadAreaPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* WhatsApp CTA Strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center"
+          >
+            <p className="text-white/90 text-lg mb-2">Want to achieve similar results?</p>
+            <p className="text-white text-xl md:text-2xl font-bold mb-4">
+              Talk to our {area.name} counselor now
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <TrackedWhatsAppButton
+                source={`faridabad-${areaSlug}-testimonial`}
+                message={`Hi! I saw the success stories from ${area.name}. How can I achieve similar NEET scores?`}
+                buttonText="Chat on WhatsApp"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-green-700 hover:bg-green-50 font-bold"
+              />
+              <Link href="/demo-booking">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
+                >
+                  Book Demo Class
+                </Button>
+              </Link>
+            </div>
+            <p className="mt-4 text-white/70 text-sm">
+              <MessageCircle className="w-4 h-4 inline mr-1" />
+              Average response time: 2 minutes
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -602,6 +650,15 @@ export default function FaridabadAreaPage() {
                 </Button>
               </Link>
 
+              <TrackedWhatsAppButton
+                source={`faridabad-${areaSlug}-footer-cta`}
+                message={`Hi! I'm from ${area.name}, Faridabad. I want to enroll for NEET coaching. Please share batch details and fees.`}
+                buttonText="WhatsApp Counselor"
+                variant="primary"
+                size="xl"
+                className="bg-green-500 hover:bg-green-400 text-white font-bold"
+              />
+
               <Link href="/courses">
                 <Button
                   variant="outline"
@@ -613,31 +670,167 @@ export default function FaridabadAreaPage() {
                 </Button>
               </Link>
             </div>
+            <p className="mt-6 text-white/70 text-sm">
+              <MessageCircle className="w-4 h-4 inline mr-1" />
+              Average response time: 2 minutes
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Schema Markup */}
+      {/* Comprehensive Schema Markup for AI/LLM Discovery */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
-            name: `Cerebrum Biology Academy - ${area.name}`,
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: `Cerebrum Biology Academy - NEET Coaching ${area.name}`,
+            alternateName: ['Cerebrum Academy', 'Cerebrum NEET Coaching'],
             description: `Best NEET Biology coaching in ${area.name}, Faridabad. ${area.studentCount} students, 98% success rate.`,
             url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+            telephone: '+91-8826444334',
+            email: 'info@cerebrumbiologyacademy.com',
             areaServed: {
-              '@type': 'Place',
-              name: area.fullName,
-              containedInPlace: { '@type': 'City', name: 'Faridabad' },
+              '@type': 'City',
+              name: 'Faridabad',
+              containsPlace: [
+                { '@type': 'Place', name: area.name },
+                { '@type': 'Place', name: 'Haryana' },
+              ],
             },
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '4.9',
-              reviewCount: area.studentCount.replace('+', ''),
               bestRating: '5',
+              ratingCount: area.studentCount.replace('+', ''),
+              reviewCount: area.studentCount.replace('+', ''),
             },
+            hasCredential: [
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: '98% Success Rate in NEET',
+              },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: 'AIIMS-Qualified Faculty',
+              },
+            ],
+          }),
+        }}
+      />
+      {/* FAQPage Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: `What is the best NEET coaching in ${area.name}, Faridabad?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Cerebrum Biology Academy is rated the best NEET coaching serving ${area.name}, Faridabad with 98% success rate and ${area.studentCount} successful students. We offer both online and offline classes with AIIMS-qualified faculty.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Is there online NEET coaching for ${area.name} students?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Yes, Cerebrum Biology Academy offers excellent online NEET coaching for ${area.name}, Faridabad students. Live interactive classes, recorded lectures, weekly tests, and unlimited doubt sessions - all from home.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `How to reach Cerebrum from ${area.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Students from ${area.name} can join our online batch for convenience or travel to our South Delhi center via metro. ${area.nearbyMetro[0]} connects to Violet Line for easy commute.`,
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {/* CourseList Schema for AI Discovery */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: `NEET Biology Courses for ${area.name} Students`,
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Foundation (Class 11+12)',
+                  description: `2-year NEET Biology program for ${area.name} students with complete syllabus coverage`,
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                  offers: { '@type': 'Offer', price: '120000', priceCurrency: 'INR' },
+                },
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Intensive (Class 12)',
+                  description: `1-year intensive NEET Biology program for ${area.name} Class 12 students`,
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                  offers: { '@type': 'Offer', price: '75000', priceCurrency: 'INR' },
+                },
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                item: {
+                  '@type': 'Course',
+                  name: 'NEET Dropper Batch',
+                  description: `Specialized dropper program for ${area.name} NEET repeaters`,
+                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                  offers: { '@type': 'Offer', price: '85000', priceCurrency: 'INR' },
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+              { '@type': 'ListItem', position: 2, name: 'Faridabad', item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad' },
+              { '@type': 'ListItem', position: 3, name: area.name, item: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}` },
+            ],
+          }),
+        }}
+      />
+      {/* WebPage with Speakable for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `Best NEET Coaching in ${area.name}, Faridabad | Cerebrum Biology Academy`,
+            description: area.description,
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', 'h2', '.area-description'],
+            },
+            mainEntity: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
           }),
         }}
       />

@@ -153,9 +153,10 @@ export function TestimonialsSection() {
                         <button
                           onClick={() => openVideoModal(testimonials[currentTestimonial].videoId!)}
                           className="absolute inset-0 bg-black/30 flex items-center justify-center hover:bg-black/40 transition-colors group"
+                          aria-label={`Watch video testimonial from ${testimonials[currentTestimonial].name}`}
                         >
                           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <Play className="w-8 h-8 text-blue-600 ml-1" />
+                            <Play className="w-8 h-8 text-blue-600 ml-1" aria-hidden="true" />
                           </div>
                         </button>
                       )}
@@ -183,28 +184,35 @@ export function TestimonialsSection() {
               <div className="flex justify-center mt-8 space-x-4">
                 <button
                   onClick={prevTestimonial}
-                  className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+                  className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors min-w-[48px] min-h-[48px]"
+                  aria-label="Previous testimonial"
                 >
-                  <ChevronLeft className="w-6 h-6 text-gray-600" />
+                  <ChevronLeft className="w-6 h-6 text-gray-600" aria-hidden="true" />
                 </button>
                 <button
                   onClick={nextTestimonial}
-                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors min-w-[48px] min-h-[48px]"
+                  aria-label="Next testimonial"
                 >
-                  <ChevronRight className="w-6 h-6 text-white" />
+                  <ChevronRight className="w-6 h-6 text-white" aria-hidden="true" />
                 </button>
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-4 space-x-2">
-                {testimonials.map((_, index) => (
+              <div className="flex justify-center mt-4 space-x-2" role="tablist" aria-label="Testimonial navigation">
+                {testimonials.map((testimonial, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
+                    className={`w-4 h-4 rounded-full transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center ${
                       index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
                     }`}
-                  />
+                    role="tab"
+                    aria-selected={index === currentTestimonial}
+                    aria-label={`View testimonial from ${testimonial.name}`}
+                  >
+                    <span className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'}`} aria-hidden="true" />
+                  </button>
                 ))}
               </div>
             </div>
@@ -228,6 +236,15 @@ export function TestimonialsSection() {
                 key={video.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group"
                 onClick={() => openVideoModal(video.videoId)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    openVideoModal(video.videoId)
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`Watch ${video.title} - ${video.studentName}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
@@ -308,9 +325,10 @@ export function TestimonialsSection() {
           <div className="bg-white rounded-2xl max-w-4xl w-full aspect-video relative">
             <button
               onClick={closeVideoModal}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 text-2xl font-bold"
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 text-2xl font-bold min-w-[48px] min-h-[48px] flex items-center justify-center"
+              aria-label="Close video modal"
             >
-              ×
+              <span aria-hidden="true">×</span>
             </button>
             <div className="w-full h-full rounded-2xl overflow-hidden">
               <iframe

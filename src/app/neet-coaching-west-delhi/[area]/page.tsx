@@ -18,8 +18,10 @@ import {
   Target,
   Building2,
   Train,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 
 const areaDetails: Record<
   string,
@@ -254,18 +256,28 @@ export default function WestDelhiAreaPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Schema Markup */}
+      {/* Comprehensive Schema Markup for AI/LLM Discovery */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
             name: `Cerebrum Biology Academy - NEET Coaching ${area.name}`,
+            alternateName: ['Cerebrum Academy', 'Cerebrum NEET Coaching'],
             description: area.heroDescription,
             url: `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${areaSlug}`,
             telephone: '+91-8826444334',
-            areaServed: area.name,
+            email: 'info@cerebrumbiologyacademy.com',
+            areaServed: {
+              '@type': 'City',
+              name: 'Delhi',
+              containsPlace: [
+                { '@type': 'Place', name: area.name },
+                { '@type': 'Place', name: 'West Delhi' },
+              ],
+            },
             address: {
               '@type': 'PostalAddress',
               addressLocality: area.name,
@@ -273,6 +285,118 @@ export default function WestDelhiAreaPage() {
               postalCode: area.pincode,
               addressCountry: 'IN',
             },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              bestRating: '5',
+              ratingCount: '847',
+              reviewCount: '523',
+            },
+            hasCredential: [
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: '98% Success Rate in NEET',
+              },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: 'AIIMS-Qualified Faculty',
+              },
+            ],
+          }),
+        }}
+      />
+      {/* FAQPage Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: `What is the best NEET coaching in ${area.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Cerebrum Biology Academy is rated the best NEET coaching in ${area.name}, West Delhi with 98% success rate, AIIMS-qualified faculty, and proven track record. We offer personalized attention with small batch sizes of 15-20 students.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `How much does NEET coaching cost in ${area.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `NEET coaching fees at Cerebrum Biology Academy for ${area.name} students range from ₹75,000 for 1-year programs to ₹1,20,000 for 2-year comprehensive courses. EMI options available.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Is there online NEET coaching for ${area.name} students?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Yes, Cerebrum Biology Academy offers both online and offline NEET coaching for ${area.name} students. Online program includes live classes, recorded lectures, doubt sessions, and weekly tests.`,
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {/* CourseList Schema for AI Discovery */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: `NEET Biology Courses for ${area.name} Students`,
+            itemListElement: courseOptions.map((course, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              item: {
+                '@type': 'Course',
+                name: course.name,
+                description: `${course.name} - ${course.duration} NEET Biology program for ${area.name} students`,
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                offers: {
+                  '@type': 'Offer',
+                  price: course.fee.replace(/[₹,]/g, ''),
+                  priceCurrency: 'INR',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+            })),
+          }),
+        }}
+      />
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+              { '@type': 'ListItem', position: 2, name: 'West Delhi', item: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi' },
+              { '@type': 'ListItem', position: 3, name: area.name, item: `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${areaSlug}` },
+            ],
+          }),
+        }}
+      />
+      {/* WebPage with Speakable for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `Best NEET Coaching in ${area.name} | Cerebrum Biology Academy`,
+            description: area.heroDescription,
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', 'h2', '.hero-description'],
+            },
+            mainEntity: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
           }),
         }}
       />
@@ -332,6 +456,15 @@ export default function WestDelhiAreaPage() {
                   Call: +91-88264-44334
                 </Button>
               </a>
+
+              <TrackedWhatsAppButton
+                source={`west-delhi-${areaSlug}-hero`}
+                message={`Hi! I'm from ${area.name}, West Delhi. I want to join NEET Biology coaching. What batches are available?`}
+                buttonText="WhatsApp Now"
+                variant="primary"
+                size="lg"
+                className="bg-green-500 hover:bg-green-400 text-white font-bold"
+              />
             </div>
 
             <div className="flex flex-wrap gap-3 justify-center">
@@ -471,6 +604,43 @@ export default function WestDelhiAreaPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* WhatsApp CTA Strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center"
+          >
+            <p className="text-white/90 text-lg mb-2">Ready to start your NEET preparation?</p>
+            <p className="text-white text-xl md:text-2xl font-bold mb-4">
+              Talk to our counselor for {area.name} students
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <TrackedWhatsAppButton
+                source={`west-delhi-${areaSlug}-why-cerebrum`}
+                message={`Hi! I'm a student from ${area.name}. I want to know more about your NEET coaching programs. Please share details.`}
+                buttonText="Chat on WhatsApp"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-green-700 hover:bg-green-50 font-bold"
+              />
+              <Link href="/demo-booking">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
+                >
+                  Book Demo Class
+                </Button>
+              </Link>
+            </div>
+            <p className="mt-4 text-white/70 text-sm">
+              <MessageCircle className="w-4 h-4 inline mr-1" />
+              Average response time: 2 minutes
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -580,6 +750,14 @@ export default function WestDelhiAreaPage() {
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/demo-booking">Book FREE Demo Class</Link>
               </Button>
+              <TrackedWhatsAppButton
+                source={`west-delhi-${areaSlug}-footer-cta`}
+                message={`Hi! I'm from ${area.name}, West Delhi. I want to enroll for NEET coaching. Please share batch details and fees.`}
+                buttonText="WhatsApp Counselor"
+                variant="primary"
+                size="xl"
+                className="bg-green-500 hover:bg-green-400 text-white font-bold"
+              />
               <Button
                 size="lg"
                 variant="outline"
@@ -592,6 +770,10 @@ export default function WestDelhiAreaPage() {
                 </a>
               </Button>
             </div>
+            <p className="mt-6 text-white/70 text-sm">
+              <MessageCircle className="w-4 h-4 inline mr-1" />
+              Average response time: 2 minutes
+            </p>
           </motion.div>
         </div>
       </section>

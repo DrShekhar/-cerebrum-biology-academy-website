@@ -361,30 +361,35 @@ export function NEETToppersShowcase({
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTopper}
-                className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                className="w-12 h-12 min-w-[48px] min-h-[48px] bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                aria-label="Previous NEET topper"
               >
-                <ChevronLeft className="w-6 h-6 text-gray-600" />
+                <ChevronLeft className="w-6 h-6 text-gray-600" aria-hidden="true" />
               </button>
             </div>
             <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
               <button
                 onClick={nextTopper}
-                className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                className="w-12 h-12 min-w-[48px] min-h-[48px] bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+                aria-label="Next NEET topper"
               >
-                <ChevronRight className="w-6 h-6 text-gray-600" />
+                <ChevronRight className="w-6 h-6 text-gray-600" aria-hidden="true" />
               </button>
             </div>
 
             {/* Topper Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {displayedToppers.map((_, index) => (
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2" role="tablist" aria-label="NEET topper navigation">
+              {displayedToppers.map((topper, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTopper(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTopper ? 'bg-yellow-500' : 'bg-white/50'
-                  }`}
-                />
+                  className={`min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-colors`}
+                  role="tab"
+                  aria-selected={index === currentTopper}
+                  aria-label={`View ${topper.name}'s success story`}
+                >
+                  <span className={`w-3 h-3 rounded-full ${index === currentTopper ? 'bg-yellow-500' : 'bg-white/50'}`} aria-hidden="true" />
+                </button>
               ))}
             </div>
           </div>

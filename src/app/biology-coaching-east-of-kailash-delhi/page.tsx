@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'Biology Coaching in East of Kailash Delhi | NEET & CBSE Tutor',
@@ -31,5 +32,16 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyCoachingEOKPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="East of Kailash"
+        slug="biology-coaching-east-of-kailash-delhi"
+        pageTitle="Biology Coaching in East of Kailash Delhi"
+        pageDescription="Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections."
+        pageType="coaching"
+      />
+      <PageContent />
+    </>
+  )
 }

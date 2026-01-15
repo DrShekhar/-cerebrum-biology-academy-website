@@ -124,7 +124,7 @@ export const mockTests: MockTest[] = [
     id: 'test-1',
     title: 'NEET Biology Full Test - Cell Biology & Genetics',
     description:
-      'Comprehensive test covering cell biology fundamentals and genetic principles. Perfect for NEET 2024 preparation with detailed explanations.',
+      'Comprehensive test covering cell biology fundamentals and genetic principles. Perfect for NEET 2025 preparation with detailed explanations.',
     slug: 'neet-biology-cell-biology-genetics',
     category: 'full-test',
     subject: 'biology',
@@ -172,7 +172,7 @@ export const mockTests: MockTest[] = [
     seoMetadata: {
       title: 'Free NEET Biology Mock Test - Cell Biology & Genetics | Cerebrum Academy',
       description:
-        'Take free NEET Biology practice test on Cell Biology & Genetics. 15 questions, detailed solutions, performance analysis. Improve your NEET 2024 score.',
+        'Take free NEET Biology practice test on Cell Biology & Genetics. 15 questions, detailed solutions, performance analysis. Improve your NEET 2025 score.',
       keywords: [
         'NEET biology mock test',
         'cell biology test',
@@ -312,17 +312,17 @@ export const mockTests: MockTest[] = [
 export const testSeries: TestSeries[] = [
   {
     id: 'series-1',
-    title: 'NEET 2024 Complete Biology Test Series',
+    title: 'NEET 2025 Complete Biology Test Series',
     description:
       'Comprehensive 12-week test series covering entire NEET Biology syllabus with weekly tests and detailed performance analysis.',
-    slug: 'neet-2024-complete-biology-series',
+    slug: 'neet-2025-complete-biology-series',
     tests: ['test-1', 'test-2', 'test-3'],
     totalTests: 24,
     duration: '12 weeks',
     price: 2499,
     isPremium: true,
     difficulty: 'intermediate',
-    targetAudience: ['NEET 2024 aspirants', 'Class 12 students', 'Droppers'],
+    targetAudience: ['NEET 2025 aspirants', 'Class 12 students', 'Droppers'],
     features: [
       '24 comprehensive tests',
       'Weekly performance reports',
@@ -334,18 +334,18 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'weekly',
       duration: 180,
-      startDate: '2024-02-01T10:00:00Z',
-      endDate: '2024-04-30T18:00:00Z',
+      startDate: '2025-02-01T10:00:00Z',
+      endDate: '2025-04-30T18:00:00Z',
     },
     enrollmentCount: 3247,
     rating: 4.7,
     testimonials: ['testimonial-1', 'testimonial-2'],
     seoMetadata: {
-      title: 'NEET 2024 Biology Test Series | 24 Mock Tests | Complete Preparation',
+      title: 'NEET 2025 Biology Test Series | 24 Mock Tests | Complete Preparation',
       description:
-        'Join NEET 2024 Biology Test Series. 24 comprehensive mock tests, weekly reports, video solutions. 3000+ students enrolled. Book now!',
+        'Join NEET 2025 Biology Test Series. 24 comprehensive mock tests, weekly reports, video solutions. 3000+ students enrolled. Book now!',
       keywords: [
-        'NEET 2024 test series',
+        'NEET 2025 test series',
         'biology test series',
         'NEET mock tests',
         'biology preparation',
@@ -376,8 +376,8 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'bi-weekly',
       duration: 120,
-      startDate: '2024-02-15T14:00:00Z',
-      endDate: '2024-04-15T18:00:00Z',
+      startDate: '2025-02-15T14:00:00Z',
+      endDate: '2025-04-15T18:00:00Z',
     },
     enrollmentCount: 1856,
     rating: 4.5,

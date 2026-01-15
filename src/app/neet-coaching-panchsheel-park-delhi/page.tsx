@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Panchsheel Park Delhi | Medical Entrance Biology',
@@ -29,5 +30,16 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingPanchsheelParkPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Panchsheel Park"
+        slug="neet-coaching-panchsheel-park-delhi"
+        pageTitle="NEET Coaching in Panchsheel Park Delhi"
+        pageDescription="Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 500+ selections."
+        pageType="coaching"
+      />
+      <PageContent />
+    </>
+  )
 }

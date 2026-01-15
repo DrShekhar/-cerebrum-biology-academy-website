@@ -67,7 +67,7 @@ export function EmptyState({
   const variantStyles = {
     default: {
       bg: 'bg-gray-100',
-      iconColor: 'text-gray-400',
+      iconColor: 'text-gray-500',
     },
     info: {
       bg: 'bg-blue-100',

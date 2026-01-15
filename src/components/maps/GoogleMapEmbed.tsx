@@ -36,8 +36,8 @@ export function GoogleMapEmbed({
         {!isLoaded && !hasError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse">
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-              <p className="text-sm text-gray-500">Loading map...</p>
+              <MapPin className="w-8 h-8 text-gray-600 mx-auto mb-2" />
+              <p className="text-sm text-gray-600">Loading map...</p>
             </div>
           </div>
         )}

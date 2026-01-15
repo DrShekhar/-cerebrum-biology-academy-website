@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Free NEET Biology Notes | Comprehensive Study Material | Cerebrum Academy',
   description:
-    'Access free comprehensive NEET biology notes covering all Class 11 and 12 topics. Expert-written study material by Dr. Shekhar Singh to help you ace NEET Biology.',
+    'Access free comprehensive NEET biology notes covering all Class 11 and 12 topics. Expert-written study material by Dr. Shekhar C Singh to help you ace NEET Biology.',
   keywords: [
     'NEET biology notes',
     'free NEET study material',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ].join(', '),
   openGraph: {
     title: 'Free NEET Biology Notes | Cerebrum Biology Academy',
-    description: 'Comprehensive biology notes for NEET preparation by Dr. Shekhar Singh',
+    description: 'Comprehensive biology notes for NEET preparation by Dr. Shekhar C Singh',
     type: 'website',
   },
   alternates: {

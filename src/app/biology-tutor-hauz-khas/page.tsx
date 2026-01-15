@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'Biology Tutor in Hauz Khas Delhi | NEET & CBSE Coaching',
@@ -31,5 +32,16 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyTutorHauzKhasPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Hauz Khas"
+        slug="biology-tutor-hauz-khas"
+        pageTitle="Biology Tutor in Hauz Khas Delhi"
+        pageDescription="Best Biology tutor for Hauz Khas, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections."
+        pageType="tutor"
+      />
+      <PageContent />
+    </>
+  )
 }

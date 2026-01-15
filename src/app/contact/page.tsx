@@ -22,6 +22,40 @@ import {
   Navigation,
 } from 'lucide-react'
 import Link from 'next/link'
+import { FAQDisplay } from '@/components/seo/FAQSchema'
+
+const contactFAQs = [
+  {
+    question: 'How can I book a free demo class at Cerebrum Academy?',
+    answer:
+      'You can book a free demo class by calling us at +91 88264 44334, sending a WhatsApp message, or filling out the contact form on this page. Our counselors will schedule a convenient time based on your preferred batch and location.',
+  },
+  {
+    question: 'What are the center locations for Cerebrum Biology Academy?',
+    answer:
+      'We have centers in South Delhi (Greater Kailash II), Rohini, and Gurugram. All centers have experienced AIIMS faculty and follow the same curriculum. We also offer online classes for students across India.',
+  },
+  {
+    question: 'What are the office hours for contacting Cerebrum Academy?',
+    answer:
+      'Our office is open Monday to Saturday from 9:00 AM to 8:00 PM. You can also reach us on WhatsApp 24/7 for queries. Sunday classes are conducted, but administrative offices remain closed.',
+  },
+  {
+    question: 'How long does it take to get a response after submitting the contact form?',
+    answer:
+      'We typically respond within 2-4 hours during office hours. For urgent queries, we recommend calling us directly at +91 88264 44334 or sending a WhatsApp message for immediate assistance.',
+  },
+  {
+    question: 'Can I visit the center before enrolling?',
+    answer:
+      'Absolutely! We encourage parents and students to visit our centers before enrollment. You can attend a demo class, meet our faculty, and see our facilities. Schedule a visit by calling us or filling out the contact form.',
+  },
+  {
+    question: 'Is there a counseling session available before enrollment?',
+    answer:
+      'Yes, we offer free one-on-one counseling sessions with our academic counselors. They will assess your current preparation level, discuss suitable course options, and create a personalized study plan recommendation.',
+  },
+]
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -460,6 +494,16 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <FAQDisplay
+            questions={contactFAQs}
+            title="Frequently Asked Questions About Contacting Us"
+          />
         </div>
       </section>
 

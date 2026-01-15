@@ -302,7 +302,7 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
     {
       question: 'When should I join for NEET 2026 repeater batch?',
       answer:
-        'Best to join by June-July 2024 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
+        'Best to join by June-July 2025 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
     },
     {
       question: 'What is the expected score improvement for NEET 2026?',

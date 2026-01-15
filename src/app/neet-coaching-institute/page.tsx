@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { BreadcrumbSchema } from '@/components/seo'
 
 const instituteHighlights = [
   {
@@ -157,6 +158,14 @@ export default function NeetCoachingInstitutePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4 bg-indigo-900">
+        <BreadcrumbSchema
+          items={[{ label: 'NEET Coaching Institute', isCurrentPage: true }]}
+          className="text-indigo-200 [&_a]:text-indigo-200 [&_a:hover]:text-white [&_.font-medium]:text-white"
+        />
+      </div>
+
       {/* FAQ Schema */}
       <script
         type="application/ld+json"

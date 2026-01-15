@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     'Find NEET coaching near your school. DPS RK Puram, DPS Vasant Vihar, Modern School, Vasant Valley, Sanskriti School students. Expert AIIMS faculty. Book free demo!',
   keywords:
     'NEET coaching near DPS, biology tuition near Modern School, NEET classes near Vasant Valley, coaching near Sanskriti School, NEET preparation near school, biology coaching Delhi schools',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-near',
+  },
 }
 
 export default function NEETCoachingNearLayout({ children }: { children: React.ReactNode }) {

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'Biology Tutor in Defence Colony Delhi | NEET & CBSE Coaching',
@@ -31,5 +32,16 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyTutorDefenceColonyPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Defence Colony"
+        slug="biology-tutor-defence-colony"
+        pageTitle="Biology Tutor in Defence Colony Delhi"
+        pageDescription="Best Biology tutor for Defence Colony, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections."
+        pageType="tutor"
+      />
+      <PageContent />
+    </>
+  )
 }

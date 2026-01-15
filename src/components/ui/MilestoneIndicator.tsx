@@ -139,14 +139,14 @@ export function MilestoneIndicator({
                 <div className="mt-2 text-center">
                   <div
                     className={`text-xs font-medium ${
-                      isAchieved || isCurrent ? selectedColor.text : 'text-gray-400'
+                      isAchieved || isCurrent ? selectedColor.text : 'text-gray-500'
                     }`}
                   >
                     {milestone.value}
                   </div>
                   <div
                     className={`text-xs mt-1 whitespace-nowrap ${
-                      isAchieved || isCurrent ? 'text-gray-700' : 'text-gray-400'
+                      isAchieved || isCurrent ? 'text-gray-700' : 'text-gray-500'
                     }`}
                   >
                     {milestone.label}

@@ -23,6 +23,7 @@ import {
 import Link from 'next/link'
 import { facultyStats, facultyHighlights } from '@/data/faculty'
 import { EEATSignals } from '@/components/seo/EEATSignals'
+import { BreadcrumbSchema } from '@/components/seo'
 import {
   PremiumSection,
   HeroSection,
@@ -39,6 +40,40 @@ import {
   AcademicList,
   AcademicEmphasis,
 } from '@/components/ui/AcademicTypography'
+import { FAQDisplay } from '@/components/seo/FAQSchema'
+
+const aboutFAQs = [
+  {
+    question: 'Who founded Cerebrum Biology Academy and what is their background?',
+    answer:
+      'Cerebrum Biology Academy was founded by Dr. Shekhar C Singh, an AIIMS Delhi graduate (2014) who scored 680/720 in NEET Biology. After observing thousands of students struggle with Biology despite expensive coaching, he chose teaching over medical practice to bring AIIMS-level instruction to NEET aspirants.',
+  },
+  {
+    question: 'How long has Cerebrum Biology Academy been operating?',
+    answer:
+      'Cerebrum Biology Academy has been operating since 2015, starting with just 23 students in a 400 sq ft room in Rohini. Over 9+ years, we have grown to coach 2,847+ students with a 98% NEET qualification rate.',
+  },
+  {
+    question: 'What makes Cerebrum different from other NEET coaching institutes?',
+    answer:
+      'Cerebrum stands out with its AIIMS-faculty led teaching methodology, small batch sizes (limited to 50 students per batch), personalized mentoring, and the "Concept Pyramid" method developed by Dr. Singh. We prioritize individual attention over mass coaching.',
+  },
+  {
+    question: 'What are the success statistics of Cerebrum Biology Academy?',
+    answer:
+      "98% NEET qualification rate, 47 AIIMS selections across 7 campuses, 27 students ranked in India's top 1,000, 183 students admitted to government medical colleges, and 12 students scored 700+ in NEET 2024.",
+  },
+  {
+    question: 'Where are Cerebrum Biology Academy centers located?',
+    answer:
+      'We have centers in South Delhi, Rohini, and Gurugram. We also offer comprehensive online classes with live interactive sessions for students across India. All centers follow the same curriculum and teaching methodology.',
+  },
+  {
+    question: 'Does the founder still teach at Cerebrum?',
+    answer:
+      "Yes! Dr. Shekhar C Singh personally takes selected batches and students. He believes that direct student interaction is essential to maintaining the quality and authenticity of Cerebrum's approach.",
+  },
+]
 
 export default function AboutPage() {
   const milestones = [
@@ -170,6 +205,10 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4 bg-[#e8ede8]">
+        <BreadcrumbSchema items={[{ label: 'About Us', isCurrentPage: true }]} />
+      </div>
       {/* Hero Section - Cerebrum Light Theme */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-[#e8ede8] text-gray-900 overflow-hidden">
         {/* Subtle background pattern */}
@@ -193,9 +232,9 @@ export default function AboutPage() {
 
               <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-[1.8] font-light max-w-3xl">
                 In 2015, Dr. Shekhar C Singh walked out of{' '}
-                <strong className="font-semibold text-[#3d4d3d]">AIIMS Delhi</strong> with a mission: no
-                student should struggle with NEET Biology the way he saw thousands struggle. Nine
-                years later,{' '}
+                <strong className="font-semibold text-[#3d4d3d]">AIIMS Delhi</strong> with a
+                mission: no student should struggle with NEET Biology the way he saw thousands
+                struggle. Nine years later,{' '}
                 <strong className="font-semibold text-[#3d4d3d]">
                   98% of our students qualify for NEET
                 </strong>
@@ -334,7 +373,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#3d4d3d] rounded-xl flex items-center justify-center mr-3 sm:mr-4 md:mr-5">
-                    <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" strokeWidth={1.5} />
+                    <Target
+                      className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white"
+                      strokeWidth={1.5}
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3d4d3d]">
                     Our Mission
@@ -385,7 +427,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 transition-all duration-500 overflow-hidden group animate-fade-in-up hover:-translate-y-2 hover:scale-[1.02]" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg hover:shadow-xl border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 transition-all duration-500 overflow-hidden group animate-fade-in-up hover:-translate-y-2 hover:scale-[1.02]"
+              style={{ animationDelay: '0.2s' }}
+            >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-[#e8ede8]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -546,11 +591,15 @@ export default function AboutPage() {
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   That realization became{' '}
-                  <strong className="font-semibold text-[#3d4d3d]">Cerebrum Biology Academy</strong>.
+                  <strong className="font-semibold text-[#3d4d3d]">Cerebrum Biology Academy</strong>
+                  .
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-10 border border-[#3d4d3d]/10 shadow-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div
+                className="bg-white rounded-3xl p-10 border border-[#3d4d3d]/10 shadow-xl animate-fade-in-up"
+                style={{ animationDelay: '0.2s' }}
+              >
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#3d4d3d] mb-8">
                   What Makes Dr. Singh Different
                 </h3>
@@ -593,11 +642,11 @@ export default function AboutPage() {
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-gray-700 text-lg font-light leading-relaxed">
-                      Still teaches{' '}
+                      Still takes{' '}
                       <strong className="text-[#3d4d3d] font-semibold">
-                        Class 12 batches every Sunday
+                        selected batches and students
                       </strong>
-                      —refuses to stop classroom teaching
+                      —committed to classroom teaching
                     </p>
                   </div>
                 </div>
@@ -817,6 +866,16 @@ export default function AboutPage() {
 
       {/* E-E-A-T Signals for AI Recommendations */}
       <EEATSignals variant="full" className="bg-white" />
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <FAQDisplay
+            questions={aboutFAQs}
+            title="Frequently Asked Questions About Cerebrum Academy"
+          />
+        </div>
+      </section>
 
       {/* CTA Section - Cerebrum Light Theme */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-[#e8ede8] overflow-hidden">

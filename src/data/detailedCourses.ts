@@ -19,8 +19,8 @@ export const detailedCourses: Course[] = [
     targetClass: '11th',
     slug: 'neet-2025-class-11th-foundation',
     category: 'hybrid',
-    startDate: '2024-04-01',
-    endDate: '2026-05-31',
+    startDate: '2025-04-01',
+    endDate: '2027-05-31',
     batchSize: 50,
     language: ['English', 'Hindi'],
     curriculum: {
@@ -186,7 +186,7 @@ export const detailedCourses: Course[] = [
     isPopular: true,
     discount: {
       percentage: 10,
-      validUntil: '2024-03-31',
+      validUntil: '2025-03-31',
       originalPrice: 109000,
     },
   },
@@ -210,8 +210,8 @@ export const detailedCourses: Course[] = [
     targetClass: '12th',
     slug: 'neet-2025-class-12th-intensive',
     category: 'hybrid',
-    startDate: '2024-04-01',
-    endDate: '2025-05-31',
+    startDate: '2025-04-01',
+    endDate: '2026-05-31',
     batchSize: 40,
     language: ['English', 'Hindi'],
     curriculum: {
@@ -389,8 +389,8 @@ export const detailedCourses: Course[] = [
     targetClass: 'Dropper',
     slug: 'neet-2025-dropper-batch',
     category: 'classroom',
-    startDate: '2024-08-01',
-    endDate: '2025-05-31',
+    startDate: '2025-08-01',
+    endDate: '2026-05-31',
     batchSize: 30,
     language: ['English', 'Hindi'],
     curriculum: {

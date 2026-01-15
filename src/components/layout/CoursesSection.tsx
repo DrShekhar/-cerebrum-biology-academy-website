@@ -271,8 +271,9 @@ export function CoursesSection() {
               size="lg"
               className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base px-4 sm:px-6"
               onClick={handleCounselingClick}
+              aria-label="Get free counseling to choose the right course"
             >
-              <MessageCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+              <MessageCircle className="w-4 h-4 mr-2 flex-shrink-0" aria-hidden="true" />
               <span className="hidden sm:inline">Free Counseling</span>
               <span className="sm:hidden">Counseling</span>
             </Button>

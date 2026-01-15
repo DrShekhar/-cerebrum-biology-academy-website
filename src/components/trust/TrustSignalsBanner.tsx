@@ -135,7 +135,7 @@ export function TrustSignalsBanner({
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 animate-fade-in-up">
-          <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-semibold mb-3 xs:mb-4">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-semibold mb-3 xs:mb-4">
             <Shield className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
             Verified Trust Signals
           </div>
@@ -158,7 +158,7 @@ export function TrustSignalsBanner({
               {/* Verified Badge */}
               {signal.verified && showVerificationBadges && (
                 <div className="absolute top-3 xs:top-4 right-3 xs:right-4">
-                  <div className="flex items-center bg-green-100 text-green-700 px-2 xs:px-3 py-0.5 xs:py-1 rounded-full text-[10px] xs:text-xs font-semibold">
+                  <div className="flex items-center bg-green-100 text-green-800 px-2 xs:px-3 py-0.5 xs:py-1 rounded-full text-[10px] xs:text-xs font-semibold">
                     <CheckCircle className="w-2.5 xs:w-3 h-2.5 xs:h-3 mr-1" />
                     Verified
                   </div>

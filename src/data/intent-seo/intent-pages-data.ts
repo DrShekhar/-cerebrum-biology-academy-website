@@ -498,9 +498,9 @@ export const intentPagesData: Record<string, IntentPageData> = {
     },
     faqs: [
       {
-        question: 'When does the NEET 2025 Dropper batch start?',
+        question: 'When does the NEET 2026 Dropper batch start?',
         answer:
-          'Our NEET 2025 Dropper batch starts in June 2024 (post NEET 2024 results). Early bird enrollment is open now with special discounts.',
+          'Our NEET 2026 Dropper batch starts in June 2025 (post NEET 2025 results). Early bird enrollment is open now with special discounts.',
       },
       {
         question: 'What is the fee for the Dropper course?',

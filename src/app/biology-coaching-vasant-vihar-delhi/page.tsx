@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
   title: 'Biology Coaching in Vasant Vihar Delhi | NEET & IB Biology Tutor',
@@ -31,5 +32,16 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyCoachingVasantViharPage() {
-  return <PageContent />
+  return (
+    <>
+      <LocalitySchema
+        locality="Vasant Vihar"
+        slug="biology-coaching-vasant-vihar-delhi"
+        pageTitle="Biology Coaching in Vasant Vihar Delhi"
+        pageDescription="Best Biology coaching for Vasant Vihar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET & IB Biology coaching with 500+ selections."
+        pageType="coaching"
+      />
+      <PageContent />
+    </>
+  )
 }

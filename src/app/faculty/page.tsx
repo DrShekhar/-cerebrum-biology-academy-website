@@ -21,6 +21,8 @@ import {
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FacultyListSchema } from '@/components/seo/PersonSchema'
+import { BreadcrumbSchema } from '@/components/seo'
 
 export default function FacultyPage() {
   const specializations = [
@@ -79,6 +81,10 @@ export default function FacultyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4 bg-[#e8ede8]">
+        <BreadcrumbSchema items={[{ label: 'Faculty', isCurrentPage: true }]} />
+      </div>
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-[#e8ede8] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -501,6 +507,9 @@ export default function FacultyPage() {
           </div>
         </div>
       </section>
+
+      {/* Structured Data for Faculty */}
+      <FacultyListSchema faculty={facultyMembers} />
     </div>
   )
 }

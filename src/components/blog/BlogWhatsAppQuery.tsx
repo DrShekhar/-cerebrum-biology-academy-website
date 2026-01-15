@@ -111,7 +111,8 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-white/20 rounded-full transition-colors"
+                  className="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center hover:bg-white/20 rounded-full transition-colors touch-manipulation"
+                  aria-label="Close dialog"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -160,9 +161,10 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
                 <button
                   onClick={handleCustomQuery}
                   disabled={!customQuery.trim()}
-                  className="absolute bottom-3 right-3 w-8 h-8 bg-green-600 hover:bg-green-600 disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors"
+                  className="absolute bottom-2 right-2 w-11 h-11 min-w-[44px] min-h-[44px] bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
+                  aria-label="Send message"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-5 h-5" />
                 </button>
               </div>
 

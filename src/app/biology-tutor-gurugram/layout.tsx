@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',
     images: [
       {
-        url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+        url: `https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('Best Biology Tutor')}&subtitle=${encodeURIComponent('NEET & Board Exam Coaching')}&locality=${encodeURIComponent('Gurugram')}`,
         width: 1200,
         height: 630,
         alt: 'Cerebrum Biology Academy - NEET Biology Coaching in Gurugram',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Biology Tutor in Gurugram | Cerebrum Academy',
     description: 'Expert NEET Biology coaching in Gurugram.',
-    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
+    images: [`https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('Best Biology Tutor')}&subtitle=${encodeURIComponent('NEET & Board Exam Coaching')}&locality=${encodeURIComponent('Gurugram')}`],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-gurugram',

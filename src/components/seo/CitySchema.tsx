@@ -35,7 +35,7 @@ export function CitySchema({
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og-image.png`,
-    foundingDate: '2018',
+    foundingDate: '2014',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
@@ -95,7 +95,7 @@ export function CitySchema({
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',
-              instructor: { '@type': 'Person', name: 'Dr. Shekhar Singh (AIIMS)' },
+              instructor: { '@type': 'Person', name: 'Dr. Shekhar C Singh (AIIMS)' },
             },
           },
         },
@@ -109,7 +109,7 @@ export function CitySchema({
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',
-              instructor: { '@type': 'Person', name: 'Dr. Shekhar Singh (AIIMS)' },
+              instructor: { '@type': 'Person', name: 'Dr. Shekhar C Singh (AIIMS)' },
             },
           },
         },
@@ -123,7 +123,7 @@ export function CitySchema({
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',
-              instructor: { '@type': 'Person', name: 'Dr. Shekhar Singh (AIIMS)' },
+              instructor: { '@type': 'Person', name: 'Dr. Shekhar C Singh (AIIMS)' },
             },
           },
         },

@@ -7,6 +7,40 @@ import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
 import { DemoClassModal } from './DemoClassModal'
+import { FAQDisplay } from '@/components/seo/FAQSchema'
+
+const courseFAQs = [
+  {
+    question: 'Which NEET Biology course is best for Class 11 students?',
+    answer:
+      'For Class 11 students, we recommend our Foundation Programs (Apex or Pinnacle series) that build strong NCERT fundamentals while introducing NEET-level concepts. These 2-year programs give you the advantage of early preparation with smaller batch sizes for personalized attention.',
+  },
+  {
+    question: 'What is the difference between Pinnacle, Ascent, and Apex series?',
+    answer:
+      'Pinnacle Series offers premium mentorship with 1:1 attention and smallest batch sizes (4-6 students). Ascent Series provides balanced coaching with moderate batch sizes (8-15 students). Apex Series is our most affordable option with larger batches (20-30 students) while maintaining quality teaching.',
+  },
+  {
+    question: 'Do you offer demo classes before enrollment?',
+    answer:
+      'Yes! We offer free demo classes for all our courses. You can experience our teaching methodology, interact with faculty, and assess the learning environment before making any commitment. Book a demo class through our website or WhatsApp.',
+  },
+  {
+    question: 'What is the fee structure for NEET Biology courses?',
+    answer:
+      'Our course fees range from ₹30,000 to ₹3,00,000+ depending on the series, batch size, and duration. We offer flexible payment options including EMI plans. Contact our counselors for detailed fee breakdowns and any ongoing discounts.',
+  },
+  {
+    question: 'Are online and offline modes available for all courses?',
+    answer:
+      'Yes, most of our courses are available in both online and offline modes. Online classes include live interactive sessions, recorded lectures, and digital study materials. Offline classes are conducted at our South Delhi centers with the same curriculum.',
+  },
+  {
+    question: 'What study materials are provided with the courses?',
+    answer:
+      'All courses include comprehensive study materials: topic-wise notes, NCERT-based question banks, previous year NEET questions, mock tests, and our proprietary Biology concept maps. Higher-tier courses also include personalized doubt-solving sessions and mentor support.',
+  },
+]
 
 // Map URL query param values to internal ClassLevel values
 const classParamMap: Record<string, ClassLevel> = {
@@ -299,6 +333,13 @@ export function EnhancedCoursesListingPage() {
             </div>
           </div>
         </div>
+
+        {/* FAQ Section */}
+        <FAQDisplay
+          questions={courseFAQs}
+          title="Frequently Asked Questions About Our Courses"
+          className="mt-12 sm:mt-16"
+        />
       </section>
 
       {/* Demo Class Modal */}

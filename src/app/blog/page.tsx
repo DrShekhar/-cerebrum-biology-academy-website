@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { getAllPosts, getAllCategories, getBlogStats } from '@/lib/blog/mdx'
+import { BreadcrumbSchema } from '@/components/seo'
 
 // Lazy load the heavy blog listing component
 const BlogListingPage = dynamic(
@@ -57,5 +58,13 @@ export default function BlogPage() {
   const categories = getAllCategories()
   const stats = getBlogStats()
 
-  return <BlogListingPage posts={posts} categories={categories} stats={stats} />
+  return (
+    <>
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4">
+        <BreadcrumbSchema items={[{ label: 'Blog', isCurrentPage: true }]} />
+      </div>
+      <BlogListingPage posts={posts} categories={categories} stats={stats} />
+    </>
+  )
 }

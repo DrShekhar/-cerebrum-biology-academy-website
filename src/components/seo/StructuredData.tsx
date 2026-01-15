@@ -26,7 +26,7 @@ export function OrganizationSchema() {
       'https://www.linkedin.com/company/cerebrumbiologyacademy',
       'https://twitter.com/cerebrumbiology',
     ],
-    foundingDate: '2015',
+    foundingDate: '2014',
     numberOfEmployees: '50-100',
     areaServed: [
       {

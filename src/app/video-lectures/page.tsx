@@ -1,11 +1,65 @@
 'use client'
 
 import { VideoLectureShowcase } from '@/components/layout/VideoLectureShowcase'
-import { Metadata } from 'next'
+import { VideoListSchema } from '@/components/seo'
+
+// Sample video data for schema (represents actual video content)
+const videoLectureData = [
+  {
+    name: 'NEET Biology - Cell Structure and Function',
+    description:
+      'Complete lecture on cell structure covering cell membrane, nucleus, organelles, and their functions for NEET preparation.',
+    thumbnailUrl: '/og-image.jpg',
+    uploadDate: '2024-12-01',
+    duration: 'PT45M',
+    embedUrl: 'https://www.youtube.com/@CerebrumBiologyAcademy',
+  },
+  {
+    name: 'NEET Biology - Cell Division (Mitosis & Meiosis)',
+    description:
+      'Detailed explanation of mitosis, meiosis, cell cycle phases, and differences for NEET Biology exam.',
+    thumbnailUrl: '/og-image.jpg',
+    uploadDate: '2024-12-05',
+    duration: 'PT55M',
+    embedUrl: 'https://www.youtube.com/@CerebrumBiologyAcademy',
+  },
+  {
+    name: 'NEET Biology - Biomolecules Complete Lecture',
+    description:
+      'Comprehensive coverage of carbohydrates, proteins, lipids, nucleic acids and enzymes for NEET.',
+    thumbnailUrl: '/og-image.jpg',
+    uploadDate: '2024-12-10',
+    duration: 'PT50M',
+    embedUrl: 'https://www.youtube.com/@CerebrumBiologyAcademy',
+  },
+  {
+    name: 'NEET Biology - Photosynthesis in Higher Plants',
+    description:
+      'Complete photosynthesis lecture covering light reactions, Calvin cycle, C3-C4 plants for NEET.',
+    thumbnailUrl: '/og-image.jpg',
+    uploadDate: '2024-12-15',
+    duration: 'PT60M',
+    embedUrl: 'https://www.youtube.com/@CerebrumBiologyAcademy',
+  },
+  {
+    name: 'NEET Biology - Human Reproduction System',
+    description:
+      'Detailed lecture on male and female reproductive systems, gametogenesis, and fertilization for NEET.',
+    thumbnailUrl: '/og-image.jpg',
+    uploadDate: '2024-12-20',
+    duration: 'PT48M',
+    embedUrl: 'https://www.youtube.com/@CerebrumBiologyAcademy',
+  },
+]
 
 export default function VideoLecturesPage() {
   return (
     <div className="min-h-screen">
+      {/* Video List Schema for SEO */}
+      <VideoListSchema
+        videos={videoLectureData}
+        listName="Cerebrum NEET Biology Video Lectures by Dr. Shekhar Singh"
+      />
       {/* Header Section */}
       <section className="bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

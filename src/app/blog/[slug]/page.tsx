@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getCategoryBySlug } from '@/lib/blog/mdx'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
+import { ArticleSchema } from '@/components/seo/ContentFreshness'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -68,14 +70,30 @@ export default async function BlogPost({ params }: Props) {
 
   const relatedPosts = getRelatedPosts(slug, 3)
   const category = getCategoryBySlug(postData.meta.category)
+  const { meta } = postData
 
   return (
-    <BlogPostPage
-      meta={postData.meta}
-      content={postData.content}
-      toc={postData.toc}
-      relatedPosts={relatedPosts}
-      category={category}
-    />
+    <>
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 py-4">
+        <BreadcrumbSchema items={COMMON_BREADCRUMBS.blog(meta.title)} />
+      </div>
+      {/* Article Schema for E-E-A-T */}
+      <ArticleSchema
+        title={meta.title}
+        description={meta.excerpt}
+        datePublished={meta.publishedAt}
+        dateModified={meta.updatedAt || meta.publishedAt}
+        author={{ name: meta.author.name }}
+        keywords={meta.tags}
+      />
+      <BlogPostPage
+        meta={meta}
+        content={postData.content}
+        toc={postData.toc}
+        relatedPosts={relatedPosts}
+        category={category}
+      />
+    </>
   )
 }

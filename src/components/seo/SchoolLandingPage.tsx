@@ -203,8 +203,8 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                 Perfect for {data.schoolName} Schedule
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                We understand the demands of {data.schoolName}. Our coaching is designed to complement your school
-                academics.
+                We understand the demands of {data.schoolName}. Our coaching is designed to
+                complement your school academics.
               </p>
             </div>
 
@@ -277,7 +277,9 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                   <Building2 className="h-8 w-8 text-blue-600" />
                   <div>
                     <div className="text-xl font-bold text-gray-900">{data.centerDetails.name}</div>
-                    <div className="text-sm text-gray-500">Just {data.distance} from your school</div>
+                    <div className="text-sm text-gray-500">
+                      Just {data.distance} from your school
+                    </div>
                   </div>
                 </div>
 
@@ -393,8 +395,8 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
               Ready to Join Other {data.schoolName} Students?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Book a free demo class and see why students from {data.schoolName} choose Cerebrum for their NEET
-              preparation.
+              Book a free demo class and see why students from {data.schoolName} choose Cerebrum for
+              their NEET preparation.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

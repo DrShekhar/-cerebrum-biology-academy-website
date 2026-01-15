@@ -11,6 +11,42 @@ export interface WhatsAppTrackingParams {
   message?: string
   sessionId?: string
   userId?: string
+  locality?: string // For geo-specific tracking
+}
+
+// UTM parameter extraction for attribution
+export function getUTMParams(): Record<string, string> {
+  if (typeof window === 'undefined') return {}
+
+  const urlParams = new URLSearchParams(window.location.search)
+  const utmParams: Record<string, string> = {}
+
+  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+  utmKeys.forEach(key => {
+    const value = urlParams.get(key)
+    if (value) {
+      utmParams[key] = value
+    }
+  })
+
+  // Store UTM params in session for persistence
+  if (Object.keys(utmParams).length > 0) {
+    sessionStorage.setItem('cerebrum_utm', JSON.stringify(utmParams))
+  }
+
+  // Retrieve stored UTM if current URL has none
+  if (Object.keys(utmParams).length === 0) {
+    const stored = sessionStorage.getItem('cerebrum_utm')
+    if (stored) {
+      try {
+        return JSON.parse(stored)
+      } catch {
+        return {}
+      }
+    }
+  }
+
+  return utmParams
 }
 
 export interface WhatsAppTrackingResult {
@@ -35,16 +71,45 @@ function getCurrentPage(): string {
   return window.location.pathname
 }
 
+// Extract locality from URL path for geo-specific tracking
+function extractLocalityFromPath(path: string): string | undefined {
+  // Pattern: /neet-coaching-{locality}-delhi or /biology-tuition-{locality}
+  const neetMatch = path.match(/\/neet-coaching-([a-z-]+)-delhi/)
+  if (neetMatch) {
+    return neetMatch[1].replace(/-/g, ' ')
+  }
+
+  // Pattern: /biology-tuition-south-delhi/{locality}
+  const bioMatch = path.match(/\/biology-tuition-south-delhi\/([a-z-]+)/)
+  if (bioMatch) {
+    return bioMatch[1].replace(/-/g, ' ')
+  }
+
+  // Pattern: /locations/{city}/{locality}
+  const locMatch = path.match(/\/locations\/[^/]+\/([a-z-]+)/)
+  if (locMatch) {
+    return locMatch[1].replace(/-/g, ' ')
+  }
+
+  return undefined
+}
+
 export async function trackWhatsAppClick(
   params: WhatsAppTrackingParams
 ): Promise<WhatsAppTrackingResult> {
   const page = params.page || getCurrentPage()
   const sessionId = params.sessionId || getSessionId()
+  const utmParams = getUTMParams()
+
+  // Extract locality from URL if not provided
+  const locality = params.locality || extractLocalityFromPath(page)
 
   const payload = {
     ...params,
     page,
     sessionId,
+    locality,
+    ...utmParams, // Include UTM params in tracking
   }
 
   try {
@@ -156,7 +221,7 @@ export const PAGE_MESSAGES: Record<string, string> = {
   '/school-career-seminar': WHATSAPP_MESSAGES.careerSeminar,
 }
 
-// Get context-aware message based on current page
+// Get context-aware message based on current page with locality personalization
 export function getContextAwareMessage(pathname?: string): string {
   if (!pathname) {
     if (typeof window !== 'undefined') {
@@ -171,6 +236,22 @@ export function getContextAwareMessage(pathname?: string): string {
     return PAGE_MESSAGES[pathname]
   }
 
+  // Locality-specific messages for better conversion
+  const locality = extractLocalityFromPath(pathname)
+  if (locality) {
+    const localityName = locality.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+
+    if (pathname.includes('neet-coaching')) {
+      return `Hi! I'm from ${localityName}. I want to join NEET Biology coaching. What batches are available nearby?`
+    }
+
+    if (pathname.includes('biology-tuition')) {
+      return `Hi! I'm from ${localityName}. I need Biology tuition for my child. Can you share batch details?`
+    }
+
+    return `Hi! I'm from ${localityName} area and interested in NEET Biology coaching. Please share details.`
+  }
+
   // Check for partial matches
   if (pathname.startsWith('/courses/')) {
     const courseName = pathname.split('/').pop()?.replace(/-/g, ' ') || 'NEET Biology'
@@ -181,7 +262,7 @@ export function getContextAwareMessage(pathname?: string): string {
     return 'Hi! I was reading your blog and have some questions about NEET Biology preparation.'
   }
 
-  // Default message
+  // Default message with urgency
   return WHATSAPP_MESSAGES.default
 }
 

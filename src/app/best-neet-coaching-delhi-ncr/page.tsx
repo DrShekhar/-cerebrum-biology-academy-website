@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { BestNEETCoachingDelhiNCRClient } from './BestNEETCoachingDelhiNCRClient'
+import { BreadcrumbSchema } from '@/components/seo'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Delhi NCR 2025 [2500+ Selections] | Cerebrum',
@@ -33,5 +34,14 @@ export const metadata: Metadata = {
 }
 
 export default function BestNEETCoachingDelhiNCRPage() {
-  return <BestNEETCoachingDelhiNCRClient />
+  return (
+    <>
+      <div className="mx-auto max-w-7xl px-4 pt-4">
+        <BreadcrumbSchema
+          items={[{ label: 'Best NEET Coaching Delhi NCR', isCurrentPage: true }]}
+        />
+      </div>
+      <BestNEETCoachingDelhiNCRClient />
+    </>
+  )
 }

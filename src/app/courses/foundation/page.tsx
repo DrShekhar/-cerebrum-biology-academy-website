@@ -259,12 +259,12 @@ export default function FoundationCoursePage() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <motion.a
           href="tel:+918826444334"
-          className="bg-[#4a5d4a] text-white p-4 rounded-full shadow-lg hover:bg-[#3d4d3d] transition-colors"
+          className="bg-[#4a5d4a] text-white p-4 rounded-full shadow-lg hover:bg-[#3d4d3d] transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          title="Call Now"
+          aria-label="Call us at 8826444334"
         >
-          <Phone className="w-6 h-6" />
+          <Phone className="w-6 h-6" aria-hidden="true" />
         </motion.a>
         <motion.button
           onClick={async () => {
@@ -274,12 +274,12 @@ export default function FoundationCoursePage() {
               campaign: 'foundation-course',
             })
           }}
-          className="bg-[#166534] text-white p-4 rounded-full shadow-lg hover:bg-[#14532d] transition-colors cursor-pointer"
+          className="bg-[#166534] text-white p-4 rounded-full shadow-lg hover:bg-[#14532d] transition-colors cursor-pointer min-w-[48px] min-h-[48px] flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          title="WhatsApp"
+          aria-label="Chat with us on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6" aria-hidden="true" />
         </motion.button>
       </div>
 
@@ -1014,19 +1014,21 @@ export default function FoundationCoursePage() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#f5f8f5] transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#f5f8f5] transition-colors min-h-[48px]"
+                  aria-expanded={openFaq === index}
+                  aria-controls={`faq-answer-${index}`}
                 >
                   <h3 className="text-base sm:text-lg font-semibold text-[#3d4d3d] pr-4">
                     {faq.question}
                   </h3>
                   {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" aria-hidden="true" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" aria-hidden="true" />
                   )}
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 pb-4">
+                  <div id={`faq-answer-${index}`} className="px-6 pb-4">
                     <p className="text-[#5a6d5a]">{faq.answer}</p>
                   </div>
                 )}

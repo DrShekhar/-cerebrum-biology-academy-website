@@ -125,6 +125,8 @@ const nextConfig = {
   images: {
     // Enable optimization for production, disable locally for faster builds
     unoptimized: process.env.NODE_ENV === 'development',
+    // Required for Next.js 16 - explicit quality values
+    qualities: [50, 75, 80, 90, 100],
     // Use remotePatterns instead of domains (Next.js 15 best practice)
     remotePatterns: [
       {
@@ -158,6 +160,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'i.ytimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
       },
     ],
     // Optimize for modern formats (WebP and AVIF)
@@ -220,29 +226,29 @@ const nextConfig = {
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
-    // TEMPORARILY DISABLED: Causes webpack module resolution errors in dev mode HMR
-    // Re-enable after fixing dev server stability
-    // optimizePackageImports: [
-    //   'lucide-react',
-    //   '@radix-ui/react-icons',
-    //   'framer-motion',
-    //   'date-fns',
-    //   'zod',
-    //   '@radix-ui/react-dialog',
-    //   '@radix-ui/react-select',
-    //   '@radix-ui/react-tabs',
-    //   '@radix-ui/react-dropdown-menu',
-    //   '@radix-ui/react-popover',
-    //   '@radix-ui/react-tooltip',
-    //   '@radix-ui/react-accordion',
-    //   'react-hook-form',
-    //   '@anthropic-ai/sdk',
-    //   'openai',
-    //   '@clerk/nextjs',
-    //   'recharts',
-    //   'react-day-picker',
-    //   '@sentry/nextjs',
-    // ],
+    // RE-ENABLED: Package optimization for smaller bundles (saves ~300-500KB)
+    // Only import used exports from these large packages
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-icons',
+      'framer-motion',
+      'date-fns',
+      'zod',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-select',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-tooltip',
+      '@radix-ui/react-accordion',
+      'react-hook-form',
+      '@anthropic-ai/sdk',
+      'openai',
+      '@clerk/nextjs',
+      'recharts',
+      'react-day-picker',
+      '@sentry/nextjs',
+    ],
   },
 
   // Redirects for SEO - Fix 404 errors reported in Google Search Console

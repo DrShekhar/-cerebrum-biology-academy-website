@@ -45,8 +45,8 @@ const locationData = {
   },
   gurugram: {
     name: 'Cerebrum Biology Academy - Gurugram',
-    address: 'M2K Corporate Park, Sector 51, Gurugram',
-    streetAddress: 'M2K Corporate Park, Sector 51',
+    address: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51, Gurugram',
+    streetAddress: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51',
     addressLocality: 'Sector 51, Gurugram',
     addressRegion: 'Haryana',
     postalCode: '122018',
@@ -244,7 +244,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
-    foundingDate: '2018',
+    foundingDate: '2014',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
       minValue: 10,
@@ -408,13 +408,8 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
 export function AllLocationsSchema() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'> = [
-    'rohini',
-    'gurugram',
-    'south-extension',
-    'green-park',
-    'faridabad',
-  ]
+  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'> =
+    ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad']
 
   const organizationWithLocations = {
     '@context': 'https://schema.org',
@@ -427,7 +422,7 @@ export function AllLocationsSchema() {
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
-    foundingDate: '2018',
+    foundingDate: '2014',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

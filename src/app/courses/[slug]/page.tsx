@@ -4,6 +4,8 @@ import { coursePrograms } from '@/data/courseSystemData'
 import { detailedCourses } from '@/data/detailedCourses'
 import { CourseDetailPage } from '@/components/courses/CourseDetailPage'
 import { EnhancedCourseDetailPage } from '@/components/courses/EnhancedCourseDetailPage'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
+import { LearningResourceSchema } from '@/components/seo/ContentFreshness'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -91,13 +93,51 @@ export default async function CoursePage({ params }: Props) {
   // First try the new course system
   const newCourse = coursePrograms.find((course) => course.id === slug)
   if (newCourse) {
-    return <EnhancedCourseDetailPage course={newCourse} />
+    return (
+      <>
+        {/* Breadcrumb Navigation + Schema */}
+        <div className="mx-auto max-w-7xl px-4 py-4">
+          <BreadcrumbSchema items={COMMON_BREADCRUMBS.courses(newCourse.name)} />
+        </div>
+        {/* Learning Resource Schema for E-E-A-T */}
+        <LearningResourceSchema
+          name={newCourse.name}
+          description={newCourse.description}
+          datePublished="2024-01-01"
+          dateModified={new Date().toISOString().split('T')[0]}
+          author={{ name: 'Cerebrum Biology Academy' }}
+          educationalLevel={`${newCourse.targetClass}, NEET`}
+          learningResourceType="Course"
+          keywords={['NEET Biology', newCourse.targetClass, 'Medical Entrance']}
+        />
+        <EnhancedCourseDetailPage course={newCourse} />
+      </>
+    )
   }
 
   // Fallback to old course system
   const oldCourse = detailedCourses.find((course) => course.slug === slug)
   if (oldCourse) {
-    return <CourseDetailPage course={oldCourse} />
+    return (
+      <>
+        {/* Breadcrumb Navigation + Schema */}
+        <div className="mx-auto max-w-7xl px-4 py-4">
+          <BreadcrumbSchema items={COMMON_BREADCRUMBS.courses(oldCourse.title)} />
+        </div>
+        {/* Learning Resource Schema for E-E-A-T */}
+        <LearningResourceSchema
+          name={oldCourse.title}
+          description={oldCourse.description}
+          datePublished="2024-01-01"
+          dateModified={new Date().toISOString().split('T')[0]}
+          author={{ name: 'Cerebrum Biology Academy' }}
+          educationalLevel={`${oldCourse.targetClass}, NEET`}
+          learningResourceType="Course"
+          keywords={['NEET Biology', oldCourse.targetClass, 'Medical Entrance']}
+        />
+        <CourseDetailPage course={oldCourse} />
+      </>
+    )
   }
 
   notFound()

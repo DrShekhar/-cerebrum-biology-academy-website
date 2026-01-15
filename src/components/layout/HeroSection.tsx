@@ -76,7 +76,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
 
           {/* H2 - Also LCP candidate, no animation */}
           <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200">
-            Delhi NCR • Noida • Laxmi Nagar • Dwarka
+            Delhi NCR - Offline in South Extension, Gurugram, Rohini • Online - Serving Worldwide
           </h2>
 
           {/* Subtext - Animated with delay (non-LCP) */}

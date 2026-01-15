@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
+import { BreadcrumbSchema } from '@/components/seo'
 
 // Lazy load the heavy courses listing component
 const EnhancedCoursesListingPage = dynamic(
@@ -44,5 +45,15 @@ export async function generateMetadata({ searchParams }: CoursesPageProps): Prom
 }
 
 export default function CoursesPage() {
-  return <EnhancedCoursesListingPage />
+  return (
+    <>
+      {/* Breadcrumb Navigation + Schema */}
+      <div className="mx-auto max-w-7xl px-4 pt-4">
+        <BreadcrumbSchema
+          items={[{ label: 'Courses', isCurrentPage: true }]}
+        />
+      </div>
+      <EnhancedCoursesListingPage />
+    </>
+  )
 }
