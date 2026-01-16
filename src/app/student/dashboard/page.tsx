@@ -34,6 +34,10 @@ import {
 import { useAuth } from '@/contexts/AuthContext'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { UpgradeModal } from '@/components/UpgradeModal'
+import {
+  CoachingTrialBanner,
+  useCoachingTrialStatus,
+} from '@/components/trial/CoachingTrialBanner'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -72,6 +76,7 @@ interface RecentActivity {
 export default function StudentDashboard() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
   const { isPaidUser, isGuestUser, freeUserId: userFlowFreeUserId } = useUserFlow()
+  const { trialStatus: coachingTrialStatus, isLoading: trialLoading } = useCoachingTrialStatus()
   const [isLoading, setIsLoading] = useState(true)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [testAttempts, setTestAttempts] = useState<TestAttempt[]>([])
@@ -214,25 +219,31 @@ export default function StudentDashboard() {
         feature="Premium Features"
       />
 
-      {/* Upgrade Banner (for free/guest users) */}
-      {!isPaidUser && (
+      {/* Coaching Trial Banner (for authenticated FREE tier users) */}
+      {isAuthenticated && coachingTrialStatus && (
+        <CoachingTrialBanner
+          trialStatus={coachingTrialStatus}
+          onUpgradeClick={() => setShowUpgradeModal(true)}
+        />
+      )}
+
+      {/* Upgrade Banner (for guest users only) */}
+      {isGuestUser && (
         <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white py-3 px-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3">
               <Crown className="w-5 h-5" />
               <span className="font-medium">
-                {isGuestUser
-                  ? 'Sign up for free to save your progress and access more features!'
-                  : 'Upgrade to unlock NEET Prep, Analytics, and unlimited tests'}
+                Sign up for free to save your progress and start your 7-day Pinnacle trial!
               </span>
             </div>
             <Button
-              onClick={() => setShowUpgradeModal(true)}
+              onClick={() => (window.location.href = '/enrollment')}
               variant="secondary"
               size="sm"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >
-              {isGuestUser ? 'Sign Up Free' : 'Upgrade Now'}
+              Sign Up Free
             </Button>
           </div>
         </div>

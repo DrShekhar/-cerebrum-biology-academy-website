@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/Button'
 import { AttendanceStatusBadge } from '@/components/student/AttendanceStatusBadge'
 import { AttendanceStatisticsWidget } from '@/components/student/AttendanceStatisticsWidget'
 import { UpcomingSessionsWidget } from '@/components/student/UpcomingSessionsWidget'
+import { SelfCheckIn } from '@/components/student/SelfCheckIn'
 import {
   Calendar,
   Clock,
@@ -109,6 +110,11 @@ export default function AttendancePage() {
           <p className="text-gray-600">
             View your attendance records, statistics, and upcoming class sessions
           </p>
+        </div>
+
+        {/* Self Check-In Section */}
+        <div className="mb-8">
+          <SelfCheckIn />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

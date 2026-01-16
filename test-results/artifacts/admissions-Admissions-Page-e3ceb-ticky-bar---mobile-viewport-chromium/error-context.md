@@ -1,0 +1,1179 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "Toggle navigation menu" [ref=e9] [cursor=pointer]
+          - link "Cerebrum Biology Academy Logo Cerebrum Biology Academy" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - img "Cerebrum Biology Academy Logo" [ref=e17]
+            - generic [ref=e19]:
+              - text: Cerebrum
+              - generic [ref=e20]: Biology Academy
+        - button "Open search menu" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - generic [ref=e35]: Early Bird Offer!
+        - generic [ref=e36]:
+          - generic [ref=e37]: Get
+          - generic [ref=e38]: 20% OFF
+          - generic [ref=e39]: on all batches
+        - generic [ref=e40]:
+          - img [ref=e41]
+          - generic [ref=e44]: "Ends in:"
+          - generic [ref=e45]:
+            - generic [ref=e46]: 3d
+            - generic [ref=e47]: ":"
+            - generic [ref=e48]: 02h
+            - generic [ref=e49]: ":"
+            - generic [ref=e50]: 29m
+            - generic [ref=e51]: ":"
+            - generic [ref=e52]: 59s
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e59]: 2,847+ Students Enrolled
+          - heading "Start Your NEET Journey Today" [level=1] [ref=e60]
+          - paragraph [ref=e61]: Join India's top Biology coaching with AIIMS trained faculty. Get personalized guidance and crack NEET with confidence.
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - img [ref=e64]
+              - generic [ref=e67]: AIIMS Trained Faculty
+            - generic [ref=e68]:
+              - img [ref=e69]
+              - generic [ref=e75]: 94% Success Rate
+          - generic [ref=e76]:
+            - button "Download Brochure" [ref=e77] [cursor=pointer]:
+              - img [ref=e78]
+              - text: Download Brochure
+            - button "Full Application" [ref=e81] [cursor=pointer]:
+              - img [ref=e82]
+              - text: Full Application
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - heading "Get Free Counseling" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Callback in 2 minutes - No commitment
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - textbox "Your Name" [ref=e94]
+            - generic [ref=e95]:
+              - img [ref=e96]
+              - textbox "WhatsApp Number" [ref=e98]
+            - generic [ref=e99]:
+              - img [ref=e100]
+              - combobox [ref=e103]:
+                - option "Select Course" [selected]
+                - option "Foundation (Class 11th)"
+                - option "Target (Class 12th)"
+                - option "Dropper Batch"
+                - option "Crash Course"
+                - option "Need Guidance"
+            - button "Get OTP on WhatsApp" [ref=e104] [cursor=pointer]:
+              - img [ref=e105]
+              - text: Get OTP on WhatsApp
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - img [ref=e109]
+                - text: 100% Secure
+              - generic [ref=e111]:
+                - img [ref=e112]
+                - text: Instant Callback
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - heading "5-Step Admission Process" [level=2] [ref=e117]
+          - paragraph [ref=e118]: Simple, transparent, and student-friendly admission process
+        - generic [ref=e119]:
+          - generic [ref=e121] [cursor=pointer]:
+            - generic [ref=e122]:
+              - img [ref=e124]
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - generic [ref=e129]: STEP 1
+                  - generic [ref=e130]:
+                    - img [ref=e131]
+                    - generic [ref=e134]: 5-10 minutes
+                - heading "Application Submission" [level=3] [ref=e135]
+                - paragraph [ref=e136]: Fill out our comprehensive application form with your academic details and NEET goals.
+              - img [ref=e138]
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - generic [ref=e142]:
+                  - heading "Process Details" [level=4] [ref=e143]
+                  - list [ref=e144]:
+                    - listitem [ref=e145]:
+                      - img [ref=e146]
+                      - generic [ref=e149]: Complete online application form
+                    - listitem [ref=e150]:
+                      - img [ref=e151]
+                      - generic [ref=e154]: Upload academic transcripts (10th & 12th)
+                    - listitem [ref=e155]:
+                      - img [ref=e156]
+                      - generic [ref=e159]: Provide previous NEET scores (if applicable)
+                    - listitem [ref=e160]:
+                      - img [ref=e161]
+                      - generic [ref=e164]: Select preferred batch and course
+                    - listitem [ref=e165]:
+                      - img [ref=e166]
+                      - generic [ref=e169]: Submit application fee payment
+                - generic [ref=e170]:
+                  - heading "Required Documents" [level=4] [ref=e171]
+                  - list [ref=e172]:
+                    - listitem [ref=e173]:
+                      - img [ref=e174]
+                      - generic [ref=e177]: Class 10th Marksheet
+                    - listitem [ref=e178]:
+                      - img [ref=e179]
+                      - generic [ref=e182]: Class 12th Marksheet
+                    - listitem [ref=e183]:
+                      - img [ref=e184]
+                      - generic [ref=e187]: Previous NEET Scorecard
+                    - listitem [ref=e188]:
+                      - img [ref=e189]
+                      - generic [ref=e192]: Passport Size Photos
+              - generic [ref=e193]:
+                - button "Start Application" [ref=e194]:
+                  - img [ref=e195]
+                  - generic [ref=e198]: Start Application
+                - button "Get Help" [ref=e199]:
+                  - img [ref=e200]
+                  - generic [ref=e202]: Get Help
+          - generic [ref=e205] [cursor=pointer]:
+            - img [ref=e207]
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: STEP 2
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - generic [ref=e216]: 30-45 minutes
+              - heading "Counselor Interaction" [level=3] [ref=e217]
+              - paragraph [ref=e218]: One-on-one session with our expert counselors to understand your goals and recommend the best course.
+            - img [ref=e220]
+          - generic [ref=e224] [cursor=pointer]:
+            - img [ref=e226]
+            - generic [ref=e230]:
+              - generic [ref=e231]:
+                - generic [ref=e232]: STEP 3
+                - generic [ref=e233]:
+                  - img [ref=e234]
+                  - generic [ref=e237]: 2-3 hours
+              - heading "Diagnostic Test" [level=3] [ref=e238]
+              - paragraph [ref=e239]: Comprehensive assessment to evaluate your current knowledge level and identify improvement areas.
+            - img [ref=e241]
+          - generic [ref=e245] [cursor=pointer]:
+            - img [ref=e247]
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: STEP 4
+                - generic [ref=e253]:
+                  - img [ref=e254]
+                  - generic [ref=e257]: 15-20 minutes
+              - heading "Course Selection & Enrollment" [level=3] [ref=e258]
+              - paragraph [ref=e259]: Finalize your course selection based on diagnostic results and complete the enrollment process.
+            - img [ref=e261]
+          - generic [ref=e265] [cursor=pointer]:
+            - img [ref=e267]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - generic [ref=e271]: STEP 5
+                - generic [ref=e272]:
+                  - img [ref=e273]
+                  - generic [ref=e276]: 2-3 hours
+              - heading "Orientation & Class Start" [level=3] [ref=e277]
+              - paragraph [ref=e278]: Comprehensive orientation session followed by your first biology class to kickstart your NEET journey.
+            - img [ref=e280]
+      - generic [ref=e283]:
+        - generic [ref=e284]:
+          - heading "Admission Requirements" [level=2] [ref=e285]
+          - paragraph [ref=e286]: Essential criteria and documents for enrollment
+        - generic [ref=e287]:
+          - generic [ref=e288]:
+            - img [ref=e290]
+            - heading "Academic Requirements" [level=3] [ref=e292]
+            - list [ref=e293]:
+              - listitem [ref=e294]:
+                - img [ref=e295]
+                - generic [ref=e298]: Completed Class 12th with PCB (Physics, Chemistry, Biology)
+              - listitem [ref=e299]:
+                - img [ref=e300]
+                - generic [ref=e303]: Minimum 50% aggregate in PCB subjects
+              - listitem [ref=e304]:
+                - img [ref=e305]
+                - generic [ref=e308]: Valid NEET registration (for current year aspirants)
+              - listitem [ref=e309]:
+                - img [ref=e310]
+                - generic [ref=e313]: English proficiency for course materials
+          - generic [ref=e314]:
+            - img [ref=e316]
+            - heading "Documents Required" [level=3] [ref=e319]
+            - list [ref=e320]:
+              - listitem [ref=e321]:
+                - img [ref=e322]
+                - generic [ref=e325]: Class 10th and 12th mark sheets
+              - listitem [ref=e326]:
+                - img [ref=e327]
+                - generic [ref=e330]: Previous NEET score card (if applicable)
+              - listitem [ref=e331]:
+                - img [ref=e332]
+                - generic [ref=e335]: Transfer certificate from previous institution
+              - listitem [ref=e336]:
+                - img [ref=e337]
+                - generic [ref=e340]: Passport size photographs (6 copies)
+              - listitem [ref=e341]:
+                - img [ref=e342]
+                - generic [ref=e345]: Valid ID proof (Aadhar/Passport)
+              - listitem [ref=e346]:
+                - img [ref=e347]
+                - generic [ref=e350]: Medical fitness certificate
+            - button "Document Specifications" [ref=e352] [cursor=pointer]:
+              - img [ref=e353]
+              - generic [ref=e355]: Document Specifications
+              - img [ref=e356]
+          - generic [ref=e358]:
+            - img [ref=e360]
+            - heading "Age & Eligibility" [level=3] [ref=e362]
+            - list [ref=e363]:
+              - listitem [ref=e364]:
+                - img [ref=e365]
+                - generic [ref=e368]: "Minimum age: 16 years (as on admission date)"
+              - listitem [ref=e369]:
+                - img [ref=e370]
+                - generic [ref=e373]: "Maximum age: 25 years for general category"
+              - listitem [ref=e374]:
+                - img [ref=e375]
+                - generic [ref=e378]: No upper age limit for SC/ST candidates
+              - listitem [ref=e379]:
+                - img [ref=e380]
+                - generic [ref=e383]: Must be eligible for NEET examination
+      - generic [ref=e385]:
+        - generic [ref=e386]:
+          - heading "Choose Your Batch" [level=2] [ref=e387]
+          - paragraph [ref=e388]: Tailored programs for different student needs - Enroll directly online!
+        - generic [ref=e389]:
+          - generic [ref=e390]:
+            - heading "Foundation Batch (Class 9-10)" [level=3] [ref=e391]
+            - paragraph [ref=e392]: 1 Year
+            - paragraph [ref=e393]: Comprehensive foundation building for early starters
+            - generic [ref=e394]:
+              - generic [ref=e395]: Starting from
+              - generic [ref=e396]: ₹40,000
+              - generic [ref=e397]: Up to ₹60,000 for Pinnacle tier
+              - generic [ref=e398]: 20% Early Bird Discount
+            - list [ref=e399]:
+              - listitem [ref=e400]:
+                - img [ref=e401]
+                - generic [ref=e404]: Complete syllabus coverage
+              - listitem [ref=e405]:
+                - img [ref=e406]
+                - generic [ref=e409]: Regular tests
+              - listitem [ref=e410]:
+                - img [ref=e411]
+                - generic [ref=e414]: Doubt sessions
+              - listitem [ref=e415]:
+                - img [ref=e416]
+                - generic [ref=e419]: Study materials
+            - generic [ref=e420]:
+              - link "Enroll Now" [ref=e421] [cursor=pointer]:
+                - /url: /checkout?class=foundation-9
+                - img [ref=e422]
+                - text: Enroll Now
+              - button "Talk to Counselor" [ref=e424] [cursor=pointer]
+          - generic [ref=e425]:
+            - heading "Class 11 - NEET Prep" [level=3] [ref=e426]
+            - paragraph [ref=e427]: 1 Year
+            - paragraph [ref=e428]: Strong foundation for NEET aspirants
+            - generic [ref=e429]:
+              - generic [ref=e430]: Starting from
+              - generic [ref=e431]: ₹40,000
+              - generic [ref=e432]: Up to ₹98,000 for Pinnacle tier
+              - generic [ref=e433]: 15% Scholarship Available
+            - list [ref=e434]:
+              - listitem [ref=e435]:
+                - img [ref=e436]
+                - generic [ref=e439]: Conceptual learning
+              - listitem [ref=e440]:
+                - img [ref=e441]
+                - generic [ref=e444]: Regular tests
+              - listitem [ref=e445]:
+                - img [ref=e446]
+                - generic [ref=e449]: Doubt sessions
+              - listitem [ref=e450]:
+                - img [ref=e451]
+                - generic [ref=e454]: Performance tracking
+            - generic [ref=e455]:
+              - link "Enroll Now" [ref=e456] [cursor=pointer]:
+                - /url: /checkout?class=class-11
+                - img [ref=e457]
+                - text: Enroll Now
+              - button "Talk to Counselor" [ref=e459] [cursor=pointer]
+          - generic [ref=e460]:
+            - generic [ref=e461]: Most Popular
+            - heading "Class 12 - NEET Intensive" [level=3] [ref=e462]
+            - paragraph [ref=e463]: 1 Year
+            - paragraph [ref=e464]: Intensive preparation for Class 12th students
+            - generic [ref=e465]:
+              - generic [ref=e466]: Starting from
+              - generic [ref=e467]: ₹40,000
+              - generic [ref=e468]: Up to ₹68,000 for Pinnacle tier
+              - generic [ref=e469]: 15% Scholarship Available
+            - list [ref=e470]:
+              - listitem [ref=e471]:
+                - img [ref=e472]
+                - generic [ref=e475]: Accelerated learning
+              - listitem [ref=e476]:
+                - img [ref=e477]
+                - generic [ref=e480]: Mock tests
+              - listitem [ref=e481]:
+                - img [ref=e482]
+                - generic [ref=e485]: Revision sessions
+              - listitem [ref=e486]:
+                - img [ref=e487]
+                - generic [ref=e490]: Performance tracking
+            - generic [ref=e491]:
+              - link "Enroll Now" [ref=e492] [cursor=pointer]:
+                - /url: /checkout?class=class-12
+                - img [ref=e493]
+                - text: Enroll Now
+              - button "Talk to Counselor" [ref=e495] [cursor=pointer]
+          - generic [ref=e496]:
+            - heading "Dropper Batch" [level=3] [ref=e497]
+            - paragraph [ref=e498]: 1 Year
+            - paragraph [ref=e499]: Specialized program for NEET repeaters
+            - generic [ref=e500]:
+              - generic [ref=e501]: Starting from
+              - generic [ref=e502]: ₹70,000
+              - generic [ref=e503]: Up to ₹1,56,000 for Pinnacle tier
+              - generic [ref=e504]: 10% Previous Student Discount
+            - list [ref=e505]:
+              - listitem [ref=e506]:
+                - img [ref=e507]
+                - generic [ref=e510]: Concept revision
+              - listitem [ref=e511]:
+                - img [ref=e512]
+                - generic [ref=e515]: Advanced problems
+              - listitem [ref=e516]:
+                - img [ref=e517]
+                - generic [ref=e520]: Motivation sessions
+              - listitem [ref=e521]:
+                - img [ref=e522]
+                - generic [ref=e525]: Individual attention
+            - generic [ref=e526]:
+              - link "Enroll Now" [ref=e527] [cursor=pointer]:
+                - /url: /checkout?class=dropper
+                - img [ref=e528]
+                - text: Enroll Now
+              - button "Talk to Counselor" [ref=e530] [cursor=pointer]
+          - generic [ref=e531]:
+            - heading "2-Year NEET Program" [level=3] [ref=e532]
+            - paragraph [ref=e533]: 2 Years
+            - paragraph [ref=e534]: Complete Class 11+12 NEET preparation
+            - generic [ref=e535]:
+              - generic [ref=e536]: Starting from
+              - generic [ref=e537]: ₹70,000
+              - generic [ref=e538]: Up to ₹1,20,000 for Pinnacle tier
+              - generic [ref=e539]: Best Value
+            - list [ref=e540]:
+              - listitem [ref=e541]:
+                - img [ref=e542]
+                - generic [ref=e545]: Full syllabus coverage
+              - listitem [ref=e546]:
+                - img [ref=e547]
+                - generic [ref=e550]: Test series
+              - listitem [ref=e551]:
+                - img [ref=e552]
+                - generic [ref=e555]: Revision sessions
+              - listitem [ref=e556]:
+                - img [ref=e557]
+                - generic [ref=e560]: Expert mentoring
+            - generic [ref=e561]:
+              - link "Enroll Now" [ref=e562] [cursor=pointer]:
+                - /url: /checkout?class=2-year
+                - img [ref=e563]
+                - text: Enroll Now
+              - button "Talk to Counselor" [ref=e565] [cursor=pointer]
+        - generic [ref=e566]:
+          - paragraph [ref=e567]: Not sure which batch is right for you?
+          - link "Start Self-Service Enrollment" [ref=e568] [cursor=pointer]:
+            - /url: /checkout
+            - img [ref=e569]
+            - text: Start Self-Service Enrollment
+      - generic [ref=e572]:
+        - generic [ref=e573]:
+          - heading "Flexible Payment Options" [level=2] [ref=e574]
+          - paragraph [ref=e575]: Multiple payment plans to suit your financial needs
+        - generic [ref=e576]:
+          - generic [ref=e577]:
+            - generic [ref=e578]: No Cost EMI
+            - img [ref=e580]
+            - heading "EMI Plans" [level=3] [ref=e582]
+            - paragraph [ref=e583]: Flexible monthly installments
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - generic [ref=e586]:
+                  - generic [ref=e587]: 3 Months
+                  - generic [ref=e588]: ₹28,333
+                - paragraph [ref=e589]: per month
+              - generic [ref=e590]:
+                - generic [ref=e591]:
+                  - generic [ref=e592]: 6 Months
+                  - generic [ref=e593]: ₹14,167
+                - paragraph [ref=e594]: per month
+              - generic [ref=e595]:
+                - generic [ref=e596]:
+                  - generic [ref=e597]: 12 Months
+                  - generic [ref=e598]: ₹7,083
+                - paragraph [ref=e599]: per month
+          - generic [ref=e600]:
+            - img [ref=e602]
+            - heading "Payment Methods" [level=3] [ref=e605]
+            - paragraph [ref=e606]: Multiple secure payment options
+            - generic [ref=e607]:
+              - generic [ref=e608]:
+                - generic [ref=e609]: UPI
+                - paragraph [ref=e610]: Google Pay, PhonePe, Paytm
+              - generic [ref=e611]:
+                - generic [ref=e612]: Cards
+                - paragraph [ref=e613]: Credit & Debit Cards
+              - generic [ref=e614]:
+                - generic [ref=e615]: Net Banking
+                - paragraph [ref=e616]: All major banks
+              - generic [ref=e617]:
+                - generic [ref=e618]: Cheque
+                - paragraph [ref=e619]: DD/Cheque accepted
+          - generic [ref=e620]:
+            - img [ref=e622]
+            - heading "Installment Plans" [level=3] [ref=e625]
+            - paragraph [ref=e626]: Pay in parts without interest
+            - generic [ref=e627]:
+              - generic [ref=e628]:
+                - generic [ref=e629]: Two Parts
+                - paragraph [ref=e630]: 50% + 50%
+                - paragraph [ref=e631]: At enrollment & mid-term
+              - generic [ref=e632]:
+                - generic [ref=e633]: Three Parts
+                - paragraph [ref=e634]: 40% + 30% + 30%
+                - paragraph [ref=e635]: Quarterly basis
+              - generic [ref=e636]:
+                - generic [ref=e637]: Custom Plan
+                - paragraph [ref=e638]: Discuss with counselor
+                - paragraph [ref=e639]: Based on your needs
+        - generic [ref=e640]:
+          - generic [ref=e641]:
+            - heading "Trusted Payment Partners" [level=3] [ref=e642]
+            - paragraph [ref=e643]: Secure transactions powered by leading payment gateways
+          - generic [ref=e644]:
+            - generic [ref=e645]:
+              - img [ref=e646]
+              - generic [ref=e649]: Razorpay
+            - generic [ref=e650]:
+              - img [ref=e651]
+              - generic [ref=e654]: Paytm
+            - generic [ref=e655]:
+              - img [ref=e656]
+              - generic [ref=e659]: PhonePe
+            - generic [ref=e660]:
+              - img [ref=e661]
+              - generic [ref=e664]: Google Pay
+          - generic [ref=e665]:
+            - generic [ref=e666]:
+              - img [ref=e668]
+              - generic [ref=e670]:
+                - paragraph [ref=e671]: Secure Payment
+                - paragraph [ref=e672]: 256-bit SSL encryption
+            - generic [ref=e673]:
+              - img [ref=e675]
+              - generic [ref=e678]:
+                - paragraph [ref=e679]: 100% Data Privacy
+                - paragraph [ref=e680]: Your info is safe
+            - generic [ref=e681]:
+              - img [ref=e683]
+              - generic [ref=e688]:
+                - paragraph [ref=e689]: Easy Refund Policy
+                - paragraph [ref=e690]: Hassle-free returns
+        - generic [ref=e691]:
+          - paragraph [ref=e692]: "Example: Target Batch (₹85,000) | 3 months: ₹28,333 × 3 | 6 months: ₹14,167 × 6 | 12 months: ₹7,083 × 12"
+          - paragraph [ref=e693]: Contact our counselors for customized payment plans tailored to your needs
+      - generic [ref=e695]:
+        - generic [ref=e696]:
+          - heading "Scholarships & Discounts" [level=2] [ref=e697]
+          - paragraph [ref=e698]: Making quality education accessible for all
+        - generic [ref=e699]:
+          - generic [ref=e700]:
+            - img [ref=e702]
+            - heading "Merit Scholarship" [level=3] [ref=e705]
+            - paragraph [ref=e706]: Top 10% in diagnostic test
+            - generic [ref=e707]: Up to 50% fee waiver
+          - generic [ref=e708]:
+            - img [ref=e710]
+            - heading "Need-based Support" [level=3] [ref=e712]
+            - paragraph [ref=e713]: Family income < ₹3 lakhs/year
+            - generic [ref=e714]: Up to 30% fee waiver
+          - generic [ref=e715]:
+            - img [ref=e717]
+            - heading "Early Bird Discount" [level=3] [ref=e720]
+            - paragraph [ref=e721]: Admission before deadline
+            - generic [ref=e722]: 20% discount on course fees
+          - generic [ref=e723]:
+            - img [ref=e725]
+            - heading "Referral Bonus" [level=3] [ref=e730]
+            - paragraph [ref=e731]: Refer a friend who enrolls
+            - generic [ref=e732]: ₹5,000 cashback
+      - generic [ref=e734]:
+        - generic [ref=e735]:
+          - heading "Success Stories" [level=2] [ref=e736]
+          - paragraph [ref=e737]: Real results from real students
+        - generic [ref=e738]:
+          - generic [ref=e739]:
+            - generic [ref=e740]:
+              - img [ref=e742]
+              - generic [ref=e745]:
+                - heading "Priya Sharma" [level=3] [ref=e746]
+                - paragraph [ref=e747]: Dropper Batch 2024
+                - generic [ref=e748]:
+                  - img [ref=e749]
+                  - img [ref=e751]
+                  - img [ref=e753]
+                  - img [ref=e755]
+                  - img [ref=e757]
+            - paragraph [ref=e760]: "\"The personalized attention and structured approach helped me improve my rank by 50,000. Dr. Shekhar's Biology classes were game-changing!\""
+            - generic [ref=e761]:
+              - generic [ref=e762]:
+                - generic [ref=e763]:
+                  - img [ref=e764]
+                  - generic [ref=e767]: Score
+                - generic [ref=e769]: 480 → 635
+                - generic [ref=e770]: "+155"
+              - generic [ref=e771]:
+                - generic [ref=e772]:
+                  - img [ref=e773]
+                  - generic [ref=e779]: Rank
+                - generic [ref=e780]: AIR 8,450
+                - generic [ref=e781]: AIIMS Bhubaneswar
+          - generic [ref=e782]:
+            - generic [ref=e783]:
+              - img [ref=e785]
+              - generic [ref=e788]:
+                - heading "Arjun Patel" [level=3] [ref=e789]
+                - paragraph [ref=e790]: Target Batch 2024
+                - generic [ref=e791]:
+                  - img [ref=e792]
+                  - img [ref=e794]
+                  - img [ref=e796]
+                  - img [ref=e798]
+                  - img [ref=e800]
+            - paragraph [ref=e803]: "\"Starting from Class 12th with Cerebrum was the best decision. The foundation building approach and regular tests kept me on track throughout the year.\""
+            - generic [ref=e804]:
+              - generic [ref=e805]:
+                - generic [ref=e806]:
+                  - img [ref=e807]
+                  - generic [ref=e810]: Score
+                - generic [ref=e811]: "670"
+                - generic [ref=e812]: First Attempt
+              - generic [ref=e813]:
+                - generic [ref=e814]:
+                  - img [ref=e815]
+                  - generic [ref=e821]: Rank
+                - generic [ref=e822]: AIR 3,240
+                - generic [ref=e823]: JIPMER Puducherry
+          - generic [ref=e824]:
+            - generic [ref=e825]:
+              - img [ref=e827]
+              - generic [ref=e830]:
+                - heading "Sneha Reddy" [level=3] [ref=e831]
+                - paragraph [ref=e832]: Dropper Batch 2024
+                - generic [ref=e833]:
+                  - img [ref=e834]
+                  - img [ref=e836]
+                  - img [ref=e838]
+                  - img [ref=e840]
+                  - img [ref=e842]
+            - paragraph [ref=e845]: "\"After failing in my first attempt, I was demotivated. The faculty here not only improved my concepts but also rebuilt my confidence. Biology went from my weakest to strongest subject!\""
+            - generic [ref=e846]:
+              - generic [ref=e847]:
+                - generic [ref=e848]:
+                  - img [ref=e849]
+                  - generic [ref=e852]: Score
+                - generic [ref=e854]: 410 → 598
+                - generic [ref=e855]: "+188"
+              - generic [ref=e856]:
+                - generic [ref=e857]:
+                  - img [ref=e858]
+                  - generic [ref=e864]: Rank
+                - generic [ref=e865]: AIR 15,680
+                - generic [ref=e866]: GMC Nagpur
+          - generic [ref=e867]:
+            - generic [ref=e868]:
+              - img [ref=e870]
+              - generic [ref=e873]:
+                - heading "Rahul Kumar" [level=3] [ref=e874]
+                - paragraph [ref=e875]: Foundation Batch 2023-24
+                - generic [ref=e876]:
+                  - img [ref=e877]
+                  - img [ref=e879]
+                  - img [ref=e881]
+                  - img [ref=e883]
+                  - img [ref=e885]
+            - paragraph [ref=e888]: "\"Two years of systematic preparation with detailed concept building gave me a strong foundation. The regular doubt sessions and personalized study plan were incredibly helpful.\""
+            - generic [ref=e889]:
+              - generic [ref=e890]:
+                - generic [ref=e891]:
+                  - img [ref=e892]
+                  - generic [ref=e895]: Score
+                - generic [ref=e896]: "685"
+                - generic [ref=e897]: Top 2K
+              - generic [ref=e898]:
+                - generic [ref=e899]:
+                  - img [ref=e900]
+                  - generic [ref=e906]: Rank
+                - generic [ref=e907]: AIR 1,840
+                - generic [ref=e908]: AIIMS Rishikesh
+          - generic [ref=e909]:
+            - generic [ref=e910]:
+              - img [ref=e912]
+              - generic [ref=e915]:
+                - heading "Ananya Singh" [level=3] [ref=e916]
+                - paragraph [ref=e917]: Crash Course 2024
+                - generic [ref=e918]:
+                  - img [ref=e919]
+                  - img [ref=e921]
+                  - img [ref=e923]
+                  - img [ref=e925]
+                  - img [ref=e927]
+            - paragraph [ref=e930]: "\"With just 6 months before NEET, I needed intensive preparation. The crash course focused on high-yield topics and smart revision strategies that maximized my score.\""
+            - generic [ref=e931]:
+              - generic [ref=e932]:
+                - generic [ref=e933]:
+                  - img [ref=e934]
+                  - generic [ref=e937]: Score
+                - generic [ref=e939]: 520 → 612
+                - generic [ref=e940]: "+92"
+              - generic [ref=e941]:
+                - generic [ref=e942]:
+                  - img [ref=e943]
+                  - generic [ref=e949]: Rank
+                - generic [ref=e950]: AIR 11,200
+                - generic [ref=e951]: KGMC Lucknow
+          - generic [ref=e952]:
+            - generic [ref=e953]:
+              - img [ref=e955]
+              - generic [ref=e958]:
+                - heading "Vikram Joshi" [level=3] [ref=e959]
+                - paragraph [ref=e960]: Target Batch 2024
+                - generic [ref=e961]:
+                  - img [ref=e962]
+                  - img [ref=e964]
+                  - img [ref=e966]
+                  - img [ref=e968]
+                  - img [ref=e970]
+            - paragraph [ref=e973]: "\"The test series and detailed performance analysis helped me identify and work on my weak areas. Biology teaching methodology here is outstanding and result-oriented.\""
+            - generic [ref=e974]:
+              - generic [ref=e975]:
+                - generic [ref=e976]:
+                  - img [ref=e977]
+                  - generic [ref=e980]: Score
+                - generic [ref=e981]: "642"
+                - generic [ref=e982]: Top 7K
+              - generic [ref=e983]:
+                - generic [ref=e984]:
+                  - img [ref=e985]
+                  - generic [ref=e991]: Rank
+                - generic [ref=e992]: AIR 6,890
+                - generic [ref=e993]: BHU Varanasi
+      - generic [ref=e995]:
+        - generic [ref=e996]:
+          - heading "Frequently Asked Questions" [level=2] [ref=e997]
+          - paragraph [ref=e998]: Get answers to common admission queries
+        - generic [ref=e999]:
+          - button "What is the admission process timeline?" [ref=e1001] [cursor=pointer]:
+            - generic [ref=e1002]: What is the admission process timeline?
+            - img [ref=e1004]
+          - button "Are there any entrance tests for admission?" [ref=e1007] [cursor=pointer]:
+            - generic [ref=e1008]: Are there any entrance tests for admission?
+            - img [ref=e1010]
+          - button "What are the payment options available?" [ref=e1013] [cursor=pointer]:
+            - generic [ref=e1014]: What are the payment options available?
+            - img [ref=e1016]
+          - button "Can I change my batch after enrollment?" [ref=e1019] [cursor=pointer]:
+            - generic [ref=e1020]: Can I change my batch after enrollment?
+            - img [ref=e1022]
+          - button "What if I miss the diagnostic test?" [ref=e1025] [cursor=pointer]:
+            - generic [ref=e1026]: What if I miss the diagnostic test?
+            - img [ref=e1028]
+          - button "Are there any scholarships available?" [ref=e1031] [cursor=pointer]:
+            - generic [ref=e1032]: Are there any scholarships available?
+            - img [ref=e1034]
+          - button "What is included in the course fees?" [ref=e1037] [cursor=pointer]:
+            - generic [ref=e1038]: What is included in the course fees?
+            - img [ref=e1040]
+          - button "Can parents attend the counseling session?" [ref=e1043] [cursor=pointer]:
+            - generic [ref=e1044]: Can parents attend the counseling session?
+            - img [ref=e1046]
+      - generic [ref=e1049]:
+        - heading "Ready to Start Your NEET Journey?" [level=2] [ref=e1050]
+        - paragraph [ref=e1051]: Join thousands of successful students and secure your medical college admission with our expert guidance and proven methodology.
+        - generic [ref=e1052]:
+          - button "Download Application" [ref=e1053] [cursor=pointer]:
+            - img [ref=e1054]
+            - text: Download Application
+          - button "Apply Now" [ref=e1057] [cursor=pointer]:
+            - text: Apply Now
+            - img [ref=e1058]
+        - generic [ref=e1060]:
+          - generic [ref=e1061]:
+            - generic [ref=e1062]: Free
+            - generic [ref=e1063]: Counseling Session
+          - generic [ref=e1064]:
+            - generic [ref=e1065]: 5 Days
+            - generic [ref=e1066]: Quick Processing
+          - generic [ref=e1067]:
+            - generic [ref=e1068]: 94%
+            - generic [ref=e1069]: Success Rate
+      - generic [ref=e1071]:
+        - generic [ref=e1072]:
+          - heading "Start Your Application" [level=2] [ref=e1073]
+          - paragraph [ref=e1074]: Fill out the form below to begin your admission process
+        - generic [ref=e1077]:
+          - generic [ref=e1078]:
+            - heading "NEET Admission Application" [level=1] [ref=e1079]
+            - paragraph [ref=e1081]: Step 1 of 5
+          - generic [ref=e1082]:
+            - generic [ref=e1083]:
+              - generic [ref=e1085]: "1"
+              - generic [ref=e1087]: "2"
+              - generic [ref=e1089]: "3"
+              - generic [ref=e1091]: "4"
+              - generic [ref=e1093]: "5"
+            - generic [ref=e1095]:
+              - generic [ref=e1096]:
+                - img [ref=e1098]
+                - generic [ref=e1101]:
+                  - heading "Personal Information" [level=2] [ref=e1102]
+                  - paragraph [ref=e1103]: Please provide your basic details
+              - generic [ref=e1104]:
+                - generic [ref=e1105]:
+                  - generic [ref=e1106]: First Name *
+                  - textbox "First Name *" [ref=e1107]:
+                    - /placeholder: Enter first name
+                - generic [ref=e1108]:
+                  - generic [ref=e1109]: Last Name *
+                  - textbox "Last Name *" [ref=e1110]:
+                    - /placeholder: Enter last name
+                - generic [ref=e1111]:
+                  - generic [ref=e1112]: Email Address *
+                  - generic [ref=e1113]:
+                    - img [ref=e1114]
+                    - textbox "Email Address *" [ref=e1117]:
+                      - /placeholder: your.email@example.com
+                - generic [ref=e1118]:
+                  - generic [ref=e1119]: Phone Number *
+                  - generic [ref=e1120]:
+                    - img [ref=e1121]
+                    - textbox "Phone Number *" [ref=e1123]:
+                      - /placeholder: 10-digit mobile number
+                - generic [ref=e1124]:
+                  - generic [ref=e1125]: Date of Birth *
+                  - generic [ref=e1126]:
+                    - img [ref=e1127]
+                    - textbox "Date of Birth *" [ref=e1129]
+                - generic [ref=e1130]:
+                  - generic [ref=e1131]: Address *
+                  - generic [ref=e1132]:
+                    - img [ref=e1133]
+                    - textbox "Address *" [ref=e1136]:
+                      - /placeholder: House/Flat No., Street Name
+                - generic [ref=e1137]:
+                  - generic [ref=e1138]: City *
+                  - generic [ref=e1139]:
+                    - img [ref=e1140]
+                    - textbox "City *" [ref=e1143]:
+                      - /placeholder: Enter city
+                - generic [ref=e1144]:
+                  - generic [ref=e1145]: State *
+                  - textbox "State *" [ref=e1146]:
+                    - /placeholder: Enter state
+                - generic [ref=e1147]:
+                  - generic [ref=e1148]: Pincode * (Auto-fills city & state)
+                  - textbox "Pincode * (Auto-fills city & state)" [ref=e1150]:
+                    - /placeholder: 6-digit pincode
+            - button "Next Step" [ref=e1152] [cursor=pointer]:
+              - text: Next Step
+              - img [ref=e1153]
+            - paragraph [ref=e1156]:
+              - text: Need help? Contact us at
+              - link "+91 88264 44334" [ref=e1157] [cursor=pointer]:
+                - /url: tel:+918826444334
+              - text: or
+              - link "admissions@cerebrumbiology.com" [ref=e1158] [cursor=pointer]:
+                - /url: mailto:admissions@cerebrumbiology.com
+      - generic [ref=e1160]:
+        - generic [ref=e1161]:
+          - heading "Need Help with Admissions?" [level=2] [ref=e1162]
+          - paragraph [ref=e1163]: Our admission counselors are here to assist you
+        - generic [ref=e1164]:
+          - link "Call Us Speak with our counselors +91 8826444334" [ref=e1165] [cursor=pointer]:
+            - /url: tel:+918826444334
+            - img [ref=e1167]
+            - heading "Call Us" [level=3] [ref=e1169]
+            - paragraph [ref=e1170]: Speak with our counselors
+            - paragraph [ref=e1171]: +91 8826444334
+          - button "WhatsApp Chat with us instantly Click to Chat" [ref=e1172] [cursor=pointer]:
+            - img [ref=e1174]
+            - heading "WhatsApp" [level=3] [ref=e1176]
+            - paragraph [ref=e1177]: Chat with us instantly
+            - paragraph [ref=e1178]: Click to Chat
+          - link "Email Us Send us your queries admissions@cerebrumbiologyacademy.com" [ref=e1179] [cursor=pointer]:
+            - /url: mailto:admissions@cerebrumbiologyacademy.com
+            - img [ref=e1181]
+            - heading "Email Us" [level=3] [ref=e1184]
+            - paragraph [ref=e1185]: Send us your queries
+            - paragraph [ref=e1186]: admissions@cerebrumbiologyacademy.com
+        - generic [ref=e1187]:
+          - paragraph [ref=e1188]: "Office Hours: Monday - Saturday, 9:00 AM - 7:00 PM"
+          - generic [ref=e1189]:
+            - generic [ref=e1190]:
+              - img [ref=e1191]
+              - generic [ref=e1194]: Free Counseling
+            - generic [ref=e1195]:
+              - img [ref=e1196]
+              - generic [ref=e1199]: Instant Responses
+            - generic [ref=e1200]:
+              - img [ref=e1201]
+              - generic [ref=e1204]: Expert Guidance
+      - button [ref=e1205] [cursor=pointer]:
+        - img [ref=e1206]
+  - contentinfo [ref=e1210]:
+    - contentinfo [ref=e1211]:
+      - generic [ref=e1212]:
+        - generic [ref=e1213]:
+          - generic [ref=e1214]:
+            - generic [ref=e1215]:
+              - generic [ref=e1216]:
+                - img "Cerebrum Biology Academy"
+              - generic [ref=e1217]:
+                - heading "Cerebrum Biology Academy" [level=3] [ref=e1218]
+                - paragraph [ref=e1219]: Excellence in Biology Education
+            - paragraph [ref=e1220]: Founded by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). Premier NEET Biology coaching institute with 15+ years of excellence. 98% success rate, 1,50,000+ students mentored to medical colleges.
+            - generic [ref=e1221]:
+              - generic [ref=e1222]:
+                - img [ref=e1223]
+                - generic [ref=e1225]:
+                  - link "Call us at +91 88264 44334" [ref=e1226] [cursor=pointer]:
+                    - /url: tel:+918826444334
+                    - text: +91 88264 44334
+                  - generic [ref=e1227]: "Mon-Sat: 8 AM - 8 PM"
+              - link "Email us at info@cerebrumbiologyacademy.com" [ref=e1231] [cursor=pointer]:
+                - /url: mailto:info@cerebrumbiologyacademy.com
+                - text: info@cerebrumbiologyacademy.com
+              - generic [ref=e1232]:
+                - img [ref=e1233]
+                - generic [ref=e1236]:
+                  - generic [ref=e1237]:
+                    - strong [ref=e1238]: "Rohini:"
+                    - text: DC Chauk Sector 9, Delhi 110085
+                  - generic [ref=e1239]:
+                    - strong [ref=e1240]: "Gurugram:"
+                    - text: M2K Corporate Park, Sector 51, 122018
+                  - generic [ref=e1241]:
+                    - strong [ref=e1242]: "South Delhi:"
+                    - text: Block D, South Extension 2, 110049
+          - generic [ref=e1243]:
+            - heading "Courses" [level=4] [ref=e1244]
+            - list [ref=e1245]:
+              - listitem [ref=e1246]:
+                - link "NEET 2026 Preparation" [ref=e1247] [cursor=pointer]:
+                  - /url: /neet-2026-preparation
+              - listitem [ref=e1248]:
+                - link "Intensive Biology Program" [ref=e1249] [cursor=pointer]:
+                  - /url: /courses/intensive-neet-biology
+              - listitem [ref=e1250]:
+                - link "Class 11th Biology" [ref=e1251] [cursor=pointer]:
+                  - /url: /courses/class-11
+              - listitem [ref=e1252]:
+                - link "Class 12th Biology" [ref=e1253] [cursor=pointer]:
+                  - /url: /courses/class-12
+              - listitem [ref=e1254]:
+                - link "NEET Dropper Program" [ref=e1255] [cursor=pointer]:
+                  - /url: /courses/neet-dropper
+              - listitem [ref=e1256]:
+                - link "Foundation Course (9th-10th)" [ref=e1257] [cursor=pointer]:
+                  - /url: /courses/foundation
+              - listitem [ref=e1258]:
+                - link "Class 9th Foundation" [ref=e1259] [cursor=pointer]:
+                  - /url: /courses/class-9-foundation
+              - listitem [ref=e1260]:
+                - link "Class 10th Foundation" [ref=e1261] [cursor=pointer]:
+                  - /url: /courses/class-10-foundation
+              - listitem [ref=e1262]:
+                - link "Pricing & Fee Structure" [ref=e1263] [cursor=pointer]:
+                  - /url: /pricing
+          - generic [ref=e1264]:
+            - heading "Board Preparation" [level=4] [ref=e1265]
+            - list [ref=e1266]:
+              - listitem [ref=e1267]:
+                - link "CBSE Biology" [ref=e1268] [cursor=pointer]:
+                  - /url: /boards/cbse
+              - listitem [ref=e1269]:
+                - link "ICSE Biology" [ref=e1270] [cursor=pointer]:
+                  - /url: /boards/icse
+              - listitem [ref=e1271]:
+                - link "IGCSE Biology" [ref=e1272] [cursor=pointer]:
+                  - /url: /boards/igcse
+              - listitem [ref=e1273]:
+                - link "IB Biology" [ref=e1274] [cursor=pointer]:
+                  - /url: /boards/ib
+              - listitem [ref=e1275]:
+                - link "State Board Biology" [ref=e1276] [cursor=pointer]:
+                  - /url: /boards/state-boards
+          - generic [ref=e1277]:
+            - heading "Offline Centers" [level=4] [ref=e1278]
+            - list [ref=e1279]:
+              - listitem [ref=e1280]:
+                - link "Rohini, Delhi" [ref=e1281] [cursor=pointer]:
+                  - /url: /neet-coaching-north-delhi
+              - listitem [ref=e1282]:
+                - link "Gurugram" [ref=e1283] [cursor=pointer]:
+                  - /url: /neet-coaching-gurugram
+              - listitem [ref=e1284]:
+                - link "South Extension" [ref=e1285] [cursor=pointer]:
+                  - /url: /neet-coaching-south-delhi
+              - listitem [ref=e1286]:
+                - link "Faridabad" [ref=e1287] [cursor=pointer]:
+                  - /url: /neet-coaching-faridabad
+            - heading "Serving Online" [level=4] [ref=e1288]
+            - list [ref=e1289]:
+              - listitem [ref=e1290]:
+                - link "North India" [ref=e1291] [cursor=pointer]:
+                  - /url: /neet-coaching-north-india
+              - listitem [ref=e1292]:
+                - link "South India" [ref=e1293] [cursor=pointer]:
+                  - /url: /neet-coaching-south-india
+              - listitem [ref=e1294]:
+                - link "East India" [ref=e1295] [cursor=pointer]:
+                  - /url: /neet-coaching-east-india
+              - listitem [ref=e1296]:
+                - link "West India" [ref=e1297] [cursor=pointer]:
+                  - /url: /neet-coaching-west-india
+              - listitem [ref=e1298]:
+                - link "NRI Students (14+ Countries)" [ref=e1299] [cursor=pointer]:
+                  - /url: /nri-students
+          - generic [ref=e1300]:
+            - heading "Biology Classes" [level=4] [ref=e1301]
+            - list [ref=e1302]:
+              - listitem [ref=e1303]:
+                - link "Delhi" [ref=e1304] [cursor=pointer]:
+                  - /url: /biology-classes-delhi
+              - listitem [ref=e1305]:
+                - link "Noida" [ref=e1306] [cursor=pointer]:
+                  - /url: /biology-classes-noida
+              - listitem [ref=e1307]:
+                - link "Gurgaon" [ref=e1308] [cursor=pointer]:
+                  - /url: /biology-classes-gurgaon
+              - listitem [ref=e1309]:
+                - link "Faridabad" [ref=e1310] [cursor=pointer]:
+                  - /url: /biology-classes-faridabad
+              - listitem [ref=e1311]:
+                - link "Ghaziabad" [ref=e1312] [cursor=pointer]:
+                  - /url: /biology-classes-ghaziabad
+              - listitem [ref=e1313]:
+                - link "South Delhi" [ref=e1314] [cursor=pointer]:
+                  - /url: /biology-classes-south-delhi
+              - listitem [ref=e1315]:
+                - link "Rohini" [ref=e1316] [cursor=pointer]:
+                  - /url: /biology-classes-rohini
+            - heading "Biology Tuition" [level=4] [ref=e1317]
+            - list [ref=e1318]:
+              - listitem [ref=e1319]:
+                - link "Biology Tuition" [ref=e1320] [cursor=pointer]:
+                  - /url: /biology-tuition
+              - listitem [ref=e1321]:
+                - link "Class 9-10 Tuition" [ref=e1322] [cursor=pointer]:
+                  - /url: /biology-tuition-class-9-10
+              - listitem [ref=e1323]:
+                - link "Class 11 Tuition" [ref=e1324] [cursor=pointer]:
+                  - /url: /biology-tuition-class-11
+              - listitem [ref=e1325]:
+                - link "Class 12 Tuition" [ref=e1326] [cursor=pointer]:
+                  - /url: /biology-tuition-class-12
+              - listitem [ref=e1327]:
+                - link "Tuition Near Me" [ref=e1328] [cursor=pointer]:
+                  - /url: /biology-tuition-near-me
+              - listitem [ref=e1329]:
+                - link "Online Classes" [ref=e1330] [cursor=pointer]:
+                  - /url: /online-biology-classes
+          - generic [ref=e1331]:
+            - heading "Services" [level=4] [ref=e1332]
+            - list [ref=e1333]:
+              - listitem [ref=e1334]:
+                - link "Online Live Classes" [ref=e1335] [cursor=pointer]:
+                  - /url: /courses
+              - listitem [ref=e1336]:
+                - link "Book a Demo Class" [ref=e1337] [cursor=pointer]:
+                  - /url: /demo-booking
+              - listitem [ref=e1338]:
+                - link "NEET Mock Tests" [ref=e1339] [cursor=pointer]:
+                  - /url: /mock-tests
+              - listitem [ref=e1340]:
+                - link "Free Biology MCQ Practice" [ref=e1341] [cursor=pointer]:
+                  - /url: /neet-biology-mcq
+              - listitem [ref=e1342]:
+                - link "Study Materials (LMS)" [ref=e1343] [cursor=pointer]:
+                  - /url: /tests
+              - listitem [ref=e1344]:
+                - link "Free Resources" [ref=e1345] [cursor=pointer]:
+                  - /url: /free-resources
+            - heading "Explore Programs" [level=4] [ref=e1346]
+            - list [ref=e1347]:
+              - listitem [ref=e1348]:
+                - link "NEET Biology" [ref=e1349] [cursor=pointer]:
+                  - /url: /neet-biology-coaching
+              - listitem [ref=e1350]:
+                - link "Biology Teacher" [ref=e1351] [cursor=pointer]:
+                  - /url: /biology-teacher
+              - listitem [ref=e1352]:
+                - link "Online Classes" [ref=e1353] [cursor=pointer]:
+                  - /url: /online-biology-classes
+              - listitem [ref=e1354]:
+                - link "Foundation & Olympiad" [ref=e1355] [cursor=pointer]:
+                  - /url: /neet-foundation-class-9
+              - listitem [ref=e1356]:
+                - link "International Curriculum" [ref=e1357] [cursor=pointer]:
+                  - /url: /international
+              - listitem [ref=e1358]:
+                - link "Best Biology Books" [ref=e1359] [cursor=pointer]:
+                  - /url: /best-biology-books-for-neet
+          - generic [ref=e1360]:
+            - heading "Company" [level=4] [ref=e1361]
+            - list [ref=e1362]:
+              - listitem [ref=e1363]:
+                - link "About Us" [ref=e1364] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e1365]:
+                - link "Dr. Shekhar Singh" [ref=e1366] [cursor=pointer]:
+                  - /url: /dr-shekhar-singh
+              - listitem [ref=e1367]:
+                - link "Our Faculty" [ref=e1368] [cursor=pointer]:
+                  - /url: /faculty
+              - listitem [ref=e1369]:
+                - link "Blog" [ref=e1370] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e1371]:
+                - link "Results" [ref=e1372] [cursor=pointer]:
+                  - /url: /results
+            - heading "Support" [level=4] [ref=e1373]
+            - list [ref=e1374]:
+              - listitem [ref=e1375]:
+                - link "Contact Us" [ref=e1376] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e1377]:
+                - link "Help Center" [ref=e1378] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e1379]:
+                - link "Book Demo Class" [ref=e1380] [cursor=pointer]:
+                  - /url: /demo-booking
+              - listitem [ref=e1381]:
+                - link "Scholarship" [ref=e1382] [cursor=pointer]:
+                  - /url: /scholarship
+        - generic [ref=e1384]:
+          - generic [ref=e1385]:
+            - heading "Stay Updated" [level=4] [ref=e1386]
+            - paragraph [ref=e1387]: Get latest updates about NEET, board exams, and biology education tips
+          - generic [ref=e1388]:
+            - generic [ref=e1389]: Email address
+            - textbox "Email address for newsletter" [ref=e1390]:
+              - /placeholder: Enter your email
+            - button "Subscribe to newsletter" [ref=e1391] [cursor=pointer]:
+              - text: Subscribe
+              - img [ref=e1392]
+      - generic [ref=e1396]:
+        - generic [ref=e1397]:
+          - generic [ref=e1398]: © 2026 Cerebrum Biology Academy. All rights reserved. | Empowering future doctors through excellence in biology education.
+          - navigation "Social media links" [ref=e1399]:
+            - generic [ref=e1400]:
+              - link "Visit our Facebook page" [ref=e1401] [cursor=pointer]:
+                - /url: https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/
+                - img [ref=e1402]
+              - link "Visit our Instagram page" [ref=e1404] [cursor=pointer]:
+                - /url: https://www.instagram.com/biologyforneetug/
+                - img [ref=e1405]
+              - link "Visit our YouTube page" [ref=e1408] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw
+                - img [ref=e1409]
+              - link "Visit our Twitter page" [ref=e1412] [cursor=pointer]:
+                - /url: https://twitter.com/shekharsingh
+                - img [ref=e1413]
+              - link "Visit our WhatsApp page" [ref=e1415] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e1416]
+              - link "Visit our Telegram page" [ref=e1418] [cursor=pointer]:
+                - /url: https://t.me/biologyforneetug
+                - img [ref=e1419]
+          - generic [ref=e1422]:
+            - generic [ref=e1423]:
+              - link "Privacy Policy" [ref=e1424] [cursor=pointer]:
+                - /url: /privacy-policy
+              - generic [ref=e1425]: "|"
+            - generic [ref=e1426]:
+              - link "Terms of Service" [ref=e1427] [cursor=pointer]:
+                - /url: /terms-of-service
+              - generic [ref=e1428]: "|"
+            - generic [ref=e1429]:
+              - link "Refund Policy" [ref=e1430] [cursor=pointer]:
+                - /url: /refund-policy
+              - generic [ref=e1431]: "|"
+            - link "Disclaimer" [ref=e1433] [cursor=pointer]:
+              - /url: /disclaimer
+            - generic [ref=e1434]:
+              - generic [ref=e1435]: "|"
+              - link "Staff Login" [ref=e1436] [cursor=pointer]:
+                - /url: /portal
+        - generic [ref=e1437]:
+          - generic [ref=e1438]: "Choose your language:"
+          - button "English - Change language" [ref=e1440] [cursor=pointer]:
+            - img [ref=e1441]
+            - generic [ref=e1444]: English
+            - img [ref=e1445]
+  - navigation "Mobile bottom navigation" [ref=e1447]:
+    - generic [ref=e1448]:
+      - link "Navigate to home page" [ref=e1449] [cursor=pointer]:
+        - /url: /
+        - img [ref=e1450]
+        - generic [ref=e1453]: Home
+      - link "Navigate to tests page" [ref=e1454] [cursor=pointer]:
+        - /url: /ai-education-demo
+        - img [ref=e1455]
+        - generic [ref=e1457]: Tests
+      - link "View your progress dashboard" [ref=e1458] [cursor=pointer]:
+        - /url: /dashboard/student
+        - img [ref=e1459]
+        - generic [ref=e1461]: Progress
+      - link "Open AI chat" [ref=e1462] [cursor=pointer]:
+        - /url: /ai-education-demo#chat
+        - img [ref=e1463]
+        - generic [ref=e1465]: Chat
+      - link "Sign in to view profile" [ref=e1466] [cursor=pointer]:
+        - /url: /auth/signin
+        - img [ref=e1467]
+        - generic [ref=e1470]: Profile
+  - generic [ref=e1472]:
+    - generic [ref=e1473]:
+      - button "Chat on WhatsApp" [ref=e1474] [cursor=pointer]:
+        - img [ref=e1475]
+        - generic [ref=e1478]: "1"
+      - generic [ref=e1479]: 2 min reply
+    - button "+2 more contact options" [ref=e1480] [cursor=pointer]:
+      - generic [ref=e1481]: "+2"
+  - button "Open Ceri AI chat assistant" [ref=e1482] [cursor=pointer]:
+    - img [ref=e1484]
+  - region "Notifications"
+  - button "Open Next.js Dev Tools" [ref=e1491] [cursor=pointer]:
+    - img [ref=e1492]
+  - alert [ref=e1495]
+```
