@@ -35,7 +35,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { useLongPress } from '@/hooks/useLongPress'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
@@ -112,7 +112,7 @@ interface GamificationData {
 }
 
 export function PersonalizedStudentDashboard() {
-  const { user, isAuthenticated } = useAuth()
+  const { user, isAuthenticated } = useFirebaseSession()
   const pathname = usePathname()
   const { showToast } = useToast()
   const [activeTab, setActiveTab] = useState('overview')
