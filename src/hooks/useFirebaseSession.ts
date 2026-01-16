@@ -6,6 +6,7 @@ interface SessionUser {
   id: string
   email: string
   name?: string
+  fullName?: string // Alias for compatibility with Clerk-style code
   role: string
   phone?: string
 }
@@ -50,7 +51,11 @@ export function useFirebaseSession(): SessionState {
 
       if (data.authenticated && data.user) {
         console.log('[useFirebaseSession] User authenticated:', data.user)
-        setUser(data.user)
+        // Map name to fullName for compatibility
+        setUser({
+          ...data.user,
+          fullName: data.user.name || data.user.fullName,
+        })
       } else {
         console.log('[useFirebaseSession] Not authenticated')
         setUser(null)

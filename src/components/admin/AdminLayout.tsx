@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { useSafeClerk, useSafeUser } from '@/hooks/useSafeClerk'
-import { useClerkRole } from '@/hooks/useClerkRole'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
+import { signOut } from '@/lib/firebase/phone-auth'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
@@ -25,7 +25,6 @@ import {
   Upload,
   FolderOpen,
   ClipboardCheck,
-  Key,
   PenTool,
   Send,
 } from 'lucide-react'
@@ -51,13 +50,15 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { signOut: clerkSignOut } = useSafeClerk()
-  const { user } = useSafeUser()
-  const { isLoaded, isSignedIn, isAdmin } = useClerkRole()
+  const { isLoading, isAuthenticated, user } = useFirebaseSession()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
 
+  // Check if user has admin role
+  const userRole = user?.role?.toLowerCase()
+  const isAdmin = userRole === 'admin' || userRole === 'owner'
+
   // Show loading state while checking auth
-  if (!isLoaded || isCheckingOwner) {
+  if (isLoading || isCheckingOwner) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -71,11 +72,11 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     )
   }
 
-  // Allow access if owner OR admin role via Clerk
+  // Allow access if owner OR admin role
   const hasAdminAccess = isOwner || isAdmin
 
   // Redirect to login if not authenticated
-  if (!isSignedIn) {
+  if (!isAuthenticated) {
     router.push('/admin/login')
     return null
   }
@@ -88,15 +89,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
   const handleLogout = async () => {
     try {
-      await clerkSignOut({ redirectUrl: '/select-role' })
+      await signOut()
+      router.push('/select-role')
     } catch (error) {
       console.error('Logout error:', error)
     }
   }
 
-  // Get display name from Clerk user
-  const displayName = user?.fullName || user?.firstName || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
-  const displayEmail = user?.emailAddresses?.[0]?.emailAddress || (isOwner ? 'Owner Access' : '')
+  // Get display name from Firebase user
+  const displayName = user?.fullName || user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
+  const displayEmail = user?.email || (isOwner ? 'Owner Access' : '')
 
   const navigation: NavItem[] = [
     {

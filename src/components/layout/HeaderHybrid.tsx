@@ -15,9 +15,9 @@ const HeaderClientInteractions = dynamic(
   }
 )
 
-// Lazy load Clerk auth buttons
-const ClerkAuthButtons = dynamic(
-  () => import('@/components/auth/ClerkAuthButtons').then((mod) => mod.ClerkAuthButtons),
+// Lazy load Firebase auth buttons
+const FirebaseAuthButtons = dynamic(
+  () => import('./FirebaseAuthButtons').then((mod) => mod.FirebaseAuthButtons),
   {
     ssr: false,
     loading: () => <div className="w-16 h-8 bg-slate-100 animate-pulse rounded" />,
@@ -205,7 +205,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
                   />
                 </svg>
               </Link>
-              <ClerkAuthButtons />
+              <FirebaseAuthButtons />
             </div>
           </div>
         </div>

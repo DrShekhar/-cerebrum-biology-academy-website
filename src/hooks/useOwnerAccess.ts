@@ -1,6 +1,6 @@
 'use client'
 
-import { useSafeUser } from '@/hooks/useSafeClerk'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useState, useEffect } from 'react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -8,18 +8,18 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 export function useOwnerAccess() {
-  const { user, isLoaded } = useSafeUser()
+  const { user, isLoading } = useFirebaseSession()
   const [isOwner, setIsOwner] = useState(false)
   const [isCheckingOwner, setIsCheckingOwner] = useState(true)
 
   useEffect(() => {
-    if (!isLoaded) {
+    if (isLoading) {
       setIsCheckingOwner(true)
       return
     }
 
     if (user) {
-      const userPhone = user.primaryPhoneNumber?.phoneNumber || ''
+      const userPhone = user.phone || ''
       const normalizedPhone = userPhone.replace(/[\s\-\(\)]/g, '')
 
       const ownerMatch =
@@ -33,7 +33,7 @@ export function useOwnerAccess() {
     }
 
     setIsCheckingOwner(false)
-  }, [user, isLoaded])
+  }, [user, isLoading])
 
-  return { isOwner, isCheckingOwner, isLoaded }
+  return { isOwner, isCheckingOwner, isLoaded: !isLoading }
 }

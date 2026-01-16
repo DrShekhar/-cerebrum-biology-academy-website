@@ -1,28 +1,44 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
-import { useClerkRole } from '@/hooks/useClerkRole'
+import { useEffect, useState } from 'react'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 
 function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoaded, isSignedIn, isAdmin } = useClerkRole()
+  const { isLoading, isAuthenticated, user } = useFirebaseSession()
   const router = useRouter()
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [isCheckingRole, setIsCheckingRole] = useState(true)
+
+  // DEV MODE: Skip authentication if bypass is enabled
+  const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
 
   useEffect(() => {
-    if (!isLoaded) return
+    if (isBypassEnabled) {
+      setIsAdmin(true)
+      setIsCheckingRole(false)
+      return
+    }
 
-    if (!isSignedIn) {
+    if (isLoading) return
+
+    if (!isAuthenticated) {
       router.push('/admin/login')
       return
     }
 
-    if (!isAdmin) {
-      router.push('/dashboard?error=admin_required')
-      return
-    }
-  }, [isLoaded, isSignedIn, isAdmin, router])
+    // Check if user has admin role
+    const userRole = user?.role?.toLowerCase()
+    const hasAdminAccess = userRole === 'admin' || userRole === 'owner'
+    setIsAdmin(hasAdminAccess)
+    setIsCheckingRole(false)
 
-  if (!isLoaded) {
+    if (!hasAdminAccess) {
+      router.push('/dashboard?error=admin_required')
+    }
+  }, [isLoading, isAuthenticated, user, router, isBypassEnabled])
+
+  if (!isBypassEnabled && (isLoading || isCheckingRole)) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -36,7 +52,7 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isSignedIn || !isAdmin) {
+  if (!isBypassEnabled && (!isAuthenticated || !isAdmin)) {
     return null
   }
 

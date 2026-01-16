@@ -1,19 +1,19 @@
 'use client'
 
-// Force dynamic rendering to prevent Clerk auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '@clerk/nextjs'
 import { Loader2, Shield } from 'lucide-react'
+import { useAuth } from '@/lib/firebase/auth-context'
 
 export default function AdminLogin() {
   const router = useRouter()
-  const { isLoaded, isSignedIn } = useAuth()
+  const { user, loading } = useAuth()
+  const [redirecting, setRedirecting] = useState(false)
 
   useEffect(() => {
-    if (!isLoaded) return
+    if (loading) return
 
     // DEV MODE: Skip authentication and go directly to admin dashboard
     if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
@@ -22,15 +22,17 @@ export default function AdminLogin() {
       return
     }
 
-    // If already signed in, go to admin dashboard
-    if (isSignedIn) {
+    // If already signed in with Firebase, go to admin dashboard
+    if (user) {
+      setRedirecting(true)
       router.replace('/admin')
       return
     }
 
-    // Redirect to Clerk sign-in with admin redirect
+    // Redirect to Firebase sign-in with admin redirect
+    setRedirecting(true)
     router.replace('/sign-in?redirect_url=/admin')
-  }, [router, isLoaded, isSignedIn])
+  }, [router, loading, user])
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -43,7 +45,7 @@ export default function AdminLogin() {
           <Loader2 className="w-4 h-4 animate-spin" />
           <span>Redirecting to sign in...</span>
         </div>
-        <p className="text-sm text-gray-500 mt-4">Secure authentication via Clerk</p>
+        <p className="text-sm text-gray-500 mt-4">Secure authentication via Firebase</p>
       </div>
     </div>
   )

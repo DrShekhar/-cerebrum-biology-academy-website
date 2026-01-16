@@ -244,7 +244,6 @@ const nextConfig = {
       'react-hook-form',
       '@anthropic-ai/sdk',
       'openai',
-      '@clerk/nextjs',
       'recharts',
       'react-day-picker',
       '@sentry/nextjs',

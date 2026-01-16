@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
 import * as fs from 'fs'
 import * as path from 'path'
+import { getFirebaseAdmin } from '@/lib/firebase/admin'
 
 type DraftStatus = 'draft' | 'in_review' | 'approved' | 'rejected' | 'published' | 'archived'
 
@@ -17,6 +17,27 @@ interface DraftItem {
   author?: string
   wordCount?: number
   tags?: string[]
+}
+
+async function verifyAdminAuth(request: NextRequest): Promise<boolean> {
+  // DEV MODE: Skip authentication
+  if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
+    return true
+  }
+
+  try {
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader?.startsWith('Bearer ')) {
+      return false
+    }
+
+    const token = authHeader.split('Bearer ')[1]
+    const admin = await getFirebaseAdmin()
+    await admin.auth().verifyIdToken(token)
+    return true
+  } catch {
+    return false
+  }
 }
 
 function getDraftsFromFileSystem(): DraftItem[] {
@@ -164,10 +185,10 @@ ${draft.content}
   }
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const { userId } = await auth()
-    if (!userId) {
+    const isAuthed = await verifyAdminAuth(request)
+    if (!isAuthed) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -181,8 +202,8 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const { userId } = await auth()
-    if (!userId) {
+    const isAuthed = await verifyAdminAuth(request)
+    if (!isAuthed) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

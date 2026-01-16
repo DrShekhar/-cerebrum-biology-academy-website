@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { ClerkProviderWrapper } from '@/components/providers/ClerkProviderWrapper'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
@@ -119,8 +118,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ClerkProviderWrapper>
-      <html lang="en">
+    <html lang="en">
         <head>
           <StructuredData />
           <meta
@@ -363,7 +361,6 @@ export default function RootLayout({
           </I18nProvider>
         </body>
       </html>
-    </ClerkProviderWrapper>
   )
 }
 // Build: 1765944827

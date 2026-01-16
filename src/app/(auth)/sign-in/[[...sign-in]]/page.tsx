@@ -1,37 +1,13 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Phone, Mail, ArrowLeft, AlertCircle, Loader2 } from 'lucide-react'
-import { useState } from 'react'
+import { Phone, ArrowLeft } from 'lucide-react'
 import { PhoneSignIn } from '@/components/auth/PhoneSignIn'
-
-type AuthMethod = 'email' | 'phone'
-
-// Check if Clerk is configured (at build time for NEXT_PUBLIC_ vars)
-const isClerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
-
-// Dynamically import Clerk SignIn only when configured
-const ClerkSignIn = isClerkConfigured
-  ? dynamic(
-      () => import('@clerk/nextjs').then((mod) => mod.SignIn),
-      {
-        loading: () => (
-          <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-[#4a5d4a]" />
-          </div>
-        ),
-        ssr: false,
-      }
-    )
-  : null
 
 export default function SignInPage() {
   const searchParams = useSearchParams()
   const redirectUrl = searchParams.get('redirect_url') || '/dashboard'
-  // Default to phone auth if Clerk is not configured
-  const [authMethod, setAuthMethod] = useState<AuthMethod>(isClerkConfigured ? 'email' : 'phone')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
@@ -53,117 +29,17 @@ export default function SignInPage() {
 
         {/* Main Card */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          {/* Auth Method Toggle - Only show if Clerk is configured */}
-          {isClerkConfigured ? (
-            <div className="p-4 bg-slate-50 border-b border-slate-100">
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={() => setAuthMethod('email')}
-                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all ${
-                    authMethod === 'email'
-                      ? 'bg-[#4a5d4a] text-white shadow-lg'
-                      : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-                  }`}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Email</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setAuthMethod('phone')}
-                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all ${
-                    authMethod === 'phone'
-                      ? 'bg-[#4a5d4a] text-white shadow-lg'
-                      : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-                  }`}
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Phone</span>
-                </button>
-              </div>
+          {/* Phone Auth Header */}
+          <div className="p-4 bg-green-50 border-b border-green-100">
+            <div className="flex items-center justify-center gap-2 text-green-700">
+              <Phone className="w-5 h-5" />
+              <span className="font-medium">Sign in with Phone OTP</span>
             </div>
-          ) : (
-            <div className="p-4 bg-green-50 border-b border-green-100">
-              <div className="flex items-center justify-center gap-2 text-green-700">
-                <Phone className="w-5 h-5" />
-                <span className="font-medium">Sign in with Phone OTP</span>
-              </div>
-            </div>
-          )}
+          </div>
 
           {/* Auth Content */}
           <div className="p-6">
-            {/* When Clerk not configured, always show phone auth */}
-            {!isClerkConfigured ? (
-              <PhoneSignIn redirectUrl={redirectUrl} />
-            ) : authMethod === 'phone' ? (
-              <PhoneSignIn redirectUrl={redirectUrl} />
-            ) : ClerkSignIn ? (
-              <ClerkSignIn
-                appearance={{
-                  elements: {
-                    rootBox: 'w-full',
-                    card: 'shadow-none border-0 p-0 w-full bg-transparent',
-                    cardBox: 'shadow-none border-0 bg-transparent',
-                    headerTitle: 'hidden',
-                    headerSubtitle: 'hidden',
-                    socialButtonsBlockButton:
-                      'bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium rounded-xl h-12',
-                    socialButtonsBlockButtonText: 'font-medium',
-                    dividerLine: 'bg-slate-200',
-                    dividerText: 'text-slate-500 text-sm bg-white',
-                    formFieldLabel: 'text-slate-700 font-medium text-sm mb-1',
-                    formFieldInput:
-                      'bg-white border border-slate-300 focus:ring-2 focus:ring-[#4a5d4a] focus:border-[#4a5d4a] rounded-xl h-12 text-slate-900',
-                    formButtonPrimary:
-                      'bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-semibold rounded-xl h-12',
-                    footerAction: 'hidden',
-                    footerActionText: 'hidden',
-                    footerActionLink: 'hidden',
-                    identityPreviewEditButton: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
-                    formFieldInputShowPasswordButton: 'text-slate-400 hover:text-slate-600',
-                    otpCodeFieldInput: 'bg-white border-slate-300 focus:ring-[#4a5d4a] rounded-lg',
-                    footer: 'hidden',
-                    footerPages: 'hidden',
-                    footerItem: 'hidden',
-                    header: 'hidden',
-                    main: 'gap-4',
-                    form: 'gap-4',
-                    internal: 'gap-4',
-                    logoBox: 'hidden',
-                    logoImage: 'hidden',
-                    badge: 'hidden',
-                    dividerRow: 'my-4',
-                    alert: 'rounded-xl border-slate-200',
-                    alertText: 'text-slate-700',
-                    identityPreview: 'bg-white border border-slate-200 rounded-xl',
-                    formResendCodeLink: 'text-[#4a5d4a] hover:text-[#3d4d3d]',
-                    // Hide Clerk branding
-                    poweredBy: 'hidden',
-                    poweredByButton: 'hidden',
-                    // Hide development mode badge
-                    developmentModeContainer: 'hidden',
-                  },
-                  layout: {
-                    socialButtonsPlacement: 'top',
-                    socialButtonsVariant: 'blockButton',
-                    showOptionalFields: false,
-                    unsafe_disableDevelopmentModeWarnings: true,
-                  },
-                  variables: {
-                    colorBackground: 'transparent',
-                    colorInputBackground: '#ffffff',
-                    colorInputText: '#1e293b',
-                    borderRadius: '0.75rem',
-                  },
-                }}
-                routing="path"
-                path="/sign-in"
-                signUpUrl="/sign-up"
-                forceRedirectUrl={redirectUrl}
-              />
-            ) : null}
+            <PhoneSignIn redirectUrl={redirectUrl} />
           </div>
 
           {/* Footer */}
@@ -182,9 +58,9 @@ export default function SignInPage() {
 
         {/* Trust Badges */}
         <div className="mt-6 flex justify-center gap-6 text-slate-400 text-xs">
-          <span>🔒 Secure Login</span>
-          <span>📱 OTP Verified</span>
-          <span>🛡️ Data Protected</span>
+          <span>Secure Login</span>
+          <span>OTP Verified</span>
+          <span>Data Protected</span>
         </div>
 
         {/* Terms */}

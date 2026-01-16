@@ -7,19 +7,33 @@ import { KeyboardShortcutsModal } from '@/components/counselor/KeyboardShortcuts
 import { Keyboard } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
-import { useClerkRole } from '@/hooks/useClerkRole'
-import { useSafeUser } from '@/hooks/useSafeClerk'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoaded, isSignedIn, isCounselor, isAdmin } = useClerkRole()
-  const { user } = useSafeUser()
+  const { isLoading, isAuthenticated, user } = useFirebaseSession()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)
   const { isOwner, isCheckingOwner } = useOwnerAccess()
+  const [isCounselor, setIsCounselor] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   // DEV MODE: Skip authentication check if bypass is enabled
   const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
+
+  useEffect(() => {
+    if (isBypassEnabled) {
+      setIsCounselor(true)
+      setIsAdmin(true)
+      return
+    }
+
+    if (user) {
+      const userRole = user.role?.toLowerCase()
+      setIsCounselor(userRole === 'counselor')
+      setIsAdmin(userRole === 'admin' || userRole === 'owner')
+    }
+  }, [user, isBypassEnabled])
 
   // Allow access if owner OR counselor/admin role
   const hasCounselorAccess = isOwner || isCounselor || isAdmin
@@ -30,9 +44,9 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       return
     }
 
-    if (!isLoaded || isCheckingOwner) return
+    if (isLoading || isCheckingOwner) return
 
-    if (!isSignedIn) {
+    if (!isAuthenticated) {
       router.push(`/sign-in?redirect_url=${encodeURIComponent(pathname)}`)
       return
     }
@@ -41,7 +55,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       router.push('/dashboard?error=counselor_required')
       return
     }
-  }, [isLoaded, isSignedIn, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
+  }, [isLoading, isAuthenticated, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
 
   // Global keyboard shortcuts
   useEffect(() => {
@@ -88,7 +102,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [router])
 
-  if (!isBypassEnabled && (!isLoaded || isCheckingOwner)) {
+  if (!isBypassEnabled && (isLoading || isCheckingOwner)) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
@@ -104,9 +118,14 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isBypassEnabled && (!isSignedIn || !hasCounselorAccess)) {
+  if (!isBypassEnabled && (!isAuthenticated || !hasCounselorAccess)) {
     return null
   }
+
+  // Get user initials for avatar
+  const userInitial = isBypassEnabled
+    ? 'D'
+    : user?.fullName?.charAt(0).toUpperCase() || user?.email?.charAt(0).toUpperCase() || 'C'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -188,7 +207,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
               <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  {isBypassEnabled ? 'D' : user?.emailAddresses?.[0]?.emailAddress?.charAt(0).toUpperCase() || user?.firstName?.charAt(0).toUpperCase() || 'C'}
+                  {userInitial}
                 </div>
               </button>
             </div>

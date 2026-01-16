@@ -1,6 +1,6 @@
 'use client'
 
-import { useSafeUser } from '@/hooks/useSafeClerk'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -103,20 +103,20 @@ const roles: RoleOption[] = [
 ]
 
 export default function SelectRolePage() {
-  const { user, isLoaded } = useSafeUser()
+  const { user, isLoading, isAuthenticated } = useFirebaseSession()
   const router = useRouter()
   const [isOwner, setIsOwner] = useState(false)
 
   useEffect(() => {
-    if (!isLoaded) return
+    if (isLoading) return
 
-    if (!user) {
+    if (!isAuthenticated || !user) {
       router.push('/sign-in')
       return
     }
 
     // Check if user is the owner by phone number
-    const userPhone = user.primaryPhoneNumber?.phoneNumber || ''
+    const userPhone = user.phone || ''
     const normalizedPhone = userPhone.replace(/[\s\-\(\)]/g, '')
 
     if (
@@ -129,7 +129,7 @@ export default function SelectRolePage() {
       // Not the owner - redirect to regular dashboard
       router.push('/dashboard')
     }
-  }, [user, isLoaded, router])
+  }, [user, isLoading, isAuthenticated, router])
 
   const handleRoleSelect = (role: RoleOption) => {
     // Store selected role in localStorage for reference
@@ -137,7 +137,7 @@ export default function SelectRolePage() {
     router.push(role.href)
   }
 
-  if (!isLoaded) {
+  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
