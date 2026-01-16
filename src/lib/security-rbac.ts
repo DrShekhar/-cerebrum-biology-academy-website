@@ -321,6 +321,70 @@ export const NEETCoachingRoles: SecurityRole[] = [
     ]
   },
   {
+    id: 'consultant',
+    name: 'Admission Consultant',
+    description: 'Admission referral tracking and lead management for referred students',
+    hierarchy: 3,
+    isSystemRole: false,
+    maxSessionDuration: 180,
+    requiresMfa: false,
+    dataAccessLevel: 'own',
+    permissions: [
+      {
+        resource: 'leads',
+        actions: ['create', 'read', 'update'],
+        dataFilters: [
+          { field: 'referred_by', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'referrals',
+        actions: ['read'],
+        dataFilters: [
+          { field: 'consultant_id', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'commissions',
+        actions: ['read'],
+        dataFilters: [
+          { field: 'consultant_id', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'referral_links',
+        actions: ['create', 'read'],
+        dataFilters: [
+          { field: 'consultant_id', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'communications',
+        actions: ['read'],
+        dataFilters: [
+          { field: 'lead_referred_by', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'demo_bookings',
+        actions: ['read'],
+        dataFilters: [
+          { field: 'referred_by', constraint: 'own_data' }
+        ]
+      },
+      {
+        resource: 'payments',
+        actions: ['read'],
+        dataFilters: [
+          { field: 'enrollment_referred_by', constraint: 'own_data' }
+        ],
+        conditions: [
+          { field: 'data_scope', operator: 'in', value: ['status', 'amount', 'date'], context: 'user' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'student',
     name: 'Student',
     description: 'Enrolled student with access to courses and materials',

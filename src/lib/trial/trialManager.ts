@@ -1,6 +1,15 @@
-import { PrismaClient } from '@/generated/prisma'
+import { PrismaClient, CoachingTier } from '@/generated/prisma'
+import {
+  CoachingSubscriptionTier,
+  CoachingFeatures,
+  hasCoachingFeature,
+} from '@/lib/subscriptions/SmartSubscriptionTiers'
 
 const prisma = new PrismaClient()
+
+// ============================================
+// TYPES
+// ============================================
 
 export interface TrialStatus {
   freeUserId: string
@@ -14,6 +23,17 @@ export interface TrialStatus {
   urgencyLevel: 'info' | 'warning' | 'urgent' | 'expired'
 }
 
+export interface CoachingTrialStatus {
+  userId: string
+  coachingTier: CoachingTier
+  isTrialActive: boolean
+  trialStartDate: Date | null
+  trialEndDate: Date | null
+  daysRemaining: number
+  urgencyLevel: 'info' | 'warning' | 'urgent' | 'expired'
+  effectiveTier: CoachingSubscriptionTier
+}
+
 export interface CreateTrialOptions {
   email?: string
   name?: string
@@ -22,8 +42,13 @@ export interface CreateTrialOptions {
   curriculum?: string
 }
 
+// ============================================
+// CONSTANTS
+// ============================================
+
 const TRIAL_DURATION_DAYS = 15
 const MAX_TRIAL_TESTS = 50
+const MASTER_TRIAL_DURATION_DAYS = 7
 
 export async function generateDeviceId(): Promise<string> {
   return `device_${Date.now()}_${Math.random().toString(36).substring(7)}`
@@ -319,4 +344,193 @@ export async function getTrialStatistics(freeUserId: string): Promise<{
     weakTopics,
     testsCompleted,
   }
+}
+
+// ============================================
+// REGISTERED USER TRIAL FUNCTIONS (7-day master trial)
+// ============================================
+
+export function getCoachingUrgencyLevel(
+  daysRemaining: number,
+  isExpired: boolean
+): CoachingTrialStatus['urgencyLevel'] {
+  if (isExpired || daysRemaining <= 0) return 'expired'
+  if (daysRemaining <= 2) return 'urgent'
+  if (daysRemaining <= 4) return 'warning'
+  return 'info'
+}
+
+export async function checkCoachingTrialStatus(userId: string): Promise<CoachingTrialStatus | null> {
+  const user = await prisma.users.findUnique({
+    where: { id: userId },
+    select: {
+      id: true,
+      coachingTier: true,
+      trialStartDate: true,
+      trialEndDate: true,
+    },
+  })
+
+  if (!user) {
+    return null
+  }
+
+  const now = new Date()
+  const isTrialActive = user.trialEndDate ? now < user.trialEndDate : false
+  const daysRemaining = user.trialEndDate
+    ? Math.max(0, Math.ceil((user.trialEndDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)))
+    : 0
+
+  const effectiveTier = getEffectiveTierFromCoaching(user.coachingTier, isTrialActive)
+
+  return {
+    userId: user.id,
+    coachingTier: user.coachingTier,
+    isTrialActive,
+    trialStartDate: user.trialStartDate,
+    trialEndDate: user.trialEndDate,
+    daysRemaining,
+    urgencyLevel: getCoachingUrgencyLevel(daysRemaining, !isTrialActive && user.coachingTier === 'FREE'),
+    effectiveTier,
+  }
+}
+
+export function getEffectiveTierFromCoaching(
+  coachingTier: CoachingTier,
+  isTrialActive: boolean
+): CoachingSubscriptionTier {
+  // During active trial, FREE users get PINNACLE access to experience all features
+  if (isTrialActive && coachingTier === 'FREE') {
+    return CoachingSubscriptionTier.PINNACLE
+  }
+
+  // Map database enum to subscription tier enum
+  switch (coachingTier) {
+    case 'PINNACLE':
+      return CoachingSubscriptionTier.PINNACLE
+    case 'ASCENT':
+      return CoachingSubscriptionTier.ASCENT
+    case 'PURSUIT':
+      return CoachingSubscriptionTier.PURSUIT
+    case 'FREE':
+    default:
+      return CoachingSubscriptionTier.FREE
+  }
+}
+
+export async function getEffectiveTier(userId: string): Promise<CoachingSubscriptionTier> {
+  const status = await checkCoachingTrialStatus(userId)
+  if (!status) {
+    return CoachingSubscriptionTier.FREE
+  }
+  return status.effectiveTier
+}
+
+export async function hasTrialFeatureAccess(
+  userId: string,
+  feature: keyof CoachingFeatures
+): Promise<{ hasAccess: boolean; reason?: string }> {
+  const status = await checkCoachingTrialStatus(userId)
+
+  if (!status) {
+    return { hasAccess: false, reason: 'User not found' }
+  }
+
+  const hasFeature = hasCoachingFeature(status.effectiveTier, feature)
+
+  if (!hasFeature) {
+    if (status.coachingTier === 'FREE' && !status.isTrialActive) {
+      return {
+        hasAccess: false,
+        reason: 'Trial expired. Upgrade to access this feature.',
+      }
+    }
+    return {
+      hasAccess: false,
+      reason: `This feature requires a higher subscription tier.`,
+    }
+  }
+
+  return { hasAccess: true }
+}
+
+export async function upgradeUserTier(
+  userId: string,
+  newTier: CoachingTier
+): Promise<{ success: boolean; user?: any; error?: string }> {
+  try {
+    const user = await prisma.users.findUnique({
+      where: { id: userId },
+    })
+
+    if (!user) {
+      return { success: false, error: 'User not found' }
+    }
+
+    const updatedUser = await prisma.users.update({
+      where: { id: userId },
+      data: {
+        coachingTier: newTier,
+        trialEndDate: null,
+        updatedAt: new Date(),
+      },
+    })
+
+    return { success: true, user: updatedUser }
+  } catch (error) {
+    console.error('Error upgrading user tier:', error)
+    return { success: false, error: 'Failed to upgrade tier' }
+  }
+}
+
+export async function startMasterTrial(userId: string): Promise<CoachingTrialStatus | null> {
+  const user = await prisma.users.findUnique({
+    where: { id: userId },
+  })
+
+  if (!user) {
+    return null
+  }
+
+  if (user.trialStartDate) {
+    return checkCoachingTrialStatus(userId)
+  }
+
+  const trialStartDate = new Date()
+  const trialEndDate = new Date(trialStartDate)
+  trialEndDate.setDate(trialEndDate.getDate() + MASTER_TRIAL_DURATION_DAYS)
+
+  await prisma.users.update({
+    where: { id: userId },
+    data: {
+      trialStartDate,
+      trialEndDate,
+      updatedAt: new Date(),
+    },
+  })
+
+  return checkCoachingTrialStatus(userId)
+}
+
+export async function extendMasterTrial(userId: string, days: number = 3): Promise<CoachingTrialStatus | null> {
+  const user = await prisma.users.findUnique({
+    where: { id: userId },
+  })
+
+  if (!user || !user.trialEndDate) {
+    return null
+  }
+
+  const newTrialEndDate = new Date(user.trialEndDate)
+  newTrialEndDate.setDate(newTrialEndDate.getDate() + days)
+
+  await prisma.users.update({
+    where: { id: userId },
+    data: {
+      trialEndDate: newTrialEndDate,
+      updatedAt: new Date(),
+    },
+  })
+
+  return checkCoachingTrialStatus(userId)
 }

@@ -527,46 +527,46 @@ model forum_replies {
 }
 
 model free_users {
-  id                      String                    @id
-  email                   String                    @unique
-  name                    String?
-  grade                   String?
-  curriculum              String?
-  school                  String?
-  city                    String?
-  totalPoints             Int                       @default(0)
-  studyStreak             Int                       @default(0)
-  lastActiveDate          DateTime?
-  preferences             Json?
-  registrationDate        DateTime                  @default(now())
-  updatedAt               DateTime
-  adaptiveData            Json?
-  averageScore            Float?
-  bestScore               Float?
-  currentLevel            Int                       @default(1)
-  strongestTopics         Json?
-  totalTestsTaken         Int                       @default(0)
-  weakestTopics           Json?
-  deviceId                String?
-  extensionCount          Int                       @default(0)
-  isTrialExpired          Boolean                   @default(false)
-  lastTrialCheck          DateTime                  @default(now())
-  testsTakenCount         Int                       @default(0)
-  trialExpiryDate         DateTime?
-  trialExtended           Boolean                   @default(false)
-  trialStartDate          DateTime                  @default(now())
-  upgradedToUserId        String?
-  achievements            achievements[]
-  bookmarks               bookmarks[]
-  forum_posts             forum_posts[]
-  mcq_bookmarks           mcq_bookmarks[]
-  performance_reports     performance_reports[]
-  study_plans             study_plans[]
-  test_attempts              test_attempts[]
-  test_sessions              test_sessions[]
-  user_progress              user_progress[]
-  user_question_responses    user_question_responses[]
-  question_review_schedules  question_review_schedule[]
+  id                        String                     @id
+  email                     String                     @unique
+  name                      String?
+  grade                     String?
+  curriculum                String?
+  school                    String?
+  city                      String?
+  totalPoints               Int                        @default(0)
+  studyStreak               Int                        @default(0)
+  lastActiveDate            DateTime?
+  preferences               Json?
+  registrationDate          DateTime                   @default(now())
+  updatedAt                 DateTime
+  adaptiveData              Json?
+  averageScore              Float?
+  bestScore                 Float?
+  currentLevel              Int                        @default(1)
+  strongestTopics           Json?
+  totalTestsTaken           Int                        @default(0)
+  weakestTopics             Json?
+  deviceId                  String?
+  extensionCount            Int                        @default(0)
+  isTrialExpired            Boolean                    @default(false)
+  lastTrialCheck            DateTime                   @default(now())
+  testsTakenCount           Int                        @default(0)
+  trialExpiryDate           DateTime?
+  trialExtended             Boolean                    @default(false)
+  trialStartDate            DateTime                   @default(now())
+  upgradedToUserId          String?
+  achievements              achievements[]
+  bookmarks                 bookmarks[]
+  forum_posts               forum_posts[]
+  mcq_bookmarks             mcq_bookmarks[]
+  performance_reports       performance_reports[]
+  study_plans               study_plans[]
+  test_attempts             test_attempts[]
+  test_sessions             test_sessions[]
+  user_progress             user_progress[]
+  user_question_responses   user_question_responses[]
+  question_review_schedules question_review_schedule[]
 
   @@index([deviceId])
   @@index([trialExpiryDate, isTrialExpired])
@@ -872,64 +872,64 @@ model question_banks {
 }
 
 model questions {
-  id                        String                      @id
-  topic                     String
-  subtopic                  String?
-  curriculum                String
-  grade                     String
-  type                      QuestionType
-  question                  String
-  options                   Json?
-  correctAnswer             String
-  explanation               String?
-  source                    String?
-  marks                     Int                         @default(1)
-  timeLimit                 Int?
-  tags                      Json?
-  totalAttempts             Int                         @default(0)
-  correctAttempts           Int                         @default(0)
-  averageTime               Int?
-  isActive                  Boolean                     @default(true)
-  isVerified                Boolean                     @default(false)
-  createdAt                 DateTime                    @default(now())
-  updatedAt                 DateTime
-  category                  QuestionCategory            @default(PRACTICE)
-  conversionRate            Float?
-  difficultyRating          Float?
-  examYear                  Int?
-  explanationImage          String?
-  keywords                  Json?
-  lastUsed                  DateTime?
-  popularityScore           Float                       @default(0)
-  qualityScore              Float?
-  questionImage             String?
-  relatedConcepts           Json?
-  reportCount               Int                         @default(0)
-  slug                      String?                     @unique
-  solutionSteps             Json?
-  subject                   String                      @default("biology")
-  variantId                 String?
-  verifiedBy                String?
-  videoExplanation          String?
-  difficulty                DifficultyLevel             @default(MEDIUM)
+  id               String           @id
+  topic            String
+  subtopic         String?
+  curriculum       String
+  grade            String
+  type             QuestionType
+  question         String
+  options          Json?
+  correctAnswer    String
+  explanation      String?
+  source           String?
+  marks            Int              @default(1)
+  timeLimit        Int?
+  tags             Json?
+  totalAttempts    Int              @default(0)
+  correctAttempts  Int              @default(0)
+  averageTime      Int?
+  isActive         Boolean          @default(true)
+  isVerified       Boolean          @default(false)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime
+  category         QuestionCategory @default(PRACTICE)
+  conversionRate   Float?
+  difficultyRating Float?
+  examYear         Int?
+  explanationImage String?
+  keywords         Json?
+  lastUsed         DateTime?
+  popularityScore  Float            @default(0)
+  qualityScore     Float?
+  questionImage    String?
+  relatedConcepts  Json?
+  reportCount      Int              @default(0)
+  slug             String?          @unique
+  solutionSteps    Json?
+  subject          String           @default("biology")
+  variantId        String?
+  verifiedBy       String?
+  videoExplanation String?
+  difficulty       DifficultyLevel  @default(MEDIUM)
 
   // NCERT-specific fields for filtering
-  isNcertBased              Boolean                     @default(false)
-  ncertClass                Int?
-  ncertChapter              Int?
-  ncertChapterName          String?
-  ncertFigure               String?
-  ncertPage                 Int?
-  neetWeightage             String?
-  isNeetImportant           Boolean                     @default(false)
+  isNcertBased     Boolean @default(false)
+  ncertClass       Int?
+  ncertChapter     Int?
+  ncertChapterName String?
+  ncertFigure      String?
+  ncertPage        Int?
+  neetWeightage    String?
+  isNeetImportant  Boolean @default(false)
 
-  mcq_bookmarks              mcq_bookmarks[]
-  question_bank_questions    question_bank_questions[]
-  test_assignment_questions  test_assignment_questions[]
-  test_questions             test_questions[]
-  user_question_responses    user_question_responses[]
-  question_diagrams          question_diagrams[]
-  question_review_schedules  question_review_schedule[]
+  mcq_bookmarks             mcq_bookmarks[]
+  question_bank_questions   question_bank_questions[]
+  test_assignment_questions test_assignment_questions[]
+  test_questions            test_questions[]
+  user_question_responses   user_question_responses[]
+  question_diagrams         question_diagrams[]
+  question_review_schedules question_review_schedule[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
@@ -1337,6 +1337,10 @@ model users {
   lastActiveAt                    DateTime?
   verificationToken               String?
   verificationTokenExpiry         DateTime?
+  coachingTier                    CoachingTier                  @default(FREE)
+  trialStartDate                  DateTime?
+  trialEndDate                    DateTime?
+  referredByConsultantId          String?
   activities                      activities[]
   student_submissions             assignment_submissions[]      @relation("StudentSubmissions")
   teacher_assignments             assignments[]                 @relation("TeacherAssignments")
@@ -1390,11 +1394,14 @@ model users {
   whatsapp_conversations          whatsapp_conversations[]      @relation("AssignedCounselor")
   whatsapp_messages_sent          whatsapp_messages[]           @relation("SentByUser")
   contact_inquiries               contact_inquiries[]           @relation("ContactInquiryAssignee")
+  consultant_profile              consultants?
 
   @@index([role, createdAt])
   @@index([lastActiveAt])
   @@index([emailVerified])
   @@index([firebaseUid])
+  @@index([coachingTier])
+  @@index([trialEndDate])
 }
 
 model whatsapp_otp {
@@ -2773,6 +2780,7 @@ enum UserRole {
   TEACHER
   ADMIN
   COUNSELOR
+  CONSULTANT
 }
 
 enum ConversationStatus {
@@ -3127,38 +3135,38 @@ enum OMRAnswerKeyStatus {
 }
 
 model omr_papers {
-  id                    String          @id @default(cuid())
-  paperCode             String          @unique
-  title                 String
-  description           String?
+  id          String  @id @default(cuid())
+  paperCode   String  @unique
+  title       String
+  description String?
 
-  subjectType           OMRSubjectType
-  targetClass           String
+  subjectType OMRSubjectType
+  targetClass String
 
-  totalQuestions        Int
-  totalMarks            Float
-  marksPerCorrect       Float           @default(4)
-  marksPerWrong         Float           @default(-1)
-  marksPerUnattempted   Float           @default(0)
+  totalQuestions      Int
+  totalMarks          Float
+  marksPerCorrect     Float @default(4)
+  marksPerWrong       Float @default(-1)
+  marksPerUnattempted Float @default(0)
 
-  sections              Json?
+  sections Json?
 
-  examDate              DateTime
-  submissionStart       DateTime
-  submissionEnd         DateTime
+  examDate        DateTime
+  submissionStart DateTime
+  submissionEnd   DateTime
 
-  hasVerifiedKey        Boolean         @default(false)
+  hasVerifiedKey        Boolean   @default(false)
   verifiedKeyUploadedAt DateTime?
 
-  status                OMRPaperStatus  @default(DRAFT)
-  isActive              Boolean         @default(true)
+  status   OMRPaperStatus @default(DRAFT)
+  isActive Boolean        @default(true)
 
-  createdBy             String?
-  createdAt             DateTime        @default(now())
-  updatedAt             DateTime        @updatedAt
+  createdBy String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  answerKeys            omr_answer_keys[]
-  submissions           omr_submissions[]
+  answerKeys  omr_answer_keys[]
+  submissions omr_submissions[]
 
   @@index([paperCode])
   @@index([subjectType, status])
@@ -3167,30 +3175,30 @@ model omr_papers {
 }
 
 model omr_answer_keys {
-  id               String              @id @default(cuid())
-  paperId          String
-  paper            omr_papers          @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  id      String     @id @default(cuid())
+  paperId String
+  paper   omr_papers @relation(fields: [paperId], references: [id], onDelete: Cascade)
 
-  questionNo       Int
-  section          String?
+  questionNo Int
+  section    String?
 
-  correctAnswer    String
-  explanation      String?             @db.Text
-  topic            String?
-  subtopic         String?
-  difficulty       String?
+  correctAnswer String
+  explanation   String? @db.Text
+  topic         String?
+  subtopic      String?
+  difficulty    String?
 
-  keyStatus        OMRAnswerKeyStatus  @default(UNVERIFIED)
+  keyStatus        OMRAnswerKeyStatus @default(UNVERIFIED)
   verifiedBy       String?
   verifiedAt       DateTime?
   verificationNote String?
 
-  previousAnswer   String?
-  changedAt        DateTime?
-  changedReason    String?
+  previousAnswer String?
+  changedAt      DateTime?
+  changedReason  String?
 
-  createdAt        DateTime            @default(now())
-  updatedAt        DateTime            @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([paperId, questionNo])
   @@index([paperId])
@@ -3198,42 +3206,42 @@ model omr_answer_keys {
 }
 
 model omr_submissions {
-  id                String       @id @default(cuid())
-  paperId           String
-  paper             omr_papers   @relation(fields: [paperId], references: [id])
+  id      String     @id @default(cuid())
+  paperId String
+  paper   omr_papers @relation(fields: [paperId], references: [id])
 
-  studentName       String
-  studentPhone      String
-  studentEmail      String?
-  studentClass      String
-  studentRollNo     String?
+  studentName   String
+  studentPhone  String
+  studentEmail  String?
+  studentClass  String
+  studentRollNo String?
 
-  submittedAnswers  Json
-  omrImageUrl       String?
-  useVerifiedKey    Boolean      @default(false)
+  submittedAnswers Json
+  omrImageUrl      String?
+  useVerifiedKey   Boolean @default(false)
 
-  totalAttempted    Int          @default(0)
-  totalCorrect      Int          @default(0)
-  totalWrong        Int          @default(0)
-  totalUnattempted  Int          @default(0)
-  marksObtained     Float        @default(0)
-  maxMarks          Float
-  percentage        Float        @default(0)
+  totalAttempted   Int   @default(0)
+  totalCorrect     Int   @default(0)
+  totalWrong       Int   @default(0)
+  totalUnattempted Int   @default(0)
+  marksObtained    Float @default(0)
+  maxMarks         Float
+  percentage       Float @default(0)
 
-  sectionResults    Json?
-  questionResults   Json?
+  sectionResults  Json?
+  questionResults Json?
 
-  rank              Int?
-  percentile        Float?
+  rank       Int?
+  percentile Float?
 
-  status            String       @default("completed")
-  submittedAt       DateTime     @default(now())
-  recalculatedAt    DateTime?
+  status         String    @default("completed")
+  submittedAt    DateTime  @default(now())
+  recalculatedAt DateTime?
 
-  ipAddress         String?
-  userAgent         String?
+  ipAddress String?
+  userAgent String?
 
-  createdAt         DateTime     @default(now())
+  createdAt DateTime @default(now())
 
   @@index([paperId])
   @@index([studentPhone])
@@ -3248,40 +3256,40 @@ model omr_submissions {
 
 // Enums for MCQ Enhancement
 enum CommunityQuestionStatus {
-  PENDING          // Just submitted
-  AI_SCREENING     // Being analyzed by AI
-  AI_APPROVED      // AI passed, waiting admin
-  AI_REJECTED      // AI flagged issues
-  ADMIN_REVIEW     // In admin queue
-  APPROVED         // Published
-  REJECTED         // Admin rejected
-  DISPUTED         // Has error reports
+  PENDING // Just submitted
+  AI_SCREENING // Being analyzed by AI
+  AI_APPROVED // AI passed, waiting admin
+  AI_REJECTED // AI flagged issues
+  ADMIN_REVIEW // In admin queue
+  APPROVED // Published
+  REJECTED // Admin rejected
+  DISPUTED // Has error reports
 }
 
 enum ErrorReportType {
-  WRONG_ANSWER      // Correct answer is incorrect
-  AMBIGUOUS         // Multiple correct answers possible
-  OUTDATED          // Information is outdated
-  TYPO              // Spelling/grammar error
-  INCOMPLETE        // Missing important info
+  WRONG_ANSWER // Correct answer is incorrect
+  AMBIGUOUS // Multiple correct answers possible
+  OUTDATED // Information is outdated
+  TYPO // Spelling/grammar error
+  INCOMPLETE // Missing important info
   OTHER
 }
 
 enum ErrorReportStatus {
   PENDING
   UNDER_REVIEW
-  ACCEPTED          // Answer corrected
-  REJECTED          // Report invalid
-  DUPLICATE         // Already reported
+  ACCEPTED // Answer corrected
+  REJECTED // Report invalid
+  DUPLICATE // Already reported
 }
 
 enum BadgeCategory {
-  STREAK            // Consistency badges
-  MILESTONE         // Question milestones
-  ACCURACY          // Performance badges
-  CONTRIBUTOR       // Community contribution
-  SPECIAL           // Events, achievements
-  TOPIC_MASTER      // Topic-specific
+  STREAK // Consistency badges
+  MILESTONE // Question milestones
+  ACCURACY // Performance badges
+  CONTRIBUTOR // Community contribution
+  SPECIAL // Events, achievements
+  TOPIC_MASTER // Topic-specific
 }
 
 enum BadgeRarity {
@@ -3301,56 +3309,56 @@ enum LeaderboardPeriod {
 
 // Community-submitted questions
 model community_questions {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Question Content
-  question          String   @db.Text
-  options           Json     // ["Option A", "Option B", "Option C", "Option D"]
-  correctAnswer     String   // "A", "B", "C", or "D"
-  explanation       String?  @db.Text
+  question      String  @db.Text
+  options       Json // ["Option A", "Option B", "Option C", "Option D"]
+  correctAnswer String // "A", "B", "C", or "D"
+  explanation   String? @db.Text
 
   // Classification
-  topic             String
-  subtopic          String?
-  chapter           String?
-  difficulty        DifficultyLevel @default(MEDIUM)
-  isPYQ             Boolean  @default(false)
-  pyqYear           Int?     // 2023, 2022, etc.
+  topic      String
+  subtopic   String?
+  chapter    String?
+  difficulty DifficultyLevel @default(MEDIUM)
+  isPYQ      Boolean         @default(false)
+  pyqYear    Int? // 2023, 2022, etc.
 
   // Submission Info
-  submittedBy       String   // free_user ID or user ID
-  submitterName     String
-  submitterPhone    String?
-  submitterEmail    String?
+  submittedBy    String // free_user ID or user ID
+  submitterName  String
+  submitterPhone String?
+  submitterEmail String?
 
   // AI Pre-screening
-  aiScore           Float?           // 0-100 quality score
-  aiAnalysis        Json?            // {accuracy: 95, clarity: 88, relevance: 92, issues: [...]}
-  aiScreenedAt      DateTime?
-  aiApproved        Boolean?         // AI recommendation
+  aiScore      Float? // 0-100 quality score
+  aiAnalysis   Json? // {accuracy: 95, clarity: 88, relevance: 92, issues: [...]}
+  aiScreenedAt DateTime?
+  aiApproved   Boolean? // AI recommendation
 
   // Admin Review
-  status            CommunityQuestionStatus @default(PENDING)
-  reviewedBy        String?          // Admin user ID
-  reviewedAt        DateTime?
-  reviewNotes       String?
-  rejectionReason   String?
+  status          CommunityQuestionStatus @default(PENDING)
+  reviewedBy      String? // Admin user ID
+  reviewedAt      DateTime?
+  reviewNotes     String?
+  rejectionReason String?
 
   // Quality Metrics (post-approval)
-  totalAttempts     Int      @default(0)
-  correctAttempts   Int      @default(0)
-  reportCount       Int      @default(0)
-  qualityScore      Float?
+  totalAttempts   Int    @default(0)
+  correctAttempts Int    @default(0)
+  reportCount     Int    @default(0)
+  qualityScore    Float?
 
   // Gamification
-  contributorXpAwarded Int   @default(0)
+  contributorXpAwarded Int @default(0)
 
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-  publishedAt       DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  publishedAt DateTime?
 
   // Relations
-  errorReports      answer_error_reports[]
+  errorReports answer_error_reports[]
 
   @@index([status, aiApproved])
   @@index([topic, difficulty])
@@ -3360,37 +3368,37 @@ model community_questions {
 
 // Answer error reports from users
 model answer_error_reports {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Question Reference
-  questionId        String?          // Standard question ID
-  communityQuestionId String?        // Community question ID
-  communityQuestion community_questions? @relation(fields: [communityQuestionId], references: [id])
+  questionId          String? // Standard question ID
+  communityQuestionId String? // Community question ID
+  communityQuestion   community_questions? @relation(fields: [communityQuestionId], references: [id])
 
   // Reporter Info
-  reportedBy        String           // free_user ID
-  reporterName      String?
-  reporterPhone     String?
-  reporterEmail     String?
+  reportedBy    String // free_user ID
+  reporterName  String?
+  reporterPhone String?
+  reporterEmail String?
 
   // Report Details
-  reportType        ErrorReportType
-  currentAnswer     String           // What's marked as correct
-  suggestedAnswer   String?          // What reporter thinks is correct
-  explanation       String   @db.Text // Why they think it's wrong
-  evidence          String?  @db.Text // Reference/source
+  reportType      ErrorReportType
+  currentAnswer   String // What's marked as correct
+  suggestedAnswer String? // What reporter thinks is correct
+  explanation     String          @db.Text // Why they think it's wrong
+  evidence        String?         @db.Text // Reference/source
 
   // Review
-  status            ErrorReportStatus @default(PENDING)
-  reviewedBy        String?
-  reviewedAt        DateTime?
-  resolution        String?  @db.Text
-  isValid           Boolean?
+  status     ErrorReportStatus @default(PENDING)
+  reviewedBy String?
+  reviewedAt DateTime?
+  resolution String?           @db.Text
+  isValid    Boolean?
 
   // Gamification
-  reporterXpAwarded Int      @default(0)
+  reporterXpAwarded Int @default(0)
 
-  createdAt         DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([status])
   @@index([questionId])
@@ -3399,49 +3407,49 @@ model answer_error_reports {
 
 // Gamification: User achievements & progress for MCQ practice
 model mcq_user_stats {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // User Reference
-  freeUserId        String?  @unique
-  userId            String?  @unique
+  freeUserId String? @unique
+  userId     String? @unique
 
   // Practice Stats
-  totalQuestions    Int      @default(0)
-  correctAnswers    Int      @default(0)
-  accuracy          Float    @default(0)
+  totalQuestions Int   @default(0)
+  correctAnswers Int   @default(0)
+  accuracy       Float @default(0)
 
   // Streaks
-  currentStreak     Int      @default(0)
-  longestStreak     Int      @default(0)
-  lastPracticeDate  DateTime?
+  currentStreak    Int       @default(0)
+  longestStreak    Int       @default(0)
+  lastPracticeDate DateTime?
 
   // XP & Levels
-  totalXp           Int      @default(0)
-  currentLevel      Int      @default(1)
-  levelProgress     Float    @default(0)  // 0-100%
+  totalXp       Int   @default(0)
+  currentLevel  Int   @default(1)
+  levelProgress Float @default(0) // 0-100%
 
   // Daily Challenge
-  dailyChallengeCompleted Boolean @default(false)
+  dailyChallengeCompleted Boolean   @default(false)
   dailyChallengeDate      DateTime?
-  dailyChallengesTotal    Int      @default(0)
+  dailyChallengesTotal    Int       @default(0)
 
   // Community Contribution
-  questionsSubmitted      Int      @default(0)
-  questionsApproved       Int      @default(0)
-  errorsReported          Int      @default(0)
-  errorsAccepted          Int      @default(0)
-  contributorRank         String?  // BRONZE, SILVER, GOLD, EXPERT
+  questionsSubmitted Int     @default(0)
+  questionsApproved  Int     @default(0)
+  errorsReported     Int     @default(0)
+  errorsAccepted     Int     @default(0)
+  contributorRank    String? // BRONZE, SILVER, GOLD, EXPERT
 
   // Topic Mastery
-  topicMastery      Json?    // {topic: {attempted: 50, correct: 45, mastery: 90}}
-  weakTopics        Json?    // ["Genetics", "Ecology"]
-  strongTopics      Json?    // ["Cell Biology", "Human Physiology"]
+  topicMastery Json? // {topic: {attempted: 50, correct: 45, mastery: 90}}
+  weakTopics   Json? // ["Genetics", "Ecology"]
+  strongTopics Json? // ["Cell Biology", "Human Physiology"]
 
   // Badges (JSON array of badge IDs)
-  badges            Json?    // ["first_100", "streak_7", "contributor_gold"]
+  badges Json? // ["first_100", "streak_7", "contributor_gold"]
 
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([totalXp])
   @@index([currentStreak])
@@ -3449,15 +3457,15 @@ model mcq_user_stats {
 
 // User bookmarked questions
 model mcq_bookmarks {
-  id          String   @id @default(cuid())
-  freeUserId  String
-  questionId  String
-  note        String?  @db.Text // Optional user note
-  createdAt   DateTime @default(now())
+  id         String   @id @default(cuid())
+  freeUserId String
+  questionId String
+  note       String?  @db.Text // Optional user note
+  createdAt  DateTime @default(now())
 
   // Relations
-  free_user   free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
-  question    questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  free_user free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  question  questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([freeUserId, questionId])
   @@index([freeUserId])
@@ -3466,20 +3474,20 @@ model mcq_bookmarks {
 
 // Spaced Repetition Review Schedule
 model question_review_schedule {
-  id            String    @id @default(cuid())
-  freeUserId    String
-  questionId    String
-  easeFactor    Float     @default(2.5) // SM-2 ease factor (min 1.3)
-  interval      Int       @default(1)   // Days until next review
-  repetitions   Int       @default(0)   // Number of successful reviews
-  nextReviewAt  DateTime  // When to review next
-  lastReviewAt  DateTime? // Last review timestamp
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id           String    @id @default(cuid())
+  freeUserId   String
+  questionId   String
+  easeFactor   Float     @default(2.5) // SM-2 ease factor (min 1.3)
+  interval     Int       @default(1) // Days until next review
+  repetitions  Int       @default(0) // Number of successful reviews
+  nextReviewAt DateTime // When to review next
+  lastReviewAt DateTime? // Last review timestamp
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   // Relations
-  free_user     free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
-  question      questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  free_user free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  question  questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([freeUserId, questionId])
   @@index([freeUserId, nextReviewAt])
@@ -3488,108 +3496,108 @@ model question_review_schedule {
 
 // Badge definitions
 model mcq_badges {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  code              String   @unique  // "streak_7", "questions_100"
-  name              String             // "Week Warrior"
-  description       String             // "Maintain 7-day streak"
-  icon              String             // Emoji or icon name
-  category          BadgeCategory
+  code        String        @unique // "streak_7", "questions_100"
+  name        String // "Week Warrior"
+  description String // "Maintain 7-day streak"
+  icon        String // Emoji or icon name
+  category    BadgeCategory
 
   // Unlock conditions
-  requirement       Json               // {type: "streak", value: 7}
-  xpReward          Int      @default(0)
+  requirement Json // {type: "streak", value: 7}
+  xpReward    Int  @default(0)
 
   // Rarity
-  rarity            BadgeRarity @default(COMMON)
-  totalUnlocked     Int      @default(0)
+  rarity        BadgeRarity @default(COMMON)
+  totalUnlocked Int         @default(0)
 
-  isActive          Boolean  @default(true)
-  createdAt         DateTime @default(now())
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
 }
 
 // Daily challenges
 model daily_challenges {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  date              DateTime @unique @db.Date
+  date DateTime @unique @db.Date
 
   // Challenge Config
-  topic             String?          // Specific topic or null for random
-  questionCount     Int      @default(5)
-  difficulty        DifficultyLevel?
-  timeLimit         Int?             // Optional time limit in seconds
+  topic         String? // Specific topic or null for random
+  questionCount Int              @default(5)
+  difficulty    DifficultyLevel?
+  timeLimit     Int? // Optional time limit in seconds
 
   // Questions (JSON array of question IDs)
-  questionIds       Json
+  questionIds Json
 
   // Rewards
-  xpReward          Int      @default(50)
-  bonusXp           Int      @default(25)  // For perfect score
+  xpReward Int @default(50)
+  bonusXp  Int @default(25) // For perfect score
 
   // Stats
-  participantCount  Int      @default(0)
-  perfectScoreCount Int      @default(0)
+  participantCount  Int    @default(0)
+  perfectScoreCount Int    @default(0)
   avgScore          Float?
 
-  createdAt         DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([date])
 }
 
 // Leaderboard snapshots
 model mcq_leaderboard {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  period            LeaderboardPeriod
-  periodStart       DateTime
-  periodEnd         DateTime
+  period      LeaderboardPeriod
+  periodStart DateTime
+  periodEnd   DateTime
 
   // Rankings (JSON array)
-  rankings          Json     // [{rank: 1, freeUserId: "...", name: "...", xp: 500, accuracy: 95}]
+  rankings Json // [{rank: 1, freeUserId: "...", name: "...", xp: 500, accuracy: 95}]
 
   // Stats
   totalParticipants Int
   topScore          Int
   avgScore          Float?
 
-  createdAt         DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([period, periodStart])
 }
 
 // MCQ Practice sessions for analytics
 model mcq_practice_sessions {
-  id                String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // User
-  freeUserId        String?
-  userId            String?
-  sessionToken      String?  // For anonymous tracking
+  freeUserId   String?
+  userId       String?
+  sessionToken String? // For anonymous tracking
 
   // Session Config
-  topic             String?
-  difficulty        DifficultyLevel?
-  isPYQOnly         Boolean  @default(false)
-  pyqYear           Int?
+  topic      String?
+  difficulty DifficultyLevel?
+  isPYQOnly  Boolean          @default(false)
+  pyqYear    Int?
 
   // Results
-  questionsAttempted Int     @default(0)
-  correctAnswers     Int     @default(0)
-  timeSpent          Int     @default(0)  // Seconds
-  xpEarned           Int     @default(0)
+  questionsAttempted Int @default(0)
+  correctAnswers     Int @default(0)
+  timeSpent          Int @default(0) // Seconds
+  xpEarned           Int @default(0)
 
   // Lead Capture
-  leadCaptured       Boolean @default(false)
-  capturedAt         DateTime?
+  leadCaptured Boolean   @default(false)
+  capturedAt   DateTime?
 
   // Device/Security
-  deviceFingerprint  String?
-  ipAddress          String?
-  userAgent          String?
+  deviceFingerprint String?
+  ipAddress         String?
+  userAgent         String?
 
-  startedAt          DateTime @default(now())
-  endedAt            DateTime?
+  startedAt DateTime  @default(now())
+  endedAt   DateTime?
 
   @@index([freeUserId])
   @@index([startedAt])
@@ -3627,62 +3635,62 @@ enum DiagramCategory {
 
 // Main diagram asset storage
 model diagram_assets {
-  id              String          @id @default(cuid())
-  
+  id String @id @default(cuid())
+
   // Basic Info
-  name            String
-  description     String?
-  category        DiagramCategory
-  subcategory     String?         // e.g., "heart", "nephron", "mitochondria"
-  
+  name        String
+  description String?
+  category    DiagramCategory
+  subcategory String? // e.g., "heart", "nephron", "mitochondria"
+
   // Source Tracking
-  source          DiagramSource
-  sourceUrl       String?         // Original URL if from external source
-  license         String          // CC BY, Public Domain, etc.
-  attribution     String?         // Credit text
-  
+  source      DiagramSource
+  sourceUrl   String? // Original URL if from external source
+  license     String // CC BY, Public Domain, etc.
+  attribution String? // Credit text
+
   // Storage
-  svgContent      String?         @db.Text  // Inline SVG for fast loading
-  fileUrl         String?         // CDN URL for larger files
-  thumbnailUrl    String?
-  
+  svgContent   String? @db.Text // Inline SVG for fast loading
+  fileUrl      String? // CDN URL for larger files
+  thumbnailUrl String?
+
   // Quality & Ratings
-  qualityScore    Float           @default(3.0)  // 1-5 rating
-  isVerified      Boolean         @default(false)
-  verifiedBy      String?
-  
+  qualityScore Float   @default(3.0) // 1-5 rating
+  isVerified   Boolean @default(false)
+  verifiedBy   String?
+
   // NCERT Mapping
-  ncertClass      Int?            // 11 or 12
-  ncertUnit       Int?
-  ncertChapter    Int?
+  ncertClass       Int? // 11 or 12
+  ncertUnit        Int?
+  ncertChapter     Int?
   ncertChapterName String?
-  ncertFigureNo   String?         // "19.2", "8.4a"
+  ncertFigureNo    String? // "19.2", "8.4a"
   ncertFigureTitle String?
-  ncertPageNo     Int?
-  
+  ncertPageNo      Int?
+
   // Labeled Parts (for interactive diagrams)
-  labeledParts    Json?           // [{label: "A", name: "Glomerulus", function: "..."}]
-  
+  labeledParts Json? // [{label: "A", name: "Glomerulus", function: "..."}]
+
   // Searchability
-  tags            String[]
-  keywords        String[]
-  
+  tags     String[]
+  keywords String[]
+
   // Usage Tracking
-  usageCount      Int             @default(0)
-  lastUsedAt      DateTime?
-  
+  usageCount Int       @default(0)
+  lastUsedAt DateTime?
+
   // Metadata
-  width           Int?
-  height          Int?
-  fileSize        Int?            // bytes
-  
-  isActive        Boolean         @default(true)
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  
+  width    Int?
+  height   Int?
+  fileSize Int? // bytes
+
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   // Relations
   questionDiagrams question_diagrams[]
-  
+
   @@index([category, subcategory])
   @@index([ncertClass, ncertChapter])
   @@index([source])
@@ -3692,50 +3700,50 @@ model diagram_assets {
 
 // Junction table: Questions <-> Diagrams (many-to-many)
 model question_diagrams {
-  id              String          @id @default(cuid())
-  
-  questionId      String
-  diagramId       String
-  
+  id String @id @default(cuid())
+
+  questionId String
+  diagramId  String
+
   // Positioning in question
-  position        String          @default("inline") // inline, above, below, side
-  caption         String?
-  
+  position String  @default("inline") // inline, above, below, side
+  caption  String?
+
   // For labeled diagram questions
-  highlightedParts String[]       // Parts to highlight/mark
-  markedLabel     String?         // Label to ask about (e.g., "X", "A")
-  
-  createdAt       DateTime        @default(now())
-  
+  highlightedParts String[] // Parts to highlight/mark
+  markedLabel      String? // Label to ask about (e.g., "X", "A")
+
+  createdAt DateTime @default(now())
+
   // Relations
-  question        questions       @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  diagram         diagram_assets  @relation(fields: [diagramId], references: [id], onDelete: Cascade)
-  
+  question questions      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  diagram  diagram_assets @relation(fields: [diagramId], references: [id], onDelete: Cascade)
+
   @@unique([questionId, diagramId])
   @@index([diagramId])
 }
 
 // NCERT Chapter reference table (for easy lookup)
 model ncert_chapters {
-  id              String          @id @default(cuid())
+  id String @id @default(cuid())
 
-  class           Int             // 11 or 12
-  unitNo          Int
-  unitName        String
-  chapterNo       Int
-  chapterName     String
+  class       Int // 11 or 12
+  unitNo      Int
+  unitName    String
+  chapterNo   Int
+  chapterName String
 
   // Important figures in this chapter
-  keyFigures      Json?           // [{figNo: "19.2", title: "Nephron", priority: 5}]
+  keyFigures Json? // [{figNo: "19.2", title: "Nephron", priority: 5}]
 
   // Topics covered
-  topics          String[]
+  topics String[]
 
   // NEET weightage
-  neetWeightage   Int             @default(1)  // 1-5
+  neetWeightage       Int    @default(1) // 1-5
   avgQuestionsPerYear Float?
 
-  createdAt       DateTime        @default(now())
+  createdAt DateTime @default(now())
 
   @@unique([class, chapterNo])
   @@index([class])
@@ -3746,20 +3754,20 @@ model ncert_chapters {
 // =====================================================
 
 enum QuizFormat {
-  MODERATOR              // Teacher asks, teams can pass
-  TEAMS_ASK_EACH_OTHER   // Teams ask each other, no passing
+  MODERATOR // Teacher asks, teams can pass
+  TEAMS_ASK_EACH_OTHER // Teams ask each other, no passing
 }
 
 enum QuizQuestionMode {
-  SIMPLE_SCOREBOARD      // Verbal questions, manual scoring only
-  PRELOADED              // Questions from database
+  SIMPLE_SCOREBOARD // Verbal questions, manual scoring only
+  PRELOADED // Questions from database
 }
 
 enum QuizSessionStatus {
-  WAITING                // Room created, waiting for start
-  IN_PROGRESS            // Quiz is active
-  PAUSED                 // Temporarily paused
-  COMPLETED              // Quiz finished
+  WAITING // Room created, waiting for start
+  IN_PROGRESS // Quiz is active
+  PAUSED // Temporarily paused
+  COMPLETED // Quiz finished
 }
 
 enum QuizTeam {
@@ -3774,60 +3782,60 @@ enum QuizWinner {
 }
 
 enum RoundOutcome {
-  CORRECT                // Full points awarded
-  INCORRECT              // Points deducted
-  PASSED                 // Passed to other team
-  PARTIAL                // Partial marks awarded
-  SKIPPED                // Question skipped
+  CORRECT // Full points awarded
+  INCORRECT // Points deducted
+  PASSED // Passed to other team
+  PARTIAL // Partial marks awarded
+  SKIPPED // Question skipped
 }
 
 // Quiz Competition Session
 model quiz_sessions {
-  id            String              @id @default(cuid())
-  roomCode      String              @unique @db.VarChar(6)
-  hostToken     String              @db.VarChar(64) // Secure token for host authorization
-  title         String
-  format        QuizFormat
-  questionMode  QuizQuestionMode
-  status        QuizSessionStatus   @default(WAITING)
-  createdById   String
+  id           String            @id @default(cuid())
+  roomCode     String            @unique @db.VarChar(6)
+  hostToken    String            @db.VarChar(64) // Secure token for host authorization
+  title        String
+  format       QuizFormat
+  questionMode QuizQuestionMode
+  status       QuizSessionStatus @default(WAITING)
+  createdById  String
 
   // Team configuration
-  teamAName     String              @default("Team A")
-  teamBName     String              @default("Team B")
-  teamAScore    Int                 @default(0)
-  teamBScore    Int                 @default(0)
-  winner        QuizWinner?         // Set when quiz ends
+  teamAName  String      @default("Team A")
+  teamBName  String      @default("Team B")
+  teamAScore Int         @default(0)
+  teamBScore Int         @default(0)
+  winner     QuizWinner? // Set when quiz ends
 
   // Quiz progress
-  currentRound  Int                 @default(0)
-  totalRounds   Int?
+  currentRound Int  @default(0)
+  totalRounds  Int?
 
   // Timer configuration (in seconds)
-  questionTimerSeconds  Int         @default(60)
-  answerTimerSeconds    Int         @default(60)
+  questionTimerSeconds Int @default(60)
+  answerTimerSeconds   Int @default(60)
 
   // Active timer state
-  activeTimerType       String?     // 'question' or 'answer' or null
-  timerStartedAt        DateTime?   // When the current timer started
-  timerPausedAt         DateTime?   // When timer was paused (for pause/resume)
+  activeTimerType String? // 'question' or 'answer' or null
+  timerStartedAt  DateTime? // When the current timer started
+  timerPausedAt   DateTime? // When timer was paused (for pause/resume)
 
   // Discussion indicator
-  teamDiscussing        String?     // 'TEAM_A' or 'TEAM_B' or null
+  teamDiscussing String? // 'TEAM_A' or 'TEAM_B' or null
 
   // Scoring rules: { correct: 20, wrong: -10, pass: -10, partial: { half: 10 } }
-  scoringRules  Json                @default("{\"correct\": 20, \"wrong\": -10, \"pass\": -10}")
+  scoringRules Json @default("{\"correct\": 20, \"wrong\": -10, \"pass\": -10}")
 
   // Timestamps
-  startedAt     DateTime?
-  endedAt       DateTime?
-  createdAt     DateTime            @default(now())
-  updatedAt     DateTime            @updatedAt
+  startedAt DateTime?
+  endedAt   DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
   // Relations
-  rounds        quiz_rounds[]
-  participants  quiz_participants[]
-  messages      quiz_messages[]
+  rounds       quiz_rounds[]
+  participants quiz_participants[]
+  messages     quiz_messages[]
 
   @@index([roomCode])
   @@index([createdById])
@@ -3836,16 +3844,16 @@ model quiz_sessions {
 
 // Quiz Round (each scoring action)
 model quiz_rounds {
-  id            String              @id @default(cuid())
+  id            String       @id @default(cuid())
   sessionId     String
   roundNumber   Int
   answeringTeam QuizTeam
   outcome       RoundOutcome
-  pointsChange  Int                 // Can be positive or negative
-  note          String?             // Optional note about the round
-  createdAt     DateTime            @default(now())
+  pointsChange  Int // Can be positive or negative
+  note          String? // Optional note about the round
+  createdAt     DateTime     @default(now())
 
-  session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  session quiz_sessions @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 
   @@unique([sessionId, roundNumber])
   @@index([sessionId])
@@ -3853,17 +3861,17 @@ model quiz_rounds {
 
 // Quiz Participants (students/viewers joining the session)
 model quiz_participants {
-  id         String              @id @default(cuid())
+  id         String    @id @default(cuid())
   sessionId  String
   name       String
-  team       QuizTeam?           // null for observers
-  isHost     Boolean             @default(false)
+  team       QuizTeam? // null for observers
+  isHost     Boolean   @default(false)
   deviceId   String?
-  joinedAt   DateTime            @default(now())
-  lastSeenAt DateTime            @default(now())
+  joinedAt   DateTime  @default(now())
+  lastSeenAt DateTime  @default(now())
 
-  session    quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  messages   quiz_messages[]
+  session  quiz_sessions   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  messages quiz_messages[]
 
   @@unique([sessionId, name])
   @@index([sessionId])
@@ -3871,17 +3879,17 @@ model quiz_participants {
 
 // Quiz Chat Messages (private team communication)
 model quiz_messages {
-  id            String              @id @default(cuid())
+  id            String   @id @default(cuid())
   sessionId     String
-  team          QuizTeam            // Which team this message belongs to
+  team          QuizTeam // Which team this message belongs to
   participantId String
-  senderName    String              // Denormalized for quick display
+  senderName    String // Denormalized for quick display
   message       String
-  createdAt     DateTime            @default(now())
+  createdAt     DateTime @default(now())
 
-  session       quiz_sessions       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  participant   quiz_participants   @relation(fields: [participantId], references: [id], onDelete: Cascade)
-  reactions     quiz_message_reactions[]
+  session     quiz_sessions            @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participant quiz_participants        @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  reactions   quiz_message_reactions[]
 
   @@index([sessionId, team, createdAt])
   @@index([participantId])
@@ -3889,13 +3897,13 @@ model quiz_messages {
 
 // Quiz Message Reactions (emoji reactions on chat messages)
 model quiz_message_reactions {
-  id            String              @id @default(cuid())
+  id            String   @id @default(cuid())
   messageId     String
   participantId String
-  emoji         String              // The emoji character: 👍, ❤️, 😂, ❓, 🔥
-  createdAt     DateTime            @default(now())
+  emoji         String // The emoji character: 👍, ❤️, 😂, ❓, 🔥
+  createdAt     DateTime @default(now())
 
-  message       quiz_messages       @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  message quiz_messages @relation(fields: [messageId], references: [id], onDelete: Cascade)
 
   @@unique([messageId, participantId, emoji]) // One reaction per emoji per user per message
   @@index([messageId])
@@ -3924,19 +3932,19 @@ enum BatchStatus {
 
 // Batch Timetable Model
 model batches {
-  id              String          @id @default(cuid())
+  id              String         @id @default(cuid())
   classType       BatchClassType
   batchNumber     Int
-  days            String[]        // ['Mon', 'Wed'] or ['Sat', 'Sun']
-  startTime       String          // '18:00' format
-  endTime         String          // '19:30' format
+  days            String[] // ['Mon', 'Wed'] or ['Sat', 'Sun']
+  startTime       String // '18:00' format
+  endTime         String // '19:30' format
   offlineLocation BatchLocation
-  hasOnline       Boolean         @default(true)
-  status          BatchStatus     @default(AVAILABLE)
-  displayOrder    Int             @default(0)
-  isActive        Boolean         @default(true)
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  hasOnline       Boolean        @default(true)
+  status          BatchStatus    @default(AVAILABLE)
+  displayOrder    Int            @default(0)
+  isActive        Boolean        @default(true)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
 
   @@unique([classType, batchNumber])
   @@index([classType, status])
@@ -3945,45 +3953,45 @@ model batches {
 
 // NEET Class Options
 model neet_classes {
-  id              String          @id @default(cuid())
-  classType       BatchClassType
-  optionADay      String          // 'Wednesday'
-  optionATime     String          // '7:30 - 8:30 PM'
-  optionBDay      String          // 'Sunday'
-  optionBTime     String          // '6:15 - 7:15 PM'
-  isActive        Boolean         @default(true)
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  id          String         @id @default(cuid())
+  classType   BatchClassType
+  optionADay  String // 'Wednesday'
+  optionATime String // '7:30 - 8:30 PM'
+  optionBDay  String // 'Sunday'
+  optionBTime String // '6:15 - 7:15 PM'
+  isActive    Boolean        @default(true)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
 
   @@unique([classType])
 }
 
 // Test Schedule
 model test_schedules {
-  id              String          @id @default(cuid())
-  classType       BatchClassType
-  day             String          // 'Monday'
-  time            String          // '8:30 - 9:30 PM'
-  mode            String          // 'Online (can request offline)'
-  isActive        Boolean         @default(true)
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  id        String         @id @default(cuid())
+  classType BatchClassType
+  day       String // 'Monday'
+  time      String // '8:30 - 9:30 PM'
+  mode      String // 'Online (can request offline)'
+  isActive  Boolean        @default(true)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
 
   @@unique([classType])
 }
 
 // Contact Inquiries - Store all website contact form submissions
 model contact_inquiries {
-  id            String              @id @default(cuid())
+  id            String          @id @default(cuid())
   name          String
   email         String
   phone         String
   center        String?
   supportType   String
   message       String
-  source        String              @default("Website")
-  status        InquiryStatus       @default(NEW)
-  priority      InquiryPriority     @default(NORMAL)
+  source        String          @default("Website")
+  status        InquiryStatus   @default(NEW)
+  priority      InquiryPriority @default(NORMAL)
   department    String?
   assignedToId  String?
   respondedAt   DateTime?
@@ -3994,9 +4002,9 @@ model contact_inquiries {
   utmSource     String?
   utmMedium     String?
   utmCampaign   String?
-  createdAt     DateTime            @default(now())
-  updatedAt     DateTime            @updatedAt
-  assignedTo    users?              @relation("ContactInquiryAssignee", fields: [assignedToId], references: [id])
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  assignedTo    users?          @relation("ContactInquiryAssignee", fields: [assignedToId], references: [id])
 
   @@index([status, createdAt])
   @@index([supportType, createdAt])
@@ -4024,50 +4032,50 @@ enum InquiryPriority {
 
 // NEET Parents Guidance Seminar Registrations
 model seminar_registrations {
-  id                String                      @id @default(cuid())
-  parentName        String
-  email             String
-  whatsappNumber    String
-  city              String
-  studentClass      String?
-  referralCode      String?
+  id             String  @id @default(cuid())
+  parentName     String
+  email          String
+  whatsappNumber String
+  city           String
+  studentClass   String?
+  referralCode   String?
 
   // Payment
-  razorpayOrderId   String                      @unique
-  razorpayPaymentId String?                     @unique
-  paymentStatus     SeminarPaymentStatus        @default(PENDING)
-  amount            Int                         @default(19900)
-  pricingTier       SeminarPricingTier          @default(STANDARD)
+  razorpayOrderId   String               @unique
+  razorpayPaymentId String?              @unique
+  paymentStatus     SeminarPaymentStatus @default(PENDING)
+  amount            Int                  @default(19900)
+  pricingTier       SeminarPricingTier   @default(STANDARD)
 
   // Seminar Details
-  seminarDate       DateTime
-  seminarSlot       String
-  attended          Boolean                     @default(false)
-  joinedAt          DateTime?
+  seminarDate DateTime
+  seminarSlot String
+  attended    Boolean   @default(false)
+  joinedAt    DateTime?
 
   // Nurturing
-  whatsappOptIn     Boolean                     @default(true)
-  emailOptIn        Boolean                     @default(true)
-  dripStage         Int                         @default(0)
-  lastDripSentAt    DateTime?
+  whatsappOptIn  Boolean   @default(true)
+  emailOptIn     Boolean   @default(true)
+  dripStage      Int       @default(0)
+  lastDripSentAt DateTime?
 
   // Conversion Tracking
-  demoClassBooked   Boolean                     @default(false)
-  demoBookedAt      DateTime?
-  courseEnrolled    Boolean                     @default(false)
-  enrolledAt        DateTime?
-  courseId          String?
+  demoClassBooked Boolean   @default(false)
+  demoBookedAt    DateTime?
+  courseEnrolled  Boolean   @default(false)
+  enrolledAt      DateTime?
+  courseId        String?
 
   // Tracking
-  utmSource         String?
-  utmMedium         String?
-  utmCampaign       String?
-  ipAddress         String?
-  userAgent         String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  ipAddress   String?
+  userAgent   String?
 
   // Timestamps
-  createdAt         DateTime                    @default(now())
-  updatedAt         DateTime                    @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([paymentStatus, createdAt])
   @@index([seminarDate])
@@ -4096,43 +4104,43 @@ enum SeminarPricingTier {
 
 // Content generation queue for automated SEO content
 model content_generation_queue {
-  id                String                    @id @default(cuid())
-  type              ContentGenerationType
-  triggerSource     ContentTriggerSource
-  priority          ContentPriority           @default(NORMAL)
-  status            ContentGenerationStatus   @default(PENDING)
+  id            String                  @id @default(cuid())
+  type          ContentGenerationType
+  triggerSource ContentTriggerSource
+  priority      ContentPriority         @default(NORMAL)
+  status        ContentGenerationStatus @default(PENDING)
 
   // Input
   topic             String
   keywords          String[]
   sourceUrl         String?
-  additionalContext String?                   @db.Text
+  additionalContext String?  @db.Text
 
   // Generated content
-  generatedTitle    String?
-  generatedSlug     String?
-  generatedContent  String?                   @db.Text
-  generatedMeta     Json?
-  generatedExcerpt  String?                   @db.Text
+  generatedTitle   String?
+  generatedSlug    String?
+  generatedContent String? @db.Text
+  generatedMeta    Json?
+  generatedExcerpt String? @db.Text
 
   // Approval workflow
   whatsappMessageId String?
   approvalSentAt    DateTime?
   approvalResponse  String?
-  iterationCount    Int                       @default(0)
-  iterationFeedback String?                   @db.Text
+  iterationCount    Int       @default(0)
+  iterationFeedback String?   @db.Text
 
   // Publishing
-  publishedUrl      String?
-  publishedAt       DateTime?
+  publishedUrl String?
+  publishedAt  DateTime?
 
   // Tracking
-  tokensUsed        Int?
-  costUsd           Float?
-  errorMessage      String?                   @db.Text
+  tokensUsed   Int?
+  costUsd      Float?
+  errorMessage String? @db.Text
 
-  createdAt         DateTime                  @default(now())
-  updatedAt         DateTime                  @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([status, createdAt])
   @@index([type, status])
@@ -4142,44 +4150,44 @@ model content_generation_queue {
 
 // Monthly limits for content generation (cost control)
 model content_generation_limits {
-  id                String   @id @default(cuid())
-  month             String   @unique // YYYY-MM format
-  blogsGenerated    Int      @default(0)
-  newsGenerated     Int      @default(0)
-  landingPages      Int      @default(0)
-  tokensUsed        Int      @default(0)
-  costUsd           Float    @default(0)
+  id             String @id @default(cuid())
+  month          String @unique // YYYY-MM format
+  blogsGenerated Int    @default(0)
+  newsGenerated  Int    @default(0)
+  landingPages   Int    @default(0)
+  tokensUsed     Int    @default(0)
+  costUsd        Float  @default(0)
 
   // Configurable monthly limits
-  maxMonthlyBlogs   Int      @default(15)
-  maxMonthlyNews    Int      @default(30)
-  maxMonthlyPages   Int      @default(10)
-  maxMonthlyCostUsd Float    @default(5.0) // $5 USD per month cap
+  maxMonthlyBlogs   Int   @default(15)
+  maxMonthlyNews    Int   @default(30)
+  maxMonthlyPages   Int   @default(10)
+  maxMonthlyCostUsd Float @default(5.0) // $5 USD per month cap
 
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 // Track trending topics and news sources
 model seo_content_sources {
-  id              String   @id @default(cuid())
-  sourceType      String
-  sourceName      String
-  sourceUrl       String?
-  lastCheckedAt   DateTime?
-  lastContentAt   DateTime?
-  isActive        Boolean  @default(true)
+  id            String    @id @default(cuid())
+  sourceType    String
+  sourceName    String
+  sourceUrl     String?
+  lastCheckedAt DateTime?
+  lastContentAt DateTime?
+  isActive      Boolean   @default(true)
 
   // RSS/Feed specific
-  feedUrl         String?
-  feedFormat      String?
+  feedUrl    String?
+  feedFormat String?
 
   // Trend tracking
-  trendKeywords   String[]
-  trendScore      Float?
+  trendKeywords String[]
+  trendScore    Float?
 
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([sourceType, isActive])
   @@index([lastCheckedAt])
@@ -4217,4 +4225,427 @@ enum ContentGenerationStatus {
   ITERATING
   PUBLISHED
   FAILED
+}
+
+// ============================================
+// COACHING SUBSCRIPTION & CONSULTANT SYSTEM
+// ============================================
+
+enum CoachingTier {
+  FREE
+  PURSUIT
+  ASCENT
+  PINNACLE
+}
+
+enum ReferralStatus {
+  NEW_LEAD
+  DEMO_SCHEDULED
+  DEMO_COMPLETED
+  OFFER_SENT
+  PAYMENT_PENDING
+  ENROLLED
+  LOST
+}
+
+enum NoticeTargetType {
+  ALL
+  BATCH
+  COURSE
+  SPECIFIC_USERS
+}
+
+enum NoticeCategory {
+  ANNOUNCEMENT
+  ALERT
+  REMINDER
+  EVENT
+  HOMEWORK
+  EXAM
+}
+
+enum WorksheetStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum WorkSubmissionStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  SUBMITTED
+  GRADED
+}
+
+enum AchieverNominationType {
+  TEACHER
+  PEER
+  AUTO_SCORE
+  AUTO_COMPLETION
+}
+
+enum NoteType {
+  TEXT
+  DRAWING
+  MIXED
+}
+
+enum EvaluationSlot {
+  MORNING
+  AFTERNOON
+  EVENING
+}
+
+// ============================================
+// CONSULTANT & REFERRAL MODELS
+// ============================================
+
+model consultants {
+  id                  String           @id @default(cuid())
+  userId              String           @unique
+  consultantCode      String           @unique
+  displayName         String
+  phone               String?
+  email               String?
+  isActive            Boolean          @default(true)
+  commissionRate      Decimal          @default(10) @db.Decimal(5, 2)
+  totalReferrals      Int              @default(0)
+  successfulReferrals Int              @default(0)
+  totalCommission     Decimal          @default(0) @db.Decimal(12, 2)
+  paidCommission      Decimal          @default(0) @db.Decimal(12, 2)
+  pendingCommission   Decimal          @default(0) @db.Decimal(12, 2)
+  bankDetails         Json?
+  metadata            Json?
+  createdAt           DateTime         @default(now())
+  updatedAt           DateTime         @updatedAt
+  user                users            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  referrals           referrals[]
+  commissions         commissions[]
+  referral_links      referral_links[]
+
+  @@index([isActive])
+  @@index([consultantCode])
+}
+
+model referrals {
+  id                String          @id @default(cuid())
+  consultantId      String
+  leadId            String?
+  studentName       String
+  phone             String
+  email             String?
+  courseInterest    String?
+  status            ReferralStatus  @default(NEW_LEAD)
+  referralLinkId    String?
+  source            String?
+  notes             String?
+  demoScheduledAt   DateTime?
+  demoCompletedAt   DateTime?
+  offerSentAt       DateTime?
+  paymentReceivedAt DateTime?
+  enrolledAt        DateTime?
+  lostAt            DateTime?
+  lostReason        String?
+  enrollmentId      String?
+  totalFeeAmount    Decimal?        @db.Decimal(10, 2)
+  commissionEarned  Decimal?        @db.Decimal(10, 2)
+  metadata          Json?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  consultant        consultants     @relation(fields: [consultantId], references: [id], onDelete: Cascade)
+  referral_link     referral_links? @relation(fields: [referralLinkId], references: [id])
+  commissions       commissions[]
+
+  @@index([consultantId, status])
+  @@index([status, createdAt])
+  @@index([phone])
+  @@index([email])
+}
+
+model commissions {
+  id           String      @id @default(cuid())
+  consultantId String
+  referralId   String
+  amount       Decimal     @db.Decimal(10, 2)
+  percentage   Decimal     @db.Decimal(5, 2)
+  baseAmount   Decimal     @db.Decimal(10, 2)
+  status       String      @default("PENDING")
+  paidAt       DateTime?
+  paymentRef   String?
+  invoiceUrl   String?
+  metadata     Json?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  consultant   consultants @relation(fields: [consultantId], references: [id], onDelete: Cascade)
+  referral     referrals   @relation(fields: [referralId], references: [id], onDelete: Cascade)
+
+  @@index([consultantId, status])
+  @@index([status, createdAt])
+}
+
+model referral_links {
+  id              String      @id @default(cuid())
+  consultantId    String
+  code            String      @unique
+  name            String?
+  targetUrl       String?
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+  clickCount      Int         @default(0)
+  conversionCount Int         @default(0)
+  isActive        Boolean     @default(true)
+  expiresAt       DateTime?
+  metadata        Json?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  consultant      consultants @relation(fields: [consultantId], references: [id], onDelete: Cascade)
+  referrals       referrals[]
+
+  @@index([consultantId, isActive])
+  @@index([code])
+}
+
+// ============================================
+// NOTICE BOARD
+// ============================================
+
+model notices {
+  id              String           @id @default(cuid())
+  title           String
+  content         String
+  category        NoticeCategory   @default(ANNOUNCEMENT)
+  targetType      NoticeTargetType @default(ALL)
+  targetCourseIds String[]
+  targetBatchIds  String[]
+  targetUserIds   String[]
+  priority        Int              @default(0)
+  isPinned        Boolean          @default(false)
+  attachments     Json?
+  publishedAt     DateTime?
+  expiresAt       DateTime?
+  createdById     String
+  isActive        Boolean          @default(true)
+  viewCount       Int              @default(0)
+  metadata        Json?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  notice_reads    notice_reads[]
+
+  @@index([isActive, publishedAt])
+  @@index([category, isActive])
+  @@index([targetType, isActive])
+  @@index([isPinned, publishedAt])
+}
+
+model notice_reads {
+  id       String   @id @default(cuid())
+  noticeId String
+  userId   String
+  readAt   DateTime @default(now())
+  notice   notices  @relation(fields: [noticeId], references: [id], onDelete: Cascade)
+
+  @@unique([noticeId, userId])
+  @@index([userId])
+}
+
+// ============================================
+// WORKSHEETS
+// ============================================
+
+model worksheets {
+  id                  String                  @id @default(cuid())
+  title               String
+  description         String?
+  courseId            String?
+  chapterId           String?
+  topicId             String?
+  content             Json
+  instructions        String?
+  maxMarks            Int                     @default(100)
+  duration            Int?
+  difficulty          DifficultyLevel         @default(MEDIUM)
+  status              WorksheetStatus         @default(DRAFT)
+  dueDate             DateTime?
+  allowLateSubmission Boolean                 @default(false)
+  createdById         String
+  publishedAt         DateTime?
+  attachments         String[]
+  tags                String[]
+  downloadCount       Int                     @default(0)
+  metadata            Json?
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  submissions         worksheet_submissions[]
+
+  @@index([status, publishedAt])
+  @@index([courseId, status])
+  @@index([dueDate])
+}
+
+model worksheet_submissions {
+  id          String               @id @default(cuid())
+  worksheetId String
+  studentId   String
+  status      WorkSubmissionStatus @default(NOT_STARTED)
+  answers     Json?
+  attachments String[]
+  startedAt   DateTime?
+  submittedAt DateTime?
+  grade       Int?
+  feedback    String?
+  gradedAt    DateTime?
+  gradedById  String?
+  isLate      Boolean              @default(false)
+  timeSpent   Int?
+  metadata    Json?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+  worksheet   worksheets           @relation(fields: [worksheetId], references: [id], onDelete: Cascade)
+
+  @@unique([worksheetId, studentId])
+  @@index([studentId, status])
+  @@index([worksheetId, status])
+  @@index([submittedAt])
+}
+
+// ============================================
+// STUDENT NOTES (Notability-like)
+// ============================================
+
+model student_notes {
+  id           String   @id @default(cuid())
+  studentId    String
+  title        String
+  noteType     NoteType @default(TEXT)
+  content      Json
+  thumbnail    String?
+  courseId     String?
+  chapterId    String?
+  topicId      String?
+  tags         String[]
+  isFavorite   Boolean  @default(false)
+  isArchived   Boolean  @default(false)
+  lastEditedAt DateTime @default(now())
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([studentId, isArchived])
+  @@index([studentId, isFavorite])
+  @@index([courseId])
+  @@index([lastEditedAt])
+}
+
+// ============================================
+// SELF EVALUATION
+// ============================================
+
+model self_evaluations {
+  id                 String         @id @default(cuid())
+  studentId          String
+  date               DateTime       @db.Date
+  slot               EvaluationSlot
+  courseId           String?
+  topicsCovered      String[]
+  conceptsLearned    String[]
+  questionsAttempted Int            @default(0)
+  questionsCorrect   Int            @default(0)
+  difficultyRating   Int?
+  confidenceLevel    Int?
+  studyHours         Decimal?       @db.Decimal(4, 2)
+  notes              String?
+  goals              String[]
+  achievements       String[]
+  struggles          String[]
+  nextDayPlan        String?
+  metadata           Json?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+
+  @@unique([studentId, date, slot])
+  @@index([studentId, date])
+  @@index([date])
+}
+
+// ============================================
+// WORK TRACKING & REPORTS
+// ============================================
+
+model work_tracking {
+  id                   String   @id @default(cuid())
+  studentId            String
+  date                 DateTime @db.Date
+  courseId             String?
+  assignmentsAssigned  Int      @default(0)
+  assignmentsSubmitted Int      @default(0)
+  assignmentsChecked   Int      @default(0)
+  testsAssigned        Int      @default(0)
+  testsAttempted       Int      @default(0)
+  testsChecked         Int      @default(0)
+  worksheetsAssigned   Int      @default(0)
+  worksheetsSubmitted  Int      @default(0)
+  worksheetsChecked    Int      @default(0)
+  classesScheduled     Int      @default(0)
+  classesAttended      Int      @default(0)
+  studyMinutes         Int      @default(0)
+  remarks              String?
+  specialNotes         String?
+  metadata             Json?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([studentId, date, courseId])
+  @@index([studentId, date])
+  @@index([date])
+}
+
+// ============================================
+// WALL OF ACHIEVERS
+// ============================================
+
+model wall_of_achievers {
+  id            String                 @id @default(cuid())
+  studentId     String
+  studentName   String
+  achievement   String
+  description   String?
+  category      String
+  score         Decimal?               @db.Decimal(5, 2)
+  rank          Int?
+  badgeUrl      String?
+  photoUrl      String?
+  courseId      String?
+  period        String?
+  featuredFrom  DateTime?
+  featuredUntil DateTime?
+  isActive      Boolean                @default(true)
+  viewCount     Int                    @default(0)
+  metadata      Json?
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+  nominations   achiever_nominations[]
+
+  @@index([isActive, featuredFrom])
+  @@index([category, isActive])
+  @@index([studentId])
+}
+
+model achiever_nominations {
+  id             String                 @id @default(cuid())
+  achieverId     String
+  nominatedById  String
+  nominationType AchieverNominationType
+  reason         String?
+  score          Int?
+  isApproved     Boolean                @default(false)
+  approvedById   String?
+  approvedAt     DateTime?
+  metadata       Json?
+  createdAt      DateTime               @default(now())
+  achiever       wall_of_achievers      @relation(fields: [achieverId], references: [id], onDelete: Cascade)
+
+  @@unique([achieverId, nominatedById, nominationType])
+  @@index([achieverId, isApproved])
+  @@index([nominationType])
 }

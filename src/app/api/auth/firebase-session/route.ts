@@ -137,6 +137,11 @@ export async function POST(request: NextRequest) {
       const userId = randomUUID()
       const placeholderEmail = `${normalizedPhone.replace('+', '')}@phone.cerebrum.local`
 
+      // Set up 7-day master trial for new users
+      const trialStartDate = new Date()
+      const trialEndDate = new Date(trialStartDate)
+      trialEndDate.setDate(trialEndDate.getDate() + 7)
+
       const newUser = await prisma.users.create({
         data: {
           id: userId,
@@ -145,6 +150,9 @@ export async function POST(request: NextRequest) {
           phone: normalizedPhone,
           firebaseUid: uid,
           role: role === 'parent' ? 'PARENT' : 'STUDENT',
+          coachingTier: 'FREE',
+          trialStartDate: trialStartDate,
+          trialEndDate: trialEndDate,
           updatedAt: new Date(),
           profile: {
             firstName,
@@ -158,6 +166,9 @@ export async function POST(request: NextRequest) {
         NextResponse.json({
           success: true,
           userId: newUser.id,
+          coachingTier: newUser.coachingTier,
+          trialStartDate: newUser.trialStartDate,
+          trialEndDate: newUser.trialEndDate,
           message: 'User created successfully',
         })
       )
@@ -198,6 +209,13 @@ export async function POST(request: NextRequest) {
         data: { lastActiveAt: new Date() },
       })
 
+      // Check if trial is still active
+      const now = new Date()
+      const isTrialActive = user.trialEndDate ? now < user.trialEndDate : false
+      const trialDaysRemaining = user.trialEndDate
+        ? Math.max(0, Math.ceil((user.trialEndDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)))
+        : 0
+
       // Create JWT token for NextAuth session
       const sessionToken = jwt.sign(
         {
@@ -206,6 +224,9 @@ export async function POST(request: NextRequest) {
           name: user.name,
           role: user.role.toLowerCase(),
           phone: normalizedPhone,
+          coachingTier: user.coachingTier,
+          isTrialActive: isTrialActive,
+          trialEndDate: user.trialEndDate?.toISOString(),
           sub: user.id,
         },
         getAuthSecret(),
@@ -237,6 +258,10 @@ export async function POST(request: NextRequest) {
             name: user.name,
             role: user.role.toLowerCase(),
             phone: normalizedPhone,
+            coachingTier: user.coachingTier,
+            isTrialActive: isTrialActive,
+            trialDaysRemaining: trialDaysRemaining,
+            trialEndDate: user.trialEndDate,
           },
         })
       )

@@ -1,7 +1,440 @@
 /**
  * Smart Subscription Tiers - Intelligently designed pricing tiers with AI-driven features
  * Optimized for different user segments with value-based pricing
+ *
+ * TIER HIERARCHY:
+ * - Online Platform Tiers: free, student (pro), premium (master), institutional
+ * - Coaching Program Tiers: FREE, PURSUIT, ASCENT, PINNACLE (aligned with batch coaching)
  */
+
+// Coaching Program Subscription Tier Enum
+export enum CoachingSubscriptionTier {
+  FREE = 'FREE',
+  PURSUIT = 'PURSUIT',
+  ASCENT = 'ASCENT',
+  PINNACLE = 'PINNACLE',
+}
+
+// Coaching Program Tier Configuration
+export interface CoachingTierConfig {
+  id: CoachingSubscriptionTier
+  name: string
+  displayName: string
+  description: string
+  price: number
+  currency: 'INR'
+  batchSize: { min: number; max: number }
+  hoursPerWeek: number
+  features: CoachingFeatures
+  limitations: CoachingLimitations
+  trialPeriod: number
+  targetAudience: string
+}
+
+export interface CoachingFeatures {
+  liveClasses: {
+    enabled: boolean
+    hoursPerWeek: number
+    batchSize: string
+    recordingsAccess: boolean
+  }
+  mcqPractice: {
+    testsLimit: number | 'unlimited'
+    adaptiveTesting: boolean
+  }
+  videoLessons: {
+    access: 'samples' | 'basic' | 'premium' | 'all_exclusive'
+  }
+  aiTutor: {
+    queriesPerDay: number | 'unlimited'
+    priority: boolean
+  }
+  mockTests: {
+    frequency: 'none' | 'one_free' | 'monthly' | 'weekly' | 'unlimited'
+  }
+  performanceAnalytics: {
+    level: 'basic' | 'standard' | 'advanced' | 'premium'
+  }
+  studyPlanner: {
+    type: 'basic' | 'standard' | 'ai_powered' | 'personal_mentor'
+  }
+  doubtSolving: {
+    enabled: boolean
+    responseTime: string
+  }
+  worksheets: {
+    access: 'samples' | 'full'
+  }
+  notes: {
+    enabled: boolean
+    cloudSync: boolean
+  }
+  wallOfAchievers: {
+    viewAccess: boolean
+    eligible: boolean
+    featured: boolean
+  }
+  certificates: {
+    type: 'none' | 'course' | 'course_merit' | 'all_badge'
+  }
+  oneOnOneMentorship: {
+    included: boolean
+    addOnAvailable: boolean
+  }
+  offlineAccess: boolean
+}
+
+export interface CoachingLimitations {
+  mcqTestsPerTrial: number
+  trialDurationDays: number
+  adsDisplayed: boolean
+}
+
+// Coaching Program Tiers Definition
+export const CoachingTiers: Record<CoachingSubscriptionTier, CoachingTierConfig> = {
+  [CoachingSubscriptionTier.FREE]: {
+    id: CoachingSubscriptionTier.FREE,
+    name: 'free',
+    displayName: 'Free Explorer',
+    description: 'Trial access with 7-day master trial unlocking all premium features',
+    price: 0,
+    currency: 'INR',
+    batchSize: { min: 0, max: 0 },
+    hoursPerWeek: 0,
+    targetAudience: 'Trial users exploring the platform',
+    trialPeriod: 7,
+    features: {
+      liveClasses: {
+        enabled: false,
+        hoursPerWeek: 0,
+        batchSize: 'N/A',
+        recordingsAccess: false,
+      },
+      mcqPractice: {
+        testsLimit: 50,
+        adaptiveTesting: false,
+      },
+      videoLessons: {
+        access: 'samples',
+      },
+      aiTutor: {
+        queriesPerDay: 5,
+        priority: false,
+      },
+      mockTests: {
+        frequency: 'one_free',
+      },
+      performanceAnalytics: {
+        level: 'basic',
+      },
+      studyPlanner: {
+        type: 'basic',
+      },
+      doubtSolving: {
+        enabled: false,
+        responseTime: 'N/A',
+      },
+      worksheets: {
+        access: 'samples',
+      },
+      notes: {
+        enabled: true,
+        cloudSync: false,
+      },
+      wallOfAchievers: {
+        viewAccess: true,
+        eligible: false,
+        featured: false,
+      },
+      certificates: {
+        type: 'none',
+      },
+      oneOnOneMentorship: {
+        included: false,
+        addOnAvailable: false,
+      },
+      offlineAccess: false,
+    },
+    limitations: {
+      mcqTestsPerTrial: 50,
+      trialDurationDays: 7,
+      adsDisplayed: true,
+    },
+  },
+  [CoachingSubscriptionTier.PURSUIT]: {
+    id: CoachingSubscriptionTier.PURSUIT,
+    name: 'pursuit',
+    displayName: 'Pursuit',
+    description: 'Budget-friendly coaching with essential features for dedicated learners',
+    price: 45000,
+    currency: 'INR',
+    batchSize: { min: 30, max: 40 },
+    hoursPerWeek: 6,
+    targetAudience: 'Budget-conscious students seeking quality coaching',
+    trialPeriod: 0,
+    features: {
+      liveClasses: {
+        enabled: true,
+        hoursPerWeek: 6,
+        batchSize: '30-40 students',
+        recordingsAccess: true,
+      },
+      mcqPractice: {
+        testsLimit: 'unlimited',
+        adaptiveTesting: true,
+      },
+      videoLessons: {
+        access: 'basic',
+      },
+      aiTutor: {
+        queriesPerDay: 50,
+        priority: false,
+      },
+      mockTests: {
+        frequency: 'monthly',
+      },
+      performanceAnalytics: {
+        level: 'standard',
+      },
+      studyPlanner: {
+        type: 'standard',
+      },
+      doubtSolving: {
+        enabled: true,
+        responseTime: '48 hours',
+      },
+      worksheets: {
+        access: 'full',
+      },
+      notes: {
+        enabled: true,
+        cloudSync: false,
+      },
+      wallOfAchievers: {
+        viewAccess: true,
+        eligible: true,
+        featured: false,
+      },
+      certificates: {
+        type: 'course',
+      },
+      oneOnOneMentorship: {
+        included: false,
+        addOnAvailable: true,
+      },
+      offlineAccess: false,
+    },
+    limitations: {
+      mcqTestsPerTrial: 0,
+      trialDurationDays: 0,
+      adsDisplayed: false,
+    },
+  },
+  [CoachingSubscriptionTier.ASCENT]: {
+    id: CoachingSubscriptionTier.ASCENT,
+    name: 'ascent',
+    displayName: 'Ascent',
+    description: 'Most popular tier with balanced features and moderate batch sizes',
+    price: 75000,
+    currency: 'INR',
+    batchSize: { min: 16, max: 18 },
+    hoursPerWeek: 8,
+    targetAudience: 'Serious aspirants seeking comprehensive preparation',
+    trialPeriod: 0,
+    features: {
+      liveClasses: {
+        enabled: true,
+        hoursPerWeek: 8,
+        batchSize: '16-18 students',
+        recordingsAccess: true,
+      },
+      mcqPractice: {
+        testsLimit: 'unlimited',
+        adaptiveTesting: true,
+      },
+      videoLessons: {
+        access: 'premium',
+      },
+      aiTutor: {
+        queriesPerDay: 'unlimited',
+        priority: false,
+      },
+      mockTests: {
+        frequency: 'weekly',
+      },
+      performanceAnalytics: {
+        level: 'advanced',
+      },
+      studyPlanner: {
+        type: 'ai_powered',
+      },
+      doubtSolving: {
+        enabled: true,
+        responseTime: '24 hours',
+      },
+      worksheets: {
+        access: 'full',
+      },
+      notes: {
+        enabled: true,
+        cloudSync: true,
+      },
+      wallOfAchievers: {
+        viewAccess: true,
+        eligible: true,
+        featured: false,
+      },
+      certificates: {
+        type: 'course_merit',
+      },
+      oneOnOneMentorship: {
+        included: false,
+        addOnAvailable: true,
+      },
+      offlineAccess: true,
+    },
+    limitations: {
+      mcqTestsPerTrial: 0,
+      trialDurationDays: 0,
+      adsDisplayed: false,
+    },
+  },
+  [CoachingSubscriptionTier.PINNACLE]: {
+    id: CoachingSubscriptionTier.PINNACLE,
+    name: 'pinnacle',
+    displayName: 'Pinnacle',
+    description: 'Premium coaching with personal mentorship and exclusive features',
+    price: 98000,
+    currency: 'INR',
+    batchSize: { min: 10, max: 12 },
+    hoursPerWeek: 12,
+    targetAudience: 'Top performers seeking maximum advantage and personal attention',
+    trialPeriod: 0,
+    features: {
+      liveClasses: {
+        enabled: true,
+        hoursPerWeek: 12,
+        batchSize: '10-12 students',
+        recordingsAccess: true,
+      },
+      mcqPractice: {
+        testsLimit: 'unlimited',
+        adaptiveTesting: true,
+      },
+      videoLessons: {
+        access: 'all_exclusive',
+      },
+      aiTutor: {
+        queriesPerDay: 'unlimited',
+        priority: true,
+      },
+      mockTests: {
+        frequency: 'unlimited',
+      },
+      performanceAnalytics: {
+        level: 'premium',
+      },
+      studyPlanner: {
+        type: 'personal_mentor',
+      },
+      doubtSolving: {
+        enabled: true,
+        responseTime: '2 hours (priority)',
+      },
+      worksheets: {
+        access: 'full',
+      },
+      notes: {
+        enabled: true,
+        cloudSync: true,
+      },
+      wallOfAchievers: {
+        viewAccess: true,
+        eligible: true,
+        featured: true,
+      },
+      certificates: {
+        type: 'all_badge',
+      },
+      oneOnOneMentorship: {
+        included: true,
+        addOnAvailable: false,
+      },
+      offlineAccess: true,
+    },
+    limitations: {
+      mcqTestsPerTrial: 0,
+      trialDurationDays: 0,
+      adsDisplayed: false,
+    },
+  },
+}
+
+// Helper function to get coaching tier by name
+export function getCoachingTier(tierName: string): CoachingTierConfig | null {
+  const tier = Object.values(CoachingTiers).find(
+    (t) => t.name.toLowerCase() === tierName.toLowerCase() || t.id === tierName.toUpperCase()
+  )
+  return tier || null
+}
+
+// Helper function to check if a feature is available for a tier
+export function hasCoachingFeature(
+  tier: CoachingSubscriptionTier,
+  feature: keyof CoachingFeatures,
+  subFeature?: string
+): boolean {
+  const config = CoachingTiers[tier]
+  if (!config) return false
+
+  const featureConfig = config.features[feature]
+  if (!featureConfig) return false
+
+  if (subFeature && typeof featureConfig === 'object') {
+    return !!(featureConfig as Record<string, unknown>)[subFeature]
+  }
+
+  return true
+}
+
+// Helper function to compare tiers
+export function compareTiers(tier1: CoachingSubscriptionTier, tier2: CoachingSubscriptionTier): number {
+  const order = [
+    CoachingSubscriptionTier.FREE,
+    CoachingSubscriptionTier.PURSUIT,
+    CoachingSubscriptionTier.ASCENT,
+    CoachingSubscriptionTier.PINNACLE,
+  ]
+  return order.indexOf(tier1) - order.indexOf(tier2)
+}
+
+// Helper function to get upgrade path
+export function getUpgradePath(currentTier: CoachingSubscriptionTier): CoachingSubscriptionTier[] {
+  const order = [
+    CoachingSubscriptionTier.FREE,
+    CoachingSubscriptionTier.PURSUIT,
+    CoachingSubscriptionTier.ASCENT,
+    CoachingSubscriptionTier.PINNACLE,
+  ]
+  const currentIndex = order.indexOf(currentTier)
+  return order.slice(currentIndex + 1)
+}
+
+// Backward compatibility: Map old tier names to new coaching tiers
+export const TierMapping = {
+  free: CoachingSubscriptionTier.FREE,
+  student: CoachingSubscriptionTier.PURSUIT,
+  premium: CoachingSubscriptionTier.ASCENT,
+  institutional: CoachingSubscriptionTier.PINNACLE,
+  // Direct mappings
+  pursuit: CoachingSubscriptionTier.PURSUIT,
+  ascent: CoachingSubscriptionTier.ASCENT,
+  pinnacle: CoachingSubscriptionTier.PINNACLE,
+} as const
+
+// ============================================================================
+// ORIGINAL ONLINE PLATFORM TIERS (Kept for backward compatibility)
+// ============================================================================
 
 interface SubscriptionTiers {
   free: FreeTierConfig

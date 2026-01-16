@@ -235,6 +235,17 @@ const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
     'payment:track',
     'whatsapp:send',
   ],
+  CONSULTANT: [
+    'referral:create',
+    'referral:view',
+    'referral:update',
+    'commission:view',
+    'lead:create',
+    'lead:view',
+    'lead:update',
+    'referral_link:generate',
+    'admission_status:view',
+  ],
   ADMIN: [
     '*', // All permissions
   ],
