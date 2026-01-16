@@ -57,20 +57,32 @@ export default defineConfig({
     }
   },
 
+  // CI: Skip tests with "Mobile" or "Tablet" in the name
+  grepInvert: isCI && !isFullBrowserTest ? /Mobile|Tablet|mobile viewport/i : undefined,
+
   projects: isCI && !isFullBrowserTest
     ? [
         // CI: Only Chromium for speed (covers 95% of issues)
-        // Exclude device-specific tests (.mobile.spec.ts, .tablet.spec.ts, etc.)
+        // Exclude device-specific and debug test files
         {
           name: 'chromium',
           use: { ...devices['Desktop Chrome'] },
           testMatch: '**/*.spec.ts',
           testIgnore: [
+            // Device-specific test files
             '**/*.mobile.spec.ts',
             '**/*.tablet.spec.ts',
             '**/*.accessibility.spec.ts',
             '**/*.performance.spec.ts',
-            '**/*.ai.spec.ts'
+            '**/*.ai.spec.ts',
+            // Mobile-related test files (different naming pattern)
+            '**/*-mobile-*.spec.ts',
+            '**/*mobile*.spec.ts',
+            // Debug/duplicate burger menu tests (keep only burger-menu.spec.ts for local)
+            '**/burger-menu-*.spec.ts',
+            '**/burger-visual-check.spec.ts',
+            // Dashboard auth tests (require mock auth setup)
+            '**/student-dashboard/**'
           ]
         }
       ]
