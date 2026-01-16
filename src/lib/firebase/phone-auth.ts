@@ -173,8 +173,20 @@ export async function verifyOTP(
 
 /**
  * Sign out the current user
+ * Clears both Firebase client auth and server-side JWT session cookie
  */
 export async function signOut(): Promise<void> {
+  // First, call server-side logout to clear the JWT session cookie
+  try {
+    await fetch('/api/auth/logout', {
+      method: 'POST',
+      credentials: 'include',
+    })
+  } catch (error) {
+    console.error('Error calling server logout:', error)
+  }
+
+  // Then sign out from Firebase client
   await auth.signOut()
   confirmationResult = null
   if (recaptchaVerifier) {

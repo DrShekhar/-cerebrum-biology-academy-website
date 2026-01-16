@@ -595,6 +595,11 @@ export class CookieManager {
   static clearAuthCookies(response: NextResponse) {
     response.cookies.delete('auth-token')
     response.cookies.delete('refresh-token')
+    // Clear all possible session token variants (both secure and non-secure)
+    response.cookies.delete('authjs.session-token')
+    response.cookies.delete('__Secure-authjs.session-token')
+    response.cookies.delete('next-auth.session-token')
+    response.cookies.delete('__Secure-next-auth.session-token')
   }
 }
 
