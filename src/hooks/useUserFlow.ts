@@ -2,7 +2,6 @@
 
 import { useMemo, useEffect, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
-import { useAuth } from './useAuth'
 import { useFirebaseSession } from './useFirebaseSession'
 import {
   getDefaultDashboard,
@@ -19,14 +18,10 @@ import {
  * Hook for managing user flow, dashboard access, and navigation
  */
 export function useUserFlow() {
-  const { user: instantUser, isAuthenticated: instantAuth, isLoading: instantLoading } = useAuth()
-  const { user: firebaseUser, isAuthenticated: firebaseAuth, isLoading: firebaseLoading } = useFirebaseSession()
+  // Use only Firebase session - InstantDB has been deprecated
+  const { user: firebaseUser, isAuthenticated, isLoading } = useFirebaseSession()
 
-  // Combine auth sources - Firebase takes priority
-  const isLoading = instantLoading || firebaseLoading
-  const isAuthenticated = firebaseAuth || instantAuth
-
-  // Use Firebase user if available, otherwise fall back to InstantDB user
+  // Map Firebase user to the expected user format
   const user = firebaseUser ? {
     id: firebaseUser.id,
     email: firebaseUser.email,
@@ -37,7 +32,7 @@ export function useUserFlow() {
     grade: undefined,
     profile: undefined,
     enrollments: undefined,
-  } : instantUser
+  } : null
   const router = useRouter()
   const pathname = usePathname()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
