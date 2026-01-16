@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import { Button } from '@/components/ui/Button'
 import {
   CheckCircle,
@@ -40,9 +41,39 @@ import {
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import ApplicationForm from '@/components/admissions/ApplicationForm'
-import { QuickInquiryForm } from '@/components/admissions/QuickInquiryForm'
-import { ExitIntentPopup } from '@/components/admissions/ExitIntentPopup'
-import { LiveChatWidget } from '@/components/admissions/LiveChatWidget'
+
+// Lazy-load non-critical components for better LCP
+const QuickInquiryForm = dynamic(
+  () => import('@/components/admissions/QuickInquiryForm').then((mod) => mod.QuickInquiryForm),
+  {
+    loading: () => (
+      <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+        <div className="text-center">
+          <div className="h-6 bg-gray-200 rounded w-32 mx-auto mb-2 animate-pulse" />
+          <div className="h-4 bg-gray-100 rounded w-48 mx-auto mb-4 animate-pulse" />
+          <div className="space-y-4">
+            <div className="h-12 bg-gray-100 rounded-lg animate-pulse" />
+            <div className="h-12 bg-gray-100 rounded-lg animate-pulse" />
+            <div className="h-12 bg-gray-100 rounded-lg animate-pulse" />
+            <div className="h-12 bg-indigo-100 rounded-lg animate-pulse" />
+          </div>
+        </div>
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
+const ExitIntentPopup = dynamic(
+  () => import('@/components/admissions/ExitIntentPopup').then((mod) => mod.ExitIntentPopup),
+  { ssr: false }
+)
+
+const LiveChatWidget = dynamic(
+  () => import('@/components/admissions/LiveChatWidget').then((mod) => mod.LiveChatWidget),
+  { ssr: false }
+)
+
 import { allClassPricing, getTierDetails } from '@/data/pricing'
 
 export default function AdmissionsPage() {
@@ -598,41 +629,33 @@ export default function AdmissionsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Hero Content */}
             <div className="text-center lg:text-left">
-              <motion.div
-                className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              {/* Badge - CSS animation instead of Framer Motion for LCP */}
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4 animate-fade-in-up">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">2,847+ Students Enrolled</span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+              {/* Main Heading - Critical LCP element, CSS animation */}
+              <h1
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up"
+                style={{ animationDelay: '0.1s' }}
               >
                 Start Your NEET Journey Today
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                className="text-base sm:text-lg md:text-xl text-blue-100 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              {/* Subheading - Part of LCP */}
+              <p
+                className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 animate-fade-in-up"
+                style={{ animationDelay: '0.2s' }}
               >
                 Join India's top Biology coaching with AIIMS trained faculty. Get personalized
                 guidance and crack NEET with confidence.
-              </motion.p>
+              </p>
 
               {/* Trust Badges */}
-              <motion.div
-                className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <div
+                className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6 animate-fade-in-up"
+                style={{ animationDelay: '0.3s' }}
               >
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2">
                   <Award className="w-5 h-5 text-yellow-400" />
@@ -642,13 +665,12 @@ export default function AdmissionsPage() {
                   <Trophy className="w-5 h-5 text-yellow-400" />
                   <span className="text-sm font-medium">94% Success Rate</span>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+              {/* CTA Buttons */}
+              <div
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up"
+                style={{ animationDelay: '0.4s' }}
               >
                 <Button
                   variant="outline"
@@ -668,18 +690,16 @@ export default function AdmissionsPage() {
                   <Phone className="w-5 h-5 mr-2" />
                   Full Application
                 </Button>
-              </motion.div>
+              </div>
             </div>
 
-            {/* Right Column - Quick Inquiry Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="lg:pl-8"
+            {/* Right Column - Quick Inquiry Form with CSS animation */}
+            <div
+              className="lg:pl-8 animate-fade-in-right"
+              style={{ animationDelay: '0.3s' }}
             >
               <QuickInquiryForm variant="hero" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
