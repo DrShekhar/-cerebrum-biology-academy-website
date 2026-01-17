@@ -209,20 +209,20 @@ export function Leaderboard({
   return (
     <div className={`bg-white rounded-xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 p-6 text-white">
-        <div className="flex items-center justify-between">
+      <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 p-4 sm:p-6 text-white">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <h3 className="text-xl font-bold flex items-center">
-              <Trophy className="w-6 h-6 mr-2" />
+            <h3 className="text-lg sm:text-xl font-bold flex items-center">
+              <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
               Leaderboard
             </h3>
-            <p className="text-white/90 text-sm mt-1">
+            <p className="text-white/90 text-xs sm:text-sm mt-1">
               Compete with others and climb the ranks
             </p>
           </div>
 
           {/* Filters */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 self-end sm:self-auto">
             {/* Type Filter */}
             <div className="relative">
               <button
@@ -331,8 +331,8 @@ export function Leaderboard({
           <>
             {/* Top 3 Podium */}
             {entries.length >= 3 && (
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6">
-                <div className="flex items-end justify-center space-x-4">
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-4 sm:p-6">
+                <div className="flex items-end justify-center space-x-2 sm:space-x-4">
                   {/* 2nd Place */}
                   {entries[1] && (
                     <motion.div
@@ -346,24 +346,24 @@ export function Leaderboard({
                           <img
                             src={entries[1].userAvatar}
                             alt={entries[1].userName}
-                            className="w-16 h-16 rounded-full object-cover border-4 border-gray-300 mx-auto"
+                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 sm:border-4 border-gray-300 mx-auto"
                           />
                         ) : (
-                          <div className="w-16 h-16 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center text-white font-bold text-xl border-4 border-gray-300 mx-auto">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-xl border-2 sm:border-4 border-gray-300 mx-auto">
                             {entries[1].userName.charAt(0).toUpperCase()}
                           </div>
                         )}
-                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gray-300 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gray-300 text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-xs font-bold">
                           2
                         </div>
                       </div>
-                      <div className="mt-3 font-semibold text-gray-700 truncate max-w-[80px]">
+                      <div className="mt-3 font-semibold text-gray-700 truncate max-w-[60px] sm:max-w-[80px] text-xs sm:text-sm">
                         {entries[1].userName}
                       </div>
-                      <div className="text-sm text-yellow-600 font-medium">
+                      <div className="text-xs sm:text-sm text-yellow-600 font-medium">
                         {entries[1].xp.toLocaleString()} XP
                       </div>
-                      <div className="h-16 w-16 bg-gray-300 rounded-t-lg mt-2 mx-auto" />
+                      <div className="h-12 w-12 sm:h-16 sm:w-16 bg-gray-300 rounded-t-lg mt-2 mx-auto" />
                     </motion.div>
                   )}
 
@@ -376,29 +376,29 @@ export function Leaderboard({
                       className="text-center"
                     >
                       <div className="relative">
-                        <Crown className="w-6 h-6 text-yellow-500 absolute -top-6 left-1/2 -translate-x-1/2" />
+                        <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2" />
                         {entries[0].userAvatar ? (
                           <img
                             src={entries[0].userAvatar}
                             alt={entries[0].userName}
-                            className="w-20 h-20 rounded-full object-cover border-4 border-yellow-400 mx-auto"
+                            className="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover border-2 sm:border-4 border-yellow-400 mx-auto"
                           />
                         ) : (
-                          <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-2xl border-4 border-yellow-400 mx-auto">
+                          <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-2xl border-2 sm:border-4 border-yellow-400 mx-auto">
                             {entries[0].userName.charAt(0).toUpperCase()}
                           </div>
                         )}
-                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white w-5 h-5 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                           1
                         </div>
                       </div>
-                      <div className="mt-3 font-bold text-gray-900 truncate max-w-[100px]">
+                      <div className="mt-3 font-bold text-gray-900 truncate max-w-[70px] sm:max-w-[100px] text-xs sm:text-sm">
                         {entries[0].userName}
                       </div>
-                      <div className="text-sm text-yellow-600 font-bold">
+                      <div className="text-xs sm:text-sm text-yellow-600 font-bold">
                         {entries[0].xp.toLocaleString()} XP
                       </div>
-                      <div className="h-24 w-20 bg-yellow-400 rounded-t-lg mt-2 mx-auto" />
+                      <div className="h-16 w-14 sm:h-24 sm:w-20 bg-yellow-400 rounded-t-lg mt-2 mx-auto" />
                     </motion.div>
                   )}
 
@@ -415,24 +415,24 @@ export function Leaderboard({
                           <img
                             src={entries[2].userAvatar}
                             alt={entries[2].userName}
-                            className="w-14 h-14 rounded-full object-cover border-4 border-amber-600 mx-auto"
+                            className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover border-2 sm:border-4 border-amber-600 mx-auto"
                           />
                         ) : (
-                          <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-amber-600 mx-auto">
+                          <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg border-2 sm:border-4 border-amber-600 mx-auto">
                             {entries[2].userName.charAt(0).toUpperCase()}
                           </div>
                         )}
-                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-amber-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-amber-600 text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-bold">
                           3
                         </div>
                       </div>
-                      <div className="mt-3 font-semibold text-gray-700 truncate max-w-[70px]">
+                      <div className="mt-3 font-semibold text-gray-700 truncate max-w-[50px] sm:max-w-[70px] text-xs sm:text-sm">
                         {entries[2].userName}
                       </div>
-                      <div className="text-sm text-yellow-600 font-medium">
+                      <div className="text-xs sm:text-sm text-yellow-600 font-medium">
                         {entries[2].xp.toLocaleString()} XP
                       </div>
-                      <div className="h-12 w-14 bg-amber-600 rounded-t-lg mt-2 mx-auto" />
+                      <div className="h-8 w-10 sm:h-12 sm:w-14 bg-amber-600 rounded-t-lg mt-2 mx-auto" />
                     </motion.div>
                   )}
                 </div>
