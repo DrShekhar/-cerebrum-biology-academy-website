@@ -298,27 +298,29 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     })
 
-    // Provide more specific error messages based on error type
-    let userMessage = 'Failed to process Firebase session'
+    // Provide user-friendly error messages (never expose technical details to users)
+    let userMessage = 'Something went wrong. Please try again in a moment.'
     let statusCode = 500
 
     if (errorMessage.includes('Unique constraint')) {
-      userMessage = 'This phone number is already registered. Please try logging in.'
+      userMessage = 'This phone number is already registered. Please try logging in instead.'
       statusCode = 409
-    } else if (errorMessage.includes('Connection') || errorMessage.includes('timeout')) {
-      userMessage = 'Database connection issue. Please try again.'
+    } else if (errorMessage.includes('Connection') || errorMessage.includes('timeout') || errorMessage.includes('ETIMEDOUT')) {
+      userMessage = 'We are experiencing connection issues. Please try again in a moment.'
       statusCode = 503
-    } else if (errorMessage.includes('Invalid') || errorMessage.includes('required')) {
-      userMessage = errorMessage
-      statusCode = 400
+    } else if (errorMessage.includes('does not exist') || errorMessage.includes('column') || errorMessage.includes('prisma')) {
+      // Database schema mismatch - don't expose to users
+      userMessage = 'We are updating our systems. Please try again in a few minutes.'
+      statusCode = 503
+    } else if (errorMessage.includes('rate limit') || errorMessage.includes('too many')) {
+      userMessage = 'Too many attempts. Please wait a few minutes before trying again.'
+      statusCode = 429
     }
 
     return addSecurityHeaders(
       NextResponse.json(
         {
           error: userMessage,
-          // Only include debug info in non-production
-          ...(process.env.NODE_ENV !== 'production' && { debug: errorMessage }),
         },
         { status: statusCode }
       )
