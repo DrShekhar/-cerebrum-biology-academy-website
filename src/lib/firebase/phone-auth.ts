@@ -13,24 +13,60 @@ let confirmationResult: ConfirmationResult | null = null
 // Store recaptcha verifier instance
 let recaptchaVerifier: RecaptchaVerifier | null = null
 
+// Track initialization attempts for better error recovery
+let initAttempts = 0
+const MAX_INIT_ATTEMPTS = 3
+
 /**
- * Initialize invisible reCAPTCHA verifier
+ * Clear and reset the reCAPTCHA verifier completely
+ * This helps recover from failed Enterprise verification attempts
+ */
+function resetRecaptchaVerifier(): void {
+  if (recaptchaVerifier) {
+    try {
+      recaptchaVerifier.clear()
+    } catch (e) {
+      console.log('[reCAPTCHA] Clear failed (may already be cleared):', e)
+    }
+    recaptchaVerifier = null
+  }
+
+  // Also remove any lingering reCAPTCHA DOM elements
+  const recaptchaContainers = document.querySelectorAll('.grecaptcha-badge, [id^="recaptcha"]')
+  recaptchaContainers.forEach(el => {
+    try {
+      el.remove()
+    } catch (e) {
+      // Ignore removal errors
+    }
+  })
+}
+
+/**
+ * Initialize invisible reCAPTCHA verifier with retry logic
+ * Uses reCAPTCHA v2 invisible mode - Firebase handles Enterprise fallback internally
  * Must be called before sendOTP - attaches to a button element
  */
 export function initRecaptcha(buttonId: string): RecaptchaVerifier {
-  // Clean up existing verifier if any
-  if (recaptchaVerifier) {
-    recaptchaVerifier.clear()
-  }
+  // Always clean up existing verifier first
+  resetRecaptchaVerifier()
+
+  console.log('[reCAPTCHA] Initializing verifier for button:', buttonId)
 
   recaptchaVerifier = new RecaptchaVerifier(auth, buttonId, {
     size: 'invisible',
     callback: () => {
-      // reCAPTCHA solved - will proceed with OTP send
+      console.log('[reCAPTCHA] Verification successful - proceeding with OTP')
+      initAttempts = 0 // Reset on success
     },
     'expired-callback': () => {
-      // Reset reCAPTCHA if expired
-      console.log('reCAPTCHA expired, please try again')
+      console.log('[reCAPTCHA] Token expired - will re-verify on next attempt')
+      // Don't clear here - let the next sendOTP attempt handle it
+    },
+    'error-callback': (error: unknown) => {
+      console.log('[reCAPTCHA] Error callback:', error)
+      // Reset on error to allow retry
+      resetRecaptchaVerifier()
     },
   })
 
@@ -65,67 +101,125 @@ export function formatPhoneNumber(phone: string): string {
 }
 
 /**
- * Send OTP to phone number
+ * Send OTP to phone number with automatic retry on reCAPTCHA failures
  * Returns true if OTP sent successfully
  */
 export async function sendOTP(
   phoneNumber: string,
   buttonId: string
-): Promise<{ success: boolean; error?: string }> {
-  try {
-    const formattedPhone = formatPhoneNumber(phoneNumber)
+): Promise<{ success: boolean; error?: string; shouldRefresh?: boolean }> {
+  const formattedPhone = formatPhoneNumber(phoneNumber)
+  console.log('[OTP] Sending to:', formattedPhone)
 
-    // Initialize recaptcha if not already done
-    if (!recaptchaVerifier) {
+  // Helper to attempt OTP send
+  const attemptSend = async (): Promise<{ success: boolean; error?: string; shouldRetry?: boolean; shouldRefresh?: boolean }> => {
+    try {
+      // Always reinitialize recaptcha for fresh token
+      // This helps avoid stale Enterprise verification issues
       initRecaptcha(buttonId)
-    }
 
-    if (!recaptchaVerifier) {
-      return { success: false, error: 'reCAPTCHA initialization failed' }
-    }
-
-    // Send OTP via Firebase
-    confirmationResult = await signInWithPhoneNumber(
-      auth,
-      formattedPhone,
-      recaptchaVerifier
-    )
-
-    return { success: true }
-  } catch (error: unknown) {
-    console.error('Error sending OTP:', error)
-
-    // Handle specific Firebase errors
-    const firebaseError = error as { code?: string; message?: string }
-    let errorMessage = 'Failed to send OTP'
-
-    if (firebaseError.code === 'auth/invalid-phone-number') {
-      errorMessage = 'Invalid phone number format'
-    } else if (firebaseError.code === 'auth/too-many-requests') {
-      errorMessage = 'Too many attempts. Please try again later'
-    } else if (firebaseError.code === 'auth/quota-exceeded') {
-      errorMessage = 'SMS quota exceeded. Please try again tomorrow'
-    } else if (firebaseError.code === 'auth/captcha-check-failed') {
-      errorMessage = 'reCAPTCHA verification failed. Please refresh the page'
-      // Reset reCAPTCHA
-      if (recaptchaVerifier) {
-        recaptchaVerifier.clear()
-        recaptchaVerifier = null
+      if (!recaptchaVerifier) {
+        return { success: false, error: 'reCAPTCHA initialization failed', shouldRetry: false }
       }
-    } else if (firebaseError.code === 'auth/operation-not-allowed') {
-      errorMessage = 'Phone auth not enabled. Please enable it in Firebase Console.'
-    } else if (firebaseError.code === 'auth/missing-client-identifier') {
-      errorMessage = 'reCAPTCHA failed to load. Please refresh the page.'
-    } else if (firebaseError.code === 'auth/network-request-failed') {
-      errorMessage = 'Network error. Please check your internet connection.'
-    } else if (firebaseError.code) {
-      // Show the actual error code for debugging
-      errorMessage = `Firebase error: ${firebaseError.code}`
-    } else if (firebaseError.message) {
-      errorMessage = firebaseError.message
-    }
 
-    return { success: false, error: errorMessage }
+      // Send OTP via Firebase
+      console.log('[OTP] Calling signInWithPhoneNumber...')
+      confirmationResult = await signInWithPhoneNumber(
+        auth,
+        formattedPhone,
+        recaptchaVerifier
+      )
+
+      console.log('[OTP] Successfully sent!')
+      initAttempts = 0
+      return { success: true }
+    } catch (error: unknown) {
+      console.error('[OTP] Error:', error)
+      const firebaseError = error as { code?: string; message?: string }
+
+      // Determine if we should retry or give up
+      let errorMessage = 'Failed to send OTP'
+      let shouldRetry = false
+      let shouldRefresh = false
+
+      switch (firebaseError.code) {
+        case 'auth/invalid-phone-number':
+          errorMessage = 'Invalid phone number format'
+          break
+
+        case 'auth/too-many-requests':
+          errorMessage = 'Too many attempts. Please wait 10-15 minutes before trying again, or use a different phone number.'
+          // Rate limit is server-side, no point in retrying
+          break
+
+        case 'auth/quota-exceeded':
+          errorMessage = 'SMS quota exceeded. Please try again tomorrow.'
+          break
+
+        case 'auth/captcha-check-failed':
+        case 'auth/missing-client-identifier':
+          // reCAPTCHA issues - might benefit from retry with fresh verifier
+          resetRecaptchaVerifier()
+          initAttempts++
+          if (initAttempts < MAX_INIT_ATTEMPTS) {
+            shouldRetry = true
+            console.log(`[OTP] reCAPTCHA failed, will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`)
+          } else {
+            errorMessage = 'Verification check failed. Please refresh the page and try again.'
+            shouldRefresh = true
+          }
+          break
+
+        case 'auth/operation-not-allowed':
+          errorMessage = 'Phone authentication is not enabled. Please contact support.'
+          break
+
+        case 'auth/network-request-failed':
+          errorMessage = 'Network error. Please check your internet connection and try again.'
+          shouldRetry = initAttempts < MAX_INIT_ATTEMPTS
+          initAttempts++
+          break
+
+        case 'auth/internal-error':
+          // Often indicates reCAPTCHA Enterprise verification failure
+          resetRecaptchaVerifier()
+          initAttempts++
+          if (initAttempts < MAX_INIT_ATTEMPTS) {
+            shouldRetry = true
+            console.log(`[OTP] Internal error (possibly reCAPTCHA Enterprise), will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`)
+          } else {
+            errorMessage = 'Verification service temporarily unavailable. Please refresh and try again.'
+            shouldRefresh = true
+          }
+          break
+
+        default:
+          if (firebaseError.code) {
+            errorMessage = `Authentication error: ${firebaseError.code}`
+          } else if (firebaseError.message) {
+            errorMessage = firebaseError.message
+          }
+      }
+
+      return { success: false, error: errorMessage, shouldRetry, shouldRefresh }
+    }
+  }
+
+  // First attempt
+  let result = await attemptSend()
+
+  // Automatic retry on reCAPTCHA failures (up to MAX_INIT_ATTEMPTS)
+  while (result.shouldRetry && initAttempts < MAX_INIT_ATTEMPTS) {
+    console.log(`[OTP] Retrying after delay...`)
+    // Small delay before retry
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    result = await attemptSend()
+  }
+
+  return {
+    success: result.success,
+    error: result.error,
+    shouldRefresh: result.shouldRefresh,
   }
 }
 
@@ -189,10 +283,8 @@ export async function signOut(): Promise<void> {
   // Then sign out from Firebase client
   await auth.signOut()
   confirmationResult = null
-  if (recaptchaVerifier) {
-    recaptchaVerifier.clear()
-    recaptchaVerifier = null
-  }
+  resetRecaptchaVerifier()
+  initAttempts = 0
 }
 
 /**
@@ -206,8 +298,16 @@ export function getCurrentUser() {
  * Clean up reCAPTCHA verifier (call on component unmount)
  */
 export function cleanupRecaptcha(): void {
-  if (recaptchaVerifier) {
-    recaptchaVerifier.clear()
-    recaptchaVerifier = null
-  }
+  resetRecaptchaVerifier()
+  initAttempts = 0
+}
+
+/**
+ * Reset the phone auth state completely
+ * Call this when user navigates away or on page refresh
+ */
+export function resetPhoneAuthState(): void {
+  resetRecaptchaVerifier()
+  confirmationResult = null
+  initAttempts = 0
 }

@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { Phone, Loader2, Check, Clock, AlertCircle } from 'lucide-react'
+import { Phone, Loader2, Check, Clock, AlertCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import {
   sendOTP,
   verifyOTP,
   cleanupRecaptcha,
   formatPhoneNumber,
+  resetPhoneAuthState,
 } from '@/lib/firebase/phone-auth'
 
 interface PhoneSignInProps {
@@ -55,6 +56,7 @@ function PhoneSignInWithFirebase({
   const [otp, setOtp] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [showRefresh, setShowRefresh] = useState(false)
   const [resendCountdown, setResendCountdown] = useState(0)
 
   // Signup form state (for new users)
@@ -95,6 +97,7 @@ function PhoneSignInWithFirebase({
 
   const handleSendOTP = async () => {
     setError('')
+    setShowRefresh(false)
     setLoading(true)
 
     try {
@@ -102,6 +105,7 @@ function PhoneSignInWithFirebase({
       const result = await sendOTP(phone, 'send-otp-button')
 
       if (!result.success) {
+        setShowRefresh(result.shouldRefresh || false)
         throw new Error(result.error || 'Failed to send OTP')
       }
 
@@ -113,6 +117,11 @@ function PhoneSignInWithFirebase({
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleRefreshPage = () => {
+    resetPhoneAuthState()
+    window.location.reload()
   }
 
   const handleVerifyOTP = async () => {
@@ -383,7 +392,16 @@ function PhoneSignInWithFirebase({
 
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-          <p>{error}</p>
+          <p className="mb-2">{error}</p>
+          {showRefresh && (
+            <button
+              onClick={handleRefreshPage}
+              className="flex items-center gap-2 text-sm font-medium text-red-700 hover:text-red-800 underline"
+            >
+              <RefreshCw className="w-4 h-4" />
+              Refresh Page
+            </button>
+          )}
         </div>
       )}
 
