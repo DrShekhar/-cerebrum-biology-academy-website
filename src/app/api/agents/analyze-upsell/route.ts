@@ -9,11 +9,18 @@ import { NextRequest, NextResponse } from 'next/server'
 import { ProductAgent } from '@/lib/crm-agents'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { AgentType } from '@/generated/prisma'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
 
 export async function POST(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const body = await request.json()
     const { userId, async = false } = body
@@ -30,6 +37,7 @@ export async function POST(request: NextRequest) {
           action: 'upsell',
           userId,
           trigger: 'API_REQUEST',
+          triggeredBy: authResult.session.userId,
         },
       })
 

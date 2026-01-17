@@ -1,13 +1,20 @@
 /**
  * Temporary endpoint to manually approve SEO content
  * DELETE THIS AFTER TESTING
+ *
+ * SECURITY: Requires admin authentication
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { processApprovalResponse } from '@/lib/seo-marketing/approvalService'
 import { getQueueStats, getItemsInReview } from '@/lib/seo-marketing/queueService'
+import { validateAdminSession } from '@/lib/auth/admin-auth'
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  // SECURITY: Require admin authentication
+  const session = await validateAdminSession(request)
+  if (!session.valid) {
+    return NextResponse.json({ error: 'Unauthorized - Admin access required' }, { status: 401 })
+  }
   const stats = await getQueueStats()
   const reviewItems = await getItemsInReview()
 
@@ -39,6 +46,12 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  // SECURITY: Require admin authentication
+  const session = await validateAdminSession(request)
+  if (!session.valid) {
+    return NextResponse.json({ error: 'Unauthorized - Admin access required' }, { status: 401 })
+  }
+
   try {
     const body = await request.json()
     const action = body.action || 'yes'

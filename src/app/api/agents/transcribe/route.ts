@@ -9,8 +9,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { CallTranscriptionService } from '@/lib/crm-agents/callTranscription'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { AgentType } from '@/generated/prisma'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 
 export async function POST(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const body = await request.json()
     const { communicationId, async = true } = body // Default to async for transcription
@@ -27,7 +34,7 @@ export async function POST(request: NextRequest) {
       const taskId = await AgentTaskManager.createTask({
         agentType: AgentType.CALL_TRANSCRIPTION,
         communicationId,
-        input: { trigger: 'API_REQUEST' },
+        input: { trigger: 'API_REQUEST', triggeredBy: authResult.session.userId },
       })
 
       return NextResponse.json({
@@ -64,6 +71,12 @@ export async function POST(request: NextRequest) {
  * Get transcription status for a communication
  */
 export async function GET(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const communicationId = searchParams.get('communicationId')

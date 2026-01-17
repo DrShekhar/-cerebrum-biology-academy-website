@@ -9,8 +9,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { ActionItemExtractorAgent } from '@/lib/crm-agents'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { AgentType } from '@/generated/prisma'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 
 export async function POST(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const body = await request.json()
     const { communicationId, async = false } = body
@@ -27,7 +34,7 @@ export async function POST(request: NextRequest) {
       const taskId = await AgentTaskManager.createTask({
         agentType: AgentType.ACTION_EXTRACTOR,
         communicationId,
-        input: { trigger: 'API_REQUEST' },
+        input: { trigger: 'API_REQUEST', triggeredBy: authResult.session.userId },
       })
 
       return NextResponse.json({

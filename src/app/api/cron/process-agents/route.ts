@@ -7,20 +7,23 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { processPendingAgentTasks } from '@/lib/crm-agents/processor'
+import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
 
 export async function GET(request: NextRequest) {
-  try {
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-
-    if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
-      console.log('[CRON] Unauthorized request to process-agents')
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+  // SECURITY: Strict cron authentication
+  const authResult = verifyCronAuth(request)
+  if (!authResult.authorized) {
+    console.log('[CRON] Unauthorized request to process-agents')
+    if (authResult.error?.includes('not set')) {
+      return createCronConfigErrorResponse(authResult.error)
     }
+    return createCronUnauthorizedResponse(authResult.error || 'Unauthorized')
+  }
 
+  try {
     console.log('[CRON] Starting agent task processing...')
 
     const result = await processPendingAgentTasks()

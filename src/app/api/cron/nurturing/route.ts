@@ -10,31 +10,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { processScheduledNurturing, cleanupFollowupQueue } from '@/lib/automation/leadNurturing'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
-
-// Verify the request is from Vercel Cron
-function verifyCronRequest(request: NextRequest): boolean {
-  const authHeader = request.headers.get('authorization')
-  const cronSecret = process.env.CRON_SECRET
-
-  // In development, allow all requests
-  if (process.env.NODE_ENV === 'development') {
-    return true
-  }
-
-  // If no CRON_SECRET is set, allow requests (with warning)
-  if (!cronSecret) {
-    console.warn('CRON_SECRET not set - cron endpoint is unprotected')
-    return true
-  }
-
-  // Verify the authorization header
-  return authHeader === `Bearer ${cronSecret}`
-}
+import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
 
 export async function GET(request: NextRequest) {
-  // Verify the request is authorized
-  if (!verifyCronRequest(request)) {
-    return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+  // SECURITY: Strict cron authentication (no dev bypass)
+  const authResult = verifyCronAuth(request)
+  if (!authResult.authorized) {
+    if (authResult.error?.includes('not set')) {
+      return createCronConfigErrorResponse(authResult.error)
+    }
+    return createCronUnauthorizedResponse(authResult.error || 'Unauthorized')
   }
 
   const startTime = Date.now()
@@ -81,7 +66,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// Also support POST for manual triggers
+// Also support POST for manual triggers (still requires auth)
 export async function POST(request: NextRequest) {
   return GET(request)
 }

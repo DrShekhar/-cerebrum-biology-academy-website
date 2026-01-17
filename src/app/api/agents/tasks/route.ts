@@ -1,21 +1,30 @@
 /**
  * Agent Tasks API
  *
- * GET /api/agents/tasks - List agent tasks with filters
- * POST /api/agents/tasks - Process pending tasks (for cron)
+ * GET /api/agents/tasks - List agent tasks with filters (requires counselor auth)
+ * POST /api/agents/tasks - Process pending tasks (requires cron auth)
+ * DELETE /api/agents/tasks - Cancel a task (requires counselor auth)
  */
 
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
-import { processPendingAgentTasks, agentProcessor } from '@/lib/crm-agents/processor'
+import { processPendingAgentTasks } from '@/lib/crm-agents/processor'
 import { AgentTaskStatus } from '@/generated/prisma'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
+import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
 
 /**
  * GET /api/agents/tasks
  * List agent tasks with optional filtering
  */
 export async function GET(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status') as AgentTaskStatus | null
@@ -77,16 +86,16 @@ export async function GET(request: NextRequest) {
  * Process pending tasks (for cron jobs)
  */
 export async function POST(request: NextRequest) {
-  try {
-    // Verify this is a legitimate cron request
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-
-    // In production, verify the cron secret
-    if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+  // SECURITY: Strict cron authentication
+  const cronAuthResult = verifyCronAuth(request)
+  if (!cronAuthResult.authorized) {
+    if (cronAuthResult.error?.includes('not set')) {
+      return createCronConfigErrorResponse(cronAuthResult.error)
     }
+    return createCronUnauthorizedResponse(cronAuthResult.error || 'Unauthorized')
+  }
 
+  try {
     // Process pending tasks
     const result = await processPendingAgentTasks()
 
@@ -105,6 +114,12 @@ export async function POST(request: NextRequest) {
  * Cancel a specific task
  */
 export async function DELETE(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const taskId = searchParams.get('taskId')

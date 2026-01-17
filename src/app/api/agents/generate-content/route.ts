@@ -9,8 +9,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { ContentGeneratorAgent } from '@/lib/crm-agents'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { AgentType } from '@/generated/prisma'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 
 export async function POST(request: NextRequest) {
+  // SECURITY: Require counselor authentication
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) {
+    return authResult.error
+  }
+
   try {
     const body = await request.json()
     const { contentType, customPrompt, metadata, async = false } = body
@@ -26,7 +33,13 @@ export async function POST(request: NextRequest) {
     if (async) {
       const taskId = await AgentTaskManager.createTask({
         agentType: AgentType.CONTENT_GENERATOR,
-        input: { trigger: 'API_REQUEST', contentType, customPrompt, metadata },
+        input: {
+          trigger: 'API_REQUEST',
+          contentType,
+          customPrompt,
+          metadata,
+          triggeredBy: authResult.session.userId,
+        },
       })
 
       return NextResponse.json({
