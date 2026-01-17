@@ -1,12 +1,47 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { z } from 'zod'
+import { getRateLimiter } from '@/lib/ratelimit/config'
+import { getIdentifier, checkRateLimit, createRateLimitResponse } from '@/lib/ratelimit/middleware'
+
+// SECURITY: Strict input validation schema
+const recommendParamsSchema = z.object({
+  topic: z.string().max(200).optional().default(''),
+  class: z.coerce.number().int().min(11).max(12).optional(),
+  chapter: z.coerce.number().int().min(1).max(30).optional(),
+})
 
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: Rate limit to prevent abuse
+    const identifier = getIdentifier(request)
+    const limiter = getRateLimiter('publicSearch')
+    const rateLimitResult = await checkRateLimit(limiter, identifier)
+    if (!rateLimitResult.success) {
+      return createRateLimitResponse(rateLimitResult)
+    }
+
     const { searchParams } = new URL(request.url)
-    const topic = searchParams.get('topic') || ''
-    const ncertClass = searchParams.get('class') ? parseInt(searchParams.get('class')!) : null
-    const ncertChapter = searchParams.get('chapter') ? parseInt(searchParams.get('chapter')!) : null
+
+    // SECURITY: Validate and sanitize all input parameters
+    const parseResult = recommendParamsSchema.safeParse({
+      topic: searchParams.get('topic') || undefined,
+      class: searchParams.get('class') || undefined,
+      chapter: searchParams.get('chapter') || undefined,
+    })
+
+    if (!parseResult.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Invalid parameters',
+          details: parseResult.error.flatten().fieldErrors,
+        },
+        { status: 400 }
+      )
+    }
+
+    const { topic, class: ncertClass, chapter: ncertChapter } = parseResult.data
 
     // Build search criteria
     const where: any = { isActive: true }

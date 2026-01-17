@@ -2,9 +2,71 @@ import { NextRequest } from 'next/server'
 import { streamChatResponse, createSSEEncoder } from '@/lib/ceri-ai/streaming/streamHandler'
 import type { MessageParam } from '@anthropic-ai/sdk/resources/messages'
 import { upstashCache, preferUpstash } from '@/lib/cache/upstash'
+import { jwtVerify } from 'jose'
 
 // Now using edge runtime with Upstash Redis for edge-compatible caching
 export const runtime = 'edge'
+
+// Rate limit tracking per user (in-memory, resets per instance)
+const userRequestCounts = new Map<string, { count: number; resetAt: number }>()
+const RATE_LIMIT_REQUESTS = 50 // Max requests per window
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000 // 1 hour window
+
+/**
+ * Validate user session from JWT cookie
+ * Returns user ID if valid, null otherwise
+ */
+async function validateSession(request: NextRequest): Promise<string | null> {
+  try {
+    // Check for session cookie
+    const sessionCookie = request.cookies.get('cerebrum_session')?.value
+    if (!sessionCookie) {
+      return null
+    }
+
+    // Get auth secret
+    const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
+    if (!secret) {
+      console.error('[AI Stream] AUTH_SECRET not configured')
+      return null
+    }
+
+    // Verify JWT using jose (edge-compatible)
+    const secretKey = new TextEncoder().encode(secret)
+    const { payload } = await jwtVerify(sessionCookie, secretKey)
+
+    // Check expiration
+    if (payload.exp && payload.exp * 1000 < Date.now()) {
+      return null
+    }
+
+    return (payload.userId || payload.sub) as string
+  } catch (error) {
+    console.error('[AI Stream] Session validation error:', error)
+    return null
+  }
+}
+
+/**
+ * Check rate limit for user
+ */
+function checkRateLimit(userId: string): boolean {
+  const now = Date.now()
+  const userLimit = userRequestCounts.get(userId)
+
+  if (!userLimit || now > userLimit.resetAt) {
+    // Reset or initialize
+    userRequestCounts.set(userId, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS })
+    return true
+  }
+
+  if (userLimit.count >= RATE_LIMIT_REQUESTS) {
+    return false
+  }
+
+  userLimit.count++
+  return true
+}
 
 // Cache key generator for chat responses
 function generateCacheKey(messages: MessageParam[]): string {
@@ -27,6 +89,23 @@ function generateCacheKey(messages: MessageParam[]): string {
 
 export async function POST(req: NextRequest) {
   try {
+    // SECURITY: Validate user session before processing AI request
+    const userId = await validateSession(req)
+    if (!userId) {
+      return new Response(
+        JSON.stringify({ error: 'Authentication required', code: 'AUTH_REQUIRED' }),
+        { status: 401, headers: { 'Content-Type': 'application/json' } }
+      )
+    }
+
+    // SECURITY: Rate limit per user to prevent API abuse
+    if (!checkRateLimit(userId)) {
+      return new Response(
+        JSON.stringify({ error: 'Rate limit exceeded. Please try again later.', code: 'RATE_LIMITED' }),
+        { status: 429, headers: { 'Content-Type': 'application/json' } }
+      )
+    }
+
     const { messages, useCache = true } = await req.json()
 
     if (!messages || !Array.isArray(messages)) {

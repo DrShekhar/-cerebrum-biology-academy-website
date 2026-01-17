@@ -1,13 +1,23 @@
 /**
- * Temporary endpoint to manually trigger publishing
- * DELETE THIS AFTER TESTING
+ * Admin endpoint to manually trigger publishing
+ * Requires admin authentication
  */
 
 import { NextResponse } from 'next/server'
 import { publishAllApproved } from '@/lib/seo-marketing/publisher'
 import { getApprovedItems, getQueueStats } from '@/lib/seo-marketing/queueService'
+import { requireAdminAuth } from '@/lib/auth'
 
 export async function GET() {
+  try {
+    await requireAdminAuth()
+  } catch {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized - Admin access required' },
+      { status: 401 }
+    )
+  }
+
   const stats = await getQueueStats()
   const approvedItems = await getApprovedItems()
 
@@ -25,6 +35,15 @@ export async function GET() {
 }
 
 export async function POST() {
+  try {
+    await requireAdminAuth()
+  } catch {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized - Admin access required' },
+      { status: 401 }
+    )
+  }
+
   try {
     const approvedItems = await getApprovedItems()
 

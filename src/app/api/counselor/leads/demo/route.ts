@@ -1,11 +1,22 @@
 /**
- * Demo API Route - No Authentication Required
+ * Demo API Route - For development/demo purposes only
  * GET /api/counselor/leads/demo
+ *
+ * SECURITY: This endpoint returns mock data and is disabled in production.
+ * It's used for UI development and demo showcases.
  */
 
 import { NextResponse } from 'next/server'
 
 export async function GET() {
+  // Block access in production environment
+  if (process.env.NODE_ENV === 'production' && !process.env.ALLOW_DEMO_ENDPOINTS) {
+    return NextResponse.json(
+      { success: false, error: 'Demo endpoints are disabled in production' },
+      { status: 403 }
+    )
+  }
+
   // Mock data for demo purposes
   const mockLeads = [
     {

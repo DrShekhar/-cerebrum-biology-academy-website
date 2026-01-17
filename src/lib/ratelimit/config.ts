@@ -133,6 +133,26 @@ export const rateLimiters = {
         prefix: 'ratelimit:newsletter:subscribe',
       })
     : null,
+
+  // Public search APIs - moderate limits to prevent abuse
+  publicSearch: redis
+    ? new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(60, '1 m'),
+        analytics: true,
+        prefix: 'ratelimit:public:search',
+      })
+    : null,
+
+  // AI endpoints - strict limits due to cost
+  aiChat: redis
+    ? new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(30, '1 h'),
+        analytics: true,
+        prefix: 'ratelimit:ai:chat',
+      })
+    : null,
 }
 
 export type RateLimiterType = keyof typeof rateLimiters
