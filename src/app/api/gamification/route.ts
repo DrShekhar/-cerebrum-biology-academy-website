@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
+import {
+  getStreakStatus,
+  getXpBreakdown,
+  getUserBadges,
+  getUserGoals,
+  getUnreadCount,
+  getShowcasedBadges,
+} from '@/lib/gamification'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -10,106 +19,25 @@ export async function GET(request: NextRequest) {
     const userId = searchParams.get('userId')
     const freeUserId = searchParams.get('freeUserId')
 
-    if (!userId && !freeUserId) {
+    // Check for authenticated user first
+    const session = await auth()
+    const authenticatedUserId = session?.user?.id
+
+    // Determine which user to fetch
+    const isPaidUser = !!authenticatedUserId && !freeUserId
+    const userIdToQuery = freeUserId || userId || authenticatedUserId
+
+    if (!userIdToQuery) {
       return NextResponse.json({ error: 'Missing userId or freeUserId parameter' }, { status: 400 })
     }
 
-    // For now, we'll focus on FreeUser gamification
-    // Can extend to paid users later
-    const userIdToQuery = freeUserId || userId
-
-    if (!userIdToQuery) {
-      return NextResponse.json({ error: 'Invalid user identifier' }, { status: 400 })
+    // Fetch data based on user type
+    if (isPaidUser && authenticatedUserId === userIdToQuery) {
+      return await getPaidUserGamification(authenticatedUserId)
     }
 
-    // Fetch user data with points, level, and streak
-    const user = await prisma.freeUser.findUnique({
-      where: { id: userIdToQuery },
-      select: {
-        id: true,
-        name: true,
-        totalPoints: true,
-        currentLevel: true,
-        studyStreak: true,
-        achievements: {
-          orderBy: {
-            earnedAt: 'desc',
-          },
-        },
-      },
-    })
-
-    if (!user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 })
-    }
-
-    // Calculate XP progress to next level
-    // Level progression: Level 1 = 0-100 XP, Level 2 = 100-250 XP, Level 3 = 250-500 XP, etc.
-    // Formula: XP for next level = currentLevel * 150 + 100
-    const currentLevel = user.currentLevel || 1
-    const totalPoints = user.totalPoints || 0
-    const xpForCurrentLevel = (currentLevel - 1) * 150 + 100
-    const xpForNextLevel = currentLevel * 150 + 100
-    const xpInCurrentLevel = Math.max(0, totalPoints - xpForCurrentLevel)
-    const xpNeededForNextLevel = xpForNextLevel - xpForCurrentLevel
-
-    // Calculate percentage progress to next level
-    const levelProgress = Math.min(100, Math.round((xpInCurrentLevel / xpNeededForNextLevel) * 100))
-
-    // Format achievements
-    const achievements = user.achievements.map((achievement) => ({
-      id: achievement.id,
-      type: achievement.type,
-      title: achievement.title,
-      description: achievement.description,
-      icon: achievement.icon || getIconForAchievementType(achievement.type),
-      points: achievement.points,
-      isCompleted: achievement.isCompleted,
-      earnedAt: achievement.earnedAt,
-      currentProgress: achievement.currentProgress,
-      targetProgress: achievement.targetProgress,
-    }))
-
-    // Separate completed and in-progress achievements
-    const completedAchievements = achievements.filter((a) => a.isCompleted)
-    const inProgressAchievements = achievements.filter((a) => !a.isCompleted)
-
-    // Get recent achievements (last 5 completed)
-    const recentAchievements = completedAchievements.slice(0, 5)
-
-    // Calculate study streak details
-    const studyStreak = user.studyStreak || 0
-    const longestStreak = studyStreak // We'll track this separately in the future
-    const streakMilestone = getNextStreakMilestone(studyStreak)
-
-    return NextResponse.json({
-      user: {
-        id: user.id,
-        name: user.name || 'Student',
-      },
-      gamification: {
-        // XP and Level
-        totalPoints,
-        currentLevel,
-        xpInCurrentLevel,
-        xpNeededForNextLevel,
-        levelProgress,
-
-        // Study Streak
-        studyStreak,
-        longestStreak,
-        streakMilestone,
-
-        // Achievements
-        totalAchievements: achievements.length,
-        completedAchievements: completedAchievements.length,
-        recentAchievements,
-        inProgressAchievements: inProgressAchievements.slice(0, 3), // Show top 3 in progress
-
-        // Leaderboard position (simplified for now)
-        rank: null, // Can calculate if needed
-      },
-    })
+    // Legacy free user gamification
+    return await getFreeUserGamification(userIdToQuery)
   } catch (error) {
     console.error('Error fetching gamification data:', error)
     return NextResponse.json(
@@ -120,6 +48,230 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     )
   }
+}
+
+/**
+ * Get gamification data for paid/authenticated users
+ * Uses the new gamification services
+ */
+async function getPaidUserGamification(userId: string) {
+  // Fetch user stats from mcq_user_stats
+  const userStats = await prisma.mcq_user_stats.findUnique({
+    where: { userId },
+  })
+
+  // Get user info
+  const user = await prisma.users.findUnique({
+    where: { id: userId },
+    select: { id: true, name: true, subscriptionTier: true },
+  })
+
+  if (!user) {
+    return NextResponse.json({ error: 'User not found' }, { status: 404 })
+  }
+
+  // Parallel fetch for performance
+  const [streakStatus, xpBreakdown, badges, goals, notificationCount, showcasedBadges] =
+    await Promise.all([
+      getStreakStatus(userId),
+      getXpBreakdown(userId),
+      getUserBadges(userId),
+      getUserGoals(userId),
+      getUnreadCount(userId),
+      getShowcasedBadges(userId),
+    ])
+
+  const currentLevel = userStats?.currentLevel || 1
+  const totalPoints = userStats?.totalPoints || 0
+  const { xpForCurrentLevel, xpForNextLevel, levelProgress } = calculateLevelProgress(
+    currentLevel,
+    totalPoints
+  )
+
+  return NextResponse.json({
+    success: true,
+    user: {
+      id: user.id,
+      name: user.name || 'Student',
+      tier: user.subscriptionTier,
+      isPaidUser: true,
+    },
+    gamification: {
+      // XP and Level
+      totalPoints,
+      currentLevel,
+      levelName: getLevelName(currentLevel),
+      xpInCurrentLevel: totalPoints - xpForCurrentLevel,
+      xpNeededForNextLevel: xpForNextLevel - xpForCurrentLevel,
+      levelProgress,
+
+      // Streak (enhanced with protection)
+      streak: streakStatus
+        ? {
+            current: streakStatus.currentStreak,
+            longest: streakStatus.longestStreak,
+            isAtRisk: streakStatus.isAtRisk,
+            isProtected: streakStatus.isProtected,
+            protectedUntil: streakStatus.protectedUntil,
+            freezesAvailable: streakStatus.freezesAvailable,
+            canRecover: streakStatus.canRecover,
+            recoveryDeadline: streakStatus.recoveryDeadline,
+            recoveryXpCost: streakStatus.recoveryXpCost,
+            lastActivity: streakStatus.lastActivity,
+            nextMilestone: getNextStreakMilestone(streakStatus.currentStreak),
+          }
+        : null,
+
+      // XP Breakdown
+      xpBreakdown: {
+        today: xpBreakdown.byPeriod.today,
+        thisWeek: xpBreakdown.byPeriod.thisWeek,
+        thisMonth: xpBreakdown.byPeriod.thisMonth,
+        byCategory: xpBreakdown.byCategory,
+      },
+
+      // Badges (enhanced)
+      badges: {
+        earned: badges.earned.length,
+        total: badges.earned.length + badges.inProgress.length + badges.available.length,
+        recent: badges.earned.slice(0, 5),
+        inProgress: badges.inProgress.slice(0, 3),
+        showcased: showcasedBadges,
+      },
+
+      // Goals
+      goals: {
+        daily: goals.daily,
+        weekly: goals.weekly,
+        completedToday: [...goals.daily, ...goals.weekly].filter((g) => g.goal.isCompleted).length,
+      },
+
+      // Notifications
+      unreadNotifications: notificationCount,
+
+      // Stats
+      stats: {
+        totalQuestions: userStats?.totalQuestions || 0,
+        correctAnswers: userStats?.correctAnswers || 0,
+        accuracy: userStats?.totalQuestions
+          ? Math.round((userStats.correctAnswers / userStats.totalQuestions) * 100)
+          : 0,
+        weeklyXp: userStats?.weeklyXp || 0,
+        monthlyXp: userStats?.monthlyXp || 0,
+      },
+    },
+  })
+}
+
+/**
+ * Legacy gamification for free users
+ */
+async function getFreeUserGamification(userIdToQuery: string) {
+  const user = await prisma.freeUser.findUnique({
+    where: { id: userIdToQuery },
+    select: {
+      id: true,
+      name: true,
+      totalPoints: true,
+      currentLevel: true,
+      studyStreak: true,
+      achievements: {
+        orderBy: {
+          earnedAt: 'desc',
+        },
+      },
+    },
+  })
+
+  if (!user) {
+    return NextResponse.json({ error: 'User not found' }, { status: 404 })
+  }
+
+  const currentLevel = user.currentLevel || 1
+  const totalPoints = user.totalPoints || 0
+  const { xpForCurrentLevel, xpForNextLevel, levelProgress } = calculateLevelProgress(
+    currentLevel,
+    totalPoints
+  )
+
+  const achievements = user.achievements.map((achievement) => ({
+    id: achievement.id,
+    type: achievement.type,
+    title: achievement.title,
+    description: achievement.description,
+    icon: achievement.icon || getIconForAchievementType(achievement.type),
+    points: achievement.points,
+    isCompleted: achievement.isCompleted,
+    earnedAt: achievement.earnedAt,
+    currentProgress: achievement.currentProgress,
+    targetProgress: achievement.targetProgress,
+  }))
+
+  const completedAchievements = achievements.filter((a) => a.isCompleted)
+  const inProgressAchievements = achievements.filter((a) => !a.isCompleted)
+  const recentAchievements = completedAchievements.slice(0, 5)
+
+  const studyStreak = user.studyStreak || 0
+  const streakMilestone = getNextStreakMilestone(studyStreak)
+
+  return NextResponse.json({
+    success: true,
+    user: {
+      id: user.id,
+      name: user.name || 'Student',
+      isPaidUser: false,
+    },
+    gamification: {
+      totalPoints,
+      currentLevel,
+      levelName: getLevelName(currentLevel),
+      xpInCurrentLevel: totalPoints - xpForCurrentLevel,
+      xpNeededForNextLevel: xpForNextLevel - xpForCurrentLevel,
+      levelProgress,
+
+      streak: {
+        current: studyStreak,
+        longest: studyStreak,
+        nextMilestone: streakMilestone,
+      },
+
+      badges: {
+        total: achievements.length,
+        earned: completedAchievements.length,
+        recent: recentAchievements,
+        inProgress: inProgressAchievements.slice(0, 3),
+      },
+
+      rank: null,
+    },
+  })
+}
+
+function calculateLevelProgress(currentLevel: number, totalPoints: number) {
+  const levels = [0, 100, 250, 500, 1000, 2000, 3500, 5500, 7500, 10000, Infinity]
+  const xpForCurrentLevel = levels[currentLevel - 1] || 0
+  const xpForNextLevel = levels[currentLevel] || levels[levels.length - 1]
+  const xpInCurrentLevel = Math.max(0, totalPoints - xpForCurrentLevel)
+  const xpNeededForNextLevel = xpForNextLevel - xpForCurrentLevel
+  const levelProgress = Math.min(100, Math.round((xpInCurrentLevel / xpNeededForNextLevel) * 100))
+
+  return { xpForCurrentLevel, xpForNextLevel, levelProgress }
+}
+
+function getLevelName(level: number): string {
+  const names = [
+    'Beginner',
+    'Apprentice',
+    'Scholar',
+    'Achiever',
+    'Expert',
+    'Master',
+    'Champion',
+    'Elite',
+    'Legend',
+    'NEET Warrior',
+  ]
+  return names[level - 1] || 'NEET Warrior'
 }
 
 function getIconForAchievementType(type: string): string {

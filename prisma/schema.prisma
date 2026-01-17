@@ -3423,6 +3423,13 @@ model mcq_user_stats {
   longestStreak    Int       @default(0)
   lastPracticeDate DateTime?
 
+  // Streak Protection
+  streakFreezeCount      Int       @default(0)
+  lastStreakBreak        DateTime?
+  streakRecoveryDeadline DateTime?
+  isStreakAtRisk         Boolean   @default(false)
+  streakProtectedUntil   DateTime?
+
   // XP & Levels
   totalXp       Int   @default(0)
   currentLevel  Int   @default(1)
@@ -4648,4 +4655,213 @@ model achiever_nominations {
   @@unique([achieverId, nominatedById, nominationType])
   @@index([achieverId, isApproved])
   @@index([nominationType])
+}
+
+// ============================================
+// ENHANCED GAMIFICATION SYSTEM
+// ============================================
+
+enum XpEventType {
+  MCQ_CORRECT
+  MCQ_STREAK_BONUS
+  TEST_COMPLETED
+  DAILY_CHALLENGE
+  ASSIGNMENT_SUBMITTED
+  ASSIGNMENT_PERFECT
+  CLASS_ATTENDED
+  STREAK_MILESTONE
+  BADGE_EARNED
+  LEVEL_UP
+  FIRST_OF_DAY
+  REFERRAL
+  CONTRIBUTOR
+  SPECIAL_EVENT
+}
+
+enum StreakProtectionType {
+  FREEZE
+  RECOVERY
+  WEEKEND_PASS
+  EXAM_PAUSE
+}
+
+enum GamificationNotificationType {
+  STREAK_AT_RISK
+  STREAK_BROKEN
+  STREAK_MILESTONE
+  BADGE_EARNED
+  LEVEL_UP
+  LEADERBOARD_CHANGE
+  DAILY_CHALLENGE
+  XP_MILESTONE
+  ACHIEVEMENT_PROGRESS
+  SPECIAL_EVENT
+}
+
+// Track individual XP earning events for history and analytics
+model gamification_xp_events {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  eventType   XpEventType
+  xpAmount    Int
+  description String?
+  sourceId    String?
+  sourceType  String?
+
+  streakDay  Int?
+  multiplier Float @default(1.0)
+
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([freeUserId, createdAt])
+  @@index([userId, createdAt])
+  @@index([eventType, createdAt])
+}
+
+// Streak protection/freeze system
+model gamification_streak_protection {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  protectionType StreakProtectionType
+  streakAtTime   Int
+
+  validFrom  DateTime
+  validUntil DateTime
+  usedAt     DateTime?
+  isUsed     Boolean   @default(false)
+  isExpired  Boolean   @default(false)
+
+  xpCost    Int     @default(0)
+  coinsCost Int     @default(0)
+  reason    String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([freeUserId, isUsed, validUntil])
+  @@index([userId, isUsed, validUntil])
+}
+
+// User badge awards (many-to-many relationship)
+model gamification_user_badges {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  badgeId   String
+  badgeCode String
+
+  earnedAt       DateTime @default(now())
+  xpAwarded      Int      @default(0)
+  isDisplayed    Boolean  @default(true)
+  displayOrder   Int?
+  progressAtTime Json?
+
+  notifiedAt DateTime?
+
+  @@unique([freeUserId, badgeId])
+  @@unique([userId, badgeId])
+  @@index([freeUserId, isDisplayed])
+  @@index([userId, isDisplayed])
+  @@index([earnedAt])
+}
+
+// In-app gamification notifications
+model gamification_notifications {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  type      GamificationNotificationType
+  title     String
+  message   String
+  icon      String?
+  actionUrl String?
+
+  relatedId   String?
+  relatedType String?
+  metadata    Json?
+
+  isRead      Boolean   @default(false)
+  readAt      DateTime?
+  isDismissed Boolean   @default(false)
+
+  showAsPopup  Boolean @default(false)
+  showAsBanner Boolean @default(false)
+  emailSent    Boolean @default(false)
+  pushSent     Boolean @default(false)
+
+  expiresAt DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([freeUserId, isRead, createdAt])
+  @@index([userId, isRead, createdAt])
+  @@index([type, createdAt])
+}
+
+// Track leaderboard position changes over time
+model gamification_leaderboard_history {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  period  LeaderboardPeriod
+  scope   String            @default("global")
+  scopeId String?
+
+  position         Int
+  previousPosition Int?
+  positionChange   Int?
+
+  xpAtTime       Int
+  accuracyAtTime Float?
+  streakAtTime   Int?
+
+  periodStart DateTime
+  periodEnd   DateTime
+  snapshotAt  DateTime @default(now())
+
+  @@index([freeUserId, period, snapshotAt])
+  @@index([userId, period, snapshotAt])
+  @@index([period, scope, snapshotAt])
+}
+
+// Daily/Weekly goals for gamification
+model gamification_goals {
+  id String @id @default(cuid())
+
+  freeUserId String?
+  userId     String?
+
+  goalType     String
+  targetValue  Int
+  currentValue Int @default(0)
+
+  periodType  String
+  periodStart DateTime
+  periodEnd   DateTime
+
+  isCompleted  Boolean   @default(false)
+  completedAt  DateTime?
+  xpRewarded   Int       @default(0)
+
+  consecutiveCompletions Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([freeUserId, goalType, periodStart])
+  @@unique([userId, goalType, periodStart])
+  @@index([freeUserId, periodEnd, isCompleted])
+  @@index([userId, periodEnd, isCompleted])
 }
