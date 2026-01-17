@@ -51,6 +51,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Rate limiting - prevent brute force attacks
+    // NOTE: In serverless environments, in-memory rate limiting is per-instance
+    // Consider using Redis (Upstash) for production distributed rate limiting
     const forwardedFor = request.headers.get('x-forwarded-for')
     const clientIP = forwardedFor
       ? forwardedFor.split(',')[0].trim()
@@ -59,11 +61,12 @@ export async function POST(request: NextRequest) {
     const rateLimitKey = `firebase-session:${clientIP}:${phoneNumber}`
     const rateLimitCheck = AuthRateLimit.checkRateLimit(rateLimitKey)
     if (!rateLimitCheck.allowed) {
+      console.warn(`[Firebase Session] Rate limit exceeded for ${rateLimitKey}`)
       return addSecurityHeaders(
         NextResponse.json(
           {
             error: 'Too many authentication attempts',
-            message: 'Please try again later',
+            message: 'Please wait a few minutes before trying again',
             lockoutEndsAt: rateLimitCheck.lockoutEndsAt,
           },
           { status: 429 }
@@ -84,6 +87,9 @@ export async function POST(request: NextRequest) {
           ],
         },
       })
+
+      // Reset rate limit on successful check
+      AuthRateLimit.resetRateLimit(rateLimitKey)
 
       return addSecurityHeaders(
         NextResponse.json({
@@ -161,6 +167,10 @@ export async function POST(request: NextRequest) {
           },
         },
       })
+
+      // Reset rate limit on successful signup
+      AuthRateLimit.resetRateLimit(rateLimitKey)
+      console.log(`[Firebase Session] New user created: ${newUser.id}`)
 
       return addSecurityHeaders(
         NextResponse.json({
@@ -249,6 +259,10 @@ export async function POST(request: NextRequest) {
 
       console.log('[Firebase Session] Cookie set via Next.js cookies() API')
 
+      // Reset rate limit on successful login
+      AuthRateLimit.resetRateLimit(rateLimitKey)
+      console.log(`[Firebase Session] User logged in: ${user.id}`)
+
       return addSecurityHeaders(
         NextResponse.json({
           success: true,
@@ -274,11 +288,39 @@ export async function POST(request: NextRequest) {
       )
     )
   } catch (error) {
-    console.error('Firebase session error:', error)
+    // Detailed error logging for debugging
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    const errorStack = error instanceof Error ? error.stack : undefined
+
+    console.error('[Firebase Session] Error processing request:', {
+      message: errorMessage,
+      stack: errorStack,
+      timestamp: new Date().toISOString(),
+    })
+
+    // Provide more specific error messages based on error type
+    let userMessage = 'Failed to process Firebase session'
+    let statusCode = 500
+
+    if (errorMessage.includes('Unique constraint')) {
+      userMessage = 'This phone number is already registered. Please try logging in.'
+      statusCode = 409
+    } else if (errorMessage.includes('Connection') || errorMessage.includes('timeout')) {
+      userMessage = 'Database connection issue. Please try again.'
+      statusCode = 503
+    } else if (errorMessage.includes('Invalid') || errorMessage.includes('required')) {
+      userMessage = errorMessage
+      statusCode = 400
+    }
+
     return addSecurityHeaders(
       NextResponse.json(
-        { error: 'Failed to process Firebase session' },
-        { status: 500 }
+        {
+          error: userMessage,
+          // Only include debug info in non-production
+          ...(process.env.NODE_ENV !== 'production' && { debug: errorMessage }),
+        },
+        { status: statusCode }
       )
     )
   }

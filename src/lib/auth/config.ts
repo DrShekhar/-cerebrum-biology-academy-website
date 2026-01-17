@@ -523,9 +523,11 @@ export class SessionManager {
  */
 export class AuthRateLimit {
   private static attempts = new Map<string, { count: number; lastAttempt: number }>()
-  private static readonly MAX_ATTEMPTS = 5
-  private static readonly LOCKOUT_DURATION = 15 * 60 * 1000 // 15 minutes
-  private static readonly ATTEMPT_WINDOW = 60 * 1000 // 1 minute
+  // Increased limits to prevent false positives during normal authentication flow
+  // Note: In serverless environments, this is per-instance. Consider Upstash Redis for production.
+  private static readonly MAX_ATTEMPTS = 15 // Increased from 5 to allow for normal auth flow
+  private static readonly LOCKOUT_DURATION = 5 * 60 * 1000 // 5 minutes (reduced from 15)
+  private static readonly ATTEMPT_WINDOW = 2 * 60 * 1000 // 2 minutes (increased from 1)
 
   static checkRateLimit(identifier: string): {
     allowed: boolean
