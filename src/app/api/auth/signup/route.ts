@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
       : request.headers.get('x-real-ip') || 'unknown'
 
     // Check rate limiting for signup attempts
-    const rateLimitCheck = AuthRateLimit.checkRateLimit(`signup:${clientIP}`)
+    const rateLimitCheck = await AuthRateLimit.checkRateLimit(`signup:${clientIP}`)
     if (!rateLimitCheck.allowed) {
       return addSecurityHeaders(
         NextResponse.json(

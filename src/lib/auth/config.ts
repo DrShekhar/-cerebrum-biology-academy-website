@@ -36,20 +36,34 @@ export type UserRole = PrismaUserRole
 let _jwtSecret: string | null = null
 let _jwtRefreshSecret: string | null = null
 
+/**
+ * Detect if we're in a build-time context (Next.js build, not actual runtime)
+ * During build, certain code paths are analyzed but not executed for real requests
+ */
+const isBuildTime = (): boolean => {
+  // NEXT_PHASE is set during Next.js build
+  return process.env.NEXT_PHASE === 'phase-production-build'
+}
+
 const getJWTSecret = (): string => {
   if (_jwtSecret) return _jwtSecret
 
   const secret = process.env.JWT_SECRET
   if (!secret) {
-    // Allow builds to proceed without secrets - they're only needed at runtime
-    // Check if we're in an actual runtime context vs build-time analysis
-    if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
-      // Only throw at actual runtime when the secret is needed
-      // During build, this code path may be analyzed but not executed for real requests
-      console.warn('[BUILD] JWT_SECRET not available - will be required at runtime')
+    // Allow builds to proceed without secrets
+    if (isBuildTime()) {
       return 'build-time-placeholder-not-for-actual-use'
     }
-    // Development/test fallback
+
+    // SECURITY: In production runtime, fail hard - never use fallback secrets
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error(
+        '[SECURITY CRITICAL] JWT_SECRET environment variable is not configured. ' +
+          'This is required for production. Set it in your deployment environment.'
+      )
+    }
+
+    // Development/test fallback only
     console.warn('[DEV] JWT_SECRET not set - using development fallback')
     _jwtSecret = 'dev-only-secret-not-for-production-use'
     return _jwtSecret
@@ -63,10 +77,20 @@ const getJWTRefreshSecret = (): string => {
 
   const secret = process.env.JWT_REFRESH_SECRET
   if (!secret) {
-    if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
-      console.warn('[BUILD] JWT_REFRESH_SECRET not available - will be required at runtime')
+    // Allow builds to proceed without secrets
+    if (isBuildTime()) {
       return 'build-time-placeholder-not-for-actual-use'
     }
+
+    // SECURITY: In production runtime, fail hard - never use fallback secrets
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error(
+        '[SECURITY CRITICAL] JWT_REFRESH_SECRET environment variable is not configured. ' +
+          'This is required for production. Set it in your deployment environment.'
+      )
+    }
+
+    // Development/test fallback only
     console.warn('[DEV] JWT_REFRESH_SECRET not set - using development fallback')
     _jwtRefreshSecret = 'dev-only-refresh-secret-not-for-production-use'
     return _jwtRefreshSecret
@@ -513,43 +537,95 @@ export class SessionManager {
 
 /**
  * Rate limiting for authentication attempts
- * In-memory rate limiter (consider Upstash Redis for production)
+ * Uses Upstash Redis in production for distributed rate limiting
+ * Falls back to in-memory for development (with warning)
+ *
+ * SECURITY NOTE: In-memory rate limiting is ineffective in serverless environments
+ * because each function instance has its own memory. Always configure Upstash
+ * Redis for production deployments.
  */
 export class AuthRateLimit {
-  private static attempts = new Map<string, { count: number; lastAttempt: number }>()
-  // Increased limits to prevent false positives during normal authentication flow
-  // Note: In serverless environments, this is per-instance. Consider Upstash Redis for production.
-  private static readonly MAX_ATTEMPTS = 15 // Increased from 5 to allow for normal auth flow
-  private static readonly LOCKOUT_DURATION = 5 * 60 * 1000 // 5 minutes (reduced from 15)
-  private static readonly ATTEMPT_WINDOW = 2 * 60 * 1000 // 2 minutes (increased from 1)
+  // In-memory fallback for development only
+  private static devAttempts = new Map<string, { count: number; lastAttempt: number }>()
+  private static readonly MAX_ATTEMPTS = 10 // Reasonable limit for auth attempts
+  private static readonly LOCKOUT_DURATION_SECONDS = 15 * 60 // 15 minutes lockout
 
-  static checkRateLimit(identifier: string): {
+  /**
+   * Check rate limit using Upstash Redis (production) or in-memory (development)
+   */
+  static async checkRateLimit(identifier: string): Promise<{
+    allowed: boolean
+    remainingAttempts?: number
+    lockoutEndsAt?: Date
+  }> {
+    // Try to use Upstash rate limiter first (production)
+    try {
+      const { getRateLimiter, isRateLimitEnabled } = await import('@/lib/ratelimit/config')
+
+      if (isRateLimitEnabled()) {
+        const limiter = getRateLimiter('authLogin')
+        if (limiter) {
+          const result = await limiter.limit(identifier)
+
+          if (!result.success) {
+            // Calculate lockout end time from reset timestamp
+            const lockoutEndsAt = new Date(result.reset)
+            return {
+              allowed: false,
+              remainingAttempts: 0,
+              lockoutEndsAt,
+            }
+          }
+
+          return {
+            allowed: true,
+            remainingAttempts: result.remaining,
+          }
+        }
+      }
+    } catch (error) {
+      // Log error but continue with fallback
+      console.error('[AuthRateLimit] Redis rate limit error, using fallback:', error)
+    }
+
+    // Fallback to in-memory for development
+    if (process.env.NODE_ENV === 'production') {
+      console.warn(
+        '[SECURITY WARNING] Using in-memory rate limiting in production. Configure UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN for proper distributed rate limiting.'
+      )
+    }
+
+    return this.checkRateLimitInMemory(identifier)
+  }
+
+  /**
+   * In-memory rate limiting fallback (development only)
+   */
+  private static checkRateLimitInMemory(identifier: string): {
     allowed: boolean
     remainingAttempts?: number
     lockoutEndsAt?: Date
   } {
     const now = Date.now()
-    const record = this.attempts.get(identifier)
+    const record = this.devAttempts.get(identifier)
+    const lockoutMs = this.LOCKOUT_DURATION_SECONDS * 1000
 
     if (!record) {
-      this.attempts.set(identifier, { count: 1, lastAttempt: now })
+      this.devAttempts.set(identifier, { count: 1, lastAttempt: now })
       return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - 1 }
     }
 
     // Check if lockout period has expired
-    if (record.count >= this.MAX_ATTEMPTS && now - record.lastAttempt < this.LOCKOUT_DURATION) {
+    if (record.count >= this.MAX_ATTEMPTS && now - record.lastAttempt < lockoutMs) {
       return {
         allowed: false,
-        lockoutEndsAt: new Date(record.lastAttempt + this.LOCKOUT_DURATION),
+        lockoutEndsAt: new Date(record.lastAttempt + lockoutMs),
       }
     }
 
-    // Reset if lockout period expired or attempt window expired
-    if (
-      now - record.lastAttempt > this.LOCKOUT_DURATION ||
-      now - record.lastAttempt > this.ATTEMPT_WINDOW
-    ) {
-      this.attempts.set(identifier, { count: 1, lastAttempt: now })
+    // Reset if lockout period expired
+    if (now - record.lastAttempt > lockoutMs) {
+      this.devAttempts.set(identifier, { count: 1, lastAttempt: now })
       return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - 1 }
     }
 
@@ -560,15 +636,20 @@ export class AuthRateLimit {
     if (record.count >= this.MAX_ATTEMPTS) {
       return {
         allowed: false,
-        lockoutEndsAt: new Date(now + this.LOCKOUT_DURATION),
+        lockoutEndsAt: new Date(now + lockoutMs),
       }
     }
 
     return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - record.count }
   }
 
+  /**
+   * Reset rate limit for an identifier (e.g., after successful login)
+   * Note: For Upstash, rate limits automatically reset after the window expires
+   */
   static resetRateLimit(identifier: string): void {
-    this.attempts.delete(identifier)
+    // Clear in-memory record (Upstash handles its own expiration)
+    this.devAttempts.delete(identifier)
   }
 }
 

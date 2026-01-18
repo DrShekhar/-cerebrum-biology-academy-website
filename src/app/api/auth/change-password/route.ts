@@ -52,7 +52,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       : request.headers.get('x-real-ip') || 'unknown'
 
     // Rate limiting for password change attempts
-    const rateLimitCheck = AuthRateLimit.checkRateLimit(
+    const rateLimitCheck = await AuthRateLimit.checkRateLimit(
       `change-password:${session.userId}:${clientIP}`
     )
     if (!rateLimitCheck.allowed) {

@@ -9,16 +9,31 @@ import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
 // Secrets are only required at runtime when actually processing requests
 let _authSecret: string | null = null
 
+/**
+ * Detect if we're in a build-time context (Next.js build, not actual runtime)
+ */
+const isBuildTime = (): boolean => {
+  return process.env.NEXT_PHASE === 'phase-production-build'
+}
+
 const getAuthSecret = (): string => {
   if (_authSecret) return _authSecret
 
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
   if (!secret) {
-    if (process.env.NODE_ENV === 'production') {
-      // During build analysis, return placeholder; actual requests will fail at runtime without secrets
-      console.warn('[BUILD] AUTH_SECRET not available - will be required at runtime')
+    // Allow builds to proceed without secrets
+    if (isBuildTime()) {
       return 'build-time-placeholder-not-for-actual-use'
     }
+
+    // SECURITY: In production runtime, fail hard - never use fallback secrets
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error(
+        '[SECURITY CRITICAL] AUTH_SECRET/NEXTAUTH_SECRET environment variable is not configured. ' +
+          'This is required for production. Set it in your deployment environment.'
+      )
+    }
+
     console.warn('[DEV] AUTH_SECRET not set - using development fallback')
     _authSecret = 'dev-only-secret-not-for-production-use'
     return _authSecret
@@ -59,7 +74,7 @@ export async function POST(request: NextRequest) {
       : request.headers.get('x-real-ip') || 'unknown'
 
     const rateLimitKey = `firebase-session:${clientIP}:${phoneNumber}`
-    const rateLimitCheck = AuthRateLimit.checkRateLimit(rateLimitKey)
+    const rateLimitCheck = await AuthRateLimit.checkRateLimit(rateLimitKey)
     if (!rateLimitCheck.allowed) {
       console.warn(`[Firebase Session] Rate limit exceeded for ${rateLimitKey}`)
       return addSecurityHeaders(
@@ -170,7 +185,10 @@ export async function POST(request: NextRequest) {
 
       // Reset rate limit on successful signup
       AuthRateLimit.resetRateLimit(rateLimitKey)
-      console.log(`[Firebase Session] New user created: ${newUser.id}`)
+
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`[Firebase Session] New user created: ${newUser.id}`)
+      }
 
       return addSecurityHeaders(
         NextResponse.json({
@@ -248,8 +266,11 @@ export async function POST(request: NextRequest) {
       const maxAge = 7 * 24 * 60 * 60 // 7 days in seconds
 
       // Use Next.js cookies() API - the recommended way to set cookies in route handlers
+      // SECURITY: Use __Secure- prefix in production for enhanced cookie security
+      // The __Secure- prefix tells browsers to only accept the cookie over HTTPS
       const cookieStore = await cookies()
-      cookieStore.set('authjs.session-token', sessionToken, {
+      const cookieName = isProduction ? '__Secure-authjs.session-token' : 'authjs.session-token'
+      cookieStore.set(cookieName, sessionToken, {
         httpOnly: true,
         secure: isProduction,
         sameSite: 'lax',
@@ -257,11 +278,16 @@ export async function POST(request: NextRequest) {
         maxAge: maxAge,
       })
 
-      console.log('[Firebase Session] Cookie set via Next.js cookies() API')
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('[Firebase Session] Cookie set via Next.js cookies() API')
+      }
 
       // Reset rate limit on successful login
       AuthRateLimit.resetRateLimit(rateLimitKey)
-      console.log(`[Firebase Session] User logged in: ${user.id}`)
+
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`[Firebase Session] User logged in: ${user.id}`)
+      }
 
       return addSecurityHeaders(
         NextResponse.json({
