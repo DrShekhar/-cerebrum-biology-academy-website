@@ -1613,4 +1613,1006 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       priceCurrency: 'INR',
     },
   },
+
+  // HIGH PRIORITY SEO PAGES - Keyword Gap Analysis (Added Jan 2025)
+
+  'neet-human-physiology-guide': {
+    slug: 'neet-human-physiology-guide',
+    classLevel: 'universal',
+    title: 'NEET Human Physiology Complete Guide 2025 | 12-15% Weightage Topics',
+    metaDescription:
+      'Master NEET Human Physiology with our comprehensive guide. Covers Digestion, Breathing, Excretion, Neural Control & more. 12-15% weightage, high-scoring chapters.',
+    keywords: [
+      'neet human physiology guide',
+      'human physiology for neet',
+      'neet human physiology important questions',
+      'human physiology notes for neet',
+      'neet human physiology weightage',
+      'how to study human physiology for neet',
+      'human physiology mcq for neet',
+    ],
+    hero: {
+      headline: 'NEET Human Physiology Complete Guide',
+      subheadline:
+        'Human Physiology contributes 12-15% of NEET Biology marks. Master all 7 chapters with our comprehensive preparation strategy and score 50+ marks from this section alone.',
+      highlightedText: '12-15% Weightage',
+      ctaText: 'Start Learning Free',
+      ctaLink: '/tools/neet-mcq?chapter=human-physiology',
+    },
+    painPoints: {
+      title: 'Why Students Struggle with Human Physiology',
+      points: [
+        {
+          icon: '🧠',
+          question: 'Too many organs and systems to remember?',
+          solution: 'Our chapter-wise breakdown makes complex systems digestible',
+        },
+        {
+          icon: '📊',
+          question: 'Confusing hormones and their functions?',
+          solution: 'Visual flowcharts and comparison tables for quick recall',
+        },
+        {
+          icon: '🔬',
+          question: "Can't connect concepts across chapters?",
+          solution: 'Integration approach linking Digestion → Breathing → Circulation',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Complete Human Physiology Coverage',
+      subtitle: '7 Chapters | 50+ Expected Questions',
+      items: [
+        {
+          icon: '🫀',
+          title: 'Digestion & Absorption',
+          description: 'Complete digestive system with enzyme actions and absorption mechanisms',
+        },
+        {
+          icon: '🫁',
+          title: 'Breathing & Gas Exchange',
+          description: 'Respiratory volumes, oxygen dissociation curve, respiratory disorders',
+        },
+        {
+          icon: '💪',
+          title: 'Body Fluids & Circulation',
+          description: 'Blood composition, cardiac cycle, ECG interpretation',
+        },
+        {
+          icon: '🧪',
+          title: 'Excretory Products',
+          description: 'Nephron structure, urine formation, kidney disorders',
+        },
+      ],
+    },
+    stats: [
+      { value: '7', label: 'Chapters', icon: '📚' },
+      { value: '12-15%', label: 'NEET Weightage', icon: '📊' },
+      { value: '50+', label: 'Expected Marks', icon: '🎯' },
+      { value: 'High', label: 'Scoring Potential', icon: '⭐' },
+    ],
+    testimonials: [
+      {
+        name: 'Ananya Krishnan',
+        achievement: 'NEET 2024 - 695/720',
+        quote:
+          'Human Physiology was my strongest section. Following this systematic approach helped me score 55/60 in these chapters!',
+        score: '695/720',
+      },
+      {
+        name: 'Rohan Sharma',
+        achievement: 'NEET 2024 - 670/720',
+        quote:
+          'The flowcharts for hormone regulation and the cardiac cycle diagrams made everything click. Highly recommend!',
+        score: '670/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How many questions come from Human Physiology in NEET?',
+        answer:
+          'NEET typically has 10-12 questions directly from Human Physiology chapters, contributing approximately 40-48 marks. This makes it one of the highest-weightage topics in Biology.',
+      },
+      {
+        question: 'Which Human Physiology chapters are most important for NEET?',
+        answer:
+          'Body Fluids & Circulation, Neural Control & Coordination, and Chemical Coordination are the top 3 chapters. Together they account for 6-8 questions annually.',
+      },
+      {
+        question: 'Is NCERT enough for Human Physiology in NEET?',
+        answer:
+          'Yes, NCERT is the primary source. About 90% of questions are directly from NCERT. However, understanding diagrams and practicing MCQs from previous years is equally important.',
+      },
+      {
+        question: 'How to memorize all the enzymes and hormones?',
+        answer:
+          'Create comparison charts grouping enzymes by organ (salivary, gastric, pancreatic) and hormones by gland. Use mnemonics and practice with MCQs for long-term retention.',
+      },
+    ],
+    courseSummary: {
+      title: 'Master Human Physiology in 6 Weeks',
+      duration: '6 weeks intensive',
+      batchSize: '10-12 students',
+      features: [
+        '7 chapters with in-depth coverage',
+        'NCERT-aligned visual notes',
+        'Chapter-wise MCQ practice (500+ questions)',
+        'Weekly tests with detailed analysis',
+      ],
+      price: {
+        original: 15000,
+        discounted: 9999,
+        emi: '₹3,333/month',
+      },
+    },
+    cta: {
+      title: 'Score 50+ in Human Physiology',
+      subtitle: '12-15% of your Biology score in 7 chapters',
+      primaryButton: {
+        text: 'Practice MCQs Free',
+        link: '/tools/neet-mcq?chapter=human-physiology',
+      },
+      secondaryButton: {
+        text: 'Join Full Course',
+        link: '/courses',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Chapter Weightage', link: '/neet-biology-chapter-weightage' },
+      { title: 'Human Physiology Notes', link: '/human-physiology-notes-neet' },
+      { title: 'NEET Biology Important Questions', link: '/neet-biology-important-questions' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Human Physiology Guide',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Complete Human Physiology preparation guide for NEET with 12-15% weightage coverage',
+      duration: '6 weeks',
+      price: 9999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-genetics-preparation': {
+    slug: 'neet-genetics-preparation',
+    classLevel: 'universal',
+    title: 'NEET Genetics Preparation Guide 2025 | Master Inheritance & Molecular Biology',
+    metaDescription:
+      'Complete NEET Genetics preparation strategy. Cover Mendelian genetics, molecular biology, biotechnology & evolution. 15-18% weightage with problem-solving approach.',
+    keywords: [
+      'neet genetics preparation',
+      'genetics for neet',
+      'neet genetics important questions',
+      'genetics mcq for neet',
+      'neet genetics weightage',
+      'molecular biology neet',
+      'how to solve genetics problems neet',
+      'genetics and evolution neet',
+    ],
+    hero: {
+      headline: 'Master NEET Genetics & Molecular Biology',
+      subheadline:
+        'Genetics, Molecular Biology & Evolution together contribute 15-18% of NEET marks. Learn our problem-solving approach to crack these conceptual chapters.',
+      highlightedText: '15-18% Weightage',
+      ctaText: 'Practice Genetics MCQs',
+      ctaLink: '/tools/neet-mcq?chapter=genetics',
+    },
+    painPoints: {
+      title: 'Why Genetics Feels Difficult',
+      points: [
+        {
+          icon: '🧬',
+          question: 'Confused by genetic cross problems?',
+          solution: 'Step-by-step problem-solving framework for any cross type',
+        },
+        {
+          icon: '🔢',
+          question: "Can't apply Hardy-Weinberg equation?",
+          solution: 'Simple 3-step approach with solved examples',
+        },
+        {
+          icon: '📖',
+          question: 'Molecular genetics feels abstract?',
+          solution: 'Visual diagrams of replication, transcription, translation',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Complete Genetics Coverage',
+      subtitle: '4 Major Units | 60+ Expected Marks',
+      items: [
+        {
+          icon: '🧬',
+          title: 'Mendelian Genetics',
+          description: 'Inheritance patterns, crosses, pedigree analysis, genetic disorders',
+        },
+        {
+          icon: '🔬',
+          title: 'Molecular Basis of Inheritance',
+          description: 'DNA structure, replication, transcription, translation, lac operon',
+        },
+        {
+          icon: '🧪',
+          title: 'Biotechnology',
+          description: 'rDNA technology, PCR, gene cloning, applications',
+        },
+        {
+          icon: '🦎',
+          title: 'Evolution',
+          description: 'Origin of life, evidences, mechanisms, Hardy-Weinberg',
+        },
+      ],
+    },
+    stats: [
+      { value: '15-18%', label: 'NEET Weightage', icon: '📊' },
+      { value: '14-16', label: 'Questions/Year', icon: '❓' },
+      { value: '56-64', label: 'Marks Available', icon: '🎯' },
+      { value: 'Must', label: 'For 600+ Score', icon: '⭐' },
+    ],
+    testimonials: [
+      {
+        name: 'Prateek Jain',
+        achievement: 'NEET 2024 - 705/720',
+        quote:
+          'Genetics was my weakest subject initially. The problem-solving approach taught here helped me solve even the trickiest crosses confidently.',
+        score: '705/720',
+      },
+      {
+        name: 'Meera Patel',
+        achievement: 'NEET 2024 - 685/720',
+        quote:
+          'Understanding the molecular mechanisms visually made biotechnology so much easier. I scored 14/16 in genetics section!',
+        score: '685/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How to solve genetics problems in NEET?',
+        answer:
+          'Follow our 4-step approach: (1) Identify the type of cross, (2) Write parent genotypes, (3) Create Punnett square, (4) Calculate ratios. Practice with 100+ problems for mastery.',
+      },
+      {
+        question: 'Is Biotechnology important for NEET?',
+        answer:
+          'Yes! Biotechnology Principles and Applications together contribute 3-4 questions (12-16 marks) annually. Its a high-scoring chapter with direct NCERT questions.',
+      },
+      {
+        question: 'Which genetics topics are most asked in NEET?',
+        answer:
+          'Molecular Basis of Inheritance (DNA replication, lac operon) and Principles of Inheritance (Mendelian genetics, linkage) are the most frequently asked topics.',
+      },
+      {
+        question: 'How to prepare Evolution for NEET?',
+        answer:
+          'Focus on origin of life theories, evidences of evolution, Hardy-Weinberg principle, and human evolution timeline. Questions are mostly factual and NCERT-based.',
+      },
+    ],
+    courseSummary: {
+      title: 'Genetics Mastery Program',
+      duration: '8 weeks intensive',
+      batchSize: '10-12 students',
+      features: [
+        '4 units with conceptual clarity',
+        'Problem-solving workshop (200+ problems)',
+        'Molecular biology visual guides',
+        'Weekly genetics tests',
+      ],
+      price: {
+        original: 18000,
+        discounted: 12999,
+        emi: '₹4,333/month',
+      },
+    },
+    cta: {
+      title: 'Crack Genetics with Confidence',
+      subtitle: 'From fear to 50+ marks in genetics',
+      primaryButton: {
+        text: 'Practice Genetics MCQs',
+        link: '/tools/neet-mcq?chapter=genetics',
+      },
+      secondaryButton: {
+        text: 'Join Full Course',
+        link: '/courses',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Chapter Weightage', link: '/neet-biology-chapter-weightage' },
+      { title: 'Genetics Notes', link: '/genetics-notes-neet' },
+      { title: 'NEET Biology Important Questions', link: '/neet-biology-important-questions' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Genetics Preparation',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Complete genetics preparation for NEET including Mendelian genetics, molecular biology, biotechnology and evolution',
+      duration: '8 weeks',
+      price: 12999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-ecology-important-questions': {
+    slug: 'neet-ecology-important-questions',
+    classLevel: 'universal',
+    title: 'NEET Ecology Important Questions 2025 | High-Scoring Topics & PYQs',
+    metaDescription:
+      'Practice NEET Ecology important questions with solutions. Covers Organisms & Environment, Ecosystem, Biodiversity & Environmental Issues. 12-15 questions, easy marks!',
+    keywords: [
+      'neet ecology important questions',
+      'ecology questions for neet',
+      'neet ecology mcq',
+      'ecology pyq neet',
+      'ecosystem questions neet',
+      'biodiversity questions neet',
+      'environmental issues neet',
+      'most asked ecology questions neet',
+    ],
+    hero: {
+      headline: 'NEET Ecology Important Questions',
+      subheadline:
+        'Ecology is the easiest high-weightage section in NEET Biology! 12-15 questions, mostly factual. Master these important questions and score 45+ marks effortlessly.',
+      highlightedText: 'Easy 45+ Marks',
+      ctaText: 'Practice Ecology MCQs',
+      ctaLink: '/tools/neet-mcq?chapter=ecology',
+    },
+    painPoints: {
+      title: 'Why Students Miss Easy Ecology Marks',
+      points: [
+        {
+          icon: '📚',
+          question: 'Treating ecology as low priority?',
+          solution: 'Its 12-15% of Biology! More than Cell Biology or Biomolecules',
+        },
+        {
+          icon: '🌿',
+          question: 'Too many environmental facts to remember?',
+          solution: 'Focused notes on NEET-relevant facts only',
+        },
+        {
+          icon: '📊',
+          question: 'Confusing ecosystem energy calculations?',
+          solution: 'Simple formulas and shortcuts for productivity questions',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Complete Ecology Question Bank',
+      subtitle: '4 Chapters | 45+ Easy Marks',
+      items: [
+        {
+          icon: '🌍',
+          title: 'Organisms & Populations',
+          description: 'Population interactions, growth models, adaptations',
+        },
+        {
+          icon: '🌳',
+          title: 'Ecosystem',
+          description: 'Energy flow, productivity, decomposition, nutrient cycling',
+        },
+        {
+          icon: '🦋',
+          title: 'Biodiversity & Conservation',
+          description: 'Diversity patterns, hotspots, conservation strategies',
+        },
+        {
+          icon: '🌡️',
+          title: 'Environmental Issues',
+          description: 'Pollution types, greenhouse effect, ozone depletion',
+        },
+      ],
+    },
+    stats: [
+      { value: '12-15', label: 'Questions/Year', icon: '❓' },
+      { value: '48-60', label: 'Marks Available', icon: '🎯' },
+      { value: '95%', label: 'From NCERT', icon: '📖' },
+      { value: 'Easiest', label: 'Section in Bio', icon: '⭐' },
+    ],
+    testimonials: [
+      {
+        name: 'Kavya Singh',
+        achievement: 'NEET 2024 - 688/720',
+        quote:
+          'I used to skip ecology thinking it was boring. These practice questions made me realize how easy and scoring it is. Got 58/60 in ecology!',
+        score: '688/720',
+      },
+      {
+        name: 'Arjun Nair',
+        achievement: 'NEET 2024 - 672/720',
+        quote:
+          'The PYQ analysis showed me exactly which topics repeat. Environmental Issues alone gave me 3 easy questions!',
+        score: '672/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How many questions come from Ecology in NEET?',
+        answer:
+          'NEET typically has 12-15 questions from Ecology chapters (Organisms & Populations, Ecosystem, Biodiversity, Environmental Issues), contributing 48-60 marks. Its one of the most predictable sections.',
+      },
+      {
+        question: 'Is Ecology easy for NEET?',
+        answer:
+          'Yes! Ecology is considered the easiest section in NEET Biology. Questions are mostly factual, directly from NCERT, with minimal application-based problems.',
+      },
+      {
+        question: 'Which Ecology topics are most important for NEET 2025?',
+        answer:
+          'Population interactions, ecosystem productivity (GPP, NPP), biodiversity hotspots, and environmental pollution are most frequently asked. Focus on graphs and numerical values in NCERT.',
+      },
+      {
+        question: 'Should I read Ecology from reference books?',
+        answer:
+          'No! NCERT is 100% sufficient for Ecology. In fact, questions are often word-to-word from NCERT. Focus on examples, diagrams, and numerical values mentioned in the textbook.',
+      },
+    ],
+    courseSummary: {
+      title: 'Ecology Mastery in 3 Weeks',
+      duration: '3 weeks intensive',
+      batchSize: '15-20 students',
+      features: [
+        'All 4 ecology chapters covered',
+        '500+ practice MCQs with solutions',
+        '10-year PYQ analysis',
+        'Quick revision notes',
+      ],
+      price: {
+        original: 8000,
+        discounted: 4999,
+        emi: '₹1,666/month',
+      },
+    },
+    cta: {
+      title: 'Grab These Easy Ecology Marks',
+      subtitle: "Don't leave 45+ marks on the table",
+      primaryButton: {
+        text: 'Practice Ecology MCQs',
+        link: '/tools/neet-mcq?chapter=ecology',
+      },
+      secondaryButton: {
+        text: 'View Ecology Notes',
+        link: '/ecology-notes-neet',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Chapter Weightage', link: '/neet-biology-chapter-weightage' },
+      { title: 'Ecology Notes', link: '/ecology-notes-neet' },
+      { title: 'NEET Biology Important Questions', link: '/neet-biology-important-questions' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Ecology Important Questions',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Important ecology questions for NEET covering all 4 chapters with PYQ analysis',
+      duration: '3 weeks',
+      price: 4999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-repeater-success-stories': {
+    slug: 'neet-repeater-success-stories',
+    classLevel: 'dropper',
+    title: 'NEET Repeater Success Stories 2025 | Dropper to Doctor Journeys',
+    metaDescription:
+      'Real NEET dropper success stories from Cerebrum Academy. See how students improved 100-200 marks in their second attempt. Get inspired & join our repeater batch.',
+    keywords: [
+      'neet repeater success stories',
+      'neet dropper success stories',
+      'neet dropper to doctor',
+      'neet second attempt success',
+      'neet score improvement stories',
+      'neet 450 to 650 improvement',
+      'neet repeater journey',
+      'neet dropper motivation',
+    ],
+    hero: {
+      headline: 'From NEET Dropout to Doctor Dreams',
+      subheadline:
+        'Real success stories of students who improved 100-200 marks in their second attempt. 78% of our droppers secure government MBBS seats. Your comeback starts here.',
+      highlightedText: '78% Success Rate',
+      ctaText: 'Join Dropper Batch 2025',
+      ctaLink: '/courses/neet-dropper',
+    },
+    painPoints: {
+      title: 'What NEET Droppers Face',
+      points: [
+        {
+          icon: '😔',
+          question: 'Feeling like a failure after first attempt?',
+          solution: 'Join 1000s who turned failure into fuel. Your story awaits.',
+        },
+        {
+          icon: '👨‍👩‍👧',
+          question: 'Family pressure and self-doubt?',
+          solution: 'Our counselors and peer support make the journey easier',
+        },
+        {
+          icon: '📉',
+          question: 'Scared of another disappointment?',
+          solution: 'Proven strategy that has helped 500+ droppers succeed',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Why Droppers Succeed at Cerebrum',
+      subtitle: '500+ Successful Repeaters',
+      items: [
+        {
+          icon: '📊',
+          title: 'Gap Analysis',
+          description: 'We identify exactly where you lost marks last time',
+        },
+        {
+          icon: '🎯',
+          title: 'Focused Preparation',
+          description: 'Target weak areas while maintaining strengths',
+        },
+        {
+          icon: '🧠',
+          title: 'Mental Wellness',
+          description: 'Regular counseling and motivation sessions',
+        },
+        {
+          icon: '👥',
+          title: 'Peer Community',
+          description: 'Study with fellow droppers who understand your journey',
+        },
+      ],
+    },
+    stats: [
+      { value: '78%', label: 'Govt Seat Rate', icon: '🏥' },
+      { value: '150+', label: 'Avg Mark Improvement', icon: '📈' },
+      { value: '500+', label: 'Success Stories', icon: '⭐' },
+      { value: '12', label: 'Month Program', icon: '📅' },
+    ],
+    testimonials: [
+      {
+        name: 'Aditya Verma',
+        achievement: 'NEET 2024 - 685/720 (from 495)',
+        quote:
+          'First attempt: 495. Second attempt: 685. The 190 mark improvement changed my life. I am now at AIIMS Delhi. Never give up!',
+        score: '190 marks improved',
+      },
+      {
+        name: 'Sneha Reddy',
+        achievement: 'NEET 2024 - 645/720 (from 520)',
+        quote:
+          'After failing to get any seat in first attempt, I joined Cerebrum. The systematic approach and emotional support helped me score 645. Government MBBS achieved!',
+        score: '125 marks improved',
+      },
+      {
+        name: 'Rahul Gupta',
+        achievement: 'NEET 2024 - 612/720 (from 410)',
+        quote:
+          'From 410 to 612 - a jump of 202 marks! The small batch size meant every doubt got cleared. Best decision of my life.',
+        score: '202 marks improved',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the success rate for NEET droppers?',
+        answer:
+          'At Cerebrum, 78% of our dropper students secure government MBBS seats. The average improvement is 150+ marks. With focused preparation, droppers often outperform first-timers.',
+      },
+      {
+        question: 'Is it worth taking a drop year for NEET?',
+        answer:
+          'Yes, if youre committed. Statistics show that 40-50% of NEET qualifiers are droppers. One extra year of preparation can mean the difference between no seat and a government MBBS.',
+      },
+      {
+        question: 'How to improve 100+ marks in second attempt?',
+        answer:
+          'Analyze your first attempt thoroughly, identify weak areas, join a structured coaching program, focus on NCERT, practice regularly, and maintain mental wellness. Most droppers can improve 100-200 marks with the right strategy.',
+      },
+      {
+        question: 'What makes Cerebrum different for droppers?',
+        answer:
+          'Small batches (10-12 students), personalized attention, gap analysis from first attempt, mental wellness support, and a community of fellow droppers. Our faculty has helped 500+ droppers succeed.',
+      },
+    ],
+    courseSummary: {
+      title: 'NEET Dropper Success Program',
+      duration: '12 months intensive',
+      batchSize: '10-12 students only',
+      features: [
+        'First attempt gap analysis',
+        'Personalized study plan',
+        'Daily doubt clearing',
+        'Mental wellness counseling',
+        'Peer study groups',
+      ],
+      price: {
+        original: 85000,
+        discounted: 65000,
+        emi: '₹5,417/month',
+      },
+    },
+    cta: {
+      title: 'Start Your Comeback Story',
+      subtitle: 'Join 500+ successful droppers who proved everyone wrong',
+      primaryButton: {
+        text: 'Join Dropper Batch 2025',
+        link: '/courses/neet-dropper',
+      },
+      secondaryButton: {
+        text: 'Talk to Counselor',
+        link: '/book-demo?type=dropper',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Dropper Course', link: '/courses/neet-dropper' },
+      { title: 'Best Coaching for Droppers', link: '/best-coaching-neet-droppers' },
+      { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Dropper Success Program',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Comprehensive NEET preparation program for droppers with 78% government seat success rate',
+      duration: '12 months',
+      price: 65000,
+      priceCurrency: 'INR',
+    },
+  },
+
+  // ONLINE COACHING SEO PAGES - High Volume Keywords (90K+ monthly)
+  'live-online-neet-classes': {
+    slug: 'live-online-neet-classes',
+    classLevel: 'universal',
+    title: 'Live Online NEET Classes 2025-26 | Interactive Biology Sessions | Cerebrum Academy',
+    metaDescription:
+      'Join live online NEET classes with real-time doubt clearing. Interactive biology sessions by AIIMS faculty. Live online NEET biology coaching with personal attention. Free demo available!',
+    keywords: [
+      'live online neet classes',
+      'live online biology classes',
+      'live neet classes online',
+      'live online neet coaching',
+      'live interactive neet classes',
+      'real-time neet classes',
+      'live online biology classes for neet',
+      'live neet biology coaching',
+      'online live classes for neet 2025',
+      'online live classes for neet 2026',
+    ],
+    hero: {
+      headline: 'Live Online NEET Classes',
+      subheadline: 'Real-time interactive biology sessions with AIIMS faculty. Ask questions, get instant answers.',
+      highlightedText: 'Live & Interactive',
+      ctaText: 'Join Free Live Demo',
+      ctaLink: '/book-demo?type=live-online',
+    },
+    painPoints: {
+      title: 'Why Choose Live Over Recorded?',
+      points: [
+        {
+          icon: 'confused',
+          question: 'Recorded videos feel one-way?',
+          solution: 'Live classes allow real-time interaction - ask doubts instantly, get immediate feedback.',
+        },
+        {
+          icon: 'stuck',
+          question: 'Cant ask questions while watching?',
+          solution: 'Raise your hand virtually, type in chat, or unmute to speak directly with faculty.',
+        },
+        {
+          icon: 'overwhelmed',
+          question: 'No accountability with self-study?',
+          solution: 'Scheduled live classes create discipline. Daily attendance tracking keeps you on track.',
+        },
+        {
+          icon: 'isolated',
+          question: 'Missing classroom feel online?',
+          solution: 'See classmates, participate in discussions, compete in live quizzes together.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Live Class Advantages',
+      subtitle: 'Experience the next best thing to physical classroom',
+      items: [
+        {
+          icon: 'video',
+          title: 'Real-Time Interaction',
+          description: 'Two-way video/audio communication. See and be seen by your teacher.',
+        },
+        {
+          icon: 'chat',
+          title: 'Instant Doubt Resolution',
+          description: 'Ask questions during class via chat or voice. Get answers immediately.',
+        },
+        {
+          icon: 'quiz',
+          title: 'Live Quizzes & Polls',
+          description: 'Interactive assessments during class to check understanding in real-time.',
+        },
+        {
+          icon: 'recording',
+          title: 'Recordings Available',
+          description: 'Missed a class? Recordings available within 2 hours for revision.',
+        },
+        {
+          icon: 'group',
+          title: 'Peer Learning',
+          description: 'Learn with classmates, see their questions, benefit from group discussions.',
+        },
+        {
+          icon: 'schedule',
+          title: 'Structured Schedule',
+          description: 'Fixed class timings create discipline and routine for consistent preparation.',
+        },
+      ],
+    },
+    stats: [
+      { value: '3+', label: 'Live Hours Daily' },
+      { value: '95%', label: 'Live Attendance' },
+      { value: '< 30 sec', label: 'Doubt Response' },
+      { value: '4.9/5', label: 'Student Rating' },
+    ],
+    testimonials: [
+      {
+        name: 'Riya Sharma',
+        achievement: 'NEET 2024 - 680/720',
+        quote: 'Live classes felt like being in a real classroom. I could ask doubts immediately and the teacher knew my name!',
+        score: 680,
+      },
+      {
+        name: 'Aditya Verma',
+        achievement: 'NEET 2024 - 645/720',
+        quote: 'The live quizzes during class kept me engaged. Much better than passively watching recorded videos.',
+        score: 645,
+      },
+      {
+        name: 'Sneha Patel',
+        achievement: 'From Tier 3 City',
+        quote: 'Living in a small town, live online classes gave me access to Delhi-level coaching.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What platform do you use for live classes?',
+        answer: 'We use a custom-built platform optimized for education with features like virtual hand-raise, breakout rooms for doubt sessions, and integrated whiteboard.',
+      },
+      {
+        question: 'What if I miss a live class?',
+        answer: 'Recordings are available within 2 hours of class completion. However, we encourage attending live for maximum benefit.',
+      },
+      {
+        question: 'How many students in a live batch?',
+        answer: 'We limit batches to 30 students to ensure everyone can interact and get their doubts resolved.',
+      },
+      {
+        question: 'What internet speed do I need?',
+        answer: 'Minimum 2 Mbps for smooth streaming. Our platform adapts to lower bandwidth but 5+ Mbps is recommended.',
+      },
+    ],
+    courseSummary: {
+      title: 'Live Online NEET Program',
+      duration: '12 months',
+      batchSize: '30 students per batch',
+      features: [
+        '3+ hours live classes daily',
+        'Real-time doubt clearing',
+        'Live quizzes & assessments',
+        'Class recordings for revision',
+        'WhatsApp support group',
+      ],
+      price: {
+        original: 75000,
+        discounted: 55000,
+        emi: '₹4,583/month',
+      },
+    },
+    cta: {
+      title: 'Experience Live Learning',
+      subtitle: 'Join a free live demo class and feel the difference',
+      primaryButton: {
+        text: 'Book Free Live Demo',
+        link: '/book-demo?type=live-online',
+      },
+      secondaryButton: {
+        text: 'View Class Schedule',
+        link: '/timetable',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'Online NEET Coaching', link: '/online-neet-coaching' },
+      { title: 'Online Test Series', link: '/online-neet-test-series' },
+      { title: 'NEET 2026 Preparation', link: '/neet-2026-preparation' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'Live Online NEET Biology Classes',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Interactive live online NEET biology classes with real-time doubt resolution',
+      duration: '12 months',
+      price: 55000,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'online-neet-test-series': {
+    slug: 'online-neet-test-series',
+    classLevel: 'universal',
+    title: 'Online NEET Test Series 2025-26 | Mock Tests & Practice | Cerebrum Academy',
+    metaDescription:
+      'Comprehensive online NEET test series with 200+ mock tests. NEET pattern online tests with detailed analysis, rank prediction & improvement suggestions. Start free trial!',
+    keywords: [
+      'online neet test series',
+      'neet online test series',
+      'neet mock test online',
+      'online neet mock test',
+      'neet practice test online',
+      'free neet test series online',
+      'best online neet test series',
+      'neet test series 2025',
+      'neet test series 2026',
+      'online neet practice papers',
+    ],
+    hero: {
+      headline: 'Online NEET Test Series 2025-26',
+      subheadline: '200+ mock tests designed by AIIMS faculty. Real NEET experience with AI-powered analysis.',
+      highlightedText: '200+ Tests',
+      ctaText: 'Start Free Trial',
+      ctaLink: '/tools/neet-mcq',
+    },
+    painPoints: {
+      title: 'Why Test Series Matters',
+      points: [
+        {
+          icon: 'exam',
+          question: 'Not sure if youre ready for NEET?',
+          solution: 'Our tests simulate exact NEET pattern. Know exactly where you stand.',
+        },
+        {
+          icon: 'time',
+          question: 'Struggling with time management?',
+          solution: 'Timed tests train you to solve 200 questions in 200 minutes.',
+        },
+        {
+          icon: 'analysis',
+          question: 'Dont know your weak areas?',
+          solution: 'Detailed analytics show chapter-wise, topic-wise performance breakdown.',
+        },
+        {
+          icon: 'rank',
+          question: 'No idea about your All India Rank?',
+          solution: 'Compare with 50,000+ students. Get realistic rank prediction.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Test Series Features',
+      subtitle: 'Everything you need to perfect your exam temperament',
+      items: [
+        {
+          icon: 'tests',
+          title: '200+ Mock Tests',
+          description: 'Chapter tests, part tests, full syllabus tests - progressive difficulty.',
+        },
+        {
+          icon: 'pattern',
+          title: 'Exact NEET Pattern',
+          description: '200 questions, 200 minutes, negative marking, OMR interface.',
+        },
+        {
+          icon: 'analysis',
+          title: 'AI-Powered Analysis',
+          description: 'Detailed performance report with improvement suggestions.',
+        },
+        {
+          icon: 'rank',
+          title: 'All India Ranking',
+          description: 'Compare with 50,000+ students across India.',
+        },
+        {
+          icon: 'solutions',
+          title: 'Video Solutions',
+          description: 'Detailed video explanations for all questions by expert faculty.',
+        },
+        {
+          icon: 'mobile',
+          title: 'Mobile Friendly',
+          description: 'Practice on mobile, tablet, or laptop anytime, anywhere.',
+        },
+      ],
+    },
+    stats: [
+      { value: '200+', label: 'Mock Tests' },
+      { value: '50K+', label: 'Students' },
+      { value: '15K+', label: 'Questions' },
+      { value: '92%', label: 'Accuracy' },
+    ],
+    testimonials: [
+      {
+        name: 'Priya Singh',
+        achievement: 'NEET 2024 - 695/720',
+        quote: 'The test series predicted my rank within 500 positions. The analysis helped me identify weak chapters I had ignored.',
+        score: 695,
+      },
+      {
+        name: 'Rahul Kumar',
+        achievement: 'Improved 120 marks',
+        quote: 'Regular tests improved my speed and accuracy. From 480 to 600 in 4 months!',
+      },
+      {
+        name: 'Ananya Reddy',
+        achievement: 'NEET 2024 - 660/720',
+        quote: 'Video solutions were game-changer. Understood every mistake and never repeated them.',
+        score: 660,
+      },
+    ],
+    faqs: [
+      {
+        question: 'How many tests are included?',
+        answer: '200+ tests including 40 chapter tests (Botany + Zoology), 20 part tests, 30 full syllabus tests, and 100+ topic-wise tests.',
+      },
+      {
+        question: 'Is there negative marking?',
+        answer: 'Yes, exactly like NEET. +4 for correct, -1 for incorrect, 0 for unattempted.',
+      },
+      {
+        question: 'Can I reattempt tests?',
+        answer: 'Yes, unlimited reattempts for all tests. Track your improvement over time.',
+      },
+      {
+        question: 'Are previous year questions included?',
+        answer: 'Yes, we have 10 years of NEET/AIPMT PYQs as separate test sets.',
+      },
+    ],
+    courseSummary: {
+      title: 'Complete NEET Test Series',
+      duration: '12 months access',
+      batchSize: 'Unlimited attempts',
+      features: [
+        '200+ mock tests',
+        'Detailed analytics',
+        'All India ranking',
+        'Video solutions',
+        'PYQ test sets',
+      ],
+      price: {
+        original: 4999,
+        discounted: 2999,
+        emi: '₹500/month',
+      },
+    },
+    cta: {
+      title: 'Start Testing Your Preparation',
+      subtitle: 'First 5 tests absolutely FREE - no card required',
+      primaryButton: {
+        text: 'Start Free Trial',
+        link: '/tools/neet-mcq',
+      },
+      secondaryButton: {
+        text: 'View Test Schedule',
+        link: '/test-series-schedule',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET MCQ Practice', link: '/tools/neet-mcq' },
+      { title: 'Online NEET Coaching', link: '/online-neet-coaching' },
+      { title: 'NEET Rank Predictor', link: '/tools/rank-predictor' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'Online NEET Test Series 2025-26',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Comprehensive online NEET test series with 200+ mock tests and AI-powered analysis',
+      duration: '12 months',
+      price: 2999,
+      priceCurrency: 'INR',
+    },
+  },
 }
