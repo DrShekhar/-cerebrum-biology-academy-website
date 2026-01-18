@@ -50,8 +50,9 @@ export function BlogLeadCapture({ articleSlug, articleTitle, category }: BlogLea
   const [error, setError] = useState('')
 
   const validatePhone = (value: string): boolean => {
-    const phoneRegex = /^[6-9]\d{9}$/
-    return phoneRegex.test(value)
+    const cleanPhone = value.replace(/[\s\-\+]/g, '')
+    const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
+    return indianPhoneRegex.test(cleanPhone)
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -59,7 +60,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle, category }: BlogLea
     setError('')
 
     if (!validatePhone(phone)) {
-      setError('Please enter a valid 10-digit mobile number')
+      setError('Please enter a valid Indian mobile number (with or without +91)')
       return
     }
 
@@ -167,7 +168,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle, category }: BlogLea
             <input
               type="tel"
               value={phone}
-              onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+              onChange={(e) => setPhone(e.target.value.replace(/[^\d+\-\s]/g, '').slice(0, 15))}
               placeholder="Enter your mobile number"
               required
               className="w-full pl-12 pr-4 py-3.5 text-base bg-white rounded-xl border-2 border-transparent focus:border-yellow-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"

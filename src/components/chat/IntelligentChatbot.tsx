@@ -757,12 +757,12 @@ export function IntelligentChatbot() {
         true
       )
     } else if (collectingContact === 'phone') {
-      const phoneRegex = /^[6-9]\d{9}$/
-      const cleanPhone = message.replace(/[^\d]/g, '').slice(-10)
+      const cleanPhone = message.replace(/[\s\-\+]/g, '')
+      const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
 
-      if (!phoneRegex.test(cleanPhone)) {
+      if (!indianPhoneRegex.test(cleanPhone)) {
         addBotMessage(
-          'Please enter a valid 10-digit Indian mobile number (starting with 6-9).',
+          'Please enter a valid Indian mobile number (e.g., 9876543210 or +91 9876543210).',
           ['Try again'],
           undefined,
           true
@@ -770,9 +770,12 @@ export function IntelligentChatbot() {
         return
       }
 
+      // Extract the 10-digit number for storage
+      const normalizedPhone = cleanPhone.slice(-10)
+
       setChatState((prev) => ({
         ...prev,
-        leadData: { ...prev.leadData, phone: cleanPhone },
+        leadData: { ...prev.leadData, phone: normalizedPhone },
         collectingContact: 'email',
       }))
       addBotMessage(

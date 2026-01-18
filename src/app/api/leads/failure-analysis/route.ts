@@ -21,10 +21,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    // Validate phone number (Indian format)
-    const phoneRegex = /^[6-9]\d{9}$/
-    if (!phoneRegex.test(data.phone.replace(/[^\d]/g, '').slice(-10))) {
-      return NextResponse.json({ error: 'Invalid phone number format' }, { status: 400 })
+    // Validate phone number (Indian format - accepts +91 prefix)
+    const cleanPhone = data.phone.replace(/[\s\-\+]/g, '')
+    const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
+    if (!indianPhoneRegex.test(cleanPhone)) {
+      return NextResponse.json({ error: 'Invalid phone number format. Please use Indian mobile number.' }, { status: 400 })
     }
 
     // Validate email format

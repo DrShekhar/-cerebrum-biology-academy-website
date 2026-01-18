@@ -147,8 +147,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
   // Lead capture form validation and submission
   const validatePhone = (value: string): boolean => {
-    const phoneRegex = /^[6-9]\d{9}$/
-    return phoneRegex.test(value)
+    const cleanPhone = value.replace(/[\s\-\+]/g, '')
+    const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
+    return indianPhoneRegex.test(cleanPhone)
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -156,7 +157,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
     setLeadError('')
 
     if (!validatePhone(leadPhone)) {
-      setLeadError('Please enter a valid 10-digit mobile number')
+      setLeadError('Please enter a valid Indian mobile number (with or without +91)')
       return
     }
 
@@ -642,7 +643,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         <input
                           type="tel"
                           value={leadPhone}
-                          onChange={(e) => setLeadPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          onChange={(e) => setLeadPhone(e.target.value.replace(/[^\d+\-\s]/g, '').slice(0, 15))}
                           placeholder="Mobile number"
                           required
                           className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-green-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
@@ -703,7 +704,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         <input
                           type="tel"
                           value={leadPhone}
-                          onChange={(e) => setLeadPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          onChange={(e) => setLeadPhone(e.target.value.replace(/[^\d+\-\s]/g, '').slice(0, 15))}
                           placeholder="Mobile number"
                           required
                           className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-yellow-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
