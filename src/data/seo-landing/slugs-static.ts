@@ -9,7 +9,7 @@
  * - DO NOT edit manually (except initial setup)
  * - Run `npm run generate:seo-slugs` after adding/removing SEO pages
  * - Last updated: 2026-01-19
- * - Total pages: 126
+ * - Total pages: 136
  *
  * @see scripts/generate-seo-slugs.js
  */
@@ -117,6 +117,8 @@ export const SEO_PAGE_SLUGS = {
     'neet-exam-date-2026',
     'neet-result-2026',
     'neet-application-form-2026',
+    'neet-tips-strategy',
+    'how-to-prepare-for-neet-online',
   ],
   resources: [
     'neet-biology-notes-pdf',
@@ -133,6 +135,12 @@ export const SEO_PAGE_SLUGS = {
     'neet-genetics-preparation',
     'neet-ecology-important-questions',
     'neet-repeater-success-stories',
+    'neet-online-classes',
+    'online-biology-tuition-neet',
+    'neet-preparation-timetable',
+    'neet-biology-important-diagrams-pdf',
+    'free-neet-biology-lectures',
+    'neet-success-stories',
   ],
   online: [
     'live-online-neet-classes',
@@ -171,6 +179,8 @@ export const SEO_PAGE_SLUGS = {
     'neet-coaching-fees-comparison',
     'neet-coaching-success-rate-comparison',
     'should-i-join-neet-coaching',
+    'best-online-coaching-neet-biology',
+    'is-online-neet-coaching-effective',
   ],
 } as const
 
@@ -231,7 +241,7 @@ export function getSEOPageCount(): number {
  * Metadata about the slugs
  */
 export const SEO_SLUGS_METADATA = {
-  totalCount: 126,
+  totalCount: 136,
   lastGenerated: '2026-01-19',
   categories: [
     'class9',
@@ -260,11 +270,11 @@ export const SEO_SLUGS_METADATA = {
     ncert: 8,
     topics: 15,
     international: 10,
-    neetGuide: 17,
-    resources: 14,
+    neetGuide: 19,
+    resources: 20,
     online: 2,
     chapterNotes: 16,
     crashCourse: 6,
-    comparison: 6,
+    comparison: 8,
   },
 } as const

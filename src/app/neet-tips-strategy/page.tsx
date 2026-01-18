@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
-import { resourcesSEOPages } from '@/data/seo-landing'
+import { neetGuideSEOPages } from '@/data/seo-landing'
 
-const content = resourcesSEOPages['neet-online-classes']
+const content = neetGuideSEOPages['neet-tips-strategy']
 
 export const metadata: Metadata = {
   title: content.title,

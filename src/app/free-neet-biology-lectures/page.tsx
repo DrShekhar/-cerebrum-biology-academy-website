@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { resourcesSEOPages } from '@/data/seo-landing'
 
-const content = resourcesSEOPages['neet-online-classes']
+const content = resourcesSEOPages['free-neet-biology-lectures']
 
 export const metadata: Metadata = {
   title: content.title,

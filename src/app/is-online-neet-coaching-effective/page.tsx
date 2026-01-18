@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
-import { resourcesSEOPages } from '@/data/seo-landing'
+import { comparisonSEOPages } from '@/data/seo-landing'
 
-const content = resourcesSEOPages['neet-online-classes']
+const content = comparisonSEOPages['is-online-neet-coaching-effective']
 
 export const metadata: Metadata = {
   title: content.title,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Page() {
+export default function IsOnlineNEETCoachingEffectivePage() {
   return (
     <>
       <script

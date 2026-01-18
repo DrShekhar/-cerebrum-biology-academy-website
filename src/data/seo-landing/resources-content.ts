@@ -2615,4 +2615,1032 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       priceCurrency: 'INR',
     },
   },
+
+  // NEET Online Classes - High Priority Service Page
+  'neet-online-classes': {
+    slug: 'neet-online-classes',
+    classLevel: 'universal',
+    title: 'NEET Online Classes 2025-26 | Live Biology Classes',
+    metaDescription:
+      'Join NEET online classes with AIIMS faculty. Live interactive biology classes, small batches, 24/7 doubt support. 2500+ selections.',
+    keywords: [
+      'neet online classes',
+      'online classes for neet',
+      'neet biology online classes',
+      'live neet classes online',
+      'neet preparation classes online',
+      'online neet biology classes',
+      'neet coaching online classes',
+      'best online classes for neet',
+    ],
+    hero: {
+      headline: 'NEET Online Classes 2025-26',
+      subheadline:
+        'Live interactive biology classes with AIIMS faculty. Join from anywhere in India and get personal attention in small batches.',
+      ctaText: 'Book Free Demo Class',
+      ctaLink: '/book-demo',
+      backgroundGradient: 'from-blue-900 to-indigo-800',
+    },
+    painPoints: {
+      title: 'Why Students Choose Our Online Classes',
+      points: [
+        {
+          icon: 'location',
+          question: 'No good coaching in your city?',
+          solution:
+            "Access AIIMS faculty teaching directly online. India's best biology coaching at your fingertips.",
+        },
+        {
+          icon: 'clock',
+          question: 'Wasting hours in commute?',
+          solution:
+            'Save 2-3 hours daily. Use saved time for self-study and revision.',
+        },
+        {
+          icon: 'wallet',
+          question: 'Offline coaching too expensive?',
+          solution:
+            'Save 60-70% on total costs. No hostel, food, or travel expenses.',
+        },
+        {
+          icon: 'repeat',
+          question: 'Miss topics in crowded classes?',
+          solution:
+            'Small batches of 10-15 students + recorded backup of every class.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'What Our Online Classes Include',
+      subtitle: 'Complete NEET biology preparation at your home',
+      items: [
+        {
+          icon: 'video',
+          title: 'Live Interactive Classes',
+          description:
+            'Not pre-recorded. Real-time classes with two-way interaction, questions, and discussions.',
+        },
+        {
+          icon: 'user',
+          title: 'AIIMS Faculty Teaching',
+          description:
+            'Dr. Shekhar Singh (AIIMS) teaches directly. 12+ years of NEET coaching experience.',
+        },
+        {
+          icon: 'users',
+          title: 'Small Batches (10-15)',
+          description:
+            'Personal attention guaranteed. Know every student by name, track individual progress.',
+        },
+        {
+          icon: 'message',
+          title: '24/7 Doubt Support',
+          description:
+            'WhatsApp support with 2-hour response time. Weekly live doubt sessions.',
+        },
+        {
+          icon: 'repeat',
+          title: 'Recorded Backup',
+          description:
+            'Missed a class? No problem. All live sessions recorded for unlimited revision.',
+        },
+        {
+          icon: 'book',
+          title: 'Complete Study Material',
+          description:
+            'NCERT-based notes, 5000+ MCQs, PYQ analysis, and chapter summaries included.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'What is the timing of NEET online classes?',
+        answer:
+          'We offer multiple batches: Morning (6-8 AM), Afternoon (4-6 PM), Evening (7-9 PM), and Weekend batches. Choose what suits your schedule. All timings are IST.',
+      },
+      {
+        question: 'Can I watch recorded classes if I miss live?',
+        answer:
+          'Yes, all live classes are recorded and uploaded within 2 hours. You get lifetime access to recordings. Watch anytime, unlimited times.',
+      },
+      {
+        question: 'How are doubts resolved in online classes?',
+        answer:
+          'Multiple channels: (1) Ask during live class, (2) WhatsApp support 24/7 with 2-hour response, (3) Weekly dedicated doubt sessions on Sunday. Most doubts resolved same day.',
+      },
+      {
+        question: 'What is the batch size for online classes?',
+        answer:
+          'Strictly 10-15 students per batch. This ensures teacher knows every student, tracks progress individually, and provides personal attention during class.',
+      },
+      {
+        question: 'Is there a demo class available?',
+        answer:
+          'Yes! Book a free demo class to experience our teaching style, platform, and interaction. No payment required. Decide after trying.',
+      },
+      {
+        question: 'What technology do I need for online classes?',
+        answer:
+          'Laptop/tablet/smartphone with internet connection (minimum 2 Mbps). We use Zoom for classes. Works on any device. Technical support available.',
+      },
+    ],
+    courseSummary: {
+      title: 'NEET Online Class Packages',
+      duration: '12-month comprehensive program',
+      batchSize: '10-15 students per batch',
+      features: [
+        '500+ hours of live classes',
+        'Complete NEET biology syllabus',
+        'AIIMS faculty teaching',
+        'Recorded backup of all classes',
+        '24/7 WhatsApp doubt support',
+        'Weekly tests + 10 mock tests',
+        'Complete study material (PDF)',
+        '7-day refund policy',
+      ],
+      price: {
+        original: 45000,
+        discounted: 35000,
+        emi: '₹5,833/month',
+      },
+    },
+    cta: {
+      title: 'Experience Our Online Classes Free',
+      subtitle: 'Book a free demo class. No payment needed. Decide after trying.',
+      primaryButton: {
+        text: 'Book Free Demo',
+        link: '/book-demo',
+      },
+      secondaryButton: {
+        text: 'View Class Schedule',
+        link: '/batch-schedule',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'Live Online Classes', link: '/live-online-neet-classes' },
+      { title: 'Online Test Series', link: '/online-neet-test-series' },
+      { title: 'Best Online Coaching', link: '/best-online-coaching-neet-biology' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Online Classes 2025-26',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Live interactive NEET biology classes with AIIMS faculty',
+      duration: '12 months',
+      price: 35000,
+      priceCurrency: 'INR',
+    },
+  },
+
+  // Online Biology Tuition for NEET
+  'online-biology-tuition-neet': {
+    slug: 'online-biology-tuition-neet',
+    classLevel: 'universal',
+    title: 'Online Biology Tuition for NEET | Personal Coaching',
+    metaDescription:
+      'Online biology tuition for NEET with AIIMS faculty. 1-on-1 and small batch options. Personalized attention, flexible timing.',
+    keywords: [
+      'online biology tuition',
+      'online biology tuition for neet',
+      'biology tuition online',
+      'biology private tuition online',
+      'online biology coaching',
+      'personal biology tutor online',
+      'biology home tutor online',
+      'neet biology tuition online',
+    ],
+    hero: {
+      headline: 'Online Biology Tuition for NEET',
+      subheadline:
+        'Personalized 1-on-1 and small batch biology tuition by AIIMS faculty. Learn at your pace.',
+      ctaText: 'Start Free Trial',
+      ctaLink: '/book-demo',
+      backgroundGradient: 'from-teal-900 to-teal-800',
+    },
+    painPoints: {
+      title: 'Why Online Biology Tuition Works',
+      points: [
+        {
+          icon: 'user',
+          question: 'Need individual attention?',
+          solution:
+            '1-on-1 tuition option with fully customized pace and syllabus coverage.',
+        },
+        {
+          icon: 'clock',
+          question: 'Fixed coaching timing not suitable?',
+          solution:
+            'Flexible scheduling. Choose your preferred time slots. Reschedule when needed.',
+        },
+        {
+          icon: 'location',
+          question: 'No good biology tutor nearby?',
+          solution:
+            'Access AIIMS faculty online. Better than any local tutor at lower cost.',
+        },
+        {
+          icon: 'question',
+          question: 'Embarrassed to ask doubts in class?',
+          solution:
+            'Personal tuition means ask unlimited questions without hesitation.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Online Tuition Options',
+      subtitle: 'Choose what works best for you',
+      items: [
+        {
+          icon: 'user',
+          title: '1-on-1 Private Tuition',
+          description:
+            'Fully personalized pace. Custom syllabus coverage based on your needs. Maximum flexibility.',
+        },
+        {
+          icon: 'users',
+          title: 'Small Batch (5-8 students)',
+          description:
+            'Peer learning benefits with personal attention. Cost-effective option.',
+        },
+        {
+          icon: 'video',
+          title: 'Visual Learning',
+          description:
+            'HD video explanations with diagrams and animations. Biology made visual.',
+        },
+        {
+          icon: 'book',
+          title: 'NCERT Focus',
+          description:
+            'Screen sharing for NCERT discussions. Every line covered systematically.',
+        },
+        {
+          icon: 'repeat',
+          title: 'Session Recordings',
+          description:
+            'All tuition sessions recorded. Revise concepts anytime.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Flexible Scheduling',
+          description:
+            'Morning, afternoon, evening, or weekend slots. You choose.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Is online biology tuition effective?',
+        answer:
+          'Very effective for biology because: (1) High-quality diagrams on screen, (2) NCERT shown during explanation, (3) Screen sharing for doubt clarification, (4) Recording for revision. Many students find biology clearer online.',
+      },
+      {
+        question: 'What is the fee for online biology tuition?',
+        answer:
+          '1-on-1 tuition: ₹50,000-75,000/year, Small batch (5-8): ₹35,000/year, Regular batch (10-15): ₹25,000/year. EMI options available.',
+      },
+      {
+        question: 'How long is each tuition session?',
+        answer:
+          'Standard sessions are 1.5-2 hours. For 1-on-1, you can customize session length. Breaks included in longer sessions.',
+      },
+      {
+        question: 'Can I choose my preferred time slot?',
+        answer:
+          'Yes, especially for 1-on-1 and small batch. Discuss your availability and we match you to suitable slot.',
+      },
+      {
+        question: 'What if I need extra help with specific topics?',
+        answer:
+          'In 1-on-1, we customize based on your weak areas. In batches, additional doubt sessions available. No extra charge for reasonable requests.',
+      },
+    ],
+    courseSummary: {
+      title: 'Online Biology Tuition Packages',
+      duration: '12-month program',
+      batchSize: 'Multiple options',
+      features: [
+        '1-on-1, small batch, or regular batch',
+        'AIIMS faculty teaching',
+        'Flexible timing',
+        'Session recordings',
+        'Complete NCERT coverage',
+        'Regular assessments',
+        'Doubt support included',
+      ],
+      price: {
+        original: 45000,
+        discounted: 35000,
+        emi: '₹5,833/month',
+      },
+    },
+    cta: {
+      title: 'Try Biology Tuition Free',
+      subtitle: 'Experience a free demo session. Find your perfect learning style.',
+      primaryButton: {
+        text: 'Book Free Demo',
+        link: '/book-demo',
+      },
+      secondaryButton: {
+        text: 'Compare Options',
+        link: '/courses',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Online Classes', link: '/neet-online-classes' },
+      { title: 'Best Online Coaching', link: '/best-online-coaching-neet-biology' },
+      { title: 'Biology Class 11 Tuition', link: '/class-11-biology-tuition-online' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'Online Biology Tuition for NEET',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Personalized online biology tuition with AIIMS faculty',
+      duration: '12 months',
+      price: 35000,
+      priceCurrency: 'INR',
+    },
+  },
+
+  // NEET Preparation Timetable
+  'neet-preparation-timetable': {
+    slug: 'neet-preparation-timetable',
+    classLevel: 'universal',
+    title: 'NEET Preparation Timetable 2025 | Daily Study Schedule',
+    metaDescription:
+      'NEET preparation timetable for Class 11, 12, and droppers. Download free study schedule PDF. Expert-designed daily routine.',
+    keywords: [
+      'neet preparation timetable',
+      'neet study schedule',
+      'neet daily timetable for class 11 12',
+      'neet preparation time table dropper',
+      'best timetable for neet preparation',
+      'neet study plan pdf',
+      'neet daily routine',
+      'how to make neet study timetable',
+    ],
+    hero: {
+      headline: 'NEET Preparation Timetable 2025',
+      subheadline:
+        'Proven study schedules for Class 11, 12, and Droppers. Download free PDF or generate custom timetable.',
+      ctaText: 'Download Free Timetable',
+      ctaLink: '/resources',
+      backgroundGradient: 'from-purple-900 to-purple-800',
+    },
+    painPoints: {
+      title: 'Timetable Problems Solved',
+      points: [
+        {
+          icon: 'question',
+          question: "Don't know how to plan study hours?",
+          solution:
+            'Ready-made day-wise schedules based on your class level and target.',
+        },
+        {
+          icon: 'book',
+          question: 'Struggling to balance school + NEET?',
+          solution:
+            'Integrated Board + NEET timetables for Class 11 and 12 students.',
+        },
+        {
+          icon: 'clock',
+          question: 'Procrastinating without structure?',
+          solution:
+            'Scientifically designed routines with built-in breaks and revision slots.',
+        },
+        {
+          icon: 'target',
+          question: 'Not sure if your plan is effective?',
+          solution:
+            'These timetables created by NEET toppers and expert faculty.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Timetables for Every Situation',
+      subtitle: 'Choose based on your category',
+      items: [
+        {
+          icon: 'calendar',
+          title: 'Class 11 NEET Timetable',
+          description:
+            'Early start advantage. Build strong foundation while managing school. 4-5 hours daily for NEET.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Class 12 Board + NEET',
+          description:
+            'Balanced schedule for both exams. Strategic overlap of syllabus. 6-7 hours daily.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Dropper Intensive',
+          description:
+            'Full-time NEET focus. 10-12 hours daily with structured revision cycles.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Last 6 Month Schedule',
+          description:
+            'Revision-focused. Complete 2 rounds of syllabus with mock test integration.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Last 3 Month Sprint',
+          description:
+            'High-intensity revision. Focus on weak areas and maximum practice.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Last 30 Days Plan',
+          description:
+            'Final revision + mock tests. Maintain confidence and peak performance.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'How many hours should I study for NEET daily?',
+        answer:
+          'Class 11: 4-5 hours, Class 12: 6-8 hours, Dropper: 10-12 hours. Quality matters more than quantity. Include breaks every 45-50 minutes.',
+      },
+      {
+        question: 'Best time to study for NEET - morning or night?',
+        answer:
+          'Depends on your natural rhythm. Generally, early morning (5-7 AM) is great for new concepts. Evening for practice. Night for light revision. Consistency matters more than timing.',
+      },
+      {
+        question: 'How to balance NEET and board preparation?',
+        answer:
+          '70% syllabus overlaps. Use NCERT for both. Dedicate 30% extra time for board-specific topics. Our Class 12 timetable handles this balance.',
+      },
+      {
+        question: 'Ideal timetable for NEET dropper?',
+        answer:
+          '6 AM wake up, 6:30-12:30 study block 1 (with breaks), 2-6 PM block 2, 7-10 PM block 3. Sunday half-day for mock tests. Weekly off for rest.',
+      },
+      {
+        question: 'Should I take breaks while studying?',
+        answer:
+          'Essential! Study 45-50 minutes, break 10-15 minutes. Longer break (30 min) every 2-3 hours. No screens during breaks - walk, stretch, snack.',
+      },
+    ],
+    courseSummary: {
+      title: 'Get Personalized Study Schedule',
+      duration: 'Custom timeline',
+      batchSize: 'Individual planning',
+      features: [
+        'Free downloadable timetables',
+        'Class 11, 12, Dropper versions',
+        'Last 6/3/1 month schedules',
+        'Subject-wise time allocation',
+        'Built-in revision cycles',
+        'Practice slot integration',
+      ],
+      price: {
+        original: 0,
+        discounted: 0,
+        emi: 'FREE',
+      },
+    },
+    cta: {
+      title: 'Download Your Timetable Now',
+      subtitle: 'Free PDF download. Start following from today.',
+      primaryButton: {
+        text: 'Download Free PDF',
+        link: '/resources',
+      },
+      secondaryButton: {
+        text: 'Generate Custom Plan',
+        link: '/tools/study-plan',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Tips & Strategy', link: '/neet-tips-strategy' },
+      { title: 'Study Plan Generator', link: '/tools/study-plan' },
+      { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
+    ],
+    schema: {
+      '@type': 'HowTo',
+      name: 'NEET Preparation Timetable 2025',
+      description: 'Expert-designed study schedules for NEET preparation',
+    },
+  },
+
+  // NEET Biology Important Diagrams PDF
+  'neet-biology-important-diagrams-pdf': {
+    slug: 'neet-biology-important-diagrams-pdf',
+    classLevel: 'universal',
+    title: 'NEET Biology Important Diagrams PDF | 500+ Labeled Diagrams',
+    metaDescription:
+      'Download NEET biology diagrams PDF free. 500+ NCERT-based labeled diagrams for Class 11 & 12. Essential for NEET 2025.',
+    keywords: [
+      'neet biology diagrams pdf',
+      'important diagrams for neet biology',
+      'neet biology diagram pdf free download',
+      'biology diagrams for neet class 11 12',
+      'labeled diagrams biology neet',
+      'neet biology diagram book',
+      'ncert biology diagrams',
+      'botany zoology diagrams neet',
+    ],
+    hero: {
+      headline: 'NEET Biology Important Diagrams PDF',
+      subheadline:
+        '500+ NCERT-based labeled diagrams essential for NEET 2025. Free download for Class 11 & 12.',
+      ctaText: 'Download Free Diagrams',
+      ctaLink: '/resources',
+      backgroundGradient: 'from-green-900 to-green-800',
+    },
+    painPoints: {
+      title: 'Diagram Challenges Solved',
+      points: [
+        {
+          icon: 'pencil',
+          question: "Can't draw diagrams in exam?",
+          solution:
+            'Pre-labeled quick-reference diagrams. Memorize structure, not drawing skills.',
+        },
+        {
+          icon: 'clock',
+          question: 'Spending too much time on diagrams?',
+          solution:
+            'Ready-to-memorize visual sheets. Focus on concepts, not artistic ability.',
+        },
+        {
+          icon: 'question',
+          question: 'Missing labels in diagram questions?',
+          solution:
+            'Complete NCERT-aligned labeling. Every important part marked clearly.',
+        },
+        {
+          icon: 'book',
+          question: 'Scattered diagram resources?',
+          solution:
+            'All 500+ diagrams in one organized PDF. Chapter-wise arrangement.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'What This Diagram Collection Includes',
+      subtitle: 'Complete visual resource for NEET Biology',
+      items: [
+        {
+          icon: 'book',
+          title: 'Chapter-wise Organization',
+          description:
+            'All 38 chapters covered. Botany + Zoology complete. Easy to navigate.',
+        },
+        {
+          icon: 'target',
+          title: 'NCERT-Based Accuracy',
+          description:
+            'Every diagram matches NCERT exactly. No confusion with exam pattern.',
+        },
+        {
+          icon: 'star',
+          title: 'High-Resolution Quality',
+          description:
+            'Printable quality. Clear labels even when printed. Study anywhere.',
+        },
+        {
+          icon: 'checkmark',
+          title: 'Exam-Important Marked',
+          description:
+            'Frequently asked diagrams highlighted. Know what to prioritize.',
+        },
+        {
+          icon: 'lightbulb',
+          title: 'Memory Tips Included',
+          description:
+            'Mnemonics and shortcuts for complex diagrams. Easier memorization.',
+        },
+        {
+          icon: 'repeat',
+          title: 'Updated for NEET 2025',
+          description:
+            'Latest syllabus coverage. Includes recent exam trends.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Which diagrams are most important for NEET?',
+        answer:
+          'Top priority: Cell structure, Plant anatomy (cross-sections), Human body systems (heart, brain, kidney, eye, ear), DNA/RNA structure, Digestive system, Respiratory system, Reproductive organs. These appear almost every year.',
+      },
+      {
+        question: 'How many diagram-based questions come in NEET?',
+        answer:
+          '15-20 questions directly involve diagrams. Another 20-25 questions test concepts that require understanding diagrams. Total 35-45 marks depend on diagram knowledge.',
+      },
+      {
+        question: 'Should I draw or just label diagrams in NEET?',
+        answer:
+          'In NEET MCQ, you only identify parts - no drawing required. But understanding the diagram helps answer questions. Our PDF focuses on labeling and part identification.',
+      },
+      {
+        question: 'Are these diagrams based on NCERT?',
+        answer:
+          'Yes, 100% NCERT-based. NEET uses NCERT diagrams. We match every detail - colors, labels, orientations - exactly as in textbook.',
+      },
+      {
+        question: 'How to memorize diagrams quickly?',
+        answer:
+          'Tips: (1) Understand function, not just structure, (2) Use mnemonics for parts, (3) Draw rough sketches while studying, (4) Revise using our PDF before sleep, (5) Self-test with unlabeled versions.',
+      },
+    ],
+    courseSummary: {
+      title: 'Complete Diagram Package',
+      duration: 'Instant access',
+      batchSize: 'Self-paced study',
+      features: [
+        '500+ labeled diagrams',
+        'All 38 chapters covered',
+        'Class 11 + 12 complete',
+        'NCERT-exact accuracy',
+        'Printable PDF quality',
+        'Chapter-wise organized',
+        'Exam-important marked',
+      ],
+      price: {
+        original: 499,
+        discounted: 0,
+        emi: 'FREE',
+      },
+    },
+    cta: {
+      title: 'Download Diagrams PDF Free',
+      subtitle: 'Instant download. No registration required.',
+      primaryButton: {
+        text: 'Download Free PDF',
+        link: '/resources',
+      },
+      secondaryButton: {
+        text: 'View Sample Diagrams',
+        link: '/blog/neet-biology-diagrams',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'NEET Biology Notes PDF', link: '/neet-biology-notes-pdf' },
+      { title: 'NEET Biology Revision Notes', link: '/neet-biology-revision-notes' },
+      { title: 'NCERT Biology Solutions', link: '/ncert-biology-solutions' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Biology Diagrams Collection',
+      provider: 'Cerebrum Biology Academy',
+      description: '500+ NCERT-based labeled diagrams for NEET biology preparation',
+      duration: 'Self-paced',
+      price: 0,
+      priceCurrency: 'INR',
+    },
+  },
+
+  // Free NEET Biology Lectures Hub
+  'free-neet-biology-lectures': {
+    slug: 'free-neet-biology-lectures',
+    classLevel: 'universal',
+    title: 'Free NEET Biology Video Lectures | 50+ Hours Free',
+    metaDescription:
+      'Free NEET biology video lectures by Dr. Shekhar Singh (AIIMS). 50+ hours of concept lectures covering all chapters.',
+    keywords: [
+      'free neet biology lectures',
+      'free biology video lectures neet',
+      'neet biology free classes',
+      'free online neet coaching',
+      'neet biology youtube lectures',
+      'free neet biology classes',
+      'neet biology free video',
+      'free neet preparation',
+    ],
+    hero: {
+      headline: 'Free NEET Biology Video Lectures',
+      subheadline:
+        '50+ hours of free concept lectures by Dr. Shekhar Singh (AIIMS). Start learning free today.',
+      ctaText: 'Start Learning Free',
+      ctaLink: '/video-lectures',
+      backgroundGradient: 'from-orange-800 to-red-800',
+    },
+    painPoints: {
+      title: 'Why Free Lectures?',
+      points: [
+        {
+          icon: 'wallet',
+          question: "Can't afford paid coaching right now?",
+          solution:
+            'Start with 50+ hours of free content. Quality learning without financial barrier.',
+        },
+        {
+          icon: 'question',
+          question: 'Not sure if online coaching works for you?',
+          solution:
+            "Try free lectures first. Experience Dr. Shekhar's teaching before deciding.",
+        },
+        {
+          icon: 'book',
+          question: 'Need help with specific topics?',
+          solution:
+            'Free chapter lectures available. Learn exactly what you need.',
+        },
+        {
+          icon: 'shield',
+          question: 'Worried about content quality?',
+          solution:
+            'Same AIIMS faculty, same quality as paid courses. Just limited chapters free.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Free Lecture Categories',
+      subtitle: 'Quality content at zero cost',
+      items: [
+        {
+          icon: 'video',
+          title: 'Class 11 Botany',
+          description:
+            'Free chapters: Living World, Biological Classification, Plant Kingdom, Morphology of Flowering Plants.',
+        },
+        {
+          icon: 'video',
+          title: 'Class 11 Zoology',
+          description:
+            'Free chapters: Animal Kingdom, Structural Organisation in Animals basics.',
+        },
+        {
+          icon: 'video',
+          title: 'Class 12 Botany',
+          description:
+            'Free chapters: Reproduction in Plants preview, Genetics introduction.',
+        },
+        {
+          icon: 'video',
+          title: 'Class 12 Zoology',
+          description:
+            'Free chapters: Human Physiology basics - Digestion, Breathing preview.',
+        },
+        {
+          icon: 'star',
+          title: 'Featured: Photosynthesis',
+          description:
+            'Complete 1.5-hour lecture covering Light, Dark reactions, C3-C4-CAM plants.',
+        },
+        {
+          icon: 'star',
+          title: 'Featured: Genetics Basics',
+          description:
+            '2-hour genetics foundation lecture. Mendelian inheritance complete.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Are these lectures really free?',
+        answer:
+          'Yes, completely free. No hidden charges, no credit card needed. Just register with email and start watching. We offer free content to help all students access quality education.',
+      },
+      {
+        question: 'Do free lectures cover full syllabus?',
+        answer:
+          'Free lectures cover approximately 30% of syllabus - foundational chapters and selected high-yield topics. Full syllabus coverage is in paid courses.',
+      },
+      {
+        question: "What's the difference between free and paid?",
+        answer:
+          'Free: Limited chapters, no doubt support, no tests, self-study. Paid: Full syllabus, live classes, doubt support, tests, study material, personal mentoring.',
+      },
+      {
+        question: 'Can I download these lectures?',
+        answer:
+          'Currently streaming only for copyright protection. But you can bookmark and watch unlimited times. Mobile app coming soon with offline feature.',
+      },
+      {
+        question: 'How to get doubt support for free lectures?',
+        answer:
+          'Free lectures have comment section for general questions. For personalized doubt resolution, consider our paid programs or join free Sunday doubt sessions (limited slots).',
+      },
+    ],
+    courseSummary: {
+      title: 'Free Learning Resources',
+      duration: '50+ hours available',
+      batchSize: 'Self-paced',
+      features: [
+        '50+ hours of video content',
+        'AIIMS faculty teaching',
+        'HD quality videos',
+        'Chapter-wise organized',
+        'Watch unlimited times',
+        'No registration fee',
+        'Mobile compatible',
+      ],
+      price: {
+        original: 0,
+        discounted: 0,
+        emi: 'FREE',
+      },
+    },
+    cta: {
+      title: 'Start Free Learning Today',
+      subtitle: 'No payment, no commitment. Just quality biology education.',
+      primaryButton: {
+        text: 'Watch Free Lectures',
+        link: '/video-lectures',
+      },
+      secondaryButton: {
+        text: 'Explore Full Courses',
+        link: '/courses',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'Video Lectures', link: '/video-lectures' },
+      { title: 'Free MCQ Practice', link: '/tools/neet-mcq' },
+      { title: 'Free Mock Tests', link: '/neet-mock-test-free' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'Free NEET Biology Video Lectures',
+      provider: 'Cerebrum Biology Academy',
+      description: '50+ hours of free NEET biology video lectures by AIIMS faculty',
+      duration: '50+ hours',
+      price: 0,
+      priceCurrency: 'INR',
+    },
+  },
+
+  // NEET Success Stories Page
+  'neet-success-stories': {
+    slug: 'neet-success-stories',
+    classLevel: 'universal',
+    title: 'NEET Success Stories 2024-25 | Student Results',
+    metaDescription:
+      'NEET success stories from Cerebrum Biology Academy. 2500+ students selected. Read topper interviews, score improvements, and college placements.',
+    keywords: [
+      'neet success stories',
+      'neet biology topper interviews',
+      'neet achievers',
+      'cerebrum biology academy results',
+      'neet 2024 toppers',
+      'neet success story',
+      'neet preparation success',
+      'neet coaching results',
+    ],
+    hero: {
+      headline: 'NEET Success Stories 2024-25',
+      subheadline:
+        '2,500+ students selected in NEET through Cerebrum Biology Academy. Read their inspiring journeys.',
+      ctaText: 'Start Your Success Story',
+      ctaLink: '/book-demo',
+      backgroundGradient: 'from-yellow-800 to-orange-800',
+    },
+    painPoints: {
+      title: 'Success From All Backgrounds',
+      points: [
+        {
+          icon: 'user',
+          question: 'Think toppers are always genius?',
+          solution:
+            'Many of our success stories were average students who improved 200+ marks with right guidance.',
+        },
+        {
+          icon: 'repeat',
+          question: 'Worried as a dropper?',
+          solution:
+            '40% of our selections are droppers. Second chance often becomes best chance.',
+        },
+        {
+          icon: 'location',
+          question: 'Small town, big dreams?',
+          solution:
+            'Students from 100+ cities succeeded with online coaching. Location no barrier.',
+        },
+        {
+          icon: 'target',
+          question: 'Aiming for government college?',
+          solution:
+            '70% of our selections got government medical colleges. Dreams achievable.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Success Categories',
+      subtitle: 'Stories that inspire',
+      items: [
+        {
+          icon: 'star',
+          title: 'Toppers (680+ Scores)',
+          description:
+            'Students who scored 680+ with our guidance. All India top ranks achieved.',
+        },
+        {
+          icon: 'checkmark',
+          title: 'First Attempt Success',
+          description:
+            'Class 12 students who cleared NEET in first attempt. Fresh success stories.',
+        },
+        {
+          icon: 'repeat',
+          title: 'Dropper Success',
+          description:
+            'Students who failed first time but succeeded with determination. Comeback stories.',
+        },
+        {
+          icon: 'chart',
+          title: 'Improvement Stories',
+          description:
+            'From 300 to 600+. Dramatic score improvements with right strategy.',
+        },
+        {
+          icon: 'building',
+          title: 'Government College Selections',
+          description:
+            'Students now in AIIMS, JIPMER, government medical colleges across India.',
+        },
+        {
+          icon: 'globe',
+          title: 'Online Success',
+          description:
+            'Students who succeeded purely through online coaching. Proof it works.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'How many students qualify NEET from Cerebrum?',
+        answer:
+          '2,500+ students selected over 5 years. 85% of our students clear NEET cutoff. 70% get government college seats. Results verified with actual names and colleges.',
+      },
+      {
+        question: 'What is the average score improvement?',
+        answer:
+          'Average improvement is 150-180 marks from baseline test to final NEET. Top improvers have jumped 250+ marks with consistent effort.',
+      },
+      {
+        question: 'Do droppers really succeed with online coaching?',
+        answer:
+          'Yes! 40% of our selections are droppers. Online coaching actually suits droppers - more study hours, no relocation, focused preparation. Many droppers score 600+.',
+      },
+      {
+        question: 'Which colleges have Cerebrum students joined?',
+        answer:
+          'AIIMS Delhi, JIPMER, Maulana Azad, KGMC Lucknow, Grant Medical, and 100+ government medical colleges. Private colleges like Manipal, Kasturba, SRMS etc.',
+      },
+      {
+        question: 'Can I talk to successful students?',
+        answer:
+          'Yes! We connect prospective students with alumni for genuine conversations. Ask during counseling call and we arrange student interaction.',
+      },
+    ],
+    courseSummary: {
+      title: 'Join Our Success Legacy',
+      duration: '12-month program',
+      batchSize: '10-15 students',
+      features: [
+        '2,500+ success stories',
+        '85% selection rate',
+        'AIIMS faculty guidance',
+        'Proven methodology',
+        'Personal mentoring',
+        'Complete support system',
+      ],
+      price: {
+        original: 45000,
+        discounted: 35000,
+        emi: '₹5,833/month',
+      },
+    },
+    cta: {
+      title: 'Be Our Next Success Story',
+      subtitle: 'Every success story started with a decision. Make yours today.',
+      primaryButton: {
+        text: 'Start Your Journey',
+        link: '/book-demo',
+      },
+      secondaryButton: {
+        text: 'View More Results',
+        link: '/results',
+      },
+    },
+    toolsCTA: resourceToolsCTA,
+    contactButtons: defaultContactButtons,
+    relatedPages: [
+      { title: 'Results Page', link: '/results' },
+      { title: 'Dropper Success', link: '/neet-repeater-success-stories' },
+      { title: 'Join Coaching', link: '/courses' },
+    ],
+    schema: {
+      '@type': 'Article',
+      name: 'NEET Success Stories 2024-25',
+      description: 'Success stories and results from Cerebrum Biology Academy students',
+    },
+  },
 }
