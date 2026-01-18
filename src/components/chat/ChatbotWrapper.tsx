@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
+// Note: Removed ssr: false - the shouldLoad pattern already prevents SSR rendering
 const IntelligentChatbot = dynamic(
   () => import('@/components/chat/IntelligentChatbot').then((mod) => mod.IntelligentChatbot),
-  { ssr: false }
+  { loading: () => null }
 )
 
 export function ChatbotWrapper() {

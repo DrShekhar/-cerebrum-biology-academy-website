@@ -49,6 +49,12 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
   const pathname = usePathname()
   const { user, isAuthenticated } = useAuth()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  // Prevent hydration mismatch: auth state differs between server and client
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -106,8 +112,9 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     {
       icon: User,
       label: 'Profile',
-      href: isAuthenticated ? '/profile' : '/auth/signin',
-      ariaLabel: isAuthenticated ? 'View your profile' : 'Sign in to view profile',
+      // Use mounted check to prevent hydration mismatch (auth state differs server vs client)
+      href: mounted && isAuthenticated ? '/profile' : '/auth/signin',
+      ariaLabel: mounted && isAuthenticated ? 'View your profile' : 'Sign in to view profile',
     },
   ]
 
@@ -260,7 +267,8 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           ))}
 
           <div className="pt-6 border-t border-gray-200">
-            {isAuthenticated ? (
+            {/* Use mounted check to prevent hydration mismatch */}
+            {mounted && isAuthenticated ? (
               <Link
                 href="/dashboard/student"
                 onClick={handleMenuItemClick}

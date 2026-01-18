@@ -11,9 +11,10 @@ import { useAuth } from '@/hooks/useAuth'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 
 // Lazy load search menu (less critical)
+// Note: Removed ssr: false to prevent SSR bailout
 const SearchMenu = dynamic(
   () => import('@/components/navigation/SearchMenu').then((mod) => mod.SearchMenu),
-  { ssr: false }
+  { loading: () => null }
 )
 
 interface HeaderClientInteractionsProps {

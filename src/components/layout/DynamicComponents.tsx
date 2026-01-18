@@ -3,19 +3,21 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
+// Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
+// Components handle browser-only APIs internally with mounted state checks
 const FloatingCTAComponent = dynamic(
   () => import('@/components/common/FloatingCTA').then((mod) => mod.FloatingCTA),
-  { ssr: false }
+  { loading: () => null }
 )
 
 const GlobalExitIntentComponent = dynamic(
   () => import('@/components/conversion/GlobalExitIntent').then((mod) => mod.GlobalExitIntent),
-  { ssr: false }
+  { loading: () => null }
 )
 
 export const ChatbotWrapper = dynamic(
   () => import('@/components/chat/ChatbotWrapper').then((mod) => mod.ChatbotWrapper),
-  { ssr: false }
+  { loading: () => null }
 )
 
 export function FloatingCTA() {
@@ -48,9 +50,10 @@ export function GlobalExitIntent() {
 }
 
 // PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)
+// Note: Removed ssr: false - component handles mounted state internally for auth-dependent UI
 export const DynamicMobileNavigation = dynamic(
   () => import('@/components/navigation/MobileNavigation').then((mod) => mod.MobileNavigation),
-  { ssr: false }
+  { loading: () => null }
 )
 
 // PERFORMANCE: Lazy-load PWA provider (service worker registration can wait)

@@ -7,19 +7,20 @@ import Image from 'next/image'
 import { Trophy, GraduationCap, Users } from 'lucide-react'
 
 // Lazy load client-side interactive elements
+// Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
+// The components handle mounted state internally for browser-only APIs
 const HeaderClientInteractions = dynamic(
   () => import('./HeaderClientInteractions').then((mod) => mod.HeaderClientInteractions),
   {
-    ssr: false,
     loading: () => null,
   }
 )
 
 // Lazy load Firebase auth buttons
+// Note: Removed ssr: false - component handles browser-only APIs internally
 const FirebaseAuthButtons = dynamic(
   () => import('./FirebaseAuthButtons').then((mod) => mod.FirebaseAuthButtons),
   {
-    ssr: false,
     loading: () => <div className="w-16 h-8 bg-slate-100 animate-pulse rounded" />,
   }
 )
