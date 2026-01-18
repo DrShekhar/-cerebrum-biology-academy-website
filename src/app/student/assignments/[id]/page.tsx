@@ -61,7 +61,7 @@ export default function AssignmentDetailPage({
 
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
-      router.push('/auth/signin')
+      router.push('/sign-in')
       return
     }
 

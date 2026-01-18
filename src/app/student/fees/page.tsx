@@ -227,7 +227,7 @@ export default function StudentFeesPage() {
               icon={AlertCircle}
               title="Authentication Required"
               description="Please sign in to view your fee details."
-              primaryAction={{ label: 'Sign In', href: '/auth/signin' }}
+              primaryAction={{ label: 'Sign In', href: '/sign-in' }}
               size="lg"
               variant="warning"
             />

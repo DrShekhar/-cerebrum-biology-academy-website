@@ -2,12 +2,14 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 import { logger } from '@/lib/utils'
 
-const redis = process.env.REDIS_URL
-  ? new Redis({
-      url: process.env.REDIS_URL,
-      token: process.env.REDIS_TOKEN || '',
-    })
-  : undefined
+// Use Upstash REST API environment variables (https:// URLs, not redis://)
+const redis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+    : undefined
 
 export const rateLimiters = {
   // Authentication endpoints - strict limits
@@ -160,7 +162,7 @@ export type RateLimiterType = keyof typeof rateLimiters
 export function isRateLimitEnabled(): boolean {
   const enabled = !!redis
   if (!enabled && process.env.NODE_ENV === 'production') {
-    logger.warn('Rate limiting disabled - REDIS_URL not configured', {
+    logger.warn('Rate limiting disabled - UPSTASH_REDIS_REST_URL/TOKEN not configured', {
       type: 'rate_limit_warning',
       env: process.env.NODE_ENV,
     })

@@ -199,7 +199,7 @@ export function DashboardAccessControl({
                   <Button
                     variant="primary"
                     size="lg"
-                    onClick={() => router.push('/auth/signup')}
+                    onClick={() => router.push('/sign-up')}
                     className="flex-1 bg-indigo-500 hover:bg-indigo-600"
                   >
                     Sign Up Free

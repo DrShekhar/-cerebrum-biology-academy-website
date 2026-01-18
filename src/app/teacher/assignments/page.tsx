@@ -43,7 +43,7 @@ export default function TeacherAssignmentsPage() {
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
-      window.location.href = '/auth/signin'
+      window.location.href = '/sign-in'
       return
     }
   }, [authLoading, isAuthenticated, user])

@@ -113,7 +113,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
       icon: User,
       label: 'Profile',
       // Use mounted check to prevent hydration mismatch (auth state differs server vs client)
-      href: mounted && isAuthenticated ? '/profile' : '/auth/signin',
+      href: mounted && isAuthenticated ? '/profile' : '/sign-in',
       ariaLabel: mounted && isAuthenticated ? 'View your profile' : 'Sign in to view profile',
     },
   ]
@@ -280,7 +280,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
             ) : (
               <div className="space-y-3">
                 <Link
-                  href="/auth/signin"
+                  href="/sign-in"
                   onClick={handleMenuItemClick}
                   className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[52px]"
                 >
@@ -288,7 +288,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
                   <span>Sign In</span>
                 </Link>
                 <Link
-                  href="/auth/signup"
+                  href="/sign-up"
                   onClick={handleMenuItemClick}
                   className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 px-6 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors min-h-[52px]"
                 >

@@ -79,7 +79,7 @@ export default function AdminTestsPage() {
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'ADMIN')) {
-      window.location.href = '/auth/signin'
+      window.location.href = '/sign-in'
       return
     }
   }, [authLoading, isAuthenticated, user])

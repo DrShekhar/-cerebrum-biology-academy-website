@@ -17,6 +17,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { zoomService } from '@/lib/zoom/zoomService'
+import { getTrackingDataForAPI, getLeadSource } from '@/lib/tracking/utm'
 
 interface DemoBookingFormProps {
   onSuccess?: (bookingData: any) => void
@@ -128,28 +129,39 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
         throw new Error('Please fill in all required fields')
       }
 
-      // Create Zoom meeting
-      const meetingResponse = await zoomService.createDemoMeeting({
-        studentName: formData.studentName,
-        email: formData.email,
-        phone: formData.phone,
-        preferredDate: new Date(formData.preferredDate),
-        preferredTime: formData.preferredTime,
-        courseInterest: formData.courseInterest,
-        studentClass: formData.studentClass,
-        previousKnowledge: formData.previousKnowledge,
-        specificTopics: formData.specificTopics,
+      // Get tracking data for Google Ads attribution
+      const trackingData = getTrackingDataForAPI()
+      const source = getLeadSource()
+
+      // Call API endpoint with tracking data
+      const response = await fetch('/api/demo/book', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          studentName: formData.studentName,
+          email: formData.email,
+          phone: formData.phone,
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+          courseInterest: formData.courseInterest,
+          studentClass: formData.studentClass,
+          previousKnowledge: formData.previousKnowledge,
+          specificTopics: formData.specificTopics,
+          ...trackingData,
+          source,
+        }),
       })
 
-      if (meetingResponse) {
-        setSuccess(true)
-        onSuccess?.(formData)
+      const data = await response.json()
 
-        // Send additional notifications
-        await sendConfirmationNotifications(meetingResponse)
-      } else {
-        throw new Error('Failed to schedule demo. Please try again.')
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to schedule demo. Please try again.')
       }
+
+      setSuccess(true)
+      onSuccess?.(data.booking)
     } catch (error) {
       console.error('Demo booking error:', error)
       setError(error instanceof Error ? error.message : 'An unexpected error occurred')

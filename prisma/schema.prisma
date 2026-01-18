@@ -230,6 +230,7 @@ model content_leads {
   utmCampaign         String?
   utmContent          String?
   utmTerm             String?
+  gclid               String?
   referrerUrl         String?
   landingPage         String?
   deviceType          String?
@@ -396,6 +397,8 @@ model demo_bookings {
   utmSource             String?
   utmMedium             String?
   utmCampaign           String?
+  utmContent            String?
+  gclid                 String?
   createdAt             DateTime             @default(now())
   updatedAt             DateTime
   demoType              DemoType             @default(FREE)
@@ -634,6 +637,12 @@ model leads {
   lostReason              String?
   demoBookingId           String?                   @unique
   source                  LeadSource                @default(MANUAL_ENTRY)
+  sourceDetail            String?
+  utmSource               String?
+  utmMedium               String?
+  utmCampaign             String?
+  utmContent              String?
+  gclid                   String?
   score                   Int?
   scoreBreakdown          Json?
   scoreUpdatedAt          DateTime?
@@ -2546,6 +2555,8 @@ enum LeadSource {
   SOCIAL_MEDIA
   WEBSITE
   ADVERTISEMENT
+  GOOGLE_ADS
+  FACEBOOK_ADS
   EVENT
   OTHER
 }
@@ -4009,6 +4020,8 @@ model contact_inquiries {
   utmSource     String?
   utmMedium     String?
   utmCampaign   String?
+  utmContent    String?
+  gclid         String?
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @updatedAt
   assignedTo    users?          @relation("ContactInquiryAssignee", fields: [assignedToId], references: [id])
@@ -4864,4 +4877,28 @@ model gamification_goals {
   @@unique([userId, goalType, periodStart])
   @@index([freeUserId, periodEnd, isCompleted])
   @@index([userId, periodEnd, isCompleted])
+}
+
+// Google Ads Offline Conversion Queue
+// Stores conversions to be uploaded to Google Ads for optimization
+model pending_conversions {
+  id String @id @default(cuid())
+
+  gclid              String
+  conversionAction   String
+  conversionDateTime DateTime
+  conversionValue    Decimal? @db.Decimal(10, 2)
+  currencyCode       String?  @default("INR")
+  orderId            String?
+
+  status     String    @default("PENDING")
+  error      String?
+  uploadedAt DateTime?
+  retryCount Int       @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, createdAt])
+  @@index([gclid])
 }

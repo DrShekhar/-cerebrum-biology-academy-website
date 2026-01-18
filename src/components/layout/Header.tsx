@@ -98,8 +98,8 @@ const Header = () => {
 
   // Authentication dropdown items
   const authOptions = [
-    { href: '/auth/signin', label: 'Student Login', icon: LogIn },
-    { href: '/auth/signup', label: 'New Student Registration', icon: UserPlus },
+    { href: '/sign-in', label: 'Student Login', icon: LogIn },
+    { href: '/sign-up', label: 'New Student Registration', icon: UserPlus },
     { href: '/admin', label: 'Admin Login', icon: Users },
   ]
 

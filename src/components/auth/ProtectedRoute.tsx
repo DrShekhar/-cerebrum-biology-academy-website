@@ -21,7 +21,7 @@ export default function ProtectedRoute({
   requireAuth = true,
   allowedRoles,
   requiredPermissions,
-  fallbackUrl = '/auth/signin',
+  fallbackUrl = '/sign-in',
   loadingComponent,
   unauthorizedComponent,
 }: ProtectedRouteProps) {

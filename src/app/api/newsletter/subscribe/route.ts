@@ -1,9 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+// Normalize phone number to standard format
+function normalizePhone(phone: string): string {
+  // Remove all non-digit characters except +
+  let normalized = phone.replace(/[^\d+]/g, '')
+  // Extract last 10 digits for Indian numbers
+  const digits = normalized.replace(/\D/g, '')
+  if (digits.length >= 10) {
+    const last10 = digits.slice(-10)
+    // Check if it's a valid Indian mobile (starts with 6-9)
+    if (/^[6-9]/.test(last10)) {
+      return '+91' + last10
+    }
+  }
+  return normalized
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json()
+    const { email, whatsappNumber, sendWhatsAppUpdates } = await request.json()
 
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 })
@@ -16,6 +32,16 @@ export async function POST(request: NextRequest) {
 
     const normalizedEmail = email.toLowerCase().trim()
 
+    // Normalize WhatsApp number if provided
+    let normalizedWhatsApp: string | null = null
+    if (whatsappNumber && whatsappNumber.trim()) {
+      normalizedWhatsApp = normalizePhone(whatsappNumber.trim())
+      // Validate it's a proper phone number
+      if (!/^\+?\d{10,15}$/.test(normalizedWhatsApp)) {
+        normalizedWhatsApp = null // Invalid, skip storing
+      }
+    }
+
     try {
       const existingSubscriber = await prisma.newsletterSubscriber.findUnique({
         where: { email: normalizedEmail },
@@ -23,6 +49,22 @@ export async function POST(request: NextRequest) {
 
       if (existingSubscriber) {
         if (existingSubscriber.status === 'active') {
+          // Update WhatsApp number if newly provided
+          if (normalizedWhatsApp && !existingSubscriber.whatsappNumber) {
+            await prisma.newsletterSubscriber.update({
+              where: { email: normalizedEmail },
+              data: {
+                whatsappNumber: normalizedWhatsApp,
+                sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
+                updatedAt: new Date(),
+              },
+            })
+            return NextResponse.json({
+              success: true,
+              message: 'You are already subscribed! WhatsApp number added for updates.',
+              alreadySubscribed: true,
+            })
+          }
           return NextResponse.json({
             success: true,
             message: 'You are already subscribed to our newsletter!',
@@ -32,7 +74,12 @@ export async function POST(request: NextRequest) {
 
         await prisma.newsletterSubscriber.update({
           where: { email: normalizedEmail },
-          data: { status: 'active', updatedAt: new Date() },
+          data: {
+            status: 'active',
+            whatsappNumber: normalizedWhatsApp,
+            sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
+            updatedAt: new Date(),
+          },
         })
 
         return NextResponse.json({
@@ -44,6 +91,8 @@ export async function POST(request: NextRequest) {
       await prisma.newsletterSubscriber.create({
         data: {
           email: normalizedEmail,
+          whatsappNumber: normalizedWhatsApp,
+          sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
           status: 'active',
           source: 'website_footer',
         },

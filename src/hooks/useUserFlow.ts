@@ -185,7 +185,7 @@ export function useUserFlow() {
 
     // Redirect if accessing protected route without access
     if (currentRouteRequiresAuth && !isAuthenticated) {
-      router.push(`/auth/signin?callbackUrl=${encodeURIComponent(pathname || '/')}`)
+      router.push(`/sign-in?callbackUrl=${encodeURIComponent(pathname || '/')}`)
     }
   }, [
     isLoading,

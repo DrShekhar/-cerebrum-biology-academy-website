@@ -82,7 +82,7 @@ export default function StudentPaymentsPage() {
               description="Please sign in to view your payment history and manage invoices."
               primaryAction={{
                 label: 'Sign In',
-                href: '/auth/signin',
+                href: '/sign-in',
               }}
               size="lg"
               variant="warning"

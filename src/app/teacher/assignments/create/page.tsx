@@ -60,7 +60,7 @@ export default function CreateAssignmentPage() {
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
-      router.push('/auth/signin')
+      router.push('/sign-in')
       return
     }
 

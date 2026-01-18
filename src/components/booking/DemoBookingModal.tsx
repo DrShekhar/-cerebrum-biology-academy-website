@@ -80,13 +80,12 @@ export function DemoBookingModal({
 
     try {
       await bookDemo({
-        userId: user?.id || '',
-        courseId,
         studentName: formData.studentName,
         email: formData.email,
         phone: formData.phone,
         preferredDate: formData.preferredDate,
         preferredTime: formData.preferredTime,
+        courseInterest: courseId,
         message: formData.message,
       })
 

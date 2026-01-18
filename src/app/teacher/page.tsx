@@ -70,7 +70,7 @@ export default function TeacherDashboardPage() {
 
   useEffect(() => {
     if (!authLoading && !isCheckingOwner && !hasTeacherAccess) {
-      window.location.href = '/auth/signin'
+      window.location.href = '/sign-in'
       return
     }
   }, [authLoading, isCheckingOwner, hasTeacherAccess])

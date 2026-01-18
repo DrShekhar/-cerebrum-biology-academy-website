@@ -1000,7 +1000,7 @@ export function AIEducationDashboard() {
                       <span>View Courses</span>
                     </motion.a>
                     <motion.a
-                      href="/auth/signup"
+                      href="/sign-up"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
@@ -1083,7 +1083,7 @@ export function AIEducationDashboard() {
                       }}
                       secondaryAction={{
                         label: 'Enroll Now',
-                        href: '/auth/signup',
+                        href: '/sign-up',
                       }}
                       size="md"
                       variant="info"

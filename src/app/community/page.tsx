@@ -36,13 +36,13 @@ function CommunityPage() {
           </p>
           <div className="space-y-3">
             <a
-              href="/auth/signin"
+              href="/sign-in"
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors block"
             >
               Sign In to Join Community
             </a>
             <a
-              href="/auth/signup"
+              href="/sign-up"
               className="w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg font-medium hover:bg-gray-50 transition-colors block"
             >
               Create New Account

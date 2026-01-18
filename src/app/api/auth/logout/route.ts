@@ -162,7 +162,7 @@ export async function GET() {
       actions: [
         {
           label: 'Sign In Again',
-          href: '/auth/signin',
+          href: '/sign-in',
         },
         {
           label: 'Browse Free Resources',

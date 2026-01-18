@@ -50,14 +50,14 @@ function AuthRequiredMessage() {
         </p>
 
         <div className="space-y-4">
-          <Link href="/auth/signin">
+          <Link href="/sign-in">
             <Button variant="primary" size="lg" className="w-full">
               <LogIn className="w-5 h-5 mr-2" />
               Sign In to Continue
             </Button>
           </Link>
 
-          <Link href="/auth/signup">
+          <Link href="/sign-up">
             <Button variant="outline" size="lg" className="w-full">
               <UserPlus className="w-5 h-5 mr-2" />
               Create Free Account

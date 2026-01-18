@@ -36,7 +36,7 @@ export default function UnauthorizedPage() {
               Go Home
             </Link>
             <Link
-              href="/auth/signin"
+              href="/sign-in"
               className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               <LogIn className="w-4 h-4" />

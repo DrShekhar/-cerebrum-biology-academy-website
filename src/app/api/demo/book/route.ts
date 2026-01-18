@@ -4,14 +4,24 @@ import { rateLimit } from '@/lib/rateLimit'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
+import { notifyAdminDemoBooking } from '@/lib/notifications/adminLeadNotification'
+import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversion'
 import { logger } from '@/lib/utils/logger'
 
 const demoBookingSchema = z.object({
   studentName: z.string().min(2).max(100),
-  email: z.string().email(),
-  phone: z.string().regex(/^\+?[1-9]\d{9,14}$/),
-  preferredDate: z.string().regex(/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?/),
-  preferredTime: z.string().regex(/^\d{2}:\d{2}$/),
+  email: z.string().email('Please enter a valid email address'),
+  phone: z
+    .string()
+    .regex(
+      /^\+?[1-9]\d{9,14}$/,
+      'Please enter a valid phone number (e.g., +91 8826444334 or 8826444334)'
+    ),
+  preferredDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?/)
+    .or(z.enum(['TODAY', 'TOMORROW', 'ASAP'])), // Allow urgent options
+  preferredTime: z.string().regex(/^\d{2}:\d{2}$/).or(z.enum(['ASAP', 'MORNING', 'AFTERNOON', 'EVENING'])),
   courseInterest: z.string().min(1).max(100),
   studentClass: z.string().min(1).max(50),
   previousKnowledge: z.string().max(1000),
@@ -22,11 +32,57 @@ const demoBookingSchema = z.object({
     .regex(/^\+?[1-9]\d{9,14}$/)
     .optional(),
   hearAboutUs: z.string().max(200).optional(),
+  source: z.string().max(200).optional(),
   utmSource: z.string().max(100).optional(),
   utmMedium: z.string().max(100).optional(),
   utmCampaign: z.string().max(100).optional(),
   utmContent: z.string().max(100).optional(),
+  gclid: z.string().max(200).optional(),
 })
+
+/**
+ * Determine LeadSource enum from tracking parameters
+ * GCLID presence = definitive Google Ads lead
+ */
+function determineLeadSource(body: {
+  gclid?: string | null
+  utmSource?: string | null
+  utmMedium?: string | null
+  source?: string | null
+}): 'GOOGLE_ADS' | 'FACEBOOK_ADS' | 'SOCIAL_MEDIA' | 'WEBSITE' | 'REFERRAL' {
+  // GCLID is definitive proof of Google Ads
+  if (body.gclid) {
+    return 'GOOGLE_ADS'
+  }
+
+  const source = (body.utmSource || body.source || '').toLowerCase()
+  const medium = (body.utmMedium || '').toLowerCase()
+
+  // Check for Google Ads via UTM
+  if (
+    (source === 'google' || source === 'googleads') &&
+    (medium === 'cpc' || medium === 'ppc' || medium === 'paid')
+  ) {
+    return 'GOOGLE_ADS'
+  }
+
+  // Check for Facebook Ads
+  if ((source === 'facebook' || source === 'fb' || source === 'instagram') && medium === 'cpc') {
+    return 'FACEBOOK_ADS'
+  }
+
+  // Check for social media
+  if (['facebook', 'fb', 'instagram', 'youtube', 'twitter', 'linkedin'].includes(source)) {
+    return 'SOCIAL_MEDIA'
+  }
+
+  // Check for referral
+  if (source === 'referral' || medium === 'referral') {
+    return 'REFERRAL'
+  }
+
+  return 'WEBSITE'
+}
 
 type DemoBookingRequest = z.infer<typeof demoBookingSchema>
 
@@ -51,6 +107,46 @@ export async function POST(request: NextRequest) {
     }
 
     const rawBody = await request.json()
+
+    // Normalize phone number (remove spaces, handle +91 prefix)
+    if (rawBody.phone) {
+      rawBody.phone = rawBody.phone.replace(/[\s-]/g, '')
+      // If it's a 10-digit Indian number without country code, add +91
+      const phoneDigits = rawBody.phone.replace(/[^\d]/g, '')
+      if (phoneDigits.length === 10 && /^[6-9]/.test(phoneDigits)) {
+        rawBody.phone = '+91' + phoneDigits
+      }
+    }
+
+    // Handle urgent date options
+    if (rawBody.preferredDate === 'TODAY') {
+      rawBody.preferredDate = new Date().toISOString().split('T')[0]
+    } else if (rawBody.preferredDate === 'TOMORROW') {
+      const tomorrow = new Date()
+      tomorrow.setDate(tomorrow.getDate() + 1)
+      rawBody.preferredDate = tomorrow.toISOString().split('T')[0]
+    } else if (rawBody.preferredDate === 'ASAP') {
+      rawBody.preferredDate = new Date().toISOString().split('T')[0]
+      rawBody.isUrgent = true
+    }
+
+    // Handle time slot preferences
+    if (rawBody.preferredTime === 'ASAP') {
+      // Find next available slot
+      const now = new Date()
+      const hour = now.getHours()
+      if (hour < 10) rawBody.preferredTime = '10:00'
+      else if (hour < 14) rawBody.preferredTime = '14:00'
+      else if (hour < 18) rawBody.preferredTime = '18:00'
+      else rawBody.preferredTime = '10:00' // Next day's first slot
+    } else if (rawBody.preferredTime === 'MORNING') {
+      rawBody.preferredTime = '10:00'
+    } else if (rawBody.preferredTime === 'AFTERNOON') {
+      rawBody.preferredTime = '14:00'
+    } else if (rawBody.preferredTime === 'EVENING') {
+      rawBody.preferredTime = '18:00'
+    }
+
     const validationResult = demoBookingSchema.safeParse(rawBody)
 
     if (!validationResult.success) {
@@ -87,21 +183,26 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Validate date (must be future date)
+    // Validate date (must be today or future, with same-day support)
     // Append T00:00:00 to parse as local time, not UTC
     const selectedDate = new Date(body.preferredDate + 'T00:00:00')
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 
-    if (selectedDate <= today) {
+    // Allow same-day booking (today) but not past dates
+    if (selectedDate < today) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Demo date must be in the future',
+          error: 'Demo date cannot be in the past. Select today or a future date.',
         },
         { status: 400 }
       )
     }
+
+    // Mark as urgent if same-day booking
+    const isSameDay = selectedDate.toDateString() === today.toDateString()
+    const isUrgent = (rawBody as { isUrgent?: boolean }).isUrgent || isSameDay
 
     // Check if slot is available
     const availableSlots = await zoomService.getAvailableSlots(selectedDate)
@@ -159,6 +260,10 @@ export async function POST(request: NextRequest) {
       })
     }
 
+    // Determine lead source from tracking params
+    const leadSource = determineLeadSource(body)
+    const sourceDetail = body.source || body.hearAboutUs || 'Website'
+
     // Step 2: Save DemoBooking to database
     const demoBooking = await prisma.demoBooking.create({
       data: {
@@ -170,10 +275,12 @@ export async function POST(request: NextRequest) {
         preferredTime: body.preferredTime,
         message: body.previousKnowledge,
         status: 'CONFIRMED',
-        source: body.hearAboutUs || 'Website',
+        source: sourceDetail,
         utmSource: body.utmSource,
         utmMedium: body.utmMedium,
         utmCampaign: body.utmCampaign,
+        utmContent: body.utmContent,
+        gclid: body.gclid,
         assignedTo: assignedCounselor.id,
         notificationsSent: {
           whatsapp: false,
@@ -182,7 +289,7 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // Step 3: Auto-create Lead from DemoBooking
+    // Step 3: Auto-create Lead from DemoBooking with proper tracking
     const lead = await prisma.lead.create({
       data: {
         studentName: body.studentName,
@@ -191,7 +298,13 @@ export async function POST(request: NextRequest) {
         courseInterest: body.courseInterest,
         stage: 'DEMO_SCHEDULED',
         priority: 'HOT',
-        source: body.hearAboutUs || 'Website - Demo Booking',
+        source: leadSource,
+        sourceDetail: sourceDetail,
+        utmSource: body.utmSource,
+        utmMedium: body.utmMedium,
+        utmCampaign: body.utmCampaign,
+        utmContent: body.utmContent,
+        gclid: body.gclid,
         assignedToId: assignedCounselor.id,
         demoBookingId: demoBooking.id,
         nextFollowUpAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
@@ -234,6 +347,35 @@ export async function POST(request: NextRequest) {
         },
       },
     })
+
+    // Step 5b: Send WhatsApp notification to admin about new lead
+    notifyAdminDemoBooking({
+      studentName: body.studentName,
+      email: body.email,
+      phone: body.phone,
+      courseInterest: body.courseInterest,
+      preferredDate: new Date(body.preferredDate),
+      preferredTime: body.preferredTime,
+      source: body.source || body.hearAboutUs,
+      gclid: body.gclid,
+      utmSource: body.utmSource,
+      utmMedium: body.utmMedium,
+      utmCampaign: body.utmCampaign,
+      leadId: lead.id,
+    }).catch((err) => {
+      logger.error('Admin WhatsApp notification failed', { error: err, leadId: lead.id })
+    })
+
+    // Step 5c: Track Google Ads conversion if GCLID is present
+    if (body.gclid) {
+      trackDemoBookingConversion({
+        gclid: body.gclid,
+        bookingId: demoBooking.id,
+        conversionDateTime: new Date(),
+      }).catch((err) => {
+        logger.error('Google Ads conversion tracking failed', { error: err, gclid: body.gclid })
+      })
+    }
 
     // Step 6: Send multi-channel confirmation to student (Email + WhatsApp + SMS)
     let notificationSent = false

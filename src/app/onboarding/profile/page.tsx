@@ -142,7 +142,7 @@ export default function OnboardingProfilePage() {
 
   // Redirect if no user
   if (!user) {
-    router.push('/auth/signin')
+    router.push('/sign-in')
     return null
   }
 

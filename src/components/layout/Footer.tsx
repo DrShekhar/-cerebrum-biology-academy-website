@@ -23,6 +23,8 @@ import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/con
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
   const [email, setEmail] = useState('')
+  const [whatsappNumber, setWhatsappNumber] = useState('')
+  const [sendWhatsAppUpdates, setSendWhatsAppUpdates] = useState(false)
   const [isSubscribing, setIsSubscribing] = useState(false)
   const [subscribeMessage, setSubscribeMessage] = useState('')
   const { t } = useI18n()
@@ -41,7 +43,11 @@ export const Footer = memo(function Footer() {
       const response = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          whatsappNumber: whatsappNumber || undefined,
+          sendWhatsAppUpdates: sendWhatsAppUpdates && whatsappNumber ? true : false,
+        }),
       })
 
       const data = await response.json()
@@ -50,6 +56,8 @@ export const Footer = memo(function Footer() {
         setSubscribeMessage(data.message || 'Thank you for subscribing!')
         if (!data.alreadySubscribed) {
           setEmail('')
+          setWhatsappNumber('')
+          setSendWhatsAppUpdates(false)
         }
       } else {
         setSubscribeMessage(data.error || 'Subscription failed. Please try again.')
@@ -428,47 +436,81 @@ export const Footer = memo(function Footer() {
           className="mt-12 pt-8 border-t border-gray-800 animate-fade-in-up"
           style={{ animationDelay: '0.5s' }}
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             <div>
               <h4 className="font-semibold text-lg mb-2 text-white">{t('stayUpdated')}</h4>
               <p className="text-gray-300 text-sm">{t('getLatestUpdates')}</p>
+              <p className="text-gray-400 text-xs mt-2">
+                Get free NEET tips, chapter notes, and important updates via email or WhatsApp
+              </p>
             </div>
 
-            <form
-              onSubmit={handleNewsletterSubscribe}
-              className="flex flex-col sm:flex-row gap-2 sm:gap-3"
-            >
-              <label htmlFor="newsletter-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-sm sm:text-base min-h-[44px]"
-                aria-label="Email address for newsletter"
-                disabled={isSubscribing}
-              />
-              <Button
-                type="submit"
-                variant="primary"
-                className="w-full sm:w-auto whitespace-nowrap text-xs sm:text-sm min-h-[44px]"
-                aria-label="Subscribe to newsletter"
-                disabled={isSubscribing}
-              >
-                {isSubscribing ? '...' : t('subscribe')}
-                <Send className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" aria-hidden="true" />
-              </Button>
+            <form onSubmit={handleNewsletterSubscribe} className="space-y-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Email address
+                </label>
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email *"
+                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-sm sm:text-base min-h-[44px]"
+                  aria-label="Email address for newsletter"
+                  disabled={isSubscribing}
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                <label htmlFor="newsletter-whatsapp" className="sr-only">
+                  WhatsApp number (optional)
+                </label>
+                <input
+                  id="newsletter-whatsapp"
+                  type="tel"
+                  value={whatsappNumber}
+                  onChange={(e) => setWhatsappNumber(e.target.value)}
+                  placeholder="WhatsApp: +91 88264 44334 (optional)"
+                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 text-sm sm:text-base min-h-[44px]"
+                  aria-label="WhatsApp number for updates"
+                  disabled={isSubscribing}
+                />
+                <Button
+                  type="submit"
+                  variant="primary"
+                  className="w-full sm:w-auto whitespace-nowrap text-xs sm:text-sm min-h-[44px]"
+                  aria-label="Subscribe to newsletter"
+                  disabled={isSubscribing}
+                >
+                  {isSubscribing ? '...' : t('subscribe')}
+                  <Send className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" aria-hidden="true" />
+                </Button>
+              </div>
+
+              {whatsappNumber && (
+                <label className="flex items-center gap-2 text-gray-300 text-sm cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={sendWhatsAppUpdates}
+                    onChange={(e) => setSendWhatsAppUpdates(e.target.checked)}
+                    className="w-4 h-4 rounded border-gray-600 bg-gray-800 text-green-500 focus:ring-green-500"
+                    disabled={isSubscribing}
+                  />
+                  <MessageCircle className="w-4 h-4 text-green-400" aria-hidden="true" />
+                  <span>Send me updates on WhatsApp</span>
+                </label>
+              )}
+
+              {subscribeMessage && (
+                <p
+                  className={`text-sm ${subscribeMessage.includes('Thank') || subscribeMessage.includes('subscribed') ? 'text-green-400' : 'text-red-400'}`}
+                >
+                  {subscribeMessage}
+                </p>
+              )}
             </form>
-            {subscribeMessage && (
-              <p
-                className={`mt-2 text-sm ${subscribeMessage.includes('Thank') ? 'text-green-400' : 'text-red-400'}`}
-              >
-                {subscribeMessage}
-              </p>
-            )}
           </div>
         </div>
       </div>

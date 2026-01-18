@@ -42,7 +42,7 @@ export default function StudentAssignmentsPage() {
 
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
-      router.push('/auth/signin')
+      router.push('/sign-in')
       return
     }
 

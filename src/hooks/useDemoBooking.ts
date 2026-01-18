@@ -1,61 +1,129 @@
 'use client'
 
 import { useState } from 'react'
-import { id } from '@/lib/db'
-import type { DemoBooking } from '@/lib/db'
+import { getTrackingDataForAPI, isGoogleAdsLead, getLeadSource } from '@/lib/tracking/utm'
+
+export interface DemoBookingInput {
+  studentName: string
+  email: string
+  phone: string
+  preferredDate: string
+  preferredTime: string
+  courseInterest: string
+  studentClass?: string
+  previousKnowledge?: string
+  specificTopics?: string[]
+  parentName?: string
+  parentPhone?: string
+  hearAboutUs?: string
+  message?: string
+}
+
+export interface DemoBookingResult {
+  success: boolean
+  message: string
+  booking?: {
+    id: string
+    leadId: string
+    meetingId?: number
+    scheduledTime?: string
+    joinUrl?: string
+    password?: string
+    assignedCounselor?: string
+  }
+  error?: string
+}
 
 export function useDemoBooking() {
-  const [bookings, setBookings] = useState<DemoBooking[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [result, setResult] = useState<DemoBookingResult | null>(null)
 
-  const bookDemo = async (bookingData: Omit<DemoBooking, 'id' | 'createdAt' | 'status'>) => {
+  /**
+   * Book a demo class - calls the API with tracking data for Google Ads attribution
+   */
+  const bookDemo = async (bookingData: DemoBookingInput): Promise<DemoBookingResult> => {
     try {
       setIsLoading(true)
-      const bookingId = id()
-      const newBooking: DemoBooking = {
+      setError(null)
+
+      // Get tracking data for Google Ads and UTM attribution
+      const trackingData = getTrackingDataForAPI()
+      const source = getLeadSource()
+
+      // Combine form data with tracking data
+      const payload = {
         ...bookingData,
-        id: bookingId,
-        status: 'pending',
-        createdAt: Date.now(),
+        ...trackingData,
+        source,
       }
 
-      // In real implementation, use db.transact(tx.demoBookings[bookingId].update(newBooking))
-      console.log('Booking demo:', newBooking)
-      setBookings((prev) => [...prev, newBooking])
-      return newBooking
-    } catch (error) {
-      console.error('Book demo error:', error)
-      setError('Failed to book demo')
-      throw error
+      const response = await fetch('/api/demo/book', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to book demo')
+      }
+
+      const bookingResult: DemoBookingResult = {
+        success: true,
+        message: data.message || 'Demo booked successfully!',
+        booking: data.booking,
+      }
+
+      setResult(bookingResult)
+      return bookingResult
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Failed to book demo'
+      setError(errorMessage)
+      const errorResult: DemoBookingResult = {
+        success: false,
+        message: errorMessage,
+        error: errorMessage,
+      }
+      setResult(errorResult)
+      throw err
     } finally {
       setIsLoading(false)
     }
   }
 
-  const updateBookingStatus = async (bookingId: string, status: DemoBooking['status']) => {
-    try {
-      // In real implementation, use db.transact(tx.demoBookings[bookingId].update({ status }))
-      console.log('Updating booking status:', bookingId, status)
-      setBookings((prev) =>
-        prev.map((booking) => (booking.id === bookingId ? { ...booking, status } : booking))
-      )
-    } catch (error) {
-      console.error('Update booking status error:', error)
-      throw error
-    }
+  /**
+   * Check if current session is from Google Ads
+   */
+  const checkIsGoogleAds = () => {
+    return isGoogleAdsLead()
   }
 
-  const getUserBookings = (userId: string) => {
-    return bookings.filter((booking) => booking.userId === userId)
+  /**
+   * Get the lead source (Google Ads, Facebook, etc.)
+   */
+  const getCurrentSource = () => {
+    return getLeadSource()
+  }
+
+  /**
+   * Reset the hook state
+   */
+  const reset = () => {
+    setError(null)
+    setResult(null)
   }
 
   return {
-    bookings,
     isLoading,
     error,
+    result,
     bookDemo,
-    updateBookingStatus,
-    getUserBookings,
+    checkIsGoogleAds,
+    getCurrentSource,
+    reset,
   }
 }

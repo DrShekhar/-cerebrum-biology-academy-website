@@ -600,7 +600,7 @@ export function needsOnboarding(user: User | null): boolean {
  * Get the next onboarding step for a user
  */
 export function getOnboardingRoute(user: User | null): string {
-  if (!user) return '/auth/signup'
+  if (!user) return '/sign-up'
 
   if (needsOnboarding(user)) {
     return '/onboarding/profile'
@@ -646,7 +646,7 @@ export function getUpgradeMessage(
       title: `Sign up to unlock ${feature}`,
       description: 'Create a free account to get a 7-day trial with access to all premium features',
       ctaText: 'Start Free Trial',
-      ctaLink: '/auth/signup',
+      ctaLink: '/sign-up',
       trialAvailable: true,
     }
   }
@@ -727,7 +727,7 @@ export function canAccessRoute(
   if (!user) {
     return {
       allowed: false,
-      redirectTo: '/auth/signin',
+      redirectTo: '/sign-in',
       reason: 'Authentication required',
     }
   }

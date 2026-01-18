@@ -3,11 +3,18 @@ import { z } from 'zod'
 import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
+import { notifyAdminContactInquiry } from '@/lib/notifications/adminLeadNotification'
+import { trackLeadConversion } from '@/lib/integrations/googleAdsConversion'
 
 const contactInquirySchema = z.object({
   name: z.string().min(2).max(100),
-  phone: z.string().regex(/^[6-9]\d{9}$/, 'Invalid Indian phone number'),
-  email: z.string().email(),
+  phone: z
+    .string()
+    .regex(
+      /^[6-9]\d{9}$/,
+      'Please enter a valid 10-digit Indian mobile number (e.g., 8826444334). We accept formats like +91 88264 44334, 91-8826444334, or just 8826444334.'
+    ),
+  email: z.string().email('Please enter a valid email address'),
   center: z.string().max(50).optional(),
   supportType: z.enum(['academic', 'admission', 'technical', 'counseling', 'general']),
   message: z.string().min(10).max(2000),
@@ -16,6 +23,8 @@ const contactInquirySchema = z.object({
   utmSource: z.string().max(100).optional(),
   utmMedium: z.string().max(100).optional(),
   utmCampaign: z.string().max(100).optional(),
+  utmContent: z.string().max(100).optional(),
+  gclid: z.string().max(200).optional(),
 })
 
 type ContactInquiryInput = z.infer<typeof contactInquirySchema>
@@ -50,8 +59,13 @@ export async function POST(request: NextRequest) {
     // Validate with Zod
     const validationResult = contactInquirySchema.safeParse(rawBody)
     if (!validationResult.success) {
+      const firstError = validationResult.error.issues[0]
       return NextResponse.json(
-        { error: 'Invalid input data', details: validationResult.error.issues },
+        {
+          error: firstError?.message || 'Invalid input data',
+          details: validationResult.error.issues,
+          hint: 'For phone, enter 10-digit mobile number (e.g., 8826444334). We accept +91 prefix.',
+        },
         { status: 400 }
       )
     }
@@ -87,6 +101,17 @@ export async function POST(request: NextRequest) {
     const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : 'unknown'
     const userAgent = request.headers.get('user-agent') || undefined
 
+    // Determine source with Google Ads detection
+    let source = data.source || 'Website'
+    if (data.gclid) {
+      source = 'Google Ads'
+    } else if (
+      data.utmSource?.toLowerCase() === 'google' &&
+      (data.utmMedium?.toLowerCase() === 'cpc' || data.utmMedium?.toLowerCase() === 'ppc')
+    ) {
+      source = 'Google Ads'
+    }
+
     // Save to database using Prisma
     const inquiry = await prisma.contact_inquiries.create({
       data: {
@@ -96,7 +121,7 @@ export async function POST(request: NextRequest) {
         center: data.center || null,
         supportType: data.supportType,
         message: data.message,
-        source: data.source || 'Website',
+        source,
         status: 'NEW',
         priority: priorityMap[data.supportType] || 'NORMAL',
         department:
@@ -107,6 +132,8 @@ export async function POST(request: NextRequest) {
         utmSource: data.utmSource,
         utmMedium: data.utmMedium,
         utmCampaign: data.utmCampaign,
+        utmContent: data.utmContent,
+        gclid: data.gclid,
       },
     })
 
@@ -117,6 +144,34 @@ export async function POST(request: NextRequest) {
       supportType: data.supportType,
       priority: inquiry.priority,
     })
+
+    // Send WhatsApp notification to admin about new lead
+    notifyAdminContactInquiry({
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      supportType: data.supportType,
+      message: data.message,
+      source,
+      gclid: data.gclid,
+      utmSource: data.utmSource,
+      utmMedium: data.utmMedium,
+      utmCampaign: data.utmCampaign,
+      inquiryId: inquiry.id,
+    }).catch((err) => {
+      logger.error('Admin WhatsApp notification failed', { error: err, inquiryId: inquiry.id })
+    })
+
+    // Track Google Ads conversion if GCLID is present
+    if (data.gclid) {
+      trackLeadConversion({
+        gclid: data.gclid,
+        leadId: inquiry.id,
+        conversionDateTime: new Date(),
+      }).catch((err) => {
+        logger.error('Google Ads conversion tracking failed', { error: err, gclid: data.gclid })
+      })
+    }
 
     // Send immediate response based on support type
     await sendInquiryResponse(data)

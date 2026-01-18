@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { showToast } from '@/lib/toast'
+import { getTrackingDataForAPI, getLeadSource } from '@/lib/tracking/utm'
 import {
   MapPin,
   Phone,
@@ -73,6 +74,10 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     try {
+      // Get tracking data for Google Ads and UTM attribution
+      const trackingData = getTrackingDataForAPI()
+      const source = getLeadSource()
+
       const response = await fetch('/api/contact/inquiry', {
         method: 'POST',
         headers: {
@@ -85,6 +90,8 @@ export default function ContactPage() {
           message: formData.message,
           supportType: formData.enquiryType,
           center: 'noida',
+          ...trackingData,
+          source,
         }),
       })
 

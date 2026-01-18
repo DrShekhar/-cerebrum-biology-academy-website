@@ -186,7 +186,7 @@ export default function TestResultsPage() {
             <AlertCircle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
             <h2 className="text-xl font-bold text-gray-900 mb-2">Login Required</h2>
             <p className="text-gray-600 mb-6">Please login to view results.</p>
-            <Link href="/auth/signin">
+            <Link href="/sign-in">
               <Button className="w-full">Login to Continue</Button>
             </Link>
           </CardContent>
