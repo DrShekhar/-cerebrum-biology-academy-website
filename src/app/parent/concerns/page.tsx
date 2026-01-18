@@ -249,7 +249,7 @@ export default function ParentConcernsPage() {
   }
 
   if (status === 'unauthenticated') {
-    router.push('/login')
+    router.push('/sign-in')
     return null
   }
 

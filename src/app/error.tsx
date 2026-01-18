@@ -180,15 +180,15 @@ export default function Error({ error, reset }: ErrorProps) {
             </Link>
 
             <Link
-              href="/study-materials"
+              href="/free-resources"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-orange-200">
                 <BookOpen className="w-5 h-5 text-orange-600" />
               </div>
               <div className="text-left">
-                <div className="font-medium text-gray-900">Study Materials</div>
-                <div className="text-sm text-gray-500">Download resources</div>
+                <div className="font-medium text-gray-900">Free Resources</div>
+                <div className="text-sm text-gray-500">Download materials</div>
               </div>
             </Link>
           </div>

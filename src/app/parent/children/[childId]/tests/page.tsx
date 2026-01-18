@@ -238,7 +238,7 @@ export default function ParentTestsPage() {
   }
 
   if (status === 'unauthenticated') {
-    router.push('/login')
+    router.push('/sign-in')
     return null
   }
 

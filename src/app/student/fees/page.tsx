@@ -103,7 +103,7 @@ export default function StudentFeesPage() {
 
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
-      router.push('/login')
+      router.push('/sign-in')
       return
     }
 

@@ -206,7 +206,7 @@ export default function ParentChildAttendancePage() {
     if (status === 'authenticated') {
       fetchAttendance()
     } else if (status === 'unauthenticated') {
-      router.push('/login')
+      router.push('/sign-in')
     }
   }, [status, fetchAttendance, router])
 
