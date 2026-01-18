@@ -10,6 +10,7 @@ import { HeaderHybrid } from '@/components/layout/HeaderHybrid'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
+import { TrackingProvider } from '@/components/tracking/TrackingProvider'
 import { TrustProvider } from '@/components/providers/TrustProvider'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import { MotionProvider } from '@/components/providers/MotionProvider'
@@ -307,6 +308,7 @@ export default function RootLayout({
           <FocusVisibleStyles />
           <I18nProvider>
             <AuthProvider>
+              <TrackingProvider>
               <ToastProvider>
                 <TrustProvider
                   enableSocialProof={false}
@@ -357,6 +359,7 @@ export default function RootLayout({
                   </PersonalizationProvider>
                 </TrustProvider>
               </ToastProvider>
+              </TrackingProvider>
             </AuthProvider>
           </I18nProvider>
         </body>
