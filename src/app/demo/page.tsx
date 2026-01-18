@@ -1,13 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle, Calendar, User, Phone, BookOpen, Video, Clock } from 'lucide-react'
+import { CheckCircle, Calendar, User, Phone, BookOpen, Video, Clock, RefreshCw } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { EventSchema } from '@/components/seo'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
+
+const DEMO_FORM_STORAGE_KEY = 'cerebrum_demo_booking_progress'
+
+interface DemoFormData {
+  name: string
+  phone: string
+  studentClass: string
+  preferredDate: string
+  preferredTime: string
+  savedAt?: string
+}
 
 export default function DemoBookingPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<DemoFormData>({
     name: '',
     phone: '',
     studentClass: '',
@@ -17,6 +29,58 @@ export default function DemoBookingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState('')
+  const [hasRestoredProgress, setHasRestoredProgress] = useState(false)
+
+  // Load saved progress from localStorage on mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(DEMO_FORM_STORAGE_KEY)
+      if (saved) {
+        const parsed: DemoFormData = JSON.parse(saved)
+        // Only restore if saved within the last 24 hours
+        if (parsed.savedAt) {
+          const savedTime = new Date(parsed.savedAt).getTime()
+          const now = Date.now()
+          const hoursDiff = (now - savedTime) / (1000 * 60 * 60)
+          if (hoursDiff < 24) {
+            // Check if any meaningful data was saved
+            if (parsed.name || parsed.phone || parsed.studentClass) {
+              setFormData(parsed)
+              setHasRestoredProgress(true)
+            }
+          } else {
+            // Clear stale data
+            localStorage.removeItem(DEMO_FORM_STORAGE_KEY)
+          }
+        }
+      }
+    } catch {
+      // Silent fail - localStorage might not be available
+    }
+  }, [])
+
+  // Save progress to localStorage whenever form changes
+  const saveProgress = useCallback((data: DemoFormData) => {
+    try {
+      const dataToSave = {
+        ...data,
+        savedAt: new Date().toISOString(),
+      }
+      localStorage.setItem(DEMO_FORM_STORAGE_KEY, JSON.stringify(dataToSave))
+    } catch {
+      // Silent fail
+    }
+  }, [])
+
+  // Clear saved progress (on successful submission or user action)
+  const clearProgress = useCallback(() => {
+    try {
+      localStorage.removeItem(DEMO_FORM_STORAGE_KEY)
+      setHasRestoredProgress(false)
+    } catch {
+      // Silent fail
+    }
+  }, [])
 
   const classOptions = [
     { value: 'class-11', label: 'Class 11th' },
@@ -47,11 +111,20 @@ export default function DemoBookingPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
+    setFormData((prev) => {
+      const updated = {
+        ...prev,
+        [name]: value,
+      }
+      // Save progress to localStorage
+      saveProgress(updated)
+      return updated
+    })
     setError('')
+    // Dismiss the restored progress banner after user starts typing
+    if (hasRestoredProgress) {
+      setHasRestoredProgress(false)
+    }
   }
 
   const validateForm = () => {
@@ -89,6 +162,9 @@ export default function DemoBookingPage() {
     setError('')
 
     try {
+      // Get tracking data (UTM params, GCLID) for attribution
+      const trackingData = getTrackingDataForAPI()
+
       const response = await fetch('/api/demo-booking', {
         method: 'POST',
         headers: {
@@ -103,6 +179,8 @@ export default function DemoBookingPage() {
           preferredDate: formData.preferredDate,
           preferredTime: formData.preferredTime,
           message: '',
+          // Include tracking data for attribution
+          ...trackingData,
         }),
       })
 
@@ -110,6 +188,8 @@ export default function DemoBookingPage() {
 
       if (response.ok && data.success) {
         setIsSuccess(true)
+        // Clear saved progress on successful booking
+        clearProgress()
       } else {
         setError(data.error || 'Failed to book demo. Please try again.')
       }
@@ -293,6 +373,36 @@ export default function DemoBookingPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Book Your Free Demo Class</h2>
 
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Progress Restored Banner */}
+                {hasRestoredProgress && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-xl text-sm flex items-center justify-between"
+                  >
+                    <div className="flex items-center">
+                      <RefreshCw className="w-4 h-4 mr-2" />
+                      <span>We've restored your previous progress!</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        clearProgress()
+                        setFormData({
+                          name: '',
+                          phone: '',
+                          studentClass: '',
+                          preferredDate: '',
+                          preferredTime: '',
+                        })
+                      }}
+                      className="text-blue-600 hover:text-blue-800 text-xs font-medium underline"
+                    >
+                      Start fresh
+                    </button>
+                  </motion.div>
+                )}
+
                 {error && (
                   <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm">
                     {error}
