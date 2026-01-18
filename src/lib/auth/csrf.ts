@@ -438,29 +438,29 @@ export function addCSPHeaders(response: NextResponse): NextResponse {
   const cspDirectives = [
     "default-src 'self'",
     // Scripts: Self + analytics + payment + auth + monitoring
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://*.vercel.app https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.clerk.accounts.dev https://*.clerk.dev https://*.sentry.io https://browser.sentry-cdn.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://*.vercel.app https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com https://*.firebaseapp.com",
     // Styles: Self + fonts + inline for dynamic styling
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.clerk.accounts.dev",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     // Fonts: Google Fonts
     "font-src 'self' https://fonts.gstatic.com data:",
     // Images: Allow HTTPS images, data URIs, blobs
-    "img-src 'self' data: https: blob: https://*.clerk.com https://*.googleusercontent.com",
+    "img-src 'self' data: https: blob: https://*.googleusercontent.com",
     // Media: Videos and audio
     "media-src 'self' https: blob:",
     // Connect: API endpoints, analytics, payments, auth, monitoring
-    "connect-src 'self' https://cerebrumbiologyacademy.com https://api.cerebrumbiologyacademy.com https://www.google-analytics.com https://*.razorpay.com https://api.razorpay.com https://*.clerk.accounts.dev https://*.clerk.dev https://api.clerk.com https://*.sentry.io https://*.ingest.sentry.io https://firebaseinstallations.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://vitals.vercel-insights.com https://*.vercel.app wss://*.clerk.accounts.dev",
-    // Frames: YouTube, Vimeo, Razorpay checkout, Clerk
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://api.razorpay.com https://*.razorpay.com https://*.clerk.accounts.dev https://challenges.cloudflare.com",
+    "connect-src 'self' https://cerebrumbiologyacademy.com https://api.cerebrumbiologyacademy.com https://www.google-analytics.com https://*.razorpay.com https://api.razorpay.com https://*.sentry.io https://*.ingest.sentry.io https://firebaseinstallations.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://vitals.vercel-insights.com https://*.vercel.app https://*.firebaseio.com wss://*.firebaseio.com",
+    // Frames: YouTube, Vimeo, Razorpay checkout, Firebase
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://api.razorpay.com https://*.razorpay.com https://challenges.cloudflare.com https://*.firebaseapp.com",
     // Workers: For service workers and web workers
     "worker-src 'self' blob:",
     // Child: For iframes and workers
-    "child-src 'self' blob: https://*.clerk.accounts.dev",
+    "child-src 'self' blob:",
     // Prevent object embeds
     "object-src 'none'",
     // Base URI restriction
     "base-uri 'self'",
     // Form submission targets
-    "form-action 'self' https://*.razorpay.com https://*.clerk.accounts.dev",
+    "form-action 'self' https://*.razorpay.com",
     // Prevent framing by other sites (clickjacking protection)
     "frame-ancestors 'self'",
     // Manifest for PWA

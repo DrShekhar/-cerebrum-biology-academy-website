@@ -70,7 +70,7 @@ export function FirebaseAuthProvider({ children }: AuthProviderProps) {
 
 /**
  * Hook to access Firebase auth state
- * Similar to Clerk's useAuth()
+ * Returns user, loading state, and auth methods
  */
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext)
@@ -81,8 +81,8 @@ export function useAuth(): AuthContextType {
 }
 
 /**
- * Hook to get current Firebase user
- * Similar to Clerk's useUser()
+ * Hook to get current Firebase user with profile data
+ * Returns user info and loading states
  */
 export function useFirebaseUser() {
   const { user, loading, isLoaded, isSignedIn } = useAuth()
@@ -92,7 +92,7 @@ export function useFirebaseUser() {
     isLoaded,
     isSignedIn,
     loading,
-    // Clerk-compatible properties
+    // Derived user properties
     primaryPhoneNumber: user?.phoneNumber ? { phoneNumber: user.phoneNumber } : null,
     emailAddresses: user?.email ? [{ emailAddress: user.email }] : [],
     firstName: user?.displayName?.split(' ')[0] || null,

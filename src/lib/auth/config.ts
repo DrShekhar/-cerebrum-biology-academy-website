@@ -1,28 +1,22 @@
 /**
  * Auth configuration for the application
  *
- * ⚠️ DEPRECATION NOTICE (2024-12)
- * ================================
- * This file contains LEGACY authentication code from the NextAuth era.
- * The application has migrated to Clerk for authentication.
+ * Authentication: Firebase Auth (Primary)
+ * =======================================
+ * The application uses Firebase Authentication as the primary auth provider.
+ * See: /src/lib/firebase/auth-context.tsx for Firebase auth context
+ * See: /src/hooks/useFirebaseSession.ts for session management
  *
- * DEPRECATED (use Clerk instead):
- * - TokenUtils - Use Clerk session tokens
- * - SessionManager - Use Clerk session management
- * - CookieManager - Use Clerk cookie handling
- * - validateUserSession - Use auth() from @clerk/nextjs/server
- * - requireAuth/optionalAuth - Use Clerk middleware
- * - AuthRateLimit - Use Clerk's built-in rate limiting
- * - authOptions - NextAuth config, not used with Clerk
- *
- * STILL ACTIVE:
- * - PasswordUtils - Used for admin password validation
+ * ACTIVE UTILITIES:
+ * - PasswordUtils - Used for admin/legacy password validation
+ * - TokenUtils - JWT token generation for API authentication
+ * - SessionManager - Server-side session management
+ * - CookieManager - Auth cookie handling
+ * - validateUserSession - Session validation for API routes
  * - ROLE_PERMISSIONS - Role-based access control
  * - addSecurityHeaders - Security headers utility
  * - ALLOWED_ORIGINS - CORS configuration
- *
- * TODO: Migrate remaining routes to Clerk and remove deprecated code
- * See: /api/auth/*, /api/test/*, /api/questions/*, /api/progress/*
+ * - AuthRateLimit - Rate limiting for auth endpoints
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { validateAdminSession, AdminSession } from './admin-auth'
@@ -151,8 +145,8 @@ export class PasswordUtils {
 }
 
 /**
- * JWT token utilities
- * @deprecated Use Clerk session tokens instead. This class will be removed in a future version.
+ * JWT token utilities for API authentication
+ * Used alongside Firebase Auth for server-side token validation
  */
 export class TokenUtils {
   static generateAccessToken(payload: Omit<JWTPayload, 'iat' | 'exp'>): string {
@@ -262,7 +256,7 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
 
 /**
  * Validate user session from request
- * @deprecated Use auth() from @clerk/nextjs/server instead. This function will be removed in a future version.
+ * Checks JWT tokens and Firebase session for authentication
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
@@ -381,7 +375,7 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
 
 /**
  * Require authentication for protected routes
- * @deprecated Use Clerk middleware with clerkMiddleware() instead. This function will be removed in a future version.
+ * Wraps handlers to enforce authentication
  */
 export function requireAuth(
   handler: (request: NextRequest, session: UserSession) => Promise<Response>
@@ -408,7 +402,7 @@ export function requireAuth(
 
 /**
  * Optional auth - allows both authenticated and unauthenticated users
- * @deprecated Use Clerk middleware instead. This function will be removed in a future version.
+ * Provides session info if available, but doesn't require it
  */
 export function optionalAuth(
   handler: (request: NextRequest, session?: UserSession) => Promise<Response>
@@ -421,7 +415,7 @@ export function optionalAuth(
 
 /**
  * Session management utilities
- * @deprecated Use Clerk session management instead. This class will be removed in a future version.
+ * Handles JWT session creation, refresh, and termination
  */
 export class SessionManager {
   static async createSession(user: {
@@ -519,7 +513,7 @@ export class SessionManager {
 
 /**
  * Rate limiting for authentication attempts
- * @deprecated Use Clerk's built-in rate limiting or Upstash Redis. This class will be removed in a future version.
+ * In-memory rate limiter (consider Upstash Redis for production)
  */
 export class AuthRateLimit {
   private static attempts = new Map<string, { count: number; lastAttempt: number }>()
@@ -580,7 +574,7 @@ export class AuthRateLimit {
 
 /**
  * Cookie management utilities
- * @deprecated Use Clerk cookie management instead. This class will be removed in a future version.
+ * Handles auth token cookies for session persistence
  */
 export class CookieManager {
   static setAuthCookies(response: NextResponse, accessToken: string, refreshToken: string) {
@@ -618,7 +612,7 @@ export class CookieManager {
 
 /**
  * Create demo session token for testing
- * @deprecated Demo tokens are not used with Clerk. This function will be removed in a future version.
+ * Used in development/testing environments
  */
 export function createDemoToken(): string {
   return `demo_${Date.now()}_${Math.random().toString(36).substring(7)}`
@@ -626,7 +620,7 @@ export function createDemoToken(): string {
 
 /**
  * NextAuth configuration options
- * @deprecated NextAuth has been replaced by Clerk. This config will be removed in a future version.
+ * Legacy config for backwards compatibility - primary auth is Firebase
  */
 export const authOptions = {
   providers: [

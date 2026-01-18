@@ -6,7 +6,7 @@ interface SessionUser {
   id: string
   email: string
   name?: string
-  fullName?: string // Alias for compatibility with Clerk-style code
+  fullName?: string // Alias for name field
   role: string
   phone?: string
 }

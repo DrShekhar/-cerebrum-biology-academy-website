@@ -21,7 +21,6 @@ export type WebhookProvider =
   | 'meta'
   | 'google_ads'
   | 'cloudflare'
-  | 'clerk'
   | 'sulekha'
   | 'justdial'
   | 'interakt'
@@ -57,7 +56,6 @@ function getWebhookSecret(provider: WebhookProvider): string | undefined {
     meta: process.env.WEBHOOK_SECRET_META_ADS,
     google_ads: process.env.WEBHOOK_SECRET_GOOGLE_ADS,
     cloudflare: process.env.CLOUDFLARE_STREAM_WEBHOOK_SECRET,
-    clerk: process.env.CLERK_WEBHOOK_SECRET,
     sulekha: process.env.WEBHOOK_SECRET_SULEKHA,
     justdial: process.env.WEBHOOK_SECRET_JUSTDIAL,
     interakt: process.env.INTERAKT_WEBHOOK_SECRET,
@@ -205,13 +203,6 @@ export function verifyWebhookSignature(options: WebhookValidationOptions): Valid
     case 'generic':
       // Standard HMAC-SHA256 verification
       isValid = verifyHmacSha256(body, signature, secret)
-      break
-
-    case 'clerk':
-      // Clerk uses Svix - this is handled separately by the svix library
-      // This case is here for completeness but Clerk webhooks should use svix directly
-      logger.warn('Clerk webhooks should use the svix library for verification')
-      isValid = false
       break
 
     default:
