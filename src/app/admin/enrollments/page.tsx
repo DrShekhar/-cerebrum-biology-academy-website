@@ -1,4 +1,4 @@
-// Force dynamic rendering to prevent Clerk auth issues during static build
+// Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
 import { EnrollmentDashboard } from '@/components/admin/EnrollmentDashboard'
