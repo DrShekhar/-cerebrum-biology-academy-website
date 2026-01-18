@@ -6,6 +6,7 @@
 export const runtime = 'nodejs'
 
 import { NextRequest, NextResponse } from 'next/server'
+import { auth } from '@/lib/auth/config'
 import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { VisualEnhancementEngine } from '@/lib/api/VisualEnhancementEngine'
 import { CreditManagementSystem } from '@/lib/api/CreditManagementSystem'
@@ -39,23 +40,37 @@ function getVoiceSynthesis() {
 
 export async function POST(request: NextRequest) {
   try {
+    // Require authentication
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+
     const { action, data } = await request.json()
+
+    // Inject authenticated userId into data and verify access
+    const authenticatedData = { ...data, authenticatedUserId: session.user.id }
+
+    // For actions that specify a userId, verify it matches session (or admin)
+    if (data?.userId && data.userId !== session.user.id && session.user.role !== 'admin') {
+      return NextResponse.json({ error: 'Cannot access other user data' }, { status: 403 })
+    }
 
     switch (action) {
       case 'process_question':
-        return await processQuestion(data)
+        return await processQuestion(authenticatedData)
 
       case 'generate_visual':
-        return await generateVisual(data)
+        return await generateVisual(authenticatedData)
 
       case 'synthesize_voice':
-        return await synthesizeVoice(data)
+        return await synthesizeVoice(authenticatedData)
 
       case 'check_credits':
-        return await checkCredits(data)
+        return await checkCredits(authenticatedData)
 
       case 'upgrade_tier':
-        return await upgradeTier(data)
+        return await upgradeTier(authenticatedData)
 
       default:
         return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
@@ -68,22 +83,28 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Require authentication
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type')
-    const userId = searchParams.get('userId')
+    const requestedUserId = searchParams.get('userId')
+
+    // Use session user's ID by default, or validate requested userId
+    const userId = requestedUserId || session.user.id
+    if (requestedUserId && requestedUserId !== session.user.id && session.user.role !== 'admin') {
+      return NextResponse.json({ error: 'Cannot access other user data' }, { status: 403 })
+    }
 
     switch (type) {
       case 'credits':
-        if (!userId) {
-          return NextResponse.json({ error: 'User ID required' }, { status: 400 })
-        }
         const credits = await getCreditSystem().getStudentCredits(userId)
         return NextResponse.json({ success: true, credits })
 
       case 'usage_analytics':
-        if (!userId) {
-          return NextResponse.json({ error: 'User ID required' }, { status: 400 })
-        }
         const analytics = await getCreditSystem().getUsageAnalytics(userId)
         return NextResponse.json({ success: true, analytics })
 

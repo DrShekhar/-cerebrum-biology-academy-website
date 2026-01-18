@@ -208,9 +208,7 @@ async function sendInquiryResponse(data: ContactInquiryInput) {
     responses[data.supportType as keyof typeof responses] ||
     `Hi ${data.name}! Thank you for contacting Cerebrum Biology Academy. We'll get back to you soon.`
 
-  // In real implementation, send WhatsApp message
-  console.log('WhatsApp response to be sent:', response)
-
+  // In real implementation, send WhatsApp message via API
   return true
 }
 
@@ -241,14 +239,8 @@ async function notifyDepartment(data: ContactInquiryInput, inquiryId: string) {
 
   const notification = notifications[data.supportType as keyof typeof notifications]
 
-  console.log('Department notification:', {
-    to: notification?.email,
-    subject: notification?.subject,
-    inquiryId,
-    data,
-  })
-
-  return true
+  // In real implementation, send email notification to department
+  return !!notification
 }
 
 // Simulate user confirmation email
@@ -282,7 +274,7 @@ async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string
     `,
   }
 
-  console.log('User confirmation email:', emailContent)
+  // In real implementation, send email via API
   return true
 }
 

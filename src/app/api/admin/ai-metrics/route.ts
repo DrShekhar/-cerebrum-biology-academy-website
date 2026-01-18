@@ -2,37 +2,17 @@
 // Provides comprehensive AI monitoring data for administrators
 
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAdminAuth } from '@/lib/auth'
 import { performanceMonitor } from '@/lib/ai/performanceMonitor'
 import { costDashboard } from '@/lib/ai/CostOptimizationDashboard'
 
 // Force Node.js runtime for better compatibility
 export const runtime = 'nodejs'
 
-// Helper to verify admin access (simplified - should integrate with actual auth)
-async function isAdmin(request: NextRequest): Promise<boolean> {
-  // In production, this should verify the user's session and check their role
-  // For now, we'll check for a valid session cookie
-  const cookies = request.cookies
-  const sessionCookie = cookies.get('session')
-
-  // TODO: Implement actual admin verification using your auth system
-  // This is a placeholder that assumes valid session = admin for demo
-  return !!sessionCookie
-}
-
 export async function GET(request: NextRequest) {
   try {
-    // Verify admin access
-    if (!(await isAdmin(request))) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'Unauthorized: Admin access required',
-          timestamp: new Date().toISOString(),
-        },
-        { status: 403 }
-      )
-    }
+    // Verify admin access using proper auth
+    await requireAdminAuth()
 
     const url = new URL(request.url)
     const action = url.searchParams.get('action') || 'dashboard'
@@ -196,17 +176,8 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    // Verify admin access
-    if (!(await isAdmin(request))) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'Unauthorized: Admin access required',
-          timestamp: new Date().toISOString(),
-        },
-        { status: 403 }
-      )
-    }
+    // Verify admin access using proper auth
+    await requireAdminAuth()
 
     const body = await request.json()
     const { action, data } = body

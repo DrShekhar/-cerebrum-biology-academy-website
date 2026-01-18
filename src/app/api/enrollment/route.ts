@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { auth } from '@/lib/auth/config'
+import { requireAdminAuth } from '@/lib/auth'
 
 const EnrollmentSchema = z.object({
   studentName: z.string().min(2),
@@ -15,10 +17,24 @@ const EnrollmentSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Require authentication
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+
     const body = await request.json()
     const validatedData = EnrollmentSchema.parse(body)
 
-    let userId = validatedData.userId
+    // Use authenticated user's ID, or allow admin to specify userId
+    let userId = session.user.id
+    if (validatedData.userId && validatedData.userId !== session.user.id) {
+      // Only admin can create enrollment for other users
+      if (session.user.role !== 'admin') {
+        return NextResponse.json({ error: 'Cannot create enrollment for another user' }, { status: 403 })
+      }
+      userId = validatedData.userId
+    }
 
     if (!userId) {
       const existingUser = await prisma.user.findUnique({
@@ -37,7 +53,6 @@ export async function POST(request: NextRequest) {
           },
         })
         userId = newUser.id
-        console.log('Created new user:', { id: newUser.id, email: newUser.email })
       }
     }
 
@@ -51,13 +66,6 @@ export async function POST(request: NextRequest) {
         pendingAmount: validatedData.amount * 100,
         paymentPlan: validatedData.installmentPlan || 'FULL',
       },
-    })
-
-    console.log('Enrollment created:', {
-      id: enrollment.id,
-      userId,
-      courseId: enrollment.courseId,
-      status: enrollment.status,
     })
 
     return NextResponse.json({
@@ -88,6 +96,12 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Require authentication
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+
     const searchParams = request.nextUrl.searchParams
     const enrollmentId = searchParams.get('id')
 
@@ -110,10 +124,17 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Enrollment not found' }, { status: 404 })
       }
 
+      // Users can only see their own enrollment unless admin
+      if (enrollment.userId !== session.user.id && session.user.role !== 'admin') {
+        return NextResponse.json({ error: 'Access denied' }, { status: 403 })
+      }
+
       return NextResponse.json({ enrollment })
     }
 
-    // List enrollments (admin only - add auth check in production)
+    // List enrollments - admin only
+    await requireAdminAuth()
+
     const enrollments = await prisma.enrollment.findMany({
       take: 50,
       orderBy: { createdAt: 'desc' },

@@ -87,65 +87,84 @@ export async function POST(request: NextRequest) {
     // Extract new fields from request body (if present)
     const { demoType, referralCodeUsed, referralDiscount } = rawData
 
-    // Save demo booking to database using Prisma
+    // Save demo booking and link to lead in a transaction for data integrity
     let demoBooking
+    let lead: Awaited<ReturnType<typeof prisma.leads.findFirst>> = null
+
     try {
-      demoBooking = await prisma.demoBooking.create({
-        data: {
-          // Identity (no userId for guest bookings)
-          userId: null, // Guest booking
-          courseId: null, // Will be assigned later by admin
+      const result = await prisma.$transaction(async (tx) => {
+        // 1. Create the demo booking
+        const booking = await tx.demoBooking.create({
+          data: {
+            // Identity (no userId for guest bookings)
+            userId: null, // Guest booking
+            courseId: null, // Will be assigned later by admin
 
-          // Student Information
-          studentName: data.name,
-          email: data.email,
-          phone: data.phone,
-          studentClass: null, // Optional, can be added to form later
+            // Student Information
+            studentName: data.name,
+            email: data.email,
+            phone: data.phone,
+            studentClass: null, // Optional, can be added to form later
 
-          // Demo Details
-          preferredDate: data.preferredDate, // Store as string
-          preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
-          message: data.message || null,
-          status: 'PENDING', // Use enum value
+            // Demo Details
+            preferredDate: data.preferredDate, // Store as string
+            preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
+            message: data.message || null,
+            status: 'PENDING', // Use enum value
 
-          // Level 3: Premium Demo & Referral Fields
-          demoType: demoType || 'FREE',
-          paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
-          referralCodeUsed: referralCodeUsed || null,
-          referralDiscount: referralDiscount || 0,
+            // Level 3: Premium Demo & Referral Fields
+            demoType: demoType || 'FREE',
+            paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
+            referralCodeUsed: referralCodeUsed || null,
+            referralDiscount: referralDiscount || 0,
 
-          // Marketing Attribution
-          source: 'website',
-          utmSource: null,
-          utmMedium: null,
-          utmCampaign: null,
+            // Marketing Attribution
+            source: 'website',
+            utmSource: null,
+            utmMedium: null,
+            utmCampaign: null,
 
-          // Follow-up Fields (defaults from schema)
-          assignedTo: null,
-          followUpDate: null,
-          remindersSent: 0,
+            // Follow-up Fields (defaults from schema)
+            assignedTo: null,
+            followUpDate: null,
+            remindersSent: 0,
 
-          // Demo Feedback (defaults)
-          demoCompleted: false,
-          demoRating: null,
-          demoFeedback: null,
-          convertedToEnrollment: false,
-        },
+            // Demo Feedback (defaults)
+            demoCompleted: false,
+            demoRating: null,
+            demoFeedback: null,
+            convertedToEnrollment: false,
+          },
+        })
+
+        // 2. Find existing lead by email or phone
+        const existingLead = await tx.leads.findFirst({
+          where: {
+            OR: [{ email: data.email }, { phone: data.phone.replace(/\D/g, '').slice(-10) }],
+          },
+        })
+
+        // 3. If lead exists, update it with demo booking reference
+        let updatedLead = existingLead
+        if (existingLead) {
+          updatedLead = await tx.leads.update({
+            where: { id: existingLead.id },
+            data: {
+              demoBookingId: booking.id,
+              stage: 'DEMO_SCHEDULED',
+            },
+          })
+        }
+
+        return { booking, lead: updatedLead }
       })
 
-      console.log('✅ Demo booking created:', {
-        id: demoBooking.id,
-        name: demoBooking.studentName,
-        email: demoBooking.email,
-        status: demoBooking.status,
-        timestamp: demoBooking.createdAt,
-      })
+      demoBooking = result.booking
+      lead = result.lead
     } catch (dbError) {
-      // Log detailed error for debugging
-      console.error('❌ Database save failed:', {
+      // Log error without sensitive data
+      console.error('Database transaction failed:', {
         error: dbError instanceof Error ? dbError.message : 'Unknown error',
-        stack: dbError instanceof Error ? dbError.stack : undefined,
-        data: { name: data.name, email: data.email, phone: data.phone },
       })
 
       // Return user-friendly error
@@ -164,35 +183,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Schedule follow-up actions
+    // Schedule follow-up actions (non-blocking, outside transaction)
     await scheduleFollowUpActions(demoBooking.id, data)
 
-    // Send immediate notifications
+    // Send immediate notifications (non-blocking, outside transaction)
     await sendImmediateNotifications(demoBooking)
 
-    // Find or create lead for this demo booking (used for product agent and drip sequences)
-    let lead: Awaited<ReturnType<typeof prisma.leads.findFirst>> = null
-
-    // Queue AI Product Agent for course match analysis (automatic trigger)
-    try {
-      // First, try to find or create a lead for this demo booking
-      lead = await prisma.leads.findFirst({
-        where: {
-          OR: [{ email: data.email }, { phone: data.phone.replace(/\D/g, '').slice(-10) }],
-        },
-      })
-
-      if (lead) {
-        // Update existing lead with demo booking
-        await prisma.leads.update({
-          where: { id: lead.id },
-          data: {
-            demoBookingId: demoBooking.id,
-            stage: 'DEMO_SCHEDULED',
-          },
-        })
-
-        // Queue Product Agent for course recommendations
+    // Queue AI Product Agent for course match analysis (non-blocking)
+    if (lead) {
+      try {
         await AgentTaskManager.createTask({
           agentType: AgentType.PRODUCT_AGENT,
           leadId: lead.id,
@@ -206,9 +205,9 @@ export async function POST(request: NextRequest) {
             },
           },
         })
+      } catch (agentError) {
+        console.error('Failed to queue product agent for demo:', agentError)
       }
-    } catch (agentError) {
-      console.error('Failed to queue product agent for demo:', agentError)
     }
 
     // Create Zoom meeting for the demo
@@ -225,13 +224,7 @@ export async function POST(request: NextRequest) {
         previousKnowledge: '', // Optional
       })
 
-      if (zoomMeeting) {
-        console.log('✅ Zoom meeting created:', {
-          bookingId: demoBooking.id,
-          meetingId: zoomMeeting.id,
-          joinUrl: zoomMeeting.join_url,
-        })
-      }
+      // Zoom meeting created successfully
     } catch (zoomError) {
       // Log but don't fail the booking if Zoom creation fails
       console.error('Failed to create Zoom meeting (non-blocking):', zoomError)
@@ -245,7 +238,6 @@ export async function POST(request: NextRequest) {
           demoDate: new Date(data.preferredDate + ' ' + data.preferredTime.split(' - ')[0]),
           courseInterest: data.courseInterest.join(', '),
         })
-        console.log('✅ Demo reminder drip sequence started for lead:', lead.id)
       }
     } catch (dripError) {
       console.error('Failed to start demo drip sequence (non-blocking):', dripError)
@@ -304,8 +296,6 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
 // Send immediate notifications to student and admin team
 async function sendImmediateNotifications(bookingData: any) {
   try {
-    console.log('📤 Starting notification process for booking:', bookingData.id)
-
     // 1. Send WhatsApp confirmation to student
     const whatsappResult = await sendWhatsAppConfirmation(bookingData)
 
@@ -314,12 +304,6 @@ async function sendImmediateNotifications(bookingData: any) {
 
     // 3. Notify admin team
     await notifyAdminTeam(bookingData)
-
-    console.log('✅ Notifications sent:', {
-      bookingId: bookingData.id,
-      whatsapp: whatsappResult.success,
-      email: emailResult.success,
-    })
 
     // Update booking with notification status
     if (whatsappResult.success || emailResult.success) {
@@ -343,7 +327,6 @@ async function sendImmediateNotifications(bookingData: any) {
 // Send WhatsApp confirmation via Interakt
 async function sendWhatsAppConfirmation(bookingData: any) {
   if (!process.env.INTERAKT_API_KEY) {
-    console.log('⚠️ Interakt not configured, skipping WhatsApp')
     return { success: false, reason: 'not_configured' }
   }
 
@@ -385,7 +368,6 @@ async function sendWhatsAppConfirmation(bookingData: any) {
     const result = await response.json()
 
     if (response.ok) {
-      console.log('✅ WhatsApp sent successfully:', result.result?.messageId)
       return { success: true, messageId: result.result?.messageId }
     } else {
       console.error('❌ Interakt API error:', result)
@@ -400,7 +382,6 @@ async function sendWhatsAppConfirmation(bookingData: any) {
 // Send Email confirmation via Resend
 async function sendEmailConfirmation(bookingData: any) {
   if (!process.env.RESEND_API_KEY) {
-    console.log('⚠️ Resend not configured, skipping email')
     return { success: false, reason: 'not_configured' }
   }
 
@@ -422,7 +403,6 @@ async function sendEmailConfirmation(bookingData: any) {
     const result = await response.json()
 
     if (response.ok) {
-      console.log('✅ Email sent successfully:', result.id)
       return { success: true, emailId: result.id }
     } else {
       console.error('❌ Resend API error:', result)
@@ -556,7 +536,6 @@ function generateDemoConfirmationEmail(bookingData: any): string {
 // Notify admin team
 async function notifyAdminTeam(bookingData: any) {
   if (!process.env.INTERAKT_API_KEY) {
-    console.log('⚠️ Admin notification skipped - Interakt not configured')
     return
   }
 
@@ -593,7 +572,6 @@ async function notifyAdminTeam(bookingData: any) {
       }),
     })
 
-    console.log('✅ Admin notified via WhatsApp')
   } catch (error) {
     console.error('❌ Admin notification failed:', error)
   }
@@ -695,11 +673,6 @@ export async function PUT(request: NextRequest) {
         ...updates,
         updatedAt: new Date(),
       },
-    })
-
-    console.log('✅ Demo booking updated:', {
-      id: updatedBooking.id,
-      changes: Object.keys(updates),
     })
 
     return NextResponse.json({
