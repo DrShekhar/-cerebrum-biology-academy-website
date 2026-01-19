@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { cookies } from 'next/headers'
 import jwt from 'jsonwebtoken'
 import { randomUUID } from 'crypto'
 import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
@@ -58,10 +57,7 @@ export async function POST(request: NextRequest) {
 
     if (!uid || !phoneNumber) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Firebase UID and phone number are required' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'Firebase UID and phone number are required' }, { status: 400 })
       )
     }
 
@@ -90,16 +86,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Normalize phone number to E.164 format
-    const normalizedPhone = phoneNumber.startsWith('+') ? phoneNumber : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
+    const normalizedPhone = phoneNumber.startsWith('+')
+      ? phoneNumber
+      : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
 
     // Action: Check if user exists
     if (action === 'check') {
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [
-            { phone: normalizedPhone },
-            { firebaseUid: uid },
-          ],
+          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
         },
       })
 
@@ -118,20 +113,14 @@ export async function POST(request: NextRequest) {
     if (action === 'signup') {
       if (!firstName) {
         return addSecurityHeaders(
-          NextResponse.json(
-            { error: 'First name is required for signup' },
-            { status: 400 }
-          )
+          NextResponse.json({ error: 'First name is required for signup' }, { status: 400 })
         )
       }
 
       // Check if user already exists
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [
-            { phone: normalizedPhone },
-            { firebaseUid: uid },
-          ],
+          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
         },
       })
 
@@ -207,19 +196,13 @@ export async function POST(request: NextRequest) {
       // Find user by phone or Firebase UID
       let user = await prisma.users.findFirst({
         where: {
-          OR: [
-            { phone: normalizedPhone },
-            { firebaseUid: uid },
-          ],
+          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
         },
       })
 
       if (!user) {
         return addSecurityHeaders(
-          NextResponse.json(
-            { error: 'User not found. Please sign up first.' },
-            { status: 404 }
-          )
+          NextResponse.json({ error: 'User not found. Please sign up first.' }, { status: 404 })
         )
       }
 
@@ -241,7 +224,10 @@ export async function POST(request: NextRequest) {
       const now = new Date()
       const isTrialActive = user.trialEndDate ? now < user.trialEndDate : false
       const trialDaysRemaining = user.trialEndDate
-        ? Math.max(0, Math.ceil((user.trialEndDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)))
+        ? Math.max(
+            0,
+            Math.ceil((user.trialEndDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+          )
         : 0
 
       // Create JWT token for NextAuth session
@@ -261,16 +247,33 @@ export async function POST(request: NextRequest) {
         { expiresIn: '7d' }
       )
 
-      // Set session cookie using Next.js cookies API (reliable across all environments)
+      // Set session cookie directly on the response object for maximum reliability
+      // This ensures the Set-Cookie header is definitely included in the response
       const isProduction = process.env.NODE_ENV === 'production'
       const maxAge = 7 * 24 * 60 * 60 // 7 days in seconds
 
-      // Use Next.js cookies() API - the recommended way to set cookies in route handlers
       // SECURITY: Use __Secure- prefix in production for enhanced cookie security
       // The __Secure- prefix tells browsers to only accept the cookie over HTTPS
-      const cookieStore = await cookies()
       const cookieName = isProduction ? '__Secure-authjs.session-token' : 'authjs.session-token'
-      cookieStore.set(cookieName, sessionToken, {
+
+      // Create response first, then set cookie directly on it
+      const response = NextResponse.json({
+        success: true,
+        userId: user.id,
+        user: {
+          id: user.id,
+          name: user.name,
+          role: user.role.toLowerCase(),
+          phone: normalizedPhone,
+          coachingTier: user.coachingTier,
+          isTrialActive: isTrialActive,
+          trialDaysRemaining: trialDaysRemaining,
+          trialEndDate: user.trialEndDate,
+        },
+      })
+
+      // Set cookie directly on the response object - most reliable method
+      response.cookies.set(cookieName, sessionToken, {
         httpOnly: true,
         secure: isProduction,
         sameSite: 'lax',
@@ -278,41 +281,18 @@ export async function POST(request: NextRequest) {
         maxAge: maxAge,
       })
 
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('[Firebase Session] Cookie set via Next.js cookies() API')
-      }
-
       // Reset rate limit on successful login
       AuthRateLimit.resetRateLimit(rateLimitKey)
 
       if (process.env.NODE_ENV !== 'production') {
         console.log(`[Firebase Session] User logged in: ${user.id}`)
+        console.log(`[Firebase Session] Cookie '${cookieName}' set on response`)
       }
 
-      return addSecurityHeaders(
-        NextResponse.json({
-          success: true,
-          userId: user.id,
-          user: {
-            id: user.id,
-            name: user.name,
-            role: user.role.toLowerCase(),
-            phone: normalizedPhone,
-            coachingTier: user.coachingTier,
-            isTrialActive: isTrialActive,
-            trialDaysRemaining: trialDaysRemaining,
-            trialEndDate: user.trialEndDate,
-          },
-        })
-      )
+      return addSecurityHeaders(response)
     }
 
-    return addSecurityHeaders(
-      NextResponse.json(
-        { error: 'Invalid action' },
-        { status: 400 }
-      )
-    )
+    return addSecurityHeaders(NextResponse.json({ error: 'Invalid action' }, { status: 400 }))
   } catch (error) {
     // Detailed error logging for debugging
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
@@ -331,10 +311,18 @@ export async function POST(request: NextRequest) {
     if (errorMessage.includes('Unique constraint')) {
       userMessage = 'This phone number is already registered. Please try logging in instead.'
       statusCode = 409
-    } else if (errorMessage.includes('Connection') || errorMessage.includes('timeout') || errorMessage.includes('ETIMEDOUT')) {
+    } else if (
+      errorMessage.includes('Connection') ||
+      errorMessage.includes('timeout') ||
+      errorMessage.includes('ETIMEDOUT')
+    ) {
       userMessage = 'We are experiencing connection issues. Please try again in a moment.'
       statusCode = 503
-    } else if (errorMessage.includes('does not exist') || errorMessage.includes('column') || errorMessage.includes('prisma')) {
+    } else if (
+      errorMessage.includes('does not exist') ||
+      errorMessage.includes('column') ||
+      errorMessage.includes('prisma')
+    ) {
       // Database schema mismatch - don't expose to users
       userMessage = 'We are updating our systems. Please try again in a few minutes.'
       statusCode = 503
