@@ -20,6 +20,12 @@ export const ChatbotWrapper = dynamic(
   { loading: () => null }
 )
 
+// ARIA Sales Agent - Lazy loaded for performance
+const SalesAgentWidgetComponent = dynamic(
+  () => import('@/components/sales-agent').then((mod) => mod.SalesAgentWidget),
+  { loading: () => null }
+)
+
 export function FloatingCTA() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
@@ -47,6 +53,19 @@ export function GlobalExitIntent() {
 
   if (!shouldLoad) return null
   return <GlobalExitIntentComponent />
+}
+
+// ARIA Sales Agent - Delays load for 3 seconds for better LCP
+export function SalesAgentWidget() {
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    const timerId = setTimeout(() => setShouldLoad(true), 3000)
+    return () => clearTimeout(timerId)
+  }, [])
+
+  if (!shouldLoad) return null
+  return <SalesAgentWidgetComponent />
 }
 
 // PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)

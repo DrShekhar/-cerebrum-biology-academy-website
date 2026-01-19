@@ -26,6 +26,7 @@ import {
   DynamicPWAProvider,
   DynamicTrialBanner,
   DynamicMaintenancePopup,
+  SalesAgentWidget,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
@@ -350,6 +351,9 @@ export default function RootLayout({
                         </ConditionalHeaderFooter>
                         <ConditionalHeaderFooter>
                           <ChatbotWrapper />
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <SalesAgentWidget />
                         </ConditionalHeaderFooter>
                         <ConditionalHeaderFooter>
                           <DynamicMaintenancePopup />
