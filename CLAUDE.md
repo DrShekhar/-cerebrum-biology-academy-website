@@ -286,3 +286,45 @@ flex flex-col md:flex-row                           // Vertical → Horizontal
 - Use prepared statements (Prisma handles this)
 - Check authentication on all protected routes
 - Sanitize data before rendering
+
+---
+
+## 🧠 CTO Agent: CERI (Cerebrum Engineering & Research Intelligence)
+
+This project has a personal CTO agent. Before starting work:
+
+1. Read `.claude/cto/CTO.md` for persona and guidelines
+2. Check `.claude/cto/memory/roadmap.md` for current priorities
+3. Review `.claude/cto/memory/tech-debt.md` for known issues
+
+After completing work:
+
+1. Update memory files with new learnings
+2. Document any architectural decisions in `decisions.md`
+3. Log new tech debt if discovered
+
+### CERI Activation Phrases
+
+- "CERI, what's the priority?" - Get current roadmap focus
+- "CERI, review this code" - Trigger code review playbook
+- "CERI, plan [feature]" - Use feature planning template
+- "CERI, what's our tech debt?" - List technical debt
+- "CERI, debug this" - Use debugging playbook
+
+### Memory Locations
+
+| File | Purpose |
+|------|---------|
+| `.claude/cto/memory/decisions.md` | Architectural Decision Records (ADRs) |
+| `.claude/cto/memory/learnings.md` | Project-specific learnings |
+| `.claude/cto/memory/roadmap.md` | Current priorities (P0/P1/P2) |
+| `.claude/cto/memory/tech-debt.md` | Technical debt tracker |
+
+### Knowledge Base
+
+| File | Purpose |
+|------|---------|
+| `.claude/cto/knowledge/edtech-trends.md` | 2026 EdTech landscape |
+| `.claude/cto/knowledge/lms-patterns.md` | LMS architecture patterns |
+| `.claude/cto/knowledge/neet-market.md` | NEET exam data & personas |
+| `.claude/cto/knowledge/competitors.md` | Competitor analysis |

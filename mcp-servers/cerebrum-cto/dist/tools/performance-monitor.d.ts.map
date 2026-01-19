@@ -1,0 +1,1 @@
+{"version":3,"file":"performance-monitor.d.ts","sourceRoot":"","sources":["../../src/tools/performance-monitor.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AASH,UAAU,iBAAiB;IACzB,GAAG,CAAC,EAAE,MAAM,CAAA;IACZ,IAAI,CAAC,EAAE,YAAY,GAAG,QAAQ,GAAG,MAAM,CAAA;CACxC;AAED,wBAAsB,gBAAgB,CAAC,MAAM,EAAE,iBAAiB;;;;;GA8G/D"}
