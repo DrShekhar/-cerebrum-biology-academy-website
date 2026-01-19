@@ -3,6 +3,7 @@ import { Clock, Calendar, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
+import { parseReadTime } from './utils'
 
 interface BlogPostHeaderProps {
   meta: BlogPostMeta
@@ -80,7 +81,7 @@ export function BlogPostHeader({ meta, category }: BlogPostHeaderProps) {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 mr-1" />
-                  {meta.readTime} min read
+                  {parseReadTime(meta.readTime)} min read
                 </div>
               </div>
             </div>

@@ -24,6 +24,7 @@ import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
 import { BlogPagination } from './BlogPagination'
 import { BlogThumbnail } from './BlogThumbnail'
+import { parseReadTime } from './utils'
 
 function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value)
@@ -324,7 +325,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                               {post.title}
                             </p>
                             <p className="text-xs text-gray-500 flex items-center gap-2">
-                              <span>{post.readTime} min read</span>
+                              <span>{parseReadTime(post.readTime)} min read</span>
                               <span>•</span>
                               <span>{(post.views || 0).toLocaleString()} views</span>
                             </p>
@@ -626,7 +627,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                             </div>
                             <div className="flex items-center">
                               <Clock className="w-4 h-4 mr-1" />
-                              {paginatedPosts[0].readTime} min
+                              {parseReadTime(paginatedPosts[0].readTime)} min
                             </div>
                             <div className="flex items-center text-orange-600">
                               <Eye className="w-4 h-4 mr-1" />
