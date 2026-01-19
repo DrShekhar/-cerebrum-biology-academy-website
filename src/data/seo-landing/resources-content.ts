@@ -2361,13 +2361,13 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         name: 'Riya Sharma',
         achievement: 'NEET 2024 - 680/720',
         quote: 'Live classes felt like being in a real classroom. I could ask doubts immediately and the teacher knew my name!',
-        score: 680,
+        score: '680/720',
       },
       {
         name: 'Aditya Verma',
         achievement: 'NEET 2024 - 645/720',
         quote: 'The live quizzes during class kept me engaged. Much better than passively watching recorded videos.',
-        score: 645,
+        score: '645/720',
       },
       {
         name: 'Sneha Patel',
@@ -2537,7 +2537,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         name: 'Priya Singh',
         achievement: 'NEET 2024 - 695/720',
         quote: 'The test series predicted my rank within 500 positions. The analysis helped me identify weak chapters I had ignored.',
-        score: 695,
+        score: '695/720',
       },
       {
         name: 'Rahul Kumar',
@@ -2548,7 +2548,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         name: 'Ananya Reddy',
         achievement: 'NEET 2024 - 660/720',
         quote: 'Video solutions were game-changer. Understood every mistake and never repeated them.',
-        score: 660,
+        score: '660/720',
       },
     ],
     faqs: [
@@ -2712,6 +2712,31 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '2500+', label: 'Students' },
+      { value: '4.9/5', label: 'Rating' },
+      { value: '500+', label: 'Hours' },
+      { value: '85%', label: 'Selection Rate' },
+    ],
+    testimonials: [
+      {
+        name: 'Priya Sharma',
+        achievement: 'NEET 2024 - 685/720',
+        quote: 'Online classes gave me access to AIIMS-level teaching from my hometown. The small batch meant teacher knew my weak areas.',
+        score: '685/720',
+      },
+      {
+        name: 'Arjun Verma',
+        achievement: 'NEET 2024 - 650/720',
+        quote: 'Saved 3 hours daily on commute. Used that time for self-study. Best decision for my NEET preparation.',
+        score: '650/720',
+      },
+      {
+        name: 'Sneha Patel',
+        achievement: 'Government College',
+        quote: 'As a dropper, online classes helped me prepare without leaving home. Got into a government medical college!',
+      },
+    ],
     faqs: [
       {
         question: 'What is the timing of NEET online classes?',
@@ -2890,6 +2915,31 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '1-on-1', label: 'Personal Attention' },
+      { value: '4.9/5', label: 'Student Rating' },
+      { value: 'Flexible', label: 'Timing' },
+      { value: '85%', label: 'Success Rate' },
+    ],
+    testimonials: [
+      {
+        name: 'Riya Singh',
+        achievement: 'NEET 2024 - 670/720',
+        quote: '1-on-1 tuition helped me cover weak chapters at my pace. Teacher understood my learning style perfectly.',
+        score: '670/720',
+      },
+      {
+        name: 'Karan Mehta',
+        achievement: 'Improved 200 marks',
+        quote: 'Moved from group coaching to personal tuition. My score jumped from 450 to 650 in 6 months!',
+      },
+      {
+        name: 'Ananya Reddy',
+        achievement: 'NEET 2024 - 655/720',
+        quote: 'Small batch tuition gave me confidence to ask any doubt. No hesitation, no judgement.',
+        score: '655/720',
+      },
+    ],
     faqs: [
       {
         question: 'Is online biology tuition effective?',
@@ -3062,6 +3112,32 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '10K+', label: 'Students Guided', icon: 'users' },
+      { value: '6', label: 'Timetable Types', icon: 'calendar' },
+      { value: '95%', label: 'Completion Rate', icon: 'chart' },
+      { value: 'FREE', label: 'Download', icon: 'download' },
+    ],
+    testimonials: [
+      {
+        name: 'Sneha P.',
+        achievement: 'NEET 2024 - 665/720',
+        quote: 'The Class 12 timetable helped me balance boards and NEET perfectly. Following the schedule consistently made all the difference!',
+        score: '665/720',
+      },
+      {
+        name: 'Varun M.',
+        achievement: 'NEET 2024 - 640/720 (Dropper)',
+        quote: 'As a dropper, I was lost. The intensive timetable gave me structure and accountability. Best decision I made.',
+        score: '640/720',
+      },
+      {
+        name: 'Ananya R.',
+        achievement: 'NEET 2024 - 680/720',
+        quote: 'The last 3-month sprint schedule was intense but exactly what I needed. High-yield topic focus really worked.',
+        score: '680/720',
+      },
+    ],
     faqs: [
       {
         question: 'How many hours should I study for NEET daily?',
@@ -3127,9 +3203,13 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
     ],
     schema: {
-      '@type': 'HowTo',
-      name: 'NEET Preparation Timetable 2025',
+      '@type': 'Article',
+      courseName: 'NEET Preparation Timetable 2025',
+      provider: 'Cerebrum Biology Academy',
       description: 'Expert-designed study schedules for NEET preparation',
+      duration: 'Self-paced',
+      price: 0,
+      priceCurrency: 'INR',
     },
   },
 
@@ -3229,6 +3309,32 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '500+', label: 'Diagrams', icon: 'image' },
+      { value: '38', label: 'Chapters', icon: 'book' },
+      { value: '35-45', label: 'Marks Coverage', icon: 'trophy' },
+      { value: 'FREE', label: 'Download', icon: 'download' },
+    ],
+    testimonials: [
+      {
+        name: 'Kavya S.',
+        achievement: 'NEET 2024 - 670/720',
+        quote: 'The diagram PDF was my revision companion. Before every test, I would go through the diagrams. Saved me 15+ marks in the actual exam!',
+        score: '670/720',
+      },
+      {
+        name: 'Rohan K.',
+        achievement: 'NEET 2024 - 655/720',
+        quote: 'I was terrible at diagrams. This organized collection made memorization easy. The exam-important marking helped prioritize.',
+        score: '655/720',
+      },
+      {
+        name: 'Meera N.',
+        achievement: 'NEET 2024 - 690/720',
+        quote: 'Best resource for last-minute revision. I could quickly scan through all diagrams in one sitting. Highly recommended!',
+        score: '690/720',
+      },
+    ],
     faqs: [
       {
         question: 'Which diagrams are most important for NEET?',
@@ -3401,6 +3507,31 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '50+', label: 'Free Hours' },
+      { value: '100K+', label: 'Views' },
+      { value: '4.8/5', label: 'Rating' },
+      { value: 'FREE', label: 'Forever' },
+    ],
+    testimonials: [
+      {
+        name: 'Rahul Kumar',
+        achievement: 'Started with Free, Now NEET 2024 - 640/720',
+        quote: 'Free lectures convinced me to join full course. Same teacher, same quality. Best decision!',
+        score: '640/720',
+      },
+      {
+        name: 'Meera Joshi',
+        achievement: 'Tier 3 City Student',
+        quote: "Couldn't afford coaching initially. Free lectures kept me on track until I could join the paid course.",
+      },
+      {
+        name: 'Vikram Patel',
+        achievement: 'NEET 2024 - 615/720',
+        quote: 'Dr. Shekhar explains so clearly even in free content. Photosynthesis lecture was life-changing!',
+        score: '615/720',
+      },
+    ],
     faqs: [
       {
         question: 'Are these lectures really free?',
@@ -3573,6 +3704,32 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '2500+', label: 'Students Selected' },
+      { value: '85%', label: 'Selection Rate' },
+      { value: '70%', label: 'Govt College' },
+      { value: '680+', label: 'Top Scores' },
+    ],
+    testimonials: [
+      {
+        name: 'Aditya Sharma',
+        achievement: 'NEET 2024 - 695/720, AIIMS Delhi',
+        quote: 'From a small village to AIIMS Delhi. Dr. Shekhar sir believed in me when I doubted myself.',
+        score: '695/720',
+      },
+      {
+        name: 'Priya Gupta',
+        achievement: 'Dropper - NEET 2024 - 665/720',
+        quote: 'Failed first attempt with 380. Second attempt 665. Online coaching gave me a second chance.',
+        score: '665/720',
+      },
+      {
+        name: 'Mohammed Asif',
+        achievement: 'NEET 2024 - 640/720, JIPMER',
+        quote: 'Government college was a dream. Now studying at JIPMER. All thanks to Cerebrum guidance.',
+        score: '640/720',
+      },
+    ],
     faqs: [
       {
         question: 'How many students qualify NEET from Cerebrum?',
@@ -3639,8 +3796,12 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Article',
-      name: 'NEET Success Stories 2024-25',
+      courseName: 'NEET Success Stories 2024-25',
+      provider: 'Cerebrum Biology Academy',
       description: 'Success stories and results from Cerebrum Biology Academy students',
+      duration: 'Varies',
+      price: 0,
+      priceCurrency: 'INR',
     },
   },
 }

@@ -1250,6 +1250,31 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '2500+', label: 'Students Selected' },
+      { value: '4.9/5', label: 'Google Rating' },
+      { value: '15', label: 'Max Batch Size' },
+      { value: '85%', label: 'Selection Rate' },
+    ],
+    testimonials: [
+      {
+        name: 'Neha Sharma',
+        achievement: 'NEET 2024 - 680/720',
+        quote: 'Compared 5 online coaching institutes. Cerebrum had the best faculty-to-student ratio and results.',
+        score: '680/720',
+      },
+      {
+        name: 'Rohit Verma',
+        achievement: 'NEET 2024 - 655/720',
+        quote: 'Small batch meant Dr. Shekhar knew my weak areas. That personal attention made all the difference.',
+        score: '655/720',
+      },
+      {
+        name: 'Kavya Patel',
+        achievement: 'Government Medical College',
+        quote: 'Was skeptical of online coaching initially. Now I recommend Cerebrum to everyone preparing for NEET.',
+      },
+    ],
     faqs: [
       {
         question: 'Which is the best online coaching for NEET biology?',
@@ -1428,6 +1453,32 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
     },
+    stats: [
+      { value: '85%', label: 'Success Rate Online' },
+      { value: '2500+', label: 'Online Selections' },
+      { value: 'Equal', label: 'Results vs Offline' },
+      { value: '60%', label: 'Cost Savings' },
+    ],
+    testimonials: [
+      {
+        name: 'Ankit Kumar',
+        achievement: 'NEET 2024 - 665/720 (Purely Online)',
+        quote: 'Was told online coaching wont work. Proved everyone wrong with 665 score. Quality teaching matters, not mode.',
+        score: '665/720',
+      },
+      {
+        name: 'Swati Sharma',
+        achievement: 'Dropper - NEET 2024 - 640/720',
+        quote: 'Tried offline as fresher, failed. Online coaching second year worked better - recorded classes were game-changer.',
+        score: '640/720',
+      },
+      {
+        name: 'Arjun Reddy',
+        achievement: 'NEET 2024 - 625/720, Government College',
+        quote: 'Small town, no good coaching. Online gave me AIIMS-level faculty. Now in government medical college.',
+        score: '625/720',
+      },
+    ],
     faqs: [
       {
         question: 'Is online coaching as effective as offline for NEET?',
@@ -1502,8 +1553,12 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'FAQPage',
-      name: 'Is Online NEET Coaching Effective?',
+      courseName: 'Is Online NEET Coaching Effective?',
+      provider: 'Cerebrum Biology Academy',
       description: 'Data-backed analysis of online NEET coaching effectiveness',
+      duration: 'Self-paced',
+      price: 0,
+      priceCurrency: 'INR',
     },
   },
 }
