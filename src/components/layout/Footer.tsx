@@ -169,6 +169,19 @@ export const Footer = memo(function Footer() {
     { name: 'Best Biology Books', href: '/best-biology-books-for-neet' },
   ]
 
+  const programDetailsLinks = [
+    { name: 'NEET Biology Coaching Delhi NCR', href: '/neet-biology-coaching-delhi-ncr' },
+    { name: 'NEET Biology Class 11', href: '/neet-biology-class-11' },
+    { name: 'NEET Biology Class 12', href: '/neet-biology-class-12' },
+    { name: 'NEET Biology Study Material', href: '/neet-biology-study-material' },
+    { name: 'NEET Biology Preparation Tips', href: '/neet-biology-preparation-tips' },
+    { name: 'Class 11 Biology Tuition', href: '/class-11-biology-tuition' },
+    { name: 'Class 12 Biology Tuition', href: '/class-12-biology-tuition' },
+    { name: 'Class 12 Board Biology Prep', href: '/class-12-board-biology-preparation' },
+    { name: 'CBSE Biology Coaching Delhi', href: '/cbse-biology-coaching-delhi' },
+    { name: 'Online Biology Classes', href: '/online-biology-classes' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -387,6 +400,23 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Explore Programs</h4>
             <ul className="space-y-2">
               {hubLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Program Details - SEO Landing Pages */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.425s' }}>
+            <h4 className="font-semibold text-lg mb-4 text-white">Program Details</h4>
+            <ul className="space-y-2">
+              {programDetailsLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
