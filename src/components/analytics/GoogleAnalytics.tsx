@@ -3,6 +3,8 @@
 import Script from 'next/script'
 import { GA_MEASUREMENT_ID } from '@/lib/analytics/googleAnalytics'
 
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || ''
+
 export default function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
     return null
@@ -19,6 +21,8 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+
+          // Google Analytics 4 configuration
           gtag('config', '${GA_MEASUREMENT_ID}', {
             page_title: document.title,
             page_location: window.location.href,
@@ -30,6 +34,9 @@ export default function GoogleAnalytics() {
               'custom_parameter_3': 'enrollment_source'
             }
           });
+
+          // Google Ads Conversion Tracking
+          ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : '// Google Ads ID not configured'}
         `}
       </Script>
     </>
