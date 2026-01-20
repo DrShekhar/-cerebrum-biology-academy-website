@@ -1,7 +1,17 @@
 'use client'
 
-import { useRef, useEffect, useCallback } from 'react'
-import * as d3 from 'd3'
+import { useRef, useEffect, useCallback, useState } from 'react'
+
+// PERFORMANCE: Dynamic import d3 only when component is used
+// This saves ~500KB from the initial bundle
+type D3Module = typeof import('d3')
+let d3Module: D3Module | null = null
+
+async function loadD3(): Promise<D3Module> {
+  if (d3Module) return d3Module
+  d3Module = await import('d3')
+  return d3Module
+}
 
 interface UseDiagramOptions {
   width: number
@@ -11,7 +21,7 @@ interface UseDiagramOptions {
 
 interface UseDiagramReturn {
   svgRef: React.RefObject<SVGSVGElement | null>
-  svg: d3.Selection<SVGSVGElement, unknown, null, undefined> | null
+  svg: any | null
   dimensions: {
     width: number
     height: number
@@ -19,8 +29,9 @@ interface UseDiagramReturn {
     innerHeight: number
     margin: { top: number; right: number; bottom: number; left: number }
   }
-  createGroup: (className: string) => d3.Selection<SVGGElement, unknown, null, undefined> | null
+  createGroup: (className: string) => any | null
   clear: () => void
+  isLoading: boolean
 }
 
 export function useDiagram({
@@ -29,11 +40,32 @@ export function useDiagram({
   margin = { top: 20, right: 20, bottom: 20, left: 20 },
 }: UseDiagramOptions): UseDiagramReturn {
   const svgRef = useRef<SVGSVGElement | null>(null)
+  const [d3, setD3] = useState<D3Module | null>(d3Module)
+  const [isLoading, setIsLoading] = useState(!d3Module)
+
+  // Load d3 dynamically on mount
+  useEffect(() => {
+    let isMounted = true
+
+    const init = async () => {
+      const d3Lib = await loadD3()
+      if (isMounted) {
+        setD3(d3Lib)
+        setIsLoading(false)
+      }
+    }
+
+    init()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const getSvg = useCallback(() => {
-    if (!svgRef.current) return null
+    if (!svgRef.current || !d3) return null
     return d3.select(svgRef.current)
-  }, [])
+  }, [d3])
 
   const createGroup = useCallback(
     (className: string) => {
@@ -70,6 +102,7 @@ export function useDiagram({
     dimensions,
     createGroup,
     clear,
+    isLoading,
   }
 }
 
