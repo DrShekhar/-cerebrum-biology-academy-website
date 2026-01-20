@@ -490,12 +490,6 @@ export class GoogleIntegration {
   }
 }
 
-// Global Type Extensions
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-  }
-}
+// Global Type Extensions are in src/types/globals.d.ts
 
 export const googleIntegration = new GoogleIntegration()

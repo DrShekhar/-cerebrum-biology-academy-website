@@ -1,10 +1,5 @@
 // Google Ads conversion tracking for Cerebrum Biology Academy
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    google_trackConversion?: (config: any) => void
-  }
-}
+// Note: Window.gtag is declared in src/types/globals.d.ts
 
 // Google Ads Account Configuration
 export const GOOGLE_ADS_CONFIG = {

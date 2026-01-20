@@ -3,16 +3,10 @@
  *
  * Provides comprehensive event tracking for user behavior analysis.
  * Tracks key events: AI usage, test generation, enrollments, and conversions.
+ * Note: Window.gtag and Window.dataLayer are declared in src/types/globals.d.ts
  */
 
 import { logger } from '../monitoring/logger'
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-  }
-}
 
 export type GAEventName =
   | 'page_view'

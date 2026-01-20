@@ -85,20 +85,22 @@ declare global {
     }
   }
 
-  // Google Analytics gtag and Facebook Pixel fbq
+  // Analytics and third-party integrations on Window
   interface Window {
-    gtag?: ((...args: any[]) => void) | undefined
+    gtag?: (...args: any[]) => void
     dataLayer?: any[]
+    fbq?: (...args: any[]) => void
+    _fbq?: any
+    clarity?: (...args: any[]) => void
+    _hsq?: any[]
+    google_trackConversion?: (config: any) => void
     Razorpay?: new (options: RazorpayOptions) => {
       open(): void
       on(event: string, handler: (response: unknown) => void): void
     }
-    fbq?: ((...args: any[]) => void) | undefined
-    _fbq?: any
   }
 
-  // Google Analytics gtag function (can be undefined on server)
-  function gtag(...args: any[]): void
+  // Google Analytics gtag function (for direct gtag() calls, not window.gtag)
   var gtag: ((...args: any[]) => void) | undefined
 }
 

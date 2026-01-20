@@ -604,12 +604,7 @@ export class MetaIntegration {
   }
 }
 
-// Global Type Extensions
-declare global {
-  interface Window {
-    fbq: (...args: any[]) => void
-  }
-}
+// Global Type Extensions are in src/types/globals.d.ts
 
 export const metaIntegration = new MetaIntegration()
 

@@ -1,14 +1,8 @@
 /**
  * Google Tag Manager Service
  * Handles GTM initialization and event tracking
+ * Note: Window.dataLayer and Window.gtag are declared in src/types/globals.d.ts
  */
-
-declare global {
-  interface Window {
-    dataLayer: any[]
-    gtag: (...args: any[]) => void
-  }
-}
 
 export class GTMService {
   private static isInitialized = false

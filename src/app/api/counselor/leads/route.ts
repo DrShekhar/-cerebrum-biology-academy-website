@@ -50,6 +50,11 @@ export async function GET(request: NextRequest) {
     const priority = searchParams.get('priority') as Priority | null
     const search = searchParams.get('search')
 
+    // Pagination parameters with validation
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1'))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')))
+    const skip = (page - 1) * limit
+
     const where: any = {
       assignedToId: session.userId,
     }
@@ -70,55 +75,76 @@ export async function GET(request: NextRequest) {
       ]
     }
 
-    const leads = await prisma.leads.findMany({
-      where,
-      select: {
-        id: true,
-        studentName: true,
-        email: true,
-        phone: true,
-        courseInterest: true,
-        source: true,
-        stage: true,
-        priority: true,
-        score: true,
-        scoreUpdatedAt: true,
-        scoreBreakdown: true,
-        nextFollowUpAt: true,
-        lostReason: true,
-        createdAt: true,
-        updatedAt: true,
-        assignedToId: true,
-        demoBookingId: true,
-        crm_communications: {
-          take: 5,
-          orderBy: { sentAt: 'desc' },
-        },
-        offers: {
-          orderBy: { createdAt: 'desc' },
-        },
-        fee_plans: {
-          orderBy: { createdAt: 'desc' },
-        },
-        tasks: {
-          orderBy: { dueDate: 'asc' },
-          take: 3,
-        },
-        _count: {
-          select: {
-            crm_communications: true,
-            notes: true,
-            tasks: true,
+    // Fetch leads with pagination and get total count
+    const [leads, totalCount] = await Promise.all([
+      prisma.leads.findMany({
+        where,
+        select: {
+          id: true,
+          studentName: true,
+          email: true,
+          phone: true,
+          courseInterest: true,
+          source: true,
+          stage: true,
+          priority: true,
+          score: true,
+          scoreUpdatedAt: true,
+          scoreBreakdown: true,
+          nextFollowUpAt: true,
+          lostReason: true,
+          createdAt: true,
+          updatedAt: true,
+          assignedToId: true,
+          demoBookingId: true,
+          crm_communications: {
+            take: 5,
+            orderBy: { sentAt: 'desc' },
+          },
+          offers: {
+            orderBy: { createdAt: 'desc' },
+            take: 1, // Only fetch most recent offer
+          },
+          fee_plans: {
+            orderBy: { createdAt: 'desc' },
+            take: 1, // Only fetch most recent fee plan
+          },
+          tasks: {
+            orderBy: { dueDate: 'asc' },
+            take: 3,
+          },
+          _count: {
+            select: {
+              crm_communications: true,
+              notes: true,
+              tasks: true,
+              offers: true,
+              fee_plans: true,
+            },
           },
         },
-      },
-      orderBy: [{ score: 'desc' }, { nextFollowUpAt: 'asc' }, { createdAt: 'desc' }],
-    })
+        orderBy: [{ score: 'desc' }, { nextFollowUpAt: 'asc' }, { createdAt: 'desc' }],
+        take: limit,
+        skip: skip,
+      }),
+
+      // Get total count for pagination
+      prisma.leads.count({ where }),
+    ])
+
+    const totalPages = Math.ceil(totalCount / limit)
 
     return NextResponse.json({
       success: true,
       data: leads,
-      count: leads.length,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages,
+        hasNextPage: page < totalPages,
+        hasPreviousPage: page > 1,
+      },
     })
   } catch (error) {
     console.error('Error fetching leads:', error)

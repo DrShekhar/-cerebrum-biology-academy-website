@@ -13,15 +13,7 @@ import {
   trackConversion,
 } from '@/lib/analytics/googleAnalytics'
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-    fbq: (...args: any[]) => void
-    clarity: (...args: any[]) => void
-    _hsq: any[]
-  }
-}
+// Global Window interface extensions are declared in @/lib/analytics/types
 
 export interface AnalyticsEvent {
   name: string

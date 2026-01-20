@@ -1,14 +1,5 @@
 // Type definitions for Google Analytics and tracking
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: Gtag.Gtag
-    dataLayer?: any[]
-    fbq?: (...args: any[]) => void
-    _fbq?: any
-  }
-}
+// Note: Window interface extensions are in src/types/globals.d.ts
 
 // Gtag namespace for proper typing
 export namespace Gtag {

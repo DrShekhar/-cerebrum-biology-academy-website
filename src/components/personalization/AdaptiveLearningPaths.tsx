@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -65,7 +65,7 @@ interface Milestone {
   importance: 'high' | 'medium' | 'low'
 }
 
-export function AdaptiveLearningPaths() {
+function AdaptiveLearningPathsComponent() {
   const { preferences, updatePreferences, trackBehavior } = usePersonalization()
   const [selectedPath, setSelectedPath] = useState<LearningPath | null>(null)
   const [studyPlan, setStudyPlan] = useState<StudyPlan | null>(null)
@@ -73,13 +73,8 @@ export function AdaptiveLearningPaths() {
     'assessment'
   )
 
-  useEffect(() => {
-    if (preferences.currentClass && preferences.targetExam) {
-      generateLearningPaths()
-    }
-  }, [preferences])
-
-  const generateLearningPaths = (): LearningPath[] => {
+  // Memoize learning paths generation - only recalculate when these specific preferences change
+  const learningPaths = useMemo((): LearningPath[] => {
     const paths: LearningPath[] = []
 
     // Foundation Path (for beginners or weak concepts)
@@ -195,94 +190,9 @@ export function AdaptiveLearningPaths() {
     }
 
     return paths.sort((a, b) => a.priority - b.priority)
-  }
+  }, [preferences.currentScore, preferences.currentClass, preferences.startDate])
 
-  const generateStudyPlan = (path: LearningPath): StudyPlan => {
-    const weeklyHours =
-      preferences.sessionDuration === '120min'
-        ? 14
-        : preferences.sessionDuration === '90min'
-          ? 11
-          : preferences.sessionDuration === '60min'
-            ? 8
-            : 6
-
-    const dailySchedule: { [key: string]: StudySession[] } = {}
-
-    // Generate daily schedule based on preferences
-    const studyTime = preferences.studyTime || 'evening'
-    const timeSlots = getTimeSlots(studyTime)
-    const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    weekDays.forEach((day) => {
-      dailySchedule[day] = [
-        {
-          time: timeSlots.primary,
-          subject: 'Biology',
-          topic: 'Current Module',
-          type: 'concept',
-          duration: parseInt(preferences.sessionDuration?.replace('min', '') || '60'),
-        },
-      ]
-
-      if (weeklyHours > 8) {
-        dailySchedule[day].push({
-          time: timeSlots.secondary,
-          subject: 'Practice',
-          topic: 'Mock Tests',
-          type: 'practice',
-          duration: 30,
-        })
-      }
-    })
-
-    // Sunday - Revision & Tests
-    dailySchedule['Sunday'] = [
-      {
-        time: timeSlots.primary,
-        subject: 'Weekly Test',
-        topic: 'Full Syllabus',
-        type: 'test',
-        duration: 180,
-      },
-    ]
-
-    const milestones: Milestone[] = [
-      {
-        week: 4,
-        goal: 'Complete Foundation Modules',
-        target: '80% module completion',
-        importance: 'high',
-      },
-      {
-        week: 8,
-        goal: 'First Mock Test Milestone',
-        target: '250+ score',
-        importance: 'high',
-      },
-      {
-        week: 12,
-        goal: 'Advanced Topics Mastery',
-        target: '300+ practice score',
-        importance: 'medium',
-      },
-      {
-        week: 16,
-        goal: 'NEET Readiness',
-        target: path.estimatedScore + '+ score',
-        importance: 'high',
-      },
-    ]
-
-    const adaptiveRecommendations = generateAdaptiveRecommendations(path)
-
-    return {
-      weeklyHours,
-      dailySchedule,
-      milestones,
-      adaptiveRecommendations,
-    }
-  }
-
+  // Helper function for time slots
   const getTimeSlots = (studyTime: string) => {
     switch (studyTime) {
       case 'morning':
@@ -298,47 +208,149 @@ export function AdaptiveLearningPaths() {
     }
   }
 
-  const generateAdaptiveRecommendations = (path: LearningPath): string[] => {
-    const recommendations = []
+  // Memoize adaptive recommendations generation
+  const generateAdaptiveRecommendations = useCallback(
+    (path: LearningPath): string[] => {
+      const recommendations = []
 
-    if (preferences.learningStyle === 'visual') {
-      recommendations.push('Focus on diagrams and flowcharts for better retention')
-      recommendations.push('Use mind maps for complex topics like genetics')
-    }
+      if (preferences.learningStyle === 'visual') {
+        recommendations.push('Focus on diagrams and flowcharts for better retention')
+        recommendations.push('Use mind maps for complex topics like genetics')
+      }
 
-    if (preferences.currentScore && preferences.currentScore < 200) {
-      recommendations.push('Spend extra time on NCERT fundamentals')
-      recommendations.push('Take more practice tests to build confidence')
-    }
+      if (preferences.currentScore && preferences.currentScore < 200) {
+        recommendations.push('Spend extra time on NCERT fundamentals')
+        recommendations.push('Take more practice tests to build confidence')
+      }
 
-    if (preferences.targetScore && preferences.targetScore > 320) {
-      recommendations.push('Focus on advanced application problems')
-      recommendations.push("Analyze previous year toppers' strategies")
-    }
+      if (preferences.targetScore && preferences.targetScore > 320) {
+        recommendations.push('Focus on advanced application problems')
+        recommendations.push("Analyze previous year toppers' strategies")
+      }
 
-    if (preferences.studyTime === 'night') {
-      recommendations.push('Avoid heavy topics late at night')
-      recommendations.push('Use active recall techniques for better memory')
-    }
+      if (preferences.studyTime === 'night') {
+        recommendations.push('Avoid heavy topics late at night')
+        recommendations.push('Use active recall techniques for better memory')
+      }
 
-    return recommendations
-  }
+      return recommendations
+    },
+    [
+      preferences.learningStyle,
+      preferences.currentScore,
+      preferences.targetScore,
+      preferences.studyTime,
+    ]
+  )
 
-  const handlePathSelection = (path: LearningPath) => {
-    setSelectedPath(path)
-    const plan = generateStudyPlan(path)
-    setStudyPlan(plan)
-    setCurrentStep('plan')
+  // Memoize study plan generation
+  const generateStudyPlan = useCallback(
+    (path: LearningPath): StudyPlan => {
+      const weeklyHours =
+        preferences.sessionDuration === '120min'
+          ? 14
+          : preferences.sessionDuration === '90min'
+            ? 11
+            : preferences.sessionDuration === '60min'
+              ? 8
+              : 6
 
-    trackBehavior('learning_path_selected', { pathId: path.id })
-    // Note: weeklyStudyHours would need to be added to UserPreferences interface
-    // updatePreferences({ weeklyStudyHours: plan.weeklyHours })
-  }
+      const dailySchedule: { [key: string]: StudySession[] } = {}
 
-  const handleStartPlan = () => {
+      // Generate daily schedule based on preferences
+      const studyTime = preferences.studyTime || 'evening'
+      const timeSlots = getTimeSlots(studyTime)
+      const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+      weekDays.forEach((day) => {
+        dailySchedule[day] = [
+          {
+            time: timeSlots.primary,
+            subject: 'Biology',
+            topic: 'Current Module',
+            type: 'concept',
+            duration: parseInt(preferences.sessionDuration?.replace('min', '') || '60'),
+          },
+        ]
+
+        if (weeklyHours > 8) {
+          dailySchedule[day].push({
+            time: timeSlots.secondary,
+            subject: 'Practice',
+            topic: 'Mock Tests',
+            type: 'practice',
+            duration: 30,
+          })
+        }
+      })
+
+      // Sunday - Revision & Tests
+      dailySchedule['Sunday'] = [
+        {
+          time: timeSlots.primary,
+          subject: 'Weekly Test',
+          topic: 'Full Syllabus',
+          type: 'test',
+          duration: 180,
+        },
+      ]
+
+      const milestones: Milestone[] = [
+        {
+          week: 4,
+          goal: 'Complete Foundation Modules',
+          target: '80% module completion',
+          importance: 'high',
+        },
+        {
+          week: 8,
+          goal: 'First Mock Test Milestone',
+          target: '250+ score',
+          importance: 'high',
+        },
+        {
+          week: 12,
+          goal: 'Advanced Topics Mastery',
+          target: '300+ practice score',
+          importance: 'medium',
+        },
+        {
+          week: 16,
+          goal: 'NEET Readiness',
+          target: path.estimatedScore + '+ score',
+          importance: 'high',
+        },
+      ]
+
+      const adaptiveRecommendations = generateAdaptiveRecommendations(path)
+
+      return {
+        weeklyHours,
+        dailySchedule,
+        milestones,
+        adaptiveRecommendations,
+      }
+    },
+    [preferences.sessionDuration, preferences.studyTime, generateAdaptiveRecommendations]
+  )
+
+  const handlePathSelection = useCallback(
+    (path: LearningPath) => {
+      setSelectedPath(path)
+      const plan = generateStudyPlan(path)
+      setStudyPlan(plan)
+      setCurrentStep('plan')
+
+      trackBehavior('learning_path_selected', { pathId: path.id })
+      // Note: weeklyStudyHours would need to be added to UserPreferences interface
+      // updatePreferences({ weeklyStudyHours: plan.weeklyHours })
+    },
+    [generateStudyPlan, trackBehavior]
+  )
+
+  const handleStartPlan = useCallback(() => {
     setCurrentStep('schedule')
     trackBehavior('study_plan_started', { pathId: selectedPath?.id })
-  }
+  }, [selectedPath?.id, trackBehavior])
 
   if (currentStep === 'assessment' || !preferences.currentClass) {
     return (
@@ -385,8 +397,6 @@ export function AdaptiveLearningPaths() {
   }
 
   if (currentStep === 'paths') {
-    const paths = generateLearningPaths()
-
     return (
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
@@ -394,7 +404,7 @@ export function AdaptiveLearningPaths() {
           Recommended Learning Paths
         </h3>
         <div className="space-y-4">
-          {paths.map((path) => (
+          {learningPaths.map((path) => (
             <motion.div
               key={path.id}
               className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
@@ -466,7 +476,10 @@ export function AdaptiveLearningPaths() {
           <h4 className="font-semibold text-gray-900 mb-3">Key Milestones</h4>
           <div className="space-y-2">
             {studyPlan.milestones.map((milestone) => (
-              <div key={`milestone-week-${milestone.week}-${milestone.goal.slice(0, 20).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-center space-x-3 p-2 bg-gray-50 rounded">
+              <div
+                key={`milestone-week-${milestone.week}-${milestone.goal.slice(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
+                className="flex items-center space-x-3 p-2 bg-gray-50 rounded"
+              >
                 <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                   {milestone.week}
                 </div>
@@ -495,7 +508,10 @@ export function AdaptiveLearningPaths() {
           </h4>
           <div className="space-y-2">
             {studyPlan.adaptiveRecommendations.map((rec) => (
-              <div key={`rec-${rec.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start space-x-2 text-sm">
+              <div
+                key={`rec-${rec.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
+                className="flex items-start space-x-2 text-sm"
+              >
                 <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{rec}</span>
               </div>
@@ -527,7 +543,10 @@ export function AdaptiveLearningPaths() {
               <h4 className="font-semibold text-gray-900 mb-2">{day}</h4>
               <div className="space-y-2">
                 {sessions.map((session) => (
-                  <div key={`session-${session.time}-${session.subject}-${session.topic}`} className="flex items-center justify-between text-sm">
+                  <div
+                    key={`session-${session.time}-${session.subject}-${session.topic}`}
+                    className="flex items-center justify-between text-sm"
+                  >
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="font-medium">{session.time}</span>
@@ -556,6 +575,9 @@ export function AdaptiveLearningPaths() {
 
   return null
 }
+
+// Memoize component to prevent unnecessary re-renders
+export const AdaptiveLearningPaths = React.memo(AdaptiveLearningPathsComponent)
 
 export function QuickAssessment() {
   const { preferences, updatePreferences, trackBehavior } = usePersonalization()

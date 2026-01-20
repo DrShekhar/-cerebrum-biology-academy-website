@@ -48,101 +48,121 @@ function getDefaultDashboardStats(): DashboardStatsResponse {
 
 /**
  * Calculate comprehensive dashboard statistics
+ * OPTIMIZED: Uses database aggregations instead of fetching all records
  */
 async function calculateDashboardStats(userId: string): Promise<DashboardStatsResponse> {
   try {
-    // Fetch all completed tests
-    const allTests = await prisma.testAttempt.findMany({
-      where: {
-        freeUserId: userId,
-        status: 'COMPLETED',
-      },
-      orderBy: { submittedAt: 'desc' },
-    })
+    const oneWeekAgo = new Date()
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
+
+    // Single aggregated query for all stats (replaces 3 separate queries)
+    const [overallStats, thisWeekStats, recentTests, upcomingTestSessions] = await Promise.all([
+      // Overall statistics using aggregation
+      prisma.testAttempt.aggregate({
+        where: {
+          freeUserId: userId,
+          status: 'COMPLETED',
+        },
+        _count: { id: true },
+        _avg: { percentage: true },
+        _sum: {
+          questionCount: true,
+          totalMarks: true,
+          score: true,
+          timeSpent: true,
+        },
+      }),
+
+      // This week's statistics using aggregation
+      prisma.testAttempt.aggregate({
+        where: {
+          freeUserId: userId,
+          status: 'COMPLETED',
+          submittedAt: { gte: oneWeekAgo },
+        },
+        _count: { id: true },
+        _sum: {
+          questionCount: true,
+          timeSpent: true,
+        },
+      }),
+
+      // Fetch only the 20 most recent tests for improvement calculation (not all tests)
+      prisma.testAttempt.findMany({
+        where: {
+          freeUserId: userId,
+          status: 'COMPLETED',
+        },
+        select: {
+          percentage: true,
+          submittedAt: true,
+        },
+        orderBy: { submittedAt: 'desc' },
+        take: 20,
+      }),
+
+      // Upcoming tests
+      prisma.testSession.findMany({
+        where: {
+          freeUserId: userId,
+          status: 'NOT_STARTED',
+          startedAt: null,
+        },
+        take: 5,
+        orderBy: { createdAt: 'asc' },
+        include: {
+          testTemplate: {
+            select: {
+              title: true,
+            },
+          },
+        },
+      }),
+    ])
 
     // Return default data if no tests found
-    if (allTests.length === 0) {
+    const totalTests = overallStats._count.id
+    if (totalTests === 0) {
       return getDefaultDashboardStats()
     }
 
-    const totalTests = allTests.length
-
-    // Calculate average score
-    const averageScore =
-      totalTests > 0 ? allTests.reduce((sum, test) => sum + test.percentage, 0) / totalTests : 0
-
-    // Calculate total questions answered
-    const totalQuestions = allTests.reduce((sum, test) => sum + test.questionCount, 0)
-
-    // Calculate overall accuracy
-    const totalMarks = allTests.reduce((sum, test) => sum + test.totalMarks, 0)
-    const totalScored = allTests.reduce((sum, test) => sum + test.score, 0)
+    // Calculate metrics from aggregated data
+    const averageScore = overallStats._avg.percentage || 0
+    const totalQuestions = overallStats._sum.questionCount || 0
+    const totalMarks = overallStats._sum.totalMarks || 0
+    const totalScored = overallStats._sum.score || 0
     const accuracy = totalMarks > 0 ? (totalScored / totalMarks) * 100 : 0
+    const totalStudyTime = Math.round((overallStats._sum.timeSpent || 0) / 60)
 
-    // Calculate total study time (in minutes)
-    const totalStudyTime = Math.round(
-      allTests.reduce((sum, test) => sum + (test.timeSpent || 0), 0) / 60
-    )
-
-    // Calculate improvement rate (compare last 10 vs previous 10 tests)
-    const recentTests = allTests.slice(0, 10)
-    const previousTests = allTests.slice(10, 20)
+    // Calculate improvement rate from recent tests only
+    const recentTestsSlice = recentTests.slice(0, 10)
+    const previousTestsSlice = recentTests.slice(10, 20)
 
     const recentAvg =
-      recentTests.length > 0
-        ? recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
+      recentTestsSlice.length > 0
+        ? recentTestsSlice.reduce((sum, test) => sum + test.percentage, 0) / recentTestsSlice.length
         : 0
 
     const previousAvg =
-      previousTests.length > 0
-        ? previousTests.reduce((sum, test) => sum + test.percentage, 0) / previousTests.length
+      previousTestsSlice.length > 0
+        ? previousTestsSlice.reduce((sum, test) => sum + test.percentage, 0) /
+          previousTestsSlice.length
         : 0
 
     const improvementRate = previousAvg > 0 ? ((recentAvg - previousAvg) / previousAvg) * 100 : 0
 
     // Get last test date
-    const lastTestDate = allTests.length > 0 ? allTests[0].submittedAt : null
+    const lastTestDate = recentTests.length > 0 ? recentTests[0].submittedAt : null
 
-    // Calculate this week's statistics
-    const oneWeekAgo = new Date()
-    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-
-    const testsThisWeek = allTests.filter(
-      (test) => test.submittedAt && test.submittedAt >= oneWeekAgo
-    ).length
-
-    const thisWeekTests = allTests.filter(
-      (test) => test.submittedAt && test.submittedAt >= oneWeekAgo
-    )
-
-    const questionsThisWeek = thisWeekTests.reduce((sum, test) => sum + test.questionCount, 0)
-
-    const studyTimeThisWeek = Math.round(
-      thisWeekTests.reduce((sum, test) => sum + (test.timeSpent || 0), 0) / 60
-    )
-
-    // Get upcoming tests (scheduled test sessions)
-    const upcomingTestSessions = await prisma.testSession.findMany({
-      where: {
-        freeUserId: userId,
-        status: 'NOT_STARTED',
-        startedAt: null,
-      },
-      take: 5,
-      orderBy: { createdAt: 'asc' },
-      include: {
-        testTemplate: {
-          select: {
-            title: true,
-          },
-        },
-      },
-    })
+    // This week's stats from aggregation
+    const testsThisWeek = thisWeekStats._count.id
+    const questionsThisWeek = thisWeekStats._sum.questionCount || 0
+    const studyTimeThisWeek = Math.round((thisWeekStats._sum.timeSpent || 0) / 60)
 
     const upcomingTests = upcomingTestSessions.map((session) => ({
       id: session.id,
       title: session.testTemplate?.title || 'Upcoming Test',
-      scheduledDate: session.createdAt, // Mock - should have a scheduledDate field
+      scheduledDate: session.createdAt,
     }))
 
     return {
@@ -205,42 +225,43 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
     // Fetch dashboard stats
     const stats = await getCachedStats(userId)
 
-    // Calculate week-over-week comparisons
+    // Calculate week-over-week comparisons using aggregation (not fetching all records)
     const twoWeeksAgo = new Date()
     twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14)
     const oneWeekAgo = new Date()
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
 
-    const lastWeekTests = await prisma.testAttempt.findMany({
-      where: {
-        freeUserId: userId,
-        status: 'COMPLETED',
-        submittedAt: {
-          gte: twoWeeksAgo,
-          lt: oneWeekAgo,
+    const [lastWeekStats, thisWeekStats] = await Promise.all([
+      // Last week's average using aggregation
+      prisma.testAttempt.aggregate({
+        where: {
+          freeUserId: userId,
+          status: 'COMPLETED',
+          submittedAt: {
+            gte: twoWeeksAgo,
+            lt: oneWeekAgo,
+          },
         },
-      },
-    })
+        _avg: { percentage: true },
+        _count: { id: true },
+      }),
 
-    const lastWeekAvg =
-      lastWeekTests.length > 0
-        ? lastWeekTests.reduce((sum, test) => sum + test.percentage, 0) / lastWeekTests.length
-        : 0
-
-    const thisWeekTests = await prisma.testAttempt.findMany({
-      where: {
-        freeUserId: userId,
-        status: 'COMPLETED',
-        submittedAt: {
-          gte: oneWeekAgo,
+      // This week's average using aggregation
+      prisma.testAttempt.aggregate({
+        where: {
+          freeUserId: userId,
+          status: 'COMPLETED',
+          submittedAt: {
+            gte: oneWeekAgo,
+          },
         },
-      },
-    })
+        _avg: { percentage: true },
+        _count: { id: true },
+      }),
+    ])
 
-    const thisWeekAvg =
-      thisWeekTests.length > 0
-        ? thisWeekTests.reduce((sum, test) => sum + test.percentage, 0) / thisWeekTests.length
-        : 0
+    const lastWeekAvg = lastWeekStats._avg.percentage || 0
+    const thisWeekAvg = thisWeekStats._avg.percentage || 0
 
     const weekOverWeekChange =
       lastWeekAvg > 0 ? ((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100 : 0
@@ -251,7 +272,7 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
         data: {
           ...stats,
           weekOverWeek: {
-            testsChange: thisWeekTests.length - lastWeekTests.length,
+            testsChange: thisWeekStats._count.id - lastWeekStats._count.id,
             scoreChange: Math.round((thisWeekAvg - lastWeekAvg) * 10) / 10,
             percentageChange: Math.round(weekOverWeekChange * 10) / 10,
           },
