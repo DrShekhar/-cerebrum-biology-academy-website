@@ -163,9 +163,17 @@ export async function POST(request: NextRequest) {
       { role: 'user' as const, content: message },
     ]
 
-    const anthropic = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY || '',
-    })
+    const apiKey = process.env.ANTHROPIC_API_KEY
+
+    if (!apiKey) {
+      console.error('[ARIA] ANTHROPIC_API_KEY is not configured')
+      return new Response(
+        JSON.stringify({ error: 'AI service not configured' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      )
+    }
+
+    const anthropic = new Anthropic({ apiKey })
 
     const stream = await createStreamWithRetry(anthropic, {
       model: 'claude-3-5-haiku-20241022',
@@ -192,10 +200,11 @@ export async function POST(request: NextRequest) {
           controller.enqueue(encoder.encode('data: [DONE]\n\n'))
           controller.close()
         } catch (error) {
-          console.error('[ARIA] Stream error:', error)
+          const errorMessage = error instanceof Error ? error.message : String(error)
+          console.error('[ARIA] Stream error:', errorMessage, error)
           controller.enqueue(
             encoder.encode(
-              `data: ${JSON.stringify({ error: 'Stream interrupted' })}\n\n`
+              `data: ${JSON.stringify({ error: `Stream error: ${errorMessage}` })}\n\n`
             )
           )
           controller.close()

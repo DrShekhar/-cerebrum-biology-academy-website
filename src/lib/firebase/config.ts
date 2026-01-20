@@ -1,5 +1,5 @@
-import { initializeApp, getApps, getApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+import { initializeApp, getApps, getApp, type FirebaseApp } from 'firebase/app'
+import { getAuth, type Auth } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,10 +11,20 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
-// Initialize Firebase (singleton pattern to prevent multiple instances)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+// Check if Firebase is configured (API key is required)
+const isFirebaseConfigured = !!process.env.NEXT_PUBLIC_FIREBASE_API_KEY
 
-// Get Firebase Auth instance
-export const auth = getAuth(app)
+// Initialize Firebase only if configured (singleton pattern)
+let app: FirebaseApp | null = null
+let auth: Auth | null = null
 
+if (isFirebaseConfigured) {
+  app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+  auth = getAuth(app)
+} else if (typeof window !== 'undefined') {
+  // Only warn in browser, not during build
+  console.warn('Firebase is not configured. Set NEXT_PUBLIC_FIREBASE_API_KEY to enable Firebase features.')
+}
+
+export { auth }
 export default app
