@@ -218,6 +218,13 @@ Required in `.env.local`:
 1. Make incremental changes
 2. Run `npm run type-check` frequently
 3. Test in browser after UI changes
+4. **CRITICAL - Task Breakdown & Incremental Commits**:
+   - When given a large task, break it into smaller subtasks
+   - Use TodoWrite tool to track subtasks and progress
+   - Commit progress incrementally before context runs out
+   - Aim to commit every 20-30 messages or at 60-70% context usage
+   - Never let context fill up without committing completed work
+   - Each commit should be a logical unit of work (e.g., 2-3 related fixes)
 
 ### Before Committing
 
