@@ -21,6 +21,7 @@ import {
   FloatingCTA,
   GlobalExitIntent,
   ChatbotWrapper,
+  SalesAgentWidget,
   DynamicFooter,
   DynamicMobileNavigation,
   DynamicPWAProvider,
@@ -351,6 +352,8 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <ChatbotWrapper />
                         </ConditionalHeaderFooter>
+                        {/* ARIA Sales Agent - positioned on right side */}
+                        <SalesAgentWidget />
                         <ConditionalHeaderFooter>
                           <DynamicMaintenancePopup />
                         </ConditionalHeaderFooter>

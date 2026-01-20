@@ -211,7 +211,7 @@ export function ExitIntentPopup({
                       <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                         {discountBenefits.map((benefit, index) => (
                           <motion.div
-                            key={index}
+                            key={`benefit-${benefit.slice(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
                             className="flex items-center bg-[#e8ede8] rounded-lg p-2.5 sm:p-3"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -400,8 +400,8 @@ export function ExitIntentPopup({
 
                       {/* Features Grid */}
                       <div className="grid grid-cols-1 gap-2 mb-6 max-h-40 overflow-y-auto">
-                        {catalogFeatures.map((feature, index) => (
-                          <div key={index} className="flex items-start">
+                        {catalogFeatures.map((feature) => (
+                          <div key={`feature-${feature.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-gray-700">{feature}</span>
                           </div>

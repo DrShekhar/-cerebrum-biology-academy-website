@@ -81,8 +81,8 @@ export const MessageBubble = memo(function MessageBubble({
                   </h4>
                 </div>
                 <ul className="ml-5 space-y-1 text-xs text-saffron-700 dark:text-saffron-400">
-                  {ncertReferences.map((ref, index) => (
-                    <li key={index} className="list-disc">
+                  {ncertReferences.map((ref) => (
+                    <li key={`ncert-${ref.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="list-disc">
                       {ref}
                     </li>
                   ))}
@@ -92,9 +92,9 @@ export const MessageBubble = memo(function MessageBubble({
 
             {!isUser && relatedTopics && relatedTopics.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-2">
-                {relatedTopics.map((topic, index) => (
+                {relatedTopics.map((topic) => (
                   <span
-                    key={index}
+                    key={`topic-${topic.replace(/\s+/g, '-').toLowerCase()}`}
                     className="inline-flex items-center rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-200"
                   >
                     {topic}

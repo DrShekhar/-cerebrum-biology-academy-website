@@ -273,6 +273,20 @@ export function UPIPaymentModal({
   )
 }
 
+// Types for sub-components
+interface UPIApp {
+  scheme: string
+  name: string
+  icon: string
+  isInstalled?: boolean
+}
+
+interface PaymentInstructions {
+  title: string
+  steps: string[]
+  troubleshooting: string[]
+}
+
 // Sub-components for better organization
 
 function UPIAppSelection({
@@ -281,9 +295,9 @@ function UPIAppSelection({
   instructions,
   isSlowNetwork,
 }: {
-  apps: any[]
+  apps: UPIApp[]
   onSelectApp: (scheme: string) => void
-  instructions: any
+  instructions: PaymentInstructions
   isSlowNetwork: boolean
 }) {
   return (
@@ -294,9 +308,9 @@ function UPIAppSelection({
       <div className="bg-blue-50 rounded-lg p-4 mb-6">
         <h4 className="font-medium text-blue-900 mb-2">How to pay:</h4>
         <ol className="text-sm text-blue-800 space-y-1">
-          {instructions.steps.map((step: string, index: number) => (
-            <li key={index} className="flex">
-              <span className="mr-2">{index + 1}.</span>
+          {instructions.steps.map((step, stepIndex) => (
+            <li key={`step-${stepIndex}-${step.slice(0, 20)}`} className="flex">
+              <span className="mr-2">{stepIndex + 1}.</span>
               <span>{step}</span>
             </li>
           ))}
@@ -338,7 +352,11 @@ function UPIAppSelection({
   )
 }
 
-function PaymentProcessing({ onShowQR, onRetry, instructions }: any) {
+function PaymentProcessing({ onShowQR, onRetry }: {
+  onShowQR: () => void
+  onRetry: () => void
+  instructions: PaymentInstructions
+}) {
   return (
     <div className="text-center">
       <motion.div
@@ -366,7 +384,12 @@ function PaymentProcessing({ onShowQR, onRetry, instructions }: any) {
   )
 }
 
-function PaymentStatus({ transactionId, onRetry, onManualCheck, instructions }: any) {
+function PaymentStatus({ transactionId, onRetry, onManualCheck }: {
+  transactionId: string
+  onRetry: () => void
+  onManualCheck: () => void
+  instructions: PaymentInstructions
+}) {
   return (
     <div className="text-center">
       <motion.div
@@ -395,7 +418,11 @@ function PaymentStatus({ transactionId, onRetry, onManualCheck, instructions }: 
   )
 }
 
-function PaymentSuccess({ transactionId, amount, courseName }: any) {
+function PaymentSuccess({ transactionId, amount, courseName }: {
+  transactionId: string
+  amount: number
+  courseName: string
+}) {
   return (
     <div className="text-center">
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-16 h-16 mx-auto mb-4">
@@ -417,7 +444,11 @@ function PaymentSuccess({ transactionId, amount, courseName }: any) {
   )
 }
 
-function PaymentError({ error, onRetry, instructions }: any) {
+function PaymentError({ error, onRetry, instructions }: {
+  error: string
+  onRetry: () => void
+  instructions: PaymentInstructions
+}) {
   return (
     <div className="text-center">
       <AlertCircle className="w-16 h-16 text-red-600 mx-auto mb-4" />
@@ -427,8 +458,8 @@ function PaymentError({ error, onRetry, instructions }: any) {
       <div className="bg-red-50 rounded-lg p-4 mb-6">
         <h4 className="font-medium text-red-900 mb-2">Troubleshooting:</h4>
         <ul className="text-sm text-red-800 space-y-1">
-          {instructions.troubleshooting.map((tip: string, index: number) => (
-            <li key={index} className="flex">
+          {instructions.troubleshooting.map((tip, tipIndex) => (
+            <li key={`tip-${tipIndex}-${tip.slice(0, 20)}`} className="flex">
               <span className="mr-2">•</span>
               <span>{tip}</span>
             </li>
@@ -443,7 +474,11 @@ function PaymentError({ error, onRetry, instructions }: any) {
   )
 }
 
-function QRCodeFallback({ qrCode, paymentUrl, onClose }: any) {
+function QRCodeFallback({ qrCode, paymentUrl, onClose }: {
+  qrCode: string
+  paymentUrl: string
+  onClose: () => void
+}) {
   return (
     <div className="fixed inset-0 bg-white z-10 p-6">
       <div className="flex items-center justify-between mb-6">

@@ -87,14 +87,14 @@ declare global {
 
   // Google Analytics gtag and Facebook Pixel fbq
   interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-    Razorpay: new (options: RazorpayOptions) => {
+    gtag?: ((...args: any[]) => void) | undefined
+    dataLayer?: any[]
+    Razorpay?: new (options: RazorpayOptions) => {
       open(): void
       on(event: string, handler: (response: unknown) => void): void
     }
-    fbq: (...args: any[]) => void
-    _fbq: any
+    fbq?: ((...args: any[]) => void) | undefined
+    _fbq?: any
   }
 
   // Google Analytics gtag function (can be undefined on server)

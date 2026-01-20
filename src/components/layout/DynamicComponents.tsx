@@ -20,6 +20,12 @@ export const ChatbotWrapper = dynamic(
   { loading: () => null }
 )
 
+// ARIA Sales Agent - lazy loaded for performance
+export const SalesAgentWidget = dynamic(
+  () => import('@/components/sales-agent/SalesAgentWidget'),
+  { loading: () => null }
+)
+
 export function FloatingCTA() {
   const [shouldLoad, setShouldLoad] = useState(false)
 

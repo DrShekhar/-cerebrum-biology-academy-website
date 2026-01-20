@@ -56,9 +56,9 @@ export function FAQDisplay({
     <section className={`my-8 ${className}`}>
       <h2 className="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
       <div className="space-y-4">
-        {questions.map((item, index) => (
+        {questions.map((item) => (
           <details
-            key={index}
+            key={`faq-${item.question.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
             className="group bg-white border border-gray-200 rounded-lg overflow-hidden"
           >
             <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-gray-50 transition-colors">

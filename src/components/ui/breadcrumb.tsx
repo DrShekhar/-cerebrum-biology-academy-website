@@ -22,7 +22,7 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       </Link>
       
       {items.map((item, index) => (
-        <div key={index} className="flex items-center">
+        <div key={`bc-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`} className="flex items-center">
           <ChevronRight className="h-4 w-4 mx-2 text-gray-500" />
           {item.href && index < items.length - 1 ? (
             <Link 

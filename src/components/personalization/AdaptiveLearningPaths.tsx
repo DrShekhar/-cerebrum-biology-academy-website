@@ -465,8 +465,8 @@ export function AdaptiveLearningPaths() {
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 mb-3">Key Milestones</h4>
           <div className="space-y-2">
-            {studyPlan.milestones.map((milestone, index) => (
-              <div key={index} className="flex items-center space-x-3 p-2 bg-gray-50 rounded">
+            {studyPlan.milestones.map((milestone) => (
+              <div key={`milestone-week-${milestone.week}-${milestone.goal.slice(0, 20).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-center space-x-3 p-2 bg-gray-50 rounded">
                 <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                   {milestone.week}
                 </div>
@@ -494,8 +494,8 @@ export function AdaptiveLearningPaths() {
             Personalized Recommendations
           </h4>
           <div className="space-y-2">
-            {studyPlan.adaptiveRecommendations.map((rec, index) => (
-              <div key={index} className="flex items-start space-x-2 text-sm">
+            {studyPlan.adaptiveRecommendations.map((rec) => (
+              <div key={`rec-${rec.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start space-x-2 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{rec}</span>
               </div>
@@ -526,8 +526,8 @@ export function AdaptiveLearningPaths() {
             <div key={day} className="border border-gray-200 rounded-lg p-3">
               <h4 className="font-semibold text-gray-900 mb-2">{day}</h4>
               <div className="space-y-2">
-                {sessions.map((session, index) => (
-                  <div key={index} className="flex items-center justify-between text-sm">
+                {sessions.map((session) => (
+                  <div key={`session-${session.time}-${session.subject}-${session.topic}`} className="flex items-center justify-between text-sm">
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="font-medium">{session.time}</span>

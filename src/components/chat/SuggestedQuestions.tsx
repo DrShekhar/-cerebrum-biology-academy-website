@@ -36,9 +36,9 @@ export const SuggestedQuestions = memo(function SuggestedQuestions({
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {questions.map((question, index) => (
+        {questions.map((question) => (
           <button
-            key={index}
+            key={`question-${question.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
             onClick={() => onQuestionClick(question)}
             disabled={disabled}
             className="group flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-left text-sm text-gray-700 shadow-mobile-card transition-colors hover:border-primary-500 hover:bg-primary-50 hover:text-primary-700 hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-primary-400 dark:hover:bg-primary-950 dark:hover:text-primary-300"

@@ -80,8 +80,6 @@ export function FacultyVideoSection() {
 
   const handleDemoBooking = () => {
     // Navigate to demo booking or trigger modal
-    console.log('Demo booking triggered from video section')
-
     // Track conversion
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_from_video', {

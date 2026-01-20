@@ -10,9 +10,8 @@ import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export function BookingSection() {
   const { t } = useI18n()
-  const handleFormSubmit = (data: ContactForm) => {
-    console.log('Booking form submitted:', data)
-    // Here you would integrate with your backend API
+  const handleFormSubmit = (_data: ContactForm) => {
+    // Integration point for backend API
     // Example: sendToAPI(data)
   }
 

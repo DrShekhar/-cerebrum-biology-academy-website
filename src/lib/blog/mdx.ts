@@ -136,6 +136,16 @@ export function getPostBySlug(slug: string): {
   const stats = readingTime(content)
   const toc = extractTableOfContents(content)
 
+  // Parse readTime to handle both numeric and string formats (e.g., "20 min read")
+  const parseReadTime = (value: unknown): number => {
+    if (typeof value === 'number' && !isNaN(value)) return value
+    if (typeof value === 'string') {
+      const parsed = parseInt(value, 10)
+      return isNaN(parsed) ? 0 : parsed
+    }
+    return 0
+  }
+
   const meta: BlogPostMeta = {
     title: data.title || '',
     slug: data.slug || slug,
@@ -146,7 +156,7 @@ export function getPostBySlug(slug: string): {
     featuredImage: data.featuredImage || '/blog/default-featured.jpg',
     publishedAt: data.publishedAt || new Date().toISOString(),
     updatedAt: data.updatedAt || data.publishedAt || new Date().toISOString(),
-    readTime: data.readTime || Math.ceil(stats.minutes),
+    readTime: parseReadTime(data.readTime) || Math.ceil(stats.minutes),
     isPublished: data.isPublished !== false,
     seoTitle: data.seoTitle || data.title,
     seoDescription: data.seoDescription || data.excerpt,
@@ -263,12 +273,16 @@ export function getBlogStats(): {
 } {
   const posts = getAllPosts()
 
+  // Safely calculate average read time, handling any non-numeric values
+  const totalReadTime = posts.reduce((sum, post) => {
+    const readTime = typeof post.readTime === 'number' && !isNaN(post.readTime) ? post.readTime : 0
+    return sum + readTime
+  }, 0)
+
   return {
     totalPosts: posts.length,
     totalViews: posts.reduce((sum, post) => sum + (post.views || 0), 0),
-    avgReadTime: Math.round(
-      posts.reduce((sum, post) => sum + (post.readTime || 0), 0) / (posts.length || 1)
-    ),
+    avgReadTime: posts.length > 0 ? Math.round(totalReadTime / posts.length) : 0,
     categories: Object.keys(blogCategories).length,
   }
 }

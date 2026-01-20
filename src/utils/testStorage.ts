@@ -30,8 +30,8 @@ const KEYS = {
 export const saveTestProgress = (progress: SavedTestProgress): void => {
   try {
     localStorage.setItem(`${KEYS.TEST_PROGRESS}_${progress.testId}`, JSON.stringify(progress))
-  } catch (error) {
-    console.error('Error saving test progress:', error)
+  } catch {
+    // Storage quota exceeded or localStorage unavailable - fail silently in production
   }
 }
 
@@ -39,9 +39,10 @@ export const saveTestProgress = (progress: SavedTestProgress): void => {
 export const getTestProgress = (testId: string): SavedTestProgress | null => {
   try {
     const saved = localStorage.getItem(`${KEYS.TEST_PROGRESS}_${testId}`)
-    return saved ? JSON.parse(saved) : null
-  } catch (error) {
-    console.error('Error getting test progress:', error)
+    if (!saved) return null
+    return JSON.parse(saved) as SavedTestProgress
+  } catch {
+    // Invalid JSON or storage error - return null
     return null
   }
 }
@@ -50,8 +51,8 @@ export const getTestProgress = (testId: string): SavedTestProgress | null => {
 export const clearTestProgress = (testId: string): void => {
   try {
     localStorage.removeItem(`${KEYS.TEST_PROGRESS}_${testId}`)
-  } catch (error) {
-    console.error('Error clearing test progress:', error)
+  } catch {
+    // Storage error - fail silently
   }
 }
 
@@ -63,31 +64,28 @@ export const saveTestResult = (result: TestResult): void => {
     history.totalTests = history.results.length
     history.averageScore = Math.round(history.results.reduce((sum, r) => sum + r.percentage, 0) / history.results.length)
     history.bestScore = Math.max(...history.results.map(r => r.percentage))
-    
+
     localStorage.setItem(KEYS.TEST_HISTORY, JSON.stringify(history))
-  } catch (error) {
-    console.error('Error saving test result:', error)
+  } catch {
+    // Storage error - fail silently
   }
 }
 
 // Get test history
 export const getTestHistory = (): TestHistory => {
+  const defaultHistory: TestHistory = {
+    results: [],
+    totalTests: 0,
+    averageScore: 0,
+    bestScore: 0
+  }
   try {
     const saved = localStorage.getItem(KEYS.TEST_HISTORY)
-    return saved ? JSON.parse(saved) : {
-      results: [],
-      totalTests: 0,
-      averageScore: 0,
-      bestScore: 0
-    }
-  } catch (error) {
-    console.error('Error getting test history:', error)
-    return {
-      results: [],
-      totalTests: 0,
-      averageScore: 0,
-      bestScore: 0
-    }
+    if (!saved) return defaultHistory
+    return JSON.parse(saved) as TestHistory
+  } catch {
+    // Invalid JSON or storage error - return default
+    return defaultHistory
   }
 }
 
@@ -110,17 +108,21 @@ export const getAttemptCount = (testId: string): number => {
   return history.results.filter(result => result.testId === testId).length
 }
 
-// Generate user ID if not exists
+// Generate user ID if not exists (using crypto for secure random generation)
 export const getUserId = (): string => {
   try {
     let userId = localStorage.getItem('userId')
     if (!userId) {
-      userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+      // Use crypto.randomUUID() for secure random ID generation
+      const randomId = typeof crypto !== 'undefined' && crypto.randomUUID
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      userId = `user_${randomId}`
       localStorage.setItem('userId', userId)
     }
     return userId
-  } catch (error) {
-    console.error('Error getting user ID:', error)
+  } catch {
+    // Silently handle storage errors in production
     return 'user_fallback'
   }
 }

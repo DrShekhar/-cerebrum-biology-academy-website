@@ -71,7 +71,7 @@ export function BreadcrumbSchema({
         >
           <ol className="flex flex-wrap items-center gap-1">
             {allItems.map((item, index) => (
-              <li key={index} className="flex items-center">
+              <li key={`breadcrumb-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`} className="flex items-center">
                 {index > 0 && <span className="mx-1 text-slate-400">/</span>}
                 {item.href && !item.isCurrentPage ? (
                   <Link href={item.href} className="hover:text-teal-600 hover:underline">
@@ -103,7 +103,7 @@ export function BreadcrumbSchema({
         <nav aria-label="Breadcrumb" className={`breadcrumb-pills ${className}`}>
           <ol className="flex flex-wrap items-center gap-2">
             {allItems.map((item, index) => (
-              <li key={index} className="flex items-center">
+              <li key={`breadcrumb-pill-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`} className="flex items-center">
                 {index > 0 && <ChevronRight className="mx-1 h-4 w-4 text-slate-400" />}
                 {item.href && !item.isCurrentPage ? (
                   <Link
@@ -137,7 +137,7 @@ export function BreadcrumbSchema({
       <nav aria-label="Breadcrumb" className={`breadcrumb-default ${className}`}>
         <ol className="flex flex-wrap items-center text-sm">
           {allItems.map((item, index) => (
-            <li key={index} className="flex items-center">
+            <li key={`breadcrumb-default-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`} className="flex items-center">
               {index > 0 && <ChevronRight className="mx-2 h-4 w-4 flex-shrink-0 text-slate-400" />}
               {item.href && !item.isCurrentPage ? (
                 <Link

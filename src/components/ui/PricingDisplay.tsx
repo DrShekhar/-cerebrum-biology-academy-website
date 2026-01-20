@@ -69,8 +69,8 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
       </div>
 
       <div className="space-y-3 mb-8">
-        {tierInfo.highlights.slice(0, 6).map((highlight: string, index: number) => (
-          <div key={index} className="flex items-start">
+        {tierInfo.highlights.slice(0, 6).map((highlight: string) => (
+          <div key={`highlight-${highlight.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start">
             <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
             <span className="text-gray-700 text-sm">{highlight}</span>
           </div>

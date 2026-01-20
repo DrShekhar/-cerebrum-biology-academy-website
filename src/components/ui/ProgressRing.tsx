@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, memo } from 'react'
+import React, { useEffect, useState, memo, useId } from 'react'
 import { motion, useSpring, useTransform } from 'framer-motion'
 
 interface ProgressRingProps {
@@ -27,6 +27,8 @@ export const ProgressRing = memo(function ProgressRing({
   className = '',
 }: ProgressRingProps) {
   const [displayValue, setDisplayValue] = useState(0)
+  // Use React's useId hook for stable, unique gradient IDs (SSR-safe)
+  const uniqueId = useId()
 
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
@@ -51,7 +53,8 @@ export const ProgressRing = memo(function ProgressRing({
 
   const selectedColor = colorClasses[color] || colorClasses.purple
 
-  const gradientId = `gradient-${color}-${Math.random().toString(36).substr(2, 9)}`
+  // Use React's useId for stable gradient ID instead of Math.random()
+  const gradientId = `gradient-${color}-${uniqueId.replace(/:/g, '-')}`
 
   useEffect(() => {
     const timer = setTimeout(() => {

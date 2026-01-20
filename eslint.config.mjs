@@ -29,21 +29,29 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",
+      // Critical rules - error level
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+      "react-hooks/rules-of-hooks": "error",
+      "no-var": "error",
+      "prefer-const": "error",
+
+      // Important rules - warn level (upgrade to error after cleanup)
       "react-hooks/exhaustive-deps": "warn",
-      "react-hooks/rules-of-hooks": "warn",
-      "import/no-anonymous-default-export": "off",
-      "react/no-unescaped-entities": "off",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-require-imports": "off",
       "@typescript-eslint/no-empty-object-type": "warn",
       "@typescript-eslint/no-unsafe-function-type": "warn",
+      "@typescript-eslint/no-namespace": "warn",
+      "prefer-rest-params": "warn",
       "react/jsx-no-undef": "warn",
       "@next/next/no-html-link-for-pages": "warn",
-      "@typescript-eslint/no-namespace": "warn",
-      "prefer-const": "warn",
-      "prefer-rest-params": "warn",
-      "no-var": "warn",
+
+      // Disabled rules (with justification)
+      "import/no-anonymous-default-export": "off", // Next.js convention
+      "react/no-unescaped-entities": "off", // Too strict for content-heavy site
+      "@typescript-eslint/no-require-imports": "off", // Needed for some dynamic imports
+
+      // Console statements - error in production
+      "no-console": ["warn", { allow: ["warn", "error"] }],
     },
   },
 ];
