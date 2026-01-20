@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth/config'
-import type { WorkSubmissionStatus } from '@/generated/prisma'
+import type { SubmissionStatus } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
 

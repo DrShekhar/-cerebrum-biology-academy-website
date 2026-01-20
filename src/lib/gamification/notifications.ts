@@ -10,7 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { GamificationNotificationType } from '@/generated/prisma'
+import { GamificationNotificationType } from '@/types/prisma-enums'
 
 export type NotificationPriority = 'LOW' | 'NORMAL' | 'HIGH' | 'URGENT'
 

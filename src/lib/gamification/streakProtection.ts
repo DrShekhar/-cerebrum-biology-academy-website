@@ -10,7 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { StreakProtectionType } from '@/generated/prisma'
+import { StreakProtectionType } from '@/types/prisma-enums'
 
 // Constants
 export const STREAK_PROTECTION_CONFIG = {

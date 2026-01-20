@@ -6,7 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { getXpHistory, getXpBreakdown, XP_REWARDS } from '@/lib/gamification'
-import { XpEventType } from '@/generated/prisma'
+import { XpEventType } from '@/types/prisma-enums'
 
 export async function GET(req: NextRequest) {
   try {

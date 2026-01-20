@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth/config'
-import type { EvaluationSlot } from '@/generated/prisma'
+import type { EvaluationSlot } from '@/types/prisma-enums'
 
 export const dynamic = 'force-dynamic'
 

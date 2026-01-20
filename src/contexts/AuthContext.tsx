@@ -370,15 +370,6 @@ function getUserPermissions(role: UserRole): string[] {
       'student:communicate',
       'counseling:provide',
     ],
-    CONSULTANT: [
-      'referral:create',
-      'referral:view',
-      'referral:update',
-      'commission:view',
-      'lead:create',
-      'lead:view',
-      'lead:update',
-    ],
     ADMIN: [
       '*', // All permissions
     ],

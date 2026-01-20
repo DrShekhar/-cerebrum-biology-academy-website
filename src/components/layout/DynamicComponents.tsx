@@ -63,7 +63,7 @@ export function GlobalExitIntent() {
 // Wrapped with AriaErrorBoundary to catch component crashes
 // CONDITIONAL DISPLAY: Only shown on public pages (non-authenticated users)
 export function SalesAgentWidget() {
-  const { user, loading: authLoading } = useAuth()
+  const { user, isLoading: authLoading } = useAuth()
   const [shouldLoad, setShouldLoad] = useState(false)
   const [loadError, setLoadError] = useState(false)
   const [isVisible, setIsVisible] = useState(true)

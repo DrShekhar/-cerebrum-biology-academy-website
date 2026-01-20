@@ -13,7 +13,7 @@ import {
   deleteNotification,
   getUnreadCount,
 } from '@/lib/gamification'
-import { GamificationNotificationType } from '@/generated/prisma'
+import { GamificationNotificationType } from '@/types/prisma-enums'
 
 export async function GET(req: NextRequest) {
   try {

@@ -10,7 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { XpEventType } from '@/generated/prisma'
+import { XpEventType } from '@/types/prisma-enums'
 
 // XP Reward Constants
 export const XP_REWARDS = {
