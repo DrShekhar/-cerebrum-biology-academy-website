@@ -69,7 +69,7 @@ function checkRateLimit(userId: string): boolean {
 }
 
 // Cache key generator for chat responses
-function generateCacheKey(messages: MessageParam[]): string {
+function generateCacheKey(messages: MessageParam[], userId: string): string {
   const lastMessage = messages[messages.length - 1]
   const content =
     typeof lastMessage.content === 'string'
@@ -84,7 +84,8 @@ function generateCacheKey(messages: MessageParam[]): string {
     hash = hash & hash
   }
 
-  return `ceri:chat:${Math.abs(hash).toString(36)}`
+  // Include userId in cache key to prevent cross-user cache collisions
+  return `ceri:chat:${userId}:${Math.abs(hash).toString(36)}`
 }
 
 export async function POST(req: NextRequest) {
@@ -114,7 +115,7 @@ export async function POST(req: NextRequest) {
 
     // Check cache if enabled and Upstash is available
     if (useCache && preferUpstash() && upstashCache.isEnabled()) {
-      const cacheKey = generateCacheKey(messages)
+      const cacheKey = generateCacheKey(messages, userId)
       const cachedResponse = await upstashCache.get(cacheKey)
 
       if (cachedResponse) {
@@ -194,7 +195,7 @@ export async function POST(req: NextRequest) {
 
           // Cache the full response
           if (useCache && fullResponse && preferUpstash() && upstashCache.isEnabled()) {
-            const cacheKey = generateCacheKey(messages)
+            const cacheKey = generateCacheKey(messages, userId)
             await upstashCache.set(cacheKey, fullResponse, 3600) // Cache for 1 hour
             console.log('Cached CERI AI response')
           }
