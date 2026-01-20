@@ -9,6 +9,7 @@ import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
+import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversion'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -87,6 +88,9 @@ export async function POST(request: NextRequest) {
     // Extract new fields from request body (if present)
     const { demoType, referralCodeUsed, referralDiscount } = rawData
 
+    // Extract tracking/attribution data from request body
+    const { utmSource, utmMedium, utmCampaign, utmContent, utmTerm, gclid, source } = rawData
+
     // Save demo booking and link to lead in a transaction for data integrity
     let demoBooking
     let lead: Awaited<ReturnType<typeof prisma.leads.findFirst>> = null
@@ -118,11 +122,12 @@ export async function POST(request: NextRequest) {
             referralCodeUsed: referralCodeUsed || null,
             referralDiscount: referralDiscount || 0,
 
-            // Marketing Attribution
-            source: 'website',
-            utmSource: null,
-            utmMedium: null,
-            utmCampaign: null,
+            // Marketing Attribution - capture tracking data for attribution
+            source: source || (gclid ? 'Google Ads' : 'website'),
+            utmSource: utmSource || null,
+            utmMedium: utmMedium || null,
+            utmCampaign: utmCampaign || null,
+            gclid: gclid || null,
 
             // Follow-up Fields (defaults from schema)
             assignedTo: null,
@@ -181,6 +186,17 @@ export async function POST(request: NextRequest) {
         },
         { status: 500 }
       )
+    }
+
+    // Track Google Ads conversion if GCLID is present (non-blocking)
+    if (gclid) {
+      trackDemoBookingConversion({
+        gclid: gclid,
+        conversionDateTime: new Date(),
+        bookingId: demoBooking.id,
+      }).catch((err) => {
+        console.error('Failed to track Google Ads demo conversion (non-blocking):', err)
+      })
     }
 
     // Schedule follow-up actions (non-blocking, outside transaction)
@@ -571,7 +587,6 @@ async function notifyAdminTeam(bookingData: any) {
         },
       }),
     })
-
   } catch (error) {
     console.error('❌ Admin notification failed:', error)
   }

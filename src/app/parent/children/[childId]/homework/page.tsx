@@ -175,7 +175,7 @@ export default function ParentChildHomeworkPage() {
     if (status === 'authenticated') {
       fetchHomework()
     } else if (status === 'unauthenticated') {
-      router.push('/login')
+      router.push('/sign-in')
     }
   }, [status, fetchHomework, router])
 

@@ -22,7 +22,7 @@ export default function GoogleAnalytics() {
           gtag('config', '${GA_MEASUREMENT_ID}', {
             page_title: document.title,
             page_location: window.location.href,
-            send_page_view: true,
+            send_page_view: false, // Page views handled by ga4.ts singleton to avoid duplicates
             // Enhanced ecommerce for education
             custom_map: {
               'custom_parameter_1': 'course_type',

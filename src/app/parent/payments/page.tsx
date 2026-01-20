@@ -181,7 +181,7 @@ export default function ParentPaymentsPage() {
   }
 
   if (status === 'unauthenticated') {
-    router.push('/login')
+    router.push('/sign-in')
     return null
   }
 

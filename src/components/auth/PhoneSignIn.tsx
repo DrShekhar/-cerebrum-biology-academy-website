@@ -38,7 +38,8 @@ function PhoneSignInFallback() {
       <div className="bg-gray-50 rounded-lg p-4 text-left text-sm text-gray-600">
         <p className="font-medium mb-2">For administrators:</p>
         <p>
-          Set the Firebase environment variables (NEXT_PUBLIC_FIREBASE_*) to enable phone authentication.
+          Set the Firebase environment variables (NEXT_PUBLIC_FIREBASE_*) to enable phone
+          authentication.
         </p>
       </div>
     </div>
@@ -46,10 +47,7 @@ function PhoneSignInFallback() {
 }
 
 // Main Firebase Phone Auth component
-function PhoneSignInWithFirebase({
-  onSuccess,
-  redirectUrl = '/dashboard',
-}: PhoneSignInProps) {
+function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: PhoneSignInProps) {
   const router = useRouter()
   const [step, setStep] = useState<Step>('phone')
   const [phone, setPhone] = useState('')
@@ -215,10 +213,7 @@ function PhoneSignInWithFirebase({
     }
   }
 
-  const createSessionAndRedirect = async (user: {
-    uid: string
-    phoneNumber: string | null
-  }) => {
+  const createSessionAndRedirect = async (user: { uid: string; phoneNumber: string | null }) => {
     try {
       // Create NextAuth session
       const response = await fetch('/api/auth/firebase-session', {
@@ -238,21 +233,52 @@ function PhoneSignInWithFirebase({
         ok: response.ok,
         status: response.status,
         data,
-        headers: Object.fromEntries(response.headers.entries()),
+        setCookieHeader:
+          response.headers.get('set-cookie') || 'not visible (expected for httpOnly)',
       })
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to create session')
       }
 
-      // Check if cookie was set (won't show httpOnly cookies but shows the request worked)
-      console.log('[PhoneSignIn] Cookies after login:', document.cookie || 'no visible cookies')
+      // Verify the session was created by checking with the session API
+      // This ensures the cookie was properly set before we redirect
+      console.log('[PhoneSignIn] Verifying session was created...')
+      const verifyResponse = await fetch('/api/auth/session', {
+        method: 'GET',
+        credentials: 'include',
+      })
+      const verifyData = await verifyResponse.json()
+
+      console.log('[PhoneSignIn] Session verification:', {
+        authenticated: verifyData.authenticated,
+        hasUser: !!verifyData.user,
+        userId: verifyData.user?.id,
+      })
+
+      if (!verifyData.authenticated) {
+        console.warn('[PhoneSignIn] Session not verified after login - cookie may not be set')
+        // Try one more time after a small delay
+        await new Promise((resolve) => setTimeout(resolve, 500))
+        const retryResponse = await fetch('/api/auth/session', {
+          method: 'GET',
+          credentials: 'include',
+        })
+        const retryData = await retryResponse.json()
+        console.log('[PhoneSignIn] Session retry verification:', retryData)
+
+        if (!retryData.authenticated) {
+          throw new Error('Session could not be verified. Please try again.')
+        }
+      }
 
       setStep('success')
 
       // Use hard redirect to ensure cookies are properly picked up
       // router.push() is a soft navigation that may not refresh cookie state
       console.log('[PhoneSignIn] Redirecting to:', redirectUrl)
+
+      // Reduced delay - session is already verified above
       setTimeout(() => {
         if (onSuccess) {
           onSuccess()
@@ -260,9 +286,10 @@ function PhoneSignInWithFirebase({
           // Hard redirect to ensure cookies are included
           window.location.href = redirectUrl
         }
-      }, 1500) // Increased delay to ensure cookie is stored
+      }, 800) // Reduced from 1500ms since we verified session above
     } catch (err: unknown) {
       const error = err as Error
+      console.error('[PhoneSignIn] Session creation error:', error)
       setError(error.message || 'Failed to complete sign-in')
       setStep('phone')
     }

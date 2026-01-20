@@ -47,7 +47,13 @@ function resetRecaptchaVerifier(): void {
  * Uses reCAPTCHA v2 invisible mode - Firebase handles Enterprise fallback internally
  * Must be called before sendOTP - attaches to a button element
  */
-export function initRecaptcha(buttonId: string): RecaptchaVerifier {
+export function initRecaptcha(buttonId: string): RecaptchaVerifier | null {
+  // If Firebase is not configured, return null
+  if (!auth) {
+    console.warn('[reCAPTCHA] Firebase not configured - phone auth unavailable')
+    return null
+  }
+
   // Always clean up existing verifier first
   resetRecaptchaVerifier()
 
@@ -108,6 +114,11 @@ export async function sendOTP(
   phoneNumber: string,
   buttonId: string
 ): Promise<{ success: boolean; error?: string; shouldRefresh?: boolean }> {
+  // If Firebase is not configured, return error
+  if (!auth) {
+    return { success: false, error: 'Phone authentication is not available' }
+  }
+
   const formattedPhone = formatPhoneNumber(phoneNumber)
   console.log('[OTP] Sending to:', formattedPhone)
 
@@ -280,8 +291,10 @@ export async function signOut(): Promise<void> {
     console.error('Error calling server logout:', error)
   }
 
-  // Then sign out from Firebase client
-  await auth.signOut()
+  // Then sign out from Firebase client (if configured)
+  if (auth) {
+    await auth.signOut()
+  }
   confirmationResult = null
   resetRecaptchaVerifier()
   initAttempts = 0
@@ -291,7 +304,7 @@ export async function signOut(): Promise<void> {
  * Get current Firebase user
  */
 export function getCurrentUser() {
-  return auth.currentUser
+  return auth?.currentUser ?? null
 }
 
 /**

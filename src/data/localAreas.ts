@@ -1453,13 +1453,22 @@ export const southDelhiAreas: LocalArea[] = [
     state: 'Delhi',
     description:
       'Premier biology coaching at Ring Road, South Extension 2, Delhi. Expert classes for Class 9, 10, 11, 12, NEET, Board exams & Olympiads. Online, offline & hybrid batches. Metro-connected - 5 min from South Extension Metro.',
-    metaTitle: 'Biology Coaching South Extension 2 Ring Road | NEET, Class 9-12, Olympiad | Cerebrum Academy',
+    metaTitle: 'Biology Coaching Near Me South Extension | NEET 2025-26, Class 9-12 | Cerebrum Academy',
     metaDescription:
-      'Best biology coaching in South Extension 2 at Ring Road. Classes for Class 9, 10, 11, 12, NEET droppers, Board exams & Olympiads. Online/Offline/Hybrid. Near South Extension Metro. Book free demo!',
+      'Best biology coaching near me in South Extension 2, Ring Road Delhi. Expert NEET biology coaching near me for Class 9-12, Droppers & Olympiad. 5 min from metro. Book free demo!',
     keywords: [
+      // High-volume "near me" keywords (40K+ monthly searches)
+      'biology tutor near me',
+      'biology coaching near me',
+      'neet biology coaching near me',
+      'biology classes near me',
+      'biology teacher near me',
+      'neet coaching near me',
+      // Location-specific keywords
       'biology coaching south extension 2',
       'neet coaching south extension delhi',
       'biology classes ring road south delhi',
+      'best biology coaching south delhi',
       'class 9 biology tuition south delhi',
       'class 10 biology coaching south extension',
       'class 11 biology tuition south delhi',
@@ -1469,8 +1478,19 @@ export const southDelhiAreas: LocalArea[] = [
       'board exam biology tuition south delhi',
       'nseb coaching south delhi',
       'biology foundation classes south extension',
+      // 2025/2026 keywords
+      'neet 2025 coaching south extension',
+      'neet 2026 preparation south delhi',
     ],
     localKeywords: [
+      // "Near me" variations for South Extension
+      'biology tutor near me south extension',
+      'biology coaching near me south delhi',
+      'neet coaching near me ring road delhi',
+      'biology classes near me defence colony',
+      'biology teacher near me lajpat nagar',
+      'neet biology near me greater kailash',
+      // Original local keywords
       'biology tuition near south extension market',
       'neet classes defence colony',
       'biology coaching ring road south extension',
@@ -1575,12 +1595,240 @@ export const southDelhiAreas: LocalArea[] = [
   },
 ]
 
+// Bangalore Areas - Major IT Hubs and Residential Areas
+export const bangaloreAreas: LocalArea[] = [
+  {
+    id: 'whitefield',
+    name: 'Whitefield',
+    slug: 'neet-coaching-whitefield-bangalore',
+    displayName: 'Whitefield',
+    state: 'Karnataka',
+    description:
+      'Expert NEET biology coaching in Whitefield, Bangalore. Serving IT professionals families from ITPL, Prestige Tech Park. Weekend & evening batches available.',
+    metaTitle: 'NEET Coaching Whitefield Bangalore | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET biology coaching in Whitefield, Bangalore. Expert faculty, flexible timings for IT families. Serving ITPL, Brookefield. Book free demo!',
+    keywords: [
+      'neet coaching whitefield',
+      'biology coaching whitefield bangalore',
+      'neet classes itpl',
+      'biology teacher whitefield',
+      'neet preparation bangalore',
+      'biology tuition whitefield',
+      'neet biology coaching bangalore',
+      'best neet coaching bangalore',
+    ],
+    localKeywords: [
+      'biology tuition near itpl',
+      'neet classes brookefield',
+      'biology coaching prestige tech park',
+      'neet tutor whitefield main road',
+      'biology classes hoodi bangalore',
+      'neet preparation kadugodi',
+    ],
+    nearbyAreas: ['ITPL', 'Brookefield', 'Hoodi', 'Kadugodi', 'Varthur', 'Kundalahalli', 'Prestige Tech Park'],
+    transportLinks: ['Whitefield Metro', 'Kadugodi Metro', 'Hoodi Junction', 'ITPL Bus Stop'],
+    demographics: {
+      schools: ['Inventure Academy', 'Greenwood High', 'Vidyashilp Academy', 'TISB Whitefield'],
+      colleges: ['IIIT Bangalore', 'PES University', 'Christ University'],
+      populationDensity: 'high',
+      studentPopulation: 'high',
+    },
+    uniqueSellingPoints: [
+      'Weekend batches for IT professionals children',
+      'Evening batches post-school hours',
+      'Central Whitefield location near ITPL',
+      'Online + offline hybrid mode available',
+      'CBSE & State Board integrated coaching',
+    ],
+    localTestimonials: ['1', '2'],
+    coordinates: { lat: 12.9698, lng: 77.7500 },
+  },
+  {
+    id: 'electronic-city',
+    name: 'Electronic City',
+    slug: 'biology-coaching-electronic-city-bangalore',
+    displayName: 'Electronic City',
+    state: 'Karnataka',
+    description:
+      'Premium biology coaching in Electronic City, Bangalore. Ideal for students from Infosys, Wipro, TCS campuses. Flexible batches, expert NEET faculty.',
+    metaTitle: 'Biology Coaching Electronic City Bangalore | NEET Classes | Cerebrum Academy',
+    metaDescription:
+      'Top biology coaching in Electronic City. Expert NEET preparation, flexible timings. Serving Phase 1 & 2. Book free demo class!',
+    keywords: [
+      'biology coaching electronic city',
+      'neet classes electronic city bangalore',
+      'biology teacher electronic city',
+      'neet coaching south bangalore',
+      'biology tuition hosur road',
+      'neet preparation electronic city',
+    ],
+    localKeywords: [
+      'biology tuition phase 1 electronic city',
+      'neet classes phase 2 electronic city',
+      'biology coaching near infosys bangalore',
+      'neet tutor bommasandra',
+      'biology classes hebbagodi',
+    ],
+    nearbyAreas: ['Phase 1', 'Phase 2', 'Bommasandra', 'Hebbagodi', 'Hosur Road', 'Neeladri Nagar'],
+    transportLinks: ['Electronic City Metro', 'NICE Road', 'Hosur Road', 'BMTC Bus Depot'],
+    demographics: {
+      schools: ['Indus International School', 'DPS Electronic City', 'Ebenezer International School'],
+      colleges: ['CMR Institute', 'Dayananda Sagar College'],
+      populationDensity: 'high',
+      studentPopulation: 'high',
+    },
+    uniqueSellingPoints: [
+      'Centrally located in Electronic City Phase 1',
+      'Weekend intensive batches',
+      'Affordable fee structure',
+      'Transport assistance from nearby areas',
+      'Regular mock tests with NEET pattern',
+    ],
+    localTestimonials: ['2', '3'],
+    coordinates: { lat: 12.8458, lng: 77.6603 },
+  },
+  {
+    id: 'marathahalli',
+    name: 'Marathahalli',
+    slug: 'neet-biology-coaching-marathahalli-bangalore',
+    displayName: 'Marathahalli',
+    state: 'Karnataka',
+    description:
+      'Expert NEET biology coaching in Marathahalli, Bangalore. Prime Outer Ring Road location. Expert faculty, comprehensive study material included.',
+    metaTitle: 'NEET Biology Coaching Marathahalli Bangalore | Outer Ring Road | Cerebrum Academy',
+    metaDescription:
+      'Best NEET biology coaching in Marathahalli. ORR location, expert faculty. Serving Kundalahalli, Bellandur. Enroll today!',
+    keywords: [
+      'neet biology coaching marathahalli',
+      'biology classes marathahalli bangalore',
+      'neet coaching outer ring road',
+      'biology teacher marathahalli',
+      'neet preparation marathahalli',
+      'biology tuition orr bangalore',
+    ],
+    localKeywords: [
+      'biology coaching near marathahalli bridge',
+      'neet classes kundalahalli',
+      'biology tuition bellandur',
+      'neet coaching kadubeesanahalli',
+      'biology teacher domlur',
+    ],
+    nearbyAreas: ['Kundalahalli', 'Bellandur', 'Kadubeesanahalli', 'Domlur', 'HAL', 'Outer Ring Road'],
+    transportLinks: ['Marathahalli Metro', 'ORR Bus Stops', 'Marathahalli Bridge', 'HAL Junction'],
+    demographics: {
+      schools: ['NPS Koramangala', 'DPS East', 'Inventure Academy', 'Canadian International School'],
+      colleges: ['CMR University', 'Jain University', 'Christ University'],
+      populationDensity: 'high',
+      studentPopulation: 'high',
+    },
+    uniqueSellingPoints: [
+      'Prime ORR location for easy access',
+      'Multiple batch timings available',
+      'Integrated board + NEET coaching',
+      'Digital learning resources included',
+      'Regular parent-teacher meetings',
+    ],
+    localTestimonials: ['1', '4'],
+    coordinates: { lat: 12.9591, lng: 77.6974 },
+  },
+  {
+    id: 'yelahanka',
+    name: 'Yelahanka',
+    slug: 'biology-coaching-yelahanka-bangalore',
+    displayName: 'Yelahanka',
+    state: 'Karnataka',
+    description:
+      'Top biology coaching in Yelahanka, North Bangalore. Near Air Force Station. Expert NEET faculty, proven track record with defence families.',
+    metaTitle: 'Biology Coaching Yelahanka Bangalore | NEET Preparation | Cerebrum Academy',
+    metaDescription:
+      'Expert biology coaching in Yelahanka. Trusted by defence families, excellent results. Serving Jakkur, Sahakara Nagar. Book demo!',
+    keywords: [
+      'biology coaching yelahanka',
+      'neet classes yelahanka bangalore',
+      'biology teacher north bangalore',
+      'neet coaching yelahanka new town',
+      'biology tuition jakkur',
+      'neet preparation north bangalore',
+    ],
+    localKeywords: [
+      'biology tuition near yelahanka air force',
+      'neet classes jakkur',
+      'biology coaching sahakara nagar',
+      'neet tutor yelahanka new town',
+      'biology classes kogilu',
+    ],
+    nearbyAreas: ['Yelahanka New Town', 'Jakkur', 'Sahakara Nagar', 'Kogilu', 'Thanisandra', 'Hebbal'],
+    transportLinks: ['Yelahanka Railway Station', 'NH44', 'KIAL Road', 'Jakkur Aerodrome'],
+    demographics: {
+      schools: ['DPS North', 'Ryan International Yelahanka', 'Oakridge International'],
+      colleges: ['MVJ College', 'MS Ramaiah College'],
+      populationDensity: 'medium',
+      studentPopulation: 'high',
+    },
+    uniqueSellingPoints: [
+      'Trusted by Air Force families',
+      'Small batch personalized attention',
+      'Free study material worth ₹8000',
+      'Weekend doubt clearing sessions',
+      'Career counseling included',
+    ],
+    localTestimonials: ['3', '5'],
+    coordinates: { lat: 13.1007, lng: 77.5963 },
+  },
+  {
+    id: 'hebbal',
+    name: 'Hebbal',
+    slug: 'neet-coaching-hebbal-bangalore',
+    displayName: 'Hebbal',
+    state: 'Karnataka',
+    description:
+      'Premium NEET coaching in Hebbal, Bangalore. Near Manyata Tech Park. Expert biology faculty, convenient location for North Bangalore students.',
+    metaTitle: 'NEET Coaching Hebbal Bangalore | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching in Hebbal. Near Manyata Tech Park, expert faculty. Serving RT Nagar, Nagawara. Enroll now!',
+    keywords: [
+      'neet coaching hebbal',
+      'biology coaching hebbal bangalore',
+      'neet classes manyata tech park',
+      'biology teacher hebbal',
+      'neet preparation north bangalore',
+      'biology tuition hebbal lake',
+    ],
+    localKeywords: [
+      'biology tuition near manyata tech park',
+      'neet classes nagawara',
+      'biology coaching rt nagar',
+      'neet tutor kempapura',
+      'biology classes esteem mall hebbal',
+    ],
+    nearbyAreas: ['Manyata Tech Park', 'Nagawara', 'RT Nagar', 'Kempapura', 'Sadashivanagar', 'Sanjaynagar'],
+    transportLinks: ['Hebbal Flyover', 'NH44', 'Nagawara Metro', 'BMTC Depot Hebbal'],
+    demographics: {
+      schools: ['Delhi Public School North', 'Poorna Prajna School', 'Vidyashilp Academy'],
+      colleges: ['MS Ramaiah Medical College', 'MVJ Medical College'],
+      populationDensity: 'high',
+      studentPopulation: 'high',
+    },
+    uniqueSellingPoints: [
+      'Strategic location at Hebbal Junction',
+      'Near Manyata Tech Park - convenient for IT families',
+      'Metro connectivity coming soon',
+      'Experienced faculty from top medical colleges',
+      'Integrated CBSE + NEET coaching',
+    ],
+    localTestimonials: ['2', '4'],
+    coordinates: { lat: 13.0358, lng: 77.5970 },
+  },
+]
+
 // Combine all areas
 export const allLocalAreas: LocalArea[] = [
   ...delhiNCRAreas,
   ...rohiniAreas,
   ...microLocationAreas,
   ...southDelhiAreas,
+  ...bangaloreAreas,
 ]
 
 export const getAreaBySlug = (slug: string): LocalArea | undefined => {

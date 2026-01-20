@@ -9,6 +9,7 @@ interface AuthContextType {
   loading: boolean
   isLoaded: boolean
   isSignedIn: boolean
+  isConfigured: boolean
   signOut: () => Promise<void>
   getIdToken: () => Promise<string | null>
   refreshUser: () => Promise<void>
@@ -23,8 +24,15 @@ interface AuthProviderProps {
 export function FirebaseAuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
+  const isConfigured = !!auth
 
   useEffect(() => {
+    // If Firebase is not configured, skip auth state listener
+    if (!auth) {
+      setLoading(false)
+      return
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser)
       setLoading(false)
@@ -34,6 +42,7 @@ export function FirebaseAuthProvider({ children }: AuthProviderProps) {
   }, [])
 
   const signOut = useCallback(async () => {
+    if (!auth) return
     await firebaseSignOut(auth)
     setUser(null)
   }, [])
@@ -49,7 +58,7 @@ export function FirebaseAuthProvider({ children }: AuthProviderProps) {
   }, [user])
 
   const refreshUser = useCallback(async () => {
-    if (user) {
+    if (user && auth) {
       await user.reload()
       setUser(auth.currentUser)
     }
@@ -60,6 +69,7 @@ export function FirebaseAuthProvider({ children }: AuthProviderProps) {
     loading,
     isLoaded: !loading,
     isSignedIn: !!user,
+    isConfigured,
     signOut,
     getIdToken,
     refreshUser,

@@ -102,7 +102,7 @@ export default function DoubtDetailPage() {
 
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
-      router.push('/login')
+      router.push('/sign-in')
       return
     }
 

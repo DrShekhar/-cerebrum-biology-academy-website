@@ -28,6 +28,7 @@ import { RelatedPosts } from './RelatedPosts'
 import { RelatedResources } from './RelatedResources'
 import { BlogComments } from './BlogComments'
 import { BackToTop } from './BackToTop'
+import { parseReadTime } from './utils'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
@@ -330,7 +331,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {meta.readTime} min read
+                          {parseReadTime(meta.readTime)} min read
                         </div>
                         <div className="flex items-center text-orange-600 font-medium">
                           <Eye className="w-4 h-4 mr-1 animate-pulse" />
@@ -409,7 +410,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   <div className="flex items-center space-x-4 text-sm text-gray-500 flex-shrink-0">
                     <span className="hidden sm:flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
-                      {meta.readTime} min
+                      {parseReadTime(meta.readTime)} min
                     </span>
                     <span className="flex items-center text-orange-600 font-medium">
                       <Eye className="w-4 h-4 mr-1" />

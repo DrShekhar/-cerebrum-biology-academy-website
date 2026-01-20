@@ -178,15 +178,25 @@ export function getNearbyLocalitiesForCenter(locationId: string): string[] {
 }
 
 export const NEAR_ME_KEYWORDS = [
+  // High-volume generic "near me" (40K+ monthly)
   'biology-tutor-near-me',
   'biology-tutors-near-me',
   'biology-teacher-near-me',
   'biology-classes-near-me',
+  'biology-coaching-near-me',
+  // NEET-specific "near me"
   'neet-biology-coaching-near-me',
   'neet-biology-tutor-near-me',
+  'neet-coaching-near-me',
+  'best-neet-coaching-near-me',
+  // Zoology (specialty)
   'zoology-classes',
   'zoology-teacher',
   'zoology-teacher-near-me',
+  'zoology-tutor-near-me',
+  // Botany (specialty)
+  'botany-classes-near-me',
+  'botany-tutor-near-me',
 ] as const
 
 export type NearMeKeyword = (typeof NEAR_ME_KEYWORDS)[number]

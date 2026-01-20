@@ -1,0 +1,28 @@
+{
+  "name": "CERI CTO Agent",
+  "version": "1.0.0",
+  "description": "Chief Technology Officer agent for Cerebrum Biology Academy",
+  "capabilities": [
+    "code-review",
+    "architecture-decisions",
+    "security-audit",
+    "performance-optimization",
+    "deployment-management",
+    "tech-debt-tracking"
+  ],
+  "memory": {
+    "path": ".claude/cto/memory",
+    "retention": "persistent"
+  },
+  "knowledge": {
+    "path": ".claude/cto/knowledge",
+    "sources": [
+      "CLAUDE.md",
+      "docs/",
+      "prisma/schema.prisma"
+    ]
+  },
+  "playbooks": {
+    "path": ".claude/cto/playbooks"
+  }
+}

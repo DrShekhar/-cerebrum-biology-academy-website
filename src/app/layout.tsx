@@ -27,6 +27,7 @@ import {
   DynamicPWAProvider,
   DynamicTrialBanner,
   DynamicMaintenancePopup,
+  SalesAgentWidget,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
@@ -354,6 +355,9 @@ export default function RootLayout({
                         </ConditionalHeaderFooter>
                         {/* ARIA Sales Agent - positioned on right side */}
                         <SalesAgentWidget />
+                        <ConditionalHeaderFooter>
+                          <SalesAgentWidget />
+                        </ConditionalHeaderFooter>
                         <ConditionalHeaderFooter>
                           <DynamicMaintenancePopup />
                         </ConditionalHeaderFooter>

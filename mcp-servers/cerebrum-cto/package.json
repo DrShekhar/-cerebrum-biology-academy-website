@@ -1,35 +1,16 @@
 {
-  "name": "@cerebrum/cto-mcp",
+  "name": "@cerebrum/cto-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server providing CTO tools for Cerebrum Biology Academy",
-  "type": "module",
-  "main": "dist/index.js",
+  "description": "MCP server for CERI CTO Agent",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx watch src/index.ts",
-    "start": "node dist/index.js",
-    "lint": "eslint src/",
-    "typecheck": "tsc --noEmit"
+    "start": "node dist/index.js"
   },
-  "keywords": [
-    "mcp",
-    "cerebrum",
-    "cto",
-    "ai-agent"
-  ],
-  "author": "Cerebrum Biology Academy",
-  "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "glob": "^10.3.10",
-    "node-fetch": "^3.3.2"
+    "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.0",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "typescript": "^5.0.0"
   }
 }

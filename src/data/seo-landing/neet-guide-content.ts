@@ -3463,6 +3463,508 @@ const neetApplicationForm2026: SEOLandingContent = {
   },
 }
 
+// How to Prepare for NEET Online - Complete Guide
+const howToPrepareForNeetOnline: SEOLandingContent = {
+  slug: 'how-to-prepare-for-neet-online',
+  classLevel: 'universal',
+
+  title: 'How to Prepare for NEET Online | Complete Guide 2025',
+  metaDescription:
+    'Learn how to prepare for NEET online with expert strategies, study plans, and tips. Master self-study techniques for online NEET preparation from home.',
+  keywords: [
+    'how to prepare for neet online',
+    'online neet preparation',
+    'neet online study plan',
+    'prepare neet at home',
+    'self study for neet online',
+    'neet online coaching tips',
+    'neet preparation from home',
+    'online classes for neet',
+    'neet online course',
+    'best way to prepare neet online',
+    'neet study at home',
+    'neet virtual coaching',
+    'online neet biology classes',
+  ],
+
+  hero: {
+    headline: 'How to Prepare for NEET Online Successfully',
+    subheadline:
+      'Master NEET preparation from the comfort of your home with proven online strategies, structured study plans, and expert guidance from Dr. Shekhar.',
+    highlightedText: 'Online',
+    ctaText: 'Start Your Online Journey',
+    ctaLink: '/contact',
+    backgroundGradient: 'from-blue-900 to-blue-800',
+  },
+
+  painPoints: {
+    title: 'Challenges of Online NEET Preparation',
+    points: [
+      {
+        icon: 'laptop',
+        question: 'Struggling to stay focused while studying online?',
+        solution:
+          'Our structured online program includes live interactive sessions, timed study blocks, and accountability check-ins to keep you engaged and on track.',
+      },
+      {
+        icon: 'clock',
+        question: 'Finding it hard to manage time without classroom structure?',
+        solution:
+          'Get personalized daily schedules, weekly planners, and automated reminders that create the same discipline as offline coaching.',
+      },
+      {
+        icon: 'question',
+        question: 'Unable to get instant doubt resolution online?',
+        solution:
+          'Dr. Shekhar offers live doubt-solving sessions, 24/7 WhatsApp support, and recorded explanations for common queries.',
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'Benefits of Online NEET Preparation',
+    subtitle: 'Why thousands of students choose online coaching',
+    items: [
+      {
+        icon: 'home',
+        title: 'Learn From Anywhere',
+        description:
+          'Access world-class NEET coaching from your home. No travel time, no relocation needed - just quality education at your fingertips.',
+      },
+      {
+        icon: 'clock',
+        title: 'Flexible Schedule',
+        description:
+          'Study at your peak productivity hours. Replay lectures, pause to take notes, and learn at your own pace.',
+      },
+      {
+        icon: 'rupee',
+        title: 'Cost Effective',
+        description:
+          'Save on hostel fees, travel costs, and expensive city accommodations. Get premium coaching at 60% lower cost.',
+      },
+      {
+        icon: 'video',
+        title: 'Recorded Lectures',
+        description:
+          'Never miss a class. Access recorded sessions anytime for revision, catch up on missed topics, or review difficult concepts.',
+      },
+      {
+        icon: 'chart',
+        title: 'Track Your Progress',
+        description:
+          'Digital dashboards show your performance analytics, completion rates, and areas needing improvement in real-time.',
+      },
+      {
+        icon: 'shield',
+        title: 'Safe Learning Environment',
+        description:
+          'Study in the comfort of your home with parental supervision. Ideal for students who prefer a familiar environment.',
+      },
+    ],
+  },
+
+  stats: [
+    { value: '85%', label: 'Online Students Score 600+', icon: 'trophy' },
+    { value: '10K+', label: 'Students Taught Online', icon: 'users' },
+    { value: '4.9/5', label: 'Student Satisfaction', icon: 'star' },
+    { value: '24/7', label: 'Doubt Support Available', icon: 'clock' },
+  ],
+
+  testimonials: [
+    {
+      name: 'Ananya R.',
+      achievement: 'NEET 2024 - 695/720 (Online Student)',
+      quote:
+        "I was skeptical about online coaching, but Dr. Shekhar's live classes were more engaging than any offline class I attended. The flexibility helped me study during my productive hours.",
+      score: '695/720',
+    },
+    {
+      name: 'Vikram S.',
+      achievement: 'NEET 2024 - 665/720 (Prepared from Tier-2 City)',
+      quote:
+        'Living in a small town, quality NEET coaching was not accessible. Online classes with Dr. Shekhar gave me the same preparation as metro city students.',
+      score: '665/720',
+    },
+  ],
+
+  faqs: [
+    {
+      question: 'Is online NEET preparation as effective as offline coaching?',
+      answer:
+        "Yes, online NEET preparation can be equally or more effective than offline coaching. Studies show that students with self-discipline often perform better online due to flexible timing, ability to replay lectures, and personalized pacing. Dr. Shekhar's online students consistently achieve 650+ scores.",
+    },
+    {
+      question: 'How to create a study plan for NEET online preparation?',
+      answer:
+        'Create a realistic 10-12 month plan: (1) First 6 months for completing NCERT syllabus, (2) Next 3 months for revision and problem-solving, (3) Last 3 months for mock tests. Allocate 6-8 hours daily with Biology getting 3 hours. Our online course provides ready-made study planners.',
+    },
+    {
+      question: 'What equipment do I need for online NEET preparation?',
+      answer:
+        'Basic requirements: Laptop/tablet/smartphone with stable internet (minimum 2 Mbps), quiet study space, headphones for clear audio, notebook for handwritten notes. Optional: Second screen for notes, good lighting for video sessions.',
+    },
+    {
+      question: 'How to stay motivated while preparing for NEET at home?',
+      answer:
+        'Tips for staying motivated: (1) Set daily targets and reward yourself, (2) Join study groups for accountability, (3) Track progress visually, (4) Take regular breaks (Pomodoro technique), (5) Connect with mentors regularly, (6) Visualize your MBBS goal daily.',
+    },
+    {
+      question: 'Can I crack NEET through self-study online without coaching?',
+      answer:
+        "Self-study is possible but challenging. We recommend a hybrid approach - use online coaching for structured learning and guidance, supplemented by self-study. Dr. Shekhar's online program combines expert teaching with self-study resources for optimal results.",
+    },
+    {
+      question: 'How are doubts resolved in online NEET coaching?',
+      answer:
+        'Multiple doubt resolution channels: (1) Live doubt sessions during class, (2) Dedicated doubt-clearing slots twice weekly, (3) WhatsApp group for quick queries, (4) One-on-one video calls for complex concepts, (5) Written responses within 24 hours.',
+    },
+    {
+      question: 'What is the best time to start online NEET preparation?',
+      answer:
+        "Ideal starting points: Class 11 students - Start immediately for 2-year plan. Class 12 students - Begin at start of academic year. Droppers - Start by June for next year's exam. It's never too late, but earlier start allows better concept building.",
+    },
+  ],
+
+  courseSummary: {
+    title: 'Online NEET Biology Course by Dr. Shekhar',
+    duration: '12 months comprehensive online program',
+    batchSize: 'Limited batches (15-20 students per batch)',
+    features: [
+      'Live interactive classes with Dr. Shekhar',
+      'Recorded lectures for unlimited revision',
+      'Digital NCERT-based study materials',
+      'Weekly mock tests with detailed analysis',
+      '24/7 doubt support via WhatsApp',
+      'Parent progress reports monthly',
+    ],
+    price: {
+      original: 75000,
+      discounted: 45000,
+      emi: 'EMI from Rs. 3,750/month',
+    },
+  },
+
+  cta: {
+    title: 'Start Your Online NEET Journey Today',
+    subtitle:
+      'Join 10,000+ students who cracked NEET through our online program. Expert guidance, flexible learning, proven results.',
+    primaryButton: {
+      text: 'Join Online Classes',
+      link: '/courses',
+    },
+    secondaryButton: {
+      text: 'Book Free Demo Class',
+      link: '/book-demo',
+    },
+    tertiaryButton: {
+      text: 'Download Study Plan',
+      link: '/resources',
+    },
+  },
+
+  toolsCTA: {
+    title: 'Free Online NEET Tools',
+    tools: [
+      {
+        name: 'NEET MCQ Practice',
+        description: 'Practice 10,000+ MCQs topic-wise online',
+        link: '/tools/neet-mcq-practice',
+        icon: 'mcq',
+      },
+      {
+        name: 'NEET Rank Predictor',
+        description: 'Estimate your rank based on mock scores',
+        link: '/tools/neet-rank-predictor',
+        icon: 'rank',
+      },
+      {
+        name: 'College Predictor',
+        description: 'Find colleges matching your expected score',
+        link: '/tools/neet-college-predictor',
+        icon: 'college',
+      },
+    ],
+  },
+
+  relatedPages: [
+    { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
+    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Study Tips', link: '/neet-study-tips' },
+    { title: 'NEET Time Management', link: '/neet-time-management' },
+  ],
+
+  contactButtons: {
+    phone: '+918826444334',
+    whatsapp: {
+      number: '+918826444334',
+      message: 'Hi Dr. Shekhar, I want to prepare for NEET online. Please guide me.',
+    },
+  },
+
+  schema: {
+    '@type': 'Course',
+    courseName: 'How to Prepare for NEET Online - Complete Guide',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      'Comprehensive guide on how to prepare for NEET online including study strategies, time management, and expert tips for successful online NEET preparation from home.',
+    duration: '12 months',
+    price: 45000,
+    priceCurrency: 'INR',
+  },
+}
+
+// NEET Tips & Strategy Page
+const neetTipsStrategy: SEOLandingContent = {
+  slug: 'neet-tips-strategy',
+  classLevel: 'universal',
+
+  title: 'NEET Tips & Strategy 2025 | Expert Preparation Guide',
+  metaDescription:
+    'Proven NEET tips and strategy for 2025. Expert guidance on time management, revision, mental preparation & scoring 650+ from Dr. Shekhar at Cerebrum Biology.',
+  keywords: [
+    'neet tips',
+    'neet strategy',
+    'how to crack neet',
+    'neet preparation tips',
+    'neet study tips',
+    'best tips for neet',
+    'neet topper tips',
+    'neet exam tips',
+    'neet success strategy',
+    'neet time management',
+    'neet revision tips',
+    'neet biology tips',
+    'neet expert advice',
+  ],
+
+  hero: {
+    headline: 'Proven NEET Tips & Strategy for 650+ Score',
+    subheadline:
+      'Master the art of NEET preparation with battle-tested strategies from Dr. Shekhar. Learn time management, smart revision techniques, and mental preparation secrets used by top rankers.',
+    highlightedText: 'Tips & Strategy',
+    ctaText: 'Get Free Consultation',
+    ctaLink: '/contact',
+    backgroundGradient: 'from-teal-900 to-teal-800',
+  },
+
+  painPoints: {
+    title: 'Common NEET Preparation Challenges',
+    points: [
+      {
+        icon: 'target',
+        question: 'Studying hard but not seeing score improvement?',
+        solution:
+          'Our strategic approach focuses on high-yield topics and smart study techniques that maximize marks per hour invested. Learn to study smarter, not just harder.',
+      },
+      {
+        icon: 'clock',
+        question: 'Running out of time during preparation or exam?',
+        solution:
+          'Dr. Shekhar provides proven time management frameworks - from daily schedules to exam-day strategies that help you attempt 180 questions confidently in 3 hours 20 minutes.',
+      },
+      {
+        icon: 'brain',
+        question: 'Feeling overwhelmed and losing motivation?',
+        solution:
+          'Our holistic approach addresses mental health, stress management, and motivation techniques that keep you focused throughout the 12-month NEET journey.',
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'Expert NEET Strategy Framework',
+    subtitle: 'Comprehensive tips for every aspect of preparation',
+    items: [
+      {
+        icon: 'calendar',
+        title: 'Study Schedule Optimization',
+        description:
+          'Customized daily and weekly timetables based on your current level, covering all subjects with proper breaks and revision slots.',
+      },
+      {
+        icon: 'book',
+        title: 'Subject-wise Strategy',
+        description:
+          'Specific tips for Biology, Physics, and Chemistry including NCERT mastery, reference book usage, and concept-to-MCQ conversion techniques.',
+      },
+      {
+        icon: 'refresh',
+        title: 'Revision Techniques',
+        description:
+          'Spaced repetition, active recall, and smart note-making strategies that ensure long-term retention of 97 chapters.',
+      },
+      {
+        icon: 'clipboard',
+        title: 'Mock Test Strategy',
+        description:
+          'How to analyze mock tests, track weak areas, and progressively improve accuracy and speed through systematic test-taking.',
+      },
+      {
+        icon: 'heart',
+        title: 'Mental Health & Motivation',
+        description:
+          'Stress management, dealing with exam anxiety, maintaining work-life balance, and staying motivated during the long preparation journey.',
+      },
+      {
+        icon: 'trophy',
+        title: 'Exam Day Strategy',
+        description:
+          'Last-minute tips, time allocation during exam, question selection in Section B, and avoiding negative marking traps.',
+      },
+    ],
+  },
+
+  stats: [
+    { value: '650+', label: 'Average Student Score', icon: 'trophy' },
+    { value: '15+', label: 'Years Teaching Experience', icon: 'user' },
+    { value: '10K+', label: 'Students Guided', icon: 'users' },
+    { value: '95%', label: 'Selection Rate', icon: 'check' },
+  ],
+
+  testimonials: [
+    {
+      name: 'Arjun Mehta',
+      achievement: 'NEET 2024 - AIR 342',
+      quote:
+        "Dr. Shekhar's strategy sessions transformed my preparation. The time management tips helped me complete the paper with 20 minutes to spare. His revision techniques made Biology my strongest subject.",
+      score: '695/720',
+    },
+    {
+      name: 'Priya Sharma',
+      achievement: 'NEET 2024 - 670/720',
+      quote:
+        "I was scoring 450 in mocks until I followed Dr. Shekhar's strategic approach. The mental preparation tips were game-changers. I went from anxious to confident in just 3 months.",
+      score: '670/720',
+    },
+  ],
+
+  faqs: [
+    {
+      question: 'What are the best tips to crack NEET in first attempt?',
+      answer:
+        'Key tips for cracking NEET in first attempt: 1) Master NCERT textbooks line-by-line - 95% questions come from NCERT, 2) Focus on high-yield chapters first (Human Physiology, Genetics, Ecology), 3) Solve 10+ years of previous year questions, 4) Take weekly mock tests and analyze mistakes, 5) Create concise revision notes, 6) Maintain consistent daily study of 6-8 hours, 7) Keep your mental health in check with proper sleep and breaks.',
+    },
+    {
+      question: 'How should I manage time while preparing for NEET?',
+      answer:
+        'Effective NEET time management: Allocate 40% time to Biology (highest weightage), 30% each to Physics and Chemistry. Study in 50-minute focused blocks with 10-minute breaks. Morning hours for difficult topics (Physics numericals, Organic Chemistry). Evening for revision and Biology reading. Weekly schedule: 5 days new topics, 1 day revision, 1 day mock test analysis. Reserve last 3 months primarily for revision and full-length tests.',
+    },
+    {
+      question: 'What is the best strategy for NEET Biology preparation?',
+      answer:
+        'NEET Biology strategy: 1) Read NCERT Biology thoroughly - make notes of diagrams, examples, and exceptions, 2) Focus on Human Physiology (50+ marks), Genetics (40+ marks), and Ecology (25+ marks), 3) Memorize scientific names, diseases, and processes using mnemonics, 4) Practice diagrams daily - labeling is crucial, 5) Solve chapter-wise PYQs after completing each topic, 6) Create flashcards for quick revision of facts. Biology is memory-heavy - revise weekly.',
+    },
+    {
+      question: 'How do NEET toppers prepare? What are topper tips for NEET?',
+      answer:
+        'NEET topper strategies: 1) They prioritize NCERT over any coaching material, 2) Consistent daily study routine (6-8 hours) without burnout, 3) Regular self-assessment through mock tests, 4) Focus on weak areas identified through test analysis, 5) Maintain error notebooks for repeated mistakes, 6) Quality sleep (7-8 hours) for memory consolidation, 7) Limited social media and distractions, 8) Positive mindset and visualization of success. Toppers study smart, not just hard.',
+    },
+    {
+      question: 'What should be the revision strategy for NEET?',
+      answer:
+        'Effective NEET revision strategy: 1) First revision within 24 hours of learning (crucial for retention), 2) Weekly revision of topics covered that week, 3) Monthly cumulative revision using short notes, 4) Use spaced repetition - revise after 1 day, 1 week, 1 month, 5) Create one-page summaries for each chapter, 6) Practice diagrams and flowcharts for quick recall, 7) Last 3 months: 2 revisions of entire syllabus minimum. Remember: Revision is more important than learning new things.',
+    },
+    {
+      question: 'How to handle exam stress and anxiety during NEET preparation?',
+      answer:
+        'Managing NEET stress: 1) Maintain regular exercise (30 min daily) - releases stress hormones, 2) Practice deep breathing and meditation (10 min daily), 3) Ensure 7-8 hours sleep - crucial for memory and focus, 4) Take weekly breaks - watch a movie, meet friends, 5) Avoid comparing with peers - focus on personal growth, 6) Talk to mentors/parents when overwhelmed, 7) Visualize success regularly, 8) On exam day: Reach early, carry essentials, stay calm. Stress is normal - channelize it positively.',
+    },
+    {
+      question: 'What are the exam day tips for NEET?',
+      answer:
+        'NEET exam day strategy: 1) Sleep well night before - no last-minute cramming, 2) Light breakfast, carry water and permitted snacks, 3) Reach center 1 hour early with all documents, 4) Start with your strongest subject for confidence, 5) Time allocation: Biology 90 min, Physics 55 min, Chemistry 55 min, 6) In Section B, quickly scan and choose easier 10 questions, 7) Avoid negative marking - skip if less than 50% confident, 8) Use last 15 min to review marked questions and OMR sheet. Stay calm and trust your preparation.',
+    },
+  ],
+
+  courseSummary: {
+    title: 'NEET Strategy Mentorship Program',
+    duration: 'Personalized (3-12 months)',
+    batchSize: '1-on-1 with Dr. Shekhar',
+    features: [
+      'Personalized study plan creation',
+      'Weekly strategy review sessions',
+      'Mock test analysis and improvement plan',
+      'Mental conditioning and motivation',
+      'Subject-wise tips and techniques',
+      'Exam day preparation guidance',
+    ],
+    price: {
+      original: 25000,
+      discounted: 15000,
+      emi: 'EMI from Rs. 2,500/month',
+    },
+  },
+
+  cta: {
+    title: 'Get Personalized NEET Strategy from Dr. Shekhar',
+    subtitle:
+      'Stop struggling with generic tips. Get a customized preparation strategy designed for your specific needs and score targets.',
+    primaryButton: {
+      text: 'Book Strategy Session',
+      link: '/contact',
+    },
+    secondaryButton: {
+      text: 'Explore Courses',
+      link: '/courses',
+    },
+    tertiaryButton: {
+      text: 'Free Resources',
+      link: '/resources',
+    },
+  },
+
+  toolsCTA: {
+    title: 'Free NEET Preparation Tools',
+    tools: [
+      {
+        name: 'NEET MCQ Practice',
+        description: 'Practice chapter-wise MCQs with detailed solutions',
+        link: '/tools/neet-mcq',
+        icon: 'mcq',
+      },
+      {
+        name: 'Rank Predictor',
+        description: 'Predict your NEET rank based on expected score',
+        link: '/tools/rank-predictor',
+        icon: 'rank',
+      },
+      {
+        name: 'College Predictor',
+        description: 'Find colleges you can get based on your rank',
+        link: '/tools/college-predictor',
+        icon: 'college',
+      },
+    ],
+  },
+
+  contactButtons: {
+    phone: '+918826444334',
+    whatsapp: {
+      number: '+918826444334',
+      message: 'Hi Dr. Shekhar, I need NEET preparation tips and strategy guidance.',
+    },
+  },
+
+  relatedPages: [
+    { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
+    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+  ],
+
+  schema: {
+    '@type': 'FAQPage',
+    courseName: 'NEET Tips & Strategy Guide',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      'Comprehensive NEET preparation tips and strategy guide covering time management, revision techniques, mental preparation, and exam day strategy for scoring 650+.',
+    duration: 'Self-paced',
+    price: 0,
+    priceCurrency: 'INR',
+  },
+}
+
 // Export all NEET guide pages
 export const neetGuideSEOPages: Record<string, SEOLandingContent> = {
   // NEET 2025 pages
@@ -3484,6 +3986,10 @@ export const neetGuideSEOPages: Record<string, SEOLandingContent> = {
   'neet-exam-date-2026': neetExamDate2026,
   'neet-result-2026': neetResult2026,
   'neet-application-form-2026': neetApplicationForm2026,
+  // Online preparation guides
+  'how-to-prepare-for-neet-online': howToPrepareForNeetOnline,
+  // Tips & Strategy guides
+  'neet-tips-strategy': neetTipsStrategy,
 }
 
 // Helper to get all NEET guide slugs

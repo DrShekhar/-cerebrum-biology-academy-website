@@ -108,7 +108,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/support/help-center"
+              href="/help"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-200">
