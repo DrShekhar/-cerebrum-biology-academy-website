@@ -107,7 +107,11 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   useEffect(() => {
     setSearchTerm(debouncedSearch)
     setIsSearching(false)
-  }, [debouncedSearch])
+    // Reset to page 1 when search changes (fixes duplicate content bug)
+    if (debouncedSearch !== searchTerm) {
+      setCurrentPage(1)
+    }
+  }, [debouncedSearch, searchTerm])
 
   // Close search preview when clicking outside
   useEffect(() => {
@@ -172,6 +176,15 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   }, [posts, selectedCategory, selectedDifficulty, selectedAuthor, searchTerm, sortBy])
 
   const totalPages = Math.ceil(filteredAndSortedPosts.length / POSTS_PER_PAGE)
+
+  // Safety check: Reset to page 1 if current page exceeds total pages
+  // This handles edge cases when filters/search reduce the result count
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1)
+    }
+  }, [currentPage, totalPages])
+
   const paginatedPosts = filteredAndSortedPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
