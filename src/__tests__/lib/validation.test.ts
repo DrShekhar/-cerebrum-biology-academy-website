@@ -177,13 +177,16 @@ describe('Validation Schemas', () => {
     })
 
     it('should accept today and future dates', () => {
-      const today = new Date().toISOString().split('T')[0]
-      const future = new Date()
-      future.setDate(future.getDate() + 7)
-      const futureDate = future.toISOString().split('T')[0]
+      // Use local date (not UTC) to match validation schema logic
+      const now = new Date()
+      const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+
+      const futureDate = new Date()
+      futureDate.setDate(futureDate.getDate() + 7)
+      const future = `${futureDate.getFullYear()}-${String(futureDate.getMonth() + 1).padStart(2, '0')}-${String(futureDate.getDate()).padStart(2, '0')}`
 
       const todayData = { ...validBookingData, preferredDate: today }
-      const futureData = { ...validBookingData, preferredDate: futureDate }
+      const futureData = { ...validBookingData, preferredDate: future }
 
       expect(demoBookingSchema.safeParse(todayData).success).toBe(true)
       expect(demoBookingSchema.safeParse(futureData).success).toBe(true)

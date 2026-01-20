@@ -55,9 +55,13 @@ export const demoBookingSchema = z.object({
     .regex(indianPhoneRegex, 'Please enter a valid Indian phone number')
     .transform((phone) => phone.replace(/[\s\-]/g, '')),
   preferredDate: z.string().refine((date) => {
-    const selectedDate = new Date(date)
+    // Parse date components explicitly to ensure local timezone
+    const [year, month, day] = date.split('-').map(Number)
+    const selectedDate = new Date(year, month - 1, day, 0, 0, 0, 0)
+
     const today = new Date()
     today.setHours(0, 0, 0, 0)
+
     return selectedDate >= today
   }, 'Date must be today or in the future'),
   preferredTime: z

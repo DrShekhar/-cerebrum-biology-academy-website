@@ -80,9 +80,13 @@ export const demoBookingSchema = z.object({
     .string()
     .min(1, 'Preferred date is required')
     .refine((date) => {
-      const selectedDate = new Date(date)
+      // Parse date components explicitly to ensure local timezone
+      const [year, month, day] = date.split('-').map(Number)
+      const selectedDate = new Date(year, month - 1, day, 0, 0, 0, 0)
+
       const today = new Date()
       today.setHours(0, 0, 0, 0)
+
       return selectedDate >= today
     }, 'Preferred date must be today or in the future'),
 
