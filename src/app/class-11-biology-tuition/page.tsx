@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'Class 11 Biology Tuition Delhi | CBSE Board Coaching',
@@ -87,6 +89,13 @@ export default function Class11BiologyTuitionPage() {
         trustBadges={['CBSE Experts', 'Practicals Covered', '95+ Scores']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 12, 2026" seatsTotal={15} seatsFilled={10} />
+        </div>
+      </section>
+
       <LeadForm
         title="Book Free Class 11 Biology Demo"
         description="Experience our board-focused teaching methodology."
@@ -129,9 +138,15 @@ export default function Class11BiologyTuitionPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

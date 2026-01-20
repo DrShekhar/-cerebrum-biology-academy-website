@@ -7,6 +7,11 @@ import {
   LocationSection,
   StickyCTA,
 } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import {
+  UrgencyBanner,
+  SocialProofNotifications,
+} from '@/components/landing-pages/UrgencyBanner'
 import type { USP, FAQ } from '@/components/landing-pages'
 
 export const metadata: Metadata = {
@@ -140,6 +145,13 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
         trustBadges={['15+ Years Experience', '10,000+ Students', '99% Results']}
       />
 
+      {/* Urgency Banner - Seats & Batch Start Date */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 5, 2026" seatsTotal={15} seatsFilled={12} />
+        </div>
+      </section>
+
       <LeadForm
         title="Book Your Free Demo Class"
         description="Experience our unique teaching methodology. Fill the form and we'll contact you within 24 hours."
@@ -251,11 +263,17 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
         </div>
       </section>
 
+      {/* Video Testimonials Section - Social Proof */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
 
       <LocationSection />
 
       <StickyCTA />
+
+      {/* Social Proof - Live Activity Notifications */}
+      <SocialProofNotifications />
 
       {/* Schema Markup for LocalBusiness */}
       <script

@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET',
@@ -92,6 +94,13 @@ export default function CBSEBiologyCoachingDelhiPage() {
         highlightedBadge="🎯 Board + NEET Preparation"
         trustBadges={['CBSE Experts', '15+ Years', 'Small Batches']}
       />
+
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 14, 2026" seatsTotal={15} seatsFilled={13} />
+        </div>
+      </section>
 
       <LeadForm
         title="Book Free CBSE Biology Demo"
@@ -184,9 +193,15 @@ export default function CBSEBiologyCoachingDelhiPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

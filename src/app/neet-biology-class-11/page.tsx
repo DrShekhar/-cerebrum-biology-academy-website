@@ -7,6 +7,11 @@ import {
   LocationSection,
   StickyCTA,
 } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import {
+  UrgencyBanner,
+  SocialProofNotifications,
+} from '@/components/landing-pages/UrgencyBanner'
 import type { USP, FAQ } from '@/components/landing-pages'
 
 export const metadata: Metadata = {
@@ -98,6 +103,13 @@ export default function NEETBiologyClass11Page() {
         trustBadges={['NCERT + NEET Coverage', 'School-Friendly Schedule', '99% Results']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={15} seatsFilled={10} />
+        </div>
+      </section>
+
       <LeadForm
         title="Book Free Class 11 Demo"
         description="Experience how we make Biology interesting and easy for Class 11 students."
@@ -135,9 +147,15 @@ export default function NEETBiologyClass11Page() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

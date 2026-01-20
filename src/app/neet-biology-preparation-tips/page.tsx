@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Preparation Tips | Study Strategies 2026',
@@ -95,6 +97,13 @@ export default function NEETBiologyPreparationTipsPage() {
         trustBadges={['Expert Strategies', 'Topper Methods', 'Free Counseling']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 20, 2026" seatsTotal={15} seatsFilled={11} />
+        </div>
+      </section>
+
       <LeadForm
         title="Get Personalized Study Plan"
         description="Book free counseling session and get customized NEET Biology preparation strategy."
@@ -172,9 +181,15 @@ export default function NEETBiologyPreparationTipsPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

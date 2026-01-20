@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching',
@@ -88,6 +90,13 @@ export default function Class12BoardBiologyPreparationPage() {
         trustBadges={['Board Exam Experts', '95+ Scores', 'Crash Courses']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 18, 2026" seatsTotal={15} seatsFilled={11} />
+        </div>
+      </section>
+
       <LeadForm
         title="Book Free Board Exam Demo"
         description="Learn our proven board exam strategies."
@@ -149,9 +158,15 @@ export default function Class12BoardBiologyPreparationPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

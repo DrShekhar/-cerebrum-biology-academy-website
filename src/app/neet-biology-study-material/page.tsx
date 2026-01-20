@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers',
@@ -88,6 +90,13 @@ export default function NEETBiologyStudyMaterialPage() {
         trustBadges={['10,000+ MCQs', '15 Years Papers', 'Free Updates']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 15, 2026" seatsTotal={15} seatsFilled={9} />
+        </div>
+      </section>
+
       <LeadForm
         title="Get Free Sample Study Material"
         description="Download free sample chapters and see the quality of our study material."
@@ -151,9 +160,15 @@ export default function NEETBiologyStudyMaterialPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }

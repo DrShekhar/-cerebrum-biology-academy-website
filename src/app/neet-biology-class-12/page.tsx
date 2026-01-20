@@ -8,6 +8,8 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 export const metadata: Metadata = {
   title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR',
@@ -86,6 +88,13 @@ export default function NEETBiologyClass12Page() {
         trustBadges={['340+ Score Strategy', 'Mock Tests', '99% Results']}
       />
 
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 8, 2026" seatsTotal={15} seatsFilled={13} />
+        </div>
+      </section>
+
       <LeadForm
         title="Book Free Class 12 NEET Demo"
         description="See how we help Class 12 students score 340+ in NEET Biology."
@@ -128,9 +137,15 @@ export default function NEETBiologyClass12Page() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       <FAQSection faqs={faqs} />
       <LocationSection />
       <StickyCTA />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </>
   )
 }
