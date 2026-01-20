@@ -22,6 +22,11 @@ import {
   Calendar,
   MapPin,
 } from 'lucide-react'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import {
+  UrgencyBanner,
+  SocialProofNotifications,
+} from '@/components/landing-pages/UrgencyBanner'
 
 const classOptions = [
   {
@@ -249,6 +254,13 @@ export default function OnlineBiologyClassesPage() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <UrgencyBanner batchStartDate="Feb 15, 2026" seatsTotal={20} seatsFilled={17} />
         </div>
       </section>
 
@@ -489,6 +501,9 @@ export default function OnlineBiologyClassesPage() {
         </div>
       </section>
 
+      {/* Video Testimonials */}
+      <VideoTestimonialsSection />
+
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -578,6 +593,9 @@ export default function OnlineBiologyClassesPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications />
     </div>
   )
 }
