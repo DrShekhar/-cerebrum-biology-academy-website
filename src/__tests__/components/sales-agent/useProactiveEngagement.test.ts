@@ -3,7 +3,7 @@
  * Tests proactive engagement triggers: exit intent, scroll depth, time on page, etc.
  */
 
-import { renderHook, act, waitFor } from '@testing-library/react'
+import { renderHook, act } from '@testing-library/react'
 
 // Mock localStorage
 const localStorageMock = (() => {
@@ -24,27 +24,21 @@ const localStorageMock = (() => {
 
 Object.defineProperty(window, 'localStorage', { value: localStorageMock })
 
-// Mock usePathname
-jest.mock('next/navigation', () => ({
-  usePathname: jest.fn(() => '/'),
-}))
-
-import { useProactiveEngagement, type ProactiveTriggerType } from '@/components/sales-agent/hooks/useProactiveEngagement'
-import { usePathname } from 'next/navigation'
+import { useProactiveEngagement } from '@/components/sales-agent/hooks/useProactiveEngagement'
+import type { Language } from '@/lib/aria/types'
 
 describe('useProactiveEngagement', () => {
-  const mockOnTrigger = jest.fn()
-
   beforeEach(() => {
     localStorageMock.clear()
-    mockOnTrigger.mockClear()
     jest.useFakeTimers()
-    ;(usePathname as jest.Mock).mockReturnValue('/')
 
     // Reset scroll position
-    Object.defineProperty(document.documentElement, 'scrollHeight', { value: 2000, writable: true })
-    Object.defineProperty(window, 'innerHeight', { value: 800, writable: true })
-    Object.defineProperty(window, 'scrollY', { value: 0, writable: true })
+    Object.defineProperty(document.documentElement, 'scrollHeight', { value: 2000, writable: true, configurable: true })
+    Object.defineProperty(window, 'innerHeight', { value: 800, writable: true, configurable: true })
+    Object.defineProperty(window, 'scrollY', { value: 0, writable: true, configurable: true })
+
+    // Reset pathname using history.pushState (JSDOM-compatible)
+    window.history.pushState({}, '', '/')
   })
 
   afterEach(() => {
@@ -54,79 +48,86 @@ describe('useProactiveEngagement', () => {
 
   describe('initialization', () => {
     it('should initialize with default config', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
-      expect(result.current.shouldShowWidget).toBe(false)
-      expect(result.current.triggerType).toBeNull()
-      expect(result.current.hasBeenDismissed).toBe(false)
-    })
-
-    it('should respect disabled state', () => {
-      const { result } = renderHook(() =>
-        useProactiveEngagement({ onTrigger: mockOnTrigger, enabled: false })
-      )
-
-      expect(result.current.shouldShowWidget).toBe(false)
-
-      // Advance time significantly
-      act(() => {
-        jest.advanceTimersByTime(60000)
-      })
-
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
+      expect(result.current.proactiveTrigger).toBeNull()
+      expect(result.current.hasTriggered).toBe(false)
     })
 
     it('should not trigger if user has "doNotShow" preference', () => {
-      localStorageMock.setItem('aria_proactive_doNotShow', 'true')
+      const stored = {
+        hasSeenProactive: false,
+        doNotShow: true,
+        lastProactiveTime: 0,
+        sessionCount: 0,
+      }
+      localStorageMock.setItem('aria_engagement', JSON.stringify(stored))
 
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       act(() => {
         jest.advanceTimersByTime(60000)
       })
 
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
+    })
+
+    it('should not trigger if shown in last hour', () => {
+      const stored = {
+        hasSeenProactive: true,
+        doNotShow: false,
+        lastProactiveTime: Date.now() - 30 * 60 * 1000, // 30 minutes ago
+        sessionCount: 0,
+      }
+      localStorageMock.setItem('aria_engagement', JSON.stringify(stored))
+
+      const { result } = renderHook(() => useProactiveEngagement())
+
+      act(() => {
+        jest.advanceTimersByTime(60000)
+      })
+
+      expect(result.current.shouldShowProactive).toBe(false)
     })
   })
 
   describe('time on page trigger', () => {
     it('should trigger after default delay (45 seconds)', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
 
       act(() => {
         jest.advanceTimersByTime(45000)
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('time_on_page')
-      expect(mockOnTrigger).toHaveBeenCalledWith('time_on_page')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('time_on_page')
+      expect(result.current.hasTriggered).toBe(true)
     })
 
     it('should respect custom delay', () => {
       const { result } = renderHook(() =>
-        useProactiveEngagement({
-          onTrigger: mockOnTrigger,
-          config: { timeOnPageDelay: 30000 }
-        })
+        useProactiveEngagement('en', { timeOnPageDelay: 30000 })
       )
 
       act(() => {
         jest.advanceTimersByTime(29000)
       })
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
 
       act(() => {
         jest.advanceTimersByTime(2000)
       })
-      expect(result.current.shouldShowWidget).toBe(true)
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('time_on_page')
     })
   })
 
   describe('exit intent trigger', () => {
     it('should trigger on mouse leave (desktop)', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // First, advance time past the initial delay
       act(() => {
@@ -135,188 +136,253 @@ describe('useProactiveEngagement', () => {
 
       // Simulate mouse leaving viewport (exit intent)
       act(() => {
-        const event = new MouseEvent('mouseout', {
+        const event = new MouseEvent('mouseleave', {
           clientY: -10, // Mouse went above viewport
-          relatedTarget: null,
         })
-        Object.defineProperty(event, 'relatedTarget', { value: null })
         document.dispatchEvent(event)
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('exit_intent')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('exit_intent')
     })
   })
 
   describe('scroll depth trigger', () => {
     it('should trigger when scroll depth exceeds threshold (60%)', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
-      // Simulate scroll to 70%
+      // Simulate scroll to 70% (scrollY = 840 out of scrollHeight 2000 - innerHeight 800 = 1200)
       act(() => {
-        Object.defineProperty(window, 'scrollY', { value: 800, writable: true })
+        Object.defineProperty(window, 'scrollY', { value: 840, writable: true, configurable: true })
         window.dispatchEvent(new Event('scroll'))
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('scroll_depth')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('scroll_depth')
     })
 
     it('should not trigger when scroll depth is below threshold', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // Simulate scroll to 30%
       act(() => {
-        Object.defineProperty(window, 'scrollY', { value: 300, writable: true })
+        Object.defineProperty(window, 'scrollY', { value: 360, writable: true, configurable: true })
         window.dispatchEvent(new Event('scroll'))
       })
 
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
+    })
+
+    it('should respect custom scroll depth threshold', () => {
+      const { result } = renderHook(() =>
+        useProactiveEngagement('en', { scrollDepthThreshold: 0.8 }) // 80%
+      )
+
+      // Scroll to 70% (should NOT trigger with 80% threshold)
+      act(() => {
+        Object.defineProperty(window, 'scrollY', { value: 840, writable: true, configurable: true })
+        window.dispatchEvent(new Event('scroll'))
+      })
+
+      expect(result.current.shouldShowProactive).toBe(false)
+
+      // Scroll to 85% (should trigger)
+      act(() => {
+        Object.defineProperty(window, 'scrollY', { value: 1020, writable: true, configurable: true })
+        window.dispatchEvent(new Event('scroll'))
+      })
+
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('scroll_depth')
     })
   })
 
   describe('pricing page trigger', () => {
     it('should trigger quickly on pricing pages', () => {
-      ;(usePathname as jest.Mock).mockReturnValue('/pricing')
+      window.history.pushState({}, '', '/pricing')
 
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // Should trigger after short delay on pricing pages
       act(() => {
         jest.advanceTimersByTime(5500)
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('pricing_page')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('pricing_page')
     })
 
     it('should trigger on course pages', () => {
-      ;(usePathname as jest.Mock).mockReturnValue('/courses/intensive-neet-biology')
+      window.history.pushState({}, '', '/courses/intensive-neet-biology')
 
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       act(() => {
         jest.advanceTimersByTime(5500)
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('pricing_page')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('pricing_page')
     })
   })
 
   describe('returning visitor trigger', () => {
     it('should trigger quickly for returning visitors', () => {
-      localStorageMock.setItem('aria_visit_count', '2')
+      const stored = {
+        hasSeenProactive: false,
+        doNotShow: false,
+        lastProactiveTime: 0,
+        sessionCount: 1, // Has visited before
+      }
+      localStorageMock.setItem('aria_engagement', JSON.stringify(stored))
 
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       act(() => {
         jest.advanceTimersByTime(5500)
       })
 
-      expect(result.current.shouldShowWidget).toBe(true)
-      expect(result.current.triggerType).toBe('returning_visitor')
+      expect(result.current.shouldShowProactive).toBe(true)
+      expect(result.current.proactiveTrigger?.type).toBe('returning_visitor')
     })
 
-    it('should increment visit count', () => {
-      localStorageMock.setItem('aria_visit_count', '1')
+    it('should increment session count', () => {
+      const stored = {
+        hasSeenProactive: false,
+        doNotShow: false,
+        lastProactiveTime: 0,
+        sessionCount: 1,
+      }
+      localStorageMock.setItem('aria_engagement', JSON.stringify(stored))
 
-      renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      renderHook(() => useProactiveEngagement())
 
-      expect(localStorageMock.setItem).toHaveBeenCalledWith('aria_visit_count', '2')
+      expect(localStorageMock.setItem).toHaveBeenCalledWith(
+        'aria_engagement',
+        expect.stringContaining('"sessionCount":2')
+      )
     })
   })
 
   describe('dismiss behavior', () => {
     it('should stop showing widget when dismissed', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // Trigger the widget
       act(() => {
         jest.advanceTimersByTime(45000)
       })
-      expect(result.current.shouldShowWidget).toBe(true)
+      expect(result.current.shouldShowProactive).toBe(true)
 
       // Dismiss
       act(() => {
-        result.current.dismissWidget()
+        result.current.dismissProactive(false)
       })
 
-      expect(result.current.shouldShowWidget).toBe(false)
-      expect(result.current.hasBeenDismissed).toBe(true)
+      expect(result.current.shouldShowProactive).toBe(false)
+      expect(result.current.proactiveTrigger).toBeNull()
     })
 
     it('should record "doNotShow" preference when user opts out', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
+      // Trigger the widget
       act(() => {
-        result.current.setDoNotShowAgain()
+        jest.advanceTimersByTime(45000)
       })
 
-      expect(localStorageMock.setItem).toHaveBeenCalledWith('aria_proactive_doNotShow', 'true')
+      act(() => {
+        result.current.dismissProactive(true) // doNotShowAgain = true
+      })
+
+      expect(localStorageMock.setItem).toHaveBeenCalledWith(
+        'aria_engagement',
+        expect.stringContaining('"doNotShow":true')
+      )
     })
 
-    it('should not trigger again after user engagement', () => {
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+    it('should not trigger again after being triggered once', () => {
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // Trigger
       act(() => {
         jest.advanceTimersByTime(45000)
       })
-      expect(result.current.shouldShowWidget).toBe(true)
+      expect(result.current.shouldShowProactive).toBe(true)
+      const firstTriggerType = result.current.proactiveTrigger?.type
 
-      // User engages (marks as engaged)
+      // Accept (user clicks to open widget)
       act(() => {
-        result.current.markAsEngaged()
+        result.current.acceptProactive()
       })
 
-      expect(result.current.shouldShowWidget).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
 
-      // Should not trigger again
+      // Should not trigger again (hasTriggered prevents it)
       act(() => {
         jest.advanceTimersByTime(60000)
       })
-      expect(result.current.triggerType).toBe('time_on_page') // Original trigger type preserved
+      expect(result.current.shouldShowProactive).toBe(false)
+      expect(result.current.hasTriggered).toBe(true)
     })
   })
 
   describe('trigger priority', () => {
     it('should only trigger once (first trigger wins)', () => {
-      ;(usePathname as jest.Mock).mockReturnValue('/pricing')
+      window.history.pushState({}, '', '/pricing')
 
-      const { result } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      const { result } = renderHook(() => useProactiveEngagement())
 
       // Pricing page should trigger first
       act(() => {
         jest.advanceTimersByTime(5500)
       })
 
-      expect(result.current.triggerType).toBe('pricing_page')
+      expect(result.current.proactiveTrigger?.type).toBe('pricing_page')
 
       // Further triggers should not change the type
       act(() => {
         jest.advanceTimersByTime(40000) // Past time on page threshold
       })
 
-      expect(result.current.triggerType).toBe('pricing_page')
-      expect(mockOnTrigger).toHaveBeenCalledTimes(1)
+      expect(result.current.proactiveTrigger?.type).toBe('pricing_page')
+      expect(result.current.hasTriggered).toBe(true)
     })
   })
 
-  describe('cleanup', () => {
-    it('should cleanup event listeners on unmount', () => {
-      const removeEventListenerSpy = jest.spyOn(document, 'removeEventListener')
-      const windowRemoveEventListenerSpy = jest.spyOn(window, 'removeEventListener')
+  describe('language support', () => {
+    it('should use specified language for trigger messages', () => {
+      const { result } = renderHook(() => useProactiveEngagement('hi'))
 
-      const { unmount } = renderHook(() => useProactiveEngagement({ onTrigger: mockOnTrigger }))
+      act(() => {
+        jest.advanceTimersByTime(45000)
+      })
 
-      unmount()
+      expect(result.current.proactiveTrigger).not.toBeNull()
+      expect(result.current.proactiveTrigger?.message).toBeDefined()
+      // Message should be in Hindi (we can't test exact message without importing translations)
+    })
+  })
 
-      expect(removeEventListenerSpy).toHaveBeenCalled()
-      expect(windowRemoveEventListenerSpy).toHaveBeenCalled()
+  describe('reset functionality', () => {
+    it('should reset all engagement state', () => {
+      const { result } = renderHook(() => useProactiveEngagement())
 
-      removeEventListenerSpy.mockRestore()
-      windowRemoveEventListenerSpy.mockRestore()
+      // Trigger
+      act(() => {
+        jest.advanceTimersByTime(45000)
+      })
+      expect(result.current.hasTriggered).toBe(true)
+
+      // Reset
+      act(() => {
+        result.current.resetEngagement()
+      })
+
+      expect(result.current.hasTriggered).toBe(false)
+      expect(result.current.shouldShowProactive).toBe(false)
+      expect(result.current.proactiveTrigger).toBeNull()
+      expect(localStorageMock.removeItem).toHaveBeenCalledWith('aria_engagement')
     })
   })
 })

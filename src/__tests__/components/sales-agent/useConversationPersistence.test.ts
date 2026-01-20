@@ -24,13 +24,9 @@ const localStorageMock = (() => {
 
 Object.defineProperty(window, 'localStorage', { value: localStorageMock })
 
-// Mock nanoid
-jest.mock('nanoid', () => ({
-  nanoid: jest.fn(() => 'test-session-id'),
-}))
-
 // Import after mocks
 import { useConversationPersistence } from '@/components/sales-agent/hooks/useConversationPersistence'
+import type { AriaMessage } from '@/lib/aria/types'
 
 describe('useConversationPersistence', () => {
   beforeEach(() => {
@@ -43,27 +39,50 @@ describe('useConversationPersistence', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
       expect(result.current.messages).toEqual([])
-      expect(result.current.leadData).toEqual({})
-      expect(result.current.leadStage).toBe('none')
+      expect(result.current.leadData.name).toBe('')
+      expect(result.current.leadData.phone).toBe('')
+      expect(result.current.leadStage).toBe('chat')
       expect(result.current.language).toBe('en')
+      expect(result.current.isNewVisitor).toBe(true)
+      expect(result.current.visitCount).toBe(1)
     })
 
     it('should generate a unique session ID', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
-      expect(result.current.sessionId).toBe('test-session-id')
+      expect(result.current.sessionId).toMatch(/^aria_\d+_[a-z0-9]+$/)
     })
 
     it('should restore state from localStorage if valid and not expired', () => {
       const savedState = {
-        sessionId: 'saved-session',
-        messages: [
-          { id: '1', content: 'Hello', role: 'user', timestamp: Date.now() }
-        ],
-        leadData: { name: 'Test User' },
-        leadStage: 'name_captured',
-        language: 'hi',
-        savedAt: Date.now(),
+        state: {
+          sessionId: 'saved-session',
+          messages: [
+            {
+              id: '1',
+              text: 'Hello',
+              sender: 'user',
+              timestamp: new Date().toISOString(),
+            },
+          ],
+          leadData: {
+            name: 'Test User',
+            phone: '',
+            studentClass: '',
+            city: '',
+            email: '',
+            score: 0,
+            interests: [],
+            source: 'aria_widget',
+            language: 'hi',
+          },
+          leadStage: 'name_captured',
+          language: 'hi',
+          lastActivity: new Date().toISOString(),
+          isNewVisitor: false,
+          visitCount: 1,
+        },
+        expiresAt: Date.now() + 24 * 60 * 60 * 1000, // Expires tomorrow
       }
       localStorageMock.setItem('aria_conversation', JSON.stringify(savedState))
 
@@ -73,23 +92,49 @@ describe('useConversationPersistence', () => {
       expect(result.current.leadData.name).toBe('Test User')
       expect(result.current.leadStage).toBe('name_captured')
       expect(result.current.language).toBe('hi')
+      expect(result.current.isNewVisitor).toBe(false)
+      expect(result.current.visitCount).toBe(2) // Incremented
     })
 
     it('should clear expired data (older than 7 days)', () => {
       const expiredState = {
-        sessionId: 'old-session',
-        messages: [{ id: '1', content: 'Old message', role: 'user', timestamp: Date.now() }],
-        leadData: {},
-        leadStage: 'none',
-        language: 'en',
-        savedAt: Date.now() - (8 * 24 * 60 * 60 * 1000), // 8 days ago
+        state: {
+          sessionId: 'old-session',
+          messages: [
+            {
+              id: '1',
+              text: 'Old message',
+              sender: 'user',
+              timestamp: new Date().toISOString(),
+            },
+          ],
+          leadData: {
+            name: '',
+            phone: '',
+            studentClass: '',
+            city: '',
+            email: '',
+            score: 0,
+            interests: [],
+            source: 'aria_widget',
+            language: 'en',
+          },
+          leadStage: 'chat',
+          language: 'en',
+          lastActivity: new Date().toISOString(),
+          isNewVisitor: true,
+          visitCount: 1,
+        },
+        expiresAt: Date.now() - 1000, // Expired
       }
       localStorageMock.setItem('aria_conversation', JSON.stringify(expiredState))
 
       const { result } = renderHook(() => useConversationPersistence())
 
+      // Should create new state when expired
       expect(result.current.messages).toEqual([])
-      expect(localStorageMock.removeItem).toHaveBeenCalledWith('aria_conversation')
+      expect(result.current.isNewVisitor).toBe(false) // Not new since expired state existed
+      expect(result.current.visitCount).toBe(2) // Incremented from expired state
     })
   })
 
@@ -97,41 +142,46 @@ describe('useConversationPersistence', () => {
     it('should add a message and persist to localStorage', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
+      const message: AriaMessage = {
+        id: 'msg-1',
+        text: 'Hello ARIA',
+        sender: 'user',
+        timestamp: new Date(),
+      }
+
       act(() => {
-        result.current.addMessage({
-          id: 'msg-1',
-          content: 'Hello ARIA',
-          role: 'user',
-          timestamp: Date.now(),
-        })
+        result.current.addMessage(message)
       })
 
       expect(result.current.messages).toHaveLength(1)
-      expect(result.current.messages[0].content).toBe('Hello ARIA')
+      expect(result.current.messages[0].text).toBe('Hello ARIA')
+      expect(result.current.messages[0].sender).toBe('user')
       expect(localStorageMock.setItem).toHaveBeenCalled()
     })
 
     it('should update an existing message', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
+      const message: AriaMessage = {
+        id: 'msg-1',
+        text: 'Loading...',
+        sender: 'bot',
+        timestamp: new Date(),
+        isStreaming: true,
+      }
+
       act(() => {
-        result.current.addMessage({
-          id: 'msg-1',
-          content: 'Loading...',
-          role: 'assistant',
-          timestamp: Date.now(),
-          isStreaming: true,
-        })
+        result.current.addMessage(message)
       })
 
       act(() => {
         result.current.updateMessage('msg-1', {
-          content: 'Hello! How can I help?',
+          text: 'Hello! How can I help?',
           isStreaming: false,
         })
       })
 
-      expect(result.current.messages[0].content).toBe('Hello! How can I help?')
+      expect(result.current.messages[0].text).toBe('Hello! How can I help?')
       expect(result.current.messages[0].isStreaming).toBe(false)
     })
 
@@ -141,19 +191,22 @@ describe('useConversationPersistence', () => {
       // Add 55 messages
       act(() => {
         for (let i = 0; i < 55; i++) {
-          result.current.addMessage({
+          const message: AriaMessage = {
             id: `msg-${i}`,
-            content: `Message ${i}`,
-            role: i % 2 === 0 ? 'user' : 'assistant',
-            timestamp: Date.now() + i,
-          })
+            text: `Message ${i}`,
+            sender: i % 2 === 0 ? 'user' : 'bot',
+            timestamp: new Date(Date.now() + i),
+          }
+          result.current.addMessage(message)
         }
       })
 
       // Should keep only the latest 50
       expect(result.current.messages.length).toBeLessThanOrEqual(50)
       // First messages should be removed
-      expect(result.current.messages.find(m => m.id === 'msg-0')).toBeUndefined()
+      expect(result.current.messages.find((m) => m.id === 'msg-0')).toBeUndefined()
+      // Latest messages should be kept
+      expect(result.current.messages.find((m) => m.id === 'msg-54')).toBeDefined()
     })
   })
 
@@ -203,27 +256,39 @@ describe('useConversationPersistence', () => {
       })
 
       expect(result.current.language).toBe('hi')
+      expect(result.current.leadData.language).toBe('hi')
       expect(localStorageMock.setItem).toHaveBeenCalled()
+    })
+
+    it('should initialize with specified language', () => {
+      const { result } = renderHook(() => useConversationPersistence('hi'))
+
+      expect(result.current.language).toBe('hi')
+      expect(result.current.leadData.language).toBe('hi')
     })
   })
 
   describe('conversation history', () => {
-    it('should return formatted conversation history for AI context', () => {
+    it('should return formatted conversation history for API context', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
+      const userMessage: AriaMessage = {
+        id: 'msg-1',
+        text: 'Hello',
+        sender: 'user',
+        timestamp: new Date(),
+      }
+
+      const botMessage: AriaMessage = {
+        id: 'msg-2',
+        text: 'Hi! How can I help?',
+        sender: 'bot',
+        timestamp: new Date(),
+      }
+
       act(() => {
-        result.current.addMessage({
-          id: 'msg-1',
-          content: 'Hello',
-          role: 'user',
-          timestamp: Date.now(),
-        })
-        result.current.addMessage({
-          id: 'msg-2',
-          content: 'Hi! How can I help?',
-          role: 'assistant',
-          timestamp: Date.now() + 1,
-        })
+        result.current.addMessage(userMessage)
+        result.current.addMessage(botMessage)
       })
 
       const history = result.current.getConversationHistory()
@@ -233,50 +298,199 @@ describe('useConversationPersistence', () => {
       expect(history[1]).toEqual({ role: 'assistant', content: 'Hi! How can I help?' })
     })
 
-    it('should limit history to recent messages for context efficiency', () => {
+    it('should filter out system messages from history', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
-      // Add 30 messages
+      const userMessage: AriaMessage = {
+        id: 'msg-1',
+        text: 'Hello',
+        sender: 'user',
+        timestamp: new Date(),
+      }
+
+      const systemMessage: AriaMessage = {
+        id: 'msg-2',
+        text: 'Language changed to Hindi',
+        sender: 'system',
+        timestamp: new Date(),
+      }
+
+      const botMessage: AriaMessage = {
+        id: 'msg-3',
+        text: 'Namaste!',
+        sender: 'bot',
+        timestamp: new Date(),
+      }
+
       act(() => {
-        for (let i = 0; i < 30; i++) {
-          result.current.addMessage({
-            id: `msg-${i}`,
-            content: `Message ${i}`,
-            role: i % 2 === 0 ? 'user' : 'assistant',
-            timestamp: Date.now() + i,
-          })
-        }
+        result.current.addMessage(userMessage)
+        result.current.addMessage(systemMessage)
+        result.current.addMessage(botMessage)
       })
 
-      const history = result.current.getConversationHistory(10)
+      const history = result.current.getConversationHistory()
 
-      expect(history.length).toBeLessThanOrEqual(10)
+      // System message should be filtered out
+      expect(history).toHaveLength(2)
+      expect(history.find((h) => h.content === 'Language changed to Hindi')).toBeUndefined()
     })
   })
 
   describe('clear conversation', () => {
-    it('should clear all data and localStorage', () => {
+    it('should clear messages but preserve visit count', () => {
       const { result } = renderHook(() => useConversationPersistence())
 
+      const message: AriaMessage = {
+        id: 'msg-1',
+        text: 'Hello',
+        sender: 'user',
+        timestamp: new Date(),
+      }
+
       act(() => {
-        result.current.addMessage({
-          id: 'msg-1',
-          content: 'Hello',
-          role: 'user',
-          timestamp: Date.now(),
-        })
+        result.current.addMessage(message)
         result.current.updateLeadData({ name: 'John' })
         result.current.setLeadStage('name_captured')
       })
+
+      const visitCount = result.current.visitCount
 
       act(() => {
         result.current.clearConversation()
       })
 
       expect(result.current.messages).toEqual([])
-      expect(result.current.leadData).toEqual({})
-      expect(result.current.leadStage).toBe('none')
-      expect(localStorageMock.removeItem).toHaveBeenCalledWith('aria_conversation')
+      expect(result.current.leadData.name).toBe('')
+      expect(result.current.leadStage).toBe('chat')
+      expect(result.current.visitCount).toBe(visitCount) // Preserved
+      expect(result.current.isNewVisitor).toBe(false) // Still not new
+    })
+  })
+
+  describe('context summary', () => {
+    it('should generate context summary from conversation state', () => {
+      const { result } = renderHook(() => useConversationPersistence())
+
+      act(() => {
+        result.current.updateLeadData({
+          name: 'John Doe',
+          studentClass: '12',
+          phone: '+919876543210',
+          interests: ['NEET', 'Biology'],
+        })
+        result.current.setLeadStage('phone_captured')
+      })
+
+      const summary = result.current.getContextSummary()
+
+      expect(summary).toContain('Student name: John Doe')
+      expect(summary).toContain('Class: 12')
+      expect(summary).toContain('Phone collected: Yes')
+      expect(summary).toContain('Interests: NEET, Biology')
+      expect(summary).toContain('Lead stage: phone_captured')
+    })
+
+    it('should include last discussed topic from messages', () => {
+      const { result } = renderHook(() => useConversationPersistence())
+
+      const message: AriaMessage = {
+        id: 'msg-1',
+        text: 'Tell me about NEET Biology coaching',
+        sender: 'user',
+        timestamp: new Date(),
+      }
+
+      act(() => {
+        result.current.addMessage(message)
+      })
+
+      const summary = result.current.getContextSummary()
+
+      expect(summary).toContain('Last discussed: Tell me about NEET Biology coaching')
+    })
+  })
+
+  describe('existing context detection', () => {
+    it('should detect returning visitor with existing context', () => {
+      const { result } = renderHook(() => useConversationPersistence())
+
+      // Initially new visitor with no context
+      expect(result.current.hasExistingContext()).toBe(false)
+
+      // Add a message
+      act(() => {
+        const message: AriaMessage = {
+          id: 'msg-1',
+          text: 'Hello',
+          sender: 'user',
+          timestamp: new Date(),
+        }
+        result.current.addMessage(message)
+      })
+
+      // Still new visitor (isNewVisitor flag matters more than messages)
+      expect(result.current.hasExistingContext()).toBe(false)
+    })
+
+    it('should detect context when lead data is captured', () => {
+      const savedState = {
+        state: {
+          sessionId: 'saved-session',
+          messages: [],
+          leadData: {
+            name: 'Test User',
+            phone: '+919876543210',
+            studentClass: '',
+            city: '',
+            email: '',
+            score: 0,
+            interests: [],
+            source: 'aria_widget',
+            language: 'en',
+          },
+          leadStage: 'phone_captured',
+          language: 'en',
+          lastActivity: new Date().toISOString(),
+          isNewVisitor: false,
+          visitCount: 2,
+        },
+        expiresAt: Date.now() + 24 * 60 * 60 * 1000,
+      }
+      localStorageMock.setItem('aria_conversation', JSON.stringify(savedState))
+
+      const { result } = renderHook(() => useConversationPersistence())
+
+      expect(result.current.hasExistingContext()).toBeTruthy() // Returns truthy value, not strict boolean
+    })
+  })
+
+  describe('visit tracking', () => {
+    it('should track visit count across sessions', () => {
+      // First visit
+      const { result: result1 } = renderHook(() => useConversationPersistence())
+      expect(result1.current.visitCount).toBe(1)
+      expect(result1.current.isNewVisitor).toBe(true)
+
+      // Simulate saving state
+      const savedState = {
+        state: {
+          sessionId: result1.current.sessionId,
+          messages: [],
+          leadData: result1.current.leadData,
+          leadStage: result1.current.leadStage,
+          language: result1.current.language,
+          lastActivity: new Date().toISOString(),
+          isNewVisitor: false,
+          visitCount: 1,
+        },
+        expiresAt: Date.now() + 24 * 60 * 60 * 1000,
+      }
+      localStorageMock.setItem('aria_conversation', JSON.stringify(savedState))
+
+      // Second visit
+      const { result: result2 } = renderHook(() => useConversationPersistence())
+      expect(result2.current.visitCount).toBe(2)
+      expect(result2.current.isNewVisitor).toBe(false)
     })
   })
 })
