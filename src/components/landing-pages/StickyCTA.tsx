@@ -36,15 +36,15 @@ export function StickyCTA({ phoneCTA = 'Call Now', demoCTA = 'Book Demo' }: Stic
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 animate-in slide-in-from-bottom duration-300">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-4 shadow-2xl backdrop-blur-sm">
+    <div className="fixed bottom-0 left-0 right-0 z-40 animate-in slide-in-from-bottom duration-300">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3 shadow-2xl backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
           <div className="hidden text-white md:block">
             <p className="text-sm font-medium">Ready to start your NEET journey?</p>
             <p className="text-xs text-white/80">Book a free demo class today</p>
           </div>
 
-          <div className="flex w-full gap-3 md:w-auto">
+          <div className="flex w-full gap-3 md:w-auto lg:mr-[280px]">
             <a
               href={`tel:${phoneNumber}`}
               onClick={handlePhoneClick}
