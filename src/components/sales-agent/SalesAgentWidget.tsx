@@ -247,10 +247,17 @@ In the meantime, would you like to:
       ]
     }
 
-    // Check if we should start lead capture (after 3 messages)
-    const userMessageCount = messages.filter(m => m.role === 'user').length + 1
-    if (userMessageCount >= 3 && !leadData.name && leadCaptureStep === 'none') {
-      responseContent += `\n\n---\n\n💡 **Quick tip:** Share your name and I can personalize your experience and send you course materials!`
+    // Check if user shows genuine interest (interest-based, not forced)
+    const contentLower = content.toLowerCase()
+    const interestSignals = [
+      'demo', 'book', 'enroll', 'join', 'admission', 'apply',
+      'interested', 'want to', 'sign up', 'register', 'brochure',
+      'send me', 'course details', 'more info', 'call me'
+    ]
+    const showsInterest = interestSignals.some(signal => contentLower.includes(signal))
+
+    if (showsInterest && !leadData.name && leadCaptureStep === 'none') {
+      responseContent += `\n\n---\n\n💡 To help you better, may I know your name? I can then send personalized course information!`
       setLeadCaptureStep('name')
     }
 

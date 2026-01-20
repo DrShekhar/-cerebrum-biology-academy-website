@@ -123,6 +123,20 @@ export default function RootLayout({
     <html lang="en">
         <head>
           <StructuredData />
+
+          {/* Google Tag Manager (gtag.js) */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11121440988"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-11121440988');
+              `,
+            }}
+          />
+
           <meta
             name="google-site-verification"
             content="L6c1LAGqVg_qEAtFGDcbzqeMzqFdEwT7kKFDgfn2-Sc"
