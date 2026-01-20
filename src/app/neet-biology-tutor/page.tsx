@@ -81,7 +81,8 @@ const whyChoose = [
   {
     icon: Brain,
     title: 'Conceptual Clarity',
-    description: 'Deep understanding of concepts, not rote memorization. Learn the "why" behind facts.',
+    description:
+      'Deep understanding of concepts, not rote memorization. Learn the "why" behind facts.',
   },
   {
     icon: BarChart,
@@ -296,7 +297,9 @@ export default function NEETBiologyTutorPage() {
           <div
             ref={whyChooseHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              whyChooseHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              whyChooseHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -359,9 +362,7 @@ export default function NEETBiologyTutorPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Start Your NEET Journey Today!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Learn from AIIMS Faculty. Score 350+ in NEET Biology!
             </p>

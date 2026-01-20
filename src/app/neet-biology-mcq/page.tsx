@@ -492,7 +492,16 @@ export default function NEETBiologyMCQPage() {
         throw error
       }
     },
-    [questions, currentQuestionIndex, sessionId, freeUserId, userStats, hasLeadCaptured, showToast, saveAnsweredIdsToStorage]
+    [
+      questions,
+      currentQuestionIndex,
+      sessionId,
+      freeUserId,
+      userStats,
+      hasLeadCaptured,
+      showToast,
+      saveAnsweredIdsToStorage,
+    ]
   )
 
   // Handle next question

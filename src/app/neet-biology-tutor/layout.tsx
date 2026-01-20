@@ -27,17 +27,14 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Tutor | AIIMS Faculty | Cerebrum Academy',
-    description: 'Expert NEET Biology coaching by Dr. Shekhar C Singh, AIIMS Alumnus. 98% success rate.',
+    description:
+      'Expert NEET Biology coaching by Dr. Shekhar C Singh, AIIMS Alumnus. 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-tutor',
   },
 }
 
-export default function NEETBiologyTutorLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function NEETBiologyTutorLayout({ children }: { children: React.ReactNode }) {
   return children
 }

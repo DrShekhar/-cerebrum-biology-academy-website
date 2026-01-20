@@ -182,8 +182,7 @@ export default function NEETBiologyTutorOnlinePage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Biology Tutor{' '}
-              <span className="text-yellow-400">Online</span>
+              NEET Biology Tutor <span className="text-yellow-400">Online</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -252,7 +251,9 @@ export default function NEETBiologyTutorOnlinePage() {
           <div
             ref={advantagesHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              advantagesHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              advantagesHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -287,12 +288,12 @@ export default function NEETBiologyTutorOnlinePage() {
           <div
             ref={requirementsHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              requirementsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              requirementsHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              What You Need
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">What You Need</h2>
             <p className="text-xl text-gray-600">Simple setup for seamless learning</p>
           </div>
 
@@ -358,9 +359,7 @@ export default function NEETBiologyTutorOnlinePage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Start Learning Online Today!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Learning Online Today!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join from anywhere in India. Book your free demo class!
             </p>

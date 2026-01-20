@@ -52,12 +52,14 @@ const dropperAdvantages = [
   {
     icon: Target,
     title: 'Gap Analysis',
-    description: 'We analyze your previous attempt to identify weak areas and create a personalized improvement plan.',
+    description:
+      'We analyze your previous attempt to identify weak areas and create a personalized improvement plan.',
   },
   {
     icon: Brain,
     title: 'Concept Rebuilding',
-    description: 'Complete re-teaching of concepts, not just revision. Build stronger foundations this time.',
+    description:
+      'Complete re-teaching of concepts, not just revision. Build stronger foundations this time.',
   },
   {
     icon: Clock,
@@ -72,12 +74,13 @@ const dropperAdvantages = [
   {
     icon: Heart,
     title: 'Emotional Support',
-    description: 'Dedicated counseling and motivation. We understand the pressure of a second attempt.',
+    description:
+      'Dedicated counseling and motivation. We understand the pressure of a second attempt.',
   },
   {
     icon: RefreshCw,
     title: 'Fresh Start Approach',
-    description: 'Don\'t carry old mistakes. Learn the right way with expert guidance.',
+    description: "Don't carry old mistakes. Learn the right way with expert guidance.",
   },
 ]
 
@@ -96,7 +99,7 @@ const faqs = [
   {
     question: 'Is it worth taking a drop year for NEET?',
     answer:
-      'If you\'re serious about becoming a doctor and didn\'t get your desired result, a focused drop year can make a huge difference. Many of our toppers were droppers who improved 100-200 marks with proper guidance. The key is finding the right mentor and staying disciplined.',
+      "If you're serious about becoming a doctor and didn't get your desired result, a focused drop year can make a huge difference. Many of our toppers were droppers who improved 100-200 marks with proper guidance. The key is finding the right mentor and staying disciplined.",
   },
   {
     question: 'How is dropper batch different from regular batch?',
@@ -106,7 +109,7 @@ const faqs = [
   {
     question: 'What if I scored below 400 in my previous attempt?',
     answer:
-      'No problem! We\'ve helped students improve from 300 to 550+ and from 400 to 600+. The key is identifying why you scored low and fixing those issues. Our gap analysis and personalized approach works for all score ranges.',
+      "No problem! We've helped students improve from 300 to 550+ and from 400 to 600+. The key is identifying why you scored low and fixing those issues. Our gap analysis and personalized approach works for all score ranges.",
   },
   {
     question: 'How to stay motivated during drop year?',
@@ -183,8 +186,7 @@ export default function NEETBiologyTutorDroppersPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Biology Tutor for{' '}
-              <span className="text-yellow-400">Droppers</span>
+              NEET Biology Tutor for <span className="text-yellow-400">Droppers</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -192,9 +194,9 @@ export default function NEETBiologyTutorDroppersPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Transform your NEET result with{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>. Our dropper program
-              has helped hundreds of students bounce back and secure medical seats.
+              Transform your NEET result with <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Our dropper program has helped hundreds of students bounce back and secure medical
+              seats.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -253,7 +255,9 @@ export default function NEETBiologyTutorDroppersPage() {
           <div
             ref={advantagesHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              advantagesHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              advantagesHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -358,9 +362,7 @@ export default function NEETBiologyTutorDroppersPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Your Second Chance Starts Here!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Your Second Chance Starts Here!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join our dropper batch. Transform your NEET result!
             </p>
