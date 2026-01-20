@@ -64,145 +64,8 @@ const STARTER_QUESTIONS: QuickAction[] = [
   { label: 'Already have coaching', value: 'I already have a coaching institute, can I still join?', icon: <CheckCircle2 className="w-3 h-3" /> },
 ]
 
-// Knowledge base for instant responses
-const KNOWLEDGE_BASE: Record<string, string> = {
-  'why cerebrum': `Great question! Here's why 10,000+ students trust Cerebrum:
-
-🎯 **Biology-Focused Excellence** - We specialize ONLY in Biology, unlike generic coaching
-👨‍⚕️ **AIIMS Faculty** - Learn from doctors who cleared NEET themselves
-📊 **98% Selection Rate** - Our results speak for themselves
-💰 **Affordable Quality** - Premium education at reasonable prices
-🔬 **Concept Clarity** - We focus on making you UNDERSTAND, not just memorize
-
-Would you like to know about our courses or book a free demo?`,
-
-  'courses': `We offer specialized Biology courses for:
-
-📚 **Class 11 Foundation** - ₹15,000/year
-   Build strong basics from day one
-
-📚 **Class 12 Intensive** - ₹18,000/year
-   Complete NEET Biology in one year
-
-📚 **Dropper Batch** - ₹12,000/6 months
-   Intensive revision + test series
-
-📚 **Crash Course** - ₹8,000/3 months
-   Last-minute preparation
-
-All courses include:
-✅ Live classes + Recordings
-✅ Study material (PDF + printed)
-✅ Doubt solving sessions
-✅ Weekly tests + NEET pattern papers
-
-Want to start with a FREE demo class?`,
-
-  'pricing': `Our courses are designed to be affordable:
-
-💰 **Class 11**: ₹15,000/year (₹1,250/month)
-💰 **Class 12**: ₹18,000/year (₹1,500/month)
-💰 **Dropper**: ₹12,000/6 months (₹2,000/month)
-💰 **Crash Course**: ₹8,000/3 months
-
-Compare this to:
-- Allen/Aakash: ₹1-2 lakhs
-- Physics Wallah: ₹5,000-20,000
-- Unacademy: ₹20,000-60,000
-
-We're 3-5x more affordable with AIIMS faculty! 🎯
-
-Would you like to enroll or try a free demo first?`,
-
-  'demo': `Excellent choice! Our FREE demo class includes:
-
-🎥 **60-minute live session** with AIIMS faculty
-📖 **Sample study material** (PDF)
-🧪 **10 NEET-pattern MCQs** to test yourself
-💬 **Direct doubt solving** with the teacher
-
-To book your demo, I just need:
-1. Your name
-2. Phone number
-3. Current class (11th/12th/Dropper)
-
-Shall I help you book it right now?`,
-
-  'already coaching': `That's actually PERFECT! 🎯
-
-Many of our top performers study at Allen, Aakash, or PW AND use Cerebrum for Biology.
-
-**Why it works:**
-✅ Your coaching covers Physics & Chemistry well
-✅ We specialize in Biology - deeper than any coaching
-✅ Our AIIMS faculty explains concepts your coaching might rush through
-✅ Extra practice = Higher marks in Biology (90 questions!)
-
-**Think of it this way:**
-- Your coaching = General preparation
-- Cerebrum = Biology specialist (like consulting a specialist doctor!)
-
-At just ₹1,000-2,000/month, it's a small investment for a BIG Biology boost.
-
-Want to try our FREE demo to see the difference?`,
-
-  'results': `Our results speak louder than words! 📊
-
-**NEET 2024 Results:**
-- 98% of students qualified NEET
-- 15 students scored 650+
-- 42 students in top 10,000 AIR
-- Average Biology score: 340/360
-
-**Why we get these results:**
-1. Biology-only focus = Deep expertise
-2. AIIMS faculty who cleared NEET themselves
-3. Concept-first teaching (not rote learning)
-4. Extensive practice with NEET-pattern questions
-
-Ready to be our next success story? 🌟`,
-
-  'faculty': `Our faculty are what make us special! 👨‍⚕️
-
-**Dr. Shekhar Sir** (Founder)
-- AIIMS Delhi alumnus
-- 10+ years teaching experience
-- Known for making complex topics simple
-
-**All our teachers:**
-✅ Doctors from top medical colleges
-✅ Cleared NEET themselves
-✅ Passionate about teaching
-✅ Available for doubt solving
-
-Unlike big coaching where you're just a number, our teachers actually know your name and progress!
-
-Want to experience their teaching in a FREE demo?`,
-}
-
-// Function to find best matching response
-function findResponse(query: string): string | null {
-  const lowerQuery = query.toLowerCase()
-
-  const keywords: Record<string, string[]> = {
-    'why cerebrum': ['why', 'cerebrum', 'join', 'best', 'different', 'special', 'choose'],
-    'courses': ['course', 'batch', 'class 11', 'class 12', 'dropper', 'program', 'offer'],
-    'pricing': ['price', 'cost', 'fee', 'afford', 'expensive', 'cheap', 'money', 'rupee', '₹'],
-    'demo': ['demo', 'trial', 'free class', 'try', 'sample', 'experience'],
-    'already coaching': ['already', 'coaching', 'allen', 'aakash', 'pw', 'unacademy', 'institute', 'other'],
-    'results': ['result', 'score', 'rank', 'selection', 'qualified', 'success', 'topper'],
-    'faculty': ['teacher', 'faculty', 'sir', 'maam', 'who teaches', 'instructor', 'aiims'],
-  }
-
-  for (const [key, words] of Object.entries(keywords)) {
-    const matchCount = words.filter(word => lowerQuery.includes(word)).length
-    if (matchCount >= 2 || (matchCount === 1 && lowerQuery.length < 30)) {
-      return KNOWLEDGE_BASE[key]
-    }
-  }
-
-  return null
-}
+// Note: Hardcoded KNOWLEDGE_BASE and findResponse removed
+// Now using Claude AI API at /api/aria/chat for intelligent responses
 
 // Lead scoring function
 function calculateLeadScore(data: Partial<LeadData>, messages: Message[]): number {
@@ -291,19 +154,68 @@ How can I help you today?`,
       return
     }
 
-    // Simulate typing delay
-    await new Promise(resolve => setTimeout(resolve, 500 + Math.random() * 1000))
-
-    // Try to find a knowledge base response
-    const knowledgeResponse = findResponse(content)
-
+    // Call AI API for intelligent response
     let responseContent: string
     let actions: QuickAction[] | undefined
 
-    if (knowledgeResponse) {
-      responseContent = knowledgeResponse
+    try {
+      const response = await fetch('/api/aria/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: content,
+          conversationHistory: messages.slice(-10).map(m => ({
+            role: m.role,
+            content: m.content,
+          })),
+          context: {
+            leadStage: leadCaptureStep,
+            leadData: leadData,
+          },
+        }),
+      })
 
-      // Add relevant follow-up actions
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`)
+      }
+
+      // Read SSE stream
+      const reader = response.body?.getReader()
+      const decoder = new TextDecoder()
+
+      if (!reader) {
+        throw new Error('No response body')
+      }
+
+      let accumulatedText = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        const chunk = decoder.decode(value)
+        const lines = chunk.split('\n')
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6)
+            if (data === '[DONE]') break
+
+            try {
+              const parsed = JSON.parse(data)
+              if (parsed.text) {
+                accumulatedText += parsed.text
+              }
+            } catch (e) {
+              console.error('[ARIA] Failed to parse SSE data:', e)
+            }
+          }
+        }
+      }
+
+      responseContent = accumulatedText || 'I apologize, but I encountered an issue. Can you please rephrase your question?'
+
+      // Add relevant follow-up actions based on content
       if (content.toLowerCase().includes('demo') || content.toLowerCase().includes('free')) {
         actions = [
           { label: '📅 Book Demo Now', value: 'I want to book a free demo class' },
@@ -315,8 +227,10 @@ How can I help you today?`,
           { label: '📅 Free Demo', value: 'I want to attend a free demo class' },
         ]
       }
-    } else {
-      // Default helpful response
+    } catch (error) {
+      console.error('[ARIA] API error:', error)
+
+      // Fallback to helpful message
       responseContent = `Thanks for your question! Let me help you with that.
 
 For detailed information about "${content.substring(0, 50)}${content.length > 50 ? '...' : ''}", I'd recommend speaking with our counselor who can give you personalized guidance.

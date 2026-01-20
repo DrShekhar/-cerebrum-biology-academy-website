@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'next'
+import { useEffect, useState } from 'react'
 import { Clock, Users, AlertCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
