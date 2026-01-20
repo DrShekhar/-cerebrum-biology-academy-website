@@ -14,6 +14,7 @@ import {
   getDemoBookingWhatsAppLink,
   openWhatsApp,
 } from '@/lib/aria/whatsappIntegration'
+import { validateLeadField } from '@/lib/aria/validation'
 
 interface UseAriaChatOptions {
   initialLanguage?: Language
@@ -261,17 +262,19 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
       const trimmedValue = value.trim()
       if (!trimmedValue) return false
 
-      // Validate phone number if applicable
+      // Validate using centralized validation
+      const validation = validateLeadField(field, trimmedValue)
+      if (!validation.isValid) {
+        return false
+      }
+
+      // Update lead data with sanitized value
       if (field === 'phone') {
-        const phoneRegex = /^[6-9]\d{9}$/
-        if (!phoneRegex.test(trimmedValue.replace(/\D/g, ''))) {
-          return false
-        }
-        updateLeadData({ phone: trimmedValue.replace(/\D/g, '') })
+        updateLeadData({ phone: validation.sanitizedValue })
       } else if (field === 'name') {
-        updateLeadData({ name: trimmedValue })
+        updateLeadData({ name: validation.sanitizedValue })
       } else if (field === 'class') {
-        updateLeadData({ studentClass: trimmedValue })
+        updateLeadData({ studentClass: validation.sanitizedValue })
       }
 
       // Progress to next stage
@@ -290,7 +293,7 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
       if (nextStage === 'complete') {
         onLeadCaptured?.({
           ...leadData,
-          [field === 'class' ? 'studentClass' : field]: trimmedValue,
+          [field === 'class' ? 'studentClass' : field]: validation.sanitizedValue,
         })
         onAnalyticsEvent?.('aria_lead_captured', { sessionId })
       } else {

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import dynamic from 'next/dynamic'
+import { AriaErrorBoundary, AriaLoadingFallback } from '@/components/sales-agent/AriaErrorBoundary'
 
 // Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
 // Components handle browser-only APIs internally with mounted state checks
@@ -20,10 +21,12 @@ export const ChatbotWrapper = dynamic(
   { loading: () => null }
 )
 
-// ARIA Sales Agent - Lazy loaded for performance
-export const SalesAgentWidget = dynamic(
+// ARIA Sales Agent - Lazy loaded for performance with loading fallback
+const SalesAgentWidgetComponent = dynamic(
   () => import('@/components/sales-agent').then((mod) => mod.SalesAgentWidget),
-  { loading: () => null }
+  {
+    loading: () => null, // Initial null - loading state handled by parent
+  }
 )
 
 export function FloatingCTA() {
@@ -56,16 +59,43 @@ export function GlobalExitIntent() {
 }
 
 // ARIA Sales Agent - Delays load for 3 seconds for better LCP
+// Wrapped with AriaErrorBoundary to catch component crashes
 export function SalesAgentWidget() {
   const [shouldLoad, setShouldLoad] = useState(false)
+  const [loadError, setLoadError] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const timerId = setTimeout(() => setShouldLoad(true), 3000)
     return () => clearTimeout(timerId)
   }, [])
 
+  const handleClose = useCallback(() => {
+    setIsVisible(false)
+  }, [])
+
+  const handleRetry = useCallback(() => {
+    setLoadError(false)
+    setShouldLoad(true)
+  }, [])
+
+  const handleError = useCallback(() => {
+    console.error('[ARIA] Component error caught by boundary')
+  }, [])
+
+  if (!isVisible) return null
   if (!shouldLoad) return null
-  return <SalesAgentWidgetComponent />
+
+  // Show loading fallback if there was a load error (e.g., network issue)
+  if (loadError) {
+    return <AriaLoadingFallback onRetry={handleRetry} onClose={handleClose} />
+  }
+
+  return (
+    <AriaErrorBoundary onClose={handleClose} onError={handleError}>
+      <SalesAgentWidgetComponent />
+    </AriaErrorBoundary>
+  )
 }
 
 // PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)

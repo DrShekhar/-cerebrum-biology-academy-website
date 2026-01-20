@@ -9,6 +9,7 @@ import { useState, useRef, useCallback, KeyboardEvent } from 'react'
 import { Send, Globe, MessageSquare, Phone, User, GraduationCap, Loader2 } from 'lucide-react'
 import type { Language, LeadStage } from '@/lib/aria/types'
 import { getTranslation } from '@/lib/aria/translations'
+import { validateLeadField } from '@/lib/aria/validation'
 
 interface AriaInputProps {
   language: Language
@@ -80,10 +81,12 @@ export function AriaInput({
       return false
     }
 
-    if (leadStage === 'phone') {
-      const cleaned = value.replace(/\D/g, '')
-      if (cleaned.length !== 10 || !/^[6-9]/.test(cleaned)) {
-        setError(getTranslation('invalidPhone', language))
+    // Use centralized validation for lead capture fields
+    if (isLeadCapture) {
+      const field = leadStage as 'name' | 'phone' | 'class'
+      const result = validateLeadField(field, value)
+      if (!result.isValid && result.errorKey) {
+        setError(getTranslation(result.errorKey, language))
         return false
       }
     }

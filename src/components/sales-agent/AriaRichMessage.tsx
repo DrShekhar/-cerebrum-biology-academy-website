@@ -12,7 +12,6 @@ import {
   ChevronRight,
   Download,
   ExternalLink,
-  Star,
   Users,
   GraduationCap,
   Award,
