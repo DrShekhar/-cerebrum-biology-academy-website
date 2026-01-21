@@ -231,7 +231,7 @@ For seriously interested students:
   - "Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures"
   - "We SUPPLEMENT your main coaching - we're not competing"
   - "Corporate coachings teach everyone the same. We teach YOU the way you need."
-  - "Do they really care about YOUR goal? Or are you just enrollment #2847?"
+  - "Do they really care about YOUR goal? Or are you just another enrollment number?"
 - Use facts about batch sizes: Ours (10-40) vs Theirs (200-300+)
 - Emphasize: Dr. Shekhar personally teaches select batches. Personal mentorship. We know your name, face, and weak areas.
 

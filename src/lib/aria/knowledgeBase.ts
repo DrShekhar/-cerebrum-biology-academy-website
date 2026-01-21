@@ -222,7 +222,7 @@ Would you like me to arrange a meeting with Dr. Shekhar Sir to discuss personali
 
 Here's why serious NEET aspirants supplement with Cerebrum - India's finest NEET Biology institute:
 
-1. **Biology is 360 marks** - Half of NEET! You need someone who PERSONALLY cares about YOUR Biology score
+1. **Biology is 360/720 marks** - Biology accounts for 50% of NEET questions and is the backbone of your medical dream! You need someone who PERSONALLY cares about YOUR Biology score
 2. **We remember your name** - Small batches (10-40 students). We know your strengths, weaknesses, and goals
 3. **AIIMS faculty** who actually understand medical entrance exams - not just teaching as a job
 4. **Personal mentorship** - Dr. Shekhar personally teaches select batches. When was the last time your Aakash/Allen/PW teacher knew your personal challenges?
@@ -303,22 +303,22 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy was founded in 2015 by Dr. Shekhar C Singh, an AIIMS Delhi graduate who scored 680/720 in NEET Biology. We are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 2,847+ students across nine years with a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy was founded in 2012 by Dr. Shekhar C Singh, an AIIMS New Delhi Alumnus. With 14+ years of excellence, we are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 150,000+ students with 10,000+ medical college admissions and a 98% NEET qualification rate.',
   },
   whyOnlyBiology: {
     question: 'Why do you focus only on Biology?',
     answer:
-      "Biology is 360 marks in NEET - half the total! Yet most coachings treat it as secondary to Physics & Chemistry. We believe in specialization. Our AIIMS faculty brings real medical perspective that general coachings can't match. Biology has the highest scoring potential with proper preparation - our students average 80-100 marks improvement in Biology alone.",
+      "Biology accounts for 50% of NEET questions and 360/720 NEET marks - it's the backbone of your medical dream! Yet most coachings treat it as secondary to Physics & Chemistry. We believe in specialization. Our AIIMS faculty brings real medical perspective that general coachings can't match. Biology has the highest scoring potential with proper preparation - our students see an average improvement of +285 marks overall, with Biology being the major contributor.",
   },
   faculty: {
     question: 'Who are your faculty members?',
     answer:
-      'Our faculty includes Dr. Shekhar C Singh (Founder, AIIMS Delhi 2014 graduate with 15+ years teaching experience) and a team of 50-100 AIIMS/top medical college graduates. All faculty are PhD holders from premier institutes with 100+ combined years of teaching expertise. Dr. Singh personally teaches select batches to maintain quality.',
+      'Our faculty includes Dr. Shekhar C Singh (Founder, AIIMS New Delhi Alumnus with 15+ years teaching experience) and a team of 50-100 AIIMS/top medical college graduates. All faculty are PhD holders from premier institutes with 100+ combined years of teaching expertise. Dr. Singh personally teaches select batches to maintain quality.',
   },
   results: {
     question: 'What are your results?',
     answer:
-      'Our track record: 98% NEET qualification rate, 500+ students in medical colleges, 47 AIIMS selections across seven campuses, 27 students ranked in India\'s top 1,000, 183 government medical college admissions. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023.',
+      'Our track record: 98% NEET qualification rate, 10,000+ medical college admissions, 247 AIIMS selections in NEET 2024 alone, 68 students in Top 500 ranks (NEET 2024), 183 government medical college admissions. Students see an average improvement of +285 marks. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023. In NEET 2024, we had 582 students with 94.2% success rate.',
   },
   neetExamPattern: {
     question: 'What is the NEET exam pattern for 2026?',
@@ -348,7 +348,7 @@ export const FAQ_DATA = {
   onlineVsOffline: {
     question: 'Do you have offline classes?',
     answer:
-      'Yes! We have offline centers at: Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, and Rohini Sector-9 Delhi. You can choose online, offline, or hybrid mode. All formats have the same expert faculty and curriculum. Our live online classes have recordings, test analysis, and customized courses.',
+      'Yes! We have 6 offline centers across Delhi NCR: South Extension Delhi, Gurugram Sector-51 M2K Corporate Park, Rohini Sector-9 Delhi, Laxmi Nagar Delhi, Dwarka Delhi, and Noida. You can choose online, offline, or hybrid mode. All formats have the same expert faculty and curriculum. Our live online classes have recordings, test analysis, and customized courses.',
   },
   studyMaterial: {
     question: 'What study materials do you provide?',
@@ -393,26 +393,32 @@ export const CONTACT_POINTS = {
   whatsapp: '+91 8826444334',
   email: 'admissions@cerebrumbiologyacademy.com',
   centers: [
-    'Gurugram - Sector 51, M2K Corporate Park',
     'South Extension, Delhi',
+    'Gurugram - Sector 51, M2K Corporate Park',
     'Rohini Sector-9, Delhi',
+    'Laxmi Nagar, Delhi',
+    'Dwarka, Delhi',
+    'Noida',
   ],
   website: 'https://cerebrumbiologyacademy.com',
 }
 
 export const USP_POINTS = [
   '98% NEET qualification rate - students score 320+ in Biology',
-  '2,847+ students coached with 500+ medical college admissions',
-  'Founded by Dr. Shekhar C Singh - AIIMS Delhi graduate (680/720 in NEET Biology)',
+  '150,000+ students coached with 10,000+ medical college admissions',
+  '14+ years of excellence in NEET Biology coaching',
+  'Founded by Dr. Shekhar C Singh - AIIMS New Delhi Alumnus',
   'AIIMS faculty - learn from doctors who cracked NEET',
   'Small batches (10-40 students) - not 200+ like big coachings',
-  '47 AIIMS selections across seven campuses',
-  '27 students ranked in India\'s top 1,000',
+  '247 AIIMS selections in NEET 2024 alone',
+  '68 students in Top 500 ranks (NEET 2024)',
+  '+285 marks average score improvement',
   '10,000+ practice questions and 50+ full-length mock tests',
   '24/7 doubt support - AI bot + WhatsApp + live sessions',
   'Proprietary "Concept Pyramid" method for conceptual clarity',
   'Money-back guarantee for Pinnacle tier',
   'Flexible online, offline, and hybrid options',
+  '6 offline centers across Delhi NCR + online classes',
   'Recorded lectures + Weekly/Monthly/Biweekly tests included',
   'Free 45-minute demo class (₹2,000 value) with study materials',
 ]
@@ -428,12 +434,13 @@ export const SCHOLARSHIP_INFO = {
 }
 
 export const ACADEMY_HISTORY = {
-  founded: '2015',
-  founder: 'Dr. Shekhar C Singh (AIIMS Delhi 2014 graduate)',
-  founderScore: '680/720 in NEET Biology',
+  founded: '2012',
+  experience: '14+ years',
+  founder: 'Dr. Shekhar C Singh (AIIMS New Delhi Alumnus)',
   origin:
     'Started with 23 students in a 400 sq ft room in Rohini. Dr. Singh chose teaching over medical practice after witnessing capable students struggle with Biology despite expensive coaching.',
-  growth: '2,847+ students coached across nine years',
+  totalStudents: '150,000+ students & counting',
+  medicalSelections: '10,000+ medical college admissions',
   rating: '4.9/5 Google rating (500+ reviews)',
 }
 
@@ -448,11 +455,28 @@ export const TEACHING_METHODOLOGY = {
 export const NOTABLE_ACHIEVEMENTS = {
   topScore: 'Sadhna Sirin - 695/720 (100 percentile in Biology) NEET 2023',
   successRate: '98% NEET qualification rate',
-  totalAdmissions: '500+ medical college selections',
-  aiimsSelections: '47 AIIMS selections across seven campuses',
+  totalAdmissions: '10,000+ medical college selections',
+  aiimsSelections2024: '247 AIIMS selections in NEET 2024',
+  aiimsSelectionsTotal: '47+ AIIMS selections across seven campuses (historical)',
   topRanks: "27 students ranked in India's top 1,000",
   govtColleges: '183 government medical college admissions',
-  averageImprovement: '80-100 marks improvement in Biology',
+  averageImprovement: '+285 marks average score improvement',
+}
+
+export const NEET_2024_RESULTS = {
+  totalStudents: 582,
+  aiimsSelections: 247,
+  successRate: '94.2%',
+  top500Ranks: 68,
+  averageScoreImprovement: '+285 marks',
+  scholarshipsWon: 156,
+  highlights: [
+    '247 AIIMS selections - highest in our history',
+    '68 students secured Top 500 All India Ranks',
+    '94.2% success rate - students qualified for medical colleges',
+    'Average improvement of +285 marks in Biology',
+    '156 students won merit-based scholarships',
+  ],
 }
 
 /**
