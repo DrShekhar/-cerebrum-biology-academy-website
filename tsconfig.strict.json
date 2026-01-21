@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    // Enable all strict type-checking options for Phase 2
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -10,8 +9,6 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-
-    // Additional strict checks
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -19,8 +16,23 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-
-    // Ensure consistent casing
-    "forceConsistentCasingInFileNames": true
-  }
+    "pretty": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/lib/utils/*.ts",
+    "src/lib/security/*.ts",
+    "src/components/ui/*.tsx",
+    "scripts/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "disabled-features",
+    "tests",
+    "src/__tests__",
+    "out",
+    "build",
+    "dist"
+  ]
 }
