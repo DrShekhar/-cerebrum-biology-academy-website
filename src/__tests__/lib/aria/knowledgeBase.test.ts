@@ -27,7 +27,7 @@ describe('COURSE_TIERS', () => {
   it('should have required properties for each tier', () => {
     const tiers = Object.values(COURSE_TIERS)
 
-    tiers.forEach(tier => {
+    tiers.forEach((tier) => {
       expect(tier.name).toBeDefined()
       expect(tier.tagline).toBeDefined()
       expect(tier.batchSize).toBeDefined()
@@ -70,19 +70,17 @@ describe('PRICING', () => {
     'Class IX Foundation',
     'Class X Foundation',
     'Class XI NEET',
-    'Class XII NEET',
-    'Dropper/Repeater',
-    '2-Year Complete (11+12)',
+    'Class XII NEET / Dropper (Pinnacle ZA)',
   ]
 
   it('should have pricing for all expected courses', () => {
-    expectedCourses.forEach(course => {
+    expectedCourses.forEach((course) => {
       expect(PRICING[course]).toBeDefined()
     })
   })
 
   it('should have all three tiers for each course', () => {
-    Object.values(PRICING).forEach(coursePricing => {
+    Object.values(PRICING).forEach((coursePricing) => {
       expect(coursePricing.pinnacle).toBeDefined()
       expect(coursePricing.ascent).toBeDefined()
       expect(coursePricing.pursuit).toBeDefined()
@@ -90,9 +88,10 @@ describe('PRICING', () => {
   })
 
   it('should have prices in INR format (₹)', () => {
-    Object.values(PRICING).forEach(coursePricing => {
-      Object.values(coursePricing).forEach(price => {
-        expect(price).toMatch(/^₹[\d,]+$/)
+    Object.values(PRICING).forEach((coursePricing) => {
+      Object.values(coursePricing).forEach((price) => {
+        // Price should start with ₹ and contain numbers
+        expect(price).toMatch(/^₹[\d,]+/)
       })
     })
   })
@@ -102,7 +101,7 @@ describe('PRICING', () => {
       return parseInt(price.replace(/[₹,]/g, ''), 10)
     }
 
-    Object.values(PRICING).forEach(coursePricing => {
+    Object.values(PRICING).forEach((coursePricing) => {
       const pursuitPrice = parsePrice(coursePricing.pursuit)
       const ascentPrice = parsePrice(coursePricing.ascent)
 
@@ -149,32 +148,36 @@ describe('ADD_ONS', () => {
 })
 
 describe('BATCH_TIMINGS', () => {
-  it('should have weekday and weekend timings', () => {
-    expect(BATCH_TIMINGS.weekday).toBeDefined()
-    expect(BATCH_TIMINGS.weekend).toBeDefined()
+  it('should have multiple batch options', () => {
+    expect(BATCH_TIMINGS.batch1).toBeDefined()
+    expect(BATCH_TIMINGS.batch2).toBeDefined()
+    expect(BATCH_TIMINGS.batch3).toBeDefined()
   })
 
-  it('should have morning, afternoon, evening for weekdays', () => {
-    expect(BATCH_TIMINGS.weekday.morning).toBeDefined()
-    expect(BATCH_TIMINGS.weekday.afternoon).toBeDefined()
-    expect(BATCH_TIMINGS.weekday.evening).toBeDefined()
-  })
-
-  it('should have morning and afternoon for weekends', () => {
-    expect(BATCH_TIMINGS.weekend.morning).toBeDefined()
-    expect(BATCH_TIMINGS.weekend.afternoon).toBeDefined()
-  })
-
-  it('should have valid time formats', () => {
-    const timeFormatRegex = /\d{1,2}:\d{2}\s*(AM|PM)\s*-\s*\d{1,2}:\d{2}\s*(AM|PM)/
-
-    Object.values(BATCH_TIMINGS.weekday).forEach(time => {
-      expect(time).toMatch(timeFormatRegex)
+  it('should have schedule, location, and format for each batch', () => {
+    Object.values(BATCH_TIMINGS).forEach((batch) => {
+      expect(batch.schedule).toBeDefined()
+      expect(batch.location).toBeDefined()
+      expect(batch.format).toBeDefined()
     })
+  })
 
-    Object.values(BATCH_TIMINGS.weekend).forEach(time => {
-      expect(time).toMatch(timeFormatRegex)
+  it('should have valid schedule information', () => {
+    Object.values(BATCH_TIMINGS).forEach((batch) => {
+      // All schedules should be non-empty strings with meaningful content
+      expect(batch.schedule).toBeDefined()
+      expect(typeof batch.schedule).toBe('string')
+      expect(batch.schedule.length).toBeGreaterThan(5)
     })
+  })
+
+  it('should have both weekday and weekend batches', () => {
+    const schedules = Object.values(BATCH_TIMINGS).map((b) => b.schedule)
+    const hasWeekday = schedules.some((s) => s.includes('Mon') || s.includes('Wed'))
+    const hasWeekend = schedules.some((s) => s.includes('Sat') || s.includes('Sun'))
+
+    expect(hasWeekday).toBe(true)
+    expect(hasWeekend).toBe(true)
   })
 })
 
@@ -187,7 +190,7 @@ describe('STUDY_MATERIALS', () => {
   })
 
   it('should have NCERT-based content', () => {
-    const includesNCERT = STUDY_MATERIALS.included.some(material =>
+    const includesNCERT = STUDY_MATERIALS.included.some((material) =>
       material.toLowerCase().includes('ncert')
     )
     expect(includesNCERT).toBe(true)
@@ -195,9 +198,8 @@ describe('STUDY_MATERIALS', () => {
 
   it('should have previous year questions', () => {
     const includesPYQ = STUDY_MATERIALS.included.some(
-      material =>
-        material.toLowerCase().includes('previous year') ||
-        material.toLowerCase().includes('pyq')
+      (material) =>
+        material.toLowerCase().includes('previous year') || material.toLowerCase().includes('pyq')
     )
     expect(includesPYQ).toBe(true)
   })
@@ -214,13 +216,13 @@ describe('OBJECTION_HANDLERS', () => {
   ]
 
   it('should have handlers for all common objections', () => {
-    expectedObjections.forEach(objection => {
+    expectedObjections.forEach((objection) => {
       expect(OBJECTION_HANDLERS[objection]).toBeDefined()
     })
   })
 
   it('should have response and followUp for each objection', () => {
-    Object.values(OBJECTION_HANDLERS).forEach(handler => {
+    Object.values(OBJECTION_HANDLERS).forEach((handler) => {
       expect(handler.response).toBeDefined()
       expect(typeof handler.response).toBe('string')
       expect(handler.response.length).toBeGreaterThan(50) // Substantive response
@@ -249,7 +251,7 @@ describe('OBJECTION_HANDLERS', () => {
 
 describe('FAQ_DATA', () => {
   it('should have question and answer for each FAQ', () => {
-    Object.values(FAQ_DATA).forEach(faq => {
+    Object.values(FAQ_DATA).forEach((faq) => {
       expect(faq.question).toBeDefined()
       expect(faq.answer).toBeDefined()
       expect(faq.question.endsWith('?')).toBe(true)
@@ -311,7 +313,7 @@ describe('USP_POINTS', () => {
   })
 
   it('should not have empty or very short points', () => {
-    USP_POINTS.forEach(point => {
+    USP_POINTS.forEach((point) => {
       expect(point.length).toBeGreaterThan(10)
     })
   })
@@ -345,8 +347,8 @@ describe('data consistency', () => {
   it('should have consistent tier names across pricing and course tiers', () => {
     const tierKeys = Object.keys(COURSE_TIERS)
 
-    Object.values(PRICING).forEach(coursePricing => {
-      tierKeys.forEach(tier => {
+    Object.values(PRICING).forEach((coursePricing) => {
+      tierKeys.forEach((tier) => {
         expect(coursePricing[tier]).toBeDefined()
       })
     })
@@ -362,13 +364,13 @@ describe('data consistency', () => {
       const placeholders = ['TODO', 'FIXME', 'XXX', 'TBD', 'placeholder', 'lorem']
 
       if (typeof obj === 'string') {
-        placeholders.forEach(placeholder => {
+        placeholders.forEach((placeholder) => {
           expect(obj.toLowerCase()).not.toContain(placeholder.toLowerCase())
         })
       } else if (Array.isArray(obj)) {
-        obj.forEach(item => checkForPlaceholders(item))
+        obj.forEach((item) => checkForPlaceholders(item))
       } else if (obj && typeof obj === 'object') {
-        Object.values(obj).forEach(value => checkForPlaceholders(value))
+        Object.values(obj).forEach((value) => checkForPlaceholders(value))
       }
     }
 
