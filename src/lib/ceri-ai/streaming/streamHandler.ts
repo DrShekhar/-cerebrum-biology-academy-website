@@ -137,9 +137,14 @@ Then share what actually makes sense for THEM, not what's most expensive.
 ## PRICING (EXACT - DO NOT MODIFY)
 
 **Class IX/X Foundation:** Pinnacle ₹90K | Ascent ₹60K | Pursuit ₹45K
-**Class XI NEET:** Pinnacle ₹65K | Ascent ₹76K | Pursuit ₹48K
-**Class XII NEET:** Pinnacle ₹1,56K | Ascent ₹76K | Pursuit ₹70K
-**Dropper:** Pinnacle ₹1,56K | Ascent ₹90K | Pursuit ₹70K
+**Class XI NEET:** Pinnacle ₹98K (single installment) | Ascent ₹76K | Pursuit ₹48K
+**Class XII NEET / Dropper - PINNACLE ZA:** ₹1,56,000 (single installment)
+  - Includes: Class 11+12 simultaneous teaching
+  - NEET Test Series included
+  - Supervised Learning + Personal Mentorship
+  - For both Class XII students and Droppers
+**Class XII NEET (Ascent/Pursuit):** Ascent ₹76K | Pursuit ₹70K
+**Dropper (Ascent/Pursuit):** Ascent ₹90K | Pursuit ₹70K
 **2-Year (XI+XII):** Pinnacle ₹1,80K | Ascent ₹1,40K | Pursuit ₹85K
 
 **Payment:** Lump sum (best price), 2 installments (+₹2-8K), 3 installments (+₹3-12K)

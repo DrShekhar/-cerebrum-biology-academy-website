@@ -569,9 +569,12 @@ const class12: ClassPricing = {
         prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
         features: [
           ...class12PinnacleFeatures,
-          'Complete 11th + 12th syllabus coverage in 1 year',
-          'Flagship NEET ZA Program',
-          'Intensive crash course for serious aspirants',
+          'Pinnacle ZA Program - Premium flagship course',
+          'Class 11th + 12th simultaneous teaching in 1 year',
+          'NEET Test Series included (50+ full-length mocks)',
+          'Supervised Learning sessions with faculty',
+          'Personal Mentorship from Dr. Shekhar',
+          'Intensive crash course for top AIR aspirants',
         ],
       },
       {
@@ -613,7 +616,14 @@ const dropper: ClassPricing = {
         batchSize: '10-12',
         hours: '10-12 hrs/week',
         prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
-        features: class12PinnacleFeatures,
+        features: [
+          ...class12PinnacleFeatures,
+          'Pinnacle ZA Program - Premium flagship course for droppers',
+          'Class 11th + 12th simultaneous teaching (complete revision)',
+          'NEET Test Series included (50+ full-length mocks)',
+          'Supervised Learning sessions with faculty',
+          'Personal Mentorship from Dr. Shekhar',
+        ],
       },
       {
         tier: 'ascent',

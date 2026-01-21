@@ -60,18 +60,13 @@ export const PRICING = {
     pursuit: '₹45,000',
   },
   'Class XI NEET': {
-    pinnacle: '₹65,000',
+    pinnacle: '₹98,000',
     ascent: '₹76,000',
     pursuit: '₹48,000',
   },
-  'Class XII NEET': {
-    pinnacle: '₹1,56,000',
-    ascent: '₹76,000',
-    pursuit: '₹70,000',
-  },
-  'Dropper/Repeater': {
-    pinnacle: '₹1,56,000',
-    ascent: '₹90,000',
+  'Class XII NEET / Dropper (Pinnacle ZA)': {
+    pinnacle: '₹1,56,000 (includes Class 11+12 simultaneous teaching, NEET Test Series, Supervised Learning, Mentorship)',
+    ascent: '₹76,000 (Class XII) / ₹90,000 (Dropper)',
     pursuit: '₹70,000',
   },
   '2-Year Complete (11+12)': {
