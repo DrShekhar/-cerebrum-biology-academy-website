@@ -107,14 +107,18 @@ ${formatPricing()}
 - Intensive Program: ₹3,60,000/year (ultra-personalized, Pinnacle only)
 
 ## BATCH TIMINGS
-**Weekdays:**
-- Morning: ${BATCH_TIMINGS.weekday.morning}
-- Afternoon: ${BATCH_TIMINGS.weekday.afternoon}
-- Evening: ${BATCH_TIMINGS.weekday.evening}
+**BATCH-1:** ${BATCH_TIMINGS.batch1.schedule} - ${BATCH_TIMINGS.batch1.location}
+**BATCH-2:** ${BATCH_TIMINGS.batch2.schedule} - ${BATCH_TIMINGS.batch2.location}
+**BATCH-3:** ${BATCH_TIMINGS.batch3.schedule} - ${BATCH_TIMINGS.batch3.location}
+**BATCH-4:** ${BATCH_TIMINGS.batch4.schedule} - ${BATCH_TIMINGS.batch4.location}
+**BATCH-5:** ${BATCH_TIMINGS.batch5.schedule} - ${BATCH_TIMINGS.batch5.location}
 
-**Weekends:**
-- Morning: ${BATCH_TIMINGS.weekend.morning}
-- Afternoon: ${BATCH_TIMINGS.weekend.afternoon}
+**NEET Class:** ${BATCH_TIMINGS.neetClass.schedule}
+**Weekly Test:** ${BATCH_TIMINGS.weeklyTest.schedule}
+
+**Dropper Batches:** ${BATCH_TIMINGS.dropperBatches.schedule}
+
+All batches available in Offline/Hybrid/Online formats.
 
 ## OUR UNIQUE SELLING POINTS
 ${USP_POINTS.map((point, i) => `${i + 1}. ${point}`).join('\n')}

@@ -104,15 +104,17 @@ describe('ARIA_SYSTEM_PROMPT', () => {
   })
 
   describe('batch timings', () => {
-    it('should include weekday timings', () => {
-      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weekday.morning)
-      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weekday.afternoon)
-      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weekday.evening)
+    it('should include all batch schedules', () => {
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.batch1.schedule)
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.batch2.schedule)
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.batch3.schedule)
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.batch4.schedule)
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.batch5.schedule)
     })
 
-    it('should include weekend timings', () => {
-      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weekend.morning)
-      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weekend.afternoon)
+    it('should include additional class timings', () => {
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.neetClass.schedule)
+      expect(ARIA_SYSTEM_PROMPT).toContain(BATCH_TIMINGS.weeklyTest.schedule)
     })
   })
 

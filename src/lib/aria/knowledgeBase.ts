@@ -101,14 +101,45 @@ export const ADD_ONS = {
 }
 
 export const BATCH_TIMINGS = {
-  weekday: {
-    morning: '6:00 AM - 9:00 AM',
-    afternoon: '2:00 PM - 5:00 PM',
-    evening: '6:00 PM - 9:00 PM',
+  batch1: {
+    schedule: 'Mon/Wed, 6:00 PM - 7:30 PM',
+    location: 'Gurugram',
+    format: 'Offline/Hybrid/Online',
   },
-  weekend: {
-    morning: '8:00 AM - 12:00 PM',
-    afternoon: '2:00 PM - 6:00 PM',
+  batch2: {
+    schedule: 'Sat/Sun, 9:30 AM - 11:00 AM',
+    location: 'South Delhi (South Extension)',
+    format: 'Offline/Hybrid/Online',
+  },
+  batch3: {
+    schedule: 'Sat/Sun, 3:30 PM - 5:00 PM',
+    location: 'Gurugram',
+    format: 'Offline/Hybrid/Online',
+  },
+  batch4: {
+    schedule: 'Tue/Thu, 4:15 PM - 5:45 PM',
+    location: 'Rohini',
+    format: 'Offline/Hybrid/Online',
+  },
+  batch5: {
+    schedule: 'Sat/Sun, 7:30 PM - 9:00 PM',
+    location: 'Gurugram',
+    format: 'Offline/Hybrid/Online',
+  },
+  neetClass: {
+    schedule: 'Wed 7:30-8:30 PM OR Sun 6:15-7:15 PM (choose one)',
+    location: 'All centers',
+    format: 'Weekly session',
+  },
+  weeklyTest: {
+    schedule: 'Mon 8:30-9:30 PM',
+    location: 'Online (offline/custom times available)',
+    format: 'Weekly assessment',
+  },
+  dropperBatches: {
+    schedule: 'Morning batches (first half) also available',
+    location: 'All centers',
+    format: 'Specially for dropper students',
   },
 }
 
