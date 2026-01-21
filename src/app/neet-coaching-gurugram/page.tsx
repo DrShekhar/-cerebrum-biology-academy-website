@@ -1,6 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   MapPin,
@@ -318,13 +317,6 @@ const whyGurugram = [
 ]
 
 export default function NeetCoachingGurugramPage() {
-  // Optimize LCP: Only enable animations after mount to prevent blocking initial render
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_gurugram', {
@@ -341,12 +333,7 @@ export default function NeetCoachingGurugramPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={mounted ? { opacity: 0, y: 20 } : false}
-            animate={mounted ? { opacity: 1, y: 0 } : false}
-            transition={mounted ? { duration: 0.8 } : { duration: 0 }}
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               Serving All Gurugram Localities
@@ -393,23 +380,18 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {successMetrics.map((metric, index) => (
-                <motion.div
+              {successMetrics.map((metric) => (
+                <div
                   key={metric.label}
-                  initial={mounted ? { opacity: 0, y: 20 } : false}
-                  animate={mounted ? { opacity: 1, y: 0 } : false}
-                  transition={
-                    mounted ? { duration: 0.6, delay: 0.2 + index * 0.1 } : { duration: 0 }
-                  }
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fade-in-up"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
