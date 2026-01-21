@@ -281,6 +281,22 @@ What works best for your family?`,
 We specialize in what we do best - NEET Biology. Would you like a side-by-side comparison?`,
     followUp: ['More comparison details', 'Why only Biology?', 'Book demo'],
   },
+  oneOnOneClasses: {
+    response: `We do offer one-on-one personalized classes! Our minimum fee for one-on-one coaching is **₹2,000+ per hour** depending on the faculty and customization level.
+
+This includes:
+- Personal attention from AIIMS faculty
+- Customized study plan for your specific needs
+- Flexible timings
+- Individual doubt clearing
+
+If this works for your budget, I can:
+1. **Collect your details** and have our counselor call you to discuss specifics
+2. **Share our contact numbers** so you can call us directly: +91 8826444334 or +91 9311946297
+
+Which would you prefer?`,
+    followUp: ['Share my details for callback', 'I will call directly', 'Tell me more about one-on-one'],
+  },
 }
 
 export const FAQ_DATA = {
