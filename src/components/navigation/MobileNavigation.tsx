@@ -161,7 +161,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           paddingBottom: 'max(env(safe-area-inset-bottom), 12px)',
         }}
       >
-        <div className="flex justify-around items-center py-3">
+        <div className="flex justify-around items-center py-3 gap-2 px-2">
           {bottomNavItems.map((item) => {
             const Icon = item.icon
             const active = isActive(item.href)
@@ -217,100 +217,100 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           aria-label="Main menu"
           className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl overflow-y-auto z-50 md:hidden animate-slide-in-right"
         >
-        <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between z-10">
-          <h2 className="text-lg font-bold text-gray-900">Menu</h2>
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-            aria-label="Close menu"
-          >
-            <X className="w-5 h-5 text-gray-500" aria-hidden="true" />
-          </button>
-        </div>
+          <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between z-10">
+            <h2 className="text-lg font-bold text-gray-900">Menu</h2>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5 text-gray-500" aria-hidden="true" />
+            </button>
+          </div>
 
-        <div className="p-4 space-y-6">
-          {menuSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                {section.title}
-              </h3>
-              <div className="space-y-1">
-                {section.items.map((item) => {
-                  const ItemIcon = item.icon
-                  const active = isActive(item.href)
+          <div className="p-4 space-y-6">
+            {menuSections.map((section) => (
+              <div key={section.title}>
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                  {section.title}
+                </h3>
+                <div className="space-y-1">
+                  {section.items.map((item) => {
+                    const ItemIcon = item.icon
+                    const active = isActive(item.href)
 
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={handleMenuItemClick}
-                      className={`flex items-center justify-between p-3 rounded-lg transition-colors min-h-[48px] ${
-                        active ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                      aria-current={active ? 'page' : undefined}
-                    >
-                      <div className="flex items-center gap-3">
-                        <ItemIcon className="w-5 h-5" aria-hidden="true" />
-                        <div>
-                          <span className="font-medium">{item.label}</span>
-                          {item.description && (
-                            <p className="text-xs text-gray-500">{item.description}</p>
-                          )}
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={handleMenuItemClick}
+                        className={`flex items-center justify-between p-3 rounded-lg transition-colors min-h-[48px] ${
+                          active ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                        aria-current={active ? 'page' : undefined}
+                      >
+                        <div className="flex items-center gap-3">
+                          <ItemIcon className="w-5 h-5" aria-hidden="true" />
+                          <div>
+                            <span className="font-medium">{item.label}</span>
+                            {item.description && (
+                              <p className="text-xs text-gray-500">{item.description}</p>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                      <ChevronRight className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  )
-                })}
+                        <ChevronRight className="w-4 h-4" aria-hidden="true" />
+                      </Link>
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
 
-          <div className="pt-6 border-t border-gray-200">
-            {/* Use mounted check to prevent hydration mismatch */}
-            {mounted && isAuthenticated ? (
-              <Link
-                href="/dashboard/student"
-                onClick={handleMenuItemClick}
-                className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[52px]"
-              >
-                <BarChart3 className="w-5 h-5" aria-hidden="true" />
-                <span>My Dashboard</span>
-              </Link>
-            ) : (
-              <div className="space-y-3">
+            <div className="pt-6 border-t border-gray-200">
+              {/* Use mounted check to prevent hydration mismatch */}
+              {mounted && isAuthenticated ? (
                 <Link
-                  href="/sign-in"
+                  href="/dashboard/student"
                   onClick={handleMenuItemClick}
                   className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[52px]"
                 >
-                  <LogIn className="w-5 h-5" aria-hidden="true" />
-                  <span>Sign In</span>
+                  <BarChart3 className="w-5 h-5" aria-hidden="true" />
+                  <span>My Dashboard</span>
                 </Link>
-                <Link
-                  href="/sign-up"
-                  onClick={handleMenuItemClick}
-                  className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 px-6 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors min-h-[52px]"
-                >
-                  <UserPlus className="w-5 h-5" aria-hidden="true" />
-                  <span>Sign Up</span>
-                </Link>
-              </div>
-            )}
-          </div>
+              ) : (
+                <div className="space-y-3">
+                  <Link
+                    href="/sign-in"
+                    onClick={handleMenuItemClick}
+                    className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[52px]"
+                  >
+                    <LogIn className="w-5 h-5" aria-hidden="true" />
+                    <span>Sign In</span>
+                  </Link>
+                  <Link
+                    href="/sign-up"
+                    onClick={handleMenuItemClick}
+                    className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 px-6 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors min-h-[52px]"
+                  >
+                    <UserPlus className="w-5 h-5" aria-hidden="true" />
+                    <span>Sign Up</span>
+                  </Link>
+                </div>
+              )}
+            </div>
 
-          <div className="pt-4">
-            <Link
-              href="/demo-booking"
-              onClick={handleMenuItemClick}
-              className="flex items-center justify-center gap-2 w-full bg-orange-100 text-orange-700 px-6 py-4 rounded-lg font-semibold hover:bg-orange-200 transition-colors border border-orange-300 min-h-[52px]"
-            >
-              <Play className="w-5 h-5" aria-hidden="true" />
-              <span>Book Free Demo</span>
-            </Link>
+            <div className="pt-4">
+              <Link
+                href="/demo-booking"
+                onClick={handleMenuItemClick}
+                className="flex items-center justify-center gap-2 w-full bg-orange-100 text-orange-700 px-6 py-4 rounded-lg font-semibold hover:bg-orange-200 transition-colors border border-orange-300 min-h-[52px]"
+              >
+                <Play className="w-5 h-5" aria-hidden="true" />
+                <span>Book Free Demo</span>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
       )}
     </>
   )
