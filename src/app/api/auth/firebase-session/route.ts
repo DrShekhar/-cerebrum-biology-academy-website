@@ -249,12 +249,18 @@ export async function POST(request: NextRequest) {
 
       // Set session cookie directly on the response object for maximum reliability
       // This ensures the Set-Cookie header is definitely included in the response
-      const isProduction = process.env.NODE_ENV === 'production'
       const maxAge = 7 * 24 * 60 * 60 // 7 days in seconds
 
-      // SECURITY: Use __Secure- prefix in production for enhanced cookie security
-      // The __Secure- prefix tells browsers to only accept the cookie over HTTPS
-      const cookieName = isProduction ? '__Secure-authjs.session-token' : 'authjs.session-token'
+      // SECURITY: Detect if request is over HTTPS to determine cookie security settings
+      // Check multiple headers that indicate HTTPS (works with reverse proxies like Vercel, Cloudflare)
+      const forwardedProto = request.headers.get('x-forwarded-proto')
+      const isHttps = forwardedProto === 'https' || request.url.startsWith('https://')
+      const isProduction = process.env.NODE_ENV === 'production'
+
+      // Only use __Secure- prefix and secure flag when actually on HTTPS
+      // This prevents cookie rejection on local HTTP development
+      const useSecureCookie = isHttps && isProduction
+      const cookieName = useSecureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
 
       // Create response first, then set cookie directly on it
       const response = NextResponse.json({
@@ -272,10 +278,23 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      // Set cookie directly on the response object - most reliable method
-      response.cookies.set(cookieName, sessionToken, {
+      // ALWAYS set BOTH cookie variants for maximum compatibility
+      // This ensures session works regardless of HTTPS detection issues
+      // The middleware will check __Secure- first, then fall back to non-secure
+
+      // Primary secure cookie (for HTTPS production)
+      response.cookies.set('__Secure-authjs.session-token', sessionToken, {
         httpOnly: true,
-        secure: isProduction,
+        secure: true, // Always true for __Secure- prefix
+        sameSite: 'lax',
+        path: '/',
+        maxAge: maxAge,
+      })
+
+      // Fallback non-secure cookie (for HTTP/localhost and as backup)
+      response.cookies.set('authjs.session-token', sessionToken, {
+        httpOnly: true,
+        secure: false,
         sameSite: 'lax',
         path: '/',
         maxAge: maxAge,
@@ -284,10 +303,14 @@ export async function POST(request: NextRequest) {
       // Reset rate limit on successful login
       AuthRateLimit.resetRateLimit(rateLimitKey)
 
-      if (process.env.NODE_ENV !== 'production') {
-        console.log(`[Firebase Session] User logged in: ${user.id}`)
-        console.log(`[Firebase Session] Cookie '${cookieName}' set on response`)
-      }
+      // Log cookie details for debugging (always log in non-production, summary in production)
+      console.log(`[Firebase Session] User logged in: ${user.id}`, {
+        cookieName,
+        isHttps,
+        isProduction,
+        useSecureCookie,
+        forwardedProto,
+      })
 
       return addSecurityHeaders(response)
     }

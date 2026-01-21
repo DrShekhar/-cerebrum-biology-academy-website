@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/navigation'
 import { Phone, Loader2, Check, Clock, AlertCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import {
@@ -48,7 +47,6 @@ function PhoneSignInFallback() {
 
 // Main Firebase Phone Auth component
 function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: PhoneSignInProps) {
-  const router = useRouter()
   const [step, setStep] = useState<Step>('phone')
   const [phone, setPhone] = useState('')
   const [otp, setOtp] = useState('')
@@ -213,9 +211,45 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
     }
   }
 
+  const verifySessionWithRetry = async (
+    maxRetries: number = 4,
+    initialDelay: number = 300
+  ): Promise<boolean> => {
+    let delay = initialDelay
+
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      console.log(`[PhoneSignIn] Session verification attempt ${attempt}/${maxRetries}`)
+
+      await new Promise((resolve) => setTimeout(resolve, delay))
+
+      try {
+        const response = await fetch('/api/auth/session', {
+          method: 'GET',
+          credentials: 'include',
+          cache: 'no-store',
+        })
+
+        const data = await response.json()
+        console.log(`[PhoneSignIn] Attempt ${attempt} result:`, {
+          authenticated: data.authenticated,
+          hasUser: !!data.user,
+        })
+
+        if (data.authenticated && data.user) {
+          return true
+        }
+      } catch (err) {
+        console.error(`[PhoneSignIn] Verification attempt ${attempt} error:`, err)
+      }
+
+      delay *= 1.5
+    }
+
+    return false
+  }
+
   const createSessionAndRedirect = async (user: { uid: string; phoneNumber: string | null }) => {
     try {
-      // Create NextAuth session
       const response = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -232,61 +266,34 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       console.log('[PhoneSignIn] Login response:', {
         ok: response.ok,
         status: response.status,
-        data,
-        setCookieHeader:
-          response.headers.get('set-cookie') || 'not visible (expected for httpOnly)',
+        userId: data.userId,
       })
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to create session')
       }
 
-      // Verify the session was created by checking with the session API
-      // This ensures the cookie was properly set before we redirect
-      console.log('[PhoneSignIn] Verifying session was created...')
-      const verifyResponse = await fetch('/api/auth/session', {
-        method: 'GET',
-        credentials: 'include',
-      })
-      const verifyData = await verifyResponse.json()
+      const isVerified = await verifySessionWithRetry()
 
-      console.log('[PhoneSignIn] Session verification:', {
-        authenticated: verifyData.authenticated,
-        hasUser: !!verifyData.user,
-        userId: verifyData.user?.id,
-      })
-
-      if (!verifyData.authenticated) {
-        console.warn('[PhoneSignIn] Session not verified after login - cookie may not be set')
-        // Try one more time after a small delay
-        await new Promise((resolve) => setTimeout(resolve, 500))
-        const retryResponse = await fetch('/api/auth/session', {
-          method: 'GET',
-          credentials: 'include',
-        })
-        const retryData = await retryResponse.json()
-        console.log('[PhoneSignIn] Session retry verification:', retryData)
-
-        if (!retryData.authenticated) {
-          throw new Error('Session could not be verified. Please try again.')
-        }
+      if (!isVerified) {
+        throw new Error('Session verification failed. Please try again.')
       }
 
+      console.log('[PhoneSignIn] Session verified successfully')
       setStep('success')
 
-      // Use hard redirect to ensure cookies are properly picked up
-      // router.push() is a soft navigation that may not refresh cookie state
-      console.log('[PhoneSignIn] Redirecting to:', redirectUrl)
+      const redirectWithTimestamp = redirectUrl.includes('?')
+        ? `${redirectUrl}&_t=${Date.now()}`
+        : `${redirectUrl}?_t=${Date.now()}`
 
-      // Reduced delay - session is already verified above
       setTimeout(() => {
         if (onSuccess) {
           onSuccess()
         } else {
-          // Hard redirect to ensure cookies are included
-          window.location.href = redirectUrl
+          console.log('[PhoneSignIn] Redirecting to:', redirectWithTimestamp)
+          window.location.href = redirectWithTimestamp
         }
-      }, 800) // Reduced from 1500ms since we verified session above
+      }, 500)
     } catch (err: unknown) {
       const error = err as Error
       console.error('[PhoneSignIn] Session creation error:', error)

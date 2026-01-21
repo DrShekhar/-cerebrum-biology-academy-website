@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { addSecurityHeaders } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
-import { jwtVerify } from 'jose'
+import * as jwt from 'jsonwebtoken'
 
-// Auth secret for verifying Firebase session tokens (encoded for jose)
+// Auth secret for verifying Firebase session tokens
 // SECURITY: No fallback in production - secrets are required
-const getAuthSecret = () => {
+const getAuthSecret = (): string => {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
   if (!secret) {
     if (process.env.NODE_ENV === 'production') {
@@ -17,8 +17,6 @@ const getAuthSecret = () => {
   }
   return secret
 }
-const AUTH_SECRET = getAuthSecret()
-const SECRET_KEY = new TextEncoder().encode(AUTH_SECRET)
 
 // Define public routes that don't require authentication
 const publicRoutes = [
@@ -86,22 +84,29 @@ interface FirebaseSessionPayload {
   exp?: number
 }
 
-// Try to get user from our custom JWT token (async for jose)
-async function getUserFromToken(req: NextRequest): Promise<{ userId: string; role: string } | null> {
+// Try to get user from our custom JWT token
+// Uses jsonwebtoken library (same as firebase-session route) for consistency
+function getUserFromToken(req: NextRequest): { userId: string; role: string } | null {
   try {
-    // Check for our Firebase auth session token
+    // Check for our Firebase auth session token - check both cookie variants
     const sessionToken =
       req.cookies.get('__Secure-authjs.session-token')?.value ||
       req.cookies.get('authjs.session-token')?.value
 
     if (!sessionToken) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('[Middleware] No session token found in cookies')
+      }
       return null
     }
 
-    const { payload } = await jwtVerify(sessionToken, SECRET_KEY)
-    const decoded = payload as unknown as FirebaseSessionPayload
+    // Use jsonwebtoken for verification (same library as token creation)
+    const decoded = jwt.verify(sessionToken, getAuthSecret()) as FirebaseSessionPayload
 
     if (decoded && decoded.id) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('[Middleware] Token verified successfully for user:', decoded.id)
+      }
       return {
         userId: decoded.id,
         role: (decoded.role || 'student').toUpperCase()
@@ -109,7 +114,10 @@ async function getUserFromToken(req: NextRequest): Promise<{ userId: string; rol
     }
     return null
   } catch (error) {
-    // Token invalid or expired
+    // Token invalid or expired - log in development for debugging
+    if (process.env.NODE_ENV !== 'production') {
+      console.error('[Middleware] Token verification failed:', error)
+    }
     return null
   }
 }
@@ -127,8 +135,8 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(newUrl, { status: 301 })
   }
 
-  // Get auth state from our custom JWT token
-  const authResult = await getUserFromToken(req)
+  // Get auth state from our custom JWT token (synchronous with jsonwebtoken)
+  const authResult = getUserFromToken(req)
   const userId = authResult?.userId || null
   const userRole = authResult?.role || null
 
