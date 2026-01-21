@@ -185,7 +185,7 @@ export default function DoubtResolutionPage() {
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
                 target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Ask on WhatsApp

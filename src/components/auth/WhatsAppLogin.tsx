@@ -241,7 +241,7 @@ export function WhatsAppLogin() {
             onClick={handleSendOTP}
             disabled={loading || !phoneNumber}
             variant="primary"
-            className="w-full bg-green-600 hover:bg-green-700"
+            className="w-full bg-[#25D366] hover:bg-[#20BD5A]"
           >
             {loading ? (
               <>
@@ -278,7 +278,7 @@ export function WhatsAppLogin() {
             onClick={handleVerifyOTP}
             disabled={loading || otp.length !== 6}
             variant="primary"
-            className="w-full bg-green-600 hover:bg-green-700"
+            className="w-full bg-[#25D366] hover:bg-[#20BD5A]"
           >
             {loading ? (
               <>

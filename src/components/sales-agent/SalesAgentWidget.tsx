@@ -455,7 +455,7 @@ In the meantime, would you like to:
       <motion.button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+        className="fixed bottom-24 right-4 md:bottom-6 md:right-6 z-50 bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 50 }}
@@ -487,7 +487,7 @@ In the meantime, would you like to:
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-4 md:right-6 w-[calc(100vw-2rem)] md:w-96 max-h-[70vh] bg-white rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200"
+            className="fixed bottom-36 right-4 md:bottom-24 md:right-6 w-[calc(100vw-2rem)] md:w-96 max-h-[60vh] md:max-h-[70vh] bg-white rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-4">

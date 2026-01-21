@@ -81,13 +81,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
       color: 'bg-blue-600 hover:bg-blue-700',
       action: 'call',
     },
-    {
-      icon: Calendar,
-      label: 'Book Demo',
-      href: '/demo-booking',
-      color: 'bg-indigo-500 hover:bg-indigo-600',
-      action: 'book-demo',
-    },
   ]
 
   const handleWhatsAppClick = async (e: React.MouseEvent, source: string) => {
@@ -132,7 +125,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
     <>
       {/* ===== MOBILE: Direct WhatsApp Button (Single Tap!) ===== */}
       {/* Always visible, no scroll requirement, direct WhatsApp access */}
-      <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-4 z-[60] lg:hidden">
+      <div className="fixed bottom-20 sm:bottom-24 left-3 sm:left-4 z-[60] lg:hidden">
         {/* Secondary Actions (Call, Book Demo) - only when expanded */}
         {isExpanded && (
           <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
@@ -200,9 +193,9 @@ export const FloatingCTA = memo(function FloatingCTA() {
             <button
               onClick={() => setIsExpanded(true)}
               className="w-8 h-8 bg-gray-500 rounded-full shadow-md flex items-center justify-center text-white text-xs font-medium transition-all duration-300 hover:bg-gray-600"
-              aria-label="+2 more contact options"
+              aria-label="+1 more contact option"
             >
-              <span aria-hidden="true">+2</span>
+              <span aria-hidden="true">+1</span>
             </button>
           )}
         </div>

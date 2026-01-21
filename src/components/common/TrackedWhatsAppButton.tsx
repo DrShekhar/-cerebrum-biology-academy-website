@@ -24,7 +24,7 @@ interface TrackedWhatsAppButtonProps {
 
 const variantStyles: Record<WhatsAppButtonVariant, string> = {
   primary:
-    'bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl',
+    'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg hover:shadow-xl',
   secondary:
     'bg-green-100 hover:bg-green-200 text-green-700 border border-green-300',
   outline:
@@ -32,9 +32,9 @@ const variantStyles: Record<WhatsAppButtonVariant, string> = {
   ghost:
     'text-green-600 hover:bg-green-50',
   floating:
-    'bg-green-500 hover:bg-green-600 text-white shadow-2xl hover:shadow-3xl rounded-full',
+    'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-2xl hover:shadow-3xl rounded-full',
   icon:
-    'bg-green-500 hover:bg-green-600 text-white rounded-full p-2',
+    'bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full p-2',
 }
 
 const sizeStyles: Record<WhatsAppButtonSize, string> = {
@@ -219,7 +219,7 @@ export function WhatsAppFloatingButton({
       className={cn(
         'fixed bottom-6 right-6 z-50',
         'w-14 h-14 rounded-full',
-        'bg-green-500 hover:bg-green-600',
+        'bg-[#25D366] hover:bg-[#20BD5A]',
         'text-white shadow-2xl hover:shadow-3xl',
         'flex items-center justify-center',
         'transition-all duration-300 transform hover:scale-110',

@@ -78,7 +78,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
       {/* Floating WhatsApp Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
+        className="fixed bottom-24 right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 animate-fade-in"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="font-medium hidden sm:inline">Ask a Doubt</span>
@@ -161,7 +161,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
                 <button
                   onClick={handleCustomQuery}
                   disabled={!customQuery.trim()}
-                  className="absolute bottom-2 right-2 w-11 h-11 min-w-[44px] min-h-[44px] bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
+                  className="absolute bottom-2 right-2 w-11 h-11 min-w-[44px] min-h-[44px] bg-[#25D366] hover:bg-[#20BD5A] disabled:bg-gray-300 text-white rounded-full flex items-center justify-center transition-colors touch-manipulation"
                   aria-label="Send message"
                 >
                   <Send className="w-5 h-5" />
