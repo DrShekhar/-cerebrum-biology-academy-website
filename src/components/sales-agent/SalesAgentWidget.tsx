@@ -58,10 +58,26 @@ const ARIA_PERSONALITY = {
 
 // Quick starter questions
 const STARTER_QUESTIONS: QuickAction[] = [
-  { label: 'Why Cerebrum?', value: 'Why should I join Cerebrum Biology Academy?', icon: <Star className="w-3 h-3" /> },
-  { label: 'Course Details', value: 'Tell me about your courses and pricing', icon: <GraduationCap className="w-3 h-3" /> },
-  { label: 'Free Demo', value: 'I want to attend a free demo class', icon: <Calendar className="w-3 h-3" /> },
-  { label: 'Already have coaching', value: 'I already have a coaching institute, can I still join?', icon: <CheckCircle2 className="w-3 h-3" /> },
+  {
+    label: 'Why Cerebrum?',
+    value: 'Why should I join Cerebrum Biology Academy?',
+    icon: <Star className="w-3 h-3" />,
+  },
+  {
+    label: 'Course Details',
+    value: 'Tell me about your courses and pricing',
+    icon: <GraduationCap className="w-3 h-3" />,
+  },
+  {
+    label: 'Free Demo',
+    value: 'I want to attend a free demo class',
+    icon: <Calendar className="w-3 h-3" />,
+  },
+  {
+    label: 'Already have coaching',
+    value: 'I already have a coaching institute, can I still join?',
+    icon: <CheckCircle2 className="w-3 h-3" />,
+  },
 ]
 
 // Note: Hardcoded KNOWLEDGE_BASE and findResponse removed
@@ -77,7 +93,10 @@ function calculateLeadScore(data: Partial<LeadData>, messages: Message[]): numbe
   if (data.class) score += 15
 
   // Interest signals from conversation
-  const userMessages = messages.filter(m => m.role === 'user').map(m => m.content.toLowerCase()).join(' ')
+  const userMessages = messages
+    .filter((m) => m.role === 'user')
+    .map((m) => m.content.toLowerCase())
+    .join(' ')
   if (userMessages.includes('demo')) score += 10
   if (userMessages.includes('enroll') || userMessages.includes('join')) score += 15
   if (userMessages.includes('price') || userMessages.includes('cost')) score += 5
@@ -91,7 +110,9 @@ export default function SalesAgentWidget() {
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const [leadData, setLeadData] = useState<LeadData>({ source: 'chat_widget', score: 0 })
-  const [leadCaptureStep, setLeadCaptureStep] = useState<'none' | 'name' | 'phone' | 'class' | 'complete'>('none')
+  const [leadCaptureStep, setLeadCaptureStep] = useState<
+    'none' | 'name' | 'phone' | 'class' | 'complete'
+  >('none')
   const [unreadCount, setUnreadCount] = useState(0)
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -134,104 +155,110 @@ How can I help you today?`,
   }, [isOpen, messages.length])
 
   // Send message handler
-  const sendMessage = useCallback(async (content: string) => {
-    if (!content.trim()) return
+  const sendMessage = useCallback(
+    async (content: string) => {
+      if (!content.trim()) return
 
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
-      role: 'user',
-      content: content.trim(),
-      timestamp: new Date(),
-    }
-
-    setMessages(prev => [...prev, userMessage])
-    setInputValue('')
-    setIsTyping(true)
-
-    // Check if we're in lead capture flow
-    if (leadCaptureStep !== 'none' && leadCaptureStep !== 'complete') {
-      handleLeadCapture(content.trim())
-      return
-    }
-
-    // Call AI API for intelligent response
-    let responseContent: string
-    let actions: QuickAction[] | undefined
-
-    try {
-      const response = await fetch('/api/aria/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: content,
-          conversationHistory: messages.slice(-10).map(m => ({
-            role: m.role,
-            content: m.content,
-          })),
-          context: {
-            leadStage: leadCaptureStep,
-            leadData: leadData,
-          },
-        }),
-      })
-
-      if (!response.ok) {
-        throw new Error(`API error: ${response.status}`)
+      const userMessage: Message = {
+        id: `user-${Date.now()}`,
+        role: 'user',
+        content: content.trim(),
+        timestamp: new Date(),
       }
 
-      // Read SSE stream
-      const reader = response.body?.getReader()
-      const decoder = new TextDecoder()
+      setMessages((prev) => [...prev, userMessage])
+      setInputValue('')
+      setIsTyping(true)
 
-      if (!reader) {
-        throw new Error('No response body')
+      // Check if we're in lead capture flow
+      if (leadCaptureStep !== 'none' && leadCaptureStep !== 'complete') {
+        handleLeadCapture(content.trim())
+        return
       }
 
-      let accumulatedText = ''
+      // Call AI API for intelligent response
+      let responseContent: string
+      let actions: QuickAction[] | undefined
 
-      while (true) {
-        const { done, value } = await reader.read()
-        if (done) break
+      try {
+        const response = await fetch('/api/aria/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: content,
+            conversationHistory: messages.slice(-10).map((m) => ({
+              role: m.role,
+              content: m.content,
+            })),
+            context: {
+              leadStage: leadCaptureStep,
+              leadData: leadData,
+            },
+          }),
+        })
 
-        const chunk = decoder.decode(value)
-        const lines = chunk.split('\n')
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status}`)
+        }
 
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6)
-            if (data === '[DONE]') break
+        // Read SSE stream
+        const reader = response.body?.getReader()
+        const decoder = new TextDecoder()
 
-            try {
-              const parsed = JSON.parse(data)
-              if (parsed.text) {
-                accumulatedText += parsed.text
+        if (!reader) {
+          throw new Error('No response body')
+        }
+
+        let accumulatedText = ''
+
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+
+          const chunk = decoder.decode(value)
+          const lines = chunk.split('\n')
+
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6)
+              if (data === '[DONE]') break
+
+              try {
+                const parsed = JSON.parse(data)
+                if (parsed.text) {
+                  accumulatedText += parsed.text
+                }
+              } catch (e) {
+                console.error('[ARIA] Failed to parse SSE data:', e)
               }
-            } catch (e) {
-              console.error('[ARIA] Failed to parse SSE data:', e)
             }
           }
         }
-      }
 
-      responseContent = accumulatedText || 'I apologize, but I encountered an issue. Can you please rephrase your question?'
+        responseContent =
+          accumulatedText ||
+          'I apologize, but I encountered an issue. Can you please rephrase your question?'
 
-      // Add relevant follow-up actions based on content
-      if (content.toLowerCase().includes('demo') || content.toLowerCase().includes('free')) {
-        actions = [
-          { label: '📅 Book Demo Now', value: 'I want to book a free demo class' },
-          { label: '📞 Call Me', value: 'I want someone to call me' },
-        ]
-      } else if (content.toLowerCase().includes('course') || content.toLowerCase().includes('price')) {
-        actions = [
-          { label: '🎓 View Courses', value: 'Tell me more about the courses' },
-          { label: '📅 Free Demo', value: 'I want to attend a free demo class' },
-        ]
-      }
-    } catch (error) {
-      console.error('[ARIA] API error:', error)
+        // Add relevant follow-up actions based on content
+        if (content.toLowerCase().includes('demo') || content.toLowerCase().includes('free')) {
+          actions = [
+            { label: '📅 Book Demo Now', value: 'I want to book a free demo class' },
+            { label: '📞 Call Me', value: 'I want someone to call me' },
+          ]
+        } else if (
+          content.toLowerCase().includes('course') ||
+          content.toLowerCase().includes('price')
+        ) {
+          actions = [
+            { label: '🎓 View Courses', value: 'Tell me more about the courses' },
+            { label: '📅 Free Demo', value: 'I want to attend a free demo class' },
+          ]
+        }
+      } catch (error) {
+        console.error('[ARIA] API error:', error)
 
-      // Fallback to helpful message
-      responseContent = `Thanks for your question! Let me help you with that.
+        // Fallback to helpful message
+        responseContent = `Thanks for your question! Let me help you with that.
 
 For detailed information about "${content.substring(0, 50)}${content.length > 50 ? '...' : ''}", I'd recommend speaking with our counselor who can give you personalized guidance.
 
@@ -240,108 +267,138 @@ In the meantime, would you like to:
 - 📞 Get a callback from our team
 - 💬 Ask about courses, pricing, or results`
 
-      actions = [
-        { label: '📅 Book Demo', value: 'I want to book a free demo class' },
-        { label: '📞 Request Callback', value: 'I want someone to call me' },
-        { label: '📋 Course Details', value: 'Tell me about your courses' },
+        actions = [
+          { label: '📅 Book Demo', value: 'I want to book a free demo class' },
+          { label: '📞 Request Callback', value: 'I want someone to call me' },
+          { label: '📋 Course Details', value: 'Tell me about your courses' },
+        ]
+      }
+
+      // Check if user shows genuine interest (interest-based, not forced)
+      const contentLower = content.toLowerCase()
+      const interestSignals = [
+        'demo',
+        'book',
+        'enroll',
+        'join',
+        'admission',
+        'apply',
+        'interested',
+        'want to',
+        'sign up',
+        'register',
+        'brochure',
+        'send me',
+        'course details',
+        'more info',
+        'call me',
       ]
-    }
+      const showsInterest = interestSignals.some((signal) => contentLower.includes(signal))
 
-    // Check if user shows genuine interest (interest-based, not forced)
-    const contentLower = content.toLowerCase()
-    const interestSignals = [
-      'demo', 'book', 'enroll', 'join', 'admission', 'apply',
-      'interested', 'want to', 'sign up', 'register', 'brochure',
-      'send me', 'course details', 'more info', 'call me'
-    ]
-    const showsInterest = interestSignals.some(signal => contentLower.includes(signal))
+      if (showsInterest && !leadData.name && leadCaptureStep === 'none') {
+        responseContent += `\n\n---\n\n💡 To help you better, may I know your name? I can then send personalized course information!`
+        setLeadCaptureStep('name')
+      }
 
-    if (showsInterest && !leadData.name && leadCaptureStep === 'none') {
-      responseContent += `\n\n---\n\n💡 To help you better, may I know your name? I can then send personalized course information!`
-      setLeadCaptureStep('name')
-    }
+      const assistantMessage: Message = {
+        id: `assistant-${Date.now()}`,
+        role: 'assistant',
+        content: responseContent,
+        timestamp: new Date(),
+        actions,
+      }
 
-    const assistantMessage: Message = {
-      id: `assistant-${Date.now()}`,
-      role: 'assistant',
-      content: responseContent,
-      timestamp: new Date(),
-      actions,
-    }
+      setMessages((prev) => [...prev, assistantMessage])
+      setIsTyping(false)
 
-    setMessages(prev => [...prev, assistantMessage])
-    setIsTyping(false)
+      // Update lead score
+      setLeadData((prev) => ({
+        ...prev,
+        score: calculateLeadScore(prev, [...messages, userMessage]),
+      }))
 
-    // Update lead score
-    setLeadData(prev => ({
-      ...prev,
-      score: calculateLeadScore(prev, [...messages, userMessage]),
-    }))
-
-    // Increment unread if closed
-    if (!isOpen) {
-      setUnreadCount(prev => prev + 1)
-    }
-  }, [messages, leadData, leadCaptureStep, isOpen])
+      // Increment unread if closed
+      if (!isOpen) {
+        setUnreadCount((prev) => prev + 1)
+      }
+    },
+    [messages, leadData, leadCaptureStep, isOpen]
+  )
 
   // Handle lead capture flow
-  const handleLeadCapture = useCallback(async (input: string) => {
-    await new Promise(resolve => setTimeout(resolve, 300))
+  const handleLeadCapture = useCallback(
+    async (input: string) => {
+      await new Promise((resolve) => setTimeout(resolve, 300))
 
-    let responseContent: string
-    let nextStep: typeof leadCaptureStep = leadCaptureStep
+      let responseContent: string
+      let nextStep: typeof leadCaptureStep = leadCaptureStep
 
-    switch (leadCaptureStep) {
-      case 'name':
-        setLeadData(prev => ({ ...prev, name: input }))
-        responseContent = `Nice to meet you, **${input}**! 👋\n\nTo send you our course brochure and demo link, could you share your phone number?`
-        nextStep = 'phone'
-        break
-
-      case 'phone':
-        if (!/^[6-9]\d{9}$/.test(input.replace(/\D/g, ''))) {
-          responseContent = `Hmm, that doesn't look like a valid Indian phone number. Please enter a 10-digit mobile number starting with 6-9.`
+      switch (leadCaptureStep) {
+        case 'name':
+          setLeadData((prev) => ({ ...prev, name: input }))
+          responseContent = `Nice to meet you, **${input}**! 👋\n\nTo send you our course brochure and demo link, could you share your phone number?`
           nextStep = 'phone'
-        } else {
-          setLeadData(prev => ({ ...prev, phone: input.replace(/\D/g, ''), capturedAt: new Date() }))
-          responseContent = `Perfect! 📱\n\nOne last question - which class are you currently in?\n\n1️⃣ Class 11\n2️⃣ Class 12\n3️⃣ Dropper\n4️⃣ Parent of NEET aspirant`
-          nextStep = 'class'
-        }
-        break
+          break
 
-      case 'class':
-        const classMap: Record<string, string> = {
-          '1': 'Class 11', '11': 'Class 11', 'class 11': 'Class 11', 'xi': 'Class 11',
-          '2': 'Class 12', '12': 'Class 12', 'class 12': 'Class 12', 'xii': 'Class 12',
-          '3': 'Dropper', 'dropper': 'Dropper', 'drop': 'Dropper',
-          '4': 'Parent', 'parent': 'Parent',
-        }
-        const studentClass = classMap[input.toLowerCase()] || input
-        setLeadData(prev => ({ ...prev, class: studentClass }))
+        case 'phone':
+          if (!/^[6-9]\d{9}$/.test(input.replace(/\D/g, ''))) {
+            responseContent = `Hmm, that doesn't look like a valid Indian phone number. Please enter a 10-digit mobile number starting with 6-9.`
+            nextStep = 'phone'
+          } else {
+            setLeadData((prev) => ({
+              ...prev,
+              phone: input.replace(/\D/g, ''),
+              capturedAt: new Date(),
+            }))
+            responseContent = `Perfect! 📱\n\nOne last question - which class are you currently in?\n\n1️⃣ Class 11\n2️⃣ Class 12\n3️⃣ Dropper\n4️⃣ Parent of NEET aspirant`
+            nextStep = 'class'
+          }
+          break
 
-        responseContent = `Excellent! 🎯\n\n**Thank you, ${leadData.name}!** Here's what happens next:\n\n✅ Our counselor will call you within 2 hours\n✅ You'll receive course details on WhatsApp\n✅ We'll send you a FREE demo class link\n\nIn the meantime, feel free to ask me anything about NEET preparation!`
-        nextStep = 'complete'
+        case 'class':
+          const classMap: Record<string, string> = {
+            '1': 'Class 11',
+            '11': 'Class 11',
+            'class 11': 'Class 11',
+            xi: 'Class 11',
+            '2': 'Class 12',
+            '12': 'Class 12',
+            'class 12': 'Class 12',
+            xii: 'Class 12',
+            '3': 'Dropper',
+            dropper: 'Dropper',
+            drop: 'Dropper',
+            '4': 'Parent',
+            parent: 'Parent',
+          }
+          const studentClass = classMap[input.toLowerCase()] || input
+          setLeadData((prev) => ({ ...prev, class: studentClass }))
 
-        // Submit lead to API (fire and forget)
-        submitLead({ ...leadData, class: studentClass })
-        break
+          responseContent = `Excellent! 🎯\n\n**Thank you, ${leadData.name}!** Here's what happens next:\n\n✅ Our counselor will call you within 2 hours\n✅ You'll receive course details on WhatsApp\n✅ We'll send you a FREE demo class link\n\nIn the meantime, feel free to ask me anything about NEET preparation!`
+          nextStep = 'complete'
 
-      default:
-        responseContent = 'How can I help you today?'
-        nextStep = 'none'
-    }
+          // Submit lead to API (fire and forget)
+          submitLead({ ...leadData, class: studentClass })
+          break
 
-    const assistantMessage: Message = {
-      id: `assistant-${Date.now()}`,
-      role: 'assistant',
-      content: responseContent,
-      timestamp: new Date(),
-    }
+        default:
+          responseContent = 'How can I help you today?'
+          nextStep = 'none'
+      }
 
-    setMessages(prev => [...prev, assistantMessage])
-    setIsTyping(false)
-    setLeadCaptureStep(nextStep)
-  }, [leadCaptureStep, leadData])
+      const assistantMessage: Message = {
+        id: `assistant-${Date.now()}`,
+        role: 'assistant',
+        content: responseContent,
+        timestamp: new Date(),
+      }
+
+      setMessages((prev) => [...prev, assistantMessage])
+      setIsTyping(false)
+      setLeadCaptureStep(nextStep)
+    },
+    [leadCaptureStep, leadData]
+  )
 
   // Submit lead to API
   const submitLead = async (data: LeadData) => {
@@ -378,7 +435,8 @@ In the meantime, would you like to:
     <>
       {/* Floating Button */}
       <motion.button
-        onClick={() => setIsOpen(prev => !prev)}
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
         className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -461,9 +519,9 @@ In the meantime, would you like to:
 
                         return (
                           <p key={i} className={i > 0 ? 'mt-1' : ''}>
-                            {parts.map((part, j) => (
+                            {parts.map((part, j) =>
                               j % 2 === 1 ? <strong key={j}>{part}</strong> : part
-                            ))}
+                            )}
                           </p>
                         )
                       })}
@@ -494,9 +552,18 @@ In the meantime, would you like to:
                 <div className="flex justify-start">
                   <div className="bg-white rounded-2xl px-4 py-3 shadow-sm border border-gray-100">
                     <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                      <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                      <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                      <span
+                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                        style={{ animationDelay: '0ms' }}
+                      />
+                      <span
+                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                        style={{ animationDelay: '150ms' }}
+                      />
+                      <span
+                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                        style={{ animationDelay: '300ms' }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -532,10 +599,13 @@ In the meantime, would you like to:
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder={
-                    leadCaptureStep === 'name' ? 'Enter your name...' :
-                    leadCaptureStep === 'phone' ? 'Enter phone number...' :
-                    leadCaptureStep === 'class' ? 'Enter your class...' :
-                    'Ask me anything...'
+                    leadCaptureStep === 'name'
+                      ? 'Enter your name...'
+                      : leadCaptureStep === 'phone'
+                        ? 'Enter phone number...'
+                        : leadCaptureStep === 'class'
+                          ? 'Enter your class...'
+                          : 'Ask me anything...'
                   }
                   className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
@@ -556,7 +626,8 @@ In the meantime, would you like to:
             {/* Footer */}
             <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 text-center">
               <p className="text-xs text-gray-500">
-                Powered by <span className="font-medium text-green-600">Cerebrum Biology Academy</span>
+                Powered by{' '}
+                <span className="font-medium text-green-600">Cerebrum Biology Academy</span>
               </p>
             </div>
           </motion.div>
