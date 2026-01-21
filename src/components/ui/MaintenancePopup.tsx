@@ -54,7 +54,7 @@ export function MaintenancePopup() {
       <button
         onClick={handleClose}
         className={cn(
-          'absolute -top-4 -right-4',
+          'absolute top-1 right-1',
           'w-8 h-8 rounded-full',
           'bg-amber-500 hover:bg-yellow-600',
           'flex items-center justify-center',
