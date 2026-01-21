@@ -52,7 +52,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
     it('should have clear helping approach', () => {
       expect(ARIA_SYSTEM_PROMPT).toContain('Answer their actual question first')
       expect(ARIA_SYSTEM_PROMPT).toContain('Understand their situation')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Be honest about fit')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Show value naturally')
       expect(ARIA_SYSTEM_PROMPT).toContain('Respect their pace')
     })
 
