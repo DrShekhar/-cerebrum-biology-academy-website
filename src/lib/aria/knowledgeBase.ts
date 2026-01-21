@@ -146,6 +146,7 @@ export const BATCH_TIMINGS = {
 export const STUDY_MATERIALS = {
   included: [
     'NCERT-based comprehensive notes',
+    'Recorded lectures (access to all live classes)',
     'Topic-wise question banks',
     'Previous year questions (2015-2024)',
     'Chapter-wise formula sheets',
@@ -153,6 +154,54 @@ export const STUDY_MATERIALS = {
     'Daily practice problems (DPPs)',
   ],
   optional: ['Printed hard copy notes (+₹2,500)', 'Video lecture USB drive (+₹3,000)'],
+}
+
+export const ASSESSMENT_SYSTEM = {
+  included: [
+    'Weekly Tests - NEET-pattern MCQ tests',
+    'Monthly Tests - Full-length mock tests',
+    'Biweekly Board Tests - Subjective school-level tests',
+    'NEET Test Series - 50+ full-length mock tests',
+    'Detailed performance analysis and reports',
+    'All India rank comparison',
+  ],
+}
+
+export const ADDITIONAL_PROGRAMS = {
+  foundation: {
+    name: 'Class 9th & 10th Foundation Course',
+    description: 'NEET Biology foundation preparation for Class 9 & 10 students',
+    features: [
+      'Early start for NEET preparation',
+      'NCERT-based curriculum',
+      'Age-appropriate teaching methodology',
+      'Foundation for competitive exams',
+    ],
+  },
+  olympiads: {
+    name: 'Biology Olympiad Preparation',
+    description: 'Specialized preparation for IBO, NTSE, NSEB and other Biology Olympiads',
+    features: [
+      'IBO (International Biology Olympiad) preparation',
+      'NTSE (National Talent Search Examination)',
+      'NSEB (National Standard Examination in Biology)',
+      'Advanced problem-solving techniques',
+      'Previous year olympiad questions',
+      'Expert mentorship for competitive biology',
+    ],
+  },
+  internationalCurricula: {
+    name: 'International Curricula',
+    description: 'AP Biology & IB Biology preparation for international board students',
+    features: [
+      'AP Biology - College Board curriculum',
+      'IB Biology (Standard Level & Higher Level)',
+      'ICSE Biology for Class 9-12',
+      'CBSE Biology for Class 9-12',
+      'International exam pattern familiarity',
+      'Expert faculty with international teaching experience',
+    ],
+  },
 }
 
 export const OBJECTION_HANDLERS = {

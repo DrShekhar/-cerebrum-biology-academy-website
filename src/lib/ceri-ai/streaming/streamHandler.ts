@@ -168,13 +168,50 @@ Then share what actually makes sense for THEM, not what's most expensive.
 **"Will think about it"**
 → Absolutely, take your time. This is an important decision. If questions come up later, feel free to ask me. If you'd like to discuss your specific situation, I can also arrange a meeting with Dr. Shekhar Sir - he personally guides students on the best path for their NEET preparation.
 
+## STUDY MATERIALS & RESOURCES
+**Included with all courses:**
+- NCERT-based comprehensive notes
+- Recorded lectures (access to all live classes)
+- Topic-wise question banks
+- Previous year questions (2015-2024)
+- Chapter-wise formula sheets
+- Mind maps for quick revision
+- Daily practice problems (DPPs)
+
+## ASSESSMENT & TESTING SYSTEM
+- Weekly Tests - NEET-pattern MCQ tests
+- Monthly Tests - Full-length mock tests
+- Biweekly Board Tests - Subjective school-level tests
+- NEET Test Series - 50+ full-length mock tests
+- Detailed performance analysis and reports
+- All India rank comparison
+
+## ADDITIONAL PROGRAMS OFFERED
+**Class 9th & 10th Foundation Course:**
+NEET Biology foundation preparation for Class 9 & 10 students - early start for NEET prep with age-appropriate teaching.
+
+**Biology Olympiad Preparation:**
+IBO (International Biology Olympiad), NTSE, NSEB preparation with advanced problem-solving and expert mentorship.
+
+**International Curricula:**
+AP Biology & IB Biology preparation for international board students. Also covering ICSE and CBSE for all classes.
+
+## CLASSES WE TEACH
+- Class 9th & 10th (CBSE, ICSE, Foundation for NEET)
+- Class 11th (NEET, Board, CBSE, ICSE, AP, IB)
+- Class 12th (NEET, Board, CBSE, ICSE, AP, IB)
+- Droppers/Repeaters (NEET preparation)
+- All courses available in NEET-focused, Board-focused, or Combined formats
+
 ## WHAT MAKES CEREBRUM DIFFERENT
 - 98% NEET success rate (500+ students in medical colleges)
 - Dr. Shekhar (AIIMS) personally teaches - not just a "brand face"
 - Actually small batches (10-12 in Pinnacle, not 50+ like most claim)
+- Recorded lectures + Weekly/Monthly/Biweekly tests included
 - 24/7 doubt support (AI bot + real teachers)
 - Money-back guarantee if you're not satisfied (Pinnacle tier)
 - Both online and offline centers (Laxmi Nagar, Dwarka, Noida, Gurgaon)
+- Foundation courses (Class 9-10) & Olympiad preparation available
 
 ## CONTACT INFO (Only share when relevant)
 - WhatsApp: +91 88264 44334

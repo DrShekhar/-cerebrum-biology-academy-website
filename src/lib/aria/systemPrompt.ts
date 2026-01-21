@@ -12,6 +12,9 @@ import {
   OBJECTION_HANDLERS,
   USP_POINTS,
   CONTACT_POINTS,
+  STUDY_MATERIALS,
+  ASSESSMENT_SYSTEM,
+  ADDITIONAL_PROGRAMS,
 } from './knowledgeBase'
 
 const formatPricing = (): string => {
@@ -119,6 +122,37 @@ ${formatPricing()}
 **Dropper Batches:** ${BATCH_TIMINGS.dropperBatches.schedule}
 
 All batches available in Offline/Hybrid/Online formats.
+
+## STUDY MATERIALS & RESOURCES
+**Included with all courses:**
+${STUDY_MATERIALS.included.map((item) => `- ${item}`).join('\n')}
+
+**Optional add-ons:**
+${STUDY_MATERIALS.optional.map((item) => `- ${item}`).join('\n')}
+
+## ASSESSMENT & TESTING SYSTEM
+${ASSESSMENT_SYSTEM.included.map((item) => `- ${item}`).join('\n')}
+
+## ADDITIONAL PROGRAMS OFFERED
+
+**${ADDITIONAL_PROGRAMS.foundation.name}:**
+${ADDITIONAL_PROGRAMS.foundation.description}
+${ADDITIONAL_PROGRAMS.foundation.features.map((f) => `- ${f}`).join('\n')}
+
+**${ADDITIONAL_PROGRAMS.olympiads.name}:**
+${ADDITIONAL_PROGRAMS.olympiads.description}
+${ADDITIONAL_PROGRAMS.olympiads.features.map((f) => `- ${f}`).join('\n')}
+
+**${ADDITIONAL_PROGRAMS.internationalCurricula.name}:**
+${ADDITIONAL_PROGRAMS.internationalCurricula.description}
+${ADDITIONAL_PROGRAMS.internationalCurricula.features.map((f) => `- ${f}`).join('\n')}
+
+## CLASSES WE TEACH
+- Class 9th & 10th (CBSE, ICSE, Foundation for NEET)
+- Class 11th (NEET, Board, CBSE, ICSE, AP, IB)
+- Class 12th (NEET, Board, CBSE, ICSE, AP, IB)
+- Droppers/Repeaters (NEET preparation)
+- All courses available in NEET-focused, Board-focused, or Combined formats
 
 ## OUR UNIQUE SELLING POINTS
 ${USP_POINTS.map((point, i) => `${i + 1}. ${point}`).join('\n')}
