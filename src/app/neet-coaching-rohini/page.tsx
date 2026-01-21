@@ -14,6 +14,11 @@ import {
   Train,
   Building,
   GraduationCap,
+  Play,
+  ExternalLink,
+  ThumbsUp,
+  MessageCircle,
+  MapPinned,
 } from 'lucide-react'
 
 const structuredData = {
@@ -379,10 +384,10 @@ export default function NEETCoachingRohiniPage() {
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6 italic">
                   &quot;As a student from Sector 11 Rohini, the weekend batches at Cerebrum were
-                  perfect for my schedule. The Red Line Metro made commuting easy. The AIIMS
-                  Trained faculty&apos;s teaching methodology and small batch size helped me focus
-                  on weak areas. I scored 685 in NEET 2024 and got admission to Maulana Azad
-                  Medical College!&quot;
+                  perfect for my schedule. The Red Line Metro made commuting easy. The AIIMS Trained
+                  faculty&apos;s teaching methodology and small batch size helped me focus on weak
+                  areas. I scored 685 in NEET 2024 and got admission to Maulana Azad Medical
+                  College!&quot;
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -397,6 +402,259 @@ export default function NEETCoachingRohiniPage() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Video Testimonials Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                Watch Success Stories from Our Students
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Hear directly from NEET achievers about their journey with Cerebrum Biology Academy
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  youtubeId: 'bk6wQCh6b9w',
+                  student: 'Sadhna Sirin',
+                  score: '695/720',
+                  achievement: 'Delhi-NCR Topper NEET 2023',
+                },
+                {
+                  youtubeId: 'NfhkGqOQXzk',
+                  student: 'Abhisek',
+                  score: 'AFMC Selection',
+                  achievement: 'Armed Forces Medical College',
+                },
+                {
+                  youtubeId: 't5F8RBuHITM',
+                  student: 'Nishita',
+                  score: 'Medical College',
+                  achievement: '6-Month Intensive Program',
+                },
+              ].map((video, index) => (
+                <motion.div
+                  key={video.youtubeId}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100"
+                >
+                  <div className="relative aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                      title={`${video.student} NEET Success Story`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-gray-800 mb-1">{video.student}</h3>
+                    <p className="text-green-600 font-semibold text-sm">{video.score}</p>
+                    <p className="text-gray-600 text-xs mt-1">{video.achievement}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <a
+                href="https://www.youtube.com/@cerebrumbiologyacademy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                <Play className="w-5 h-5" />
+                Watch More on YouTube
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Google Business Profile & Reviews Section */}
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  Trusted by 500+ Verified Google Reviews
+                </h2>
+                <p className="text-gray-600">
+                  See what parents and students say about Cerebrum Biology Academy
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                {/* Google Rating Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-xl p-8 border border-gray-100"
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <img
+                      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                      alt="Google"
+                      className="h-8"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-gray-900 mb-2">4.9</div>
+                    <div className="flex items-center justify-center gap-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-600 font-medium mb-4">Based on 500+ reviews</p>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="https://www.google.com/search?q=cerebrum+biology+academy+reviews"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                      >
+                        <ThumbsUp className="w-5 h-5" />
+                        Read Reviews on Google
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="https://search.google.com/local/writereview?placeid=ChIJ_cerebrum_placeholder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 border-2 border-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm"
+                      >
+                        <Star className="w-4 h-4" />
+                        Write a Review
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Recent Reviews Highlights */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-xl p-6 border border-gray-100"
+                >
+                  <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <MessageCircle className="w-5 h-5 text-green-600" />
+                    Recent Reviews
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        text: 'Best NEET Biology coaching! Small batches helped my son get personal attention. Scored 682 in NEET 2024.',
+                        author: 'Parent - Rohini Sector 11',
+                        rating: 5,
+                      },
+                      {
+                        text: 'AIIMS Trained faculty are excellent. Weekend batches perfect for us. Highly recommend!',
+                        author: 'Student - Pitampura',
+                        rating: 5,
+                      },
+                      {
+                        text: 'Amazing teaching methodology. Got admission to MAMC. Thank you Cerebrum!',
+                        author: 'Student - Shalimar Bagh',
+                        rating: 5,
+                      },
+                    ].map((review, index) => (
+                      <div key={index} className="border-l-4 border-green-500 pl-4 py-2">
+                        <div className="flex gap-1 mb-1">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <p className="text-sm text-gray-700 italic mb-1">
+                          &quot;{review.text}&quot;
+                        </p>
+                        <p className="text-xs text-gray-500">- {review.author}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Google Maps Embed */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-xl p-6 border border-gray-100"
+              >
+                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                  <MapPinned className="w-5 h-5 text-red-600" />
+                  Visit Our Center - South Extension, New Delhi
+                </h3>
+                <div className="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-100">
+                  <iframe
+                    src="https://www.google.com/maps?q=Cerebrum+Biology+Academy+Panchsheel+Enclave+South+Extension+Delhi&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Cerebrum Biology Academy Location"
+                  />
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-2">Address:</p>
+                    <p className="text-gray-600 text-sm">
+                      Cerebrum Biology Academy
+                      <br />
+                      Panchsheel Enclave, South Extension
+                      <br />
+                      New Delhi - 110017
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-2">Contact:</p>
+                    <p className="text-gray-600 text-sm mb-1">
+                      <a href="tel:+918826444334" className="text-green-600 hover:underline">
+                        +91 88264 44334
+                      </a>
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      <a
+                        href="mailto:info@cerebrumbiologyacademy.com"
+                        className="text-green-600 hover:underline"
+                      >
+                        info@cerebrumbiologyacademy.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -429,6 +687,53 @@ export default function NEETCoachingRohiniPage() {
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Badges Section */}
+        <section className="py-12 bg-gray-50 border-y border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  icon: Award,
+                  label: '15+ Years Experience',
+                  sublabel: 'Since 2009',
+                  color: 'text-blue-600',
+                },
+                {
+                  icon: Users,
+                  label: '2,500+ Selections',
+                  sublabel: 'NEET Qualified',
+                  color: 'text-green-600',
+                },
+                {
+                  icon: Star,
+                  label: '4.9 Google Rating',
+                  sublabel: '500+ Reviews',
+                  color: 'text-yellow-600',
+                },
+                {
+                  icon: GraduationCap,
+                  label: 'AIIMS Trained Faculty',
+                  sublabel: 'Expert Teachers',
+                  color: 'text-purple-600',
+                },
+              ].map((badge, index) => (
+                <motion.div
+                  key={badge.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
+                  <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
+                  <div className="text-xs text-gray-600">{badge.sublabel}</div>
                 </motion.div>
               ))}
             </div>
