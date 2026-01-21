@@ -210,23 +210,28 @@ export const OBJECTION_HANDLERS = {
 
 1. **Pursuit tier** (₹45,000-70,000) provides the same AIIMS faculty teaching at a more accessible price
 2. **EMI options** available - spread payments over 2-3 installments
-3. **Scholarships** for deserving students - based on entrance test performance
+3. **Scholarships & Fee Waivers** - If your concern is genuine and you're serious about NEET, Dr. Shekhar Sir is very kind and personally helps deserving students. After a simple test, he may provide significant fee waivers for students facing financial difficulties.
 
 Remember, this is an investment in your medical career. Our 98% success rate means your chances of cracking NEET Biology are excellent!
 
-Would you like to know more about our scholarship program?`,
-    followUp: ['Tell me about scholarships', 'EMI options', 'Compare with Pursuit tier'],
+Would you like me to arrange a meeting with Dr. Shekhar Sir to discuss personalized options?`,
+    followUp: ['Meet Dr. Shekhar Sir', 'EMI options', 'Compare with Pursuit tier'],
   },
   alreadyInCoaching: {
-    response: `That's actually perfect! Most of our top performers are already enrolled in major coaching institutes. Here's why they choose us:
+    response: `Perfect! That's exactly what most of our top performers do. Think about it - in those big corporate coachings with 200-300 students per batch, will your teacher even remember your name? Your face? How will they help YOU specifically get good results?
 
-1. We **supplement** your main coaching - focus only on Biology (360 marks in NEET!)
-2. Our **AIIMS faculty** brings real medical perspective
-3. **Small batches** (10-40 students) vs 200+ in big coachings
-4. **Flexible timings** that don't clash with your current schedule
+Here's why serious NEET aspirants supplement with Cerebrum - India's finest NEET Biology institute:
 
-Would you like to see how our batch timings can fit your schedule?`,
-    followUp: ['Show batch timings', 'How is this different?', 'Book a demo'],
+1. **Biology is 360 marks** - Half of NEET! You need someone who PERSONALLY cares about YOUR Biology score
+2. **We remember your name** - Small batches (10-40 students). We know your strengths, weaknesses, and goals
+3. **AIIMS faculty** who actually understand medical entrance exams - not just teaching as a job
+4. **Personal mentorship** - Dr. Shekhar personally teaches select batches. When was the last time your Aakash/Allen/PW teacher knew your personal challenges?
+5. **Flexible timings** - We work around your main coaching schedule
+
+Do crowded corporate coachings really care about YOUR goal? Or are you just enrollment number #2847? We're not competing with them - we're giving you what they CAN'T: personal attention for Biology excellence.
+
+Would you like to see how we can complement your preparation?`,
+    followUp: ['Show batch timings', 'Book a demo', 'Tell me about personal mentorship'],
   },
   notSureAboutOnline: {
     response: `I completely understand! Online learning needs to be experienced to be appreciated. Here's what we offer:
@@ -353,9 +358,9 @@ export const FAQ_DATA = {
       'While self-study is possible, coaching provides structured guidance, expert mentorship, regular testing, and peer learning. NEET 2026 aspirants benefit from experienced faculty who understand exam patterns, common mistakes, and scoring strategies. Our 98% success rate shows the value of expert guidance. We offer a free demo to help you decide.',
   },
   alreadyInCoaching: {
-    question: 'I am already in another coaching. Should I join Cerebrum?',
+    question: 'I am already in Aakash/Allen/PhysicsWallah. Should I join Cerebrum?',
     answer:
-      'Many of our top performers are already in major coaching institutes. They join us for focused Biology coaching because: (1) Biology is 360 NEET marks - the backbone of medical career, (2) Small batches (10-40 students) vs 200+ in big coachings, (3) AIIMS faculty brings real medical perspective, (4) Flexible timings that don\'t clash with your current schedule. We supplement your main coaching to help you excel in Biology.',
+      'Absolutely YES! 70% of our top performers are already in Allen, Aakash, or PW. Here\'s the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. We are India\'s finest NEET Biology institute - we SUPPLEMENT your main coaching with: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? We will.',
   },
   parentInvolvement: {
     question: 'How can parents support NEET preparation?',
@@ -365,8 +370,9 @@ export const FAQ_DATA = {
 }
 
 export const CONTACT_POINTS = {
-  phone: '+91 88264 44334',
-  whatsapp: '+91 88264 44334',
+  phone: '+91 8826444334',
+  phone2: '+91 9311946297',
+  whatsapp: '+91 8826444334',
   email: 'admissions@cerebrumbiologyacademy.com',
   centers: [
     'Gurugram - Sector 51, M2K Corporate Park',

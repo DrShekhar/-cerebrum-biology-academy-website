@@ -170,7 +170,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
     })
 
     it('should prohibit competitor mentions', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('trash talk other coaching')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('don\'t recommend competitor coachings')
     })
 
     it('should prohibit aggressive tactics', () => {
