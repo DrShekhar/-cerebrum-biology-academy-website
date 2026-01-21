@@ -191,7 +191,7 @@ export function LeadForm({
                 <button
                   type="button"
                   onClick={handleWhatsAppClick}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-lg border-2 border-green-500 bg-green-50 px-6 py-4 text-lg font-semibold text-green-700 transition-all hover:bg-green-100"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#20BD5A] hover:shadow-xl"
                 >
                   <MessageCircle className="h-5 w-5" />
                   Chat on WhatsApp

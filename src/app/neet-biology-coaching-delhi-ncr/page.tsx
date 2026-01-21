@@ -168,7 +168,7 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+            <h2 className="border-l-4 border-[#4a5d4a] pl-6 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
               Comprehensive NEET Biology Syllabus Coverage
             </h2>
             <p className="mt-4 text-lg text-slate-600">
@@ -231,7 +231,7 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
             </div>
 
             <div className="mt-12 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white shadow-xl md:p-12">
-              <h3 className="text-2xl font-bold">What You Get</h3>
+              <h3 className="border-l-4 border-yellow-400 pl-4 text-2xl font-bold">What You Get</h3>
               <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <li className="flex items-start gap-3">
                   <span className="text-2xl">📚</span>

@@ -79,11 +79,11 @@ export function UrgencyBanner({
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex items-center justify-center gap-2 rounded-full bg-green-100 px-4 py-2 sm:px-6 sm:py-3"
+        className="flex items-center justify-center gap-2 rounded-full bg-yellow-100 px-4 py-2 sm:px-6 sm:py-3"
       >
-        <Users className="h-5 w-5 text-green-700" />
-        <span className="text-sm font-semibold text-green-800 sm:text-base">
-          {seatsFilled}/{seatsTotal} seats filled
+        <Users className="h-5 w-5 text-yellow-800" />
+        <span className="text-sm font-semibold text-slate-900 sm:text-base">
+          <span className="font-bold text-[#ea4335]">{seatsFilled}/{seatsTotal}</span> seats filled
         </span>
       </motion.div>
     </div>

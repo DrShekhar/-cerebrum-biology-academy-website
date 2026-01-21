@@ -93,7 +93,7 @@ export function LandingHero({
                 key={index}
                 className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
               >
-                <CheckCircle className="h-4 w-4 text-green-400" />
+                <CheckCircle className="h-4 w-4 text-green-500" />
                 <span className="text-sm font-medium text-white/90">{badge}</span>
               </div>
             ))}
@@ -112,14 +112,14 @@ export function LandingHero({
                 const element = document.getElementById('demo-form')
                 element?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="group inline-flex items-center gap-2 rounded-lg bg-yellow-800 px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all hover:scale-105 hover:bg-yellow-700 hover:shadow-2xl"
+              className="group inline-flex items-center gap-2 rounded-lg bg-yellow-500 px-10 py-5 text-xl font-bold text-slate-900 shadow-xl transition-all hover:scale-105 hover:bg-yellow-400 hover:shadow-2xl"
             >
               {ctaPrimary}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
               href={`tel:${phoneNumber}`}
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
             >
               <Phone className="h-5 w-5" />
               {ctaSecondary}

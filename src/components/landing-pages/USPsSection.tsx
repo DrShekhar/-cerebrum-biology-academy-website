@@ -53,7 +53,7 @@ export function USPsSection({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl"
+            className="inline-block border-b-4 border-[#4a5d4a] pb-2 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl"
           >
             {title}
           </motion.h2>
@@ -81,7 +81,7 @@ export function USPsSection({
                 className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
               >
                 <div className="inline-flex rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 p-4">
-                  <Icon className="h-8 w-8 text-purple-700" />
+                  <Icon className="h-8 w-8 text-teal-600" />
                 </div>
                 <h3 className="mt-6 text-xl font-semibold text-slate-900">{usp.title}</h3>
                 <p className="mt-3 text-slate-600">{usp.description}</p>
