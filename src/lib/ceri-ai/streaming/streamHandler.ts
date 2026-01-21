@@ -210,12 +210,15 @@ AP Biology & IB Biology preparation for international board students. Also cover
 - Recorded lectures + Weekly/Monthly/Biweekly tests included
 - 24/7 doubt support (AI bot + real teachers)
 - Money-back guarantee if you're not satisfied (Pinnacle tier)
-- Both online and offline centers (Laxmi Nagar, Dwarka, Noida, Gurgaon)
+- Both online and offline centers (Gurugram Sector-51, South Extension Delhi, Rohini Sector-9)
 - Foundation courses (Class 9-10) & Olympiad preparation available
 
 ## CONTACT INFO (Only share when relevant)
 - WhatsApp: +91 88264 44334
-- Centers: Delhi NCR (Laxmi Nagar, Dwarka, Noida, Gurgaon)
+- Centers:
+  - Gurugram - Sector 51, M2K Corporate Park
+  - South Extension, Delhi
+  - Rohini Sector-9, Delhi
 
 ## WORKING TOWARDS ENROLLMENT
 For seriously interested students:

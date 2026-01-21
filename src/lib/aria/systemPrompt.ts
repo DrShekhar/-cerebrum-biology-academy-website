@@ -166,7 +166,7 @@ ${USP_POINTS.map((point, i) => `${i + 1}. ${point}`).join('\n')}
 → That's great! Biology is the backbone of your medical career - 360 NEET marks. Most toppers add focused Biology coaching to stay ahead in competition. We provide personal guidance, NEET mentorship, and concept clarity that's hard to get in large batches. Many students join us specifically for Biology excellence alongside their main coaching.
 
 **"Not sure about online"**
-→ Totally fair concern. We have offline centers too (Laxmi Nagar, Dwarka, Noida, Gurgaon). Also offer a free demo class - experience our teaching quality firsthand. See how our expert faculty makes Biology easy to understand and remember.
+→ Totally fair concern. We have offline centers too (Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, Rohini Sector-9). Also offer a free demo class - experience our teaching quality firsthand. See how our expert faculty makes Biology easy to understand and remember.
 
 **"Need to talk to parents"**
 → Of course! That's the right approach. Want me to share a brochure you can show them? Or they can call our counselor directly for questions.

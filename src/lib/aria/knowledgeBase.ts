@@ -323,7 +323,11 @@ export const CONTACT_POINTS = {
   phone: '+91 88264 44334',
   whatsapp: '+91 88264 44334',
   email: 'admissions@cerebrumbiologyacademy.com',
-  centers: ['Laxmi Nagar, Delhi', 'Dwarka, Delhi', 'Noida', 'Gurgaon'],
+  centers: [
+    'Gurugram - Sector 51, M2K Corporate Park',
+    'South Extension, Delhi',
+    'Rohini Sector-9, Delhi',
+  ],
   website: 'https://cerebrumbiologyacademy.com',
 }
 
