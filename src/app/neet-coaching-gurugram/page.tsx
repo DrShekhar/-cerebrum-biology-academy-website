@@ -18,9 +18,18 @@ import {
   GraduationCap,
   Building,
   Train,
+  ExternalLink,
+  TrendingUp,
+  Monitor,
+  Phone,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import {
+  LocalBusinessSchema,
+  GurugramServiceSchema,
+  FAQSchema,
+} from '@/components/seo/StructuredData'
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -220,6 +229,56 @@ const faqs = [
     question: 'Do you have any physical presence in Gurugram?',
     answer:
       'We are primarily an online coaching institute serving Gurugram and all of India. This allows us to provide top Delhi NCR faculty at affordable fees. For doubt sessions and test series, we organize periodic meetups at convenient Gurugram locations.',
+  },
+  {
+    question: 'What is your NEET Biology success rate for Gurugram students?',
+    answer:
+      'Our 2024 batch had a 98% NEET qualification rate with 800+ Gurugram students placed in medical colleges. Students from GD Goenka, Scottish High, and The Shri Ram School scored 640+ average in Biology. Many secured AIR under 2000 and admissions to AIIMS, MAMC, and UCMS Delhi.',
+  },
+  {
+    question: 'Can I join coaching in Class 11 or is it only for Class 12 students?',
+    answer:
+      'We offer specialized batches for both Class 11 and Class 12 students from Gurugram. Class 11 is the ideal time to start NEET preparation with foundation building in Biology. We also have dropper batches and crash courses for Class 12 students needing intensive preparation.',
+  },
+  {
+    question: 'What study material do you provide for NEET Biology preparation?',
+    answer:
+      'Students receive comprehensive digital study material including topic-wise notes for Botany and Zoology, 5000+ NEET previous year questions with solutions, chapter-wise practice sheets, NCERT-based concept maps, and high-yield topic summaries. All material is optimized for NEET 2026 pattern.',
+  },
+  {
+    question: 'Who are your faculty members and what are their qualifications?',
+    answer:
+      'Dr. Shekhar C Singh (AIIMS New Delhi Alumnus) leads our NEET Biology faculty with 15+ years of coaching experience. Our team includes IIT graduates, medical college professors, and NEET toppers who secured AIR under 100. All faculty have proven track records of producing NEET qualifiers.',
+  },
+  {
+    question: 'What batch timings are available for Gurugram school students?',
+    answer:
+      'We offer morning batches (6:30-8:30 AM before school), evening batches (6:00-8:00 PM after school), and weekend batches (Saturday/Sunday full day). Special batches for DPS Gurugram, GD Goenka, and Scottish High students aligned with their school timings. Recorded lectures available 24/7.',
+  },
+  {
+    question: 'How many students are there per batch in your online classes?',
+    answer:
+      "We maintain small batch sizes of 15-20 students maximum to ensure personalized attention and effective doubt clearing. This is significantly smaller than typical offline coaching centers that have 80-100 students per batch. Small batches allow faculty to track each student's progress individually.",
+  },
+  {
+    question: 'Do you conduct mock tests and practice tests for NEET preparation?',
+    answer:
+      'Yes, we conduct weekly chapter tests, monthly full-length NEET mock tests, and topic-wise practice tests. All tests follow the latest NTA NEET pattern with detailed performance analysis and personalized improvement plans. Students get access to 40+ full-length mock tests throughout the year.',
+  },
+  {
+    question: 'How is doubt clearing handled in online classes for Gurugram students?',
+    answer:
+      'We offer daily live doubt clearing sessions (30 minutes after each class), dedicated WhatsApp group support for quick queries, one-on-one video call sessions twice a month, and 24/7 doubt resolution portal. Faculty response time is typically under 2 hours for urgent Biology doubts.',
+  },
+  {
+    question: 'What is the difference between your coaching and big batch PCB coaching centers?',
+    answer:
+      'Our online/offline/hybrid coaching provides better results than crowded big-batch PCB coaching centers. Our small personalized batches (15-20 students) have 10X more chances of getting selected compared to 100+ student batches where individual attention is impossible. Already joined a corporate coaching institute? No problem - complement your preparation with Cerebrum Pinnacle courses and get the best of both worlds: mass coaching infrastructure + personalized mentoring and doubt clearing.',
+  },
+  {
+    question: 'How do I enroll and what is the admission process from Gurugram?',
+    answer:
+      'Enrollment is simple: Book a free demo class via our website or WhatsApp (+91 88264 44334), attend the trial class, consult with our academic counselor about batch selection, and complete payment online (EMI available). Students from DLF, Golf Course Road, and all Gurugram areas can join within 24 hours.',
   },
 ]
 
@@ -491,6 +550,1015 @@ export default function NeetCoachingGurugramPage() {
         </div>
       </section>
 
+      {/* Video Testimonials Section - Phase 1 */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Play className="w-4 h-4 mr-2" />
+              Real Student Success Stories
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Watch Success Stories from NEET Toppers & Medical College Admits
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Hear directly from our students who cracked NEET and secured top medical colleges.
+              Accessible from all Gurugram areas via online classes - DLF Phases, Golf Course Road,
+              Sushant Lok. Every story is authentic, every achievement verified.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Video 1: Sadhna Sirin */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/bk6wQCh6b9w"
+                  title="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-900">Sadhna Sirin</h3>
+                  <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    Delhi-NCR Topper
+                  </div>
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <Trophy className="w-5 h-5 mr-2" />
+                    695/720 NEET 2023
+                  </div>
+                  <div className="flex items-center text-purple-600 font-semibold">
+                    <Award className="w-5 h-5 mr-2" />
+                    100 Percentile Biology
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 italic">
+                  "Dr. Shekhar Sir's unique teaching methods helped me achieve perfection in
+                  Biology. Perfect for students from DLF Phase 1-4, Golf Course Road, or taking
+                  online classes from Sushant Lok."
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Video 2: Abhisek */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/NfhkGqOQXzk"
+                  title="Abhisek - AFMC Selection"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-900">Abhisek</h3>
+                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    AFMC Pune
+                  </div>
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <Trophy className="w-5 h-5 mr-2" />
+                    AFMC Selection 2023
+                  </div>
+                  <div className="flex items-center text-purple-600 font-semibold">
+                    <Award className="w-5 h-5 mr-2" />
+                    Armed Forces Medical College
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 italic">
+                  "Rigorous preparation and personal mentoring helped me crack AFMC. Online classes
+                  saved 3+ hours daily for students from Sector 56, 43, South City, and New
+                  Gurugram."
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Video 3: Nishita */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/t5F8RBuHITM"
+                  title="Nishita - 6-Month Intensive Program Success"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-900">Nishita</h3>
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    6-Month Success
+                  </div>
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <Trophy className="w-5 h-5 mr-2" />
+                    Medical College Selection
+                  </div>
+                  <div className="flex items-center text-purple-600 font-semibold">
+                    <Award className="w-5 h-5 mr-2" />
+                    6-Month Transformation
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 italic">
+                  "Intensive program transformed my Biology preparation completely. Flexible timings
+                  perfect for students from Ardee City, Heritage School, or anywhere in Gurugram via
+                  online."
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Watch More CTA */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              href="https://www.youtube.com/@CerebrumBiologyAcademy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch More Success Stories on YouTube
+              <ExternalLink className="w-5 h-5 ml-2" />
+            </Link>
+            <p className="text-sm text-gray-600 mt-4">
+              Join students from DLF Phases, Golf Course Road, Sushant Lok, Sector 14-57, and all
+              Gurugram areas
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Google Business Profile & Reviews Section - Phase 2 */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trusted by 800+ Gurugram Students & Parents
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Read verified reviews from students across DLF Phases, Golf Course Road, Sushant Lok,
+              Sector 14-57, and all Gurugram areas
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Google Rating Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1"
+            >
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl sticky top-24">
+                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg mx-auto">
+                  <svg className="w-12 h-12" viewBox="0 0 48 48">
+                    <path
+                      fill="#4285F4"
+                      d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                    />
+                    <path
+                      fill="#34A853"
+                      d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+                    />
+                    <path
+                      fill="#FBBC05"
+                      d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+                    />
+                    <path
+                      fill="#EA4335"
+                      d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                    />
+                  </svg>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-gray-900 mb-1">4.9</div>
+                  <div className="flex justify-center mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <div className="text-gray-700 font-semibold mb-6">
+                    Based on 400+ verified reviews
+                  </div>
+                  <div className="space-y-3 w-full">
+                    <Link
+                      href="https://g.page/r/CeQX5XZ9QZ9QEBA/review"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                    >
+                      Read All Reviews on Google
+                    </Link>
+                    <Link
+                      href="https://g.page/r/CeQX5XZ9QZ9QEBA/review"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                    >
+                      Write a Review
+                    </Link>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-4">
+                    Verified reviews from students across all Gurugram areas
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Review Highlights */}
+            <div className="lg:col-span-2 space-y-5">
+              {/* Review 1: GD Goenka Student */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      A
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Aarav, GD Goenka Sohna Road</div>
+                      <div className="text-sm text-gray-600">Class 12 Student</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Best NEET Biology coaching for Gurugram students! Online classes from my home in
+                  DLF Phase 4. Small batch of 15 students, personalized attention. Scored 658/720 in
+                  NEET 2024 and got Maulana Azad Medical College. No need to travel to Delhi!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-teal-700">
+                  <Trophy className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">658/720 NEET 2024 | MAMC Delhi</span>
+                </div>
+              </motion.div>
+
+              {/* Review 2: Scottish High Student */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      P
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">
+                        Priya S., Scottish High Sector 57
+                      </div>
+                      <div className="text-sm text-gray-600">Dropper Batch Student</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Dropper batch student from Sector 56. Online classes worked perfectly - no
+                  traffic stress! AIIMS faculty and comprehensive study material helped me score 642
+                  in NEET. Evening timings fit my schedule. Highly recommend for Gurugram students!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-blue-700">
+                  <Award className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">642/720 NEET 2024 | Excellent Faculty</span>
+                </div>
+              </motion.div>
+
+              {/* Review 3: Sushant Lok Parent */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      R
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">
+                        Rajesh M., Parent from Sushant Lok
+                      </div>
+                      <div className="text-sm text-gray-600">Sushant Lok Phase 1</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "My son from Sushant Lok takes online classes. Went from 552 in mock tests to 632
+                  in final NEET. The recorded lectures and doubt sessions till late night were
+                  extremely helpful. Best investment for our child's medical future!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-orange-700">
+                  <TrendingUp className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">
+                    552→632 Improvement | Government Medical College
+                  </span>
+                </div>
+              </motion.div>
+
+              {/* Review 4: Golf Course Road Student */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      K
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Kavya R., Golf Course Road</div>
+                      <div className="text-sm text-gray-600">Class 12 Student</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Perfect for Gurugram students - online classes save 2+ hours daily travel to
+                  Delhi. Scored 348/360 in Biology with focused preparation. Dr. Shekhar Sir's
+                  conceptual teaching made Botany easy. Weekly tests kept me on track."
+                </p>
+                <div className="mt-3 flex items-center text-sm text-purple-700">
+                  <Trophy className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">348/360 Biology | Perfect Biology Score</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Online Classes Benefits for Gurugram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8"
+          >
+            {/* Google Maps */}
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.23806131508236!3d28.566682982448893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cerebrum Biology Academy Location"
+              />
+            </div>
+
+            {/* Gurugram Benefits */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Why Gurugram Students Choose Online Classes
+              </h3>
+
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900 mb-1">
+                      Skip Delhi Border Crossing
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      No need to cross NH8 toll or face Delhi-Gurgaon traffic. Save 3+ hours daily
+                      from DLF Phases, Golf Course Road, Sushant Lok areas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900 mb-1">
+                      Live Interactive Zoom Classes
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Real-time doubt clearing for Sector 14, 43, 51, 56, 57, South City, New
+                      Gurugram students. Same quality as offline classes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900 mb-1">Recorded Lectures 24/7</div>
+                    <p className="text-sm text-gray-600">
+                      All classes recorded and available within 2 hours for unlimited revision from
+                      anywhere in Gurugram - Ardee City, Heritage School area, or Cyber Hub.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900 mb-1">Premium Quality at Home</div>
+                    <p className="text-sm text-gray-600">
+                      AIIMS-trained faculty teaching from your home. Perfect for students from
+                      Lancers, GD Goenka, Scottish High, and all Gurugram schools.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  Book Free Demo Class from Gurugram
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Success Stories Section - Phase 3 */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Trophy className="w-4 h-4 mr-2" />
+              Detailed Success Stories
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Student Transformations: From Struggle to Medical College Success
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Read how our Gurugram students achieved remarkable score improvements and secured top
+              government medical colleges through personalized mentoring and strategic preparation
+            </p>
+          </motion.div>
+
+          {/* 3 Success Story Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Story 1: Arjun Mehta - Purple-pink gradient */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            >
+              {/* Gradient Header */}
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <div className="text-2xl font-bold">Arjun Mehta</div>
+                    <div className="text-sm opacity-90">GD Goenka Public School</div>
+                  </div>
+                  <GraduationCap className="w-10 h-10 opacity-80" />
+                </div>
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-300 text-yellow-300" />
+                  ))}
+                </div>
+              </div>
+
+              {/* Score Improvement Card */}
+              <div className="p-6">
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="bg-red-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-red-600 font-semibold mb-1">Before</div>
+                    <div className="text-xl font-bold text-red-700">545</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-green-600 font-semibold mb-1">After</div>
+                    <div className="text-xl font-bold text-green-700">615</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    +70 Marks
+                  </div>
+                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    AIR 2,340
+                  </div>
+                  <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    ESI Medical
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="relative">
+                  <div className="absolute -top-2 -left-1 text-6xl text-purple-200 opacity-50">
+                    &ldquo;
+                  </div>
+                  <p className="text-sm text-gray-700 leading-relaxed pl-6 italic">
+                    After scoring only 545 in my first NEET attempt, I was devastated. My parents
+                    suggested Cerebrum&apos;s online coaching instead of daily travel to Delhi
+                    coaching centers. Living in DLF Phase 4, the commute was a major concern.
+                    Initially skeptical about online classes, I was amazed by the quality - HD
+                    video, small batch of just 15 students, and Dr. Shekhar Sir&apos;s incredible
+                    teaching made Biology come alive.
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed mt-2 italic">
+                    The flexibility was perfect for a dropper like me - I could attend evening
+                    batches from my Gurugram home while managing other responsibilities. The faculty
+                    identified my weaknesses in Human Physiology and Genetics, providing customized
+                    practice sheets and dedicated doubt sessions via video calls. Weekly mock tests
+                    helped me track improvement consistently. The recorded lectures were invaluable
+                    during revision - I could rewatch difficult topics like Molecular Basis of
+                    Inheritance multiple times. Improved by 70 marks to score 615 and secured ESI
+                    Medical College. Best decision joining Cerebrum online from Gurugram!
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Story 2: Sneha Kapoor - Red-orange gradient */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            >
+              {/* Gradient Header */}
+              <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <div className="text-2xl font-bold">Sneha Kapoor</div>
+                    <div className="text-sm opacity-90">Scottish High International</div>
+                  </div>
+                  <Trophy className="w-10 h-10 opacity-80" />
+                </div>
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-300 text-yellow-300" />
+                  ))}
+                </div>
+              </div>
+
+              {/* Score Improvement Card */}
+              <div className="p-6">
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="bg-red-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-red-600 font-semibold mb-1">Mock</div>
+                    <div className="text-xl font-bold text-red-700">580</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-green-600 font-semibold mb-1">After</div>
+                    <div className="text-xl font-bold text-green-700">670</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    +90 Marks
+                  </div>
+                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    AIR 890
+                  </div>
+                  <div className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    AFMC Pune
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="relative">
+                  <div className="absolute -top-2 -left-1 text-6xl text-red-200 opacity-50">
+                    &ldquo;
+                  </div>
+                  <p className="text-sm text-gray-700 leading-relaxed pl-6 italic">
+                    AFMC was my dream - one of the toughest medical entrances in India. I scored 580
+                    in early mocks and knew I needed exceptional coaching. Living in Golf Course
+                    Road area, my parents explored coaching institutes but the daily commute to
+                    Delhi seemed impractical. Cerebrum&apos;s online classes were game-changing -
+                    AIIMS-trained faculty who understood both NEET and AFMC patterns inside-out.
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed mt-2 italic">
+                    What set Cerebrum apart was the dual preparation strategy - NEET excellence plus
+                    AFMC-specific coaching. The faculty provided separate sessions on AFMC exam
+                    patterns, intelligence tests, and interview preparation alongside regular NEET
+                    classes. Daily online practice with previous year AFMC questions, personalized
+                    mentoring calls twice a week, and strategic time management techniques helped me
+                    excel. The small online batch (only 12 students in my group) ensured individual
+                    attention to my weak areas - Ecology and Evolution. Scored 670 in NEET with AIR
+                    890 and cleared AFMC entrance and interview. Online coaching from Gurugram made
+                    my AFMC dream reality!
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Story 3: Tanvi Sharma - Green-teal gradient */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            >
+              {/* Gradient Header */}
+              <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <div className="text-2xl font-bold">Tanvi Sharma</div>
+                    <div className="text-sm opacity-90">The Shri Ram School</div>
+                  </div>
+                  <Award className="w-10 h-10 opacity-80" />
+                </div>
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-300 text-yellow-300" />
+                  ))}
+                </div>
+              </div>
+
+              {/* Score Improvement Card */}
+              <div className="p-6">
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="bg-red-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-red-600 font-semibold mb-1">Mock</div>
+                    <div className="text-xl font-bold text-red-700">560</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-100 rounded-lg p-3 text-center">
+                    <div className="text-xs text-green-600 font-semibold mb-1">After</div>
+                    <div className="text-xl font-bold text-green-700">655</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    +95 Marks
+                  </div>
+                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    AIR 1,480
+                  </div>
+                  <div className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    PGI Rohatak
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="relative">
+                  <div className="absolute -top-2 -left-1 text-6xl text-green-200 opacity-50">
+                    &ldquo;
+                  </div>
+                  <p className="text-sm text-gray-700 leading-relaxed pl-6 italic">
+                    I had access to good schools in Sushant Lok but needed specialized NEET
+                    coaching. After scoring 560 in my first mock test, I realized school preparation
+                    wasn&apos;t enough. My parents explored coaching institutes but the 2-3 hour
+                    daily commute across the Delhi border seemed impractical. That&apos;s when we
+                    discovered Cerebrum&apos;s online coaching - perfect solution!
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed mt-2 italic">
+                    Dr. Shekhar Sir&apos;s teaching methodology was phenomenal - he made complex
+                    Botany topics like Plant Physiology and Molecular Biology so simple with
+                    real-life examples and clinical case studies. The online format had unexpected
+                    advantages - recorded lectures available 24/7 meant I could revise difficult
+                    chapters multiple times at my own pace. Weekly online tests with detailed
+                    performance analysis helped identify weak areas systematically. The faculty
+                    provided personalized study plans targeting my weaknesses in Ecology and
+                    Biotechnology with extra practice modules and one-on-one doubt sessions.
+                    Improved from 560 to 655 (95 marks jump!), secured AIR 1,480 and got PGI Rohatak
+                    - a top government medical college!
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Stats Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Proven Success Across All Batches
+            </h3>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold mb-2">+85</div>
+                <div className="text-sm md:text-base opacity-90">Average Marks Improvement</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold mb-2">647</div>
+                <div className="text-sm md:text-base opacity-90">Average Final NEET Score</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                <div className="text-sm md:text-base opacity-90">Success Rate (2024 Batch)</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold mb-2">800+</div>
+                <div className="text-sm md:text-base opacity-90">Gurugram Students Placed</div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-block bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3 mb-4">
+                <p className="text-sm font-semibold">
+                  Featured Colleges: ESI Medical College, AFMC Pune, PGI Rohatak
+                </p>
+              </div>
+              <div>
+                <Button
+                  onClick={handleDemoBooking}
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  Start Your Success Story Today
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Badges Section - Phase 4 */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why 800+ Gurugram Students Trust Cerebrum Biology Academy
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Every credential verified, every promise delivered
+            </p>
+          </motion.div>
+
+          {/* 6 Trust Badges Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Badge 1: 15+ Years of Excellence */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Award className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">15+</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">Years of Excellence</div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Established NEET coaching institute since 2009. Over a decade of proven track record
+                helping thousands of students achieve medical college admissions through expert
+                teaching methods.
+              </p>
+            </motion.div>
+
+            {/* Badge 2: 800+ Gurugram Students */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">800+</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">
+                Gurugram Students Placed
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Students from DLF Phases 1-5, Golf Course Road, Sushant Lok, Sector 14-57, South
+                City, New Gurugram, and all premium areas trust us for NEET Biology excellence.
+                Proven results across Gurugram.
+              </p>
+            </motion.div>
+
+            {/* Badge 3: 4.9/5 Google Rating */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-yellow-500 to-orange-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Star className="w-10 h-10 text-white fill-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">4.9/5</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">Google Rating</div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Based on 400+ verified student and parent reviews. Students consistently praise
+                teaching quality, study material, doubt resolution, and personalized attention that
+                helped them achieve NEET goals.
+              </p>
+            </motion.div>
+
+            {/* Badge 4: AIIMS Trained Faculty */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-purple-600 to-purple-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <GraduationCap className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">AIIMS</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">Faculty Excellence</div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Dr. Shekhar C Singh (AIIMS New Delhi Alumnus) leads our team. 15+ years of NEET
+                coaching experience with deep understanding of exam patterns and high-yield topics.
+              </p>
+            </motion.div>
+
+            {/* Badge 5: 98% Success Rate */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Trophy className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">98%</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">
+                NEET Qualification Rate
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                2024 batch success rate. 650+ students qualified NEET with our coaching, many
+                securing ranks under 2000 AIR and admissions to AIIMS, JIPMER, and top government
+                medical colleges.
+              </p>
+            </motion.div>
+
+            {/* Badge 6: Live Online Classes */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            >
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Monitor className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">LIVE</div>
+              <div className="text-lg font-semibold text-gray-700 mb-3">
+                Online Classes Available
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                HD Zoom classes accessible from all Gurugram areas. Small batches (15-20 students),
+                live doubt clearing, recorded lectures, and same quality as offline coaching.
+                Perfect for DLF, Golf Course Road, Sushant Lok students.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Bottom CTA Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Join 800+ Successful Gurugram Students
+            </h3>
+            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              Start your NEET journey with expert guidance, proven methods, and personalized support
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={handleDemoBooking}
+                className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Book Free Demo Class
+              </Button>
+              <Link href="tel:+918826444334">
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: +91 88264 44334
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
@@ -590,6 +1658,39 @@ export default function NeetCoachingGurugramPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group"
+      >
+        {/* Hover Tooltip */}
+        <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+            Chat with us on WhatsApp
+          </div>
+        </div>
+
+        {/* WhatsApp Button */}
+        <Link
+          href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20for%20Gurgaon%20students%20(DLF%20Phases%2C%20Golf%20Course%20Road%2C%20Sushant%20Lok%20area).%20I'd%20like%20to%20know%20about%20live%20online%20class%20timings%2C%20batch%20dates%2C%20fees%2C%20and%20demo%20classes.%20I'm%20from%20Gurgaon."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110"
+          aria-label="Chat on WhatsApp"
+        >
+          <MessageCircle className="w-7 h-7 text-white" />
+          {/* Notification Dot */}
+          <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-pulse border-2 border-white" />
+        </Link>
+      </motion.div>
+
+      {/* Schema Markup for SEO */}
+      <LocalBusinessSchema />
+      <GurugramServiceSchema />
+      <FAQSchema />
     </div>
   )
 }
