@@ -18,8 +18,10 @@ import {
   BookOpen,
   Award,
   Play,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
 
 const ghaziabadAreas = [
   {
@@ -652,36 +654,37 @@ export default function NeetCoachingGhaziabadPage() {
         </div>
       </section>
 
-      {/* Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'EducationalOrganization',
-            name: 'Cerebrum Biology Academy - Ghaziabad',
-            description:
-              'Best NEET Biology coaching in Ghaziabad. Expert AIIMS faculty, 98% success rate. Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension.',
-            url: 'https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad',
-            areaServed: [
-              {
-                '@type': 'City',
-                name: 'Ghaziabad',
-                containedInPlace: { '@type': 'State', name: 'Uttar Pradesh' },
-              },
-              { '@type': 'Place', name: 'Indirapuram' },
-              { '@type': 'Place', name: 'Vaishali' },
-              { '@type': 'Place', name: 'Crossing Republik' },
-            ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '1500',
-              bestRating: '5',
-            },
-          }),
-        }}
-      />
+      {/* Schema Markup for SEO */}
+      <LocalBusinessSchema />
+      <FAQSchema />
+
+      {/* WhatsApp Floating Button */}
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group"
+      >
+        {/* Hover Tooltip */}
+        <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+            Chat with us on WhatsApp
+          </div>
+        </div>
+
+        {/* WhatsApp Button */}
+        <Link
+          href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20for%20Ghaziabad%20students%20(Indirapuram%2C%20Vaishali%2C%20Crossing%20Republik%20area).%20I'd%20like%20to%20know%20about%20live%20online%20class%20timings%2C%20batch%20dates%2C%20fees%2C%20and%20demo%20classes.%20I'm%20from%20Ghaziabad."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110"
+          aria-label="Chat on WhatsApp"
+        >
+          <MessageCircle className="w-7 h-7 text-white" />
+          {/* Notification Dot */}
+          <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-pulse border-2 border-white" />
+        </Link>
+      </motion.div>
     </div>
   )
 }

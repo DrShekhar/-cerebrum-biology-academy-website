@@ -25,6 +25,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
 
 const faridabadAreas = [
   {
@@ -643,6 +644,7 @@ export default function NeetCoachingFaridabadPage() {
                 <iframe
                   src="https://www.youtube.com/embed/bk6wQCh6b9w"
                   title="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -676,6 +678,7 @@ export default function NeetCoachingFaridabadPage() {
                 <iframe
                   src="https://www.youtube.com/embed/NfhkGqOQXzk"
                   title="Abhisek - AFMC Selection Success Story"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -709,6 +712,7 @@ export default function NeetCoachingFaridabadPage() {
                 <iframe
                   src="https://www.youtube.com/embed/t5F8RBuHITM"
                   title="Nishita - 6-Month Intensive Program Success"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -2166,6 +2170,10 @@ export default function NeetCoachingFaridabadPage() {
           Chat with us on WhatsApp
         </span>
       </motion.a>
+
+      {/* Schema Markup for SEO */}
+      <LocalBusinessSchema />
+      <FAQSchema />
     </div>
   )
 }

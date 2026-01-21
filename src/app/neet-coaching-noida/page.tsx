@@ -25,6 +25,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
 
 const noidaSectors = [
   { sector: '18', area: 'Atta Market, Great India Place', students: '120+', metro: 'Sector 18' },
@@ -577,6 +578,7 @@ export default function NeetCoachingNoidaPage() {
                 <iframe
                   src="https://www.youtube.com/embed/bk6wQCh6b9w"
                   title="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -619,6 +621,7 @@ export default function NeetCoachingNoidaPage() {
                 <iframe
                   src="https://www.youtube.com/embed/NfhkGqOQXzk"
                   title="Abhisek - AFMC Selection"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -660,6 +663,7 @@ export default function NeetCoachingNoidaPage() {
                 <iframe
                   src="https://www.youtube.com/embed/t5F8RBuHITM"
                   title="Nishita - 6-Month Intensive Program Success"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
@@ -2019,6 +2023,10 @@ export default function NeetCoachingNoidaPage() {
           <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-pulse border-2 border-white" />
         </Link>
       </motion.div>
+
+      {/* Schema Markup for SEO */}
+      <LocalBusinessSchema />
+      <FAQSchema />
     </div>
   )
 }
