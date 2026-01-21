@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   MapPin,
@@ -317,6 +318,13 @@ const whyGurugram = [
 ]
 
 export default function NeetCoachingGurugramPage() {
+  // Optimize LCP: Only enable animations after mount to prevent blocking initial render
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_gurugram', {
@@ -335,9 +343,9 @@ export default function NeetCoachingGurugramPage() {
         <div className="relative max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            animate={mounted ? { opacity: 1, y: 0 } : false}
+            transition={mounted ? { duration: 0.8 } : { duration: 0 }}
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
@@ -388,9 +396,11 @@ export default function NeetCoachingGurugramPage() {
               {successMetrics.map((metric, index) => (
                 <motion.div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                  initial={mounted ? { opacity: 0, y: 20 } : false}
+                  animate={mounted ? { opacity: 1, y: 0 } : false}
+                  transition={
+                    mounted ? { duration: 0.6, delay: 0.2 + index * 0.1 } : { duration: 0 }
+                  }
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
