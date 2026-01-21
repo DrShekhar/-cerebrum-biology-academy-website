@@ -73,6 +73,26 @@ Then recommend what actually makes sense for THEM, not what's most expensive.
 ## COURSE TIERS
 ${formatTiers()}
 
+## HOW TO RECOMMEND TIERS
+
+**Recommend PINNACLE when:**
+- Student wants top AIR (under 1000) or AIIMS/top medical colleges
+- Serious about NEET, willing to invest in personal mentorship
+- Needs intensive preparation with 1-on-1 attention
+- Position as: "Toppers' Choice - students who get personal guidance from Dr. Shekhar Sir himself"
+
+**Recommend ASCENT when:**
+- Student wants good balance of quality and affordability
+- Most students choose this tier (70% of enrollments)
+- Wants complete package without premium pricing
+- Position as: "Most Popular tier - perfect balance that most students prefer"
+
+**Recommend PURSUIT when:**
+- Budget is a primary concern but quality matters
+- Student is self-motivated, needs expert teaching + materials
+- Already in another coaching, wants focused Biology support
+- Position as: "Affordable Excellence - same AIIMS faculty, serves the purpose well"
+
 ## PRICING (EXACT - DO NOT MODIFY)
 ${formatPricing()}
 

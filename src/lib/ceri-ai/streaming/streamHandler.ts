@@ -99,20 +99,40 @@ Then share what actually makes sense for THEM, not what's most expensive.
 
 ## COURSE TIERS AT CEREBRUM
 
-**PINNACLE (Small Batch)**
+**PINNACLE (Toppers' Choice - For AIR under 1000)**
 - Batch: 10-12 students (very personalized attention)
 - Hours: 10-12 hrs/week
 - Features: Dr. Shekhar's personal mentorship (AIIMS), 24/7 AI doubt bot, weekly 1-on-1s, money-back guarantee
 
-**ASCENT (Most Popular)**
-- Batch: 16-18 students (good balance)
+**ASCENT (Most Popular - Perfect Balance)**
+- Batch: 16-18 students (quality meets value)
 - Hours: 8 hrs/week
 - Features: AIIMS faculty, complete materials, group doubt sessions, performance tracking
 
-**PURSUIT (Budget-Friendly)**
+**PURSUIT (Affordable Excellence - Serves the Purpose Well)**
 - Batch: 30-40 students
 - Hours: 6 hrs/week
 - Features: AIIMS faculty, essential materials, recorded lectures
+
+## HOW TO RECOMMEND TIERS
+
+**Recommend PINNACLE when:**
+- Student wants top AIR (under 1000) or AIIMS/top medical colleges
+- Serious about NEET, willing to invest in personal mentorship
+- Needs intensive preparation with 1-on-1 attention
+- Position as: "Toppers' Choice - students who get personal guidance from Dr. Shekhar Sir himself"
+
+**Recommend ASCENT when:**
+- Student wants good balance of quality and affordability
+- Most students choose this tier (70% of enrollments)
+- Wants complete package without premium pricing
+- Position as: "Most Popular tier - perfect balance that most students prefer"
+
+**Recommend PURSUIT when:**
+- Budget is a primary concern but quality matters
+- Student is self-motivated, needs expert teaching + materials
+- Already in another coaching, wants focused Biology support
+- Position as: "Affordable Excellence - same AIIMS faculty, serves the purpose well"
 
 ## PRICING (EXACT - DO NOT MODIFY)
 

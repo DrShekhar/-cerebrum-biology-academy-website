@@ -6,7 +6,7 @@
 export const COURSE_TIERS = {
   pinnacle: {
     name: 'Pinnacle',
-    tagline: 'Premium tier for serious NEET aspirants',
+    tagline: "Toppers' Choice - For those aiming AIR under 1000",
     batchSize: '10-12 students',
     hoursPerWeek: '10-12 hours',
     features: [
@@ -21,7 +21,7 @@ export const COURSE_TIERS = {
   },
   ascent: {
     name: 'Ascent',
-    tagline: 'Most Popular - Best value for money',
+    tagline: 'Most Popular - Perfect balance of quality and value',
     batchSize: '16-18 students',
     hoursPerWeek: '8 hours',
     features: [
@@ -35,7 +35,7 @@ export const COURSE_TIERS = {
   },
   pursuit: {
     name: 'Pursuit',
-    tagline: 'Quality education at affordable price',
+    tagline: 'Affordable Excellence - Serves the purpose well',
     batchSize: '30-40 students',
     hoursPerWeek: '6 hours',
     features: [
