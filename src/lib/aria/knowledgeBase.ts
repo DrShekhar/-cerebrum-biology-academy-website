@@ -454,3 +454,113 @@ export const NOTABLE_ACHIEVEMENTS = {
   govtColleges: '183 government medical college admissions',
   averageImprovement: '80-100 marks improvement in Biology',
 }
+
+/**
+ * SAFETY GUARDRAILS - Content Moderation for Minors
+ * Based on California SB 243 (2026) and Federal GUARD Act compliance
+ */
+export const SAFETY_GUARDRAILS = {
+  NEVER_DISCUSS: [
+    'Sexual content, romantic relationships, or intimate topics',
+    'Dating advice or relationship counseling',
+    'Violence, weapons, or harmful activities',
+    'Illegal activities including exam cheating or fraud',
+    'Political or religious debates',
+    'Personal financial advice beyond course fees',
+    'Substance abuse or drug use',
+    'Gambling or betting',
+  ],
+
+  APPROPRIATE_TOPICS_ONLY: [
+    'NEET Biology syllabus, concepts, and study material',
+    'Study techniques, time management, and exam strategies',
+    'Course information, pricing, and admissions process',
+    'Career guidance in medical and healthcare fields',
+    'Academic doubts, biology questions, and concept clarity',
+    'Batch timings, faculty information, and demo classes',
+  ],
+}
+
+/**
+ * HUMAN HANDOFF SYSTEM - WhatsApp Integration
+ */
+export const HANDOFF_CONFIG = {
+  whatsappNumber: '+91 8826444334',
+  businessHours: '9:00 AM - 8:00 PM IST (Mon-Sun)',
+  responseTime: 'Within 10 minutes during business hours',
+
+  triggerPhrases: [
+    'talk to human',
+    'speak to counselor',
+    'talk to someone',
+    'need help',
+    'human support',
+    'real person',
+    'call me',
+    'speak to agent',
+  ],
+
+  handoffReasons: {
+    studentRequest: 'Student explicitly requested human help',
+    repeatedConfusion: 'Bot provided 2+ unhelpful responses',
+    complexQuery: 'Query requires personal consultation',
+    technical: 'Technical issue or payment problem',
+  },
+}
+
+/**
+ * WhatsApp Summary Message Template
+ */
+export interface HandoffSummary {
+  studentName: string
+  studentClass: string
+  botUsed: 'ARIA' | 'CERI'
+  interest?: string
+  location?: string
+  phone?: string
+  mainConcern: string
+  conversationSummary: string
+  urgency: 'low' | 'medium' | 'high' | 'critical'
+  timestamp: string
+}
+
+export const formatWhatsAppHandoff = (summary: HandoffSummary): string => {
+  const urgencyEmoji = {
+    low: '📘',
+    medium: '🔔',
+    high: '🚨',
+    critical: '🆘',
+  }
+
+  return `${urgencyEmoji[summary.urgency]} *NEW LEAD - ${summary.botUsed} Handoff*
+
+📝 *Name:* ${summary.studentName}
+📚 *Class:* ${summary.studentClass}
+🎯 *Interest:* ${summary.interest || 'Not specified'}
+📍 *Location:* ${summary.location || 'Not provided'}
+📞 *Phone:* ${summary.phone || 'Not shared'}
+
+💬 *Main Concern:*
+${summary.mainConcern}
+
+📋 *Summary:*
+${summary.conversationSummary}
+
+⏰ *Time:* ${summary.timestamp}`
+}
+
+/**
+ * Response Templates for Safety Scenarios
+ */
+export const SAFETY_RESPONSES = {
+  inappropriateContent: `I'm here to help with NEET Biology preparation and course questions only. I can't discuss that topic.
+
+Would you like to:
+1. Ask about Biology concepts or NEET preparation
+2. Learn about our courses
+3. Talk to our counselor for other concerns`,
+
+  offTopicRedirect: `That's outside my expertise area (NEET Biology coaching). Let me connect you with our counselor who can better assist you.
+
+🙋 Would you like to talk to a human counselor?`,
+}
