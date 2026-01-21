@@ -38,7 +38,7 @@ export const realTestimonials: RealTestimonial[] = [
     thumbnail: 'https://i.ytimg.com/vi/bk6wQCh6b9w/hqdefault.jpg',
     year: 2023,
     quote:
-      "Dr. Shekhar Sir's unique teaching methods helped me achieve perfection in Biology. His conceptual approach made complex topics simple.",
+      "Dr. Shekhar Sir's unique teaching methods helped me achieve perfection in Biology with 100 percentile. His conceptual approach made complex topics like Genetics and Plant Physiology simple to understand and remember. The weekly tests and detailed performance analysis helped me identify and fix my weak areas systematically. I couldn't have scored 360/360 in Biology without the personal mentorship and strategic guidance I received at Cerebrum Biology Academy.",
     isFeatured: true,
   },
   {
@@ -50,7 +50,7 @@ export const realTestimonials: RealTestimonial[] = [
     thumbnail: '',
     year: 2023,
     quote:
-      "Scored full marks in Biology thanks to Dr. Shekhar Sir's focused teaching and strategic preparation methods.",
+      "Scored full marks in Biology thanks to Dr. Shekhar Sir's focused teaching and strategic preparation methods. Initially I struggled with Botany concepts, but the faculty's patient explanation and comprehensive study materials helped me master even the toughest chapters. The regular doubt-clearing sessions and topic-wise practice tests built my confidence. What impressed me most was the personalized attention I received despite being in a batch - every student's progress was tracked individually.",
   },
   {
     id: 'abhisek',
@@ -61,7 +61,7 @@ export const realTestimonials: RealTestimonial[] = [
     thumbnail: 'https://i.ytimg.com/vi/NfhkGqOQXzk/hqdefault.jpg',
     year: 2023,
     college: 'AFMC Pune',
-    quote: 'The rigorous preparation and personal mentoring at Cerebrum helped me crack AFMC.',
+    quote: 'The rigorous preparation and personal mentoring at Cerebrum helped me crack AFMC, one of the toughest medical entrance exams. The faculty understood AFMC exam patterns thoroughly and provided targeted preparation strategies. Regular mock tests simulating actual exam conditions helped me manage time pressure. The intensive revision modules in the final months were particularly helpful in consolidating my Biology knowledge and boosting my confidence for the exam day.',
     isFeatured: true,
   },
   {
@@ -72,7 +72,7 @@ export const realTestimonials: RealTestimonial[] = [
     youtubeId: 't5F8RBuHITM',
     thumbnail: 'https://i.ytimg.com/vi/t5F8RBuHITM/hqdefault.jpg',
     year: 2023,
-    quote: 'The intensive program transformed my Biology preparation completely in just 6 months.',
+    quote: 'The intensive 6-month program transformed my Biology preparation completely. Coming from a non-medical background, I found Biology challenging initially. The faculty broke down complex concepts into simple, digestible parts with real-life examples and clinical case studies. Daily practice sessions, chapter-wise tests, and personalized doubt resolution helped me build a strong foundation quickly. Within 6 months, I went from basics to NEET-ready preparation.',
   },
   {
     id: 'rahul-sharma',
@@ -86,7 +86,7 @@ export const realTestimonials: RealTestimonial[] = [
     previousScore: '480/720',
     improvement: '+192 marks',
     quote:
-      'From struggling with Biology to scoring 672 - Cerebrum made it possible. The dropper batch gave me a second chance at my dream.',
+      'From struggling with Biology to scoring 672 marks - Cerebrum made my dream possible. After scoring only 480 in my first attempt, I was demotivated. The dropper batch gave me a structured second chance with systematic revision of the entire syllabus. The faculty identified my weak areas - Ecology and Evolution - and provided targeted practice. Small batch size ensured I got individual attention. The improvement of 192 marks and AIR 156 secured my seat at AIIMS Delhi.',
   },
   {
     id: 'ananya-gupta',
