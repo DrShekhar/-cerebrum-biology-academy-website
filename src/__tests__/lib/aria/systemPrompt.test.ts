@@ -21,7 +21,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
 
   it('should identify as ARIA', () => {
     expect(ARIA_SYSTEM_PROMPT).toContain('ARIA')
-    expect(ARIA_SYSTEM_PROMPT).toContain('Advanced Real-time Intelligence Assistant')
+    expect(ARIA_SYSTEM_PROMPT).toContain('friendly educational counselor')
   })
 
   it('should mention Cerebrum Biology Academy', () => {
@@ -31,9 +31,9 @@ describe('ARIA_SYSTEM_PROMPT', () => {
   describe('personality section', () => {
     it('should define warm, friendly personality', () => {
       const lowerPrompt = ARIA_SYSTEM_PROMPT.toLowerCase()
-      expect(lowerPrompt).toContain('warm')
       expect(lowerPrompt).toContain('friendly')
-      expect(lowerPrompt).toContain('professional')
+      expect(lowerPrompt).toContain('caring')
+      expect(lowerPrompt).toContain('helpful senior')
     })
 
     it('should mention Hinglish usage', () => {
@@ -43,22 +43,23 @@ describe('ARIA_SYSTEM_PROMPT', () => {
     })
 
     it('should emphasize patience', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('patient')
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('one question')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('one thing at a time')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('listen first')
     })
   })
 
-  describe('goals section', () => {
-    it('should have clear primary goals', () => {
-      expect(ARIA_SYSTEM_PROMPT).toContain('Build Trust')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Qualify Leads')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Handle Objections')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Guide to Action')
+  describe('approach section', () => {
+    it('should have clear helping approach', () => {
+      expect(ARIA_SYSTEM_PROMPT).toContain('Answer their actual question first')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Understand their situation')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Be honest about fit')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Respect their pace')
     })
 
-    it('should mention lead capture', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('capture')
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toMatch(/name|phone|class/i)
+    it('should naturally collect student information', () => {
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('name')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('phone')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('class')
     })
   })
 
@@ -124,37 +125,36 @@ describe('ARIA_SYSTEM_PROMPT', () => {
   })
 
   describe('objection handling', () => {
-    it('should have scripts for common objections', () => {
-      const objectionKeywords = [
+    it('should handle common concerns naturally', () => {
+      const concernKeywords = [
         'expensive',
-        'already in coaching',
+        'already in',
         'online',
-        'later',
+        'think about',
         'parents',
       ]
 
-      objectionKeywords.forEach(keyword => {
+      concernKeywords.forEach(keyword => {
         expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain(keyword)
       })
     })
 
-    it('should mention EMI and scholarship for price objection', () => {
-      expect(ARIA_SYSTEM_PROMPT).toMatch(/EMI|emi/i)
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('scholarship')
+    it('should mention Pursuit tier and installments for price objection', () => {
+      expect(ARIA_SYSTEM_PROMPT).toContain('Pursuit')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('installments')
     })
 
     it('should mention offline centers for online concerns', () => {
       expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('offline')
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('hybrid')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('free demo')
     })
   })
 
-  describe('closing techniques', () => {
-    it('should include closing technique strategies', () => {
-      expect(ARIA_SYSTEM_PROMPT).toContain('Soft Close')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Alternative Close')
-      expect(ARIA_SYSTEM_PROMPT).toContain('Urgency Close')
-      expect(ARIA_SYSTEM_PROMPT).toContain('WhatsApp Close')
+  describe('natural conversation', () => {
+    it('should prioritize helping over sales', () => {
+      expect(ARIA_SYSTEM_PROMPT).toContain('HELP first')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Not every conversation needs to end in enrollment')
+      expect(ARIA_SYSTEM_PROMPT).toContain('Build genuine trust')
     })
 
     it('should include demo booking call-to-action', () => {
@@ -164,15 +164,16 @@ describe('ARIA_SYSTEM_PROMPT', () => {
 
   describe('constraints section', () => {
     it('should have rules about what not to do', () => {
-      expect(ARIA_SYSTEM_PROMPT).toContain('NOT TO DO')
+      expect(ARIA_SYSTEM_PROMPT).toContain('NEVER DO')
     })
 
     it('should prohibit competitor mentions', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('competitor')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('trash talk other coaching')
     })
 
     it('should prohibit aggressive tactics', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('aggressive')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('pressure')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('fake urgency')
     })
   })
 
