@@ -54,8 +54,8 @@ export function MaintenancePopup() {
       <button
         onClick={handleClose}
         className={cn(
-          'absolute -top-3 -right-3',
-          'w-6 h-6 rounded-full',
+          'absolute -top-4 -right-4',
+          'w-8 h-8 rounded-full',
           'bg-amber-500 hover:bg-yellow-600',
           'flex items-center justify-center',
           'text-white shadow-md',
@@ -64,7 +64,7 @@ export function MaintenancePopup() {
         )}
         aria-label="Close maintenance notice"
       >
-        <X className="w-4 h-4" />
+        <X className="w-5 h-5" />
       </button>
 
       {/* Icon */}
