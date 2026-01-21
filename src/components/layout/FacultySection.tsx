@@ -202,6 +202,15 @@ export function FacultySection() {
         </div>
 
         {/* Teaching Methodology */}
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12">
+          <h3 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Our Teaching <span className="text-blue-600">Methodology</span>
+          </h3>
+          <p className="text-base xs:text-lg text-gray-600 max-w-3xl mx-auto">
+            At Cerebrum Biology Academy, we combine traditional teaching excellence with modern pedagogical approaches. Our AIIMS Trained faculty employs proven methods that ensure deep conceptual understanding, exam readiness, and long-term retention of biological concepts for NEET success.
+          </p>
+        </div>
+
         <div
           ref={methodologyAnim.ref}
           className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 mb-8 xs:mb-10 sm:mb-12 transition-all duration-600 ${
@@ -216,7 +225,7 @@ export function FacultySection() {
               Conceptual Teaching
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              Deep understanding through concept-based learning rather than rote memorization
+              We emphasize deep understanding through concept-based learning, real-world examples, and clinical case studies rather than rote memorization. Our faculty connects biological concepts to practical applications, making complex topics like Genetics, Physiology, and Ecology easy to understand and remember. Interactive discussions and doubt-clearing sessions ensure every student grasps fundamental principles thoroughly.
             </p>
           </div>
 
@@ -225,10 +234,10 @@ export function FacultySection() {
               <Target className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-purple-600" />
             </div>
             <h3 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
-              NEET Focused
+              NEET Focused Strategy
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              Strategic approach aligned with NEET exam patterns and high-yield topics
+              Our strategic approach aligns perfectly with NEET exam patterns, focusing on high-yield topics and frequently asked concepts. Weekly assessments mirror the actual NEET paper structure with detailed performance analysis and improvement strategies. We provide extensive practice with previous year questions, topic-wise tests, and full-length mock exams to build speed, accuracy, and exam temperament for NEET success.
             </p>
           </div>
 
@@ -240,7 +249,7 @@ export function FacultySection() {
               Personal Mentoring
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              Individual attention and personalized guidance for every student&apos;s success
+              With small batch sizes of maximum 15 students, we ensure individual attention and personalized guidance for every student. Our faculty tracks each student's progress through regular assessments, identifies weak areas, and provides customized improvement plans. One-on-one doubt sessions, parent-teacher meetings, and motivational counseling create a supportive environment where every student can achieve their full potential and realize their NEET dreams.
             </p>
           </div>
         </div>

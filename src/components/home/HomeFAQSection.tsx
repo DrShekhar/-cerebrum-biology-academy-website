@@ -56,17 +56,37 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'Who are the faculty members at Cerebrum Biology Academy?',
     answer:
-      'Our faculty comprises AIIMS and top medical college graduates with 15+ years of NEET coaching experience. Led by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), our team has collectively mentored 1,50,000+ successful NEET candidates.',
+      'Our faculty comprises AIIMS Trained and top medical college graduates with 15+ years of NEET coaching experience. Led by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), our team has collectively mentored 1,50,000+ successful NEET candidates.',
   },
   {
     question: 'Is there a free demo class available?',
     answer:
-      `Yes! We offer a FREE 45-minute demo class with our AIIMS expert faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call ${CONTACT_INFO.phone.display.primary}.`,
+      `Yes! We offer a FREE 45-minute demo class with our AIIMS Trained faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call ${CONTACT_INFO.phone.display.primary}.`,
   },
   {
     question: 'What study materials are provided?',
     answer:
       'We provide comprehensive NCERT-based study materials including detailed notes, chapter-wise summaries, 10,000+ practice questions, previous year papers with solutions, mind maps, mnemonics, and quick revision sheets - all included in the course fee.',
+  },
+  {
+    question: 'What is the batch size at Cerebrum Biology Academy?',
+    answer:
+      'We maintain small batches of maximum 15 students per class to ensure personalized attention for every student. This optimal batch size allows our AIIMS Trained faculty to focus on individual learning needs, provide detailed doubt clarification, and track each student\'s progress effectively. Unlike large coaching centers with 50-100 students per batch, our intimate class environment fosters better student-teacher interaction and improved learning outcomes.',
+  },
+  {
+    question: 'What is your NEET Biology syllabus coverage?',
+    answer:
+      'We cover the complete NEET Biology syllabus as per NTA guidelines, including all NCERT topics from Class 11 and 12. Botany coverage includes Diversity in Living World, Plant Physiology, Reproduction, Genetics, and Ecology. Zoology includes Human Physiology, Animal Kingdom, Evolution, Biotechnology, and Environmental Biology. Our curriculum aligns with the latest NEET pattern and includes regular updates for recent exam trends and high-weightage topics.',
+  },
+  {
+    question: 'Do you provide test series and mock exams?',
+    answer:
+      'Yes, we provide a comprehensive test series with 40+ full-length NEET mock tests, 80+ chapter-wise tests, and weekly assessments throughout the year. Each test follows the exact NEET pattern with detailed solutions and performance analysis. Our AI-powered test platform identifies weak areas and provides personalized improvement suggestions. Additionally, we conduct All India Test Series (AITS) to help students benchmark their preparation against lakhs of NEET aspirants nationwide.',
+  },
+  {
+    question: 'What are the class timings and batch options available?',
+    answer:
+      'We offer flexible batch timings to accommodate students from different schools and boards. Morning batches run from 7:00 AM to 9:00 AM (ideal for evening school students), afternoon batches from 2:00 PM to 4:00 PM, and evening batches from 5:00 PM to 7:00 PM (perfect for morning school students). Weekend batches are available on Saturday and Sunday from 9:00 AM to 1:00 PM. Online live classes offer additional flexibility with recorded session access for revision.',
   },
 ]
 
