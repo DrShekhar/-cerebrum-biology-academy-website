@@ -48,11 +48,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://cerebrumbiologyacademy.com'),
   title: {
-    default: '#1 NEET Biology Coaching 2025 | 98% Success Rate | Free Demo',
+    default: 'Best NEET Biology Coaching Delhi NCR | Cerebrum Academy',
     template: '%s | Cerebrum Biology Academy',
   },
   description:
-    'Best NEET Biology coaching by AIIMS faculty. 98% success rate, 500+ selections. Online & offline classes in Delhi NCR. Class 11, 12 & droppers. Book FREE demo today!',
+    'Top NEET Biology coaching Delhi NCR. AIIMS Trained faculty, 98% success, 500+ selections. Class 11-12 & droppers. FREE demo!',
   keywords:
     'NEET biology coaching, NEET coaching India, best NEET coaching Delhi NCR, NEET coaching Laxmi Nagar, NEET coaching Dwarka, NEET coaching Noida, NEET coaching Gurgaon, online NEET coaching India, NEET coaching Kota alternative, NEET coaching Hyderabad, NEET coaching Bangalore, NEET coaching Mumbai, NEET coaching Chennai, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching Delhi, biology classes Delhi, NEET 2026 coaching, NEET 2026 coaching, online biology coaching, zoology coaching, botany coaching, human physiology, genetics coaching, ecology NEET, best biology teacher India, biology online classes India, NEET crash course, NEET dropper batch, Class 11 biology coaching, Class 12 biology coaching, affordable NEET coaching, small batch NEET coaching, NEET mock tests, NEET study material, NCERT biology NEET, NEET coaching near me, top 10 NEET coaching India, best NEET coaching 2025',
   authors: [{ name: 'Cerebrum Biology Academy' }],
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com',
     siteName: 'Cerebrum Biology Academy',
-    title: '#1 NEET Biology Coaching 2025 | 98% Success | AIIMS Faculty',
+    title: 'Best NEET Biology Coaching Delhi NCR | Cerebrum Academy',
     description:
-      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 500+ medical selections. Online & offline classes in Delhi NCR. Book FREE demo!',
+      'Top NEET Biology coaching Delhi NCR. AIIMS Trained faculty, 98% success, 500+ selections. Class 11-12 & droppers. FREE demo!',
     images: [
       {
         url: '/og-image.jpg',
@@ -78,11 +78,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '#1 NEET Biology Coaching 2025 | 98% Success Rate',
+    title: 'Best NEET Biology Coaching Delhi NCR | Cerebrum',
     description:
-      'Top NEET Biology coaching by AIIMS faculty. 98% success rate, 500+ selections. Online & offline in Delhi NCR. FREE demo!',
+      'Top NEET Biology coaching Delhi NCR. AIIMS Trained faculty, 98% success, 500+ selections. Class 11-12 & droppers. FREE demo!',
     images: ['/og-image.jpg'],
-    creator: '@cerebrumbiology',
+    creator: '@cerebrumbiologyacademy',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com',

@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     name: 'Cerebrum Biology Academy',
     alternateName: 'Cerebrum Biology Academy',
     description:
-      'Premier NEET Biology coaching institute with AIIMS expert faculty, offering comprehensive preparation for medical entrance exams with 98% success rate.',
+      'Premier NEET Biology coaching institute with AIIMS Trained faculty, offering comprehensive preparation for medical entrance exams with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
@@ -224,11 +224,20 @@ export function CourseSchema() {
     '@type': 'Course',
     name: 'NEET Biology Coaching Program',
     description:
-      'Comprehensive NEET Biology preparation course by AIIMS expert faculty with proven track record of 98% success rate',
+      'Comprehensive NEET Biology preparation course by AIIMS Trained faculty with proven track record of 98% success rate',
     provider: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy',
       sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    datePublished: '2014-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '2500',
+      bestRating: '5',
+      worstRating: '1',
     },
     hasCourseInstance: [
       {
@@ -239,8 +248,9 @@ export function CourseSchema() {
         instructor: [
           {
             '@type': 'Person',
-            name: 'Biology Department Head',
-            jobTitle: 'Senior Biology Faculty',
+            name: 'Dr. Shekhar Singh',
+            jobTitle: 'AIIMS Trained Biology Faculty',
+            description: '15+ years NEET coaching experience',
           },
         ],
       },

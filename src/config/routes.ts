@@ -74,12 +74,12 @@ export const routes = {
   // External Links
   external: {
     facebook: 'https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/',
-    instagram: 'https://www.instagram.com/biologyforneetug/',
+    instagram: 'https://www.instagram.com/cerebrumbiologyacademy/',
     youtube: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
     twitter: 'https://twitter.com/shekharsingh',
     whatsapp: (message?: string) =>
       `https://wa.me/918826444334${message ? `?text=${encodeURIComponent(message)}` : ''}`,
-    telegram: 'https://t.me/biologyforneetug',
+    telegram: 'https://t.me/cerebrumbiologyacademy',
   },
 
   // Contact
