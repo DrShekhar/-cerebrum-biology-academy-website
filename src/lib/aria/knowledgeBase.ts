@@ -6,7 +6,7 @@
 export const COURSE_TIERS = {
   pinnacle: {
     name: 'Pinnacle',
-    tagline: "Toppers' Choice - For those aiming AIR under 1000",
+    tagline: "Premium Tier - For those aiming AIR under 1000",
     batchSize: '10-12 students',
     hoursPerWeek: '10-12 hours',
     features: [
