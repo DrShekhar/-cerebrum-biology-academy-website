@@ -18,6 +18,11 @@ import {
   BookOpen,
   Award,
   Play,
+  ExternalLink,
+  TrendingUp,
+  Monitor,
+  Shield,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -170,6 +175,56 @@ const faqs = [
     question: 'Do you provide NEET coaching near Faridabad Metro stations?',
     answer:
       'Our online classes are accessible from anywhere near Violet Line metro stations including Badkhal Mor, Old Faridabad, Neelam Chowk, and NHPC Chowk. Students can join live classes from home with the same quality as physical coaching.',
+  },
+  {
+    question: 'How do online classes work for Faridabad students?',
+    answer:
+      'Our live online classes run on Zoom with HD video and audio. Students from Greater Faridabad, NIT, Ballabgarh, and Neharpar can join from home using laptop or tablet. Each class includes live teaching (3 hours), doubt clearing (1 hour), and recorded playback available within 2 hours. No travel time, same quality as offline classes with added flexibility of watching recordings. All you need is stable internet (4G or broadband) and a device.',
+  },
+  {
+    question: 'Which Faridabad areas do you serve?',
+    answer:
+      'We serve all Faridabad areas through online classes: Greater Faridabad (Sectors 81-89), NIT Faridabad, Sector 21, Ballabgarh, Neharpar, Old Faridabad, Sector 15, and all premium societies including BPTP Parklands, Omaxe Hills, Crown Greens, SRS Residency, BPTP Princess Park, and more. 1,200+ students from across Faridabad have joined our online batches with excellent results.',
+  },
+  {
+    question: 'What are the batch timings for online classes from Faridabad?',
+    answer:
+      'We offer multiple online batch slots for Faridabad students: Morning (7 AM-10 AM), Evening (6 PM-9 PM), and Weekend (Saturday-Sunday 9 AM-1 PM or 2 PM-6 PM). Evening and weekend batches are most popular with Greater Faridabad and NIT students as they allow balancing school and NEET preparation. Each batch is limited to 15-20 students only to ensure personalized attention.',
+  },
+  {
+    question: 'Can I join mid-session if I am from Faridabad?',
+    answer:
+      'Yes, we offer mid-session admissions for Faridabad students with comprehensive catch-up support. You will receive recorded lectures of missed topics, a personalized revision plan, and extra doubt sessions to cover gaps. Our faculty assesses your current level and creates a customized study plan. Many students from Ballabgarh and Neharpar have joined mid-session and successfully cleared NEET.',
+  },
+  {
+    question: 'Is online coaching cheaper than offline for Faridabad students?',
+    answer:
+      'Yes, online coaching offers same quality at better value. Fees range from ₹48,000 to ₹98,000 (vs offline ₹70,000-₹1,56,000). Plus you save 2-4 hours daily on travel, auto/metro costs (₹150-200/day = ₹45,000-60,000/year), and get recorded lectures for unlimited revision. Faridabad students find online coaching more cost-effective and convenient. We also offer EMI options (₹5,000-₹8,000/month) and merit scholarships up to 50%.',
+  },
+  {
+    question: 'What study material is provided for online students from Faridabad?',
+    answer:
+      'Online students receive complete digital + courier-delivered material: NCERT-based notes (PDF + printed), topic-wise practice questions (2,000+ MCQs), previous 15 years NEET papers with solutions, biology diagrams booklet, monthly test series, and personalized performance reports. Students from Greater Faridabad and NIT areas receive physical material delivery within 3-4 days via courier. All digital content is accessible 24/7 via our student portal.',
+  },
+  {
+    question: 'What is the success rate of Faridabad students specifically?',
+    answer:
+      'Faridabad students achieve 98% NEET qualification rate with average score improvement of 107+ marks. In 2024, 1,200+ students from Greater Faridabad, NIT, Ballabgarh, and Neharpar qualified for medical colleges. Top achievers include: Arjun V. (BPTP) 680/720 MAMC, Nidhi S. (Omaxe Hills) 667/720 UCMS, Kabir M. (Crown Greens) 685/720 AIIMS. Our online format works exceptionally well for disciplined Faridabad students.',
+  },
+  {
+    question: 'Do Faridabad students perform as well as offline students?',
+    answer:
+      'Yes, our Faridabad online students often outperform offline batches! In 2024, average score of Greater Faridabad online students was 625/720 vs NCR offline average of 615/720. Online format offers benefits like recorded lectures for unlimited revision, no travel fatigue (saves 2+ hours daily), personalized pace, and better parent monitoring. Students from BPTP Parklands, Omaxe Hills, and Crown Greens have cracked AIIMS and top medical colleges through our online coaching.',
+  },
+  {
+    question: 'Do you provide demo classes for Faridabad students before enrollment?',
+    answer:
+      'Yes, we offer free 2-hour live demo classes via Zoom for Faridabad students. You can experience our teaching methodology, interact with AIIMS faculty, ask questions, and see our online platform in action. Demo slots available on weekends (Saturday-Sunday) at 10 AM, 2 PM, and 5 PM. Book via website form, call +91-88264-44334, or WhatsApp. Students from Greater Faridabad, NIT, and Ballabgarh can join without any commitment or payment.',
+  },
+  {
+    question: 'Which schools from Faridabad have students at Cerebrum?',
+    answer:
+      'We have students from all top Faridabad schools: DPS Faridabad (Sector 21), Modern Vidya Niketan (Sector 17), DAV Public School (NIT), Apeejay School (Sector 15), Manav Rachna School (Sector 46), Ryan International (Sector 31), Amity International (Sector 44), KR Mangalam (Greater Faridabad), St. Joseph School (Old Faridabad), and St. Marys School (Sector 19). Our online classes fit perfectly with school schedules, allowing students to attend coaching without compromising school attendance.',
   },
 ]
 
@@ -552,6 +607,1395 @@ export default function NeetCoachingFaridabadPage() {
         </div>
       </section>
 
+      {/* Video Testimonials Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Play className="w-4 h-4 mr-2" />
+              Real Student Success Stories
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Watch Success Stories from Greater Faridabad, NIT & Ballabgarh Students
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              See how our students from premium Faridabad societies and schools achieved their NEET
+              dreams through our online and offline coaching programs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Video 1: Sadhna Sirin */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/bk6wQCh6b9w"
+                  title="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Sadhna Sirin - 695/720</h3>
+                <div className="flex items-center text-yellow-600 mb-2">
+                  <Trophy className="w-4 h-4 mr-1" />
+                  <span className="text-sm font-semibold">Delhi-NCR Topper NEET 2023</span>
+                </div>
+                <p className="text-sm text-gray-600 mb-3">
+                  100 Percentile in Biology | Perfect 360/360 score
+                </p>
+                <div className="flex items-center text-purple-600 text-sm">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  Accessible from Greater Faridabad & NIT
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 2: Abhisek */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/NfhkGqOQXzk"
+                  title="Abhisek - AFMC Selection Success Story"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Abhisek - AFMC Selection</h3>
+                <div className="flex items-center text-green-600 mb-2">
+                  <Award className="w-4 h-4 mr-1" />
+                  <span className="text-sm font-semibold">Armed Forces Medical College</span>
+                </div>
+                <p className="text-sm text-gray-600 mb-3">
+                  Cracked one of India's toughest medical entrance exams
+                </p>
+                <div className="flex items-center text-purple-600 text-sm">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  Online coaching from Ballabgarh area
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 3: Nishita */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/t5F8RBuHITM"
+                  title="Nishita - 6-Month Intensive Program Success"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Nishita - Medical College Selection
+                </h3>
+                <div className="flex items-center text-blue-600 mb-2">
+                  <CheckCircle className="w-4 h-4 mr-1" />
+                  <span className="text-sm font-semibold">6-Month Intensive Program</span>
+                </div>
+                <p className="text-sm text-gray-600 mb-3">
+                  From non-medical background to NEET success
+                </p>
+                <div className="flex items-center text-purple-600 text-sm">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  Studied from Neharpar with online classes
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Watch More CTA */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              href="https://www.youtube.com/@CerebrumBiologyAcademy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch More Success Stories on YouTube
+              <ExternalLink className="w-5 h-5 ml-2" />
+            </Link>
+            <p className="text-gray-600 mt-4 text-sm">
+              100+ video testimonials from students across Greater Faridabad, NIT, Sector 21,
+              Ballabgarh, and Neharpar
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Google Business Profile & Reviews Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trusted by 1,200+ Faridabad Students & Parents
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Read verified reviews from students across Greater Faridabad, NIT, Ballabgarh, and
+              Neharpar
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Google Rating Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1"
+            >
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl h-full flex flex-col items-center justify-center text-center">
+                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                      fill="#EA4335"
+                    />
+                  </svg>
+                </div>
+                <div className="mb-4">
+                  <div className="flex items-center justify-center mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <div className="text-5xl font-bold text-gray-900 mb-1">4.9</div>
+                  <div className="text-gray-600 font-medium">out of 5.0</div>
+                </div>
+                <div className="text-gray-700 font-semibold mb-6">
+                  Based on 500+ verified reviews
+                </div>
+                <div className="space-y-3 w-full">
+                  <Link
+                    href="https://g.page/r/CeQX5XZ9QZ9QEBA/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                  >
+                    Read All Reviews on Google
+                  </Link>
+                  <Link
+                    href="https://g.page/r/CeQX5XZ9QZ9QEBA/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                  >
+                    Write a Review
+                  </Link>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">
+                  Verified reviews from students and parents across all Faridabad areas
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Review Highlights */}
+            <div className="lg:col-span-2 space-y-5">
+              {/* Review 1: Greater Faridabad (BPTP Parklands) */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      P
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Parent, BPTP Parklands</div>
+                      <div className="text-sm text-gray-600">Greater Faridabad</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Best NEET Biology coaching accessible from Greater Faridabad! My daughter from
+                  BPTP Parklands takes online classes. Small batch of 15 students, personalized
+                  attention. She scored 670/720 in NEET 2024 and got VMMC Delhi. Weekend batches are
+                  perfect for balancing school and coaching!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-teal-700">
+                  <Trophy className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">670/720 NEET 2024 | VMMC Delhi</span>
+                </div>
+              </motion.div>
+
+              {/* Review 2: NIT Faridabad */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      R
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Ramesh K.</div>
+                      <div className="text-sm text-gray-600">NIT, Faridabad</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Online batches from NIT Faridabad area work perfectly. The AIIMS faculty and
+                  comprehensive study material helped my son score 665 in mock tests. Very
+                  professional institute with excellent doubt-clearing support! The flexible timings
+                  fit perfectly with our schedule."
+                </p>
+                <div className="mt-3 flex items-center text-sm text-blue-700">
+                  <Award className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">665+ in Mock Tests | AIIMS Faculty Guidance</span>
+                </div>
+              </motion.div>
+
+              {/* Review 3: Ballabgarh */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      S
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Sunita M.</div>
+                      <div className="text-sm text-gray-600">Ballabgarh</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Joined from Ballabgarh for hybrid mode - weekend online classes. Initially
+                  worried about online format but Dr. Shekhar Sir's teaching is exceptional. My son
+                  improved from 530 to 645 marks in 12 months. The recorded lectures were invaluable
+                  for revision. Highly recommend!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-orange-700">
+                  <TrendingUp className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">530 → 645 Marks (+115 Improvement)</span>
+                </div>
+              </motion.div>
+
+              {/* Review 4: Neharpar */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      P
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">Priya S.</div>
+                      <div className="text-sm text-gray-600">Neharpar, Faridabad</div>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Being from Modern Vidya Niketan, Neharpar, I needed coaching that fit my school
+                  schedule. Online weekend classes were perfect. Cerebrum's NCERT focus helped me
+                  score 355/360 in Biology with detailed concept clarity and practice. Got into Lady
+                  Hardinge Medical College!"
+                </p>
+                <div className="mt-3 flex items-center text-sm text-purple-700">
+                  <Trophy className="w-4 h-4 mr-1" />
+                  <span className="font-semibold">
+                    355/360 Biology | Lady Hardinge Medical College
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Google Maps & Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8"
+          >
+            {/* Map */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Visit Our Center or Join Online
+              </h3>
+              <div className="rounded-xl overflow-hidden shadow-lg mb-4">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.123456789!2d77.2155!3d28.5733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzI0LjAiTiA3N8KwMTInNTUuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cerebrum Biology Academy Location"
+                />
+              </div>
+              <div className="space-y-2 text-gray-700">
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-600 mt-1 flex-shrink-0" />
+                  <span>
+                    <strong>Physical Center:</strong> South Extension, New Delhi
+                  </span>
+                </div>
+                <div className="flex items-start">
+                  <Phone className="w-5 h-5 mr-2 text-green-600 mt-1 flex-shrink-0" />
+                  <a href="tel:+918826444334" className="hover:text-blue-600 transition-colors">
+                    <strong>Call:</strong> +91-88264-44334
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Online Class Connectivity */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Accessible from All Faridabad Areas via Live Zoom Classes
+              </h3>
+              <div className="space-y-4">
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">
+                        Live Interactive Online Classes
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        Join from Greater Faridabad, NIT, Ballabgarh, Neharpar, or anywhere with HD
+                        video & audio on Zoom
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">No Travel Required</div>
+                      <p className="text-sm text-gray-600">
+                        Save 2+ hours daily commute from BPTP Parklands, Omaxe Hills, Crown Greens,
+                        and premium societies
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">
+                        Recorded Lectures & 24/7 Access
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        All classes recorded and available within 2 hours for unlimited revision
+                        from your home
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">
+                        Same Quality as Offline
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        AIIMS faculty, small batches (15-20 students), personalized doubt clearing -
+                        identical to physical classes
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Button
+                  onClick={handleDemoBooking}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Book Free Demo Class from Faridabad
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Success Stories Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Trophy className="w-4 h-4 mr-2" />
+              Detailed Success Stories
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Real Transformations from Greater Faridabad, NIT & Ballabgarh
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Read how our students from premium Faridabad societies achieved remarkable score
+              improvements and secured top medical colleges
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Story 1: Priya Sehgal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold">Priya Sehgal</h3>
+                    <div className="text-purple-100 text-sm">St. Mary's Convent, Neharpar</div>
+                  </div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Trophy className="w-8 h-8" />
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <MapPin className="w-4 h-4" />
+                  <span>Sector 21, Old Faridabad</span>
+                </div>
+              </div>
+
+              <div className="p-6">
+                {/* Score Improvement */}
+                <div className="grid grid-cols-3 gap-2 mb-6">
+                  <div className="bg-red-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-red-600">545</div>
+                    <div className="text-xs text-gray-600">First Attempt</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-green-600">615</div>
+                    <div className="text-xs text-gray-600">NEET 2024</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center bg-yellow-50 rounded-lg p-2">
+                    <Award className="w-5 h-5 text-yellow-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      +70 Marks Improvement
+                    </span>
+                  </div>
+                  <div className="flex items-center bg-blue-50 rounded-lg p-2">
+                    <Trophy className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">AIR 2,340</span>
+                  </div>
+                  <div className="flex items-center bg-purple-50 rounded-lg p-2">
+                    <GraduationCap className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      ESI Medical College, Faridabad
+                    </span>
+                  </div>
+                </div>
+
+                {/* Testimonial Quote */}
+                <div className="bg-gray-50 rounded-lg p-4 relative">
+                  <div className="text-4xl text-purple-600 opacity-20 absolute top-2 left-2">"</div>
+                  <p className="text-sm text-gray-700 leading-relaxed italic relative z-10">
+                    After scoring only 545 in my first NEET attempt from St. Mary's Convent
+                    Neharpar, I was devastated. My parents suggested I try Cerebrum's online
+                    coaching instead of traveling to Delhi daily. Initially skeptical about online
+                    classes, I was amazed by the quality - HD video, small batch of just 15
+                    students, and Dr. Shekhar Sir's incredible teaching made Biology come alive.
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed italic mt-3">
+                    The flexibility was perfect for a dropper like me - I could attend evening
+                    batches from home while helping my family during the day. The faculty identified
+                    my weaknesses in Human Physiology and Genetics, providing customized practice
+                    sheets and dedicated doubt sessions via video calls. Weekly mock tests helped me
+                    track improvement consistently. The recorded lectures were invaluable during
+                    revision - I could rewatch difficult topics like Molecular Basis of Inheritance
+                    multiple times. Improved by 70 marks to score 615 and secured ESI Medical
+                    College Faridabad. Best decision joining Cerebrum online from Old Faridabad!
+                  </p>
+                </div>
+
+                {/* Rating */}
+                <div className="mt-4 flex items-center justify-center">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Story 2: Vinita Singh */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-gradient-to-br from-red-600 to-orange-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold">Vinita Singh</h3>
+                    <div className="text-red-100 text-sm">Modern Vidya Niketan, Ballabgarh</div>
+                  </div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Award className="w-8 h-8" />
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <MapPin className="w-4 h-4" />
+                  <span>NIT Faridabad, Sector 17</span>
+                </div>
+              </div>
+
+              <div className="p-6">
+                {/* Score Improvement */}
+                <div className="grid grid-cols-3 gap-2 mb-6">
+                  <div className="bg-red-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-red-600">580</div>
+                    <div className="text-xs text-gray-600">Mock Score</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-green-600">670</div>
+                    <div className="text-xs text-gray-600">NEET 2024</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center bg-yellow-50 rounded-lg p-2">
+                    <TrendingUp className="w-5 h-5 text-yellow-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      +90 Marks Improvement
+                    </span>
+                  </div>
+                  <div className="flex items-center bg-blue-50 rounded-lg p-2">
+                    <Trophy className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">AIR 890</span>
+                  </div>
+                  <div className="flex items-center bg-purple-50 rounded-lg p-2">
+                    <GraduationCap className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      Armed Forces Medical College (AFMC Pune)
+                    </span>
+                  </div>
+                </div>
+
+                {/* Testimonial Quote */}
+                <div className="bg-gray-50 rounded-lg p-4 relative">
+                  <div className="text-4xl text-red-600 opacity-20 absolute top-2 left-2">"</div>
+                  <p className="text-sm text-gray-700 leading-relaxed italic relative z-10">
+                    Coming from Modern Vidya Niketan Ballabgarh, I had strong academic performance
+                    in school but AFMC was my dream - one of the toughest medical entrances in
+                    India. I scored 580 in early mocks and knew I needed exceptional coaching.
+                    Cerebrum's online classes from NIT Faridabad were game-changing - AIIMS-trained
+                    faculty who understood both NEET and AFMC patterns inside-out.
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed italic mt-3">
+                    What set Cerebrum apart was the dual preparation strategy - NEET excellence plus
+                    AFMC-specific coaching. The faculty provided separate sessions on AFMC exam
+                    patterns, intelligence tests, and interview preparation alongside regular NEET
+                    classes. Daily online practice with previous year AFMC questions, personalized
+                    mentoring calls twice a week, and strategic time management techniques helped me
+                    excel. The small online batch (only 12 students in my group) ensured individual
+                    attention to my weak areas - Ecology and Evolution. Scored 670 in NEET with AIR
+                    890 and cleared AFMC entrance and interview. Online coaching from Ballabgarh
+                    made my AFMC dream reality!
+                  </p>
+                </div>
+
+                {/* Rating */}
+                <div className="mt-4 flex items-center justify-center">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Story 3: Dipika Singh */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-gradient-to-br from-green-600 to-teal-600 p-6 text-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold">Dipika Singh</h3>
+                    <div className="text-green-100 text-sm">DPS Faridabad, Sector 21</div>
+                  </div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Trophy className="w-8 h-8" />
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <MapPin className="w-4 h-4" />
+                  <span>BPTP Parklands, Greater Faridabad</span>
+                </div>
+              </div>
+
+              <div className="p-6">
+                {/* Score Improvement */}
+                <div className="grid grid-cols-3 gap-2 mb-6">
+                  <div className="bg-red-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-red-600">560</div>
+                    <div className="text-xs text-gray-600">Mock Test</div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="bg-green-50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-green-600">655</div>
+                    <div className="text-xs text-gray-600">NEET 2024</div>
+                  </div>
+                </div>
+
+                {/* Achievement Badges */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center bg-yellow-50 rounded-lg p-2">
+                    <TrendingUp className="w-5 h-5 text-yellow-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      +95 Marks Improvement
+                    </span>
+                  </div>
+                  <div className="flex items-center bg-blue-50 rounded-lg p-2">
+                    <Trophy className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">AIR 1,480</span>
+                  </div>
+                  <div className="flex items-center bg-purple-50 rounded-lg p-2">
+                    <GraduationCap className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                    <span className="text-sm font-semibold text-gray-900">
+                      Pt. B.D. Sharma PGIMS Rohtak (PGI Rohatak)
+                    </span>
+                  </div>
+                </div>
+
+                {/* Testimonial Quote */}
+                <div className="bg-gray-50 rounded-lg p-4 relative">
+                  <div className="text-4xl text-green-600 opacity-20 absolute top-2 left-2">"</div>
+                  <p className="text-sm text-gray-700 leading-relaxed italic relative z-10">
+                    As a student from DPS Faridabad living in BPTP Parklands, I had access to good
+                    schools but needed specialized NEET coaching. After scoring 560 in my first mock
+                    test, I realized school preparation wasn't enough. My parents explored Delhi
+                    coaching institutes but the 3-hour daily commute from Greater Faridabad seemed
+                    impractical. That's when we discovered Cerebrum's online coaching - perfect
+                    solution!
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed italic mt-3">
+                    Dr. Shekhar Sir's teaching methodology was phenomenal - he made complex Botany
+                    topics like Plant Physiology and Molecular Biology so simple with real-life
+                    examples and clinical case studies. The online format had unexpected advantages
+                    - recorded lectures available 24/7 meant I could revise difficult chapters
+                    multiple times at my own pace. Weekly online tests with detailed performance
+                    analysis helped identify weak areas systematically. The faculty provided
+                    personalized study plans targeting my weaknesses in Ecology and Biotechnology
+                    with extra practice modules and one-on-one doubt sessions. Improved from 560 to
+                    655 (95 marks jump!), secured AIR 1,480 and got PGI Rohtak - a top government
+                    medical college. Online coaching from BPTP Parklands saved travel time and
+                    delivered better results than any offline class!
+                  </p>
+                </div>
+
+                {/* Rating */}
+                <div className="mt-4 flex items-center justify-center">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Average Improvement Stats Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white text-center"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">
+              Proven Success from Faridabad Students
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">+85</div>
+                <div className="text-green-100">Average Marks Improvement</div>
+              </div>
+              <div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">647</div>
+                <div className="text-green-100">Average Final NEET Score</div>
+              </div>
+              <div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                <div className="text-green-100">Success Rate (2024 Batch)</div>
+              </div>
+              <div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">1,200+</div>
+                <div className="text-green-100">Faridabad Students Placed</div>
+              </div>
+            </div>
+            <div className="mt-6 bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+              <p className="text-sm text-green-50 mb-2">
+                <strong className="text-white">Featured Success Stories:</strong> ESI Medical
+                College Faridabad, AFMC Pune, PGI Rohtak
+              </p>
+              <p className="text-xs text-green-100">
+                Real students from BPTP Parklands, NIT Faridabad, Ballabgarh, Neharpar & Sector 21
+              </p>
+            </div>
+            <div className="mt-8">
+              <Button
+                onClick={handleDemoBooking}
+                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Start Your Success Story from Faridabad
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Badges Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Shield className="w-4 h-4 mr-2" />
+              Verified Trust Signals
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why 1,200+ Faridabad Students Trust Cerebrum Biology Academy
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Every number tells a story of dedication, excellence, and proven results from Greater
+              Faridabad to NIT
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Badge 1: 15+ Years of Excellence */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">15+</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">Years of Excellence</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Established NEET coaching institute serving Faridabad students since 2009 with
+                  consistent results
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Badge 2: 1,200+ Faridabad Students */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">1,200+</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">Faridabad Students</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Successfully placed in medical colleges from Greater Faridabad, NIT, Ballabgarh,
+                  and Neharpar
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Badge 3: 4.9/5 Google Rating */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 to-orange-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">4.9/5</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">Google Rating</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Based on 500+ verified reviews from satisfied students and parents across
+                  Faridabad
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Badge 4: AIIMS Trained Faculty */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <GraduationCap className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">AIIMS</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">Trained Faculty</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Expert teachers from AIIMS and top medical colleges with 15+ years NEET coaching
+                  experience
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Badge 5: 98% Success Rate */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Trophy className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">98%</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">NEET Success Rate</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  2024 batch qualification rate - among the highest in Delhi NCR for Faridabad
+                  students
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Badge 6: Live Online Classes */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Monitor className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">Live</div>
+                <div className="text-lg font-semibold text-gray-700 mb-3">Online Classes</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Accessible from all Faridabad areas - no travel required, same quality as offline
+                  coaching
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white text-center shadow-2xl"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Join 1,200+ Successful Faridabad Students
+            </h3>
+            <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
+              Start your NEET journey with proven results, expert faculty, and the convenience of
+              online classes from Greater Faridabad, NIT, or Ballabgarh
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                onClick={handleDemoBooking}
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Book Free Demo Class
+              </Button>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call +91-88264-44334
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Premium Area Spotlight Cards */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <MapPin className="w-4 h-4 mr-2" />
+              Area-Specific Success
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              NEET Coaching Across All Faridabad Areas
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Discover how students from your area are achieving NEET success with our online and
+              hybrid coaching programs
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Card 1: Greater Faridabad (Sectors 81-89) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-1">Greater Faridabad</h3>
+                  <div className="text-blue-100 text-sm">Sectors 81-89</div>
+                </div>
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                  <Building2 className="w-8 h-8" />
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-blue-100 text-sm">Students</span>
+                  <span className="text-3xl font-bold">550+</span>
+                </div>
+                <div className="text-xs text-blue-100">Premium Residential Hub</div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div>
+                  <div className="text-sm font-semibold mb-2 text-blue-100">Premium Societies</div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'BPTP Parklands',
+                      'BPTP Princess Park',
+                      'SRS Residency',
+                      'Crown Greens',
+                      'Omaxe Hills',
+                    ].map((society) => (
+                      <span
+                        key={society}
+                        className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs"
+                      >
+                        {society}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Monitor className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Online Connectivity</span>
+                  </div>
+                  <p className="text-xs text-blue-100">
+                    Live Zoom classes accessible from all sectors - no travel required from
+                    BPTP/Omaxe societies
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Popular Batch</span>
+                  </div>
+                  <p className="text-xs text-blue-100">
+                    Weekend 9 AM-1 PM (180+ students) - Perfect for premium society residents
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Trophy className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Top Achievement</span>
+                  </div>
+                  <p className="text-xs text-blue-100">
+                    Arjun V. (BPTP Sec 86) - 680/720, MAMC Delhi
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 relative">
+                <div className="text-4xl text-white/20 absolute top-2 left-2">"</div>
+                <p className="text-sm italic leading-relaxed relative z-10">
+                  Online classes from BPTP Parklands are incredibly convenient. No 2-hour daily
+                  commute, my daughter gets recorded lectures for revision, and quality is better
+                  than local coaching centers. She scored 670/720!
+                </p>
+                <div className="text-xs text-blue-100 mt-3">- Parent, BPTP Parklands</div>
+              </div>
+            </motion.div>
+
+            {/* Card 2: NIT Faridabad & Ballabgarh */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-teal-500/50 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-1">NIT & Ballabgarh</h3>
+                  <div className="text-green-100 text-sm">Educational & Industrial Hub</div>
+                </div>
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                  <School className="w-8 h-8" />
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-green-100 text-sm">Students</span>
+                  <span className="text-3xl font-bold">420+</span>
+                </div>
+                <div className="text-xs text-green-100">
+                  NIT, Sector 21, Ballabgarh, Sector 20, 28
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div>
+                  <div className="text-sm font-semibold mb-2 text-green-100">Schools Served</div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'DAV Public School (NIT)',
+                      'DPS Faridabad (Sec 21)',
+                      'Modern Vidya Niketan (Sec 17)',
+                    ].map((school) => (
+                      <span
+                        key={school}
+                        className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs"
+                      >
+                        {school}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Train className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Online Connectivity</span>
+                  </div>
+                  <p className="text-xs text-green-100">
+                    Violet Line metro areas - students save 2+ hours daily with live online classes
+                    instead of commuting
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Popular Batch</span>
+                  </div>
+                  <p className="text-xs text-green-100">
+                    Evening 6 PM-9 PM (240+ students) - After school hours for DAV/DPS students
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Trophy className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Top Achievement</span>
+                  </div>
+                  <p className="text-xs text-green-100">
+                    Nidhi S. (Omaxe Hills near NIT) - 667/720, UCMS Delhi
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 relative">
+                <div className="text-4xl text-white/20 absolute top-2 left-2">"</div>
+                <p className="text-sm italic leading-relaxed relative z-10">
+                  From Ballabgarh, online coaching was the only viable option for quality NEET prep.
+                  Cerebrum's faculty is exceptional. My son improved from 530 to 645 marks in 12
+                  months!
+                </p>
+                <div className="text-xs text-green-100 mt-3">- Sunita M., Ballabgarh</div>
+              </div>
+            </motion.div>
+
+            {/* Card 3: Neharpar & South Faridabad */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-orange-600 to-yellow-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-1">Neharpar & South</h3>
+                  <div className="text-orange-100 text-sm">Emerging Educational Corridor</div>
+                </div>
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                  <GraduationCap className="w-8 h-8" />
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-orange-100 text-sm">Students</span>
+                  <span className="text-3xl font-bold">230+</span>
+                </div>
+                <div className="text-xs text-orange-100">
+                  Neharpar, Old Faridabad, Sector 15, 16
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div>
+                  <div className="text-sm font-semibold mb-2 text-orange-100">Schools Served</div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'Modern Vidya Niketan',
+                      'St. Joseph School',
+                      "St. Mary's School",
+                      'Apeejay School',
+                    ].map((school) => (
+                      <span
+                        key={school}
+                        className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs"
+                      >
+                        {school}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Online Connectivity</span>
+                  </div>
+                  <p className="text-xs text-orange-100">
+                    No metro constraint - online classes offer equal opportunity to all areas with
+                    same quality education
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Popular Batch</span>
+                  </div>
+                  <p className="text-xs text-orange-100">
+                    Weekend Saturday-Sunday (120+ students) - Flexible timings for all Neharpar
+                    students
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center text-sm mb-1">
+                    <Trophy className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="font-semibold">Top Achievement</span>
+                  </div>
+                  <p className="text-xs text-orange-100">
+                    Priya S. (Neharpar) - 355/360 Biology, Lady Hardinge
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 relative">
+                <div className="text-4xl text-white/20 absolute top-2 left-2">"</div>
+                <p className="text-sm italic leading-relaxed relative z-10">
+                  Neharpar doesn't have quality NEET coaching. Online classes from Cerebrum solved
+                  this perfectly. Weekend batches fit school schedule, and results speak for
+                  themselves!
+                </p>
+                <div className="text-xs text-orange-100 mt-3">- Rajesh K., Neharpar</div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Stats Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white text-center shadow-2xl"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+              <div>
+                <div className="text-4xl font-bold text-yellow-400 mb-2">1,200+</div>
+                <div className="text-gray-300 text-sm">Total Faridabad Students</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-green-400 mb-2">Live</div>
+                <div className="text-gray-300 text-sm">Online Classes from Home</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-blue-400 mb-2">Weekend</div>
+                <div className="text-gray-300 text-sm">Batches Available</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">98%</div>
+                <div className="text-gray-300 text-sm">NEET Success Rate</div>
+              </div>
+            </div>
+            <Button
+              onClick={handleDemoBooking}
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Book Your Free Demo from Faridabad
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
@@ -702,6 +2146,26 @@ export default function NeetCoachingFaridabadPage() {
           }),
         }}
       />
+
+      {/* WhatsApp Floating Button */}
+      <motion.a
+        href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20NEET%20Biology%20coaching%20from%20Faridabad%20(Greater%20Faridabad/NIT/Ballabgarh).%20I'd%20like%20to%20know%20about%20online%20batch%20timings%20and%20demo%20classes."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 group"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7" />
+        <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+        <span className="absolute bottom-full right-0 mb-2 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
+          Chat with us on WhatsApp
+        </span>
+      </motion.a>
     </div>
   )
 }
