@@ -234,15 +234,17 @@ Would you like to see how we can complement your preparation?`,
     followUp: ['Show batch timings', 'Book a demo', 'Tell me about personal mentorship'],
   },
   notSureAboutOnline: {
-    response: `I completely understand! Online learning needs to be experienced to be appreciated. Here's what we offer:
+    response: `I completely understand! Most students prefer face-to-face teaching. Here's what we offer:
 
-1. **FREE demo class** - experience our teaching style firsthand
-2. **Offline centers** available in Delhi NCR (Laxmi Nagar, Dwarka, Noida, Gurgaon)
+1. **1-week FREE trial** - Full access to online classes, study materials, doubt clearing. No commitment, no credit card!
+2. **Offline centers** available at: Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, Rohini Sector-9 Delhi
 3. **Hybrid option** - combine online + offline as needed
-4. Our online platform has **interactive features** - live doubts, polls, recordings
+4. **FREE demo class** at offline centers - experience our teaching quality firsthand
 
-Would you like to book a free demo class to experience it yourself?`,
-    followUp: ['Book free demo', 'Show offline centers', 'Learn about hybrid'],
+If you're within 25 km of our centers, I recommend offline/hybrid for the best experience. If you're farther, try our 1-week online trial!
+
+Would you like to start your FREE trial or book an offline demo?`,
+    followUp: ['Start 1-week free trial', 'Book offline demo', 'Learn about hybrid'],
   },
   willJoinLater: {
     response: `Of course, timing is important! However, I should mention:
