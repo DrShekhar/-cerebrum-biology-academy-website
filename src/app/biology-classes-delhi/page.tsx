@@ -468,7 +468,7 @@ export default function BiologyClassesDelhiPage() {
                     </Link>
                     <a
                       href={center.mapUrl}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
                     >

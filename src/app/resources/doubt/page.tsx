@@ -183,7 +183,7 @@ export default function DoubtResolutionPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
@@ -332,7 +332,7 @@ export default function DoubtResolutionPage() {
                     </ul>
                     <a
                       href={`https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20doubt%20in%20${encodeURIComponent(category.name)}`}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-700"
                     >
@@ -534,7 +534,7 @@ export default function DoubtResolutionPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all"
             >

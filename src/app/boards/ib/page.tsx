@@ -43,7 +43,7 @@ const FloatingWhatsAppButton = () => {
   return (
     <motion.a
       href={`https://wa.me/${whatsappNumber}?text=${message}`}
-      target="_blank"
+      target="_blank" rel="noopener noreferrer"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 group"
       initial={{ scale: 0, opacity: 0 }}
@@ -392,7 +392,7 @@ export default function IBBiologyPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <motion.a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I'm interested in IB Biology coaching. Please share program details.")}`}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-green-500/25"
                   whileHover={{ scale: 1.02 }}
@@ -727,7 +727,7 @@ export default function IBBiologyPage() {
 
                 <motion.a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm interested in the ${plan.name} for IB Biology coaching.`)}`}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all ${
                     plan.highlight
@@ -838,7 +838,7 @@ export default function IBBiologyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <motion.a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I want to book a free consultation for IB Biology coaching.")}`}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg"
                 whileHover={{ scale: 1.02 }}

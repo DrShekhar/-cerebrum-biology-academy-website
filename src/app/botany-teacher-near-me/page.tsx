@@ -166,7 +166,7 @@ export default function BotanyTeacherNearMePage() {
                   <div className="flex gap-2">
                     <a
                       href={center.mapUrl}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 text-sm text-lime-600 hover:underline"
                     >
@@ -270,7 +270,7 @@ export default function BotanyTeacherNearMePage() {
             <div className="mt-8 text-center">
               <a
                 href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
               >

@@ -307,7 +307,7 @@ export default function SessionDetailPage({ params }: SessionDetailPageProps) {
                       <div className="flex items-center gap-2">
                         <a
                           href={session.meetingLink}
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                           rel="noopener noreferrer"
                           className="font-medium text-blue-600 hover:underline break-all"
                         >

@@ -406,7 +406,7 @@ export default function AuthForm({
                   <a
                     href="/terms-of-service"
                     className="text-blue-600 hover:underline"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     rel="noopener noreferrer"
                   >
                     Terms of Service
@@ -415,7 +415,7 @@ export default function AuthForm({
                   <a
                     href="/privacy-policy"
                     className="text-blue-600 hover:underline"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     rel="noopener noreferrer"
                   >
                     Privacy Policy

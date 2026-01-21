@@ -200,7 +200,7 @@ function PDFPreview({ pdf, language }: { pdf: RichPDF; language: Language }) {
   return (
     <a
       href={pdf.url}
-      target="_blank"
+      target="_blank" rel="noopener noreferrer"
       rel="noopener noreferrer"
       className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 transition-all hover:border-green-300 hover:bg-green-50"
     >

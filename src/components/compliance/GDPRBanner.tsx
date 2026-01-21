@@ -184,7 +184,7 @@ export const GDPRBanner = ({
                       <a
                         href={privacyPolicyUrl}
                         className="underline hover:opacity-80"
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         rel="noopener noreferrer"
                       >
                         Privacy Policy
@@ -193,7 +193,7 @@ export const GDPRBanner = ({
                       <a
                         href={cookiePolicyUrl}
                         className="underline hover:opacity-80"
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         rel="noopener noreferrer"
                       >
                         Cookie Policy

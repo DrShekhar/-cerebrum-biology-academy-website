@@ -102,7 +102,7 @@ export function LocationsSection() {
 
                 <a
                   href={location.googleMapsUrl}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full bg-[#3d4d3d] text-white py-2.5 rounded-lg font-medium text-sm hover:bg-[#4a5d4a] transition-colors"
                 >

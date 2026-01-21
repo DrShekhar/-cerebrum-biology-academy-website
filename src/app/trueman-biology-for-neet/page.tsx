@@ -153,7 +153,7 @@ export default function TruemanBiologyPage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="https://www.amazon.in/Truemans-Elementary-Biology-NEET-1/dp/818720218X"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="bg-white text-red-600 hover:bg-white/90 font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
                     <ShoppingCart className="w-5 h-5" />
@@ -163,7 +163,7 @@ export default function TruemanBiologyPage() {
                 </Link>
                 <Link
                   href="https://www.amazon.in/Truemans-Elementary-Biology-Vol-NEET/dp/8187223316"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="bg-red-600/20 border border-white/30 hover:bg-red-600/30 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
                     Buy Vol 2
@@ -266,7 +266,7 @@ export default function TruemanBiologyPage() {
                         ? 'https://www.amazon.in/Truemans-Elementary-Biology-NEET-1/dp/818720218X'
                         : 'https://www.amazon.in/Truemans-Elementary-Biology-Vol-NEET/dp/8187223316'
                     }
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="mt-6 block"
                   >
                     <Button className="w-full bg-red-600 text-white hover:bg-red-700 rounded-xl flex items-center justify-center gap-2">

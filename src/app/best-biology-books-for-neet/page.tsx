@@ -364,7 +364,7 @@ export default function BestBiologyBooksPage() {
 
                       <div className="flex flex-wrap gap-3 mt-4">
                         {book.amazon11 && (
-                          <Link href={book.amazon11} target="_blank">
+                          <Link href={book.amazon11} target="_blank" rel="noopener noreferrer">
                             <Button
                               size="sm"
                               className={`${colors.bg} text-white hover:opacity-90 rounded-lg flex items-center gap-1`}
@@ -376,7 +376,7 @@ export default function BestBiologyBooksPage() {
                           </Link>
                         )}
                         {book.amazon12 && (
-                          <Link href={book.amazon12} target="_blank">
+                          <Link href={book.amazon12} target="_blank" rel="noopener noreferrer">
                             <Button
                               size="sm"
                               className={`${colors.bg} text-white hover:opacity-90 rounded-lg flex items-center gap-1`}
@@ -388,7 +388,7 @@ export default function BestBiologyBooksPage() {
                           </Link>
                         )}
                         {book.amazonLink && (
-                          <Link href={book.amazonLink} target="_blank">
+                          <Link href={book.amazonLink} target="_blank" rel="noopener noreferrer">
                             <Button
                               size="sm"
                               className={`${colors.bg} text-white hover:opacity-90 rounded-lg flex items-center gap-1`}

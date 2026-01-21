@@ -508,7 +508,7 @@ Submitted via School Seminar Booking Form`
                     href={getWhatsAppLink(
                       'Hi, I want to book a free career guidance seminar for our school.'
                     )}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0"
                   >
@@ -1341,7 +1341,7 @@ Submitted via School Seminar Booking Form`
                   href={getWhatsAppLink(
                     'Hi, I want to book a free career guidance seminar for our school.'
                   )}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                 >
                   <Button variant="primary" size="lg" className="w-full md:w-auto">

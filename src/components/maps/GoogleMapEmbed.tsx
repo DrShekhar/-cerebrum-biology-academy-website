@@ -49,7 +49,7 @@ export function GoogleMapEmbed({
             <p className="text-sm text-gray-600 text-center mb-4 max-w-sm">{centerAddress}</p>
             <a
               href={googleMapsDirectionsUrl}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
@@ -88,7 +88,7 @@ export function GoogleMapEmbed({
           <div className="flex gap-2">
             <a
               href={googleMapsDirectionsUrl}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
@@ -97,7 +97,7 @@ export function GoogleMapEmbed({
             </a>
             <a
               href={googleMapsSearchUrl}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm border border-gray-300 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
             >

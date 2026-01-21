@@ -462,7 +462,7 @@ export default function OnlineBiologyClassesNRIPage() {
               </Link>
               <a
                 href="https://wa.me/918826444334"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold transition hover:bg-white/10"
               >

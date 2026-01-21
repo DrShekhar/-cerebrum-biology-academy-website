@@ -326,7 +326,7 @@ export default function ContentDraftsPage() {
                               {draft.status === 'published' && draft.type === 'BLOG_POST' && (
                                 <a
                                   href={`/blog/${draft.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60)}`}
-                                  target="_blank"
+                                  target="_blank" rel="noopener noreferrer"
                                   rel="noopener noreferrer"
                                   className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
                                 >

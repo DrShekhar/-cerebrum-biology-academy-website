@@ -198,7 +198,7 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20East%20of%20Kailash%20and%20interested%20in%20Biology%20coaching"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
               >
                 <Button
@@ -375,7 +375,7 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20East%20of%20Kailash%20and%20interested%20in%20Biology%20coaching"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
               >
                 <Button

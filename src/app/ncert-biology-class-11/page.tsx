@@ -200,7 +200,7 @@ export default function NCERTBiologyClass11Page() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="https://www.amazon.in/Biology-Textbook-Class-11-2024-25/dp/8195334792"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="bg-white text-green-700 hover:bg-white/90 font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
                     <ShoppingCart className="w-5 h-5" />
@@ -271,7 +271,7 @@ export default function NCERTBiologyClass11Page() {
                     </div>
                     <Link
                       href="https://www.amazon.in/Biology-Textbook-Class-11-2024-25/dp/8195334792"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <Button className="bg-green-600 hover:from-green-700 hover:to-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
                         <ShoppingCart className="w-5 h-5" />
