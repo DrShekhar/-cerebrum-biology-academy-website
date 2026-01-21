@@ -280,42 +280,87 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy is a specialized NEET Biology coaching institute founded by AIIMS faculty members. We focus exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). Our unique approach helps students supplement their existing coaching with expert biology guidance.',
+      'Cerebrum Biology Academy was founded in 2015 by Dr. Shekhar C Singh, an AIIMS Delhi graduate who scored 680/720 in NEET Biology. We are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 2,847+ students across nine years with a 98% NEET qualification rate.',
   },
   whyOnlyBiology: {
     question: 'Why do you focus only on Biology?',
     answer:
-      "Biology is 360 marks in NEET - half the total! Yet most coachings treat it as secondary to Physics & Chemistry. We believe in specialization. Our AIIMS faculty brings real medical perspective that general coachings can't match. Plus, Biology has the highest scoring potential with proper preparation.",
+      "Biology is 360 marks in NEET - half the total! Yet most coachings treat it as secondary to Physics & Chemistry. We believe in specialization. Our AIIMS faculty brings real medical perspective that general coachings can't match. Biology has the highest scoring potential with proper preparation - our students average 80-100 marks improvement in Biology alone.",
   },
   faculty: {
     question: 'Who are your faculty members?',
     answer:
-      'Our faculty includes Dr. Shekhar (Founder, AIIMS graduate with 10+ years teaching experience) and a team of AIIMS/JIPMER doctors passionate about teaching. All our faculty members have personally scored 600+ in NEET and understand the exam from both sides.',
+      'Our faculty includes Dr. Shekhar C Singh (Founder, AIIMS Delhi 2014 graduate with 15+ years teaching experience) and a team of 50-100 AIIMS/top medical college graduates. All faculty are PhD holders from premier institutes with 100+ combined years of teaching expertise. Dr. Singh personally teaches select batches to maintain quality.',
   },
   results: {
     question: 'What are your results?',
     answer:
-      'Our track record: 98% of students score 320+ in Biology, 500+ students selected in top medical colleges, average improvement of 80-100 marks in Biology, and multiple AIR under 1000 selections.',
+      'Our track record: 98% NEET qualification rate, 500+ students in medical colleges, 47 AIIMS selections across seven campuses, 27 students ranked in India\'s top 1,000, 183 government medical college admissions. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023.',
+  },
+  neetExamPattern: {
+    question: 'What is the NEET exam pattern for 2026?',
+    answer:
+      'NEET 2026 will have 200 questions total (180 compulsory). Biology has 90 questions (45 from Class 11, 45 from Class 12). Each correct answer gives +4 marks, incorrect -1 mark. The exam is held once a year (expected May 3, 2026). There is no cap on attempts - candidates aged 17+ can take NEET as many times as needed.',
+  },
+  neetEligibility: {
+    question: 'What is the eligibility criteria for NEET 2026?',
+    answer:
+      'Candidates must pass 10+2 or equivalent with individual passing grades in Physics, Chemistry, Biology/Biotechnology, and English. Minimum age is 17 years. There is no upper age limit. You can take NEET as many times as you want - there is no cap on attempts.',
+  },
+  neetSyllabus: {
+    question: 'What is the NEET Biology syllabus?',
+    answer:
+      'NEET Biology is based on NCERT Class 11 & 12 curriculum. High-weightage topics: Human Physiology, Genetics & Evolution, Reproduction, Plant Physiology, Ecology. NEET 2025 analysis shows Cell, Plant Kingdom, and Molecular Basis of Inheritance had maximum questions. NCERT accounts for ~70% of NEET questions.',
+  },
+  whenToStartPreparation: {
+    question: 'When should I start NEET preparation?',
+    answer:
+      'Ideally start from Class 9-10 with foundation courses for early conceptual clarity. Class 11 is when serious NEET prep begins. Starting early means more practice time - the NEET syllabus is vast. We offer foundation courses for Class 9-10 (₹45K-₹90K), Class 11 comprehensive (₹48K-₹98K), and intensive Class 12/Dropper programs.',
   },
   demoClass: {
     question: 'Can I attend a demo class?',
     answer:
-      'Absolutely! We offer a FREE demo class so you can experience our teaching style. Our counselor will call you to schedule a convenient time. The demo includes a live class, Q&A session, and discussion about your preparation strategy.',
+      'Yes! We offer a FREE 45-minute demo class (₹2,000 value) with study materials included. You can experience our teaching style, meet our faculty, and discuss your preparation strategy. Call +91 88264 44334 or WhatsApp to schedule a convenient time for your demo.',
   },
   onlineVsOffline: {
     question: 'Do you have offline classes?',
     answer:
-      'Yes! We have centers in Delhi NCR - Laxmi Nagar, Dwarka, Noida, and Gurgaon. You can choose online, offline, or hybrid mode based on your convenience. All modes have the same curriculum and faculty.',
+      'Yes! We have offline centers at: Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, and Rohini Sector-9 Delhi. You can choose online, offline, or hybrid mode. All formats have the same expert faculty and curriculum. Our live online classes have recordings, test analysis, and customized courses.',
   },
   studyMaterial: {
     question: 'What study materials do you provide?',
     answer:
-      "We provide NCERT-based comprehensive notes, topic-wise question banks, 10 years of previous year questions with solutions, formula sheets, mind maps, and daily practice problems. All materials are curated by our AIIMS faculty and aligned with the latest NEET pattern.",
+      'We provide: NCERT-based comprehensive notes, 10,000+ practice questions, topic-wise question banks, 10 years previous year NEET questions with solutions, chapter-wise formula sheets, mind maps for quick revision, Daily Practice Problems (DPPs), recorded lectures (all live classes), and 7,000+ free MCQs (no login required). All materials are curated by AIIMS faculty.',
   },
   doubtClearing: {
     question: 'How does doubt clearing work?',
     answer:
-      "We have a 24/7 AI doubt bot for instant answers, live doubt sessions during classes, dedicated doubt clearing slots, and direct WhatsApp access to faculty for Pinnacle students. No doubt goes unanswered!",
+      '24/7 WhatsApp doubt support, live doubt sessions during classes, dedicated doubt clearing slots, and direct WhatsApp access to faculty for Pinnacle students. We also have an AI doubt bot for instant answers. No doubt goes unanswered - we ensure every concept is crystal clear.',
+  },
+  batchSize: {
+    question: 'What are your batch sizes?',
+    answer:
+      'We maintain small batches for personalized attention: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Unlike large coachings with 200+ students per batch, our small sizes enable individual mentoring and personal guidance from faculty.',
+  },
+  testSeries: {
+    question: 'Do you provide test series?',
+    answer:
+      'Yes! Included in all courses: Weekly Tests (NEET-pattern MCQs), Monthly Tests (full-length mocks), Biweekly Board Tests (subjective school-level). NEET Test Series has 50+ full-length mock tests with detailed performance analysis, All India rank comparison, and personalized weak area reports. Additional test series available for ₹8,000/year.',
+  },
+  coachingNecessary: {
+    question: 'Is coaching necessary for NEET?',
+    answer:
+      'While self-study is possible, coaching provides structured guidance, expert mentorship, regular testing, and peer learning. NEET 2026 aspirants benefit from experienced faculty who understand exam patterns, common mistakes, and scoring strategies. Our 98% success rate shows the value of expert guidance. We offer a free demo to help you decide.',
+  },
+  alreadyInCoaching: {
+    question: 'I am already in another coaching. Should I join Cerebrum?',
+    answer:
+      'Many of our top performers are already in major coaching institutes. They join us for focused Biology coaching because: (1) Biology is 360 NEET marks - the backbone of medical career, (2) Small batches (10-40 students) vs 200+ in big coachings, (3) AIIMS faculty brings real medical perspective, (4) Flexible timings that don\'t clash with your current schedule. We supplement your main coaching to help you excel in Biology.',
+  },
+  parentInvolvement: {
+    question: 'How can parents support NEET preparation?',
+    answer:
+      'Parents should show trust over expectations. Ask "How are you feeling?" instead of "How much did you score?" - emotions matter more than marks during this demanding journey. We provide: monthly parent-teacher meetings (Pinnacle tier), transparent progress tracking, performance reports, and direct counselor access. Your belief matters more than constant checking.',
   },
 }
 
@@ -332,13 +377,20 @@ export const CONTACT_POINTS = {
 }
 
 export const USP_POINTS = [
-  '98% success rate - students score 320+ in Biology',
-  '500+ medical college selections',
+  '98% NEET qualification rate - students score 320+ in Biology',
+  '2,847+ students coached with 500+ medical college admissions',
+  'Founded by Dr. Shekhar C Singh - AIIMS Delhi graduate (680/720 in NEET Biology)',
   'AIIMS faculty - learn from doctors who cracked NEET',
-  'Small batches (10-40 students) for personal attention',
-  '24/7 doubt support - AI + Human',
+  'Small batches (10-40 students) - not 200+ like big coachings',
+  '47 AIIMS selections across seven campuses',
+  '27 students ranked in India\'s top 1,000',
+  '10,000+ practice questions and 50+ full-length mock tests',
+  '24/7 doubt support - AI bot + WhatsApp + live sessions',
+  'Proprietary "Concept Pyramid" method for conceptual clarity',
   'Money-back guarantee for Pinnacle tier',
   'Flexible online, offline, and hybrid options',
+  'Recorded lectures + Weekly/Monthly/Biweekly tests included',
+  'Free 45-minute demo class (₹2,000 value) with study materials',
 ]
 
 export const SCHOLARSHIP_INFO = {
@@ -349,4 +401,32 @@ export const SCHOLARSHIP_INFO = {
     'Early bird applicants get priority',
   ],
   howToApply: 'Book a demo class and request scholarship assessment during the session.',
+}
+
+export const ACADEMY_HISTORY = {
+  founded: '2015',
+  founder: 'Dr. Shekhar C Singh (AIIMS Delhi 2014 graduate)',
+  founderScore: '680/720 in NEET Biology',
+  origin:
+    'Started with 23 students in a 400 sq ft room in Rohini. Dr. Singh chose teaching over medical practice after witnessing capable students struggle with Biology despite expensive coaching.',
+  growth: '2,847+ students coached across nine years',
+  rating: '4.9/5 Google rating (500+ reviews)',
+}
+
+export const TEACHING_METHODOLOGY = {
+  approach: 'Concept-based learning rather than rote memorization',
+  strategy: 'NEET-focused strategic approach aligned with exam patterns',
+  uniqueMethod: 'Proprietary "Concept Pyramid" method for conceptual clarity',
+  focus: 'Small batch sizes enable personalized mentoring for individual student success',
+  ncertEmphasis: 'NCERT-based preparation (accounts for ~70% of NEET questions)',
+}
+
+export const NOTABLE_ACHIEVEMENTS = {
+  topScore: 'Sadhna Sirin - 695/720 (100 percentile in Biology) NEET 2023',
+  successRate: '98% NEET qualification rate',
+  totalAdmissions: '500+ medical college selections',
+  aiimsSelections: '47 AIIMS selections across seven campuses',
+  topRanks: "27 students ranked in India's top 1,000",
+  govtColleges: '183 government medical college admissions',
+  averageImprovement: '80-100 marks improvement in Biology',
 }
