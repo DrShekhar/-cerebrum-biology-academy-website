@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState, useRef, useEffect, useCallback } from 'react'
+import { usePathname } from 'next/navigation'
+import { useAuth } from '@/hooks/useAuth'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,
@@ -105,6 +107,9 @@ function calculateLeadScore(data: Partial<LeadData>, messages: Message[]): numbe
 }
 
 export default function SalesAgentWidget() {
+  const pathname = usePathname()
+  const { isAuthenticated } = useAuth()
+
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [inputValue, setInputValue] = useState('')
@@ -117,6 +122,16 @@ export default function SalesAgentWidget() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // ARIA should ONLY show on public pages (homepage, landing pages, pricing)
+  // Should NOT show on authenticated pages (dashboard, tests, profile)
+  const shouldShowAria =
+    !isAuthenticated ||
+    (!pathname.startsWith('/dashboard') &&
+      !pathname.startsWith('/tests') &&
+      !pathname.startsWith('/ai-education-demo') &&
+      !pathname.startsWith('/profile') &&
+      !pathname.startsWith('/courses/enrolled'))
 
   // Scroll to bottom on new messages
   useEffect(() => {
@@ -430,6 +445,9 @@ In the meantime, would you like to:
     e.preventDefault()
     sendMessage(inputValue)
   }
+
+  // Don't render ARIA on authenticated pages - show Ceri AI instead
+  if (!shouldShowAria) return null
 
   return (
     <>
