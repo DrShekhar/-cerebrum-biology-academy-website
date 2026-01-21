@@ -563,4 +563,13 @@ Would you like to:
   offTopicRedirect: `That's outside my expertise area (NEET Biology coaching). Let me connect you with our counselor who can better assist you.
 
 🙋 Would you like to talk to a human counselor?`,
+
+  examStressSupport: `I understand NEET preparation can feel overwhelming. You're not alone in feeling this way.
+
+Here's what can help:
+• Talk to our counselor about managing exam stress
+• We offer study planning sessions with Dr. Shekhar Sir
+• Many successful students felt the same way - you can do this!
+
+Would you like me to connect you with our counselor to discuss your preparation plan?`,
 }
