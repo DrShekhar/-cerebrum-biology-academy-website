@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Award, Star, Quote, ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react'
+import { Award, Star, Quote, ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from 'lucide-react'
 import { RealTestimonial } from '@/data/realTestimonials'
 import { Button } from '@/components/ui/Button'
 
