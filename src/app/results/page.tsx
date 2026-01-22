@@ -107,14 +107,14 @@ const VIDEO_TESTIMONIALS = [
 ]
 
 const TOP_COLLEGES = [
-  { name: 'AIIMS Delhi', students: 89, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'AIIMS Rishikesh', students: 67, color: 'text-[#4a5d4a]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'MAMC Delhi', students: 54, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'JIPMER Puducherry', students: 37, color: 'text-[#5a6d5a]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'KGMC Lucknow', students: 45, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'GMC Nagpur', students: 52, color: 'text-[#4a5d4a]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'BHU Varanasi', students: 41, color: 'text-[#3d4d3d]', bgColor: 'bg-[#e8ede8]' },
-  { name: 'VMMC Delhi', students: 38, color: 'text-[#5a6d5a]', bgColor: 'bg-[#e8ede8]' },
+  { name: 'AIIMS Delhi', students: 89, iconBg: 'bg-[#ea4335]' },
+  { name: 'AIIMS Rishikesh', students: 67, iconBg: 'bg-[#4285f4]' },
+  { name: 'MAMC Delhi', students: 54, iconBg: 'bg-[#fbbc04]' },
+  { name: 'JIPMER Puducherry', students: 37, iconBg: 'bg-[#34a853]' },
+  { name: 'KGMC Lucknow', students: 45, iconBg: 'bg-[#7c3aed]' },
+  { name: 'GMC Nagpur', students: 52, iconBg: 'bg-[#0d9488]' },
+  { name: 'BHU Varanasi', students: 41, iconBg: 'bg-[#ea4335]' },
+  { name: 'VMMC Delhi', students: 38, iconBg: 'bg-[#4285f4]' },
 ]
 
 const METHODOLOGY = [
@@ -375,7 +375,7 @@ export default function ResultsPage() {
                 className="p-6 hover:shadow-xl transition-all bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-10 h-10 bg-[#3d4d3d] rounded-xl flex items-center justify-center">
+                  <div className={`w-10 h-10 ${college.iconBg} rounded-xl flex items-center justify-center`}>
                     <GraduationCap className="h-5 w-5 text-white" />
                   </div>
                   <Badge className="bg-[#e8ede8] text-[#3d4d3d] border-0 font-bold">

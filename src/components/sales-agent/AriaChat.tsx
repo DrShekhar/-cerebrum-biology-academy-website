@@ -37,7 +37,7 @@ function MessageBubble({
       className={`flex gap-2 ${isBot ? 'justify-start' : 'justify-end'}`}
     >
       {isBot && (
-        <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-teal-600">
+        <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
           <Bot className="h-4 w-4 text-white" />
         </div>
       )}
@@ -106,7 +106,7 @@ function TypingIndicator({ language }: { language: Language }) {
       exit={{ opacity: 0 }}
       className="flex items-center gap-2"
     >
-      <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-teal-600">
+      <div className="flex h-7 w-7 items-center justify-center rounded-full bg-green-500">
         <Bot className="h-4 w-4 text-white" />
       </div>
       <div className="rounded-2xl rounded-tl-sm bg-slate-100 px-3 py-2">
@@ -189,7 +189,7 @@ export function AriaChat({
       {/* Empty state */}
       {messages.length === 0 && (
         <div className="flex h-full flex-col items-center justify-center text-center">
-          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-teal-600">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">
             <Sparkles className="h-6 w-6 text-white" />
           </div>
           <p className="text-sm text-slate-500">
