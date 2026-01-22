@@ -10,16 +10,10 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
   const [isAdmin, setIsAdmin] = useState(false)
   const [isCheckingRole, setIsCheckingRole] = useState(true)
 
-  // DEV MODE: Skip authentication if bypass is enabled
-  const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
+  // SECURITY: Auth bypass removed from client-side code
+  // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
 
   useEffect(() => {
-    if (isBypassEnabled) {
-      setIsAdmin(true)
-      setIsCheckingRole(false)
-      return
-    }
-
     if (isLoading) return
 
     if (!isAuthenticated) {
@@ -36,9 +30,9 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     if (!hasAdminAccess) {
       router.push('/dashboard?error=admin_required')
     }
-  }, [isLoading, isAuthenticated, user, router, isBypassEnabled])
+  }, [isLoading, isAuthenticated, user, router])
 
-  if (!isBypassEnabled && (isLoading || isCheckingRole)) {
+  if (isLoading || isCheckingRole) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -52,7 +46,7 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isBypassEnabled && (!isAuthenticated || !isAdmin)) {
+  if (!isAuthenticated || !isAdmin) {
     return null
   }
 

@@ -18,32 +18,21 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   const [isCounselor, setIsCounselor] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
 
-  // DEV MODE: Skip authentication check if bypass is enabled
-  const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
+  // SECURITY: Auth bypass removed from client-side code
+  // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
 
   useEffect(() => {
-    if (isBypassEnabled) {
-      setIsCounselor(true)
-      setIsAdmin(true)
-      return
-    }
-
     if (user) {
       const userRole = user.role?.toLowerCase()
       setIsCounselor(userRole === 'counselor')
       setIsAdmin(userRole === 'admin' || userRole === 'owner')
     }
-  }, [user, isBypassEnabled])
+  }, [user])
 
   // Allow access if owner OR counselor/admin role
   const hasCounselorAccess = isOwner || isCounselor || isAdmin
 
   useEffect(() => {
-    if (isBypassEnabled) {
-      console.log('[DEV MODE] Bypassing counselor layout authentication')
-      return
-    }
-
     if (isLoading || isCheckingOwner) return
 
     if (!isAuthenticated) {
@@ -55,7 +44,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       router.push('/dashboard?error=counselor_required')
       return
     }
-  }, [isLoading, isAuthenticated, isCheckingOwner, hasCounselorAccess, router, pathname, isBypassEnabled])
+  }, [isLoading, isAuthenticated, isCheckingOwner, hasCounselorAccess, router, pathname])
 
   // Global keyboard shortcuts
   useEffect(() => {
@@ -102,7 +91,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [router])
 
-  if (!isBypassEnabled && (isLoading || isCheckingOwner)) {
+  if (isLoading || isCheckingOwner) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
@@ -118,14 +107,12 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!isBypassEnabled && (!isAuthenticated || !hasCounselorAccess)) {
+  if (!isAuthenticated || !hasCounselorAccess) {
     return null
   }
 
   // Get user initials for avatar
-  const userInitial = isBypassEnabled
-    ? 'D'
-    : user?.fullName?.charAt(0).toUpperCase() || user?.email?.charAt(0).toUpperCase() || 'C'
+  const userInitial = user?.fullName?.charAt(0).toUpperCase() || user?.email?.charAt(0).toUpperCase() || 'C'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">

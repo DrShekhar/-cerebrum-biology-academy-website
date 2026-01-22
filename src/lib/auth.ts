@@ -181,12 +181,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           // Try to find user in database if Prisma is available
           if (prisma) {
             try {
-              console.log('🔍 Looking up user:', validatedData.email)
               const user = await prisma.users.findUnique({
                 where: { email: validatedData.email },
               })
-
-              console.log('👤 User found:', !!user, user ? `Role: ${user.role}` : 'No user')
 
               if (user && user.passwordHash) {
                 const isValidPassword = await bcrypt.compare(
@@ -194,10 +191,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                   user.passwordHash
                 )
 
-                console.log('🔐 Password valid:', isValidPassword)
-
                 if (isValidPassword) {
-                  console.log('✅ Login successful for:', user.email, user.role)
                   return {
                     id: user.id,
                     email: user.email,
@@ -210,22 +204,18 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                       | 'counselor',
                     profile: user.profile as any,
                   }
-                } else {
-                  console.log('❌ Password mismatch for:', user.email)
                 }
-              } else {
-                console.log('❌ User not found or no password hash')
               }
             } catch (dbError) {
-              console.warn('Database query failed, falling back to hardcoded admin:', dbError)
+              // Database query failed - continue to throw auth error
+              if (process.env.NODE_ENV !== 'production') {
+                console.warn('Database query failed:', dbError)
+              }
             }
-          } else {
-            console.warn('Prisma client not available, using hardcoded admin only')
           }
 
           throw new Error('Invalid email or password')
         } catch (error) {
-          console.error('Authentication error:', error)
           if (error instanceof z.ZodError) {
             throw new Error('Invalid input: ' + error.issues.map((e: any) => e.message).join(', '))
           }

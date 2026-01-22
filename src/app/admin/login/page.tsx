@@ -15,12 +15,8 @@ export default function AdminLogin() {
   useEffect(() => {
     if (loading) return
 
-    // DEV MODE: Skip authentication and go directly to admin dashboard
-    if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
-      console.log('[DEV MODE] Bypassing admin login, redirecting to students page')
-      router.replace('/admin/students')
-      return
-    }
+    // SECURITY: Auth bypass removed from client-side code
+    // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
 
     // If already signed in with Firebase, go to admin dashboard
     if (user) {

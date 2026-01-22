@@ -2,6 +2,25 @@ import { NextRequest } from 'next/server'
 import { auth } from '@/lib/auth'
 import { logger } from '@/lib/utils/logger'
 import prisma from '@/lib/prisma'
+import crypto from 'crypto'
+
+/**
+ * Timing-safe comparison to prevent timing attacks on API keys
+ * SECURITY: Always use this for comparing secrets, never use === directly
+ */
+function secureCompare(a: string, b: string): boolean {
+  if (a.length !== b.length) {
+    // Pad shorter string to prevent length-based timing leaks
+    const maxLen = Math.max(a.length, b.length)
+    a = a.padEnd(maxLen, '\0')
+    b = b.padEnd(maxLen, '\0')
+  }
+  try {
+    return crypto.timingSafeEqual(Buffer.from(a, 'utf8'), Buffer.from(b, 'utf8'))
+  } catch {
+    return false
+  }
+}
 
 export interface AdminVerificationResult {
   authorized: boolean
@@ -12,14 +31,20 @@ export interface AdminVerificationResult {
 
 export async function verifyAdminAccess(request: NextRequest): Promise<AdminVerificationResult> {
   try {
-    // DEV MODE: Bypass authentication during development
-    if (process.env.BYPASS_CRM_AUTH === 'true') {
-      console.log('[DEV MODE] Bypassing admin verification')
+    // DEV MODE: Bypass authentication during development ONLY
+    // SECURITY: This bypass is disabled in production to prevent accidental exposure
+    if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV !== 'production') {
+      console.log('[DEV MODE] Bypassing admin verification (non-production only)')
       return {
         authorized: true,
         adminId: 'dev-admin-id',
         adminEmail: 'dev@cerebrumbiologyacademy.com',
       }
+    }
+
+    // Warn if bypass is attempted in production
+    if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV === 'production') {
+      logger.error('[SECURITY WARNING] BYPASS_CRM_AUTH is set in production but ignored')
     }
 
     const authHeader = request.headers.get('authorization')
@@ -63,7 +88,8 @@ async function verifyApiKey(apiKey: string): Promise<AdminVerificationResult> {
     }
   }
 
-  if (apiKey !== validApiKey) {
+  // SECURITY: Use timing-safe comparison to prevent timing attacks
+  if (!secureCompare(apiKey, validApiKey)) {
     logger.warn('Invalid API key attempt')
     return {
       authorized: false,
@@ -88,7 +114,8 @@ async function verifyBearerToken(token: string): Promise<AdminVerificationResult
       }
     }
 
-    if (token !== validToken) {
+    // SECURITY: Use timing-safe comparison to prevent timing attacks
+    if (!secureCompare(token, validToken)) {
       return {
         authorized: false,
         message: 'Invalid bearer token',

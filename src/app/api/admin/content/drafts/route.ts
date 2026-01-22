@@ -20,9 +20,16 @@ interface DraftItem {
 }
 
 async function verifyAdminAuth(request: NextRequest): Promise<boolean> {
-  // DEV MODE: Skip authentication
-  if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
+  // SECURITY: Auth bypass only works in non-production environments
+  // Using server-side env var (not NEXT_PUBLIC_) to prevent client exposure
+  if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV !== 'production') {
+    console.log('[DEV MODE] Bypassing admin auth for drafts API (non-production only)')
     return true
+  }
+
+  // Warn if bypass is attempted in production
+  if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV === 'production') {
+    console.error('[SECURITY WARNING] BYPASS_CRM_AUTH is set in production but ignored')
   }
 
   try {

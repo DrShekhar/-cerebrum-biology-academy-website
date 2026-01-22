@@ -20,9 +20,10 @@ export interface CounselorSession {
 export async function authenticateCounselor(): Promise<
   { session: CounselorSession } | { error: NextResponse }
 > {
-  // DEV MODE: Bypass authentication during development
-  if (process.env.BYPASS_CRM_AUTH === 'true') {
-    console.log('[DEV MODE] Bypassing counselor authentication')
+  // DEV MODE: Bypass authentication during development ONLY
+  // SECURITY: This bypass is disabled in production to prevent accidental exposure
+  if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV !== 'production') {
+    console.log('[DEV MODE] Bypassing counselor authentication (non-production only)')
     return {
       session: {
         userId: 'dev-user-id',
@@ -31,6 +32,11 @@ export async function authenticateCounselor(): Promise<
         role: 'ADMIN',
       },
     }
+  }
+
+  // Warn if bypass is attempted in production
+  if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV === 'production') {
+    console.error('[SECURITY WARNING] BYPASS_CRM_AUTH is set in production but ignored')
   }
 
   const session = await auth()
