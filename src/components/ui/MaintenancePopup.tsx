@@ -40,12 +40,12 @@ export function MaintenancePopup() {
   return (
     <div
       className={cn(
-        'fixed bottom-4 right-4 z-50',
+        'fixed top-20 right-4 z-50',
         'w-[95px] min-h-[75px] p-2',
         'bg-gradient-to-br from-amber-50 to-orange-50',
         'border border-amber-300 rounded-lg shadow-lg',
         'transform transition-all duration-300 ease-out',
-        isExiting ? 'opacity-0 translate-y-2 scale-95' : 'opacity-100 translate-y-0 scale-100'
+        isExiting ? 'opacity-0 -translate-y-2 scale-95' : 'opacity-100 translate-y-0 scale-100'
       )}
       role="alert"
       aria-live="polite"
