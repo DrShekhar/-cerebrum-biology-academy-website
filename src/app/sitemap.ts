@@ -196,6 +196,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     },
+    // Class-wise Tuition & NEET Landing Pages - HIGH PRIORITY
+    {
+      url: `${baseUrl}/class-11-biology-tuition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/class-12-biology-tuition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-biology-class-11`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-biology-class-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-biology-coaching-delhi-ncr`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
     {
       url: `${baseUrl}/locations`,
       lastModified: lastUpdated,
