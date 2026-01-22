@@ -432,7 +432,7 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
           <div className="mt-4 flex justify-center">
             <a
               href={story.socialProof.linkedIn}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
             >

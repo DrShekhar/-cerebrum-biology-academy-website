@@ -190,32 +190,32 @@ export const logger = createLogger('cerebrum')
  * Safe console replacement for development
  */
 export const safeLog = {
-  info: (...args: any[]) => {
+  info: (...args: unknown[]) => {
     const redacted = args.map(arg =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.info(...redacted)
+    logger.info({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'info')
   },
 
-  error: (...args: any[]) => {
+  error: (...args: unknown[]) => {
     const redacted = args.map(arg =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.error(...redacted)
+    logger.error({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'error')
   },
 
-  warn: (...args: any[]) => {
+  warn: (...args: unknown[]) => {
     const redacted = args.map(arg =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.warn(...redacted)
+    logger.warn({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'warning')
   },
 
-  debug: (...args: any[]) => {
+  debug: (...args: unknown[]) => {
     const redacted = args.map(arg =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.debug(...redacted)
+    logger.debug({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'debug')
   },
 }
 

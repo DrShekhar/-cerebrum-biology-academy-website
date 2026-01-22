@@ -313,7 +313,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                   </Link>
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.centerDetails.address)}`}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50"
                   >

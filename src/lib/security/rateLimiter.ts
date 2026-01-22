@@ -77,7 +77,8 @@ export function getIdentifier(request: NextRequest): string {
 
   // Fallback to IP address
   const forwarded = request.headers.get('x-forwarded-for')
-  const ip = forwarded ? forwarded.split(',')[0].trim() : request.ip || 'unknown'
+  const realIp = request.headers.get('x-real-ip')
+  const ip = forwarded ? forwarded.split(',')[0].trim() : realIp || 'unknown'
 
   return `ip:${ip}`
 }

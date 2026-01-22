@@ -428,7 +428,7 @@ export default function KeywordTrackerPage() {
                             <span className="text-gray-300">•</span>
                             <a
                               href={kw.url}
-                              target="_blank" rel="noopener noreferrer"
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="text-xs text-purple-600 hover:text-purple-700 flex items-center gap-1"
                             >

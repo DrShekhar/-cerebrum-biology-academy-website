@@ -116,7 +116,7 @@ export function GoogleReviewsWidget({
 
             <a
               href="https://www.google.com/maps/place/Cerebrum+Biology+Academy"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-lg"
             >
@@ -193,7 +193,7 @@ export function GoogleReviewsWidget({
 
         <a
           href="https://www.google.com/maps/place/Cerebrum+Biology+Academy"
-          target="_blank" rel="noopener noreferrer"
+          target="_blank"
           rel="noopener noreferrer"
           className="mt-4 block text-center text-blue-600 hover:text-blue-700 font-medium text-sm"
         >
@@ -302,7 +302,7 @@ export function GoogleReviewsWidget({
         >
           <a
             href="https://www.google.com/maps/place/Cerebrum+Biology+Academy"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-colors shadow-lg hover:shadow-xl"
           >

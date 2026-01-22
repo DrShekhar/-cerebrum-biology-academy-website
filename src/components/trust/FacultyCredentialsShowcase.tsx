@@ -655,7 +655,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                 {faculty.socialProof.linkedIn && (
                   <a
                     href={faculty.socialProof.linkedIn}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
                   >
@@ -666,7 +666,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                 {faculty.socialProof.googleScholar && (
                   <a
                     href={faculty.socialProof.googleScholar}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-green-600 hover:text-green-700 text-sm font-medium"
                   >
