@@ -32,12 +32,12 @@ import {
 
 const getCourseDetailUrl = (classLevel: ClassLevel): string => {
   const urlMap: Record<ClassLevel, string> = {
-    'foundation-9': '/courses/class-9-foundation',
-    'foundation-10': '/courses/class-10-foundation',
-    'class-11': '/courses/class-11',
-    'class-12': '/courses/class-12',
-    dropper: '/courses/dropper',
-    '2-year': '/courses/neet-complete',
+    'foundation-9': '/courses/class-9-foundation-biology',
+    'foundation-10': '/courses/class-10-foundation-biology',
+    'class-11': '/courses/class-11-neet-comprehensive',
+    'class-12': '/courses/class-12-neet-intensive',
+    dropper: '/courses/neet-dropper-intensive',
+    '2-year': '/courses/2-year-complete-neet',
   }
   return urlMap[classLevel] || '/courses'
 }
