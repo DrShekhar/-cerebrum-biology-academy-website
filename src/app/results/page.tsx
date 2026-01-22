@@ -123,46 +123,40 @@ const METHODOLOGY = [
     title: 'Conceptual Mastery',
     description:
       'Deep understanding over rote learning. Our faculty ensures every concept is crystal clear.',
-    color: 'text-[#3d4d3d]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#ea4335]',
   },
   {
     icon: Target,
     title: 'Targeted Practice',
     description:
       '10,000+ NEET-specific questions with detailed solutions and performance analytics.',
-    color: 'text-[#4a5d4a]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#4285f4]',
   },
   {
     icon: BarChart3,
     title: 'Personalized Analytics',
     description: 'AI-powered insights identify weak areas and create customized improvement plans.',
-    color: 'text-[#3d4d3d]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#fbbc04]',
   },
   {
     icon: Users,
     title: 'Expert Mentorship',
     description:
       'One-on-one guidance from NEET toppers and experienced faculty throughout your journey.',
-    color: 'text-[#5a6d5a]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#34a853]',
   },
   {
     icon: Zap,
     title: 'Regular Testing',
     description: 'Weekly mock tests simulating real NEET environment to build speed and accuracy.',
-    color: 'text-[#3d4d3d]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#7c3aed]',
   },
   {
     icon: Heart,
     title: 'Emotional Support',
     description:
       'Stress management, motivation sessions, and counseling to keep you mentally strong.',
-    color: 'text-[#4a5d4a]',
-    bgColor: 'bg-[#e8ede8]',
+    bgColor: 'bg-[#0d9488]',
   },
 ]
 
@@ -277,61 +271,61 @@ export default function ResultsPage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 mb-10 sm:mb-12 md:mb-16">
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#3d4d3d] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#ea4335]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#ea4335] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <Trophy className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.aiims}
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">AIIMS Selections</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#4a5d4a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#4285f4]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#4285f4] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <Target className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.successRate}%
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">Success Rate</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#5a6d5a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#fbbc04]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#fbbc04] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <Medal className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.topRanks}
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">Top 500 Ranks</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#3d4d3d] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#34a853]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#34a853] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <TrendingUp className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               +{NEET_2024_RESULTS.averageImprovement}
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">Avg. Improvement</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#4a5d4a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#7c3aed]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#7c3aed] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <GraduationCap className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.totalStudents}
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">Total Students</div>
           </Card>
 
-          <Card className="text-center p-4 sm:p-6 bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 shadow-lg hover:shadow-xl transition-all">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#5a6d5a] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+          <Card className="text-center p-4 sm:p-6 bg-white border border-gray-100 hover:border-[#0d9488]/30 shadow-lg hover:shadow-xl transition-all">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#0d9488] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <Award className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
             </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.scholarships}
             </div>
             <div className="text-xs sm:text-sm font-medium text-gray-600">Scholarships Won</div>
@@ -474,14 +468,14 @@ export default function ResultsPage() {
             {METHODOLOGY.map((method, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-xl transition-all bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30"
+                className="p-6 hover:shadow-xl transition-all bg-white border border-gray-100 hover:border-gray-200"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className={`w-12 h-12 ${method.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
                     <method.icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-2 text-[#3d4d3d]">{method.title}</h3>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">{method.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{method.description}</p>
                   </div>
                 </div>

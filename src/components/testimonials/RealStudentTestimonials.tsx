@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Play, Award, Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Award, Star, Quote, ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react'
 import { RealTestimonial } from '@/data/realTestimonials'
 import { Button } from '@/components/ui/Button'
 
