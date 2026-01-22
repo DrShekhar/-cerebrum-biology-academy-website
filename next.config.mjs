@@ -1329,6 +1329,20 @@ const nextConfig = {
       // Biology classes with sub-areas (specific ones from GSC)
       { source: '/biology-classes-green-park/iit', destination: '/biology-classes-south-delhi', permanent: true },
       { source: '/biology-classes-neet-coaching-south-city-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+
+      // ============================================
+      // GSC "Alternate page with canonical" - Additional fixes
+      // ============================================
+
+      // Location sub-pages (gurugram variations)
+      { source: '/locations/gurugram', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/locations/gurugram/:area*', destination: '/neet-coaching-gurgaon', permanent: true },
+
+      // www vs non-www (handled by DNS but adding for safety)
+      // These pages exist but may have www/non-www canonical issues
+
+      // Services main page redirect
+      { source: '/services', destination: '/courses', permanent: true },
     ]
   },
 
