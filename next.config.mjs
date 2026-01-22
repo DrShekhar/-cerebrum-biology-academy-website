@@ -265,7 +265,7 @@ const nextConfig = {
       {
         source: '/admin-login',
         destination: '/admin',
-        permanent: false,
+        permanent: true,
       },
       // Old blog slugs redirecting to relevant existing content
       {
@@ -437,7 +437,7 @@ const nextConfig = {
       {
         source: '/counselor/communications',
         destination: '/auth/signin',
-        permanent: false,
+        permanent: true,
       },
       // Old blog posts - redirect to relevant content
       {
@@ -667,14 +667,14 @@ const nextConfig = {
       {
         source: '/fonts/:file*',
         destination: '/',
-        permanent: false,
+        permanent: true,
       },
 
       // Search template URL - redirect to homepage
       {
         source: '/search',
         destination: '/',
-        permanent: false,
+        permanent: true,
       },
 
       // Career options page migrated to blog
