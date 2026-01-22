@@ -90,9 +90,12 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const handleLogout = async () => {
     try {
       await signOut()
-      router.push('/select-role')
+      // Force hard refresh to clear all client-side state
+      window.location.href = '/select-role'
     } catch (error) {
       console.error('Logout error:', error)
+      // Even on error, force redirect
+      window.location.href = '/select-role'
     }
   }
 

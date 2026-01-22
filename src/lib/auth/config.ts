@@ -670,9 +670,30 @@ export class CookieManager {
   }
 
   static clearAuthCookies(response: NextResponse) {
+    const isProduction = process.env.NODE_ENV === 'production'
+
+    // Cookie options must match how they were set for deletion to work
+    const cookieOptions = {
+      path: '/',
+      secure: isProduction,
+      sameSite: 'lax' as const,
+      maxAge: 0, // Expire immediately
+    }
+
+    // Clear auth tokens by setting empty value with maxAge: 0
+    // This is more reliable than delete() across different browsers
+    response.cookies.set('auth-token', '', cookieOptions)
+    response.cookies.set('refresh-token', '', cookieOptions)
+
+    // Clear all possible session token variants (both secure and non-secure)
+    response.cookies.set('authjs.session-token', '', { ...cookieOptions, secure: false })
+    response.cookies.set('__Secure-authjs.session-token', '', { ...cookieOptions, secure: true })
+    response.cookies.set('next-auth.session-token', '', { ...cookieOptions, secure: false })
+    response.cookies.set('__Secure-next-auth.session-token', '', { ...cookieOptions, secure: true })
+
+    // Also use delete as a fallback for older implementations
     response.cookies.delete('auth-token')
     response.cookies.delete('refresh-token')
-    // Clear all possible session token variants (both secure and non-secure)
     response.cookies.delete('authjs.session-token')
     response.cookies.delete('__Secure-authjs.session-token')
     response.cookies.delete('next-auth.session-token')

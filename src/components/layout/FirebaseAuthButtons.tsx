@@ -10,9 +10,16 @@ export function FirebaseAuthButtons() {
   const router = useRouter()
 
   const handleSignOut = async () => {
-    await signOut()
-    router.push('/')
-    router.refresh()
+    try {
+      await signOut()
+      // Force a hard refresh to clear all client-side state
+      // router.refresh() only refreshes server components, not client state
+      window.location.href = '/'
+    } catch (error) {
+      console.error('Sign out error:', error)
+      // Even on error, redirect to home and force refresh
+      window.location.href = '/'
+    }
   }
 
   if (isLoading) {
