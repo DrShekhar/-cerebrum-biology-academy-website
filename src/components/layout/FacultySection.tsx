@@ -128,7 +128,7 @@ export function FacultySection() {
             >
               {/* Faculty Image */}
               <div className="w-20 xs:w-22 sm:w-24 h-20 xs:h-22 sm:h-24 mx-auto mb-4 xs:mb-5 sm:mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
-                {faculty.image ? (
+                {faculty.image && !faculty.image.includes('ui-avatars.com') ? (
                   <Image
                     src={faculty.image}
                     alt={faculty.name}
@@ -139,8 +139,10 @@ export function FacultySection() {
                     sizes="(max-width: 640px) 80px, 96px"
                   />
                 ) : (
-                  <div className="w-full h-full bg-blue-500 flex items-center justify-center">
-                    <GraduationCap className="w-10 xs:w-11 sm:w-12 h-10 xs:h-11 sm:h-12 text-white" />
+                  <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-xl xs:text-2xl sm:text-3xl">
+                      {faculty.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                    </span>
                   </div>
                 )}
               </div>

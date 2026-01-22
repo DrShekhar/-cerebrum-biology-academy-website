@@ -264,8 +264,8 @@ export default function FacultyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="relative h-48 bg-[#3d4d3d]">
-                  {faculty.image ? (
+                <div className="relative h-48 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#5a6d5a]">
+                  {faculty.image && !faculty.image.includes('ui-avatars.com') ? (
                     <Image
                       src={faculty.image}
                       alt={faculty.name}
@@ -275,8 +275,10 @@ export default function FacultyPage() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center">
-                        <GraduationCap className="w-10 h-10 text-white" />
+                      <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
+                        <span className="text-white font-bold text-3xl">
+                          {faculty.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                        </span>
                       </div>
                     </div>
                   )}
