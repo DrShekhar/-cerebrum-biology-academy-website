@@ -1037,6 +1037,24 @@ const nextConfig = {
         destination: '/biology-tuition-class-12',
         permanent: true,
       },
+
+      // ============================================
+      // Catch-all redirects for location sub-routes
+      // ============================================
+
+      // Catch all biology-classes sub-routes
+      {
+        source: '/biology-classes-:location/:area+',
+        destination: '/biology-classes-:location',
+        permanent: true,
+      },
+
+      // Catch all biology-tuition sub-routes
+      {
+        source: '/biology-tuition-:location/:area+',
+        destination: '/biology-tuition-:location',
+        permanent: true,
+      },
     ]
   },
 
