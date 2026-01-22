@@ -118,7 +118,7 @@ export const detailedCourses: Course[] = [
       testSeries: 25,
     },
     instructor: {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Delhi), MD (Anatomy)',
       experience: '15+ years',
       specialization: ['Human Anatomy', 'Physiology', 'NEET Strategy'],
@@ -302,7 +302,7 @@ export const detailedCourses: Course[] = [
       testSeries: 30,
     },
     instructor: {
-      name: 'Dr. Priya Mehta',
+      name: 'Dr. Shekhar',
       qualification: 'MSc (Botany), PhD (Plant Physiology)',
       experience: '12+ years',
       specialization: ['Plant Biology', 'Ecology', 'Genetics'],
@@ -465,7 +465,7 @@ export const detailedCourses: Course[] = [
       testSeries: 50,
     },
     instructor: {
-      name: 'Dr. Amit Singh',
+      name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Jodhpur), MS (General Surgery)',
       experience: '10+ years',
       specialization: ['Animal Physiology', 'Human Biology', 'Clinical Correlation'],
@@ -612,7 +612,7 @@ export const detailedCourses: Course[] = [
       testSeries: 20,
     },
     instructor: {
-      name: 'Dr. Priya Sharma',
+      name: 'Dr. Shekhar',
       qualification: 'PhD in Botany, MSc (Biology)',
       experience: '8+ years',
       specialization: ['Foundation Biology', 'Cell Biology', 'Plant Sciences'],
@@ -745,7 +745,7 @@ export const detailedCourses: Course[] = [
       testSeries: 25,
     },
     instructor: {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Dr. Shekhar',
       qualification: 'PhD in Zoology, MSc (Life Sciences)',
       experience: '10+ years',
       specialization: ['Foundation Biology', 'Human Physiology', 'Genetics'],
@@ -883,7 +883,7 @@ export const detailedCourses: Course[] = [
       testSeries: 40,
     },
     instructor: {
-      name: 'Dr. Vikram Mehta',
+      name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Delhi), PhD (Molecular Biology)',
       experience: '12+ years',
       specialization: ['NEET Biology', 'Molecular Biology', 'Genetics'],
@@ -1037,7 +1037,7 @@ export const detailedCourses: Course[] = [
       testSeries: 50,
     },
     instructor: {
-      name: 'Dr. Amit Singh',
+      name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Jodhpur), MS (General Surgery)',
       experience: '10+ years in dropper batch coaching',
       specialization: ['NEET Strategy', 'Score Improvement', 'Motivation'],

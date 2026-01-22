@@ -261,7 +261,7 @@ export const coursePrograms: CourseProgram[] = [
     faculty: [
       {
         id: 'fac-001',
-        name: 'Dr. Priya Sharma',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Biology', 'Ph.D Botany'],
         experience: '8 years',
         specialization: ['Cell Biology', 'Plant Sciences', 'Foundation Teaching'],
@@ -379,7 +379,7 @@ export const coursePrograms: CourseProgram[] = [
     faculty: [
       {
         id: 'fac-002',
-        name: 'Dr. Rajesh Kumar',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Zoology', 'Ph.D Animal Physiology'],
         experience: '12 years',
         specialization: ['Animal Physiology', 'Life Processes', 'NEET Foundation'],
@@ -476,7 +476,7 @@ export const coursePrograms: CourseProgram[] = [
     faculty: [
       {
         id: 'fac-003',
-        name: 'Dr. Meena Patel',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Botany', 'Ph.D Plant Taxonomy', 'CSIR-NET'],
         experience: '15 years',
         specialization: ['Plant Biology', 'Taxonomy', 'NEET Biology'],
@@ -579,7 +579,7 @@ export const coursePrograms: CourseProgram[] = [
     faculty: [
       {
         id: 'fac-004',
-        name: 'Dr. Anil Singh',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Zoology', 'Ph.D Human Physiology', 'Medical College Faculty'],
         experience: '18 years',
         specialization: ['Human Physiology', 'Medical Entrance', 'Board Preparation'],
@@ -890,7 +890,7 @@ export const coursePrograms: CourseProgram[] = [
     faculty: [
       {
         id: 'fac-005',
-        name: 'Dr. Kavita Reddy',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Biotechnology', 'Ph.D Molecular Biology', 'NEET Coaching Specialist'],
         experience: '12 years',
         specialization: [
@@ -908,7 +908,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       {
         id: 'fac-006',
-        name: 'Dr. Suresh Gupta',
+        name: 'Dr. Shekhar',
         qualification: ['M.Sc Zoology', 'Ph.D Animal Behavior', 'Ex-Medical College Professor'],
         experience: '20 years',
         specialization: ['Human Physiology', 'Animal Behavior', 'Medical Entrance Strategy'],
