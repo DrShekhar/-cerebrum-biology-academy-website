@@ -308,7 +308,6 @@ export default function SessionDetailPage({ params }: SessionDetailPageProps) {
                         <a
                           href={session.meetingLink}
                           target="_blank" rel="noopener noreferrer"
-                          rel="noopener noreferrer"
                           className="font-medium text-blue-600 hover:underline break-all"
                         >
                           Join Meeting

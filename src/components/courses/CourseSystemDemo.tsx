@@ -174,6 +174,7 @@ export function CourseSystemDemo() {
                   '11th': 3,
                   '12th': 3,
                   Dropper: 2,
+                  '2-Year': 1,
                 }}
               />
             )}

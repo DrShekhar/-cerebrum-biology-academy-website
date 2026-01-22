@@ -282,7 +282,6 @@ export default function AssignmentDetailPage({
                         key={index}
                         href={file}
                         target="_blank" rel="noopener noreferrer"
-                        rel="noopener noreferrer"
                         className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                       >
                         <Download className="w-4 h-4 text-blue-600" />
@@ -327,7 +326,6 @@ export default function AssignmentDetailPage({
                           key={index}
                           href={file}
                           target="_blank" rel="noopener noreferrer"
-                          rel="noopener noreferrer"
                           className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100"
                         >
                           <Download className="w-4 h-4 text-blue-600" />

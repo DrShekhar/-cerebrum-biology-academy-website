@@ -401,7 +401,6 @@ export default function BiologyTeacherNearMePage() {
                       <a
                         href={center.mapUrl}
                         target="_blank" rel="noopener noreferrer"
-                        rel="noopener noreferrer"
                         className={`p-3 rounded-xl ${style.iconBg} hover:scale-105 transition-transform`}
                         title="Get directions"
                       >
@@ -607,7 +606,6 @@ export default function BiologyTeacherNearMePage() {
               <a
                 href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
                 target="_blank" rel="noopener noreferrer"
-                rel="noopener noreferrer"
               >
                 <Button size="lg" className="bg-green-500 hover:bg-green-600">
                   <MessageCircle className="w-5 h-5 mr-2" />

@@ -154,7 +154,6 @@ export function InternationalCourseCard({
           <a
             href={`https://wa.me/${CONTACT_INFO.whatsapp.primary}?text=${whatsappMessage}`}
             target="_blank" rel="noopener noreferrer"
-            rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-white bg-green-500 hover:bg-green-600 rounded-lg transition-colors"
           >
             <MessageCircle className="w-4 h-4 mr-2" />

@@ -251,7 +251,6 @@ export default async function VerifyCertificatePage({ params }: PageProps) {
                   <a
                     href={issuer.website}
                     target="_blank" rel="noopener noreferrer"
-                    rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700"
                   >
                     {issuer.website}

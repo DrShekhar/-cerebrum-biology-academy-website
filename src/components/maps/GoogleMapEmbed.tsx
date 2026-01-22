@@ -50,7 +50,6 @@ export function GoogleMapEmbed({
             <a
               href={googleMapsDirectionsUrl}
               target="_blank" rel="noopener noreferrer"
-              rel="noopener noreferrer"
               className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Navigation className="w-4 h-4 mr-2" />
@@ -89,7 +88,6 @@ export function GoogleMapEmbed({
             <a
               href={googleMapsDirectionsUrl}
               target="_blank" rel="noopener noreferrer"
-              rel="noopener noreferrer"
               className="inline-flex items-center text-sm bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Navigation className="w-4 h-4 mr-1" />
@@ -98,7 +96,6 @@ export function GoogleMapEmbed({
             <a
               href={googleMapsSearchUrl}
               target="_blank" rel="noopener noreferrer"
-              rel="noopener noreferrer"
               className="inline-flex items-center text-sm border border-gray-300 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <ExternalLink className="w-4 h-4 mr-1" />

@@ -253,7 +253,6 @@ function NoticeDetailModal({ notice, isOpen, onClose }: NoticeDetailModalProps) 
                     key={index}
                     href={attachment.url}
                     target="_blank" rel="noopener noreferrer"
-                    rel="noopener noreferrer"
                     className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                   >
                     <span className="text-lg">📎</span>

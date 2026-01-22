@@ -427,7 +427,6 @@ export default function ReferralLinksPage() {
                 <a
                   href={link.fullUrl}
                   target="_blank" rel="noopener noreferrer"
-                  rel="noopener noreferrer"
                   className="p-1.5 hover:bg-gray-200 rounded transition-colors flex-shrink-0"
                   title="Open link"
                 >

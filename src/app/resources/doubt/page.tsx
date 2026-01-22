@@ -184,7 +184,6 @@ export default function DoubtResolutionPage() {
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
                 target="_blank" rel="noopener noreferrer"
-                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -333,7 +332,6 @@ export default function DoubtResolutionPage() {
                     <a
                       href={`https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20doubt%20in%20${encodeURIComponent(category.name)}`}
                       target="_blank" rel="noopener noreferrer"
-                      rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-700"
                     >
                       <MessageSquare className="w-4 h-4 mr-1" />
@@ -535,7 +533,6 @@ export default function DoubtResolutionPage() {
             <a
               href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
               target="_blank" rel="noopener noreferrer"
-              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all"
             >
               <MessageSquare className="w-5 h-5 mr-2" />

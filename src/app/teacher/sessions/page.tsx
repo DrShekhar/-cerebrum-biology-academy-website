@@ -360,7 +360,6 @@ export default function TeacherSessionsPage() {
                         <a
                           href={session.meetingLink}
                           target="_blank" rel="noopener noreferrer"
-                          rel="noopener noreferrer"
                           className="text-blue-600 hover:text-blue-700"
                         >
                           <Video className="w-5 h-5" />
@@ -518,7 +517,6 @@ export default function TeacherSessionsPage() {
                                 <a
                                   href={session.meetingLink}
                                   target="_blank" rel="noopener noreferrer"
-                                  rel="noopener noreferrer"
                                   className="text-blue-600 hover:underline"
                                 >
                                   Join Meeting

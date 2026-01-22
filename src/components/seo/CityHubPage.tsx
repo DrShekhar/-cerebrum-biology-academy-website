@@ -490,7 +490,6 @@ export function CityHubPage({ data }: CityHubPageProps) {
                         <a
                           href={`https://maps.google.com/?q=${data.geoCoordinates.lat},${data.geoCoordinates.lng}`}
                           target="_blank" rel="noopener noreferrer"
-                          rel="noopener noreferrer"
                           className="rounded-lg border border-green-600 px-6 py-3 font-medium text-green-700 transition hover:bg-green-50"
                         >
                           <Navigation className="mr-2 inline h-4 w-4" />

@@ -116,7 +116,6 @@ export function CitationBadge({
               <a
                 href={source.url}
                 target="_blank" rel="noopener noreferrer"
-                rel="noopener noreferrer"
                 className="ml-1 text-green-600 hover:underline"
               >
                 <ExternalLink className="inline h-3 w-3" />
@@ -184,7 +183,6 @@ export function CitedStatistic({
             <a
               href={source.url}
               target="_blank" rel="noopener noreferrer"
-              rel="noopener noreferrer"
               className="text-green-600 hover:underline"
             >
               {source.name}

@@ -170,7 +170,6 @@ export default function ZoologyTeacherNearMePage() {
                     <a
                       href={center.mapUrl}
                       target="_blank" rel="noopener noreferrer"
-                      rel="noopener noreferrer"
                       className="flex items-center gap-1 text-sm text-blue-600 hover:underline"
                     >
                       <Navigation className="h-4 w-4" />
@@ -274,7 +273,6 @@ export default function ZoologyTeacherNearMePage() {
               <a
                 href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
                 target="_blank" rel="noopener noreferrer"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
               >
                 <MessageCircle className="h-5 w-5" />

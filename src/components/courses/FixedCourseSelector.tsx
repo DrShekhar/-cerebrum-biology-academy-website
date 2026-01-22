@@ -249,6 +249,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
       '11th': 0,
       '12th': 0,
       Dropper: 0,
+      '2-Year': 0,
     }
 
     coursePrograms.forEach((course) => {

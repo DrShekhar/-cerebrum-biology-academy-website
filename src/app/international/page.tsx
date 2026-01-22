@@ -272,7 +272,6 @@ export default function InternationalHubPage() {
           <a
             href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20tutoring.%20Can%20you%20share%20more%20details?"
             target="_blank" rel="noopener noreferrer"
-            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-xl hover:shadow-2xl transition-all duration-200"
           >
             <MessageCircle className="w-6 h-6" />

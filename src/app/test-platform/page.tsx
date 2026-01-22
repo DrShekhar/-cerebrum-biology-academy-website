@@ -219,7 +219,6 @@ function TestLink({ href, title, description, status }: TestLinkProps) {
     <a
       href={href}
       target="_blank" rel="noopener noreferrer"
-      rel="noopener noreferrer"
       className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
     >
       <div className="flex items-start justify-between">

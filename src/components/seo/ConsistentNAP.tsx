@@ -210,7 +210,6 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
                   key={index}
                   href={url}
                   target="_blank" rel="noopener noreferrer"
-                  rel="noopener noreferrer"
                   className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-600"
                 >
                   {platform}

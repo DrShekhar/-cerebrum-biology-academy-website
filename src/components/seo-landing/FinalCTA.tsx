@@ -97,7 +97,6 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
               <a
                 href={whatsappLink}
                 target="_blank" rel="noopener noreferrer"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-green-600/20 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-green-600/30"
               >
                 <MessageCircle className="h-4 w-4" />

@@ -453,7 +453,6 @@ export function DemoBookingSystem() {
                       <a
                         href={bookingData.zoomJoinUrl}
                         target="_blank" rel="noopener noreferrer"
-                        rel="noopener noreferrer"
                         className="text-blue-600 hover:underline truncate max-w-[200px]"
                       >
                         {bookingData.zoomJoinUrl}
