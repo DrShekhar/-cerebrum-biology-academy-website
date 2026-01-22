@@ -49,11 +49,13 @@ const classParamMap: Record<string, ClassLevel> = {
   'class-11': '11th',
   'class-12': '12th',
   dropper: 'Dropper',
+  '2-year': '2-Year',
   '9th': '9th',
   '10th': '10th',
   '11th': '11th',
   '12th': '12th',
   Dropper: 'Dropper',
+  '2-Year': '2-Year',
 }
 
 export function EnhancedCoursesListingPage() {
@@ -88,6 +90,7 @@ export function EnhancedCoursesListingPage() {
       '11th': 0,
       '12th': 0,
       Dropper: 0,
+      '2-Year': 0,
     }
 
     coursePrograms.forEach((course) => {
@@ -253,46 +256,95 @@ export function EnhancedCoursesListingPage() {
             </div>
           )}
 
-          {/* Tier Comparison Section */}
+          {/* Tier Comparison Section - Pricing Table */}
           <div className="mt-12 sm:mt-16 md:mt-20 bg-white rounded-2xl sm:rounded-3xl shadow-lg p-6 sm:p-8">
             <div className="text-center mb-6 sm:mb-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Compare Our Course Tiers
+                Course Pricing by Tier
               </h3>
               <p className="text-sm sm:text-base text-gray-600 px-4">
-                Choose the learning tier that best fits your needs and budget
+                All prices shown are lump sum payments. EMI options available.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* Tier Headers */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {courseTiers.map((tier) => (
-                <div key={tier.series} className="text-center">
-                  <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center ${
-                      tier.series === 'pinnacle'
-                        ? 'bg-purple-100'
-                        : tier.series === 'ascent'
-                          ? 'bg-blue-100'
-                          : 'bg-green-100'
-                    }`}
-                  >
-                    <span className="text-2xl">
-                      {tier.series === 'pinnacle' ? '👑' : tier.series === 'ascent' ? '🎯' : '🌟'}
-                    </span>
+                <div
+                  key={tier.series}
+                  className={`text-center p-4 rounded-xl ${
+                    tier.series === 'pinnacle'
+                      ? 'bg-purple-50 border-2 border-purple-200'
+                      : tier.series === 'ascent'
+                        ? 'bg-blue-50 border-2 border-blue-200'
+                        : 'bg-green-50 border-2 border-green-200'
+                  }`}
+                >
+                  <div className="text-2xl mb-2">
+                    {tier.series === 'pinnacle' ? '👑' : tier.series === 'ascent' ? '🎯' : '🌟'}
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{tier.name}</h4>
-                  <p className="text-gray-600 mb-4">{tier.description}</p>
-                  <div className="text-2xl font-bold text-gray-900 mb-2">
-                    ₹{tier.priceRange.min.toLocaleString()} - ₹
-                    {tier.priceRange.max.toLocaleString()}
-                  </div>
-                  <div className="text-sm text-gray-500 mb-4">
-                    Batch Size: {tier.batchSizeDisplay || tier.batchSize} students
-                  </div>
-                  <div className="text-left space-y-2">
-                    {tier.highlights.slice(0, 3).map((highlight, index) => (
-                      <div key={index} className="flex items-center text-sm text-gray-700">
-                        <span className="text-green-600 mr-2">✓</span>
+                  <h4 className="text-lg font-bold text-gray-900">{tier.name}</h4>
+                  <p className="text-sm text-gray-600">Batch: {tier.batchSizeDisplay || tier.batchSize} students</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Pricing Table */}
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="text-left p-3 sm:p-4 font-semibold text-gray-900 border-b">Course</th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-purple-700 border-b">Pinnacle</th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-blue-700 border-b">Ascent</th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-green-700 border-b">Pursuit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {coursePrograms.map((course, index) => (
+                    <tr key={course.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                      <td className="p-3 sm:p-4 border-b">
+                        <div className="font-medium text-gray-900 text-sm sm:text-base">{course.name}</div>
+                        <div className="text-xs text-gray-500">{course.duration}</div>
+                      </td>
+                      <td className="text-center p-3 sm:p-4 border-b">
+                        <span className="font-bold text-purple-700 text-sm sm:text-base">
+                          ₹{course.tiers.pinnacle.price.toLocaleString()}
+                        </span>
+                      </td>
+                      <td className="text-center p-3 sm:p-4 border-b">
+                        <span className="font-bold text-blue-700 text-sm sm:text-base">
+                          ₹{course.tiers.ascent.price.toLocaleString()}
+                        </span>
+                      </td>
+                      <td className="text-center p-3 sm:p-4 border-b">
+                        <span className="font-bold text-green-700 text-sm sm:text-base">
+                          ₹{course.tiers.pursuit.price.toLocaleString()}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Tier Features Summary */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {courseTiers.map((tier) => (
+                <div key={tier.series} className="p-4">
+                  <h5 className={`font-bold mb-3 ${
+                    tier.series === 'pinnacle'
+                      ? 'text-purple-700'
+                      : tier.series === 'ascent'
+                        ? 'text-blue-700'
+                        : 'text-green-700'
+                  }`}>
+                    {tier.name} Features
+                  </h5>
+                  <div className="space-y-2">
+                    {tier.highlights.slice(0, 4).map((highlight, index) => (
+                      <div key={index} className="flex items-start text-xs sm:text-sm text-gray-700">
+                        <span className="text-green-600 mr-2 mt-0.5">✓</span>
                         {highlight}
                       </div>
                     ))}

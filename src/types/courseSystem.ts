@@ -1,6 +1,6 @@
 // Comprehensive Course System Types for Cerebrum Biology Academy
 
-export type ClassLevel = '9th' | '10th' | '11th' | '12th' | 'Dropper'
+export type ClassLevel = '9th' | '10th' | '11th' | '12th' | 'Dropper' | '2-Year'
 export type CourseSeries = 'pinnacle' | 'ascent' | 'pursuit'
 export type LearningMode = 'Online' | 'Offline' | 'Hybrid'
 export type PaymentPlan = 'one-time' | 'installment'

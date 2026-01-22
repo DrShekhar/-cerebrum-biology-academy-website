@@ -20,6 +20,7 @@ export function ClassFilterNav({
     { value: '11th', label: 'Class 11th', emoji: '🎯' },
     { value: '12th', label: 'Class 12th', emoji: '🏆' },
     { value: 'Dropper', label: 'Dropper', emoji: '💪' },
+    { value: '2-Year', label: '2-Year Complete', emoji: '📅' },
   ]
 
   const getTotalCourses = () => {
