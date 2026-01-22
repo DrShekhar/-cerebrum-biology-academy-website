@@ -31,7 +31,6 @@ import {
   Lock,
   Crown,
 } from 'lucide-react'
-import { useAuth } from '@/contexts/AuthContext'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { UpgradeModal } from '@/components/UpgradeModal'
 import {
@@ -74,8 +73,7 @@ interface RecentActivity {
 }
 
 export default function StudentDashboard() {
-  const { user, isAuthenticated, isLoading: authLoading } = useAuth()
-  const { isPaidUser, isGuestUser, freeUserId: userFlowFreeUserId } = useUserFlow()
+  const { user, isAuthenticated, isLoading: authLoading, isPaidUser, isGuestUser, freeUserId: userFlowFreeUserId } = useUserFlow()
   const { trialStatus: coachingTrialStatus, isLoading: trialLoading } = useCoachingTrialStatus()
   const [isLoading, setIsLoading] = useState(true)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)

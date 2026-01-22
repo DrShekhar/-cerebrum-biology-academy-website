@@ -21,6 +21,26 @@ type Step = 'phone' | 'otp' | 'signup' | 'success'
 // Check if Firebase is configured
 const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
+// Get role-based dashboard redirect URL
+function getRoleDashboardUrl(role: string | undefined): string {
+  const normalizedRole = (role || 'student').toLowerCase()
+  switch (normalizedRole) {
+    case 'admin':
+      return '/admin/dashboard'
+    case 'teacher':
+      return '/teacher/dashboard'
+    case 'counselor':
+      return '/counselor/dashboard'
+    case 'consultant':
+      return '/consultant/dashboard'
+    case 'parent':
+      return '/parent/dashboard'
+    case 'student':
+    default:
+      return '/dashboard'
+  }
+}
+
 // Fallback component when Firebase is not configured
 function PhoneSignInFallback() {
   return (
@@ -282,15 +302,21 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       console.log('[PhoneSignIn] Session verified successfully')
       setStep('success')
 
-      const redirectWithTimestamp = redirectUrl.includes('?')
-        ? `${redirectUrl}&_t=${Date.now()}`
-        : `${redirectUrl}?_t=${Date.now()}`
+      // Use role-based redirect if no custom redirectUrl was provided
+      const userRole = data.user?.role
+      const finalRedirectUrl = redirectUrl === '/dashboard'
+        ? getRoleDashboardUrl(userRole)
+        : redirectUrl
+
+      const redirectWithTimestamp = finalRedirectUrl.includes('?')
+        ? `${finalRedirectUrl}&_t=${Date.now()}`
+        : `${finalRedirectUrl}?_t=${Date.now()}`
 
       setTimeout(() => {
         if (onSuccess) {
           onSuccess()
         } else {
-          console.log('[PhoneSignIn] Redirecting to:', redirectWithTimestamp)
+          console.log('[PhoneSignIn] Redirecting to:', redirectWithTimestamp, 'role:', userRole)
           window.location.href = redirectWithTimestamp
         }
       }, 500)

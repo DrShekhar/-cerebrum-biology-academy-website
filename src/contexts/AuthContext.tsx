@@ -1,7 +1,9 @@
 'use client'
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import { useRouter } from 'next/navigation'
 import type { UserRole } from '@/generated/prisma'
+import { signOut as firebaseSignOut } from '@/lib/firebase/phone-auth'
 
 export interface NotificationPreferences {
   email?: boolean
@@ -112,6 +114,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [permissions, setPermissions] = useState<string[]>([])
+  const router = useRouter()
 
   // PERFORMANCE: Defer auth initialization to avoid blocking initial render
   // Only check auth immediately on protected routes, defer on public pages
@@ -246,15 +249,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   const logout = async () => {
     try {
-      await fetch('/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-      })
+      await firebaseSignOut()
     } catch (error) {
       console.error('Logout error:', error)
     } finally {
       setUser(null)
       setPermissions([])
+      router.push('/')
     }
   }
 

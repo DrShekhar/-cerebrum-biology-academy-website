@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
+import { useUserFlow } from '@/hooks/useUserFlow'
 import {
   TrendingUp,
   Calendar,
@@ -149,9 +149,7 @@ const alertIconColors = {
 }
 
 export default function ParentDashboard() {
-  const sessionResult = useSession()
-  const session = sessionResult?.data
-  const status = sessionResult?.status ?? 'loading'
+  const { user, isAuthenticated, isLoading: authLoading } = useUserFlow()
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -187,15 +185,16 @@ export default function ParentDashboard() {
   }, [selectedChild])
 
   useEffect(() => {
-    if (status === 'authenticated') {
+    if (authLoading) return
+    if (isAuthenticated) {
       fetchDashboardData()
-    } else if (status === 'unauthenticated') {
+    } else {
       setLoading(false)
       setError('Please sign in to view your dashboard')
     }
-  }, [status, fetchDashboardData])
+  }, [isAuthenticated, authLoading, fetchDashboardData])
 
-  if (status === 'loading' || loading) {
+  if (authLoading || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
