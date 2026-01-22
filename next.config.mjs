@@ -1261,6 +1261,74 @@ const nextConfig = {
 
       // Blog management quota article
       { source: '/blog/management-quota-mbbs-fees-process-complete-guide', destination: '/blog', permanent: true },
+
+      // ============================================
+      // GSC "Page with redirect" Fixes - January 2026
+      // These pages are being crawled but need proper redirects
+      // ============================================
+
+      // Campbell Biology chapter pages (redirect to biology notes)
+      { source: '/campbell-biology', destination: '/biology-notes', permanent: true },
+      { source: '/campbell-biology/:slug', destination: '/biology-notes', permanent: true },
+
+      // International exam preparation pages
+      { source: '/mcat-biology-preparation', destination: '/courses', permanent: true },
+      { source: '/mcat-biology-preparation/', destination: '/courses', permanent: true },
+      { source: '/inbo-coaching', destination: '/courses', permanent: true },
+      { source: '/inbo-coaching/', destination: '/courses', permanent: true },
+      { source: '/usabo-coaching', destination: '/courses', permanent: true },
+      { source: '/usabo-coaching/', destination: '/courses', permanent: true },
+      { source: '/ibo-preparation', destination: '/courses', permanent: true },
+      { source: '/ibo-preparation/', destination: '/courses', permanent: true },
+      { source: '/bbo-preparation', destination: '/bbo-coaching', permanent: true },
+      { source: '/bbo-preparation/', destination: '/bbo-coaching', permanent: true },
+      { source: '/biology-olympiad-preparation', destination: '/courses', permanent: true },
+      { source: '/biology-olympiad-preparation/', destination: '/courses', permanent: true },
+
+      // Tuition specialty pages
+      { source: '/dna-biology-tuition', destination: '/courses', permanent: true },
+      { source: '/live-biology-classes-neet', destination: '/courses', permanent: true },
+      { source: '/genetics-biology-tuition', destination: '/courses', permanent: true },
+
+      // Resource and tool pages
+      { source: '/mock-tests', destination: '/resources/mock-tests', permanent: true },
+      { source: '/neet-result-analysis', destination: '/resources', permanent: true },
+      { source: '/neet-biology-mcq-practice', destination: '/neet-biology-mcq', permanent: true },
+      { source: '/neet-rank-predictor', destination: '/resources', permanent: true },
+      { source: '/neet-registration-guide', destination: '/admissions', permanent: true },
+
+      // NCERT notes pages
+      { source: '/ncert-biology-notes-class-11', destination: '/biology-notes', permanent: true },
+      { source: '/ncert-based-neet-questions', destination: '/neet-biology-mcq', permanent: true },
+
+      // NEET preparation pages
+      { source: '/neet-biology-crash-course', destination: '/neet-crash-course', permanent: true },
+      { source: '/neet-preparation-guide', destination: '/courses', permanent: true },
+      { source: '/neet-2026-preparation', destination: '/courses', permanent: true },
+      { source: '/neet-exam-pattern-2025', destination: '/courses', permanent: true },
+      { source: '/neet-biology-notes-pdf', destination: '/biology-notes', permanent: true },
+
+      // Topic-specific notes
+      { source: '/reproduction-notes-neet', destination: '/biology-notes', permanent: true },
+      { source: '/plant-kingdom-notes-neet', destination: '/biology-notes', permanent: true },
+
+      // Services pages
+      { source: '/services/international', destination: '/international', permanent: true },
+      { source: '/services/classroom', destination: '/courses', permanent: true },
+      { source: '/services/online-classes', destination: '/courses', permanent: true },
+
+      // Legal pages
+      { source: '/terms-of-service', destination: '/privacy-policy', permanent: true },
+
+      // Book demo with query params (catch-all)
+      { source: '/book-demo', destination: '/demo', permanent: true },
+
+      // Biology tuition location
+      { source: '/biology-tuition-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+
+      // Biology classes with sub-areas (specific ones from GSC)
+      { source: '/biology-classes-green-park/iit', destination: '/biology-classes-south-delhi', permanent: true },
+      { source: '/biology-classes-neet-coaching-south-city-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
     ]
   },
 
