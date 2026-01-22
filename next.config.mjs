@@ -1151,6 +1151,116 @@ const nextConfig = {
 
       // Test series page
       { source: '/test-series', destination: '/courses', permanent: true },
+
+      // ============================================
+      // GSC noindex Fixes - January 2026 (Phase 3)
+      // Missing pages causing 404 with noindex
+      // ============================================
+
+      // Olympiad preparation pages (redirect to coaching pages)
+      { source: '/cnbo-preparation', destination: '/cnbo-coaching', permanent: true },
+      { source: '/cnbo-preparation/', destination: '/cnbo-coaching', permanent: true },
+      { source: '/sbo-preparation', destination: '/sbo-coaching', permanent: true },
+      { source: '/sbo-preparation/', destination: '/sbo-coaching', permanent: true },
+      { source: '/asob-preparation', destination: '/asob-coaching', permanent: true },
+      { source: '/asob-preparation/', destination: '/asob-coaching', permanent: true },
+
+      // Typos and URL variants
+      { source: '/neet-biology-tutor-droppers', destination: '/neet-biology-tutor-for-droppers', permanent: true },
+      { source: '/fees', destination: '/pricing', permanent: true },
+      { source: '/hr', destination: '/', permanent: true },
+      { source: '/hour', destination: '/', permanent: true },
+      { source: '/biology-tutor-delhi', destination: '/biology-tutor-central-delhi', permanent: true },
+
+      // Course URL variations
+      { source: '/courses/neet', destination: '/courses/neet-complete', permanent: true },
+      { source: '/courses/crash-course', destination: '/neet-crash-course', permanent: true },
+      { source: '/courses/weekend-batch', destination: '/neet-biology-weekend-batch', permanent: true },
+      { source: '/courses/intensive-neet-biology', destination: '/courses/class-12', permanent: true },
+
+      // Resource pages redirects
+      { source: '/resources/biomolecules-notes', destination: '/biology-notes', permanent: true },
+      { source: '/resources/classification-notes', destination: '/biology-notes', permanent: true },
+      { source: '/resources/morphology-notes', destination: '/biology-notes', permanent: true },
+      { source: '/resources/revision-notes', destination: '/biology-notes', permanent: true },
+      { source: '/resources/diagrams', destination: '/resources', permanent: true },
+      { source: '/free-biology-quiz', destination: '/neet-biology-mcq', permanent: true },
+      { source: '/tools/neet-mcq', destination: '/neet-biology-mcq', permanent: true },
+      { source: '/tools/:path*', destination: '/resources', permanent: true },
+
+      // Missing biology class location pages
+      { source: '/biology-classes-bawal', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-dharuhera', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-janakpuri', destination: '/neet-coaching-west-delhi', permanent: true },
+      { source: '/biology-classes-dc-chowk-rohini', destination: '/neet-coaching-north-delhi', permanent: true },
+      { source: '/biology-classes-nirman-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
+      { source: '/biology-classes-rajinder-nagar', destination: '/neet-coaching-centre', permanent: true },
+      { source: '/biology-classes-sushant-lok-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-noida-sector-62', destination: '/neet-coaching-noida', permanent: true },
+      { source: '/biology-classes-gurgaon-sector-82', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-gurgaon-sector-50', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-gurgaon-sector-14', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-gurgaon-sector-4', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-golf-course-extension-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-rohini-sector-5', destination: '/neet-coaching-north-delhi', permanent: true },
+
+      // School-specific NEET coaching pages
+      { source: '/neet-coaching-pathways-gurgaon-students', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/neet-coaching-springdales-students', destination: '/neet-coaching-centre', permanent: true },
+      { source: '/neet-droppers-batch-delhi', destination: '/courses/neet-dropper', permanent: true },
+
+      // More school-specific biology classes
+      { source: '/biology-classes-biology-classes-rps-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-shikshanter-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-tuition-ryan-international', destination: '/biology-tuition-ryan-international', permanent: true },
+      { source: '/biology-classes-biology-class-12-gurgaon', destination: '/biology-tuition-class-12', permanent: true },
+      { source: '/biology-classes-biology-class-11-gurgaon', destination: '/biology-tuition-class-11', permanent: true },
+      { source: '/biology-classes-biology-class-9-10-gurgaon', destination: '/biology-tuition-class-9-10', permanent: true },
+      { source: '/biology-classes-biology-tutor-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-bal-bharati-students', destination: '/biology-classes-bal-bharati-students', permanent: true },
+      { source: '/biology-classes-biology-classes-ryan-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-euro-international-gurgaon', destination: '/biology-classes-euro-international-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-manav-rachna-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-suncity-school-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-gd-goenka-gurgaon', destination: '/biology-classes-gd-goenka-gurgaon', permanent: true },
+      { source: '/biology-classes-biology-classes-dav-gurgaon', destination: '/biology-classes-dav-gurgaon', permanent: true },
+
+      // NEET coaching specific pages
+      { source: '/biology-classes-neet-droppers-batch-gurgaon', destination: '/courses/neet-dropper', permanent: true },
+      { source: '/biology-classes-neet-coaching-golf-course-road-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-neet-coaching-dlf-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-neet-coaching-pathways-school', destination: '/neet-coaching-gurgaon', permanent: true },
+      { source: '/biology-classes-neet-coaching-nirvana-country-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+
+      // Missing NEET coaching city pages (redirect to regional hubs)
+      { source: '/neet-coaching-mumbai', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-pune', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-chennai', destination: '/neet-coaching-south-india', permanent: true },
+      { source: '/neet-coaching-hyderabad', destination: '/neet-coaching-south-india', permanent: true },
+      { source: '/neet-coaching-ahmedabad', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-lucknow', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-chandigarh', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-bhopal', destination: '/neet-coaching-centre', permanent: true },
+      { source: '/neet-coaching-nagpur', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-vadodara', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-thane', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-navi-mumbai', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-coimbatore', destination: '/neet-coaching-south-india', permanent: true },
+      { source: '/neet-coaching-madurai', destination: '/neet-coaching-south-india', permanent: true },
+      { source: '/neet-coaching-ludhiana', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-guwahati', destination: '/neet-coaching-east-india', permanent: true },
+      { source: '/neet-coaching-ranchi', destination: '/neet-coaching-east-india', permanent: true },
+      { source: '/neet-coaching-dhanbad', destination: '/neet-coaching-east-india', permanent: true },
+      { source: '/neet-coaching-jabalpur', destination: '/neet-coaching-centre', permanent: true },
+      { source: '/neet-coaching-gwalior', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-jodhpur', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-aurangabad', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-vasai-virar', destination: '/neet-coaching-west-india', permanent: true },
+      { source: '/neet-coaching-meerut', destination: '/neet-coaching-north-india', permanent: true },
+      { source: '/neet-coaching-delhi', destination: '/neet-coaching-centre', permanent: true },
+
+      // Blog management quota article
+      { source: '/blog/management-quota-mbbs-fees-process-complete-guide', destination: '/blog', permanent: true },
     ]
   },
 
