@@ -63,7 +63,7 @@ export class SecurityScanner {
               evidence: vector
             })
           }
-        } catch (error) {
+        } catch (_error) {
           // Input rejection is good - no violation
         }
       }
@@ -126,7 +126,7 @@ export class SecurityScanner {
               evidence: payload
             })
           }
-        } catch (error) {
+        } catch (_error) {
           // Request rejection is good - no violation
         }
       }
@@ -179,7 +179,7 @@ export class SecurityScanner {
             })
           }
         }
-      } catch (error) {
+      } catch (_error) {
         // Form protection working - no violation
       }
     }
@@ -208,7 +208,7 @@ export class SecurityScanner {
             location: '/auth/register'
           })
         }
-      } catch (error) {
+      } catch (_error) {
         // Password rejection is good
       }
     }
@@ -233,7 +233,7 @@ export class SecurityScanner {
           location: '/auth/login'
         })
       }
-    } catch (error) {
+    } catch (_error) {
       // Expected for test environment
     }
 
@@ -288,7 +288,7 @@ export class SecurityScanner {
           })
         }
 
-      } catch (error) {
+      } catch (_error) {
         // Endpoint access denied - good security
       }
     }
@@ -371,7 +371,7 @@ export class SecurityScanner {
             evidence: file.name
           })
         }
-      } catch (error) {
+      } catch (_error) {
         // File rejection is good
       }
     }
