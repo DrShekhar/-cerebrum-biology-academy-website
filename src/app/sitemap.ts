@@ -146,6 +146,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.6,
     },
+    // Trust & Social Proof Pages - HIGH CONVERSION
+    {
+      url: `${baseUrl}/neet-success-stories`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/wall-of-achievers`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-repeater-success-stories`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.80,
+    },
+    // Free Resources & Lead Gen Pages
+    {
+      url: `${baseUrl}/free-neet-biology-lectures`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-definitions`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/online-neet-test-series`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-tips-strategy`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/neet-preparation-timetable`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
     {
       url: `${baseUrl}/locations`,
       lastModified: lastUpdated,
@@ -304,6 +354,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.96,
+    },
+    // NEET Biology MCQ Topic Pages - HIGH ENGAGEMENT
+    {
+      url: `${baseUrl}/neet-biology-mcq/ecology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/genetics-evolution`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/human-physiology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/reproduction`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/daily-challenge`,
+      lastModified: lastUpdated,
+      changeFrequency: 'daily' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/leaderboard`,
+      lastModified: lastUpdated,
+      changeFrequency: 'daily' as const,
+      priority: 0.85,
     },
     // Regional Online Service Pages - HIGH PRIORITY
     {
@@ -952,6 +1039,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
+    },
+    // Delhi NCR Standalone Location Pages - HIGH PRIORITY
+    {
+      url: `${baseUrl}/neet-coaching-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-cr-park-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-defence-colony-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-green-park-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-saket-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-vasant-kunj-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-coaching-vasant-vihar-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
     },
     // South Delhi SEO Landing Pages - HIGH PRIORITY
     {
