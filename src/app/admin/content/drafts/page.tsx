@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   FileText,
   Clock,
-  CheckCircle,
+  CheckCircle
   XCircle,
   AlertCircle,
   Eye,
