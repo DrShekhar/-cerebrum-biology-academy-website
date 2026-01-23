@@ -2,6 +2,40 @@ import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 
+// SECURITY: In-memory store for webhook event deduplication (use Redis in production)
+const processedEvents = new Map<string, number>()
+const EVENT_EXPIRY_MS = 24 * 60 * 60 * 1000 // 24 hours
+
+// Clean up old events periodically
+function cleanupProcessedEvents() {
+  const now = Date.now()
+  for (const [eventId, timestamp] of processedEvents.entries()) {
+    if (now - timestamp > EVENT_EXPIRY_MS) {
+      processedEvents.delete(eventId)
+    }
+  }
+}
+
+// SECURITY: Timing-safe signature verification
+function verifySignature(body: string, signature: string, secret: string): boolean {
+  try {
+    const expectedSignature = crypto.createHmac('sha256', secret).update(body).digest('hex')
+
+    // Convert to buffers for timing-safe comparison
+    const expectedBuffer = Buffer.from(expectedSignature, 'utf8')
+    const signatureBuffer = Buffer.from(signature, 'utf8')
+
+    // Check length first (timing-safe comparison requires same length)
+    if (expectedBuffer.length !== signatureBuffer.length) {
+      return false
+    }
+
+    return crypto.timingSafeEqual(expectedBuffer, signatureBuffer)
+  } catch {
+    return false
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.text()
@@ -19,17 +53,31 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 })
     }
 
-    const expectedSignature = crypto.createHmac('sha256', webhookSecret).update(body).digest('hex')
-
-    if (expectedSignature !== signature) {
+    // SECURITY: Use timing-safe signature verification to prevent timing attacks
+    if (!verifySignature(body, signature, webhookSecret)) {
       console.error('Webhook: Invalid signature')
       return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
     }
 
     const event = JSON.parse(body)
     const eventType = event.event
+    const eventId = event.payload?.payment?.entity?.id || event.payload?.order?.entity?.id || `${eventType}_${Date.now()}`
 
-    console.log('Webhook received:', eventType, event.payload?.payment?.entity?.id)
+    // SECURITY: Replay attack prevention - check if event was already processed
+    if (processedEvents.has(eventId)) {
+      console.log('Webhook: Duplicate event ignored:', eventId)
+      return NextResponse.json({ success: true, message: 'Event already processed' })
+    }
+
+    // Mark event as processed
+    processedEvents.set(eventId, Date.now())
+
+    // Periodically clean up old events
+    if (processedEvents.size > 1000) {
+      cleanupProcessedEvents()
+    }
+
+    console.log('Webhook received:', eventType, eventId)
 
     switch (eventType) {
       case 'payment.authorized':

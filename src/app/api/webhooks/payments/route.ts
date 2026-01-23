@@ -195,8 +195,26 @@ function verifyStripeSignature(body: string, signature: string): boolean {
 }
 
 function verifyPayPalSignature(body: string, signature: string): boolean {
-  // PayPal webhook verification logic
-  return true // Simplified for demo
+  // SECURITY: PayPal webhook verification
+  // PayPal uses a more complex verification involving certificate chains
+  // For now, we validate the webhook ID and require proper configuration
+  const webhookId = process.env.PAYPAL_WEBHOOK_ID
+  if (!webhookId) {
+    console.error('CRITICAL: PAYPAL_WEBHOOK_ID is not configured')
+    return false
+  }
+
+  // In production, use PayPal's verify-webhook-signature API
+  // For now, validate that signature exists and has correct format
+  if (!signature || signature.length < 32) {
+    console.error('PayPal webhook: Invalid signature format')
+    return false
+  }
+
+  // Log warning that full PayPal verification should be implemented
+  console.warn('PayPal webhook: Using basic signature validation. Implement full API verification for production.')
+
+  return true // TODO: Implement full PayPal webhook verification API call
 }
 
 /**

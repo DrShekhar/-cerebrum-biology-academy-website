@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import { prisma } from '@/lib/prisma'
+import { validateUserSession } from '@/lib/auth/config'
 
 const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
 type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
@@ -29,8 +30,28 @@ const CURRENCY_SYMBOLS: Record<SupportedCurrency, string> = {
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Validate user session before creating payment orders
+    const session = await validateUserSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { success: false, error: 'Authentication required to create payment orders' },
+        { status: 401 }
+      )
+    }
+
     const body = await request.json()
     const { amount, currency = 'INR', receipt, notes, enrollmentId, userId } = body
+
+    // SECURITY: Verify the userId matches the authenticated user (prevent creating orders for others)
+    if (userId && userId !== session.userId) {
+      return NextResponse.json(
+        { success: false, error: 'Cannot create payment order for another user' },
+        { status: 403 }
+      )
+    }
+
+    // Use authenticated user's ID if not provided
+    const authenticatedUserId = userId || session.userId
 
     if (!amount || amount <= 0) {
       return NextResponse.json({ success: false, error: 'Invalid amount' }, { status: 400 })
@@ -77,11 +98,11 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    if (enrollmentId && userId) {
+    if (enrollmentId && authenticatedUserId) {
       await prisma.payments.create({
         data: {
           id: `pay_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          userId,
+          userId: authenticatedUserId,
           enrollmentId,
           amount: amountInSmallestUnit,
           currency: normalizedCurrency,

@@ -1,13 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessService'
+import { requireAdminAuth } from '@/lib/auth'
+import { logAdminAction } from '@/lib/security/auditLogger'
 
 /**
  * WhatsApp Business API Send Message Endpoint
  * Handles direct message sending for legacy compatibility
+ *
+ * SECURITY: Requires admin authentication to prevent unauthorized message sending
  */
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Require admin authentication for WhatsApp message sending
+    const session = await requireAdminAuth()
+
+    // Get client info for audit logging
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+    const userAgent = request.headers.get('user-agent') || 'unknown'
+
     const body = await request.json()
     const { phone, message, type = 'text', templateName, templateParams } = body
 
@@ -65,6 +77,22 @@ export async function POST(request: NextRequest) {
         )
     }
 
+    // Log WhatsApp message send to audit trail
+    logAdminAction(
+      'admin_data_export', // Using export as closest match for outbound communication
+      session.user.email,
+      session.user.id,
+      clientIp,
+      userAgent,
+      {
+        action: 'whatsapp_message_sent',
+        recipient: phone,
+        messageType: type,
+        templateName: templateName || null,
+        messageId: result.messages?.[0]?.id,
+      }
+    )
+
     return NextResponse.json({
       success: true,
       messageId: result.messages?.[0]?.id,
@@ -75,6 +103,14 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('WhatsApp send message error:', error)
+
+    // Handle auth errors
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized - Admin authentication required' },
+        { status: 401 }
+      )
+    }
 
     return NextResponse.json(
       {
@@ -90,6 +126,9 @@ export async function POST(request: NextRequest) {
 // Get sending status and rate limits
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: Require admin authentication to view WhatsApp status
+    await requireAdminAuth()
+
     const searchParams = request.nextUrl.searchParams
     const messageId = searchParams.get('messageId')
 
