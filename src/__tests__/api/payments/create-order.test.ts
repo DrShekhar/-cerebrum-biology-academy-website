@@ -9,10 +9,27 @@ jest.mock('@/lib/prisma', () => ({
     payment: {
       create: jest.fn(),
     },
+    payments: {
+      create: jest.fn(),
+    },
   },
 }))
 
+// Mock the user session validation
+jest.mock('@/lib/auth/config', () => ({
+  validateUserSession: jest.fn().mockResolvedValue({
+    valid: true,
+    userId: 'test-user-123',
+    email: 'test@example.com',
+    role: 'STUDENT',
+  }),
+}))
+
 const MockedRazorpay = Razorpay as jest.MockedClass<typeof Razorpay>
+
+// Import the mock to control it in tests
+import { validateUserSession } from '@/lib/auth/config'
+const mockValidateUserSession = validateUserSession as jest.MockedFunction<typeof validateUserSession>
 
 describe('POST /api/payments/create-order', () => {
   const originalEnv = process.env
@@ -24,6 +41,15 @@ describe('POST /api/payments/create-order', () => {
       NEXT_PUBLIC_RAZORPAY_KEY_ID: 'rzp_test_key',
       RAZORPAY_KEY_SECRET: 'test_secret',
     }
+
+    // Reset the mock to return valid session by default
+    mockValidateUserSession.mockResolvedValue({
+      valid: true,
+      userId: 'test-user-123',
+      email: 'test@example.com',
+      role: 'STUDENT',
+      name: 'Test User',
+    })
 
     MockedRazorpay.mockImplementation(
       () =>
@@ -101,12 +127,13 @@ describe('POST /api/payments/create-order', () => {
     it('should create payment record when enrollmentId provided', async () => {
       const mockCreate = jest.fn().mockResolvedValue({
         id: 'payment_123',
+        userId: 'test-user-123',
         enrollmentId: 'enroll_123',
         amount: 4200000,
         razorpayOrderId: 'order_123',
         status: 'PENDING',
       })
-      ;(prisma.payment.create as jest.Mock) = mockCreate
+      ;(prisma.payments.create as jest.Mock) = mockCreate
 
       const request = new NextRequest('http://localhost:3000/api/payments/create-order', {
         method: 'POST',
@@ -119,13 +146,57 @@ describe('POST /api/payments/create-order', () => {
       const response = await POST(request)
       expect(response.status).toBe(200)
       expect(mockCreate).toHaveBeenCalledWith({
-        data: {
+        data: expect.objectContaining({
+          userId: 'test-user-123',
           enrollmentId: 'enroll_123',
           amount: 4200000,
           razorpayOrderId: 'order_123',
           status: 'PENDING',
-        },
+        }),
       })
+    })
+  })
+
+  describe('Authentication', () => {
+    it('should reject unauthenticated requests', async () => {
+      mockValidateUserSession.mockResolvedValue({
+        valid: false,
+        userId: null,
+        email: null,
+        role: null,
+        name: null,
+      })
+
+      const request = new NextRequest('http://localhost:3000/api/payments/create-order', {
+        method: 'POST',
+        body: JSON.stringify({
+          amount: 42000,
+        }),
+      })
+
+      const response = await POST(request)
+      const data = await response.json()
+
+      expect(response.status).toBe(401)
+      expect(data.success).toBe(false)
+      expect(data.error).toContain('Authentication required')
+    })
+
+    it('should reject creating orders for other users', async () => {
+      const request = new NextRequest('http://localhost:3000/api/payments/create-order', {
+        method: 'POST',
+        body: JSON.stringify({
+          amount: 42000,
+          userId: 'different-user-456', // Different from authenticated user
+        }),
+      })
+
+      const response = await POST(request)
+      const data = await response.json()
+
+      expect(response.status).toBe(403)
+      expect(data.success).toBe(false)
+      expect(data.error).toContain('Cannot create payment order for another user')
     })
   })
 
@@ -372,7 +443,7 @@ describe('POST /api/payments/create-order', () => {
   describe('Enrollment ID Linking', () => {
     it('should link payment to enrollment', async () => {
       const mockCreate = jest.fn()
-      ;(prisma.payment.create as jest.Mock) = mockCreate
+      ;(prisma.payments.create as jest.Mock) = mockCreate
 
       const request = new NextRequest('http://localhost:3000/api/payments/create-order', {
         method: 'POST',
@@ -386,6 +457,7 @@ describe('POST /api/payments/create-order', () => {
 
       expect(mockCreate).toHaveBeenCalledWith({
         data: expect.objectContaining({
+          userId: 'test-user-123',
           enrollmentId: 'enroll_abc123',
         }),
       })
@@ -393,7 +465,7 @@ describe('POST /api/payments/create-order', () => {
 
     it('should not create payment record without enrollmentId', async () => {
       const mockCreate = jest.fn()
-      ;(prisma.payment.create as jest.Mock) = mockCreate
+      ;(prisma.payments.create as jest.Mock) = mockCreate
 
       const request = new NextRequest('http://localhost:3000/api/payments/create-order', {
         method: 'POST',
