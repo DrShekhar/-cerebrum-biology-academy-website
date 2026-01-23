@@ -184,7 +184,7 @@ export async function GET(request: NextRequest) {
             caption: true,
             highlightedParts: true,
             markedLabel: true,
-            diagram: {
+            diagram_assets: {
               select: {
                 id: true,
                 name: true,
@@ -238,11 +238,11 @@ export async function GET(request: NextRequest) {
           highlightedParts: qd.highlightedParts || undefined,
           markedLabel: qd.markedLabel || undefined,
           diagram: {
-            id: qd.diagram.id,
-            name: qd.diagram.name,
-            fileUrl: qd.diagram.fileUrl || undefined,
-            svgContent: qd.diagram.svgContent || undefined,
-            labeledParts: qd.diagram.labeledParts as
+            id: qd.diagram_assets.id,
+            name: qd.diagram_assets.name,
+            fileUrl: qd.diagram_assets.fileUrl || undefined,
+            svgContent: qd.diagram_assets.svgContent || undefined,
+            labeledParts: qd.diagram_assets.labeledParts as
               | { label: string; name: string; function?: string }[]
               | undefined,
           },
