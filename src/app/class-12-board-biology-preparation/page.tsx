@@ -139,12 +139,12 @@ export default function Class12BoardBiologyPreparationPage() {
             ].map((phase, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-r from-blue-50 to-purple-50 p-8 shadow-lg"
+                className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-4">
-                      <span className="rounded-lg bg-blue-600 px-4 py-2 text-white font-semibold">
+                      <span className="rounded-lg bg-[#3d4d3d] px-4 py-2 text-white font-semibold">
                         {phase.phase}
                       </span>
                       <h3 className="text-2xl font-bold text-slate-900">{phase.title}</h3>

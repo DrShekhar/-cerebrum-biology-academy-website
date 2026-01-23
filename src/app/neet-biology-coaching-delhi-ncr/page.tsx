@@ -177,61 +177,61 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
             </p>
 
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-teal-50 p-8 shadow-lg">
+              <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
                 <h3 className="text-2xl font-bold text-slate-900">Botany</h3>
                 <ul className="mt-6 space-y-3 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Diversity in Living World
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Structural Organization in Plants
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Cell Structure and Function
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Plant Physiology
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Genetics and Evolution
                   </li>
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-lg">
+              <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
                 <h3 className="text-2xl font-bold text-slate-900">Zoology</h3>
                 <ul className="mt-6 space-y-3 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Human Physiology
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Reproduction and Development
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Genetics and Molecular Biology
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Evolution and Diversity
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                    <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                     Ecology and Environment
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-12 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white shadow-xl md:p-12">
-              <h3 className="border-l-4 border-yellow-400 pl-4 text-2xl font-bold">What You Get</h3>
+            <div className="mt-12 rounded-2xl bg-[#3d4d3d] p-8 text-white shadow-xl shadow-[#3d4d3d]/30 md:p-12">
+              <h3 className="border-l-4 border-[#e8ede8] pl-4 text-2xl font-bold">What You Get</h3>
               <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <li className="flex items-start gap-3">
                   <span className="text-2xl">📚</span>

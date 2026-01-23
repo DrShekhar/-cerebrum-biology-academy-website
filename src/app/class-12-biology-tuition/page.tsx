@@ -117,7 +117,7 @@ export default function Class12BiologyTuitionPage() {
             Class 12 Biology Marking Scheme
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-lg">
+            <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
               <h3 className="text-2xl font-bold text-slate-900">Theory (70 marks)</h3>
               <ul className="mt-6 space-y-3">
                 <li className="flex justify-between">
@@ -143,7 +143,7 @@ export default function Class12BiologyTuitionPage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-teal-50 p-8 shadow-lg">
+            <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
               <h3 className="text-2xl font-bold text-slate-900">Practical (30 marks)</h3>
               <ul className="mt-6 space-y-3">
                 <li className="flex justify-between">

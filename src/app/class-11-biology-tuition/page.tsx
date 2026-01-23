@@ -123,13 +123,13 @@ export default function Class11BiologyTuitionPage() {
             ].map((unit, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between rounded-xl border border-slate-200 bg-gradient-to-r from-green-50 to-teal-50 p-6 shadow-lg"
+                className="flex items-center justify-between rounded-xl border border-[#e8ede8] bg-[#e8ede8] p-6 shadow-lg shadow-[#3d4d3d]/10"
               >
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">{unit.unit}</h3>
                   <p className="mt-1 text-slate-600">{unit.chapters} chapters</p>
                 </div>
-                <div className="rounded-lg bg-green-100 px-4 py-2 text-green-700 font-semibold">
+                <div className="rounded-lg bg-[#e8ede8] px-4 py-2 text-[#3d4d3d] font-semibold">
                   {unit.marks} marks
                 </div>
               </div>

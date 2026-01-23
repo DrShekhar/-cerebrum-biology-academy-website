@@ -120,60 +120,60 @@ export default function CBSEBiologyCoachingDelhiPage() {
             CBSE Biology Coverage (Class 11-12)
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-teal-50 p-8 shadow-lg">
+            <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
               <h3 className="text-2xl font-bold text-slate-900">Class 11 CBSE</h3>
               <ul className="mt-6 space-y-3 text-slate-700">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Diversity in Living World (2 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Structural Organization (2 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Cell Biology (3 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Plant Physiology (4 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Human Physiology (5 chapters)
                 </li>
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-lg">
+            <div className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10">
               <h3 className="text-2xl font-bold text-slate-900">Class 12 CBSE</h3>
               <ul className="mt-6 space-y-3 text-slate-700">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Reproduction (2 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Genetics & Evolution (3 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Biology & Human Welfare (2 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Biotechnology (2 chapters)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#4a5d4a]" />
                   Ecology (3 chapters)
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white shadow-xl md:p-12">
+          <div className="mt-12 rounded-2xl bg-[#3d4d3d] p-8 text-white shadow-xl shadow-[#3d4d3d]/30 md:p-12">
             <h3 className="text-2xl font-bold">What Makes Us Delhi's Best CBSE Biology Coaching</h3>
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
               <div>

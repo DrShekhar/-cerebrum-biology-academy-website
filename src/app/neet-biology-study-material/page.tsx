@@ -149,7 +149,7 @@ export default function NEETBiologyStudyMaterialPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 text-center shadow-lg"
+                className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 text-center shadow-lg shadow-[#3d4d3d]/10"
               >
                 <div className="text-5xl">{item.icon}</div>
                 <h3 className="mt-4 text-xl font-bold text-slate-900">{item.title}</h3>

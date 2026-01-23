@@ -41,7 +41,7 @@ const classOptions = [
     focus: 'NEET Foundation',
     topics: 'Diversity, Structural Organisation, Cell Biology, Plant Physiology',
     neetRelevance: '60% NEET weightage from Class 11',
-    color: 'bg-green-600',
+    color: 'bg-[#3d4d3d]',
   },
   {
     class: 'Class 12',
@@ -143,7 +143,7 @@ const faqs = [
 
 export default function OnlineBiologyClassesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#e8ede8] to-white">
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -189,7 +189,7 @@ export default function OnlineBiologyClassesPage() {
       />
 
       {/* Hero Section with Image */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-600 py-20 text-white">
+      <section className="relative overflow-hidden bg-[#3d4d3d] py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -205,7 +205,7 @@ export default function OnlineBiologyClassesPage() {
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
                 Online Biology Classes
               </h1>
-              <p className="mb-8 text-xl text-green-100">
+              <p className="mb-8 text-xl text-white/80">
                 Join India&apos;s best online biology classes with AIIMS-trained faculty. Live
                 interactive sessions, 500+ recorded lectures, and comprehensive NEET preparation.
                 1,50,000+ students across India and abroad!
@@ -213,7 +213,7 @@ export default function OnlineBiologyClassesPage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/demo"
-                  className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
+                  className="rounded-lg bg-white px-8 py-3 font-semibold text-[#4a5d4a] shadow-lg transition hover:bg-[#e8ede8]"
                 >
                   Start Free Trial
                 </Link>
@@ -239,10 +239,10 @@ export default function OnlineBiologyClassesPage() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-800/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3d4d3d]/50 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/90 p-4 backdrop-blur">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-600">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3d4d3d]">
                       <Play className="h-5 w-5 text-white" />
                     </div>
                     <div>
@@ -281,7 +281,7 @@ export default function OnlineBiologyClassesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 text-center shadow-lg"
               >
-                <stat.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
+                <stat.icon className="mx-auto mb-3 h-10 w-10 text-[#4a5d4a]" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -317,9 +317,9 @@ export default function OnlineBiologyClassesPage() {
               >
                 <div className={`mb-4 h-2 w-full rounded-full ${option.color}`} />
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{option.class}</h3>
-                <p className="mb-3 font-semibold text-green-600">{option.focus}</p>
+                <p className="mb-3 font-semibold text-[#4a5d4a]">{option.focus}</p>
                 <p className="mb-3 text-sm text-gray-600">{option.topics}</p>
-                <div className="rounded-lg bg-green-50 p-2 text-sm font-medium text-green-700">
+                <div className="rounded-lg bg-[#e8ede8] p-2 text-sm font-medium text-[#3d4d3d]">
                   {option.neetRelevance}
                 </div>
               </motion.div>
@@ -347,7 +347,7 @@ export default function OnlineBiologyClassesPage() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
-              <span className="mb-2 inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
+              <span className="mb-2 inline-block rounded-full bg-[#e8ede8] px-3 py-1 text-sm font-semibold text-[#3d4d3d]">
                 Most Popular
               </span>
               <h2 className="mb-4 text-3xl font-bold text-gray-900">
@@ -366,14 +366,14 @@ export default function OnlineBiologyClassesPage() {
                   'Unit 5: Human Physiology (20%)',
                 ].map((unit, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <CheckCircle className="h-5 w-5 text-[#4a5d4a]" />
                     <span className="text-gray-700">{unit}</span>
                   </div>
                 ))}
               </div>
               <Link
                 href="/demo"
-                className="mt-6 inline-block rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
+                className="mt-6 inline-block rounded-lg bg-[#3d4d3d] px-6 py-3 font-semibold text-white transition hover:bg-[#4a5d4a]"
               >
                 Join Class 11 Batch
               </Link>
@@ -407,7 +407,7 @@ export default function OnlineBiologyClassesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl bg-white p-6 shadow-lg"
               >
-                <feature.icon className="mb-4 h-10 w-10 text-green-600" />
+                <feature.icon className="mb-4 h-10 w-10 text-[#4a5d4a]" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
               </motion.div>
@@ -432,7 +432,7 @@ export default function OnlineBiologyClassesPage() {
 
           <div className="mx-auto max-w-4xl overflow-hidden rounded-xl shadow-lg">
             <table className="w-full">
-              <thead className="bg-green-600 text-white">
+              <thead className="bg-[#3d4d3d] text-white">
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center">Our Online Classes</th>
@@ -443,7 +443,7 @@ export default function OnlineBiologyClassesPage() {
                 {comparisonTable.map((row, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-6 py-4 font-medium text-gray-900">{row.feature}</td>
-                    <td className="px-6 py-4 text-center text-green-600">{row.online}</td>
+                    <td className="px-6 py-4 text-center text-[#4a5d4a]">{row.online}</td>
                     <td className="px-6 py-4 text-center text-gray-500">{row.local}</td>
                   </tr>
                 ))}
@@ -541,7 +541,7 @@ export default function OnlineBiologyClassesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/best-biology-teacher-online"
-              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
+              className="rounded-lg bg-[#e8ede8] px-4 py-2 text-[#3d4d3d] transition hover:bg-[#d8ddd8]"
             >
               Best Biology Teacher Online
             </Link>
@@ -568,17 +568,17 @@ export default function OnlineBiologyClassesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 py-16 text-white">
+      <section className="bg-[#3d4d3d] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="mb-4 text-3xl font-bold">Start Learning Biology Online Today</h2>
-            <p className="mb-8 text-xl text-green-100">
+            <p className="mb-8 text-xl text-white/80">
               Join 1,50,000+ students learning biology online from anywhere in the world!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/demo"
-                className="rounded-lg bg-white px-8 py-3 font-semibold text-green-600 shadow-lg transition hover:bg-green-50"
+                className="rounded-lg bg-white px-8 py-3 font-semibold text-[#4a5d4a] shadow-lg transition hover:bg-[#e8ede8]"
               >
                 Book Free Demo Class
               </Link>

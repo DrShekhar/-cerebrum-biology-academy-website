@@ -137,7 +137,7 @@ export default function NEETBiologyClass11Page() {
             ].map((module, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-lg"
+                className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-6 shadow-lg shadow-[#3d4d3d]/10"
               >
                 <h3 className="text-xl font-bold text-slate-900">{module.title}</h3>
                 <p className="mt-2 text-slate-600">{module.topics} chapters covered</p>

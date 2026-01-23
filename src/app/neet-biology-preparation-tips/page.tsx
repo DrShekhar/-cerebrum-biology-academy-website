@@ -146,12 +146,12 @@ export default function NEETBiologyPreparationTipsPage() {
             ].map((phase, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-r from-blue-50 to-purple-50 p-8 shadow-lg"
+                className="rounded-2xl border border-[#e8ede8] bg-[#e8ede8] p-8 shadow-lg shadow-[#3d4d3d]/10"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-4">
-                      <span className="text-3xl font-bold text-blue-600">{phase.month}</span>
+                      <span className="text-3xl font-bold text-[#4a5d4a]">{phase.month}</span>
                       <h3 className="text-2xl font-bold text-slate-900">{phase.focus}</h3>
                     </div>
                     <p className="mt-4 text-lg text-slate-600">{phase.tasks}</p>
@@ -161,7 +161,7 @@ export default function NEETBiologyPreparationTipsPage() {
             ))}
           </div>
 
-          <div className="mt-16 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white md:p-12">
+          <div className="mt-16 rounded-2xl bg-[#3d4d3d] p-8 text-white shadow-xl shadow-[#3d4d3d]/30 md:p-12">
             <h3 className="text-2xl font-bold">Daily Study Routine</h3>
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
               <div>

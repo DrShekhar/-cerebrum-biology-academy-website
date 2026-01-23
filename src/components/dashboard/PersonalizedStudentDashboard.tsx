@@ -111,6 +111,63 @@ interface GamificationData {
   gamification: GamificationStats
 }
 
+// Extracted component to fix React hooks rule violation
+// Hooks cannot be called inside map callbacks
+function WeakAreaItem({
+  area,
+  onSelect,
+}: {
+  area: WeakArea
+  onSelect: (area: WeakArea) => void
+}) {
+  const longPressHandlers = useLongPress({
+    onLongPress: () => onSelect(area),
+    onClick: () => onSelect(area),
+    threshold: 500,
+  })
+
+  return (
+    <motion.div
+      whileTap={{ scale: 0.98 }}
+      {...longPressHandlers}
+      className="p-3 sm:p-4 bg-orange-50 rounded-lg cursor-pointer hover:bg-orange-100 transition-colors active:bg-orange-200"
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${area.chapter}`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onSelect(area)
+        }
+      }}
+    >
+      <div className="flex items-center justify-between mb-2 gap-2">
+        <span className="font-medium text-sm sm:text-base text-gray-900 truncate flex-1">
+          {area.chapter}
+        </span>
+        <span
+          className={`text-xs px-2 py-1 rounded flex-shrink-0 ${
+            area.difficulty === 'high'
+              ? 'bg-red-100 text-red-600'
+              : area.difficulty === 'medium'
+                ? 'bg-yellow-100 text-yellow-600'
+                : 'bg-green-100 text-green-600'
+          }`}
+        >
+          {area.difficulty}
+        </span>
+      </div>
+      <div className="text-xs sm:text-sm text-gray-600 mb-2 line-clamp-2">{area.topic}</div>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <span className="text-xs text-gray-500">
+          Recommended: {area.recommendedStudyTime} min/day
+        </span>
+        <span className="text-blue-600 text-xs sm:text-sm font-medium">Tap for details →</span>
+      </div>
+    </motion.div>
+  )
+}
+
 export function PersonalizedStudentDashboard() {
   const { user, isAuthenticated } = useFirebaseSession()
   const pathname = usePathname()
@@ -878,66 +935,16 @@ export function PersonalizedStudentDashboard() {
                     Areas for Improvement
                   </h3>
                   <div className="space-y-3 sm:space-y-4">
-                    {neetProgress.weakAreas.slice(0, 3).map((area, index) => {
-                      const longPressHandlers = useLongPress({
-                        onLongPress: () => {
-                          setSelectedWeakArea(area)
+                    {neetProgress.weakAreas.slice(0, 3).map((area, index) => (
+                      <WeakAreaItem
+                        key={index}
+                        area={area}
+                        onSelect={(selectedArea) => {
+                          setSelectedWeakArea(selectedArea)
                           weakAreaSheet.open()
-                        },
-                        onClick: () => {
-                          setSelectedWeakArea(area)
-                          weakAreaSheet.open()
-                        },
-                        threshold: 500,
-                      })
-
-                      return (
-                        <motion.div
-                          key={index}
-                          whileTap={{ scale: 0.98 }}
-                          {...longPressHandlers}
-                          className="p-3 sm:p-4 bg-orange-50 rounded-lg cursor-pointer hover:bg-orange-100 transition-colors active:bg-orange-200"
-                          role="button"
-                          tabIndex={0}
-                          aria-label={`View details for ${area.chapter}`}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              e.preventDefault()
-                              setSelectedWeakArea(area)
-                              weakAreaSheet.open()
-                            }
-                          }}
-                        >
-                          <div className="flex items-center justify-between mb-2 gap-2">
-                            <span className="font-medium text-sm sm:text-base text-gray-900 truncate flex-1">
-                              {area.chapter}
-                            </span>
-                            <span
-                              className={`text-xs px-2 py-1 rounded flex-shrink-0 ${
-                                area.difficulty === 'high'
-                                  ? 'bg-red-100 text-red-600'
-                                  : area.difficulty === 'medium'
-                                    ? 'bg-yellow-100 text-yellow-600'
-                                    : 'bg-green-100 text-green-600'
-                              }`}
-                            >
-                              {area.difficulty}
-                            </span>
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-600 mb-2 line-clamp-2">
-                            {area.topic}
-                          </div>
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                            <span className="text-xs text-gray-500">
-                              Recommended: {area.recommendedStudyTime} min/day
-                            </span>
-                            <span className="text-blue-600 text-xs sm:text-sm font-medium">
-                              Tap for details →
-                            </span>
-                          </div>
-                        </motion.div>
-                      )
-                    })}
+                        }}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
