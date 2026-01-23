@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Calendar,
@@ -247,9 +248,11 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
 
         {/* Faculty Info */}
         <div className="flex items-center mt-3 space-x-3">
-          <img
+          <Image
             src={demoClass.faculty.photo}
             alt={demoClass.faculty.name}
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-full border-2 border-white"
           />
           <div>

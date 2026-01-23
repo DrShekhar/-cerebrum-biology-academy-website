@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import { MockTest, TestResponse } from '@/types/mockTest'
 import { Button } from '@/components/ui/Button'
 import {
@@ -381,12 +382,14 @@ export function MobileTestInterface({
           </h2>
 
           {currentQuestion.imageUrl && (
-            <div className="mb-4">
-              <img
+            <div className="mb-4 relative">
+              <Image
                 src={currentQuestion.imageUrl}
                 alt="Question illustration"
+                width={600}
+                height={400}
                 className="w-full rounded-lg shadow-sm"
-                loading="lazy"
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
           )}

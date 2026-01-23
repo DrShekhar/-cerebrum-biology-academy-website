@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import {
   Bold,
   Italic,

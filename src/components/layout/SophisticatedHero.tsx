@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   PremiumButton,
@@ -277,9 +278,11 @@ export function SophisticatedHero({
                   className="relative space-y-6"
                 >
                   <div className="flex items-center gap-4">
-                    <img
+                    <Image
                       src={testimonials[currentTestimonial].image}
                       alt={testimonials[currentTestimonial].name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
                     />
                     <div>

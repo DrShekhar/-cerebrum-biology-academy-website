@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   GraduationCap,
@@ -407,9 +408,11 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
         )}
 
         <div className="flex items-start space-x-4">
-          <img
+          <Image
             src={faculty.photo}
             alt={faculty.name}
+            width={80}
+            height={80}
             className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
           />
 

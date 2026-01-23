@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { QuickQuizFlow } from './QuickQuizFlow'
 import { InstantEnrollment } from './InstantEnrollment'
@@ -295,9 +296,11 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                       className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
                     >
                       <div className="flex items-start gap-3">
-                        <img
+                        <Image
                           src={testimonial.image}
                           alt={testimonial.name}
+                          width={48}
+                          height={48}
                           className="w-12 h-12 rounded-full object-cover border-2 border-orange-300"
                         />
                         <div className="flex-1">

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
+import Image from 'next/image'
 import {
   Brain,
   X,
@@ -207,10 +208,13 @@ export function EnhancedChatInterface({
             >
               {/* Image Display */}
               {message.imageUrl && (
-                <img
+                <Image
                   src={message.imageUrl}
                   alt="Uploaded biology image"
+                  width={320}
+                  height={240}
                   className="w-full rounded-lg mb-2 max-w-xs"
+                  style={{ width: '100%', height: 'auto' }}
                 />
               )}
 

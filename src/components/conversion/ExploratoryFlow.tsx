@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
@@ -622,9 +623,11 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                     <div className="grid lg:grid-cols-3 gap-8">
                       {/* Left: Photo & Basic Info */}
                       <div className="text-center space-y-4">
-                        <img
+                        <Image
                           src={story.image}
                           alt={story.name}
+                          width={128}
+                          height={128}
                           className="w-32 h-32 rounded-full object-cover mx-auto border-4 border-green-200"
                         />
                         <div>
