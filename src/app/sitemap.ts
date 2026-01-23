@@ -4843,6 +4843,102 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // Premium Metro Area Pages - HIGH PRIORITY (₹24,000+ Fee Demographics)
+    // Mumbai Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-bandra-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94, // Ultra-premium international school area
+    },
+    {
+      url: `${baseUrl}/neet-coaching-powai-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // IT/Tech hub with Hiranandani
+    },
+    {
+      url: `${baseUrl}/neet-coaching-andheri-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Commercial hub, large population
+    },
+    {
+      url: `${baseUrl}/neet-coaching-south-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94, // SoBo ultra-premium - Colaba, Malabar Hill
+    },
+    // Hyderabad Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-jubilee-hills-hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Premium residential & school hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-gachibowli-hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // IT Financial District
+    },
+    {
+      url: `${baseUrl}/neet-coaching-hitech-city-hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // IT corridor - Madhapur, Kukatpally
+    },
+    // Bangalore Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-koramangala-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Startup hub, premium schools
+    },
+    {
+      url: `${baseUrl}/neet-coaching-indiranagar-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // East Bangalore premium
+    },
+    {
+      url: `${baseUrl}/neet-coaching-hsr-layout-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // South Bangalore IT hub
+    },
+    // Chennai Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-adyar-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Educational hub - IIT Madras adjacent
+    },
+    {
+      url: `${baseUrl}/neet-coaching-anna-nagar-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // North Chennai premium
+    },
+    {
+      url: `${baseUrl}/neet-coaching-omr-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // IT corridor
+    },
+    // Pune Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-koregaon-park-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // East Pune premium - international schools
+    },
+    {
+      url: `${baseUrl}/neet-coaching-baner-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // West Pune IT corridor
+    },
   ]
 
   return routes
