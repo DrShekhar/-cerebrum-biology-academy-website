@@ -5,7 +5,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getVersionInfo, createVersionedResponse, getApiVersion } from '@/lib/api/versioning'
 
 export const runtime = 'edge'
-export const dynamic = 'force-dynamic'
+// Cache version info for 1 hour - static deployment info
+export const revalidate = 3600
 
 /**
  * GET /api/version

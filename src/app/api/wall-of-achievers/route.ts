@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-export const dynamic = 'force-dynamic'
+// Cache wall of achievers for 10 minutes - public showcase data
+export const revalidate = 600
 
 // ============================================
 // GET - Fetch wall of achievers (public)

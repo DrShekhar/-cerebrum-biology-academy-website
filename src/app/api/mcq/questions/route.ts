@@ -3,7 +3,8 @@ import { prisma } from '@/lib/prisma'
 import type { MCQQuestion, QuestionFilter, QuestionResponse } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
-export const dynamic = 'force-dynamic'
+// Cache MCQ questions for 2 minutes - question bank changes infrequently
+export const revalidate = 120
 
 // Helper to safely parse question options (JSON or array)
 function safeParseOptions(options: unknown): string[] {

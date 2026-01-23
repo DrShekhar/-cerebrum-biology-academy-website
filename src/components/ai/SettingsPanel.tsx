@@ -533,7 +533,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                               {avatarPreview ? (
                                 <img
                                   src={avatarPreview}
-                                  alt="Avatar"
+                                  alt="Your profile avatar"
                                   className="w-full h-full object-cover"
                                 />
                               ) : (

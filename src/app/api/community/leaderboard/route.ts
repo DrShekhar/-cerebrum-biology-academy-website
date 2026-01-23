@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
 export const runtime = 'nodejs'
-export const dynamic = 'force-dynamic'
+// Cache leaderboard for 5 minutes - public data that doesn't need real-time updates
+export const revalidate = 300
 
 export async function GET(request: NextRequest) {
   try {

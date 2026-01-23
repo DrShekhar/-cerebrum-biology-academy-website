@@ -197,56 +197,58 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            <User className="w-4 h-4 inline mr-2" />
-            Full Name *
+            <User className="w-4 h-4 inline mr-2" aria-hidden="true" />
+            Full Name <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <Input
             id="name"
+            name="name"
             type="text"
             placeholder="Enter your full name"
             value={formData.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
-            className={errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : ''}
+            error={errors.name}
+            required
+            autoComplete="name"
           />
-          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
 
         {/* Email and Phone */}
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              <Mail className="w-4 h-4 inline mr-2" />
-              Email Address *
+              <Mail className="w-4 h-4 inline mr-2" aria-hidden="true" />
+              Email Address <span className="text-red-500" aria-hidden="true">*</span>
             </label>
             <Input
               id="email"
+              name="email"
               type="email"
               placeholder="your.email@example.com"
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className={
-                errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : ''
-              }
+              error={errors.email}
+              required
+              autoComplete="email"
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-              <Phone className="w-4 h-4 inline mr-2" />
-              Phone Number *
+              <Phone className="w-4 h-4 inline mr-2" aria-hidden="true" />
+              Phone Number <span className="text-red-500" aria-hidden="true">*</span>
             </label>
             <Input
               id="phone"
+              name="phone"
               type="tel"
               placeholder="9876543210"
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className={
-                errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : ''
-              }
+              error={errors.phone}
+              required
+              autoComplete="tel"
             />
-            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
           </div>
         </div>
 
