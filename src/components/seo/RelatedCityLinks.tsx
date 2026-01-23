@@ -118,6 +118,46 @@ export const cityPages = {
     region: 'Delhi',
     students: '350+',
   },
+  // Major Coaching Hub Cities
+  kota: {
+    name: 'Kota',
+    href: '/neet-coaching-kota',
+    region: 'Rajasthan',
+    students: '2,500+',
+  },
+  jaipur: {
+    name: 'Jaipur',
+    href: '/neet-coaching-jaipur',
+    region: 'Rajasthan',
+    students: '3,500+',
+  },
+  // Eastern India
+  kolkata: {
+    name: 'Kolkata',
+    href: '/neet-coaching-kolkata',
+    region: 'West Bengal',
+    students: '4,000+',
+  },
+  patna: {
+    name: 'Patna',
+    href: '/neet-coaching-patna',
+    region: 'Bihar',
+    students: '3,000+',
+  },
+  // Western India
+  ahmedabad: {
+    name: 'Ahmedabad',
+    href: '/neet-coaching-ahmedabad',
+    region: 'Gujarat',
+    students: '3,500+',
+  },
+  // Northern India
+  lucknow: {
+    name: 'Lucknow',
+    href: '/neet-coaching-lucknow',
+    region: 'Uttar Pradesh',
+    students: '4,500+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -131,24 +171,34 @@ interface RelatedCityLinksProps {
 
 // Define related cities for each city
 const relatedCitiesMap: Record<CityKey, CityKey[]> = {
-  mumbai: ['bangalore', 'pune', 'hyderabad', 'chennai', 'delhiNCR'],
-  bangalore: ['chennai', 'hyderabad', 'mumbai', 'pune', 'delhiNCR'],
-  hyderabad: ['bangalore', 'chennai', 'mumbai', 'pune', 'delhiNCR'],
-  chennai: ['bangalore', 'hyderabad', 'mumbai', 'pune', 'delhiNCR'],
-  pune: ['mumbai', 'bangalore', 'hyderabad', 'chennai', 'delhiNCR'],
-  delhiNCR: ['southDelhi', 'noida', 'gurgaon', 'mumbai', 'bangalore'],
+  mumbai: ['bangalore', 'pune', 'hyderabad', 'chennai', 'ahmedabad'],
+  bangalore: ['chennai', 'hyderabad', 'mumbai', 'pune', 'kolkata'],
+  hyderabad: ['bangalore', 'chennai', 'mumbai', 'pune', 'kolkata'],
+  chennai: ['bangalore', 'hyderabad', 'mumbai', 'pune', 'kolkata'],
+  pune: ['mumbai', 'bangalore', 'hyderabad', 'chennai', 'ahmedabad'],
+  delhiNCR: ['southDelhi', 'noida', 'gurgaon', 'kota', 'lucknow'],
   southDelhi: ['eastDelhi', 'westDelhi', 'northDelhi', 'noida', 'kaluSarai'],
   eastDelhi: ['northDelhi', 'westDelhi', 'southDelhi', 'noida', 'ghaziabad'],
   northDelhi: ['westDelhi', 'eastDelhi', 'southDelhi', 'mukherjeeNagar', 'rajinderNagar'],
   westDelhi: ['northDelhi', 'southDelhi', 'eastDelhi', 'gurgaon', 'delhiNCR'],
-  noida: ['greaterNoida', 'ghaziabad', 'eastDelhi', 'southDelhi', 'delhiNCR'],
-  gurgaon: ['faridabad', 'westDelhi', 'southDelhi', 'noida', 'delhiNCR'],
+  noida: ['greaterNoida', 'ghaziabad', 'eastDelhi', 'lucknow', 'delhiNCR'],
+  gurgaon: ['faridabad', 'westDelhi', 'southDelhi', 'noida', 'jaipur'],
   faridabad: ['gurgaon', 'noida', 'southDelhi', 'greaterNoida', 'delhiNCR'],
-  ghaziabad: ['noida', 'eastDelhi', 'greaterNoida', 'northDelhi', 'delhiNCR'],
-  greaterNoida: ['noida', 'ghaziabad', 'faridabad', 'eastDelhi', 'delhiNCR'],
-  kaluSarai: ['rajinderNagar', 'southDelhi', 'delhiNCR', 'noida', 'gurgaon'],
+  ghaziabad: ['noida', 'eastDelhi', 'greaterNoida', 'lucknow', 'delhiNCR'],
+  greaterNoida: ['noida', 'ghaziabad', 'faridabad', 'lucknow', 'delhiNCR'],
+  kaluSarai: ['rajinderNagar', 'southDelhi', 'delhiNCR', 'kota', 'jaipur'],
   rajinderNagar: ['kaluSarai', 'mukherjeeNagar', 'northDelhi', 'westDelhi', 'delhiNCR'],
-  mukherjeeNagar: ['rajinderNagar', 'northDelhi', 'kaluSarai', 'delhiNCR', 'ghaziabad'],
+  mukherjeeNagar: ['rajinderNagar', 'northDelhi', 'kaluSarai', 'delhiNCR', 'lucknow'],
+  // Coaching Hub Cities
+  kota: ['jaipur', 'delhiNCR', 'patna', 'lucknow', 'ahmedabad'],
+  jaipur: ['kota', 'delhiNCR', 'ahmedabad', 'lucknow', 'mumbai'],
+  // Eastern India
+  kolkata: ['patna', 'bangalore', 'chennai', 'hyderabad', 'mumbai'],
+  patna: ['kolkata', 'lucknow', 'kota', 'delhiNCR', 'bangalore'],
+  // Western India
+  ahmedabad: ['mumbai', 'pune', 'jaipur', 'kota', 'bangalore'],
+  // Northern India
+  lucknow: ['patna', 'kota', 'delhiNCR', 'noida', 'jaipur'],
 }
 
 export function RelatedCityLinks({
@@ -290,7 +340,7 @@ export function RelatedCityLinks({
 
 // Quick links component for footer or sidebar
 export function CityQuickLinks() {
-  const tier1Cities: CityKey[] = ['mumbai', 'bangalore', 'hyderabad', 'chennai', 'pune']
+  const tier1Cities: CityKey[] = ['mumbai', 'bangalore', 'hyderabad', 'chennai', 'pune', 'kolkata', 'ahmedabad']
   const delhiNCRCities: CityKey[] = [
     'delhiNCR',
     'southDelhi',
@@ -299,6 +349,7 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
+  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow']
 
   return (
     <div className="space-y-6">
@@ -325,6 +376,25 @@ export function CityQuickLinks() {
         <h4 className="font-semibold text-gray-900 mb-3">Delhi NCR</h4>
         <ul className="space-y-2">
           {delhiNCRCities.map((cityKey) => {
+            const city = cityPages[cityKey]
+            return (
+              <li key={cityKey}>
+                <Link
+                  href={city.href}
+                  className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                >
+                  NEET Coaching in {city.name}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold text-gray-900 mb-3">Coaching Hubs</h4>
+        <ul className="space-y-2">
+          {coachingHubCities.map((cityKey) => {
             const city = cityPages[cityKey]
             return (
               <li key={cityKey}>
