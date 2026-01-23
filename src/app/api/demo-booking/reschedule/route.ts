@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import crypto from 'crypto'
+import { withAdmin, UserSession } from '@/lib/auth/middleware'
+import { withRateLimit } from '@/lib/middleware/rateLimit'
+import { Prisma } from '@/generated/prisma'
 
 // Support phone from environment
 const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 88264 44334'
@@ -14,33 +17,38 @@ async function verifyAndConsumeToken(
   bookingId: string,
   token: string
 ): Promise<{ valid: boolean; tokenId?: string }> {
-  // Use raw query with row-level locking to prevent race conditions
+  // Use serializable isolation to prevent race conditions
   // This atomically: 1) finds valid token, 2) marks it used, 3) returns result
-  const result = await prisma.$transaction(async (tx) => {
-    // Find and lock the token row
-    const tokenRecord = await tx.rescheduleToken.findFirst({
-      where: {
-        bookingId,
-        token,
-        used: false,
-        expiresAt: {
-          gte: new Date(),
+  const result = await prisma.$transaction(
+    async (tx) => {
+      // Find and lock the token row
+      const tokenRecord = await tx.rescheduleToken.findFirst({
+        where: {
+          bookingId,
+          token,
+          used: false,
+          expiresAt: {
+            gte: new Date(),
+          },
         },
-      },
-    })
+      })
 
-    if (!tokenRecord) {
-      return { valid: false }
+      if (!tokenRecord) {
+        return { valid: false }
+      }
+
+      // Atomically mark as used within same transaction
+      await tx.rescheduleToken.update({
+        where: { id: tokenRecord.id },
+        data: { used: true },
+      })
+
+      return { valid: true, tokenId: tokenRecord.id }
+    },
+    {
+      isolationLevel: Prisma.TransactionIsolationLevel.Serializable,
     }
-
-    // Atomically mark as used within same transaction
-    await tx.rescheduleToken.update({
-      where: { id: tokenRecord.id },
-      data: { used: true },
-    })
-
-    return { valid: true, tokenId: tokenRecord.id }
-  })
+  )
 
   return result
 }
@@ -162,6 +170,24 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Rate limit to prevent token/booking enumeration
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+
+    const rateLimitResult = await withRateLimit(request, {
+      identifier: `reschedule-get:${clientIp}`,
+      limit: 20, // 20 requests per 15 minutes
+      window: 15 * 60 * 1000,
+      keyPrefix: 'reschedule-get',
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const bookingId = searchParams.get('id')
     const token = searchParams.get('token')
@@ -256,7 +282,8 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
   }
 }
 
-export async function PUT(request: NextRequest) {
+// Generate reschedule link - ADMIN ONLY to prevent IDOR attacks
+async function handleGenerateRescheduleLink(request: NextRequest, session: UserSession) {
   try {
     const { bookingId } = await request.json()
 
@@ -304,6 +331,9 @@ export async function PUT(request: NextRequest) {
       },
     })
 
+    // Log admin action
+    console.log(`[Reschedule] Admin ${session.userId} generated reschedule link for booking ${bookingId}`)
+
     const rescheduleUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/demo-booking/reschedule?id=${bookingId}&token=${token}`
 
     return NextResponse.json({
@@ -319,3 +349,6 @@ export async function PUT(request: NextRequest) {
     )
   }
 }
+
+// Export PUT with admin authentication to prevent IDOR attacks
+export const PUT = withAdmin(handleGenerateRescheduleLink)

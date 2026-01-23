@@ -39,7 +39,8 @@ const DemoBookingSchema = z.object({
     .string()
     .min(2, 'Name must be at least 2 characters')
     .max(50, 'Name must be less than 50 characters')
-    .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
+    // Support Unicode letters (Hindi, Tamil, etc.) and spaces
+    .regex(/^[\p{L}\p{M}\s'-]+$/u, 'Name can only contain letters, spaces, hyphens, and apostrophes'),
   email: z.string().email('Invalid email format').transform((email) => email.toLowerCase().trim()),
   phone: z.string().refine(validatePhoneNumber, 'Phone must have 10-15 digits'),
   whatsappNumber: z
@@ -220,33 +221,55 @@ export async function POST(request: NextRequest) {
     // Extract new fields from request body (if present)
     const { demoType, referralCodeUsed } = rawData
 
-    // Validate and cap referral discount to prevent abuse
+    // Validate referral code against database and get actual discount
+    // SECURITY: Never trust client-provided discount value - always derive from DB
     let validatedReferralDiscount = 0
-    if (rawData.referralDiscount !== undefined) {
-      const discount = Number(rawData.referralDiscount)
-      if (!isNaN(discount) && discount >= 0) {
-        // Cap at maximum allowed discount (10%)
-        validatedReferralDiscount = Math.min(discount, MAX_REFERRAL_DISCOUNT_PERCENT)
-      }
-    }
+    let validatedReferralCode: string | null = null
+    let validatedReferralCodeId: string | null = null
 
-    // If referral code provided, validate it exists and get actual discount
-    // TODO: Implement actual referral code validation against database
     if (referralCodeUsed && typeof referralCodeUsed === 'string') {
-      // For now, just ensure discount doesn't exceed max
-      // In production, lookup the referral code and get its actual discount value
-      console.log(`[Demo Booking] Referral code used: ${referralCodeUsed}, discount: ${validatedReferralDiscount}%`)
+      try {
+        // Lookup the referral code in database
+        const referralCodeRecord = await prisma.referral_codes.findUnique({
+          where: { code: referralCodeUsed.toUpperCase().trim() },
+        })
+
+        if (referralCodeRecord) {
+          // Validate code is active and not expired
+          const now = new Date()
+          const isExpired = referralCodeRecord.expiresAt && referralCodeRecord.expiresAt < now
+          const hasUsesLeft = referralCodeRecord.uses < referralCodeRecord.maxUses
+
+          if (!isExpired && hasUsesLeft) {
+            // Use discount from database, capped at max allowed
+            validatedReferralDiscount = Math.min(referralCodeRecord.discount, MAX_REFERRAL_DISCOUNT_PERCENT)
+            validatedReferralCode = referralCodeRecord.code
+            validatedReferralCodeId = referralCodeRecord.id
+
+            console.log(`[Demo Booking] Valid referral code: ${referralCodeRecord.code}, discount: ${validatedReferralDiscount}%`)
+          } else {
+            console.log(`[Demo Booking] Referral code ${referralCodeUsed} is ${isExpired ? 'expired' : 'maxed out'}`)
+          }
+        } else {
+          console.log(`[Demo Booking] Invalid referral code attempted: ${referralCodeUsed}`)
+        }
+      } catch (referralError) {
+        // Log error but don't fail the booking - just proceed without discount
+        console.error('[Demo Booking] Referral code lookup failed:', referralError)
+      }
     }
 
     // Extract tracking/attribution data from request body
     const { utmSource, utmMedium, utmCampaign, utmContent: _utmContent, utmTerm: _utmTerm, gclid, source } = rawData
 
     // Save demo booking and link to lead in a transaction for data integrity
+    // Use serializable isolation to prevent duplicate lead race conditions
     let demoBooking
     let lead: Awaited<ReturnType<typeof prisma.leads.findFirst>> = null
 
     try {
-      const result = await prisma.$transaction(async (tx) => {
+      const result = await prisma.$transaction(
+        async (tx) => {
         // 1. Create the demo booking
         const booking = await tx.demoBooking.create({
           data: {
@@ -269,7 +292,8 @@ export async function POST(request: NextRequest) {
             // Level 3: Premium Demo & Referral Fields
             demoType: demoType || 'FREE',
             paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
-            referralCodeUsed: referralCodeUsed || null,
+            // Only store validated referral code from database lookup
+            referralCodeUsed: validatedReferralCode,
             referralDiscount: validatedReferralDiscount,
 
             // Marketing Attribution - capture tracking data for attribution
@@ -342,8 +366,35 @@ export async function POST(request: NextRequest) {
           })
         }
 
+        // If referral code was used successfully, increment usage count and create redemption record
+        if (validatedReferralCode && validatedReferralCodeId) {
+          // Increment usage count
+          await tx.referral_codes.update({
+            where: { code: validatedReferralCode },
+            data: { uses: { increment: 1 } },
+          })
+
+          // Create redemption record for tracking
+          await tx.referral_redemptions.create({
+            data: {
+              id: `redemption_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+              referralCodeId: validatedReferralCodeId,
+              redeemedBy: updatedLead?.id || 'guest',
+              redeemedByEmail: data.email,
+              discountGiven: validatedReferralDiscount,
+              bookingId: booking.id,
+            },
+          })
+        }
+
         return { booking, lead: updatedLead }
-      })
+        },
+        {
+          // Use serializable isolation to prevent duplicate lead creation race conditions
+          // This ensures findFirst + create is atomic
+          isolationLevel: 'Serializable',
+        }
+      )
 
       demoBooking = result.booking
       lead = result.lead
@@ -353,17 +404,12 @@ export async function POST(request: NextRequest) {
         error: dbError instanceof Error ? dbError.message : 'Unknown error',
       })
 
-      // Return user-friendly error
+      // Return user-friendly error - NEVER expose internal details to client
+      // Details are logged server-side only for debugging
       return NextResponse.json(
         {
-          error: 'Database error',
-          message: 'Unable to save booking. Please try again or contact support.',
-          details:
-            process.env.NODE_ENV === 'development'
-              ? dbError instanceof Error
-                ? dbError.message
-                : 'Unknown error'
-              : undefined,
+          error: 'Unable to save booking',
+          message: 'Please try again or contact support.',
         },
         { status: 500 }
       )
