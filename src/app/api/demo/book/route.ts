@@ -239,25 +239,32 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Step 1: Get or create first available counselor (for round-robin assignment)
-    let assignedCounselor = await prisma.user.findFirst({
-      where: { role: 'COUNSELOR' },
-      orderBy: { createdAt: 'asc' },
+    // Step 1: Get first available counselor using round-robin (least loaded)
+    const assignedCounselor = await prisma.user.findFirst({
+      where: {
+        role: { in: ['COUNSELOR', 'ADMIN'] },
+        isActive: true,
+      },
+      orderBy: {
+        // Assign to counselor with fewest leads for load balancing
+        leads: { _count: 'asc' },
+      },
     })
 
-    // If no counselor exists, create a default one for testing
+    // SECURITY: Never auto-create users in production
+    // If no counselor exists, the booking cannot be assigned - return error
     if (!assignedCounselor) {
-      logger.warn('No counselor found, creating default counselor for testing', {
-        action: 'auto_create_counselor',
+      logger.error('No active counselor or admin found for lead assignment', {
+        action: 'demo_booking_failed',
+        reason: 'no_counselor_available',
       })
-      assignedCounselor = await prisma.user.create({
-        data: {
-          email: 'counselor@cerebrumbiologyacademy.com',
-          name: 'Default Counselor',
-          role: 'COUNSELOR',
-          phone: '+918826444334',
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Unable to process booking at this time. Please contact support.',
         },
-      })
+        { status: 503 }
+      )
     }
 
     // Determine lead source from tracking params

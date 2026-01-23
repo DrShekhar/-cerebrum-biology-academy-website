@@ -468,6 +468,136 @@ export function clearRateLimit(identifier: string, prefix?: string): number {
   return cleared
 }
 
+// Spam pattern detection storage (distributed when Redis available)
+const spamPatternStorage = new Map<string, { violations: number[]; blocked: boolean; blockedUntil?: number }>()
+
+// Check and track spam patterns for an IP/identifier
+export async function checkSpamPattern(
+  identifier: string,
+  context: string = 'general'
+): Promise<{ blocked: boolean; violations: number; blockedUntil?: number } | null> {
+  const key = `spam:${context}:${identifier}`
+  const now = Date.now()
+
+  // Try Redis first for distributed spam tracking
+  if (upstashRedis) {
+    try {
+      const data = await upstashRedis.get<{ violations: number[]; blocked: boolean; blockedUntil?: number }>(key)
+
+      if (!data) {
+        return null
+      }
+
+      // Check if block has expired
+      if (data.blocked && data.blockedUntil && data.blockedUntil < now) {
+        // Block expired, clear it
+        await upstashRedis.del(key)
+        return null
+      }
+
+      return {
+        blocked: data.blocked,
+        violations: data.violations.length,
+        blockedUntil: data.blockedUntil,
+      }
+    } catch (error) {
+      logger.error('Redis spam check error:', error)
+      // Fall through to in-memory
+    }
+  }
+
+  // Fallback to in-memory
+  const record = spamPatternStorage.get(key)
+  if (!record) {
+    return null
+  }
+
+  // Check if block expired
+  if (record.blocked && record.blockedUntil && record.blockedUntil < now) {
+    spamPatternStorage.delete(key)
+    return null
+  }
+
+  return {
+    blocked: record.blocked,
+    violations: record.violations.length,
+    blockedUntil: record.blockedUntil,
+  }
+}
+
+// Record a spam violation and potentially block
+export async function recordSpamViolation(
+  identifier: string,
+  context: string = 'general',
+  options: {
+    maxViolations?: number
+    violationWindow?: number
+    blockDuration?: number
+  } = {}
+): Promise<{ blocked: boolean; violations: number }> {
+  const {
+    maxViolations = 3,
+    violationWindow = 60 * 60 * 1000, // 1 hour
+    blockDuration = 24 * 60 * 60 * 1000, // 24 hours
+  } = options
+
+  const key = `spam:${context}:${identifier}`
+  const now = Date.now()
+
+  // Try Redis first
+  if (upstashRedis) {
+    try {
+      const data = await upstashRedis.get<{ violations: number[]; blocked: boolean; blockedUntil?: number }>(key)
+      const record = data || { violations: [], blocked: false }
+
+      // Filter to recent violations
+      record.violations = record.violations.filter((t) => t > now - violationWindow)
+      record.violations.push(now)
+
+      // Check if should block
+      if (record.violations.length >= maxViolations && !record.blocked) {
+        record.blocked = true
+        record.blockedUntil = now + blockDuration
+        logger.warn(`Spam block activated for ${identifier} in ${context}`)
+      }
+
+      // Store with TTL
+      await upstashRedis.set(key, record, { ex: Math.ceil(blockDuration / 1000) })
+
+      return {
+        blocked: record.blocked,
+        violations: record.violations.length,
+      }
+    } catch (error) {
+      logger.error('Redis spam record error:', error)
+      // Fall through to in-memory
+    }
+  }
+
+  // Fallback to in-memory
+  let record = spamPatternStorage.get(key)
+  if (!record) {
+    record = { violations: [], blocked: false }
+    spamPatternStorage.set(key, record)
+  }
+
+  // Filter to recent violations
+  record.violations = record.violations.filter((t) => t > now - violationWindow)
+  record.violations.push(now)
+
+  // Check if should block
+  if (record.violations.length >= maxViolations && !record.blocked) {
+    record.blocked = true
+    record.blockedUntil = now + blockDuration
+    logger.warn(`Spam block activated for ${identifier} in ${context}`)
+  }
+
+  return {
+    blocked: record.blocked,
+    violations: record.violations.length,
+  }
+}
+
 export default {
   withRateLimit,
   apiRateLimit,
@@ -482,5 +612,7 @@ export default {
   burstRateLimit,
   getRateLimitHeaders,
   getRateLimitStats,
-  clearRateLimit
+  clearRateLimit,
+  checkSpamPattern,
+  recordSpamViolation
 }
