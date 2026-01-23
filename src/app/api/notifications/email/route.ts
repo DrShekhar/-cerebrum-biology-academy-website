@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     // Get payment details if orderId provided
     let payment = null
     if (validatedData.orderId) {
-      payment = await prisma.payment.findFirst({
+      payment = await prisma.payments.findFirst({
         where: { razorpayOrderId: validatedData.orderId },
       })
     }

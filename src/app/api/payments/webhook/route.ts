@@ -115,7 +115,7 @@ async function handlePaymentSuccess(event: any) {
 
   try {
     await prisma.$transaction(async (tx) => {
-      const paymentRecord = await tx.payment.findFirst({
+      const paymentRecord = await tx.payments.findFirst({
         where: { razorpayOrderId: orderId },
         include: {
           enrollment: {
@@ -136,7 +136,7 @@ async function handlePaymentSuccess(event: any) {
         return
       }
 
-      await tx.payment.updateMany({
+      await tx.payments.updateMany({
         where: { razorpayOrderId: orderId },
         data: {
           razorpayPaymentId: paymentId,
@@ -196,7 +196,7 @@ async function handlePaymentFailed(event: any) {
   const reason = payment.error_description || 'Payment failed'
 
   try {
-    await prisma.payment.updateMany({
+    await prisma.payments.updateMany({
       where: { razorpayOrderId: orderId },
       data: {
         status: 'FAILED',
@@ -224,7 +224,7 @@ async function handleRefundCreated(event: any) {
   const refundAmount = refund.amount
 
   try {
-    const payment = await prisma.payment.findFirst({
+    const payment = await prisma.payments.findFirst({
       where: { razorpayPaymentId: paymentId },
       include: { enrollment: true },
     })
@@ -235,7 +235,7 @@ async function handleRefundCreated(event: any) {
     }
 
     await prisma.$transaction(async (tx) => {
-      await tx.payment.update({
+      await tx.payments.update({
         where: { id: payment.id },
         data: {
           status: 'REFUNDED',

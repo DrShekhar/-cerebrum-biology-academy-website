@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
         let courseId: string | null = null
 
         await prisma.$transaction(async (tx) => {
-          const payment = await tx.payment.findFirst({
+          const payment = await tx.payments.findFirst({
             where: { razorpayOrderId: orderId },
             include: {
               enrollment: {
@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
             return
           }
 
-          await tx.payment.updateMany({
+          await tx.payments.updateMany({
             where: { razorpayOrderId: orderId },
             data: {
               razorpayPaymentId: paymentId,
@@ -294,7 +294,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Missing order_id parameter' }, { status: 400 })
     }
 
-    const payment = await prisma.payment.findFirst({
+    const payment = await prisma.payments.findFirst({
       where: { razorpayOrderId: orderId },
       include: {
         enrollment: {

@@ -13,7 +13,7 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
     }
 
     // Get payment details with related data
-    const payment = await prisma.payment.findFirst({
+    const payment = await prisma.payments.findFirst({
       where: { razorpayOrderId: orderId },
       include: {
         user: true,

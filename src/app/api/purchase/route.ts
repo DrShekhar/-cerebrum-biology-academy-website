@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
       })
 
       // Create payment record
-      const payment = await tx.payment.create({
+      const payment = await tx.payments.create({
         data: {
           userId,
           enrollmentId: enrollment.id,
