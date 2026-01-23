@@ -52,7 +52,7 @@ export async function calculateLeadScore(leadId: string): Promise<ScoreBreakdown
   if (lead.phone) demographicScore += 5
 
   const sourceScores: Record<string, number> = {
-    WEBSITE_FORM: 10,
+    WEBSITE: 10,
     WHATSAPP: 8,
     PHONE_CALL: 9,
     REFERRAL: 10,

@@ -115,6 +115,16 @@ export interface UserSession {
   permissions?: string[]
 }
 
+export interface AuthenticatedSession {
+  valid: true
+  userId: string
+  role: UserRole
+  email: string
+  name: string
+  expiresAt?: Date
+  permissions?: string[]
+}
+
 export interface JWTPayload {
   userId: string
   email: string
