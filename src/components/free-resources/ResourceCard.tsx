@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { FileText, Calendar, Bell, BookOpen, Calculator, Eye, Clock, Archive } from 'lucide-react'
 import Link from 'next/link'
 
@@ -55,10 +56,12 @@ export default function ResourceCard({ resource }: ResourceCardProps) {
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-green-300 transition-all duration-300 h-full flex flex-col">
         {resource.thumbnailUrl ? (
           <div className="aspect-video bg-gray-100 relative overflow-hidden">
-            <img
+            <Image
               src={resource.thumbnailUrl}
               alt={resource.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             {resource.isArchived && (
               <div className="absolute top-2 right-2 bg-gray-800/80 text-white text-xs px-2 py-1 rounded flex items-center gap-1">

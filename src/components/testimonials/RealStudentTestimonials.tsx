@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Award, Star, Quote, ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import { RealTestimonial } from '@/data/realTestimonials'
@@ -78,12 +79,12 @@ export function RealStudentTestimonials({
                   >
                     {testimonial.youtubeId ? (
                       <>
-                        <img
+                        <Image
                           src={testimonial.thumbnail}
                           alt={`${testimonial.studentName} testimonial`}
-                          className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                          loading="lazy"
-                          decoding="async"
+                          fill
+                          className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                           <motion.div

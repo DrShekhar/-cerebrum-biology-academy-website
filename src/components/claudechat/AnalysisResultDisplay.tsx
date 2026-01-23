@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
@@ -161,10 +162,12 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
             className="relative w-24 h-24 rounded-lg overflow-hidden shadow-md"
             whileHover={{ scale: 1.05 }}
           >
-            <img
+            <Image
               src={result.imageUrl}
               alt={result.fileName}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="96px"
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
               <Eye

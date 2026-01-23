@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import type { DiagramBasedQuestion } from '@/data/neetQuestionBank'
 
@@ -116,10 +117,11 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
         <div ref={containerRef} className="relative inline-block mx-auto">
           {!imageError ? (
             <>
-              <img
-                ref={imageRef}
+              <Image
                 src={question.diagramUrl}
                 alt={question.diagramDescription}
+                width={600}
+                height={400}
                 onLoad={handleImageLoad}
                 onError={handleImageError}
                 className={cn(

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
@@ -426,10 +427,12 @@ export function SecondChanceNEETLanding({
                 >
                   <div className="relative">
                     <div className="relative bg-black rounded-2xl overflow-hidden aspect-video">
-                      <img
+                      <Image
                         src={successStories[currentTestimonial].image}
                         alt={successStories[currentTestimonial].name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                         <PlayCircle className="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform" />

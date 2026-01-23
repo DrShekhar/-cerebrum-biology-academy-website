@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Youtube, Play, Users, Video, TrendingUp, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
@@ -170,12 +171,12 @@ export function YouTubeChannel({
                   onClick={() => openVideo(video)}
                 >
                   <div className="relative aspect-video bg-gray-900 group">
-                    <img
+                    <Image
                       src={video.thumbnail}
                       alt={video.title}
-                      className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                       <motion.div

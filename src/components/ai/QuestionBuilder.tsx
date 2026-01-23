@@ -762,11 +762,13 @@ export function QuestionBuilder({
                               <h4 className="font-medium text-gray-700 mb-2">Images:</h4>
                               <div className="grid grid-cols-3 gap-4">
                                 {question.question.images.map((img, index) => (
-                                  <div key={index} className="relative">
-                                    <img
+                                  <div key={index} className="relative h-24">
+                                    <Image
                                       src={img}
                                       alt={`Question image ${index + 1}`}
-                                      className="w-full h-24 object-cover rounded"
+                                      fill
+                                      className="object-cover rounded"
+                                      sizes="120px"
                                     />
                                     <button
                                       onClick={() =>
@@ -959,12 +961,16 @@ export function QuestionBuilder({
                     />
 
                     {question.question.images.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt={`Question diagram ${index + 1}`}
-                        className="max-w-md mt-4 rounded"
-                      />
+                      <div key={index} className="relative max-w-md mt-4">
+                        <Image
+                          src={img}
+                          alt={`Question diagram ${index + 1}`}
+                          width={400}
+                          height={300}
+                          className="rounded"
+                          style={{ width: '100%', height: 'auto' }}
+                        />
+                      </div>
                     ))}
 
                     {question.type === 'mcq' && question.options && (

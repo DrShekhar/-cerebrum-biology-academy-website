@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
@@ -633,13 +634,16 @@ Want me to explain any specific part in more detail?`
                       {/* Image Preview */}
                       {message.metadata?.imageUrl && (
                         <motion.div
-                          className="mt-3 rounded-lg overflow-hidden"
+                          className="mt-3 rounded-lg overflow-hidden relative"
                           whileHover={{ scale: 1.02 }}
                         >
-                          <img
+                          <Image
                             src={message.metadata.imageUrl}
                             alt="Biology diagram"
+                            width={400}
+                            height={256}
                             className="max-w-full h-auto max-h-64 object-contain"
+                            style={{ width: 'auto', height: 'auto' }}
                           />
                         </motion.div>
                       )}

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Camera,
@@ -349,10 +350,12 @@ Key concepts covered:
                 whileHover={{ y: -2 }}
               >
                 <div className="aspect-square relative">
-                  <img
+                  <Image
                     src={file.preview}
                     alt={file.file.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="120px"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                     <motion.button

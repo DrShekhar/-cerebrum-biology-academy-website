@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Smartphone,
@@ -340,10 +341,12 @@ export function MobileAppPromoSection({
                         transition={{ duration: 0.5 }}
                         className="absolute inset-0"
                       >
-                        <img
+                        <Image
                           src={appScreenshots[currentScreenshot].image}
                           alt={appScreenshots[currentScreenshot].title}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 400px"
                         />
 
                         {/* Overlay with app interface elements */}

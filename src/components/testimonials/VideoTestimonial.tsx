@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Play, Pause, Volume2, VolumeX, Maximize, X, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -77,10 +78,12 @@ export function VideoTestimonial({
               onEnded={() => setIsPlaying(false)}
             />
           ) : (
-            <img
+            <Image
               src={thumbnailUrl}
               alt={`${studentName} testimonial`}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           )}
 
