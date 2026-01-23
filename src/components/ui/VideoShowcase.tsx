@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Play, ExternalLink, BookOpen } from 'lucide-react'
 import { Button } from './Button'
@@ -138,12 +139,12 @@ export function VideoShowcase({
                   <LoadingSpinner size="lg" variant="cerebrum" />
                 </div>
               )}
-              <img
+              <Image
                 src={defaultThumbnail}
                 alt={title}
-                className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                loading="lazy"
-                decoding="async"
+                fill
+                className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 onLoad={() => setImageLoaded(true)}
                 onError={(e) => {
                   e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`

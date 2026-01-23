@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { useMobileOptimization } from '@/lib/performance/mobileOptimization'
 
 interface AdaptiveLoaderProps {
@@ -286,13 +287,17 @@ export const ImageLoader = ({
 
   return (
     <AdaptiveLoader priority={priority} enableSkeletonLoader={false}>
-      <img
+      <Image
         src={src}
         alt={alt}
+        width={400}
+        height={300}
         className={className}
         loading={shouldPreloadImages ? 'eager' : 'lazy'}
         style={{
           filter: `contrast(${optimalImageQuality}%)`,
+          width: '100%',
+          height: 'auto',
         }}
       />
     </AdaptiveLoader>

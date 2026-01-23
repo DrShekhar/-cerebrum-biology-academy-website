@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
@@ -526,12 +527,14 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                             Profile Avatar
                           </label>
                           <div className="flex items-center space-x-4">
-                            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center overflow-hidden">
+                            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center overflow-hidden relative">
                               {avatarPreview ? (
-                                <img
+                                <Image
                                   src={avatarPreview}
                                   alt="Your profile avatar"
-                                  className="w-full h-full object-cover"
+                                  fill
+                                  className="object-cover"
+                                  sizes="80px"
                                 />
                               ) : (
                                 <User className="w-10 h-10 text-white" />
