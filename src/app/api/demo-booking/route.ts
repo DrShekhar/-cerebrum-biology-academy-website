@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
     const { demoType, referralCodeUsed, referralDiscount } = rawData
 
     // Extract tracking/attribution data from request body
-    const { utmSource, utmMedium, utmCampaign, utmContent, utmTerm, gclid, source } = rawData
+    const { utmSource, utmMedium, utmCampaign, utmContent: _utmContent, utmTerm: _utmTerm, gclid, source } = rawData
 
     // Save demo booking and link to lead in a transaction for data integrity
     let demoBooking
@@ -341,11 +341,11 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
   const now = new Date()
 
   // Schedule confirmation call within 2 hours
-  const confirmationTime = new Date(now.getTime() + 2 * 60 * 60 * 1000)
+  const _confirmationTime = new Date(now.getTime() + 2 * 60 * 60 * 1000)
 
   // Schedule reminder 1 day before demo
   const preferredDate = new Date(data.preferredDate)
-  const reminderTime = new Date(preferredDate.getTime() - 24 * 60 * 60 * 1000)
+  const _reminderTime = new Date(preferredDate.getTime() - 24 * 60 * 60 * 1000)
 
   // Schedule tasks using BullMQ/fallback scheduler
   try {
@@ -647,7 +647,7 @@ async function notifyAdminTeam(bookingData: any) {
 
 // Handle GET requests for fetching demo bookings (admin use)
 // Protected with admin authentication
-async function handleGet(request: NextRequest, session: UserSession) {
+async function handleGet(request: NextRequest, _session: UserSession) {
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')

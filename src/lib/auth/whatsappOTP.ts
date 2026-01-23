@@ -169,7 +169,7 @@ async function checkRateLimit(phone: string): Promise<{ allowed: boolean; remain
       3600 // 1 hour in seconds
     )
     return { allowed: result.allowed, remaining: result.remaining }
-  } catch (error) {
+  } catch {
     // Fallback to in-memory
     const now = new Date()
     const hourAgo = new Date(now.getTime() - 60 * 60 * 1000)
@@ -198,7 +198,7 @@ export async function sendOTP(phone: string, name?: string): Promise<SendOTPResu
     const normalizedPhone = normalizePhone(phone)
 
     // Check rate limit
-    const { allowed, remaining } = await checkRateLimit(phone)
+    const { allowed, remaining: _remaining } = await checkRateLimit(phone)
     if (!allowed) {
       return {
         success: false,
@@ -482,7 +482,7 @@ export async function getOTPStatus(phone: string): Promise<{
         storageType: 'redis',
       }
     }
-  } catch (error) {
+  } catch {
     // Fall through to memory check
   }
 
