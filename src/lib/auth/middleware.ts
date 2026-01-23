@@ -354,7 +354,7 @@ export const publicRoute = combineMiddleware(withOptionalAuth, withLogging, (han
   withRateLimit(300, 60000, handler)
 )
 
-export type { UserRole } from './config'
+export type { UserRole, UserSession } from './config'
 
 export default {
   withAuth,

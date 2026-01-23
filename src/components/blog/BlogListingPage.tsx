@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { BlogPostMeta, BlogCategory, Difficulty } from '@/types/blog'
 import { blogCategories } from '@/lib/blog/mdx'
@@ -75,13 +76,17 @@ interface BlogListingPageProps {
 const POSTS_PER_PAGE = 9
 
 export function BlogListingPage({ posts, categories, stats }: BlogListingPageProps) {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const initialPage = parseInt(searchParams.get('page') || '1', 10)
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all')
   const [selectedAuthor, setSelectedAuthor] = useState<string>('all')
   const [sortBy, setSortBy] = useState<SortOption>('newest')
   const [searchTerm, setSearchTerm] = useState('')
   const [searchInput, setSearchInput] = useState('')
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(initialPage)
   const [isSearching, setIsSearching] = useState(false)
   const [showSearchPreview, setShowSearchPreview] = useState(false)
   const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>([])
@@ -96,6 +101,14 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
       setBookmarkedPosts(JSON.parse(saved))
     }
   }, [])
+
+  // Sync currentPage with URL when browser back/forward is used
+  useEffect(() => {
+    const pageFromUrl = parseInt(searchParams.get('page') || '1', 10)
+    if (pageFromUrl !== currentPage) {
+      setCurrentPage(pageFromUrl)
+    }
+  }, [searchParams, currentPage])
 
   // Get unique authors
   const authors = useMemo(() => {
@@ -190,10 +203,21 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     currentPage * POSTS_PER_PAGE
   )
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const handlePageChange = useCallback(
+    (page: number) => {
+      setCurrentPage(page)
+      const params = new URLSearchParams(searchParams.toString())
+      if (page === 1) {
+        params.delete('page')
+      } else {
+        params.set('page', page.toString())
+      }
+      const query = params.toString()
+      router.push(query ? `/blog?${query}` : '/blog', { scroll: false })
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+    [router, searchParams]
+  )
 
   const handleFilterChange = () => {
     setCurrentPage(1)

@@ -24,7 +24,7 @@ const BlogListingPage = dynamic(
 )
 
 interface BlogPageProps {
-  searchParams: Promise<{ search?: string; category?: string }>
+  searchParams: Promise<{ search?: string; category?: string; page?: string }>
 }
 
 export async function generateMetadata({ searchParams }: BlogPageProps): Promise<Metadata> {
