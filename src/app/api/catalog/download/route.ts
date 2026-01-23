@@ -1,31 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
+import { prisma } from '@/lib/prisma'
 
 interface CatalogDownloadRequest {
   email: string
   phone: string
+  name?: string
   source?: string
   utm_campaign?: string
   utm_source?: string
   utm_medium?: string
 }
-
-interface CatalogLead {
-  email: string
-  phone: string
-  source: string
-  timestamp: number
-  userAgent: string
-  ip: string
-  utm_data?: {
-    campaign?: string
-    source?: string
-    medium?: string
-  }
-}
-
-// In-memory storage for demo (replace with database in production)
-const catalogLeads: CatalogLead[] = []
 
 export async function POST(request: NextRequest) {
   try {
@@ -45,39 +30,96 @@ export async function POST(request: NextRequest) {
 
     // Basic phone validation (10-15 digits)
     const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,15}$/
-    if (!phoneRegex.test(body.phone.replace(/\s/g, ''))) {
+    const cleanPhone = body.phone.replace(/\s/g, '')
+    if (!phoneRegex.test(cleanPhone)) {
       return NextResponse.json({ error: 'Invalid phone number format' }, { status: 400 })
     }
 
-    // Check for duplicate (basic spam prevention)
-    const existingLead = catalogLeads.find(
-      (lead) => lead.email === body.email || lead.phone === body.phone
-    )
+    const normalizedPhone = cleanPhone.replace(/\D/g, '').slice(-10)
+    const clientIp = headersList.get('x-forwarded-for')?.split(',')[0].trim() || '127.0.0.1'
+    const userAgent = headersList.get('user-agent') || ''
 
-    if (existingLead && Date.now() - existingLead.timestamp < 300000) {
-      // 5 minutes
-      return NextResponse.json({ error: 'Please wait before requesting again' }, { status: 429 })
-    }
-
-    // Create lead record
-    const lead: CatalogLead = {
-      email: body.email,
-      phone: body.phone,
-      source: body.source || 'exit_intent_popup',
-      timestamp: Date.now(),
-      userAgent: headersList.get('user-agent') || '',
-      ip: headersList.get('x-forwarded-for') || '127.0.0.1',
-      utm_data: {
-        campaign: body.utm_campaign,
-        source: body.utm_source,
-        medium: body.utm_medium,
+    // Check for duplicate (rate limit per email/phone)
+    const recentLead = await prisma.content_leads.findFirst({
+      where: {
+        OR: [{ email: body.email }, { whatsappPhone: normalizedPhone }],
+        createdAt: { gte: new Date(Date.now() - 5 * 60 * 1000) }, // Last 5 minutes
       },
+    })
+
+    if (recentLead) {
+      return NextResponse.json(
+        { error: 'Please wait before requesting again' },
+        { status: 429 }
+      )
     }
 
-    // Store lead (in production, save to database)
-    catalogLeads.push(lead)
+    // Generate unique lead ID
+    const leadId = `content_${Date.now()}_${Math.random().toString(36).substring(7)}`
 
-    // Generate catalog download data (mock)
+    // Persist to database - content_leads table
+    await prisma.content_leads.create({
+      data: {
+        id: leadId,
+        name: body.name || null,
+        email: body.email,
+        whatsappPhone: normalizedPhone,
+        source: body.source || 'catalog_download',
+        captureType: 'CATALOG_DOWNLOAD',
+        articleSlug: 'catalog-download',
+        ipAddress: clientIp,
+        deviceType: userAgent.includes('Mobile') ? 'MOBILE' : 'DESKTOP',
+        browserInfo: userAgent,
+        utmSource: body.utm_source || null,
+        utmMedium: body.utm_medium || null,
+        utmCampaign: body.utm_campaign || null,
+        engagementScore: 20, // Base score for catalog download
+        updatedAt: new Date(),
+      },
+    })
+
+    // Also create a CRM lead for follow-up
+    try {
+      // Find a default counselor
+      const counselor = await prisma.users.findFirst({
+        where: {
+          role: { in: ['COUNSELOR', 'ADMIN'] },
+          isActive: true,
+        },
+        select: { id: true },
+      })
+
+      if (counselor) {
+        // Check if CRM lead already exists
+        const existingCrmLead = await prisma.leads.findFirst({
+          where: {
+            OR: [{ email: body.email }, { phone: normalizedPhone }],
+          },
+        })
+
+        if (!existingCrmLead) {
+          await prisma.leads.create({
+            data: {
+              id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+              studentName: body.name || body.email.split('@')[0],
+              email: body.email,
+              phone: normalizedPhone,
+              courseInterest: 'NEET Biology - Catalog Download',
+              stage: 'NEW_LEAD',
+              priority: 'WARM',
+              source: body.utm_source ? 'PAID_ADS' : 'WEBSITE_FORM',
+              assignedToId: counselor.id,
+              updatedAt: new Date(),
+            },
+          })
+        }
+      }
+    } catch (crmError) {
+      // Log but don't fail - content lead was already created
+      console.error('Failed to create CRM lead (non-blocking):', crmError)
+    }
+
+    // Generate catalog download data
     const catalogData = {
       downloadUrl: '/catalog/neet-biology-complete-guide.pdf',
       title: 'NEET Biology Complete Course Catalog',
@@ -96,34 +138,22 @@ export async function POST(request: NextRequest) {
       ],
     }
 
-    // In production, you would:
-    // 1. Send the catalog via email
-    // 2. Add to CRM/marketing automation
-    // 3. Trigger follow-up sequences
-    // 4. Log to analytics
-
-    // Mock email sending (replace with actual email service)
-    const emailSent = await sendCatalogEmail(body.email, catalogData)
-
-    // Mock WhatsApp notification (replace with actual WhatsApp API)
-    const whatsappSent = await sendWhatsAppNotification(body.phone, lead)
-
-    // Track conversion in analytics
-    await trackCatalogDownload(lead)
-
     // Log successful conversion
-    console.log(`[CATALOG-DOWNLOAD] ${body.email} - ${body.source}`)
+    console.log(`[CATALOG-DOWNLOAD] ${body.email} - ${body.source || 'direct'} - Lead ID: ${leadId}`)
 
     return NextResponse.json({
       success: true,
       message: 'Catalog sent successfully',
       catalog: catalogData,
-      leadId: `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      leadId: leadId,
       estimatedDelivery: '5-10 minutes',
     })
   } catch (error) {
     console.error('Catalog download error:', error)
-    return NextResponse.json({ error: 'Failed to process catalog request' }, { status: 500 })
+    return NextResponse.json(
+      { error: 'Failed to process catalog request' },
+      { status: 500 }
+    )
   }
 }
 
@@ -134,72 +164,69 @@ export async function GET(request: NextRequest) {
     const timeframe = searchParams.get('timeframe') || '24h'
     const source = searchParams.get('source')
 
-    // Filter leads based on timeframe
-    const now = Date.now()
-    const timeframes = {
+    // Calculate cutoff date based on timeframe
+    const now = new Date()
+    const timeframes: Record<string, number> = {
       '1h': 60 * 60 * 1000,
       '24h': 24 * 60 * 60 * 1000,
       '7d': 7 * 24 * 60 * 60 * 1000,
       '30d': 30 * 24 * 60 * 60 * 1000,
     }
 
-    const cutoff = now - (timeframes[timeframe as keyof typeof timeframes] || timeframes['24h'])
-    let filteredLeads = catalogLeads.filter((lead) => lead.timestamp >= cutoff)
+    const cutoffMs = timeframes[timeframe] || timeframes['24h']
+    const cutoffDate = new Date(now.getTime() - cutoffMs)
+
+    // Query from database
+    const whereClause: Record<string, unknown> = {
+      captureType: 'CATALOG_DOWNLOAD',
+      createdAt: { gte: cutoffDate },
+    }
 
     if (source) {
-      filteredLeads = filteredLeads.filter((lead) => lead.source === source)
+      whereClause.source = source
     }
+
+    const [leads, totalCount] = await Promise.all([
+      prisma.content_leads.findMany({
+        where: whereClause,
+        orderBy: { createdAt: 'desc' },
+        take: 100,
+      }),
+      prisma.content_leads.count({
+        where: { captureType: 'CATALOG_DOWNLOAD' },
+      }),
+    ])
 
     // Generate analytics
     const analytics = {
-      totalDownloads: filteredLeads.length,
-      uniqueEmails: new Set(filteredLeads.map((l) => l.email)).size,
-      uniquePhones: new Set(filteredLeads.map((l) => l.phone)).size,
-      sourceBreakdown: filteredLeads.reduce(
+      totalDownloads: leads.length,
+      uniqueEmails: new Set(leads.map((l) => l.email).filter(Boolean)).size,
+      uniquePhones: new Set(leads.map((l) => l.whatsappPhone)).size,
+      sourceBreakdown: leads.reduce(
         (acc, lead) => {
-          acc[lead.source] = (acc[lead.source] || 0) + 1
+          const src = lead.source || 'unknown'
+          acc[src] = (acc[src] || 0) + 1
           return acc
         },
         {} as Record<string, number>
       ),
       timeframe,
-      conversionRate: (filteredLeads.length / (catalogLeads.length || 1)) * 100,
+      allTimeTotal: totalCount,
     }
 
     return NextResponse.json({
+      success: true,
       analytics,
-      recentLeads: filteredLeads.slice(-10), // Last 10 leads
+      recentLeads: leads.slice(0, 10).map((l) => ({
+        id: l.id,
+        email: l.email,
+        phone: l.whatsappPhone,
+        source: l.source,
+        createdAt: l.createdAt,
+      })),
     })
   } catch (error) {
     console.error('Catalog analytics error:', error)
     return NextResponse.json({ error: 'Failed to retrieve analytics' }, { status: 500 })
   }
-}
-
-// Mock email service (replace with actual implementation)
-async function sendCatalogEmail(email: string, catalogData: any): Promise<boolean> {
-  // In production, integrate with:
-  // - SendGrid, Mailgun, or similar
-  // - Email templates
-  // - Attachment handling
-
-  console.log(`[EMAIL] Sending catalog to ${email}`)
-  return new Promise((resolve) => setTimeout(() => resolve(true), 100))
-}
-
-// Mock WhatsApp service (replace with actual implementation)
-async function sendWhatsAppNotification(phone: string, lead: CatalogLead): Promise<boolean> {
-  // In production, integrate with WhatsApp Business API
-  console.log(`[WHATSAPP] Notifying ${phone} about catalog download`)
-  return new Promise((resolve) => setTimeout(() => resolve(true), 100))
-}
-
-// Mock analytics tracking (replace with actual implementation)
-async function trackCatalogDownload(lead: CatalogLead): Promise<void> {
-  // In production, send to:
-  // - Google Analytics
-  // - Facebook Pixel
-  // - Custom analytics
-
-  console.log(`[ANALYTICS] Tracking catalog download for ${lead.email}`)
 }

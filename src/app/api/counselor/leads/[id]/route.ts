@@ -39,18 +39,21 @@ async function handleGET(
     const lead = await prisma.leads.findUnique({
       where: { id },
       include: {
-        assignedTo: {
+        // Assigned counselor (correct field name: users)
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        demoBooking: true,
-        communications: {
+        // Demo booking relation (correct field name: demo_bookings)
+        demo_bookings: true,
+        // Communications (correct field name: crm_communications)
+        crm_communications: {
           orderBy: { sentAt: 'desc' },
           include: {
-            sentBy: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -59,27 +62,31 @@ async function handleGET(
             },
           },
         },
+        // Offers
         offers: {
           orderBy: { createdAt: 'desc' },
         },
-        feePlans: {
+        // Fee plans (correct field name: fee_plans)
+        fee_plans: {
           orderBy: { createdAt: 'desc' },
           include: {
-            installments: {
+            fee_installments: {
               orderBy: { dueDate: 'asc' },
             },
-            payments: {
+            fee_payments: {
               orderBy: { createdAt: 'desc' },
             },
           },
         },
+        // Tasks
         tasks: {
           orderBy: { dueDate: 'asc' },
         },
+        // Notes
         notes: {
           orderBy: { createdAt: 'desc' },
           include: {
-            createdBy: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -87,11 +94,12 @@ async function handleGET(
             },
           },
         },
+        // Activities (correct field name: activities with users relation)
         activities: {
           orderBy: { createdAt: 'desc' },
           take: 50,
           include: {
-            user: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -194,7 +202,7 @@ async function handlePATCH(
       where: { id },
       data: updateData,
       include: {
-        assignedTo: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -204,8 +212,9 @@ async function handlePATCH(
       },
     })
 
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
         userId: session.userId,
         leadId: lead.id,
         action: 'LEAD_UPDATED',
@@ -293,17 +302,19 @@ async function handleDELETE(
       )
     }
 
-    await prisma.leads.delete({
-      where: { id },
-    })
-
-    await prisma.activity.create({
+    // Note: Activity must be created BEFORE delete due to cascade rules
+    await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
         userId: session.userId,
         leadId: id,
         action: 'LEAD_DELETED',
         description: `Deleted lead: ${existingLead.studentName}`,
       },
+    })
+
+    await prisma.leads.delete({
+      where: { id },
     })
 
     return NextResponse.json({

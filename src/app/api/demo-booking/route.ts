@@ -49,6 +49,35 @@ const rateLimitStore = new Map<string, { count: number; resetTime: number }>()
 // Spam detection: track submission patterns
 const spamDetectionStore = new Map<string, { submissions: number[]; blocked: boolean }>()
 
+// Helper: Get default counselor for auto-assignment (round-robin or least loaded)
+async function getDefaultCounselorId(tx: typeof prisma): Promise<string> {
+  // Find active counselors ordered by least active leads
+  const counselor = await tx.users.findFirst({
+    where: {
+      role: { in: ['COUNSELOR', 'ADMIN'] },
+      isActive: true,
+    },
+    orderBy: {
+      leads: {
+        _count: 'asc', // Assign to counselor with fewest leads
+      },
+    },
+    select: { id: true },
+  })
+
+  // If no counselor found, try to find any admin
+  if (!counselor) {
+    const admin = await tx.users.findFirst({
+      where: { role: 'ADMIN' },
+      select: { id: true },
+    })
+    if (admin) return admin.id
+    throw new Error('No counselor or admin available for lead assignment')
+  }
+
+  return counselor.id
+}
+
 // Database is now imported from db-admin.ts
 
 export async function POST(request: NextRequest) {
@@ -196,20 +225,49 @@ export async function POST(request: NextRequest) {
         })
 
         // 2. Find existing lead by email or phone
+        const normalizedPhone = data.phone.replace(/\D/g, '').slice(-10)
         const existingLead = await tx.leads.findFirst({
           where: {
-            OR: [{ email: data.email }, { phone: data.phone.replace(/\D/g, '').slice(-10) }],
+            OR: [
+              { email: data.email },
+              { phone: normalizedPhone },
+            ],
           },
         })
 
-        // 3. If lead exists, update it with demo booking reference
-        let updatedLead = existingLead
+        // 3. If lead exists, update it. Otherwise CREATE a new lead.
+        let updatedLead
         if (existingLead) {
+          // Update existing lead with demo booking reference
           updatedLead = await tx.leads.update({
             where: { id: existingLead.id },
             data: {
               demoBookingId: booking.id,
               stage: 'DEMO_SCHEDULED',
+              // Update name if provided and different
+              ...(data.name && data.name !== existingLead.studentName && { studentName: data.name }),
+              // Update course interest if provided
+              ...(data.courseInterest?.length > 0 && {
+                courseInterest: data.courseInterest.join(', '),
+              }),
+            },
+          })
+        } else {
+          // CREATE NEW LEAD - This was missing before!
+          updatedLead = await tx.leads.create({
+            data: {
+              id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+              studentName: data.name,
+              email: data.email || null,
+              phone: normalizedPhone,
+              courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
+              stage: 'DEMO_SCHEDULED',
+              priority: 'WARM',
+              source: utmSource ? 'PAID_ADS' : (source as any) || 'WEBSITE_FORM',
+              demoBookingId: booking.id,
+              // Auto-assign to first available counselor or leave unassigned
+              assignedToId: await getDefaultCounselorId(tx),
+              updatedAt: new Date(),
             },
           })
         }
