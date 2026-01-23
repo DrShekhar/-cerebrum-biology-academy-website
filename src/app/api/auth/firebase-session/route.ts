@@ -51,11 +51,25 @@ interface FirebaseSessionRequest {
 }
 
 export async function POST(request: NextRequest) {
+  const requestId = `req_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
+  const startTime = Date.now()
+
   try {
     const body: FirebaseSessionRequest = await request.json()
     const { uid, phoneNumber, firstName, lastName, role, action } = body
 
+    // Log request details
+    console.log(`[Firebase Session][${requestId}] Request received:`, {
+      action,
+      hasUid: !!uid,
+      phoneLastDigits: phoneNumber ? phoneNumber.slice(-4) : 'none',
+      hasFirstName: !!firstName,
+      role,
+      timestamp: new Date().toISOString(),
+    })
+
     if (!uid || !phoneNumber) {
+      console.error(`[Firebase Session][${requestId}] Missing required fields`)
       return addSecurityHeaders(
         NextResponse.json({ error: 'Firebase UID and phone number are required' }, { status: 400 })
       )
@@ -193,6 +207,8 @@ export async function POST(request: NextRequest) {
 
     // Action: Create session (login)
     if (action === 'login') {
+      console.log(`[Firebase Session][${requestId}] Processing login for phone: ***${normalizedPhone.slice(-4)}`)
+
       // Find user by phone or Firebase UID
       let user = await prisma.users.findFirst({
         where: {
@@ -200,7 +216,14 @@ export async function POST(request: NextRequest) {
         },
       })
 
+      console.log(`[Firebase Session][${requestId}] User lookup result:`, {
+        found: !!user,
+        userId: user?.id,
+        userRole: user?.role,
+      })
+
       if (!user) {
+        console.warn(`[Firebase Session][${requestId}] User not found for phone: ***${normalizedPhone.slice(-4)}`)
         return addSecurityHeaders(
           NextResponse.json({ error: 'User not found. Please sign up first.' }, { status: 404 })
         )
@@ -303,13 +326,20 @@ export async function POST(request: NextRequest) {
       // Reset rate limit on successful login
       AuthRateLimit.resetRateLimit(rateLimitKey)
 
-      // Log cookie details for debugging (always log in non-production, summary in production)
-      console.log(`[Firebase Session] User logged in: ${user.id}`, {
+      const elapsed = Date.now() - startTime
+
+      // Log cookie details for debugging
+      console.log(`[Firebase Session][${requestId}] Login successful:`, {
+        userId: user.id,
+        role: user.role,
         cookieName,
         isHttps,
         isProduction,
         useSecureCookie,
         forwardedProto,
+        elapsed: `${elapsed}ms`,
+        cookiesSet: ['__Secure-authjs.session-token', 'authjs.session-token'],
+        tokenLength: sessionToken.length,
       })
 
       return addSecurityHeaders(response)
