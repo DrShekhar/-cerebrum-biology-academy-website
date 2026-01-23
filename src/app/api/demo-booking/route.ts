@@ -15,6 +15,7 @@ import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversi
 import { withAdmin, UserSession } from '@/lib/auth/middleware'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import { withRateLimit, checkSpamPattern } from '@/lib/middleware/rateLimit'
+import { normalizePhone, validatePhone as validatePhoneUtil } from '@/lib/utils/phone'
 
 // HTML escape function to prevent XSS in email templates
 function escapeHtml(str: string | null | undefined): string {
@@ -27,10 +28,9 @@ function escapeHtml(str: string | null | undefined): string {
     .replace(/'/g, '&#039;')
 }
 
-// Phone number validation - must have at least 10 actual digits
+// Use centralized phone validation from utils
 function validatePhoneNumber(phone: string): boolean {
-  const digitsOnly = phone.replace(/\D/g, '')
-  return digitsOnly.length >= 10 && digitsOnly.length <= 15
+  return validatePhoneUtil(phone)
 }
 
 // Input validation schema
@@ -63,6 +63,18 @@ const DemoBookingSchema = z.object({
   website: z.string().max(0, 'Invalid submission').optional(),
 })
 
+// Date validation helper - must be valid ISO date string
+const dateStringSchema = z.string().refine(
+  (val) => !isNaN(Date.parse(val)),
+  { message: 'Invalid date format' }
+)
+
+// Time validation helper - must be valid time format like "10:00 AM - 11:00 AM"
+const timeStringSchema = z.string().regex(
+  /^\d{1,2}:\d{2}\s*(?:AM|PM)(?:\s*-\s*\d{1,2}:\d{2}\s*(?:AM|PM))?$/i,
+  { message: 'Invalid time format (expected: "HH:MM AM/PM" or "HH:MM AM - HH:MM PM")' }
+)
+
 // Admin update schema - WHITELIST of allowed fields only
 const AdminUpdateSchema = z.object({
   // Status fields
@@ -70,19 +82,19 @@ const AdminUpdateSchema = z.object({
   demoCompleted: z.boolean().optional(),
   convertedToEnrollment: z.boolean().optional(),
 
-  // Scheduling fields
-  preferredDate: z.string().optional(),
-  preferredTime: z.string().optional(),
-  rescheduledDate: z.string().optional(),
-  rescheduledTime: z.string().optional(),
+  // Scheduling fields - with proper date/time validation
+  preferredDate: dateStringSchema.optional(),
+  preferredTime: timeStringSchema.optional(),
+  rescheduledDate: dateStringSchema.optional(),
+  rescheduledTime: timeStringSchema.optional(),
 
   // Feedback fields
   demoRating: z.number().min(1).max(5).optional(),
   feedback: z.string().max(1000).optional(),
   adminNotes: z.string().max(2000).optional(),
 
-  // Assignment
-  assignedCounselorId: z.string().optional(),
+  // Assignment - validated as non-empty string
+  assignedCounselorId: z.string().min(1, 'Counselor ID cannot be empty').optional(),
 
   // Zoom details (can be updated if meeting needs recreation)
   zoomMeetingId: z.string().optional(),
@@ -150,6 +162,7 @@ export async function POST(request: NextRequest) {
       limit: 5,
       window: 15 * 60 * 1000, // 15 minutes
       keyPrefix: 'demo-booking',
+      failClosed: true, // Security-critical: block requests if rate limiter fails
     })
 
     if (!rateLimitResult.success) {
@@ -317,14 +330,14 @@ export async function POST(request: NextRequest) {
         })
 
         // 2. Find existing lead by email (case-insensitive) or phone
-        const normalizedPhone = data.phone.replace(/\D/g, '').slice(-10)
+        const normalizedPhoneValue = normalizePhone(data.phone)
         const normalizedEmail = data.email.toLowerCase().trim()
         const existingLead = await tx.leads.findFirst({
           where: {
             OR: [
               // Case-insensitive email comparison
               { email: { equals: normalizedEmail, mode: 'insensitive' } },
-              { phone: normalizedPhone },
+              { phone: normalizedPhoneValue },
             ],
           },
         })
@@ -353,7 +366,7 @@ export async function POST(request: NextRequest) {
               id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
               studentName: data.name,
               email: data.email || null,
-              phone: normalizedPhone,
+              phone: normalizedPhoneValue,
               courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
               stage: 'DEMO_SCHEDULED',
               priority: 'WARM',
@@ -695,6 +708,8 @@ function generateDemoConfirmationEmail(bookingData: any): string {
   const safeDate = escapeHtml(bookingData.preferredDate)
   const safeTime = escapeHtml(bookingData.preferredTime)
   const safeDemoType = escapeHtml(bookingData.demoType) || 'FREE'
+  // Escape booking ID for URL safety (prevent injection in href)
+  const safeBookingId = encodeURIComponent(bookingData.id || '')
 
   const coursesList = Array.isArray(bookingData.courseInterest)
     ? bookingData.courseInterest.map((c: string) => escapeHtml(c)).join(', ')
@@ -779,7 +794,7 @@ function generateDemoConfirmationEmail(bookingData: any): string {
 
           <!-- CTA Button -->
           <div style="text-align: center; margin: 40px 0;">
-            <a href="https://cerebrumbiologyacademy.com/demo-booking/reschedule?id=${bookingData.id}"
+            <a href="https://cerebrumbiologyacademy.com/demo-booking/reschedule?id=${safeBookingId}"
                style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
                       color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 8px;
                       font-weight: bold; font-size: 16px;">
@@ -925,12 +940,11 @@ async function handleGet(request: NextRequest, _session: UserSession) {
       totalPages: Math.ceil(total / limit),
     })
   } catch (error) {
+    // Log full error server-side for debugging
     console.error('Fetch demo bookings error:', error)
+    // Return generic error to client - never expose internal details
     return NextResponse.json(
-      {
-        error: 'Internal server error',
-        details: error instanceof Error ? error.message : 'Unknown error',
-      },
+      { error: 'Failed to fetch bookings' },
       { status: 500 }
     )
   }

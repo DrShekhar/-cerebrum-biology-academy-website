@@ -29,6 +29,9 @@ interface RateLimitConfig {
   skipSuccessfulRequests?: boolean
   skipFailedRequests?: boolean
   keyPrefix?: string
+  // For security-sensitive endpoints, fail closed (block request) on rate limit errors
+  // Default: false (fail open - allow request on errors to prevent DoS)
+  failClosed?: boolean
 }
 
 interface RateLimitResult {
@@ -159,6 +162,19 @@ export async function withRateLimit(
     }
   } catch (error) {
     logger.error('Rate limiting error:', error)
+
+    // Security-sensitive endpoints should fail closed (block request on error)
+    // Non-sensitive endpoints fail open (allow request) to prevent DoS from rate limit failures
+    if (config.failClosed) {
+      logger.warn('Rate limiting failed closed for security endpoint:', { identifier: config.identifier })
+      return {
+        success: false,
+        limit: config.limit,
+        remaining: 0,
+        resetTime: Date.now() + config.window,
+        error: 'Rate limiting unavailable - request blocked for security',
+      }
+    }
 
     // Fail open - allow request if rate limiting fails
     return {

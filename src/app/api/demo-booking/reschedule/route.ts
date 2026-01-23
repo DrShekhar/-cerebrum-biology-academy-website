@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import { withAdmin, UserSession } from '@/lib/auth/middleware'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { Prisma } from '@/generated/prisma'
+import { normalizePhone } from '@/lib/utils/phone'
 
 // Support phone from environment
 const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 88264 44334'
@@ -54,7 +55,11 @@ async function verifyAndConsumeToken(
 }
 
 // Non-consuming token verification (for GET requests to display booking info)
+// Includes artificial delay to prevent timing attacks on token enumeration
 async function verifyTokenReadOnly(bookingId: string, token: string): Promise<boolean> {
+  const startTime = Date.now()
+  const MIN_RESPONSE_TIME = 100 // Minimum 100ms response time
+
   const result = await prisma.rescheduleToken.findFirst({
     where: {
       bookingId,
@@ -65,11 +70,38 @@ async function verifyTokenReadOnly(bookingId: string, token: string): Promise<bo
       },
     },
   })
+
+  // Add artificial delay to make response time constant regardless of whether token exists
+  // This prevents timing attacks that could enumerate valid tokens
+  const elapsed = Date.now() - startTime
+  if (elapsed < MIN_RESPONSE_TIME) {
+    await new Promise((resolve) => setTimeout(resolve, MIN_RESPONSE_TIME - elapsed))
+  }
+
   return result !== null
 }
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit to prevent token brute-force attacks
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+
+    const rateLimitResult = await withRateLimit(request, {
+      identifier: `reschedule-post:${clientIp}`,
+      limit: 10, // 10 reschedule attempts per 15 minutes (stricter than GET)
+      window: 15 * 60 * 1000,
+      keyPrefix: 'reschedule-post',
+      failClosed: true, // Security-critical: block requests if rate limiter fails
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many reschedule attempts. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
     const { bookingId, token, newDate, newTime } = body
 
@@ -179,6 +211,7 @@ export async function GET(request: NextRequest) {
       limit: 20, // 20 requests per 15 minutes
       window: 15 * 60 * 1000,
       keyPrefix: 'reschedule-get',
+      failClosed: true, // Security-critical: block requests if rate limiter fails
     })
 
     if (!rateLimitResult.success) {
@@ -260,7 +293,7 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
 
     // Send WhatsApp notification if configured
     if (process.env.INTERAKT_API_KEY && booking.phone) {
-      const phone = booking.phone.replace(/\D/g, '').slice(-10)
+      const phone = normalizePhone(booking.phone)
       await fetch('https://api.interakt.ai/v1/public/message/', {
         method: 'POST',
         headers: {

@@ -1,22 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { rateLimit } from '@/lib/rateLimit'
+import { withRateLimit, checkSpamPattern, recordSpamViolation } from '@/lib/middleware/rateLimit'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
 import { notifyAdminDemoBooking } from '@/lib/notifications/adminLeadNotification'
 import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversion'
 import { logger } from '@/lib/utils/logger'
+import { Prisma } from '@/generated/prisma'
+import { normalizePhone, validatePhone } from '@/lib/utils/phone'
+
+// Use centralized phone validation from utils
+function validatePhoneNumber(phone: string): boolean {
+  return validatePhone(phone)
+}
 
 const demoBookingSchema = z.object({
-  studentName: z.string().min(2).max(100),
-  email: z.string().email('Please enter a valid email address'),
+  studentName: z
+    .string()
+    .min(2, 'Name must be at least 2 characters')
+    .max(100, 'Name must be less than 100 characters')
+    // Support Unicode letters (Hindi, Tamil, etc.) and spaces
+    .regex(/^[\p{L}\p{M}\s'-]+$/u, 'Name can only contain letters, spaces, hyphens, and apostrophes'),
+  email: z.string().email('Please enter a valid email address').transform((email) => email.toLowerCase().trim()),
   phone: z
     .string()
-    .regex(
-      /^\+?[1-9]\d{9,14}$/,
-      'Please enter a valid phone number (e.g., +91 8826444334 or 8826444334)'
-    ),
+    .refine(validatePhoneNumber, 'Phone must have 10-15 digits'),
   preferredDate: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?/)
@@ -29,7 +38,7 @@ const demoBookingSchema = z.object({
   parentName: z.string().max(100).optional(),
   parentPhone: z
     .string()
-    .regex(/^\+?[1-9]\d{9,14}$/)
+    .refine((phone) => !phone || validatePhoneNumber(phone), 'Parent phone must have 10-15 digits')
     .optional(),
   hearAboutUs: z.string().max(200).optional(),
   source: z.string().max(200).optional(),
@@ -38,6 +47,8 @@ const demoBookingSchema = z.object({
   utmCampaign: z.string().max(100).optional(),
   utmContent: z.string().max(100).optional(),
   gclid: z.string().max(200).optional(),
+  // Honeypot field - should always be empty (bots will fill it)
+  website: z.string().max(0, 'Invalid submission').optional(),
 })
 
 /**
@@ -88,25 +99,69 @@ type DemoBookingRequest = z.infer<typeof demoBookingSchema>
 
 export async function POST(request: NextRequest) {
   try {
-    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    // Get client IP (parse first IP from x-forwarded-for to prevent spoofing)
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
+    const now = Date.now()
+
+    // Check for spam block before rate limiting
+    const spamResult = await checkSpamPattern(clientIp, 'demo-book')
+    if (spamResult?.blocked) {
+      logger.warn('Blocked spam IP attempted demo booking', { clientIp })
+      return NextResponse.json(
+        { success: false, error: 'Your IP has been temporarily blocked due to suspicious activity.' },
+        { status: 403 }
+      )
+    }
+
+    // Use distributed rate limiting (Redis-backed when configured)
+    const rateLimitResult = await withRateLimit(request, {
+      identifier: `demo-book:${clientIp}`,
+      limit: 10, // 10 bookings per hour per IP
+      window: 60 * 60 * 1000, // 1 hour
+      keyPrefix: 'demo-book',
+      failClosed: true, // Security-critical: block requests if rate limiter fails
+    })
+
     if (!rateLimitResult.success) {
+      logger.warn('Rate limit exceeded for demo booking', { clientIp })
+      // Record rate limit violation for spam detection
+      await recordSpamViolation(clientIp, 'demo-book')
       return NextResponse.json(
         {
           success: false,
           error: 'Too many requests. Please try again later.',
+          retryAfter: Math.ceil((rateLimitResult.resetTime - now) / 1000),
         },
         {
           status: 429,
           headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.resetTime - now) / 1000)),
             'X-RateLimit-Limit': rateLimitResult.limit.toString(),
             'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
-            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
           },
         }
       )
     }
 
     const rawBody = await request.json()
+
+    // Honeypot check - if 'website' field is filled, it's a bot
+    if (rawBody.website && rawBody.website.length > 0) {
+      logger.warn('Honeypot triggered in demo booking', { clientIp })
+      // Record spam violation
+      await recordSpamViolation(clientIp, 'demo-book')
+      // Return success to fool the bot, but don't save anything
+      return NextResponse.json({
+        success: true,
+        booking: {
+          id: 'demo_' + Math.random().toString(36).substring(7),
+          message: 'Demo class booked successfully!',
+        },
+      })
+    }
 
     // Normalize phone number (remove spaces, handle +91 prefix)
     if (rawBody.phone) {
@@ -271,89 +326,128 @@ export async function POST(request: NextRequest) {
     const leadSource = determineLeadSource(body)
     const sourceDetail = body.source || body.hearAboutUs || 'Website'
 
-    // Step 2: Save DemoBooking to database
-    const demoBooking = await prisma.demoBooking.create({
-      data: {
-        studentName: body.studentName,
-        email: body.email,
-        phone: body.phone,
-        studentClass: body.studentClass as any,
-        preferredDate: new Date(body.preferredDate),
-        preferredTime: body.preferredTime,
-        message: body.previousKnowledge,
-        status: 'CONFIRMED',
-        source: sourceDetail,
-        utmSource: body.utmSource,
-        utmMedium: body.utmMedium,
-        utmCampaign: body.utmCampaign,
-        utmContent: body.utmContent,
-        gclid: body.gclid,
-        assignedTo: assignedCounselor.id,
-        notificationsSent: {
-          whatsapp: false,
-          email: false,
-        },
-      },
-    })
+    // Normalize phone for dedup check using centralized utility
+    const normalizedPhoneValue = normalizePhone(body.phone)
+    const normalizedEmail = body.email.toLowerCase().trim()
 
-    // Step 3: Auto-create Lead from DemoBooking with proper tracking
-    const lead = await prisma.lead.create({
-      data: {
-        studentName: body.studentName,
-        email: body.email,
-        phone: body.phone,
-        courseInterest: body.courseInterest,
-        stage: 'DEMO_SCHEDULED',
-        priority: 'HOT',
-        source: leadSource,
-        sourceDetail: sourceDetail,
-        utmSource: body.utmSource,
-        utmMedium: body.utmMedium,
-        utmCampaign: body.utmCampaign,
-        utmContent: body.utmContent,
-        gclid: body.gclid,
-        assignedToId: assignedCounselor.id,
-        demoBookingId: demoBooking.id,
-        nextFollowUpAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
-      },
-    })
+    // Use serializable transaction to prevent duplicate lead creation race conditions
+    const { demoBooking, lead } = await prisma.$transaction(
+      async (tx) => {
+        // Check for existing lead by email or phone (case-insensitive)
+        const existingLead = await tx.lead.findFirst({
+          where: {
+            OR: [
+              { email: { equals: normalizedEmail, mode: 'insensitive' } },
+              { phone: normalizedPhoneValue },
+            ],
+          },
+        })
 
-    // Step 4: Create initial follow-up task for counselor
-    const followUpDate = new Date()
-    followUpDate.setHours(followUpDate.getHours() + 2) // Follow up in 2 hours
+        // Step 2: Save DemoBooking to database
+        const booking = await tx.demoBooking.create({
+          data: {
+            studentName: body.studentName,
+            email: normalizedEmail,
+            phone: body.phone,
+            studentClass: body.studentClass as any,
+            preferredDate: new Date(body.preferredDate),
+            preferredTime: body.preferredTime,
+            message: body.previousKnowledge,
+            status: 'CONFIRMED',
+            source: sourceDetail,
+            utmSource: body.utmSource,
+            utmMedium: body.utmMedium,
+            utmCampaign: body.utmCampaign,
+            utmContent: body.utmContent,
+            gclid: body.gclid,
+            assignedTo: assignedCounselor.id,
+            notificationsSent: {
+              whatsapp: false,
+              email: false,
+            },
+          },
+        })
 
-    await prisma.task.create({
-      data: {
-        title: `Follow up on demo booking - ${body.studentName}`,
-        description: `New demo class booked for ${body.studentName} (${body.courseInterest}). Demo scheduled for ${body.preferredDate} at ${body.preferredTime}. Please call to confirm attendance.`,
-        type: 'FOLLOW_UP_CALL',
-        priority: 'HIGH',
-        dueDate: followUpDate,
-        status: 'PENDING',
-        leadId: lead.id,
-        assignedToId: assignedCounselor.id,
-        createdById: assignedCounselor.id,
-        isAutoGenerated: true,
-        triggerEvent: 'demo_booking_created',
-      },
-    })
+        let leadRecord
+        if (existingLead) {
+          // Update existing lead with new demo booking
+          leadRecord = await tx.lead.update({
+            where: { id: existingLead.id },
+            data: {
+              stage: 'DEMO_SCHEDULED',
+              demoBookingId: booking.id,
+              // Update if name is different
+              ...(body.studentName !== existingLead.studentName && { studentName: body.studentName }),
+            },
+          })
+        } else {
+          // Step 3: Create new Lead from DemoBooking with proper tracking
+          leadRecord = await tx.lead.create({
+            data: {
+              studentName: body.studentName,
+              email: normalizedEmail,
+              phone: normalizedPhoneValue,
+              courseInterest: body.courseInterest,
+              stage: 'DEMO_SCHEDULED',
+              priority: 'HOT',
+              source: leadSource,
+              sourceDetail: sourceDetail,
+              utmSource: body.utmSource,
+              utmMedium: body.utmMedium,
+              utmCampaign: body.utmCampaign,
+              utmContent: body.utmContent,
+              gclid: body.gclid,
+              assignedToId: assignedCounselor.id,
+              demoBookingId: booking.id,
+              nextFollowUpAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
+            },
+          })
+        }
 
-    // Step 5: Log activity for audit trail
-    await prisma.activity.create({
-      data: {
-        userId: assignedCounselor.id,
-        leadId: lead.id,
-        action: 'DEMO_BOOKED',
-        description: `Demo booking created for ${body.studentName} via website. Scheduled for ${body.preferredDate} at ${body.preferredTime}.`,
-        metadata: {
-          demoBookingId: demoBooking.id,
-          source: body.hearAboutUs || 'Website',
-          utmSource: body.utmSource,
-          utmMedium: body.utmMedium,
-          utmCampaign: body.utmCampaign,
-        },
+        // Step 4: Create initial follow-up task for counselor
+        const followUpDate = new Date()
+        followUpDate.setHours(followUpDate.getHours() + 2) // Follow up in 2 hours
+
+        await tx.task.create({
+          data: {
+            title: `Follow up on demo booking - ${body.studentName}`,
+            description: `New demo class booked for ${body.studentName} (${body.courseInterest}). Demo scheduled for ${body.preferredDate} at ${body.preferredTime}. Please call to confirm attendance.`,
+            type: 'FOLLOW_UP_CALL',
+            priority: 'HIGH',
+            dueDate: followUpDate,
+            status: 'PENDING',
+            leadId: leadRecord.id,
+            assignedToId: assignedCounselor.id,
+            createdById: assignedCounselor.id,
+            isAutoGenerated: true,
+            triggerEvent: 'demo_booking_created',
+          },
+        })
+
+        // Step 5: Log activity for audit trail
+        await tx.activity.create({
+          data: {
+            userId: assignedCounselor.id,
+            leadId: leadRecord.id,
+            action: 'DEMO_BOOKED',
+            description: `Demo booking created for ${body.studentName} via website. Scheduled for ${body.preferredDate} at ${body.preferredTime}.`,
+            metadata: {
+              demoBookingId: booking.id,
+              source: body.hearAboutUs || 'Website',
+              utmSource: body.utmSource,
+              utmMedium: body.utmMedium,
+              utmCampaign: body.utmCampaign,
+            },
+          },
+        })
+
+        return { demoBooking: booking, lead: leadRecord }
       },
-    })
+      {
+        // Use serializable isolation to prevent duplicate lead creation race conditions
+        isolationLevel: Prisma.TransactionIsolationLevel.Serializable,
+      }
+    )
 
     // Step 5b: Send WhatsApp notification to admin about new lead
     notifyAdminDemoBooking({
@@ -461,7 +555,20 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
-    const rateLimitResult = await rateLimit(request, { maxRequests: 30, windowMs: 60 * 60 * 1000 })
+    // Get client IP for rate limiting
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
+
+    // Use distributed rate limiting for slot availability checks
+    const rateLimitResult = await withRateLimit(request, {
+      identifier: `demo-book-slots:${clientIp}`,
+      limit: 30, // 30 requests per 15 minutes for slot checks
+      window: 15 * 60 * 1000,
+      keyPrefix: 'demo-book-slots',
+    })
+
     if (!rateLimitResult.success) {
       return NextResponse.json(
         { success: false, error: 'Too many requests. Please try again later.' },
@@ -470,7 +577,6 @@ export async function GET(request: NextRequest) {
           headers: {
             'X-RateLimit-Limit': rateLimitResult.limit.toString(),
             'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
-            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
           },
         }
       )
