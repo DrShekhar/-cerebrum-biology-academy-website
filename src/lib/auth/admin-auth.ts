@@ -3,7 +3,7 @@
  *
  * SECURITY AUDIT (2026-01-19):
  * - Fixed: session_ prefix bypass vulnerability
- * - Fixed: BYPASS_CRM_AUTH now only works in development
+ * - Fixed: BYPASS_CRM_AUTH completely removed (2026-01-23)
  * - Added: Timing-safe comparison for admin key
  * - Added: IP logging for admin access attempts
  * - Added: Proper session validation against database
@@ -49,27 +49,9 @@ export async function validateAdminSession(request: NextRequest): Promise<AdminS
   const clientIP = getClientIP(request)
 
   try {
-    // SECURITY: DEV MODE bypass ONLY works in non-production environments
-    // This prevents accidental bypass if env var is set in production
-    if (
-      process.env.BYPASS_CRM_AUTH === 'true' &&
-      process.env.NODE_ENV !== 'production'
-    ) {
-      console.log('[DEV MODE] Bypassing admin authentication (non-production only)')
-      return {
-        valid: true,
-        userId: 'dev-admin',
-        role: 'admin',
-        expiresAt: new Date(Date.now() + 3600000),
-      }
-    }
-
-    // Warn if bypass is attempted in production
-    if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV === 'production') {
-      console.error(
-        `[SECURITY WARNING] BYPASS_CRM_AUTH is set in production but ignored. IP: ${clientIP}`
-      )
-    }
+    // SECURITY: Auth bypass completely removed from production code
+    // For local development, use a real admin account in the database
+    // This prevents accidental bypass if env vars are misconfigured
 
     const adminKey =
       request.headers.get('x-admin-key') || request.cookies.get('admin-session')?.value

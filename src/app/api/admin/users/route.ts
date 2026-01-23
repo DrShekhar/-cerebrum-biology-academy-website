@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import bcrypt from 'bcryptjs'
+import { logAdminUserCreation } from '@/lib/security/auditLogger'
 
 const createUserSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
@@ -19,7 +20,12 @@ const createUserSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
-    await requireAdminAuth()
+    const session = await requireAdminAuth()
+
+    // Get client info for audit logging
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+    const userAgent = request.headers.get('user-agent') || 'unknown'
 
     const body = await request.json()
     const validatedData = createUserSchema.parse(body)
@@ -76,6 +82,19 @@ export async function POST(request: NextRequest) {
         },
       },
     })
+
+    // SECURITY: Log admin action to security audit trail
+    logAdminUserCreation(
+      session.user.email,
+      session.user.id,
+      clientIp,
+      userAgent,
+      {
+        id: user.id,
+        email: user.email,
+        role: validatedData.role,
+      }
+    )
 
     const sanitizedUser = {
       ...user,

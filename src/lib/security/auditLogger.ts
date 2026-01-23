@@ -11,6 +11,14 @@ export interface SecurityEvent {
     | 'password_change'
     | 'account_locked'
     | 'suspicious_activity'
+    | 'admin_user_created'
+    | 'admin_user_updated'
+    | 'admin_user_deleted'
+    | 'admin_role_changed'
+    | 'admin_permission_changed'
+    | 'admin_settings_changed'
+    | 'admin_data_export'
+    | 'admin_data_delete'
   userId?: string
   userEmail?: string
   userRole?: string
@@ -372,5 +380,121 @@ export const logSuspiciousActivity = (
     userAgent,
     severity: 'critical',
     details: { description, ...details },
+  })
+}
+
+// Admin action logging - comprehensive audit trail for all admin operations
+export const logAdminAction = (
+  action: 'admin_user_created' | 'admin_user_updated' | 'admin_user_deleted' | 'admin_role_changed' | 'admin_permission_changed' | 'admin_settings_changed' | 'admin_data_export' | 'admin_data_delete',
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  details: {
+    targetUserId?: string
+    targetUserEmail?: string
+    targetRole?: string
+    previousValue?: any
+    newValue?: any
+    resource?: string
+    reason?: string
+    [key: string]: any
+  }
+) => {
+  securityAuditLogger.logEvent({
+    eventType: action,
+    userId: adminId,
+    userEmail: adminEmail,
+    userRole: 'admin',
+    ipAddress,
+    userAgent,
+    severity: action.includes('delete') ? 'critical' : 'high',
+    details: {
+      action,
+      performedBy: adminEmail,
+      performedById: adminId,
+      timestamp: new Date().toISOString(),
+      ...details,
+    },
+  })
+}
+
+// Convenience functions for common admin actions
+export const logAdminUserCreation = (
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  newUser: { email: string; role: string; id: string }
+) => {
+  logAdminAction('admin_user_created', adminEmail, adminId, ipAddress, userAgent, {
+    targetUserId: newUser.id,
+    targetUserEmail: newUser.email,
+    targetRole: newUser.role,
+  })
+}
+
+export const logAdminUserUpdate = (
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  targetUser: { email: string; id: string },
+  changes: Record<string, { from: any; to: any }>
+) => {
+  logAdminAction('admin_user_updated', adminEmail, adminId, ipAddress, userAgent, {
+    targetUserId: targetUser.id,
+    targetUserEmail: targetUser.email,
+    changes,
+  })
+}
+
+export const logAdminRoleChange = (
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  targetUser: { email: string; id: string },
+  previousRole: string,
+  newRole: string
+) => {
+  logAdminAction('admin_role_changed', adminEmail, adminId, ipAddress, userAgent, {
+    targetUserId: targetUser.id,
+    targetUserEmail: targetUser.email,
+    previousValue: previousRole,
+    newValue: newRole,
+  })
+}
+
+export const logAdminDataExport = (
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  resource: string,
+  recordCount: number,
+  filters?: Record<string, any>
+) => {
+  logAdminAction('admin_data_export', adminEmail, adminId, ipAddress, userAgent, {
+    resource,
+    recordCount,
+    filters,
+  })
+}
+
+export const logAdminDataDelete = (
+  adminEmail: string,
+  adminId: string,
+  ipAddress: string,
+  userAgent: string,
+  resource: string,
+  recordIds: string[],
+  reason: string
+) => {
+  logAdminAction('admin_data_delete', adminEmail, adminId, ipAddress, userAgent, {
+    resource,
+    recordIds,
+    recordCount: recordIds.length,
+    reason,
   })
 }

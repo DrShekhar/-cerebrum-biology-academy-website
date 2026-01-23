@@ -31,36 +31,10 @@ const loginSchema = z.object({
   password: z.string().min(6, 'Password must be at least 6 characters'),
 })
 
-// Admin credentials - MUST be set via environment variables in production
-const ADMIN_CREDENTIALS = {
-  email: process.env.ADMIN_EMAIL,
-  passwordHash: process.env.ADMIN_PASSWORD_HASH,
-  name: process.env.ADMIN_NAME || 'Admin User',
-  role: 'admin' as const,
-}
-
-// Validate required admin environment variables (only at runtime, not during build)
-if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
-  if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
-    logger.securityEvent(
-      'MISSING_ADMIN_CREDENTIALS',
-      {
-        message: 'ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required',
-        environment: process.env.NODE_ENV,
-      },
-      'high'
-    )
-    if (process.env.NODE_ENV === 'production') {
-      logger.warn('Missing admin credentials in production - admin features will be disabled', {
-        feature: 'admin_auth',
-      })
-    } else {
-      logger.warn('Running in development mode without proper admin credentials', {
-        feature: 'admin_auth',
-      })
-    }
-  }
-}
+// SECURITY: Hardcoded admin credentials removed (2026-01-23)
+// All admin users MUST be created in the database
+// Use: POST /api/admin/users to create admin accounts
+// This prevents bypassing database-level security controls
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
@@ -158,63 +132,56 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
           logger.debug('Credentials validated successfully', {
             prismaAvailable: !!prisma,
-            hasAdminCredentials: !!ADMIN_CREDENTIALS.email,
           })
 
-          // First check if it's the hardcoded admin credentials (fallback)
-          if (validatedData.email === ADMIN_CREDENTIALS.email) {
-            const isValidPassword = await bcrypt.compare(
-              validatedData.password,
-              ADMIN_CREDENTIALS.passwordHash
-            )
+          // SECURITY: All users must be in the database - no hardcoded fallback
+          // This ensures proper audit trail and password policy enforcement
+          const user = await prisma.users.findUnique({
+            where: { email: validatedData.email },
+          })
 
-            if (isValidPassword) {
-              return {
-                id: 'admin-1',
-                email: ADMIN_CREDENTIALS.email,
-                name: ADMIN_CREDENTIALS.name,
-                role: ADMIN_CREDENTIALS.role,
-              }
-            }
+          if (!user || !user.passwordHash) {
+            // Log failed login attempt
+            logger.warn('Login attempt for non-existent user', {
+              email: validatedData.email,
+              authMethod: 'credentials',
+            })
+            throw new Error('Invalid email or password')
           }
 
-          // Try to find user in database if Prisma is available
-          if (prisma) {
-            try {
-              const user = await prisma.users.findUnique({
-                where: { email: validatedData.email },
-              })
+          const isValidPassword = await bcrypt.compare(
+            validatedData.password,
+            user.passwordHash
+          )
 
-              if (user && user.passwordHash) {
-                const isValidPassword = await bcrypt.compare(
-                  validatedData.password,
-                  user.passwordHash
-                )
-
-                if (isValidPassword) {
-                  return {
-                    id: user.id,
-                    email: user.email,
-                    name: user.name,
-                    role: user.role.toLowerCase() as
-                      | 'student'
-                      | 'parent'
-                      | 'teacher'
-                      | 'admin'
-                      | 'counselor',
-                    profile: user.profile as any,
-                  }
-                }
-              }
-            } catch (dbError) {
-              // Database query failed - continue to throw auth error
-              if (process.env.NODE_ENV !== 'production') {
-                console.warn('Database query failed:', dbError)
-              }
-            }
+          if (!isValidPassword) {
+            // Log failed login attempt
+            logger.warn('Invalid password attempt', {
+              userId: user.id,
+              email: validatedData.email,
+              authMethod: 'credentials',
+            })
+            throw new Error('Invalid email or password')
           }
 
-          throw new Error('Invalid email or password')
+          // Log successful authentication
+          logger.authentication(user.id, 'credentials_login', true, {
+            email: user.email,
+            role: user.role,
+          })
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            role: user.role.toLowerCase() as
+              | 'student'
+              | 'parent'
+              | 'teacher'
+              | 'admin'
+              | 'counselor',
+            profile: user.profile as any,
+          }
         } catch (error) {
           if (error instanceof z.ZodError) {
             throw new Error('Invalid input: ' + error.issues.map((e: any) => e.message).join(', '))

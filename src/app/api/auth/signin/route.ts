@@ -8,6 +8,7 @@ import {
   AuthRateLimit,
 } from '@/lib/auth/config'
 import { z } from 'zod'
+import { logLogin, logFailedLogin } from '@/lib/security/auditLogger'
 
 // Request validation schema
 const SignInSchema = z.object({
@@ -16,12 +17,59 @@ const SignInSchema = z.object({
   rememberMe: z.boolean().optional().default(false),
 })
 
+// CSRF validation helper
+function validateCSRF(request: NextRequest): boolean {
+  // Skip CSRF for same-origin requests (checked via referer/origin)
+  const origin = request.headers.get('origin')
+  const referer = request.headers.get('referer')
+
+  const allowedOrigins = [
+    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
+    process.env.NEXT_PUBLIC_APP_URL,
+    process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
+  ].filter(Boolean)
+
+  // Origin header is more reliable than referer
+  if (origin) {
+    return allowedOrigins.some(allowed => origin.startsWith(allowed || ''))
+  }
+
+  // Fall back to referer if origin not present
+  if (referer) {
+    return allowedOrigins.some(allowed => referer.startsWith(allowed || ''))
+  }
+
+  // Reject if no origin/referer (could be direct API call from attacker)
+  return false
+}
+
 /**
  * POST /api/auth/signin
  * User login with credentials
  */
 export async function POST(request: NextRequest) {
+  // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+  const forwardedFor = request.headers.get('x-forwarded-for')
+  const clientIP = forwardedFor
+    ? forwardedFor.split(',')[0].trim()
+    : request.headers.get('x-real-ip') || 'unknown'
+  const userAgent = request.headers.get('user-agent') || 'unknown'
+
   try {
+    // CSRF validation - reject cross-origin requests
+    if (!validateCSRF(request)) {
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Invalid request origin',
+            message: 'Cross-origin requests are not allowed',
+          },
+          { status: 403 }
+        )
+      )
+    }
+
     // Parse request body
     const body = await request.json()
     const result = SignInSchema.safeParse(body)
@@ -39,11 +87,6 @@ export async function POST(request: NextRequest) {
     }
 
     const { email, password, rememberMe } = result.data
-    // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
-    const forwardedFor = request.headers.get('x-forwarded-for')
-    const clientIP = forwardedFor
-      ? forwardedFor.split(',')[0].trim()
-      : request.headers.get('x-real-ip') || 'unknown'
 
     // Check rate limiting
     const rateLimitCheck = await AuthRateLimit.checkRateLimit(`signin:${clientIP}:${email}`)
@@ -66,7 +109,8 @@ export async function POST(request: NextRequest) {
     })
 
     if (!user || !user.passwordHash) {
-      // Don't reveal whether user exists
+      // Log failed login attempt - don't reveal whether user exists
+      logFailedLogin(email, clientIP, userAgent, 'user_not_found')
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -81,6 +125,8 @@ export async function POST(request: NextRequest) {
     // Verify password
     const isPasswordValid = await PasswordUtils.verify(password, user.passwordHash)
     if (!isPasswordValid) {
+      // Log failed login attempt
+      logFailedLogin(email, clientIP, userAgent, 'invalid_password')
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -111,6 +157,9 @@ export async function POST(request: NextRequest) {
 
     // Reset rate limit on successful login
     AuthRateLimit.resetRateLimit(`signin:${clientIP}:${email}`)
+
+    // Log successful login to audit trail
+    logLogin(user.email, user.role, clientIP, userAgent)
 
     // Create response with tokens
     const response = NextResponse.json({

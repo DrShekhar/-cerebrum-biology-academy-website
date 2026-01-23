@@ -31,21 +31,9 @@ export interface AdminVerificationResult {
 
 export async function verifyAdminAccess(request: NextRequest): Promise<AdminVerificationResult> {
   try {
-    // DEV MODE: Bypass authentication during development ONLY
-    // SECURITY: This bypass is disabled in production to prevent accidental exposure
-    if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV !== 'production') {
-      console.log('[DEV MODE] Bypassing admin verification (non-production only)')
-      return {
-        authorized: true,
-        adminId: 'dev-admin-id',
-        adminEmail: 'dev@cerebrumbiologyacademy.com',
-      }
-    }
-
-    // Warn if bypass is attempted in production
-    if (process.env.BYPASS_CRM_AUTH === 'true' && process.env.NODE_ENV === 'production') {
-      logger.error('[SECURITY WARNING] BYPASS_CRM_AUTH is set in production but ignored')
-    }
+    // SECURITY: Auth bypass completely removed from production code
+    // For local development, use a real admin account in the database
+    // This prevents accidental bypass if env vars are misconfigured
 
     const authHeader = request.headers.get('authorization')
     const apiKey = request.headers.get('x-api-key')
