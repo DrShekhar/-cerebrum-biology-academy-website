@@ -32,8 +32,8 @@ const demoBookingSchema = z.object({
     .or(z.enum(['TODAY', 'TOMORROW', 'ASAP'])), // Allow urgent options
   preferredTime: z.string().regex(/^\d{2}:\d{2}$/).or(z.enum(['ASAP', 'MORNING', 'AFTERNOON', 'EVENING'])),
   courseInterest: z.string().min(1).max(100),
-  studentClass: z.string().min(1).max(50),
-  previousKnowledge: z.string().max(1000),
+  studentClass: z.string().max(50).optional(),
+  previousKnowledge: z.string().max(1000).optional(),
   specificTopics: z.array(z.string()).optional(),
   parentName: z.string().max(100).optional(),
   parentPhone: z
@@ -295,7 +295,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Step 1: Get first available counselor using round-robin (least loaded)
-    const assignedCounselor = await prisma.user.findFirst({
+    const assignedCounselor = await prisma.users.findFirst({
       where: {
         role: { in: ['COUNSELOR', 'ADMIN'] },
         isActive: true,
@@ -334,7 +334,7 @@ export async function POST(request: NextRequest) {
     const { demoBooking, lead } = await prisma.$transaction(
       async (tx) => {
         // Check for existing lead by email or phone (case-insensitive)
-        const existingLead = await tx.lead.findFirst({
+        const existingLead = await tx.leads.findFirst({
           where: {
             OR: [
               { email: { equals: normalizedEmail, mode: 'insensitive' } },
@@ -371,7 +371,7 @@ export async function POST(request: NextRequest) {
         let leadRecord
         if (existingLead) {
           // Update existing lead with new demo booking
-          leadRecord = await tx.lead.update({
+          leadRecord = await tx.leads.update({
             where: { id: existingLead.id },
             data: {
               stage: 'DEMO_SCHEDULED',
@@ -382,7 +382,7 @@ export async function POST(request: NextRequest) {
           })
         } else {
           // Step 3: Create new Lead from DemoBooking with proper tracking
-          leadRecord = await tx.lead.create({
+          leadRecord = await tx.leads.create({
             data: {
               studentName: body.studentName,
               email: normalizedEmail,
@@ -408,7 +408,7 @@ export async function POST(request: NextRequest) {
         const followUpDate = new Date()
         followUpDate.setHours(followUpDate.getHours() + 2) // Follow up in 2 hours
 
-        await tx.task.create({
+        await tx.tasks.create({
           data: {
             title: `Follow up on demo booking - ${body.studentName}`,
             description: `New demo class booked for ${body.studentName} (${body.courseInterest}). Demo scheduled for ${body.preferredDate} at ${body.preferredTime}. Please call to confirm attendance.`,
@@ -425,7 +425,7 @@ export async function POST(request: NextRequest) {
         })
 
         // Step 5: Log activity for audit trail
-        await tx.activity.create({
+        await tx.activities.create({
           data: {
             userId: assignedCounselor.id,
             leadId: leadRecord.id,
