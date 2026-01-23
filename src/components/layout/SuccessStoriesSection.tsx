@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
@@ -676,9 +677,11 @@ function SuccessStoryCard({
         {/* Header with Photo and Basic Info */}
         <div className="text-center space-y-4">
           <div className="relative">
-            <img
+            <Image
               src={story.profilePhoto}
               alt={story.name}
+              width={80}
+              height={80}
               className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
             />
             {story.isVerified && (
@@ -840,9 +843,11 @@ function InstagramStyleStories({
           {/* Story Content */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <img
+              <Image
                 src={currentStory.profilePhoto}
                 alt={currentStory.name}
+                width={64}
+                height={64}
                 className="w-16 h-16 rounded-full object-cover"
               />
               <div>

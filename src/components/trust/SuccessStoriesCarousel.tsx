@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
@@ -304,9 +305,11 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
 
         <div className="flex items-center space-x-4">
           <div className="relative">
-            <img
+            <Image
               src={story.photo}
               alt={story.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
             />
             {story.videoUrl && (
