@@ -1,5 +1,4 @@
-'use client'
-
+// Server Component - no client-side interactivity needed
 import Script from 'next/script'
 import { MapPin, Phone, Clock, Mail, ExternalLink } from 'lucide-react'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'

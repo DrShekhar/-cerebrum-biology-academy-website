@@ -1,5 +1,4 @@
-'use client'
-
+// Server Component - no client-side interactivity needed
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface LocalBusinessSchemaProps {
