@@ -36,7 +36,8 @@ export class WebhookService {
     payload: WebhookPayload,
     isTest: boolean = false,
     attemptNumber: number = 1,
-    deliveryId?: string
+    deliveryId?: string,
+    maxRetries?: number
   ): Promise<WebhookDeliveryResult & { deliveryId?: string }> {
     const startTime = Date.now()
 
@@ -80,6 +81,7 @@ export class WebhookService {
           responseTime,
           attemptNumber,
           existingId: deliveryId,
+          maxRetries: maxRetries || webhook.retryPolicy?.maxRetries || 3,
         })
       }
 
@@ -103,6 +105,7 @@ export class WebhookService {
           responseTime,
           attemptNumber,
           existingId: deliveryId,
+          maxRetries: maxRetries || webhook.retryPolicy?.maxRetries || 3,
         })
       }
 
@@ -136,12 +139,14 @@ export class WebhookService {
       responseTime?: number
       attemptNumber: number
       existingId?: string
+      maxRetries?: number
     }
   ): Promise<string> {
     try {
+      const maxRetries = result.maxRetries || 3
       const status = result.success
         ? 'SUCCESS'
-        : result.attemptNumber < 3
+        : result.attemptNumber < maxRetries
           ? 'RETRYING'
           : 'FAILED'
 
@@ -223,10 +228,11 @@ export class WebhookService {
           events: webhook.events,
         }
 
-        const result = await this.sendWebhook(config, payload, false, 1)
+        const maxRetries = config.retryPolicy?.maxRetries || 3
+        const result = await this.sendWebhook(config, payload, false, 1, undefined, maxRetries)
 
         // If failed and retry policy allows, schedule retry
-        if (!result.success && config.retryPolicy?.maxRetries && result.deliveryId) {
+        if (!result.success && maxRetries > 1 && result.deliveryId) {
           await this.scheduleRetry(config, payload, 2, result.deliveryId)
         }
 
@@ -274,7 +280,7 @@ export class WebhookService {
     // In production, this should use a proper job queue (e.g., BullMQ, Vercel Cron)
     // For now, use setTimeout as a simple implementation
     setTimeout(async () => {
-      const result = await this.sendWebhook(webhook, payload, false, attemptNumber, deliveryId)
+      const result = await this.sendWebhook(webhook, payload, false, attemptNumber, deliveryId, maxRetries)
 
       if (!result.success && attemptNumber < maxRetries) {
         await this.scheduleRetry(webhook, payload, attemptNumber + 1, deliveryId)

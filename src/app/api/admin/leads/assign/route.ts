@@ -9,7 +9,7 @@ import type { LeadStage } from '@/generated/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const assignLeadSchema = z.object({
-  leadIds: z.array(z.string()).min(1, 'At least one lead ID required'),
+  leadIds: z.array(z.string()).min(1, 'At least one lead ID required').max(100, 'Maximum 100 leads per request'),
   counselorId: z.string().min(1, 'Counselor ID is required'),
   notifyCounselor: z.boolean().optional().default(true),
   reason: z.string().optional(),
@@ -46,10 +46,19 @@ async function handlePOST(request: NextRequest, session: { userId: string; role:
       )
     }
 
-    // Get existing leads
+    // Get existing leads with all fields needed for webhook dispatch
     const leads = await prisma.leads.findMany({
       where: { id: { in: validatedData.leadIds } },
-      select: { id: true, studentName: true, assignedToId: true },
+      select: {
+        id: true,
+        studentName: true,
+        email: true,
+        phone: true,
+        courseInterest: true,
+        stage: true,
+        priority: true,
+        assignedToId: true,
+      },
     })
 
     if (leads.length === 0) {
