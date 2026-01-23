@@ -2389,6 +2389,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Metro & Coaching Hub City Pages - NEW EXPANSION
+    {
+      url: `${baseUrl}/neet-coaching-kota`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.96, // India's coaching capital - highest priority
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kolkata`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95, // 15M population metro
+    },
+    {
+      url: `${baseUrl}/neet-coaching-ahmedabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95, // 8M population metro
+    },
+    {
+      url: `${baseUrl}/neet-coaching-patna`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Major coaching hub with high aspirant density
+    },
+    {
+      url: `${baseUrl}/neet-coaching-lucknow`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // UP capital, major coaching center
+    },
+    {
+      url: `${baseUrl}/neet-coaching-jaipur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Rajasthan capital, Kota alternative
+    },
     {
       url: `${baseUrl}/best-neet-coaching-delhi-ncr`,
       lastModified: lastUpdated,
