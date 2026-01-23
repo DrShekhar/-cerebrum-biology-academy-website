@@ -125,10 +125,10 @@ export const FloatingCTA = memo(function FloatingCTA() {
     <>
       {/* ===== MOBILE: Direct WhatsApp Button (Single Tap!) ===== */}
       {/* Always visible, no scroll requirement, direct WhatsApp access */}
-      <div className="fixed bottom-20 sm:bottom-24 left-3 sm:left-4 z-[60] lg:hidden">
+      <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-4 z-[60] lg:hidden">
         {/* Secondary Actions (Call, Book Demo) - only when expanded */}
         {isExpanded && (
-          <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
+          <div className="absolute bottom-16 left-0 space-y-3 animate-fadeInUp">
             {secondaryActions.map((action, index) => {
               const Icon = action.icon
               return (
@@ -152,7 +152,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
         )}
 
         {/* Main WhatsApp Button - DIRECT LINK (single tap!) */}
-        <div className="flex flex-col items-end gap-2">
+        <div className="flex flex-col items-center gap-2">
           {/* Expand/Collapse for secondary actions */}
           {isExpanded && (
             <button
