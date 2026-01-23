@@ -9,15 +9,10 @@ import {
   Clock,
   CheckCircle,
   Star,
-  Video,
   Phone,
   Globe,
   GraduationCap,
   Award,
-  BookOpen,
-  Target,
-  MessageCircle,
-  Calendar,
 } from 'lucide-react'
 
 const teacherCredentials = [

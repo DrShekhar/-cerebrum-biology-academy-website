@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/Button'
-import { Download, FileText, Loader2, Eye } from 'lucide-react'
+import { Download, Loader2, Eye } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 

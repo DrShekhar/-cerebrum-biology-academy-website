@@ -6,7 +6,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { courses } from '@/data/courseData'
-import { COURSE_SERIES, getSeriesForClass } from '@/data/seriesData'
 import { CourseSelectionResponseSchema, validateApiResponse } from '@/lib/data/integrationSchemas'
 
 // Request validation schema

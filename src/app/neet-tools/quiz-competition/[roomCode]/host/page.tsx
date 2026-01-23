@@ -23,7 +23,6 @@ import {
   ChevronDown,
   ChevronUp,
   Timer,
-  Pause,
   Settings,
   MessageCircle,
   UserMinus,

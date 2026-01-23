@@ -2,24 +2,18 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import {
   MessageCircle,
   Phone,
   Clock,
-  User,
   CheckCircle,
   Calendar,
-  MapPin,
-  Star,
-  Zap,
   Send,
   X,
   ChevronDown,
   ChevronUp,
   Users,
-  Award,
-  Headphones,
 } from 'lucide-react'
 
 interface ConsultationSlot {

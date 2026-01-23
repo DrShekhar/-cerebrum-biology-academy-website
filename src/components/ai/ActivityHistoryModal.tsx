@@ -9,7 +9,6 @@ import {
   Award,
   BookOpen,
   Search,
-  Filter,
   Calendar,
   Clock,
   CheckCircle,

@@ -17,7 +17,6 @@ import {
   Phone,
   ArrowRight,
   Target,
-  Zap,
   Shield,
   HeadphonesIcon,
   GraduationCap,

@@ -4,7 +4,7 @@
  * Student privacy protection with regulatory adherence
  */
 
-import type { AuditLog, DataRetentionPolicy, UserType, AuditAction, AuditStatus } from '../types'
+import type { DataRetentionPolicy, UserType } from '../types'
 
 interface ComplianceRule {
   id: string

@@ -6,23 +6,16 @@ import dynamic from 'next/dynamic'
 import {
   CheckCircle2,
   XCircleIcon,
-  Sparkles,
   GraduationCap,
-  Clock,
   Users,
-  FlaskConical,
   Trophy,
-  Calendar,
   ShieldCheck,
-  CreditCard,
   Search,
   X,
   ChevronDown,
 } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import {
   allClassPricing,
-  addOnCourses,
   type ClassLevel,
   type CourseType,
   type TierLevel,

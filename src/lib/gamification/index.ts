@@ -13,7 +13,7 @@
 // Streak Protection
 export {
   getStreakStatus,
-  useStreakFreeze,
+  applyStreakFreeze,
   recoverStreak,
   markStreakAtRisk,
   breakStreak,
@@ -93,8 +93,8 @@ export const gamification = {
       return getStreakStatus(userId)
     },
     useFreeze: async (userId: string) => {
-      const { useStreakFreeze } = await import('./streakProtection')
-      return useStreakFreeze(userId)
+      const { applyStreakFreeze } = await import('./streakProtection')
+      return applyStreakFreeze(userId)
     },
     recover: async (userId: string) => {
       const { recoverStreak } = await import('./streakProtection')

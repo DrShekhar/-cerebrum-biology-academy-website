@@ -10,13 +10,10 @@ import {
   TrendingUp,
   Users,
   Award,
-  Calendar,
-  Clock,
   Target,
   Star,
   BookOpen,
   Brain,
-  Zap,
   Activity,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

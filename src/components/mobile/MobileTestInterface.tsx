@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { MockTest, TestResponse, UserProfile } from '@/types/mockTest'
+import { MockTest, TestResponse } from '@/types/mockTest'
 import { Button } from '@/components/ui/Button'
 import {
   Clock,
@@ -18,11 +18,7 @@ import {
   CheckCircle,
   Circle,
   AlertTriangle,
-  Share2,
-  Download,
-  RefreshCw,
   Smartphone,
-  Zap,
 } from 'lucide-react'
 import { motion, AnimatePresence, PanInfo } from 'framer-motion'
 

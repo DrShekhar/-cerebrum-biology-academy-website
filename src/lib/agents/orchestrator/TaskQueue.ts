@@ -5,7 +5,7 @@
  * and dependency resolution.
  */
 
-import type { AgentTask, TaskStatus, TaskPriority } from '../types'
+import type { AgentTask, TaskPriority } from '../types'
 
 export class TaskQueue {
   private queue: AgentTask[]

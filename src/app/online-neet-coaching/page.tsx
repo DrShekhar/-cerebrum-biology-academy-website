@@ -3,13 +3,11 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  GraduationCap,
   Users,
   Trophy,
   Clock,
   CheckCircle,
   Star,
-  BookOpen,
   Video,
   Phone,
   Globe,

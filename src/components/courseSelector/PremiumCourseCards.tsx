@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, Star, Award, Clock, Users, Target, BookOpen, Zap } from 'lucide-react'
+import { Check, Star, Award } from 'lucide-react'
 
 interface CourseCard {
   id: string

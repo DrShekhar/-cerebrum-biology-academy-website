@@ -3,18 +3,14 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Clock,
   Users,
   TrendingUp,
-  Zap,
   AlertTriangle,
   Timer,
   UserCheck,
   Eye,
   Calendar,
-  CheckCircle,
   Flame,
-  Target,
 } from 'lucide-react'
 
 interface UrgencyData {

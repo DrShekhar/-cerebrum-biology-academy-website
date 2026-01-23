@@ -6,7 +6,6 @@ import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2 } from 'lucide-react'
 import toast from 'react-hot-toast'
-import { useEffect } from 'react'
 
 const editStudentSchema = z.object({
   studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),

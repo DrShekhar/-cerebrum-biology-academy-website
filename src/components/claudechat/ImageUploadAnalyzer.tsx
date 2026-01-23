@@ -6,14 +6,10 @@ import {
   Camera,
   Upload,
   X,
-  Loader2,
-  CheckCircle,
-  AlertCircle,
   Eye,
   Sparkles,
   Brain,
   Zap,
-  RotateCcw,
 } from 'lucide-react'
 
 interface ImageAnalysisResult {

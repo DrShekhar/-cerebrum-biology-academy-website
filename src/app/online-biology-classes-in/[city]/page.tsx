@@ -5,12 +5,10 @@ import Link from 'next/link'
 import {
   Users,
   Trophy,
-  Clock,
   CheckCircle,
   Star,
   Video,
   Phone,
-  Globe,
   Laptop,
   Wifi,
   BookOpen,
@@ -19,9 +17,8 @@ import {
   MessageCircle,
   MapPin,
   AlertCircle,
-  ArrowRight,
 } from 'lucide-react'
-import { cities, getCityBySlug, type CityData } from '@/lib/onlineClasses/cityData'
+import { cities, getCityBySlug } from '@/lib/onlineClasses/cityData'
 import { notFound } from 'next/navigation'
 import { use } from 'react'
 

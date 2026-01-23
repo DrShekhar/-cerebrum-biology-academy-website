@@ -14,7 +14,6 @@ import {
   AlertTriangle,
   CheckCircle2,
   Clock,
-  Award,
   Flame,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

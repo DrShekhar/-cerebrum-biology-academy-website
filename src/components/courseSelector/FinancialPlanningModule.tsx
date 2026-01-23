@@ -3,19 +3,14 @@
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Calculator,
   Calendar,
-  DollarSign,
   PiggyBank,
   Award,
   TrendingDown,
   TrendingUp,
   Users,
   CheckCircle,
-  XCircle,
   AlertCircle,
-  CreditCard,
-  Banknote,
   Receipt,
   Target,
   Zap,

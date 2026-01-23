@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import {
-  Award,
   Star,
   Users,
   Trophy,
@@ -14,11 +13,8 @@ import {
   Radio,
   Globe,
   Building,
-  Clock,
-  ThumbsUp,
   Target,
   TrendingUp,
-  BookOpen,
   Heart,
 } from 'lucide-react'
 

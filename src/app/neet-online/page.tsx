@@ -14,7 +14,6 @@ import {
   Laptop,
   Smartphone,
   Wifi,
-  BookOpen,
   Target,
 } from 'lucide-react'
 

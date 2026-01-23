@@ -21,7 +21,6 @@ import {
   ExternalLink,
   TrendingUp,
   Monitor,
-  Shield,
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

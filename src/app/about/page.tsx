@@ -8,14 +8,11 @@ import {
   Target,
   Star,
   TrendingUp,
-  Clock,
   Shield,
   Heart,
   Lightbulb,
-  Zap,
   CheckCircle,
   ArrowRight,
-  Play,
   Building,
   Calendar,
   Trophy,
@@ -24,22 +21,10 @@ import Link from 'next/link'
 import { facultyStats, facultyHighlights } from '@/data/faculty'
 import { EEATSignals } from '@/components/seo/EEATSignals'
 import { BreadcrumbSchema } from '@/components/seo'
-import {
-  PremiumSection,
-  HeroSection,
-  FeatureSection,
-  ContentSection,
-  SectionHeader,
-  AcademicGrid,
-  AcademicCard,
-} from '@/components/ui/PremiumSection'
-import {
-  AcademicHeadline,
-  AcademicParagraph,
-  AcademicQuote,
-  AcademicList,
-  AcademicEmphasis,
-} from '@/components/ui/AcademicTypography'
+
+
+
+
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 
 const aboutFAQs = [

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import CertificateCard from './CertificateCard'
-import { Search, Filter, Award, Download } from 'lucide-react'
+import { Search, Filter, Award } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 
 interface Certificate {

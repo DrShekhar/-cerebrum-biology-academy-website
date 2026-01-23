@@ -7,12 +7,10 @@ import {
   X,
   Send,
   Bot,
-  User,
   BookOpen,
   Calendar,
   Phone,
   Download,
-  CheckCircle,
 } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
@@ -23,7 +21,7 @@ import {
   type ConversationContext,
   type LeadQualificationScore,
 } from '@/lib/chat/leadQualification'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone, getWhatsAppLink } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone, getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 interface ChatMessage {
   id: string

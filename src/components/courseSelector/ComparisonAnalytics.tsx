@@ -6,7 +6,6 @@ import {
   TrendingUp,
   TrendingDown,
   DollarSign,
-  Clock,
   Users,
   Award,
   Calculator,

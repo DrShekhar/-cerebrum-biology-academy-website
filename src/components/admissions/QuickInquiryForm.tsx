@@ -10,7 +10,6 @@ import {
   Loader2,
   Check,
   Clock,
-  ArrowRight,
   Shield,
   Zap,
 } from 'lucide-react'

@@ -4,13 +4,11 @@ import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
-  Filter,
   Calculator,
   Star,
   Users,
   Clock,
   Award,
-  ChevronDown,
   CheckCircle,
 } from 'lucide-react'
 import {
@@ -18,7 +16,6 @@ import {
   getSeriesInfo,
   getBadgeInfo,
   type Course,
-  type InstallmentOption,
 } from '@/data/courseData'
 import { PaymentCalculator } from './PaymentCalculator'
 import { CourseComparison } from './CourseComparison'

@@ -6,10 +6,7 @@ import {
   X,
   Check,
   Star,
-  Users,
-  Clock,
   Award,
-  Calculator,
   TrendingUp,
   AlertTriangle,
 } from 'lucide-react'

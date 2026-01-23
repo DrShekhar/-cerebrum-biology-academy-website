@@ -10,8 +10,6 @@ import {
   User,
   BookOpen,
   Brain,
-  Lightbulb,
-  FileText,
   Clock,
   Star,
   TrendingUp,
@@ -19,11 +17,6 @@ import {
   MicOff,
   Volume2,
   VolumeX,
-  Download,
-  Share2,
-  ThumbsUp,
-  ThumbsDown,
-  RotateCcw,
 } from 'lucide-react'
 import { EmptyState } from '@/components/ui/EmptyState'
 // import { biologyTutor, BiologyQuery, BiologyResponse } from '@/lib/ai/BiologyTutorEngine' // Using API instead for Edge Runtime compatibility

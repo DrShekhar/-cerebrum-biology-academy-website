@@ -13,8 +13,6 @@ import {
   PlayCircle,
   Timer,
   Calendar,
-  ArrowRight,
-  Filter,
   Trophy,
   Target,
   BookOpen,
@@ -22,7 +20,7 @@ import {
   Loader2,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils'

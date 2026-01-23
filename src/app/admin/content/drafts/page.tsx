@@ -14,12 +14,9 @@ import {
   Send,
   Trash2,
   RefreshCw,
-  Filter,
   ChevronDown,
   ChevronUp,
   ExternalLink,
-  Calendar,
-  User,
   Tag,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'

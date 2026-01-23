@@ -14,8 +14,6 @@ import {
   Clock,
   Award,
   Play,
-  Target,
-  Microscope,
   Building2,
   School,
   ExternalLink,

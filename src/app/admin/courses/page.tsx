@@ -21,7 +21,6 @@ import {
   Pause,
   Settings,
   BarChart3,
-  Award,
   Target,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'

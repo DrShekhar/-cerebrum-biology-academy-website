@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Clock,
@@ -15,18 +14,14 @@ import {
   Download,
   Calculator,
   FileText,
-  Microscope,
   Brain,
   GraduationCap,
-  Phone,
   MessageCircle,
-  Calendar,
   Sparkles,
   ChevronRight,
   Play,
   Shield,
   TrendingUp,
-  Zap,
   Gift,
   AlertCircle,
 } from 'lucide-react'

@@ -5,10 +5,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   CheckCircle,
-  Clock,
   Users,
   Award,
-  BookOpen,
   Target,
   Star,
   ArrowRight,

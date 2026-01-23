@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 // Normalize phone number to standard format
 function normalizePhone(phone: string): string {
   // Remove all non-digit characters except +
-  let normalized = phone.replace(/[^\d+]/g, '')
+  const normalized = phone.replace(/[^\d+]/g, '')
   // Extract last 10 digits for Indian numbers
   const digits = normalized.replace(/\D/g, '')
   if (digits.length >= 10) {

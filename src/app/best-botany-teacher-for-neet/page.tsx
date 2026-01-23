@@ -11,7 +11,6 @@ import {
   Star,
   BookOpen,
   Target,
-  Award,
   Phone,
   TrendingUp,
   Leaf,

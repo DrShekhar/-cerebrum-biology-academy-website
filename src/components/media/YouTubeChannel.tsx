@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Youtube, Play, Users, Video, TrendingUp, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

@@ -2,11 +2,6 @@
 
 import { motion } from 'framer-motion'
 import {
-  Trophy,
-  Users,
-  Star,
-  CheckCircle,
-  Award,
   BookOpen,
   Video,
   MessageCircle,
@@ -18,7 +13,6 @@ import {
   Brain,
   Clock,
   Laptop,
-  MapPin,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

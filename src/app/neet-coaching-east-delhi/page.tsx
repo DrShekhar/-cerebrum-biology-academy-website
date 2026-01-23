@@ -11,13 +11,8 @@ import {
   CheckCircle,
   Phone,
   ArrowRight,
-  Clock,
   Award,
   Play,
-  Target,
-  Microscope,
-  Building2,
-  School,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 

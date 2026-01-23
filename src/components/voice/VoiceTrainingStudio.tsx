@@ -3,17 +3,11 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Mic,
   Play,
-  Pause,
   Square,
-  Settings,
   Volume2,
-  VolumeX,
-  Save,
   RefreshCw,
   Sliders,
-  Languages,
   Brain,
   Target,
   User,

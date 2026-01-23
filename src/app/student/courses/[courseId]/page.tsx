@@ -11,7 +11,6 @@ import {
   CheckCircle,
   Play,
   Calendar,
-  Trophy,
   ArrowLeft,
   GraduationCap,
   Loader2,

@@ -5,33 +5,23 @@ import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
-  TrendingUp,
   Award,
-  Clock,
   Users,
   CheckCircle,
   Star,
   Play,
-  Calendar,
   Brain,
-  Zap,
   Trophy,
-  ArrowRight,
-  FileText,
-  Video,
   HelpCircle,
-  Download,
   Phone,
   MessageCircle,
   Gift,
   Shield,
-  Sparkles,
   GraduationCap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
-import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function NEET2026PreparationPage() {

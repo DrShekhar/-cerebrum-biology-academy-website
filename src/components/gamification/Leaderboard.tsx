@@ -9,7 +9,6 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
-  User,
   Users,
   Globe,
   Calendar,

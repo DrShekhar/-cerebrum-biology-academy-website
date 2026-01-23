@@ -19,14 +19,11 @@ import {
   ArrowRight,
   Layers,
 } from 'lucide-react'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   batches,
-  neetClasses,
-  testSchedules,
   locations,
   locationLabels,
-  classTypeLabels,
   formatTimeRange,
   filterBatches,
   getNeetClassByType,

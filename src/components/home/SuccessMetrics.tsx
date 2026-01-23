@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
-import { Trophy, Target, Users, Star, TrendingUp, Award, BookOpen, Heart } from 'lucide-react'
+import { motion, useInView } from 'framer-motion'
+import { Trophy, Target, Users, Star, TrendingUp, Award, Heart } from 'lucide-react'
 import { successStats } from '@/data/studentSuccessData'
 
 interface MetricCard {

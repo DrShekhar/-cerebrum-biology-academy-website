@@ -7,14 +7,11 @@ import {
   Users,
   Award,
   Target,
-  Calendar,
   Star,
   BookOpen,
   Clock,
   Trophy,
-  Zap,
   ArrowUp,
-  Filter,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 

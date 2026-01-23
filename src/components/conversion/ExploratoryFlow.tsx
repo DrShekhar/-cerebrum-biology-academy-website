@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   GraduationCap,
   Clock,
@@ -15,9 +15,6 @@ import {
   Play,
   Phone,
   MessageSquare,
-  BookOpen,
-  FlaskConical,
-  BarChart2,
   Heart,
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'

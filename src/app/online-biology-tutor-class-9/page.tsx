@@ -10,9 +10,7 @@ import {
   MessageCircle,
   Play,
   Headphones,
-  FileText,
   BarChart,
-  GraduationCap,
   Lightbulb,
   Sprout,
 } from 'lucide-react'

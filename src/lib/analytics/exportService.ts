@@ -1,5 +1,5 @@
 import { prisma as db } from '@/lib/database'
-import type { ExportOptions, ExportData, ChartData } from '@/lib/types/analytics'
+import type { ExportOptions, ExportData } from '@/lib/types/analytics'
 import { performanceAnalytics } from './performanceService'
 import { renderToBuffer } from '@react-pdf/renderer'
 import React from 'react'

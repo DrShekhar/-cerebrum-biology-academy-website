@@ -15,10 +15,9 @@ import {
   MobileCardStack,
   HapticFeedback,
   TouchOptimizationProvider,
-  useTouchOptimization,
   useNativeTouchGestures,
 } from '@/components/ui/TouchOptimization'
-import { Phone, MessageSquare, Play } from 'lucide-react'
+import { Phone, Play } from 'lucide-react'
 import { CONTACT_INFO, getPhoneLink, getWhatsAppLink } from '@/lib/constants/contactInfo'
 
 /**

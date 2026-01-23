@@ -9,7 +9,6 @@ import {
   BaseAgent,
   AgentContext,
   AgentResponse,
-  getCommunicationContext,
   AgentTaskManager,
 } from './base'
 import { prisma } from '@/lib/prisma'

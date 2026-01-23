@@ -6,18 +6,10 @@ import { useParams } from 'next/navigation'
 import {
   MapPin,
   GraduationCap,
-  Users,
-  Trophy,
-  Star,
   CheckCircle,
   Phone,
   ArrowRight,
-  Clock,
-  Award,
   Play,
-  Target,
-  Microscope,
-  Building2,
   Train,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

@@ -92,35 +92,36 @@ export function HeroClientInteractive() {
         className="flex flex-col sm:flex-row space-y-3 xs:space-y-4 sm:space-y-0 sm:space-x-4 mb-4 animate-fade-in-up"
         style={{ animationDelay: '0.3s' }}
       >
-        {/* PRIMARY CTA: WhatsApp - instant, low-friction contact */}
+        {/* PRIMARY CTA: Book Demo - highest intent conversion action */}
+        <a
+          href="/demo-booking"
+          className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-300 hover:scale-[1.02] active:scale-[0.98] group animate-pulse-subtle"
+        >
+          <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
+          BOOK FREE DEMO
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-900 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-900"></span>
+          </span>
+        </a>
+
+        {/* SECONDARY CTA: WhatsApp - low-friction contact */}
         <button
           onClick={() => trackAndOpenWhatsApp({
-            source: 'hero-cta-primary',
+            source: 'hero-cta-secondary',
             message: WHATSAPP_MESSAGES.enquiry,
             campaign: 'homepage-hero',
           })}
-          className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group animate-pulse-subtle"
+          className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-[#25D366]/20 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border-2 border-[#25D366] hover:border-[#20BD5A] hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
-          Chat on WhatsApp
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-          </span>
+          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 text-[#25D366] group-hover:scale-110 transition-transform flex-shrink-0" />
+          <span className="text-[#25D366]">Chat on WhatsApp</span>
         </button>
 
-        {/* SECONDARY CTA: Book Demo */}
-        <a
-          href="/demo-booking"
-          className="inline-flex items-center justify-center gap-2 bg-[#ea4335] hover:bg-[#d33426] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-red-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-red-400/30 hover:scale-[1.02] active:scale-[0.98] group"
-        >
-          <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" />
-          BOOK DEMO
-        </a>
-
+        {/* TERTIARY CTA: Success Stories */}
         <a
           href="/success-stories"
-          className="inline-flex items-center justify-center gap-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-600/30 hover:scale-[1.02] active:scale-[0.98] group"
+          className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border border-white/30 hover:border-white/50 hover:scale-[1.02] active:scale-[0.98] group"
         >
           <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors flex-shrink-0" />
           Success Stories

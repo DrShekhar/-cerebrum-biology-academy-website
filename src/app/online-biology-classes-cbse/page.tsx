@@ -7,7 +7,6 @@ import {
   Trophy,
   CheckCircle,
   Star,
-  Video,
   Phone,
   BookOpen,
   GraduationCap,

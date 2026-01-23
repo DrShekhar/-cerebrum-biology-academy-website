@@ -13,7 +13,6 @@ import {
   TrendingUp,
   AlertCircle,
   ChevronRight,
-  User,
   Phone,
 } from 'lucide-react'
 

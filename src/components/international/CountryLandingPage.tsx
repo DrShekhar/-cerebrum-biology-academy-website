@@ -11,7 +11,6 @@ import {
   Users,
   GraduationCap,
   CheckCircle2,
-  BarChart2,
   Clock,
   Phone,
   Mail,

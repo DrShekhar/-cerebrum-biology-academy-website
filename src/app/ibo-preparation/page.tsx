@@ -7,11 +7,8 @@ import {
   Trophy,
   BookOpen,
   Users,
-  Clock,
   CheckCircle,
   Globe,
-  Star,
-  ArrowRight,
   GraduationCap,
   Target,
   Beaker,
@@ -20,7 +17,6 @@ import {
   Brain,
   ChevronRight,
   Award,
-  Calendar,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 

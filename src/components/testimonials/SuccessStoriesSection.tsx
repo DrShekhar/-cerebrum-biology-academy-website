@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, TrendingUp, Clock, Target, Quote, GraduationCap, Star } from 'lucide-react'
+import { ArrowRight, TrendingUp, Clock, Target, Quote, GraduationCap } from 'lucide-react'
 import { successStories, type SuccessStory } from '@/data/realTestimonials'
 import { useState } from 'react'
 import Link from 'next/link'

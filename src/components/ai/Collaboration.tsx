@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users,
@@ -13,41 +13,14 @@ import {
   Share2,
   Crown,
   Clock,
-  Bell,
-  ArrowRight,
   ThumbsUp,
   ThumbsDown,
-  AlertCircle,
   Send,
   Edit3,
-  Trash2,
-  Plus,
   X,
   Download,
-  Upload,
   Settings,
-  Filter,
-  Search,
-  Calendar,
-  MapPin,
-  Mail,
-  Phone,
-  Award,
-  BookOpen,
-  Target,
-  Zap,
-  Brain,
-  Shield,
-  Activity,
-  RefreshCw,
-  Save,
-  Play,
-  Pause,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronRight,
   Star,
-  Flag,
   Copy,
   ExternalLink
 } from 'lucide-react'

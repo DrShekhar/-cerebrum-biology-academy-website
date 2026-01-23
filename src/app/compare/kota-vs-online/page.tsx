@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import {
   Home,
-  TrendingUp,
   Heart,
   Users,
   BookOpen,
@@ -17,16 +16,13 @@ import {
   Play,
   ArrowRight,
   AlertCircle,
-  Brain,
   Star,
-  Zap,
   Calculator,
   MessageCircle,
   Trophy,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
-import Link from 'next/link'
 
 export default function KotaVsOnlinePage() {
   const handleDemoBooking = () => {

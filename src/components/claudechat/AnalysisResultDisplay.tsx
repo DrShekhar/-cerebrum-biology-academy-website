@@ -7,7 +7,6 @@ import {
   BookOpen,
   Lightbulb,
   Target,
-  Clock,
   Star,
   ChevronDown,
   ChevronUp,

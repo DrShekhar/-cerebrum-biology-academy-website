@@ -9,11 +9,8 @@ import {
   BiologyUnit,
   type NEETCurriculum,
   type NEETUnit,
-  type NEETChapter,
   DifficultyLevel,
-  type ExamType,
   TopicImportance,
-  type ExamRelevance,
 } from '../types'
 
 export interface BiologyEducationConfig {

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { ConversionFunnelChart } from '../../../../components/analytics/ConversionFunnelChart'
 import {
   HeatmapVisualization,
-  InteractiveHeatmap,
   HeatmapStats,
 } from '../../../../components/analytics/HeatmapVisualization'
 import { FeedbackModal, QuickFeedbackWidget } from '../../../../components/feedback/FeedbackModal'

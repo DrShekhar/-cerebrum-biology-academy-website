@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Check, Clock, Target, Trophy, Brain, Zap, Star, Award } from 'lucide-react'
+import { Check, Clock, Target, Trophy, Brain, Zap, Star } from 'lucide-react'
 
 interface TimelinePhase {
   id: number

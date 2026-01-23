@@ -12,14 +12,11 @@ import {
   Users,
   TrendingUp,
   BookOpen,
-  Clock,
   AlertTriangle,
   CheckCircle,
   Download,
-  Filter,
   Search,
   BarChart3,
-  PieChart,
   Activity,
 } from 'lucide-react'
 import type { TeacherAnalytics } from '@/lib/types/analytics'

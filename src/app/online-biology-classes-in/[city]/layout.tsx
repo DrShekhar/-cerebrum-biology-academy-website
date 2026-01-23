@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { cities, getCityBySlug, getAllCitySlugs } from '@/lib/onlineClasses/cityData'
+import { getCityBySlug, getAllCitySlugs } from '@/lib/onlineClasses/cityData'
 
 interface Props {
   params: Promise<{ city: string }>

@@ -4,12 +4,10 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { facultyMembers, facultyStats, facultyHighlights } from '@/data/faculty'
 import {
-  Users,
   Award,
   BookOpen,
   Star,
   GraduationCap,
-  Microscope,
   Heart,
   Target,
   CheckCircle,

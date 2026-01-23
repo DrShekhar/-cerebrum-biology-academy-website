@@ -14,11 +14,9 @@ import {
   Star,
   Play,
   ArrowLeft,
-  Trophy,
   BarChart3,
   CheckCircle,
   AlertCircle,
-  Award,
   TrendingUp,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

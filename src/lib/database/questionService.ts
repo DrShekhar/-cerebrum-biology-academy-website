@@ -4,7 +4,6 @@ import type {
   questions,
   question_banks,
   question_bank_questions,
-  user_question_responses,
   Prisma,
 } from '@/generated/prisma'
 

@@ -18,7 +18,7 @@ import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()

@@ -13,16 +13,10 @@ import {
 import {
   Download,
   Copy,
-  Palette,
   Layout,
   Award,
   Zap,
   Eye,
-  Settings,
-  FileImage,
-  Code,
-  Maximize,
-  Minimize,
 } from 'lucide-react'
 
 interface BrandIdentityGeneratorProps {

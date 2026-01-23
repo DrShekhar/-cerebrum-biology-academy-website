@@ -7,7 +7,6 @@ import {
   TrendingUp,
   Award,
   BookOpen,
-  Users,
   Clock,
   Trophy,
 } from 'lucide-react'

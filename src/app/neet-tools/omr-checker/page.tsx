@@ -1,20 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Lock,
   FileText,
-  CheckCircle,
-  XCircle,
-  Minus,
-  Download,
   ArrowRight,
   ArrowLeft,
   Loader2,
   AlertCircle,
   Clock,
-  Key,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 

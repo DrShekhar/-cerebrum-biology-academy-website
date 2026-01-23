@@ -15,8 +15,6 @@ import {
   Eye,
   Calendar,
   User,
-  BookOpen,
-  Tag,
   Star,
   AlertCircle,
 } from 'lucide-react'

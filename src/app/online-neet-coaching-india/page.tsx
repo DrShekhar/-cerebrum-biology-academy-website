@@ -10,8 +10,6 @@ import {
   CheckCircle,
   Star,
   Clock,
-  Shield,
-  Zap,
   MessageCircle,
   Award,
   MapPin,

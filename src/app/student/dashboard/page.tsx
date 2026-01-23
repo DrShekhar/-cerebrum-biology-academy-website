@@ -10,24 +10,17 @@ import {
   TrendingUp,
   Target,
   Clock,
-  Award,
   Brain,
-  Calendar,
-  CheckCircle,
   BarChart3,
-  Zap,
-  Users,
   MessageCircle,
   Video,
   Bell,
   ArrowUp,
   ArrowDown,
-  Play,
   FileText,
   Trophy,
   Activity,
   Flame,
-  Timer,
   Lock,
   Crown,
 } from 'lucide-react'
@@ -37,7 +30,7 @@ import {
   CoachingTrialBanner,
   useCoachingTrialStatus,
 } from '@/components/trial/CoachingTrialBanner'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils'

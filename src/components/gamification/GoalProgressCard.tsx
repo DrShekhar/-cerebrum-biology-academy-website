@@ -11,7 +11,6 @@ import {
   Calendar,
   BookOpen,
   Trophy,
-  ChevronRight,
 } from 'lucide-react'
 
 type GoalType = 'DAILY' | 'WEEKLY'

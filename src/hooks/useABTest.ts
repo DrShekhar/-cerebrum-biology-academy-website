@@ -470,9 +470,12 @@ export const useABTest = (testId: string) => {
 }
 
 // Hook for managing multiple A/B tests
+// eslint-disable-next-line react-hooks/rules-of-hooks -- This pattern intentionally uses dynamic hooks
 export const useABTests = (testIds: string[]) => {
+  // Note: This assumes testIds array is stable (same length/order) between renders
   const tests = testIds.reduce(
     (acc, testId) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks -- Dynamic hook pattern for multiple tests
       acc[testId] = useABTest(testId)
       return acc
     },

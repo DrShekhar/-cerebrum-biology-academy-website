@@ -8,7 +8,6 @@ import {
   CheckCircle,
   Award,
   BookOpen,
-  Video,
   MessageCircle,
   Play,
   ArrowRight,
@@ -19,7 +18,6 @@ import {
   Leaf,
   Heart,
   GraduationCap,
-  Medal,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

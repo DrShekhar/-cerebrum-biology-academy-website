@@ -12,7 +12,7 @@
  * - Multi-objective optimization
  */
 
-import { ItemParameters, StudentResponse, AbilityEstimate } from './ItemResponseTheory'
+import { ItemParameters, StudentResponse } from './ItemResponseTheory'
 import { PerformanceProfile } from './PerformanceAnalytics'
 
 export interface LearningObjective {

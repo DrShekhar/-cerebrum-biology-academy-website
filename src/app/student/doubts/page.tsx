@@ -17,7 +17,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { DoubtStatsWidget } from '@/components/student/DoubtStatsWidget'
 import { DoubtTicketCard } from '@/components/student/DoubtTicketCard'
 import { CreateDoubtModal } from '@/components/student/CreateDoubtModal'
-import { Plus, Search, Filter, MessageCircle, RefreshCw } from 'lucide-react'
+import { Plus, Search, MessageCircle, RefreshCw } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 

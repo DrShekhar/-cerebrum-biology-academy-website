@@ -7,9 +7,7 @@ import {
   Sun,
   Moon,
   Bell,
-  BellOff,
   User,
-  Lock,
   Palette,
   Type,
   Calendar,
@@ -23,7 +21,6 @@ import {
   Trash2,
   Save,
   AlertCircle,
-  CheckCircle,
   ChevronRight,
 } from 'lucide-react'
 import { useToast } from '../ui/Toast'

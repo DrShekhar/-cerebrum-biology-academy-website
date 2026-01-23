@@ -8,11 +8,8 @@ import { motion } from 'framer-motion'
 import {
   Users,
   Search,
-  BookOpen,
   Calendar,
-  TrendingUp,
   Award,
-  Clock,
   Mail,
   Phone,
   MapPin,

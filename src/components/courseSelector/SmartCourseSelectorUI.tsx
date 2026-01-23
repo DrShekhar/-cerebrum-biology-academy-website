@@ -1,14 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
   ChevronRight,
   Check,
-  Star,
   Users,
-  Clock,
   Calculator,
   Award,
   TrendingUp,
@@ -17,14 +15,12 @@ import {
   Target,
   Crown,
   Gem,
-  Zap,
 } from 'lucide-react'
 import {
   QualificationQuestion,
   QualificationAnswers,
   CourseRecommendation,
   CourseQualificationEngine,
-  getNextQuestion,
   isQualificationComplete,
   getQualificationProgress,
   QUALIFICATION_QUESTIONS,

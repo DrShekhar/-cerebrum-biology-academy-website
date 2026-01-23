@@ -12,7 +12,6 @@ import {
   MessageCircle,
   Play,
   ArrowRight,
-  Target,
   Brain,
   FileText,
   BarChart,

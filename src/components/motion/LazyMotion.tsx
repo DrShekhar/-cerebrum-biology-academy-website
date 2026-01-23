@@ -1,6 +1,6 @@
 'use client'
 
-import { lazy, Suspense, type ReactNode, type ComponentProps } from 'react'
+import { lazy, Suspense, type ReactNode } from 'react'
 import type { HTMLMotionProps } from 'framer-motion'
 
 // Lazy load framer-motion to reduce initial bundle (~50KB savings)

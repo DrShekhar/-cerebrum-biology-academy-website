@@ -10,13 +10,11 @@ import {
   Users,
   Clock,
   Award,
-  Filter,
   ExternalLink,
   Microscope,
   Zap,
   Leaf,
   Heart,
-  Brain,
   Search,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

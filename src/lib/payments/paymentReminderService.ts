@@ -6,9 +6,8 @@
 
 import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
-import { addDays, isBefore, isAfter, differenceInDays, format } from 'date-fns'
+import { addDays, differenceInDays, format } from 'date-fns'
 import type { NotificationPriority } from '@/lib/notifications/notificationService'
-import type { PaymentSchedule } from './paymentScheduleService'
 
 export interface PaymentReminderConfig {
   reminderDaysBefore: number[]

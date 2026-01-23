@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function BiologyTutorOnlinePage() {
   const faqSchema = {

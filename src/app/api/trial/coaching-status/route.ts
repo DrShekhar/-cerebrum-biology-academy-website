@@ -3,7 +3,6 @@ import { auth } from '@/lib/auth/config'
 import {
   checkCoachingTrialStatus,
   startMasterTrial,
-  CoachingTrialStatus,
 } from '@/lib/trial/trialManager'
 import { CoachingTiers, CoachingSubscriptionTier } from '@/lib/subscriptions/SmartSubscriptionTiers'
 
@@ -16,7 +15,7 @@ export async function GET(request: NextRequest) {
     }
 
     const userId = session.user.id
-    let trialStatus = await checkCoachingTrialStatus(userId)
+    const trialStatus = await checkCoachingTrialStatus(userId)
 
     if (!trialStatus) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })

@@ -17,14 +17,6 @@ import {
   Share2,
   Download,
   Info,
-  Calendar,
-  Users,
-  ChevronDown,
-  ChevronUp,
-  Heart,
-  Scale,
-  IndianRupee,
-  Star,
   Loader2,
 } from 'lucide-react'
 
@@ -370,7 +362,7 @@ export default function NEETCollegePredictorPage() {
    Inline Form Components
    ============================================ */
 
-import type { College, InputMode, SearchMode } from './_components/types'
+import type { College, InputMode } from './_components/types'
 
 interface CollegeSearchFormProps {
   collegeSearchRef: React.RefObject<HTMLDivElement | null>

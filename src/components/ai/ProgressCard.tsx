@@ -8,7 +8,6 @@ import {
   Clock,
   Target,
   BookOpen,
-  Award,
   TrendingUp,
   Sparkles,
 } from 'lucide-react'

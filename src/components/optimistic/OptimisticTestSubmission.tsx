@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle, Loader2, Send, AlertCircle, RotateCcw } from 'lucide-react'
 import { useOptimisticUpdate } from '@/hooks/useOptimisticUpdate'

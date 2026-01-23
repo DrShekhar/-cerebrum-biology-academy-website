@@ -1,6 +1,5 @@
 import { NextRequest } from 'next/server'
 import { handleError, successResponse, logError } from '@/lib/errors'
-import { withErrorHandling } from '@/lib/errors'
 import prisma from '@/lib/prisma'
 
 // Rate limiting for error reporting API

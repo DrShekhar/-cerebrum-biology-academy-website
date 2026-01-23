@@ -2,7 +2,6 @@
 
 import { useReducer, useCallback, useMemo, useEffect } from 'react'
 import {
-  CourseSelector,
   CourseSelectorAction,
   CourseSelectorState,
   PlanSelection,
@@ -51,7 +50,7 @@ function courseSelectorReducer(
       }
 
     case 'CLEAR_SELECTION': {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       const { [action.payload]: _removed, ...remainingPlans } = state.selectedPlans
       const typedRemainingPlans = remainingPlans as Record<SeriesType, PlanSelection>
       return {

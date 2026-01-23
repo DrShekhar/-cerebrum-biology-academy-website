@@ -4,22 +4,16 @@ import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
-  Star,
-  CheckCircle,
   BookOpen,
-  Video,
   MessageCircle,
   Play,
   Headphones,
-  FileText,
   BarChart,
   GraduationCap,
   Target,
-  Award,
   Brain,
   Microscope,
   Dna,
-  FlaskConical,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

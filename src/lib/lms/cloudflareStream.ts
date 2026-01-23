@@ -12,7 +12,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { VideoUploadStatus, PlaybackPolicy } from '@/generated/prisma'
+import { VideoUploadStatus } from '@/generated/prisma'
 
 // Cloudflare API configuration
 const CF_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID

@@ -3,18 +3,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Camera,
   Mic,
   Volume2,
-  VolumeX,
   Image as ImageIcon,
   Video,
-  FileText,
   Brain,
   Eye,
-  Ear,
   Play,
-  Pause,
   Square,
   Download,
   Upload,
@@ -23,9 +18,6 @@ import {
   BookOpen,
   Target,
   Clock,
-  CheckCircle,
-  AlertCircle,
-  RotateCcw,
   Share2,
   Settings,
   Layers

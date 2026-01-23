@@ -7,7 +7,6 @@ import {
   BIOLOGY_CHAPTERS,
   PYQ_YEARS,
   type BiologyTopic,
-  type PYQYear,
 } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 

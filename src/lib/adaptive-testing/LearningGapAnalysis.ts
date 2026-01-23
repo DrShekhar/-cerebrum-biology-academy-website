@@ -12,7 +12,7 @@
  * - Early intervention systems
  */
 
-import { ItemParameters, StudentResponse, AbilityEstimate } from './ItemResponseTheory'
+import { ItemParameters, StudentResponse } from './ItemResponseTheory'
 import { PerformanceProfile } from './PerformanceAnalytics'
 import { KnowledgeNode } from './PersonalizedSequencing'
 

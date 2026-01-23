@@ -4,8 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
-  CheckCircle,
-  BookOpen,
   MessageCircle,
   Play,
   Headphones,

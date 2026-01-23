@@ -6,7 +6,6 @@ import {
   Users,
   Star,
   CheckCircle,
-  Award,
   BookOpen,
   Video,
   MessageCircle,

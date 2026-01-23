@@ -10,28 +10,14 @@ import {
   Target,
   Clock,
   GraduationCap,
-  PlusCircle,
   Play,
-  Save,
-  Download,
-  Upload,
-  BarChart3,
-  Shuffle,
-  Filter,
-  Users,
-  Award,
-  TrendingUp,
   CheckCircle,
-  Calendar,
   Zap,
   RefreshCw,
   Eye,
-  X,
   ChevronDown,
   ChevronRight,
-  ArrowRight,
   ArrowLeft,
-  Star,
   Lightbulb,
 } from 'lucide-react'
 import { ClassSelection } from '@/components/mockTests/ClassSelection'
@@ -41,7 +27,6 @@ import {
   class11Chapters,
   class12Chapters,
   phase1PriorityTopics,
-  questionBankStructure,
 } from '@/data/ncertBiologyContentDatabase'
 import {
   cellBiologyQuestions,
@@ -52,8 +37,7 @@ import {
   numericalQuestions,
   statementBasedQuestions,
 } from '@/data/neetQuestionBank'
-import { mockTests, getTestsByDifficulty, getTestsBySubject } from '@/data/mockTests'
-import type { MockTest, Question, TestResponse, TestAttempt } from '@/types/mockTest'
+import type { MockTest, TestResponse, TestAttempt } from '@/types/mockTest'
 
 interface TestConfiguration {
   title: string

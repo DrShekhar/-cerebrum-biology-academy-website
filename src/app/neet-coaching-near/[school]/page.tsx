@@ -13,8 +13,6 @@ import {
   Users,
   Clock,
   Calendar,
-  BookOpen,
-  Target,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 

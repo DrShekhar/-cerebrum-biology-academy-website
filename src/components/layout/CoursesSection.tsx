@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/Button'
 import { courses, courseCategories } from '@/data/courses'
-import { detailedCourses } from '@/data/detailedCourses'
 import {
   Clock,
   IndianRupee,

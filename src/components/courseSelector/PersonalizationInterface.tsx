@@ -6,26 +6,17 @@ import {
   User,
   Brain,
   Clock,
-  MapPin,
   GraduationCap,
   Microscope,
   Target,
-  TrendingUp,
   CheckCircle,
   AlertTriangle,
-  Star,
-  Zap,
-  Award,
-  BookOpen,
-  Users,
-  Calendar,
 } from 'lucide-react'
 import {
   StudentProfile,
   CourseRecommendation,
   PersonalizationEngine,
   analyzeStudentProfile,
-  generateQuickProfile,
 } from '@/lib/personalization/PersonalizationEngine'
 
 interface PersonalizationInterfaceProps {

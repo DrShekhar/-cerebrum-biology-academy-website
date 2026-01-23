@@ -4,9 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
-  FlaskConical,
   Users,
-  TrendingUp,
   CheckCircle,
   BookOpen,
   Clock,

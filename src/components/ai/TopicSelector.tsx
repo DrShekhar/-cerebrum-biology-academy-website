@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { NEETUnit, NEETChapter, getAllUnits } from '@/data/neet-syllabus'
+import { getAllUnits } from '@/data/neet-syllabus'
 import DifficultyBadge from '@/components/ui/DifficultyBadge'
 import WeightageBadge from '@/components/ui/WeightageBadge'
 import { Check, BookOpen, ChevronDown, ChevronUp, TrendingUp } from 'lucide-react'

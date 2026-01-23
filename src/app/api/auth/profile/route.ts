@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { validateUserSession, addSecurityHeaders, PasswordUtils } from '@/lib/auth/config'
+import { addSecurityHeaders } from '@/lib/auth/config'
 import { withAuth } from '@/lib/auth/middleware'
 import { z } from 'zod'
 

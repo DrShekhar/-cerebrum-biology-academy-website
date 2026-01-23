@@ -12,7 +12,7 @@ import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { KPIStatisticsWidget } from '@/components/counselor/KPIStatisticsWidget'
-import { TrendingUp, TrendingDown, Target, Award } from 'lucide-react'
+import { TrendingUp, TrendingDown, Target } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 

@@ -5,21 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Plus,
-  Check,
   Star,
   Crown,
   TrendingUp,
   Clock,
-  Users,
   DollarSign,
   BookOpen,
-  Target,
   Award,
   ChevronDown,
   ChevronUp,
   Sparkles,
-  Shield,
-  Zap,
 } from 'lucide-react'
 import { type Course } from '@/data/courseData'
 

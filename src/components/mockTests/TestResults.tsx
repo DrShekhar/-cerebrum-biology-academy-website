@@ -21,12 +21,10 @@ import {
   Brain,
   Lightbulb,
   Users,
-  Calendar,
   BookOpen,
   Eye,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 interface TestResultsProps {
   test: MockTest

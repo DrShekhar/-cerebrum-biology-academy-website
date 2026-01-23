@@ -17,7 +17,6 @@ import {
   MapPin,
   Plus,
   Search,
-  Filter,
   Edit,
   Trash2,
   Eye,
@@ -29,7 +28,6 @@ import {
 } from 'lucide-react'
 import { SessionForm } from '@/components/teacher/SessionForm'
 import { showToast } from '@/lib/toast'
-import { cn } from '@/lib/utils'
 import type { ClassSession } from '@/types/attendance'
 
 interface SessionStatistics {

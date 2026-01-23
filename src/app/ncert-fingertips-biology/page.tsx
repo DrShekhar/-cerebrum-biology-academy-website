@@ -3,10 +3,8 @@
 import { motion } from 'framer-motion'
 import {
   BookOpen,
-  CheckCircle2,
   ExternalLink,
   Target,
-  Award,
   ChevronDown,
   ChevronUp,
   ShoppingCart,

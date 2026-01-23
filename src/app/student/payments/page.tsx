@@ -16,12 +16,9 @@ import { UpcomingPaymentsWidget } from '@/components/student/UpcomingPaymentsWid
 import { EmptyState } from '@/components/ui/EmptyState'
 import { useAuth } from '@/contexts/AuthContext'
 import {
-  CreditCard,
   TrendingUp,
   Clock,
   AlertCircle,
-  DollarSign,
-  Download,
   Calendar,
   ArrowUpRight,
   ArrowDownRight,

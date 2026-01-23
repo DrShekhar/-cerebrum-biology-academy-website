@@ -9,7 +9,6 @@ import {
   Globe,
   ArrowRight,
   CheckCircle,
-  Download,
   BarChart3,
   Award,
 } from 'lucide-react'

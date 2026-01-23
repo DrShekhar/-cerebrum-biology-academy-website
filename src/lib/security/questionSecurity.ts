@@ -3,7 +3,7 @@
  * Handles question randomization, encryption, and secure delivery
  */
 
-import { SimpleQuestion, TestResponse } from '../../types/simpleTest'
+import { SimpleQuestion } from '../../types/simpleTest'
 
 export interface SecureQuestion {
   id: string

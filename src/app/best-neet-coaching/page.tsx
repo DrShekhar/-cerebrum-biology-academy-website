@@ -9,14 +9,11 @@ import {
   Award,
   BookOpen,
   Clock,
-  Shield,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
-  GraduationCap,
   Target,
-  TrendingUp,
   Medal,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

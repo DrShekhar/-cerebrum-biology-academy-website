@@ -12,7 +12,6 @@ import {
   Users,
   CheckCircle,
   MapPin,
-  Repeat,
   AlertCircle,
   Download,
   Phone,

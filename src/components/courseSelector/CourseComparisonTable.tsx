@@ -8,11 +8,7 @@ import {
   Crown,
   Target,
   Gem,
-  Users,
-  Clock,
-  BookOpen,
   Award,
-  Calculator,
   ChevronDown,
   ChevronUp,
 } from 'lucide-react'

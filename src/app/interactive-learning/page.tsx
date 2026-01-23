@@ -20,22 +20,14 @@ import {
 } from '@/components/ui/AcademicTypography'
 import {
   BiologyConceptExplorer,
-  DNAHelixAnimation,
-  CellDivisionAnimation,
-  HeartBeatAnimation,
-  PhotosynthesisAnimation,
-  NeuronFiringAnimation,
 } from '@/components/interactive/BiologyAnimations'
 import { InteractiveQuiz, sampleNEETQuestions } from '@/components/interactive/InteractiveQuiz'
 import { Button } from '@/components/ui/Button'
 import {
   Microscope,
   Brain,
-  Atom,
-  Dna,
   Heart,
   Leaf,
-  Zap,
   BookOpen,
   Play,
   Award,
@@ -43,7 +35,6 @@ import {
   Users,
   TrendingUp,
   ArrowRight,
-  CheckCircle,
   Star,
 } from 'lucide-react'
 import Link from 'next/link'

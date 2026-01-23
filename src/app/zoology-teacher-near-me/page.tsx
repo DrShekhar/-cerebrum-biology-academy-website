@@ -16,17 +16,13 @@ import {
   Building2,
   Wifi,
   MessageCircle,
-  ArrowRight,
   Navigation,
-  ExternalLink,
 } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import {
   getOfflineCenters,
   getOnlineRegions,
   generateLocalBusinessSchema,
   generateFAQSchema,
-  getCityLocalityPath,
   getWhatsAppEnquiryUrl,
 } from '@/lib/nearMe/nearMeData'
 

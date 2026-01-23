@@ -5,20 +5,16 @@ import Link from 'next/link'
 import {
   MessageCircle,
   Clock,
-  Users,
   Video,
   CheckCircle,
   Star,
   ArrowRight,
   BookOpen,
   Brain,
-  Zap,
   Phone,
   MessageSquare,
   HelpCircle,
   Sparkles,
-  Target,
-  Award,
   Lightbulb,
 } from 'lucide-react'
 

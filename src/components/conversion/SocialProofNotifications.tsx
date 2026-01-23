@@ -9,15 +9,11 @@ import {
   MapPin,
   Clock,
   Users,
-  TrendingUp,
   Award,
-  BookOpen,
   MessageCircle,
-  Phone,
   X,
   UserCheck,
   Target,
-  Calendar,
 } from 'lucide-react'
 
 interface SocialProofEvent {

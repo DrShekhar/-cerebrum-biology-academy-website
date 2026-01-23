@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Mic, Image as ImageIcon, X, Loader2 } from 'lucide-react'
+import { Send, Mic, Image as ImageIcon, Loader2 } from 'lucide-react'
 import { useSwipeable } from 'react-swipeable'
 import { MessageWithLatex } from '../latex/LatexRenderer'
 

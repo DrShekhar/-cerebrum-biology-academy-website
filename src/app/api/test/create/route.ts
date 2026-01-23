@@ -3,7 +3,6 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
-import { withValidation } from '@/lib/middleware/validation'
 import { logger } from '@/lib/utils/logger'
 
 // Validation schema for test creation

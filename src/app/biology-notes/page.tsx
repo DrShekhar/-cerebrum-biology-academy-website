@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { prisma } from '@/lib/prisma'
 
-import { BookOpen, Search, Filter, TrendingUp, Clock } from 'lucide-react'
+import { BookOpen, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {

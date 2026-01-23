@@ -5,7 +5,6 @@ import {
   Trophy,
   Users,
   Star,
-  CheckCircle,
   Award,
   BookOpen,
   Video,

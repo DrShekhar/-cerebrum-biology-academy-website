@@ -3,15 +3,12 @@
 import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
-  Users,
   Star,
   CheckCircle,
   BookOpen,
   Video,
   MessageCircle,
   Play,
-  Laptop,
-  Clock,
   Headphones,
   FileText,
   BarChart,

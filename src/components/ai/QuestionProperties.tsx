@@ -13,15 +13,12 @@ import {
   Star,
   Award,
   TrendingUp,
-  Users,
   CheckCircle,
   Info,
   Plus,
   Minus,
   X,
-  Edit,
-  Save,
-  RotateCcw
+  Save
 } from 'lucide-react'
 
 // Comprehensive question metadata interface

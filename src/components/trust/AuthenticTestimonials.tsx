@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
-import Image from 'next/image'
 import { useTranslations } from '@/lib/i18n/translations'
 import { OptimizedImage } from '@/components/mobile/OptimizedImage'
 

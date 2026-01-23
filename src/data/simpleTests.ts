@@ -8,7 +8,6 @@ import {
   class12Questions,
   getQuestionsByChapter,
   getQuestionsByDifficulty,
-  getQuestionsByTopic,
 } from './authenticQuestions'
 
 // ============================================================================

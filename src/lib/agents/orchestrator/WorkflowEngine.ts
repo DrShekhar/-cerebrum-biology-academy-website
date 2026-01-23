@@ -7,7 +7,6 @@
 import type Anthropic from '@anthropic-ai/sdk'
 import type {
   AgentConfig,
-  AgentTask,
   AgentResponse,
   FeatureRequest,
   WorkflowExecution,

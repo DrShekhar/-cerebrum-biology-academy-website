@@ -21,7 +21,6 @@ import {
   Clock,
   ClipboardCheck,
   Layers,
-  DollarSign,
   MapPin,
 } from 'lucide-react'
 import Link from 'next/link'

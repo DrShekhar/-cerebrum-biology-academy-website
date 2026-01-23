@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { FileText, Pencil, Layers, Star, Archive, MoreVertical, Trash2, Edit } from 'lucide-react'
+import { FileText, Pencil, Layers, Star, Archive, MoreVertical, Trash2 } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 
 export interface Note {

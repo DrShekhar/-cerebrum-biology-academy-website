@@ -5,14 +5,9 @@ import { motion } from 'framer-motion'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   Trophy,
-  Users,
-  Star,
   CheckCircle,
   Award,
   BookOpen,
-  Clock,
-  MessageCircle,
-  ArrowRight,
   GraduationCap,
   Target,
   Brain,

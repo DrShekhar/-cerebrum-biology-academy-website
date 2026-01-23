@@ -7,7 +7,6 @@ import {
   Phone,
   BookOpen,
   Play,
-  GraduationCap,
   MessageCircle,
   Clock,
 } from 'lucide-react'

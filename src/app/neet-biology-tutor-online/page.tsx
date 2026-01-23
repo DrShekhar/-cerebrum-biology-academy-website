@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
-  Star,
   CheckCircle,
   BookOpen,
   Video,
@@ -12,9 +11,6 @@ import {
   Play,
   Headphones,
   FileText,
-  BarChart,
-  GraduationCap,
-  Target,
   Laptop,
   Clock,
   Globe,

@@ -13,7 +13,6 @@ import {
   Phone,
   ArrowRight,
   Clock,
-  Award,
   Play,
   Target,
   Building2,

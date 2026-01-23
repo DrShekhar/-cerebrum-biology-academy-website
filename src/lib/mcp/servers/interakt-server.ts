@@ -21,21 +21,12 @@ import {
 
 // Import existing Interakt functions
 import {
-  sendWhatsAppMessage,
   sendTemplateMessage,
   sendWhatsAppOTP,
-  sendLoginOTP,
   sendWelcomeMessage,
   sendDemoConfirmation,
   sendDemoReminder,
-  sendEnrollmentConfirmation,
-  sendPaymentConfirmation,
   sendPaymentReminder,
-  sendClassReminder,
-  sendTestReminder,
-  sendTestResult,
-  sendSpecialOffer,
-  sendFollowUpMessage,
   trackUser,
   trackEvent,
   checkAPIHealth,

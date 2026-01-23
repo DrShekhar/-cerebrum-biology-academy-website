@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ClassLevel, CourseProgram } from '@/types/courseSystem'
-import { coursePrograms, courseTiers } from '@/data/courseSystemData'
+import { coursePrograms } from '@/data/courseSystemData'
 import { getSeriesForClass, Series } from '@/data/seriesData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Loader2, ZoomIn, ZoomOut, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
+import { Loader2, Maximize2 } from 'lucide-react'
 
 interface PDFViewerProps {
   fileUrl: string

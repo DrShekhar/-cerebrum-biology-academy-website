@@ -5,7 +5,6 @@ import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
-import { Select } from '@/components/ui/Select'
 import LoadingSpinner from '@/components/ui/LoadingSpinner'
 
 interface UserProfileDashboardProps {

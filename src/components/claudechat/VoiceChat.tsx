@@ -13,9 +13,7 @@ import {
   Mic,
   MicOff,
   Volume2,
-  Languages,
   Play,
-  Pause,
   RotateCcw,
   MessageCircle,
 } from 'lucide-react'

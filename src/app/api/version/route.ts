@@ -1,7 +1,7 @@
 // API Version Information Endpoint
 // Provides information about supported API versions
 
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 import { getVersionInfo, createVersionedResponse, getApiVersion } from '@/lib/api/versioning'
 
 export const runtime = 'edge'

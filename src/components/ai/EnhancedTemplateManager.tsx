@@ -1,48 +1,24 @@
 'use client'
 
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   FileText,
   Search,
   Filter,
   Star,
-  Clock,
   Users,
-  TrendingUp,
   BookOpen,
   Target,
-  BarChart3,
-  Settings,
   Play,
-  Copy,
-  Edit3,
-  Trash2,
-  Download,
-  Upload,
-  Share2,
   Plus,
-  X,
-  Save,
   Grid,
   List,
-  Tag,
-  Calendar,
-  Award,
   Zap,
   Brain,
-  Microscope,
-  Heart,
-  Leaf,
-  Dna,
   ArrowUp,
   ArrowDown,
-  Atom,
-  Eye,
   RefreshCw,
-  CheckCircle2,
-  AlertCircle,
-  Info,
 } from 'lucide-react'
 
 interface NEETTemplate {

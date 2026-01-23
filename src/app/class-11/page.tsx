@@ -16,7 +16,6 @@ import {
   Microscope,
   Leaf,
   Heart,
-  Dna,
   Eye,
   Lightbulb,
   ArrowRight,

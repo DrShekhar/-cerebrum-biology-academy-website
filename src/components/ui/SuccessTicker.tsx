@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, TrendingUp, Trophy, Star, MapPin } from 'lucide-react'
+import { X, TrendingUp, Trophy } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 
 interface SuccessTickerProps {

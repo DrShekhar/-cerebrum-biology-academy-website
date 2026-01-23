@@ -8,7 +8,6 @@ import {
   Users,
   CheckCircle,
   Award,
-  Video,
   MessageCircle,
   Play,
   Building,

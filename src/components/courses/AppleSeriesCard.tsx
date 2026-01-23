@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Crown, Zap, Rocket, ChevronRight, Star, Users, Clock, CheckCircle } from 'lucide-react'
+import { Crown, Zap, Rocket, ChevronRight, Users, Clock, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
 interface Plan {

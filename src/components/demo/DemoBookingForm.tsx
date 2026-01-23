@@ -9,8 +9,6 @@ import {
   Calendar,
   Clock,
   BookOpen,
-  GraduationCap,
-  Brain,
   CheckCircle,
   AlertCircle,
   Video,

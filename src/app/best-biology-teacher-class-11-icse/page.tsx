@@ -11,7 +11,6 @@ import {
   MessageCircle,
   Play,
   ArrowRight,
-  Dna,
   Leaf,
   Bug,
   Microscope,

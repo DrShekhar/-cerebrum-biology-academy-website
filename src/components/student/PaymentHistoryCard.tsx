@@ -9,7 +9,6 @@ import { PaymentStatusBadge } from './PaymentStatusBadge'
 import { InvoiceDownloadButton } from './InvoiceDownloadButton'
 import { Calendar, CreditCard, FileText, Hash, Building2 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 import type { StudentPayment, FeePayment } from '@/types/payment'
 
 interface PaymentHistoryCardProps {

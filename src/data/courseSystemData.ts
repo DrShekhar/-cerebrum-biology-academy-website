@@ -5,7 +5,6 @@ import {
   CourseTier,
   CourseCategory,
   CourseProgram,
-  CourseFeatures,
   PaymentOptions,
 } from '@/types/courseSystem'
 

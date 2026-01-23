@@ -16,7 +16,6 @@ import {
   Calendar,
   Target,
 } from 'lucide-react'
-import Image from 'next/image'
 
 interface FacultyProfilesProps {
   course: CourseProgram

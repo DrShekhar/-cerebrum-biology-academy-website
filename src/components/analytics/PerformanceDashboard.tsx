@@ -7,7 +7,6 @@ import {
   BarChart3,
   TrendingUp,
   Trophy,
-  Clock,
   Target,
   Calendar,
   Users,
@@ -15,23 +14,17 @@ import {
   Award,
   Brain,
   Zap,
-  Filter,
   Download,
   Share2,
   Eye,
-  ChevronDown,
-  ChevronUp,
   ArrowUp,
   ArrowDown,
   Minus,
   BookOpen,
-  CheckCircle,
   AlertTriangle,
   Activity,
-  PieChart,
-  LineChart,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface PerformanceDashboardProps {
   userHistory: UserTestHistory

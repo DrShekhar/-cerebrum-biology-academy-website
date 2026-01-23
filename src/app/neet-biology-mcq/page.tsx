@@ -19,7 +19,7 @@ import { TimedModeTimer } from '@/components/mcq/TimedModeTimer'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
 import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
 import type { DifficultyLevel } from '@/generated/prisma'
-import { BIOLOGY_TOPICS, LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
+import { LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
 
 export default function NEETBiologyMCQPage() {
   const router = useRouter()

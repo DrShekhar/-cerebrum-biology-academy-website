@@ -1,5 +1,4 @@
 import { Award, Trophy, Download, Phone } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
 /**

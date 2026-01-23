@@ -1,15 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  CheckCircle,
   Trophy,
   Star,
   ArrowRight,
   Medal,
   Target,
-  Users,
   TrendingUp,
-  Award,
   Crown,
   Zap,
 } from 'lucide-react'

@@ -3,33 +3,17 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Settings,
   Eye,
-  Play,
   Save,
-  Share2,
-  Download,
-  Upload,
   RefreshCw,
   Brain,
-  Zap,
-  Target,
   CheckCircle2,
   AlertTriangle,
   Info,
   X,
-  Maximize2,
-  Minimize2,
   Grid,
-  List,
-  Menu,
   Smartphone,
   Monitor,
-  HelpCircle,
-  Lightbulb,
-  Bookmark,
-  History,
-  Star,
 } from 'lucide-react'
 
 // Import our enhanced components

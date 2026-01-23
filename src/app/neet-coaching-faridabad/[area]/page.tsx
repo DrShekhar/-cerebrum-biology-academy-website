@@ -11,7 +11,6 @@ import {
   Users,
   Trophy,
   Star,
-  CheckCircle,
   Phone,
   ArrowRight,
   ArrowLeft,

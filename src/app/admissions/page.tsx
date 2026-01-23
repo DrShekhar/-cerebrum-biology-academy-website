@@ -19,13 +19,10 @@ import {
   BookOpen,
   GraduationCap,
   Star,
-  Zap,
   Shield,
   Heart,
-  Play,
   ChevronDown,
   ChevronUp,
-  AlertCircle,
   Info,
   Trophy,
   TrendingUp,
@@ -74,7 +71,7 @@ const LiveChatWidget = dynamic(
   { ssr: false }
 )
 
-import { allClassPricing, getTierDetails } from '@/data/pricing'
+import { allClassPricing } from '@/data/pricing'
 
 export default function AdmissionsPage() {
   const [activeStep, setActiveStep] = useState(0)

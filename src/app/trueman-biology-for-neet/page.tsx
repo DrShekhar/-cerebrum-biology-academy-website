@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   ExternalLink,
   Target,
-  Award,
   ChevronDown,
   ChevronUp,
   ShoppingCart,

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   BookOpen,
@@ -15,21 +15,9 @@ import {
   Play,
   Edit,
   Copy,
-  Trash2,
   Plus,
   Save,
   X,
-  CheckCircle2,
-  AlertCircle,
-  Calendar,
-  Users,
-  BarChart3,
-  Zap,
-  Brain,
-  Microscope,
-  Activity,
-  TrendingUp,
-  Filter,
   Download,
   Share,
 } from 'lucide-react'

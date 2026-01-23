@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Plus,
@@ -14,16 +14,9 @@ import {
   BookOpen,
   Calculator,
   TrendingUp,
-  Award,
-  DollarSign,
   BarChart3,
   PieChart,
   Star,
-  Zap,
-  Shield,
-  ChevronDown,
-  ChevronUp,
-  Info,
 } from 'lucide-react'
 
 // Types

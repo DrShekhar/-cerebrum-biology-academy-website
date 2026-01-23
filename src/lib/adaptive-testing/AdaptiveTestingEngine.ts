@@ -17,7 +17,6 @@ import { catEngine, CATSession, CATConfiguration } from './ComputerAdaptiveTesti
 import { performanceAnalytics, PerformanceProfile } from './PerformanceAnalytics'
 import { personalizedSequencing, LearningPath } from './PersonalizedSequencing'
 import { learningGapAnalysis, GapAnalysisReport } from './LearningGapAnalysis'
-import { assessmentAI } from '../ai/AssessmentAI'
 
 export interface AdaptiveTestSession {
   id: string

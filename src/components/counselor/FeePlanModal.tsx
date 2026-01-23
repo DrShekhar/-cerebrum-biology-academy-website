@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import type { Lead } from '@/app/counselor/leads/page'
 
 interface FeePlanModalProps {

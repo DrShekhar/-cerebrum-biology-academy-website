@@ -10,7 +10,6 @@ import {
   Brain,
   Trophy,
   Target,
-  Lightbulb,
   ArrowRight,
   RotateCcw,
   BookOpen,

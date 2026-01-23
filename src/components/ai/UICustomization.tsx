@@ -17,25 +17,9 @@ import {
   Monitor,
   Smartphone,
   Tablet,
-  Settings,
-  Zap,
-  Copy,
   Check,
-  X,
   Plus,
-  Trash2,
-  Edit3,
-  Sun,
-  Moon,
-  Contrast,
-  Paintbrush,
-  Layout,
-  AlignLeft,
-  AlignCenter,
-  AlignRight,
-  Bold,
-  Italic,
-  Underline
+  Trash2
 } from 'lucide-react'
 
 // Types and Interfaces

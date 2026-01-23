@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Phone,
   MapPin,
@@ -12,14 +12,11 @@ import {
   Mail,
   CalendarDays,
   GraduationCap,
-  CreditCard,
   Monitor,
   Heart,
   AlertTriangle,
-  Star,
   ExternalLink,
   Video,
-  Globe,
   CheckCircle2,
 } from 'lucide-react'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'

@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Loader2, MessageCircle, Users } from 'lucide-react'
+import { Loader2, Users } from 'lucide-react'
 
 export default function CounselorLogin() {
   const router = useRouter()

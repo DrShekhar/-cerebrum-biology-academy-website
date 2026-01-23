@@ -2,14 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { ParentFlow } from '@/components/conversion/ParentFlow'
 import { QuizProgress } from '@/components/ui/ProgressIndicators'
 import {
   ChevronRight,
   Sparkles,
-  GraduationCap,
-  Clock,
   CheckCircle2,
   Star,
   Phone,

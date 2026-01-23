@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { VideoShowcase } from '@/components/ui/VideoShowcase'
-import { Play, ExternalLink, BookOpen, Clock, Users, Award } from 'lucide-react'
+import { Play, BookOpen, Clock, Users, Award } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 

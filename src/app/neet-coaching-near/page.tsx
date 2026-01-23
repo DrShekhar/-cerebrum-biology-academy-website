@@ -5,13 +5,11 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
-  MapPin,
   CheckCircle,
   Phone,
   ArrowRight,
   Play,
   Users,
-  Star,
   Wifi,
   MessageCircle,
 } from 'lucide-react'

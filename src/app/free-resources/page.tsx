@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Loader2, BookOpen, AlertCircle, Target, FileText, GraduationCap } from 'lucide-react'
+import { Loader2, BookOpen, AlertCircle, Target, FileText } from 'lucide-react'
 import Link from 'next/link'
 import ResourceCard from '@/components/free-resources/ResourceCard'
 import ResourceFilter from '@/components/free-resources/ResourceFilter'

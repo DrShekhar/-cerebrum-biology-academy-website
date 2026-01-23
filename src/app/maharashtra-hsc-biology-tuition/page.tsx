@@ -17,7 +17,6 @@ import {
   ArrowRight,
   GraduationCap,
   Building,
-  Sparkles,
   Phone,
   Calculator,
   Target,

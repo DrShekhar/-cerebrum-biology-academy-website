@@ -1,5 +1,4 @@
 import { prisma } from '@/lib/prisma'
-import { calculateBiologyScore } from './scoreCalculator'
 
 /**
  * Prediction Engine Utilities

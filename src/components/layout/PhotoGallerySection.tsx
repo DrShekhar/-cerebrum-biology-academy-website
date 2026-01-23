@@ -11,22 +11,16 @@ import {
   Award,
   Heart,
   Search,
-  Filter,
   X,
   ChevronLeft,
   ChevronRight,
   Calendar,
   MapPin,
   Tag,
-  Play,
-  Download,
-  Share2,
-  Eye,
   ZoomIn,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import {
-  photoGallery,
   photoCategories,
   galleryStats,
   getPhotosByCategory,

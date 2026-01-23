@@ -2,8 +2,6 @@ import {
   signInWithPhoneNumber,
   RecaptchaVerifier,
   ConfirmationResult,
-  PhoneAuthProvider,
-  signInWithCredential,
 } from 'firebase/auth'
 import { auth } from './config'
 

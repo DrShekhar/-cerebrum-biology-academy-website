@@ -5,15 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   PremiumButton,
   PremiumCard,
-  PremiumStat,
   AnimatedCounter,
 } from '@/components/ui/PremiumDesignSystem'
 import {
   GraduationCap,
   Heart,
   Trophy,
-  Phone,
-  FileDown,
   Clock,
   Users,
   Sparkles,

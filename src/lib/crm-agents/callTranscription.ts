@@ -7,7 +7,7 @@
 
 import OpenAI from 'openai'
 import { prisma } from '@/lib/prisma'
-import { AgentType, AgentTaskStatus } from '@/generated/prisma'
+import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from './base'
 
 interface TranscriptionResult {

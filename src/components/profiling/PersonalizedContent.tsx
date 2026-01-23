@@ -8,8 +8,6 @@ import {
   Clock,
   Target,
   BookOpen,
-  Video,
-  FileText,
   Users,
   Award,
   Zap,

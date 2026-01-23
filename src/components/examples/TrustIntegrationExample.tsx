@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { TrustInjections, TrustWrapper } from '@/components/conversion/TrustInjections'
+import { TrustWrapper } from '@/components/conversion/TrustInjections'
 
 /**
  * Example implementations showing how to integrate trust elements

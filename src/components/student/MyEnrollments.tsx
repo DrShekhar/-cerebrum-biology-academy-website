@@ -51,6 +51,35 @@ export function MyEnrollments() {
   const [progressData, setProgressData] = useState<Record<string, ProgressData>>({})
   const [loadingProgress, setLoadingProgress] = useState<Record<string, boolean>>({})
 
+  const userEnrollments = user ? getUserEnrollments(user.id) : []
+
+  useEffect(() => {
+    const fetchProgressForEnrollments = async () => {
+      if (!user || userEnrollments.length === 0) return
+
+      for (const enrollment of userEnrollments) {
+        if (enrollment.paymentStatus !== 'paid') continue
+        if (progressData[enrollment.id]) continue
+
+        setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: true }))
+
+        try {
+          const response = await fetch(`/api/progress/${enrollment.id}`)
+          if (response.ok) {
+            const data = await response.json()
+            setProgressData((prev) => ({ ...prev, [enrollment.id]: data }))
+          }
+        } catch (error) {
+          console.error(`Failed to fetch progress for enrollment ${enrollment.id}:`, error)
+        } finally {
+          setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: false }))
+        }
+      }
+    }
+
+    fetchProgressForEnrollments()
+  }, [user, userEnrollments, progressData])
+
   if (!isAuthenticated || !user) {
     return (
       <div className="max-w-4xl mx-auto p-6">
@@ -131,35 +160,6 @@ export function MyEnrollments() {
       </div>
     )
   }
-
-  const userEnrollments = getUserEnrollments(user.id)
-
-  useEffect(() => {
-    const fetchProgressForEnrollments = async () => {
-      if (userEnrollments.length === 0) return
-
-      for (const enrollment of userEnrollments) {
-        if (enrollment.paymentStatus !== 'paid') continue
-        if (progressData[enrollment.id]) continue
-
-        setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: true }))
-
-        try {
-          const response = await fetch(`/api/progress/${enrollment.id}`)
-          if (response.ok) {
-            const data = await response.json()
-            setProgressData((prev) => ({ ...prev, [enrollment.id]: data }))
-          }
-        } catch (error) {
-          console.error(`Failed to fetch progress for enrollment ${enrollment.id}:`, error)
-        } finally {
-          setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: false }))
-        }
-      }
-    }
-
-    fetchProgressForEnrollments()
-  }, [userEnrollments, progressData])
 
   if (userEnrollments.length === 0) {
     return (

@@ -1,31 +1,20 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
   Clock,
   TrendingUp,
-  Award,
   AlertTriangle,
   CheckCircle,
   Play,
   Pause,
-  RotateCcw,
   Calendar,
-  BarChart3,
   Brain,
   Zap,
-  Star,
-  ArrowRight,
-  Timer,
   Trophy,
-  Lightbulb,
-  Activity,
-  PieChart,
-  Settings,
-  Download,
   Video,
   FileText,
   TestTube,
@@ -36,7 +25,6 @@ import {
   type StudentProfile,
   type LearningPath,
   type StudySession,
-  type Milestone,
 } from '@/lib/learning/PersonalizedLearningEngine'
 import { useAuth } from '@/hooks/useAuth'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'

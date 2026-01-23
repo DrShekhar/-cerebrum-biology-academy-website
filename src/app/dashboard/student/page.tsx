@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import React, { useState, useEffect, lazy, Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
@@ -20,7 +20,6 @@ import {
   Award,
   BarChart3,
   Download,
-  Zap,
   Brain,
 } from 'lucide-react'
 import type {

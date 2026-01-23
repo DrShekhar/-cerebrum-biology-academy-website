@@ -9,8 +9,6 @@ import {
   Star,
   Video,
   Phone,
-  BookOpen,
-  GraduationCap,
   Play,
   Target,
   Globe,

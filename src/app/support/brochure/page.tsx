@@ -7,15 +7,11 @@ import {
   FileText,
   Eye,
   CheckCircle,
-  Star,
   Users,
   BookOpen,
   Award,
   Target,
-  Clock,
   Phone,
-  Mail,
-  Send,
   ArrowRight,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

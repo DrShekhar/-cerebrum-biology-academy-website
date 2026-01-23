@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
-import { Calendar, Phone, MessageCircle, X, ChevronUp, Clock, Users } from 'lucide-react'
+import { Phone, MessageCircle, X, ChevronUp, Clock, Users } from 'lucide-react'
 import Link from 'next/link'
-import { trackAndOpenWhatsApp, getContextAwareMessage, getUTMParams } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 // High-converting CTA copy with social proof

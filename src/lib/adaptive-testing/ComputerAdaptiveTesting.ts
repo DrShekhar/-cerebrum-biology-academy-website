@@ -12,7 +12,6 @@
  */
 
 import { irtEngine, ItemParameters, StudentResponse, AbilityEstimate, AdaptiveTestState } from './ItemResponseTheory'
-import { assessmentAI } from '../ai/AssessmentAI'
 
 export interface CATConfiguration {
   algorithm: 'maximum_information' | 'bayesian_optimal' | 'hybrid'

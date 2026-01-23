@@ -13,7 +13,6 @@ import {
   MessageCircle,
   Trophy,
   Zap,
-  Download,
   QrCodeIcon,
   Star,
   ChevronLeft,

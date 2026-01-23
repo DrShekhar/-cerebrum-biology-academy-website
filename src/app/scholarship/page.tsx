@@ -12,7 +12,6 @@ import {
   FileText,
   Calendar,
   Users,
-  Percent,
   IndianRupee,
   BookOpen,
   Clock,

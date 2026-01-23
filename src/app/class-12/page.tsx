@@ -4,11 +4,8 @@ import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
-  TrendingUp,
   Award,
-  Clock,
   Users,
-  CheckCircle,
   Star,
   Play,
   Calendar,

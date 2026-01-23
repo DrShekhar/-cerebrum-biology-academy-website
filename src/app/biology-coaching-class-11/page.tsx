@@ -5,19 +5,13 @@ import Link from 'next/link'
 import {
   BookOpen,
   GraduationCap,
-  Users,
-  Trophy,
-  Star,
   CheckCircle,
   Phone,
   ArrowRight,
   Clock,
-  Award,
   Play,
   Target,
   Microscope,
-  Leaf,
-  Bug,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 

@@ -17,15 +17,11 @@ import {
   Clock,
   Filter,
   X,
-  Download,
   BookOpen,
   MapPin,
-  User,
-  TrendingUp,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
-import { cn } from '@/lib/utils'
 import type { StudentAttendance, AttendanceFilter } from '@/types/attendance'
 
 export default function AttendancePage() {

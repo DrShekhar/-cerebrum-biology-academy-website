@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
-import { UserActivity } from '@/lib/types/analytics'
 import prisma from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
 import { nanoid } from 'nanoid'

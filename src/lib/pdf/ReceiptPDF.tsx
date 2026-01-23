@@ -1,5 +1,5 @@
 import React from 'react'
-import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer'
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Register fonts (optional - uses default fonts if not specified)

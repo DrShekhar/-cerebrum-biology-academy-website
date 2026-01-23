@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   PlayCircle,
-  FunnelIcon,
   Search,
   Phone,
   MessageSquare,
@@ -17,12 +16,9 @@ import {
   CalendarDays,
   MapPin,
   BadgeCheck,
-  NewspaperIcon,
   FileText,
   TrendingUp,
-  Sparkles,
   Smile,
-  Star,
   ArrowRight,
   ChevronLeft,
   ChevronRight,

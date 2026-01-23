@@ -11,19 +11,10 @@ import {
   CheckCircle,
   Star,
   ArrowRight,
-  Calendar,
-  Target,
   Award,
-  GraduationCap,
   Sparkles,
   Phone,
   MessageSquare,
-  IndianRupee,
-  Zap,
-  Brain,
-  TrendingUp,
-  FileText,
-  PlayCircle,
 } from 'lucide-react'
 
 interface ProgramData {

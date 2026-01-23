@@ -4,7 +4,7 @@
  */
 
 import { biologyTutor, BiologyQuery, BiologyResponse } from './BiologyTutorEngine'
-import { assessmentAI, GeneratedQuestion, StudentAnswer, AssessmentSession } from './AssessmentAI'
+import { assessmentAI, AssessmentSession } from './AssessmentAI'
 import {
   contentIntelligence,
   StudyMaterial,
@@ -14,7 +14,6 @@ import {
 import {
   performancePredictionAI,
   PredictionResult,
-  StudentPerformanceData,
 } from './PerformancePredictionAI'
 import { AdaptiveLearningEngine } from './AdaptiveLearningEngine'
 import { AIGateway } from './gateway/AIGateway'

@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Search, Download, Eye, TrendingUp, Users, Award, BarChart3 } from 'lucide-react'
+import { Search, Download, TrendingUp, Users, Award, BarChart3 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 

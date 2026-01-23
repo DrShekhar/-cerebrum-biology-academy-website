@@ -8,16 +8,11 @@ import { motion } from 'framer-motion'
 import {
   Calendar,
   Clock,
-  MapPin,
-  Users,
   Plus,
   Edit,
   Trash2,
   Search,
-  Filter,
   RefreshCw,
-  Check,
-  X,
   Wifi,
   Building2,
 } from 'lucide-react'

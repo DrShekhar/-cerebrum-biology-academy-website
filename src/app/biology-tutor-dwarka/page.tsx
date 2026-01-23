@@ -8,7 +8,6 @@ import {
   Play,
   Headphones,
   MapPin,
-  Clock,
   Star,
   GraduationCap,
   Target,

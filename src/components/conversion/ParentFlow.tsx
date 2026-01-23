@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   X,
   Shield,

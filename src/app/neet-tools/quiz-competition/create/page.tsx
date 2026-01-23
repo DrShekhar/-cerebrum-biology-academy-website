@@ -13,7 +13,7 @@ import {
   BookOpen,
   Zap,
 } from 'lucide-react'
-import { quizChapters, getChaptersByClass } from '@/data/quiz-chapters'
+import { getChaptersByClass } from '@/data/quiz-chapters'
 
 interface ScoringRules {
   correct: number

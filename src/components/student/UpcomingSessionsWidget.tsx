@@ -13,8 +13,6 @@ import {
   MapPin,
   ChevronRight,
   BookOpen,
-  Users,
-  ExternalLink,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import type { FollowupTrigger, FollowupAction, Priority } from '@/generated/prisma'
+import type { FollowupTrigger, FollowupAction } from '@/generated/prisma'
 
 const createRuleSchema = z.object({
   name: z.string().min(1, 'Rule name is required'),

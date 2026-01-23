@@ -10,7 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { recordXpEvent, XP_REWARDS } from './xpEvents'
+import { recordXpEvent } from './xpEvents'
 
 // Badge Rarity Tiers
 export type BadgeRarity = 'COMMON' | 'UNCOMMON' | 'RARE' | 'EPIC' | 'LEGENDARY'

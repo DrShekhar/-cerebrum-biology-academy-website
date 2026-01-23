@@ -13,10 +13,8 @@ import {
   Phone,
   ArrowRight,
   Clock,
-  Award,
   Play,
   Target,
-  Microscope,
   Building2,
   Train,
 } from 'lucide-react'

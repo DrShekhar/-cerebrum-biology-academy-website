@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Rocket, BookOpen, Target, Check, Star, Crown, Zap } from 'lucide-react'
-import { CourseSeriesCard } from '@/types/courseSeriesCard'
+import { Rocket, BookOpen, Target, Check, Star, Zap } from 'lucide-react'
 
 interface PlanOption {
   id: 'A' | 'B' | 'C'

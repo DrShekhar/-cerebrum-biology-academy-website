@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Globe, Check, ChevronDown } from 'lucide-react'
-import { useI18n, Language, languageNames } from '@/contexts/I18nContext'
+import { useI18n, Language } from '@/contexts/I18nContext'
 
 interface LanguageOption {
   code: Language

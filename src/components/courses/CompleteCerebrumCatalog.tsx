@@ -1,45 +1,18 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
+import React, { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import {
-  Star,
-  Users,
-  Clock,
-  Trophy,
-  ChevronDown,
-  ChevronUp,
   Check,
-  X,
   ArrowRight,
-  Award,
-  Target,
-  Zap,
-  Shield,
   MessageCircle,
   Phone,
-  BookOpen,
-  Calendar,
-  DollarSign,
-  TrendingUp,
-  Heart,
-  Globe,
-  Verified,
   Crown,
-  Gift,
-  HelpCircle,
-  ChevronRight,
-  Play,
-  GraduationCap,
-  Brain,
   Sparkles,
-  Microscope,
-  FlaskConical,
-  Filter,
   Search,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 // Complete Course Catalog from Screenshots
 const COMPLETE_COURSE_CATALOG = {

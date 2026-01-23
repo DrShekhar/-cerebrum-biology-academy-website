@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SeriesCard } from './SeriesCard'
-import { PlanButtons } from './PlanButtons'
 import '@/styles/courseSeriesGrid.css'
 
 interface CourseSeriesContainerProps {

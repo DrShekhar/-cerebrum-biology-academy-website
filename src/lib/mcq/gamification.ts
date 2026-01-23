@@ -4,7 +4,6 @@
 import {
   LEVEL_CONFIG,
   XP_REWARDS,
-  type Badge,
   type UserStats,
   type TopicMastery,
   type LevelConfig,

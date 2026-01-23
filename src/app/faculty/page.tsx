@@ -3,11 +3,9 @@
 import { Button } from '@/components/ui/Button'
 import { facultyMembers, facultyStats, facultyHighlights } from '@/data/faculty'
 import {
-  Award,
   Users,
   BookOpen,
   Star,
-  Clock,
   GraduationCap,
   MessageSquare,
   Calendar,
@@ -15,7 +13,6 @@ import {
   Play,
   CheckCircle,
   Target,
-  TrendingUp,
   Lightbulb,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

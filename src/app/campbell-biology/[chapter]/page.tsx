@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Book, Clock, Trophy, GraduationCap, ChevronLeft, ChevronRight, MessageCircle, CheckCircle, HelpCircle } from 'lucide-react'
+import { Book, Clock, Trophy, ChevronLeft, ChevronRight, CheckCircle, HelpCircle } from 'lucide-react'
 import { getChapterBySlug, allChapters, getAdjacentChapters } from '@/data/campbell-biology'
 import { getUnitById } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'

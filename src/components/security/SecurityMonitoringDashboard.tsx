@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import { SecurityEvent } from '../../lib/security/browserSecurity'
-import { BehavioralProfile } from '../../lib/security/behavioralAnalysis'
 
 interface SecurityAlert {
   id: string

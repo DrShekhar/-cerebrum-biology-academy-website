@@ -7,11 +7,8 @@ import {
   Users,
   Calendar,
   MapPin,
-  Star,
-  CheckCircle,
   TrendingUp,
   BookOpen,
-  Award,
   Clock,
 } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'

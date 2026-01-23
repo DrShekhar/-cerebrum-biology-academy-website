@@ -10,7 +10,6 @@ import {
   Award,
   BookOpen,
   Clock,
-  Shield,
   Video,
   MessageCircle,
   Play,

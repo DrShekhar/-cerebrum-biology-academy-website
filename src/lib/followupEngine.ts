@@ -6,19 +6,11 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { FollowupTrigger, LeadStage, QueueStatus } from '@/generated/prisma'
+import { LeadStage } from '@/generated/prisma'
 import {
   logError,
   logWarning,
   logInfo,
-  validateTriggerConditions,
-  validateLeadData,
-  validateRuleData,
-  FollowupValidationError,
-  FollowupProcessingError,
-  createTimeoutPromise,
-  retryWithBackoff,
-  safeJsonParse,
 } from './followupErrorHandler'
 
 interface TriggerConditions {

@@ -11,7 +11,6 @@ import type {
   StudentQuery,
   AgentResponse,
   BiologyTopic,
-  QueryPriority,
 } from '../types'
 import { AgentType, AgentCapability, DifficultyLevel, BiologyUnit } from '../types'
 

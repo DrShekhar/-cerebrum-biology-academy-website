@@ -1,18 +1,16 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users,
   TrendingUp,
   Clock,
   BookOpen,
-  MapPin,
   Zap,
   UserPlus,
-  CheckCircle2,
 } from 'lucide-react'
-import { getRandomSuccessStory, successStats } from '@/data/studentSuccessData'
+import { getRandomSuccessStory } from '@/data/studentSuccessData'
 import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
 interface EnrollmentNotification {

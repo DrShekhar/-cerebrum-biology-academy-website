@@ -11,7 +11,6 @@ import {
   Zap,
   TrendingUp,
   Award,
-  ChevronRight,
 } from 'lucide-react'
 
 interface StreakStatus {

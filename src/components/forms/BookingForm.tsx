@@ -3,12 +3,11 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import { Select } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import { ContactForm } from '@/types'
 import { Calendar, Phone, Mail, User, BookOpen, MessageSquare, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface BookingFormProps {
   type?: 'demo' | 'inquiry' | 'callback'

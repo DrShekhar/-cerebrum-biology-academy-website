@@ -6,13 +6,9 @@ import {
   Check,
   Star,
   Award,
-  Clock,
-  Users,
   Target,
-  BookOpen,
   Zap,
   Crown,
-  Gem,
   TrendingUp,
 } from 'lucide-react'
 

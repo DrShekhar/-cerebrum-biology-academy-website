@@ -13,7 +13,6 @@ import {
   BookOpen,
   ChevronLeft,
   ChevronRight,
-  Play,
   Verified,
   ThumbsUp,
   MessageCircle,
@@ -22,7 +21,6 @@ import { Button } from '@/components/ui/Button'
 import {
   parentTestimonials,
   parentSuccessMetrics,
-  ParentTestimonial,
 } from '@/data/parentTestimonialsData'
 
 interface ParentTestimonialsSectionProps {

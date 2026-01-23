@@ -1,10 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   Search,
-  Filter,
   ExternalLink,
   AlertCircle,
   CheckCircle,
@@ -15,7 +14,7 @@ import {
   Copy,
   Star,
 } from 'lucide-react'
-import { navigationRoutes, getRoutesByCategory, NavigationItem } from '@/lib/navigation'
+import { navigationRoutes } from '@/lib/navigation'
 
 const NavigationDashboard: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')

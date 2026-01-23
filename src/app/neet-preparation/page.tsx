@@ -3,13 +3,10 @@
 import { motion } from 'framer-motion'
 import {
   Target,
-  Users,
   Trophy,
   Star,
   CheckCircle,
-  Award,
   BookOpen,
-  Clock,
   Video,
   MessageCircle,
   Play,

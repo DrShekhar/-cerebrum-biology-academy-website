@@ -6,7 +6,6 @@ import {
   DollarSign,
   Calendar,
   CheckCircle2,
-  AlertCircle,
   Clock,
   Send,
   User,
@@ -14,7 +13,7 @@ import {
   CreditCard,
   AlertTriangle,
 } from 'lucide-react'
-import { formatDistanceToNow, format, isPast, differenceInDays } from 'date-fns'
+import { format, isPast, differenceInDays } from 'date-fns'
 
 export interface PaymentInstallment {
   id: string

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, X, BookOpen, Target, Clock, MessageCircle, Download, Share2 } from 'lucide-react'
+import { Plus, X, BookOpen, Target, Clock, MessageCircle } from 'lucide-react'
 
 export interface FABAction {
   id: string

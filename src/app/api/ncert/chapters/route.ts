@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { ncertReader, NCERTChapter } from '@/lib/ncert/NCERTContentReader'
+import { ncertReader } from '@/lib/ncert/NCERTContentReader'
 
 /**
  * API endpoint to get NCERT chapter information

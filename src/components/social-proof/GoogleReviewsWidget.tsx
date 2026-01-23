@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Star, Quote, ThumbsUp, TrendingUp, ExternalLink, MapPin } from 'lucide-react'
-import Link from 'next/link'
 
 interface GoogleReview {
   id: string

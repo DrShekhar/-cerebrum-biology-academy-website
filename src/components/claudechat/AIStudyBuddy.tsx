@@ -9,16 +9,11 @@ import React, { useState, useEffect, useRef } from 'react'
 import {
   Brain,
   Heart,
-  Target,
   MessageCircle,
   Sparkles,
   TrendingUp,
   Volume2,
-  Smile,
   Zap,
-  BookOpen,
-  Award,
-  Clock,
   Flame,
   Star,
 } from 'lucide-react'

@@ -5,7 +5,6 @@ import {
   Crown,
   Star,
   Users,
-  Award,
   Clock,
   Shield,
   Target,

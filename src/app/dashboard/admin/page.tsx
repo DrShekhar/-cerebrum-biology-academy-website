@@ -14,7 +14,6 @@ import {
   DollarSign,
   TrendingUp,
   Activity,
-  Database,
   Shield,
   Zap,
   BookOpen,
@@ -22,10 +21,6 @@ import {
   CheckCircle,
   Download,
   Settings,
-  BarChart3,
-  PieChart,
-  Globe,
-  Clock,
 } from 'lucide-react'
 import type { AdminAnalytics } from '@/lib/types/analytics'
 

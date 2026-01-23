@@ -3,8 +3,6 @@ import Link from 'next/link'
 import {
   CheckCircle,
   Clock,
-  Users,
-  Award,
   BookOpen,
   Target,
   Star,

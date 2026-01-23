@@ -8,12 +8,11 @@ import {
   ChevronRight,
   Star,
   Users,
-  Clock,
   Award,
   Target,
   CheckCircle,
 } from 'lucide-react'
-import { biologyOlympiads, getOlympiadsByRegion, IBO_WHATSAPP_MESSAGE } from '@/data/olympiad'
+import { getOlympiadsByRegion } from '@/data/olympiad'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
 import { CampbellFloatingWhatsApp } from '@/components/campbell/CampbellFloatingWhatsApp'
 

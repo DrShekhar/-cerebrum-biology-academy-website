@@ -8,7 +8,6 @@ import {
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import {
   Star,
-  UserCircleIcon,
   GraduationCap,
   MapPin,
   Calendar,

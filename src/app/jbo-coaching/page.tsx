@@ -14,9 +14,7 @@ import {
   ArrowRight,
   Globe,
   Target,
-  Award,
   Microscope,
-  GraduationCap,
   FileText,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'

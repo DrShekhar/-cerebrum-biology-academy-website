@@ -1,58 +1,26 @@
 'use client'
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { motion, AnimatePresence, PanInfo, useDragControls } from 'framer-motion'
+import React, { useState, useEffect, useRef } from 'react'
+import { motion, AnimatePresence, useDragControls } from 'framer-motion'
 import {
   Smartphone,
-  Tablet,
-  Monitor,
   TouchpadIcon as Touch,
   Mic,
-  Camera,
   Volume2,
-  VolumeX,
   Vibrate,
   RotateCw,
-  Maximize2,
-  Minimize2,
-  ZoomIn,
-  ZoomOut,
   Settings,
-  Play,
-  Pause,
-  SkipForward,
-  SkipBack,
-  Heart,
-  Share2,
   Download,
-  Upload,
   Eye,
-  EyeOff,
-  Sun,
-  Moon,
   Battery,
   Wifi,
   Signal,
   Navigation,
-  Compass,
-  MapPin,
-  Activity,
   TrendingUp,
   Target,
   BookOpen,
   Brain,
-  Layers,
-  Headphones,
-  MessageSquare,
-  HelpCircle,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  Lightbulb,
-  Zap,
-  Star,
-  Users,
-  Clock
+  Users
 } from 'lucide-react'
 
 interface DeviceSpecs {

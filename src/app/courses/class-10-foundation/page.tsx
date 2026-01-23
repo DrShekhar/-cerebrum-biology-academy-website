@@ -5,15 +5,12 @@ import {
   CheckCircle,
   Clock,
   Users,
-  Award,
   BookOpen,
   Target,
   Star,
   ArrowRight,
   Trophy,
   Brain,
-  Lightbulb,
-  Microscope,
   Zap,
 } from 'lucide-react'
 import { PricingDisplay } from '@/components/ui/PricingDisplay'

@@ -5,7 +5,6 @@
 
 import { db } from '@/lib/db'
 import { RazorpayService } from '@/lib/payments/razorpayService'
-import type { LeadStage } from '@/app/counselor/leads/page'
 
 interface CreateFeePlanParams {
   leadId: string

@@ -13,18 +13,13 @@ import {
   BookOpen,
   Users,
   Trophy,
-  Star,
   ArrowRight,
   GraduationCap,
   Target,
   Brain,
   Zap,
-  Award,
-  Clock,
   Video,
-  Download,
   FileText,
-  Heart,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'

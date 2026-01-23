@@ -8,13 +8,10 @@ import {
   Users,
   Trophy,
   Star,
-  CheckCircle,
   Phone,
   ArrowRight,
-  Clock,
   Award,
   Play,
-  Target,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 

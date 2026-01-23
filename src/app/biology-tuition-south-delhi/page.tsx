@@ -3,17 +3,10 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  MapPin,
-  GraduationCap,
-  Users,
-  Trophy,
-  Star,
   CheckCircle,
   Phone,
   ArrowRight,
-  BookOpen,
   Microscope,
-  Award,
   Play,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

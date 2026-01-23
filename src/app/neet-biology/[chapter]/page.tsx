@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams, notFound } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import {
   Phone,
   BookOpen,
@@ -10,7 +10,6 @@ import {
   ArrowLeft,
   CheckCircle,
   Target,
-  Clock,
   FileText,
   Brain,
 } from 'lucide-react'

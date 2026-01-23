@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { RefreshCw, Home, Shield, Phone, Mail, Settings } from 'lucide-react'
+import { RefreshCw, Home, Shield, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { logError } from '@/lib/errors'
 

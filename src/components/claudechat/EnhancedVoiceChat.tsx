@@ -5,21 +5,13 @@
 
 'use client'
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Mic,
-  MicOff,
   Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  RotateCcw,
-  Square,
-  MessageCircle,
   Brain,
   Sparkles,
   Languages,
@@ -29,7 +21,6 @@ import {
 import VoiceMemosUI from '../voice/VoiceMemosUI'
 import VoiceRecognitionService, {
   VoiceRecognitionResult,
-  BiologyTerm,
 } from '../../lib/voice/voiceRecognitionService'
 
 interface VoiceMessage {

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Target, Clock, Users, Award, ChevronRight, Crown, Zap, Rocket, Star } from 'lucide-react'
+import { Target, ChevronRight, Crown, Zap, Rocket, Star } from 'lucide-react'
 import Link from 'next/link'
 import { CourseSeriesCard, createCourseSeriesCard, SeriesType } from '@/types/courseSeriesCard'
 

@@ -3,10 +3,7 @@
 import { motion } from 'framer-motion'
 import {
   Trophy,
-  Users,
-  Star,
   CheckCircle,
-  Award,
   BookOpen,
   Video,
   MessageCircle,
@@ -15,7 +12,6 @@ import {
   Target,
   Brain,
   FileText,
-  Clock,
   Laptop,
   Wifi,
   Calendar,

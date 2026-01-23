@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import {
   getCountryConfig,
   SUPPORTED_COUNTRIES,
-  formatPrice,
 } from '@/lib/international/countries'
 import { CountryHero } from '@/components/international/CountryHero'
 import { CountryWhatsAppCTA } from '@/components/international/CountryWhatsAppCTA'

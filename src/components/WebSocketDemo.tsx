@@ -7,7 +7,7 @@ import {
   NotificationPayload,
   SystemStatusPayload,
 } from '@/lib/websocket/types'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export function WebSocketDemo() {
   const [studyMetrics, setStudyMetrics] = useState<StudyMetricsPayload | null>(null)

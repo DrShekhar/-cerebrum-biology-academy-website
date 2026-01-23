@@ -7,7 +7,6 @@ import {
   Trophy,
   CheckCircle,
   Star,
-  Video,
   Phone,
   BookOpen,
   GraduationCap,
@@ -15,7 +14,6 @@ import {
   Target,
   FileText,
   BarChart3,
-  ArrowRight,
   AlertTriangle,
 } from 'lucide-react'
 import { getBoardBySlug } from '@/lib/onlineClasses/boardData'

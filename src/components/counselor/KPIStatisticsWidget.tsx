@@ -9,13 +9,11 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import {
   TrendingUp,
-  TrendingDown,
   Users,
   CheckCircle,
   Phone,
   Calendar,
   DollarSign,
-  Target,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 

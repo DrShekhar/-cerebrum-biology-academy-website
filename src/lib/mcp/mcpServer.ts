@@ -12,7 +12,6 @@ import WebSocket, { WebSocketServer } from 'ws'
 import compression from 'compression'
 import helmet from 'helmet'
 import rateLimit from 'express-rate-limit'
-import jwt from 'jsonwebtoken'
 
 import {
   MCPServerConfig,
@@ -21,9 +20,7 @@ import {
   AgentResponse,
   AgentType,
   WebSocketMessage,
-  AuditLog,
   MCPError,
-  ErrorCode,
   AuditAction,
   QueryPriority,
 } from './types'

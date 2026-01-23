@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { ABTestingService, ABTestResults } from '@/lib/abTesting/abTestingService'
-import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import {
   BarChart2,
   Trophy,
@@ -12,8 +11,6 @@ import {
   MousePointerClick,
   BadgeCheck,
   Play,
-  PauseIcon,
-  Square,
 } from 'lucide-react'
 
 interface ABTestDashboardProps {

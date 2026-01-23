@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/Badge'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import { Switch } from '@/components/ui/switch'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Check,
   X,
@@ -17,7 +16,6 @@ import {
   Target,
   Calculator,
   CreditCard,
-  Percent,
   Gift,
   Clock,
   Users,

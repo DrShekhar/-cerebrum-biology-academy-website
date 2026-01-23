@@ -10,11 +10,7 @@ import {
   Play,
   ArrowRight,
   GraduationCap,
-  Clock,
   Target,
-  Calendar,
-  Brain,
-  Award,
   FileText,
   TrendingUp,
 } from 'lucide-react'

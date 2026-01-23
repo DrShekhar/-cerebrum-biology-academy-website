@@ -9,15 +9,11 @@ import {
   MessageSquare,
   TrendingUp,
   Bell,
-  Search,
-  Filter,
   Download,
   Settings,
   RefreshCw,
-  ChevronDown,
   BookOpen,
   DollarSign,
-  Phone,
   Target,
   Zap,
   AlertTriangle,
@@ -26,10 +22,6 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   MapPin,
-  Smartphone,
-  Mail,
-  Calendar as CalendarIcon,
-  User,
   GraduationCap
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

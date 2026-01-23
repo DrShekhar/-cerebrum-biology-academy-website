@@ -16,7 +16,6 @@ import {
   Play,
   ArrowRight,
   GraduationCap,
-  Building,
   Heart,
   Target,
   Zap,

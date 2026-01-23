@@ -10,7 +10,6 @@ import { AnalyticsAgent } from './tools/analytics'
 import { CommunicationAgent } from './tools/communication'
 import { SecurityManager } from './security/encryption'
 import { ComplianceManager } from './security/compliance'
-import { AuditLogger } from './security/audit'
 import type { MCPServerConfig, StudentQuery } from './types'
 import { AgentType, QueryPriority, StudentLevel, DifficultyLevel, ExamType } from './types'
 

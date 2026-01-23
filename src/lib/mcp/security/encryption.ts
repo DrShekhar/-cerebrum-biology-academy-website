@@ -7,7 +7,7 @@
 import crypto from 'crypto'
 import jwt from 'jsonwebtoken'
 import CryptoJS from 'crypto-js'
-import type { SecurityConfig, EncryptionConfig, SecurityPolicy, PasswordPolicy } from '../types'
+import type { SecurityConfig, SecurityPolicy } from '../types'
 
 interface EncryptedData {
   encryptedData: string

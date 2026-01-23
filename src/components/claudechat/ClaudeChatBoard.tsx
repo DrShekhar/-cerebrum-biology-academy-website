@@ -5,15 +5,13 @@
 
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   Camera,
   Mic,
   MessageSquare,
   BookOpen,
-  Users,
   TrendingUp,
-  Settings,
   Bell,
   Award,
   Target,

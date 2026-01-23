@@ -20,8 +20,6 @@ import {
   Trash2,
   Edit3,
   Eye,
-  EyeOff,
-  Save,
   Download,
   Copy,
   RefreshCw,

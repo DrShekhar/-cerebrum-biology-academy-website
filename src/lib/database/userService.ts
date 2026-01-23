@@ -1,11 +1,9 @@
-import { prisma, DatabaseUtils } from './connection'
+import { prisma } from './connection'
 import { UserCacheService } from '../cache/redis'
 import type {
-  users,
   free_users,
   user_progress,
   performance_reports,
-  Prisma,
 } from '@/generated/prisma'
 
 export interface CreateFreeUserInput {

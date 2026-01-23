@@ -8,7 +8,6 @@ import {
   CheckCircle,
   Award,
   BookOpen,
-  Video,
   MessageCircle,
   Play,
   ArrowRight,

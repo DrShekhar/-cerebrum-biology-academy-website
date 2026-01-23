@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import TestTemplates from './TestTemplates'
 import SectionConfiguration from './SectionConfiguration'
@@ -20,22 +20,15 @@ import { getAllUnits, getChapterById } from '@/data/neet-syllabus'
 import {
   Brain,
   Target,
-  TrendingUp,
-  Clock,
   BarChart3,
   Shuffle,
   Shield,
   CheckCircle2,
   Settings,
   Play,
-  Download,
   RefreshCw,
-  Lightbulb,
   BookOpen,
-  Award,
   Zap,
-  Filter,
-  Search,
   TreePine,
   Lock,
   Users,

@@ -12,16 +12,12 @@ import {
   GraduationCap,
   Target,
   Brain,
-  Award,
-  FileText,
   TrendingUp,
   Atom,
   FlaskConical,
   Microscope,
   MapPin,
   Wifi,
-  Navigation,
-  Phone,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

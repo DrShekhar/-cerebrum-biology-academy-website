@@ -1,23 +1,19 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useInView, useMotionValue, useTransform } from 'framer-motion'
-import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
+import { PremiumButton, PremiumCard } from '@/components/ui/PremiumDesignSystem'
 import {
   CheckCircle2,
-  X,
-  Star,
   Trophy,
   Heart,
   ShieldCheck,
   GraduationCap,
   Users,
-  Clock,
   IndianRupee,
   Phone,
   FileDown,
   PlayCircle,
-  Lightbulb,
   Flame,
 } from 'lucide-react'
 

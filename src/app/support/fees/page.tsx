@@ -6,22 +6,15 @@ import {
   CreditCard,
   CheckCircle,
   Star,
-  Award,
   Calculator,
   Phone,
   ArrowRight,
   Shield,
-  Clock,
   Users,
   BookOpen,
   Target,
   Gift,
   AlertCircle,
-  DollarSign,
-  Calendar,
-  Percent,
-  PiggyBank,
-  FileText,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'

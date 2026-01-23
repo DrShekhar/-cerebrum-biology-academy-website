@@ -8,10 +8,8 @@ import {
   FunnelIcon,
   Clock,
   CheckCircle2,
-  XCircleIcon,
   Bookmark,
   Eye,
-  TagIcon,
   FlaskConical,
 } from 'lucide-react'
 import { Bookmark as BookmarkSolidIcon } from 'lucide-react'

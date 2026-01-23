@@ -15,7 +15,6 @@ import {
   ChevronRight,
   Sparkles,
   CheckCircle2,
-  User,
   Bot,
   Loader2,
 } from 'lucide-react'

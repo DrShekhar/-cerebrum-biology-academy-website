@@ -169,12 +169,12 @@ export function createLazyComponentWithErrorBoundary<T extends ComponentType<any
 
 // Intersection Observer based lazy loading for components
 export function useLazyLoad(threshold = 0.1) {
-  if (typeof window === 'undefined') return { isVisible: false, ref: null }
-
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

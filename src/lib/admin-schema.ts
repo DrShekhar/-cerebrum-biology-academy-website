@@ -1,4 +1,4 @@
-import { User, DemoBooking, Enrollment, ContactSubmission, MarketingLead } from './db'
+import { DemoBooking } from './db'
 
 // Admin Dashboard Analytics
 export interface AdminAnalytics {

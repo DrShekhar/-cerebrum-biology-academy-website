@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Play, Pause, Volume2, VolumeX, Maximize, X, ExternalLink, BookOpen } from 'lucide-react'
+import { useState, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Play, ExternalLink, BookOpen } from 'lucide-react'
 import { Button } from './Button'
-import { VideoSkeleton, LoadingSpinner } from './LoadingStates'
+import { LoadingSpinner } from './LoadingStates'
 
 interface VideoShowcaseProps {
   videoId: string

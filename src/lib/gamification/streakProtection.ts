@@ -10,7 +10,6 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { StreakProtectionType } from '@/types/prisma-enums'
 
 // Constants
 export const STREAK_PROTECTION_CONFIG = {
@@ -129,7 +128,7 @@ export async function getStreakStatus(userId: string): Promise<StreakStatus | nu
 /**
  * Use a streak freeze to protect the current streak
  */
-export async function useStreakFreeze(userId: string): Promise<ProtectionResult> {
+export async function applyStreakFreeze(userId: string): Promise<ProtectionResult> {
   const status = await getStreakStatus(userId)
 
   if (!status) {
@@ -464,7 +463,7 @@ async function getStreakAtBreak(userId: string, breakDate: Date): Promise<number
 
 export default {
   getStreakStatus,
-  useStreakFreeze,
+  applyStreakFreeze,
   recoverStreak,
   markStreakAtRisk,
   breakStreak,

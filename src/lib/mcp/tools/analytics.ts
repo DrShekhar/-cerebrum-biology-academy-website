@@ -11,10 +11,6 @@ import type {
   StudentQuery,
   AgentResponse,
   StudentProgress,
-  PerformanceMetrics,
-  LearningRecommendation,
-  BiologyTopic,
-  DifficultyLevel,
   BiologyUnit,
 } from '../types'
 import { AgentType, AgentCapability, AuditAction } from '../types'

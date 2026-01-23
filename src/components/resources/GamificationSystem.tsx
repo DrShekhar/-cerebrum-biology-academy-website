@@ -1,19 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
   Trophy,
   Flame,
   Star,
-  Zap,
-  GraduationCap,
-  Users,
   CheckCircle2,
-  Clock,
   BarChart2,
 } from 'lucide-react'
-import { Trophy as TrophyIcon } from 'lucide-react'
 
 interface Achievement {
   id: string

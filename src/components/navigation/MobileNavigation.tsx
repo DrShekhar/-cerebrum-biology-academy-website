@@ -8,7 +8,6 @@ import {
   BarChart3,
   MessageCircle,
   User,
-  Menu,
   X,
   BookOpen,
   Award,

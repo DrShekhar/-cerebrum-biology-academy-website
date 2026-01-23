@@ -4,20 +4,15 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  MapPin,
   CheckCircle,
   Phone,
-  ArrowRight,
   Play,
   Users,
   Star,
   Clock,
   Award,
-  BookOpen,
   GraduationCap,
   Target,
-  TrendingUp,
-  Shield,
   Wifi,
   MessageCircle,
 } from 'lucide-react'

@@ -6,12 +6,8 @@ import { useParams, useRouter } from 'next/navigation'
 import {
   ArrowLeft,
   Target,
-  Clock,
-  Users,
   BookOpen,
-  Award,
   CheckCircle,
-  Star,
   Calendar,
   Video,
   FileText,

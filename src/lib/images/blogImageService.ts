@@ -6,7 +6,7 @@
  * based on content type and requirements
  */
 
-import { searchUnsplashImages, getRandomUnsplashImage, type UnsplashImage } from './unsplashService'
+import { searchUnsplashImages, getRandomUnsplashImage } from './unsplashService'
 import { getResizedUnsplashUrl, BIOLOGY_PROMPT_TEMPLATES } from './imageUtils'
 import {
   generateBlogFeaturedImage,

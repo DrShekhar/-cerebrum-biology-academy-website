@@ -3,15 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  CheckCircle2,
   Clock,
   Users,
-  GraduationCap,
   ChevronRight,
   PlayCircle,
   Star,
   Trophy,
-  Flame,
   Phone,
   MessageSquare,
   X,

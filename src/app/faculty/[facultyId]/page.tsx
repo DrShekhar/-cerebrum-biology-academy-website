@@ -2,22 +2,17 @@ import { notFound } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { facultyMembers } from '@/data/faculty'
 import {
-  Award,
   BookOpen,
   Star,
   Calendar,
   MessageSquare,
   ArrowLeft,
   CheckCircle,
-  TrendingUp,
   Users,
   Clock,
   Target,
-  Phone,
-  Mail,
   Video,
   GraduationCap,
-  Lightbulb,
   Quote,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

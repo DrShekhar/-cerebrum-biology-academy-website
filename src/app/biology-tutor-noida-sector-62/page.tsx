@@ -11,7 +11,6 @@ import {
   Star,
   GraduationCap,
   Target,
-  Train,
   Briefcase,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

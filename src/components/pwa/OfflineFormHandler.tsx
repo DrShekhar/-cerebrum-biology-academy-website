@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { WifiOff, Send, Clock, CheckCircle, AlertCircle, Trash2, RefreshCw } from 'lucide-react'
+import { WifiOff, Send, Clock, AlertCircle, Trash2, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'

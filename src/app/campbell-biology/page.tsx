@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Book, GraduationCap, Trophy, Clock, MessageCircle, ChevronRight, Star, Users, Award } from 'lucide-react'
 import { campbellUnits, CAMPBELL_STATS } from '@/data/campbell-biology'
-import { allChapters, getChaptersByUnitId } from '@/data/campbell-biology'
+import { getChaptersByUnitId } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
 import { CampbellFloatingWhatsApp } from '@/components/campbell/CampbellFloatingWhatsApp'
 

@@ -2,10 +2,7 @@
 
 import { motion } from 'framer-motion'
 import {
-  BookOpen,
   Target,
-  TrendingUp,
-  Award,
   Clock,
   Users,
   CheckCircle,
@@ -17,11 +14,9 @@ import {
   Lightbulb,
   ArrowRight,
   Trophy,
-  GraduationCap,
   Rocket,
   BarChart3,
   Shield,
-  Zap,
   AlertCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

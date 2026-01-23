@@ -2,7 +2,7 @@
 
 import { StreamlinedEnrollmentPage } from '@/components/enrollment/StreamlinedEnrollmentPage'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function EnrollmentPage() {
   const handleEnrollmentComplete = (data: any) => {

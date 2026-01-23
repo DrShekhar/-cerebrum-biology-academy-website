@@ -6,7 +6,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import type { AttendanceFilter } from '@/types/attendance'
 
 export async function GET(req: NextRequest) {
   try {

@@ -17,7 +17,6 @@ import {
   FileText,
   AlertCircle,
   BookOpen,
-  CreditCard,
   Home,
   Clock,
   Users,
@@ -28,7 +27,7 @@ import { Button } from '@/components/ui/Button'
 import toast from 'react-hot-toast'
 import { trackFormStep, trackFormSubmission, trackBatchSelection } from '@/lib/analytics'
 import { Input } from '@/components/ui/Input'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { Label } from '@/components/ui/Label'
 import {
   Select,

@@ -6,20 +6,16 @@ import Image from 'next/image'
 import {
   Users,
   Trophy,
-  Clock,
   CheckCircle,
   Star,
   Video,
   Phone,
   Globe,
   Laptop,
-  Smartphone,
   Wifi,
   BookOpen,
-  GraduationCap,
   Play,
   MessageCircle,
-  Calendar,
   MapPin,
 } from 'lucide-react'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

@@ -5,7 +5,6 @@ import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Menu,
   X,
   ChevronRight,
   ChevronDown,
@@ -18,13 +17,12 @@ import {
   HelpCircle,
   LayoutDashboard,
   ClipboardList,
-  UserCircle,
   Settings,
   Calculator,
   FileText,
 } from 'lucide-react'
 import Link from 'next/link'
-import { navigationConfig, type NavigationSection } from '@/data/navigationConfig'
+import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/hooks/useAuth'
 
 interface BurgerMenuProps {

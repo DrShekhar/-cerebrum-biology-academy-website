@@ -3,7 +3,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Shield, Award, Users, Star, CheckCircle, Lock, Globe, Zap } from 'lucide-react'
-import Image from 'next/image'
 import { useTranslations } from '@/lib/i18n/translations'
 
 interface TrustBadge {

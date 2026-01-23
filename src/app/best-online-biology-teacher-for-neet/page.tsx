@@ -4,18 +4,9 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  Users,
-  Trophy,
-  Clock,
   CheckCircle,
-  Star,
-  Video,
   Phone,
   Target,
-  Award,
-  BookOpen,
-  BarChart,
-  FileText,
   Zap,
 } from 'lucide-react'
 

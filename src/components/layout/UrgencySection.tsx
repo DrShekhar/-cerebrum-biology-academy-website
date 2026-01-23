@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Clock, Users, AlertCircle, TrendingUp, Star, Zap, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 

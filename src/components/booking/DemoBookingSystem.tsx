@@ -21,7 +21,6 @@ import {
   Trophy,
   Users,
   Target,
-  Award,
   AlertCircle,
   TrendingUp,
   Check,
@@ -32,15 +31,12 @@ import { format, addDays, startOfTomorrow } from 'date-fns'
 import 'react-day-picker/dist/style.css'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { useFacebookPixel } from '@/hooks/useFacebookPixel'
-import { zoomService } from '@/lib/zoom/zoomService'
 import { useFormValidation } from '@/hooks/useFormValidation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { TestimonialCarousel } from './TestimonialCarousel'
 import { BenefitsGrid } from './BenefitsGrid'
 import { FAQAccordion } from './FAQAccordion'
 import { InstructorCard } from './InstructorCard'
-import { PremiumDemoCard } from './PremiumDemoCard'
-import { ReferralInput } from './ReferralInput'
 import { CalendarActions } from './CalendarActions'
 import { ReferralShare } from './ReferralShare'
 
@@ -123,6 +119,68 @@ export function DemoBookingSystem() {
   const [referralDiscount, setReferralDiscount] = useState(0)
   const [paymentInProgress, setPaymentInProgress] = useState(false)
   const [bookingId, setBookingId] = useState<string>('')
+
+  // Save draft to localStorage
+  useEffect(() => {
+    if (bookingData.studentName || bookingData.email || selectedDate) {
+      const draftData = {
+        ...bookingData,
+        selectedDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
+        selectedTime,
+        currentStep,
+        savedAt: new Date().toISOString(),
+      }
+      localStorage.setItem('demo-booking-draft', JSON.stringify(draftData))
+    }
+  }, [bookingData, selectedDate, selectedTime, currentStep])
+
+  // Load saved progress on mount
+  useEffect(() => {
+    const savedDraft = localStorage.getItem('demo-booking-draft')
+    if (savedDraft) {
+      try {
+        const parsed = JSON.parse(savedDraft)
+        const savedAt = new Date(parsed.savedAt)
+        const hoursSince = (Date.now() - savedAt.getTime()) / (1000 * 60 * 60)
+
+        if (hoursSince < 24) {
+          const shouldRestore = window.confirm(
+            'We found your previous booking draft. Would you like to continue where you left off?'
+          )
+
+          if (shouldRestore) {
+            setBookingData({
+              studentName: parsed.studentName || '',
+              email: parsed.email || '',
+              phone: parsed.phone || '',
+              preferredDate: parsed.preferredDate || '',
+              preferredTime: parsed.preferredTime || '',
+              courseInterest: Array.isArray(parsed.courseInterest)
+                ? parsed.courseInterest
+                : parsed.courseInterest
+                  ? [parsed.courseInterest]
+                  : ['neet-biology'],
+              currentClass: parsed.currentClass || '',
+              previousScore: parsed.previousScore || '',
+              specificTopics: parsed.specificTopics || '',
+              hearAboutUs: parsed.hearAboutUs || '',
+            })
+            if (parsed.selectedDate) {
+              setSelectedDate(new Date(parsed.selectedDate))
+            }
+            setSelectedTime(parsed.selectedTime || '')
+            setCurrentStep(parsed.currentStep || 1)
+          } else {
+            localStorage.removeItem('demo-booking-draft')
+          }
+        } else {
+          localStorage.removeItem('demo-booking-draft')
+        }
+      } catch {
+        localStorage.removeItem('demo-booking-draft')
+      }
+    }
+  }, [])
 
   // All days are available for booking (admin can disable specific dates if needed)
   const disabledDays: { dayOfWeek: number[] }[] = []
@@ -575,72 +633,6 @@ export function DemoBookingSystem() {
       </div>
     )
   }
-
-  useEffect(() => {
-    if (bookingData.studentName || bookingData.email || selectedDate) {
-      const draftData = {
-        ...bookingData,
-        selectedDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
-        selectedTime,
-        currentStep,
-        savedAt: new Date().toISOString(),
-      }
-      localStorage.setItem('demo-booking-draft', JSON.stringify(draftData))
-      console.log('💾 Progress saved to localStorage')
-    }
-  }, [bookingData, selectedDate, selectedTime, currentStep])
-
-  // Load saved progress on mount
-  useEffect(() => {
-    const savedDraft = localStorage.getItem('demo-booking-draft')
-    if (savedDraft) {
-      try {
-        const parsed = JSON.parse(savedDraft)
-        const savedAt = new Date(parsed.savedAt)
-        const hoursSince = (Date.now() - savedAt.getTime()) / (1000 * 60 * 60)
-
-        // Only restore if less than 24 hours old
-        if (hoursSince < 24) {
-          const shouldRestore = window.confirm(
-            'We found your previous booking draft. Would you like to continue where you left off?'
-          )
-
-          if (shouldRestore) {
-            setBookingData({
-              studentName: parsed.studentName || '',
-              email: parsed.email || '',
-              phone: parsed.phone || '',
-              preferredDate: parsed.preferredDate || '',
-              preferredTime: parsed.preferredTime || '',
-              courseInterest: Array.isArray(parsed.courseInterest)
-                ? parsed.courseInterest
-                : parsed.courseInterest
-                  ? [parsed.courseInterest]
-                  : ['neet-biology'],
-              currentClass: parsed.currentClass || '',
-              previousScore: parsed.previousScore || '',
-              specificTopics: parsed.specificTopics || '',
-              hearAboutUs: parsed.hearAboutUs || '',
-            })
-            if (parsed.selectedDate) {
-              setSelectedDate(new Date(parsed.selectedDate))
-            }
-            setSelectedTime(parsed.selectedTime || '')
-            setCurrentStep(parsed.currentStep || 1)
-            console.log('✅ Draft restored from localStorage')
-          } else {
-            localStorage.removeItem('demo-booking-draft')
-          }
-        } else {
-          localStorage.removeItem('demo-booking-draft')
-          console.log('🗑️ Old draft removed (>24 hours)')
-        }
-      } catch (e) {
-        console.error('Failed to restore draft:', e)
-        localStorage.removeItem('demo-booking-draft')
-      }
-    }
-  }, [])
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">

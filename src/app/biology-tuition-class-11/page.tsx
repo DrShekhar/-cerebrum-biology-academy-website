@@ -10,12 +10,8 @@ import {
   Play,
   ArrowRight,
   GraduationCap,
-  Clock,
   Target,
-  Calendar,
   Brain,
-  Lightbulb,
-  Award,
   FileText,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

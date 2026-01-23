@@ -14,9 +14,6 @@
  */
 
 import { spawnSync } from 'child_process'
-import * as fs from 'fs'
-import * as path from 'path'
-import * as os from 'os'
 import { QuestionSeed } from '../../../../scripts/question-seeder/types'
 
 export interface ShekharSirConfig {

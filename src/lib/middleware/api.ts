@@ -13,10 +13,7 @@ import {
   type AuditLog,
 } from '../security'
 import {
-  handleError,
   withErrorHandling,
-  AuthenticationError,
-  AuthorizationError,
   RateLimitError,
   ValidationError,
   logError,

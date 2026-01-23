@@ -5,20 +5,13 @@
 
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   Users,
   Trophy,
   Flame,
-  Star,
-  Zap,
   Target,
   Award,
-  MessageCircle,
-  Share2,
-  Heart,
-  Clock,
-  TrendingUp,
 } from 'lucide-react'
 
 interface StudyStreak {

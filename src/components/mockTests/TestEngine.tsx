@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/Button'
-import { MockTest, Question, TestResponse } from '@/types/mockTest'
+import { MockTest, TestResponse } from '@/types/mockTest'
 import {
   Clock,
   ChevronLeft,
@@ -13,10 +13,6 @@ import {
   Play,
   CheckCircle,
   AlertCircle,
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
   Maximize,
   X,
   BookOpen,

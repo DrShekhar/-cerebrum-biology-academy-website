@@ -1,13 +1,11 @@
 'use client'
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
-import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import {
-  MessageSquare,
   Mic,
   Image,
   Send,

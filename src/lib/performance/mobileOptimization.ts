@@ -340,60 +340,68 @@ export class MobileOptimizer {
 // Singleton instance
 export const mobileOptimizer = new MobileOptimizer()
 
+// Default values for server-side rendering
+const DEFAULT_MOBILE_OPTIMIZATION = {
+  isDataSaverMode: false,
+  isLowEndDevice: false,
+  shouldPreloadImages: true,
+  shouldUseAnimations: true,
+  shouldLazyLoad: false,
+  optimalImageQuality: 80,
+  optimalImageSize: { width: 375, height: 667 },
+  dataUsageMB: 0,
+  indianNetworkOptimizations: {
+    optimizeFor2G: false,
+    optimizeFor3G: false,
+    isJioNetwork: false,
+    isAirtelNetwork: false,
+    isViNetwork: false,
+    recommendations: {
+      useCompression: true,
+      enableServiceWorker: true,
+      preloadCriticalResources: true,
+      useImageOptimization: true,
+      enableOfflineMode: false,
+      useCDN: true,
+      enableGzip: true,
+    },
+  },
+}
+
 // React hook for mobile optimization
 export function useMobileOptimization() {
-  if (typeof window === 'undefined') {
-    return {
-      isDataSaverMode: false,
-      isLowEndDevice: false,
-      shouldPreloadImages: true,
-      shouldUseAnimations: true,
-      shouldLazyLoad: false,
-      optimalImageQuality: 80,
-      optimalImageSize: { width: 375, height: 667 },
-      dataUsageMB: 0,
-      indianNetworkOptimizations: {
-        optimizeFor2G: false,
-        optimizeFor3G: false,
-        isJioNetwork: false,
-        isAirtelNetwork: false,
-        isViNetwork: false,
-        recommendations: {
-          useCompression: true,
-          enableServiceWorker: true,
-          preloadCriticalResources: true,
-          useImageOptimization: true,
-          enableOfflineMode: false,
-          useCDN: true,
-          enableGzip: true,
-        },
-      },
-    }
-  }
+  // Import React dynamically for environments where it may not be available
+  const React = typeof window !== 'undefined' ? require('react') : null
 
-  // Only import React on client side
-  const React = require('react')
-  const [isDataSaverMode, setIsDataSaverMode] = React.useState(
-    mobileOptimizer.shouldUseDataSaverMode()
-  )
-  const [isLowEndDevice, setIsLowEndDevice] = React.useState(
-    (mobileOptimizer as any).deviceInfo.isLowEnd
-  )
+  // Always call hooks unconditionally (React Rules of Hooks)
+  const [isDataSaverMode, setIsDataSaverMode] = React?.useState(false) ?? [false, () => {}]
+  const [isLowEndDevice, setIsLowEndDevice] = React?.useState(false) ?? [false, () => {}]
+  const [isClient, setIsClient] = React?.useState(false) ?? [false, () => {}]
 
-  React.useEffect(() => {
-    const checkOptimizations = () => {
+  React?.useEffect(() => {
+    setIsClient(true)
+    if (typeof window !== 'undefined') {
       setIsDataSaverMode(mobileOptimizer.shouldUseDataSaverMode())
       setIsLowEndDevice((mobileOptimizer as any).deviceInfo.isLowEnd)
-    }
 
-    // Check optimizations periodically
-    const interval = setInterval(checkOptimizations, 30000) // Every 30 seconds
+      const checkOptimizations = () => {
+        setIsDataSaverMode(mobileOptimizer.shouldUseDataSaverMode())
+        setIsLowEndDevice((mobileOptimizer as any).deviceInfo.isLowEnd)
+      }
 
-    return () => {
-      clearInterval(interval)
-      mobileOptimizer.destroy()
+      const interval = setInterval(checkOptimizations, 30000)
+
+      return () => {
+        clearInterval(interval)
+        mobileOptimizer.destroy()
+      }
     }
   }, [])
+
+  // Return defaults during SSR or until client hydration
+  if (!isClient || typeof window === 'undefined') {
+    return DEFAULT_MOBILE_OPTIMIZATION
+  }
 
   return {
     isDataSaverMode,

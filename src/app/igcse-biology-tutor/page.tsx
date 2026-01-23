@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function IGCSEBiologyTutorPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)

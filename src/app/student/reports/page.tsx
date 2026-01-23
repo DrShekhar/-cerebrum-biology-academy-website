@@ -14,17 +14,13 @@ import {
   ClipboardCheck,
   BookOpen,
   Clock,
-  TrendingUp,
   AlertCircle,
   CheckCircle2,
   Calendar,
   Target,
-  Download,
-  Filter,
   RefreshCw,
   MessageSquare,
   BarChart3,
-  PieChart,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { showToast } from '@/lib/toast'

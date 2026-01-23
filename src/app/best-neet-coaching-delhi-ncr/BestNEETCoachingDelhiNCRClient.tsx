@@ -4,18 +4,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
-  CheckCircle,
   Phone,
-  ArrowRight,
   Play,
   Users,
   Star,
   Clock,
-  Award,
   Trophy,
   GraduationCap,
   Target,
-  TrendingUp,
   Zap,
   BookOpen,
   Brain,

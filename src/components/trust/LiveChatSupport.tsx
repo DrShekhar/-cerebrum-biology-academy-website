@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
@@ -12,18 +12,11 @@ import {
   Phone,
   Mail,
   Clock,
-  User,
-  Bot,
   Minimize2,
   Maximize2,
   Paperclip,
   Smile,
-  MoreVertical,
-  Star,
-  CheckCircle,
   AlertCircle,
-  Users,
-  Headphones,
   Video,
 } from 'lucide-react'
 

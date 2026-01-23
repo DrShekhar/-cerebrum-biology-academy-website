@@ -20,8 +20,6 @@ import {
   ChevronUp,
   Loader2,
   MessageSquare,
-  RefreshCw,
-  Share2,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'

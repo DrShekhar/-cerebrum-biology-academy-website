@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { useRouter } from 'next/navigation'
@@ -27,7 +27,6 @@ import {
   DollarSign,
   Flame,
   Eye,
-  TrendingDown,
 } from 'lucide-react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'

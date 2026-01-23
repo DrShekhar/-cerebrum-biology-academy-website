@@ -4,18 +4,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import {
-  Atom,
   Dna,
   Heart,
   Microscope,
-  Activity,
   Zap,
-  Waves,
   Brain,
-  Eye,
   Leaf,
   Droplets,
-  ChevronRight,
   Play,
   Pause,
   RotateCcw,

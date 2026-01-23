@@ -5,9 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Plus,
   Trash2,
-  Edit,
   Clock,
-  Users,
   AlertCircle,
   CheckCircle2,
   Shuffle,
@@ -15,23 +13,16 @@ import {
   Settings,
   Copy,
   Save,
-  RefreshCw,
   ArrowUp,
   ArrowDown,
   Eye,
   EyeOff,
-  Play,
-  Pause,
-  BarChart3,
   FileText,
   Lock,
   Unlock,
   Calculator,
   Timer,
   Award,
-  BookOpen,
-  Lightbulb,
-  Info,
 } from 'lucide-react'
 import { useToast } from '@/components/ui/Toast'
 

@@ -7,16 +7,12 @@ import {
   Activity,
   DollarSign,
   Clock,
-  Users,
   MessageSquare,
-  TrendingUp,
-  Zap,
   CheckCircle,
   AlertCircle,
   BarChart3,
   PieChart,
   Cpu,
-  Database,
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'

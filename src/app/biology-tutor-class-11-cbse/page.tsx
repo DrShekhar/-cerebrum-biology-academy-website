@@ -8,18 +8,15 @@ import {
   CheckCircle,
   Award,
   BookOpen,
-  Clock,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
   Target,
-  Brain,
   Microscope,
   Dna,
   Leaf,
   Heart,
-  Medal,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

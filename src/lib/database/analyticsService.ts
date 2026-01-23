@@ -1,4 +1,4 @@
-import { prisma, DatabaseUtils } from './connection'
+import { prisma } from './connection'
 import { AnalyticsCacheService } from '../cache/redis'
 import { Prisma } from '@/generated/prisma'
 

@@ -5,15 +5,12 @@ import {
   BookOpen,
   Users,
   GraduationCap,
-  Award,
   Clock,
   CheckCircle,
   Star,
   Play,
-  Phone,
   Microscope,
   Dna,
-  Brain,
   Leaf,
   Heart,
   Beaker,
@@ -24,7 +21,6 @@ import {
   Building2,
   Globe2,
   Target,
-  TrendingUp,
   MessageCircle,
   FileText,
   Lightbulb,
@@ -37,7 +33,6 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import Link from 'next/link'
 
 export default function BiologyMajorCoursesPage() {
   const handleDemoBooking = () => {

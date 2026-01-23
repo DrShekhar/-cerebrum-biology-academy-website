@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { QuickQuizFlow } from './QuickQuizFlow'
 import { InstantEnrollment } from './InstantEnrollment'
-import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   Sparkles,
   Trophy,

@@ -4,10 +4,7 @@ import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import {
   ArrowLeft,
-  MapPin,
   Building2,
-  Award,
-  Users,
   IndianRupee,
   Search,
   ChevronRight,

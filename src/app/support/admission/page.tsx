@@ -7,19 +7,14 @@ import {
   CheckCircle,
   Clock,
   Users,
-  Award,
   Phone,
   Mail,
   Calendar,
   BookOpen,
-  Target,
   ArrowRight,
   Download,
   Upload,
   CreditCard,
-  Shield,
-  Star,
-  AlertCircle,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 

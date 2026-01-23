@@ -19,7 +19,6 @@ import {
   getQueueStats,
 } from './queueService'
 import { regenerateWithFeedback } from './contentGenerator'
-import type { ContentGenerationStatus } from '@/generated/prisma'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Owner's WhatsApp number for approval messages (without + prefix for wa.me links)

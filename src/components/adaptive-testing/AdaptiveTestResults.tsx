@@ -10,9 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Award,
   TrendingUp,
-  Target,
-  Brain,
-  Clock,
   Zap,
   AlertTriangle,
   CheckCircle2,

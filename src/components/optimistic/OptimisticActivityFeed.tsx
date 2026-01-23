@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { UserCheck, BookOpen, Trophy, TrendingUp, Users, Play, Loader2 } from 'lucide-react'
+import { UserCheck, Trophy, Users, Play, Loader2 } from 'lucide-react'
 import { useOptimisticList } from '@/hooks/useOptimisticList'
 import { useToast } from '@/components/ui/Toast'
 

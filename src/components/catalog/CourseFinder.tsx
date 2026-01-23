@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
@@ -8,9 +8,6 @@ import {
   BookOpen,
   Target,
   Users,
-  GraduationCap,
-  Award,
-  Brain,
   Sparkles,
   Star,
   ArrowRight,

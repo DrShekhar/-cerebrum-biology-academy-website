@@ -21,7 +21,6 @@ import {
   testInfo,
   getNextUpcomingTest,
   getTestStatus,
-  type Test,
   type TestType,
 } from '@/data/test-series-schedule'
 

@@ -4,13 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Gift,
-  Percent,
-  Clock,
-  Star,
-  Target,
-  TrendingUp,
   Award,
-  Users,
   Zap,
   CheckCircle,
   X,
@@ -19,9 +13,7 @@ import {
   Sparkles,
   Crown,
   Heart,
-  BookOpen,
   MapPin,
-  Calendar,
   Timer,
 } from 'lucide-react'
 import { CourseSelectionData } from '@/hooks/useCourseSelectorState'

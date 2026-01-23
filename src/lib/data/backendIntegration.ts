@@ -6,7 +6,7 @@
 import { courses } from '@/data/courseData'
 import { COURSE_SERIES } from '@/data/seriesData'
 import { detailedCourses } from '@/data/detailedCourses'
-import { EnhancedCourseData, Student, Course } from './integrationSchemas'
+import { EnhancedCourseData, Student } from './integrationSchemas'
 import { generateUUID } from '@/lib/utils'
 
 // Existing backend service adapters

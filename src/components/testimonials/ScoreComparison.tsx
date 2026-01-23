@@ -6,8 +6,6 @@ import {
   TrendingDown,
   Award,
   Target,
-  Calendar,
-  BarChart3,
   ArrowRight,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

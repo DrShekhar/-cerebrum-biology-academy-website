@@ -1,6 +1,5 @@
 import { NextRequest } from 'next/server'
 import { handleError, successResponse, ValidationError } from '@/lib/errors'
-import { withErrorHandling } from '@/lib/errors'
 import { z } from 'zod'
 import prisma from '@/lib/prisma'
 import { emailService } from '@/lib/email/emailService'

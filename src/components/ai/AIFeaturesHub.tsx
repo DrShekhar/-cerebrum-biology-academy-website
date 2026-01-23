@@ -20,7 +20,6 @@ import {
   ArrowRight,
   Brain,
   Zap,
-  BookOpen,
   Target,
   TrendingUp,
   Award,

@@ -4,11 +4,9 @@ import { motion } from 'framer-motion'
 import {
   Trophy,
   Users,
-  Star,
   CheckCircle,
   Award,
   BookOpen,
-  Video,
   MessageCircle,
   Play,
   ArrowRight,

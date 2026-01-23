@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { CourseProgram, CourseSeries } from '@/types/courseSystem'
 import { getCoursePricing, formatPrice, formatCurrency } from '@/lib/utils/pricing'
 import { courseTiers } from '@/data/courseSystemData'
 import { DemoClassModal } from './DemoClassModal'
-import { Star, Users, Clock, Award, ChevronRight, CheckCircle } from 'lucide-react'
+import { Star, Users, Clock, ChevronRight, CheckCircle } from 'lucide-react'
 
 interface AppleCourseCardProps {
   course: CourseProgram

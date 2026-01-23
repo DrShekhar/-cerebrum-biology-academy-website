@@ -5,7 +5,6 @@
 
 import { CONTACT_INFO, getWhatsAppLink } from '@/lib/constants/contactInfo'
 import type { LeadData, Language } from './types'
-import { getTranslation } from './translations'
 
 interface WhatsAppContext {
   leadData?: Partial<LeadData>

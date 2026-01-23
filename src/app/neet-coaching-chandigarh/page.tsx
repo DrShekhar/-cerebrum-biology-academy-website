@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import {
-  MapPin, Users, Trophy, Star, CheckCircle, Award, BookOpen, Clock, Shield, Video,
+  MapPin, Users, Trophy, Star, Award, BookOpen, Clock, Shield, Video,
   MessageCircle, Play, ArrowRight, GraduationCap, Building, Phone, Calculator, Target,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

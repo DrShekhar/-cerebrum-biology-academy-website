@@ -5,7 +5,7 @@
  * and logging utilities for the automated follow-up system.
  */
 
-import { LeadStage, FollowupTrigger, FollowupAction } from '@/generated/prisma'
+import { FollowupTrigger } from '@/generated/prisma'
 
 /**
  * Custom error types for better error categorization

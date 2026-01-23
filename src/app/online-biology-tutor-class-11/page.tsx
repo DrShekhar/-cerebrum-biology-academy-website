@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 import {
-  Trophy,
   Users,
   Star,
   CheckCircle,
@@ -10,8 +9,6 @@ import {
   Video,
   MessageCircle,
   Play,
-  ArrowRight,
-  Laptop,
   Clock,
   Headphones,
   FileText,

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { SimpleTest, SimpleQuestion, TestResponse } from '@/types/simpleTest'
+import { SimpleTest, TestResponse } from '@/types/simpleTest'
 import { ClassType } from './ClassSelector'
 import { saveTestProgress, clearTestProgress, getUserId } from '@/utils/testStorage'
 

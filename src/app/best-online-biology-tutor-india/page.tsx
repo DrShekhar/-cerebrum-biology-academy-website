@@ -4,22 +4,16 @@ import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
-  Star,
   CheckCircle,
   BookOpen,
   Video,
   MessageCircle,
   Play,
-  Laptop,
-  Clock,
   Headphones,
-  FileText,
-  BarChart,
   GraduationCap,
   Target,
   Award,
   Globe,
-  Zap,
   Shield,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

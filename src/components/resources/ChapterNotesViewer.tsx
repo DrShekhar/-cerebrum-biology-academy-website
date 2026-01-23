@@ -6,12 +6,9 @@ import {
   BookOpen,
   Bookmark,
   ShareIcon,
-  PrinterIcon,
   Search,
-  SlidersHorizontal,
   Star,
   Clock,
-  TagIcon,
   Download,
 } from 'lucide-react'
 import { Bookmark as BookmarkSolidIcon } from 'lucide-react'

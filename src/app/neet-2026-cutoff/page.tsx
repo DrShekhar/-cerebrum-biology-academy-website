@@ -7,7 +7,6 @@ import {
   BookOpen,
   ArrowRight,
   CheckCircle,
-  AlertCircle,
   Target,
   BarChart3,
   GraduationCap,

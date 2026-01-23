@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { Label } from '@/components/ui/Label'
 import { NativeSelect } from '@/components/ui/NativeSelect'
-import { AlertCircle, Loader2, Upload, X } from 'lucide-react'
+import { AlertCircle, X } from 'lucide-react'
 
 interface CreateDoubtModalProps {
   open: boolean

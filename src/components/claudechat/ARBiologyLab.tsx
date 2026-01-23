@@ -5,8 +5,8 @@
 
 'use client'
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { Camera, Upload, Scan, Play, Pause, Volume2, VolumeX, RotateCcw, Zap } from 'lucide-react'
+import React, { useState, useRef, useCallback } from 'react'
+import { Camera, Upload, Scan, Pause, Volume2, VolumeX, RotateCcw, Zap } from 'lucide-react'
 
 interface AROverlay {
   id: string

@@ -7,7 +7,7 @@ import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { BookOpen, LogIn, UserPlus, Brain } from 'lucide-react'
+import { LogIn, UserPlus, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const PersonalizedLearningPath = dynamicImport(

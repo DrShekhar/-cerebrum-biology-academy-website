@@ -7,7 +7,7 @@ import { ClassLevel, CourseSeries } from '@/types/courseSystem'
 import { courseTiers, coursePrograms } from '@/data/courseSystemData'
 import { getCoursePricing, formatPrice, formatCurrency } from '@/lib/utils/pricing'
 import { DemoClassModal } from './DemoClassModal'
-import { Star, Users, Clock, Award, ChevronRight, CheckCircle } from 'lucide-react'
+import { Users, Clock, ChevronRight, CheckCircle } from 'lucide-react'
 
 interface ClassTierCardProps {
   classLevel: ClassLevel

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState, ReactNode, ElementType } from 'react'
+import React, { useEffect, useRef, useState, ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 type HTMLElementTag = 'div' | 'span' | 'section' | 'article' | 'main' | 'header' | 'footer' | 'nav' | 'aside' | 'ul' | 'ol' | 'li' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'

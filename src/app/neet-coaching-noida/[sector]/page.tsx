@@ -13,7 +13,6 @@ import {
   Star,
   CheckCircle,
   Phone,
-  ArrowRight,
   ArrowLeft,
   Clock,
   BookOpen,

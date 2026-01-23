@@ -13,7 +13,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { LeadStage as PrismaLeadStage, FollowupAction, QueueStatus } from '../../generated/prisma'
+import { LeadStage as PrismaLeadStage, FollowupAction } from '../../generated/prisma'
 import {
   sendWhatsAppMessage,
   sendFollowUpMessage,

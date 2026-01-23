@@ -3,9 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import {
   getNetworkInfo,
-  isSlowConnection,
   prefersReducedMotion,
-  getOptimalImageQuality,
   isMobileDevice,
   isTouchDevice,
   getDevicePixelRatio,

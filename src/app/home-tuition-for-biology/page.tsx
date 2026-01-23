@@ -2,24 +2,17 @@
 
 import { motion } from 'framer-motion'
 import {
-  Users,
   CheckCircle,
   BookOpen,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
-  GraduationCap,
   Clock,
   Target,
-  Calendar,
   Brain,
   Home,
-  Laptop,
-  Shield,
-  Award,
   XCircle,
-  Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

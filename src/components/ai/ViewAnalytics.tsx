@@ -5,7 +5,6 @@ import {
   BarChart3,
   TrendingUp,
   Users,
-  Calendar,
   Target,
   Award,
   Clock,

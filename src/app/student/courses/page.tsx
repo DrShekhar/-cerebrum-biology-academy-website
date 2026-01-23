@@ -8,11 +8,9 @@ import { motion } from 'framer-motion'
 import {
   BookOpen,
   Clock,
-  CheckCircle,
   Play,
   Calendar,
   Trophy,
-  ArrowRight,
   GraduationCap,
   Loader2,
 } from 'lucide-react'

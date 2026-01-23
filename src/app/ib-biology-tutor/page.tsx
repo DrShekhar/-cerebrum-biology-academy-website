@@ -5,11 +5,9 @@ import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
-  Users,
   Award,
   TrendingUp,
   MessageCircle,
-  Phone,
   GraduationCap,
   Microscope,
   Dna,
@@ -26,7 +24,6 @@ import {
   BookMarked,
 } from 'lucide-react'
 import Link from 'next/link'
-import type { Metadata } from 'next'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 const fadeInUp = {

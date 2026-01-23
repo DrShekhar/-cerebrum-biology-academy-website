@@ -7,17 +7,12 @@ import {
   VolumeX,
   Eye,
   EyeOff,
-  Type,
-  Contrast,
-  MousePointer,
   Pause,
   Play,
   RotateCcw,
   Accessibility,
-  Settings,
   ZoomIn,
   ZoomOut,
-  Focus,
   Hand,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'

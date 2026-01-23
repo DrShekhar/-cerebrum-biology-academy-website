@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, memo } from 'react'
-import dynamic from 'next/dynamic'
 import { BookOpen } from 'lucide-react'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>

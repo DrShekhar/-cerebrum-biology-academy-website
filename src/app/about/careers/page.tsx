@@ -10,17 +10,14 @@ import {
   MapPin,
   CheckCircle,
   ArrowRight,
-  Star,
   Award,
   BookOpen,
   TrendingUp,
   Phone,
   Mail,
-  Building,
   IndianRupee,
   Coffee,
   Laptop,
-  Calendar,
 } from 'lucide-react'
 
 export default function CareersPage() {

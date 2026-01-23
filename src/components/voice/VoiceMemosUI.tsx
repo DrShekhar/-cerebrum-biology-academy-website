@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Mic, MicOff, Play, Pause, Square, RotateCcw, Volume2, VolumeX } from 'lucide-react'
+import { Mic, Play, Pause, Square, RotateCcw, Volume2 } from 'lucide-react'
 
 interface VoiceMemosUIProps {
   isRecording: boolean

@@ -6,7 +6,6 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { QueueStatus, FollowupAction } from '@/generated/prisma'
 import { renderTemplate } from './templateRenderer'
 import {
   logError,
@@ -16,10 +15,6 @@ import {
   validateQueueItemData,
   FollowupProcessingError,
   FollowupValidationError,
-  createTimeoutPromise,
-  retryWithBackoff,
-  globalCircuitBreaker,
-  globalRateLimiter,
   sanitizeTemplateContent,
 } from './followupErrorHandler'
 import { emailService } from './email/emailService'

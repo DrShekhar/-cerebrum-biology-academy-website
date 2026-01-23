@@ -7,7 +7,6 @@ import {
 import type {
   test_templates,
   test_sessions,
-  test_attempts,
   questions,
   user_question_responses,
   test_analytics,

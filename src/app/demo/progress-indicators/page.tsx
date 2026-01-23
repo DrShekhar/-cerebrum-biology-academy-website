@@ -12,7 +12,6 @@ import {
   Database,
   CheckCircle,
   Sparkles,
-  Clock,
   Download,
   Play,
   RotateCcw,

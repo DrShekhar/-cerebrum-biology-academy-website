@@ -6,18 +6,11 @@ import {
   CheckCircle,
   Clock,
   Users,
-  Award,
-  BookOpen,
-  Target,
-  Star,
-  ArrowRight,
-  Trophy,
   MessageCircle,
   Phone,
   Video,
   Zap,
   Brain,
-  Bot,
 } from 'lucide-react'
 
 const NeomorphismClaudeChatBoard = dynamic(

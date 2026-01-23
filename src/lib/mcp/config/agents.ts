@@ -7,9 +7,6 @@
 import {
   AgentType,
   AgentCapability,
-  type DifficultyLevel,
-  type BiologyUnit,
-  type ExamType,
 } from '../types'
 
 export interface AgentConfigProfile {

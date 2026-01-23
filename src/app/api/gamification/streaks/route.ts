@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import {
   getStreakStatus,
-  useStreakFreeze,
+  applyStreakFreeze,
   recoverStreak,
   STREAK_PROTECTION_CONFIG,
 } from '@/lib/gamification'
@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
     let result
 
     if (action === 'freeze') {
-      result = await useStreakFreeze(session.user.id)
+      result = await applyStreakFreeze(session.user.id)
     } else {
       result = await recoverStreak(session.user.id)
     }

@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 import {
   BookOpen,
   GraduationCap,
@@ -14,9 +13,7 @@ import {
   FlaskConical,
   BarChart2,
   Star,
-  Calendar,
   Users,
-  Globe,
   Trophy,
 } from 'lucide-react'
 

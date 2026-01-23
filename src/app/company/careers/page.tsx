@@ -18,13 +18,9 @@ import {
   TrendingUp,
   Award,
   Coffee,
-  Gamepad2,
   Car,
   Stethoscope,
   BookOpen,
-  Star,
-  Globe,
-  Shield,
   Zap,
 } from 'lucide-react'
 import { motion } from 'framer-motion'

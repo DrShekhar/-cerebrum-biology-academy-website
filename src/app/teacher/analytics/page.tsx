@@ -10,15 +10,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import {
-  BarChart3,
   Calendar,
   FileText,
   Users,
-  TrendingUp,
-  TrendingDown,
   CheckCircle,
-  Clock,
-  Award,
   BookOpen,
   Target,
   Activity,

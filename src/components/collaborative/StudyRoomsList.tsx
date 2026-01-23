@@ -7,7 +7,6 @@ import {
   BookOpen,
   Brain,
   Target,
-  Clock,
   ChevronRight,
   Plus,
   Filter,

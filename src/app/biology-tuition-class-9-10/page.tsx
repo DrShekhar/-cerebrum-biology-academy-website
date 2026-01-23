@@ -3,16 +3,9 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  BookOpen,
-  GraduationCap,
-  Users,
-  Trophy,
-  Star,
   CheckCircle,
   Phone,
   ArrowRight,
-  Clock,
-  Award,
   Play,
   Target,
   Microscope,

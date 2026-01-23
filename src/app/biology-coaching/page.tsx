@@ -2,9 +2,7 @@
 
 import { motion } from 'framer-motion'
 import {
-  Trophy,
   Users,
-  Star,
   CheckCircle,
   Award,
   BookOpen,
@@ -12,14 +10,10 @@ import {
   MessageCircle,
   Play,
   ArrowRight,
-  GraduationCap,
-  Clock,
   Target,
   Calendar,
   Brain,
-  Lightbulb,
   TrendingUp,
-  Shield,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

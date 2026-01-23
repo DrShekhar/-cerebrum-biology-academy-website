@@ -4,7 +4,6 @@
 export const dynamic = 'force-dynamic'
 
 import { useState, useEffect } from 'react'
-import { formatDistanceToNow } from 'date-fns'
 
 interface AnalyticsData {
   overview: {

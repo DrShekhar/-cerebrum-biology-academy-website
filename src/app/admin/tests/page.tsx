@@ -16,7 +16,6 @@ import {
   Edit,
   Trash2,
   Users,
-  CheckCircle,
   Clock,
   Eye,
   Brain,
@@ -26,7 +25,6 @@ import {
   BookOpen,
   Download,
   Copy,
-  Settings,
   TrendingUp,
   Award,
 } from 'lucide-react'

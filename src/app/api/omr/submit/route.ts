@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { OMRPaperStatus } from '@/generated/prisma'
 import { calculateOMRResult } from '@/lib/omr/calculator'
-import { SectionConfig, AnswerKey, SubmittedAnswers, AnswerOption } from '@/lib/omr/types'
+import { SectionConfig, AnswerKey, SubmittedAnswers } from '@/lib/omr/types'
 
 const answerOptionSchema = z.enum(['A', 'B', 'C', 'D']).nullable()
 

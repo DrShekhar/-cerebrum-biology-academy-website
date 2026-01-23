@@ -6,12 +6,11 @@ import { usePathname } from 'next/navigation'
 import {
   HomeIcon,
   BookOpen,
-  FlaskConical,
   Trophy,
   Phone,
   Play,
 } from 'lucide-react'
-import { CONTACT_INFO, getPhoneLink, getFormattedPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getFormattedPhone } from '@/lib/constants/contactInfo'
 
 interface MobileBottomNavProps {
   className?: string

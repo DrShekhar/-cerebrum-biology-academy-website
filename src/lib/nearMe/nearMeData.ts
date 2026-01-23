@@ -2,7 +2,6 @@ import {
   offlineLocations,
   onlineRegions,
   primaryContact,
-  type Location,
   type OnlineRegion,
 } from '@/data/locations'
 

@@ -8,9 +8,8 @@ import { PaymentOptionsDisplay } from './PaymentOptionsDisplay'
 import { coursePrograms } from '@/data/courseSystemData'
 import { ClassLevel, CourseSeries } from '@/types/courseSystem'
 import { getCoursesByClass } from '@/utils/courseUtils'
-import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'
-import { BookOpen, CreditCard, Grid3x3, BarChart3, ChevronDown, CheckCircle } from 'lucide-react'
+import { BookOpen, CreditCard, Grid3x3, BarChart3, CheckCircle } from 'lucide-react'
 
 export function CourseSystemDemo() {
   const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('11th')

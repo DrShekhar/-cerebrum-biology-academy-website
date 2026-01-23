@@ -14,7 +14,6 @@ import {
   Lock,
   Phone,
   Mail,
-  User,
   ChevronDown,
   ChevronUp,
 } from 'lucide-react'

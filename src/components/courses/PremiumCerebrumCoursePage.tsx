@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import {
   Star,
-  Users,
-  Clock,
   Trophy,
   ChevronDown,
   ChevronUp,
@@ -14,30 +12,17 @@ import {
   ArrowRight,
   Award,
   Target,
-  Zap,
-  Shield,
   MessageCircle,
   Phone,
   BookOpen,
   Calendar,
-  DollarSign,
-  TrendingUp,
-  Heart,
-  Globe,
-  Verified,
   Crown,
-  Gift,
   HelpCircle,
-  ChevronRight,
   Play,
-  GraduationCap,
-  Brain,
   Sparkles,
-  Microscope,
-  FlaskConical,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface CourseCard {
   id: string

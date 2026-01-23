@@ -17,7 +17,6 @@ import {
   TrendingUp,
   TrendingDown,
   ChevronDown,
-  Users,
   Timer,
   BarChart3,
 } from 'lucide-react'

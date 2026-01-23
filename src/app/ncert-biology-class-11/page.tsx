@@ -4,18 +4,14 @@ import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle2,
-  Star,
   ExternalLink,
   GraduationCap,
   Target,
-  Clock,
   Award,
   ChevronDown,
   ChevronUp,
   ShoppingCart,
   Microscope,
-  Leaf,
-  Heart,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

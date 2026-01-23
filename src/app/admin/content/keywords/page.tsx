@@ -7,15 +7,12 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import {
   Search,
   TrendingUp,
-  TrendingDown,
   ArrowUp,
   ArrowDown,
   Minus,
   Plus,
   RefreshCw,
   ExternalLink,
-  Filter,
-  Download,
 } from 'lucide-react'
 
 interface KeywordRanking {

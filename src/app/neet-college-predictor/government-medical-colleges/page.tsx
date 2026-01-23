@@ -6,7 +6,6 @@ import {
   ArrowLeft,
   MapPin,
   Building2,
-  Award,
   Users,
   IndianRupee,
   Search,

@@ -7,10 +7,8 @@ import {
   Star,
   Lock,
   X,
-  Calendar,
   Sparkles,
   Filter,
-  ChevronRight,
 } from 'lucide-react'
 
 type BadgeRarity = 'COMMON' | 'UNCOMMON' | 'RARE' | 'EPIC' | 'LEGENDARY'

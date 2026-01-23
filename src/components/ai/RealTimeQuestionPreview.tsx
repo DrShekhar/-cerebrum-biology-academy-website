@@ -15,14 +15,8 @@ import {
   Target,
   BookOpen,
   Zap,
-  Users,
-  GraduationCap,
   RefreshCw,
-  Layers,
-  Grid,
-  List,
   Edit3,
-  Save,
   X
 } from 'lucide-react'
 

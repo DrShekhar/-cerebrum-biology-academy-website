@@ -7,7 +7,6 @@ import {
   Star,
   CheckCircle,
   Award,
-  BookOpen,
   Clock,
   Shield,
   Target,

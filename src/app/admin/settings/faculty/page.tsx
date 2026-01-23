@@ -20,7 +20,6 @@ import {
   Clock,
   Users,
   TrendingUp,
-  CheckCircle,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { auth as firebaseAuth } from 'firebase-admin'
 import { getFirebaseAdmin } from '@/lib/firebase/admin'
 
 /**
@@ -26,7 +25,7 @@ export async function GET(request: NextRequest) {
     const phoneNumber = decodedToken.phone_number
 
     // Find user in database by phone number or Firebase UID
-    let user = await prisma.users.findFirst({
+    const user = await prisma.users.findFirst({
       where: {
         OR: [
           { phone: phoneNumber },

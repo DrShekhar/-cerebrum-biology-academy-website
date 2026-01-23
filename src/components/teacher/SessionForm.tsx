@@ -11,7 +11,6 @@ import { Input } from '@/components/ui/Input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Calendar, Clock, Video, MapPin, BookOpen, Save, X } from 'lucide-react'
 import { showToast } from '@/lib/toast'
-import { cn } from '@/lib/utils'
 import type { ClassSession } from '@/types/attendance'
 
 interface SessionFormProps {

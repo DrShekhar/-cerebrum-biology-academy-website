@@ -8,18 +8,14 @@
 
 import Anthropic from '@anthropic-ai/sdk'
 import type {
-  AgentConfig,
-  AgentTask,
-  AgentResponse,
   FeatureRequest,
   WorkflowExecution,
   UserCommand,
   UserNotification,
   OrchestratorConfig,
-  AgentContext,
   WorkflowMetrics,
 } from '../types'
-import { WorkflowStatus, TaskStatus, AgentType } from '../types'
+import { WorkflowStatus, AgentType } from '../types'
 import { AgentRegistry } from './AgentRegistry'
 import { TaskQueue } from './TaskQueue'
 import { WorkflowEngine } from './WorkflowEngine'

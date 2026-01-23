@@ -12,7 +12,6 @@ import {
   CheckCircle,
   Star,
   Train,
-  Building,
   GraduationCap,
   Play,
   ExternalLink,

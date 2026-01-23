@@ -5,8 +5,6 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
-import rateLimit from 'express-rate-limit'
-import helmet from 'helmet'
 
 interface SecurityConfig {
   environment: 'development' | 'staging' | 'production'

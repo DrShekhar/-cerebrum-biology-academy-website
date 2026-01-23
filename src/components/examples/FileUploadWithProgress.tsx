@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ProgressIndicator from '@/components/ui/ProgressIndicator'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-import { Upload, File, CheckCircle2, X, Image, FileText, Film } from 'lucide-react'
+import { Upload, CheckCircle2, X, Image, FileText, Film } from 'lucide-react'
 
 interface UploadedFile {
   id: string

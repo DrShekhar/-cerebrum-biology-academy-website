@@ -9,9 +9,7 @@ import {
   ClipboardCheck,
   BookOpen,
   Clock,
-  TrendingUp,
   AlertCircle,
-  CheckCircle2,
   Calendar,
   Target,
 } from 'lucide-react'

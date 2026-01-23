@@ -2,26 +2,18 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Globe,
   MapPin,
-  Users,
-  Trophy,
   Star,
   CheckCircle,
-  Award,
-  BookOpen,
   Clock,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
-  GraduationCap,
   Phone,
-  Calendar,
-  Wifi,
-  FileText,
   Target,
   Send,
   Shield,

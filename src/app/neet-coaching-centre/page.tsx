@@ -6,7 +6,6 @@ import {
   Users,
   Trophy,
   Star,
-  CheckCircle,
   Award,
   BookOpen,
   Clock,

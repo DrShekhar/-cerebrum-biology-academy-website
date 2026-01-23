@@ -3,7 +3,7 @@
  * Advanced AI provider routing based on question type, complexity, cost, and performance
  */
 
-import { aiConfig, AIProviderConfig } from './aiConfig'
+import { aiConfig } from './aiConfig'
 
 export interface TaskAnalysis {
   complexity: 'low' | 'medium' | 'high'

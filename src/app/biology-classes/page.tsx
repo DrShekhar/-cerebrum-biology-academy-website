@@ -2,11 +2,8 @@
 
 import { motion } from 'framer-motion'
 import {
-  Trophy,
   Users,
-  Star,
   CheckCircle,
-  Award,
   BookOpen,
   Video,
   MessageCircle,
@@ -15,7 +12,6 @@ import {
   GraduationCap,
   Clock,
   Target,
-  Microscope,
   Calendar,
   Brain,
 } from 'lucide-react'

@@ -6,7 +6,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { adaptiveTestingEngine } from '@/lib/adaptive-testing/AdaptiveTestingEngine'
 import { auth } from '@/lib/auth/config'
-import { authOptions } from '@/lib/auth/config'
 
 export async function GET(request: NextRequest, { params }: { params: { sessionId: string } }) {
   try {

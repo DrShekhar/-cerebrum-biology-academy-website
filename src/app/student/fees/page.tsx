@@ -19,16 +19,12 @@ import {
   AlertCircle,
   Clock,
   CheckCircle,
-  ChevronRight,
   CreditCard,
   HelpCircle,
   Send,
   Phone,
   Mail,
-  FileText,
-  PiggyBank,
   Gift,
-  Calculator,
   ArrowLeft,
   Percent,
   IndianRupee,
@@ -36,7 +32,7 @@ import {
   BadgeCheck,
 } from 'lucide-react'
 import Link from 'next/link'
-import { format, formatDistanceToNow, isBefore, isAfter, addDays } from 'date-fns'
+import { format, isBefore, addDays } from 'date-fns'
 
 interface FeePlan {
   id: string

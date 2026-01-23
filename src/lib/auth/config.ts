@@ -19,12 +19,10 @@
  * - AuthRateLimit - Rate limiting for auth endpoints
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { validateAdminSession, AdminSession } from './admin-auth'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import { prisma } from '@/lib/prisma'
 import type { UserRole as PrismaUserRole } from '@/generated/prisma'
-import { cookies } from 'next/headers'
 
 export type UserRole = PrismaUserRole
 

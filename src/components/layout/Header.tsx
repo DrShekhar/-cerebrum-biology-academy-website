@@ -1,23 +1,15 @@
 'use client'
 
-import { useState, useEffect, memo, useMemo, Suspense } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import {
-  Menu,
-  X,
-  Phone,
   Play,
   BarChart3,
   LogIn,
   UserPlus,
-  Monitor,
   Users,
-  Globe,
-  HelpCircle,
-  Brain,
-  Sparkles,
   Trophy,
   ArrowRight,
   Search,

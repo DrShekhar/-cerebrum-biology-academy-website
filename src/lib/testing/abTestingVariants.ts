@@ -1,4 +1,3 @@
-import { ABTestConfig } from '@/hooks/useABTest'
 
 export interface ABTestVariant {
   id: string

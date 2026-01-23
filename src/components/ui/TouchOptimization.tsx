@@ -14,8 +14,6 @@ import {
   UserCircleIcon,
   Phone,
   Play,
-  ChevronLeft,
-  ChevronRight,
   ChevronDown,
   X,
 } from 'lucide-react'

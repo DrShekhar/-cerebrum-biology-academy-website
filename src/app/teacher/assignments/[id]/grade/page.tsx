@@ -16,7 +16,6 @@ import {
   ArrowLeft,
   BookOpen,
   Calendar,
-  Clock,
   FileText,
   Search,
   CheckCircle,
@@ -26,7 +25,6 @@ import {
   Award,
   TrendingUp,
   Download,
-  Filter,
 } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 

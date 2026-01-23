@@ -6,8 +6,6 @@ import {
   Award,
   BookOpen,
   Users,
-  Calendar,
-  MapPin,
   CheckCircle,
   Star,
   GraduationCap,

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { QuestionBuilder } from './QuestionBuilder'
 import {
@@ -8,7 +8,6 @@ import {
   FileText,
   Settings,
   Target,
-  Clock,
   CheckCircle,
   AlertCircle,
   ChevronDown,
@@ -32,16 +31,9 @@ import {
   Camera,
   Globe,
   Layers,
-  GraduationCap,
-  Users,
-  Calculator,
   Timer,
   BarChart3,
-  Star,
-  Languages,
-  RefreshCw,
-  Eye,
-  RotateCcw
+  RefreshCw
 } from 'lucide-react'
 
 interface Topic {

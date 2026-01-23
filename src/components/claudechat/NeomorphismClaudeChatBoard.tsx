@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
@@ -9,19 +9,10 @@ import {
   Send,
   Mic,
   MicOff,
-  Camera,
   Image as ImageIcon,
   Brain,
   Volume2,
   VolumeX,
-  Sparkles,
-  FileText,
-  BookOpen,
-  Target,
-  Star,
-  Settings,
-  RefreshCw,
-  Zap,
 } from 'lucide-react'
 import { useShekharVoice } from '@/hooks/useShekharVoice'
 

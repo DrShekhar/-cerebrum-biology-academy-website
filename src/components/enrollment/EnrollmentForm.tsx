@@ -7,7 +7,6 @@ import {
   Mail,
   Phone,
   CreditCard,
-  Calendar,
   IndianRupee,
   CheckCircle,
   AlertCircle,

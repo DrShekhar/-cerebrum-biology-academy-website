@@ -1,13 +1,12 @@
 'use client'
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
-  Camera,
   Send,
   Bot,
   User,
@@ -17,15 +16,6 @@ import {
   MessageSquare,
   Brain,
   Zap,
-  Star,
-  BookOpen,
-  Target,
-  TrendingUp,
-  Settings,
-  Bell,
-  Award,
-  Heart,
-  Users,
 } from 'lucide-react'
 
 import { VoiceMemosUI } from '../voice/VoiceMemosUI'

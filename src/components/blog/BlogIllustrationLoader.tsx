@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, memo, Suspense } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { BookOpen, GraduationCap, Brain, Dna, Heart, Microscope } from 'lucide-react'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>

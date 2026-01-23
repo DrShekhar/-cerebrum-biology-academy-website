@@ -12,7 +12,6 @@
  */
 
 import { AbilityEstimate, StudentResponse, ItemParameters } from './ItemResponseTheory'
-import { CATSession } from './ComputerAdaptiveTesting'
 
 export interface PerformanceMetrics {
   currentAbility: number

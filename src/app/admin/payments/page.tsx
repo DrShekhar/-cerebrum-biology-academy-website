@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 import {
   CreditCard,
   Search,
-  Filter,
   Download,
   TrendingUp,
   AlertCircle,
@@ -16,8 +15,6 @@ import {
   XCircle,
   Clock,
   DollarSign,
-  Users,
-  Calendar,
   Eye,
   RefreshCw,
   Send,

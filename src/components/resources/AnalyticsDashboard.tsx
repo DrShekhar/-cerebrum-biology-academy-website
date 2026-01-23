@@ -6,14 +6,9 @@ import {
   BarChart2,
   TrendingUp as TrendingUpIcon,
   TrendingDown as TrendingDownIcon,
-  Clock,
-  GraduationCap,
   Zap,
-  Calendar,
   AlertTriangle,
   CheckCircle2,
-  UserIcon,
-  BookOpen,
 } from 'lucide-react'
 
 interface PerformanceData {

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { TimezoneService, ClassSchedule, TimezoneInfo } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { Clock, Globe, Users, Calendar } from 'lucide-react'
-import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getDisplayPhone } from '@/lib/constants/contactInfo'
 
 interface TimezoneScheduleProps {
   onScheduleSelect?: (schedule: ClassSchedule) => void

@@ -10,10 +10,9 @@ import type {
   EducationalAgent,
   StudentQuery,
   AgentResponse,
-  BiologyTopic,
   NEETCurriculum,
 } from '../types'
-import { AgentType, AgentCapability, DifficultyLevel, ExamType, BiologyUnit } from '../types'
+import { AgentType, AgentCapability, DifficultyLevel, ExamType } from '../types'
 
 interface AgentConfig {
   anthropic: Anthropic

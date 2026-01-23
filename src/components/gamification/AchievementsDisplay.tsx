@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Trophy, Star, Zap, CheckCircle, Lock } from 'lucide-react'
+import { Trophy, CheckCircle } from 'lucide-react'
 
 interface Achievement {
   id: string

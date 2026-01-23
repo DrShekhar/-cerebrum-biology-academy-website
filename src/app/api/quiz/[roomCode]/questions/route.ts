@@ -5,7 +5,6 @@ import {
   class11Questions,
   class12Questions,
 } from '@/data/questions'
-import { AuthenticQuestion } from '@/data/questions/types'
 import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 import { createHash } from 'crypto'

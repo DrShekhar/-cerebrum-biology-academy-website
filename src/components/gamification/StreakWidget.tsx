@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Flame, TrendingUp, Target, Award } from 'lucide-react'
+import { Flame, TrendingUp, Award } from 'lucide-react'
 
 interface StreakWidgetProps {
   studyStreak: number

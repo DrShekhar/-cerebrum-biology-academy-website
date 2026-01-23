@@ -5,19 +5,13 @@ import {
   Trophy,
   Users,
   Star,
-  CheckCircle,
-  BookOpen,
   Video,
   MessageCircle,
   Play,
   Headphones,
   MapPin,
   GraduationCap,
-  Target,
-  Award,
   Building,
-  Train,
-  Car,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

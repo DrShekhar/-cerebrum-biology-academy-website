@@ -1,7 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useEffect, useState, lazy, Suspense } from 'react'
-import { Shield, Star, Award, Users, CheckCircle, Trophy, Clock } from 'lucide-react'
+import { Shield, Star, Award, Users, CheckCircle } from 'lucide-react'
 
 // Lazy-load heavy components to reduce initial bundle
 const RealTimeSocialProof = lazy(() =>
