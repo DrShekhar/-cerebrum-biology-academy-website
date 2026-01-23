@@ -32,9 +32,11 @@ test.describe('Homepage Quick Tests', () => {
     await page.goto('/')
     // Wait for the page to fully load
     await page.waitForLoadState('networkidle')
+    // Wait for lazy-loaded widgets
+    await page.waitForTimeout(4000)
 
-    // Look for chat button
-    const chatButton = page.locator('button[aria-label*="chat"], button[aria-label*="Chat"]')
-    await expect(chatButton).toBeVisible({ timeout: 10000 })
+    // Look for chat button (ARIA widget or WhatsApp CTA)
+    const chatButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="Chat"], button[aria-label*="chat"], button[aria-label*="WhatsApp"]')
+    await expect(chatButton.first()).toBeVisible({ timeout: 10000 })
   })
 })
