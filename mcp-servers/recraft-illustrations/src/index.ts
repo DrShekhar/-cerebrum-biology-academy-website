@@ -7,7 +7,6 @@ import {
   ListToolsRequestSchema,
   Tool,
 } from "@modelcontextprotocol/sdk/types.js";
-import { z } from "zod";
 import { RecraftClient, IllustrationStyle, IconStyle } from "./recraft-client.js";
 
 // Environment configuration

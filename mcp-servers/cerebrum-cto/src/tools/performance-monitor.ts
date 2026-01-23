@@ -84,7 +84,7 @@ export async function checkPerformance(params: PerformanceParams) {
       } catch {
         // Ignore errors
       }
-    } catch (error) {
+    } catch {
       output += '⚠️ Bundle analysis failed\n\n'
     }
   }

@@ -6,7 +6,6 @@
 
 import { exec } from 'child_process'
 import { promisify } from 'util'
-import path from 'path'
 
 const execAsync = promisify(exec)
 
@@ -27,7 +26,7 @@ export async function auditDependencies(params: AuditParams) {
     output += '### 🔒 Security Vulnerabilities\n\n'
 
     try {
-      const { stdout, stderr } = await execAsync('npm audit --json', {
+      const { stdout } = await execAsync('npm audit --json', {
         cwd: projectRoot,
         maxBuffer: 1024 * 1024 * 10,
       })

@@ -93,8 +93,8 @@ export async function GET(
 }
 
 export async function POST(
-  request: NextRequest,
-  { params }: { params: { sessionId: string } }
+  _request: NextRequest,
+  { params: _params }: { params: { sessionId: string } }
 ) {
   return NextResponse.json(
     { error: 'Method not allowed' },

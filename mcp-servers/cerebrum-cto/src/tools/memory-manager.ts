@@ -41,7 +41,7 @@ export async function readMemory(params: ReadParams) {
           output += '\n\n*[truncated - file is longer]*\n'
         }
         output += '\n---\n\n'
-      } catch (error) {
+      } catch {
         output += `### 📁 ${name}.md\n\n⚠️ File not found\n\n---\n\n`
       }
     }
@@ -59,7 +59,7 @@ export async function readMemory(params: ReadParams) {
     try {
       const content = await fs.readFile(fullPath, 'utf-8')
       output = content
-    } catch (error) {
+    } catch {
       return {
         content: [{ type: 'text', text: `Memory file not found: ${filePath}` }],
         isError: true,
