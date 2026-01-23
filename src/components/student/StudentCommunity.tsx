@@ -381,9 +381,11 @@ export function StudentCommunity() {
                     {/* Post Header */}
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center space-x-3">
-                        <img
+                        <Image
                           src={post.author.avatar}
                           alt={post.author.name}
+                          width={40}
+                          height={40}
                           className="w-10 h-10 rounded-full"
                         />
                         <div>
@@ -579,9 +581,11 @@ export function StudentCommunity() {
                 >
                   <div className="flex items-center space-x-4">
                     <div className="relative">
-                      <img
+                      <Image
                         src={student.avatar}
                         alt={student.name}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 rounded-full"
                       />
                       {student.badge && (

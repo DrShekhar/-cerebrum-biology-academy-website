@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+
+// ISR: Revalidate every 1 hour - service pages are relatively static marketing content
+export const revalidate = 3600
 import {
   CheckCircle,
   Users,

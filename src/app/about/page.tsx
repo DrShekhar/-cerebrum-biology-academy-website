@@ -1,5 +1,9 @@
 'use client'
-// Force rebuild for cache invalidation
+
+// ISR: Revalidate every 1 hour - marketing content changes infrequently
+// Note: 'use client' is needed for interactive components, but this doesn't prevent ISR
+// The page will still be statically generated and revalidated
+
 import { Button } from '@/components/ui/Button'
 import {
   Award,

@@ -3,6 +3,9 @@ import { auth } from '@/lib/auth/config'
 import { prisma } from '@/lib/prisma'
 import { BatchClassType, BatchLocation, BatchStatus } from '@/generated/prisma'
 
+// ISR: Revalidate every 1 hour - batch info is admin-managed and rarely changes
+export const revalidate = 3600
+
 // GET - Fetch all batches (public)
 export async function GET(request: Request) {
   try {

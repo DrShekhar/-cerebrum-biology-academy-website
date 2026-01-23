@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+
+// ISR: Revalidate every 1 hour - board info is relatively static content
+export const revalidate = 3600
 import {
   CheckCircle,
   Clock,

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { MockTest, TestResponse } from '@/types/mockTest'
 import {
@@ -426,11 +427,14 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                     {currentQuestion.questionText}
                   </p>
                   {currentQuestion.questionImage && (
-                    <div className="mt-4">
-                      <img
+                    <div className="mt-4 relative">
+                      <Image
                         src={currentQuestion.questionImage}
                         alt="Question diagram"
+                        width={600}
+                        height={400}
                         className="max-w-full h-auto rounded-lg"
+                        style={{ width: 'auto', height: 'auto' }}
                       />
                     </div>
                   )}
@@ -461,11 +465,14 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                           <span className="text-gray-900">{option.text}</span>
                         </div>
                         {option.image && (
-                          <div className="mt-3 ml-10">
-                            <img
+                          <div className="mt-3 ml-10 relative">
+                            <Image
                               src={option.image}
                               alt={`Option ${option.id}`}
+                              width={400}
+                              height={300}
                               className="max-w-full h-auto rounded"
+                              style={{ width: 'auto', height: 'auto' }}
                             />
                           </div>
                         )}

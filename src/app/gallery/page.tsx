@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import { GalleryPageContent } from '@/components/gallery/GalleryPageContent'
 
+// ISR: Revalidate every 30 minutes - gallery may be updated with new images
+export const revalidate = 1800
+
 export const metadata: Metadata = {
   title: 'Wall of Excellence | Gallery | Cerebrum Biology Academy',
   description:

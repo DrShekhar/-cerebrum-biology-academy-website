@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Trophy,
@@ -146,9 +147,11 @@ function LeaderboardRow({ entry, index }: { entry: LeaderboardEntry; index: numb
         {/* Avatar */}
         <div className="flex-shrink-0">
           {entry.userAvatar ? (
-            <img
+            <Image
               src={entry.userAvatar}
               alt={entry.userName}
+              width={40}
+              height={40}
               className="w-10 h-10 rounded-full object-cover"
             />
           ) : (
@@ -342,9 +345,11 @@ export function Leaderboard({
                     >
                       <div className="relative">
                         {entries[1].userAvatar ? (
-                          <img
+                          <Image
                             src={entries[1].userAvatar}
                             alt={entries[1].userName}
+                            width={64}
+                            height={64}
                             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 sm:border-4 border-gray-300 mx-auto"
                           />
                         ) : (
@@ -377,9 +382,11 @@ export function Leaderboard({
                       <div className="relative">
                         <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2" />
                         {entries[0].userAvatar ? (
-                          <img
+                          <Image
                             src={entries[0].userAvatar}
                             alt={entries[0].userName}
+                            width={80}
+                            height={80}
                             className="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover border-2 sm:border-4 border-yellow-400 mx-auto"
                           />
                         ) : (
@@ -411,9 +418,11 @@ export function Leaderboard({
                     >
                       <div className="relative">
                         {entries[2].userAvatar ? (
-                          <img
+                          <Image
                             src={entries[2].userAvatar}
                             alt={entries[2].userName}
+                            width={56}
+                            height={56}
                             className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover border-2 sm:border-4 border-amber-600 mx-auto"
                           />
                         ) : (

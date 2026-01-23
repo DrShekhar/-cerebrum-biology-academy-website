@@ -5,6 +5,9 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+
+// ISR: Revalidate every 5 minutes - gallery is public data that updates occasionally
+export const revalidate = 300
 import { getGalleryItems, getFeaturedGalleryItems, getCategoriesWithCounts } from '@/lib/gallery'
 import { GalleryCategory, GalleryItemType } from '@/generated/prisma'
 

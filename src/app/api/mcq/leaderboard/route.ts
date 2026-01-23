@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma'
 import type { LeaderboardPeriod } from '@/generated/prisma'
 import type { Leaderboard, LeaderboardEntry } from '@/lib/mcq/types'
 
+// ISR: Revalidate every 5 minutes - leaderboard can tolerate slight staleness
+export const revalidate = 300
+
 // Helper to check if table doesn't exist
 function isTableNotExistError(error: unknown): boolean {
   return (
