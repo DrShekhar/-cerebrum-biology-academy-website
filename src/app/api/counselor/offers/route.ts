@@ -80,7 +80,7 @@ async function handlePOST(request: NextRequest, session: any) {
     const body = await request.json()
     const validatedData = createOfferSchema.parse(body)
 
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: validatedData.leadId },
       select: { assignedToId: true, studentName: true },
     })
@@ -141,14 +141,14 @@ async function handlePOST(request: NextRequest, session: any) {
       },
     })
 
-    await prisma.lead.update({
+    await prisma.leads.update({
       where: { id: validatedData.leadId },
       data: {
         stage: 'OFFER_SENT',
       },
     })
 
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         userId: session.userId,
         leadId: validatedData.leadId,

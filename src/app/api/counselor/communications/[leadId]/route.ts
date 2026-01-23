@@ -34,7 +34,7 @@ async function handleGET(req: NextRequest, session: any) {
     }
 
     // Verify lead exists and belongs to current counselor's organization
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: leadId },
       select: { id: true, studentName: true },
     })

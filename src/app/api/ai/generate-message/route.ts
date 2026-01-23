@@ -41,7 +41,7 @@ async function handlePOST(req: NextRequest, session: any) {
     const { leadId, intent, tone, customInstructions } = validatedData
 
     // Fetch lead data with all relevant context
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: leadId },
       include: {
         communications: {

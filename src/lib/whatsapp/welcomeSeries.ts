@@ -134,7 +134,7 @@ export async function startWelcomeSeries(leadId: string): Promise<{
   error?: string
 }> {
   try {
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: leadId },
     })
 
@@ -175,7 +175,7 @@ export async function startWelcomeSeries(leadId: string): Promise<{
     }
 
     // Update lead with welcome series status
-    await prisma.lead.update({
+    await prisma.leads.update({
       where: { id: leadId },
       data: {
         metadata: {
@@ -205,7 +205,7 @@ export async function sendWelcomeSeriesMessage(
   day: number
 ): Promise<{ success: boolean; error?: string }> {
   try {
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: leadId },
     })
 
@@ -240,7 +240,7 @@ export async function sendWelcomeSeriesMessage(
       const sentMessages = (metadata.welcomeSeriesSent as string[]) || []
       sentMessages.push(`day${day}`)
 
-      await prisma.lead.update({
+      await prisma.leads.update({
         where: { id: leadId },
         data: {
           metadata: {
@@ -271,7 +271,7 @@ export async function processWelcomeSeriesQueue(): Promise<{
 
   try {
     // Get leads that started welcome series but may need follow-up messages
-    const leads = await prisma.lead.findMany({
+    const leads = await prisma.leads.findMany({
       where: {
         metadata: {
           path: ['welcomeSeriesStarted'],

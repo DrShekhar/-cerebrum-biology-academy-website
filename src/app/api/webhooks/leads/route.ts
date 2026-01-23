@@ -388,7 +388,7 @@ async function checkDuplicate(
   phone: string,
   email?: string
 ): Promise<{ isDuplicate: boolean; existingLead?: ExistingLeadRecord }> {
-  const existingLead = await prisma.lead.findFirst({
+  const existingLead = await prisma.leads.findFirst({
     where: {
       OR: [{ phone }, email ? { email } : {}].filter(Boolean),
     },
@@ -417,7 +417,7 @@ async function checkDuplicate(
  */
 async function assignCounselor() {
   // Get all counselors
-  const counselors = await prisma.user.findMany({
+  const counselors = await prisma.users.findMany({
     where: { role: 'COUNSELOR' },
     include: {
       _count: {
@@ -437,7 +437,7 @@ async function assignCounselor() {
 
   if (counselors.length === 0) {
     // Create default counselor if none exists
-    return await prisma.user.create({
+    return await prisma.users.create({
       data: {
         email: 'counselor@cerebrumbiologyacademy.com',
         name: 'Default Counselor',
@@ -491,7 +491,7 @@ export async function POST(request: NextRequest) {
       console.log(`⚠️ Duplicate lead detected: ${leadData.phone}`)
 
       // Update existing lead with new information
-      await prisma.lead.update({
+      await prisma.leads.update({
         where: { id: existingLead.id },
         data: {
           lastContactedAt: new Date(),
@@ -502,7 +502,7 @@ export async function POST(request: NextRequest) {
       })
 
       // Log activity
-      await prisma.activity.create({
+      await prisma.activities.create({
         data: {
           userId: existingLead.assignedToId,
           leadId: existingLead.id,
@@ -524,7 +524,7 @@ export async function POST(request: NextRequest) {
     const counselor = await assignCounselor()
 
     // Create new lead
-    const lead = await prisma.lead.create({
+    const lead = await prisma.leads.create({
       data: {
         studentName: leadData.studentName,
         email: leadData.email,
@@ -539,7 +539,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Create follow-up task
-    const task = await prisma.task.create({
+    const task = await prisma.tasks.create({
       data: {
         title: `New lead from ${source} - ${leadData.studentName}`,
         description: `New lead received from ${source}.\n\nStudent: ${leadData.studentName}\nPhone: ${leadData.phone}\nEmail: ${leadData.email || 'Not provided'}\nCourse Interest: ${leadData.courseInterest}\nCity: ${leadData.city || 'Not provided'}\nGrade: ${leadData.grade || 'Not provided'}\n\nMessage: ${leadData.message || 'No message'}\n\nPlease contact within 2 hours for best conversion.`,
@@ -556,7 +556,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Log activity
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         userId: counselor.id,
         leadId: lead.id,

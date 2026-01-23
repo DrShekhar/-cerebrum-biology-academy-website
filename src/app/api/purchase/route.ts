@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
       }
 
       // Find or create user account
-      let user = await prisma.user.findFirst({
+      let user = await prisma.users.findFirst({
         where: {
           OR: [{ email: validatedData.email }, { phone: validatedData.phone }],
         },
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
         const tempPassword = Math.random().toString(36).slice(-12)
         const passwordHash = await hashPassword(tempPassword)
 
-        user = await prisma.user.create({
+        user = await prisma.users.create({
           data: {
             email: validatedData.email,
             phone: validatedData.phone,

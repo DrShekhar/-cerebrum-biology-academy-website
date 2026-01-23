@@ -268,7 +268,7 @@ class PaymentReminderService {
     installment: any,
     urgency: 'OVERDUE' | 'DUE_TOMORROW'
   ) {
-    const existingTask = await prisma.task.findFirst({
+    const existingTask = await prisma.tasks.findFirst({
       where: {
         leadId: lead.id,
         type: 'PAYMENT_REMINDER',
@@ -301,7 +301,7 @@ Action Required:
 - Offer assistance if needed
 - Update installment status after payment`
 
-    await prisma.task.create({
+    await prisma.tasks.create({
       data: {
         leadId: lead.id,
         title,
@@ -316,7 +316,7 @@ Action Required:
       },
     })
 
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         userId: lead.assignedToId,
         leadId: lead.id,
@@ -406,7 +406,7 @@ Action Required:
           },
         })
 
-        await prisma.activity.create({
+        await prisma.activities.create({
           data: {
             userId: lead.assignedToId,
             leadId: lead.id,

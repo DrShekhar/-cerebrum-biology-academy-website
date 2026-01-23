@@ -21,7 +21,7 @@ async function handlePATCH(
     const body = await request.json()
     const validatedData = updateTaskSchema.parse(body)
 
-    const existingTask = await prisma.task.findUnique({
+    const existingTask = await prisma.tasks.findUnique({
       where: { id },
       include: {
         lead: {
@@ -62,7 +62,7 @@ async function handlePATCH(
       updateData.completedAt = new Date()
     }
 
-    const task = await prisma.task.update({
+    const task = await prisma.tasks.update({
       where: { id },
       data: updateData,
       include: {
@@ -76,7 +76,7 @@ async function handlePATCH(
     })
 
     if (task.leadId) {
-      await prisma.activity.create({
+      await prisma.activities.create({
         data: {
           userId: session.userId,
           leadId: task.leadId,
@@ -123,7 +123,7 @@ async function handleDELETE(
   try {
     const { id } = await context.params
 
-    const existingTask = await prisma.task.findUnique({
+    const existingTask = await prisma.tasks.findUnique({
       where: { id },
     })
 
@@ -147,7 +147,7 @@ async function handleDELETE(
       )
     }
 
-    await prisma.task.delete({
+    await prisma.tasks.delete({
       where: { id },
     })
 

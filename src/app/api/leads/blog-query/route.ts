@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
     const userAgent = request.headers.get('user-agent') || 'unknown'
 
     // Create or update lead in database
-    const lead = await prisma.lead.create({
+    const lead = await prisma.leads.create({
       data: {
         source: source || 'blog_whatsapp_query',
         status: 'NEW',

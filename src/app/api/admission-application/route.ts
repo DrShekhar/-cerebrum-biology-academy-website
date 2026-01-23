@@ -61,14 +61,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user exists or create new
-    let user = await prisma.user.findFirst({
+    let user = await prisma.users.findFirst({
       where: {
         OR: [{ email: personalInfo.email }, { phone: formattedPhone }],
       },
     })
 
     if (!user) {
-      user = await prisma.user.create({
+      user = await prisma.users.create({
         data: {
           name: `${personalInfo.firstName} ${personalInfo.lastName}`,
           email: personalInfo.email,
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create lead for counselor follow-up
-    const lead = await prisma.lead.create({
+    const lead = await prisma.leads.create({
       data: {
         name: `${personalInfo.firstName} ${personalInfo.lastName}`,
         email: personalInfo.email,
@@ -187,7 +187,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Application ID required' }, { status: 400 })
     }
 
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: applicationId },
     })
 

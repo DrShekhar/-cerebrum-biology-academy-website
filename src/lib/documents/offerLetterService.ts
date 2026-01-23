@@ -35,7 +35,7 @@ class OfferLetterService {
       console.log('📄 Generating offer letter:', params)
 
       // Fetch lead data
-      const lead = await prisma.lead.findUnique({
+      const lead = await prisma.leads.findUnique({
         where: { id: params.leadId },
         include: {
           assignedTo: {
@@ -85,7 +85,7 @@ class OfferLetterService {
       }
 
       // Fetch counselor data
-      const counselor = await prisma.user.findUnique({
+      const counselor = await prisma.users.findUnique({
         where: { id: params.userId },
         select: {
           id: true,
@@ -231,7 +231,7 @@ class OfferLetterService {
     try {
       // Fetch all required data
       const [lead, feePlan, offer] = await Promise.all([
-        prisma.lead.findUnique({
+        prisma.leads.findUnique({
           where: { id: leadId },
           include: {
             assignedTo: {
@@ -336,7 +336,7 @@ class OfferLetterService {
   ): Promise<{ canGenerate: boolean; reason?: string }> {
     try {
       const [lead, feePlan, offer] = await Promise.all([
-        prisma.lead.findUnique({ where: { id: leadId } }),
+        prisma.leads.findUnique({ where: { id: leadId } }),
         prisma.feePlan.findUnique({ where: { id: feePlanId } }),
         prisma.offer.findUnique({ where: { id: offerId } }),
       ])

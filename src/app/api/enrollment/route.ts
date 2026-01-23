@@ -37,14 +37,14 @@ export async function POST(request: NextRequest) {
     }
 
     if (!userId) {
-      const existingUser = await prisma.user.findUnique({
+      const existingUser = await prisma.users.findUnique({
         where: { email: validatedData.email },
       })
 
       if (existingUser) {
         userId = existingUser.id
       } else {
-        const newUser = await prisma.user.create({
+        const newUser = await prisma.users.create({
           data: {
             name: validatedData.studentName,
             email: validatedData.email,

@@ -195,13 +195,13 @@ export class DemoBookingService {
   ): Promise<void> {
     try {
       // Get or create user
-      let user = await prisma.user.findUnique({
+      let user = await prisma.users.findUnique({
         where: { phone: phoneNumber },
       })
 
       if (!user) {
         // Create new user
-        user = await prisma.user.create({
+        user = await prisma.users.create({
           data: {
             phone: phoneNumber,
             name: studentDetails.name || 'WhatsApp Student',

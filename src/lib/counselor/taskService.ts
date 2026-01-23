@@ -125,7 +125,7 @@ export class TaskService {
    */
   static async createTask(params: CreateTaskParams) {
     try {
-      const task = await prisma.task.create({
+      const task = await prisma.tasks.create({
         data: {
           leadId: params.leadId,
           title: params.title,
@@ -149,7 +149,7 @@ export class TaskService {
       })
 
       if (params.leadId) {
-        await prisma.activity.create({
+        await prisma.activities.create({
           data: {
             leadId: params.leadId,
             type: 'TASK_CREATED',
@@ -181,7 +181,7 @@ export class TaskService {
         return null
       }
 
-      const lead = await prisma.lead.findUnique({
+      const lead = await prisma.leads.findUnique({
         where: { id: params.leadId },
         select: { studentName: true },
       })
@@ -226,7 +226,7 @@ export class TaskService {
         updateData.completedAt = new Date()
       }
 
-      const task = await prisma.task.update({
+      const task = await prisma.tasks.update({
         where: { id: taskId },
         data: updateData,
         include: {
@@ -240,7 +240,7 @@ export class TaskService {
       })
 
       if (task.leadId) {
-        await prisma.activity.create({
+        await prisma.activities.create({
           data: {
             leadId: task.leadId,
             type: 'TASK_UPDATED',
@@ -269,7 +269,7 @@ export class TaskService {
    */
   static async deleteTask(taskId: string) {
     try {
-      await prisma.task.delete({
+      await prisma.tasks.delete({
         where: { id: taskId },
       })
     } catch (error) {
@@ -309,7 +309,7 @@ export class TaskService {
         }
       }
 
-      const tasks = await prisma.task.findMany({
+      const tasks = await prisma.tasks.findMany({
         where,
         include: {
           lead: {
@@ -338,7 +338,7 @@ export class TaskService {
    */
   static async getOverdueTasksCount(counselorId: string): Promise<number> {
     try {
-      const count = await prisma.task.count({
+      const count = await prisma.tasks.count({
         where: {
           assignedToId: counselorId,
           dueDate: {
@@ -368,7 +368,7 @@ export class TaskService {
       const tomorrow = new Date(today)
       tomorrow.setDate(tomorrow.getDate() + 1)
 
-      const count = await prisma.task.count({
+      const count = await prisma.tasks.count({
         where: {
           assignedToId: counselorId,
           dueDate: {
@@ -394,16 +394,16 @@ export class TaskService {
   static async getTaskStats(counselorId: string) {
     try {
       const [total, todo, inProgress, completed, overdue, dueToday] = await Promise.all([
-        prisma.task.count({
+        prisma.tasks.count({
           where: { assignedToId: counselorId },
         }),
-        prisma.task.count({
+        prisma.tasks.count({
           where: { assignedToId: counselorId, status: 'TODO' },
         }),
-        prisma.task.count({
+        prisma.tasks.count({
           where: { assignedToId: counselorId, status: 'IN_PROGRESS' },
         }),
-        prisma.task.count({
+        prisma.tasks.count({
           where: { assignedToId: counselorId, status: 'COMPLETED' },
         }),
         this.getOverdueTasksCount(counselorId),
@@ -462,7 +462,7 @@ export class TaskService {
       const createdTasks = []
 
       for (const installment of dueInstallments) {
-        const existingTask = await prisma.task.findFirst({
+        const existingTask = await prisma.tasks.findFirst({
           where: {
             leadId: installment.fee_plans.leadId,
             type: 'PAYMENT_REMINDER',
@@ -531,7 +531,7 @@ export class TaskService {
       const createdTasks = []
 
       for (const offer of expiringOffers) {
-        const existingTask = await prisma.task.findFirst({
+        const existingTask = await prisma.tasks.findFirst({
           where: {
             leadId: offer.leadId,
             type: 'OFFER_EXPIRY',

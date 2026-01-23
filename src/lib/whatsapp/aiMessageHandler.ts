@@ -298,7 +298,7 @@ export class AIMessageHandler {
    */
   private async getEnrollmentStatus(phoneNumber: string): Promise<string> {
     try {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.users.findUnique({
         where: { phone: phoneNumber },
         include: {
           enrollments: {
@@ -340,7 +340,7 @@ export class AIMessageHandler {
    */
   private async getStudentId(phoneNumber: string): Promise<string> {
     try {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.users.findUnique({
         where: { phone: phoneNumber },
         select: { id: true },
       })
@@ -414,7 +414,7 @@ export class AIMessageHandler {
     metadata?: any
   ): Promise<void> {
     try {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.users.findUnique({
         where: { phone: messageData.from },
       })
 

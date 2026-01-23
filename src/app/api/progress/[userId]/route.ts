@@ -287,7 +287,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Determine if this is a free user or regular user
-    const targetUser = await prisma.user.findUnique({
+    const targetUser = await prisma.users.findUnique({
       where: { id: userId },
       select: { id: true, role: true, name: true, email: true },
     })

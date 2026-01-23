@@ -192,7 +192,7 @@ export async function getLastActiveDate(
     // Check last active field in user table
     let lastActiveFromProfile: Date | null = null
     if (userType === 'user') {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.users.findUnique({
         where: { id: userId },
         select: { lastActiveAt: true },
       })
