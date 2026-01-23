@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -289,7 +290,13 @@ export function StudentCommunity() {
             {/* Create Post */}
             <div className="bg-white rounded-lg shadow-sm border p-4">
               <div className="flex items-start space-x-3">
-                <img src="/avatars/current-user.jpg" alt="You" className="w-10 h-10 rounded-full" />
+                <Image
+                  src="/avatars/current-user.jpg"
+                  alt="Your profile avatar"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
                 <div className="flex-1">
                   <textarea
                     value={newPost}

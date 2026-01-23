@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 
+// ISR: Revalidate every 24 hours - static legal content
+export const revalidate = 86400
+
 export const metadata: Metadata = {
   title: 'Privacy Policy | Cerebrum Biology Academy',
   description:

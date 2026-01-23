@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { FileText, Pencil, Layers, Star, Archive, MoreVertical, Trash2 } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 
@@ -80,8 +81,14 @@ export function NoteCard({ note, onClick, onFavorite, onArchive, onDelete }: Not
       className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all cursor-pointer overflow-hidden group"
     >
       {note.thumbnail ? (
-        <div className="h-32 bg-gray-100 overflow-hidden">
-          <img src={note.thumbnail} alt={note.title} className="w-full h-full object-cover" />
+        <div className="h-32 bg-gray-100 overflow-hidden relative">
+          <Image
+            src={note.thumbnail}
+            alt={note.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
         </div>
       ) : (
         <div className={`h-32 ${config.bg} flex items-center justify-center`}>
