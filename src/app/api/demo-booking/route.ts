@@ -1,5 +1,7 @@
 // Demo Booking API Route
 // Handles demo booking submissions with real-time notifications
+// POST: Public (with rate limiting + honeypot spam protection)
+// GET/PUT: Admin-only (requires authentication)
 
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
@@ -10,6 +12,7 @@ import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversion'
+import { withAdmin, UserSession } from '@/lib/auth/middleware'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -36,23 +39,54 @@ const DemoBookingSchema = z.object({
   }, 'Preferred date must be today or in the future'),
   preferredTime: z.string().regex(/^\d{2}:\d{2} [AP]M - \d{2}:\d{2} [AP]M$/, 'Invalid time format'),
   message: z.string().max(500, 'Message must be less than 500 characters').optional(),
+  // Honeypot field - should always be empty (bots will fill it)
+  website: z.string().max(0, 'Invalid submission').optional(),
 })
 
 // Rate limiting store (in production, use Redis)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>()
 
+// Spam detection: track submission patterns
+const spamDetectionStore = new Map<string, { submissions: number[]; blocked: boolean }>()
+
 // Database is now imported from db-admin.ts
 
 export async function POST(request: NextRequest) {
   try {
-    // Rate limiting check
-    const clientIp = request.headers.get('x-forwarded-for') || 'unknown'
+    // Get client IP (parse first IP from x-forwarded-for to prevent spoofing)
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor
+      ? forwardedFor.split(',')[0].trim()
+      : request.headers.get('x-real-ip') || 'unknown'
     const now = Date.now()
-    const rateLimit = rateLimitStore.get(clientIp)
 
+    // Check if IP is permanently blocked (spam detected)
+    const spamRecord = spamDetectionStore.get(clientIp)
+    if (spamRecord?.blocked) {
+      console.warn(`[Demo Booking] Blocked spam attempt from ${clientIp}`)
+      return NextResponse.json(
+        { error: 'Your IP has been temporarily blocked due to suspicious activity.' },
+        { status: 403 }
+      )
+    }
+
+    // Rate limiting check (5 requests per 15 minutes)
+    const rateLimit = rateLimitStore.get(clientIp)
     if (rateLimit && rateLimit.resetTime > now) {
       if (rateLimit.count >= 5) {
-        // Max 5 requests per 15 minutes
+        // Track for spam detection - if they hit rate limit multiple times, block them
+        if (spamRecord) {
+          spamRecord.submissions.push(now)
+          // If 3+ rate limit hits in 1 hour, block for 24 hours
+          const recentHits = spamRecord.submissions.filter(t => t > now - 3600000)
+          if (recentHits.length >= 3) {
+            spamRecord.blocked = true
+            console.warn(`[Demo Booking] IP ${clientIp} blocked for repeated rate limit violations`)
+          }
+        } else {
+          spamDetectionStore.set(clientIp, { submissions: [now], blocked: false })
+        }
+
         return NextResponse.json(
           { error: 'Rate limit exceeded. Please try again later.' },
           { status: 429 }
@@ -67,6 +101,25 @@ export async function POST(request: NextRequest) {
     }
 
     const rawData = await request.json()
+
+    // Honeypot check - if 'website' field is filled, it's a bot
+    if (rawData.website && rawData.website.length > 0) {
+      console.warn(`[Demo Booking] Honeypot triggered from ${clientIp}`)
+      // Return success to fool the bot, but don't save anything
+      return NextResponse.json({
+        success: true,
+        bookingId: 'demo_' + Math.random().toString(36).substring(7),
+        message: 'Demo booking created successfully',
+      })
+    }
+
+    // Time-based spam check: submission must take at least 3 seconds (bots are fast)
+    const formStartTime = rawData._formStartTime
+    if (formStartTime && (now - formStartTime) < 3000) {
+      console.warn(`[Demo Booking] Suspiciously fast submission from ${clientIp}`)
+      // Don't reject, but flag for review
+      rawData._flaggedForReview = true
+    }
 
     // Validate and sanitize input data
     const validationResult = DemoBookingSchema.safeParse(rawData)
@@ -593,7 +646,8 @@ async function notifyAdminTeam(bookingData: any) {
 }
 
 // Handle GET requests for fetching demo bookings (admin use)
-export async function GET(request: NextRequest) {
+// Protected with admin authentication
+async function handleGet(request: NextRequest, session: UserSession) {
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')
@@ -663,8 +717,12 @@ export async function GET(request: NextRequest) {
   }
 }
 
+// Export GET with admin authentication
+export const GET = withAdmin(handleGet)
+
 // Handle PUT requests for updating demo bookings (admin use)
-export async function PUT(request: NextRequest) {
+// Protected with admin authentication
+async function handlePut(request: NextRequest, session: UserSession) {
   try {
     const { bookingId, updates } = await request.json()
 
@@ -690,6 +748,9 @@ export async function PUT(request: NextRequest) {
       },
     })
 
+    // Log admin action for audit trail
+    console.log(`[Demo Booking] Admin ${session.userId} updated booking ${bookingId}`)
+
     return NextResponse.json({
       success: true,
       message: 'Demo booking updated successfully',
@@ -706,3 +767,6 @@ export async function PUT(request: NextRequest) {
     )
   }
 }
+
+// Export PUT with admin authentication
+export const PUT = withAdmin(handlePut)
