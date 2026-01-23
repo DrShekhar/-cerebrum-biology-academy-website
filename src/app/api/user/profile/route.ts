@@ -1,18 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/database/connection'
+import { withAuth, UserSession } from '@/lib/auth/middleware'
 
 /**
  * POST /api/user/profile
  * Save or update user profile with track selection and onboarding data
+ * SECURITY: Requires authentication - users can only update their own profile
  */
-export async function POST(request: NextRequest) {
+async function handlePost(request: NextRequest, session: UserSession) {
   try {
     const body = await request.json()
-    const { userId, profile } = body
+    const { profile } = body
 
-    if (!userId) {
-      return NextResponse.json({ success: false, error: 'User ID is required' }, { status: 400 })
-    }
+    // SECURITY: Use authenticated user's ID, not client-provided userId
+    // This prevents users from modifying other users' profiles
+    const userId = session.userId
 
     if (!profile) {
       return NextResponse.json(
@@ -53,29 +55,30 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error updating user profile:', error)
+    // SECURITY: Don't expose internal error details to client
     return NextResponse.json(
       {
         success: false,
         error: 'Failed to update profile',
-        details: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     )
   }
 }
 
-/**
- * GET /api/user/profile?userId=xxx
- * Get user profile
- */
-export async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = new URL(request.url)
-    const userId = searchParams.get('userId')
+// Export with authentication middleware
+export const POST = withAuth(handlePost)
 
-    if (!userId) {
-      return NextResponse.json({ success: false, error: 'User ID is required' }, { status: 400 })
-    }
+/**
+ * GET /api/user/profile
+ * Get authenticated user's profile
+ * SECURITY: Requires authentication - users can only view their own profile
+ */
+async function handleGet(request: NextRequest, session: UserSession) {
+  try {
+    // SECURITY: Use authenticated user's ID, not query param
+    // This prevents users from viewing other users' profiles
+    const userId = session.userId
 
     const user = await prisma.users.findUnique({
       where: { id: userId },
@@ -114,13 +117,16 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error fetching user profile:', error)
+    // SECURITY: Don't expose internal error details to client
     return NextResponse.json(
       {
         success: false,
         error: 'Failed to fetch profile',
-        details: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     )
   }
 }
+
+// Export with authentication middleware
+export const GET = withAuth(handleGet)

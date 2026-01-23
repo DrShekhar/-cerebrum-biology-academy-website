@@ -43,7 +43,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const passwordHash = await bcrypt.hash(validatedData.password, 10)
+    // SECURITY: Use 12 salt rounds (standardized across the application)
+    const passwordHash = await bcrypt.hash(validatedData.password, 12)
 
     const user = await prisma.users.create({
       data: {

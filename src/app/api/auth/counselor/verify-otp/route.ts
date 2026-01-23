@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { signIn } from '@/lib/auth'
 import { z } from 'zod'
+import crypto from 'crypto'
 
 const verifyOTPSchema = z.object({
   phoneNumber: z.string().min(10, 'Phone number must be at least 10 digits'),
@@ -95,7 +96,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const verificationToken = `${Date.now()}_${Math.random().toString(36).substring(2, 15)}`
+    // SECURITY: Use cryptographically secure random token instead of predictable Math.random()
+    const verificationToken = crypto.randomBytes(32).toString('hex')
     const verificationTokenExpiry = new Date(Date.now() + 5 * 60 * 1000)
 
     await prisma.users.update({
