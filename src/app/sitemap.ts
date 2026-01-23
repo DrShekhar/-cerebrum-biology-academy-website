@@ -4939,6 +4939,68 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92, // West Pune IT corridor
     },
+    // State Board Pages - English Medium NEET Preparation
+    {
+      url: `${baseUrl}/maharashtra-hsc-biology-tuition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // High population state
+    },
+    {
+      url: `${baseUrl}/karnataka-puc-biology-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // IT hub state
+    },
+    {
+      url: `${baseUrl}/tamil-nadu-biology-tuition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Strong NEET aspirant base
+    },
+    {
+      url: `${baseUrl}/telangana-inter-biology-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Hyderabad hub
+    },
+    {
+      url: `${baseUrl}/kerala-biology-tuition-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Best NCERT alignment
+    },
+    // Tier-2 City Pages - Emerging Markets
+    {
+      url: `${baseUrl}/neet-coaching-chandigarh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Union Territory - high income
+    },
+    {
+      url: `${baseUrl}/neet-coaching-bhopal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // MP capital - AIIMS Bhopal
+    },
+    {
+      url: `${baseUrl}/neet-coaching-indore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // MP coaching hub
+    },
+    {
+      url: `${baseUrl}/biology-tuition-surat`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Gujarat diamond city
+    },
+    {
+      url: `${baseUrl}/biology-coaching-nagpur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // AIIMS Nagpur - Central India
+    },
   ]
 
   return routes
