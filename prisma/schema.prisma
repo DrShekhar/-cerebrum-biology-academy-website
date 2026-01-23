@@ -798,10 +798,26 @@ model courses {
   enrollments             enrollments[]
   product_recommendations product_recommendations[]
   study_materials         study_materials[]
+  course_pricing          course_pricing[]
 
   @@index([class, isActive])
   @@index([isActive, sortOrder])
   @@index([type, isActive])
+}
+
+model course_pricing {
+  id        String   @id @default(cuid())
+  courseId  String
+  currency  String   // INR, USD, EUR, GBP, AUD, CAD, AED, SGD
+  amount    Int      // Amount in smallest currency unit (paise, cents)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  course    courses  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, currency])
+  @@index([currency, isActive])
 }
 
 model crm_communications {

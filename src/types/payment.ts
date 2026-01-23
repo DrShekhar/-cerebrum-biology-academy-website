@@ -5,6 +5,39 @@
 
 import { PaymentStatus, PaymentMethod, PaymentStatusEnum } from '@/generated/prisma'
 
+export const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
+export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
+
+export interface CurrencyInfo {
+  code: SupportedCurrency
+  symbol: string
+  name: string
+  locale: string
+}
+
+export interface CreateOrderRequest {
+  amount: number
+  currency?: SupportedCurrency
+  receipt?: string
+  notes?: Record<string, string>
+  enrollmentId?: string
+  userId?: string
+}
+
+export interface CreateOrderResponse {
+  success: boolean
+  id?: string
+  entity?: string
+  amount?: number
+  amountDisplay?: number
+  currency?: SupportedCurrency
+  currencySymbol?: string
+  receipt?: string
+  status?: string
+  created_at?: number
+  error?: string
+}
+
 export interface StudentPayment {
   id: string
   userId: string
