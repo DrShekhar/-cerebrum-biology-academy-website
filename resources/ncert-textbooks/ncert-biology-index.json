@@ -1,0 +1,562 @@
+{
+  "class11": {
+    "subject": "Biology",
+    "bookCode": "NCERT-BIO-11",
+    "totalChapters": 22,
+    "units": [
+      {
+        "unitNo": 1,
+        "name": "Diversity in the Living World",
+        "chapters": [
+          {
+            "chapterNo": 1,
+            "name": "The Living World",
+            "pdfFile": "class11-ch01.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "1.1", "title": "Taxonomic hierarchy", "page": 7},
+              {"figure": "1.2", "title": "Binomial nomenclature", "page": 9}
+            ],
+            "topics": ["What is living?", "Diversity in the living world", "Taxonomic categories", "Taxonomic aids"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 1, "end": 16}
+          },
+          {
+            "chapterNo": 2,
+            "name": "Biological Classification",
+            "pdfFile": "class11-ch02.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "2.1", "title": "Five Kingdom Classification", "page": 18},
+              {"figure": "2.2", "title": "Bacteria cell structure", "page": 22}
+            ],
+            "topics": ["Kingdom Monera", "Kingdom Protista", "Kingdom Fungi", "Kingdom Plantae", "Kingdom Animalia", "Viruses, Viroids and Lichens"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 17, "end": 36}
+          },
+          {
+            "chapterNo": 3,
+            "name": "Plant Kingdom",
+            "pdfFile": "class11-ch03.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "3.1", "title": "Algae types", "page": 38},
+              {"figure": "3.2", "title": "Life cycle of plants", "page": 48}
+            ],
+            "topics": ["Algae", "Bryophytes", "Pteridophytes", "Gymnosperms", "Angiosperms", "Plant life cycles"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 37, "end": 56}
+          },
+          {
+            "chapterNo": 4,
+            "name": "Animal Kingdom",
+            "pdfFile": "class11-ch04.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "4.1", "title": "Levels of organization", "page": 58},
+              {"figure": "4.2", "title": "Body symmetry", "page": 60}
+            ],
+            "topics": ["Basis of classification", "Non-chordates", "Phylum Chordata", "Class Mammalia"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 57, "end": 84}
+          }
+        ]
+      },
+      {
+        "unitNo": 2,
+        "name": "Structural Organisation in Animals and Plants",
+        "chapters": [
+          {
+            "chapterNo": 5,
+            "name": "Morphology of Flowering Plants",
+            "pdfFile": "class11-ch05.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "5.1", "title": "Root types", "page": 86},
+              {"figure": "5.3", "title": "Leaf types", "page": 92}
+            ],
+            "topics": ["Root", "Stem", "Leaf", "Inflorescence", "Flower", "Fruit", "Seed"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 85, "end": 112}
+          },
+          {
+            "chapterNo": 6,
+            "name": "Anatomy of Flowering Plants",
+            "pdfFile": "class11-ch06.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "6.1", "title": "Plant tissues", "page": 114},
+              {"figure": "6.5", "title": "Secondary growth", "page": 125}
+            ],
+            "topics": ["Tissues", "Tissue system", "Anatomy of dicot and monocot", "Secondary growth"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 113, "end": 134}
+          },
+          {
+            "chapterNo": 7,
+            "name": "Structural Organisation in Animals",
+            "pdfFile": "class11-ch07.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "7.1", "title": "Animal tissues", "page": 136},
+              {"figure": "7.5", "title": "Cockroach anatomy", "page": 148}
+            ],
+            "topics": ["Animal tissues", "Organ and organ systems", "Cockroach - morphology and anatomy"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 135, "end": 158}
+          }
+        ]
+      },
+      {
+        "unitNo": 3,
+        "name": "Cell: Structure and Functions",
+        "chapters": [
+          {
+            "chapterNo": 8,
+            "name": "Cell - The Unit of Life",
+            "pdfFile": "class11-ch08.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "8.1", "title": "Prokaryotic cell", "page": 160},
+              {"figure": "8.3", "title": "Eukaryotic cell", "page": 165}
+            ],
+            "topics": ["Cell theory", "Prokaryotic cells", "Eukaryotic cells", "Cell organelles"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 159, "end": 182}
+          },
+          {
+            "chapterNo": 9,
+            "name": "Biomolecules",
+            "pdfFile": "class11-ch09.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "9.1", "title": "Carbohydrate structures", "page": 185},
+              {"figure": "9.5", "title": "Enzyme action", "page": 198}
+            ],
+            "topics": ["Carbohydrates", "Proteins", "Lipids", "Nucleic acids", "Enzymes", "Metabolism"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 183, "end": 210}
+          },
+          {
+            "chapterNo": 10,
+            "name": "Cell Cycle and Cell Division",
+            "pdfFile": "class11-ch10.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "10.1", "title": "Cell cycle phases", "page": 212},
+              {"figure": "10.3", "title": "Mitosis stages", "page": 218}
+            ],
+            "topics": ["Cell cycle", "Mitosis", "Meiosis", "Significance of mitosis and meiosis"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 211, "end": 230}
+          }
+        ]
+      },
+      {
+        "unitNo": 4,
+        "name": "Plant Physiology",
+        "chapters": [
+          {
+            "chapterNo": 11,
+            "name": "Transport in Plants",
+            "pdfFile": "class11-ch11.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "11.1", "title": "Water potential", "page": 232},
+              {"figure": "11.5", "title": "Transpiration pull", "page": 242}
+            ],
+            "topics": ["Means of transport", "Plant-water relations", "Transpiration", "Uptake of mineral ions", "Phloem transport"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 231, "end": 254}
+          },
+          {
+            "chapterNo": 12,
+            "name": "Mineral Nutrition",
+            "pdfFile": "class11-ch12.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "12.1", "title": "Deficiency symptoms", "page": 256},
+              {"figure": "12.2", "title": "Nitrogen cycle", "page": 262}
+            ],
+            "topics": ["Essential mineral elements", "Mechanism of mineral absorption", "Nitrogen metabolism"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 255, "end": 272}
+          },
+          {
+            "chapterNo": 13,
+            "name": "Photosynthesis in Higher Plants",
+            "pdfFile": "class11-ch13.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "13.1", "title": "Chloroplast structure", "page": 274},
+              {"figure": "13.5", "title": "Calvin cycle", "page": 288}
+            ],
+            "topics": ["Early experiments", "Light reactions", "Calvin cycle", "C4 pathway", "Photorespiration"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 273, "end": 298}
+          },
+          {
+            "chapterNo": 14,
+            "name": "Respiration in Plants",
+            "pdfFile": "class11-ch14.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "14.1", "title": "Glycolysis", "page": 300},
+              {"figure": "14.3", "title": "Krebs cycle", "page": 308}
+            ],
+            "topics": ["Glycolysis", "Fermentation", "Aerobic respiration", "Respiratory quotient"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 299, "end": 318}
+          },
+          {
+            "chapterNo": 15,
+            "name": "Plant Growth and Development",
+            "pdfFile": "class11-ch15.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "15.1", "title": "Growth curve", "page": 320},
+              {"figure": "15.4", "title": "Auxin action", "page": 330}
+            ],
+            "topics": ["Growth", "Differentiation", "Plant hormones", "Photoperiodism", "Vernalization"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 319, "end": 342}
+          }
+        ]
+      },
+      {
+        "unitNo": 5,
+        "name": "Human Physiology",
+        "chapters": [
+          {
+            "chapterNo": 16,
+            "name": "Digestion and Absorption",
+            "pdfFile": "class11-ch16.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "16.1", "title": "Human digestive system", "page": 344},
+              {"figure": "16.3", "title": "Stomach structure", "page": 350}
+            ],
+            "topics": ["Digestive system", "Digestion of food", "Absorption", "Disorders of digestive system"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 343, "end": 366}
+          },
+          {
+            "chapterNo": 17,
+            "name": "Breathing and Exchange of Gases",
+            "pdfFile": "class11-ch17.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "17.1", "title": "Human respiratory system", "page": 368},
+              {"figure": "17.4", "title": "Oxygen dissociation curve", "page": 378}
+            ],
+            "topics": ["Respiratory organs", "Mechanism of breathing", "Exchange of gases", "Transport of gases"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 367, "end": 386}
+          },
+          {
+            "chapterNo": 18,
+            "name": "Body Fluids and Circulation",
+            "pdfFile": "class11-ch18.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "18.1", "title": "Human heart", "page": 388},
+              {"figure": "18.4", "title": "Blood vessels", "page": 396}
+            ],
+            "topics": ["Blood", "Lymph", "Circulatory pathways", "Cardiac cycle", "ECG"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 387, "end": 412}
+          },
+          {
+            "chapterNo": 19,
+            "name": "Excretory Products and their Elimination",
+            "pdfFile": "class11-ch19.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "19.1", "title": "Human excretory system", "page": 414},
+              {"figure": "19.3", "title": "Nephron structure", "page": 418}
+            ],
+            "topics": ["Human excretory system", "Urine formation", "Regulation of kidney function", "Disorders"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 413, "end": 434}
+          },
+          {
+            "chapterNo": 20,
+            "name": "Locomotion and Movement",
+            "pdfFile": "class11-ch20.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "20.1", "title": "Human skeleton", "page": 436},
+              {"figure": "20.5", "title": "Muscle contraction", "page": 448}
+            ],
+            "topics": ["Types of movement", "Skeletal system", "Joints", "Muscle", "Disorders"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 435, "end": 460}
+          },
+          {
+            "chapterNo": 21,
+            "name": "Neural Control and Coordination",
+            "pdfFile": "class11-ch21.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "21.1", "title": "Neuron structure", "page": 462},
+              {"figure": "21.5", "title": "Human brain", "page": 472}
+            ],
+            "topics": ["Nervous system", "Neuron", "Nerve impulse", "Central nervous system", "Sensory organs"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 461, "end": 494}
+          },
+          {
+            "chapterNo": 22,
+            "name": "Chemical Coordination and Integration",
+            "pdfFile": "class11-ch22.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "22.1", "title": "Endocrine glands", "page": 496},
+              {"figure": "22.3", "title": "Hormone action mechanism", "page": 502}
+            ],
+            "topics": ["Endocrine glands", "Hormones", "Mechanism of hormone action", "Disorders"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 495, "end": 520}
+          }
+        ]
+      }
+    ]
+  },
+  "class12": {
+    "subject": "Biology",
+    "bookCode": "NCERT-BIO-12",
+    "totalChapters": 16,
+    "units": [
+      {
+        "unitNo": 6,
+        "name": "Reproduction",
+        "chapters": [
+          {
+            "chapterNo": 1,
+            "name": "Reproduction in Organisms",
+            "pdfFile": "class12-ch01.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "1.1", "title": "Asexual reproduction types", "page": 3}
+            ],
+            "topics": ["Asexual reproduction", "Sexual reproduction", "Pre-fertilization events", "Post-fertilization events"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 1, "end": 18}
+          },
+          {
+            "chapterNo": 2,
+            "name": "Sexual Reproduction in Flowering Plants",
+            "pdfFile": "class12-ch02.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "2.1", "title": "Flower structure", "page": 20},
+              {"figure": "2.7", "title": "Double fertilization", "page": 32}
+            ],
+            "topics": ["Flower structure", "Microsporogenesis", "Megasporogenesis", "Pollination", "Double fertilization", "Endosperm"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 19, "end": 46}
+          },
+          {
+            "chapterNo": 3,
+            "name": "Human Reproduction",
+            "pdfFile": "class12-ch03.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "3.1", "title": "Male reproductive system", "page": 48},
+              {"figure": "3.3", "title": "Female reproductive system", "page": 52}
+            ],
+            "topics": ["Male reproductive system", "Female reproductive system", "Gametogenesis", "Menstrual cycle", "Fertilization", "Pregnancy"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 47, "end": 76}
+          },
+          {
+            "chapterNo": 4,
+            "name": "Reproductive Health",
+            "pdfFile": "class12-ch04.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "4.1", "title": "Contraceptive methods", "page": 80}
+            ],
+            "topics": ["Reproductive health", "Population explosion", "Birth control", "STDs", "Infertility"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 77, "end": 94}
+          }
+        ]
+      },
+      {
+        "unitNo": 7,
+        "name": "Genetics and Evolution",
+        "chapters": [
+          {
+            "chapterNo": 5,
+            "name": "Principles of Inheritance and Variation",
+            "pdfFile": "class12-ch05.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "5.1", "title": "Mendel's experiments", "page": 96},
+              {"figure": "5.6", "title": "Punnett square", "page": 106}
+            ],
+            "topics": ["Mendel's laws", "Chromosomal theory", "Linkage and crossing over", "Sex determination", "Mutations", "Genetic disorders"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 95, "end": 130}
+          },
+          {
+            "chapterNo": 6,
+            "name": "Molecular Basis of Inheritance",
+            "pdfFile": "class12-ch06.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "6.1", "title": "DNA structure", "page": 132},
+              {"figure": "6.10", "title": "Central dogma", "page": 148}
+            ],
+            "topics": ["DNA structure", "DNA replication", "Transcription", "Translation", "Gene regulation", "Human Genome Project"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 131, "end": 170}
+          },
+          {
+            "chapterNo": 7,
+            "name": "Evolution",
+            "pdfFile": "class12-ch07.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "7.1", "title": "Miller-Urey experiment", "page": 172},
+              {"figure": "7.5", "title": "Human evolution", "page": 186}
+            ],
+            "topics": ["Origin of life", "Evolution theories", "Evidences of evolution", "Adaptive radiation", "Human evolution"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 171, "end": 196}
+          }
+        ]
+      },
+      {
+        "unitNo": 8,
+        "name": "Biology and Human Welfare",
+        "chapters": [
+          {
+            "chapterNo": 8,
+            "name": "Human Health and Disease",
+            "pdfFile": "class12-ch08.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "8.1", "title": "Immune system", "page": 198},
+              {"figure": "8.5", "title": "AIDS lifecycle", "page": 210}
+            ],
+            "topics": ["Common diseases", "Immunity", "AIDS", "Cancer", "Drugs and alcohol abuse"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 197, "end": 226}
+          },
+          {
+            "chapterNo": 9,
+            "name": "Strategies for Enhancement in Food Production",
+            "pdfFile": "class12-ch09.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "9.1", "title": "Plant breeding steps", "page": 228}
+            ],
+            "topics": ["Animal husbandry", "Plant breeding", "Single cell protein", "Tissue culture"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 227, "end": 248}
+          },
+          {
+            "chapterNo": 10,
+            "name": "Microbes in Human Welfare",
+            "pdfFile": "class12-ch10.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "10.1", "title": "Biogas plant", "page": 254}
+            ],
+            "topics": ["Microbes in household products", "Industrial products", "Sewage treatment", "Biogas production", "Biocontrol agents"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 249, "end": 270}
+          }
+        ]
+      },
+      {
+        "unitNo": 9,
+        "name": "Biotechnology",
+        "chapters": [
+          {
+            "chapterNo": 11,
+            "name": "Biotechnology: Principles and Processes",
+            "pdfFile": "class12-ch11.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "11.1", "title": "Restriction enzymes", "page": 272},
+              {"figure": "11.5", "title": "PCR", "page": 282}
+            ],
+            "topics": ["Principles of biotechnology", "Restriction enzymes", "Cloning vectors", "rDNA technology", "PCR"],
+            "neetWeightage": "VERY_HIGH",
+            "pageRange": {"start": 271, "end": 296}
+          },
+          {
+            "chapterNo": 12,
+            "name": "Biotechnology and its Applications",
+            "pdfFile": "class12-ch12.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "12.1", "title": "Bt cotton", "page": 298}
+            ],
+            "topics": ["Bt crops", "GM organisms", "Gene therapy", "Transgenic animals", "Ethical issues"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 297, "end": 316}
+          }
+        ]
+      },
+      {
+        "unitNo": 10,
+        "name": "Ecology and Environment",
+        "chapters": [
+          {
+            "chapterNo": 13,
+            "name": "Organisms and Populations",
+            "pdfFile": "class12-ch13.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "13.1", "title": "Population growth curves", "page": 320}
+            ],
+            "topics": ["Organism and its environment", "Populations", "Population attributes", "Population growth", "Population interactions"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 317, "end": 342}
+          },
+          {
+            "chapterNo": 14,
+            "name": "Ecosystem",
+            "pdfFile": "class12-ch14.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "14.1", "title": "Food chain", "page": 344},
+              {"figure": "14.4", "title": "Energy flow", "page": 352}
+            ],
+            "topics": ["Ecosystem structure", "Productivity", "Decomposition", "Energy flow", "Ecological pyramids", "Nutrient cycling", "Ecological succession"],
+            "neetWeightage": "HIGH",
+            "pageRange": {"start": 343, "end": 368}
+          },
+          {
+            "chapterNo": 15,
+            "name": "Biodiversity and Conservation",
+            "pdfFile": "class12-ch15.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "15.1", "title": "Species-area relationship", "page": 372}
+            ],
+            "topics": ["Biodiversity", "Patterns of biodiversity", "Loss of biodiversity", "Conservation strategies"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 369, "end": 388}
+          },
+          {
+            "chapterNo": 16,
+            "name": "Environmental Issues",
+            "pdfFile": "class12-ch16.pdf",
+            "status": "available",
+            "keyDiagrams": [
+              {"figure": "16.1", "title": "Air pollution sources", "page": 390}
+            ],
+            "topics": ["Air pollution", "Water pollution", "Solid waste", "Ozone depletion", "Greenhouse effect", "Deforestation"],
+            "neetWeightage": "MEDIUM",
+            "pageRange": {"start": 389, "end": 410}
+          }
+        ]
+      }
+    ]
+  }
+}

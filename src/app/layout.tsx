@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import FacebookPixel from '@/components/analytics/FacebookPixel'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 // PERFORMANCE: Using hybrid header for faster mobile LCP
 // Server-rendered shell with lazy-loaded interactivity
@@ -157,6 +158,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="dns-prefetch" href="//giscus.app" />
         <link rel="dns-prefetch" href="//i.ytimg.com" />
+        <link rel="dns-prefetch" href="//connect.facebook.net" />
         <link rel="dns-prefetch" href="//assets.zyrosite.com" />
 
         {/* Fonts are handled by next/font/google - no manual preload needed */}
@@ -304,6 +306,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <GoogleAnalytics />
+        <FacebookPixel />
         <WebVitalsReporter />
         <DynamicPWAProvider />
         <FocusVisibleStyles />

@@ -31,6 +31,7 @@ import { DayPicker } from 'react-day-picker'
 import { format, addDays, startOfTomorrow } from 'date-fns'
 import 'react-day-picker/dist/style.css'
 import { useAnalytics } from '@/hooks/useAnalytics'
+import { useFacebookPixel } from '@/hooks/useFacebookPixel'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { useFormValidation } from '@/hooks/useFormValidation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -69,6 +70,7 @@ interface BookingData {
 
 export function DemoBookingSystem() {
   const { trackDemoRequest } = useAnalytics()
+  const { trackDemoBooking, trackFormStart, trackContentView } = useFacebookPixel()
   const { validationStates, validateField, formatPhone, capitalizeName } = useFormValidation()
   const [currentStep, setCurrentStep] = useState(1)
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
@@ -85,6 +87,12 @@ export function DemoBookingSystem() {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Track form view with Facebook Pixel
+  useEffect(() => {
+    trackContentView('Demo Booking Form', 'Lead Form')
+    trackFormStart('Demo Booking')
+  }, [trackContentView, trackFormStart])
 
   // Scroll input into view when focused (iOS keyboard handling)
   const handleInputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -379,12 +387,23 @@ export function DemoBookingSystem() {
       // Step 4: Send SMS Confirmation
       await sendSMSConfirmation(bookingIdResult)
 
-      // Step 5: Track analytics
+      // Step 5: Track analytics (Google Analytics)
       trackDemoRequest(
         bookingData.studentName,
         bookingData.courseInterest.join(', '),
         bookingData.phone
       )
+
+      // Step 5b: Track with Facebook Pixel (Lead event + Conversion API)
+      trackDemoBooking({
+        subject: bookingData.courseInterest.join(', '),
+        studentClass: bookingData.currentClass || 'Not specified',
+        studentName: bookingData.studentName,
+        phoneNumber: bookingData.phone,
+        email: bookingData.email,
+        preferredTime: selectedTime,
+        source: bookingData.hearAboutUs || 'direct',
+      })
 
       // Step 6: Show success screen
       setBookingComplete(true)
