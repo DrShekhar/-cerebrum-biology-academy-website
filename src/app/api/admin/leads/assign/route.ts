@@ -22,7 +22,14 @@ const bulkAssignSchema = z.object({
   rebalance: z.boolean().optional(),
   // Only include leads from specific stages
   stages: z.array(z.string()).optional(),
+  // Pagination for large datasets (max 500 per batch)
+  limit: z.number().min(1).max(500).optional().default(100),
+  // Offset for pagination
+  offset: z.number().min(0).optional().default(0),
 })
+
+// Maximum leads per bulk operation to prevent timeout/memory issues
+const MAX_BULK_OPERATION_SIZE = 500
 
 async function handlePOST(request: NextRequest, session: { userId: string; role: string }) {
   try {
@@ -193,7 +200,7 @@ async function handleGET(_request: NextRequest, _session: { userId: string; role
     const unassignedLeads = await prisma.leads.count({
       where: {
         OR: [
-          { assignedToId: null as unknown as string },
+          { assignedToId: null },
           { users: { isActive: false } },
         ],
       },
@@ -265,67 +272,45 @@ async function handlePUT(request: NextRequest, session: { userId: string; role: 
     }
 
     let assignedCount = 0
+    const assignedLeads: Array<{
+      lead: { id: string; studentName: string; email: string | null; phone: string; courseInterest: string; stage: string; priority: string; previousAssignedToId: string | null }
+      counselor: { id: string; name: string }
+    }> = []
 
     if (validatedData.assignUnassigned) {
-      // Find unassigned leads
+      // Find unassigned leads with full data for webhooks (with pagination)
       const unassignedLeads = await prisma.leads.findMany({
         where: {
           OR: [
-            { assignedToId: null as unknown as string },
+            { assignedToId: null },
             // Could also check for inactive counselors
           ],
           ...(validatedData.stages && {
             stage: { in: validatedData.stages as LeadStage[] },
           }),
         },
-        select: { id: true },
+        select: {
+          id: true,
+          studentName: true,
+          email: true,
+          phone: true,
+          courseInterest: true,
+          stage: true,
+          priority: true,
+          assignedToId: true,
+        },
+        take: Math.min(validatedData.limit || 100, MAX_BULK_OPERATION_SIZE),
+        skip: validatedData.offset || 0,
+        orderBy: { createdAt: 'asc' }, // Process oldest leads first
       })
 
-      // Round-robin assignment
-      for (let i = 0; i < unassignedLeads.length; i++) {
-        const counselor = counselors[i % counselors.length]
+      // Wrap in transaction for atomicity
+      await prisma.$transaction(async (tx) => {
+        for (let i = 0; i < unassignedLeads.length; i++) {
+          const counselor = counselors[i % counselors.length]
+          const lead = unassignedLeads[i]
 
-        await prisma.leads.update({
-          where: { id: unassignedLeads[i].id },
-          data: {
-            assignedToId: counselor.id,
-            updatedAt: new Date(),
-          },
-        })
-
-        await prisma.activities.create({
-          data: {
-            id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-            userId: session.userId,
-            leadId: unassignedLeads[i].id,
-            action: 'LEAD_AUTO_ASSIGNED',
-            description: `Lead auto-assigned to ${counselor.name}`,
-          },
-        })
-
-        assignedCount++
-      }
-    }
-
-    if (validatedData.rebalance) {
-      // Get all leads
-      const allLeads = await prisma.leads.findMany({
-        where: validatedData.stages
-          ? { stage: { in: validatedData.stages as LeadStage[] } }
-          : undefined,
-        select: { id: true, assignedToId: true },
-      })
-
-      // Calculate target per counselor (for reference, could be used for smarter distribution)
-      const _targetPerCounselor = Math.ceil(allLeads.length / counselors.length)
-
-      // Reassign to balance
-      for (let i = 0; i < allLeads.length; i++) {
-        const counselor = counselors[i % counselors.length]
-        const lead = allLeads[i]
-
-        if (lead.assignedToId !== counselor.id) {
-          await prisma.leads.update({
+          await tx.leads.update({
             where: { id: lead.id },
             data: {
               assignedToId: counselor.id,
@@ -333,10 +318,136 @@ async function handlePUT(request: NextRequest, session: { userId: string; role: 
             },
           })
 
+          await tx.activities.create({
+            data: {
+              id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}_${i}`,
+              userId: session.userId,
+              leadId: lead.id,
+              action: 'LEAD_AUTO_ASSIGNED',
+              description: `Lead auto-assigned to ${counselor.name}`,
+            },
+          })
+
+          assignedLeads.push({
+            lead: { ...lead, previousAssignedToId: lead.assignedToId },
+            counselor: { id: counselor.id, name: counselor.name },
+          })
           assignedCount++
         }
-      }
+      })
     }
+
+    if (validatedData.rebalance) {
+      // Get leads for rebalancing with pagination to prevent unbounded queries
+      const allLeads = await prisma.leads.findMany({
+        where: validatedData.stages
+          ? { stage: { in: validatedData.stages as LeadStage[] } }
+          : undefined,
+        select: {
+          id: true,
+          studentName: true,
+          email: true,
+          phone: true,
+          courseInterest: true,
+          stage: true,
+          priority: true,
+          assignedToId: true,
+        },
+        take: Math.min(validatedData.limit || 100, MAX_BULK_OPERATION_SIZE),
+        skip: validatedData.offset || 0,
+        orderBy: { createdAt: 'asc' }, // Consistent ordering for pagination
+      })
+
+      // Wrap rebalance in transaction for atomicity
+      await prisma.$transaction(async (tx) => {
+        for (let i = 0; i < allLeads.length; i++) {
+          const counselor = counselors[i % counselors.length]
+          const lead = allLeads[i]
+
+          if (lead.assignedToId !== counselor.id) {
+            await tx.leads.update({
+              where: { id: lead.id },
+              data: {
+                assignedToId: counselor.id,
+                updatedAt: new Date(),
+              },
+            })
+
+            await tx.activities.create({
+              data: {
+                id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}_rb_${i}`,
+                userId: session.userId,
+                leadId: lead.id,
+                action: 'LEAD_REBALANCED',
+                description: `Lead rebalanced to ${counselor.name}`,
+              },
+            })
+
+            assignedLeads.push({
+              lead: { ...lead, previousAssignedToId: lead.assignedToId },
+              counselor: { id: counselor.id, name: counselor.name },
+            })
+            assignedCount++
+          }
+        }
+      })
+    }
+
+    // Dispatch webhooks for all assigned leads (outside transaction, non-blocking)
+    if (assignedLeads.length > 0) {
+      // Fire webhooks in background, don't await all
+      setImmediate(async () => {
+        for (const { lead, counselor } of assignedLeads) {
+          try {
+            await WebhookService.onLeadAssigned(
+              {
+                id: lead.id,
+                studentName: lead.studentName,
+                email: lead.email,
+                phone: lead.phone,
+                courseInterest: lead.courseInterest,
+                stage: lead.stage,
+                priority: lead.priority,
+                previousAssignedToId: lead.previousAssignedToId,
+              },
+              { id: counselor.id, name: counselor.name }
+            )
+          } catch (webhookError) {
+            console.error(`Failed to dispatch webhook for lead ${lead.id}:`, webhookError)
+          }
+        }
+      })
+    }
+
+    // Get total counts for pagination info
+    let totalUnassigned = 0
+    let totalForRebalance = 0
+
+    if (validatedData.assignUnassigned) {
+      totalUnassigned = await prisma.leads.count({
+        where: {
+          OR: [{ assignedToId: null }],
+          ...(validatedData.stages && {
+            stage: { in: validatedData.stages as LeadStage[] },
+          }),
+        },
+      })
+    }
+
+    if (validatedData.rebalance) {
+      totalForRebalance = await prisma.leads.count({
+        where: validatedData.stages
+          ? { stage: { in: validatedData.stages as LeadStage[] } }
+          : undefined,
+      })
+    }
+
+    const limit = validatedData.limit || 100
+    const offset = validatedData.offset || 0
+    const totalRemaining = Math.max(
+      validatedData.assignUnassigned ? totalUnassigned - offset - assignedCount : 0,
+      validatedData.rebalance ? totalForRebalance - offset - assignedCount : 0
+    )
 
     return NextResponse.json({
       success: true,
@@ -344,6 +455,13 @@ async function handlePUT(request: NextRequest, session: { userId: string; role: 
       data: {
         processedCount: assignedCount,
         counselorCount: counselors.length,
+        pagination: {
+          limit,
+          offset,
+          hasMore: totalRemaining > 0,
+          remaining: totalRemaining,
+          total: validatedData.assignUnassigned ? totalUnassigned : totalForRebalance,
+        },
       },
     })
   } catch (error) {

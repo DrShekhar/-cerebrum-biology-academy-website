@@ -6,9 +6,86 @@ import { withAdmin } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
+// Blocked hosts to prevent SSRF attacks
+const BLOCKED_HOSTS = [
+  'localhost',
+  '127.0.0.1',
+  '0.0.0.0',
+  '::1',
+  '10.',
+  '172.16.',
+  '172.17.',
+  '172.18.',
+  '172.19.',
+  '172.20.',
+  '172.21.',
+  '172.22.',
+  '172.23.',
+  '172.24.',
+  '172.25.',
+  '172.26.',
+  '172.27.',
+  '172.28.',
+  '172.29.',
+  '172.30.',
+  '172.31.',
+  '192.168.',
+  '169.254.',
+  'metadata.google',
+  'metadata.aws',
+  '100.100.100.200', // AWS metadata
+]
+
+// Validate webhook URL to prevent SSRF
+function validateWebhookUrl(url: string): { valid: boolean; error?: string } {
+  try {
+    const parsedUrl = new URL(url)
+
+    // Must be HTTPS in production
+    if (process.env.NODE_ENV === 'production' && parsedUrl.protocol !== 'https:') {
+      return { valid: false, error: 'Webhook URL must use HTTPS in production' }
+    }
+
+    // Check for blocked hosts
+    const hostname = parsedUrl.hostname.toLowerCase()
+    for (const blocked of BLOCKED_HOSTS) {
+      if (hostname === blocked || hostname.startsWith(blocked) || hostname.endsWith('.' + blocked)) {
+        return { valid: false, error: 'Webhook URL cannot point to internal/private networks' }
+      }
+    }
+
+    // Block IPs that look like internal addresses
+    const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/
+    if (ipv4Regex.test(hostname)) {
+      const octets = hostname.split('.').map(Number)
+      // Block private ranges
+      if (octets[0] === 10 ||
+          (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
+          (octets[0] === 192 && octets[1] === 168) ||
+          (octets[0] === 127) ||
+          (octets[0] === 169 && octets[1] === 254)) {
+        return { valid: false, error: 'Webhook URL cannot point to private IP addresses' }
+      }
+    }
+
+    // Must have a valid port (default 443 for https, 80 for http)
+    const port = parsedUrl.port ? parseInt(parsedUrl.port) : (parsedUrl.protocol === 'https:' ? 443 : 80)
+    if (port < 1 || port > 65535) {
+      return { valid: false, error: 'Invalid port number' }
+    }
+
+    return { valid: true }
+  } catch {
+    return { valid: false, error: 'Invalid URL format' }
+  }
+}
+
 const webhookSchema = z.object({
   name: z.string().min(1).max(100),
-  url: z.string().url(),
+  url: z.string().url().refine(
+    (url) => validateWebhookUrl(url).valid,
+    (url) => ({ message: validateWebhookUrl(url).error || 'Invalid webhook URL' })
+  ),
   events: z.array(z.enum([
     'lead.created',
     'lead.updated',

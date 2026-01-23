@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { withCounselor } from '@/lib/auth/middleware'
 import type { UserSession } from '@/lib/auth/config'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 interface RouteParams {
   params: {
@@ -26,7 +27,17 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         include: {
           feePlan: {
             include: {
-              lead: true,
+              lead: {
+                select: {
+                  id: true,
+                  studentName: true,
+                  email: true,
+                  phone: true,
+                  courseInterest: true,
+                  stage: true,
+                  priority: true,
+                },
+              },
               installments: true,
             },
           },
@@ -128,8 +139,39 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         payment: feePayment,
         feePlan: updatedFeePlan,
         enrolled: allPaid,
+        lead: installment.feePlan.lead,
       }
     })
+
+    // Dispatch payment.received webhook
+    try {
+      if (result.lead) {
+        await WebhookService.onPaymentReceived(
+          {
+            id: result.lead.id,
+            studentName: result.lead.studentName,
+            email: result.lead.email,
+            phone: result.lead.phone,
+            courseInterest: result.lead.courseInterest,
+            stage: result.lead.stage,
+            priority: result.lead.priority,
+          },
+          {
+            id: result.payment.id,
+            installmentId: result.installment.id,
+            amount: paidAmount,
+            paymentMethod,
+            razorpayPaymentId,
+            status: 'COMPLETED',
+            paidAt: result.payment.paidAt,
+            feePlanId: result.feePlan.id,
+            enrolled: result.enrolled,
+          }
+        )
+      }
+    } catch (webhookError) {
+      console.error('Failed to dispatch payment.received webhook:', webhookError)
+    }
 
     return NextResponse.json(result)
   } catch (error) {

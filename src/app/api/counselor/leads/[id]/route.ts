@@ -285,6 +285,18 @@ async function handlePATCH(
           await WebhookService.onLeadConverted(leadData)
         } else if (validatedData.stage === 'LOST') {
           await WebhookService.onLeadLost(leadData, validatedData.lostReason)
+        } else if (validatedData.stage === 'DEMO_SCHEDULED') {
+          // Dispatch demo.booked webhook when stage changes to DEMO_SCHEDULED
+          await WebhookService.onDemoBooked(leadData, {
+            scheduledAt: new Date().toISOString(),
+            previousStage: existingLead.stage,
+          })
+        } else if (validatedData.stage === 'DEMO_COMPLETED') {
+          // Dispatch demo.completed webhook when stage changes to DEMO_COMPLETED
+          await WebhookService.onDemoCompleted(leadData, {
+            completedAt: new Date().toISOString(),
+            previousStage: existingLead.stage,
+          })
         }
       }
     } catch (webhookError) {

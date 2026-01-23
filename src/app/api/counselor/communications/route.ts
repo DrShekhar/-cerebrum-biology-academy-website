@@ -116,7 +116,15 @@ export async function POST(request: NextRequest) {
 
     const lead = await prisma.leads.findUnique({
       where: { id: validatedData.leadId },
-      select: { assignedToId: true, studentName: true },
+      select: {
+        assignedToId: true,
+        studentName: true,
+        email: true,
+        phone: true,
+        courseInterest: true,
+        stage: true,
+        priority: true,
+      },
     })
 
     if (!lead) {
@@ -178,12 +186,17 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // Dispatch webhook event for communication sent
+    // Dispatch webhook event for communication sent with full lead context
     try {
       await WebhookService.onCommunicationSent(
         {
           id: validatedData.leadId,
           studentName: lead.studentName,
+          email: lead.email,
+          phone: lead.phone,
+          courseInterest: lead.courseInterest,
+          stage: lead.stage,
+          priority: lead.priority,
         },
         {
           id: communication.id,

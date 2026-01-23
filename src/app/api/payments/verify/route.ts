@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import { z } from 'zod'
 import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const paymentVerificationSchema = z.object({
   order_id: z.string().optional(),
@@ -208,6 +209,26 @@ export async function POST(request: NextRequest) {
           }).catch((err) => console.error('Email notification failed:', err))
 
           console.log('Triggered WhatsApp and Email notifications')
+
+          // Dispatch payment.received webhook for external CRM integration
+          try {
+            await WebhookService.onPaymentReceived(
+              {
+                userId,
+                enrollmentId,
+                courseId,
+              },
+              {
+                orderId,
+                paymentId,
+                type: 'RAZORPAY',
+                status: 'COMPLETED',
+                verifiedAt: new Date().toISOString(),
+              }
+            )
+          } catch (webhookError) {
+            console.error('Failed to dispatch payment.received webhook:', webhookError)
+          }
         }
       } catch (dbError) {
         console.error('Transaction error after payment verification:', dbError)
