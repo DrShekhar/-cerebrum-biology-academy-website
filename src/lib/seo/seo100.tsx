@@ -1,11 +1,12 @@
-// src/lib/seo/seo100.ts
+// src/lib/seo/seo100.tsx
 // Master SEO Schema Generator - Combines all schemas for 100/100 scores
 
-import { generateVideoSchema, generateAllVideoSchemas, testimonialVideos } from './videoSchema';
+import React from 'react';
+import { generateAllVideoSchemas } from './videoSchema';
 import { generateAggregateRatingSchema, generateCourseRatingSchema, featuredReviews, courseRatings } from './ratingSchema';
 import { generateBreadcrumbSchema, breadcrumbPaths, generateBlogBreadcrumb, generateCityBreadcrumb } from './breadcrumbSchema';
 import { generateEventSchema, generateAllEventSchemas, upcomingEvents } from './eventSchema';
-import { generateFacultySchema, generateAllFacultySchemas, facultyMembers, generateAuthorSchema } from './personSchema';
+import { generateAllFacultySchemas, generateAuthorSchema } from './personSchema';
 import { generateSpeakableWebPageSchema, generateSpeakableFAQSchema, generateSpeakableArticleSchema, speakablePages, voiceOptimizedFAQs } from './speakableSchema';
 
 // Export everything for individual use
