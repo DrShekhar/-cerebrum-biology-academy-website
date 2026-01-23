@@ -2,9 +2,22 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/navigation'
 import { ChevronRight, ArrowLeft, BarChart3 } from 'lucide-react'
-import { TopicAnalytics } from '@/components/mcq/TopicAnalytics'
+
+// Dynamic import for TopicAnalytics - reduces initial bundle size
+const TopicAnalytics = dynamic(
+  () => import('@/components/mcq/TopicAnalytics').then((mod) => mod.TopicAnalytics),
+  {
+    loading: () => (
+      <div className="p-8 text-center">
+        <div className="w-8 h-8 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading analytics...</p>
+      </div>
+    ),
+  }
+)
 
 export default function MCQAnalyticsPage() {
   const router = useRouter()
