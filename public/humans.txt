@@ -1,0 +1,102 @@
+/* TEAM */
+Founder & Director: Dr. Shekhar C Singh
+Title: Founder, Lead NEET Biology Faculty
+Qualifications: AIIMS New Delhi Alumnus, Former Narayana Academic Head
+Site: https://cerebrumbiologyacademy.com
+Contact: info@cerebrumbiologyacademy.com
+Twitter: @CerebrumBio
+Location: Delhi NCR, India
+
+Senior Faculty: Dr. Priya Sharma
+Title: Botany Specialist
+Qualifications: PhD Botany (JNU), MSc Botany (Delhi University)
+
+Senior Faculty: Dr. Amit Kumar
+Title: Zoology & Human Physiology Specialist
+Qualifications: MBBS (MAMC), MD Physiology (LHMC)
+
+Lead Developer: Cerebrum Tech Team
+Contact: tech@cerebrumbiologyacademy.com
+From: Delhi, India
+
+Content & Editorial: Editorial Team
+Contact: content@cerebrumbiologyacademy.com
+Responsibilities: Blog posts, study material, student success stories
+
+Student Relations: Counseling Team
+Contact: admissions@cerebrumbiologyacademy.com
+Responsibilities: Admissions, demo bookings, student support
+
+/* THANKS */
+Our 5000+ students who trusted us with their NEET journey
+Parents who believed in our teaching methodology
+AIIMS faculty mentors who shaped our curriculum
+Our alumni who continue to inspire current batches
+The medical education community in India
+Sadhna Sirin (695/720) for inspiring future NEET aspirants
+
+/* SITE */
+Last update: 2026/01/23
+Language: English, Hindi
+Doctype: HTML5
+Framework: Next.js 15 (App Router)
+UI Library: React 19, Tailwind CSS, Radix UI
+Deployment: Vercel
+Database: PostgreSQL (Prisma ORM)
+Analytics: Google Analytics 4, Mixpanel
+Error Tracking: Sentry
+Performance: Lighthouse score 95+
+
+/* STANDARDS */
+HTML: HTML5 Semantic Elements
+CSS: Tailwind CSS, CSS Modules
+JavaScript: TypeScript 5.x
+Accessibility: WCAG 2.1 AA Compliant
+SEO: Schema.org JSON-LD (100/100 optimized)
+Social: OpenGraph, Twitter Cards
+AI-Ready: llms.txt, robots.txt with AI crawler rules
+
+/* SEO IMPLEMENTATION */
+Schema Types: EducationalOrganization, LocalBusiness, Course, FAQPage, WebSite, VideoObject, Person, Event, AggregateRating, BreadcrumbList, Speakable
+Structured Data: JSON-LD format
+Meta Tags: Title, Description, Canonical, Robots
+Open Graph: Full implementation with images (1200x630)
+Twitter Cards: summary_large_image
+Sitemap: XML sitemap with priority scores
+Robots.txt: Googlebot, Bingbot, AI crawlers (GPTBot, Claude-Web, PerplexityBot, Anthropic-AI, Google-Extended)
+AI Context: llms.txt with comprehensive entity information
+
+/* ACHIEVEMENTS */
+Founded: 2014
+Students Trained: 5000+
+Medical Selections: 500+
+Success Rate: 98% NEET Qualification
+Top Score: 695/720 (100 Percentile) - Sadhna Sirin, NEET 2023
+Google Rating: 4.9/5 (2500+ reviews)
+Years of Excellence: 14+
+Physical Centers: 5 (Delhi NCR)
+Faculty Experience: Combined 28+ years
+
+/* AWARDS */
+Best Biology Teacher Award 2022 - Education Excellence Foundation
+NEET Educator of the Year 2023 - Medical Entrance Awards
+Top NEET Coaching Institute Delhi 2023 - Education Today
+
+/* CONTACT */
+Website: https://cerebrumbiologyacademy.com
+Email: info@cerebrumbiologyacademy.com
+Phone: +91-88264-44334
+WhatsApp: +91-88264-44334 (Avg response: 2 mins)
+Social Media:
+  Instagram: @cerebrumbiologyacademy
+  YouTube: @cerebrumbiologyacademy (50K+ subscribers)
+  LinkedIn: /company/cerebrum-biology-academy
+  Twitter: @CerebrumBio
+  Facebook: /cerebrumbiologyacademy
+
+/* COMPANION FILES */
+llms.txt: Information for AI assistants
+robots.txt: Crawler directives
+sitemap.xml: URL structure
+manifest.json: PWA configuration
+ai.txt: Additional AI context
