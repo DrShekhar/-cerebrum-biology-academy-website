@@ -51,50 +51,66 @@ interface FirebaseSessionPayload {
 }
 
 export async function GET(request: NextRequest) {
-  const isDev = process.env.NODE_ENV !== 'production'
+  const requestId = `sess_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`
+  const startTime = Date.now()
 
   try {
     const cookieStore = await cookies()
+    const allCookies = cookieStore.getAll()
 
-    // Debug logging only in development
-    if (isDev) {
-      const allCookies = cookieStore.getAll()
-      console.log('[Session API] Checking session, received cookies:', allCookies.map(c => c.name))
-    }
+    // Always log session checks for debugging auth issues
+    console.log(`[Session API][${requestId}] Checking session:`, {
+      cookieCount: allCookies.length,
+      cookieNames: allCookies.map(c => c.name),
+      hasSecureCookie: allCookies.some(c => c.name === '__Secure-authjs.session-token'),
+      hasNonSecureCookie: allCookies.some(c => c.name === 'authjs.session-token'),
+    })
 
     // Check for our Firebase auth session token
     // SECURITY: Check __Secure- prefixed cookie first (production)
-    const sessionToken =
-      cookieStore.get('__Secure-authjs.session-token')?.value ||
-      cookieStore.get('authjs.session-token')?.value
+    const secureToken = cookieStore.get('__Secure-authjs.session-token')?.value
+    const nonSecureToken = cookieStore.get('authjs.session-token')?.value
+    const sessionToken = secureToken || nonSecureToken
 
-    if (isDev) {
-      console.log('[Session API] Session token found:', sessionToken ? 'yes' : 'no')
-    }
+    console.log(`[Session API][${requestId}] Token status:`, {
+      hasSecureToken: !!secureToken,
+      hasNonSecureToken: !!nonSecureToken,
+      usingToken: secureToken ? 'secure' : nonSecureToken ? 'non-secure' : 'none',
+      tokenLength: sessionToken?.length || 0,
+    })
 
     if (!sessionToken) {
-      if (isDev) {
-        console.log('[Session API] No session token found in cookies')
-      }
+      console.log(`[Session API][${requestId}] No session token found - returning unauthenticated`)
       return NextResponse.json({
         authenticated: false,
-        user: null
+        user: null,
+        debug: {
+          reason: 'no_token',
+          cookiesReceived: allCookies.map(c => c.name),
+        }
       })
-    }
-
-    if (isDev) {
-      console.log('[Session API] Found session token, verifying...')
     }
 
     // Verify and decode the JWT
+    console.log(`[Session API][${requestId}] Verifying JWT token...`)
     const decoded = jwt.verify(sessionToken, getAuthSecret()) as FirebaseSessionPayload
 
     if (!decoded || !decoded.id) {
+      console.warn(`[Session API][${requestId}] Token decoded but missing user ID`)
       return NextResponse.json({
         authenticated: false,
-        user: null
+        user: null,
+        debug: { reason: 'invalid_payload' }
       })
     }
+
+    const elapsed = Date.now() - startTime
+    console.log(`[Session API][${requestId}] Session verified successfully:`, {
+      userId: decoded.id,
+      role: decoded.role,
+      elapsed: `${elapsed}ms`,
+      tokenExp: decoded.exp ? new Date(decoded.exp * 1000).toISOString() : 'unknown',
+    })
 
     return NextResponse.json({
       authenticated: true,
@@ -107,13 +123,24 @@ export async function GET(request: NextRequest) {
       }
     })
   } catch (error) {
-    // Token invalid or expired - only log details in development
-    if (isDev) {
-      console.error('Session check error:', error)
-    }
+    const elapsed = Date.now() - startTime
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+
+    // Always log session errors for debugging
+    console.error(`[Session API][${requestId}] Session verification failed:`, {
+      error: errorMessage,
+      elapsed: `${elapsed}ms`,
+      isExpired: errorMessage.includes('expired'),
+      isInvalid: errorMessage.includes('invalid') || errorMessage.includes('malformed'),
+    })
+
     return NextResponse.json({
       authenticated: false,
-      user: null
+      user: null,
+      debug: {
+        reason: errorMessage.includes('expired') ? 'token_expired' : 'verification_failed',
+        error: process.env.NODE_ENV !== 'production' ? errorMessage : undefined,
+      }
     })
   }
 }
