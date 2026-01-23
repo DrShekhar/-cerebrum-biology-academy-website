@@ -12,6 +12,7 @@ Current priorities and future plans for Cerebrum Biology Academy.
 - [ ] Deploy TypeScript fixes (Prisma types, globals.d.ts)
 
 ### P1 - High Priority (This Month)
+- [ ] **International Payments** - Enable multi-currency (USD/EUR/GBP) via Razorpay International
 - [ ] Add dropper-specific content (high demand)
 - [ ] Fix remaining ~100 TypeScript errors
 - [ ] Implement blog view tracking
@@ -32,6 +33,7 @@ Current priorities and future plans for Cerebrum Biology Academy.
 - [ ] Launch 3 new courses
 - [ ] Implement referral program
 - [ ] Add payment plans (EMI)
+- [ ] **International Payments** - Multi-currency + Stripe for NRI market
 
 ### Technical Excellence
 - [ ] Zero TypeScript errors
@@ -68,6 +70,13 @@ Current priorities and future plans for Cerebrum Biology Academy.
 ---
 
 ## ✅ Recently Completed
+
+### January 2026 - Week 4
+- [x] Fixed MCQ questions API (Prisma relation name mismatch)
+- [x] Fixed ARIA/WhatsApp button overlap on mobile
+- [x] Gallery "Wall of Excellence" feature
+- [x] International payments architecture planning
+- [x] E2E test improvements for CI stability
 
 ### January 2026 - Week 3
 - [x] Build performance optimization (50-60% faster)
