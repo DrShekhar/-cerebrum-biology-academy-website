@@ -1,0 +1,25 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Best NEET Coaching in Thane Mumbai | Biology Classes | Cerebrum Academy',
+  description:
+    'Best NEET biology coaching in Thane Mumbai. 94.2% success rate. AIIMS faculty. Thane West, Ghodbunder Road, Hiranandani, Majiwada. Online live classes. Fee ₹24,000+. Book free demo!',
+  keywords:
+    'NEET coaching Thane, best NEET biology coaching Thane Mumbai, biology tuition Thane West, NEET classes Ghodbunder Road, biology coaching Hiranandani Thane, NEET preparation Mumbai, Thane NEET coaching online, Maharashtra HSC NEET coaching',
+  openGraph: {
+    title: 'Best NEET Coaching in Thane Mumbai | Biology Classes | Cerebrum Academy',
+    description:
+      'Best NEET biology coaching in Thane Mumbai with 94.2% success rate. AIIMS faculty. Thane West, Ghodbunder Road, Hiranandani.',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-thane-mumbai',
+    siteName: 'Cerebrum Biology Academy',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-thane-mumbai',
+  },
+}
+
+export default function ThaneCoachingLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}

@@ -4939,6 +4939,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92, // West Pune IT corridor
     },
+    {
+      url: `${baseUrl}/neet-coaching-viman-nagar-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // IT corridor - international schools
+    },
+    // Additional Metro Premium Areas
+    {
+      url: `${baseUrl}/neet-coaching-whitefield-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // IT hub - ITPL, international schools
+    },
+    {
+      url: `${baseUrl}/neet-coaching-thane-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Mumbai suburban premium - Hiranandani
+    },
+    {
+      url: `${baseUrl}/neet-coaching-secunderabad-hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Twin city - Begumpet, defence area
+    },
+    {
+      url: `${baseUrl}/neet-coaching-t-nagar-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Central Chennai premium - PSBB hub
+    },
     // State Board Pages - English Medium NEET Preparation
     {
       url: `${baseUrl}/maharashtra-hsc-biology-tuition`,
