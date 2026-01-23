@@ -9,8 +9,8 @@ test.describe('ARIA Widget - Basic Functionality', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load', timeout: 30000 })
     await page.waitForLoadState('domcontentloaded')
-    // Wait for widget lazy load (3 second delay)
-    await page.waitForTimeout(4000)
+    // Wait for widget lazy load (3 second delay + component load time)
+    await page.waitForTimeout(6000)
   })
 
   test('should display ARIA widget button after page load', async ({ page }) => {
@@ -63,7 +63,7 @@ test.describe('ARIA Widget - Basic Functionality', () => {
 test.describe('ARIA Widget - Chat Interaction', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load', timeout: 30000 })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     // Open the widget
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
@@ -118,7 +118,7 @@ test.describe('ARIA Widget - Chat Interaction', () => {
 test.describe('ARIA Widget - Quick Actions', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
     await widgetButton.click()
@@ -156,7 +156,7 @@ test.describe('ARIA Widget - Quick Actions', () => {
 test.describe('ARIA Widget - Lead Capture Flow', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
     await widgetButton.click()
@@ -219,7 +219,7 @@ test.describe('ARIA Widget - Lead Capture Flow', () => {
 test.describe('ARIA Widget - Language Support', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
     await widgetButton.click()
@@ -249,7 +249,7 @@ test.describe('ARIA Widget - Language Support', () => {
 test.describe('ARIA Widget - WhatsApp Integration', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
     await widgetButton.click()
@@ -276,7 +276,7 @@ test.describe('ARIA Widget - Mobile Experience', () => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 })
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
   })
 
   test('should be visible and accessible on mobile', async ({ page }) => {
@@ -327,7 +327,7 @@ test.describe('ARIA Widget - Persistence', () => {
     test.skip(!!process.env.CI, 'Skipping persistence test in CI')
 
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     // Open widget
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
@@ -342,7 +342,7 @@ test.describe('ARIA Widget - Persistence', () => {
 
     // Refresh page
     await page.reload()
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     // Reopen widget
     await widgetButton.click()
@@ -355,7 +355,7 @@ test.describe('ARIA Widget - Persistence', () => {
 
   test('should save language preference', async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
 
     // Open widget
     const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
@@ -369,7 +369,7 @@ test.describe('ARIA Widget - Persistence', () => {
 
       // Refresh page
       await page.reload()
-      await page.waitForTimeout(4000)
+      await page.waitForTimeout(6000)
 
       // Reopen widget
       const reopenButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
@@ -386,7 +386,7 @@ test.describe('ARIA Widget - Persistence', () => {
 test.describe('ARIA Widget - Accessibility', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load' })
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(6000)
   })
 
   test('should have proper ARIA labels', async ({ page }) => {
