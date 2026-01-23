@@ -13,6 +13,7 @@ import { zoomService } from '@/lib/zoom/zoomService'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversion'
 import { withAdmin, UserSession } from '@/lib/auth/middleware'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -368,6 +369,37 @@ export async function POST(request: NextRequest) {
       }
     } catch (dripError) {
       console.error('Failed to start demo drip sequence (non-blocking):', dripError)
+    }
+
+    // Dispatch webhook event for external CRM integrations
+    try {
+      const leadData = lead ? {
+        id: lead.id,
+        studentName: lead.studentName,
+        email: lead.email,
+        phone: lead.phone,
+        courseInterest: lead.courseInterest,
+        stage: lead.stage,
+        priority: lead.priority,
+      } : {
+        studentName: data.name,
+        email: data.email,
+        phone: data.phone,
+        courseInterest: data.courseInterest.join(', '),
+      }
+
+      const demoData = {
+        id: demoBooking.id,
+        preferredDate: data.preferredDate,
+        preferredTime: data.preferredTime,
+        demoType: demoType || 'FREE',
+        status: demoBooking.status,
+        zoomJoinUrl: zoomMeeting?.join_url,
+      }
+
+      await WebhookService.onDemoBooked(leadData, demoData)
+    } catch (webhookError) {
+      console.error('Failed to dispatch demo.booked webhook:', webhookError)
     }
 
     return NextResponse.json({

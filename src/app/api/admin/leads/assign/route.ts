@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { withAdmin } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import type { LeadStage } from '@/generated/prisma'
 
 const assignLeadSchema = z.object({
   leadIds: z.array(z.string()).min(1, 'At least one lead ID required'),
@@ -237,7 +238,7 @@ async function handlePUT(request: NextRequest, session: { userId: string; role: 
             // Could also check for inactive counselors
           ],
           ...(validatedData.stages && {
-            stage: { in: validatedData.stages as any },
+            stage: { in: validatedData.stages as LeadStage[] },
           }),
         },
         select: { id: true },
@@ -273,7 +274,7 @@ async function handlePUT(request: NextRequest, session: { userId: string; role: 
       // Get all leads
       const allLeads = await prisma.leads.findMany({
         where: validatedData.stages
-          ? { stage: { in: validatedData.stages as any } }
+          ? { stage: { in: validatedData.stages as LeadStage[] } }
           : undefined,
         select: { id: true, assignedToId: true },
       })

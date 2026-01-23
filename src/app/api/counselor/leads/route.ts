@@ -5,6 +5,7 @@ import { z } from 'zod'
 import type { LeadStage, Priority } from '@/generated/prisma'
 import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const createLeadSchema = z.object({
   studentName: z.string().min(1, 'Student name is required'),
@@ -16,28 +17,7 @@ const createLeadSchema = z.object({
   demoBookingId: z.string().optional(),
 })
 
-const updateLeadSchema = z.object({
-  studentName: z.string().optional(),
-  email: z.string().email().optional(),
-  phone: z.string().optional(),
-  courseInterest: z.string().optional(),
-  stage: z
-    .enum([
-      'NEW_LEAD',
-      'DEMO_SCHEDULED',
-      'DEMO_COMPLETED',
-      'OFFER_SENT',
-      'NEGOTIATING',
-      'PAYMENT_PLAN_CREATED',
-      'ENROLLED',
-      'ACTIVE_STUDENT',
-      'LOST',
-    ])
-    .optional(),
-  priority: z.enum(['HOT', 'WARM', 'COLD']).optional(),
-  nextFollowUpAt: z.string().optional(),
-  lostReason: z.string().optional(),
-})
+// Update schema moved to [id]/route.ts
 
 export async function GET(request: NextRequest) {
   try {
@@ -55,7 +35,7 @@ export async function GET(request: NextRequest) {
     const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')))
     const skip = (page - 1) * limit
 
-    const where: any = {
+    const where: Record<string, unknown> = {
       assignedToId: session.userId,
     }
 
@@ -189,6 +169,7 @@ export async function POST(request: NextRequest) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
         userId: session.userId,
         leadId: lead.id,
         action: 'LEAD_CREATED',
@@ -227,6 +208,24 @@ export async function POST(request: NextRequest) {
       })
     } catch (agentError) {
       console.error('Failed to queue product agent:', agentError)
+    }
+
+    // Dispatch webhook event for external CRM integrations
+    try {
+      await WebhookService.onLeadCreated({
+        id: lead.id,
+        studentName: lead.studentName,
+        email: lead.email,
+        phone: lead.phone,
+        courseInterest: lead.courseInterest,
+        source: lead.source,
+        stage: lead.stage,
+        priority: lead.priority,
+        createdAt: lead.createdAt,
+        assignedTo: lead.users,
+      })
+    } catch (webhookError) {
+      console.error('Failed to dispatch lead.created webhook:', webhookError)
     }
 
     return NextResponse.json(

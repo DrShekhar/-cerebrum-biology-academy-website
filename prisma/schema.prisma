@@ -2947,6 +2947,7 @@ model users {
   video_progress                                                        video_progress[]
   whatsapp_conversations                                                whatsapp_conversations[]
   whatsapp_messages                                                     whatsapp_messages[]
+  webhooks                                                              webhooks[]
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -3121,6 +3122,52 @@ model whatsapp_otp {
 
   @@index([phone, expiresAt])
   @@index([phone, verified])
+}
+
+model webhooks {
+  id                String              @id
+  name              String
+  url               String
+  events            String[]
+  secret            String?
+  headers           Json?
+  retryPolicy       Json?
+  isActive          Boolean             @default(true)
+  metadata          Json?
+  createdById       String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  users             users?              @relation(fields: [createdById], references: [id])
+  webhook_deliveries webhook_deliveries[]
+
+  @@index([isActive])
+  @@index([createdById])
+}
+
+model webhook_deliveries {
+  id            String              @id
+  webhookId     String
+  event         String
+  payload       Json
+  status        WebhookDeliveryStatus @default(PENDING)
+  statusCode    Int?
+  responseBody  String?
+  errorMessage  String?
+  attempts      Int                 @default(0)
+  completedAt   DateTime?
+  createdAt     DateTime            @default(now())
+  webhooks      webhooks            @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+
+  @@index([webhookId, createdAt])
+  @@index([status])
+  @@index([event, createdAt])
+}
+
+enum WebhookDeliveryStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  RETRYING
 }
 
 enum AccessLevel {

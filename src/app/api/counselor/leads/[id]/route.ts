@@ -4,6 +4,21 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { TaskService } from '@/lib/counselor/taskService'
 import { processLeadRules } from '@/lib/followupEngine'
+import { WebhookService } from '@/lib/webhooks/webhookService'
+import type { LeadStage, Prisma } from '@/generated/prisma'
+
+// Type for counselor session
+interface CounselorSession {
+  userId: string
+  role: string
+}
+
+// Type for lead update data
+type LeadUpdateInput = Prisma.leadsUpdateInput & {
+  lastContactedAt?: Date
+  convertedAt?: Date
+  lostAt?: Date
+}
 
 const updateLeadSchema = z.object({
   studentName: z.string().optional(),
@@ -29,8 +44,8 @@ const updateLeadSchema = z.object({
 })
 
 async function handleGET(
-  request: NextRequest,
-  session: any,
+  _request: NextRequest,
+  session: CounselorSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -150,7 +165,7 @@ async function handleGET(
 
 async function handlePATCH(
   request: NextRequest,
-  session: any,
+  session: CounselorSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -183,7 +198,7 @@ async function handlePATCH(
       )
     }
 
-    const updateData: any = { ...validatedData }
+    const updateData: LeadUpdateInput = { ...validatedData }
     if (validatedData.nextFollowUpAt) {
       updateData.nextFollowUpAt = new Date(validatedData.nextFollowUpAt)
     }
@@ -226,7 +241,7 @@ async function handlePATCH(
       try {
         await TaskService.createAutomatedTask({
           leadId: lead.id,
-          newStage: validatedData.stage as any,
+          newStage: validatedData.stage as LeadStage,
           counselorId: session.userId,
         })
       } catch (error) {
@@ -238,6 +253,42 @@ async function handlePATCH(
       await processLeadRules(lead.id)
     } catch (error) {
       console.error('Error processing follow-up rules:', error)
+    }
+
+    // Dispatch webhook events for external CRM integrations
+    try {
+      const leadData = {
+        id: lead.id,
+        studentName: lead.studentName,
+        email: lead.email,
+        phone: lead.phone,
+        courseInterest: lead.courseInterest,
+        stage: lead.stage,
+        priority: lead.priority,
+        updatedAt: lead.updatedAt,
+        assignedTo: lead.users,
+      }
+
+      // Always dispatch lead.updated
+      await WebhookService.onLeadUpdated(leadData, Object.keys(validatedData))
+
+      // Check for stage change
+      if (validatedData.stage && validatedData.stage !== existingLead.stage) {
+        await WebhookService.onLeadStageChanged(
+          leadData,
+          existingLead.stage,
+          validatedData.stage
+        )
+
+        // Handle special stage events
+        if (validatedData.stage === 'ENROLLED') {
+          await WebhookService.onLeadConverted(leadData)
+        } else if (validatedData.stage === 'LOST') {
+          await WebhookService.onLeadLost(leadData, validatedData.lostReason)
+        }
+      }
+    } catch (webhookError) {
+      console.error('Failed to dispatch webhook:', webhookError)
     }
 
     return NextResponse.json({
@@ -270,8 +321,8 @@ async function handlePATCH(
 }
 
 async function handleDELETE(
-  request: NextRequest,
-  session: any,
+  _request: NextRequest,
+  session: CounselorSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -334,12 +385,12 @@ async function handleDELETE(
   }
 }
 
-export const GET = withCounselor((req: NextRequest, session: any) =>
+export const GET = withCounselor((req: NextRequest, session: CounselorSession) =>
   handleGET(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )
-export const PATCH = withCounselor((req: NextRequest, session: any) =>
+export const PATCH = withCounselor((req: NextRequest, session: CounselorSession) =>
   handlePATCH(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )
-export const DELETE = withCounselor((req: NextRequest, session: any) =>
+export const DELETE = withCounselor((req: NextRequest, session: CounselorSession) =>
   handleDELETE(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )

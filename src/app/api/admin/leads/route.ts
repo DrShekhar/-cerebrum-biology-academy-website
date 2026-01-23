@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
+import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
 
 const createLeadSchema = z.object({
   studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
@@ -45,8 +46,8 @@ export async function POST(request: NextRequest) {
         email: validatedData.email || null,
         phone: validatedData.phone,
         courseInterest: validatedData.courseInterest,
-        source: validatedData.source as any,
-        priority: validatedData.priority as any,
+        source: validatedData.source as LeadSource,
+        priority: validatedData.priority as Priority,
         stage: 'NEW_LEAD',
         assignedToId: validatedData.assignedToId,
         nextFollowUpAt: validatedData.nextFollowUpAt
@@ -170,9 +171,9 @@ export async function PUT(request: NextRequest) {
         email: validatedData.email || null,
         phone: validatedData.phone,
         courseInterest: validatedData.courseInterest,
-        source: validatedData.source as any,
-        stage: validatedData.stage as any,
-        priority: validatedData.priority as any,
+        source: validatedData.source as LeadSource,
+        stage: validatedData.stage as LeadStage,
+        priority: validatedData.priority as Priority,
         assignedToId: validatedData.assignedToId,
         nextFollowUpAt: validatedData.nextFollowUpAt
           ? new Date(validatedData.nextFollowUpAt)
