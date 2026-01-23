@@ -6,6 +6,7 @@ import { withAdmin } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage } from '@/generated/prisma'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const assignLeadSchema = z.object({
   leadIds: z.array(z.string()).min(1, 'At least one lead ID required'),
@@ -92,6 +93,33 @@ async function handlePOST(request: NextRequest, session: { userId: string; role:
 
       return updateResult
     })
+
+    // Dispatch webhook events for each assigned lead
+    try {
+      const counselorData = {
+        id: counselor.id,
+        name: counselor.name,
+        email: counselor.email,
+      }
+
+      for (const lead of leads) {
+        await WebhookService.onLeadAssigned(
+          {
+            id: lead.id,
+            studentName: lead.studentName,
+            email: lead.email,
+            phone: lead.phone,
+            courseInterest: lead.courseInterest,
+            stage: lead.stage,
+            priority: lead.priority,
+            previousAssignedToId: lead.assignedToId,
+          },
+          counselorData
+        )
+      }
+    } catch (webhookError) {
+      console.error('Failed to dispatch lead.assigned webhooks:', webhookError)
+    }
 
     // TODO: Send notification to counselor if notifyCounselor is true
     // This would integrate with email/WhatsApp notification service

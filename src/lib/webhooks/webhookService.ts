@@ -34,8 +34,10 @@ export class WebhookService {
   static async sendWebhook(
     webhook: WebhookConfig,
     payload: WebhookPayload,
-    isTest: boolean = false
-  ): Promise<WebhookDeliveryResult> {
+    isTest: boolean = false,
+    attemptNumber: number = 1,
+    deliveryId?: string
+  ): Promise<WebhookDeliveryResult & { deliveryId?: string }> {
     const startTime = Date.now()
 
     try {
@@ -46,6 +48,7 @@ export class WebhookService {
         'X-Webhook-ID': webhook.id,
         'X-Webhook-Event': payload.event,
         'X-Webhook-Timestamp': payload.timestamp,
+        'X-Webhook-Attempt': String(attemptNumber),
         ...(webhook.headers || {}),
       }
 
@@ -67,13 +70,16 @@ export class WebhookService {
       const responseTime = Date.now() - startTime
       const responseBody = await response.text()
 
-      // Create delivery record (unless it's a test)
+      // Create or update delivery record (unless it's a test)
+      let recordId = deliveryId
       if (!isTest) {
-        await this.createDeliveryRecord(webhook.id, payload, {
+        recordId = await this.upsertDeliveryRecord(webhook.id, payload, {
           success: response.ok,
           statusCode: response.status,
           responseBody: responseBody.substring(0, 5000), // Limit response size
           responseTime,
+          attemptNumber,
+          existingId: deliveryId,
         })
       }
 
@@ -82,17 +88,21 @@ export class WebhookService {
         statusCode: response.status,
         responseTime,
         response: responseBody.substring(0, 1000),
+        deliveryId: recordId,
       }
     } catch (error) {
       const responseTime = Date.now() - startTime
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
 
-      // Create failed delivery record
+      // Create or update failed delivery record
+      let recordId = deliveryId
       if (!isTest) {
-        await this.createDeliveryRecord(webhook.id, payload, {
+        recordId = await this.upsertDeliveryRecord(webhook.id, payload, {
           success: false,
           errorMessage,
           responseTime,
+          attemptNumber,
+          existingId: deliveryId,
         })
       }
 
@@ -100,6 +110,7 @@ export class WebhookService {
         success: false,
         responseTime,
         error: errorMessage,
+        deliveryId: recordId,
       }
     }
   }
@@ -113,8 +124,8 @@ export class WebhookService {
       .digest('hex')
   }
 
-  // Create delivery record in database
-  private static async createDeliveryRecord(
+  // Create or update delivery record in database
+  private static async upsertDeliveryRecord(
     webhookId: string,
     payload: WebhookPayload,
     result: {
@@ -123,25 +134,53 @@ export class WebhookService {
       responseBody?: string
       errorMessage?: string
       responseTime?: number
+      attemptNumber: number
+      existingId?: string
     }
-  ): Promise<void> {
+  ): Promise<string> {
     try {
-      await prisma.webhook_deliveries.create({
-        data: {
-          id: `whd_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-          webhookId,
-          event: payload.event,
-          payload: payload as object,
-          status: result.success ? 'SUCCESS' : 'FAILED',
-          statusCode: result.statusCode,
-          responseBody: result.responseBody,
-          errorMessage: result.errorMessage,
-          attempts: 1,
-          completedAt: new Date(),
-        },
-      })
+      const status = result.success
+        ? 'SUCCESS'
+        : result.attemptNumber < 3
+          ? 'RETRYING'
+          : 'FAILED'
+
+      if (result.existingId) {
+        // Update existing record with new attempt
+        await prisma.webhook_deliveries.update({
+          where: { id: result.existingId },
+          data: {
+            status,
+            statusCode: result.statusCode,
+            responseBody: result.responseBody,
+            errorMessage: result.errorMessage,
+            attempts: result.attemptNumber,
+            completedAt: result.success ? new Date() : null,
+          },
+        })
+        return result.existingId
+      } else {
+        // Create new record for first attempt
+        const id = `whd_${Date.now()}_${Math.random().toString(36).substring(7)}`
+        await prisma.webhook_deliveries.create({
+          data: {
+            id,
+            webhookId,
+            event: payload.event,
+            payload: payload as object,
+            status,
+            statusCode: result.statusCode,
+            responseBody: result.responseBody,
+            errorMessage: result.errorMessage,
+            attempts: result.attemptNumber,
+            completedAt: result.success ? new Date() : null,
+          },
+        })
+        return id
+      }
     } catch (error) {
-      console.error('Failed to create webhook delivery record:', error)
+      console.error('Failed to upsert webhook delivery record:', error)
+      return ''
     }
   }
 
@@ -184,11 +223,11 @@ export class WebhookService {
           events: webhook.events,
         }
 
-        const result = await this.sendWebhook(config, payload)
+        const result = await this.sendWebhook(config, payload, false, 1)
 
         // If failed and retry policy allows, schedule retry
-        if (!result.success && config.retryPolicy?.maxRetries) {
-          await this.scheduleRetry(config, payload, 1)
+        if (!result.success && config.retryPolicy?.maxRetries && result.deliveryId) {
+          await this.scheduleRetry(config, payload, 2, result.deliveryId)
         }
 
         return { webhookId: webhook.id, result }
@@ -204,13 +243,23 @@ export class WebhookService {
   private static async scheduleRetry(
     webhook: WebhookConfig,
     payload: WebhookPayload,
-    attemptNumber: number
+    attemptNumber: number,
+    deliveryId: string
   ): Promise<void> {
     const maxRetries = webhook.retryPolicy?.maxRetries || 3
     const retryDelayMs = webhook.retryPolicy?.retryDelayMs || 5000
 
-    if (attemptNumber >= maxRetries) {
+    if (attemptNumber > maxRetries) {
       console.warn(`Max retries (${maxRetries}) reached for webhook ${webhook.id}`)
+      // Mark delivery as failed
+      try {
+        await prisma.webhook_deliveries.update({
+          where: { id: deliveryId },
+          data: { status: 'FAILED', completedAt: new Date() },
+        })
+      } catch (e) {
+        console.error('Failed to update webhook delivery status:', e)
+      }
       return
     }
 
@@ -219,16 +268,16 @@ export class WebhookService {
 
     // Log retry scheduling (debug info)
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`Scheduling retry ${attemptNumber + 1} for webhook ${webhook.id} in ${delay}ms`)
+      console.warn(`Scheduling retry ${attemptNumber} for webhook ${webhook.id} in ${delay}ms`)
     }
 
     // In production, this should use a proper job queue (e.g., BullMQ, Vercel Cron)
     // For now, use setTimeout as a simple implementation
     setTimeout(async () => {
-      const result = await this.sendWebhook(webhook, payload)
+      const result = await this.sendWebhook(webhook, payload, false, attemptNumber, deliveryId)
 
-      if (!result.success && attemptNumber + 1 < maxRetries) {
-        await this.scheduleRetry(webhook, payload, attemptNumber + 1)
+      if (!result.success && attemptNumber < maxRetries) {
+        await this.scheduleRetry(webhook, payload, attemptNumber + 1, deliveryId)
       }
     }, delay)
   }

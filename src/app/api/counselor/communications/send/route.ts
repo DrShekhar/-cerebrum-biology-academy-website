@@ -7,6 +7,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { withCounselor } from '@/lib/auth/middleware'
 import { notificationService } from '@/lib/notifications/notificationService'
 import { z } from 'zod'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 // Request schema
 const sendMessageSchema = z.object({
@@ -24,7 +25,12 @@ const sendMessageSchema = z.object({
   message: z.string().min(1),
 })
 
-async function handlePOST(req: NextRequest, session: any) {
+interface CounselorSession {
+  userId: string
+  role: string
+}
+
+async function handlePOST(req: NextRequest, session: CounselorSession) {
   try {
     const body = await req.json()
     const validatedData = sendMessageSchema.parse(body)
@@ -65,7 +71,7 @@ async function handlePOST(req: NextRequest, session: any) {
     }
 
     // Prepare notification data
-    const notificationData: any = {
+    const notificationData: Record<string, unknown> = {
       leadId: validatedData.leadId,
       studentName: validatedData.studentName,
       email: validatedData.email,
@@ -101,6 +107,30 @@ async function handlePOST(req: NextRequest, session: any) {
     const result = await notificationService.send(notificationData)
 
     if (result.success) {
+      // Dispatch webhook event for communication sent
+      try {
+        await WebhookService.onCommunicationSent(
+          {
+            id: validatedData.leadId,
+            studentName: validatedData.studentName,
+            email: validatedData.email,
+            phone: validatedData.phone,
+          },
+          {
+            type: 'MULTI_CHANNEL',
+            channels: validatedData.channels,
+            subject: validatedData.subject,
+            messagePreview: validatedData.message.substring(0, 100),
+            priority: validatedData.priority,
+            sentBy: session.userId,
+            sentAt: new Date().toISOString(),
+            result: result.channels,
+          }
+        )
+      } catch (webhookError) {
+        console.error('Failed to dispatch communication.sent webhook:', webhookError)
+      }
+
       return NextResponse.json({
         success: true,
         channels: result.channels,

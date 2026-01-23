@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const createCommunicationSchema = z.object({
   leadId: z.string().min(1, 'Lead ID is required'),
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest) {
     const leadId = searchParams.get('leadId')
     const type = searchParams.get('type')
 
-    const where: any = {}
+    const where: Record<string, unknown> = {}
 
     if (leadId) {
       const lead = await prisma.leads.findUnique({
@@ -169,12 +170,34 @@ export async function POST(request: NextRequest) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
         userId: session.userId,
         leadId: validatedData.leadId,
         action: 'COMMUNICATION_SENT',
         description: `Sent ${validatedData.type} message to ${lead.studentName}`,
       },
     })
+
+    // Dispatch webhook event for communication sent
+    try {
+      await WebhookService.onCommunicationSent(
+        {
+          id: validatedData.leadId,
+          studentName: lead.studentName,
+        },
+        {
+          id: communication.id,
+          type: validatedData.type,
+          direction: validatedData.direction,
+          subject: validatedData.subject,
+          messagePreview: validatedData.message.substring(0, 100),
+          sentBy: session.userId,
+          sentAt: communication.sentAt,
+        }
+      )
+    } catch (webhookError) {
+      console.error('Failed to dispatch communication.sent webhook:', webhookError)
+    }
 
     return NextResponse.json(
       {
