@@ -419,6 +419,12 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 Resources
               </a>
               <a
+                href="/gallery"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              >
+                Gallery
+              </a>
+              <a
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
               >
@@ -641,6 +647,12 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                     className="block py-3 text-gray-900 font-medium border-t border-gray-100"
                   >
                     Resources
+                  </a>
+                  <a
+                    href="/gallery"
+                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                  >
+                    Gallery
                   </a>
                   <a
                     href="/contact"

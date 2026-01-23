@@ -29,6 +29,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
     { href: '#courses', label: 'Courses' },
     { href: '/success-stories', label: 'Results' },
     { href: '/faculty', label: 'Faculty' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/locations', label: 'Centers' },
   ]
 

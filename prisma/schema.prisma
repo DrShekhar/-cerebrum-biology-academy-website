@@ -1326,6 +1326,37 @@ model free_users {
   @@index([studyStreak]) // For streak-based queries
 }
 
+model gallery_items {
+  id             String              @id @default(cuid())
+  cloudflareId   String?             @unique
+  type           GalleryItemType     @default(PHOTO)
+  url            String
+  thumbnailUrl   String?
+  blurHash       String?
+  title          String
+  description    String?
+  category       GalleryCategory
+  tags           String[]
+  featured       Boolean             @default(false)
+  displayOrder   Int                 @default(0)
+  aspectRatio    String              @default("4:3")
+  width          Int?
+  height         Int?
+  durationSeconds Int?
+  eventDate      DateTime?
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  createdBy      String?
+  users          users?              @relation(fields: [createdBy], references: [id])
+
+  @@index([category])
+  @@index([featured])
+  @@index([displayOrder])
+  @@index([eventDate])
+  @@index([createdAt])
+  @@index([type, category])
+}
+
 model installments {
   id                String            @id
   feePlanId         String
@@ -2868,6 +2899,7 @@ model users {
   followup_rules_followup_rules_createdByIdTousers                      followup_rules[]              @relation("followup_rules_createdByIdTousers")
   followup_rules_followup_rules_updatedByIdTousers                      followup_rules[]              @relation("followup_rules_updatedByIdTousers")
   followup_templates                                                    followup_templates[]
+  gallery_items                                                         gallery_items[]
   leads                                                                 leads[]
   lms_device_sessions                                                   lms_device_sessions[]
   lms_progress_notifications                                            lms_progress_notifications[]
@@ -3467,6 +3499,21 @@ enum FreeResourceType {
   ANNOUNCEMENT
   NOTES
   FORMULA_SHEET
+}
+
+enum GalleryCategory {
+  TOPPERS
+  EVENTS
+  SEMINARS
+  FACULTY
+  CAMPUS
+  MEDIA
+  VIDEOS
+}
+
+enum GalleryItemType {
+  PHOTO
+  VIDEO
 }
 
 enum GoalPeriod {
