@@ -176,7 +176,7 @@ export function BookingSuccess({
 
         {/* Share & Get Free Materials */}
         <div className="mb-6">
-          <ReferralShare bookingId={bookingId} studentName={bookingData.studentName} />
+          <ReferralShare userName={bookingData.studentName} userEmail={bookingData.email} />
         </div>
 
         {/* Explore More */}

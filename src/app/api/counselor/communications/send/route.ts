@@ -4,8 +4,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
-import { notificationService } from '@/lib/notifications/notificationService'
+import { withCounselor, ValidatedSession } from '@/lib/auth/middleware'
+import { notificationService, NotificationRequest } from '@/lib/notifications/notificationService'
 import { z } from 'zod'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 
@@ -25,12 +25,7 @@ const sendMessageSchema = z.object({
   message: z.string().min(1),
 })
 
-interface CounselorSession {
-  userId: string
-  role: string
-}
-
-async function handlePOST(req: NextRequest, session: CounselorSession) {
+async function handlePOST(req: NextRequest, session: ValidatedSession) {
   try {
     const body = await req.json()
     const validatedData = sendMessageSchema.parse(body)
@@ -70,8 +65,8 @@ async function handlePOST(req: NextRequest, session: CounselorSession) {
       )
     }
 
-    // Prepare notification data
-    const notificationData: Record<string, unknown> = {
+    // Prepare notification data with proper typing
+    const notificationData: NotificationRequest = {
       leadId: validatedData.leadId,
       studentName: validatedData.studentName,
       email: validatedData.email,
@@ -79,28 +74,15 @@ async function handlePOST(req: NextRequest, session: CounselorSession) {
       type: 'GENERAL',
       priority: validatedData.priority,
       customChannels: validatedData.channels,
-    }
-
-    // Add email data if email channel selected
-    if (validatedData.channels.email && validatedData.email && validatedData.subject) {
-      notificationData.emailData = {
-        subject: validatedData.subject,
-        html: convertMessageToHTML(validatedData.message),
-      }
-    }
-
-    // Add WhatsApp data if WhatsApp channel selected
-    if (validatedData.channels.whatsapp) {
-      notificationData.whatsappData = {
-        message: validatedData.message,
-      }
-    }
-
-    // Add SMS data if SMS channel selected
-    if (validatedData.channels.sms) {
-      notificationData.smsData = {
-        message: truncateForSMS(validatedData.message),
-      }
+      emailData: validatedData.channels.email && validatedData.email && validatedData.subject
+        ? { subject: validatedData.subject, html: convertMessageToHTML(validatedData.message) }
+        : undefined,
+      whatsappData: validatedData.channels.whatsapp
+        ? { message: validatedData.message }
+        : undefined,
+      smsData: validatedData.channels.sms
+        ? { message: truncateForSMS(validatedData.message) }
+        : undefined,
     }
 
     // Send via unified notification service

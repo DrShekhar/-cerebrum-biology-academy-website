@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { LucideIcon, ChevronLeft, ChevronRight } from 'lucide-react'
+import type { SwipeGestureHandlers } from '@/hooks/useSwipeGesture'
 
 interface Tab {
   id: string
@@ -15,7 +16,7 @@ interface DashboardTabsProps {
   onTabChange: (tabId: string) => void
   onPrevious: () => void
   onNext: () => void
-  swipeHandlers?: Record<string, unknown>
+  swipeHandlers?: Partial<SwipeGestureHandlers>
 }
 
 export function DashboardTabs({

@@ -2,7 +2,7 @@
 // Promotes qualified content_leads to the main leads table for counselor follow-up
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { LeadSource, LeadStage, Priority } from '@/generated/prisma'
@@ -36,7 +36,7 @@ interface MigrationResult {
 
 async function handlePOST(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const body = await request.json()
@@ -144,15 +144,15 @@ async function handlePOST(
 
         // Map source to LeadSource enum
         const sourceMapping: Record<string, LeadSource> = {
-          blog_inline: LeadSource.WEBSITE_FORM,
-          blog_sidebar: LeadSource.WEBSITE_FORM,
-          exit_intent: LeadSource.WEBSITE_FORM,
-          catalog_download: LeadSource.WEBSITE_FORM,
-          lead_magnet: LeadSource.WEBSITE_FORM,
+          blog_inline: LeadSource.WEBSITE,
+          blog_sidebar: LeadSource.WEBSITE,
+          exit_intent: LeadSource.WEBSITE,
+          catalog_download: LeadSource.WEBSITE,
+          lead_magnet: LeadSource.WEBSITE,
           whatsapp_cta: LeadSource.WHATSAPP,
         }
 
-        const leadSource = sourceMapping[contentLead.source || ''] || LeadSource.WEBSITE_FORM
+        const leadSource = sourceMapping[contentLead.source || ''] || LeadSource.WEBSITE
 
         // Determine priority based on engagement score
         let priority: Priority = validatedData.priority as Priority
@@ -250,7 +250,7 @@ async function handlePOST(
 // GET: Preview leads that would be migrated
 async function handleGET(
   request: NextRequest,
-  _session: { userId: string; role: string }
+  _session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)

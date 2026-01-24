@@ -2,7 +2,7 @@
 // GET: Export leads with filtering options
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { LeadStage, Priority, LeadSource } from '@/generated/prisma'
 
@@ -32,7 +32,7 @@ interface ExportLead {
 
 async function handleGET(
   request: NextRequest,
-  _session: { userId: string; role: string }
+  _session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)
@@ -277,7 +277,7 @@ function escapeCSV(value: string): string {
 // POST: Generate export with custom columns (advanced)
 async function handlePOST(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const body = await request.json()

@@ -2,14 +2,14 @@
 // Send a test payload to verify webhook configuration
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 
 // POST: Send test webhook
 async function handlePOST(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const url = new URL(request.url)

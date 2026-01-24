@@ -2,7 +2,7 @@
 // POST: Assign or reassign leads to counselors (Admin only)
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage } from '@/generated/prisma'
@@ -31,7 +31,7 @@ const bulkAssignSchema = z.object({
 // Maximum leads per bulk operation to prevent timeout/memory issues
 const MAX_BULK_OPERATION_SIZE = 500
 
-async function handlePOST(request: NextRequest, session: { userId: string; role: string }) {
+async function handlePOST(request: NextRequest, session: ValidatedSession) {
   try {
     const body = await request.json()
     const validatedData = assignLeadSchema.parse(body)
@@ -170,7 +170,7 @@ async function handlePOST(request: NextRequest, session: { userId: string; role:
 }
 
 // GET: Get assignment statistics and counselor workloads
-async function handleGET(_request: NextRequest, _session: { userId: string; role: string }) {
+async function handleGET(_request: NextRequest, _session: ValidatedSession) {
   try {
     // Get counselor workload statistics
     const counselors = await prisma.users.findMany({
@@ -247,7 +247,7 @@ async function handleGET(_request: NextRequest, _session: { userId: string; role
 }
 
 // PUT: Bulk operations (auto-assign, rebalance)
-async function handlePUT(request: NextRequest, session: { userId: string; role: string }) {
+async function handlePUT(request: NextRequest, session: ValidatedSession) {
   try {
     const body = await request.json()
     const validatedData = bulkAssignSchema.parse(body)

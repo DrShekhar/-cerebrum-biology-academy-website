@@ -1,17 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { withCounselor, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { TaskService } from '@/lib/counselor/taskService'
 import { processLeadRules } from '@/lib/followupEngine'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import type { LeadStage, Prisma } from '@/generated/prisma'
-
-// Type for counselor session
-interface CounselorSession {
-  userId: string
-  role: string
-}
 
 // Type for lead update data
 type LeadUpdateInput = Prisma.leadsUpdateInput & {
@@ -45,7 +39,7 @@ const updateLeadSchema = z.object({
 
 async function handleGET(
   _request: NextRequest,
-  session: CounselorSession,
+  session: ValidatedSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -165,7 +159,7 @@ async function handleGET(
 
 async function handlePATCH(
   request: NextRequest,
-  session: CounselorSession,
+  session: ValidatedSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -334,7 +328,7 @@ async function handlePATCH(
 
 async function handleDELETE(
   _request: NextRequest,
-  session: CounselorSession,
+  session: ValidatedSession,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -397,12 +391,12 @@ async function handleDELETE(
   }
 }
 
-export const GET = withCounselor((req: NextRequest, session: CounselorSession) =>
+export const GET = withCounselor((req: NextRequest, session: ValidatedSession) =>
   handleGET(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )
-export const PATCH = withCounselor((req: NextRequest, session: CounselorSession) =>
+export const PATCH = withCounselor((req: NextRequest, session: ValidatedSession) =>
   handlePATCH(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )
-export const DELETE = withCounselor((req: NextRequest, session: CounselorSession) =>
+export const DELETE = withCounselor((req: NextRequest, session: ValidatedSession) =>
   handleDELETE(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
 )

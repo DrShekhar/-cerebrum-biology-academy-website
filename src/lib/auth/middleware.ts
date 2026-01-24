@@ -8,16 +8,30 @@ import {
 } from './config'
 
 /**
+ * Validated session type with required fields (after authentication)
+ * This is passed to handlers after successful validation
+ */
+export interface ValidatedSession {
+  valid: true
+  userId: string
+  role: UserRole
+  email?: string
+  name?: string
+  expiresAt?: Date
+  permissions?: string[]
+}
+
+/**
  * Authentication middleware for API routes
  */
 export function withAuth(
-  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession, context?: any) => Promise<Response>
 ) {
   return async (request: NextRequest, context?: any): Promise<Response> => {
     try {
       const session = await validateUserSession(request)
 
-      if (!session.valid) {
+      if (!session.valid || !session.userId || !session.role) {
         return addSecurityHeaders(
           NextResponse.json(
             {
@@ -30,7 +44,18 @@ export function withAuth(
         )
       }
 
-      return handler(request, session, context)
+      // Cast to ValidatedSession since we've verified the required fields
+      const validatedSession: ValidatedSession = {
+        valid: true,
+        userId: session.userId,
+        role: session.role,
+        email: session.email,
+        name: session.name,
+        expiresAt: session.expiresAt,
+        permissions: session.permissions,
+      }
+
+      return handler(request, validatedSession, context)
     } catch (error) {
       console.error('Auth middleware error:', error)
       return addSecurityHeaders(
@@ -51,10 +76,10 @@ export function withAuth(
  */
 export function withRole(
   allowedRoles: UserRole[],
-  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession, context?: any) => Promise<Response>
 ) {
-  return withAuth(async (request: NextRequest, session: UserSession, context?: any) => {
-    if (!session.role || !allowedRoles.includes(session.role)) {
+  return withAuth(async (request: NextRequest, session: ValidatedSession, context?: any) => {
+    if (!allowedRoles.includes(session.role)) {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -78,10 +103,10 @@ export function withRole(
  */
 export function withPermission(
   requiredPermission: string,
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession) => Promise<Response>
 ) {
-  return withAuth(async (request: NextRequest, session: UserSession) => {
-    if (!session.role || !hasPermission(session.role, requiredPermission)) {
+  return withAuth(async (request: NextRequest, session: ValidatedSession) => {
+    if (!hasPermission(session.role, requiredPermission)) {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -121,7 +146,7 @@ export function withOptionalAuth(
  * Admin-only middleware
  */
 export function withAdmin(
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession) => Promise<Response>
 ) {
   return withRole(['ADMIN'], handler)
 }
@@ -130,7 +155,7 @@ export function withAdmin(
  * Teacher or Admin middleware
  */
 export function withTeacher(
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession) => Promise<Response>
 ) {
   return withRole(['TEACHER', 'ADMIN'], handler)
 }
@@ -139,7 +164,7 @@ export function withTeacher(
  * Student-only middleware
  */
 export function withStudent(
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession) => Promise<Response>
 ) {
   return withRole(['STUDENT'], handler)
 }
@@ -148,7 +173,7 @@ export function withStudent(
  * Counselor-only middleware
  */
 export function withCounselor(
-  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
+  handler: (request: NextRequest, session: ValidatedSession, context?: any) => Promise<Response>
 ) {
   return withRole(['COUNSELOR', 'ADMIN'], handler)
 }

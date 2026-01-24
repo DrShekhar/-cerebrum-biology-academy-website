@@ -2,7 +2,7 @@
 // GET, PATCH, DELETE operations for specific webhooks
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
@@ -22,18 +22,18 @@ const updateWebhookSchema = z.object({
     'communication.sent',
   ])).optional(),
   isActive: z.boolean().optional(),
-  headers: z.record(z.string()).optional(),
+  headers: z.record(z.string(), z.string()).optional(),
   retryPolicy: z.object({
     maxRetries: z.number().min(0).max(10).optional(),
     retryDelayMs: z.number().min(1000).max(60000).optional(),
   }).optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 })
 
 // GET: Get webhook details with delivery history
 async function handleGET(
   request: NextRequest,
-  _session: { userId: string; role: string }
+  _session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const url = new URL(request.url)
@@ -119,7 +119,7 @@ async function handleGET(
 // PATCH: Update webhook
 async function handlePATCH(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const url = new URL(request.url)
@@ -192,7 +192,7 @@ async function handlePATCH(
 // DELETE: Delete webhook
 async function handleDELETE(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const url = new URL(request.url)

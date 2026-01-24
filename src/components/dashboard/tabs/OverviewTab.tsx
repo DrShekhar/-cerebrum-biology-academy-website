@@ -265,13 +265,15 @@ export function OverviewTab({
             totalPoints={gamificationData.gamification.totalPoints}
           />
           <StreakWidget
-            currentStreak={gamificationData.gamification.studyStreak}
+            studyStreak={gamificationData.gamification.studyStreak}
             longestStreak={gamificationData.gamification.longestStreak}
-            nextMilestone={gamificationData.gamification.streakMilestone}
+            streakMilestone={gamificationData.gamification.streakMilestone}
           />
           <AchievementsDisplay
-            recentAchievements={gamificationData.gamification.recentAchievements}
-            inProgressAchievements={gamificationData.gamification.inProgressAchievements}
+            achievements={[
+              ...gamificationData.gamification.recentAchievements,
+              ...gamificationData.gamification.inProgressAchievements,
+            ]}
             totalAchievements={gamificationData.gamification.totalAchievements}
             completedAchievements={gamificationData.gamification.completedAchievements}
           />

@@ -2,7 +2,7 @@
 // CRUD operations for webhook configurations
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
@@ -84,7 +84,7 @@ const webhookSchema = z.object({
   name: z.string().min(1).max(100),
   url: z.string().url().refine(
     (url) => validateWebhookUrl(url).valid,
-    (url) => ({ message: validateWebhookUrl(url).error || 'Invalid webhook URL' })
+    { message: 'Invalid webhook URL - blocked host or invalid format' }
   ),
   events: z.array(z.enum([
     'lead.created',
@@ -100,18 +100,18 @@ const webhookSchema = z.object({
   ])),
   isActive: z.boolean().optional().default(true),
   secret: z.string().optional(), // For HMAC signature verification
-  headers: z.record(z.string()).optional(), // Custom headers
+  headers: z.record(z.string(), z.string()).optional(), // Custom headers
   retryPolicy: z.object({
     maxRetries: z.number().min(0).max(10).optional().default(3),
     retryDelayMs: z.number().min(1000).max(60000).optional().default(5000),
   }).optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 })
 
 // GET: List all webhooks
 async function handleGET(
   request: NextRequest,
-  _session: { userId: string; role: string }
+  _session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)
@@ -186,7 +186,7 @@ async function handleGET(
 // POST: Create new webhook
 async function handlePOST(
   request: NextRequest,
-  session: { userId: string; role: string }
+  session: ValidatedSession
 ): Promise<NextResponse> {
   try {
     const body = await request.json()
