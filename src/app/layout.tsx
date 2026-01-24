@@ -142,6 +142,15 @@ export default function RootLayout({
         <meta name="apple-touch-fullscreen" content="yes" />
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
+        {/* PERFORMANCE: Preload critical chunks to reduce LCP render delay */}
+        {/* These hints tell the browser to start loading JS earlier */}
+        <link
+          rel="preload"
+          href="/_next/static/chunks/webpack.js"
+          as="script"
+          crossOrigin="anonymous"
+        />
+
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
         {/* Google Fonts - CRITICAL for reducing render blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -297,6 +306,14 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var o=window.onerror;window.onerror=function(m,u,l,c,e){if(m&&typeof m==='string'&&m.indexOf('MIME type')!==-1&&m.indexOf('.css')!==-1)return true;return o?o.apply(this,arguments):false};var c=console.error;console.error=function(){var a=Array.prototype.slice.call(arguments);if(a.join(' ').indexOf('MIME type')!==-1&&a.join(' ').indexOf('.css')!==-1)return;return c.apply(console,a)}})();`,
+          }}
+        />
+
+        {/* PERFORMANCE: Yield to main thread for better LCP/TBT
+            This script breaks up long tasks by yielding control back to the browser */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(typeof window!=='undefined'){window.__scheduleTask=function(fn,priority){if('scheduler'in window&&'postTask'in window.scheduler){return window.scheduler.postTask(fn,{priority:priority||'background'})}else if('requestIdleCallback'in window){return requestIdleCallback(fn)}else{return setTimeout(fn,0)}};}})();`,
           }}
         />
       </head>

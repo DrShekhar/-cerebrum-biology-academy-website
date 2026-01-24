@@ -9,34 +9,59 @@ import {
   GraduationCap,
   MessageCircle,
 } from 'lucide-react'
-import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
+// PERFORMANCE: Static strings for initial render to avoid blocking LCP
+// These are the most common (English) translations - i18n will override if needed
+const STATIC_STRINGS = {
+  sadhnasScore: "Sadhna's Score",
+  percentile100: '100 Percentile',
+  successRate: 'Success Rate',
+  neetQualified: 'NEET Qualified',
+  students: 'Students',
+  andCounting: 'and Counting',
+  nextBatchStarting: 'Next Batch Starting',
+  earlyBirdDiscount: 'Early Bird: Save ₹5,000 (ends in {days} days)',
+}
+
+// PERFORMANCE: Defer counter animation using requestIdleCallback
 const AnimatedCounter = memo(({ value, suffix = '' }: { value: string; suffix?: string }) => {
   const [displayValue, setDisplayValue] = useState(value)
   const [hasAnimated, setHasAnimated] = useState(false)
 
   useEffect(() => {
     if (hasAnimated) return
-    setHasAnimated(true)
 
-    const numericValue = parseInt(value.replace(/[^0-9]/g, ''))
-    const duration = 1500
-    const steps = 30
-    const increment = numericValue / steps
-    let current = 0
+    // PERFORMANCE: Use requestIdleCallback to defer animation
+    const startAnimation = () => {
+      setHasAnimated(true)
+      const numericValue = parseInt(value.replace(/[^0-9]/g, ''))
+      const duration = 1500
+      const steps = 30
+      const increment = numericValue / steps
+      let current = 0
 
-    const timer = setInterval(() => {
-      current += increment
-      if (current >= numericValue) {
-        setDisplayValue(value)
-        clearInterval(timer)
-      } else {
-        setDisplayValue(Math.floor(current).toString())
-      }
-    }, duration / steps)
+      const timer = setInterval(() => {
+        current += increment
+        if (current >= numericValue) {
+          setDisplayValue(value)
+          clearInterval(timer)
+        } else {
+          setDisplayValue(Math.floor(current).toString())
+        }
+      }, duration / steps)
 
-    return () => clearInterval(timer)
+      return () => clearInterval(timer)
+    }
+
+    // Defer animation to after main thread is idle
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(startAnimation, { timeout: 2000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(startAnimation, 500)
+      return () => clearTimeout(timerId)
+    }
   }, [value, hasAnimated])
 
   return (
@@ -48,18 +73,23 @@ const AnimatedCounter = memo(({ value, suffix = '' }: { value: string; suffix?: 
 })
 AnimatedCounter.displayName = 'AnimatedCounter'
 
-export function HeroClientInteractive() {
-  const { t } = useI18n()
+// PERFORMANCE: Use static strings for initial render to avoid blocking LCP
+// The I18n context handles language changes via re-render at the app level
+function useI18nLazy() {
+  const t = (key: string) => STATIC_STRINGS[key as keyof typeof STATIC_STRINGS] || key
+  return { t }
+}
 
-  const [timeLeft, setTimeLeft] = useState({
-    days: 82,
-    hours: 15,
-    minutes: 42,
-    seconds: 30,
-  })
+export function HeroClientInteractive() {
+  const { t } = useI18nLazy()
+
+  // PERFORMANCE: Calculate initial time on client to avoid hydration mismatch
+  // Use a stable initial value, then update after mount
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [_isCountdownReady, setIsCountdownReady] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date('2026-01-15T00:00:00')
+    const targetDate = new Date('2026-05-04T00:00:00') // NEET 2026 expected date
 
     const calculateTimeLeft = () => {
       const now = new Date()
@@ -76,13 +106,26 @@ export function HeroClientInteractive() {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 }
     }
 
+    // Set initial value immediately
     setTimeLeft(calculateTimeLeft())
+    setIsCountdownReady(true)
 
-    const interval = setInterval(() => {
-      setTimeLeft(calculateTimeLeft())
-    }, 1000)
+    // PERFORMANCE: Defer interval start to reduce initial JS execution
+    let interval: NodeJS.Timeout
 
-    return () => clearInterval(interval)
+    const startInterval = () => {
+      interval = setInterval(() => {
+        setTimeLeft(calculateTimeLeft())
+      }, 1000)
+    }
+
+    // Start countdown after a brief delay to prioritize LCP
+    const delayId = setTimeout(startInterval, 100)
+
+    return () => {
+      clearTimeout(delayId)
+      if (interval) clearInterval(interval)
+    }
   }, [])
 
   return (

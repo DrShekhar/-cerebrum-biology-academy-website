@@ -36,7 +36,8 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
       className={`relative min-h-screen bg-indigo-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
     >
       {/* Background - CSS only, no external image for faster LCP */}
-      <div className="absolute inset-0">
+      {/* PERFORMANCE: contain: strict isolates this layer from affecting LCP */}
+      <div className="absolute inset-0 contain-strict" aria-hidden="true">
         {/* CSS gradient orbs - no JS animation for performance */}
         <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-pulse-slow" />
         <div
@@ -55,7 +56,8 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
         {/* PERFORMANCE: LCP-critical elements (H1, H2) rendered immediately without animation
             Non-LCP elements use staggered animations for visual appeal */}
-        <div className="w-full">
+        {/* lcp-critical class ensures content-visibility: visible for this container */}
+        <div className="w-full lcp-critical">
           {/* Badge - Animated (non-LCP element) */}
           <div
             className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"

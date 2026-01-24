@@ -34,8 +34,14 @@ export function FloatingCTA() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
-    const timerId = setTimeout(() => setShouldLoad(true), 2000)
-    return () => clearTimeout(timerId)
+    // PERFORMANCE: Use requestIdleCallback for non-critical UI to avoid blocking LCP
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 4000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 3000)
+      return () => clearTimeout(timerId)
+    }
   }, [])
 
   if (!shouldLoad) return null
@@ -69,8 +75,14 @@ export function SalesAgentWidget() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const timerId = setTimeout(() => setShouldLoad(true), 3000)
-    return () => clearTimeout(timerId)
+    // PERFORMANCE: Delay sales agent to prioritize LCP and core interactivity
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 4000)
+      return () => clearTimeout(timerId)
+    }
   }, [])
 
   const handleClose = useCallback(() => {
