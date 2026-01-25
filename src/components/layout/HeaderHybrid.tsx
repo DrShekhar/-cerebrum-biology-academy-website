@@ -75,27 +75,15 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               <div className="relative flex-shrink-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
-                    src="/brain-logo.webp"
+                    src="/brain-logo.png"
                     alt="Cerebrum Biology Academy"
                     width={40}
                     height={40}
                     sizes="40px"
                     className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
-                    onError={(e) => {
-                      // Hide broken image and show fallback
-                      e.currentTarget.style.display = 'none'
-                    }}
+                    unoptimized={false}
                   />
-                  {/* Fallback icon if image fails */}
-                  <svg
-                    className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 hidden"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
                 </div>
               </div>
 
