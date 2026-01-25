@@ -24,6 +24,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function VasantViharLocationPage() {
   useEffect(() => {
@@ -259,6 +263,12 @@ export default function VasantViharLocationPage() {
             </div>
           </div>
         </section>
+
+        <RelatedLocations
+          currentLocation="Vasant Vihar"
+          locations={getRelatedLocations('vasant-vihar')}
+          className="bg-white"
+        />
 
         {/* Stats */}
         <section className="py-12 bg-slate-900 text-white">

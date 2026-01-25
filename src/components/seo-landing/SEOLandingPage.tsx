@@ -11,6 +11,7 @@ import { FinalCTA } from './FinalCTA'
 import { ToolsCTASection } from './ToolsCTASection'
 import { RelatedBlogPosts } from './RelatedBlogPosts'
 import { HowToSchema, DrShekharSinghSchema } from '@/components/seo/StructuredData'
+import { AICitationTracking } from '@/components/seo/AICitationTracking'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -93,6 +94,13 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
 
       {/* Final CTA */}
       <FinalCTA cta={content.cta} contactButtons={content.contactButtons} />
+
+      {/* AI Citation Tracking for GEO */}
+      <AICitationTracking
+        pageName={content.title}
+        pageType="course"
+        primaryKeywords={content.keywords.slice(0, 5)}
+      />
     </main>
   )
 }

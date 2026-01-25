@@ -24,6 +24,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { PhotoGallerySection } from '@/components/layout/PhotoGallerySection'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
+import { NEETStudyTimetableInfographic } from '@/components/seo/NEETStudyTimetableInfographic'
 import Link from 'next/link'
 
 export default function Class9FoundationPage() {
@@ -528,6 +529,9 @@ export default function Class9FoundationPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* NEET Study Timetable Infographic */}
+      <NEETStudyTimetableInfographic variant="compact" className="bg-gray-50" />
 
       {/* Parent Testimonials */}
       <ParentTestimonialsSection />

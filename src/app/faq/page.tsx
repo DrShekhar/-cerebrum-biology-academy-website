@@ -18,6 +18,8 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { AICitationTracking } from '@/components/seo/AICitationTracking'
+import { NEETBiologyWeightageInfographic } from '@/components/seo/NEETBiologyWeightageInfographic'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface FAQ {
@@ -490,6 +492,9 @@ export default function FAQPage() {
             </div>
           )}
 
+          {/* NEET Biology Weightage Infographic */}
+          <NEETBiologyWeightageInfographic className="bg-white -mx-4 sm:-mx-6 lg:-mx-8" />
+
           {/* Contact CTA */}
           <div className="mt-16 bg-indigo-500 rounded-2xl p-8 md:p-12 text-white text-center">
             <MessageCircle className="w-12 h-12 mx-auto mb-4 opacity-80" />
@@ -534,6 +539,18 @@ export default function FAQPage() {
           </div>
         </div>
       </div>
+
+      <AICitationTracking
+        pageName="Cerebrum Biology Academy - Frequently Asked Questions"
+        pageType="faq"
+        primaryKeywords={[
+          'NEET Biology coaching FAQ',
+          'NEET coaching fees Delhi',
+          'best Biology coaching South Delhi',
+          'NEET dropper course questions',
+          'online Biology coaching FAQ',
+        ]}
+      />
     </>
   )
 }

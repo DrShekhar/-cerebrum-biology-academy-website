@@ -23,6 +23,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function NewFriendsColonyPage() {
   useEffect(() => {
@@ -226,6 +230,12 @@ export default function NewFriendsColonyPage() {
             </div>
           </div>
         </section>
+
+        <RelatedLocations
+          currentLocation="New Friends Colony"
+          locations={getRelatedLocations('new-friends-colony')}
+          className="bg-white"
+        />
 
         <section className="py-12 bg-slate-900 text-white">
           <div className="container mx-auto px-4">
