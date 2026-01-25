@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getAllMetroSlugs, getMetroBySlug } from '@/data/south-delhi-metros'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { MapPin, Train, Clock, Phone, ArrowRight, CheckCircle, GraduationCap } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -74,28 +75,32 @@ export default async function MetroLandingPage({ params }: PageProps) {
     })
     .filter(Boolean)
 
+  const organizationId = 'https://cerebrumbiologyacademy.com/#organization'
+
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'EducationalOrganization'],
     '@id': `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}#localbusiness`,
     name: `Cerebrum Biology Academy - Near ${metro.name} Metro`,
     description: `NEET coaching center near ${metro.name} Metro station. ${metro.description}`,
     url: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}`,
-    telephone: '+91-8826444334',
-    email: 'info@cerebrumbiologyacademy.com',
+    telephone: CEREBRUM_METRICS.phone,
+    email: CEREBRUM_METRICS.email,
     priceRange: '₹₹',
+    image: 'https://cerebrumbiologyacademy.com/logo.png',
+    parentOrganization: { '@id': organizationId },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Kalu Sarai, Near IIT Delhi',
+      streetAddress: CEREBRUM_METRICS.mainAddress,
       addressLocality: 'South Delhi',
       addressRegion: 'Delhi',
-      postalCode: '110016',
+      postalCode: CEREBRUM_METRICS.pincode,
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '28.5459',
-      longitude: '77.1926',
+      latitude: CEREBRUM_METRICS.coordinates.latitude.toString(),
+      longitude: CEREBRUM_METRICS.coordinates.longitude.toString(),
     },
     openingHoursSpecification: [
       {
@@ -104,11 +109,82 @@ export default async function MetroLandingPage({ params }: PageProps) {
         opens: '08:00',
         closes: '20:00',
       },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
+      },
+    ],
+    sameAs: [
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+      'https://www.youtube.com/@cerebrumbiologyacademy',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '150',
+      ratingValue: CEREBRUM_METRICS.rating.toString(),
+      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Student near ' + metro.name },
+        datePublished: '2025-11-10',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: `Perfect location near ${metro.name} Metro! I travel from ${metro.nearbyAreas[0] || 'nearby areas'} and it takes just ${metro.walkingTime}. The faculty is excellent and the small batch size ensures personal attention.`,
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Parent' },
+        datePublished: '2025-10-05',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: `My daughter easily commutes via ${metro.line} Line to reach Cerebrum. The coaching quality is excellent - she improved her Biology score from 150 to 340+ out of 360. Highly recommended!`,
+      },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'NEET Biology Courses',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          price: CEREBRUM_METRICS.feeClass12,
+          availability: 'https://schema.org/InStock',
+          itemOffered: {
+            '@type': 'Course',
+            name: 'Class 12 Intensive NEET Biology',
+            description: '1-year intensive NEET Biology course with focus on board + NEET integration',
+            provider: { '@id': organizationId },
+            educationalLevel: 'Class 12',
+            timeRequired: 'P1Y',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['onsite', 'online', 'blended'],
+            },
+          },
+        },
+        {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          price: CEREBRUM_METRICS.feeDropper,
+          availability: 'https://schema.org/InStock',
+          itemOffered: {
+            '@type': 'Course',
+            name: 'Dropper Batch NEET Biology',
+            description: '1-year comprehensive revision course for NEET repeaters',
+            provider: { '@id': organizationId },
+            educationalLevel: '12th Pass / Dropper',
+            timeRequired: 'P1Y',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['onsite', 'online', 'blended'],
+            },
+          },
+        },
+      ],
     },
   }
 

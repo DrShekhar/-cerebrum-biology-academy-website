@@ -2,9 +2,43 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { MapPin, GraduationCap, CheckCircle, Phone, ArrowRight, Play, Train } from 'lucide-react'
+import {
+  MapPin,
+  GraduationCap,
+  CheckCircle,
+  Phone,
+  ArrowRight,
+  Play,
+  Train,
+  ChevronRight,
+  Home,
+} from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { AreaDetails, courseOptions } from '@/data/south-delhi-areas'
+import { AreaDetails, courseOptions, areaDetails } from '@/data/south-delhi-areas'
+
+// Helper to get nearby areas based on area type and location
+function getNearbyAreas(currentSlug: string, currentType: string): string[] {
+  const allSlugs = Object.keys(areaDetails)
+  const typeMapping: Record<string, string[]> = {
+    'coaching-hub': ['hauz-khas', 'kalu-sarai', 'malviya-nagar', 'karol-bagh', 'rajendra-nagar'],
+    posh: ['greater-kailash', 'defence-colony', 'vasant-vihar', 'panchsheel-park', 'east-of-kailash'],
+    residential: ['saket', 'green-park', 'new-friends-colony', 'cr-park', 'alaknanda', 'lajpat-nagar'],
+    'govt-colony': ['rk-puram', 'sarojini-nagar', 'lodhi-colony', 'andrews-ganj', 'kidwai-nagar'],
+    'ultra-premium': ['golf-links', 'jor-bagh', 'sunder-nagar', 'gulmohar-park', 'vasant-vihar'],
+    'student-hub': ['munirka', 'ber-sarai', 'katwaria-sarai', 'kalu-sarai'],
+    gated: ['vasant-kunj', 'saket', 'cr-park'],
+  }
+  const sameType = typeMapping[currentType] || []
+  return sameType.filter((slug) => slug !== currentSlug && areaDetails[slug]).slice(0, 4)
+}
+
+// Convert metro name to slug
+function metroToSlug(metroName: string): string {
+  return metroName
+    .toLowerCase()
+    .replace(' metro', '')
+    .replace(/\s+/g, '-')
+}
 
 interface AreaPageContentProps {
   area: AreaDetails
@@ -22,8 +56,43 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
     }
   }
 
+  const nearbyAreas = getNearbyAreas(areaSlug, area.type)
+
   return (
     <div className="min-h-screen">
+      {/* Visual Breadcrumb Navigation */}
+      <nav
+        className="bg-gray-100 py-3 px-4"
+        aria-label="Breadcrumb"
+      >
+        <div className="max-w-7xl mx-auto">
+          <ol className="flex items-center flex-wrap gap-1 text-sm">
+            <li className="flex items-center">
+              <Link
+                href="/"
+                className="text-gray-600 hover:text-purple-600 transition-colors flex items-center"
+              >
+                <Home className="w-4 h-4" />
+                <span className="sr-only">Home</span>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link
+                href="/neet-coaching-south-delhi"
+                className="text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                NEET Coaching South Delhi
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-purple-700 font-medium">{area.name}</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -36,15 +105,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Link
-              href="/neet-coaching-south-delhi"
-              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 mb-4"
-            >
-              <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
-              Back to South Delhi
-            </Link>
 
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 ml-4">
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               {area.fullName}
             </div>
@@ -112,12 +174,20 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 <h3 className="font-bold text-gray-900">Nearby Metro Stations</h3>
               </div>
               <ul className="space-y-2">
-                {area.nearbyMetro.map((metro) => (
-                  <li key={metro} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                    {metro}
-                  </li>
-                ))}
+                {area.nearbyMetro.map((metro) => {
+                  const metroSlug = metroToSlug(metro)
+                  return (
+                    <li key={metro} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                      <Link
+                        href={`/neet-coaching-near-metro/${metroSlug}`}
+                        className="text-purple-600 hover:text-purple-800 transition-colors"
+                      >
+                        {metro}
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </motion.div>
 
@@ -259,6 +329,80 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </div>
       </section>
+
+      {/* Nearby Areas - Internal Linking */}
+      {nearbyAreas.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                NEET Coaching in Nearby Areas
+              </h2>
+              <p className="text-gray-600">
+                Explore our coaching services in similar localities near {area.name}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {nearbyAreas.map((slug, index) => {
+                const nearbyArea = areaDetails[slug]
+                if (!nearbyArea) return null
+                return (
+                  <motion.div
+                    key={slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Link
+                      href={`/neet-coaching-south-delhi/${slug}`}
+                      className="block bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-purple-300 group"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <MapPin className="w-5 h-5 text-purple-600" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
+                      </div>
+                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-purple-700">
+                        {nearbyArea.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 line-clamp-2">
+                        {nearbyArea.description}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-1">
+                        {nearbyArea.highlights.slice(0, 2).map((h) => (
+                          <span
+                            key={h}
+                            className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full"
+                          >
+                            {h}
+                          </span>
+                        ))}
+                      </div>
+                    </Link>
+                  </motion.div>
+                )
+              })}
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                href="/neet-coaching-south-delhi"
+                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
+              >
+                View All South Delhi Areas
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
