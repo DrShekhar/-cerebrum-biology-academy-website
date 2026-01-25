@@ -44,66 +44,67 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
           {/* Left Section - Logo */}
           <div className="flex items-center space-x-4">
             {/* Burger Menu - Client interactive, visible on ALL screens */}
-            <div id="burger-menu-slot">
-              <Suspense
-                fallback={
-                  <button
-                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                    aria-label="Menu"
+            <Suspense
+              fallback={
+                <button
+                  className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  aria-label="Menu"
+                  type="button"
+                >
+                  <svg
+                    className="w-6 h-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
                   >
-                    <svg
-                      className="w-6 h-6 text-gray-700"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
-                  </button>
-                }
-              >
-                <HeaderClientInteractions section="burger" />
-              </Suspense>
-            </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </button>
+              }
+            >
+              <HeaderClientInteractions section="burger" />
+            </Suspense>
 
             {/* Logo - Server rendered for instant LCP */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+              <div className="relative flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
                     src="/brain-logo.webp"
-                    alt="Cerebrum Biology Academy Logo"
+                    alt="Cerebrum Biology Academy"
                     width={40}
                     height={40}
-                    sizes="(max-width: 640px) 32px, 40px"
-                    className="object-contain"
+                    sizes="40px"
+                    className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
+                    onError={(e) => {
+                      // Hide broken image and show fallback
+                      e.currentTarget.style.display = 'none'
+                    }}
                   />
+                  {/* Fallback icon if image fails */}
+                  <svg
+                    className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 hidden"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
                 </div>
-                <div className="absolute inset-0 bg-green-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
               </div>
 
-              {/* Mobile brand */}
-              <div className="block sm:hidden">
-                <span className="text-xl font-bold text-slate-900 leading-none tracking-[-0.02em]">
+              {/* Responsive brand text - single element */}
+              <div className="flex flex-col justify-center min-w-0">
+                <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em]">
                   Cerebrum
                 </span>
-                <span className="block text-xs text-slate-600 font-medium tracking-wide">
-                  Biology Academy
-                </span>
-              </div>
-
-              {/* Desktop brand */}
-              <div className="hidden sm:block">
-                <span className="text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em]">
-                  Cerebrum
-                </span>
-                <span className="block text-sm text-slate-600 font-medium tracking-wide">
+                <span className="text-[10px] sm:text-sm text-slate-600 font-medium tracking-wide leading-tight">
                   Biology Academy
                 </span>
               </div>
@@ -145,32 +146,31 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             {/* Search - Client interactive */}
-            <div id="search-slot">
-              <Suspense
-                fallback={
-                  <button
-                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                    aria-label="Search"
+            <Suspense
+              fallback={
+                <button
+                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
+                  aria-label="Search"
+                  type="button"
+                >
+                  <svg
+                    className="w-5 h-5 text-gray-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
                   >
-                    <svg
-                      className="w-5 h-5 text-gray-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </button>
-                }
-              >
-                <HeaderClientInteractions section="search" />
-              </Suspense>
-            </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </button>
+              }
+            >
+              <HeaderClientInteractions section="search" />
+            </Suspense>
 
             {/* Desktop CTAs - Server rendered */}
             <div className="hidden lg:flex items-center gap-6">

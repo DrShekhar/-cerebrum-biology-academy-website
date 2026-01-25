@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { trackLeadFormConversion } from '@/lib/analytics/googleAdsConversions'
 
 interface SecondChanceNEETLandingProps {
   onFormSubmit?: (data: any) => void
@@ -186,13 +187,7 @@ export function SecondChanceNEETLanding({
     e.preventDefault()
     onFormSubmit?.(formData)
     // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL',
-        value: 1.0,
-        currency: 'INR',
-      })
-    }
+    trackLeadFormConversion('failure-analysis-form')
   }
 
   const handleInputChange = (field: string, value: string) => {

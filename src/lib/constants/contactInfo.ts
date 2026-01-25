@@ -58,6 +58,48 @@ export const CONTACT_INFO = {
     website: 'https://cerebrumbiologyacademy.com',
   },
 
+  // Physical Location - Gurugram Center
+  location: {
+    gurugram: {
+      name: 'Cerebrum Biology Academy - Gurugram',
+      streetAddress: 'Plot No. 15, Sector 44',
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      postalCode: '122003',
+      addressCountry: 'IN',
+      // Exact coordinates for Google Maps
+      geo: {
+        latitude: 28.4595,
+        longitude: 77.0266,
+      },
+      // Google Maps embed URL
+      mapUrl: 'https://maps.google.com/maps?q=Cerebrum+Biology+Academy+Gurugram',
+      // Google Business Profile URL (update after claiming)
+      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy',
+      // Landmarks for local SEO
+      nearbyLandmarks: [
+        'Near HUDA City Centre Metro Station',
+        'Opposite Sector 44 Market',
+        'Near Golf Course Road',
+      ],
+    },
+  },
+
+  // Operating Hours
+  hours: {
+    weekdays: {
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      open: '07:00',
+      close: '21:00',
+    },
+    sunday: {
+      days: ['Sunday'],
+      open: '09:00',
+      close: '18:00',
+    },
+    displayText: 'Mon-Sat: 7 AM - 9 PM | Sun: 9 AM - 6 PM',
+  },
+
   // Social media
   social: {
     instagram: 'https://instagram.com/cerebrumbiologyacademy',

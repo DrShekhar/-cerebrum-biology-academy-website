@@ -118,6 +118,7 @@ export const Footer = memo(function Footer() {
     { name: 'Contact Us', href: '/contact' },
     { name: 'Help Center', href: '/help' },
     { name: 'Book Demo Class', href: '/demo-booking' },
+    { name: 'Leave a Review', href: '/reviews' },
     { name: 'Scholarship', href: '/scholarship' },
     { name: 'Referral Program', href: '/referral' },
     { name: 'Admission Process', href: '/admissions' },
@@ -125,7 +126,7 @@ export const Footer = memo(function Footer() {
 
   const offlineCenters = [
     { name: 'Rohini, Delhi', href: '/neet-coaching-north-delhi' },
-    { name: 'Gurugram', href: '/neet-coaching-gurugram' },
+    { name: 'Gurugram', href: '/locations/gurugram' },
     { name: 'South Extension', href: '/neet-coaching-south-delhi' },
     { name: 'Faridabad', href: '/neet-coaching-faridabad' },
   ]
@@ -447,7 +448,7 @@ export const Footer = memo(function Footer() {
 
             <h4 className="font-semibold text-lg mb-4 text-white">{t('support')}</h4>
             <ul className="space-y-2">
-              {supportLinks.slice(0, 4).map((link) => (
+              {supportLinks.slice(0, 5).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

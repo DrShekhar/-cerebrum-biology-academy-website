@@ -4,6 +4,14 @@ import { SecondChanceNEETLanding } from '@/components/landing/SecondChanceNEETLa
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { useEffect } from 'react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import {
+  trackGoogleAdsConversion,
+  trackPhoneCallConversion,
+  trackWhatsAppConversion,
+  trackLeadFormConversion,
+  trackDemoBookingConversion,
+  GOOGLE_ADS_CONVERSIONS,
+} from '@/lib/analytics/googleAdsConversions'
 
 export default function SecondChanceNEETPage() {
   useEffect(() => {
@@ -20,12 +28,9 @@ export default function SecondChanceNEETPage() {
     // Google Ads conversion tracking for page view
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'page_view', {
-        send_to: 'AW-CONVERSION_ID',
-        custom_parameters: {
-          page_type: 'landing_page',
-          campaign_type: 'failed_neet_students',
-          source: 'google_ads',
-        },
+        page_type: 'landing_page',
+        campaign_type: 'failed_neet_students',
+        source: 'google_ads',
       })
     }
 
@@ -49,14 +54,7 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.trackLeadGeneration('failure-analysis-form', data)
 
     // Google Ads conversion tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/LEAD_CONVERSION_LABEL',
-        value: 1.0,
-        currency: 'INR',
-        transaction_id: `lead_${Date.now()}`,
-      })
-    }
+    trackLeadFormConversion('failure-analysis-form')
 
     // Facebook Pixel tracking
     if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -98,15 +96,12 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.trackWhatsAppClick()
 
     // Google Ads conversion tracking for WhatsApp clicks
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/WHATSAPP_CONVERSION_LABEL',
-      })
-    }
+    trackWhatsAppConversion('second-chance-neet')
 
     await trackAndOpenWhatsApp({
       source: 'second-chance-neet',
-      message: 'Hi! I saw your Second Chance NEET program. I failed NEET 2024 and need guidance for my second attempt.',
+      message:
+        'Hi! I saw your Second Chance NEET program. I failed NEET 2024 and need guidance for my second attempt.',
       campaign: 'second-chance-neet',
     })
   }
@@ -115,11 +110,7 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.trackPhoneCall()
 
     // Google Ads conversion tracking for phone calls
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/PHONE_CONVERSION_LABEL',
-      })
-    }
+    trackPhoneCallConversion('+918826444334')
 
     // Call tracking number for Google Ads
     window.open('tel:+918826444334', '_self')
@@ -129,11 +120,7 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.trackDemoBooking()
 
     // Track counseling booking intent
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/COUNSELING_CONVERSION_LABEL',
-      })
-    }
+    trackDemoBookingConversion('second-chance-neet-counseling')
 
     // Redirect to booking page with source tracking
     window.location.href = '/enrollment?source=second-chance-neet&step=counseling'
@@ -143,11 +130,7 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.trackDownload('success-stories-repeaters')
 
     // Track success stories download
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/DOWNLOAD_CONVERSION_LABEL',
-      })
-    }
+    trackGoogleAdsConversion('DOWNLOAD_RESOURCE')
 
     // Generate and download PDF (implementation needed)
     alert('Success stories PDF will be sent to your WhatsApp within 2 minutes!')

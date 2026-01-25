@@ -118,45 +118,29 @@ const Header = () => {
 
             {/* Enhanced Logo with Brain Design */}
             <Link href="/" className="flex items-center space-x-3 group">
-              {/* Beautiful Brain Logo */}
-              <div className="relative">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              {/* Brain Logo */}
+              <div className="relative flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
                     src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
                     width={40}
                     height={40}
-                    sizes="(max-width: 640px) 32px, 40px"
-                    className="object-contain"
+                    sizes="40px"
+                    className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
                   />
                 </div>
-                {/* Teal glow effect on hover */}
-                <div className="absolute inset-0 bg-green-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
-              {/* Mobile: Compact brand display */}
-              <div className="block sm:hidden">
-                <div className="flex flex-col justify-center">
-                  <span className="text-xl font-bold text-slate-900 leading-none tracking-[-0.02em] antialiased">
-                    Cerebrum
-                  </span>
-                  <span className="text-xs text-slate-600 font-medium leading-tight tracking-wide">
-                    Biology Academy
-                  </span>
-                </div>
-              </div>
-
-              {/* Desktop: Full brand display */}
-              <div className="hidden sm:block">
-                <div className="flex flex-col justify-center">
-                  <span className="text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] antialiased">
-                    Cerebrum
-                  </span>
-                  <span className="text-sm text-slate-600 font-medium leading-tight tracking-wide">
-                    Biology Academy
-                  </span>
-                </div>
+              {/* Responsive brand text - single element */}
+              <div className="flex flex-col justify-center min-w-0">
+                <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] antialiased truncate">
+                  Cerebrum
+                </span>
+                <span className="text-[10px] sm:text-sm text-slate-600 font-medium leading-tight tracking-wide">
+                  Biology Academy
+                </span>
               </div>
             </Link>
           </div>

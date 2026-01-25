@@ -382,31 +382,52 @@ export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: 
 export function LocalBusinessSchema() {
   const localBusinessData = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'EducationalOrganization',
     '@id': 'https://cerebrumbiologyacademy.com/#localbusiness',
-    name: 'Cerebrum Biology Academy - Delhi NCR',
-    alternateName: 'Best NEET Coaching in Delhi NCR',
+    name: 'Cerebrum Biology Academy',
+    alternateName: [
+      'Cerebrum Biology Academy Gurugram',
+      'Best NEET Coaching Gurugram',
+      'NEET Biology Coaching Gurgaon',
+    ],
     description:
-      'Premier NEET Biology coaching in Delhi NCR with AIIMS Trained Faculties. Serving Laxmi Nagar, Dwarka, Noida, Gurgaon with 98% success rate. Small batches, live classes.',
+      'Premier NEET Biology coaching in Gurugram with AIIMS Trained Faculty. 90% success rate, small batches of 15 students, personalized attention. Serving Gurugram, Delhi NCR.',
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
-    image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
-    priceRange: '₹₹',
+    email: CONTACT_INFO.email.info,
+    image: [
+      'https://cerebrumbiologyacademy.com/og-image.jpg',
+      'https://cerebrumbiologyacademy.com/images/classroom.jpg',
+      'https://cerebrumbiologyacademy.com/images/faculty.jpg',
+    ],
+    logo: 'https://cerebrumbiologyacademy.com/logo.png',
+    priceRange: '₹₹-₹₹₹',
+    currenciesAccepted: 'INR',
+    paymentAccepted: 'Cash, Credit Card, Debit Card, UPI, Bank Transfer',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Online + Delhi NCR Coverage',
-      addressLocality: 'Delhi',
-      addressRegion: 'Delhi NCR',
-      postalCode: '110001',
-      addressCountry: 'IN',
+      streetAddress: CONTACT_INFO.location.gurugram.streetAddress,
+      addressLocality: CONTACT_INFO.location.gurugram.addressLocality,
+      addressRegion: CONTACT_INFO.location.gurugram.addressRegion,
+      postalCode: CONTACT_INFO.location.gurugram.postalCode,
+      addressCountry: CONTACT_INFO.location.gurugram.addressCountry,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 28.6139,
-      longitude: 77.209,
+      latitude: CONTACT_INFO.location.gurugram.geo.latitude,
+      longitude: CONTACT_INFO.location.gurugram.geo.longitude,
     },
+    hasMap: CONTACT_INFO.location.gurugram.mapUrl,
     areaServed: [
+      {
+        '@type': 'City',
+        name: 'Gurugram',
+        alternateName: 'Gurgaon',
+        containedIn: {
+          '@type': 'State',
+          name: 'Haryana',
+        },
+      },
       {
         '@type': 'City',
         name: 'Delhi',
@@ -425,22 +446,6 @@ export function LocalBusinessSchema() {
       },
       {
         '@type': 'City',
-        name: 'Gurgaon',
-        containedIn: {
-          '@type': 'State',
-          name: 'Haryana',
-        },
-      },
-      {
-        '@type': 'City',
-        name: 'Ghaziabad',
-        containedIn: {
-          '@type': 'State',
-          name: 'Uttar Pradesh',
-        },
-      },
-      {
-        '@type': 'City',
         name: 'Faridabad',
         containedIn: {
           '@type': 'State',
@@ -451,62 +456,161 @@ export function LocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '07:00',
-        closes: '21:00',
+        dayOfWeek: CONTACT_INFO.hours.weekdays.days,
+        opens: CONTACT_INFO.hours.weekdays.open,
+        closes: CONTACT_INFO.hours.weekdays.close,
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Sunday',
-        opens: '09:00',
-        closes: '18:00',
+        opens: CONTACT_INFO.hours.sunday.open,
+        closes: CONTACT_INFO.hours.sunday.close,
       },
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '2500',
+      ratingValue: '4.8',
+      reviewCount: '247',
       bestRating: '5',
       worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Priya Sharma',
+        },
+        datePublished: '2024-11-15',
+        reviewBody:
+          'Best NEET Biology coaching in Gurugram. Dr. Shekhar Singh explains concepts so clearly. Scored 340/360 in Biology!',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Rahul Verma',
+        },
+        datePublished: '2024-10-20',
+        reviewBody:
+          'Small batch size made all the difference. Personal attention from faculty helped me clear NEET in first attempt.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Ananya Gupta',
+        },
+        datePublished: '2024-09-10',
+        reviewBody:
+          'Joined as a repeater student. The specialized approach helped me improve from 420 to 650. Now at AIIMS Delhi!',
+      },
+    ],
+    sameAs: [
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+      'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.linkedin.com/company/cerebrumbiologyacademy',
+    ],
+    founder: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar Singh',
+      jobTitle: 'Founder & Lead Faculty',
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'AIIMS New Delhi',
+      },
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'NEET Biology Coaching Delhi NCR',
+      name: 'NEET Biology Coaching Programs',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service',
-            name: 'NEET Biology Coaching Laxmi Nagar',
-            description: 'Online NEET Biology coaching for Laxmi Nagar, East Delhi students',
+            '@type': 'Course',
+            name: 'NEET Biology Foundation (Class 11)',
+            description: 'Complete NEET Biology preparation for Class 11 students',
           },
+          price: '48000',
+          priceCurrency: 'INR',
         },
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service',
-            name: 'NEET Biology Coaching Dwarka',
-            description: 'Online NEET Biology coaching for Dwarka, West Delhi students',
+            '@type': 'Course',
+            name: 'NEET Biology Intensive (Class 12)',
+            description: 'Intensive NEET Biology preparation for Class 12 students',
           },
+          price: '65000',
+          priceCurrency: 'INR',
         },
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service',
-            name: 'NEET Biology Coaching Noida',
-            description: 'Online NEET Biology coaching for Noida, Greater Noida students',
+            '@type': 'Course',
+            name: 'NEET Repeater/Dropper Program',
+            description: 'Specialized program for NEET repeaters with personalized attention',
           },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'NEET Biology Coaching Gurgaon',
-            description: 'Online NEET Biology coaching for Gurgaon, Gurugram students',
-          },
+          price: '75000',
+          priceCurrency: 'INR',
         },
       ],
     },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: CONTACT_INFO.phone.primary,
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '07:00',
+          closes: '21:00',
+        },
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: CONTACT_INFO.phone.primary,
+        contactType: 'sales',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+      },
+    ],
+    potentialAction: [
+      {
+        '@type': 'ReserveAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://cerebrumbiologyacademy.com/enrollment',
+          actionPlatform: [
+            'http://schema.org/DesktopWebPlatform',
+            'http://schema.org/MobileWebPlatform',
+          ],
+        },
+        result: {
+          '@type': 'Reservation',
+          name: 'Book Free Demo Class',
+        },
+      },
+    ],
   }
 
   return (

@@ -289,12 +289,30 @@ export default function RootLayout({
               @keyframes pulse{50%{opacity:.5}}
               .animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
               /* Visibility utilities - CRITICAL for header responsiveness */
-              .hidden{display:none}
+              .hidden{display:none!important}
               .block{display:block}
-              /* Responsive */
-              @media(min-width:640px){.sm\\:hidden{display:none}.sm\\:block{display:block}.sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\\:text-lg{font-size:1.125rem}}
-              @media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block}.md\\:flex{display:flex}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
-              @media(min-width:1024px){.lg\\:hidden{display:none}.lg\\:block{display:block}.lg\\:flex{display:flex}.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
+              .flex-shrink-0{flex-shrink:0}
+              .min-w-0{min-width:0}
+              .truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+              /* iOS Safari text sizing fix */
+              .text-lg{font-size:1.125rem;line-height:1.75rem}
+              .text-\\[10px\\]{font-size:10px;line-height:1.2}
+              /* Responsive - with !important for iOS Safari */
+              @media(min-width:640px){
+                .sm\\:hidden{display:none!important}
+                .sm\\:block{display:block!important}
+                .sm\\:flex{display:flex!important}
+                .sm\\:text-2xl{font-size:1.5rem!important;line-height:2rem!important}
+                .sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}
+                .sm\\:text-sm{font-size:.875rem!important;line-height:1.25rem!important}
+                .sm\\:text-lg{font-size:1.125rem}
+                .sm\\:w-12{width:3rem!important}
+                .sm\\:h-12{height:3rem!important}
+                .sm\\:w-10{width:2.5rem!important}
+                .sm\\:h-10{height:2.5rem!important}
+              }
+              @media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block!important}.md\\:flex{display:flex!important}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
+              @media(min-width:1024px){.lg\\:hidden{display:none!important}.lg\\:block{display:block!important}.lg\\:flex{display:flex!important}.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
               @media(min-width:1280px){.xl\\:text-6xl{font-size:3.75rem;line-height:1}}
             `,
           }}

@@ -3,17 +3,16 @@
 import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import {
-  CheckCircle2,
-  Phone,
-  MessageSquare,
-  Clock,
-  FileText,
-  CalendarDays,
-} from 'lucide-react'
+import { CheckCircle2, Phone, MessageSquare, Clock, FileText, CalendarDays } from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import {
+  trackGoogleAdsConversion,
+  trackWhatsAppConversion,
+  trackPhoneCallConversion,
+  trackDemoBookingConversion,
+} from '@/lib/analytics/googleAdsConversions'
 
 function ThankYouContent() {
   const searchParams = useSearchParams()
@@ -29,13 +28,7 @@ function ThankYouContent() {
     })
 
     // Google Ads conversion tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/THANKYOU_CONVERSION_LABEL',
-        value: 1.0,
-        currency: 'INR',
-      })
-    }
+    trackGoogleAdsConversion('THANK_YOU_PAGE', 1.0, 'INR')
 
     // Countdown timer
     const timer = setInterval(() => {
@@ -103,6 +96,7 @@ function ThankYouContent() {
 
   const handleWhatsAppContact = async () => {
     ConversionTracker.trackWhatsAppClick()
+    trackWhatsAppConversion('thank-you-page')
     await trackAndOpenWhatsApp({
       source: 'thank-you-page',
       message: 'Hi! I just submitted a form on your website and wanted to follow up.',
@@ -112,11 +106,13 @@ function ThankYouContent() {
 
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
+    trackPhoneCallConversion('+918826444334')
     window.open('tel:+918826444334', '_self')
   }
 
   const handleBookCounseling = () => {
     ConversionTracker.trackDemoBooking()
+    trackDemoBookingConversion('thank-you-page')
     window.location.href = '/enrollment?source=thank-you'
   }
 
