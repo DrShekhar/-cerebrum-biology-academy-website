@@ -163,7 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-repeater-success-stories`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.80,
+      priority: 0.8,
     },
     // Free Resources & Lead Gen Pages
     {
@@ -201,25 +201,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/class-11-biology-tuition`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/class-12-biology-tuition`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-biology-class-11`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-biology-class-12`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-biology-coaching-delhi-ncr`,
@@ -294,6 +294,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // Premium Areas - High ROI Location Pages
+    {
+      url: `${baseUrl}/locations/greater-kailash`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/defence-colony`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/gulmohar-park`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/new-friends-colony`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/panchsheel`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/vasant-vihar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/demo-booking`,
@@ -465,7 +502,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-biology-mcq/daily-challenge`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-biology-mcq/leaderboard`,
@@ -1126,7 +1163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-rohini`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-cr-park-delhi`,
@@ -2659,6 +2696,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // Board-Specific Course Pages
+    {
+      url: `${baseUrl}/courses/class-9-10-biology-foundation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/courses/cbse-biology-class-11-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/courses/icse-isc-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/courses/ib-igcse-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     },
     // Company Pages
     {
