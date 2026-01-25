@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Delhi | Cerebrum Biology Academy',
   description:
-    'Best NEET Biology coaching in Delhi by AIIMS faculty. Small batches of 15 students, 90% success rate. Located at Patel Nagar. Call +91 88264 44334.',
+    'Best NEET Biology coaching in Delhi by AIIMS faculty. Small batches of 15 students, 98% success rate. Centers at South Extension & Rohini. Call +91 88264 44334.',
   keywords: [
     'NEET coaching Delhi',
     'NEET coaching New Delhi',
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     'NEET preparation Delhi',
     'Medical coaching Delhi',
     'AIIMS coaching Delhi',
-    'NEET coaching Patel Nagar',
-    'NEET coaching Rajendra Place',
+    'NEET coaching South Extension',
+    'NEET coaching Rohini',
     'NEET coaching Karol Bagh',
     'NEET coaching near me Delhi',
     'Biology tuition Delhi',
@@ -58,23 +58,16 @@ export const metadata: Metadata = {
 function DelhiServiceSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy - Delhi',
-    description: 'Best NEET Biology coaching in Delhi with AIIMS faculty',
+    '@type': 'Service',
+    name: 'NEET Biology Coaching for Delhi Students',
+    description:
+      'Best NEET Biology coaching for Delhi students. Join our Rohini or South Extension center for expert coaching by AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/locations/delhi',
-    telephone: '+91-88264-44334',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'C-15, Patel Nagar West',
-      addressLocality: 'New Delhi',
-      addressRegion: 'Delhi',
-      postalCode: '110008',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 28.6508,
-      longitude: 77.1726,
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+      telephone: '+91-88264-44334',
     },
     areaServed: [
       'Patel Nagar',
@@ -87,7 +80,40 @@ function DelhiServiceSchema() {
       'Janakpuri',
       'Moti Nagar',
       'Ramesh Nagar',
+      'Punjabi Bagh',
+      'Paschim Vihar',
+      'Connaught Place',
+      'Central Delhi',
+      'West Delhi',
     ],
+    serviceType: 'NEET Biology Coaching',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'NEET Biology Courses',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Class 11 NEET Biology',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Class 12 NEET Biology',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Dropper Batch',
+          },
+        },
+      ],
+    },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
@@ -95,20 +121,6 @@ function DelhiServiceSchema() {
       bestRating: '5',
       worstRating: '1',
     },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '07:00',
-        closes: '21:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '09:00',
-        closes: '18:00',
-      },
-    ],
   }
 
   return (
