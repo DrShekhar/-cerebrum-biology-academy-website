@@ -363,6 +363,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    // Phase 3 Premium Areas - Ultra-Premium & High Volume
+    {
+      url: `${baseUrl}/locations/golf-links`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/malviya-nagar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/lajpat-nagar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/shanti-niketan`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/anand-niketan`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    // Comparison Pages - AEO/GEO Optimized
+    {
+      url: `${baseUrl}/compare/neet-coaching-comparison`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/demo-booking`,
       lastModified: lastUpdated,
