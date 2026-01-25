@@ -123,6 +123,154 @@ const faqSchema = {
   })),
 }
 
+// AggregateOffer Schema for bundle pricing
+const aggregateOfferSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AggregateOffer',
+  '@id': `${BASE_URL}/neet-coaching-south-delhi#offers`,
+  priceCurrency: 'INR',
+  lowPrice: CEREBRUM_METRICS.feeCrashCourse,
+  highPrice: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+  offerCount: 4,
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Class 11+12 Two-Year Program',
+      price: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+    },
+    {
+      '@type': 'Offer',
+      name: 'Class 12 One-Year Intensive',
+      price: CEREBRUM_METRICS.feeClass12,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+    },
+    {
+      '@type': 'Offer',
+      name: 'Dropper Batch',
+      price: CEREBRUM_METRICS.feeDropper,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+    },
+    {
+      '@type': 'Offer',
+      name: 'Crash Course',
+      price: CEREBRUM_METRICS.feeCrashCourse,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+    },
+  ],
+}
+
+// Event Schema for Demo Classes
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Free NEET Biology Demo Class - South Delhi',
+  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from South Delhi. Meet Dr. Shekhar Suman.`,
+  startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+  endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+  location: [
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: CEREBRUM_METRICS.mainAddress,
+        addressLocality: 'South Delhi',
+        addressRegion: 'Delhi',
+        postalCode: CEREBRUM_METRICS.pincode,
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'VirtualLocation',
+      url: `${BASE_URL}/demo-booking`,
+    },
+  ],
+  performer: {
+    '@type': 'Person',
+    name: 'Dr. Shekhar Suman',
+    jobTitle: 'Founder & Lead Faculty',
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Cerebrum Biology Academy',
+    url: BASE_URL,
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'INR',
+    availability: 'https://schema.org/InStock',
+    url: `${BASE_URL}/demo-booking`,
+    validFrom: new Date().toISOString().split('T')[0],
+  },
+  image: `${BASE_URL}/logo.png`,
+}
+
+// HowTo Schema for enrollment
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Enroll in NEET Coaching in South Delhi',
+  description: 'Step-by-step guide to enroll in Cerebrum Biology Academy for NEET preparation in South Delhi.',
+  totalTime: 'P3D',
+  estimatedCost: {
+    '@type': 'MonetaryAmount',
+    currency: 'INR',
+    value: CEREBRUM_METRICS.feeClass12,
+  },
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Book Free Demo Class',
+      text: `Book a free demo class via WhatsApp at ${CEREBRUM_METRICS.phoneDisplay} or fill the online form.`,
+      url: `${BASE_URL}/demo-booking`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Attend Demo Session',
+      text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Choose Your Batch',
+      text: 'Select batch timing - morning (8-10 AM), afternoon (2-4 PM), or evening (6-8 PM).',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Complete Enrollment',
+      text: 'Submit documents and pay fees via UPI, bank transfer, or EMI. Scholarship up to 50% available.',
+    },
+  ],
+}
+
+// Speakable Schema for voice search
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${BASE_URL}/neet-coaching-south-delhi#webpage`,
+  url: `${BASE_URL}/neet-coaching-south-delhi`,
+  name: 'Best NEET Coaching in South Delhi | Cerebrum Biology Academy',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.hero-title', '.hero-description', '.quick-answers'],
+  },
+}
+
 export default function NEETCoachingSouthDelhiPage() {
   return (
     <>
@@ -130,6 +278,22 @@ export default function NEETCoachingSouthDelhiPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOfferSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <LocalitySchema
         locality="South Delhi"

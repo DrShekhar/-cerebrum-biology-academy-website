@@ -12,6 +12,7 @@ export interface MetroStation {
   landmarks: string[]
   description: string
   walkingTime: string
+  coordinates: { lat: number; lng: number }
 }
 
 export const metroStations: Record<string, MetroStation> = {
@@ -25,6 +26,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Hauz Khas Metro is a major interchange station on the Yellow and Magenta lines, providing excellent connectivity to coaching hubs in South Delhi.',
     walkingTime: '5-10 minutes from our center',
+    coordinates: { lat: 28.4996, lng: 77.2069 },
   },
   'iit-delhi-metro': {
     name: 'IIT Delhi',
@@ -36,6 +38,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'IIT Delhi Metro station is the closest to the famous Kalu Sarai coaching hub, making it the most convenient for NEET aspirants.',
     walkingTime: '2-5 minutes from our center',
+    coordinates: { lat: 28.5467, lng: 77.1855 },
   },
   'green-park-metro': {
     name: 'Green Park',
@@ -47,6 +50,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Green Park Metro on the Yellow Line offers easy access to premium residential areas and coaching centers in South Delhi.',
     walkingTime: '10-15 minutes from our center',
+    coordinates: { lat: 28.5597, lng: 77.2068 },
   },
   'aiims-metro': {
     name: 'AIIMS',
@@ -58,6 +62,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'AIIMS Metro station connects to premier medical institutions, making it ideal for aspiring medical students.',
     walkingTime: '15-20 minutes from our center',
+    coordinates: { lat: 28.5689, lng: 77.2078 },
   },
   'greater-kailash-metro': {
     name: 'Greater Kailash',
@@ -69,6 +74,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Greater Kailash Metro serves the affluent GK area, home to students from top schools seeking quality NEET coaching.',
     walkingTime: '20-25 minutes from our center',
+    coordinates: { lat: 28.5472, lng: 77.2390 },
   },
   'saket-metro': {
     name: 'Saket',
@@ -80,6 +86,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Saket Metro on the Yellow Line provides connectivity to the rapidly developing Saket area with growing demand for NEET coaching.',
     walkingTime: '15-20 minutes from our center',
+    coordinates: { lat: 28.5226, lng: 77.2101 },
   },
   'malviya-nagar-metro': {
     name: 'Malviya Nagar',
@@ -91,6 +98,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Malviya Nagar Metro serves the affordable coaching and student hub area in South Delhi.',
     walkingTime: '15-20 minutes from our center',
+    coordinates: { lat: 28.5285, lng: 77.2095 },
   },
   'rk-puram-metro': {
     name: 'RK Puram',
@@ -102,6 +110,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'RK Puram Metro connects the large government colony with excellent access to coaching centers near IIT Delhi.',
     walkingTime: '10-15 minutes from our center',
+    coordinates: { lat: 28.5681, lng: 77.1769 },
   },
   'munirka-metro': {
     name: 'Munirka',
@@ -113,6 +122,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Munirka Metro serves the vibrant student hub near JNU, popular among NEET aspirants from across India.',
     walkingTime: '10-12 minutes from our center',
+    coordinates: { lat: 28.5580, lng: 77.1672 },
   },
   'kalkaji-mandir-metro': {
     name: 'Kalkaji Mandir',
@@ -124,6 +134,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Kalkaji Mandir Metro is an interchange station connecting Violet and Magenta lines, serving students from South-East Delhi.',
     walkingTime: '25-30 minutes from our center',
+    coordinates: { lat: 28.5436, lng: 77.2596 },
   },
   'nehru-place-metro': {
     name: 'Nehru Place',
@@ -135,6 +146,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Nehru Place Metro serves the IT hub area with students from nearby residential colonies seeking NEET coaching.',
     walkingTime: '25-30 minutes from our center',
+    coordinates: { lat: 28.5498, lng: 77.2526 },
   },
   'lajpat-nagar-metro': {
     name: 'Lajpat Nagar',
@@ -146,6 +158,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Lajpat Nagar Metro connects the bustling commercial area with Defence Colony and GK, serving many NEET aspirants.',
     walkingTime: '20-25 minutes from our center',
+    coordinates: { lat: 28.5699, lng: 77.2434 },
   },
 }
 

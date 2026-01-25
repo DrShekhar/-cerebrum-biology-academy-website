@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { getAllMetroSlugs, getMetroBySlug } from '@/data/south-delhi-metros'
 import { areaDetails } from '@/data/south-delhi-areas'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
-import { MapPin, Train, Clock, Phone, ArrowRight, CheckCircle, GraduationCap } from 'lucide-react'
+import { MapPin, Train, Clock, Phone, ArrowRight, CheckCircle, GraduationCap, Home, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { QuickAnswers } from '@/components/seo/QuickAnswers'
 
 interface PageProps {
   params: Promise<{ metro: string }>
@@ -27,8 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const title = `NEET Coaching Near ${metro.name} Metro | Cerebrum Biology Academy`
-  const description = `Best NEET Biology coaching near ${metro.name} Metro station in South Delhi. ${metro.description} Just ${metro.walkingTime}. Expert faculty, small batches, flexible timings.`
+  const title = `NEET Coaching Near ${metro.name} Metro | Cerebrum Academy`
+  const description = `Best NEET Biology coaching near ${metro.name} Metro. ${CEREBRUM_METRICS.successRateText} success rate, just ${metro.walkingTime}. Small batches, expert faculty.`
 
   return {
     title,
@@ -76,11 +77,12 @@ export default async function MetroLandingPage({ params }: PageProps) {
     .filter(Boolean)
 
   const organizationId = 'https://cerebrumbiologyacademy.com/#organization'
+  const localBusinessId = `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}#localbusiness`
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'EducationalOrganization'],
-    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}#localbusiness`,
+    '@id': localBusinessId,
     name: `Cerebrum Biology Academy - Near ${metro.name} Metro`,
     description: `NEET coaching center near ${metro.name} Metro station. ${metro.description}`,
     url: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}`,
@@ -99,8 +101,17 @@ export default async function MetroLandingPage({ params }: PageProps) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: CEREBRUM_METRICS.coordinates.latitude.toString(),
-      longitude: CEREBRUM_METRICS.coordinates.longitude.toString(),
+      latitude: metro.coordinates.lat.toString(),
+      longitude: metro.coordinates.lng.toString(),
+    },
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: metro.coordinates.lat.toString(),
+        longitude: metro.coordinates.lng.toString(),
+      },
+      geoRadius: '3000',
     },
     openingHoursSpecification: [
       {
@@ -201,15 +212,282 @@ export default async function MetroLandingPage({ params }: PageProps) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: `NEET Coaching Near ${metro.name} Metro`,
+        name: 'NEET Coaching South Delhi',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `Near ${metro.name} Metro`,
         item: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}`,
       },
     ],
   }
 
+  // FAQPage Schema - Metro specific
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How far is Cerebrum Biology Academy from ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Cerebrum Biology Academy is just ${metro.walkingTime} from ${metro.name} Metro station on the ${metro.line} Line. Students can easily commute from ${metro.nearbyAreas.slice(0, 3).join(', ')} and surrounding areas.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What is the fee for NEET coaching near ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Our NEET Biology coaching fee is ₹${CEREBRUM_METRICS.feeClass12.toLocaleString()}/year for Class 12, ₹${CEREBRUM_METRICS.feeClass11.toLocaleString()}/year for Class 11, and ₹${CEREBRUM_METRICS.feeDropper.toLocaleString()}/year for dropper batch. EMI options and scholarships up to 50% available.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Which areas can reach Cerebrum via ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Students from ${metro.nearbyAreas.join(', ')} can easily reach us via ${metro.name} Metro (${metro.line} Line). Key landmarks nearby include ${metro.landmarks.slice(0, 3).join(', ')}.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What is the success rate of NEET coaching near ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Cerebrum Biology Academy has a ${CEREBRUM_METRICS.successRateText} success rate with ${CEREBRUM_METRICS.medicalSelectionsText} medical college selections. Our top student scored ${CEREBRUM_METRICS.topScoreText} in NEET Biology.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is online coaching available for students near ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Yes! We offer online, offline, and hybrid modes. Students near ${metro.name} Metro can choose convenient batch timings - morning (8-10 AM), afternoon (2-4 PM), or evening (6-8 PM).`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What makes Cerebrum the best choice near ${metro.name} Metro?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Cerebrum offers small batches of ${CEREBRUM_METRICS.batchSizeText}, AIIMS/JIPMER trained faculty with ${CEREBRUM_METRICS.facultyExperienceText} experience, convenient ${metro.line} Line metro access, and flexible timings for students from ${metro.nearbyAreas[0]} and surrounding areas.`,
+        },
+      },
+    ],
+  }
+
+  // HowTo Schema for enrollment
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How to Enroll in NEET Coaching Near ${metro.name} Metro`,
+    description: `Step-by-step guide to enroll in Cerebrum Biology Academy for students commuting via ${metro.name} Metro.`,
+    totalTime: 'P3D',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'INR',
+      value: CEREBRUM_METRICS.feeClass12,
+    },
+    supply: [
+      { '@type': 'HowToSupply', name: 'School ID Card or Marksheet' },
+      { '@type': 'HowToSupply', name: 'Address Proof (Aadhar/Passport)' },
+      { '@type': 'HowToSupply', name: 'Passport Size Photographs (2)' },
+      { '@type': 'HowToSupply', name: 'Parent/Guardian Contact Details' },
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Book Free Demo Class',
+        text: `Book a free demo class via WhatsApp at ${CEREBRUM_METRICS.phoneDisplay} or fill the online form. Mention you'll commute via ${metro.name} Metro.`,
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Visit Our Center',
+        text: `Take ${metro.line} Line to ${metro.name} Metro. Our center is ${metro.walkingTime}. Near landmarks: ${metro.landmarks[0]}.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Attend Demo Session',
+        text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology and small batch environment.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Choose Your Batch',
+        text: `Select batch timing that works with your commute via ${metro.name} Metro. Morning (8-10 AM), afternoon (2-4 PM), or evening (6-8 PM) batches available.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Complete Enrollment',
+        text: `Submit documents and pay fees via UPI, bank transfer, or EMI. Scholarship up to 50% available for deserving students.`,
+      },
+    ],
+  }
+
+  // AggregateOffer Schema
+  const aggregateOfferSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateOffer',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}#offers`,
+    priceCurrency: 'INR',
+    lowPrice: CEREBRUM_METRICS.feeCrashCourse,
+    highPrice: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+    offerCount: 4,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Class 11+12 Two-Year Program',
+        price: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Class 12 One-Year Intensive',
+        price: CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Dropper Batch',
+        price: CEREBRUM_METRICS.feeDropper,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Crash Course',
+        price: CEREBRUM_METRICS.feeCrashCourse,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+    ],
+  }
+
+  // Event Schema for Demo Classes
+  const eventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `Free NEET Biology Demo Class - Near ${metro.name} Metro`,
+    description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants commuting via ${metro.name} Metro. Meet Dr. Shekhar Suman.`,
+    startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+    location: [
+      {
+        '@type': 'Place',
+        name: 'Cerebrum Biology Academy',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: CEREBRUM_METRICS.mainAddress,
+          addressLocality: 'South Delhi',
+          addressRegion: 'Delhi',
+          postalCode: CEREBRUM_METRICS.pincode,
+          addressCountry: 'IN',
+        },
+      },
+      {
+        '@type': 'VirtualLocation',
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+    ],
+    performer: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar Suman',
+      jobTitle: 'Founder & Lead Faculty',
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      validFrom: new Date().toISOString().split('T')[0],
+    },
+    image: 'https://cerebrumbiologyacademy.com/logo.png',
+  }
+
+  // Speakable Schema for voice search
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}#webpage`,
+    url: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${metroSlug}`,
+    name: `NEET Coaching Near ${metro.name} Metro | Cerebrum Biology Academy`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.hero-title', '.hero-description', '.quick-answers'],
+    },
+    mainEntity: { '@id': localBusinessId },
+  }
+
+  // WebSite Schema with SearchAction
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://cerebrumbiologyacademy.com/#website',
+    url: 'https://cerebrumbiologyacademy.com',
+    name: 'Cerebrum Biology Academy',
+    description: 'Best NEET Biology Coaching in South Delhi with 94% success rate',
+    publisher: { '@id': organizationId },
+    inLanguage: 'en-IN',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
     <>
       <div className="min-h-screen">
+        {/* Visual Breadcrumb Navigation */}
+        <nav className="bg-gray-100 py-3 px-4" aria-label="Breadcrumb">
+          <div className="max-w-7xl mx-auto">
+            <ol className="flex items-center flex-wrap gap-1 text-sm">
+              <li className="flex items-center">
+                <Link href="/" className="text-gray-600 hover:text-purple-600 transition-colors flex items-center">
+                  <Home className="w-4 h-4" />
+                  <span className="sr-only">Home</span>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+                <Link href="/neet-coaching-south-delhi" className="text-gray-600 hover:text-purple-600 transition-colors">
+                  NEET Coaching South Delhi
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+                <span className="text-purple-700 font-medium">Near {metro.name} Metro</span>
+              </li>
+            </ol>
+          </div>
+        </nav>
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20" />
@@ -225,11 +503,11 @@ export default async function MetroLandingPage({ params }: PageProps) {
                 {metro.line} Line Metro Station
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 NEET Coaching Near <span className="text-yellow-400">{metro.name} Metro</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-300 mb-4">{metro.description}</p>
+              <p className="hero-description text-lg md:text-xl text-gray-300 mb-4">{metro.description}</p>
 
               <div className="flex items-center justify-center gap-2 text-yellow-400 mb-8">
                 <Clock className="w-5 h-5" />
@@ -352,6 +630,15 @@ export default async function MetroLandingPage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Quick Answers - Speakable for Voice Search */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="quick-answers">
+              <QuickAnswers locality={`Near ${metro.name} Metro`} />
+            </div>
+          </div>
+        </section>
+
         {/* Explore Other Areas */}
         {nearbyAreaDetails.length > 0 && (
           <section className="py-16 bg-white">
@@ -428,6 +715,42 @@ export default async function MetroLandingPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateOfferSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speakableSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>
