@@ -91,6 +91,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   const [showSearchPreview, setShowSearchPreview] = useState(false)
   const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>([])
   const searchRef = useRef<HTMLDivElement>(null)
+  const prevSearchRef = useRef<string>('')
 
   const debouncedSearch = useDebounce(searchInput, 200)
 
@@ -116,14 +117,24 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     return Array.from(authorSet)
   }, [posts])
 
+  // Update search term and reset to page 1 only when search actually changes
   useEffect(() => {
-    setSearchTerm(debouncedSearch)
-    setIsSearching(false)
-    // Reset to page 1 when search changes (fixes duplicate content bug)
-    if (debouncedSearch !== searchTerm) {
-      setCurrentPage(1)
+    // Only reset page if the search term actually changed (not on every render)
+    if (debouncedSearch !== prevSearchRef.current) {
+      setSearchTerm(debouncedSearch)
+      setIsSearching(false)
+      // Reset to page 1 when search changes
+      if (prevSearchRef.current !== '' || debouncedSearch !== '') {
+        setCurrentPage(1)
+        // Update URL to remove page param when resetting
+        const params = new URLSearchParams(searchParams.toString())
+        params.delete('page')
+        const query = params.toString()
+        router.replace(query ? `/blog?${query}` : '/blog', { scroll: false })
+      }
+      prevSearchRef.current = debouncedSearch
     }
-  }, [debouncedSearch, searchTerm])
+  }, [debouncedSearch, router, searchParams])
 
   // Close search preview when clicking outside
   useEffect(() => {
@@ -194,8 +205,13 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(1)
+      // Update URL to remove invalid page param
+      const params = new URLSearchParams(searchParams.toString())
+      params.delete('page')
+      const query = params.toString()
+      router.replace(query ? `/blog?${query}` : '/blog', { scroll: false })
     }
-  }, [currentPage, totalPages])
+  }, [currentPage, totalPages, router, searchParams])
 
   const paginatedPosts = filteredAndSortedPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
@@ -218,9 +234,14 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     [router, searchParams]
   )
 
-  const handleFilterChange = () => {
+  const handleFilterChange = useCallback(() => {
     setCurrentPage(1)
-  }
+    // Update URL to remove page param when filters change
+    const params = new URLSearchParams(searchParams.toString())
+    params.delete('page')
+    const query = params.toString()
+    router.replace(query ? `/blog?${query}` : '/blog', { scroll: false })
+  }, [router, searchParams])
 
   const clearAllFilters = () => {
     setSearchInput('')
