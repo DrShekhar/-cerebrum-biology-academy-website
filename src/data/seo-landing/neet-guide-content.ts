@@ -3694,6 +3694,68 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
     { title: 'NEET Time Management', link: '/neet-time-management' },
   ],
 
+  // HowTo schema for instructional content
+  howToSteps: [
+    {
+      name: 'Set Up Your Study Environment',
+      text: 'Create a dedicated study space at home with minimal distractions. Ensure you have a stable internet connection (2+ Mbps), a laptop/tablet, notebook for notes, and proper lighting. Keep your phone on silent mode during study hours.',
+    },
+    {
+      name: 'Choose a Reliable Online Coaching Platform',
+      text: 'Select an online NEET coaching that offers live interactive classes, recorded lectures for revision, regular mock tests, and 24/7 doubt support. Check for faculty credentials, student reviews, and success rates before enrolling.',
+    },
+    {
+      name: 'Create a Structured Daily Schedule',
+      text: 'Allocate 6-8 hours daily for NEET preparation. Divide your day into focused blocks: 3 hours for new topics, 2 hours for practice questions, 1-2 hours for revision, and 1 hour for mock tests. Take 10-minute breaks every 45 minutes.',
+    },
+    {
+      name: 'Master NCERT Textbooks First',
+      text: 'Read NCERT Biology, Physics, and Chemistry textbooks thoroughly. 90% of NEET questions are directly or indirectly from NCERT. Highlight important points, make notes in margins, and memorize diagrams and tables.',
+    },
+    {
+      name: 'Attend All Live Sessions',
+      text: 'Participate actively in live online classes. Keep your camera on, ask questions during doubt-solving sessions, and take notes. If you miss a class, watch the recording within 24 hours to stay on track.',
+    },
+    {
+      name: 'Practice Daily with MCQs',
+      text: "Solve 100+ MCQs daily across all three subjects. Use topic-wise question banks, previous year papers (last 15 years), and your coaching's test series. Analyze wrong answers and maintain an error log.",
+    },
+    {
+      name: 'Take Weekly Mock Tests',
+      text: 'Attempt at least one full-length mock test every week in exam-like conditions. Complete it in 3 hours 20 minutes, without any breaks or distractions. Analyze your performance immediately after.',
+    },
+    {
+      name: 'Use 24/7 Doubt Support Effectively',
+      text: "Don't let doubts accumulate. Use WhatsApp/chat support to ask questions immediately. Take screenshots of confusing topics and send to faculty. Keep a doubt register and review resolved doubts weekly.",
+    },
+    {
+      name: 'Track Progress with Digital Tools',
+      text: "Use your coaching portal's analytics to track completion rates, test scores, and improvement areas. Set weekly goals and monitor your progress. Aim for consistent improvement rather than sudden jumps.",
+    },
+    {
+      name: 'Final Month Intensive Revision',
+      text: 'In the last month, focus entirely on revision and practice. Revise NCERT daily, solve 2-3 mock tests per week, and review your error log. Stay calm, sleep well, and trust your preparation.',
+    },
+  ],
+  howToMeta: {
+    totalTime: 'P12M',
+    supply: [
+      'NCERT Biology Class 11 & 12',
+      'NCERT Physics Class 11 & 12',
+      'NCERT Chemistry Class 11 & 12',
+      'Laptop/Tablet with Stable Internet',
+      'Notebook and Stationery',
+      'Dedicated Study Space',
+    ],
+    tool: [
+      'Online Coaching Platform',
+      'Video Conferencing App (Zoom/Google Meet)',
+      'Practice Test Platform',
+      'Error Log Notebook',
+      'Timer/Stopwatch',
+    ],
+  },
+
   contactButtons: {
     phone: '+918826444334',
     whatsapp: {

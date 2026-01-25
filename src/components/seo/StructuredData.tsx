@@ -802,6 +802,299 @@ export function GurugramServiceSchema() {
   )
 }
 
+/**
+ * HowToSchema - For instructional/guide content
+ * Helps content appear in Google's "How-to" rich snippets
+ */
+export interface HowToStep {
+  name: string
+  text: string
+  url?: string
+  image?: string
+}
+
+export interface HowToSchemaProps {
+  name: string
+  description: string
+  steps: HowToStep[]
+  totalTime?: string
+  estimatedCost?: {
+    currency: string
+    value: string
+  }
+  image?: string
+  supply?: string[]
+  tool?: string[]
+}
+
+export function HowToSchema({
+  name,
+  description,
+  steps,
+  totalTime,
+  estimatedCost,
+  image,
+  supply,
+  tool,
+}: HowToSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    ...(totalTime && { totalTime }),
+    ...(estimatedCost && {
+      estimatedCost: {
+        '@type': 'MonetaryAmount',
+        currency: estimatedCost.currency,
+        value: estimatedCost.value,
+      },
+    }),
+    ...(image && { image }),
+    ...(supply && {
+      supply: supply.map((item) => ({
+        '@type': 'HowToSupply',
+        name: item,
+      })),
+    }),
+    ...(tool && {
+      tool: tool.map((item) => ({
+        '@type': 'HowToTool',
+        name: item,
+      })),
+    }),
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.url && { url: step.url }),
+      ...(step.image && {
+        image: {
+          '@type': 'ImageObject',
+          url: step.image,
+        },
+      }),
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * PersonSchema - For faculty/author profiles
+ * Important for E-E-A-T signals and author attribution
+ */
+export interface PersonSchemaProps {
+  name: string
+  jobTitle: string
+  description?: string
+  image?: string
+  url?: string
+  email?: string
+  telephone?: string
+  alumniOf?: Array<{
+    name: string
+    type?: 'CollegeOrUniversity' | 'EducationalOrganization'
+  }>
+  worksFor?: {
+    name: string
+    url?: string
+  }
+  knowsAbout?: string[]
+  sameAs?: string[]
+  awards?: string[]
+  hasCredential?: Array<{
+    name: string
+    description?: string
+  }>
+}
+
+export function PersonSchema({
+  name,
+  jobTitle,
+  description,
+  image,
+  url,
+  email,
+  telephone,
+  alumniOf,
+  worksFor,
+  knowsAbout,
+  sameAs,
+  awards,
+  hasCredential,
+}: PersonSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+    jobTitle,
+    ...(description && { description }),
+    ...(image && { image }),
+    ...(url && { url }),
+    ...(email && { email }),
+    ...(telephone && { telephone }),
+    ...(alumniOf && {
+      alumniOf: alumniOf.map((org) => ({
+        '@type': org.type || 'CollegeOrUniversity',
+        name: org.name,
+      })),
+    }),
+    ...(worksFor && {
+      worksFor: {
+        '@type': 'EducationalOrganization',
+        name: worksFor.name,
+        ...(worksFor.url && { url: worksFor.url }),
+      },
+    }),
+    ...(knowsAbout && { knowsAbout }),
+    ...(sameAs && { sameAs }),
+    ...(awards && { award: awards }),
+    ...(hasCredential && {
+      hasCredential: hasCredential.map((cred) => ({
+        '@type': 'EducationalOccupationalCredential',
+        name: cred.name,
+        ...(cred.description && { description: cred.description }),
+      })),
+    }),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * Pre-configured PersonSchema for Dr. Shekhar C Singh
+ * Use this on pages that need to establish author authority
+ */
+export function DrShekharSinghSchema() {
+  return (
+    <PersonSchema
+      name="Dr. Shekhar C Singh"
+      jobTitle="Founder & Lead NEET Biology Faculty"
+      description="AIIMS New Delhi alumnus with 14+ years of experience in NEET Biology coaching. Former Narayana Academic Head. Has mentored 500+ students into AIIMS, JIPMER, and other top medical colleges."
+      image="https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg"
+      url="https://cerebrumbiologyacademy.com/faculty"
+      email="drshekhar@cerebrumbiologyacademy.com"
+      telephone={CONTACT_INFO.phone.primary}
+      alumniOf={[
+        {
+          name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
+          type: 'CollegeOrUniversity',
+        },
+      ]}
+      worksFor={{
+        name: 'Cerebrum Biology Academy',
+        url: 'https://cerebrumbiologyacademy.com',
+      }}
+      knowsAbout={[
+        'NEET Biology',
+        'NEET-UG Preparation',
+        'Human Physiology',
+        'Genetics and Evolution',
+        'Molecular Biology',
+        'Biotechnology',
+        'Medical Entrance Examination',
+        'NCERT Biology',
+        'Botany for NEET',
+        'Zoology for NEET',
+      ]}
+      sameAs={[
+        'https://www.linkedin.com/in/drshekharsingh',
+        'https://www.youtube.com/@cerebrumbiologyacademy',
+      ]}
+      awards={[
+        'Best Biology Teacher Award 2022 - Education Excellence Foundation',
+        'NEET Educator of the Year 2023',
+      ]}
+      hasCredential={[
+        {
+          name: 'AIIMS New Delhi Alumnus',
+          description: "Medical degree from India's premier medical institution",
+        },
+        {
+          name: '500+ AIIMS/JIPMER Selections',
+          description: 'Students mentored into top medical colleges',
+        },
+        {
+          name: '98% NEET Success Rate',
+          description: 'Consistent track record of student success in NEET examinations',
+        },
+      ]}
+    />
+  )
+}
+
+/**
+ * VideoSchema - For pages with embedded videos
+ * Important for video rich snippets in search
+ */
+export interface VideoSchemaProps {
+  name: string
+  description: string
+  thumbnailUrl: string
+  uploadDate: string
+  duration?: string
+  contentUrl?: string
+  embedUrl?: string
+  interactionCount?: number
+}
+
+export function VideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  contentUrl,
+  embedUrl,
+  interactionCount,
+}: VideoSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    ...(duration && { duration }),
+    ...(contentUrl && { contentUrl }),
+    ...(embedUrl && { embedUrl }),
+    ...(interactionCount && {
+      interactionStatistic: {
+        '@type': 'InteractionCounter',
+        interactionType: { '@type': 'WatchAction' },
+        userInteractionCount: interactionCount,
+      },
+    }),
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export function StructuredData() {
   // Note: FAQSchema is NOT included globally to prevent duplicate FAQ errors in Google Search Console
   // Include FAQSchema only on specific pages that have FAQ content

@@ -29,22 +29,26 @@ export const intentPagesData: Record<string, IntentPageData> = {
         {
           icon: 'target',
           title: 'Transparent Pricing',
-          description: 'All-inclusive fees with no hidden charges. Study material, test series, and doubt sessions included.',
+          description:
+            'All-inclusive fees with no hidden charges. Study material, test series, and doubt sessions included.',
         },
         {
           icon: 'clock',
           title: 'Flexible EMI Options',
-          description: 'Easy monthly installments starting from Rs 5,000/month. No-cost EMI available.',
+          description:
+            'Easy monthly installments starting from Rs 5,000/month. No-cost EMI available.',
         },
         {
           icon: 'star',
           title: 'Merit Scholarships',
-          description: 'Up to 50% scholarship based on performance. Reward for hard work, not just entrance test.',
+          description:
+            'Up to 50% scholarship based on performance. Reward for hard work, not just entrance test.',
         },
         {
           icon: 'users',
           title: 'Same Quality, Lower Cost',
-          description: 'AIIMS-trained faculty and comprehensive curriculum - same as expensive coaching centers.',
+          description:
+            'AIIMS-trained faculty and comprehensive curriculum - same as expensive coaching centers.',
         },
         {
           icon: 'book',
@@ -59,8 +63,14 @@ export const intentPagesData: Record<string, IntentPageData> = {
       ],
     },
     benefits: [
-      { title: 'Fees from Rs 35,000/year', description: 'Most affordable quality coaching in Delhi NCR' },
-      { title: 'No Registration Fee', description: 'Pay only for the course, no hidden admission charges' },
+      {
+        title: 'Fees from Rs 35,000/year',
+        description: 'Most affordable quality coaching in Delhi NCR',
+      },
+      {
+        title: 'No Registration Fee',
+        description: 'Pay only for the course, no hidden admission charges',
+      },
       { title: 'Free Trial Classes', description: 'Attend 3 classes free before deciding' },
       { title: 'Money-Back Guarantee', description: 'Full refund if not satisfied within 15 days' },
       { title: 'Sibling Discount', description: '10% off for siblings enrolling together' },
@@ -165,7 +175,10 @@ export const intentPagesData: Record<string, IntentPageData> = {
       ],
     },
     benefits: [
-      { title: 'PG from Rs 8,000/month', description: 'Affordable accommodation with all facilities' },
+      {
+        title: 'PG from Rs 8,000/month',
+        description: 'Affordable accommodation with all facilities',
+      },
       { title: 'Near Coaching Center', description: 'Save 2-3 hours daily on commute' },
       { title: 'Meals Included', description: 'Healthy, home-like food provided' },
       { title: '24/7 Security', description: 'CCTV surveillance and security guards' },
@@ -230,7 +243,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
         'In large batches, individual doubts often go unaddressed',
         'Every student learns at a different pace - one-size-fits-all does not work',
         'Shy students hesitate to ask questions in front of others',
-        'Fixed batch timings may not suit everyone\'s schedule',
+        "Fixed batch timings may not suit everyone's schedule",
       ],
     },
     solution: {
@@ -241,7 +254,8 @@ export const intentPagesData: Record<string, IntentPageData> = {
         {
           icon: 'users',
           title: 'Dedicated Faculty',
-          description: 'Your personal AIIMS-trained mentor who understands your strengths and weaknesses.',
+          description:
+            'Your personal AIIMS-trained mentor who understands your strengths and weaknesses.',
         },
         {
           icon: 'target',
@@ -251,7 +265,8 @@ export const intentPagesData: Record<string, IntentPageData> = {
         {
           icon: 'clock',
           title: 'Flexible Timing',
-          description: 'Choose class timings that suit your schedule. Morning, evening, or weekend.',
+          description:
+            'Choose class timings that suit your schedule. Morning, evening, or weekend.',
         },
         {
           icon: 'message',
@@ -386,7 +401,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
     ],
     testimonial: {
       quote:
-        'I was working in an IT company and thought NEET was impossible. Cerebrum\'s weekend batch changed everything. I cleared NEET in my first attempt while working!',
+        "I was working in an IT company and thought NEET was impossible. Cerebrum's weekend batch changed everything. I cleared NEET in my first attempt while working!",
       name: 'Rahul Verma',
       result: 'NEET 2024 - 620 Score (Working Professional)',
     },
@@ -483,7 +498,10 @@ export const intentPagesData: Record<string, IntentPageData> = {
       ],
     },
     benefits: [
-      { title: 'Complete Syllabus Coverage', description: 'All 38 chapters of Biology covered thoroughly' },
+      {
+        title: 'Complete Syllabus Coverage',
+        description: 'All 38 chapters of Biology covered thoroughly',
+      },
       { title: 'Daily Practice Questions', description: '100+ questions daily with analysis' },
       { title: 'PYQ Focus', description: 'Last 15 years questions chapter-wise' },
       { title: 'Doubt Marathon Sessions', description: 'Weekly sessions to clear all doubts' },
@@ -754,6 +772,51 @@ export const intentPagesData: Record<string, IntentPageData> = {
     heroHighlight: 'Strategy Used by 65+ AIIMS Selections',
     primaryCTA: 'Get Free Strategy Session',
     secondaryCTA: 'Download Strategy PDF',
+    howToSteps: [
+      {
+        name: 'Master NCERT Textbooks Completely',
+        text: 'Read NCERT Biology Class 11 and 12 thoroughly at least 5 times. First reading for understanding, subsequent readings for memorizing details including diagrams, flowcharts, and tables. By the 5th reading, you should remember page numbers and exact wordings.',
+      },
+      {
+        name: 'Focus on High-Weightage Chapters',
+        text: 'Prioritize high-yield chapters: Genetics (8-10 questions), Human Physiology (10-12 questions), Plant Physiology (6-8 questions), Ecology (10-12 questions), and Cell Biology (6-8 questions). These 5 areas cover 40+ questions in NEET.',
+      },
+      {
+        name: 'Practice 10,000+ Quality MCQs',
+        text: 'Solve at least 10,000 quality MCQs to develop pattern recognition. Practice chapter-wise questions after completing each topic. Use previous 15 years NEET papers and quality test series for authentic question patterns.',
+      },
+      {
+        name: 'Analyze Previous Year Questions',
+        text: 'Thoroughly analyze last 15 years NEET Biology papers. Identify recurring patterns, frequently asked topics, and question styles. Many questions repeat concepts with slight variations.',
+      },
+      {
+        name: 'Maintain an Error Log',
+        text: 'Track every mistake you make in practice tests. Create a dedicated notebook for wrong answers with correct explanations. Revise this error log weekly to avoid repeating the same mistakes.',
+      },
+      {
+        name: 'Master Time Management',
+        text: 'Practice completing the Biology section in 45 minutes with accuracy. Do timed 30-question sets in 20 minutes. Read questions quickly, identify keywords, and move on if stuck - return to difficult questions later.',
+      },
+      {
+        name: 'Take Regular Mock Tests',
+        text: 'Attempt weekly full-length mock tests under exam conditions. Analyze performance after each test. Track your score progression and identify weak chapters for additional focus.',
+      },
+      {
+        name: 'Final Month Intensive Revision',
+        text: 'In the last month, focus on revision over new learning. Revise NCERT diagrams daily. Review your error log. Attempt 2-3 full mock tests per week. Stay calm and trust your preparation.',
+      },
+    ],
+    howToMeta: {
+      totalTime: 'P6M',
+      supply: [
+        'NCERT Biology Class 11',
+        'NCERT Biology Class 12',
+        'Previous Year Question Papers',
+        'Quality MCQ Book',
+        'Error Log Notebook',
+      ],
+      tool: ['Timer for Practice', 'Mock Test Series', 'Doubt Resolution Support'],
+    },
     problemStatement: {
       title: 'Why Most Students Cannot Score 320+ in Biology',
       points: [
@@ -877,7 +940,8 @@ export const intentPagesData: Record<string, IntentPageData> = {
         {
           icon: 'target',
           title: 'Self-Study CAN Work',
-          description: 'If you have discipline, resources, and strong basics - self-study is viable.',
+          description:
+            'If you have discipline, resources, and strong basics - self-study is viable.',
         },
         {
           icon: 'users',
@@ -908,9 +972,18 @@ export const intentPagesData: Record<string, IntentPageData> = {
     },
     benefits: [
       { title: 'Objective Analysis', description: 'We assess YOUR situation, not sell blindly' },
-      { title: 'Self-Study Resources', description: 'Even if you do not join, we share free resources' },
-      { title: 'Flexible Options', description: 'Full coaching, minimal guidance, or self-study support' },
-      { title: 'Honest Feedback', description: 'If you can succeed without coaching, we will tell you' },
+      {
+        title: 'Self-Study Resources',
+        description: 'Even if you do not join, we share free resources',
+      },
+      {
+        title: 'Flexible Options',
+        description: 'Full coaching, minimal guidance, or self-study support',
+      },
+      {
+        title: 'Honest Feedback',
+        description: 'If you can succeed without coaching, we will tell you',
+      },
       { title: 'Free Counseling', description: 'No-obligation discussion about your preparation' },
       { title: 'Trial Classes', description: 'Try before you decide' },
     ],
@@ -988,7 +1061,8 @@ export const intentPagesData: Record<string, IntentPageData> = {
         {
           icon: 'building',
           title: 'Offline Advantages',
-          description: 'Physical presence, immediate interaction, peer learning, focused environment.',
+          description:
+            'Physical presence, immediate interaction, peer learning, focused environment.',
         },
         {
           icon: 'users',

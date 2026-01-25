@@ -13,6 +13,58 @@ interface YouTubeVideo {
   publishedAt: string
   views?: string
   duration?: string
+  description?: string
+}
+
+/**
+ * VideoListSchema - Structured data for video list (ItemList + VideoObject)
+ * Helps videos appear in Google Video search and rich snippets
+ */
+function VideoListSchema({ videos, channelName }: { videos: YouTubeVideo[]; channelName: string }) {
+  const videoSchemas = videos.map((video, index) => ({
+    '@type': 'VideoObject',
+    position: index + 1,
+    name: video.title,
+    description:
+      video.description || `${video.title} - NEET Biology preparation video by ${channelName}`,
+    thumbnailUrl: video.thumbnail,
+    uploadDate: video.publishedAt,
+    duration: video.duration ? `PT${video.duration.replace(':', 'M')}S` : undefined,
+    contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
+    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    interactionStatistic: video.views
+      ? {
+          '@type': 'InteractionCounter',
+          interactionType: { '@type': 'WatchAction' },
+          userInteractionCount: parseInt(video.views.replace(/[^0-9]/g, '')) * 1000,
+        }
+      : undefined,
+    publisher: {
+      '@type': 'Organization',
+      name: channelName,
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+  }))
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${channelName} - NEET Biology Success Stories`,
+    description:
+      'Video testimonials and success stories from NEET toppers who prepared with Cerebrum Biology Academy',
+    numberOfItems: videos.length,
+    itemListElement: videoSchemas,
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 }
 
 interface YouTubeChannelProps {
@@ -94,6 +146,9 @@ export function YouTubeChannel({
 
   return (
     <div className="w-full bg-gradient-to-br bg-red-50 py-16">
+      {/* Video Schema for SEO */}
+      <VideoListSchema videos={videosToShow} channelName={channelName} />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"

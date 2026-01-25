@@ -2,6 +2,29 @@
 
 export type ClassLevel = 'class-9' | 'class-10' | 'class-11' | 'class-12' | 'dropper' | 'universal'
 
+/**
+ * HowTo step for instructional content pages
+ * Enables HowTo rich snippets in Google search
+ */
+export interface HowToStep {
+  name: string
+  text: string
+  url?: string
+  image?: string
+}
+
+/**
+ * HowTo schema metadata
+ */
+export interface HowToMeta {
+  /** ISO 8601 duration (e.g., "P6M" for 6 months, "PT2H" for 2 hours) */
+  totalTime?: string
+  /** Items needed (e.g., "NCERT Biology Class 11") */
+  supply?: string[]
+  /** Tools needed (e.g., "Mock Test Series") */
+  tool?: string[]
+}
+
 export interface SEOLandingContent {
   // Page identification
   slug: string
@@ -128,6 +151,10 @@ export interface SEOLandingContent {
     title: string
     link: string
   }>
+
+  // HowTo schema for instructional/guide content (optional)
+  howToSteps?: HowToStep[]
+  howToMeta?: HowToMeta
 
   // Schema.org data
   schema: {

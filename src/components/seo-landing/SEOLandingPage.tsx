@@ -10,6 +10,7 @@ import { SEOFAQSection } from './SEOFAQSection'
 import { FinalCTA } from './FinalCTA'
 import { ToolsCTASection } from './ToolsCTASection'
 import { RelatedBlogPosts } from './RelatedBlogPosts'
+import { HowToSchema, DrShekharSinghSchema } from '@/components/seo/StructuredData'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -20,8 +21,25 @@ interface SEOLandingPageProps {
 export function SEOLandingPage({ content }: SEOLandingPageProps) {
   const courseLink = coursePageLinks[content.classLevel]
 
+  // Check if this is a "how-to" style page that should have instructional schema
+  const hasHowToContent = content.howToSteps && content.howToSteps.length > 0
+
   return (
     <main className="min-h-screen">
+      {/* HowTo Schema for instructional/guide pages */}
+      {hasHowToContent && (
+        <HowToSchema
+          name={content.title}
+          description={content.metaDescription}
+          steps={content.howToSteps!}
+          totalTime={content.howToMeta?.totalTime}
+          supply={content.howToMeta?.supply}
+          tool={content.howToMeta?.tool}
+        />
+      )}
+
+      {/* Author Schema for E-E-A-T signals */}
+      <DrShekharSinghSchema />
       {/* Hero Section with Stats */}
       <SEOLandingHero hero={content.hero} stats={content.stats} />
 

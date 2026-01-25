@@ -102,13 +102,12 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     }
   }, [])
 
-  // Sync currentPage with URL when browser back/forward is used
+  // Sync currentPage with URL when browser back/forward is used or on initial load
   useEffect(() => {
     const pageFromUrl = parseInt(searchParams.get('page') || '1', 10)
-    if (pageFromUrl !== currentPage) {
-      setCurrentPage(pageFromUrl)
-    }
-  }, [searchParams, currentPage])
+    // Only update if the page from URL differs from current state
+    setCurrentPage((prevPage) => (pageFromUrl !== prevPage ? pageFromUrl : prevPage))
+  }, [searchParams])
 
   // Get unique authors
   const authors = useMemo(() => {

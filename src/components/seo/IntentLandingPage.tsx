@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { HowToSchema, DrShekharSinghSchema } from './StructuredData'
 import {
   Phone,
   ArrowRight,
@@ -16,6 +17,12 @@ import {
   Building,
   Sparkles,
 } from 'lucide-react'
+
+export interface HowToStepData {
+  name: string
+  text: string
+  url?: string
+}
 
 export interface IntentPageData {
   slug: string
@@ -54,6 +61,12 @@ export interface IntentPageData {
     primary: { value: string; label: string }
     secondary: { value: string; label: string }
     tertiary: { value: string; label: string }
+  }
+  howToSteps?: HowToStepData[]
+  howToMeta?: {
+    totalTime?: string
+    supply?: string[]
+    tool?: string[]
   }
 }
 
@@ -190,45 +203,34 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
     mainEntity: { '@id': `${baseUrl}/#organization` },
   }
 
-  const howToSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'How to Join NEET Coaching at Cerebrum Biology Academy',
-    description: 'Step-by-step guide to enroll in NEET biology coaching',
-    totalTime: 'PT30M',
-    estimatedCost: {
-      '@type': 'MonetaryAmount',
-      currency: 'INR',
-      value: '0',
+  const defaultHowToSteps = [
+    {
+      name: 'Book Free Demo',
+      text: `Contact us via WhatsApp (${CONTACT_INFO.phone.primary}) or fill the form on our website to book a free demo class.`,
+      url: `${pageUrl}#contact`,
     },
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Book Free Demo',
-        text: `Contact us via WhatsApp (${CONTACT_INFO.phone.primary}) or fill the form on our website to book a free demo class.`,
-        url: `${pageUrl}#contact`,
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Attend Demo Class',
-        text: 'Experience our teaching methodology and interact with faculty during the demo session.',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Choose Your Batch',
-        text: 'Select from Foundation (Class 11), Advanced (Class 12), Dropper, or Crash Course batches.',
-      },
-      {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Complete Enrollment',
-        text: 'Submit required documents and complete fee payment to confirm admission.',
-      },
-    ],
-  }
+    {
+      name: 'Attend Demo Class',
+      text: 'Experience our teaching methodology and interact with faculty during the demo session.',
+    },
+    {
+      name: 'Choose Your Batch',
+      text: 'Select from Foundation (Class 11), Advanced (Class 12), Dropper, or Crash Course batches.',
+    },
+    {
+      name: 'Complete Enrollment',
+      text: 'Submit required documents and complete fee payment to confirm admission.',
+    },
+  ]
+
+  const hasContentSpecificHowTo = data.howToSteps && data.howToSteps.length > 0
+  const howToSteps = hasContentSpecificHowTo ? data.howToSteps! : defaultHowToSteps
+  const howToName = hasContentSpecificHowTo
+    ? data.heroTitle
+    : 'How to Join NEET Coaching at Cerebrum Biology Academy'
+  const howToDescription = hasContentSpecificHowTo
+    ? data.metaDescription
+    : 'Step-by-step guide to enroll in NEET biology coaching'
 
   return (
     <>
@@ -248,10 +250,17 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      <HowToSchema
+        name={howToName}
+        description={howToDescription}
+        steps={howToSteps}
+        totalTime={data.howToMeta?.totalTime || 'PT30M'}
+        supply={data.howToMeta?.supply}
+        tool={data.howToMeta?.tool}
       />
+
+      {/* Author Schema for E-E-A-T signals */}
+      <DrShekharSinghSchema />
 
       {/* AI-Optimized Speakable Content for Voice Search & LLMs */}
       <div className="sr-only" aria-hidden="false">
