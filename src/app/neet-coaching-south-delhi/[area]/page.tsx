@@ -375,6 +375,167 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
     ],
   }
 
+  // HowTo Schema for enrollment process
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How to Enroll in NEET Coaching in ${area.name}`,
+    description: `Step-by-step guide to enroll in Cerebrum Biology Academy's NEET coaching program for students from ${area.name}, South Delhi.`,
+    totalTime: 'P3D',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'INR',
+      value: CEREBRUM_METRICS.feeClass12,
+    },
+    supply: [
+      { '@type': 'HowToSupply', name: 'School ID Card or Marksheet' },
+      { '@type': 'HowToSupply', name: 'Address Proof (Aadhar/Passport)' },
+      { '@type': 'HowToSupply', name: 'Passport Size Photographs (2)' },
+      { '@type': 'HowToSupply', name: 'Parent/Guardian Contact Details' },
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Book Free Demo Class',
+        text: `Book a free demo class via WhatsApp at ${CEREBRUM_METRICS.phoneDisplay} or fill the online form. Mention you're from ${area.name}.`,
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Attend Demo Session',
+        text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology and small batch environment.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Choose Your Batch',
+        text: `Select batch timing suitable for your school schedule. We offer morning (8-10 AM), afternoon (2-4 PM), and evening (6-8 PM) batches for ${area.name} students.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Submit Documents',
+        text: 'Submit admission form with required documents: School ID, address proof, photographs, and parent contact details.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Complete Payment',
+        text: `Pay fees via UPI, bank transfer, or opt for EMI (30/60/90 days). Scholarship up to 50% available for deserving students from ${area.name}.`,
+      },
+    ],
+  }
+
+  // Area-specific FAQ Schema
+  const getAreaFAQs = () => {
+    const baseFAQs = [
+      {
+        question: `What is the fee for NEET coaching in ${area.name}?`,
+        answer: `Our NEET Biology coaching fee for students from ${area.name} is ₹${CEREBRUM_METRICS.feeClass12.toLocaleString()}/year for Class 12 and ₹${CEREBRUM_METRICS.feeClass11.toLocaleString()}/year for Class 11. EMI options and scholarships up to 50% are available.`,
+      },
+      {
+        question: `How can students from ${area.name} reach Cerebrum Biology Academy?`,
+        answer: `Students from ${area.name} can easily reach us via ${area.nearbyMetro[0] || 'metro'}. Our center in Kalu Sarai is well-connected to all parts of South Delhi. We also offer online and hybrid modes for convenience.`,
+      },
+      {
+        question: `Which schools from ${area.name} have students at Cerebrum?`,
+        answer: `We have students from ${area.schools.join(', ')} and other schools in ${area.name}. Our batch timings are designed to complement school schedules.`,
+      },
+      {
+        question: `Is online NEET coaching available for ${area.name} students?`,
+        answer: `Yes! We offer online, offline, and hybrid modes for students from ${area.name}. Live interactive classes, recorded lectures, doubt sessions - all accessible from home.`,
+      },
+      {
+        question: `What is the batch size for NEET coaching?`,
+        answer: `We maintain small batches of ${CEREBRUM_METRICS.batchSizeText} for personalized attention. This has helped us achieve ${CEREBRUM_METRICS.successRateText} success rate.`,
+      },
+    ]
+
+    // Add area-type specific FAQ
+    if (area.type === 'posh' || area.type === 'ultra-premium') {
+      baseFAQs.push({
+        question: `Do you offer personalized coaching for ${area.name} students?`,
+        answer: `Yes, our small batch of ${CEREBRUM_METRICS.batchSizeText} ensures personalized attention. For premium support, we offer 1-on-1 doubt sessions and customized study plans for students from ${area.name}.`,
+      })
+    } else if (area.type === 'govt-colony') {
+      baseFAQs.push({
+        question: `Are there discounts for government employees' children from ${area.name}?`,
+        answer: `We offer scholarships up to 50% based on merit. Children of defence personnel and central government employees are eligible for special consideration. Contact us with valid ID proof.`,
+      })
+    } else if (area.type === 'coaching-hub' || area.type === 'student-hub') {
+      baseFAQs.push({
+        question: `How does Cerebrum compare to other coaching in ${area.name}?`,
+        answer: `Unlike large institutes with 50-100 students/batch, Cerebrum has only ${CEREBRUM_METRICS.batchSizeText}. Our ${CEREBRUM_METRICS.successRateText} success rate vs 60-70% industry average speaks for our quality. AIIMS-trained faculty with ${CEREBRUM_METRICS.facultyExperienceText} experience.`,
+      })
+    }
+
+    return baseFAQs
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: getAreaFAQs().map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
+  // Event Schema for Demo Classes
+  const eventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `Free NEET Biology Demo Class - ${area.name}`,
+    description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from ${area.name}. Meet Dr. Shekhar Suman and understand our unique approach.`,
+    startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+    location: [
+      {
+        '@type': 'Place',
+        name: 'Cerebrum Biology Academy',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: CEREBRUM_METRICS.mainAddress,
+          addressLocality: 'South Delhi',
+          addressRegion: 'Delhi',
+          postalCode: CEREBRUM_METRICS.pincode,
+          addressCountry: 'IN',
+        },
+      },
+      {
+        '@type': 'VirtualLocation',
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+    ],
+    performer: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar Suman',
+      jobTitle: 'Founder & Lead Faculty',
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      validFrom: new Date().toISOString().split('T')[0],
+    },
+    image: 'https://cerebrumbiologyacademy.com/logo.png',
+  }
+
   return (
     <>
       <AreaPageContent area={area} areaSlug={areaSlug} />
@@ -396,6 +557,24 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventSchema),
         }}
       />
     </>
