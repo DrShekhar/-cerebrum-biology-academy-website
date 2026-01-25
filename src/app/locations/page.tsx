@@ -150,6 +150,90 @@ export default function LocationsPage() {
         </div>
       </section>
 
+      {/* Our Physical Centers - Delhi NCR */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-gradient-to-br from-green-50 to-teal-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <Badge className="mb-4 bg-green-100 text-green-800 border-green-200 text-sm px-4 py-2">
+              <Building2 className="w-4 h-4 mr-2 inline" />
+              Physical Coaching Centers
+            </Badge>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
+              Visit Our Delhi NCR Centers
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
+              5 state-of-the-art centers with AIIMS faculty, small batches of 15 students
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {[
+              {
+                name: 'Gurugram',
+                area: 'Sector 44',
+                metro: 'HUDA City Centre',
+                href: '/locations/gurugram',
+                color: 'green',
+              },
+              {
+                name: 'Delhi (West)',
+                area: 'Patel Nagar',
+                metro: 'Patel Nagar Metro',
+                href: '/locations/delhi',
+                color: 'red',
+              },
+              {
+                name: 'South Delhi',
+                area: 'Greater Kailash',
+                metro: 'Kailash Colony Metro',
+                href: '/locations/south-delhi',
+                color: 'purple',
+              },
+              {
+                name: 'Noida',
+                area: 'Sector 62',
+                metro: 'Sector 62 Metro',
+                href: '/locations/noida',
+                color: 'blue',
+              },
+              {
+                name: 'Faridabad',
+                area: 'Sector 15',
+                metro: 'Bata Chowk Metro',
+                href: '/locations/faridabad',
+                color: 'orange',
+              },
+            ].map((center) => (
+              <Link key={center.name} href={center.href}>
+                <Card className="p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-green-400 bg-white group">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-xl text-gray-900 group-hover:text-green-600 transition-colors">
+                        {center.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">{center.area}</p>
+                      <p className="text-xs text-green-600 mt-2 flex items-center">
+                        <MapPin className="w-3 h-3 mr-1" />
+                        Near {center.metro}
+                      </p>
+                    </div>
+                    <ChevronRight className="w-6 h-6 text-green-500 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-gray-600">
+              All centers offer: <span className="font-semibold">Small Batches (15 students)</span>{' '}
+              • <span className="font-semibold">AIIMS Faculty</span> •{' '}
+              <span className="font-semibold">90% Success Rate</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Top Cities by NEET Aspirants */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">

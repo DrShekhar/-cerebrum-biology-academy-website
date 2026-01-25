@@ -125,10 +125,12 @@ export const Footer = memo(function Footer() {
   ]
 
   const offlineCenters = [
-    { name: 'Rohini, Delhi', href: '/neet-coaching-north-delhi' },
+    { name: 'Delhi (Patel Nagar)', href: '/locations/delhi' },
+    { name: 'South Delhi (GK)', href: '/locations/south-delhi' },
     { name: 'Gurugram', href: '/locations/gurugram' },
-    { name: 'South Extension', href: '/neet-coaching-south-delhi' },
-    { name: 'Faridabad', href: '/neet-coaching-faridabad' },
+    { name: 'Noida (Sec 62)', href: '/locations/noida' },
+    { name: 'Faridabad', href: '/locations/faridabad' },
+    { name: 'All Locations', href: '/locations' },
   ]
 
   const onlineRegions = [
@@ -140,16 +142,13 @@ export const Footer = memo(function Footer() {
   ]
 
   const biologyClassesByCity = [
-    { name: 'Delhi', href: '/biology-classes-delhi' },
-    { name: 'Noida', href: '/biology-classes-noida' },
-    { name: 'Gurgaon', href: '/biology-classes-gurgaon' },
-    { name: 'Faridabad', href: '/biology-classes-faridabad' },
+    { name: 'Delhi', href: '/locations/delhi' },
+    { name: 'South Delhi', href: '/locations/south-delhi' },
+    { name: 'Noida', href: '/locations/noida' },
+    { name: 'Gurugram', href: '/locations/gurugram' },
+    { name: 'Faridabad', href: '/locations/faridabad' },
     { name: 'Ghaziabad', href: '/biology-classes-ghaziabad' },
-    { name: 'South Delhi', href: '/biology-classes-south-delhi' },
     { name: 'Rohini', href: '/biology-classes-rohini' },
-    { name: 'Manesar', href: '/biology-classes-manesar' },
-    { name: 'Rewari', href: '/biology-classes-rewari' },
-    { name: 'Mahendragarh', href: '/biology-classes-mahendragarh' },
   ]
 
   const biologyTuitionLinks = [

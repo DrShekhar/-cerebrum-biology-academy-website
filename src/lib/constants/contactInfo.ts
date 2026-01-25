@@ -58,7 +58,7 @@ export const CONTACT_INFO = {
     website: 'https://cerebrumbiologyacademy.com',
   },
 
-  // Physical Location - Gurugram Center
+  // Physical Locations - All Centers
   location: {
     gurugram: {
       name: 'Cerebrum Biology Academy - Gurugram',
@@ -67,20 +67,92 @@ export const CONTACT_INFO = {
       addressRegion: 'Haryana',
       postalCode: '122003',
       addressCountry: 'IN',
-      // Exact coordinates for Google Maps
       geo: {
         latitude: 28.4595,
         longitude: 77.0266,
       },
-      // Google Maps embed URL
       mapUrl: 'https://maps.google.com/maps?q=Cerebrum+Biology+Academy+Gurugram',
-      // Google Business Profile URL (update after claiming)
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy',
-      // Landmarks for local SEO
       nearbyLandmarks: [
         'Near HUDA City Centre Metro Station',
         'Opposite Sector 44 Market',
         'Near Golf Course Road',
+      ],
+    },
+    delhi: {
+      name: 'Cerebrum Biology Academy - Delhi',
+      streetAddress: 'C-15, Patel Nagar West',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110008',
+      addressCountry: 'IN',
+      geo: {
+        latitude: 28.6508,
+        longitude: 77.1726,
+      },
+      mapUrl: 'https://maps.google.com/maps?q=Patel+Nagar+West+Delhi',
+      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-delhi',
+      nearbyLandmarks: [
+        'Near Patel Nagar Metro Station',
+        'Opposite Patel Nagar Market',
+        'Near Shadipur Metro',
+      ],
+    },
+    southDelhi: {
+      name: 'Cerebrum Biology Academy - South Delhi',
+      streetAddress: 'M-24, Greater Kailash Part 1',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110048',
+      addressCountry: 'IN',
+      geo: {
+        latitude: 28.5494,
+        longitude: 77.2347,
+      },
+      mapUrl: 'https://maps.google.com/maps?q=Greater+Kailash+Part+1+Delhi',
+      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-gk',
+      nearbyLandmarks: [
+        'Near Greater Kailash M Block Market',
+        'Near Kailash Colony Metro',
+        'Near Nehru Place',
+      ],
+    },
+    noida: {
+      name: 'Cerebrum Biology Academy - Noida',
+      streetAddress: 'B-45, Sector 62',
+      addressLocality: 'Noida',
+      addressRegion: 'Uttar Pradesh',
+      postalCode: '201301',
+      addressCountry: 'IN',
+      geo: {
+        latitude: 28.6280,
+        longitude: 77.3649,
+      },
+      mapUrl: 'https://maps.google.com/maps?q=Sector+62+Noida',
+      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-noida',
+      nearbyLandmarks: [
+        'Near Sector 62 Metro Station',
+        'Near Electronic City',
+        'Near Noida City Centre',
+      ],
+    },
+    faridabad: {
+      name: 'Cerebrum Biology Academy - Faridabad',
+      streetAddress: 'SCO 23, Sector 15',
+      addressLocality: 'Faridabad',
+      addressRegion: 'Haryana',
+      postalCode: '121007',
+      addressCountry: 'IN',
+      geo: {
+        latitude: 28.3948,
+        longitude: 77.3117,
+      },
+      mapUrl: 'https://maps.google.com/maps?q=Sector+15+Faridabad',
+      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-faridabad',
+      nearbyLandmarks: [
+        'Near Sector 15 Market',
+        'Near Bata Chowk',
+        'Near HUDA Complex',
       ],
     },
   },

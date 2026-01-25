@@ -1,0 +1,128 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'NEET Biology Coaching in Noida | Cerebrum Biology Academy',
+  description:
+    'Best NEET Biology coaching in Noida by AIIMS faculty. Small batches of 15 students, 90% success rate. Located in Sector 62. Call +91 88264 44334.',
+  keywords: [
+    'NEET coaching Noida',
+    'Biology coaching Noida',
+    'NEET Biology classes Noida',
+    'Best NEET coaching Noida',
+    'NEET preparation Noida',
+    'Medical coaching Noida',
+    'AIIMS coaching Noida',
+    'NEET coaching Sector 62',
+    'NEET coaching Sector 18',
+    'NEET coaching near me Noida',
+    'Biology tuition Noida',
+    'NEET coaching Greater Noida',
+  ],
+  openGraph: {
+    title: 'NEET Biology Coaching in Noida | Cerebrum Biology Academy',
+    description:
+      'Best NEET Biology coaching in Noida. AIIMS faculty, small batches, 90% success rate.',
+    type: 'website',
+    locale: 'en_IN',
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/images/noida-center.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Cerebrum Biology Academy Noida Center',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching in Noida',
+    description: 'Best NEET Biology coaching by AIIMS faculty. 90% success rate.',
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/noida',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+function NoidaServiceSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: 'Cerebrum Biology Academy - Noida',
+    description: 'Best NEET Biology coaching in Noida with AIIMS faculty',
+    url: 'https://cerebrumbiologyacademy.com/locations/noida',
+    telephone: '+91-88264-44334',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'B-45, Sector 62',
+      addressLocality: 'Noida',
+      addressRegion: 'Uttar Pradesh',
+      postalCode: '201301',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 28.628,
+      longitude: 77.3649,
+    },
+    areaServed: [
+      'Sector 62',
+      'Sector 18',
+      'Sector 15',
+      'Sector 16',
+      'Sector 50',
+      'Sector 63',
+      'Noida City Centre',
+      'Greater Noida',
+      'Noida Extension',
+      'Ghaziabad',
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '320',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '07:00',
+        closes: '21:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export default function NoidaLocationLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <NoidaServiceSchema />
+      {children}
+    </>
+  )
+}
