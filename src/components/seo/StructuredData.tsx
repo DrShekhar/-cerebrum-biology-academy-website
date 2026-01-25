@@ -1095,6 +1095,108 @@ export function VideoSchema({
   )
 }
 
+/**
+ * ReviewSchema - For individual reviews/testimonials
+ * Important for social proof and rich snippets
+ */
+export interface ReviewSchemaProps {
+  itemReviewed: {
+    type: 'Course' | 'Organization' | 'LocalBusiness'
+    name: string
+  }
+  author: {
+    name: string
+    image?: string
+  }
+  reviewRating: {
+    ratingValue: number
+    bestRating?: number
+    worstRating?: number
+  }
+  reviewBody: string
+  datePublished: string
+}
+
+export function ReviewSchema({
+  itemReviewed,
+  author,
+  reviewRating,
+  reviewBody,
+  datePublished,
+}: ReviewSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': itemReviewed.type,
+      name: itemReviewed.name,
+    },
+    author: {
+      '@type': 'Person',
+      name: author.name,
+      ...(author.image && { image: author.image }),
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: reviewRating.ratingValue,
+      bestRating: reviewRating.bestRating || 5,
+      worstRating: reviewRating.worstRating || 1,
+    },
+    reviewBody,
+    datePublished,
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * ReviewListSchema - For multiple testimonials on a page
+ * Renders multiple individual Review schemas
+ */
+export interface ReviewListSchemaProps {
+  reviews: Array<{
+    author: string
+    authorImage?: string
+    rating: number
+    review: string
+    date: string
+  }>
+  itemReviewed?: {
+    type: 'Course' | 'Organization' | 'LocalBusiness'
+    name: string
+  }
+}
+
+export function ReviewListSchema({
+  reviews,
+  itemReviewed = { type: 'Organization', name: 'Cerebrum Biology Academy' },
+}: ReviewListSchemaProps) {
+  return (
+    <>
+      {reviews.map((review, index) => (
+        <ReviewSchema
+          key={index}
+          itemReviewed={itemReviewed}
+          author={{
+            name: review.author,
+            image: review.authorImage,
+          }}
+          reviewRating={{
+            ratingValue: review.rating,
+          }}
+          reviewBody={review.review}
+          datePublished={review.date}
+        />
+      ))}
+    </>
+  )
+}
+
 export function StructuredData() {
   // Note: FAQSchema is NOT included globally to prevent duplicate FAQ errors in Google Search Console
   // Include FAQSchema only on specific pages that have FAQ content

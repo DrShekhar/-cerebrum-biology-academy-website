@@ -36,7 +36,7 @@ export { VideoSchema, VideoListSchema, VideoDisplay } from './VideoSchema'
 // Event schema for webinars, demos, live classes
 export { EventSchema, EventListSchema, WebinarSchema } from './EventSchema'
 
-// Structured data schemas (Organization, Course, LocalBusiness, HowTo, Person, Video)
+// Structured data schemas (Organization, Course, LocalBusiness, HowTo, Person, Video, Review)
 export {
   OrganizationSchema,
   WebsiteSchema,
@@ -49,11 +49,15 @@ export {
   PersonSchema,
   DrShekharSinghSchema,
   VideoSchema as VideoObjectSchema,
+  ReviewSchema,
+  ReviewListSchema,
   StructuredData,
   type HowToStep,
   type HowToSchemaProps,
   type PersonSchemaProps,
   type VideoSchemaProps,
+  type ReviewSchemaProps,
+  type ReviewListSchemaProps,
 } from './StructuredData'
 
 // Intent landing page component with built-in SEO
