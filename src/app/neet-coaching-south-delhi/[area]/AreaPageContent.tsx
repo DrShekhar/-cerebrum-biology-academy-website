@@ -14,6 +14,7 @@ import {
   Home,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { AreaDetails, courseOptions, areaDetails } from '@/data/south-delhi-areas'
 
 // Helper to get nearby areas based on area type and location
@@ -111,11 +112,11 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               {area.fullName}
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Best <span className="text-yellow-300">NEET Coaching in {area.name}</span>
             </h1>
 
-            <p className="text-lg md:text-xl opacity-90 mb-4">{area.description}</p>
+            <p className="hero-description text-lg md:text-xl opacity-90 mb-4">{area.description}</p>
 
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
@@ -232,6 +233,15 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 ))}
               </ul>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Answers - Speakable for Voice Search */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="quick-answers">
+            <QuickAnswers locality={area.name} />
           </div>
         </div>
       </section>

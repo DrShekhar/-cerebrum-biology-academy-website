@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { areaDetails, getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
-import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
+import { CEREBRUM_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 
 interface PageProps {
@@ -144,6 +144,12 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
   const organizationId = 'https://cerebrumbiologyacademy.com/#organization'
   const localBusinessId = `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#localbusiness`
 
+  // Get area-specific coordinates or fallback to Kalu Sarai
+  const areaCoords = AREA_COORDINATES[areaSlug] || {
+    lat: CEREBRUM_METRICS.coordinates.latitude,
+    lng: CEREBRUM_METRICS.coordinates.longitude,
+  }
+
   // Generate area-specific reviews based on area type
   const getAreaReviews = () => {
     const baseReviews = [
@@ -231,17 +237,17 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: CEREBRUM_METRICS.coordinates.latitude.toString(),
-      longitude: CEREBRUM_METRICS.coordinates.longitude.toString(),
+      latitude: areaCoords.lat.toString(),
+      longitude: areaCoords.lng.toString(),
     },
     areaServed: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: CEREBRUM_METRICS.coordinates.latitude.toString(),
-        longitude: CEREBRUM_METRICS.coordinates.longitude.toString(),
+        latitude: areaCoords.lat.toString(),
+        longitude: areaCoords.lng.toString(),
       },
-      geoRadius: '10000',
+      geoRadius: '5000',
     },
     openingHoursSpecification: [
       {
@@ -536,6 +542,105 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
     image: 'https://cerebrumbiologyacademy.com/logo.png',
   }
 
+  // ImageObject Schema for hero images
+  const imageObjectSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#primaryimage`,
+    url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    contentUrl: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    width: '1200',
+    height: '630',
+    caption: `NEET Biology Coaching in ${area.name} - Cerebrum Biology Academy`,
+    representativeOfPage: true,
+    inLanguage: 'en-IN',
+  }
+
+  // AggregateOffer Schema for bundle pricing
+  const aggregateOfferSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateOffer',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#offers`,
+    priceCurrency: 'INR',
+    lowPrice: CEREBRUM_METRICS.feeCrashCourse,
+    highPrice: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+    offerCount: 4,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Class 11+12 Two-Year Program',
+        price: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Class 12 One-Year Intensive',
+        price: CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Dropper Batch',
+        price: CEREBRUM_METRICS.feeDropper,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Crash Course',
+        price: CEREBRUM_METRICS.feeCrashCourse,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+    ],
+  }
+
+  // Speakable Schema for voice search (Google Assistant, Alexa)
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#webpage`,
+    url: `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}`,
+    name: `NEET Coaching in ${area.name} | Cerebrum Biology Academy`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.hero-title', '.hero-description', '.quick-answers'],
+      xpath: [
+        "//*[@class='hero-title']",
+        "//*[@class='hero-description']",
+        "//*[@class='quick-answers']",
+      ],
+    },
+    mainEntity: { '@id': localBusinessId },
+    primaryImageOfPage: { '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#primaryimage` },
+  }
+
+  // WebSite Schema with SearchAction for sitelinks searchbox
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://cerebrumbiologyacademy.com/#website',
+    url: 'https://cerebrumbiologyacademy.com',
+    name: 'Cerebrum Biology Academy',
+    description: 'Best NEET Biology Coaching in South Delhi with 94% success rate',
+    publisher: { '@id': organizationId },
+    inLanguage: 'en-IN',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
     <>
       <AreaPageContent area={area} areaSlug={areaSlug} />
@@ -575,6 +680,30 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(eventSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(imageObjectSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateOfferSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speakableSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>
