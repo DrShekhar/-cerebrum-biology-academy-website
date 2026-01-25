@@ -25,6 +25,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function SouthExtensionLocationPage() {
   useEffect(() => {
@@ -49,7 +53,8 @@ export default function SouthExtensionLocationPage() {
     trackWhatsAppConversion('south-extension-location')
     await trackAndOpenWhatsApp({
       source: 'south-extension-location-page',
-      message: 'Hi! I am interested in joining your South Extension center for NEET Biology coaching.',
+      message:
+        'Hi! I am interested in joining your South Extension center for NEET Biology coaching.',
       campaign: 'location-south-extension',
     })
   }
@@ -123,8 +128,7 @@ export default function SouthExtensionLocationPage() {
                 Flagship Center
               </div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                NEET Biology Coaching in{' '}
-                <span className="text-yellow-400">South Extension</span>
+                NEET Biology Coaching in <span className="text-yellow-400">South Extension</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
                 Our flagship center near AIIMS Delhi - Where Dr. Shekhar personally teaches
@@ -345,6 +349,13 @@ export default function SouthExtensionLocationPage() {
             </div>
           </div>
         </section>
+
+        {/* Related Locations - Cross-linking for SEO */}
+        <RelatedLocations
+          currentLocation="South Extension"
+          locations={getRelatedLocations('south-extension')}
+          className="bg-white"
+        />
 
         {/* Stats */}
         <section className="py-12 bg-slate-900 text-white">

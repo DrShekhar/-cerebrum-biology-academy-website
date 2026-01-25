@@ -122,8 +122,7 @@ export default function GreenParkLocationPage() {
                 Yellow Line Metro
               </div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                NEET Biology Coaching in{' '}
-                <span className="text-yellow-400">Green Park</span>
+                NEET Biology Coaching in <span className="text-yellow-400">Green Park</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
                 Premium coaching near Hauz Khas & IIT Delhi - Ideal for South Delhi students
@@ -397,9 +396,7 @@ export default function GreenParkLocationPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Visit Our Green Park Center Today!
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Book a free demo class near Hauz Khas
-            </p>
+            <p className="text-lg mb-6 opacity-90">Book a free demo class near Hauz Khas</p>
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={handleWhatsApp}
@@ -420,10 +417,7 @@ export default function GreenParkLocationPage() {
         </section>
       </div>
 
-      <MobilePhoneStickyBar
-        phoneNumber={CONTACT_INFO.phone.primary}
-        source="green-park-location"
-      />
+      <MobilePhoneStickyBar phoneNumber={CONTACT_INFO.phone.primary} source="green-park-location" />
     </>
   )
 }

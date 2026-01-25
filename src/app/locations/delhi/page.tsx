@@ -45,7 +45,8 @@ export default function DelhiLocationPage() {
     trackWhatsAppConversion('delhi-area')
     await trackAndOpenWhatsApp({
       source: 'delhi-area-page',
-      message: 'Hi! I am from Delhi and interested in NEET Biology coaching. Which center is nearest to me?',
+      message:
+        'Hi! I am from Delhi and interested in NEET Biology coaching. Which center is nearest to me?',
       campaign: 'location-delhi-area',
     })
   }
@@ -132,11 +133,11 @@ export default function DelhiLocationPage() {
                 Area We Serve
               </div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                NEET Biology Coaching for{' '}
-                <span className="text-yellow-400">Delhi Students</span>
+                NEET Biology Coaching for <span className="text-yellow-400">Delhi Students</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
-                Premium NEET Biology coaching by AIIMS faculty. Students from all parts of Delhi can join our nearby centers.
+                Premium NEET Biology coaching by AIIMS faculty. Students from all parts of Delhi can
+                join our nearby centers.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button
@@ -259,7 +260,8 @@ export default function DelhiLocationPage() {
               Areas We Serve in Delhi
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Students from all these areas join our NEET Biology coaching program at Rohini or South Extension center
+              Students from all these areas join our NEET Biology coaching program at Rohini or
+              South Extension center
             </p>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
               {areasServed.map((area, idx) => (
@@ -326,9 +328,7 @@ export default function DelhiLocationPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Start Your NEET Journey?
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Book a free demo class at your nearest center
-            </p>
+            <p className="text-lg mb-6 opacity-90">Book a free demo class at your nearest center</p>
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={handleWhatsApp}

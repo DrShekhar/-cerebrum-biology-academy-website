@@ -23,6 +23,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function GreaterKailashLocationPage() {
   useEffect(() => {
@@ -249,6 +253,13 @@ export default function GreaterKailashLocationPage() {
             </div>
           </div>
         </section>
+
+        {/* Related Locations - Cross-linking for SEO */}
+        <RelatedLocations
+          currentLocation="Greater Kailash"
+          locations={getRelatedLocations('greater-kailash')}
+          className="bg-white"
+        />
 
         {/* Stats */}
         <section className="py-12 bg-slate-900 text-white">

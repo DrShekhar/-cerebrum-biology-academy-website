@@ -45,7 +45,8 @@ export default function SouthDelhiLocationPage() {
     trackWhatsAppConversion('south-delhi-area')
     await trackAndOpenWhatsApp({
       source: 'south-delhi-area-page',
-      message: 'Hi! I am from South Delhi and interested in NEET Biology coaching at South Extension center.',
+      message:
+        'Hi! I am from South Delhi and interested in NEET Biology coaching at South Extension center.',
       campaign: 'location-south-delhi-area',
     })
   }
@@ -130,7 +131,8 @@ export default function SouthDelhiLocationPage() {
                 <span className="text-yellow-400">South Delhi Students</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
-                Join our flagship South Extension center - where Dr. Shekhar personally teaches. Just minutes away from GK, CR Park, Nehru Place.
+                Join our flagship South Extension center - where Dr. Shekhar personally teaches.
+                Just minutes away from GK, CR Park, Nehru Place.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -167,7 +169,9 @@ export default function SouthDelhiLocationPage() {
                     <Award className="w-8 h-8" />
                     <div>
                       <h2 className="font-bold text-xl">{nearestCenter.name}</h2>
-                      <p className="text-yellow-100 text-sm">Recommended for South Delhi Students</p>
+                      <p className="text-yellow-100 text-sm">
+                        Recommended for South Delhi Students
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -270,7 +274,8 @@ export default function SouthDelhiLocationPage() {
               South Delhi Areas We Serve
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Students from all these areas join our flagship South Extension center for NEET Biology coaching
+              Students from all these areas join our flagship South Extension center for NEET
+              Biology coaching
             </p>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
               {areasServed.map((area, idx) => (
@@ -337,9 +342,7 @@ export default function SouthDelhiLocationPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Join Our Flagship South Extension Center!
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Book a free demo class with Dr. Shekhar
-            </p>
+            <p className="text-lg mb-6 opacity-90">Book a free demo class with Dr. Shekhar</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/locations/south-extension"

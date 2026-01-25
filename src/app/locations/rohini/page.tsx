@@ -48,7 +48,8 @@ export default function RohiniLocationPage() {
     trackWhatsAppConversion('rohini-location')
     await trackAndOpenWhatsApp({
       source: 'rohini-location-page',
-      message: 'Hi! I am from Rohini and interested in NEET Biology coaching at your DC Chowk center.',
+      message:
+        'Hi! I am from Rohini and interested in NEET Biology coaching at your DC Chowk center.',
       campaign: 'location-rohini',
     })
   }
@@ -122,8 +123,7 @@ export default function RohiniLocationPage() {
                 North Delhi Center
               </div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                NEET Biology Coaching in{' '}
-                <span className="text-yellow-400">Rohini</span>
+                NEET Biology Coaching in <span className="text-yellow-400">Rohini</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-6">
                 Premium coaching center at DC Chowk - Serving North & North-West Delhi
@@ -394,12 +394,8 @@ export default function RohiniLocationPage() {
         {/* CTA */}
         <section className="py-12 bg-gradient-to-r from-red-500 to-orange-500 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Visit Our Rohini Center Today!
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Book a free demo class at DC Chowk
-            </p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Visit Our Rohini Center Today!</h2>
+            <p className="text-lg mb-6 opacity-90">Book a free demo class at DC Chowk</p>
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={handleWhatsApp}
@@ -420,10 +416,7 @@ export default function RohiniLocationPage() {
         </section>
       </div>
 
-      <MobilePhoneStickyBar
-        phoneNumber={CONTACT_INFO.phone.primary}
-        source="rohini-location"
-      />
+      <MobilePhoneStickyBar phoneNumber={CONTACT_INFO.phone.primary} source="rohini-location" />
     </>
   )
 }

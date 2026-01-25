@@ -1,11 +1,23 @@
 import { Metadata } from 'next'
+import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
   title: 'Class 12 Biology NEET Coaching | Target 2025 Batch | Cerebrum Academy',
   description:
     'Intensive Class 12 Biology coaching for NEET 2026. Complete syllabus, previous year papers, mock tests, 90+ marks guarantee. AIIMS faculty. Limited seats!',
-  keywords:
-    'Class 12 biology, NEET target batch, Class 12 NEET coaching, biology coaching, NEET 2026, board exam biology, NEET preparation, competitive biology',
+  keywords: [
+    'Class 12 biology',
+    'NEET target batch',
+    'Class 12 NEET coaching',
+    'biology coaching',
+    'NEET 2026',
+    'board exam biology',
+    'NEET preparation',
+    'competitive biology',
+    'NEET Biology revision classes',
+    'Biology coaching with recorded lectures',
+    'NEET Biology weekend batch Delhi',
+  ],
   openGraph: {
     title: 'Class 12 Biology NEET Target Batch | Crack NEET 2026',
     description:
@@ -26,5 +38,35 @@ export const metadata: Metadata = {
 }
 
 export default function Class12Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <HowToEnrollSchema
+        courseName="Class 12 NEET Biology Target Batch"
+        courseUrl="https://cerebrumbiologyacademy.com/courses/class-12"
+      />
+      <CourseWithHowToSchema
+        courseName="Class 12 NEET Biology Target Batch"
+        courseDescription="Intensive Class 12 Biology coaching for NEET 2026. Complete syllabus coverage with previous year papers, mock tests, and board exam 90+ guarantee."
+        courseUrl="https://cerebrumbiologyacademy.com/courses/class-12"
+        price={55000}
+        duration="10 months"
+        educationalLevel="Class 12"
+        syllabus={[
+          'Reproduction in Organisms',
+          'Sexual Reproduction in Flowering Plants',
+          'Human Reproduction',
+          'Reproductive Health',
+          'Principles of Inheritance',
+          'Molecular Basis of Inheritance',
+          'Evolution',
+          'Human Health and Disease',
+          'Biotechnology Principles & Applications',
+          'Organisms and Populations',
+          'Ecosystem',
+          'Biodiversity and Conservation',
+        ]}
+      />
+      {children}
+    </>
+  )
 }

@@ -219,8 +219,8 @@ export default function NoidaLocationPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">By Metro</h3>
               <p className="text-gray-600">
-                Nearest metro station: <strong>Sector 62</strong> (Blue Line). We are 5 minutes
-                walk from the station. Also accessible from Noida City Centre.
+                Nearest metro station: <strong>Sector 62</strong> (Blue Line). We are 5 minutes walk
+                from the station. Also accessible from Noida City Centre.
               </p>
             </div>
 

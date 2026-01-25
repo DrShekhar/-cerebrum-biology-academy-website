@@ -264,6 +264,43 @@ const faqCategories: FAQCategory[] = [
       },
     ],
   },
+  {
+    id: 'quick-answers',
+    name: 'Quick Answers',
+    icon: <HelpCircle className="w-5 h-5" />,
+    questions: [
+      {
+        question: 'Where is the best NEET Biology coaching near me?',
+        answer:
+          'Cerebrum Biology Academy at South Extension, Delhi is the best NEET Biology coaching with 98% success rate. We have AIIMS-qualified faculty, small batch sizes of 15-20 students, and offer both online and offline classes. Our flagship center is accessible from Greater Kailash, Defence Colony, Lajpat Nagar, Saket, and all South Delhi areas.',
+      },
+      {
+        question: 'Which is better - online or offline NEET coaching?',
+        answer:
+          'Both have advantages. Offline coaching offers face-to-face interaction and better discipline. Online coaching saves 2-3 hours daily commute time and offers flexibility. Cerebrum offers both modes with the same quality faculty and materials. For South Delhi students, our offline center is convenient; others prefer online to avoid traffic.',
+      },
+      {
+        question: 'Can I join NEET coaching in the middle of the year?',
+        answer:
+          'Yes, Cerebrum offers rolling admissions with catch-up support. We provide recorded lectures of previous classes and extra doubt sessions to help mid-year joiners cover missed content. Many students change coaching institutes mid-year and join us successfully.',
+      },
+      {
+        question: 'Is NEET Biology coaching necessary for droppers?',
+        answer:
+          'Yes, especially for improving Biology scores. Most droppers have studied theory but need exam-focused preparation, extensive practice, and expert guidance on scoring patterns. Cerebrum dropper batch focuses on these with 98% success rate. Biology is 360/720 marks - proper coaching makes a significant difference.',
+      },
+      {
+        question: 'What is the success rate of Cerebrum Biology Academy?',
+        answer:
+          'Cerebrum Biology Academy has a 98% success rate with 500+ students qualifying NEET annually. Our highest score is 695/720 in NEET Biology (Sadhna Sirin, 2023). We have 15+ years of experience with AIIMS-qualified faculty. Over 60% of our students score above 330/360 in Biology.',
+      },
+      {
+        question: 'How much does NEET Biology coaching cost in Delhi?',
+        answer:
+          'NEET Biology coaching fees at Cerebrum range from ₹45,000 to ₹1,80,000 depending on course tier. Pursuit tier: ₹45,000-₹85,000, Ascent tier: ₹60,000-₹1,40,000, Pinnacle tier: ₹65,000-₹1,80,000. EMI options available. This is comparable to large coaching chains but with much smaller batch sizes (15-20 vs 40-80).',
+      },
+    ],
+  },
 ]
 
 // Flatten all questions for schema
