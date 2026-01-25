@@ -88,20 +88,20 @@ Disallow: /dashboard/
 # - Mock Tests & Analysis
 
 # =====================================================
-# PHYSICAL LOCATIONS
+# PHYSICAL LOCATIONS (5 Centers in Delhi NCR)
 # =====================================================
-# 1. Rohini, North Delhi (DC Chowk Metro)
-# 2. South Extension, South Delhi
-# 3. Green Park, South Delhi
-# 4. Gurugram, Haryana
-# 5. Faridabad, Haryana
+# 1. South Extension Part 2, New Delhi (Flagship - Near Lajpat Nagar Metro)
+# 2. Rohini, Delhi (DC Chauk, Sector 9 - Near Rohini West Metro)
+# 3. Gurugram, Haryana (Sector 51 - Near HUDA City Centre Metro)
+# 4. Green Park, New Delhi (Near Green Park Metro)
+# 5. Faridabad, Haryana (Sector 21)
 
 # =====================================================
 # CONTACT INFORMATION
 # =====================================================
 # Website: https://cerebrumbiologyacademy.com
-# Phone: +91-9310-387-227
-# WhatsApp: +91-9310-387-227
+# Phone: +91-88264-44334
+# WhatsApp: +91-88264-44334
 # Email: info@cerebrumbiologyacademy.com
 
 # =====================================================
