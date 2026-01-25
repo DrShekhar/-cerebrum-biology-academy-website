@@ -21,6 +21,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { QuickAnswers } from '@/components/seo/QuickAnswers'
 
 const southDelhiAreas = [
   {
@@ -277,6 +278,13 @@ export default function PageContent() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Answers Section - Optimized for Featured Snippets */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <QuickAnswers locality="South Delhi" />
         </div>
       </section>
 
