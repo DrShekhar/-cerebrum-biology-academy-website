@@ -22,13 +22,15 @@ export function FirebaseAuthButtons() {
     }
   }
 
+  // Loading state - hidden on mobile to prevent layout shift
   if (isLoading) {
-    return <div className="w-16 h-8 bg-slate-100 animate-pulse rounded" />
+    return <div className="hidden lg:block w-16 h-8 bg-slate-100 animate-pulse rounded" />
   }
 
+  // Authenticated state - hidden on mobile (mobile nav handles this)
   if (isAuthenticated && user) {
     return (
-      <div className="flex items-center gap-3">
+      <div className="hidden lg:flex items-center gap-3">
         <Link
           href="/dashboard"
           className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
@@ -45,10 +47,11 @@ export function FirebaseAuthButtons() {
     )
   }
 
+  // Sign in link - hidden on mobile (mobile nav handles this)
   return (
     <Link
       href="/sign-in"
-      className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+      className="hidden lg:flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
     >
       Sign In
     </Link>

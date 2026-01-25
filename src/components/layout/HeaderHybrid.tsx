@@ -79,10 +79,10 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
                     alt="Cerebrum Biology Academy"
                     width={40}
                     height={40}
-                    sizes="40px"
+                    sizes="(max-width: 640px) 32px, 40px"
                     className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
-                    unoptimized={false}
+                    unoptimized
                   />
                 </div>
               </div>
@@ -200,8 +200,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
         </div>
       </div>
 
-      {/* Client-side interactive elements mount point */}
-      <HeaderClientInteractions section="all" />
+      {/* Note: Auth buttons are now handled by FirebaseAuthButtons component above */}
     </header>
   )
 })

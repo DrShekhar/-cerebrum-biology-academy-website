@@ -126,9 +126,10 @@ const Header = () => {
                     alt="Cerebrum Biology Academy Logo"
                     width={40}
                     height={40}
-                    sizes="40px"
+                    sizes="(max-width: 640px) 32px, 40px"
                     className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
+                    unoptimized
                   />
                 </div>
               </div>
