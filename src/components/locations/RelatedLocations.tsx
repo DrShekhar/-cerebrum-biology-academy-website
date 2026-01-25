@@ -83,6 +83,10 @@ export const PREMIUM_LOCATIONS: RelatedLocation[] = [
   { name: 'Vasant Vihar', slug: 'vasant-vihar', distance: '15 min' },
   { name: 'Panchsheel', slug: 'panchsheel', distance: '12 min' },
   { name: 'Gulmohar Park', slug: 'gulmohar-park', distance: '10 min' },
+  { name: 'Maharani Bagh', slug: 'maharani-bagh', distance: '12 min' },
+  { name: 'Neeti Bagh', slug: 'neeti-bagh', distance: '7 min' },
+  { name: 'Westend', slug: 'westend', distance: '18 min' },
+  { name: 'Safdarjung Enclave', slug: 'safdarjung-enclave', distance: '12 min' },
 ]
 
 export const ALL_DELHI_LOCATIONS: RelatedLocation[] = [

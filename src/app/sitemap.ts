@@ -394,6 +394,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    // Phase 4 Premium Areas - P2 Expansion
+    {
+      url: `${baseUrl}/locations/maharani-bagh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/neeti-bagh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/westend`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/safdarjung-enclave`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     // Comparison Pages - AEO/GEO Optimized
     {
       url: `${baseUrl}/compare/neet-coaching-comparison`,
