@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     'IGCSE Biology Defence Colony',
     'IB Biology home tutor Delhi',
     'IGCSE Biology online tutor',
+    'IB Biology IA help Delhi',
+    'IGCSE Biology past papers coaching',
+    'IB Internal Assessment Biology help',
+    'Cambridge IGCSE Biology tuition',
   ],
   openGraph: {
     title: 'IB & IGCSE Biology Tutor Delhi | International Board Coaching',

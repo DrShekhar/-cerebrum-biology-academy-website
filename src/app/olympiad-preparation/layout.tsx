@@ -1,21 +1,33 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Olympiad Preparation | Science Olympiad Coaching - Cerebrum Biology Academy',
+  title: 'Biology Olympiad Coaching Delhi | NSEB, INBO, IBO Preparation | Cerebrum',
   description:
-    'Expert olympiad preparation classes for NSO, NSEB, KVPY, and all science olympiads. Specialized olympiad coaching with proven results, scholarships, and recognition. Join olympiad classes near you!',
+    'Expert Biology Olympiad coaching in Delhi. NSEB preparation, INBO training, pathway to IBO. HBCSE pattern coaching, NTSE Biology prep, INSPIRE scholarship guidance. 95% selection rate.',
   keywords: [
+    'NSEB coaching Delhi',
+    'Biology Olympiad preparation',
+    'Biology Olympiad classes Delhi',
+    'INBO preparation Delhi',
+    'IBO training India',
+    'HBCSE Biology Olympiad',
+    'NTSE Biology preparation Delhi',
+    'INSPIRE scholarship Biology',
     'olympiad preparation',
     'science olympiad coaching',
     'olympiad classes',
     'olympiad coaching near me',
     'olympiad preparation classes',
-    'NSO coaching',
+    'NSO coaching Delhi',
     'NSEB coaching',
     'biology olympiad preparation',
     'olympiad training',
     'science olympiad classes',
     'olympiad exam preparation',
+    'National Standard Examination Biology',
+    'Indian National Biology Olympiad',
+    'International Biology Olympiad',
+    'KVPY Biology preparation',
   ],
   openGraph: {
     title: 'Olympiad Preparation | Science Olympiad Coaching - Cerebrum',

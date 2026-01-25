@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     'NEET coaching Kalkaji',
     'NEET coaching near me South Delhi',
     'Biology tuition South Delhi',
+    'Best Biology teacher South Delhi',
+    'NEET Biology coaching near me',
+    'Top Biology tutor South Delhi',
+    'Biology home tutor South Delhi',
   ],
   openGraph: {
     title: 'NEET Biology Coaching in South Delhi | Cerebrum Biology Academy',
