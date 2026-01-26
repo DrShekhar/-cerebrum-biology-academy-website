@@ -4672,6 +4672,66 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'biology-12th-boards-gurgaon': {
+    slug: 'biology-12th-boards-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Academy',
+    metaDescription:
+      'Best biology coaching for Class 12 board exams in Gurgaon. CBSE, Haryana Board. Score 95%+ in boards while preparing for NEET. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Biology Coaching for 12th Board Exams Gurgaon',
+    heroSubtitle:
+      'Final year biology - score 95%+ in boards while preparing for NEET. Human physiology, genetics, biotechnology, ecology experts.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 12 Biology Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology Tuition', url: '/class-12-biology-tuition-gurugram' },
+      { name: '10th Boards Biology', url: '/biology-10th-boards-gurgaon' },
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Do you offer biology coaching for Class 12 boards?',
+        answer:
+          'Yes! We offer specialized Class 12 biology coaching for CBSE and Haryana Board. Our program covers complete syllabus with focus on scoring 95%+ in boards while preparing for NEET.',
+      },
+      {
+        question: 'Which topics in Class 12 biology are most important for boards and NEET?',
+        answer:
+          'Human Physiology (30% weightage), Genetics & Evolution (25%), Biotechnology (20%), and Ecology (15%) are crucial. Our coaching covers all with NCERT focus for boards + MCQ practice for NEET.',
+      },
+      {
+        question: 'What is the fee for Class 12 board biology coaching?',
+        answer:
+          'Class 12 biology board + NEET coaching costs ₹70,000-85,000/year including study material, test series, and daily doubt clearing. Pure board-focused batch available at ₹55,000.',
+      },
+      {
+        question: 'Can I join in December for board exam preparation?',
+        answer:
+          'Yes! We offer crash courses for Class 12 boards starting in December and January. 45-60 day intensive programs covering complete syllabus with previous year paper practice.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '650+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
   'biology-home-tuition-gurgaon': {
     slug: 'biology-home-tuition-gurgaon',
     cityName: 'Gurgaon',
