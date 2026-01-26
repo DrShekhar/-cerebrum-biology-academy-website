@@ -81,7 +81,7 @@ const faqStructuredData = {
       name: 'How can Gurgaon students reach Cerebrum Biology Academy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Students from Gurgaon can take the Yellow Line Metro from HUDA City Centre to Hauz Khas station (35 minutes), then take a short auto ride to our South Extension center (10 minutes). Total journey is 50-60 minutes from most Gurgaon areas including DLF Phases, Cyber City, and Golf Course Road.',
+        text: 'Our Gurugram center is located at M2K Corporate Park, Sector 51 (Mayfield Garden) - conveniently accessible from all Gurgaon areas. Just 10-15 minutes from DLF Phases, Cyber City, and Golf Course Road. Near HUDA City Centre Metro Station. No need to travel to Delhi!',
       },
     },
     {
@@ -102,10 +102,10 @@ const faqStructuredData = {
     },
     {
       '@type': 'Question',
-      name: 'How long does the metro journey take from Gurgaon to your center?',
+      name: 'How long does it take to reach your Gurugram center?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The metro journey from HUDA City Centre (Gurgaon) to our South Extension center takes approximately 50-60 minutes total. Yellow Line from HUDA City Centre to Hauz Khas is 35 minutes, then 10 minutes auto ride. Students from DLF Phases, Cyber City, and Golf Course Road find this very convenient.',
+        text: 'Our Gurugram center at M2K Corporate Park, Sector 51 is just 10-15 minutes from most Gurgaon localities. From DLF Phases: 10-12 min, Cyber City: 8-10 min, Golf Course Road: 10-12 min, Sohna Road: 12-15 min. We are near HUDA City Centre Metro for students using public transport.',
       },
     },
     {
@@ -192,14 +192,14 @@ const faqStructuredData = {
 }
 
 const gurgaonAreas = [
-  { name: 'DLF Phase 1-5', distance: '50 min via Metro', description: 'Premium residential areas' },
-  { name: 'Sector 14', distance: '55 min via Metro', description: 'Near HUDA City Centre' },
-  { name: 'MG Road', distance: '50 min via Metro', description: 'Commercial hub' },
-  { name: 'Sohna Road', distance: '55 min', description: 'Growing residential corridor' },
-  { name: 'Golf Course Road', distance: '55 min', description: 'Premium locality' },
-  { name: 'Cyber City', distance: '50 min via Metro', description: 'IT hub area' },
-  { name: 'Palam Vihar', distance: '45 min', description: 'Near Dwarka Expressway' },
-  { name: 'South City', distance: '50 min', description: 'Near Sohna Road' },
+  { name: 'DLF Phase 1-5', distance: '10-12 min drive', description: 'Premium residential areas' },
+  { name: 'Sector 14', distance: '15 min drive', description: 'Near HUDA City Centre' },
+  { name: 'MG Road', distance: '12-15 min drive', description: 'Commercial hub' },
+  { name: 'Sohna Road', distance: '12-15 min drive', description: 'Growing residential corridor' },
+  { name: 'Golf Course Road', distance: '10-12 min drive', description: 'Premium locality' },
+  { name: 'Cyber City', distance: '8-10 min drive', description: 'IT hub area' },
+  { name: 'Palam Vihar', distance: '20-25 min drive', description: 'Near Dwarka Expressway' },
+  { name: 'South City', distance: '10-12 min drive', description: 'Near Sohna Road' },
 ]
 
 const features = [
@@ -267,9 +267,9 @@ export default function NEETCoachingGurgaonPage() {
               </h1>
 
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Join Cerebrum Biology Academy for specialized NEET biology coaching. Easy access
-                from all Gurgaon sectors via Rapid Metro and Yellow Line. Weekend batches available
-                for working professionals&apos; children.
+                Join Cerebrum Biology Academy at our dedicated Gurugram center - M2K Corporate Park,
+                Sector 51. Just 10-15 minutes from DLF, Cyber City, and Golf Course Road. No need
+                to travel to Delhi! Weekend batches available for working professionals&apos; children.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
@@ -436,11 +436,11 @@ export default function NEETCoachingGurgaonPage() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Easy Access from All Gurgaon Areas
+                Our Gurugram Center - M2K Corporate Park, Sector 51
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Well-connected via Rapid Metro and Yellow Line. Special weekend batches for Gurgaon
-                students.
+                Conveniently located in the heart of Gurugram. Just 10-15 minutes from most
+                localities. Near HUDA City Centre Metro for those using public transport.
               </p>
             </motion.div>
 
@@ -472,21 +472,21 @@ export default function NEETCoachingGurgaonPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-8 bg-yellow-50 rounded-xl p-6 border border-yellow-200"
+              className="mt-8 bg-green-50 rounded-xl p-6 border border-green-200"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Train className="w-6 h-6 text-yellow-600" />
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Metro Route from Gurgaon</h3>
+                  <h3 className="font-bold text-gray-800 mb-2">Our Gurugram Center Location</h3>
                   <p className="text-gray-600">
-                    <strong>Yellow Line:</strong> HUDA City Centre → Hauz Khas (Direct)
+                    <strong>Address:</strong> Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51
                     <br />
-                    <strong>Then:</strong> Short auto/cab to Panchsheel Enclave (5 min)
+                    <strong>Landmark:</strong> Near HUDA City Centre Metro Station
                     <br />
                     <span className="text-green-600 font-medium">
-                      Total journey: 50-60 minutes from most Gurgaon areas
+                      Just 10-15 minutes from most Gurgaon localities - no need to travel to Delhi!
                     </span>
                   </p>
                 </div>
@@ -626,25 +626,25 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="space-y-5">
                   {[
                     {
-                      text: 'Best NEET Biology coaching accessible from Gurgaon! My son travels from DLF Phase 3 via Yellow Line Metro (50 min). Small batch of 15 students meant personalized attention. He scored 668/720 in NEET 2024 and got MAMC Delhi. Highly recommend!',
+                      text: 'Best NEET Biology coaching in Gurgaon! The Sector 51 center is just 10 minutes from our home in DLF Phase 3. Small batch of 15 students meant personalized attention. My son scored 668/720 in NEET 2024 and got MAMC Delhi. No need to travel to Delhi anymore!',
                       author: 'Parent',
                       location: 'DLF Phase 3, Gurgaon',
                       rating: 5,
                     },
                     {
-                      text: 'Weekend batches are perfect for us from Cyber City. My daughter balances school and NEET prep beautifully. The AIIMS trained faculty and comprehensive study material helped her score 675 in mock tests. Very professional institute!',
+                      text: 'Weekend batches at the M2K Corporate Park center are perfect for us from Cyber City - just 8 minutes away! My daughter balances school and NEET prep beautifully. The AIIMS trained faculty helped her score 675 in mock tests. Very professional!',
                       author: 'Rajesh K.',
                       location: 'Cyber City, Gurgaon',
                       rating: 5,
                     },
                     {
-                      text: "Joined from Sohna Road for the hybrid mode - weekend offline classes and weekday online. The commute was initially a concern but Dr. Shekhar Sir's teaching is worth it. My son improved from 540 to 650 marks. Excellent coaching!",
+                      text: "Joined from Sohna Road - the Sector 51 center is just 12 minutes drive! Hybrid mode works great - weekend offline classes and weekday online. Dr. Shekhar Sir's teaching is excellent. My son improved from 540 to 650 marks!",
                       author: 'Meena S.',
                       location: 'Sohna Road, Gurgaon',
                       rating: 5,
                     },
                     {
-                      text: "Being from The Shri Ram School Gurgaon, I needed coaching that complemented my school syllabus. Cerebrum's focus on NCERT and conceptual clarity helped me score 360/360 in Biology. Got into UCMS Delhi!",
+                      text: "Being from The Shri Ram School Gurgaon, I needed coaching that complemented my school syllabus. The Gurugram center is so convenient. Cerebrum's focus on NCERT and conceptual clarity helped me score 360/360 in Biology. Got into UCMS Delhi!",
                       author: 'Ananya V.',
                       location: 'DLF Phase 2, Gurgaon',
                       rating: 5,
@@ -679,13 +679,13 @@ export default function NEETCoachingGurgaonPage() {
                 {/* Map */}
                 <div className="relative h-96 lg:h-auto bg-gray-100">
                   <LazyGoogleMap
-                    embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8904729344643!2d77.21443931508122!3d28.56964948244002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e9f6f5f5f5%3A0x1234567890abcdef!2sSouth%20Extension%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                    title="NEET Coaching Center Location"
+                    embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.8904729344643!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19e3f6f5f5f5%3A0x1234567890abcdef!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    title="NEET Coaching Center Location - Gurugram"
                     height={400}
                     placeholder={{
-                      lat: 28.5696,
-                      lng: 77.2144,
-                      address: "South Extension, New Delhi"
+                      lat: 28.4295,
+                      lng: 77.0426,
+                      address: "M2K Corporate Park, Sector 51, Gurugram"
                     }}
                   />
                 </div>
@@ -693,7 +693,7 @@ export default function NEETCoachingGurgaonPage() {
                 {/* Contact Details */}
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Easy Access from Gurgaon via Metro
+                    Our Gurugram Center - Right in Your City!
                   </h3>
                   <div className="space-y-5">
                     <div className="flex items-start gap-4">
@@ -703,9 +703,11 @@ export default function NEETCoachingGurgaonPage() {
                         <p className="text-gray-600 leading-relaxed">
                           Cerebrum Biology Academy
                           <br />
-                          South Extension, Part I
+                          Unit 17, M2K Corporate Park
                           <br />
-                          New Delhi - 110049
+                          Mayfield Garden, Sector 51
+                          <br />
+                          Gurugram, Haryana - 122018
                         </p>
                       </div>
                     </div>
@@ -738,19 +740,22 @@ export default function NEETCoachingGurgaonPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <Train className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+                      <Clock className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 mb-1">Metro Route from Gurgaon</p>
+                        <p className="font-semibold text-gray-900 mb-1">Travel Time from Your Area</p>
                         <p className="text-gray-600">
-                          <span className="inline-block bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium mr-1">
-                            Yellow Line
+                          <span className="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium mr-1">
+                            DLF Phases
                           </span>
-                          HUDA City Centre → Hauz Khas (35 min)
+                          10-12 min drive
                           <br />
-                          Then auto to our center (10 min, ₹50-70)
+                          <span className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium mr-1">
+                            Cyber City
+                          </span>
+                          8-10 min drive
                           <br />
                           <span className="text-green-600 font-medium">
-                            Total: 50-60 minutes from most Gurgaon areas
+                            Near HUDA City Centre Metro for public transport
                           </span>
                         </p>
                       </div>
@@ -758,13 +763,13 @@ export default function NEETCoachingGurgaonPage() {
 
                     <div className="pt-4">
                       <a
-                        href="https://maps.google.com/?q=Cerebrum+Biology+Academy+South+Extension"
+                        href="https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Gurugram"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full justify-center"
                       >
                         <MapPin className="w-5 h-5" />
-                        Get Directions from Gurgaon
+                        Get Directions to Gurugram Center
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     </div>
@@ -1150,21 +1155,21 @@ export default function NEETCoachingGurgaonPage() {
                 </p>
               </motion.div>
 
-              {/* Badge 6: Metro Accessible */}
+              {/* Badge 6: Local Gurugram Center */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Train className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">50 min</div>
-                <div className="text-lg font-semibold text-gray-700 mb-2">Metro Accessible</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">10-15 min</div>
+                <div className="text-lg font-semibold text-gray-700 mb-2">Local Gurugram Center</div>
                 <p className="text-sm text-gray-600">
-                  Direct Yellow Line connectivity from HUDA City Centre to Hauz Khas
+                  M2K Corporate Park, Sector 51 - no need to travel to Delhi!
                 </p>
               </motion.div>
             </div>
@@ -1249,11 +1254,11 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="p-6">
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start gap-3">
-                      <Train className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                      <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Metro Route</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
                         <p className="text-gray-600 text-sm">
-                          Yellow Line: HUDA City Centre → Hauz Khas (35 min)
+                          Just 10-12 minutes drive to our Sector 51 center
                         </p>
                       </div>
                     </div>
@@ -1261,9 +1266,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Total Travel</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Convenience</p>
                         <p className="text-gray-600 text-sm">
-                          50 minutes door-to-door from DLF areas
+                          No need to travel to Delhi - local Gurugram coaching!
                         </p>
                       </div>
                     </div>
@@ -1281,7 +1286,7 @@ export default function NEETCoachingGurgaonPage() {
 
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="text-sm text-gray-700 italic">
-                      &quot;The metro connectivity from DLF Phase 3 makes daily classes convenient.
+                      &quot;The Sector 51 center is just 10 minutes from our DLF Phase 3 home.
                       Weekend batches fit perfectly with my school schedule.&quot;
                     </p>
                     <p className="text-xs text-gray-600 mt-2 font-medium">- Parent, DLF Phase 2</p>
@@ -1314,11 +1319,11 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="p-6">
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start gap-3">
-                      <Train className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                      <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Metro Route</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
                         <p className="text-gray-600 text-sm">
-                          Yellow Line: Cyber City/Sector 55-56 → Hauz Khas (30-35 min)
+                          Just 8-10 minutes drive to our Sector 51 center
                         </p>
                       </div>
                     </div>
@@ -1326,9 +1331,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Total Travel</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Convenience</p>
                         <p className="text-gray-600 text-sm">
-                          50-55 minutes from Cyber City and Golf Course Road
+                          Closest locality to our M2K Corporate Park center
                         </p>
                       </div>
                     </div>
@@ -1346,9 +1351,8 @@ export default function NEETCoachingGurgaonPage() {
 
                   <div className="bg-green-50 rounded-lg p-4 border border-green-100">
                     <p className="text-sm text-gray-700 italic">
-                      &quot;Weekend batches from Cyber City are perfect for working
-                      professionals&apos; children. My daughter balances school and NEET prep
-                      beautifully.&quot;
+                      &quot;The M2K Corporate Park center is just 8 minutes from Cyber City.
+                      My daughter balances school and NEET prep beautifully.&quot;
                     </p>
                     <p className="text-xs text-gray-600 mt-2 font-medium">
                       - Rajesh K., Cyber City
@@ -1382,11 +1386,11 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="p-6">
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start gap-3">
-                      <Train className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                      <MapPin className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Metro Route</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
                         <p className="text-gray-600 text-sm">
-                          Yellow Line: Sikanderpur/Sector 54 → Hauz Khas (35-40 min)
+                          Just 12-15 minutes drive to our Sector 51 center
                         </p>
                       </div>
                     </div>
@@ -1394,9 +1398,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Total Travel</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">Convenience</p>
                         <p className="text-gray-600 text-sm">
-                          55-60 minutes from Sohna Road and New Gurgaon areas
+                          Easy access via Golf Course Extension Road
                         </p>
                       </div>
                     </div>
@@ -1414,8 +1418,8 @@ export default function NEETCoachingGurgaonPage() {
 
                   <div className="bg-orange-50 rounded-lg p-4 border border-orange-100">
                     <p className="text-sm text-gray-700 italic">
-                      &quot;Hybrid mode (weekend offline + weekday online) works perfectly from
-                      Sohna Road. The commute concern disappeared with flexible options.&quot;
+                      &quot;The Sector 51 center is just 12 minutes from Sohna Road.
+                      Hybrid mode works perfectly for us.&quot;
                     </p>
                     <p className="text-xs text-gray-600 mt-2 font-medium">- Meena S., Sohna Road</p>
                   </div>
@@ -1433,8 +1437,7 @@ export default function NEETCoachingGurgaonPage() {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">All Gurgaon Areas Covered</h3>
                 <p className="text-gray-300">
-                  Students from every corner of Gurgaon find our metro-accessible location
-                  convenient
+                  Students from every corner of Gurgaon reach our Sector 51 center in just 10-15 minutes
                 </p>
               </div>
 
@@ -1444,8 +1447,8 @@ export default function NEETCoachingGurgaonPage() {
                   <div className="text-sm text-gray-300">Total Gurgaon Students</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-400 mb-1">50-60 min</div>
-                  <div className="text-sm text-gray-300">Average Metro Travel Time</div>
+                  <div className="text-3xl font-bold text-green-400 mb-1">10-15 min</div>
+                  <div className="text-sm text-gray-300">Average Travel Time</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-400 mb-1">Weekend</div>

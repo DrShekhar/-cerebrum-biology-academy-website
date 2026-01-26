@@ -981,13 +981,13 @@ export default function NeetCoachingGurugramPage() {
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <LazyGoogleMap
-                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.23806131508236!3d28.566682982448893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
-                title="NEET Coaching Center Location"
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.8904729344643!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19e3f6f5f5f5%3A0x1234567890abcdef!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1234567890"
+                title="NEET Coaching Center Location - Gurugram"
                 height={300}
                 placeholder={{
-                  lat: 28.5667,
-                  lng: 77.2381,
-                  address: "South Extension, New Delhi"
+                  lat: 28.4295,
+                  lng: 77.0426,
+                  address: "M2K Corporate Park, Sector 51, Gurugram"
                 }}
               />
             </div>
@@ -995,7 +995,7 @@ export default function NeetCoachingGurugramPage() {
             {/* Gurugram Benefits */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Why Gurugram Students Choose Online Classes
+                Why Our Gurugram Center is Perfect for You
               </h3>
 
               <div className="bg-white rounded-lg p-4 shadow-md">
@@ -1003,11 +1003,11 @@ export default function NeetCoachingGurugramPage() {
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">
-                      Skip Delhi Border Crossing
+                      No Need to Travel to Delhi
                     </div>
                     <p className="text-sm text-gray-600">
-                      No need to cross NH8 toll or face Delhi-Gurgaon traffic. Save 3+ hours daily
-                      from DLF Phases, Golf Course Road, Sushant Lok areas.
+                      Our M2K Corporate Park center in Sector 51 is just 10-15 minutes from DLF
+                      Phases, Golf Course Road, and Sushant Lok areas. Save hours daily!
                     </p>
                   </div>
                 </div>
