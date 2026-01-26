@@ -1561,6 +1561,167 @@ export default function NeetCoachingGurugramPage() {
         subtitle="Boost your preparation with our AI-powered tools - 100% Free for Gurugram students"
       />
 
+      {/* School-Specific NEET Coaching Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              School-Specific NEET Coaching
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We serve students from all major Gurugram schools with batch timings aligned to their schedules
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { name: 'DPS Gurugram', href: '/biology-classes-dps-gurgaon', students: '85+' },
+              { name: 'Amity International', href: '/biology-classes-amity-gurgaon', students: '45+' },
+              { name: 'GD Goenka World School', href: '/biology-classes-gd-goenka-gurgaon', students: '55+' },
+              { name: 'The Shri Ram School', href: '/biology-classes-shri-ram-school-gurgaon', students: '65+' },
+              { name: 'Scottish High International', href: '/biology-classes-scottish-high-gurgaon', students: '40+' },
+              { name: 'Heritage Xperiential', href: '/biology-classes-heritage-school-gurgaon', students: '25+' },
+              { name: 'Suncity World School', href: '/biology-classes-suncity-school-gurgaon', students: '35+' },
+              { name: 'Manav Rachna School', href: '/biology-classes-manav-rachna-gurgaon', students: '30+' },
+            ].map((school, index) => (
+              <motion.div
+                key={school.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Link href={school.href}>
+                  <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                    <h3 className="font-bold text-gray-900 mb-1">{school.name}</h3>
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-600 font-semibold">{school.students} students</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Board-Specific Coaching Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Board-Specific NEET Coaching
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Specialized programs aligned with your board syllabus for seamless NEET preparation
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/cbse-neet-coaching-gurugram">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-blue-100">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">CBSE Board Students</h3>
+                  <p className="text-gray-600 mb-4">100% NCERT-aligned coaching. Perfect for DPS, Shri Ram, GD Goenka students.</p>
+                  <div className="flex items-center text-blue-600 font-semibold">
+                    <span>View CBSE Program</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/icse-neet-coaching-gurugram">
+                <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-purple-100">
+                  <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">ICSE/ISC Board Students</h3>
+                  <p className="text-gray-600 mb-4">ICSE-to-NCERT bridge program. For Pathways, Lancers, Suncity students.</p>
+                  <div className="flex items-center text-purple-600 font-semibold">
+                    <span>View ICSE Program</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/haryana-board-neet-coaching-gurugram">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-green-100">
+                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Haryana Board Students</h3>
+                  <p className="text-gray-600 mb-4">Hindi + English bilingual support. Affordable fees starting ₹35,000.</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span>View HBSE Program</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Explore More NEET Resources</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link href="/neet-coaching-near-me-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-teal-600">NEET Coaching Near Me</h3>
+              <p className="text-sm text-gray-600">Find coaching by location</p>
+            </Link>
+            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-teal-600">Online NEET Classes</h3>
+              <p className="text-sm text-gray-600">Live interactive sessions</p>
+            </Link>
+            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-teal-600">NEET Study Material</h3>
+              <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
+            </Link>
+            <Link href="/neet-dropper-batch-2025-26-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-teal-600">Dropper Batch 2025-26</h3>
+              <p className="text-sm text-gray-600">Intensive preparation</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">

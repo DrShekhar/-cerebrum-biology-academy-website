@@ -268,15 +268,28 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         </div>
       </section>
 
+      {/* School-Specific Pages */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">NEET Coaching for CBSE Schools</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link href="/biology-classes-dps-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">DPS Gurugram</h3><p className="text-sm text-gray-600">85+ students enrolled</p></Link>
+            <Link href="/biology-classes-shri-ram-school-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">The Shri Ram School</h3><p className="text-sm text-gray-600">65+ students enrolled</p></Link>
+            <Link href="/biology-classes-gd-goenka-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">GD Goenka World School</h3><p className="text-sm text-gray-600">55+ students enrolled</p></Link>
+            <Link href="/biology-classes-amity-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">Amity International</h3><p className="text-sm text-gray-600">45+ students enrolled</p></Link>
+          </div>
+        </div>
+      </section>
+
       {/* Related */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/icse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">ICSE NEET Coaching</h3><p className="text-sm text-gray-600">For ICSE board students</p></Link>
-            <Link href="/neet-foundation-class-11-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 11 Foundation</h3><p className="text-sm text-gray-600">Start early preparation</p></Link>
-            <Link href="/neet-foundation-class-12-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 12 Intensive</h3><p className="text-sm text-gray-600">Board year preparation</p></Link>
-            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
+            <Link href="/icse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">ICSE NEET Coaching</h3><p className="text-sm text-gray-600">For ICSE board students</p></Link>
+            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">Online NEET Classes</h3><p className="text-sm text-gray-600">Live interactive sessions</p></Link>
+            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Study Material</h3><p className="text-sm text-gray-600">Notes, MCQs, tests</p></Link>
+            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>
       </section>

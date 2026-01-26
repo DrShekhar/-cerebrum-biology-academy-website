@@ -385,10 +385,10 @@ export default function HaryanaBoardNEETCoachingContent({ faqs }: { faqs: FAQ[] 
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/cbse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">CBSE NEET Coaching</h3><p className="text-sm text-gray-600">For CBSE board students</p></Link>
-            <Link href="/icse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">ICSE NEET Coaching</h3><p className="text-sm text-gray-600">For ICSE/ISC students</p></Link>
-            <Link href="/affordable-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Coaching</h3><p className="text-sm text-gray-600">Budget-friendly options</p></Link>
-            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
+            <Link href="/cbse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">CBSE NEET Coaching</h3><p className="text-sm text-gray-600">For CBSE board students</p></Link>
+            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">Online NEET Classes</h3><p className="text-sm text-gray-600">Live interactive sessions</p></Link>
+            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Study Material</h3><p className="text-sm text-gray-600">Notes, MCQs, tests</p></Link>
+            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>
       </section>
