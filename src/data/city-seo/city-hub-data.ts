@@ -4794,6 +4794,721 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  // Class-Specific NEET Coaching Pages
+  'class-11-neet-coaching-gurugram': {
+    slug: 'class-11-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 11 NEET Coaching Gurugram 2026 | Foundation Year | Cerebrum Academy',
+    metaDescription:
+      'Best Class 11 NEET coaching in Gurugram. Build strong foundation in Physics, Chemistry, Biology. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
+    heroTitle: 'Class 11 NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Your NEET journey begins here. Build unshakeable foundation in Class 11 for NEET 2027 success.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 11 NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 NEET Coaching', url: '/class-12-neet-coaching-gurugram' },
+      { name: '2 Year NEET Course', url: '/2-year-neet-course-gurugram' },
+      { name: 'NEET Foundation', url: '/neet-foundation-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Class 11 important for NEET preparation?',
+        answer:
+          'Class 11 covers 45% of NEET syllabus. Topics like Physics (Mechanics, Thermodynamics), Chemistry (Organic basics), Biology (Cell Biology, Plant Physiology) form the foundation. Students who skip Class 11 struggle in Class 12.',
+      },
+      {
+        question: 'What is the fee for Class 11 NEET coaching in Gurugram?',
+        answer:
+          'Class 11 NEET coaching at Cerebrum costs ₹75,000-90,000/year including all subjects, study material, and test series. 2-year integrated program (Class 11+12) available at ₹1,40,000.',
+      },
+      {
+        question: 'Can I join Class 11 NEET coaching mid-year?',
+        answer:
+          'Yes! We offer mid-year joining with catch-up classes. Our systematic approach with recorded backups ensures you cover all missed topics. Best to join by August for optimal preparation.',
+      },
+      {
+        question: 'Do you cover school boards along with NEET in Class 11?',
+        answer:
+          '80% of NEET syllabus overlaps with CBSE. Our program covers both seamlessly. Students typically score 90%+ in boards while preparing for NEET.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '600+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'class-12-neet-coaching-gurugram': {
+    slug: 'class-12-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 12 NEET Coaching Gurugram 2026 | Final Year Prep | Cerebrum Academy',
+    metaDescription:
+      'Best Class 12 NEET coaching in Gurugram. Intensive preparation for NEET 2026. AIIMS faculty, daily tests, 98% results. Sector 51. Call 88264-44334!',
+    heroTitle: 'Class 12 NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Final year, maximum stakes. Intensive NEET preparation with board exam excellence guaranteed.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 12 NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sector 56-57', url: '/neet-coaching-gurgaon-sector-56-57' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 NEET Coaching', url: '/class-11-neet-coaching-gurugram' },
+      { name: '1 Year NEET Course', url: '/1-year-neet-course-gurugram' },
+      { name: 'NEET Dropper Course', url: '/neet-dropper-course-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What is covered in Class 12 NEET coaching?',
+        answer:
+          'Class 12 covers 55% of NEET syllabus including Human Physiology, Genetics, Biotechnology, Ecology (Biology), Organic Chemistry, Electrochemistry, Modern Physics. Plus complete revision of Class 11.',
+      },
+      {
+        question: 'What is the fee for Class 12 NEET coaching in Gurugram?',
+        answer:
+          'Class 12 NEET coaching costs ₹85,000-1,00,000/year including all subjects, intensive test series, and board preparation. Scholarship up to 50% available based on test.',
+      },
+      {
+        question: 'How do you balance boards and NEET in Class 12?',
+        answer:
+          'Our integrated approach covers both. Till February: board-focused preparation. March-April: NEET intensive. Our students average 93% in boards and 600+ in NEET.',
+      },
+      {
+        question: 'Do you provide hostel facility for Class 12 NEET students?',
+        answer:
+          'We have tie-ups with PG accommodations near Sector 51 center. Safe, affordable options (₹8,000-15,000/month) with mess facility. Many outstation students use this.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  // Duration-Based NEET Course Pages
+  '1-year-neet-course-gurugram': {
+    slug: '1-year-neet-course-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: '1 Year NEET Course Gurugram 2026 | Intensive Program | Cerebrum Academy',
+    metaDescription:
+      'Best 1 year NEET course in Gurugram for Class 12 and dropper students. Complete syllabus coverage, 500+ tests, AIIMS faculty. Sector 51. Call 88264-44334!',
+    heroTitle: '1 Year NEET Course in Gurugram',
+    heroSubtitle:
+      'Intensive 12-month program designed for focused NEET preparation. Ideal for Class 12 students and first-time droppers.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '1 Year NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: '2 Year NEET Course', url: '/2-year-neet-course-gurugram' },
+      { name: '6 Month NEET Coaching', url: '/6-month-neet-coaching-gurugram' },
+      { name: 'NEET Dropper Course', url: '/neet-dropper-course-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What is covered in the 1 year NEET course?',
+        answer:
+          'Complete Class 11 + Class 12 syllabus for Physics, Chemistry, Biology. Includes 500+ chapter tests, 50+ full syllabus tests, NCERT mastery, and previous year paper practice.',
+      },
+      {
+        question: 'What is the fee for 1 year NEET course in Gurugram?',
+        answer:
+          '1 year NEET course costs ₹1,20,000-1,50,000 including all subjects, study material, test series, and doubt clearing sessions. Scholarship up to 50% based on entrance test.',
+      },
+      {
+        question: 'Is 1 year enough for NEET preparation?',
+        answer:
+          'Yes, if you are dedicated. Our 1 year course has produced 50+ NEET toppers. Daily 6-8 hours of focused study with our structured program is sufficient for 600+ score.',
+      },
+      {
+        question: 'Who should join the 1 year NEET course?',
+        answer:
+          'Ideal for: Class 12 students targeting NEET 2026, First-time droppers, Students who completed Class 12 and want focused preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '400+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  '2-year-neet-course-gurugram': {
+    slug: '2-year-neet-course-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Academy',
+    metaDescription:
+      'Best 2 year NEET course in Gurugram for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
+    heroTitle: '2 Year NEET Course in Gurugram',
+    heroSubtitle:
+      'The gold standard for NEET preparation. Start from Class 11 and build unshakeable foundation over 24 months.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '2 Year NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: '1 Year NEET Course', url: '/1-year-neet-course-gurugram' },
+      { name: 'Class 11 NEET Coaching', url: '/class-11-neet-coaching-gurugram' },
+      { name: 'NEET Foundation', url: '/neet-foundation-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose a 2 year NEET course?',
+        answer:
+          'Students with 2 years preparation score 15-20% higher than 1 year students. You get time to build concepts, practice extensively, and revise multiple times. Our 2 year students average 650+ in NEET.',
+      },
+      {
+        question: 'What is the fee for 2 year NEET course in Gurugram?',
+        answer:
+          '2 year NEET course costs ₹1,80,000-2,20,000 for complete Class 11+12 (can be paid yearly at ₹95,000-1,10,000/year). Includes all subjects, material, tests, and board preparation.',
+      },
+      {
+        question: 'Can I balance school and the 2 year NEET course?',
+        answer:
+          'Yes! Our 2 year program is designed for school-going students. Evening and weekend batches available. 80% syllabus overlaps with CBSE, so you prepare for both simultaneously.',
+      },
+      {
+        question: 'What if I miss classes in the 2 year course?',
+        answer:
+          'We provide recorded backup of all classes, catch-up sessions during vacations, and dedicated mentors to ensure you never fall behind. Flexibility is built into the program.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '500+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  '6-month-neet-coaching-gurugram': {
+    slug: '6-month-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: '6 Month NEET Coaching Gurugram 2026 | Crash Course | Cerebrum Academy',
+    metaDescription:
+      'Intensive 6 month NEET coaching in Gurugram. Fast-track revision and practice. For droppers and late starters. Sector 51 center. Call 88264-44334!',
+    heroTitle: '6 Month NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Short on time but big on ambition? Our intensive 6-month program covers everything you need to crack NEET.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Crash Course Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: '1 Year NEET Course', url: '/1-year-neet-course-gurugram' },
+      { name: 'NEET Crash Course', url: '/neet-crash-course-gurugram' },
+      { name: 'NEET Dropper Course', url: '/neet-dropper-course-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Is 6 months enough for NEET preparation?',
+        answer:
+          'For students with strong Class 11-12 basics, yes. Our 6 month program focuses on revision, problem-solving, and test practice. Students with weak basics should consider 1 year course.',
+      },
+      {
+        question: 'What is the fee for 6 month NEET coaching?',
+        answer:
+          '6 month NEET coaching costs ₹70,000-85,000 including all subjects, study material, 200+ tests, and daily doubt sessions. Intensive daily classes for 5-6 hours.',
+      },
+      {
+        question: 'Who should join the 6 month NEET course?',
+        answer:
+          'Ideal for: Students who studied Class 11-12 well but need focused revision, Droppers who need targeted practice, Late starters who missed regular admission.',
+      },
+      {
+        question: 'What is the daily schedule for 6 month course?',
+        answer:
+          'Morning batch: 6 AM - 12 PM, Evening batch: 2 PM - 8 PM. Daily 6 hours of classes covering Physics, Chemistry, Biology with tests every alternate day.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '92%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  // Batch Timing Pages
+  'weekend-neet-batch-gurugram': {
+    slug: 'weekend-neet-batch-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Academy',
+    metaDescription:
+      'Weekend NEET coaching in Gurugram for school students. Saturday-Sunday batches. Balance school and NEET prep. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Weekend NEET Batch in Gurugram',
+    heroSubtitle:
+      'Perfect for school-going students. Intensive Saturday-Sunday classes to prepare for NEET without missing school.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Weekend Batch Available',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Evening Batch NEET', url: '/evening-batch-neet-gurugram' },
+      { name: 'Offline NEET Coaching', url: '/offline-neet-coaching-gurugram' },
+      { name: 'Online NEET Classes', url: '/online-neet-classes-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What are the timings for weekend NEET batch?',
+        answer:
+          'Saturday: 9 AM - 5 PM (Physics & Chemistry), Sunday: 9 AM - 3 PM (Biology + Tests). Total 14 hours of intensive coaching every weekend.',
+      },
+      {
+        question: 'Can weekend batch students compete with regular batch students?',
+        answer:
+          'Yes! Weekend batch covers the same syllabus with same faculty. Many weekend batch students score 600+ in NEET. Key is doing self-study during weekdays.',
+      },
+      {
+        question: 'What is the fee for weekend NEET batch?',
+        answer:
+          'Weekend NEET batch costs ₹65,000-80,000/year including study material and tests. Slightly lower than regular batch due to fewer contact hours.',
+      },
+      {
+        question: 'Is weekend batch suitable for Class 11 students?',
+        answer:
+          'Perfect for Class 11! Students attend school Monday-Friday and prepare for NEET on weekends. Our 2-year weekend program produces excellent results.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '350+',
+      successRate: '94%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'evening-batch-neet-gurugram': {
+    slug: 'evening-batch-neet-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Evening Batch NEET Coaching Gurugram | After School | Cerebrum Academy',
+    metaDescription:
+      'Evening NEET coaching in Gurugram after school hours. 4 PM - 8 PM batches. Perfect for Class 11-12 students. Sector 51. Call 88264-44334!',
+    heroTitle: 'Evening Batch NEET Coaching Gurugram',
+    heroSubtitle:
+      'Finish school, start NEET prep. Our evening batches run after school hours for seamless dual preparation.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Evening Batch 4-8 PM',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Weekend NEET Batch', url: '/weekend-neet-batch-gurugram' },
+      { name: 'Morning Batch NEET', url: '/morning-batch-neet-gurugram' },
+      { name: 'Offline NEET Coaching', url: '/offline-neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What are the evening batch timings?',
+        answer:
+          'Evening batches run 4 PM - 8 PM (Monday-Friday). One subject daily: Mon-Tue Physics, Wed-Thu Chemistry, Fri Biology. Saturday tests and doubt sessions.',
+      },
+      {
+        question: 'Can school students manage evening batch?',
+        answer:
+          'Yes! Most school students prefer evening batches. They attend school till 2-3 PM, take a break, and join coaching at 4 PM. Thousands of our students follow this routine.',
+      },
+      {
+        question: 'What is the fee for evening NEET batch?',
+        answer:
+          'Evening batch fees are same as regular batch: ₹75,000-95,000/year including all subjects, material, and test series.',
+      },
+      {
+        question: 'Is evening batch available for droppers?',
+        answer:
+          'Droppers usually prefer morning batch for more study time. But evening batch is available for working droppers or those who prefer studying at night.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '450+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'offline-neet-coaching-gurugram': {
+    slug: 'offline-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Offline NEET Coaching Gurugram 2026 | Classroom Program | Cerebrum Academy',
+    metaDescription:
+      'Best offline NEET coaching in Gurugram. In-person classroom teaching at Sector 51 center. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
+    heroTitle: 'Offline NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Nothing beats classroom learning. Join our offline batches for face-to-face interaction with AIIMS faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Walk-in Anytime',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phase 1-5', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Online NEET Classes', url: '/online-neet-classes-gurugram' },
+      { name: 'Hybrid NEET Coaching', url: '/hybrid-neet-coaching-gurugram' },
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose offline coaching over online?',
+        answer:
+          'Offline coaching offers: Direct faculty interaction, peer competition, lab facilities, instant doubt resolution, discipline of classroom. Our 98% success rate comes from offline batches.',
+      },
+      {
+        question: 'What are the batch sizes for offline coaching?',
+        answer:
+          'We maintain small batches of 25-30 students maximum. This ensures personal attention while maintaining healthy competition among peers.',
+      },
+      {
+        question: 'What facilities are available at the offline center?',
+        answer:
+          'AC classrooms, digital boards, reference library, doubt clearing room, cafeteria, and safe parking. CCTV monitored campus with biometric attendance.',
+      },
+      {
+        question: 'Can I switch from online to offline mid-course?',
+        answer:
+          'Yes! Students can switch from online to offline (or vice versa) with one month notice. Fee difference, if any, will be adjusted.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '1,200+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  // Competitor Alternative Pages
+  'fiitjee-alternative-gurugram': {
+    slug: 'fiitjee-alternative-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Academy',
+    metaDescription:
+      'Looking for FIITJEE alternative in Gurugram for NEET? Cerebrum offers specialized biology coaching with AIIMS faculty. 50% lower fees, 98% results. 88264-44334!',
+    heroTitle: 'FIITJEE Alternative for NEET in Gurugram',
+    heroSubtitle:
+      'FIITJEE excels in IIT-JEE, but for NEET you need biology specialists. Cerebrum offers dedicated NEET coaching at half the cost.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'NEET Biology Specialist',
+    },
+    localities: [
+      { name: 'Sector 14', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Aakash Alternative', url: '/aakash-alternative-gurugram' },
+      { name: 'Allen Alternative', url: '/allen-alternative-gurugram' },
+      { name: 'Narayana Alternative', url: '/narayana-alternative-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose Cerebrum over FIITJEE for NEET?',
+        answer:
+          'FIITJEE is primarily an IIT-JEE coaching with NEET as add-on. Cerebrum is NEET-specialized with AIIMS faculty. Our biology teachers have 10+ years NEET experience vs generalist approach.',
+      },
+      {
+        question: 'How do fees compare with FIITJEE?',
+        answer:
+          'FIITJEE NEET fees: ₹1.5-2.5 lakh/year. Cerebrum fees: ₹75,000-1,00,000/year. You save 50%+ while getting specialized NEET biology coaching.',
+      },
+      {
+        question: 'What about FIITJEE brand value?',
+        answer:
+          'Brand value helps in IIT-JEE. For NEET, what matters is biology expertise and results. Our 98% selection rate and 50+ medical college admits speak for themselves.',
+      },
+      {
+        question: 'Can I take FIITJEE for Physics-Chemistry and Cerebrum for Biology?',
+        answer:
+          'Yes! Many students do this. We offer Biology-only program at ₹45,000/year. Combine with any coaching for complete preparation.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '200+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'narayana-alternative-gurugram': {
+    slug: 'narayana-alternative-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Narayana Alternative in Gurugram | Personal Attention | Cerebrum Academy',
+    metaDescription:
+      'Better than Narayana for NEET in Gurugram? Cerebrum offers small batches, personal attention, AIIMS faculty. No factory coaching. Call 88264-44334!',
+    heroTitle: 'Narayana Alternative for NEET in Gurugram',
+    heroSubtitle:
+      'Tired of crowded Narayana batches? Get personal attention with our 25-student batches and dedicated mentors.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Small Batch Expert',
+    },
+    localities: [
+      { name: 'Sector 14', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Aakash Alternative', url: '/aakash-alternative-gurugram' },
+      { name: 'FIITJEE Alternative', url: '/fiitjee-alternative-gurugram' },
+      { name: 'Physics Wallah Alternative', url: '/physics-wallah-alternative-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose Cerebrum over Narayana?',
+        answer:
+          'Narayana has 100+ student batches with franchise model. Cerebrum has 25-student batches with AIIMS faculty. Personal attention means better results.',
+      },
+      {
+        question: 'How do results compare with Narayana Gurugram?',
+        answer:
+          'Narayana Gurugram selection rate: ~15-20%. Cerebrum selection rate: 98%. Our small batches and focused approach deliver better outcomes.',
+      },
+      {
+        question: 'Is Narayana better for integrated school program?',
+        answer:
+          'Narayana schools force you into their system. With Cerebrum, study at any school and join coaching separately. More flexibility, same results.',
+      },
+      {
+        question: 'What about Narayana study material?',
+        answer:
+          'Our study material is designed by AIIMS faculty specifically for NEET. Narayana uses generic material across India. Our localized approach works better.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '250+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'physics-wallah-alternative-gurugram': {
+    slug: 'physics-wallah-alternative-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Academy',
+    metaDescription:
+      'Looking for Physics Wallah alternative in Gurugram? Cerebrum offers offline classes with AIIMS faculty. Real classroom experience. Call 88264-44334!',
+    heroTitle: 'Physics Wallah Alternative for NEET in Gurugram',
+    heroSubtitle:
+      'PW videos are great for basics. For serious NEET prep, you need classroom coaching with real interaction and discipline.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Offline Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Unacademy Alternative', url: '/unacademy-alternative-gurugram' },
+      { name: 'Offline NEET Coaching', url: '/offline-neet-coaching-gurugram' },
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose offline coaching over Physics Wallah?',
+        answer:
+          'PW completion rate is 15-20% (most students drop off). Offline coaching at Cerebrum has 95%+ retention because of discipline, peer pressure, and direct teacher interaction.',
+      },
+      {
+        question: 'How do fees compare with Physics Wallah?',
+        answer:
+          'PW costs ₹15,000-30,000/year but with low completion. Cerebrum costs ₹75,000-95,000/year with guaranteed discipline and 98% results. Investment vs expense.',
+      },
+      {
+        question: 'Can I use PW videos along with Cerebrum coaching?',
+        answer:
+          'Yes! Many students watch PW for revision. But primary preparation should be offline with structured curriculum, tests, and doubt clearing.',
+      },
+      {
+        question: 'Is PW Vidyapeeth center in Gurgaon good?',
+        answer:
+          'PW Vidyapeeth is new with inexperienced faculty. Cerebrum has 10+ years of NEET teaching experience in Gurugram with proven track record.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'unacademy-alternative-gurugram': {
+    slug: 'unacademy-alternative-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Unacademy Alternative Gurugram | Real Classroom | Cerebrum Academy',
+    metaDescription:
+      'Better than Unacademy for NEET? Cerebrum offers real classroom coaching in Gurugram. No screen fatigue. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Unacademy Alternative for NEET in Gurugram',
+    heroSubtitle:
+      'Tired of watching videos all day? Real NEET preparation happens in classrooms with actual teachers and peer competition.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Real Classroom',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Physics Wallah Alternative', url: '/physics-wallah-alternative-gurugram' },
+      { name: 'Vedantu Alternative', url: '/vedantu-alternative-gurugram' },
+      { name: 'Offline NEET Coaching', url: '/offline-neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose Cerebrum over Unacademy?',
+        answer:
+          'Unacademy has 1000s of videos causing decision paralysis. Cerebrum has structured curriculum with clear path. Real teachers, real classrooms, real results.',
+      },
+      {
+        question: 'Is Unacademy Plus worth it for NEET?',
+        answer:
+          'Unacademy Plus costs ₹50,000-80,000/year for videos. Same investment gets you offline coaching at Cerebrum with guaranteed discipline and 3x better completion.',
+      },
+      {
+        question: 'What about Unacademy doubt solving?',
+        answer:
+          'Unacademy doubt solving is via chat/video call. At Cerebrum, raise your hand and get instant in-person explanation. No waiting, no scheduling.',
+      },
+      {
+        question: 'Can I switch from Unacademy to Cerebrum mid-year?',
+        answer:
+          'Yes! We have special catch-up batches for students switching from online platforms. Most adapt within 2-3 weeks and see immediate improvement.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '250+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
   // Gurugram Class-Specific Pages
   'biology-class-11-gurgaon': {
     slug: 'biology-class-11-gurgaon',
