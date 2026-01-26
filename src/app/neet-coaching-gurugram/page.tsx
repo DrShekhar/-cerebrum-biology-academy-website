@@ -32,6 +32,8 @@ import {
   DrShekharSinghSchema,
   VideoSchema,
 } from '@/components/seo/StructuredData'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -969,15 +971,15 @@ export default function NeetCoachingGurugramPage() {
           >
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.23806131508236!3d28.566682982448893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Cerebrum Biology Academy Location"
+              <LazyGoogleMap
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.23806131508236!3d28.566682982448893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
+                title="NEET Coaching Center Location"
+                height={300}
+                placeholder={{
+                  lat: 28.5667,
+                  lng: 77.2381,
+                  address: "South Extension, New Delhi"
+                }}
               />
             </div>
 
@@ -1552,6 +1554,12 @@ export default function NeetCoachingGurugramPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Free NEET Tools Section */}
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Boost your preparation with our AI-powered tools - 100% Free for Gurugram students"
+      />
 
       {/* FAQs Section */}
       <section className="py-20 bg-white">

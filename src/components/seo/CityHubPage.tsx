@@ -35,6 +35,7 @@ import {
 import type { CityHubData } from '@/data/city-seo/city-hub-data'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
 import { CredibilityBar } from '@/components/seo/EEATSignals'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -487,7 +488,8 @@ export function CityHubPage({ data }: CityHubPageProps) {
                         </Link>
                         <a
                           href={`https://maps.google.com/?q=${data.geoCoordinates.lat},${data.geoCoordinates.lng}`}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="rounded-lg border border-green-600 px-6 py-3 font-medium text-green-700 transition hover:bg-green-50"
                         >
                           <Navigation className="mr-2 inline h-4 w-4" />
@@ -828,6 +830,12 @@ export function CityHubPage({ data }: CityHubPageProps) {
             </div>
           </section>
         )}
+
+        {/* Free NEET Tools Section */}
+        <NEETToolsWidget
+          title={`Free NEET Preparation Tools for ${data.cityName} Students`}
+          subtitle="Boost your preparation with our AI-powered tools - 100% Free"
+        />
 
         {/* FAQs */}
         <section className="py-20">
