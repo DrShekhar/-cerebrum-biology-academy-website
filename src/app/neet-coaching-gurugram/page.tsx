@@ -34,6 +34,7 @@ import {
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -383,7 +384,15 @@ export default function NeetCoachingGurugramPage() {
               </Link>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {/* Urgency Banner */}
+            <UrgencyBanner
+              batchStartDate="Feb 10, 2026"
+              seatsTotal={20}
+              seatsFilled={16}
+              showCountdown={true}
+            />
+
+            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-8">
               {successMetrics.map((metric) => (
                 <div
                   key={metric.label}

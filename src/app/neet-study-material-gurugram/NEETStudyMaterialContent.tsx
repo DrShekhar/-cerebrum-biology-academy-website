@@ -13,6 +13,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 
 interface FAQ { question: string; answer: string }
 
@@ -144,6 +145,9 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
                 <Phone className="w-5 h-5" />Order Study Material
               </motion.button>
             </div>
+
+            {/* Urgency Banner */}
+            <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={50} seatsFilled={38} showCountdown={false} />
           </motion.div>
         </div>
       </section>
