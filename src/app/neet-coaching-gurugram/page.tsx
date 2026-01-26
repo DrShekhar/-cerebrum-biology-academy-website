@@ -29,6 +29,8 @@ import {
   LocalBusinessSchema,
   GurugramServiceSchema,
   FAQSchema,
+  DrShekharSinghSchema,
+  VideoSchema,
 } from '@/components/seo/StructuredData'
 
 const gurugramLocalities = [
@@ -1683,6 +1685,36 @@ export default function NeetCoachingGurugramPage() {
       <LocalBusinessSchema />
       <GurugramServiceSchema />
       <FAQSchema />
+      <DrShekharSinghSchema />
+
+      {/* Video Testimonial Schemas */}
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Dr. Shekhar's teaching methods at Cerebrum Biology Academy helped her achieve this exceptional score."
+        thumbnailUrl="https://img.youtube.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2023-08-15"
+        duration="PT5M30S"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+        interactionCount={15000}
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Pune Selection Success Story"
+        description="Abhisek shares his experience preparing for NEET and AFMC entrance with Cerebrum Biology Academy. Hear how personalized mentoring and rigorous preparation helped him crack AFMC Pune."
+        thumbnailUrl="https://img.youtube.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2023-09-10"
+        duration="PT4M45S"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+        interactionCount={8500}
+      />
+      <VideoSchema
+        name="Nishita - 6-Month Intensive NEET Program Success"
+        description="Nishita's transformation story - how the 6-month intensive NEET program at Cerebrum Biology Academy helped her secure admission to a government medical college."
+        thumbnailUrl="https://img.youtube.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2023-10-05"
+        duration="PT6M20S"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+        interactionCount={12000}
+      />
     </div>
   )
 }
