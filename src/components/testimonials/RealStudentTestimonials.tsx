@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Award, Star, Quote, ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import { RealTestimonial } from '@/data/realTestimonials'
 import { Button } from '@/components/ui/Button'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface RealStudentTestimonialsProps {
   testimonials: RealTestimonial[]
@@ -232,15 +233,12 @@ export function RealStudentTestimonials({
               </button>
 
               <div className="aspect-video bg-black">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                <LazyYouTubeEmbed
+                  videoId={selectedVideo.youtubeId || ''}
                   title={`${selectedVideo.studentName} testimonial`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
+                  thumbnailUrl={selectedVideo.thumbnail}
+                  autoplay={true}
+                  className="w-full h-full rounded-none"
                 />
               </div>
 

@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Play, ExternalLink, BookOpen } from 'lucide-react'
+import { ExternalLink, BookOpen } from 'lucide-react'
 import { Button } from './Button'
-import { LoadingSpinner } from './LoadingStates'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface VideoShowcaseProps {
   videoId: string
@@ -34,45 +33,19 @@ export function VideoShowcase({
   ctaText = 'Book Free Demo Class',
   onCTAClick,
 }: VideoShowcaseProps) {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
-  const [isFullscreen, setIsFullscreen] = useState(false)
-  const [showPlayer, setShowPlayer] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [imageLoaded, setImageLoaded] = useState(false)
-  const videoRef = useRef<HTMLIFrameElement>(null)
-
-  // Generate YouTube embed URL
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?${new URLSearchParams({
-    autoplay: showPlayer ? '1' : '0',
-    mute: isMuted ? '1' : '0',
-    rel: '0',
-    modestbranding: '1',
-    playsinline: '1',
-    enablejsapi: '1',
-    origin:
-      typeof window !== 'undefined' ? window.location.origin : 'https://cerebrumbiologyacademy.com',
-  }).toString()}`
-
-  // Generate thumbnail URL if not provided
-  const defaultThumbnail = thumbnailUrl || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  const [hasPlayed, setHasPlayed] = useState(false)
 
   const handlePlayClick = () => {
-    setIsLoading(true)
-    setShowPlayer(true)
-    setIsPlaying(true)
+    setHasPlayed(true)
 
     // Track video interaction
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'video_play', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ;(window as unknown as { gtag: Function }).gtag('event', 'video_play', {
         event_category: 'engagement',
         event_label: `${category}_video_${videoId}`,
         value: 1,
       })
     }
-
-    // Simulate loading time for smooth transition
-    setTimeout(() => setIsLoading(false), 1500)
   }
 
   const handleCTAClick = () => {
@@ -81,8 +54,8 @@ export function VideoShowcase({
     }
 
     // Track CTA conversion
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'video_cta_click', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ;(window as unknown as { gtag: Function }).gtag('event', 'video_cta_click', {
         event_category: 'conversion',
         event_label: `${category}_video_cta`,
         value: 1,
@@ -129,90 +102,20 @@ export function VideoShowcase({
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        {/* Video Container */}
-        <div className="relative aspect-video">
-          {!showPlayer ? (
-            // Custom Thumbnail with Play Button
-            <div className="relative w-full h-full">
-              {!imageLoaded && (
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-pulse flex items-center justify-center">
-                  <LoadingSpinner size="lg" variant="cerebrum" />
-                </div>
-              )}
-              <Image
-                src={defaultThumbnail}
-                alt={title}
-                fill
-                className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                onLoad={() => setImageLoaded(true)}
-                onError={(e) => {
-                  e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-                  setImageLoaded(true)
-                }}
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
-
-              {/* Play Button */}
-              <motion.button
-                className="absolute inset-0 flex items-center justify-center"
-                onClick={handlePlayClick}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 group-hover:bg-white/30 transition-all">
-                  <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                </div>
-              </motion.button>
-
-              {/* Category Badge */}
-              <div
-                className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-medium border ${getCategoryColor()}`}
-              >
-                {getCategoryLabel()}
-              </div>
-
-              {/* Duration Badge */}
-              {duration && (
-                <div className="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                  {duration}
-                </div>
-              )}
-
-              {/* Cerebrum Branding */}
-              <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                Cerebrum Faculty
-              </div>
-            </div>
-          ) : (
-            // YouTube Player with Loading State
-            <div className="relative w-full h-full">
-              {isLoading && (
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/90 to-indigo-600/90 flex items-center justify-center z-10">
-                  <div className="text-center text-white">
-                    <LoadingSpinner size="xl" variant="minimal" className="mb-4" />
-                    <p className="text-lg font-medium">Loading Cerebrum Video...</p>
-                    <p className="text-sm opacity-80 mt-1">
-                      Preparing your Biology learning experience
-                    </p>
-                  </div>
-                </div>
-              )}
-              <iframe
-                ref={videoRef}
-                src={embedUrl}
-                title={title}
-                className="w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                onLoad={() => setIsLoading(false)}
-              />
-            </div>
-          )}
-        </div>
+        {/* Video Container - Using LazyYouTubeEmbed for LCP optimization */}
+        <LazyYouTubeEmbed
+          videoId={videoId}
+          title={title}
+          thumbnailUrl={thumbnailUrl}
+          duration={duration}
+          autoplay={autoplay}
+          onPlay={handlePlayClick}
+          badge={{
+            text: getCategoryLabel(),
+            className: `border ${getCategoryColor()}`,
+          }}
+          className="rounded-t-2xl"
+        />
 
         {/* Video Info */}
         <div className="p-6">

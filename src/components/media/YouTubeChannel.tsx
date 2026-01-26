@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Youtube, Play, Users, Video, TrendingUp, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface YouTubeVideo {
   id: string
@@ -312,15 +313,12 @@ export function YouTubeChannel({
             </button>
 
             <div className="aspect-video bg-black">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${selectedVideo.id}?autoplay=1`}
+              <LazyYouTubeEmbed
+                videoId={selectedVideo.id}
                 title={selectedVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
+                thumbnailUrl={selectedVideo.thumbnail}
+                autoplay={true}
+                className="w-full h-full rounded-none"
               />
             </div>
 

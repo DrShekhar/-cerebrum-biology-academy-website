@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { useTranslations } from '@/lib/i18n/translations'
 import { OptimizedImage } from '@/components/mobile/OptimizedImage'
+import { LazyVideo } from '@/components/performance/LazyVideo'
 
 interface TestimonialData {
   id: string
@@ -410,15 +411,17 @@ export function AuthenticTestimonials() {
                 className="relative max-w-4xl w-full"
                 onClick={(e) => e.stopPropagation()}
               >
-                <video
-                  className="w-full rounded-xl"
+                <LazyVideo
+                  src={testimonialData.find((t) => t.id === showVideo)?.videoUrl || ''}
+                  poster={testimonialData.find((t) => t.id === showVideo)?.photoUrl || ''}
                   controls
                   autoPlay
-                  src={testimonialData.find((t) => t.id === showVideo)?.videoUrl}
+                  muted={false}
+                  className="w-full aspect-video rounded-xl"
                 />
                 <button
                   onClick={() => setShowVideo(null)}
-                  className="absolute -top-4 -right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors"
+                  className="absolute -top-4 -right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors z-10"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path

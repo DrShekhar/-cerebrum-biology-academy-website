@@ -2,9 +2,10 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Play, Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface VideoTestimonial {
   id: string
@@ -89,16 +90,19 @@ const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
 
 export function VideoTestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(false)
+  // Track which videos have been clicked to play
+  const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set())
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? VIDEO_TESTIMONIALS.length - 1 : prev - 1))
-    setIsPlaying(false)
   }
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev === VIDEO_TESTIMONIALS.length - 1 ? 0 : prev + 1))
-    setIsPlaying(false)
+  }
+
+  const handleVideoPlay = (index: number) => {
+    setPlayingVideos((prev) => new Set(prev).add(index))
   }
 
   const activeTestimonial = VIDEO_TESTIMONIALS[activeIndex]
@@ -127,49 +131,25 @@ export function VideoTestimonialsSection() {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Video Player */}
+            {/* Video Player - Using LazyYouTubeEmbed for LCP optimization */}
             <motion.div
               key={activeIndex}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gray-900"
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
             >
-              {isPlaying ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${activeTestimonial.videoId}?autoplay=1`}
-                  title={`${activeTestimonial.studentName} testimonial`}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <>
-                  <div
-                    className="w-full h-full bg-indigo-500 flex items-center justify-center cursor-pointer group"
-                    onClick={() => setIsPlaying(true)}
-                  >
-                    <div className="text-center text-white p-8">
-                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                        <Play className="w-10 h-10 text-white fill-white" />
-                      </div>
-                      <p className="text-lg font-medium">
-                        Watch {activeTestimonial.studentName}&apos;s Story
-                      </p>
-                      <p className="text-white/80 text-sm mt-1">
-                        AIR {activeTestimonial.rank} | NEET {activeTestimonial.year}
-                      </p>
-                    </div>
-                  </div>
-                  {/* Score Badge */}
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <span className="text-2xl font-bold text-green-600">
-                      {activeTestimonial.neetScore}
-                    </span>
-                    <span className="text-gray-600 text-sm ml-1">marks</span>
-                  </div>
-                </>
-              )}
+              <LazyYouTubeEmbed
+                videoId={activeTestimonial.videoId}
+                title={`${activeTestimonial.studentName} testimonial`}
+                thumbnailUrl={activeTestimonial.thumbnailUrl}
+                onPlay={() => handleVideoPlay(activeIndex)}
+                badge={{
+                  text: `${activeTestimonial.neetScore} marks`,
+                  className: 'bg-white/90 text-green-600 font-bold',
+                }}
+                playButtonSize="lg"
+              />
             </motion.div>
 
             {/* Testimonial Details */}
